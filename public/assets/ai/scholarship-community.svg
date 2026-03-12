@@ -1,0 +1,39 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#28364A"/>
+      <stop offset="0.55" stop-color="#496585"/>
+      <stop offset="1" stop-color="#7A9C59"/>
+    </linearGradient>
+    <radialGradient id="spotA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1260 240) rotate(130) scale(520 480)">
+      <stop stop-color="white" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="spotB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(420 700) rotate(32) scale(640 400)">
+      <stop stop-color="white" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#spotA)"/>
+  <rect width="1600" height="900" fill="url(#spotB)"/>
+
+  <g opacity="0.24" stroke="white" stroke-width="1.4">
+    <path d="M-60 140C280 60 540 80 900 220C1140 312 1360 330 1660 220"/>
+    <path d="M-80 330C240 260 600 250 980 410C1230 520 1430 530 1680 460"/>
+    <path d="M-80 520C260 440 620 450 980 620C1200 730 1440 740 1680 690"/>
+    <path d="M-100 710C220 650 580 670 930 830C1170 910 1380 920 1700 860"/>
+  </g>
+
+  <g opacity="0.18" fill="white">
+    <circle cx="1160" cy="120" r="110"/>
+    <circle cx="1340" cy="170" r="55"/>
+    <circle cx="280" cy="730" r="90"/>
+  </g>
+
+  <g fill="white">
+    <text x="120" y="620" font-family="Arial, sans-serif" font-size="92" font-weight="700" letter-spacing="2">SCHOLARSHIP FUND</text>
+    <text x="120" y="700" font-family="Arial, sans-serif" font-size="34" font-weight="500" opacity="0.9">Education impact and community programs</text>
+  </g>
+</svg>

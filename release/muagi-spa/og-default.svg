@@ -1,0 +1,7 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A3E33"/>
+  <rect x="80" y="80" width="1040" height="470" rx="28" fill="#0F5A48"/>
+  <text x="140" y="250" fill="#F3F8F5" font-size="84" font-family="Arial, Helvetica, sans-serif" font-weight="700">ANSLIFE</text>
+  <text x="140" y="330" fill="#E8F6EE" font-size="42" font-family="Arial, Helvetica, sans-serif">Manufacturing Ecosystem</text>
+  <text x="140" y="390" fill="#D5E8DE" font-size="30" font-family="Arial, Helvetica, sans-serif">React SPA + WordPress CMS</text>
+</svg>
