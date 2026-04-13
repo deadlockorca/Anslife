@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" role="img" aria-label="Operating model icon">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#31c083"/>
+      <stop offset="1" stop-color="#258e5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="88" width="156" height="12" rx="6" fill="#dbe5f0"/>
+  <circle cx="90" cy="58" r="16" fill="url(#g)"/>
+  <circle cx="52" cy="56" r="8" fill="#6a89a8"/>
+  <circle cx="128" cy="56" r="8" fill="#6a89a8"/>
+  <circle cx="72" cy="30" r="7" fill="#7ea8c5"/>
+  <circle cx="108" cy="30" r="7" fill="#7ea8c5"/>
+  <circle cx="72" cy="84" r="7" fill="#7ea8c5"/>
+  <circle cx="108" cy="84" r="7" fill="#7ea8c5"/>
+  <path d="M60 56L82 58M98 58L120 56M76 35L84 48M104 48L112 35M76 81L84 68M104 68L112 81" stroke="#6f889f" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <circle cx="90" cy="58" r="6" fill="#e5f7ee"/>
+</svg>

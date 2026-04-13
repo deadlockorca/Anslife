@@ -134,7 +134,7 @@ export default function ProductsPage() {
           {filteredProducts.length === 0 && (
             <article className="content-card">
               <h3>{t('Chưa có sản phẩm')}</h3>
-              <p>{t('Hiện chưa có sản phẩm nào được đăng từ CMS.')}</p>
+              <p>{t('Hiện chưa có sản phẩm nào trong hệ thống dữ liệu.')}</p>
             </article>
           )}
           {filteredProducts.map((product) => {

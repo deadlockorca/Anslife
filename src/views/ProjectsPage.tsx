@@ -118,7 +118,7 @@ export default function ProjectsPage() {
           {filteredProjects.length === 0 && (
             <article className="content-card">
               <h3>{t('Chưa có dự án')}</h3>
-              <p>{t('Hiện chưa có dự án nào được đăng từ CMS.')}</p>
+              <p>{t('Hiện chưa có dự án nào trong hệ thống dữ liệu.')}</p>
             </article>
           )}
           {filteredProjects.map((project) => (

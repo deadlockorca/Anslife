@@ -91,7 +91,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       </article>
       <article class="ai-highlight-card">
         <strong>Lợi thế vận hành</strong>
-        <p>Rút ngắn vòng xác nhận kỹ thuật nhờ phối hợp chặt giữa kinh doanh, kỹ thuật và nhà máy.</p>
+        <p>Rút ngắn vòng xác nhận kỹ thuật nhờ phối hợp chặt giữa sale, kỹ thuật và nhà máy.</p>
       </article>
       <article class="ai-highlight-card">
         <strong>Năng lực mở rộng</strong>
@@ -185,7 +185,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       giúp thông tin kỹ thuật và vận hành không bị đứt đoạn giữa các phòng ban.
     </p>
     <ul>
-      <li><strong>Kinh doanh:</strong> tiếp nhận yêu cầu, làm rõ phạm vi dự án và điều kiện thương mại.</li>
+      <li><strong>Sale:</strong> tiếp nhận yêu cầu, làm rõ phạm vi dự án và điều kiện thương mại.</li>
       <li><strong>R&D / Kỹ thuật:</strong> phân tích thiết kế, chuẩn hóa spec và phát triển mẫu.</li>
       <li><strong>Sản xuất:</strong> lập kế hoạch line, theo dõi công suất và kiểm soát tiến độ.</li>
       <li><strong>QC:</strong> giám sát chất lượng theo tiêu chí từng công đoạn.</li>
@@ -297,52 +297,138 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     </figure>
   </div>
 
-  <section id="production-system" class="ai-section">
-    <h2>Hệ thống sản xuất</h2>
-    <p>
-      Hệ thống sản xuất của ANSLIFE được tổ chức theo mô hình kết hợp giữa trung tâm sản xuất chủ lực và mạng lưới nhà máy liên kết.
-      Cấu trúc này giúp đảm bảo chất lượng đồng bộ, duy trì tính linh hoạt công suất và tăng khả năng đáp ứng các đơn hàng xuất khẩu.
-    </p>
+  <section id="production-system" class="ai-section ai-production-system">
+    <div class="ai-ps-hero">
+      <img
+        src="/assets/production-system/hero-system.svg"
+        alt="Hệ thống sản xuất ANSLIFE"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="ai-ps-hero-overlay">
+        <p class="ai-ps-kicker">ANSLIFE FACTORY NETWORK</p>
+        <h2>Hệ thống sản xuất</h2>
+        <p>ANSLIFE vận hành hệ thống sản xuất không chỉ là một nhà máy, mà là một mạng lưới sản xuất được kiểm soát.</p>
+        <ul class="ai-ps-hero-bullets">
+          <li>Điều phối tập trung</li>
+          <li>Sản xuất phân tán</li>
+          <li>Kiểm soát thống nhất</li>
+        </ul>
+      </div>
+    </div>
 
-    <div class="ai-highlight-grid">
-      <article class="ai-highlight-card">
+    <div class="ai-ps-card-grid">
+      <article class="ai-ps-card">
+        <img
+          class="ai-ps-card-icon"
+          src="/assets/production-system/card-anslife-factory.svg"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
         <h3>Nhà máy ANSLIFE</h3>
-        <p>Đóng vai trò trung tâm quản lý kỹ thuật, kiểm soát quy trình và kiểm định chất lượng trước xuất khẩu.</p>
+        <p>Trung tâm kỹ thuật và kiểm soát vận hành theo tiêu chuẩn đồng bộ.</p>
+        <a href="./anslife-factory" class="ai-ps-link">Xem chi tiết</a>
       </article>
-      <article class="ai-highlight-card">
-        <h3>Nhà máy đối tác</h3>
-        <p>Được lựa chọn theo tiêu chí năng lực, kinh nghiệm gia công và khả năng tuân thủ chuẩn kỹ thuật ANSLIFE.</p>
+
+      <article class="ai-ps-card">
+        <img
+          class="ai-ps-card-icon"
+          src="/assets/production-system/card-satellite-factory.svg"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+        <h3>Nhà máy vệ tinh</h3>
+        <p>Mở rộng sản xuất theo năng lực ngành hàng và kế hoạch giao hàng.</p>
+        <a href="./satellite-factories" class="ai-ps-link">Xem chi tiết</a>
       </article>
-      <article class="ai-highlight-card">
-        <h3>Năng lực sản xuất</h3>
-        <p>Đáp ứng từ phát triển mẫu đến sản xuất hàng loạt, gia công theo thiết kế khách hàng và triển khai OEM/ODM.</p>
+
+      <article class="ai-ps-card">
+        <img
+          class="ai-ps-card-icon"
+          src="/assets/production-system/card-operating-model.svg"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+        <h3>Mô hình vận hành</h3>
+        <p>Điều phối QC - Data - tiến độ dưới một hệ thống kiểm soát thống nhất.</p>
+        <a href="./ecosystem-operating-model" class="ai-ps-link">Xem chi tiết</a>
       </article>
     </div>
 
-    <ul>
-      <li>Mở rộng năng lực sản xuất theo kế hoạch thị trường và tiến độ đơn hàng.</li>
-      <li>Linh hoạt đáp ứng các đơn hàng với quy mô và yêu cầu kỹ thuật khác nhau.</li>
-      <li>Tối ưu hiệu quả tổ chức sản xuất thông qua điều phối tập trung và chuẩn hóa vận hành.</li>
-      <li>Tất cả nhà máy đối tác hoạt động dưới sự giám sát quy trình của ANSLIFE.</li>
-    </ul>
+    <div class="ai-ps-flow" role="list" aria-label="Quy trình vận hành hệ thống sản xuất">
+      <div class="ai-ps-flow-item" role="listitem">
+        <img
+          class="ai-ps-flow-icon"
+          src="/assets/production-system/flow-customer.svg"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+        <span>Khách hàng</span>
+      </div>
+      <span class="ai-ps-flow-arrow" aria-hidden="true">→</span>
+      <div class="ai-ps-flow-item" role="listitem">
+        <img
+          class="ai-ps-flow-icon"
+          src="/assets/production-system/flow-anslife.svg"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+        <span>ANSLIFE</span>
+      </div>
+      <span class="ai-ps-flow-arrow" aria-hidden="true">→</span>
+      <div class="ai-ps-flow-item" role="listitem">
+        <img
+          class="ai-ps-flow-icon"
+          src="/assets/production-system/flow-factory-network.svg"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+        <span>Factory Network</span>
+      </div>
+      <span class="ai-ps-flow-arrow" aria-hidden="true">→</span>
+      <div class="ai-ps-flow-item" role="listitem">
+        <img
+          class="ai-ps-flow-icon"
+          src="/assets/production-system/flow-qc.svg"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+        <span>QC</span>
+      </div>
+      <span class="ai-ps-flow-arrow" aria-hidden="true">→</span>
+      <div class="ai-ps-flow-item" role="listitem">
+        <img
+          class="ai-ps-flow-icon"
+          src="/assets/production-system/flow-data.svg"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+        <span>Data</span>
+      </div>
+      <span class="ai-ps-flow-arrow" aria-hidden="true">→</span>
+      <div class="ai-ps-flow-item" role="listitem">
+        <img
+          class="ai-ps-flow-icon"
+          src="/assets/production-system/flow-export.svg"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+        <span>Xuất khẩu</span>
+      </div>
+    </div>
 
-    <div class="ai-eco-image-row">
-      <figure>
-        <img
-          src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=1400"
-          alt="Khu vực sản xuất với dây chuyền được tổ chức theo chuẩn"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure>
-        <img
-          src="https://images.pexels.com/photos/3862627/pexels-photo-3862627.jpeg?auto=compress&cs=tinysrgb&w=1400"
-          alt="Kiểm tra chi tiết sản phẩm trong công đoạn hoàn thiện"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
+    <div class="ai-ps-quote">
+      <p><strong>ANSLIFE</strong> không mở rộng bằng cách xây nhà máy lớn hơn.</p>
+      <p><strong>ANSLIFE</strong> mở rộng bằng cách xây dựng một <strong>hệ thống kiểm soát</strong>.</p>
     </div>
   </section>
 
@@ -856,7 +942,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   <section id="vietnam-hq" class="ai-section">
     <h2>Việt Nam - Trụ sở</h2>
     <p>
-      Trụ sở Việt Nam là điểm điều phối trung tâm cho các hoạt động kinh doanh, kỹ thuật,
+      Trụ sở Việt Nam là điểm điều phối trung tâm cho các hoạt động sale, kỹ thuật,
       sản xuất, QC và logistics của toàn hệ thống.
     </p>
     <p>
@@ -1068,7 +1154,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     <article class="ai-highlight-card">
       <h3>Trụ sở chính</h3>
       <p>Tầng 5, Tòa nhà Zen Tower, Số 12 đường Khuất Duy Tiến, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội.</p>
-      <p>Email: sales@anslife.vn</p>
+      <p>Email: sales@anslife.net</p>
       <p>Hotline: (+84) 983 150 336</p>
       <p>Giờ làm việc: Thứ 2 - Thứ 7, 08:00 - 17:30</p>
     </article>
@@ -1137,12 +1223,16 @@ export function getAIFallbackSectionHtml(
   const introMatch = pageHtml.match(
     /<p class="ai-intro">[\s\S]*?<\/p>/i,
   );
+  const shouldRenderPageBannerAndIntro =
+    !(pageSlug === 'manufacturing-ecosystem' && sectionId === 'production-system');
 
-  return `
+  const composedHtml = `
 <div class="ai-content">
-  ${bannerMatch?.[0] ?? ''}
-  ${introMatch?.[0] ?? ''}
+  ${shouldRenderPageBannerAndIntro ? bannerMatch?.[0] ?? '' : ''}
+  ${shouldRenderPageBannerAndIntro ? introMatch?.[0] ?? '' : ''}
   ${sectionMatch[0]}
 </div>
 `.trim();
+
+  return composedHtml;
 }

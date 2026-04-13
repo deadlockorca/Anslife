@@ -40,7 +40,7 @@ export default function NewsDetailPage() {
       {loading && <LoadingBlock />}
       {error && <ErrorBlock message={error} />}
       {!loading && !error && !data && (
-        <ErrorBlock message={t('Không tìm thấy bài viết trong CMS.')} />
+        <ErrorBlock message={t('Không tìm thấy bài viết trong hệ thống dữ liệu.')} />
       )}
       {data && (
         <HtmlContent html={data.content.rendered} className="html-content html-panel" />

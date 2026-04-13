@@ -1,36 +1,43 @@
-# Deploy Next.js App to cPanel (`muagi.vn`)
+# Deploy Next.js + MySQL on cPanel (`anslife.net`)
 
-## 1) Prepare environment
+## 1) Environment
+Tạo `.env` trong thư mục app:
+1. `NEXT_PUBLIC_SITE_URL=https://anslife.net`
+2. `NEXT_PUBLIC_INTERNAL_API_BASE=/api/public`
+3. `NEXT_PUBLIC_CF7_QUOTE_FORM_ID=1`
+4. `NEXT_PUBLIC_CF7_MEETING_FORM_ID=2`
+5. `DATABASE_URL=mysql://USER:PASSWORD@HOST:3306/DB_NAME`
+
+## 2) Install + build
 ```bash
-npm install
-cp .env.example .env
-```
-
-Set:
-1. `NEXT_PUBLIC_SITE_URL=https://muagi.vn`
-2. `NEXT_PUBLIC_API_BASE_URL=https://cms.muagi.vn/wp-json`
-3. `NEXT_PUBLIC_CF7_QUOTE_FORM_ID=<quote_form_id>`
-4. `NEXT_PUBLIC_CF7_MEETING_FORM_ID=<meeting_form_id>`
-
-## 2) Build for production
-```bash
+npm install --include=dev
 npm run build
 ```
 
-## 3) Run on cPanel Node.js App
-1. Open `Setup Node.js App` in cPanel.
-2. Create app for domain/subdomain frontend.
-3. Node startup file: use Next start command in app settings.
-4. Run:
+Nếu host thiếu RAM để build, build local rồi upload cả thư mục `.next`.
+
+## 3) Run on cPanel Node App
 ```bash
-npm install --production
-npm run start
+npm install --omit=dev
+export NODE_ENV=production
+export NEXT_TELEMETRY_DISABLED=1
+node server.js
 ```
 
-## 4) Smoke checks
-1. Open all top routes and refresh each route to verify no 404.
-2. Open one detail route:
-- `/products/<category>/<slug>`
-- `/projects/<slug>`
-- `/news/<slug>`
-3. Submit both contact forms and check email + Flamingo inbox.
+Sau đó bấm `Restart App` trong cPanel.
+
+## 4) Apply Prisma schema
+```bash
+npm run prisma:generate
+npm run prisma:deploy
+npm run db:seed
+```
+
+Sau khi migrate xong, mở thử:
+1. `https://anslife.net/api/public/products?per_page=1`
+2. `https://anslife.net/api/public/categories?taxonomy=product_category`
+
+## 5) Smoke checks
+1. Vào trang sản phẩm/dự án/tin tức, xác nhận không còn request tới legacy CMS domain.
+2. Gửi thử 2 form ở trang liên hệ.
+3. Kiểm tra DB có dòng mới trong bảng `contact_leads`.

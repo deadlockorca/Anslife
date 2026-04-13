@@ -136,7 +136,7 @@ export default function ProductDetailPage() {
       {error && <ErrorBlock message={error} />}
 
       {!loading && !error && !data && (
-        <ErrorBlock message={t('Không tìm thấy sản phẩm trong CMS.')} />
+        <ErrorBlock message={t('Không tìm thấy sản phẩm trong hệ thống dữ liệu.')} />
       )}
 
       {!loading && !error && data && !categoryMatched && (

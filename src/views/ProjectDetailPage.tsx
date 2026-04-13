@@ -34,7 +34,7 @@ export default function ProjectDetailPage() {
       {loading && <LoadingBlock />}
       {error && <ErrorBlock message={error} />}
       {!loading && !error && !data && (
-        <ErrorBlock message={t('Không tìm thấy dự án trong CMS.')} />
+        <ErrorBlock message={t('Không tìm thấy dự án trong hệ thống dữ liệu.')} />
       )}
       {data && (
         <HtmlContent html={data.content.rendered} className="html-content html-panel" />

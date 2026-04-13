@@ -49,7 +49,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   }
 
   const fallbackHtml = getAIFallbackSectionHtml(config.slug, section.id);
-  const resolvedHtml = data?.content.rendered ?? fallbackHtml;
+  const shouldForceTemplateHtml =
+    config.slug === 'manufacturing-ecosystem' && section.id === 'production-system';
+  const resolvedHtml = shouldForceTemplateHtml
+    ? fallbackHtml ?? data?.content.rendered
+    : data?.content.rendered ?? fallbackHtml;
   const shouldShowLoading = loading && !resolvedHtml;
   const shouldShowError = Boolean(error) && !resolvedHtml;
 

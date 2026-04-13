@@ -11,8 +11,8 @@ import useSiteI18n from '../hooks/useSiteI18n';
 import { decodeHtml } from '../lib/content';
 import { getPageBySlug, getProducts, submitContactForm } from '../lib/wp';
 
-const quoteFormId = Number(process.env.NEXT_PUBLIC_CF7_QUOTE_FORM_ID ?? 0);
-const meetingFormId = Number(process.env.NEXT_PUBLIC_CF7_MEETING_FORM_ID ?? 0);
+const quoteFormId = Number(process.env.NEXT_PUBLIC_CF7_QUOTE_FORM_ID ?? 1);
+const meetingFormId = Number(process.env.NEXT_PUBLIC_CF7_MEETING_FORM_ID ?? 2);
 const contactSections = ['company-info', 'quote-request', 'schedule-meeting'] as const;
 
 type ContactSection = (typeof contactSections)[number];
@@ -78,8 +78,8 @@ export default function ContactPage() {
       ? t('Vui lòng điền biểu mẫu để đội ngũ ANSLIFE phản hồi báo giá trong thời gian sớm nhất.')
       : activeSection === 'schedule-meeting'
         ? t('Đăng ký lịch làm việc để ANSLIFE chủ động sắp xếp tư vấn theo nhu cầu của bạn.')
-        : t(
-            'Gửi yêu cầu báo giá hoặc đặt lịch làm việc. Dữ liệu được lưu vào WordPress qua Contact Form 7 + Flamingo.',
+      : t(
+            'Gửi yêu cầu báo giá hoặc đặt lịch làm việc. Dữ liệu được lưu trực tiếp vào hệ thống nội bộ.',
           );
 
   const [quoteState, setQuoteState] = useState<SubmissionState>(idleState);
@@ -221,16 +221,6 @@ export default function ContactPage() {
   ) {
     event.preventDefault();
 
-    if (!formId) {
-      setState({
-        status: 'error',
-        message: t(
-          'Form ID chưa được cấu hình. Vui lòng đặt NEXT_PUBLIC_CF7_QUOTE_FORM_ID hoặc NEXT_PUBLIC_CF7_MEETING_FORM_ID.',
-        ),
-      });
-      return;
-    }
-
     const form = event.currentTarget;
     const formData = new FormData(form);
     const payload = Object.fromEntries(
@@ -367,11 +357,13 @@ export default function ContactPage() {
                   )}
                   <p className="form-helper-text">
                     {quoteProductsLoading
-                      ? t('Đang tải danh sách sản phẩm...')
+                        ? t('Đang tải danh sách sản phẩm...')
                       : quoteProductsError
-                        ? t('Không tải được gợi ý sản phẩm từ CMS. Bạn vẫn có thể nhập thủ công.')
+                        ? t(
+                            'Không tải được gợi ý sản phẩm từ hệ thống dữ liệu. Bạn vẫn có thể nhập thủ công.',
+                          )
                         : productOptions.length === 0
-                          ? t('Chưa có sản phẩm trong CMS để gợi ý.')
+                          ? t('Chưa có sản phẩm trong hệ thống để gợi ý.')
                       : t(
                           'Bạn có thể chọn nhiều sản phẩm. Nếu không thấy trong gợi ý, nhập thủ công rồi bấm Thêm.',
                         )}

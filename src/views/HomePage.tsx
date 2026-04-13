@@ -200,7 +200,7 @@ export default function HomePage() {
                 <article className="home-ans-card">
                   <p className="home-ans-tag">{t('Sản phẩm')}</p>
                   <h3>{t('Chưa có sản phẩm')}</h3>
-                  <p>{t('Hiện chưa có sản phẩm nào được đăng từ CMS.')}</p>
+                  <p>{t('Hiện chưa có sản phẩm nào trong hệ thống dữ liệu.')}</p>
                 </article>
               )}
               {products.map((product) => {
@@ -251,7 +251,7 @@ export default function HomePage() {
                 <article className="home-ans-card">
                   <p className="home-ans-tag">{t('Dự án')}</p>
                   <h3>{t('Chưa có dự án')}</h3>
-                  <p>{t('Hiện chưa có dự án nào được đăng từ CMS.')}</p>
+                  <p>{t('Hiện chưa có dự án nào trong hệ thống dữ liệu.')}</p>
                 </article>
               )}
               {projects.map((project) => {
@@ -295,7 +295,7 @@ export default function HomePage() {
                 <article className="home-ans-card">
                   <p className="home-ans-tag">{t('Tin tức')}</p>
                   <h3>{t('Chưa có bài viết')}</h3>
-                  <p>{t('Hiện chưa có bài viết nào được đăng từ CMS.')}</p>
+                  <p>{t('Hiện chưa có bài viết nào trong hệ thống dữ liệu.')}</p>
                 </article>
               )}
               {news.map((post) => {

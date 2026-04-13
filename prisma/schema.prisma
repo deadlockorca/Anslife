@@ -1,0 +1,428 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model ContentItem {
+  id                  Int      @id @default(autoincrement()) @db.UnsignedInt
+  kind                String   @db.VarChar(32)
+  slug                String   @db.VarChar(191)
+  title               String   @db.VarChar(255)
+  excerpt_html        String?  @db.LongText
+  content_html        String?  @db.LongText
+  featured_image      String?  @db.VarChar(1024)
+  gallery_json        String?  @db.LongText
+  specifications_json String?  @db.LongText
+  published_at        DateTime @default(now()) @db.DateTime(0)
+  created_at          DateTime @default(now()) @db.DateTime(0)
+  updated_at          DateTime @updatedAt @db.DateTime(0)
+
+  content_item_taxonomies ContentItemTaxonomy[]
+
+  @@unique([kind, slug], map: "uniq_kind_slug")
+  @@index([kind, published_at], map: "idx_kind_published_at")
+  @@map("content_items")
+}
+
+model Taxonomy {
+  id         Int      @id @default(autoincrement()) @db.UnsignedInt
+  taxonomy   String   @db.VarChar(64)
+  slug       String   @db.VarChar(191)
+  name       String   @db.VarChar(191)
+  created_at DateTime @default(now()) @db.DateTime(0)
+
+  content_item_taxonomies ContentItemTaxonomy[]
+
+  @@unique([taxonomy, slug], map: "uniq_taxonomy_slug")
+  @@index([taxonomy, name], map: "idx_taxonomy_name")
+  @@map("taxonomies")
+}
+
+model ContentItemTaxonomy {
+  item_id     Int @db.UnsignedInt
+  taxonomy_id Int @db.UnsignedInt
+
+  item     ContentItem @relation(fields: [item_id], references: [id], onDelete: Cascade, map: "fk_content_item_taxonomies_item")
+  taxonomy Taxonomy    @relation(fields: [taxonomy_id], references: [id], onDelete: Cascade, map: "fk_content_item_taxonomies_taxonomy")
+
+  @@id([item_id, taxonomy_id])
+  @@map("content_item_taxonomies")
+}
+
+model ContactLead {
+  id               BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  form_type        String   @db.VarChar(32)
+  name             String?  @db.VarChar(191)
+  email            String?  @db.VarChar(191)
+  phone            String?  @db.VarChar(64)
+  company          String?  @db.VarChar(191)
+  message          String?  @db.LongText
+  product_interest String?  @db.LongText
+  payload_json     String?  @db.LongText
+  status           String   @default("new") @db.VarChar(32)
+  created_at       DateTime @default(now()) @db.DateTime(0)
+
+  @@index([form_type], map: "idx_contact_leads_form_type")
+  @@index([created_at], map: "idx_contact_leads_created_at")
+  @@map("contact_leads")
+}
+
+model AppUser {
+  id            BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  email         String    @unique(map: "uniq_app_users_email") @db.VarChar(191)
+  password_hash String    @db.VarChar(255)
+  full_name     String    @db.VarChar(191)
+  is_active     Boolean   @default(true) @db.TinyInt
+  last_login_at DateTime? @db.DateTime(0)
+  created_at    DateTime  @default(now()) @db.DateTime(0)
+  updated_at    DateTime  @updatedAt @db.DateTime(0)
+
+  attendance_logs                     AttendanceLog[]
+  trade_orders_sale_owner             TradeOrder[]           @relation("TradeOrdersSaleOwner")
+  order_logistics_updated_by          OrderLogistics[]       @relation("OrderLogisticsUpdatedBy")
+  order_work_logs_created_by          OrderWorkLog[]         @relation("OrderWorkLogsCreatedBy")
+  order_work_logs_updated_by          OrderWorkLog[]         @relation("OrderWorkLogsUpdatedBy")
+  trade_order_assignments             TradeOrderAssignment[]
+  order_data_items_created_by         OrderDataItem[]        @relation("OrderDataItemsCreatedBy")
+  order_data_items_approved_by        OrderDataItem[]        @relation("OrderDataItemsApprovedBy")
+  qc_items_created_by                 QcItem[]               @relation("QcItemsCreatedBy")
+  qc_items_approved_by                QcItem[]               @relation("QcItemsApprovedBy")
+  capa_items_owner                    CapaItem[]             @relation("CapaItemsOwner")
+  capa_items_created_by               CapaItem[]             @relation("CapaItemsCreatedBy")
+  capa_items_approved_by              CapaItem[]             @relation("CapaItemsApprovedBy")
+  factory_surveys_created_by          FactorySurvey[]        @relation("FactorySurveysCreatedBy")
+  factory_surveys_approved_by         FactorySurvey[]        @relation("FactorySurveysApprovedBy")
+  supplier_material_items_created_by  SupplierMaterialItem[] @relation("SupplierMaterialItemsCreatedBy")
+  supplier_material_items_approved_by SupplierMaterialItem[] @relation("SupplierMaterialItemsApprovedBy")
+  data_share_links_created_by         DataShareLink[]        @relation("DataShareLinksCreatedBy")
+  audit_logs_actor                    AuditLog[]             @relation("AuditLogsActor")
+  app_user_sessions                   AppUserSession[]
+
+  @@map("app_users")
+}
+
+model AppUserSession {
+  id         BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id    BigInt   @db.UnsignedBigInt
+  token_hash String   @unique(map: "uniq_app_user_sessions_token_hash") @db.VarChar(64)
+  expires_at DateTime @db.DateTime(0)
+  created_at DateTime @default(now()) @db.DateTime(0)
+  updated_at DateTime @updatedAt @db.DateTime(0)
+
+  user AppUser @relation(fields: [user_id], references: [id], onDelete: Cascade, map: "fk_app_user_sessions_user")
+
+  @@index([user_id, expires_at], map: "idx_app_user_sessions_user_expired")
+  @@map("app_user_sessions")
+}
+
+model AttendanceLog {
+  id                   BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id              BigInt    @db.UnsignedBigInt
+  attendance_date      DateTime  @db.Date
+  check_in_at          DateTime? @db.DateTime(0)
+  check_out_at         DateTime? @db.DateTime(0)
+  check_in_ip          String?   @db.VarChar(64)
+  check_out_ip         String?   @db.VarChar(64)
+  check_in_user_agent  String?   @db.VarChar(512)
+  check_out_user_agent String?   @db.VarChar(512)
+  check_in_lat         Decimal?  @db.Decimal(10, 7)
+  check_in_lng         Decimal?  @db.Decimal(10, 7)
+  check_in_photo_url   String?   @db.VarChar(1024)
+  check_out_lat        Decimal?  @db.Decimal(10, 7)
+  check_out_lng        Decimal?  @db.Decimal(10, 7)
+  check_out_photo_url  String?   @db.VarChar(1024)
+  note                 String?   @db.VarChar(512)
+  created_at           DateTime  @default(now()) @db.DateTime(0)
+  updated_at           DateTime  @updatedAt @db.DateTime(0)
+
+  user AppUser @relation(fields: [user_id], references: [id], onDelete: Cascade, map: "fk_attendance_logs_user")
+
+  @@unique([user_id, attendance_date], map: "uniq_attendance_logs_user_date")
+  @@index([attendance_date], map: "idx_attendance_logs_date")
+  @@index([user_id], map: "idx_attendance_logs_user")
+  @@map("attendance_logs")
+}
+
+model Customer {
+  id           BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  code         String   @unique(map: "uniq_customers_code") @db.VarChar(64)
+  name         String   @db.VarChar(191)
+  country_code String?  @db.VarChar(8)
+  created_at   DateTime @default(now()) @db.DateTime(0)
+  updated_at   DateTime @updatedAt @db.DateTime(0)
+
+  trade_orders TradeOrder[]
+
+  @@map("customers")
+}
+
+model Factory {
+  id         BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  code       String   @unique(map: "uniq_factories_code") @db.VarChar(64)
+  name       String   @db.VarChar(191)
+  location   String?  @db.VarChar(255)
+  created_at DateTime @default(now()) @db.DateTime(0)
+  updated_at DateTime @updatedAt @db.DateTime(0)
+
+  trade_orders    TradeOrder[]
+  factory_surveys FactorySurvey[]
+
+  @@map("factories")
+}
+
+model TradeOrder {
+  id                 BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  order_no           String    @unique(map: "uniq_trade_orders_order_no") @db.VarChar(64)
+  customer_id        BigInt    @db.UnsignedBigInt
+  factory_id         BigInt?   @db.UnsignedBigInt
+  sale_owner_user_id BigInt?   @db.UnsignedBigInt
+  status             String    @default("draft") @db.VarChar(32)
+  due_date           DateTime? @db.Date
+  metadata_json      String?   @db.LongText
+  created_at         DateTime  @default(now()) @db.DateTime(0)
+  updated_at         DateTime  @updatedAt @db.DateTime(0)
+
+  customer                Customer               @relation(fields: [customer_id], references: [id], onDelete: Restrict, map: "fk_trade_orders_customer")
+  factory                 Factory?               @relation(fields: [factory_id], references: [id], onDelete: SetNull, map: "fk_trade_orders_factory")
+  sale_owner_user         AppUser?               @relation("TradeOrdersSaleOwner", fields: [sale_owner_user_id], references: [id], onDelete: SetNull, map: "fk_trade_orders_sale_owner")
+  order_logistics         OrderLogistics?
+  order_work_logs         OrderWorkLog[]
+  trade_order_assignments TradeOrderAssignment[]
+  order_data_items        OrderDataItem[]
+  qc_items                QcItem[]
+  capa_items              CapaItem[]
+
+  @@index([customer_id], map: "idx_trade_orders_customer_id")
+  @@index([factory_id], map: "idx_trade_orders_factory_id")
+  @@index([sale_owner_user_id], map: "idx_trade_orders_sale_owner")
+  @@map("trade_orders")
+}
+
+model OrderLogistics {
+  id             BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  order_id       BigInt    @unique(map: "uniq_order_logistics_order") @db.UnsignedBigInt
+  etd            DateTime? @db.Date
+  eta            DateTime? @db.Date
+  container_no   String?   @db.VarChar(64)
+  departure_port String?   @db.VarChar(191)
+  arrival_port   String?   @db.VarChar(191)
+  shipping_line  String?   @db.VarChar(191)
+  vessel_name    String?   @db.VarChar(191)
+  logistics_note String?   @db.LongText
+  updated_by     BigInt?   @db.UnsignedBigInt
+  created_at     DateTime  @default(now()) @db.DateTime(0)
+  updated_at     DateTime  @updatedAt @db.DateTime(0)
+
+  order           TradeOrder @relation(fields: [order_id], references: [id], onDelete: Cascade, map: "fk_order_logistics_order")
+  updated_by_user AppUser?   @relation("OrderLogisticsUpdatedBy", fields: [updated_by], references: [id], onDelete: SetNull, map: "fk_order_logistics_updated_by")
+
+  @@index([etd], map: "idx_order_logistics_etd")
+  @@index([eta], map: "idx_order_logistics_eta")
+  @@map("order_logistics")
+}
+
+model OrderWorkLog {
+  id         BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  order_id   BigInt   @db.UnsignedBigInt
+  visibility String   @default("internal") @db.VarChar(32)
+  note_type  String   @default("update") @db.VarChar(64)
+  message    String   @db.LongText
+  created_by BigInt?  @db.UnsignedBigInt
+  updated_by BigInt?  @db.UnsignedBigInt
+  created_at DateTime @default(now()) @db.DateTime(0)
+  updated_at DateTime @updatedAt @db.DateTime(0)
+
+  order           TradeOrder @relation(fields: [order_id], references: [id], onDelete: Cascade, map: "fk_order_work_logs_order")
+  created_by_user AppUser?   @relation("OrderWorkLogsCreatedBy", fields: [created_by], references: [id], onDelete: SetNull, map: "fk_order_work_logs_created_by")
+  updated_by_user AppUser?   @relation("OrderWorkLogsUpdatedBy", fields: [updated_by], references: [id], onDelete: SetNull, map: "fk_order_work_logs_updated_by")
+
+  @@index([order_id], map: "idx_order_work_logs_order")
+  @@index([visibility], map: "idx_order_work_logs_visibility")
+  @@map("order_work_logs")
+}
+
+model TradeOrderAssignment {
+  id              BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  order_id        BigInt   @db.UnsignedBigInt
+  user_id         BigInt   @db.UnsignedBigInt
+  assignment_role String   @db.VarChar(64)
+  assigned_at     DateTime @default(now()) @db.DateTime(0)
+
+  order TradeOrder @relation(fields: [order_id], references: [id], onDelete: Cascade, map: "fk_trade_order_assignments_order")
+  user  AppUser    @relation(fields: [user_id], references: [id], onDelete: Cascade, map: "fk_trade_order_assignments_user")
+
+  @@unique([order_id, user_id, assignment_role], map: "uniq_trade_order_assignment")
+  @@index([user_id], map: "idx_trade_order_assignments_user")
+  @@map("trade_order_assignments")
+}
+
+model OrderDataItem {
+  id            BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  order_id      BigInt    @db.UnsignedBigInt
+  data_type     String    @db.VarChar(64)
+  title         String    @db.VarChar(255)
+  state         String    @default("draft") @db.VarChar(32)
+  storage_key   String?   @db.VarChar(1024)
+  metadata_json String?   @db.LongText
+  created_by    BigInt?   @db.UnsignedBigInt
+  approved_by   BigInt?   @db.UnsignedBigInt
+  approved_at   DateTime? @db.DateTime(0)
+  created_at    DateTime  @default(now()) @db.DateTime(0)
+  updated_at    DateTime  @updatedAt @db.DateTime(0)
+
+  order            TradeOrder      @relation(fields: [order_id], references: [id], onDelete: Cascade, map: "fk_order_data_items_order")
+  created_by_user  AppUser?        @relation("OrderDataItemsCreatedBy", fields: [created_by], references: [id], onDelete: SetNull, map: "fk_order_data_items_created_by")
+  approved_by_user AppUser?        @relation("OrderDataItemsApprovedBy", fields: [approved_by], references: [id], onDelete: SetNull, map: "fk_order_data_items_approved_by")
+  data_share_links DataShareLink[]
+
+  @@index([order_id], map: "idx_order_data_items_order_id")
+  @@index([state], map: "idx_order_data_items_state")
+  @@map("order_data_items")
+}
+
+model QcItem {
+  id            BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  order_id      BigInt    @db.UnsignedBigInt
+  title         String    @db.VarChar(255)
+  finding_type  String    @default("general") @db.VarChar(64)
+  severity      String    @default("major") @db.VarChar(32)
+  state         String    @default("pending_review") @db.VarChar(32)
+  report_no     String?   @db.VarChar(128)
+  observed_at   DateTime? @db.DateTime(0)
+  metadata_json String?   @db.LongText
+  created_by    BigInt?   @db.UnsignedBigInt
+  approved_by   BigInt?   @db.UnsignedBigInt
+  approved_at   DateTime? @db.DateTime(0)
+  created_at    DateTime  @default(now()) @db.DateTime(0)
+  updated_at    DateTime  @updatedAt @db.DateTime(0)
+
+  order            TradeOrder @relation(fields: [order_id], references: [id], onDelete: Cascade, map: "fk_qc_items_order")
+  created_by_user  AppUser?   @relation("QcItemsCreatedBy", fields: [created_by], references: [id], onDelete: SetNull, map: "fk_qc_items_created_by")
+  approved_by_user AppUser?   @relation("QcItemsApprovedBy", fields: [approved_by], references: [id], onDelete: SetNull, map: "fk_qc_items_approved_by")
+  capa_items       CapaItem[]
+
+  @@index([order_id], map: "idx_qc_items_order_id")
+  @@index([state], map: "idx_qc_items_state")
+  @@index([severity], map: "idx_qc_items_severity")
+  @@map("qc_items")
+}
+
+model CapaItem {
+  id                BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  order_id          BigInt    @db.UnsignedBigInt
+  qc_item_id        BigInt?   @db.UnsignedBigInt
+  title             String    @db.VarChar(255)
+  root_cause        String?   @db.LongText
+  corrective_action String?   @db.LongText
+  preventive_action String?   @db.LongText
+  owner_user_id     BigInt?   @db.UnsignedBigInt
+  due_date          DateTime? @db.Date
+  state             String    @default("draft") @db.VarChar(32)
+  metadata_json     String?   @db.LongText
+  created_by        BigInt?   @db.UnsignedBigInt
+  approved_by       BigInt?   @db.UnsignedBigInt
+  approved_at       DateTime? @db.DateTime(0)
+  created_at        DateTime  @default(now()) @db.DateTime(0)
+  updated_at        DateTime  @updatedAt @db.DateTime(0)
+
+  order            TradeOrder @relation(fields: [order_id], references: [id], onDelete: Cascade, map: "fk_capa_items_order")
+  qc_item          QcItem?    @relation(fields: [qc_item_id], references: [id], onDelete: SetNull, map: "fk_capa_items_qc_item")
+  owner_user       AppUser?   @relation("CapaItemsOwner", fields: [owner_user_id], references: [id], onDelete: SetNull, map: "fk_capa_items_owner")
+  created_by_user  AppUser?   @relation("CapaItemsCreatedBy", fields: [created_by], references: [id], onDelete: SetNull, map: "fk_capa_items_created_by")
+  approved_by_user AppUser?   @relation("CapaItemsApprovedBy", fields: [approved_by], references: [id], onDelete: SetNull, map: "fk_capa_items_approved_by")
+
+  @@index([order_id], map: "idx_capa_items_order_id")
+  @@index([qc_item_id], map: "idx_capa_items_qc_item_id")
+  @@index([state], map: "idx_capa_items_state")
+  @@map("capa_items")
+}
+
+model FactorySurvey {
+  id            BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  factory_id    BigInt    @db.UnsignedBigInt
+  survey_code   String    @unique(map: "uniq_factory_surveys_code") @db.VarChar(64)
+  title         String    @db.VarChar(255)
+  survey_date   DateTime? @db.Date
+  score         Decimal?  @db.Decimal(5, 2)
+  state         String    @default("pending_review") @db.VarChar(32)
+  summary       String?   @db.LongText
+  metadata_json String?   @db.LongText
+  created_by    BigInt?   @db.UnsignedBigInt
+  approved_by   BigInt?   @db.UnsignedBigInt
+  approved_at   DateTime? @db.DateTime(0)
+  created_at    DateTime  @default(now()) @db.DateTime(0)
+  updated_at    DateTime  @updatedAt @db.DateTime(0)
+
+  factory          Factory  @relation(fields: [factory_id], references: [id], onDelete: Cascade, map: "fk_factory_surveys_factory")
+  created_by_user  AppUser? @relation("FactorySurveysCreatedBy", fields: [created_by], references: [id], onDelete: SetNull, map: "fk_factory_surveys_created_by")
+  approved_by_user AppUser? @relation("FactorySurveysApprovedBy", fields: [approved_by], references: [id], onDelete: SetNull, map: "fk_factory_surveys_approved_by")
+
+  @@index([factory_id], map: "idx_factory_surveys_factory_id")
+  @@index([state], map: "idx_factory_surveys_state")
+  @@map("factory_surveys")
+}
+
+model SupplierMaterialItem {
+  id              BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  supplier_code   String    @db.VarChar(64)
+  supplier_name   String    @db.VarChar(191)
+  material_code   String    @db.VarChar(64)
+  material_name   String    @db.VarChar(191)
+  certificate_url String?   @db.VarChar(1024)
+  quote_url       String?   @db.VarChar(1024)
+  state           String    @default("pending_review") @db.VarChar(32)
+  metadata_json   String?   @db.LongText
+  created_by      BigInt?   @db.UnsignedBigInt
+  approved_by     BigInt?   @db.UnsignedBigInt
+  approved_at     DateTime? @db.DateTime(0)
+  created_at      DateTime  @default(now()) @db.DateTime(0)
+  updated_at      DateTime  @updatedAt @db.DateTime(0)
+
+  created_by_user  AppUser? @relation("SupplierMaterialItemsCreatedBy", fields: [created_by], references: [id], onDelete: SetNull, map: "fk_supplier_material_items_created_by")
+  approved_by_user AppUser? @relation("SupplierMaterialItemsApprovedBy", fields: [approved_by], references: [id], onDelete: SetNull, map: "fk_supplier_material_items_approved_by")
+
+  @@unique([supplier_code, material_code], map: "uniq_supplier_material_items_key")
+  @@index([state], map: "idx_supplier_material_items_state")
+  @@index([supplier_code], map: "idx_supplier_material_items_supplier")
+  @@index([material_code], map: "idx_supplier_material_items_material")
+  @@map("supplier_material_items")
+}
+
+model DataShareLink {
+  id           BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  data_item_id BigInt    @db.UnsignedBigInt
+  token        String    @unique(map: "uniq_data_share_links_token") @db.VarChar(191)
+  expires_at   DateTime? @db.DateTime(0)
+  created_by   BigInt?   @db.UnsignedBigInt
+  created_at   DateTime  @default(now()) @db.DateTime(0)
+
+  data_item       OrderDataItem @relation(fields: [data_item_id], references: [id], onDelete: Cascade, map: "fk_data_share_links_item")
+  created_by_user AppUser?      @relation("DataShareLinksCreatedBy", fields: [created_by], references: [id], onDelete: SetNull, map: "fk_data_share_links_created_by")
+
+  @@index([data_item_id], map: "idx_data_share_links_item")
+  @@map("data_share_links")
+}
+
+model AuditLog {
+  id            BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  actor_user_id BigInt?  @db.UnsignedBigInt
+  action        String   @db.VarChar(64)
+  resource      String   @db.VarChar(64)
+  resource_id   String   @db.VarChar(128)
+  before_json   String?  @db.LongText
+  after_json    String?  @db.LongText
+  ip_address    String?  @db.VarChar(64)
+  user_agent    String?  @db.VarChar(512)
+  created_at    DateTime @default(now()) @db.DateTime(0)
+
+  actor_user AppUser? @relation("AuditLogsActor", fields: [actor_user_id], references: [id], onDelete: SetNull, map: "fk_audit_logs_actor")
+
+  @@index([actor_user_id], map: "idx_audit_logs_actor")
+  @@index([resource, resource_id], map: "idx_audit_logs_resource")
+  @@index([created_at], map: "idx_audit_logs_created_at")
+  @@map("audit_logs")
+}

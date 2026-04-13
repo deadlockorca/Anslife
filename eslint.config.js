@@ -5,7 +5,15 @@ import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist', '.next']),
+  globalIgnores([
+    'dist/**',
+    '.next/**',
+    '.next_old_*/**',
+    '.deploy_bundle/**',
+    'release/**',
+    'wordpress/**',
+    '*.zip',
+  ]),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [

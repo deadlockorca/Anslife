@@ -3,7 +3,7 @@ interface LoadingBlockProps {
 }
 
 export default function LoadingBlock({
-  label = 'Đang tải dữ liệu từ CMS...',
+  label = 'Đang tải dữ liệu...',
 }: LoadingBlockProps) {
   void label;
   return null;

@@ -117,7 +117,7 @@ export default function NewsPage() {
           {filteredPosts.length === 0 && (
             <article className="content-card">
               <h3>{t('Chưa có bài viết')}</h3>
-              <p>{t('Hiện chưa có bài viết nào được đăng từ CMS.')}</p>
+              <p>{t('Hiện chưa có bài viết nào trong hệ thống dữ liệu.')}</p>
             </article>
           )}
           {filteredPosts.map((post) => {
