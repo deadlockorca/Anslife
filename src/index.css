@@ -111,6 +111,8 @@ ul {
 
 .site-shell {
   min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1200,7 +1202,7 @@ ul {
 .mobile-bottom-nav {
   position: fixed;
   left: 50%;
-  bottom: 0.36rem;
+  bottom: max(0.36rem, env(safe-area-inset-bottom));
   transform: translateX(-50%);
   width: min(1320px, calc(100% - 0.68rem));
   z-index: 190;
@@ -4491,7 +4493,7 @@ ul {
   }
 
   .mobile-bottom-nav {
-    bottom: 0.28rem;
+    bottom: max(0.28rem, env(safe-area-inset-bottom));
     width: min(1320px, calc(100% - 0.45rem));
     border-radius: 14px;
     padding: 0.28rem 0.3rem calc(0.28rem + env(safe-area-inset-bottom));
@@ -4976,8 +4978,10 @@ ul {
 .site-shell:has(.home-vcb-root) {
   position: relative;
   height: 100vh;
-  min-height: 100dvh;
+  height: 100svh;
   height: 100dvh;
+  min-height: 100svh;
+  min-height: 100dvh;
   overflow: hidden;
 }
 
@@ -4986,6 +4990,8 @@ ul {
   width: 100%;
   margin: 0;
   flex: 1;
+  min-height: 100svh;
+  height: 100svh;
   min-height: 100dvh;
   height: 100dvh;
   overflow: hidden;
@@ -5005,6 +5011,9 @@ ul {
   inset: 0;
   width: 100vw;
   height: 100vh;
+  height: 100svh;
+  height: 100dvh;
+  min-height: 100svh;
   min-height: 100dvh;
   z-index: 1;
 }
@@ -5027,6 +5036,7 @@ ul {
   position: absolute;
   inset: 0;
   height: auto;
+  min-height: 100svh;
   min-height: 100dvh;
   border-radius: 0;
   border: 0;
@@ -5670,6 +5680,8 @@ ul {
   .home-anslife-search-popup {
     width: 100%;
     max-height: calc(100vh - 1.4rem);
+    max-height: calc(100svh - 1.4rem);
+    max-height: calc(100dvh - 1.4rem);
     border-radius: 22px;
   }
 
@@ -5798,6 +5810,8 @@ ul {
 
   .home-anslife-search-popup {
     max-height: calc(100vh - 1.04rem);
+    max-height: calc(100svh - 1.04rem);
+    max-height: calc(100dvh - 1.04rem);
     border-radius: 18px;
   }
 
