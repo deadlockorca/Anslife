@@ -3,7 +3,7 @@ export interface WpRenderedField {
 }
 
 export interface WpTerm {
-  id: number;
+  id: number | string;
   name: string;
   slug: string;
   taxonomy?: string;
@@ -20,7 +20,7 @@ export interface WpEmbedded {
 }
 
 export interface WpEntity {
-  id: number;
+  id: number | string;
   slug: string;
   date: string;
   link: string;
@@ -33,7 +33,7 @@ export interface WpEntity {
 }
 
 export interface WpProductGalleryImage {
-  id: number;
+  id: number | string;
   src: string;
   thumbnail?: string | null;
   alt?: string | null;
@@ -42,6 +42,10 @@ export interface WpProductGalleryImage {
 export interface WpProductSpecifications {
   product_code?: string | null;
   material?: string | null;
+  items?: Array<{
+    name: string;
+    value: string;
+  }>;
   dimensions?: {
     l?: string | null;
     d?: string | null;
@@ -56,9 +60,10 @@ export interface WpProductSpecifications {
 }
 
 export interface WpCategory {
-  id: number;
+  id: number | string;
   name: string;
   slug: string;
+  parentId?: number | string | null;
 }
 
 export interface Cf7Response {

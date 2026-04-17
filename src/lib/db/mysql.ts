@@ -3,11 +3,8 @@ import mysql from 'mysql2/promise';
 type DbPool = mysql.Pool;
 
 declare global {
-  // eslint-disable-next-line no-var
   var __anslifeDbPool: DbPool | undefined;
-  // eslint-disable-next-line no-var
   var __anslifeDbSchemaReady: boolean | undefined;
-  // eslint-disable-next-line no-var
   var __anslifeDbSchemaPromise: Promise<boolean> | undefined;
 }
 

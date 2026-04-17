@@ -104,14 +104,25 @@ export default function ProductDetailPage() {
   const specs = data?.specifications;
   const dimensionLabel = data ? buildDimensionsLabel(data) : '';
 
-  const specificationRows = [
-    { label: t('Mã sản phẩm'), value: specs?.product_code || '' },
-    { label: t('Chất liệu'), value: specs?.material || '' },
-    { label: t('Kích thước (L x D x H)'), value: dimensionLabel },
-    { label: 'Seat length', value: specs?.seat?.length || '' },
-    { label: 'Seat depth', value: specs?.seat?.depth || '' },
-    { label: 'Seat height', value: specs?.seat?.height || '' },
-  ].filter((row) => row.value && row.value.trim().length > 0);
+  const genericSpecificationRows =
+    specs?.items
+      ?.map((item) => ({
+        label: item.name,
+        value: item.value,
+      }))
+      .filter((row) => row.label.trim().length > 0 && row.value.trim().length > 0) ?? [];
+
+  const specificationRows =
+    genericSpecificationRows.length > 0
+      ? genericSpecificationRows
+      : [
+          { label: t('Mã sản phẩm'), value: specs?.product_code || '' },
+          { label: t('Chất liệu'), value: specs?.material || '' },
+          { label: t('Kích thước (L x D x H)'), value: dimensionLabel },
+          { label: 'Seat length', value: specs?.seat?.length || '' },
+          { label: 'Seat depth', value: specs?.seat?.depth || '' },
+          { label: 'Seat height', value: specs?.seat?.height || '' },
+        ].filter((row) => row.value && row.value.trim().length > 0);
 
   const hasExcerpt = Boolean(data?.excerpt?.rendered && stripHtmlTags(data.excerpt.rendered));
   const hasContent = Boolean(data?.content?.rendered && stripHtmlTags(data.content.rendered));

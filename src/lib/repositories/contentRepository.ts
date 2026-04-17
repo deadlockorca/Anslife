@@ -1,6 +1,13 @@
 import type { ResultSetHeader, RowDataPacket } from 'mysql2';
 import { ensureDatabaseSchema, getDbPool, isDatabaseConfigured } from '../db/mysql';
 import type { WpCategory, WpEntity, WpTerm } from '../../types/wp';
+import {
+  getCatalogProductBySlug as getCatalogProductBySlugRecord,
+  isCatalogProductSchemaAvailable,
+  listCatalogCategories,
+  listPublicCatalogProducts,
+  type PublicCatalogProductRecord,
+} from './catalogProductRepository';
 
 type EntityKind = 'page' | 'product' | 'project' | 'news';
 type ContactFormType = 'quote' | 'meeting' | 'contact';
@@ -30,6 +37,7 @@ interface TaxonomyRow extends RowDataPacket {
   id: number;
   slug: string;
   name: string;
+  parent_id: number | string | null;
 }
 
 function normalizePerPage(perPage: number | null | undefined, fallback = 24): number {
@@ -74,6 +82,75 @@ function toWpEntity(row: EntityRow, termGroups: WpTerm[][]): WpEntity {
     excerpt: { rendered: row.excerpt_html ?? '' },
     gallery: parseJsonValue(row.gallery_json),
     specifications: parseJsonValue(row.specifications_json),
+    _embedded: embedded,
+  };
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function toParagraphHtml(value: string | null): string {
+  if (!value || value.trim().length === 0) {
+    return '';
+  }
+
+  return `<p>${escapeHtml(value).replace(/\n/g, '<br/>')}</p>`;
+}
+
+function toWpEntityFromCatalogRecord(record: PublicCatalogProductRecord): WpEntity {
+  const featuredMedia = record.imageUrl
+    ? [{ source_url: record.imageUrl }]
+    : undefined;
+  const terms: WpTerm[][] = record.category
+    ? [
+        [
+          {
+            id: record.category.id,
+            slug: record.category.slug,
+            name: record.category.name,
+            taxonomy: 'product_category',
+          },
+        ],
+      ]
+    : [];
+
+  const embedded =
+    featuredMedia || terms.length > 0
+      ? {
+          ...(featuredMedia ? { 'wp:featuredmedia': featuredMedia } : {}),
+          ...(terms.length > 0 ? { 'wp:term': terms } : {}),
+        }
+      : undefined;
+
+  return {
+    id: record.id,
+    slug: record.slug,
+    date: new Date(record.createdAt).toISOString(),
+    link: `/product/${record.slug}`,
+    title: { rendered: record.name },
+    content: { rendered: toParagraphHtml(record.description) },
+    excerpt: { rendered: toParagraphHtml(record.shortDescription) },
+    gallery: record.imageUrls.map((url, index) => ({
+      id: `${record.id}-${index + 1}`,
+      src: url,
+      thumbnail: url,
+      alt: record.name,
+    })),
+    specifications:
+      record.specs.length > 0
+        ? {
+            items: record.specs.map((spec) => ({
+              name: spec.name,
+              value: spec.value,
+            })),
+          }
+        : undefined,
     _embedded: embedded,
   };
 }
@@ -203,10 +280,24 @@ export async function getPageBySlug(slug: string): Promise<WpEntity | null> {
 }
 
 export async function listProducts(perPage?: number): Promise<WpEntity[]> {
+  if (await isCatalogProductSchemaAvailable()) {
+    const products = await listPublicCatalogProducts(normalizePerPage(perPage));
+    if (products.length > 0) {
+      return products.map(toWpEntityFromCatalogRecord);
+    }
+  }
+
   return listEntitiesByKind('product', perPage);
 }
 
 export async function getProductBySlug(slug: string): Promise<WpEntity | null> {
+  if (await isCatalogProductSchemaAvailable()) {
+    const product = await getCatalogProductBySlugRecord(slug);
+    if (product) {
+      return toWpEntityFromCatalogRecord(product);
+    }
+  }
+
   return getEntityByKindAndSlug('product', slug);
 }
 
@@ -229,6 +320,25 @@ export async function getNewsBySlug(slug: string): Promise<WpEntity | null> {
 export async function listCategoriesByTaxonomy(
   taxonomy: string,
 ): Promise<WpCategory[]> {
+  if (taxonomy === 'product_category') {
+    try {
+      const categories = await listCatalogCategories({ activeOnly: true });
+      if (categories.length > 0) {
+        return categories.map((category) => ({
+          id: category.id,
+          slug: category.slug,
+          name: category.name,
+          parentId: category.parentId,
+        }));
+      }
+    } catch (error) {
+      console.warn(
+        '[contentRepository] Falling back to taxonomies for product_category:',
+        error,
+      );
+    }
+  }
+
   if (!taxonomy || !isDatabaseConfigured()) {
     return [];
   }
@@ -244,7 +354,7 @@ export async function listCategoriesByTaxonomy(
   }
 
   const [rows] = await pool.query<TaxonomyRow[]>(
-    `SELECT id, slug, name
+    `SELECT id, slug, name, NULL AS parent_id
      FROM taxonomies
      WHERE taxonomy = ?
      ORDER BY name ASC`,
@@ -255,6 +365,7 @@ export async function listCategoriesByTaxonomy(
     id: row.id,
     slug: row.slug,
     name: row.name,
+    parentId: row.parent_id,
   }));
 }
 

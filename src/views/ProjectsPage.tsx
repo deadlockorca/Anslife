@@ -11,10 +11,10 @@ import type { WpEntity } from '../types/wp';
 
 interface ProjectResource {
   projects: WpEntity[];
-  types: Array<{ id: number; slug: string; name: string }>;
+  types: Array<{ id: number | string; slug: string; name: string }>;
 }
 
-const EMPTY_PROJECT_TYPES: Array<{ id: number; slug: string; name: string }> = [];
+const EMPTY_PROJECT_TYPES: Array<{ id: number | string; slug: string; name: string }> = [];
 
 export default function ProjectsPage() {
   const { t, toLocalizedPath } = useSiteI18n();

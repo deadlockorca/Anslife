@@ -3,6 +3,7 @@ import useSiteI18n from '../../hooks/useSiteI18n';
 
 const ADMIN_MODULES = [
   { path: '/admin/dashboard', label: 'Tổng quan' },
+  { path: '/admin/products', label: 'Sản phẩm' },
   { path: '/admin/users', label: 'Người dùng' },
   { path: '/admin/customers', label: 'Khách hàng' },
   { path: '/admin/factories', label: 'Nhà máy' },

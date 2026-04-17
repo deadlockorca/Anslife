@@ -19,6 +19,23 @@ npm run prisma:push
 npm run db:seed
 ```
 
+## Import SQL gốc `toamhoanhao-2.sql` (giữ nguyên 1:1)
+File dump đã được đưa vào project tại `prisma/sql/toamhoanhao-2.sql`.
+
+Chạy import:
+
+```bash
+npx prisma db execute --file ./prisma/sql/toamhoanhao-2.sql --schema ./prisma/schema.prisma
+```
+
+Lưu ý:
+1. File này là schema/data ecommerce khác với Prisma schema hiện tại của Anslife.
+2. Nên import vào database riêng (không dùng chung DB đang chạy app Anslife) để tránh lệch schema.
+
+Sau khi import xong, module quản trị sản phẩm dùng trực tiếp các bảng `product/category/productimage/productspec`:
+1. URL: `/vn/admin/products`
+2. API nội bộ: `/api/internal/catalog-products` và `/api/internal/catalog-products/:id`
+
 Sau khi chạy xong, DB sẽ có các bảng chính:
 1. `content_items`
 2. `taxonomies`

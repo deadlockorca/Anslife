@@ -16,11 +16,11 @@ import type { WpEntity } from '../types/wp';
 
 interface NewsResource {
   posts: WpEntity[];
-  categories: Array<{ id: number; slug: string; name: string }>;
+  categories: Array<{ id: number | string; slug: string; name: string }>;
 }
 
 const EMPTY_POSTS: WpEntity[] = [];
-const EMPTY_CATEGORIES: Array<{ id: number; slug: string; name: string }> = [];
+const EMPTY_CATEGORIES: Array<{ id: number | string; slug: string; name: string }> = [];
 
 export default function NewsPage() {
   const { t, toLocalizedPath } = useSiteI18n();
