@@ -457,15 +457,6 @@ export default function SiteLayout() {
   }, []);
 
   useEffect(() => {
-    if (location.pathname !== '/vn') {
-      setShowLanguagePopup(false);
-      return;
-    }
-
-    setShowLanguagePopup(getStoredLanguage() === null);
-  }, [location.pathname]);
-
-  useEffect(() => {
     setMobileOpen(false);
     setDesktopOpenMenuPath(null);
     setSearchFocused(false);
