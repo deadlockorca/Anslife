@@ -67,6 +67,60 @@ const HEADER_UTILITY_LINKS = [
   { label: 'Mạng lưới', path: '/global-network' },
   { label: 'Tuyển dụng', path: '/scholarship-community/join-anslife' },
 ] as const;
+const FOOTER_NAV_COLUMNS = [
+  {
+    title: 'Giới thiệu về Anslife',
+    links: [
+      { label: 'Giới thiệu về công ty', path: '/about-anslife/company-intro' },
+      { label: 'Tầm nhìn, sứ mệnh', path: '/about-anslife/vision-mission' },
+      { label: 'Giá trị cốt lõi', path: '/about-anslife/core-values' },
+      { label: 'Đội ngũ', path: '/about-anslife/team' },
+    ],
+  },
+  {
+    title: 'Công cụ & Năng lực',
+    links: [
+      { label: 'Hệ sinh thái sản xuất', path: '/manufacturing-ecosystem' },
+      {
+        label: 'Năng lực sản xuất',
+        path: '/manufacturing-ecosystem/production-ecosystem-scale',
+      },
+      { label: 'Kiểm soát chất lượng', path: '/quality-control' },
+      { label: 'Quy trình thương mại', path: '/commercial-process' },
+    ],
+  },
+  {
+    title: 'Dự án & Mạng lưới',
+    links: [
+      { label: 'Dự án', path: '/projects' },
+      { label: 'Mạng lưới', path: '/global-network' },
+      { label: 'Tin tức', path: '/news' },
+      { label: 'Tham gia cùng ANSLIFE', path: '/scholarship-community/join-anslife' },
+    ],
+  },
+  {
+    title: 'Liên hệ & Hỗ trợ',
+    links: [
+      { label: 'Liên hệ', path: '/contact' },
+      { label: 'Gửi yêu cầu báo giá', path: '/contact/quote-request' },
+      { label: 'Đặt lịch làm việc', path: '/contact/schedule-meeting' },
+      { label: 'Tuyển dụng', path: '/scholarship-community/join-anslife' },
+    ],
+  },
+  {
+    title: 'Liên kết nhanh',
+    links: [
+      { label: 'Sản phẩm', path: '/products' },
+      { label: 'Dự án & Case Study', path: '/projects' },
+      { label: 'Hệ thống toàn cầu', path: '/global-network' },
+      { label: 'Quỹ học bổng & cộng đồng', path: '/scholarship-community' },
+    ],
+  },
+] as const;
+const FOOTER_QUICK_ACTIONS = [
+  { label: 'Gửi yêu cầu báo giá', path: '/contact/quote-request' },
+  { label: 'Đặt lịch làm việc', path: '/contact/schedule-meeting' },
+] as const;
 const TOAM_PRODUCT_MENU_FALLBACK: MenuChildItem[] = [
   {
     label: 'Sofa - Ghế thư giãn',
@@ -435,6 +489,7 @@ export default function SiteLayout() {
   const mobileLanguageLabel =
     supportedLanguageOptions.find((option) => option.code === language)?.menuLabel ??
     language.toUpperCase();
+  const footerYear = new Date().getFullYear();
 
   useEffect(() => {
     if (productRootCategories.length === 0) {
@@ -1561,13 +1616,72 @@ export default function SiteLayout() {
 
       {!isAdminRoute && !isHomeRoute && (
         <footer className="site-footer">
-          <div className="footer-company">
-            <strong>ANSLIFE</strong> - {t('Hệ sinh thái sản xuất')},{' '}
-            {t('Kiểm soát chất lượng')}, {t('Hệ thống toàn cầu')}.
+          <div className="site-footer-top">
+            <div className="site-footer-columns">
+              {FOOTER_NAV_COLUMNS.map((column) => (
+                <nav key={column.title} className="site-footer-column" aria-label={t(column.title)}>
+                  <h3>{t(column.title)}</h3>
+                  <div className="site-footer-links">
+                    {column.links.map((item) => (
+                      <Link
+                        key={`${column.title}-${item.path}`}
+                        to={toLocalizedPath(item.path)}
+                        className="site-footer-link"
+                        onClick={() => {
+                          setMobileOpen(false);
+                          setDesktopOpenMenuPath(null);
+                        }}
+                      >
+                        {t(item.label)}
+                      </Link>
+                    ))}
+                  </div>
+                </nav>
+              ))}
+            </div>
+
+            <aside className="site-footer-aside">
+              <div className="site-footer-quick-actions">
+                {FOOTER_QUICK_ACTIONS.map((item, index) => (
+                  <Link
+                    key={item.path}
+                    to={toLocalizedPath(item.path)}
+                    className={`site-footer-quick-action ${index === 0 ? 'is-primary' : 'is-secondary'}`}
+                    onClick={() => {
+                      setMobileOpen(false);
+                      setDesktopOpenMenuPath(null);
+                    }}
+                  >
+                    {t(item.label)}
+                  </Link>
+                ))}
+              </div>
+
+              <div className="site-footer-hotline">
+                <p>{t('Hotline')}</p>
+                <a href={`tel:${HEADER_HOTLINE_TEL}`}>{HEADER_HOTLINE_NUMBER}</a>
+              </div>
+
+              <div className="site-footer-social">
+                <strong>{t('Kết nối ANSLIFE')}</strong>
+                <SocialLinks className="site-footer-social-icons" />
+              </div>
+            </aside>
           </div>
-          <div className="footer-social">
-            <strong>{t('Kết nối ANSLIFE')}</strong>
-            <SocialLinks />
+
+          <div className="site-footer-bottom">
+            <Link to={toLocalizedPath('/')} className="site-footer-brand" onClick={handleBrandClick}>
+              <img
+                src="/assets/anslife-logo.png"
+                alt="ANSLIFE"
+                className="site-footer-brand-logo"
+                loading="lazy"
+                decoding="async"
+              />
+            </Link>
+            <p className="site-footer-copy">
+              © {footerYear} ANSLIFE. Manufacturing & Export Ecosystem.
+            </p>
           </div>
         </footer>
       )}
