@@ -662,7 +662,7 @@ ul {
 
 .menu-item-group {
   position: relative;
-  padding-bottom: 6px;
+  padding-bottom: 8px;
   flex: 0 0 auto;
 }
 
@@ -738,27 +738,36 @@ ul {
 .submenu {
   position: absolute;
   left: 0;
-  top: calc(100% + 5px);
-  min-width: 0;
-  width: fit-content;
-  max-width: min(88vw, 320px);
-  border: 1px solid rgba(68, 96, 132, 0.2);
-  border-radius: 11px;
-  background: #fff;
-  box-shadow: 0 10px 20px rgba(26, 40, 61, 0.14);
-  padding: 0.2rem;
+  top: calc(100% + 8px);
+  min-width: 260px;
+  width: max-content;
+  max-width: min(88vw, 360px);
+  border: 1px solid rgba(68, 96, 132, 0.24);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 20px 42px rgba(14, 28, 46, 0.2);
+  padding: 0.4rem;
   display: grid;
-  gap: 0.04rem;
+  gap: 0.14rem;
   overflow: visible;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(6px);
+  transform: translateY(10px) scale(0.985);
   transition:
-    opacity 0.16s ease,
-    transform 0.16s ease,
-    visibility 0s linear 0.16s;
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0s linear 0.2s;
   z-index: 120;
+}
+
+.submenu::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
 }
 
 .menu-item-group:hover .submenu,
@@ -767,23 +776,28 @@ ul {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
   transition-delay: 0s;
+}
+
+.main-nav .menu-item-group:not(.is-product-menu):nth-last-child(-n + 2) .submenu {
+  right: 0;
+  left: auto;
 }
 
 .submenu-link {
   display: flex;
   align-items: center;
-  width: auto;
+  width: 100%;
   text-decoration: none;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  padding: 0.32rem 0.44rem;
-  font-size: 0.77rem;
-  font-weight: 600;
-  color: #4b5b70;
-  line-height: 1.2;
-  white-space: nowrap;
+  border: 1px solid rgba(68, 96, 132, 0.08);
+  border-radius: 10px;
+  padding: 0.48rem 0.6rem;
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: #3a506b;
+  line-height: 1.35;
+  white-space: normal;
 }
 
 .submenu-link-button {
@@ -797,8 +811,8 @@ ul {
 }
 
 .submenu-link:hover {
-  background: rgba(68, 96, 132, 0.12);
-  border-color: rgba(68, 96, 132, 0.2);
+  background: linear-gradient(180deg, #f4f9ff 0%, #ecf4ff 100%);
+  border-color: rgba(68, 96, 132, 0.24);
   color: var(--primary-strong);
 }
 
@@ -824,34 +838,40 @@ ul {
 }
 
 .submenu-link-arrow {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   color: #6a7d93;
   line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.submenu-flyout-item:hover > .submenu-link-parent .submenu-link-arrow,
+.submenu-flyout-item:focus-within > .submenu-link-parent .submenu-link-arrow {
+  transform: translateX(2px);
 }
 
 .submenu-flyout-panel {
   position: absolute;
-  top: 0;
-  left: calc(100% + 6px);
-  min-width: 0;
-  width: fit-content;
-  max-width: min(82vw, 300px);
-  border: 1px solid rgba(68, 96, 132, 0.2);
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 10px 20px rgba(26, 40, 61, 0.14);
-  padding: 0.22rem;
+  top: -4px;
+  left: calc(100% + 10px);
+  min-width: 240px;
+  width: max-content;
+  max-width: min(82vw, 360px);
+  border: 1px solid rgba(68, 96, 132, 0.24);
+  border-radius: 13px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 18px 36px rgba(14, 28, 46, 0.18);
+  padding: 0.36rem;
   display: grid;
-  gap: 0.04rem;
+  gap: 0.12rem;
   overflow: visible;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateX(6px);
+  transform: translateX(8px) scale(0.985);
   transition:
-    opacity 0.16s ease,
-    transform 0.16s ease,
-    visibility 0s linear 0.16s;
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0s linear 0.2s;
   z-index: 125;
 }
 
@@ -860,31 +880,48 @@ ul {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateX(0);
+  transform: translateX(0) scale(1);
   transition-delay: 0s;
 }
 
+.main-nav .menu-item-group:not(.is-product-menu):nth-last-child(-n + 2) .submenu-flyout-panel {
+  right: calc(100% + 10px);
+  left: auto;
+  transform: translateX(-8px) scale(0.985);
+}
+
+.main-nav
+  .menu-item-group:not(.is-product-menu):nth-last-child(-n + 2)
+  .submenu-flyout-item:hover
+  > .submenu-flyout-panel,
+.main-nav
+  .menu-item-group:not(.is-product-menu):nth-last-child(-n + 2)
+  .submenu-flyout-item:focus-within
+  > .submenu-flyout-panel {
+  transform: translateX(0) scale(1);
+}
+
 .submenu-flyout-panel .submenu-link-nested {
-  padding-left: 0.46rem;
-  font-size: 0.75rem;
+  padding-left: 0.58rem;
+  font-size: 0.8rem;
 }
 
 .submenu-group {
-  border: 1px solid rgba(68, 96, 132, 0.18);
-  border-radius: 8px;
-  background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
-  padding: 0.24rem;
+  border: 1px solid rgba(68, 96, 132, 0.16);
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fbfdff 0%, #f4f8ff 100%);
+  padding: 0.34rem;
   display: grid;
-  gap: 0.14rem;
+  gap: 0.2rem;
 }
 
 .submenu-group-title {
   text-decoration: none;
-  border-radius: 6px;
-  padding: 0.3rem 0.38rem;
-  font-size: 0.77rem;
-  line-height: 1.22;
-  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.36rem 0.46rem;
+  font-size: 0.82rem;
+  line-height: 1.3;
+  font-weight: 600;
   color: #2e4663;
 }
 
@@ -894,12 +931,12 @@ ul {
 
 .submenu-group-list {
   display: grid;
-  gap: 0.04rem;
+  gap: 0.12rem;
 }
 
 .submenu-link-nested {
-  padding-left: 0.46rem;
-  font-size: 0.75rem;
+  padding-left: 0.6rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
@@ -4313,7 +4350,7 @@ ul {
   text-decoration: none;
   color: #5b6b7d;
   font-size: 0.94rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.38;
 }
 
@@ -4348,7 +4385,7 @@ ul {
   align-items: center;
   justify-content: center;
   font-size: 0.87rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
   text-align: center;
   padding: 0.42rem 0.6rem;
@@ -4374,14 +4411,14 @@ ul {
   margin: 0;
   color: #2f435d;
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .site-footer-hotline a {
   text-decoration: none;
   color: #7ea523;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.01em;
   line-height: 1.1;
 }
@@ -4394,6 +4431,7 @@ ul {
 .site-footer-social strong {
   color: #22364e;
   font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .site-footer-social-icons {
@@ -4437,7 +4475,7 @@ ul {
   text-align: right;
   color: #49596d;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.35;
 }
 
