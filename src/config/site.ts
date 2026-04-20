@@ -93,7 +93,7 @@ export const TOP_MENU: TopMenuItem[] = [
       },
       {
         label: "Lịch sử phát triển",
-        path: "/about-anslife"
+        path: "/about-anslife/development-history"
       }
     ]
   },
@@ -669,6 +669,12 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
         title: 'Hệ sinh thái ANSLIFE',
         description:
           'Liên kết giữa nhà máy, nguyên liệu, QC và dịch vụ thương mại.',
+      },
+      {
+        id: 'development-history',
+        title: 'Lịch sử phát triển',
+        description:
+          'Các giai đoạn hình thành, chuẩn hóa và mở rộng hệ thống ANSLIFE.',
       },
     ],
   },

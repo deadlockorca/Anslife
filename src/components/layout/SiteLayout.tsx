@@ -18,15 +18,19 @@ import { getCurrentUser, type AuthUser } from '../../lib/internalAuth';
 import type { WpCategory } from '../../types/wp';
 
 const supportedLanguageOptions = [
-  { code: 'vn', label: 'Tiếng Việt', menuLabel: 'VN' },
-  { code: 'en', label: 'English', menuLabel: 'EN' },
-  { code: 'jp', label: '日本語', menuLabel: 'JP' },
-  { code: 'kr', label: '한국어', menuLabel: 'KR' },
+  { code: 'vn', label: 'Tiếng Việt', menuLabel: 'VN', flag: '🇻🇳' },
+  { code: 'en', label: 'English', menuLabel: 'EN', flag: '🇬🇧' },
+  { code: 'jp', label: '日本語', menuLabel: 'JP', flag: '🇯🇵' },
+  { code: 'kr', label: '한국어', menuLabel: 'KR', flag: '🇰🇷' },
 ] as const satisfies ReadonlyArray<{
   code: LanguageCode;
   label: string;
   menuLabel: string;
+  flag: string;
 }>;
+const mobileMenuLanguageOptions = supportedLanguageOptions.filter(
+  (option) => option.code !== 'kr',
+);
 
 const LANGUAGE_SELECTOR_STORAGE_KEY = 'anslife_language_selector';
 const LANGUAGE_ROUTE_ALIAS: Record<string, LanguageCode> = {
@@ -345,6 +349,7 @@ export default function SiteLayout() {
     HEADER_SEGMENT_ITEMS[0].id,
   );
   const [showLanguagePopup, setShowLanguagePopup] = useState(false);
+  const [mobileLanguageOpen, setMobileLanguageOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchFocused, setSearchFocused] = useState(false);
   const [searchLoading, setSearchLoading] = useState(false);
@@ -486,9 +491,11 @@ export default function SiteLayout() {
       HEADER_SEGMENT_ITEMS[0],
     [activeHeaderSegmentId],
   );
-  const mobileLanguageLabel =
-    supportedLanguageOptions.find((option) => option.code === language)?.menuLabel ??
-    language.toUpperCase();
+  const activeLanguageOption = supportedLanguageOptions.find(
+    (option) => option.code === language,
+  );
+  const mobileLanguageLabel = activeLanguageOption?.menuLabel ?? language.toUpperCase();
+  const mobileLanguageFlag = activeLanguageOption?.flag ?? '🌐';
   const footerYear = new Date().getFullYear();
 
   useEffect(() => {
@@ -801,6 +808,7 @@ export default function SiteLayout() {
   useEffect(() => {
     if (!mobileOpen) {
       setMobileSegmentOpen(false);
+      setMobileLanguageOpen(false);
     }
   }, [mobileOpen]);
 
@@ -845,6 +853,7 @@ export default function SiteLayout() {
   function handleLanguageSelect(code: LanguageCode) {
     window.localStorage.setItem(LANGUAGE_STORAGE_KEY, code);
     setShowLanguagePopup(false);
+    setMobileLanguageOpen(false);
     const targetPath = withLanguagePath(
       `${location.pathname}${location.search}${location.hash}`,
       code,
@@ -1220,45 +1229,24 @@ export default function SiteLayout() {
                       }
                     >
                       {hasChildren && item.path !== '/' ? (
-                        isExternalPath(resolvedPath) ? (
-                          <a
-                            href={toLocalizedPath(resolvedPath)}
-                            className={`${linkClassName} ${
-                              isPathMatch(item.path) ? 'is-active' : ''
-                            }`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-haspopup="true"
-                            aria-label={resolvedLabel}
-                            onClick={(event) => {
-                              setMobileOpen(false);
-                              setDesktopOpenMenuPath(null);
-                              if (event.detail > 0) {
-                                event.currentTarget.blur();
-                              }
-                            }}
-                          >
-                            {resolvedLabel}
-                          </a>
-                        ) : (
-                          <NavLink
-                            to={toLocalizedPath(resolvedPath)}
-                            className={({ isActive }) =>
-                              `${linkClassName} ${isActive ? 'is-active' : ''}`
-                            }
-                            aria-haspopup="true"
-                            aria-label={resolvedLabel}
-                            onClick={(event) => {
-                              setMobileOpen(false);
-                              setDesktopOpenMenuPath(null);
-                              if (event.detail > 0) {
-                                event.currentTarget.blur();
-                              }
-                            }}
-                          >
-                            {resolvedLabel}
-                          </NavLink>
-                        )
+                        <button
+                          type="button"
+                          className={`${linkClassName} menu-link-button ${
+                            isPathMatch(item.path) ? 'is-active' : ''
+                          }`}
+                          aria-haspopup="true"
+                          aria-expanded={desktopOpenMenuPath === item.path}
+                          aria-label={resolvedLabel}
+                          onMouseDown={(event) => {
+                            // Keep desktop dropdown open-by-hover only for pointer interaction.
+                            event.preventDefault();
+                          }}
+                          onClick={(event) => {
+                            event.preventDefault();
+                          }}
+                        >
+                          {resolvedLabel}
+                        </button>
                       ) : isExternalPath(resolvedPath) ? (
                         <a
                           href={toLocalizedPath(resolvedPath)}
@@ -1591,19 +1579,55 @@ export default function SiteLayout() {
                 ))}
               </nav>
 
-              <button
-                type="button"
-                className="mobile-menu-language"
-                onClick={() => setShowLanguagePopup(true)}
-              >
-                <span className="mobile-menu-language-flag" aria-hidden="true">
-                  🌐
-                </span>
-                <span className="mobile-menu-language-label">{mobileLanguageLabel}</span>
-                <span className="mobile-menu-language-arrow" aria-hidden="true">
-                  ▾
-                </span>
-              </button>
+              <div className="mobile-menu-language-wrap">
+                <button
+                  type="button"
+                  className={`mobile-menu-language ${mobileLanguageOpen ? 'is-open' : ''}`}
+                  aria-expanded={mobileLanguageOpen}
+                  aria-controls="mobile-language-options"
+                  onClick={() => setMobileLanguageOpen((currentValue) => !currentValue)}
+                >
+                  <span className="mobile-menu-language-flag" aria-hidden="true">
+                    {mobileLanguageFlag}
+                  </span>
+                  <span className="mobile-menu-language-label">{mobileLanguageLabel}</span>
+                  <span className="mobile-menu-language-arrow" aria-hidden="true">
+                    ▾
+                  </span>
+                </button>
+
+                {mobileLanguageOpen && (
+                  <div
+                    id="mobile-language-options"
+                    className="mobile-menu-language-options"
+                    role="menu"
+                    aria-label={t('Chọn ngôn ngữ')}
+                  >
+                    {mobileMenuLanguageOptions.map((option) => (
+                      <button
+                        key={option.code}
+                        type="button"
+                        role="menuitemradio"
+                        aria-checked={language === option.code}
+                        className={`mobile-menu-language-option ${
+                          language === option.code ? 'is-active' : ''
+                        }`}
+                        onClick={() => handleLanguageSelect(option.code)}
+                      >
+                        <span
+                          className="mobile-menu-language-option-flag"
+                          aria-hidden="true"
+                        >
+                          {option.flag}
+                        </span>
+                        <span className="mobile-menu-language-option-label">
+                          {option.label}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </aside>
           </div>,

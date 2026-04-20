@@ -50,7 +50,16 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
 
   const fallbackHtml = getAIFallbackSectionHtml(config.slug, section.id);
   const shouldForceTemplateHtml =
-    config.slug === 'manufacturing-ecosystem' && section.id === 'production-system';
+    (config.slug === 'manufacturing-ecosystem' && section.id === 'production-system') ||
+    (config.slug === 'about-anslife' &&
+      (section.id === 'company-intro' ||
+        section.id === 'vision-mission' ||
+        section.id === 'core-values' ||
+        section.id === 'production-philosophy' ||
+        section.id === 'organization' ||
+        section.id === 'team' ||
+        section.id === 'anslife-ecosystem' ||
+        section.id === 'development-history'));
   const resolvedHtml = shouldForceTemplateHtml
     ? fallbackHtml ?? data?.content.rendered
     : data?.content.rendered ?? fallbackHtml;
