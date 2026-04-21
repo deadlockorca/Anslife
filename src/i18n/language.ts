@@ -2,7 +2,7 @@ export const LANGUAGE_CODES = ['vn', 'en', 'jp', 'kr'] as const;
 export type LanguageCode = (typeof LANGUAGE_CODES)[number];
 
 export const LANGUAGE_STORAGE_KEY = 'anslife_selected_language';
-export const DEFAULT_LANGUAGE: LanguageCode = 'vn';
+export const DEFAULT_LANGUAGE: LanguageCode = 'en';
 
 export function isLanguageCode(value: string | null | undefined): value is LanguageCode {
   if (!value) {

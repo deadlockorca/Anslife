@@ -40,7 +40,7 @@ function resolveLanguage(pathname: string): string {
   if (first && SUPPORTED_LANGUAGES.has(first)) {
     return first;
   }
-  return 'vn';
+  return 'en';
 }
 
 export function proxy(request: NextRequest) {
