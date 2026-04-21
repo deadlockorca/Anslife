@@ -71,12 +71,6 @@ const HEADER_UTILITY_LINKS = [
   { label: 'Mạng lưới', path: '/global-network' },
   { label: 'Tuyển dụng', path: '/scholarship-community/join-anslife' },
 ] as const;
-const MOBILE_UTILITY_LINKS = [
-  { label: 'Giới thiệu về Anslife', path: '/about-anslife' },
-  { label: 'Công cụ & năng lực', path: '/manufacturing-ecosystem' },
-  { label: 'Dự án & mạng lưới', path: '/projects' },
-  { label: 'Liên hệ & hỗ trợ', path: '/contact' },
-] as const;
 const FOOTER_NAV_COLUMNS = [
   {
     title: 'Giới thiệu về Anslife',
@@ -421,78 +415,22 @@ export default function SiteLayout() {
       }),
     [productMenuChildren],
   );
-  const desktopTopMenuItems = useMemo(() => {
-    const itemByPath = new Map(topMenuItems.map((item) => [item.path, item]));
-    const mapToChild = (
-      path: string,
-      overrideLabel?: string,
-    ): MenuChildItem | null => {
-      const source = itemByPath.get(path);
-      if (!source) {
-        return null;
-      }
-
-      return {
-        label: overrideLabel ?? source.label,
-        path: source.path,
-        children: source.children,
-      };
-    };
-
-    const compactDesktopMenu = [
-      {
-        label: 'Giới thiệu về Anslife',
-        path: '/about-anslife',
-        children: itemByPath.get('/about-anslife')?.children ?? [],
-      },
-      {
-        label: 'Công cụ & Năng lực',
-        path: '/manufacturing-ecosystem',
-        children: [
-          mapToChild('/manufacturing-ecosystem', 'Hệ sinh thái sản xuất'),
-          mapToChild(
-            '/manufacturing-ecosystem/production-ecosystem-scale',
-            'Năng lực sản xuất',
-          ),
-          mapToChild('/quality-control', 'Kiểm soát chất lượng'),
-          mapToChild('/commercial-process', 'Quy trình thương mại'),
-        ].filter((item): item is MenuChildItem => Boolean(item)),
-      },
-      {
-        label: 'Dự án & Mạng lưới',
-        path: '/projects',
-        children: [
-          mapToChild('/projects', 'Dự án & Case Study'),
-          mapToChild('/global-network', 'Hệ thống toàn cầu'),
-          mapToChild('/scholarship-community', 'Phụng sự xã hội'),
-          { label: 'Tin tức', path: '/news' },
-        ].filter((item): item is MenuChildItem => Boolean(item)),
-      },
-      {
-        label: 'Liên hệ & Hỗ trợ',
-        path: '/contact',
-        children: [
-          mapToChild('/contact', 'Liên hệ'),
-          { label: 'Gửi yêu cầu báo giá', path: '/contact/quote-request' },
-          { label: 'Đặt lịch làm việc', path: '/contact/schedule-meeting' },
-        ].filter((item): item is MenuChildItem => Boolean(item)),
-      },
-    ];
-
-    return compactDesktopMenu;
-  }, [topMenuItems]);
+  const desktopTopMenuItems = useMemo(
+    () =>
+      topMenuItems.map((item) => ({
+        label: item.label,
+        path: item.path,
+        children: item.children,
+      })),
+    [topMenuItems],
+  );
   const mobileUtilityMenuItems = useMemo(
     () =>
-      MOBILE_UTILITY_LINKS.map((item) => {
-        const source = desktopTopMenuItems.find(
-          (desktopItem) => desktopItem.path === item.path,
-        );
-        return {
-          label: item.label,
-          path: item.path,
-          children: source?.children ?? [],
-        } satisfies MenuChildItem;
-      }),
+      desktopTopMenuItems.map((item) => ({
+        label: item.label,
+        path: item.path,
+        children: item.children,
+      })),
     [desktopTopMenuItems],
   );
   const activeMobileUtilityItem = useMemo(
