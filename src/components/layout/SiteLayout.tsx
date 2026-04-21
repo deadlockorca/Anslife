@@ -1866,11 +1866,6 @@ export default function SiteLayout() {
                 ))}
               </div>
 
-              <div className="site-footer-hotline">
-                <p>{t('Hotline')}</p>
-                <a href={`tel:${HEADER_HOTLINE_TEL}`}>{HEADER_HOTLINE_NUMBER}</a>
-              </div>
-
               <div className="site-footer-social">
                 <strong>{t('Kết nối ANSLIFE')}</strong>
                 <SocialLinks className="site-footer-social-icons" />

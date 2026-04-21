@@ -1252,7 +1252,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   'manufacturing-ecosystem': `
 <div class="ai-content">
   <figure class="ai-banner">
-    <img src="/assets/ai/manufacturing-ecosystem.svg" alt="Hệ sinh thái sản xuất" loading="lazy" decoding="async" />
+    <img src="/assets/about/organization-hero-real.jpg" alt="Hệ sinh thái sản xuất ANSLIFE vận hành theo mô hình điều phối tập trung" loading="lazy" decoding="async" />
   </figure>
 
   <p class="ai-intro">
@@ -1288,7 +1288,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   <div class="ai-eco-image-strip">
     <figure>
       <img
-        src="/assets/production-system/hero-system-v2.svg"
+        src="/assets/about/ecosystem-hero-real.jpg"
         alt="Không gian vận hành sản xuất nội thất"
         loading="lazy"
         decoding="async"
@@ -1315,7 +1315,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   <section id="production-system" class="ai-section ai-production-system">
     <div class="ai-ps-hero">
       <img
-        src="/assets/production-system/hero-system-v2.svg"
+        src="/assets/about/company-intro-hero-real.jpg"
         alt="Hệ thống sản xuất nội thất ANSLIFE"
         loading="lazy"
         decoding="async"
@@ -1447,6 +1447,233 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     </div>
   </section>
 
+  <section id="anslife-factory" class="ai-section">
+  <h2>Nhà máy ANSLIFE</h2>
+  <p>
+    Nhà máy ANSLIFE là trung tâm sản xuất chủ lực, đóng vai trò "control tower" cho toàn bộ hệ sinh thái.
+    Đây là nơi tiếp nhận yêu cầu kỹ thuật từ khách hàng, chuyển hóa thành tiêu chuẩn sản xuất thực thi và
+    kiểm soát chất lượng trước khi nhân rộng sang mạng lưới nhà máy liên kết.
+  </p>
+  <p>
+    Khác với mô hình chỉ gia công đơn thuần, ANSLIFE tổ chức vận hành theo chuỗi tích hợp: kỹ thuật, kế hoạch,
+    QC và dữ liệu cùng làm việc trên một framework chung để đảm bảo sản phẩm giao đúng chuẩn, đúng tiến độ,
+    đúng hồ sơ truy xuất.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/core-values-data-real.jpg"
+        alt="Trung tâm điều phối vận hành tại nhà máy ANSLIFE"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/ecosystem-production-real.jpg"
+        alt="Khu vực sản xuất và triển khai công đoạn tại nhà máy"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <div class="ai-highlight-grid">
+    <article class="ai-highlight-card">
+      <strong>Engineering Hub</strong>
+      <p>Phân tích bản vẽ, chuẩn hóa BOM và chốt quy chuẩn kỹ thuật trước sản xuất.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Quality Hub</strong>
+      <p>Thiết lập checkpoint bắt buộc theo công đoạn để giảm lỗi lặp và lỗi truyền line.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Planning Hub</strong>
+      <p>Điều phối năng lực line theo lịch xuất hàng và mức ưu tiên từng đơn hàng.</p>
+    </article>
+  </div>
+
+  <h3>Chu trình vận hành tại nhà máy trung tâm</h3>
+  <ol>
+    <li>Review kỹ thuật và xác nhận mức khả thi sản xuất.</li>
+    <li>Lập kế hoạch vật tư, công đoạn và QC gate theo timeline đơn hàng.</li>
+    <li>Giám sát thực thi theo dữ liệu hiện trường và điều chỉnh sớm khi có lệch chuẩn.</li>
+    <li>Nghiệm thu trước xuất theo checklist chất lượng, đóng gói và chứng từ.</li>
+  </ol>
+
+  <p>
+    Nhờ cấu trúc này, nhà máy ANSLIFE vừa là nơi sản xuất, vừa là nơi chuẩn hóa hệ thống cho toàn mạng lưới.
+  </p>
+</section>
+
+  <section id="satellite-factories" class="ai-section">
+  <h2>Nhà máy vệ tinh</h2>
+  <p>
+    Mạng lưới nhà máy vệ tinh giúp ANSLIFE mở rộng công suất theo mùa vụ và theo nhóm ngành hàng,
+    mà không đánh đổi độ ổn định chất lượng. Mỗi nhà máy liên kết tham gia theo năng lực đã thẩm định,
+    vận hành dưới cùng một bộ tiêu chuẩn kỹ thuật và cơ chế kiểm soát dữ liệu.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/company-ecosystem-partner-real.jpg"
+        alt="Nhà máy vệ tinh tham gia vào hệ sinh thái sản xuất"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/ecosystem-global-real.jpg"
+        alt="Mạng lưới sản xuất liên kết với năng lực giao hàng quốc tế"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <h3>Nguyên tắc tích hợp nhà máy vệ tinh</h3>
+  <ul>
+    <li>Phân vai theo thế mạnh công đoạn: gia công, lắp ráp, hoàn thiện hoặc đóng gói.</li>
+    <li>Chỉ triển khai sau khi vượt đánh giá hiện trường và thử nghiệm lô pilot.</li>
+    <li>Áp dụng cùng checklist QC và chế độ báo cáo tiến độ theo checkpoint.</li>
+    <li>Duy trì cơ chế CAPA chung để xử lý lỗi gốc và ngăn lỗi tái diễn.</li>
+  </ul>
+
+  <div class="ai-highlight-grid">
+    <article class="ai-highlight-card">
+      <strong>Linh hoạt công suất</strong>
+      <p>Mở rộng nhanh khi đơn hàng tăng đột biến hoặc theo đợt cao điểm thị trường.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Giảm rủi ro tập trung</strong>
+      <p>Hạn chế phụ thuộc một điểm sản xuất duy nhất cho các đơn hàng xuất khẩu lớn.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Đồng bộ tiêu chuẩn</strong>
+      <p>Giữ cùng chất lượng đầu ra nhờ điều phối kỹ thuật và QC tập trung.</p>
+    </article>
+  </div>
+</section>
+
+  <section id="ecosystem-operating-model" class="ai-section">
+  <h2>Mô hình vận hành hệ sinh thái</h2>
+  <p>
+    ANSLIFE vận hành theo mô hình "Centralized Control - Distributed Execution":
+    trung tâm điều phối chịu trách nhiệm chuẩn kỹ thuật, kế hoạch và chất lượng;
+    các nhà máy trong hệ sinh thái thực thi theo phạm vi năng lực đã phân bổ.
+  </p>
+  <p>
+    Cách tiếp cận này học từ các hệ thống sản xuất xuất khẩu quy mô lớn: mở rộng công suất bằng mạng lưới,
+    nhưng giữ tính nhất quán bằng tiêu chuẩn, dữ liệu và cơ chế kiểm soát tập trung.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/core-values-operations-real.jpg"
+        alt="Đội vận hành phối hợp theo chuẩn hệ thống trong mô hình sản xuất"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/vision-system-pillars-real.jpg"
+        alt="Hệ thống dữ liệu và kiểm soát điều phối sản xuất theo thời gian thực"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <h3>4 trụ cột vận hành</h3>
+  <div class="ai-highlight-grid">
+    <article class="ai-highlight-card">
+      <strong>Plan Governance</strong>
+      <p>Xác nhận yêu cầu kỹ thuật, timeline và target chất lượng trước khi mở lệnh sản xuất.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Capacity Allocation</strong>
+      <p>Phân bổ đơn hàng theo năng lực thật của từng nhà máy để tối ưu OTIF và rủi ro.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Quality Gate</strong>
+      <p>Kiểm soát đa lớp theo công đoạn, không đợi đến khâu final mới kiểm lỗi.</p>
+    </article>
+  </div>
+
+  <h3>Chu kỳ điều hành theo tuần</h3>
+  <ol>
+    <li>Kick-off đơn hàng: chốt thông số kỹ thuật, BOM và mốc giao hàng.</li>
+    <li>Load plan: phân bổ line và năng lực vệ tinh theo mức ưu tiên.</li>
+    <li>Execution review: cập nhật sản lượng, tỷ lệ lỗi, độ lệch tiến độ theo ngày.</li>
+    <li>Quality review: đóng CAPA cho lỗi trọng yếu và khóa hành động phòng ngừa.</li>
+    <li>Shipment readiness: chốt đóng gói, chứng từ và kế hoạch giao nhận.</li>
+  </ol>
+
+  <h3>Nhóm KPI kiểm soát</h3>
+  <ul>
+    <li>OTIF (On-time In-full) theo từng đơn hàng và từng line sản xuất.</li>
+    <li>First Pass Yield và tỷ lệ rework theo công đoạn trọng yếu.</li>
+    <li>Lead time thực tế so với lead time kế hoạch.</li>
+    <li>Tỷ lệ đóng CAPA đúng hạn và tỷ lệ lỗi tái diễn theo tháng.</li>
+  </ul>
+
+  <p>
+    Nhờ mô hình này, ANSLIFE có thể mở rộng theo chiều rộng mạng lưới nhà máy, nhưng vẫn giữ một chuẩn quản trị chung
+    tương đương một hệ thống sản xuất thống nhất.
+  </p>
+</section>
+
+  <section id="manufacturing-partner-registration" class="ai-section">
+  <h2>Đăng ký đối tác sản xuất</h2>
+  <p>
+    Chương trình đối tác sản xuất được xây dựng để phát triển mạng lưới theo hướng có kiểm soát,
+    bảo đảm đối tác mới có thể tham gia đơn hàng xuất khẩu mà vẫn đáp ứng chuẩn hệ thống ngay từ đầu.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/organization-partner-access-real.jpg"
+        alt="Đối tác sản xuất làm việc và trao đổi dữ liệu cùng hệ thống ANSLIFE"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/ecosystem-legal-real.jpg"
+        alt="Đánh giá tuân thủ và hồ sơ pháp lý cho nhà máy đối tác"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <h3>Điều kiện tham gia chương trình</h3>
+  <ul>
+    <li>Năng lực máy móc, line và nhân sự phù hợp nhóm sản phẩm mục tiêu.</li>
+    <li>Khả năng vận hành theo quy trình chất lượng và cơ chế dữ liệu bắt buộc.</li>
+    <li>Cam kết tuân thủ tiêu chuẩn kỹ thuật, pháp lý và quy tắc hợp tác dài hạn.</li>
+  </ul>
+
+  <h3>Quy trình đánh giá và onboarding</h3>
+  <ol>
+    <li>Sơ tuyển hồ sơ và xếp hạng mức phù hợp theo ngành hàng.</li>
+    <li>Khảo sát thực địa, đối chiếu năng lực vận hành thực tế.</li>
+    <li>Chạy thử lô pilot để kiểm chứng chất lượng và lead time.</li>
+    <li>Đánh giá CAPA sau pilot và phê duyệt vào danh sách triển khai.</li>
+  </ol>
+
+  <p>
+    Đối tác đạt chuẩn sẽ được hướng dẫn tài liệu kỹ thuật, checklist QC và cơ chế báo cáo dữ liệu để vận hành đồng bộ với hệ sinh thái.
+  </p>
+</section>
+
   <section id="raw-material-zone" class="ai-section">
     <h2>Vùng nguyên liệu</h2>
     <p>
@@ -1503,6 +1730,132 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     </p>
   </section>
 
+  <section id="wood-supply" class="ai-section">
+  <h2>Nguồn cung gỗ</h2>
+  <p>
+    Nguồn cung gỗ được quản trị theo triết lý "ổn định trước, giá sau".
+    ANSLIFE ưu tiên nhà cung ứng có năng lực giao hàng đều, chất lượng lô hàng nhất quán và dữ liệu truy xuất minh bạch.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/core-values-partnership-real.jpg"
+        alt="Nguồn gỗ nguyên liệu được phân loại trước khi cấp phát sản xuất"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/company-ecosystem-main-real.jpg"
+        alt="Hệ thống kho và luân chuyển nguyên liệu trong hệ sinh thái"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <h3>Tiêu chí lựa chọn nhà cung ứng</h3>
+  <ul>
+    <li>Đáp ứng yêu cầu kỹ thuật về quy cách, độ ẩm và tính ổn định vật liệu.</li>
+    <li>Có khả năng cung cấp hồ sơ truy xuất theo yêu cầu thị trường xuất khẩu.</li>
+    <li>Hiệu suất giao hàng đúng lịch và mức độ phản hồi khi phát sinh vấn đề.</li>
+  </ul>
+
+  <p>
+    Mỗi lô nguyên liệu đều được đối chiếu tiêu chuẩn trước khi nhập kho để giảm rủi ro lỗi ngay từ nguồn đầu vào.
+  </p>
+</section>
+
+  <section id="supply-system" class="ai-section">
+  <h2>Hệ thống cung ứng</h2>
+  <p>
+    Hệ thống cung ứng được thiết kế theo mô hình 3 lớp: lập kế hoạch nhu cầu,
+    điều phối vật tư theo line và kiểm soát mức dự phòng cho nhóm vật tư rủi ro cao.
+    Mục tiêu là giữ nhịp sản xuất ổn định và tối ưu chi phí tồn kho.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/history-foundation-real.jpg"
+        alt="Chuỗi cung ứng gắn với tiến độ xuất khẩu"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/organization-control-data-v2-real.jpg"
+        alt="Điều phối cung ứng dựa trên dữ liệu vận hành thực tế"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <div class="ai-highlight-grid">
+    <article class="ai-highlight-card">
+      <strong>Demand Planning</strong>
+      <p>Dự báo nhu cầu vật tư theo forecast và PO đã xác nhận.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Material Allocation</strong>
+      <p>Phân bổ theo mã hàng, ưu tiên các line có mốc giao hàng gần.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Risk Buffer</strong>
+      <p>Thiết lập mức dự phòng cho vật tư có lead time dài hoặc biến động cao.</p>
+    </article>
+  </div>
+
+  <ol>
+    <li>Lập MRP theo đơn hàng và lịch sản xuất cập nhật hằng tuần.</li>
+    <li>Theo dõi inbound, cảnh báo sớm điểm nghẽn và phương án thay thế.</li>
+    <li>Điều chỉnh cấp phát theo thay đổi sản lượng, chất lượng và ưu tiên đơn hàng.</li>
+  </ol>
+</section>
+
+  <section id="material-control" class="ai-section">
+  <h2>Kiểm soát nguyên liệu</h2>
+  <p>
+    Kiểm soát nguyên liệu là lớp phòng ngừa đầu tiên của hệ thống chất lượng.
+    ANSLIFE triển khai kiểm tra đầu vào theo tiêu chí kỹ thuật bắt buộc trước khi vật tư được cấp vào line.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/ecosystem-qc-real.jpg"
+        alt="Kiểm tra nguyên liệu đầu vào theo checklist kỹ thuật"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/ecosystem-data-real.jpg"
+        alt="Dữ liệu kiểm soát nguyên liệu được lưu trữ để truy xuất"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <h3>Checklist kiểm soát đầu vào</h3>
+  <ul>
+    <li>Đo độ ẩm, quy cách và dung sai theo tiêu chuẩn từng mã hàng.</li>
+    <li>Đánh giá bề mặt, cấu trúc và trạng thái vật liệu trước khi nhập kho.</li>
+    <li>Gắn mã lô và lưu hồ sơ để phục vụ truy xuất khi có sự cố chất lượng.</li>
+    <li>Cách ly và xử lý lô không phù hợp theo quy trình CAPA nội bộ.</li>
+  </ul>
+
+  <p>
+    Dữ liệu đầu vào được dùng như chỉ báo sớm để tối ưu nhà cung ứng và giảm tỷ lệ lỗi truyền sang công đoạn sau.
+  </p>
+</section>
+
   <section id="manufacturing-process" class="ai-section">
     <h2>Quy trình sản xuất</h2>
     <p>
@@ -1558,6 +1911,312 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     </p>
   </section>
 
+  <section id="equipment-technology" class="ai-section">
+  <h2>Thiết bị & công nghệ</h2>
+  <p>
+    Nền tảng thiết bị của ANSLIFE được đầu tư theo hướng phục vụ độ chính xác và tính lặp lại trong sản xuất xuất khẩu.
+    Công nghệ không chỉ để tăng tốc, mà để giảm biến động chất lượng giữa các ca và giữa các nhà máy.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/production-philosophy-operations-real.jpg"
+        alt="Thiết bị sản xuất vận hành trong nhà máy nội thất"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1400&q=80"
+        alt="Kỹ sư phân tích giải pháp công nghệ cho công đoạn sản xuất"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <div class="ai-highlight-grid">
+    <article class="ai-highlight-card">
+      <strong>Machine Capability</strong>
+      <p>Chọn cấu hình máy theo dung sai kỹ thuật và năng lực sản lượng.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Process Consistency</strong>
+      <p>Chuẩn hóa tham số vận hành để giữ đầu ra ổn định theo lô.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Scalable Deployment</strong>
+      <p>Dễ nhân rộng setup giữa các line và nhà máy cùng nhóm công đoạn.</p>
+    </article>
+  </div>
+
+  <p>
+    Việc đầu tư thiết bị luôn đi kèm tài liệu công nghệ và cơ chế kiểm soát để chuyển từ năng lực máy móc thành năng lực giao hàng thực tế.
+  </p>
+</section>
+
+  <section id="production-machinery" class="ai-section">
+  <h2>Máy móc sản xuất</h2>
+  <p>
+    Hệ thống máy móc được phân thành các cụm công đoạn rõ ràng nhằm giảm thời gian chờ,
+    hạn chế thao tác trung gian và cải thiện độ ổn định giữa các công đoạn liên tiếp.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/history-global-real.jpg"
+        alt="Không gian máy móc trong dây chuyền sản xuất"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/vision-factory-operations-real.jpg"
+        alt="Vận hành dây chuyền theo kế hoạch công suất và tiến độ"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <h3>Nhóm máy móc trọng yếu</h3>
+  <ul>
+    <li>Cụm gia công chính xác cho chi tiết yêu cầu dung sai chặt.</li>
+    <li>Cụm lắp ráp hỗ trợ kiểm soát độ vững và độ khít kết cấu.</li>
+    <li>Cụm hoàn thiện giúp ổn định ngoại quan và bề mặt sản phẩm.</li>
+    <li>Cụm kiểm tra và hiệu chuẩn định kỳ để duy trì độ tin cậy thiết bị.</li>
+  </ul>
+</section>
+
+  <section id="processing-technology" class="ai-section">
+  <h2>Công nghệ gia công</h2>
+  <p>
+    Công nghệ gia công được chuẩn hóa để giảm sai lệch giữa mẫu duyệt và sản phẩm hàng loạt.
+    Trọng tâm là kiểm soát tham số công đoạn, đồ gá và phương pháp kiểm tra ngay tại line.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/production-philosophy-qc-v2-real.jpg"
+        alt="Kiểm tra thông số kỹ thuật trong công đoạn gia công"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/history-hero-real.jpg"
+        alt="Đội kỹ thuật cải tiến công nghệ gia công theo dữ liệu"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <div class="ai-highlight-grid">
+    <article class="ai-highlight-card">
+      <strong>Fixture & Jig</strong>
+      <p>Tăng độ lặp lại vị trí và giảm lỗi sai lệch thao tác thủ công.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Parameter Control</strong>
+      <p>Khóa tham số quan trọng theo từng mã hàng và vật liệu.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Inline Verification</strong>
+      <p>Kiểm tra nhanh tại nguồn để ngăn lỗi truyền qua công đoạn kế tiếp.</p>
+    </article>
+  </div>
+</section>
+
+  <section id="sample-development" class="ai-section">
+  <h2>Phát triển mẫu</h2>
+  <p>
+    Phát triển mẫu là giai đoạn chuyển đổi từ ý tưởng sang tiêu chuẩn sản xuất thực thi.
+    Mỗi mẫu đều được đánh giá theo ba trục: kỹ thuật, khả năng sản xuất và hiệu quả chi phí.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="https://images.pexels.com/photos/5710746/pexels-photo-5710746.jpeg?auto=compress&cs=tinysrgb&w=1400"
+        alt="Đội ngũ kỹ thuật triển khai mẫu thử tại khu vực phát triển sản phẩm"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/history-platform-real.jpg"
+        alt="Kỹ sư rà soát mẫu và phương án sản xuất"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <h3>Stage-gate phát triển mẫu</h3>
+  <ol>
+    <li>Thiết lập brief kỹ thuật và mục tiêu thị trường.</li>
+    <li>Chế thử mẫu, kiểm chứng vật liệu và kết cấu.</li>
+    <li>Pilot công đoạn để xác nhận khả năng sản xuất hàng loạt.</li>
+    <li>Chốt spec, BOM và tài liệu bàn giao line.</li>
+  </ol>
+
+  <p>
+    Cách làm này giúp rút ngắn vòng lặp thử-sửa và tăng tỷ lệ triển khai mẫu thành công ở quy mô thương mại.
+  </p>
+</section>
+
+  <section id="processing" class="ai-section">
+  <h2>Gia công</h2>
+  <p>
+    Công đoạn gia công được kiểm soát theo bản vẽ kỹ thuật và dung sai mục tiêu ngay tại hiện trường,
+    đảm bảo chi tiết đầu ra đạt chuẩn trước khi chuyển sang lắp ráp.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/history-scale-real.jpg"
+        alt="Thực thi công đoạn gia công tại nhà máy"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/team-data-real.jpg"
+        alt="Giám sát chất lượng trong quá trình gia công"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <ul>
+    <li>Chuẩn hóa setup máy theo từng mã hàng và từng vật liệu.</li>
+    <li>Thực hiện first-piece check đầu ca trước khi chạy sản lượng.</li>
+    <li>Kiểm tra kích thước theo tần suất định nghĩa để kiểm soát drift.</li>
+    <li>Ghi nhận lỗi công đoạn để tối ưu thao tác và chu kỳ sản xuất.</li>
+  </ul>
+</section>
+
+  <section id="assembly" class="ai-section">
+  <h2>Lắp ráp</h2>
+  <p>
+    Lắp ráp là công đoạn quyết định độ vững kết cấu và trải nghiệm sử dụng.
+    ANSLIFE áp dụng hướng dẫn thao tác chuẩn (SOP) cùng các điểm kiểm soát bắt buộc trước khi chuyển line.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/organization-execution-real.jpg"
+        alt="Công đoạn lắp ráp theo tiêu chuẩn thao tác"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/production-philosophy-partnership-real.jpg"
+        alt="Phối hợp tổ đội trong giai đoạn lắp ráp"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <div class="ai-highlight-grid">
+    <article class="ai-highlight-card">
+      <strong>Structure Check</strong>
+      <p>Kiểm tra độ khít, độ cân bằng và độ vững theo checklist kỹ thuật.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Fastener Control</strong>
+      <p>Quản lý loại liên kết, lực siết và vị trí lắp theo tiêu chuẩn.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Transfer Gate</strong>
+      <p>Chỉ bàn giao sang hoàn thiện khi đạt toàn bộ điều kiện lắp ráp.</p>
+    </article>
+  </div>
+</section>
+
+  <section id="finishing" class="ai-section">
+  <h2>Sơn hoàn thiện</h2>
+  <p>
+    Công đoạn hoàn thiện bề mặt được quản trị theo tiêu chí ngoại quan, độ phủ và độ bền.
+    Mục tiêu là giữ tính đồng nhất giữa mẫu duyệt và thành phẩm giao hàng ở quy mô lớn.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/team-hero-real.jpg"
+        alt="Kiểm tra ngoại quan và bề mặt trong công đoạn hoàn thiện"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/team-qc-real.jpg"
+        alt="Nhân sự QC xác nhận tiêu chí bề mặt trước khi đóng gói"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <ul>
+    <li>Đối chiếu mẫu màu master trước khi chạy theo lô sản xuất.</li>
+    <li>Kiểm tra độ mịn, độ phủ và lỗi ngoại quan theo mức phân loại.</li>
+    <li>Kiểm soát điều kiện công đoạn để giảm lỗi bề mặt tái diễn.</li>
+    <li>Nghiệm thu trước chuyển tiếp sang đóng gói xuất khẩu.</li>
+  </ul>
+</section>
+
+  <section id="packaging" class="ai-section">
+  <h2>Đóng gói</h2>
+  <p>
+    Đóng gói là lớp kiểm soát cuối cùng trước giao hàng, quyết định mức an toàn của sản phẩm trong toàn hành trình logistics.
+    ANSLIFE xây dựng phương án đóng gói theo đặc thù sản phẩm, điều kiện container và yêu cầu thị trường đích.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="/assets/about/vision-global-network-real.jpg"
+        alt="Chuẩn bị đóng gói phục vụ vận chuyển quốc tế"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/assets/about/company-ecosystem-system-real.jpg"
+        alt="Đối chiếu checklist đóng gói và bàn giao logistics"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <ul>
+    <li>Thiết kế bao bì theo mức rủi ro va đập và đặc thù tuyến vận chuyển.</li>
+    <li>Kiểm tra nhãn, mã hàng, phụ kiện và tài liệu kèm theo từng kiện.</li>
+    <li>Đối chiếu số lượng, tình trạng kiện và sơ đồ xếp container trước xuất.</li>
+    <li>Ghi nhận biên bản bàn giao để phục vụ truy xuất sau giao hàng.</li>
+  </ul>
+</section>
+
   <section id="standards-certificates" class="ai-section">
     <h2>Tiêu chuẩn & chứng chỉ</h2>
     <p>
@@ -1612,6 +2271,92 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     </p>
   </section>
 
+  <section id="production-standards" class="ai-section">
+  <h2>Tiêu chuẩn sản xuất</h2>
+  <p>
+    Bộ tiêu chuẩn sản xuất của ANSLIFE được xây dựng theo cấu trúc nhiều lớp,
+    đảm bảo toàn hệ sinh thái có cùng cách hiểu và cùng phương pháp thực thi từ đầu vào đến xuất hàng.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="https://images.pexels.com/photos/4483609/pexels-photo-4483609.jpeg?auto=compress&cs=tinysrgb&w=1400"
+        alt="Hệ thống tài liệu tiêu chuẩn và tuân thủ vận hành"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="https://images.pexels.com/photos/3846517/pexels-photo-3846517.jpeg?auto=compress&cs=tinysrgb&w=1400"
+        alt="Áp dụng tiêu chuẩn sản xuất trong kiểm soát công đoạn"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <h3>Cấu trúc tiêu chuẩn</h3>
+  <ul>
+    <li>Tiêu chuẩn nguyên liệu và vật tư đầu vào.</li>
+    <li>Tiêu chuẩn thao tác theo từng công đoạn sản xuất.</li>
+    <li>Tiêu chuẩn chất lượng theo checkpoint và tiêu chí nghiệm thu.</li>
+    <li>Tiêu chuẩn dữ liệu, truy xuất và lưu hồ sơ vận hành.</li>
+  </ul>
+
+  <p>
+    Hệ tiêu chuẩn được cập nhật định kỳ theo phản hồi khách hàng, dữ liệu lỗi và thay đổi yêu cầu thị trường.
+  </p>
+</section>
+
+  <section id="ecosystem-certifications" class="ai-section">
+  <h2>Chứng chỉ trong hệ sinh thái</h2>
+  <p>
+    ANSLIFE phối hợp cùng các đối tác sản xuất để duy trì năng lực đáp ứng yêu cầu chứng chỉ,
+    hồ sơ tuân thủ và tài liệu kỹ thuật theo từng thị trường xuất khẩu.
+  </p>
+
+  <div class="ai-eco-image-row">
+    <figure>
+      <img
+        src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1400"
+        alt="Rà soát chứng từ và tuân thủ trong hệ sinh thái sản xuất"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <figure>
+      <img
+        src="https://images.pexels.com/photos/6169660/pexels-photo-6169660.jpeg?auto=compress&cs=tinysrgb&w=1400"
+        alt="Phối hợp với đối tác để chuẩn bị hồ sơ chứng chỉ"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+
+  <div class="ai-highlight-grid">
+    <article class="ai-highlight-card">
+      <strong>Compliance Readiness</strong>
+      <p>Chuẩn bị tài liệu phù hợp yêu cầu pháp lý và tiêu chí kỹ thuật thị trường đích.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Traceable Documentation</strong>
+      <p>Liên kết chứng từ với lô sản xuất để dễ kiểm tra và đối chiếu khi audit.</p>
+    </article>
+    <article class="ai-highlight-card">
+      <strong>Audit Coordination</strong>
+      <p>Phối hợp nội bộ và đối tác để xử lý nhanh yêu cầu đánh giá từ khách hàng.</p>
+    </article>
+  </div>
+
+  <p>
+    Cách tổ chức hồ sơ theo chuẩn hệ sinh thái giúp doanh nghiệp phản hồi nhanh hơn với yêu cầu chứng từ,
+    đồng thời giảm rủi ro gián đoạn khi triển khai đơn hàng tại thị trường mới.
+  </p>
+</section>
+
   <section id="production-ecosystem-scale" class="ai-section">
     <h2>Quy mô hệ sinh thái sản xuất</h2>
     <p>
@@ -1636,8 +2381,73 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   <section id="product-development-capability" class="ai-section">
     <h2>Năng lực phát triển sản phẩm</h2>
     <p>
-      ANSLIFE có khả năng tiếp nhận ý tưởng, phân tích bản vẽ, phát triển mẫu và tối ưu cấu trúc để phù hợp sản xuất hàng loạt.
-      Quá trình này giúp rút ngắn vòng lặp thử nghiệm và giảm rủi ro sai lệch kỹ thuật khi chạy đơn lớn.
+      ANSLIFE tổ chức phát triển sản phẩm theo mô hình stage-gate để rút ngắn thời gian làm mẫu,
+      đồng thời bảo đảm mẫu duyệt có thể chuyển sang sản xuất hàng loạt với mức rủi ro thấp.
+      Năng lực này bao gồm tiếp nhận ý tưởng, phân tích bản vẽ, dựng mẫu, chạy pilot và chuẩn hóa hồ sơ kỹ thuật.
+    </p>
+
+    <div class="ai-eco-image-row">
+      <figure>
+        <img
+          src="/assets/about/team-rnd-real.jpg"
+          alt="Đội R&D phối hợp phát triển mẫu sản phẩm theo brief kỹ thuật"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+      <figure>
+        <img
+          src="/assets/about/ecosystem-rnd-real.jpg"
+          alt="Kỹ sư rà soát mẫu thử trước khi chuyển sang giai đoạn pilot"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+    </div>
+
+    <h3>Khung phát triển sản phẩm theo stage-gate</h3>
+    <ol>
+      <li>Concept Intake: tiếp nhận brief, mục tiêu thị trường và yêu cầu kỹ thuật.</li>
+      <li>Engineering Review: đánh giá kết cấu, vật liệu, dung sai và tính khả thi sản xuất.</li>
+      <li>Prototype Build: dựng mẫu thử, kiểm tra ngoại quan và chức năng sử dụng.</li>
+      <li>Pilot Validation: chạy thử công đoạn để xác nhận lead time và mức ổn định chất lượng.</li>
+      <li>Release for Production: chốt thông số, BOM và tài liệu bàn giao line sản xuất.</li>
+    </ol>
+
+    <div class="ai-highlight-grid">
+      <article class="ai-highlight-card">
+        <strong>DFM / DFE Review</strong>
+        <p>Tối ưu thiết kế để dễ sản xuất, giảm phát sinh rework và lãng phí vật tư.</p>
+      </article>
+      <article class="ai-highlight-card">
+        <strong>Prototype Loop</strong>
+        <p>Rút ngắn vòng lặp sửa mẫu nhờ phối hợp đồng thời giữa R&D, kỹ thuật và QC.</p>
+      </article>
+      <article class="ai-highlight-card">
+        <strong>Production Readiness</strong>
+        <p>Xác nhận mẫu đạt điều kiện triển khai thương mại trước khi mở lệnh sản xuất hàng loạt.</p>
+      </article>
+    </div>
+
+    <h3>Đầu ra bàn giao cho sản xuất</h3>
+    <ul>
+      <li>Tech pack hoàn chỉnh: bản vẽ, BOM, hướng dẫn công đoạn và tiêu chí QC.</li>
+      <li>Mẫu chuẩn đã phê duyệt kèm ngưỡng dung sai cho các điểm kỹ thuật quan trọng.</li>
+      <li>Kế hoạch pilot và bài học CAPA để ngăn lỗi tái diễn khi scale sản lượng.</li>
+      <li>Checklist đóng gói, nhãn mác và yêu cầu hồ sơ theo thị trường xuất khẩu.</li>
+    </ul>
+
+    <h3>KPI vận hành phát triển mẫu</h3>
+    <ul>
+      <li>Sample Lead Time: thời gian từ nhận brief đến mẫu duyệt.</li>
+      <li>First Sample Pass Rate: tỷ lệ mẫu đạt ngay vòng đầu.</li>
+      <li>Pilot-to-Production Success: tỷ lệ pilot chuyển thành sản xuất ổn định.</li>
+      <li>Engineering Change Cycle: thời gian đóng vòng thay đổi kỹ thuật.</li>
+    </ul>
+
+    <p>
+      Cấu trúc vận hành này giúp ANSLIFE giảm chênh lệch giữa mẫu và sản xuất thực tế,
+      từ đó tăng tốc độ triển khai dự án mới cho khách hàng quốc tế.
     </p>
   </section>
 
@@ -1811,7 +2621,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   'commercial-process': `
 <div class="ai-content">
   <figure class="ai-banner">
-    <img src="/assets/ai/commercial-process.svg" alt="Quy trình thương mại" loading="lazy" decoding="async" />
+    <img src="/assets/about/ecosystem-global-real.jpg" alt="Quy trình thương mại và vận chuyển nội thất xuất khẩu" loading="lazy" decoding="async" />
   </figure>
 
   <p class="ai-intro">
@@ -1841,19 +2651,69 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   <section id="order-flow" class="ai-section">
     <h2>Quy trình đặt hàng</h2>
     <p>
-      Quy trình được chuẩn hóa theo từng bước để giảm sai lệch thông tin và rút ngắn thời gian xác nhận đơn.
+      Quy trình đặt hàng được chuẩn hóa theo mô hình stage-by-stage để giảm sai lệch thông tin
+      giữa đội mua hàng, kỹ thuật và vận hành sản xuất. Mỗi giai đoạn đều có đầu vào rõ ràng,
+      điều kiện xác nhận và người chịu trách nhiệm, giúp đơn hàng đi nhanh nhưng vẫn kiểm soát được rủi ro.
     </p>
+
+    <div class="ai-eco-image-row">
+      <figure>
+        <img
+          src="/assets/about/ecosystem-production-real.jpg"
+          alt="Khu vực sản xuất nội thất phục vụ đơn hàng xuất khẩu"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+      <figure>
+        <img
+          src="/assets/about/ecosystem-global-real.jpg"
+          alt="Hệ thống container phục vụ giao nhận nội thất xuất khẩu"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+    </div>
+
+    <h3>Flow triển khai đơn hàng</h3>
     <ol>
-      <li>Tiếp nhận yêu cầu và làm rõ thông số kỹ thuật.</li>
-      <li>Phân tích vật liệu, cấu hình hoàn thiện và điều kiện đóng gói.</li>
-      <li>Báo giá và xác nhận điều kiện thương mại.</li>
-      <li>Đối chiếu mẫu hoặc tài liệu kỹ thuật trước khi chốt đơn.</li>
-      <li>Lập kế hoạch sản xuất và lịch giao dự kiến.</li>
-      <li>Cập nhật tiến độ theo mốc đã cam kết.</li>
-      <li>Chốt kiểm trước xuất và bàn giao logistics.</li>
+      <li>RFQ Intake: tiếp nhận yêu cầu, bản vẽ, target giá và target giao hàng.</li>
+      <li>Technical Clarification: làm rõ cấu trúc, vật liệu, finish, packing spec.</li>
+      <li>Costing & Quotation: phân tích chi phí, gửi báo giá và phương án thương mại.</li>
+      <li>Sample / Spec Alignment: đối chiếu mẫu, chốt dung sai và tiêu chí nghiệm thu.</li>
+      <li>PO Confirmation: xác nhận đơn hàng, điều khoản thanh toán, Incoterms và timeline.</li>
+      <li>Production Planning: phân bổ line, chuẩn bị vật tư, khóa mốc kiểm soát chất lượng.</li>
+      <li>Execution Tracking: cập nhật tiến độ theo checkpoint từ sản xuất đến đóng gói.</li>
+      <li>Pre-shipment & Handover: kiểm trước xuất, hoàn thiện chứng từ và bàn giao logistics.</li>
     </ol>
+
+    <div class="ai-highlight-grid">
+      <article class="ai-highlight-card">
+        <strong>Checkpoint kỹ thuật</strong>
+        <p>Chốt thông số bắt buộc trước PO để hạn chế thay đổi phát sinh giữa kỳ.</p>
+      </article>
+      <article class="ai-highlight-card">
+        <strong>Checkpoint thương mại</strong>
+        <p>Minh bạch giá, điều khoản thanh toán, trách nhiệm giao nhận ngay từ đầu.</p>
+      </article>
+      <article class="ai-highlight-card">
+        <strong>Checkpoint giao hàng</strong>
+        <p>Kiểm soát tiến độ, QC và chứng từ để bảo đảm xuất hàng đúng mốc cam kết.</p>
+      </article>
+    </div>
+
+    <h3>Thông tin cần chuẩn bị để chốt đơn nhanh</h3>
+    <ul>
+      <li>Mã sản phẩm hoặc bản vẽ kỹ thuật kèm ảnh tham chiếu.</li>
+      <li>Yêu cầu vật liệu, màu hoàn thiện, tiêu chí QC ưu tiên.</li>
+      <li>Số lượng theo từng mã và lịch giao mong muốn.</li>
+      <li>Điều kiện giao hàng dự kiến (EXW/FOB/CIF...) và cảng đích.</li>
+      <li>Yêu cầu chứng từ đặc thù của thị trường nhập khẩu.</li>
+    </ul>
+
     <p>
-      Cấu trúc quy trình này giúp cả hai bên chủ động quản trị kỳ vọng và giảm phát sinh khi dự án đi vào triển khai.
+      Cấu trúc này giúp hai bên quản trị kỳ vọng theo dữ liệu và mốc rõ ràng, giảm đáng kể vòng lặp chỉnh sửa
+      khi đơn hàng đã đi vào giai đoạn thực thi.
     </p>
   </section>
 
@@ -2238,8 +3098,7 @@ export function getAIFallbackSectionHtml(
   const introMatch = pageHtml.match(
     /<p class="ai-intro">[\s\S]*?<\/p>/i,
   );
-  const shouldRenderPageBannerAndIntro =
-    !(pageSlug === 'manufacturing-ecosystem' && sectionId === 'production-system');
+  const shouldRenderPageBannerAndIntro = pageSlug !== 'manufacturing-ecosystem';
 
   const composedHtml = `
 <div class="ai-content">

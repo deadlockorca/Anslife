@@ -4640,7 +4640,7 @@ ul {
 
 .ai-ps-kicker {
   margin: 0;
-  color: rgba(226, 237, 250, 0.9);
+  color: #000;
   font-size: 0.72rem;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -4649,7 +4649,7 @@ ul {
 
 .ai-production-system h2 {
   margin: 0;
-  color: #fff;
+  color: #000;
   font-size: clamp(1.38rem, 2.8vw, 2rem);
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -4658,7 +4658,7 @@ ul {
 .ai-ps-hero-overlay > p {
   margin: 0;
   max-width: 62ch;
-  color: rgba(242, 248, 255, 0.95);
+  color: #000;
   font-size: 0.94rem;
   line-height: 1.58;
 }
