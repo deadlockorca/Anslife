@@ -71,6 +71,12 @@ const HEADER_UTILITY_LINKS = [
   { label: 'Mạng lưới', path: '/global-network' },
   { label: 'Tuyển dụng', path: '/scholarship-community/join-anslife' },
 ] as const;
+const MOBILE_UTILITY_LINKS = [
+  { label: 'Giới thiệu về Anslife', path: '/about-anslife' },
+  { label: 'Công cụ & năng lực', path: '/manufacturing-ecosystem' },
+  { label: 'Dự án & mạng lưới', path: '/projects' },
+  { label: 'Liên hệ & hỗ trợ', path: '/contact' },
+] as const;
 const FOOTER_NAV_COLUMNS = [
   {
     title: 'Giới thiệu về Anslife',
@@ -350,6 +356,12 @@ export default function SiteLayout() {
   );
   const [showLanguagePopup, setShowLanguagePopup] = useState(false);
   const [mobileLanguageOpen, setMobileLanguageOpen] = useState(false);
+  const [mobileUtilityActivePath, setMobileUtilityActivePath] = useState<string | null>(
+    null,
+  );
+  const [mobileUtilityExpandedGroups, setMobileUtilityExpandedGroups] = useState<
+    Record<string, boolean>
+  >({});
   const [searchQuery, setSearchQuery] = useState('');
   const [searchFocused, setSearchFocused] = useState(false);
   const [searchLoading, setSearchLoading] = useState(false);
@@ -469,6 +481,27 @@ export default function SiteLayout() {
 
     return compactDesktopMenu;
   }, [topMenuItems]);
+  const mobileUtilityMenuItems = useMemo(
+    () =>
+      MOBILE_UTILITY_LINKS.map((item) => {
+        const source = desktopTopMenuItems.find(
+          (desktopItem) => desktopItem.path === item.path,
+        );
+        return {
+          label: item.label,
+          path: item.path,
+          children: source?.children ?? [],
+        } satisfies MenuChildItem;
+      }),
+    [desktopTopMenuItems],
+  );
+  const activeMobileUtilityItem = useMemo(
+    () =>
+      mobileUtilityActivePath
+        ? mobileUtilityMenuItems.find((item) => item.path === mobileUtilityActivePath) ?? null
+        : null,
+    [mobileUtilityActivePath, mobileUtilityMenuItems],
+  );
   const productRootCategories = useMemo(() => {
     const productMenuItem = topMenuItems.find((item) => item.path === PRODUCT_MENU_PATH);
     return productMenuItem?.children ?? [];
@@ -809,6 +842,8 @@ export default function SiteLayout() {
     if (!mobileOpen) {
       setMobileSegmentOpen(false);
       setMobileLanguageOpen(false);
+      setMobileUtilityActivePath(null);
+      setMobileUtilityExpandedGroups({});
     }
   }, [mobileOpen]);
 
@@ -997,6 +1032,98 @@ export default function SiteLayout() {
         )}
       </div>
     );
+  }
+
+  function renderMobileUtilitySubmenuItems(
+    items: MenuChildItem[],
+    keyPrefix: string,
+    depth = 0,
+  ): ReactNode {
+    if (items.length === 0) {
+      return <p className="mobile-menu-empty">{t('Mục này đang được cập nhật.')}</p>;
+    }
+
+    return items.map((item, index) => {
+      const hasChildren = Boolean(item.children && item.children.length > 0);
+      const itemKey = `${keyPrefix}-${depth}-${item.path}-${item.label}-${index}`;
+      const paddingLeft = `${0.9 + depth * 0.8}rem`;
+
+      if (!hasChildren) {
+        if (isExternalPath(item.path)) {
+          return (
+            <a
+              key={itemKey}
+              href={toLocalizedPath(item.path)}
+              className={`mobile-menu-utility-sub-link ${depth > 0 ? 'is-nested' : ''}`}
+              style={{ paddingLeft }}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                setMobileOpen(false);
+                setDesktopOpenMenuPath(null);
+                setMobileUtilityActivePath(null);
+                setMobileUtilityExpandedGroups({});
+              }}
+            >
+              {t(item.label)}
+            </a>
+          );
+        }
+
+        return (
+          <NavLink
+            key={itemKey}
+            to={toLocalizedPath(item.path)}
+            className={({ isActive }) =>
+              `mobile-menu-utility-sub-link ${depth > 0 ? 'is-nested' : ''} ${
+                isActive ? 'is-active' : ''
+              }`
+            }
+            style={{ paddingLeft }}
+            onClick={() => {
+              setMobileOpen(false);
+              setDesktopOpenMenuPath(null);
+              setMobileUtilityActivePath(null);
+              setMobileUtilityExpandedGroups({});
+            }}
+          >
+            {t(item.label)}
+          </NavLink>
+        );
+      }
+
+      const isOpen = Boolean(mobileUtilityExpandedGroups[itemKey]);
+
+      return (
+        <div
+          key={itemKey}
+          className={`mobile-menu-utility-subitem ${isOpen ? 'is-open' : ''}`}
+        >
+          <button
+            type="button"
+            className={`mobile-menu-utility-subtoggle ${depth > 0 ? 'is-nested' : ''}`}
+            style={{ paddingLeft }}
+            aria-expanded={isOpen}
+            onClick={() =>
+              setMobileUtilityExpandedGroups((currentGroups) => ({
+                ...currentGroups,
+                [itemKey]: !currentGroups[itemKey],
+              }))
+            }
+          >
+            <span>{t(item.label)}</span>
+            <span className="mobile-menu-utility-sub-caret" aria-hidden="true">
+              ▾
+            </span>
+          </button>
+          {isOpen && (
+            <div className="mobile-menu-utility-subchildren">
+              {renderMobileUtilitySubmenuItems(item.children ?? [], itemKey, depth + 1)}
+            </div>
+          )}
+        </div>
+      );
+    });
   }
 
   function renderLanguageSwitcher(selectId = 'language-switcher') {
@@ -1512,122 +1639,180 @@ export default function SiteLayout() {
             </div>
 
             <div className="mobile-menu-body">
-              <button
-                type="button"
-                className={`mobile-menu-segment-toggle ${mobileSegmentOpen ? 'is-open' : ''}`}
-                aria-expanded={mobileSegmentOpen}
-                onClick={() => setMobileSegmentOpen((currentValue) => !currentValue)}
-              >
-                <span className="mobile-menu-segment-icon" aria-hidden="true">
-                  ●
-                </span>
-                <span className="mobile-menu-segment-copy">
-                  <small>{t('Bạn đang truy cập')}</small>
-                  <strong>{t(activeHeaderSegment.label)}</strong>
-                </span>
-                <span className="mobile-menu-segment-caret" aria-hidden="true">
-                  ▾
-                </span>
-              </button>
+              {!activeMobileUtilityItem && (
+                <>
+                  <button
+                    type="button"
+                    className={`mobile-menu-segment-toggle ${mobileSegmentOpen ? 'is-open' : ''}`}
+                    aria-expanded={mobileSegmentOpen}
+                    onClick={() => setMobileSegmentOpen((currentValue) => !currentValue)}
+                  >
+                    <span className="mobile-menu-segment-icon" aria-hidden="true">
+                      ●
+                    </span>
+                    <span className="mobile-menu-segment-copy">
+                      <small>{t('Bạn đang truy cập')}</small>
+                      <strong>{t(activeHeaderSegment.label)}</strong>
+                    </span>
+                    <span className="mobile-menu-segment-caret" aria-hidden="true">
+                      ▾
+                    </span>
+                  </button>
 
-              {mobileSegmentOpen && (
-                <div className="mobile-menu-segment-options">
-                  {HEADER_SEGMENT_ITEMS.map((item) => (
-                    <button
-                      key={item.id}
-                      type="button"
-                      className={`mobile-menu-segment-option ${
-                        activeHeaderSegment.id === item.id ? 'is-active' : ''
-                      }`}
-                      onClick={() => {
-                        setActiveHeaderSegmentId(item.id);
-                        setMobileSegmentOpen(false);
-                      }}
-                    >
-                      {t(item.label)}
-                    </button>
-                  ))}
-                </div>
-              )}
+                  {mobileSegmentOpen && (
+                    <div className="mobile-menu-segment-options">
+                      {HEADER_SEGMENT_ITEMS.map((item) => (
+                        <button
+                          key={item.id}
+                          type="button"
+                          className={`mobile-menu-segment-option ${
+                            activeHeaderSegment.id === item.id ? 'is-active' : ''
+                          }`}
+                          onClick={() => {
+                            setActiveHeaderSegmentId(item.id);
+                            setMobileSegmentOpen(false);
+                          }}
+                        >
+                          {t(item.label)}
+                        </button>
+                      ))}
+                    </div>
+                  )}
 
-              <Link
-                to={toLocalizedPath(authMenuPath)}
-                className="mobile-menu-login-row"
-                onClick={() => {
-                  setMobileOpen(false);
-                  setDesktopOpenMenuPath(null);
-                }}
-              >
-                {headerLoginLabel}
-              </Link>
-
-              <nav className="mobile-menu-utility" aria-label={t('Liên kết nhanh')}>
-                {HEADER_UTILITY_LINKS.map((item) => (
-                  <NavLink
-                    key={item.path}
-                    to={toLocalizedPath(item.path)}
-                    className={({ isActive }) =>
-                      `mobile-menu-utility-link ${isActive ? 'is-active' : ''}`
-                    }
+                  <Link
+                    to={toLocalizedPath(authMenuPath)}
+                    className="mobile-menu-login-row"
                     onClick={() => {
                       setMobileOpen(false);
                       setDesktopOpenMenuPath(null);
                     }}
                   >
-                    {t(item.label)}
-                  </NavLink>
-                ))}
-              </nav>
+                    {headerLoginLabel}
+                  </Link>
+                </>
+              )}
 
-              <div className="mobile-menu-language-wrap">
-                <button
-                  type="button"
-                  className={`mobile-menu-language ${mobileLanguageOpen ? 'is-open' : ''}`}
-                  aria-expanded={mobileLanguageOpen}
-                  aria-controls="mobile-language-options"
-                  onClick={() => setMobileLanguageOpen((currentValue) => !currentValue)}
+              {activeMobileUtilityItem ? (
+                <section
+                  className="mobile-menu-utility-subpanel"
+                  aria-label={t(activeMobileUtilityItem.label)}
                 >
-                  <span className="mobile-menu-language-flag" aria-hidden="true">
-                    {mobileLanguageFlag}
-                  </span>
-                  <span className="mobile-menu-language-label">{mobileLanguageLabel}</span>
-                  <span className="mobile-menu-language-arrow" aria-hidden="true">
-                    ▾
-                  </span>
-                </button>
-
-                {mobileLanguageOpen && (
-                  <div
-                    id="mobile-language-options"
-                    className="mobile-menu-language-options"
-                    role="menu"
-                    aria-label={t('Chọn ngôn ngữ')}
+                  <button
+                    type="button"
+                    className="mobile-menu-utility-back"
+                    onClick={() => {
+                      setMobileUtilityActivePath(null);
+                      setMobileUtilityExpandedGroups({});
+                    }}
                   >
-                    {mobileMenuLanguageOptions.map((option) => (
-                      <button
-                        key={option.code}
-                        type="button"
-                        role="menuitemradio"
-                        aria-checked={language === option.code}
-                        className={`mobile-menu-language-option ${
-                          language === option.code ? 'is-active' : ''
-                        }`}
-                        onClick={() => handleLanguageSelect(option.code)}
-                      >
-                        <span
-                          className="mobile-menu-language-option-flag"
-                          aria-hidden="true"
+                    <span className="mobile-menu-utility-back-icon" aria-hidden="true">
+                      ←
+                    </span>
+                    <span>{t(activeMobileUtilityItem.label)}</span>
+                  </button>
+
+                  <nav className="mobile-menu-utility-sublist">
+                    {renderMobileUtilitySubmenuItems(
+                      activeMobileUtilityItem.children ?? [],
+                      `mobile-utility-${activeMobileUtilityItem.path}`,
+                    )}
+                  </nav>
+                </section>
+              ) : (
+                <nav className="mobile-menu-utility" aria-label={t('Liên kết nhanh')}>
+                  {mobileUtilityMenuItems.map((item) => {
+                    const hasChildren = Boolean(item.children && item.children.length > 0);
+                    if (!hasChildren) {
+                      return (
+                        <NavLink
+                          key={item.path}
+                          to={toLocalizedPath(item.path)}
+                          className={({ isActive }) =>
+                            `mobile-menu-utility-link ${isActive ? 'is-active' : ''}`
+                          }
+                          onClick={() => {
+                            setMobileOpen(false);
+                            setDesktopOpenMenuPath(null);
+                          }}
                         >
-                          {option.flag}
-                        </span>
-                        <span className="mobile-menu-language-option-label">
-                          {option.label}
+                          {t(item.label)}
+                        </NavLink>
+                      );
+                    }
+
+                    return (
+                      <button
+                        key={item.path}
+                        type="button"
+                        className="mobile-menu-utility-link mobile-menu-utility-trigger"
+                        onClick={() => {
+                          setMobileUtilityActivePath(item.path);
+                          setMobileUtilityExpandedGroups({});
+                          setMobileLanguageOpen(false);
+                          setMobileSegmentOpen(false);
+                        }}
+                      >
+                        <span>{t(item.label)}</span>
+                        <span className="mobile-menu-utility-trigger-arrow" aria-hidden="true">
+                          ›
                         </span>
                       </button>
-                    ))}
-                  </div>
-                )}
-              </div>
+                    );
+                  })}
+                </nav>
+              )}
+
+              {!activeMobileUtilityItem && (
+                <div className="mobile-menu-language-wrap">
+                  <button
+                    type="button"
+                    className={`mobile-menu-language ${mobileLanguageOpen ? 'is-open' : ''}`}
+                    aria-expanded={mobileLanguageOpen}
+                    aria-controls="mobile-language-options"
+                    onClick={() => setMobileLanguageOpen((currentValue) => !currentValue)}
+                  >
+                    <span className="mobile-menu-language-flag" aria-hidden="true">
+                      {mobileLanguageFlag}
+                    </span>
+                    <span className="mobile-menu-language-label">{mobileLanguageLabel}</span>
+                    <span className="mobile-menu-language-arrow" aria-hidden="true">
+                      ▾
+                    </span>
+                  </button>
+
+                  {mobileLanguageOpen && (
+                    <div
+                      id="mobile-language-options"
+                      className="mobile-menu-language-options"
+                      role="menu"
+                      aria-label={t('Chọn ngôn ngữ')}
+                    >
+                      {mobileMenuLanguageOptions.map((option) => (
+                        <button
+                          key={option.code}
+                          type="button"
+                          role="menuitemradio"
+                          aria-checked={language === option.code}
+                          className={`mobile-menu-language-option ${
+                            language === option.code ? 'is-active' : ''
+                          }`}
+                          onClick={() => handleLanguageSelect(option.code)}
+                        >
+                          <span
+                            className="mobile-menu-language-option-flag"
+                            aria-hidden="true"
+                          >
+                            {option.flag}
+                          </span>
+                          <span className="mobile-menu-language-option-label">
+                            {option.label}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </aside>
           </div>,
