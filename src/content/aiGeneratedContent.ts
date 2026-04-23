@@ -1,3 +1,5 @@
+import type { LanguageCode } from '../i18n/language';
+
 const AI_PAGE_CONTENT: Record<string, string> = {
   'about-anslife': `
 <div class="ai-content">
@@ -140,236 +142,371 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   </section>
 
   <section id="vision-mission" class="ai-section ai-vision-mission">
-    <p class="ai-vision-kicker">ANSLIFE GLOBAL MANUFACTURING PLATFORM</p>
-    <h2>Tầm nhìn - Sứ mệnh</h2>
-    <p class="ai-vision-lead">
-      Học từ các doanh nghiệp nội thất xuất khẩu quy mô lớn, ANSLIFE định vị rõ: phát triển như một hệ thống sản xuất
-      có thể kiểm soát bằng tiêu chuẩn và dữ liệu, thay vì phụ thuộc vào một nhà máy đơn lẻ.
-    </p>
-    <figure class="ai-vision-visual ai-vision-visual-main">
-      <img
-        src="/assets/about/vision-global-network-real.jpg"
-        alt="Mạng lưới logistics quốc tế phục vụ sản xuất và xuất khẩu"
-        loading="lazy"
-        decoding="async"
-      />
-    </figure>
+    <div class="ai-vision-shell">
+      <header class="ai-vision-header">
+        <h2>Tầm nhìn, sứ mệnh</h2>
+        <span class="ai-vision-header-line" aria-hidden="true"></span>
+      </header>
 
-    <div class="ai-vision-grid">
-      <article class="ai-vision-card">
-        <h3>Tầm nhìn</h3>
-        <p>
-          ANSLIFE hướng tới việc trở thành một hệ thống sản xuất có thể kiểm soát ở quy mô toàn cầu, kết nối khách
-          hàng quốc tế với mạng lưới sản xuất tại nhiều quốc gia.
-        </p>
-        <p>
-          Chúng tôi không chỉ xây dựng năng lực sản xuất tại Việt Nam, mà từng bước mở rộng hệ sinh thái sang các khu
-          vực khác, nơi các nhà máy vận hành theo cùng một tiêu chuẩn và cùng một hệ thống kiểm soát.
-        </p>
+      <article class="ai-vision-panel">
+        <div class="ai-vision-side">
+          <span class="ai-vision-side-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 30l23-9 10 16-23 9z" />
+              <path d="M37 22l6-3 8 13-6 3" />
+              <path d="M16 33l-5 2-3-6 5-2" />
+              <path d="M31 40l-9 15" />
+              <path d="M37 38l8 14" />
+              <path d="M19 55h30" />
+            </svg>
+          </span>
+          <h3>Tầm nhìn</h3>
+          <span class="ai-vision-side-line" aria-hidden="true"></span>
+        </div>
+
+        <div class="ai-vision-content ai-vision-content-grid">
+          <div class="ai-vision-copy">
+            <p>
+              ANSLIFE hướng tới việc trở thành một hệ thống sản xuất có thể kiểm soát ở quy mô toàn cầu, kết nối khách
+              hàng quốc tế với mạng lưới sản xuất tại nhiều quốc gia.
+            </p>
+            <p>
+              Chúng tôi không chỉ xây dựng năng lực sản xuất tại Việt Nam, mà từng bước mở rộng hệ sinh thái sang các
+              khu vực khác, nơi các nhà máy được tổ chức và vận hành theo cùng một tiêu chuẩn, cùng một hệ thống kiểm
+              soát và cùng một phương thức quản lý dữ liệu.
+            </p>
+          </div>
+
+          <div class="ai-vision-copy">
+            <p>ANSLIFE định hướng trở thành một nền tảng sản xuất xuyên biên giới, nơi:</p>
+            <ul class="ai-vision-bullet-list">
+              <li>chất lượng được kiểm soát bằng hệ thống, không phụ thuộc vào vị trí địa lý</li>
+              <li>dữ liệu sản xuất được quản lý tập trung</li>
+              <li>các nhà máy tại nhiều quốc gia có thể vận hành theo cùng một chuẩn</li>
+            </ul>
+            <p class="ai-vision-copy-note">
+              Trong dài hạn, ANSLIFE hướng tới việc xây dựng một mạng lưới sản xuất toàn cầu có tính ổn định cao, linh
+              hoạt về công suất và minh bạch trong toàn bộ quá trình vận hành.
+            </p>
+          </div>
+        </div>
       </article>
-      <article class="ai-vision-card">
-        <h3>Sứ mệnh</h3>
-        <p>
-          Sứ mệnh của ANSLIFE là xây dựng một hệ thống sản xuất minh bạch, có thể kiểm soát và có khả năng mở rộng
-          toàn cầu, giúp kết nối hiệu quả giữa khách hàng quốc tế và mạng lưới sản xuất.
-        </p>
-        <p>
-          Trọng tâm của sứ mệnh là đảm bảo chất lượng và tiến độ ổn định ở quy mô lớn, đồng thời giảm rủi ro trong quá
-          trình sản xuất xuyên biên giới.
-        </p>
+
+      <article class="ai-vision-panel ai-vision-panel-mission">
+        <div class="ai-vision-side">
+          <span class="ai-vision-side-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="31" cy="33" r="17" />
+              <circle cx="31" cy="33" r="9" />
+              <circle cx="31" cy="33" r="2.8" fill="currentColor" stroke="none" />
+              <path d="M31 33l17-16" />
+              <path d="M42 17h8v8" />
+            </svg>
+          </span>
+          <h3>Sứ mệnh</h3>
+          <span class="ai-vision-side-line" aria-hidden="true"></span>
+        </div>
+
+        <div class="ai-vision-content">
+          <p class="ai-vision-mission-lead">
+            Sứ mệnh của ANSLIFE là xây dựng một hệ thống sản xuất minh bạch, có thể kiểm soát và có khả năng mở rộng
+            toàn cầu, giúp kết nối hiệu quả giữa khách hàng quốc tế và mạng lưới sản xuất.
+          </p>
+
+          <div class="ai-vision-benefit-grid">
+            <article class="ai-vision-benefit">
+              <h4>
+                <span class="ai-vision-benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="21" cy="25" r="5.5" />
+                    <circle cx="32" cy="22" r="6.5" />
+                    <circle cx="43" cy="25" r="5.5" />
+                    <path d="M12 44c1.4-6 5.4-9.6 10.4-9.6s9.2 3.6 10.5 9.6" />
+                    <path d="M26 44c1.5-7.2 6-11.4 11.4-11.4S47.3 36.8 49 44" />
+                  </svg>
+                </span>
+                Đối với khách hàng
+              </h4>
+              <ul>
+                <li>tiếp cận hệ thống sản xuất tại nhiều quốc gia thông qua một nền tảng thống nhất</li>
+                <li>giảm rủi ro trong quá trình sản xuất xuyên biên giới</li>
+                <li>đảm bảo chất lượng và tiến độ ở quy mô lớn</li>
+              </ul>
+            </article>
+
+            <article class="ai-vision-benefit">
+              <h4>
+                <span class="ai-vision-benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 48V20h14v8l11-8v8l11-8v28H12z" />
+                    <path d="M20 48V38" />
+                    <path d="M27 48V34" />
+                    <path d="M34 48V40" />
+                    <path d="M41 48V35" />
+                  </svg>
+                </span>
+                Đối với nhà máy
+              </h4>
+              <ul>
+                <li>tham gia vào mạng lưới sản xuất toàn cầu</li>
+                <li>vận hành theo tiêu chuẩn quốc tế</li>
+                <li>nâng cao năng lực sản xuất và quản trị</li>
+              </ul>
+            </article>
+
+            <article class="ai-vision-benefit">
+              <h4>
+                <span class="ai-vision-benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="32" cy="32" r="17" />
+                    <path d="M15 32h34" />
+                    <path d="M32 15a25 25 0 0 0 0 34" />
+                    <path d="M32 15a25 25 0 0 1 0 34" />
+                    <path d="M19 24c3.4 2.4 8.3 3.8 13 3.8s9.6-1.4 13-3.8" />
+                    <path d="M19 40c3.4-2.4 8.3-3.8 13-3.8s9.6 1.4 13 3.8" />
+                  </svg>
+                </span>
+                Đối với hệ sinh thái
+              </h4>
+              <ul>
+                <li>kết nối các nguồn lực sản xuất tại nhiều quốc gia</li>
+                <li>chuẩn hóa quy trình và hệ thống kiểm soát chất lượng</li>
+                <li>tạo ra một nền tảng sản xuất có khả năng mở rộng linh hoạt theo nhu cầu thị trường</li>
+              </ul>
+            </article>
+          </div>
+        </div>
       </article>
     </div>
-
-    <div class="ai-vision-system-grid">
-      <article class="ai-vision-system-item">
-        <strong>Chất lượng được kiểm soát bằng hệ thống</strong>
-        <p>Không phụ thuộc vị trí địa lý hay từng nhà máy riêng lẻ.</p>
-      </article>
-      <article class="ai-vision-system-item">
-        <strong>Dữ liệu sản xuất quản lý tập trung</strong>
-        <p>Quyết định vận hành dựa trên dữ liệu thay vì cảm tính.</p>
-      </article>
-      <article class="ai-vision-system-item">
-        <strong>Vận hành đa quốc gia theo cùng chuẩn</strong>
-        <p>Đồng bộ quy trình, kiểm soát và cách đo lường hiệu quả.</p>
-      </article>
-    </div>
-    <figure class="ai-vision-visual ai-vision-visual-pillars">
-      <img
-        src="/assets/about/vision-system-pillars-real.jpg"
-        alt="Kỹ sư vận hành theo dõi dữ liệu và kiểm soát hệ thống sản xuất"
-        loading="lazy"
-        decoding="async"
-      />
-    </figure>
-
-    <div class="ai-vision-value-grid">
-      <article class="ai-vision-value-card">
-        <h3>Đối với khách hàng</h3>
-        <ul>
-          <li>Tiếp cận hệ thống sản xuất tại nhiều quốc gia qua một nền tảng thống nhất.</li>
-          <li>Giảm rủi ro trong quá trình sản xuất xuyên biên giới.</li>
-          <li>Đảm bảo chất lượng và tiến độ ở quy mô lớn.</li>
-        </ul>
-      </article>
-      <article class="ai-vision-value-card">
-        <h3>Đối với nhà máy</h3>
-        <ul>
-          <li>Tham gia vào mạng lưới sản xuất toàn cầu.</li>
-          <li>Vận hành theo tiêu chuẩn quốc tế.</li>
-          <li>Nâng cao năng lực sản xuất và quản trị dữ liệu.</li>
-        </ul>
-      </article>
-      <article class="ai-vision-value-card">
-        <h3>Đối với hệ sinh thái</h3>
-        <ul>
-          <li>Kết nối các nguồn lực sản xuất tại nhiều quốc gia.</li>
-          <li>Chuẩn hóa quy trình và hệ thống kiểm soát chất lượng.</li>
-          <li>Mở rộng công suất linh hoạt theo nhu cầu thị trường.</li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="ai-vision-roadmap">
-      <figure class="ai-vision-visual ai-vision-visual-operations">
-        <img
-          src="/assets/about/vision-factory-operations-real.jpg"
-          alt="Không gian vận hành và kiểm soát sản xuất trong hệ sinh thái ANSLIFE"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <article class="ai-vision-roadmap-step">
-        <span>Giai đoạn 01</span>
-        <strong>Chuẩn hóa hệ thống nền tảng tại Việt Nam</strong>
-        <p>Xây chuẩn kỹ thuật, chuẩn kiểm soát và chuẩn dữ liệu vận hành thống nhất.</p>
-      </article>
-      <article class="ai-vision-roadmap-step">
-        <span>Giai đoạn 02</span>
-        <strong>Mở rộng mạng lưới sản xuất khu vực</strong>
-        <p>Kết nối nhà máy đối tác theo cùng tiêu chuẩn và cùng cơ chế giám sát chất lượng.</p>
-      </article>
-      <article class="ai-vision-roadmap-step">
-        <span>Giai đoạn 03</span>
-        <strong>Vận hành nền tảng sản xuất xuyên biên giới</strong>
-        <p>Xây mạng lưới toàn cầu ổn định, linh hoạt công suất và minh bạch toàn chuỗi.</p>
-      </article>
-    </div>
-
-    <p class="ai-vision-note">
-      Trong dài hạn, ANSLIFE hướng tới một mạng lưới sản xuất toàn cầu có tính ổn định cao, có thể mở rộng nhanh theo
-      nhu cầu thị trường và vẫn giữ được kỷ luật chất lượng nhất quán.
-    </p>
   </section>
 
   <section id="core-values" class="ai-section ai-core-values">
-    <p class="ai-core-kicker">ANSLIFE OPERATING VALUES</p>
-    <h2>Giá trị cốt lõi</h2>
-    <p class="ai-core-lead">
-      Học từ các hệ thống nội thất xuất khẩu lớn, ANSLIFE xem giá trị cốt lõi là chuẩn hành vi vận hành mỗi ngày, không
-      phải khẩu hiệu truyền thông.
-    </p>
+    <div class="ai-core-shell">
+      <header class="ai-core-header">
+        <h2>Giá trị cốt lõi</h2>
+        <span class="ai-core-header-accent" aria-hidden="true"></span>
+        <div class="ai-core-header-meta">
+          <p class="ai-core-kicker">GIÁ TRỊ CỐT LÕI</p>
+          <span class="ai-core-header-rule" aria-hidden="true"></span>
+        </div>
+      </header>
 
-    <figure class="ai-core-hero">
-      <img
-        src="/assets/about/core-values-operations-real.jpg"
-        alt="Đội vận hành nhà máy nội thất làm việc theo quy trình kiểm soát"
-        loading="lazy"
-        decoding="async"
-      />
-    </figure>
+      <div class="ai-core-grid">
+        <article class="ai-core-card">
+          <div class="ai-core-card-side">
+            <span class="ai-core-card-number">01</span>
+            <span class="ai-core-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M52 16l18 7v18c0 14-9 22-18 27-9-5-18-13-18-27V23z" />
+                <path d="M44 41l6 6 10-12" />
+                <path d="M12 48h24v30H12z" />
+                <path d="M19 48v-6h10v6" />
+                <path d="M18 58h12M18 64h9M18 70h10" />
+                <circle cx="74" cy="66" r="10" />
+                <path d="M74 52v4M74 76v4M60 66h4M84 66h4M64 56l3 3M81 73l3 3M64 76l3-3M81 59l3-3" />
+              </svg>
+            </span>
+          </div>
+          <div class="ai-core-card-content">
+            <h3>KIỂM SOÁT</h3>
+            <p>ANSLIFE vận hành dựa trên nguyên tắc kiểm soát, không phụ thuộc vào cảm tính hay cá nhân.</p>
+            <p>Mọi hoạt động trong sản xuất đều được:</p>
+            <ul>
+              <li>Thiết lập quy trình rõ ràng</li>
+              <li>Kiểm tra theo từng công đoạn</li>
+              <li>Ghi nhận dữ liệu thực tế</li>
+            </ul>
+            <p class="ai-core-card-note">
+              Chất lượng không được đảm bảo bằng lời nói, mà bằng hệ thống kiểm soát xuyên suốt.
+            </p>
+          </div>
+        </article>
 
-    <div class="ai-core-grid">
-      <article class="ai-core-card">
-        <h3><span>01</span>KIỂM SOÁT (CONTROL)</h3>
-        <p>ANSLIFE vận hành dựa trên nguyên tắc kiểm soát, không phụ thuộc vào cảm tính hay cá nhân.</p>
-        <ul>
-          <li>Thiết lập quy trình rõ ràng.</li>
-          <li>Kiểm tra theo từng công đoạn.</li>
-          <li>Ghi nhận dữ liệu thực tế.</li>
-        </ul>
-        <p class="ai-core-card-note">Chất lượng được đảm bảo bằng hệ thống kiểm soát xuyên suốt.</p>
-      </article>
+        <article class="ai-core-card">
+          <div class="ai-core-card-side">
+            <span class="ai-core-card-number">02</span>
+            <span class="ai-core-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="24" cy="26" rx="12" ry="6" />
+                <path d="M12 26v24c0 3 5 6 12 6s12-3 12-6V26" />
+                <path d="M12 38c0 3 5 6 12 6s12-3 12-6M12 50c0 3 5 6 12 6s12-3 12-6" />
+                <path d="M46 40h8v10h-8zM58 30h8v20h-8z" />
+                <path d="M48 68l8-8 8 7 10-10" />
+                <circle cx="48" cy="68" r="2.3" />
+                <circle cx="56" cy="60" r="2.3" />
+                <circle cx="64" cy="67" r="2.3" />
+                <circle cx="74" cy="57" r="2.3" />
+              </svg>
+            </span>
+          </div>
+          <div class="ai-core-card-content">
+            <h3>DỮ LIỆU</h3>
+            <p>Mọi thông tin trong hệ thống đều được ghi nhận, lưu trữ và sử dụng để phục vụ vận hành.</p>
+            <div class="ai-core-split-list">
+              <div class="ai-core-split-col">
+                <p>ANSLIFE xây dựng hệ thống dữ liệu bao gồm:</p>
+                <ul>
+                  <li>Dữ liệu sản xuất</li>
+                  <li>Dữ liệu QC</li>
+                  <li>Dữ liệu tiến độ</li>
+                  <li>Dữ liệu lỗi</li>
+                </ul>
+              </div>
+              <div class="ai-core-split-col">
+                <p>Dữ liệu không chỉ để lưu trữ, mà để:</p>
+                <ul>
+                  <li>Phân tích</li>
+                  <li>Cải tiến</li>
+                  <li>Đưa ra quyết định</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
 
-      <article class="ai-core-card">
-        <h3><span>02</span>DỮ LIỆU (DATA-DRIVEN)</h3>
-        <p>Mọi thông tin được ghi nhận, lưu trữ và dùng để phục vụ vận hành thực tế.</p>
-        <ul>
-          <li>Dữ liệu sản xuất.</li>
-          <li>Dữ liệu QC.</li>
-          <li>Dữ liệu tiến độ và dữ liệu lỗi.</li>
-        </ul>
-        <p class="ai-core-card-note">Dữ liệu được dùng để phân tích, cải tiến và ra quyết định.</p>
-      </article>
+        <article class="ai-core-card">
+          <div class="ai-core-card-side">
+            <span class="ai-core-card-number">03</span>
+            <span class="ai-core-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 16h30l14 14v46H24z" />
+                <path d="M54 16v14h14M34 38h24M34 48h24M34 58h20" />
+                <circle cx="62" cy="66" r="10" />
+                <path d="M62 54v4M62 74v4M50 66h4M70 66h4M54 58l3 3M67 71l3 3M54 74l3-3M67 61l3-3" />
+              </svg>
+            </span>
+          </div>
+          <div class="ai-core-card-content">
+            <h3>TIÊU CHUẨN</h3>
+            <p>ANSLIFE chuẩn hóa toàn bộ quy trình để đảm bảo sự đồng nhất trong hệ thống.</p>
+            <p>Dù sản xuất tại bất kỳ nhà máy nào, mọi hoạt động đều phải tuân theo:</p>
+            <ul>
+              <li>Tiêu chuẩn kỹ thuật</li>
+              <li>Tiêu chuẩn chất lượng</li>
+              <li>Quy trình vận hành</li>
+            </ul>
+            <p class="ai-core-card-note">Tiêu chuẩn là nền tảng để hệ thống có thể mở rộng.</p>
+          </div>
+        </article>
 
-      <article class="ai-core-card">
-        <h3><span>03</span>TIÊU CHUẨN (STANDARDIZATION)</h3>
-        <p>ANSLIFE chuẩn hóa toàn bộ quy trình để đảm bảo sự đồng nhất trên toàn hệ sinh thái.</p>
-        <ul>
-          <li>Tiêu chuẩn kỹ thuật.</li>
-          <li>Tiêu chuẩn chất lượng.</li>
-          <li>Quy trình vận hành.</li>
-        </ul>
-        <p class="ai-core-card-note">Tiêu chuẩn là nền tảng để hệ thống có thể mở rộng.</p>
-      </article>
+        <article class="ai-core-card">
+          <div class="ai-core-card-side">
+            <span class="ai-core-card-number">04</span>
+            <span class="ai-core-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="24" cy="46" r="6" />
+                <circle cx="48" cy="40" r="8" />
+                <circle cx="72" cy="46" r="6" />
+                <path d="M16 72v-8c0-5 4-9 8-9s8 4 8 9v8" />
+                <path d="M38 72v-10c0-6 5-11 10-11s10 5 10 11v10" />
+                <path d="M64 72v-8c0-5 4-9 8-9s8 4 8 9v8" />
+                <path d="M16 34c8-12 24-18 40-16 8 1 14 4 20 8" stroke-dasharray="4 4" />
+              </svg>
+            </span>
+          </div>
+          <div class="ai-core-card-content">
+            <h3>MINH BẠCH</h3>
+            <p>ANSLIFE xây dựng môi trường làm việc minh bạch giữa:</p>
+            <div class="ai-core-split-list">
+              <div class="ai-core-split-col">
+                <ul>
+                  <li>Khách hàng</li>
+                  <li>Nhà máy</li>
+                  <li>Hệ thống vận hành</li>
+                </ul>
+                <p>Thông tin được:</p>
+              </div>
+              <div class="ai-core-split-col">
+                <ul>
+                  <li>Ghi nhận rõ ràng</li>
+                  <li>Cập nhật liên tục</li>
+                  <li>Chia sẻ theo đúng phạm vi</li>
+                </ul>
+              </div>
+            </div>
+            <p class="ai-core-card-note">Minh bạch giúp giảm rủi ro và tăng độ tin cậy trong hợp tác.</p>
+          </div>
+        </article>
 
-      <article class="ai-core-card">
-        <h3><span>04</span>MINH BẠCH (TRANSPARENCY)</h3>
-        <p>ANSLIFE xây môi trường minh bạch giữa khách hàng, nhà máy và hệ thống vận hành.</p>
-        <ul>
-          <li>Thông tin ghi nhận rõ ràng.</li>
-          <li>Cập nhật liên tục theo thực tế vận hành.</li>
-          <li>Chia sẻ theo đúng phạm vi và trách nhiệm.</li>
-        </ul>
-        <p class="ai-core-card-note">Minh bạch giúp giảm rủi ro và tăng độ tin cậy trong hợp tác.</p>
-      </article>
+        <article class="ai-core-card">
+          <div class="ai-core-card-side">
+            <span class="ai-core-card-number">05</span>
+            <span class="ai-core-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M32 64V42l8 6 8-12v10h16v18H32z" />
+                <path d="M38 58h6M48 58h6" />
+                <circle cx="48" cy="52" r="28" />
+                <path d="M44 22h10l-2-6M25 44l-4 10-4-3M71 58l4-10 4 3" />
+              </svg>
+            </span>
+          </div>
+          <div class="ai-core-card-content">
+            <h3>LINH HOẠT</h3>
+            <p>ANSLIFE vận hành hệ sinh thái nhiều nhà máy, cho phép:</p>
+            <ul>
+              <li>Điều chỉnh công suất</li>
+              <li>Phân bổ sản xuất</li>
+              <li>Thích ứng với yêu cầu khác nhau của từng thị trường</li>
+            </ul>
+            <p class="ai-core-card-note">
+              Sự linh hoạt được xây dựng trên nền tảng hệ thống, không phải xử lý tình huống ngẫu nhiên.
+            </p>
+          </div>
+        </article>
 
-      <article class="ai-core-card">
-        <h3><span>05</span>LINH HOẠT (FLEXIBILITY)</h3>
-        <p>Hệ sinh thái nhiều nhà máy cho phép ANSLIFE phản ứng nhanh theo từng thị trường.</p>
-        <ul>
-          <li>Điều chỉnh công suất theo nhu cầu.</li>
-          <li>Phân bổ sản xuất theo cụm công đoạn.</li>
-          <li>Thích ứng yêu cầu khác nhau của từng khách hàng.</li>
-        </ul>
-        <p class="ai-core-card-note">Linh hoạt được xây trên nền tảng hệ thống, không xử lý ngẫu nhiên.</p>
-      </article>
+        <article class="ai-core-card">
+          <div class="ai-core-card-side">
+            <span class="ai-core-card-number">06</span>
+            <span class="ai-core-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 42l10-18 16 8-10 18zM78 42l-10-18-16 8 10 18z" />
+                <path d="M35 50l8-7c3-2 7-2 10 0l8 7" />
+                <path d="M30 54l10 10c2 2 5 2 7 0l6-6" />
+                <path d="M66 54L56 64c-2 2-5 2-7 0" />
+                <path d="M24 52l12 12M72 52L60 64" />
+              </svg>
+            </span>
+          </div>
+          <div class="ai-core-card-content">
+            <h3>HỢP TÁC</h3>
+            <p>
+              ANSLIFE không xem nhà máy và khách hàng là đối tượng giao dịch, mà là đối tác trong cùng một hệ thống.
+            </p>
+            <p>Chúng tôi hướng tới:</p>
+            <ul>
+              <li>Hợp tác lâu dài</li>
+              <li>Phát triển cùng nhau</li>
+              <li>Nâng cao tiêu chuẩn chung</li>
+            </ul>
+          </div>
+        </article>
+      </div>
 
-      <article class="ai-core-card">
-        <h3><span>06</span>HỢP TÁC (PARTNERSHIP)</h3>
-        <p>ANSLIFE không xem nhà máy và khách hàng là đối tượng giao dịch, mà là đối tác trong cùng hệ thống.</p>
-        <ul>
-          <li>Hợp tác lâu dài.</li>
-          <li>Phát triển cùng nhau.</li>
-          <li>Nâng cao tiêu chuẩn chung.</li>
-        </ul>
-        <p class="ai-core-card-note">Hệ sinh thái chỉ bền vững khi tất cả các bên cùng phát triển.</p>
-      </article>
+      <div class="ai-core-footer-notes">
+        <article class="ai-core-note-card">
+          <span class="ai-core-note-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 24l22-10 22 10" />
+              <path d="M14 24h36M18 24v18M28 24v18M38 24v18M48 24v18M12 46h40" />
+            </svg>
+          </span>
+          <p>ANSLIFE vận hành như một hệ thống, nơi mọi giá trị được xây dựng từ kiểm soát, dữ liệu và tiêu chuẩn.</p>
+        </article>
+        <article class="ai-core-note-card is-trailing">
+          <span class="ai-core-note-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="21" cy="25" r="5" />
+              <circle cx="32" cy="21" r="6" />
+              <circle cx="43" cy="25" r="5" />
+              <path d="M13 44v-3c0-4 3-7 7-7h2c4 0 7 3 7 7v3" />
+              <path d="M24 44v-4c0-4.5 3.5-8 8-8s8 3.5 8 8v4" />
+              <path d="M35 14l2 3 3-2" />
+            </svg>
+          </span>
+          <p>Hệ sinh thái chỉ bền vững khi tất cả các bên cùng phát triển.</p>
+        </article>
+      </div>
     </div>
-
-    <div class="ai-core-visual-row">
-      <figure class="ai-core-visual">
-        <img
-          src="/assets/about/core-values-data-real.jpg"
-          alt="Kỹ sư theo dõi dữ liệu và chất lượng tại xưởng sản xuất"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure class="ai-core-visual">
-        <img
-          src="/assets/about/core-values-partnership-real.jpg"
-          alt="Đội ngũ kỹ thuật và vận hành phối hợp tại nhà máy"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-    </div>
-
-    <p class="ai-core-note">
-      ANSLIFE vận hành như một hệ thống, nơi mọi giá trị được xây dựng từ kiểm soát, dữ liệu và tiêu chuẩn để tạo nền
-      tảng tăng trưởng dài hạn cho cả khách hàng, nhà máy và hệ sinh thái.
-    </p>
   </section>
 
   <section id="production-philosophy" class="ai-section ai-operating-philosophy">
@@ -3027,6 +3164,489 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 `.trim(),
 };
 
+const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
+  'company-intro': `
+  <section id="company-intro" class="ai-section ai-company-intro">
+    <div class="ai-company-hero">
+      <div class="ai-company-copy">
+        <h1 class="ai-company-title">Company Introduction</h1>
+        <p class="ai-company-kicker">ABOUT ANSLIFE</p>
+        <p class="ai-company-lead">
+          ANSLIFE is a furniture manufacturing and export system built in Vietnam, focused on organizing the production
+          chain, quality control, and connecting industry resources.
+        </p>
+        <div class="ai-company-keyline">
+          <strong>ANSLIFE is not a factory. It is a controllable manufacturing system.</strong>
+        </div>
+        <p>
+          ANSLIFE does not operate as a single factory. We run an ecosystem of a core factory and partner factories,
+          connected through a unified management process and an independent quality control system.
+        </p>
+      </div>
+      <figure class="ai-company-cover">
+        <img
+          src="/assets/about/company-intro-hero-match-v3.png"
+          alt="ANSLIFE furniture manufacturing and export system in Vietnam"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+    </div>
+
+    <div class="ai-company-two-col">
+      <article class="ai-company-block ai-company-block-valuechain">
+        <span class="ai-company-card-icon" aria-hidden="true">⌘</span>
+        <h3>We are directly involved in the entire value chain:</h3>
+        <ul>
+          <li>Product development based on customer requirements</li>
+          <li>Production organization across our factory network</li>
+          <li>Quality control by market-specific standards</li>
+          <li>Finishing and export</li>
+        </ul>
+      </article>
+      <article class="ai-company-block ai-company-block-guarantee">
+        <span class="ai-company-card-icon" aria-hidden="true">✓</span>
+        <h3>As a result, ANSLIFE ensures:</h3>
+        <ul>
+          <li>Consistent quality</li>
+          <li>Flexible production</li>
+          <li>Ability to meet diverse customer requirements</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="ai-company-panels">
+      <article class="ai-company-panel ai-company-panel-ecosystem">
+        <span class="ai-company-card-icon" aria-hidden="true">▦</span>
+        <h3>MANUFACTURING ECOSYSTEM</h3>
+        <p>ANSLIFE builds a manufacturing ecosystem including:</p>
+        <ul class="ai-company-plain-list">
+          <li>Core factory system</li>
+          <li>Satellite partner factories</li>
+          <li>Independent quality control system</li>
+          <li>Raw material supply network</li>
+        </ul>
+        <p class="ai-company-divider-note">
+          All operations follow the same standards and processes to:
+        </p>
+        <ul class="ai-company-plain-list">
+          <li>Standardize quality</li>
+          <li>Optimize cost</li>
+          <li>Scale capacity flexibly</li>
+        </ul>
+      </article>
+
+      <article class="ai-company-panel ai-company-panel-market">
+        <span class="ai-company-card-icon" aria-hidden="true">◎</span>
+        <h3>MARKETS</h3>
+        <p>ANSLIFE currently serves:</p>
+        <ul class="ai-company-plain-list ai-company-market-list">
+          <li><span class="ai-country-flag" aria-hidden="true">🇺🇸</span>United States</li>
+          <li><span class="ai-country-flag" aria-hidden="true">🇯🇵</span>Japan</li>
+          <li><span class="ai-country-flag" aria-hidden="true">🇪🇺</span>Europe</li>
+        </ul>
+        <p class="ai-company-divider-note">
+          Each market has specific standards, and ANSLIFE's system is designed to meet those requirements consistently
+          and sustainably.
+        </p>
+      </article>
+
+      <article class="ai-company-panel ai-company-panel-direction">
+        <span class="ai-company-card-icon" aria-hidden="true">◉</span>
+        <h3>DIRECTION</h3>
+        <p>ANSLIFE aims to build a transparent and controllable manufacturing platform where:</p>
+        <ul class="ai-company-plain-list">
+          <li>Customers can directly access the manufacturing system</li>
+          <li>Factories can join a high-standard supply chain</li>
+          <li>Production and quality data are captured and centrally managed</li>
+        </ul>
+      </article>
+
+      <article class="ai-company-panel ai-company-panel-commitment">
+        <span class="ai-company-card-icon" aria-hidden="true">⟗</span>
+        <h3>COMMITMENT</h3>
+        <p>ANSLIFE commits to:</p>
+        <ul class="ai-company-plain-list">
+          <li>Ensuring product quality according to agreed standards</li>
+          <li>Ensuring production timelines</li>
+          <li>Maintaining transparent information throughout collaboration</li>
+          <li>Building long-term partnerships with customers and partners</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+  `.trim(),
+  'vision-mission': `
+  <section id="vision-mission" class="ai-section ai-vision-mission">
+    <div class="ai-vision-shell">
+      <header class="ai-vision-header">
+        <h2>Vision, Mission</h2>
+        <span class="ai-vision-header-line" aria-hidden="true"></span>
+      </header>
+
+      <article class="ai-vision-panel">
+        <div class="ai-vision-side">
+          <span class="ai-vision-side-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 30l23-9 10 16-23 9z" />
+              <path d="M37 22l6-3 8 13-6 3" />
+              <path d="M16 33l-5 2-3-6 5-2" />
+              <path d="M31 40l-9 15" />
+              <path d="M37 38l8 14" />
+              <path d="M19 55h30" />
+            </svg>
+          </span>
+          <h3>Vision</h3>
+          <span class="ai-vision-side-line" aria-hidden="true"></span>
+        </div>
+
+        <div class="ai-vision-content ai-vision-content-grid">
+          <div class="ai-vision-copy">
+            <p>
+              ANSLIFE aims to become a controllable manufacturing system at global scale, connecting international
+              customers with production networks across multiple countries.
+            </p>
+            <p>
+              We not only build production capability in Vietnam, but also expand the ecosystem into other regions where
+              factories are organized and operated under the same standards, control system, and data management method.
+            </p>
+          </div>
+
+          <div class="ai-vision-copy">
+            <p>ANSLIFE is oriented to become a cross-border manufacturing platform where:</p>
+            <ul class="ai-vision-bullet-list">
+              <li>quality is controlled by systems, independent of geographic location</li>
+              <li>production data is centrally managed</li>
+              <li>factories in different countries can operate under one shared standard</li>
+            </ul>
+            <p class="ai-vision-copy-note">
+              In the long term, ANSLIFE aims to build a global manufacturing network with high stability, flexible
+              capacity, and full operational transparency.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="ai-vision-panel ai-vision-panel-mission">
+        <div class="ai-vision-side">
+          <span class="ai-vision-side-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="31" cy="33" r="17" />
+              <circle cx="31" cy="33" r="9" />
+              <circle cx="31" cy="33" r="2.8" fill="currentColor" stroke="none" />
+              <path d="M31 33l17-16" />
+              <path d="M42 17h8v8" />
+            </svg>
+          </span>
+          <h3>Mission</h3>
+          <span class="ai-vision-side-line" aria-hidden="true"></span>
+        </div>
+
+        <div class="ai-vision-content">
+          <p class="ai-vision-mission-lead">
+            ANSLIFE's mission is to build a transparent, controllable, and globally scalable manufacturing system that
+            efficiently connects international customers with the production network.
+          </p>
+
+          <div class="ai-vision-benefit-grid">
+            <article class="ai-vision-benefit">
+              <h4>
+                <span class="ai-vision-benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="21" cy="25" r="5.5" />
+                    <circle cx="32" cy="22" r="6.5" />
+                    <circle cx="43" cy="25" r="5.5" />
+                    <path d="M12 44c1.4-6 5.4-9.6 10.4-9.6s9.2 3.6 10.5 9.6" />
+                    <path d="M26 44c1.5-7.2 6-11.4 11.4-11.4S47.3 36.8 49 44" />
+                  </svg>
+                </span>
+                For Customers
+              </h4>
+              <ul>
+                <li>access manufacturing systems in multiple countries through one unified platform</li>
+                <li>reduce risk in cross-border manufacturing</li>
+                <li>ensure quality and schedule at scale</li>
+              </ul>
+            </article>
+
+            <article class="ai-vision-benefit">
+              <h4>
+                <span class="ai-vision-benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 48V20h14v8l11-8v8l11-8v28H12z" />
+                    <path d="M20 48V38" />
+                    <path d="M27 48V34" />
+                    <path d="M34 48V40" />
+                    <path d="M41 48V35" />
+                  </svg>
+                </span>
+                For Factories
+              </h4>
+              <ul>
+                <li>join the global manufacturing network</li>
+                <li>operate under international standards</li>
+                <li>improve manufacturing and management capabilities</li>
+              </ul>
+            </article>
+
+            <article class="ai-vision-benefit">
+              <h4>
+                <span class="ai-vision-benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="32" cy="32" r="17" />
+                    <path d="M15 32h34" />
+                    <path d="M32 15a25 25 0 0 0 0 34" />
+                    <path d="M32 15a25 25 0 0 1 0 34" />
+                    <path d="M19 24c3.4 2.4 8.3 3.8 13 3.8s9.6-1.4 13-3.8" />
+                    <path d="M19 40c3.4-2.4 8.3-3.8 13-3.8s9.6 1.4 13 3.8" />
+                  </svg>
+                </span>
+                For the Ecosystem
+              </h4>
+              <ul>
+                <li>connect manufacturing resources across multiple countries</li>
+                <li>standardize processes and quality control systems</li>
+                <li>create a production platform that can scale flexibly with market demand</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  `.trim(),
+  'core-values': `
+  <section id="core-values" class="ai-section ai-core-values">
+    <div class="ai-core-shell">
+      <header class="ai-core-header">
+        <h2>Core Values</h2>
+        <span class="ai-core-header-accent" aria-hidden="true"></span>
+        <div class="ai-core-header-meta">
+          <p class="ai-core-kicker">CORE VALUES</p>
+          <span class="ai-core-header-rule" aria-hidden="true"></span>
+        </div>
+      </header>
+
+      <div class="ai-core-grid">
+        <article class="ai-core-card">
+          <div class="ai-core-card-side">
+            <span class="ai-core-card-number">01</span>
+            <span class="ai-core-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M52 16l18 7v18c0 14-9 22-18 27-9-5-18-13-18-27V23z" />
+                <path d="M44 41l6 6 10-12" />
+                <path d="M12 48h24v30H12z" />
+                <path d="M19 48v-6h10v6" />
+                <path d="M18 58h12M18 64h9M18 70h10" />
+                <circle cx="74" cy="66" r="10" />
+                <path d="M74 52v4M74 76v4M60 66h4M84 66h4M64 56l3 3M81 73l3 3M64 76l3-3M81 59l3-3" />
+              </svg>
+            </span>
+          </div>
+          <div class="ai-core-card-content">
+            <h3>CONTROL</h3>
+            <p>ANSLIFE operates on the principle of control, not on intuition or individual dependency.</p>
+            <p>Every production activity is:</p>
+            <ul>
+              <li>Defined with clear processes</li>
+              <li>Inspected by each stage</li>
+              <li>Recorded with actual data</li>
+            </ul>
+            <p class="ai-core-card-note">
+              Quality is not ensured by words. It is ensured by a consistent control system.
+            </p>
+          </div>
+        </article>
+
+        <article class="ai-core-card">
+          <div class="ai-core-card-side">
+            <span class="ai-core-card-number">02</span>
+            <span class="ai-core-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="24" cy="26" rx="12" ry="6" />
+                <path d="M12 26v24c0 3 5 6 12 6s12-3 12-6V26" />
+                <path d="M12 38c0 3 5 6 12 6s12-3 12-6M12 50c0 3 5 6 12 6s12-3 12-6" />
+                <path d="M46 40h8v10h-8zM58 30h8v20h-8z" />
+                <path d="M48 68l8-8 8 7 10-10" />
+                <circle cx="48" cy="68" r="2.3" />
+                <circle cx="56" cy="60" r="2.3" />
+                <circle cx="64" cy="67" r="2.3" />
+                <circle cx="74" cy="57" r="2.3" />
+              </svg>
+            </span>
+          </div>
+          <div class="ai-core-card-content">
+            <h3>DATA-DRIVEN</h3>
+            <p>All information in the system is recorded, stored, and used for operations.</p>
+            <div class="ai-core-split-list">
+              <div class="ai-core-split-col">
+                <p>ANSLIFE's data system includes:</p>
+                <ul>
+                  <li>Production data</li>
+                  <li>QC data</li>
+                  <li>Progress data</li>
+                  <li>Defect data</li>
+                </ul>
+              </div>
+              <div class="ai-core-split-col">
+                <p>Data is not only for storage, but also to:</p>
+                <ul>
+                  <li>Analyze</li>
+                  <li>Improve</li>
+                  <li>Make decisions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ai-core-card">
+          <div class="ai-core-card-side">
+            <span class="ai-core-card-number">03</span>
+            <span class="ai-core-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 16h30l14 14v46H24z" />
+                <path d="M54 16v14h14M34 38h24M34 48h24M34 58h20" />
+                <circle cx="62" cy="66" r="10" />
+                <path d="M62 54v4M62 74v4M50 66h4M70 66h4M54 58l3 3M67 71l3 3M54 74l3-3M67 61l3-3" />
+              </svg>
+            </span>
+          </div>
+          <div class="ai-core-card-content">
+            <h3>STANDARDIZATION</h3>
+            <p>ANSLIFE standardizes all processes to ensure consistency across the system.</p>
+            <p>Regardless of factory location, all operations must follow:</p>
+            <ul>
+              <li>Technical standards</li>
+              <li>Quality standards</li>
+              <li>Operating procedures</li>
+            </ul>
+            <p class="ai-core-card-note">Standards are the foundation for system scalability.</p>
+          </div>
+        </article>
+
+        <article class="ai-core-card">
+          <div class="ai-core-card-side">
+            <span class="ai-core-card-number">04</span>
+            <span class="ai-core-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="24" cy="46" r="6" />
+                <circle cx="48" cy="40" r="8" />
+                <circle cx="72" cy="46" r="6" />
+                <path d="M16 72v-8c0-5 4-9 8-9s8 4 8 9v8" />
+                <path d="M38 72v-10c0-6 5-11 10-11s10 5 10 11v10" />
+                <path d="M64 72v-8c0-5 4-9 8-9s8 4 8 9v8" />
+                <path d="M16 34c8-12 24-18 40-16 8 1 14 4 20 8" stroke-dasharray="4 4" />
+              </svg>
+            </span>
+          </div>
+          <div class="ai-core-card-content">
+            <h3>TRANSPARENCY</h3>
+            <p>ANSLIFE builds a transparent working environment among:</p>
+            <div class="ai-core-split-list">
+              <div class="ai-core-split-col">
+                <ul>
+                  <li>Customers</li>
+                  <li>Factories</li>
+                  <li>The operating system</li>
+                </ul>
+                <p>Information is:</p>
+              </div>
+              <div class="ai-core-split-col">
+                <ul>
+                  <li>Clearly recorded</li>
+                  <li>Continuously updated</li>
+                  <li>Shared within proper scope</li>
+                </ul>
+              </div>
+            </div>
+            <p class="ai-core-card-note">Transparency reduces risk and increases trust in collaboration.</p>
+          </div>
+        </article>
+
+        <article class="ai-core-card">
+          <div class="ai-core-card-side">
+            <span class="ai-core-card-number">05</span>
+            <span class="ai-core-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M32 64V42l8 6 8-12v10h16v18H32z" />
+                <path d="M38 58h6M48 58h6" />
+                <circle cx="48" cy="52" r="28" />
+                <path d="M44 22h10l-2-6M25 44l-4 10-4-3M71 58l4-10 4 3" />
+              </svg>
+            </span>
+          </div>
+          <div class="ai-core-card-content">
+            <h3>FLEXIBILITY</h3>
+            <p>ANSLIFE operates a multi-factory ecosystem that enables:</p>
+            <ul>
+              <li>Capacity adjustment</li>
+              <li>Production allocation</li>
+              <li>Adaptation to different market requirements</li>
+            </ul>
+            <p class="ai-core-card-note">
+              Flexibility is built on a system foundation, not on random case-by-case handling.
+            </p>
+          </div>
+        </article>
+
+        <article class="ai-core-card">
+          <div class="ai-core-card-side">
+            <span class="ai-core-card-number">06</span>
+            <span class="ai-core-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 42l10-18 16 8-10 18zM78 42l-10-18-16 8 10 18z" />
+                <path d="M35 50l8-7c3-2 7-2 10 0l8 7" />
+                <path d="M30 54l10 10c2 2 5 2 7 0l6-6" />
+                <path d="M66 54L56 64c-2 2-5 2-7 0" />
+                <path d="M24 52l12 12M72 52L60 64" />
+              </svg>
+            </span>
+          </div>
+          <div class="ai-core-card-content">
+            <h3>PARTNERSHIP</h3>
+            <p>
+              ANSLIFE does not treat factories and customers as transactional parties, but as partners in one system.
+            </p>
+            <p>We aim for:</p>
+            <ul>
+              <li>Long-term collaboration</li>
+              <li>Co-development</li>
+              <li>Higher shared standards</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="ai-core-footer-notes">
+        <article class="ai-core-note-card">
+          <span class="ai-core-note-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 24l22-10 22 10" />
+              <path d="M14 24h36M18 24v18M28 24v18M38 24v18M48 24v18M12 46h40" />
+            </svg>
+          </span>
+          <p>ANSLIFE operates as a system, where every value is built on control, data, and standards.</p>
+        </article>
+        <article class="ai-core-note-card is-trailing">
+          <span class="ai-core-note-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="21" cy="25" r="5" />
+              <circle cx="32" cy="21" r="6" />
+              <circle cx="43" cy="25" r="5" />
+              <path d="M13 44v-3c0-4 3-7 7-7h2c4 0 7 3 7 7v3" />
+              <path d="M24 44v-4c0-4.5 3.5-8 8-8s8 3.5 8 8v4" />
+              <path d="M35 14l2 3 3-2" />
+            </svg>
+          </span>
+          <p>The ecosystem is sustainable only when all parties grow together.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  `.trim(),
+};
+
 export function getAIFallbackPageHtml(slug: string): string | null {
   return AI_PAGE_CONTENT[slug] ?? null;
 }
@@ -3038,19 +3658,10 @@ function escapeRegExp(input: string): string {
 export function getAIFallbackSectionHtml(
   pageSlug: string,
   sectionId: string,
+  language: LanguageCode = 'vn',
 ): string | null {
   const pageHtml = AI_PAGE_CONTENT[pageSlug];
   if (!pageHtml) {
-    return null;
-  }
-
-  const escapedSectionId = escapeRegExp(sectionId);
-  const sectionPattern = new RegExp(
-    `<section\\s+id="${escapedSectionId}"[^>]*>[\\s\\S]*?<\\/section>`,
-    'i',
-  );
-  const sectionMatch = pageHtml.match(sectionPattern);
-  if (!sectionMatch) {
     return null;
   }
 
@@ -3062,7 +3673,38 @@ export function getAIFallbackSectionHtml(
   );
   const shouldRenderPageBannerAndIntro =
     pageSlug !== 'manufacturing-ecosystem' &&
-    !(pageSlug === 'about-anslife' && sectionId === 'company-intro');
+    !(
+      pageSlug === 'about-anslife' &&
+      (sectionId === 'company-intro' ||
+        sectionId === 'vision-mission' ||
+        sectionId === 'core-values')
+    );
+
+  const translatedSectionOverride =
+    pageSlug === 'about-anslife' && language === 'en'
+      ? AI_ABOUT_SECTION_CONTENT_EN[sectionId] ?? null
+      : null;
+  if (translatedSectionOverride) {
+    const composedTranslatedHtml = `
+<div class="ai-content">
+  ${shouldRenderPageBannerAndIntro ? bannerMatch?.[0] ?? '' : ''}
+  ${shouldRenderPageBannerAndIntro ? introMatch?.[0] ?? '' : ''}
+  ${translatedSectionOverride}
+</div>
+`.trim();
+
+    return composedTranslatedHtml;
+  }
+
+  const escapedSectionId = escapeRegExp(sectionId);
+  const sectionPattern = new RegExp(
+    `<section\\s+id="${escapedSectionId}"[^>]*>[\\s\\S]*?<\\/section>`,
+    'i',
+  );
+  const sectionMatch = pageHtml.match(sectionPattern);
+  if (!sectionMatch) {
+    return null;
+  }
 
   const composedHtml = `
 <div class="ai-content">

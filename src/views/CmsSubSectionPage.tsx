@@ -15,7 +15,7 @@ interface CmsSubSectionPageProps {
 }
 
 export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
-  const { t, toLocalizedPath } = useSiteI18n();
+  const { language, t, toLocalizedPath } = useSiteI18n();
   const { sectionId = '' } = useParams();
 
   const section = useMemo(
@@ -48,9 +48,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     );
   }
 
-  const fallbackHtml = getAIFallbackSectionHtml(config.slug, section.id);
-  const isCompanyIntroSection =
-    config.slug === 'about-anslife' && section.id === 'company-intro';
+  const fallbackHtml = getAIFallbackSectionHtml(config.slug, section.id, language);
+  const isCustomAboutSection =
+    config.slug === 'about-anslife' &&
+    (section.id === 'company-intro' ||
+      section.id === 'vision-mission' ||
+      section.id === 'core-values');
   const shouldForceTemplateHtml =
     (config.slug === 'manufacturing-ecosystem' && section.id === 'production-system') ||
     (config.slug === 'about-anslife' &&
@@ -71,7 +74,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   return (
     <>
       <Seo title={`${t(section.title)} | ${t(config.title)}`} description={t(section.description)} />
-      {!isCompanyIntroSection && (
+      {!isCustomAboutSection && (
         <section className="page-hero compact">
           <p className="kicker">{t(config.title)}</p>
           <h1>{t(section.title)}</h1>
@@ -83,7 +86,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       {shouldShowError && <ErrorBlock message={error as string} />}
       {resolvedHtml && (
         <HtmlContent
-          className={`html-content html-panel ${isCompanyIntroSection ? 'company-intro-page-panel' : ''}`}
+          className={`html-content html-panel ${isCustomAboutSection ? 'company-intro-page-panel' : ''}`}
           html={resolvedHtml}
         />
       )}
@@ -93,7 +96,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         </article>
       )}
 
-      {!isCompanyIntroSection && (
+      {!isCustomAboutSection && (
         <Link to={toLocalizedPath(config.path)} className="inline-link back-link">
           {t('Xem toàn bộ')} {t(config.title)}
         </Link>
