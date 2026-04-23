@@ -130,11 +130,6 @@ type FooterContactIcon = 'location' | 'phone' | 'mail' | 'website';
 
 const FOOTER_CONTACT_ITEMS = [
   {
-    label: 'Lô A-2.3, KCN Gò An Lạc, Bến Lức, Long An, Việt Nam',
-    path: 'https://maps.google.com/?q=KCN+Go+An+Lac+Ben+Luc+Long+An+Viet+Nam',
-    icon: 'location' as FooterContactIcon,
-  },
-  {
     label: HEADER_HOTLINE_NUMBER,
     path: `tel:${HEADER_HOTLINE_TEL}`,
     icon: 'phone' as FooterContactIcon,
@@ -154,7 +149,6 @@ const FOOTER_CONTACT_ITEMS = [
 const FOOTER_LEGAL_LINKS = [
   { label: 'Chính sách bảo mật', path: '/contact/company-info' },
   { label: 'Điều khoản sử dụng', path: '/commercial-process' },
-  { label: 'Sơ đồ website', path: '/' },
 ] as const;
 const TOAM_PRODUCT_MENU_FALLBACK: MenuChildItem[] = [
   {
