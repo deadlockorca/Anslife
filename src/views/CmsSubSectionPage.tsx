@@ -49,6 +49,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   }
 
   const fallbackHtml = getAIFallbackSectionHtml(config.slug, section.id);
+  const isCompanyIntroSection =
+    config.slug === 'about-anslife' && section.id === 'company-intro';
   const shouldForceTemplateHtml =
     (config.slug === 'manufacturing-ecosystem' && section.id === 'production-system') ||
     (config.slug === 'about-anslife' &&
@@ -69,24 +71,33 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   return (
     <>
       <Seo title={`${t(section.title)} | ${t(config.title)}`} description={t(section.description)} />
-      <section className="page-hero compact">
-        <p className="kicker">{t(config.title)}</p>
-        <h1>{t(section.title)}</h1>
-        <p>{t(section.description)}</p>
-      </section>
+      {!isCompanyIntroSection && (
+        <section className="page-hero compact">
+          <p className="kicker">{t(config.title)}</p>
+          <h1>{t(section.title)}</h1>
+          <p>{t(section.description)}</p>
+        </section>
+      )}
 
       {shouldShowLoading && <LoadingBlock />}
       {shouldShowError && <ErrorBlock message={error as string} />}
-      {resolvedHtml && <HtmlContent className="html-content html-panel" html={resolvedHtml} />}
+      {resolvedHtml && (
+        <HtmlContent
+          className={`html-content html-panel ${isCompanyIntroSection ? 'company-intro-page-panel' : ''}`}
+          html={resolvedHtml}
+        />
+      )}
       {!loading && !shouldShowError && !resolvedHtml && (
         <article className="html-content html-panel">
           <p>{t(section.description)}</p>
         </article>
       )}
 
-      <Link to={toLocalizedPath(config.path)} className="inline-link back-link">
-        {t('Xem toàn bộ')} {t(config.title)}
-      </Link>
+      {!isCompanyIntroSection && (
+        <Link to={toLocalizedPath(config.path)} className="inline-link back-link">
+          {t('Xem toàn bộ')} {t(config.title)}
+        </Link>
+      )}
     </>
   );
 }

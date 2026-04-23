@@ -73,57 +73,88 @@ const HEADER_UTILITY_LINKS = [
 ] as const;
 const FOOTER_NAV_COLUMNS = [
   {
-    title: 'Giới thiệu về Anslife',
+    title: 'VỀ ANSLIFE',
     links: [
       { label: 'Giới thiệu về công ty', path: '/about-anslife/company-intro' },
-      { label: 'Tầm nhìn, sứ mệnh', path: '/about-anslife/vision-mission' },
-      { label: 'Giá trị cốt lõi', path: '/about-anslife/core-values' },
-      { label: 'Đội ngũ', path: '/about-anslife/team' },
-    ],
-  },
-  {
-    title: 'Công cụ & Năng lực',
-    links: [
       { label: 'Hệ sinh thái sản xuất', path: '/manufacturing-ecosystem' },
       {
         label: 'Năng lực sản xuất',
         path: '/manufacturing-ecosystem/production-ecosystem-scale',
       },
-      { label: 'Kiểm soát chất lượng', path: '/quality-control' },
-      { label: 'Quy trình thương mại', path: '/commercial-process' },
+      { label: 'Hệ thống kiểm soát chất lượng', path: '/quality-control' },
     ],
   },
   {
-    title: 'Dự án & Mạng lưới',
+    title: 'QUY TRÌNH THƯƠNG MẠI',
     links: [
-      { label: 'Dự án', path: '/projects' },
-      { label: 'Mạng lưới', path: '/global-network' },
-      { label: 'Tin tức', path: '/news' },
-      { label: 'Tham gia cùng ANSLIFE', path: '/scholarship-community/join-anslife' },
+      { label: 'Quy trình phát triển mẫu', path: '/manufacturing-ecosystem/sample-development' },
+      { label: 'Quy trình đặt hàng', path: '/commercial-process/order-flow' },
+      { label: 'Điều kiện giao hàng (Incoterms)', path: '/commercial-process/incoterms' },
+      { label: 'Phương thức thanh toán', path: '/commercial-process/payment' },
+      { label: 'Thời gian sản xuất', path: '/commercial-process/lead-time' },
+      { label: 'Logistics', path: '/commercial-process/logistics' },
     ],
   },
   {
-    title: 'Liên hệ & Hỗ trợ',
+    title: 'DỰ ÁN & CASE STUDY',
     links: [
-      { label: 'Liên hệ', path: '/contact' },
-      { label: 'Gửi yêu cầu báo giá', path: '/contact/quote-request' },
-      { label: 'Đặt lịch làm việc', path: '/contact/schedule-meeting' },
-      { label: 'Tuyển dụng', path: '/scholarship-community/join-anslife' },
+      { label: 'Dự án xuất khẩu', path: '/projects/type/du-an-xuat-khau' },
+      { label: 'Case sản xuất', path: '/projects/type/case-san-xuat' },
+      { label: 'Case cải tiến', path: '/projects/type/case-cai-tien' },
+      { label: 'Hình ảnh giao hàng', path: '/projects/type/hinh-anh-giao-hang' },
+      { label: 'Hình ảnh container', path: '/projects/type/hinh-anh-container' },
     ],
   },
   {
-    title: 'Liên kết nhanh',
+    title: 'HỆ THỐNG TOÀN CẦU',
     links: [
-      { label: 'Sản phẩm', path: '/products' },
-      { label: 'Dự án & Case Study', path: '/projects' },
-      { label: 'Hệ thống toàn cầu', path: '/global-network' },
-      { label: 'Quỹ học bổng & cộng đồng', path: '/scholarship-community' },
+      { label: 'Việt Nam – Trụ sở', path: '/global-network/vietnam-hq' },
+      { label: 'Singapore – Văn phòng', path: '/global-network/singapore-office' },
+      { label: 'Nhật Bản – Văn phòng', path: '/global-network/japan-office' },
+      { label: 'Hoa Kỳ – Văn phòng', path: '/global-network/us-office' },
+      { label: 'Đối tác quốc tế', path: '/global-network/international-partners' },
+    ],
+  },
+  {
+    title: 'PHỤNG SỰ XÃ HỘI',
+    links: [
+      { label: 'Giới thiệu triết lý', path: '/scholarship-community/fund-overview' },
+      { label: 'Hoạt động cộng đồng', path: '/scholarship-community/community-activities' },
+      { label: 'Quỹ học bổng', path: '/scholarship-community/scholarship-program' },
+      { label: 'Báo cáo & tác động', path: '/scholarship-community/community-activities' },
     ],
   },
 ] as const;
-const FOOTER_QUICK_ACTIONS = [
-  { label: 'Gửi yêu cầu báo giá', path: '/contact/quote-request' },
-  { label: 'Đặt lịch làm việc', path: '/contact/schedule-meeting' },
+
+type FooterContactIcon = 'location' | 'phone' | 'mail' | 'website';
+
+const FOOTER_CONTACT_ITEMS = [
+  {
+    label: 'Lô A-2.3, KCN Gò An Lạc, Bến Lức, Long An, Việt Nam',
+    path: 'https://maps.google.com/?q=KCN+Go+An+Lac+Ben+Luc+Long+An+Viet+Nam',
+    icon: 'location' as FooterContactIcon,
+  },
+  {
+    label: HEADER_HOTLINE_NUMBER,
+    path: `tel:${HEADER_HOTLINE_TEL}`,
+    icon: 'phone' as FooterContactIcon,
+  },
+  {
+    label: 'info@anslife.net',
+    path: 'mailto:info@anslife.net',
+    icon: 'mail' as FooterContactIcon,
+  },
+  {
+    label: 'www.anslife.net',
+    path: 'https://anslife.net',
+    icon: 'website' as FooterContactIcon,
+  },
+] as const;
+
+const FOOTER_LEGAL_LINKS = [
+  { label: 'Chính sách bảo mật', path: '/contact/company-info' },
+  { label: 'Điều khoản sử dụng', path: '/commercial-process' },
+  { label: 'Sơ đồ website', path: '/' },
 ] as const;
 const TOAM_PRODUCT_MENU_FALLBACK: MenuChildItem[] = [
   {
@@ -340,6 +371,37 @@ function buildProductMenuChildren(categories: WpCategory[]): MenuChildItem[] {
   return pruneEmptyChildren(source);
 }
 
+function renderFooterContactIcon(icon: FooterContactIcon) {
+  switch (icon) {
+    case 'location':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2a6.5 6.5 0 0 0-6.5 6.5c0 4.88 5.36 11.9 6.02 12.74a.63.63 0 0 0 .97 0c.66-.84 6.01-7.86 6.01-12.74A6.5 6.5 0 0 0 12 2Zm0 9.25a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5Z" />
+        </svg>
+      );
+    case 'phone':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M19.2 15.24a3.5 3.5 0 0 0-2.5-1.03h-1.88a1.2 1.2 0 0 0-1 .54l-.9 1.34a13.7 13.7 0 0 1-5-5l1.33-.9c.35-.23.56-.62.56-1.03V8.3a3.5 3.5 0 0 0-1.03-2.5L7.67 4.7a1.8 1.8 0 0 0-2.55 0L3.7 6.13A2.87 2.87 0 0 0 2.88 8.8c.3 2.6 1.42 5.33 3.3 7.9a18.56 18.56 0 0 0 7.9 5.3 2.9 2.9 0 0 0 2.66-.81l1.42-1.43a1.8 1.8 0 0 0 0-2.55l-1.95-1.96Z" />
+        </svg>
+      );
+    case 'mail':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3.5 5A2.5 2.5 0 0 0 1 7.5v9A2.5 2.5 0 0 0 3.5 19h17a2.5 2.5 0 0 0 2.5-2.5v-9A2.5 2.5 0 0 0 20.5 5h-17Zm0 2h17c.2 0 .38.08.52.2L12 13.55 2.98 7.2A.8.8 0 0 1 3.5 7Zm-.5 2.08 6.6 4.64a4.2 4.2 0 0 0 4.8 0L21 9.08v7.42a.5.5 0 0 1-.5.5h-17a.5.5 0 0 1-.5-.5V9.08Z" />
+        </svg>
+      );
+    case 'website':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm7.92 9h-3.18a15.65 15.65 0 0 0-1.32-5A8.05 8.05 0 0 1 19.92 11ZM12 4.08c.9 1.05 1.9 3.05 2.38 5.92H9.62C10.1 7.13 11.1 5.13 12 4.08Zm-3.42 1.94a15.7 15.7 0 0 0-1.32 4.98H4.08a8.05 8.05 0 0 1 4.5-4.98ZM4.08 13h3.18a15.66 15.66 0 0 0 1.32 4.98A8.04 8.04 0 0 1 4.08 13Zm7.92 6.92c-.9-1.05-1.9-3.05-2.38-5.92h4.76c-.48 2.87-1.48 4.87-2.38 5.92Zm3.42-1.94c.59-1.45 1.05-3.15 1.32-4.98h3.18a8.04 8.04 0 0 1-4.5 4.98Z" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
 export default function SiteLayout() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [desktopOpenMenuPath, setDesktopOpenMenuPath] = useState<string | null>(null);
@@ -354,6 +416,9 @@ export default function SiteLayout() {
     null,
   );
   const [mobileUtilityExpandedGroups, setMobileUtilityExpandedGroups] = useState<
+    Record<string, boolean>
+  >({});
+  const [expandedFooterSections, setExpandedFooterSections] = useState<
     Record<string, boolean>
   >({});
   const [searchQuery, setSearchQuery] = useState('');
@@ -392,6 +457,11 @@ export default function SiteLayout() {
     () => /^\/(?:vn|en|jp|kr)\/?$/.test(location.pathname),
     [location.pathname],
   );
+  const isCompanyIntroRoute = useMemo(
+    () => location.pathname.includes('/about-anslife/company-intro'),
+    [location.pathname],
+  );
+  const isWoodThemeRoute = !isAdminRoute && !isHomeRoute;
   const showGlobalVideoBackground =
     hasGlobalVideoBackground && !isAdminRoute && isHomeRoute;
   const [selectedLanguageOption, setSelectedLanguageOption] = useState<string>(() => {
@@ -498,6 +568,7 @@ export default function SiteLayout() {
     setMobileSegmentOpen(false);
     setSearchFocused(false);
     setSearchQuery('');
+    setExpandedFooterSections({});
   }, [location.pathname]);
 
   useEffect(() => {
@@ -638,6 +709,15 @@ export default function SiteLayout() {
     (item: MenuChildItem, className: string): ReactNode => {
       const resolvedPath = toLocalizedPath(item.path);
       const resolvedLabel = t(item.label);
+      const hasChildren = Boolean(item.children && item.children.length > 0);
+
+      if (hasChildren) {
+        return (
+          <span className={`${className} product-mega-static`} aria-label={resolvedLabel}>
+            {resolvedLabel}
+          </span>
+        );
+      }
 
       if (isExternalPath(item.path)) {
         return (
@@ -719,36 +799,20 @@ export default function SiteLayout() {
         if (depth === 0) {
           const key = `desktop-parent-${depth}-${item.path}-${item.label}`;
           const label = t(item.label);
-          const parentNode = isExternalPath(item.path) ? (
-            <a
+          const parentNode = (
+            <button
               key={key}
-              href={toLocalizedPath(item.path)}
-              className="submenu-link submenu-link-parent"
-              target="_blank"
-              rel="noopener noreferrer"
+              type="button"
+              className="submenu-link submenu-link-parent submenu-link-button"
               aria-haspopup="true"
               aria-label={label}
-              onClick={() => setMobileOpen(false)}
+              onClick={(event) => event.preventDefault()}
             >
               {label}
               <span className="submenu-link-arrow" aria-hidden="true">
                 ›
               </span>
-            </a>
-          ) : (
-            <NavLink
-              key={key}
-              to={toLocalizedPath(item.path)}
-              className="submenu-link submenu-link-parent"
-              aria-haspopup="true"
-              aria-label={label}
-              onClick={() => setMobileOpen(false)}
-            >
-              {label}
-              <span className="submenu-link-arrow" aria-hidden="true">
-                ›
-              </span>
-            </NavLink>
+            </button>
           );
 
           return (
@@ -766,14 +830,14 @@ export default function SiteLayout() {
             key={`desktop-nested-${item.path}-${item.label}`}
             className="submenu-group"
           >
-            {renderMenuLeaf(item, 'submenu-group-title', `desktop-group-title-${depth}`)}
+            <p className="submenu-group-title">{t(item.label)}</p>
             <div className="submenu-group-list">
               {renderDesktopSubmenuItems(item.children ?? [], depth + 1)}
             </div>
           </div>
         );
       }),
-    [isExternalPath, renderMenuLeaf, t, toLocalizedPath],
+    [renderMenuLeaf, t],
   );
 
   useEffect(() => {
@@ -1110,10 +1174,47 @@ export default function SiteLayout() {
     );
   }
 
+  const toggleFooterSection = useCallback((sectionKey: string) => {
+    setExpandedFooterSections((currentState) => ({
+      ...currentState,
+      [sectionKey]: !currentState[sectionKey],
+    }));
+  }, []);
+
+  function renderFooterSectionToggle(
+    sectionKey: string,
+    sectionId: string,
+    label: string,
+    isSectionExpanded: boolean,
+  ) {
+    return (
+      <button
+        type="button"
+        className={`site-footer-section-toggle ${isSectionExpanded ? 'is-open' : ''}`}
+        aria-expanded={isSectionExpanded}
+        aria-controls={sectionId}
+        onClick={() => toggleFooterSection(sectionKey)}
+      >
+        <span>{label}</span>
+        <span className="site-footer-section-caret" aria-hidden="true">
+          ▾
+        </span>
+      </button>
+    );
+  }
+
+  const footerContactSectionKey = 'contact';
+  const footerContactSectionId = 'site-footer-contact-list';
+  const isFooterContactExpanded = Boolean(expandedFooterSections[footerContactSectionKey]);
+
   return (
     <div
       className={`site-shell ${isAdminRoute ? 'is-admin-route' : ''} ${
         !isAdminRoute && isHomeRoute ? 'is-home-route' : ''
+      } ${
+        !isAdminRoute && isCompanyIntroRoute ? 'is-company-intro-route' : ''
+      } ${
+        isWoodThemeRoute ? 'is-wood-theme-route' : ''
       } ${
         showGlobalVideoBackground ? 'has-global-video' : ''
       }`}
@@ -1158,7 +1259,7 @@ export default function SiteLayout() {
         </div>
       )}
 
-      <header className="topbar">
+      <header className={`topbar ${isWoodThemeRoute ? 'is-company-intro-theme' : ''}`}>
         <div className="topbar-inner">
           {!isAdminRoute && (
             <div className="topbar-utility">
@@ -1213,6 +1314,7 @@ export default function SiteLayout() {
                 decoding="async"
               />
             </NavLink>
+            {!isAdminRoute && isCompanyIntroRoute && renderLanguageSwitcher('language-switcher-company-intro')}
             {!isAdminRoute && (
               <div className="mobile-home-header-actions">
                 <Link
@@ -1367,7 +1469,35 @@ export default function SiteLayout() {
                                       const isActive =
                                         activeProductMegaCategory?.path === category.path;
                                       const childCount = category.children?.length ?? 0;
+                                      const hasChildren = childCount > 0;
                                       const categoryLabel = t(category.label);
+
+                                      if (hasChildren) {
+                                        return (
+                                          <button
+                                            key={`product-root-${category.path}`}
+                                            type="button"
+                                            onMouseEnter={() =>
+                                              setActiveProductMegaCategoryPath(category.path)
+                                            }
+                                            onFocus={() =>
+                                              setActiveProductMegaCategoryPath(category.path)
+                                            }
+                                            onClick={(event) => {
+                                              event.preventDefault();
+                                              setActiveProductMegaCategoryPath(category.path);
+                                            }}
+                                            className={`product-mega-root-item ${
+                                              isActive ? 'active' : ''
+                                            }`}
+                                          >
+                                            <span>{categoryLabel}</span>
+                                            <span className="product-mega-root-count">
+                                              {childCount > 0 ? childCount : '•'}
+                                            </span>
+                                          </button>
+                                        );
+                                      }
 
                                       if (isExternalPath(category.path)) {
                                         return (
@@ -1762,13 +1892,42 @@ export default function SiteLayout() {
       </main>
 
       {!isAdminRoute && !isHomeRoute && (
-        <footer className="site-footer">
-          <div className="site-footer-top">
-            <div className="site-footer-columns">
-              {FOOTER_NAV_COLUMNS.map((column) => (
-                <nav key={column.title} className="site-footer-column" aria-label={t(column.title)}>
-                  <h3>{t(column.title)}</h3>
-                  <div className="site-footer-links">
+        <footer className={`site-footer ${isWoodThemeRoute ? 'is-company-intro-theme' : ''}`}>
+          <div className="site-footer-main">
+            <section className="site-footer-company">
+              <Link to={toLocalizedPath('/')} className="site-footer-brand" onClick={handleBrandClick}>
+                <img
+                  src="/assets/anslife-logo.png"
+                  alt="ANSLIFE"
+                  className="site-footer-brand-logo"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </Link>
+              <p className="site-footer-company-copy">
+                {t('Nhà sản xuất và xuất khẩu nội thất gỗ uy tín cho các thương hiệu toàn cầu.')}
+              </p>
+              <SocialLinks className="site-footer-social-icons" />
+            </section>
+
+            {FOOTER_NAV_COLUMNS.map((column, index) => {
+              const sectionKey = `column-${index}`;
+              const sectionId = `site-footer-links-${index}`;
+              const isSectionExpanded = Boolean(expandedFooterSections[sectionKey]);
+              const columnTitle = t(column.title);
+
+              return (
+                <nav
+                  key={column.title}
+                  className="site-footer-section site-footer-column"
+                  aria-label={columnTitle}
+                >
+                  {renderFooterSectionToggle(sectionKey, sectionId, columnTitle, isSectionExpanded)}
+                  <h3>{columnTitle}</h3>
+                  <div
+                    id={sectionId}
+                    className={`site-footer-links ${isSectionExpanded ? 'is-open' : ''}`}
+                  >
                     {column.links.map((item) => (
                       <Link
                         key={`${column.title}-${item.path}`}
@@ -1784,46 +1943,56 @@ export default function SiteLayout() {
                     ))}
                   </div>
                 </nav>
-              ))}
-            </div>
+              );
+            })}
 
-            <aside className="site-footer-aside">
-              <div className="site-footer-quick-actions">
-                {FOOTER_QUICK_ACTIONS.map((item, index) => (
-                  <Link
+            <section className="site-footer-section site-footer-contact" aria-label={t('LIÊN HỆ')}>
+              {renderFooterSectionToggle(
+                footerContactSectionKey,
+                footerContactSectionId,
+                t('LIÊN HỆ'),
+                isFooterContactExpanded,
+              )}
+              <h3>{t('LIÊN HỆ')}</h3>
+              <div
+                id={footerContactSectionId}
+                className={`site-footer-contact-list ${isFooterContactExpanded ? 'is-open' : ''}`}
+              >
+                {FOOTER_CONTACT_ITEMS.map((item) => (
+                  <a
                     key={item.path}
-                    to={toLocalizedPath(item.path)}
-                    className={`site-footer-quick-action ${index === 0 ? 'is-primary' : 'is-secondary'}`}
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setDesktopOpenMenuPath(null);
-                    }}
+                    href={item.path}
+                    className="site-footer-contact-item"
+                    target={item.path.startsWith('http') ? '_blank' : undefined}
+                    rel={item.path.startsWith('http') ? 'noopener noreferrer' : undefined}
                   >
-                    {t(item.label)}
-                  </Link>
+                    {renderFooterContactIcon(item.icon)}
+                    <span>{t(item.label)}</span>
+                  </a>
                 ))}
               </div>
-
-              <div className="site-footer-social">
-                <strong>{t('Kết nối ANSLIFE')}</strong>
-                <SocialLinks className="site-footer-social-icons" />
-              </div>
-            </aside>
+            </section>
           </div>
 
-          <div className="site-footer-bottom">
-            <Link to={toLocalizedPath('/')} className="site-footer-brand" onClick={handleBrandClick}>
-              <img
-                src="/assets/anslife-logo.png"
-                alt="ANSLIFE"
-                className="site-footer-brand-logo"
-                loading="lazy"
-                decoding="async"
-              />
-            </Link>
+          <div className="site-footer-legal">
             <p className="site-footer-copy">
-              © {footerYear} ANSLIFE. Manufacturing & Export Ecosystem.
+              © {footerYear} ANSLIFE. All Rights Reserved.
             </p>
+            <nav className="site-footer-legal-links" aria-label={t('Liên kết chân trang')}>
+              {FOOTER_LEGAL_LINKS.map((item) => (
+                <Link
+                  key={item.path}
+                  to={toLocalizedPath(item.path)}
+                  className="site-footer-legal-link"
+                  onClick={() => {
+                    setMobileOpen(false);
+                    setDesktopOpenMenuPath(null);
+                  }}
+                >
+                  {t(item.label)}
+                </Link>
+              ))}
+            </nav>
           </div>
         </footer>
       )}

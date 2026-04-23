@@ -32,146 +32,108 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   <section id="company-intro" class="ai-section ai-company-intro">
     <div class="ai-company-hero">
       <div class="ai-company-copy">
+        <h1 class="ai-company-title">Giới thiệu về công ty</h1>
         <p class="ai-company-kicker">GIỚI THIỆU ANSLIFE</p>
-        <h2>Hệ thống sản xuất nội thất có thể kiểm soát và mở rộng</h2>
-        <p>
+        <p class="ai-company-lead">
           ANSLIFE là một hệ thống sản xuất và xuất khẩu nội thất được xây dựng tại Việt Nam, tập trung vào việc tổ chức
           chuỗi sản xuất, kiểm soát chất lượng và kết nối các nguồn lực trong ngành.
         </p>
+        <div class="ai-company-keyline">
+          <strong>ANSLIFE is not a factory. It is a controllable manufacturing system.</strong>
+        </div>
         <p>
           ANSLIFE không hoạt động như một nhà máy đơn lẻ, mà vận hành một hệ sinh thái gồm nhà máy chính và các nhà
           máy đối tác, được liên kết thông qua quy trình quản lý thống nhất và hệ thống kiểm soát chất lượng độc lập.
         </p>
-        <div class="ai-company-keyline">
-          <span>ANSLIFE is not a factory.</span>
-          <strong>It is a controllable manufacturing system.</strong>
-        </div>
       </div>
       <figure class="ai-company-cover">
         <img
-          src="/assets/about/company-intro-hero-real.jpg"
-          alt="Đội ngũ sản xuất nội thất phối hợp tại xưởng ANSLIFE"
+          src="/assets/about/company-intro-hero-match-v3.png"
+          alt="Hệ thống sản xuất và xuất khẩu nội thất ANSLIFE tại Việt Nam"
           loading="lazy"
           decoding="async"
         />
       </figure>
     </div>
 
-    <div class="ai-company-pill-row">
-      <span>Chuỗi sản xuất tích hợp</span>
-      <span>Kiểm soát chất lượng độc lập</span>
-      <span>Kết nối đa nhà máy</span>
-      <span>Xuất khẩu theo chuẩn thị trường</span>
-    </div>
-
     <div class="ai-company-two-col">
-      <article class="ai-company-block">
-        <h3>ANSLIFE tham gia trực tiếp vào toàn bộ chuỗi giá trị</h3>
-        <ol>
-          <li>Phát triển sản phẩm theo yêu cầu.</li>
-          <li>Tổ chức sản xuất tại hệ thống nhà máy.</li>
-          <li>Kiểm soát chất lượng theo tiêu chuẩn từng thị trường.</li>
-          <li>Hoàn thiện và xuất khẩu.</li>
-        </ol>
-      </article>
-      <article class="ai-company-block">
-        <h3>Kết quả ANSLIFE đảm bảo</h3>
+      <article class="ai-company-block ai-company-block-valuechain">
+        <span class="ai-company-card-icon" aria-hidden="true">⌘</span>
+        <h3>Chúng tôi tham gia trực tiếp vào toàn bộ chuỗi giá trị:</h3>
         <ul>
-          <li>Sự ổn định về chất lượng.</li>
-          <li>Tính linh hoạt trong sản xuất.</li>
-          <li>Khả năng đáp ứng đa dạng yêu cầu của khách hàng.</li>
+          <li>Phát triển sản phẩm theo yêu cầu</li>
+          <li>Tổ chức sản xuất tại hệ thống nhà máy</li>
+          <li>Kiểm soát chất lượng theo tiêu chuẩn từng thị trường</li>
+          <li>Hoàn thiện và xuất khẩu</li>
         </ul>
       </article>
-    </div>
-
-    <div class="ai-company-ecosystem">
-      <h3>HỆ SINH THÁI SẢN XUẤT</h3>
-      <p>
-        ANSLIFE xây dựng một hệ sinh thái sản xuất gồm hệ thống nhà máy chính, các nhà máy đối tác vệ tinh, hệ thống
-        kiểm soát chất lượng độc lập và mạng lưới cung ứng nguyên vật liệu.
-      </p>
-      <div class="ai-company-eco-grid">
-        <article class="ai-company-eco-card">
-          <strong>Hệ thống nhà máy chính</strong>
-          <p>Giữ vai trò điều phối năng lực lõi và chuẩn vận hành.</p>
-        </article>
-        <article class="ai-company-eco-card">
-          <strong>Nhà máy đối tác vệ tinh</strong>
-          <p>Tham gia theo cụm công đoạn để mở rộng công suất linh hoạt.</p>
-        </article>
-        <article class="ai-company-eco-card">
-          <strong>Kiểm soát chất lượng độc lập</strong>
-          <p>Giám sát nhất quán chất lượng xuyên suốt toàn chuỗi sản xuất.</p>
-        </article>
-        <article class="ai-company-eco-card">
-          <strong>Mạng lưới cung ứng vật liệu</strong>
-          <p>Bảo đảm nguồn cung ổn định, minh bạch và phù hợp tiêu chuẩn xuất khẩu.</p>
-        </article>
-      </div>
-      <p class="ai-company-eco-note">
-        Tất cả được vận hành theo cùng một tiêu chuẩn và quy trình, giúp đồng bộ chất lượng, tối ưu chi phí và linh
-        hoạt mở rộng công suất theo từng giai đoạn đơn hàng.
-      </p>
-      <div class="ai-company-ecosystem-visuals">
-        <figure>
-          <img
-            src="/assets/about/company-ecosystem-main-real.jpg"
-            alt="Dây chuyền nguyên liệu trong hệ thống sản xuất ANSLIFE"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/about/company-ecosystem-partner-real.jpg"
-            alt="Khu vực sản xuất vệ tinh trong mạng lưới đối tác"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-        <figure>
-          <img
-            src="/assets/about/company-ecosystem-system-real.jpg"
-            alt="Kiểm soát vận hành và chất lượng theo hệ thống"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-      </div>
+      <article class="ai-company-block ai-company-block-guarantee">
+        <span class="ai-company-card-icon" aria-hidden="true">✓</span>
+        <h3>Nhờ đó, ANSLIFE đảm bảo được:</h3>
+        <ul>
+          <li>Sự ổn định về chất lượng</li>
+          <li>Tính linh hoạt trong sản xuất</li>
+          <li>Khả năng đáp ứng đa dạng yêu cầu của khách hàng</li>
+        </ul>
+      </article>
     </div>
 
     <div class="ai-company-panels">
-      <article class="ai-company-panel">
-        <h3>THỊ TRƯỜNG</h3>
-        <p>ANSLIFE hiện đang làm việc với các thị trường có tiêu chuẩn cao và khác biệt.</p>
-        <ul class="ai-company-market-list">
-          <li><span>🇺🇸</span>Hoa Kỳ</li>
-          <li><span>🇯🇵</span>Nhật Bản</li>
-          <li><span>🇰🇷</span>Hàn Quốc</li>
-          <li><span>🇪🇺</span>Châu Âu</li>
+      <article class="ai-company-panel ai-company-panel-ecosystem">
+        <span class="ai-company-card-icon" aria-hidden="true">▦</span>
+        <h3>HỆ SINH THÁI SẢN XUẤT</h3>
+        <p>ANSLIFE xây dựng một hệ sinh thái sản xuất gồm:</p>
+        <ul class="ai-company-plain-list">
+          <li>Hệ thống nhà máy chính</li>
+          <li>Các nhà máy đối tác vệ tinh</li>
+          <li>Hệ thống kiểm soát chất lượng độc lập</li>
+          <li>Mạng lưới cung ứng nguyên vật liệu</li>
         </ul>
-        <p>
-          Mỗi thị trường có tiêu chuẩn riêng biệt, và hệ thống của ANSLIFE được thiết kế để đáp ứng các yêu cầu đó
-          một cách ổn định và dài hạn.
+        <p class="ai-company-divider-note">
+          Tất cả được vận hành theo cùng một tiêu chuẩn và quy trình, giúp:
+        </p>
+        <ul class="ai-company-plain-list">
+          <li>Đồng bộ chất lượng</li>
+          <li>Tối ưu chi phí</li>
+          <li>Linh hoạt mở rộng công suất</li>
+        </ul>
+      </article>
+
+      <article class="ai-company-panel ai-company-panel-market">
+        <span class="ai-company-card-icon" aria-hidden="true">◎</span>
+        <h3>THỊ TRƯỜNG</h3>
+        <p>ANSLIFE hiện đang làm việc với các thị trường:</p>
+        <ul class="ai-company-plain-list ai-company-market-list">
+          <li><span class="ai-country-flag" aria-hidden="true">🇺🇸</span>Hoa Kỳ</li>
+          <li><span class="ai-country-flag" aria-hidden="true">🇯🇵</span>Nhật Bản</li>
+          <li><span class="ai-country-flag" aria-hidden="true">🇪🇺</span>Châu Âu</li>
+        </ul>
+        <p class="ai-company-divider-note">
+          Mỗi thị trường có những tiêu chuẩn riêng biệt, và hệ thống của ANSLIFE được thiết kế để đáp ứng các yêu cầu
+          đó một cách ổn định và dài hạn.
         </p>
       </article>
-      <article class="ai-company-panel">
+
+      <article class="ai-company-panel ai-company-panel-direction">
+        <span class="ai-company-card-icon" aria-hidden="true">◉</span>
         <h3>ĐỊNH HƯỚNG</h3>
-        <p>ANSLIFE hướng tới nền tảng sản xuất minh bạch và có thể kiểm soát, nơi:</p>
-        <ul>
-          <li>Khách hàng có thể tiếp cận trực tiếp hệ thống sản xuất.</li>
-          <li>Nhà máy có thể tham gia vào chuỗi cung ứng chất lượng cao.</li>
-          <li>Dữ liệu sản xuất và chất lượng được ghi nhận, quản lý tập trung.</li>
+        <p>ANSLIFE hướng tới việc xây dựng một nền tảng sản xuất minh bạch và có thể kiểm soát, nơi:</p>
+        <ul class="ai-company-plain-list">
+          <li>Khách hàng có thể tiếp cận trực tiếp hệ thống sản xuất</li>
+          <li>Nhà máy có thể tham gia vào chuỗi cung ứng chất lượng cao</li>
+          <li>Dữ liệu sản xuất và chất lượng được ghi nhận và quản lý tập trung</li>
         </ul>
       </article>
-      <article class="ai-company-panel">
+
+      <article class="ai-company-panel ai-company-panel-commitment">
+        <span class="ai-company-card-icon" aria-hidden="true">⟗</span>
         <h3>CAM KẾT</h3>
-        <p>ANSLIFE cam kết đồng hành dài hạn cùng khách hàng và đối tác bằng các nguyên tắc rõ ràng:</p>
-        <ul>
-          <li>Đảm bảo chất lượng sản phẩm theo tiêu chuẩn đã thống nhất.</li>
-          <li>Đảm bảo tiến độ sản xuất.</li>
-          <li>Minh bạch thông tin trong toàn bộ quá trình làm việc.</li>
-          <li>Xây dựng mối quan hệ hợp tác lâu dài với khách hàng và đối tác.</li>
+        <p>ANSLIFE cam kết:</p>
+        <ul class="ai-company-plain-list">
+          <li>Đảm bảo chất lượng sản phẩm theo tiêu chuẩn đã thống nhất</li>
+          <li>Đảm bảo tiến độ sản xuất</li>
+          <li>Minh bạch thông tin trong toàn bộ quá trình làm việc</li>
+          <li>Xây dựng mối quan hệ hợp tác lâu dài với khách hàng và đối tác</li>
         </ul>
       </article>
     </div>
@@ -3098,7 +3060,9 @@ export function getAIFallbackSectionHtml(
   const introMatch = pageHtml.match(
     /<p class="ai-intro">[\s\S]*?<\/p>/i,
   );
-  const shouldRenderPageBannerAndIntro = pageSlug !== 'manufacturing-ecosystem';
+  const shouldRenderPageBannerAndIntro =
+    pageSlug !== 'manufacturing-ecosystem' &&
+    !(pageSlug === 'about-anslife' && sectionId === 'company-intro');
 
   const composedHtml = `
 <div class="ai-content">

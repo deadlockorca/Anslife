@@ -636,8 +636,9 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
     sections: [
       {
         id: 'company-intro',
-        title: 'Giới thiệu công ty',
-        description: 'Tổng quan lịch sử, năng lực và hướng phát triển của ANSLIFE.',
+        title: 'Giới thiệu về công ty',
+        description:
+          'ANSLIFE là một hệ thống sản xuất và xuất khẩu nội thất tập trung vào chuỗi sản xuất, kiểm soát chất lượng và kết nối nguồn lực trong ngành.',
       },
       {
         id: 'vision-mission',
