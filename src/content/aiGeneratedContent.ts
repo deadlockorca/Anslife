@@ -80,7 +80,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 
     <div class="ai-company-panels">
       <article class="ai-company-panel ai-company-panel-ecosystem">
-        <h3>HỆ SINH THÁI SẢN XUẤT</h3>
+        <h3>Hệ sinh thái sản xuất</h3>
         <p>ANSLIFE xây dựng một hệ sinh thái sản xuất gồm:</p>
         <ul class="ai-company-plain-list">
           <li>Hệ thống nhà máy chính</li>
@@ -99,7 +99,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       </article>
 
       <article class="ai-company-panel ai-company-panel-market">
-        <h3>THỊ TRƯỜNG</h3>
+        <h3>Thị trường</h3>
         <p>ANSLIFE hiện đang làm việc với các thị trường:</p>
         <ul class="ai-company-plain-list ai-company-market-list">
           <li><span class="ai-country-flag" aria-hidden="true">🇺🇸</span>Hoa Kỳ</li>
@@ -113,7 +113,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       </article>
 
       <article class="ai-company-panel ai-company-panel-direction">
-        <h3>ĐỊNH HƯỚNG</h3>
+        <h3>Định hướng</h3>
         <p>ANSLIFE hướng tới việc xây dựng một nền tảng sản xuất minh bạch và có thể kiểm soát, nơi:</p>
         <ul class="ai-company-plain-list">
           <li>Khách hàng có thể tiếp cận trực tiếp hệ thống sản xuất</li>
@@ -123,7 +123,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       </article>
 
       <article class="ai-company-panel ai-company-panel-commitment">
-        <h3>CAM KẾT</h3>
+        <h3>Cam kết</h3>
         <p>ANSLIFE cam kết:</p>
         <ul class="ai-company-plain-list">
           <li>Đảm bảo chất lượng sản phẩm theo tiêu chuẩn đã thống nhất</li>
@@ -144,16 +144,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 
       <article class="ai-vision-panel">
         <div class="ai-vision-side">
-          <span class="ai-vision-side-icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 30l23-9 10 16-23 9z" />
-              <path d="M37 22l6-3 8 13-6 3" />
-              <path d="M16 33l-5 2-3-6 5-2" />
-              <path d="M31 40l-9 15" />
-              <path d="M37 38l8 14" />
-              <path d="M19 55h30" />
-            </svg>
-          </span>
           <h3>Tầm nhìn</h3>
           <span class="ai-vision-side-line" aria-hidden="true"></span>
         </div>
@@ -174,9 +164,9 @@ const AI_PAGE_CONTENT: Record<string, string> = {
           <div class="ai-vision-copy">
             <p>ANSLIFE định hướng trở thành một nền tảng sản xuất xuyên biên giới, nơi:</p>
             <ul class="ai-vision-bullet-list">
-              <li>chất lượng được kiểm soát bằng hệ thống, không phụ thuộc vào vị trí địa lý</li>
-              <li>dữ liệu sản xuất được quản lý tập trung</li>
-              <li>các nhà máy tại nhiều quốc gia có thể vận hành theo cùng một chuẩn</li>
+              <li>Chất lượng được kiểm soát bằng hệ thống, không phụ thuộc vào vị trí địa lý</li>
+              <li>Dữ liệu sản xuất được quản lý tập trung</li>
+              <li>Các nhà máy tại nhiều quốc gia có thể vận hành theo cùng một chuẩn</li>
             </ul>
             <p class="ai-vision-copy-note">
               Trong dài hạn, ANSLIFE hướng tới việc xây dựng một mạng lưới sản xuất toàn cầu có tính ổn định cao, linh
@@ -188,15 +178,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 
       <article class="ai-vision-panel ai-vision-panel-mission">
         <div class="ai-vision-side">
-          <span class="ai-vision-side-icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="31" cy="33" r="17" />
-              <circle cx="31" cy="33" r="9" />
-              <circle cx="31" cy="33" r="2.8" fill="currentColor" stroke="none" />
-              <path d="M31 33l17-16" />
-              <path d="M42 17h8v8" />
-            </svg>
-          </span>
           <h3>Sứ mệnh</h3>
           <span class="ai-vision-side-line" aria-hidden="true"></span>
         </div>
@@ -210,62 +191,34 @@ const AI_PAGE_CONTENT: Record<string, string> = {
           <div class="ai-vision-benefit-grid">
             <article class="ai-vision-benefit">
               <h4>
-                <span class="ai-vision-benefit-icon" aria-hidden="true">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="21" cy="25" r="5.5" />
-                    <circle cx="32" cy="22" r="6.5" />
-                    <circle cx="43" cy="25" r="5.5" />
-                    <path d="M12 44c1.4-6 5.4-9.6 10.4-9.6s9.2 3.6 10.5 9.6" />
-                    <path d="M26 44c1.5-7.2 6-11.4 11.4-11.4S47.3 36.8 49 44" />
-                  </svg>
-                </span>
                 Đối với khách hàng
               </h4>
               <ul>
-                <li>tiếp cận hệ thống sản xuất tại nhiều quốc gia thông qua một nền tảng thống nhất</li>
-                <li>giảm rủi ro trong quá trình sản xuất xuyên biên giới</li>
-                <li>đảm bảo chất lượng và tiến độ ở quy mô lớn</li>
+                <li>Tiếp cận hệ thống sản xuất tại nhiều quốc gia thông qua một nền tảng thống nhất</li>
+                <li>Giảm rủi ro trong quá trình sản xuất xuyên biên giới</li>
+                <li>Đảm bảo chất lượng và tiến độ ở quy mô lớn</li>
               </ul>
             </article>
 
             <article class="ai-vision-benefit">
               <h4>
-                <span class="ai-vision-benefit-icon" aria-hidden="true">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 48V20h14v8l11-8v8l11-8v28H12z" />
-                    <path d="M20 48V38" />
-                    <path d="M27 48V34" />
-                    <path d="M34 48V40" />
-                    <path d="M41 48V35" />
-                  </svg>
-                </span>
                 Đối với nhà máy
               </h4>
               <ul>
-                <li>tham gia vào mạng lưới sản xuất toàn cầu</li>
-                <li>vận hành theo tiêu chuẩn quốc tế</li>
-                <li>nâng cao năng lực sản xuất và quản trị</li>
+                <li>Tham gia vào mạng lưới sản xuất toàn cầu</li>
+                <li>Vận hành theo tiêu chuẩn quốc tế</li>
+                <li>Nâng cao năng lực sản xuất và quản trị</li>
               </ul>
             </article>
 
             <article class="ai-vision-benefit">
               <h4>
-                <span class="ai-vision-benefit-icon" aria-hidden="true">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="32" cy="32" r="17" />
-                    <path d="M15 32h34" />
-                    <path d="M32 15a25 25 0 0 0 0 34" />
-                    <path d="M32 15a25 25 0 0 1 0 34" />
-                    <path d="M19 24c3.4 2.4 8.3 3.8 13 3.8s9.6-1.4 13-3.8" />
-                    <path d="M19 40c3.4-2.4 8.3-3.8 13-3.8s9.6 1.4 13 3.8" />
-                  </svg>
-                </span>
                 Đối với hệ sinh thái
               </h4>
               <ul>
-                <li>kết nối các nguồn lực sản xuất tại nhiều quốc gia</li>
-                <li>chuẩn hóa quy trình và hệ thống kiểm soát chất lượng</li>
-                <li>tạo ra một nền tảng sản xuất có khả năng mở rộng linh hoạt theo nhu cầu thị trường</li>
+                <li>Kết nối các nguồn lực sản xuất tại nhiều quốc gia</li>
+                <li>Chuẩn hóa quy trình và hệ thống kiểm soát chất lượng</li>
+                <li>Tạo ra một nền tảng sản xuất có khả năng mở rộng linh hoạt theo nhu cầu thị trường</li>
               </ul>
             </article>
           </div>
@@ -3209,7 +3162,7 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
 
     <div class="ai-company-panels">
       <article class="ai-company-panel ai-company-panel-ecosystem">
-        <h3>MANUFACTURING ECOSYSTEM</h3>
+        <h3>Manufacturing Ecosystem</h3>
         <p>ANSLIFE builds a manufacturing ecosystem including:</p>
         <ul class="ai-company-plain-list">
           <li>Core factory system</li>
@@ -3228,7 +3181,7 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
       </article>
 
       <article class="ai-company-panel ai-company-panel-market">
-        <h3>MARKETS</h3>
+        <h3>Markets</h3>
         <p>ANSLIFE currently serves:</p>
         <ul class="ai-company-plain-list ai-company-market-list">
           <li><span class="ai-country-flag" aria-hidden="true">🇺🇸</span>United States</li>
@@ -3242,7 +3195,7 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
       </article>
 
       <article class="ai-company-panel ai-company-panel-direction">
-        <h3>DIRECTION</h3>
+        <h3>Direction</h3>
         <p>ANSLIFE aims to build a transparent and controllable manufacturing platform where:</p>
         <ul class="ai-company-plain-list">
           <li>Customers can directly access the manufacturing system</li>
@@ -3252,7 +3205,7 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
       </article>
 
       <article class="ai-company-panel ai-company-panel-commitment">
-        <h3>COMMITMENT</h3>
+        <h3>Commitment</h3>
         <p>ANSLIFE commits to:</p>
         <ul class="ai-company-plain-list">
           <li>Ensuring product quality according to agreed standards</li>
@@ -3274,16 +3227,6 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
 
       <article class="ai-vision-panel">
         <div class="ai-vision-side">
-          <span class="ai-vision-side-icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 30l23-9 10 16-23 9z" />
-              <path d="M37 22l6-3 8 13-6 3" />
-              <path d="M16 33l-5 2-3-6 5-2" />
-              <path d="M31 40l-9 15" />
-              <path d="M37 38l8 14" />
-              <path d="M19 55h30" />
-            </svg>
-          </span>
           <h3>Vision</h3>
           <span class="ai-vision-side-line" aria-hidden="true"></span>
         </div>
@@ -3303,9 +3246,9 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
           <div class="ai-vision-copy">
             <p>ANSLIFE is oriented to become a cross-border manufacturing platform where:</p>
             <ul class="ai-vision-bullet-list">
-              <li>quality is controlled by systems, independent of geographic location</li>
-              <li>production data is centrally managed</li>
-              <li>factories in different countries can operate under one shared standard</li>
+              <li>Quality is controlled by systems, independent of geographic location</li>
+              <li>Production data is centrally managed</li>
+              <li>Factories in different countries can operate under one shared standard</li>
             </ul>
             <p class="ai-vision-copy-note">
               In the long term, ANSLIFE aims to build a global manufacturing network with high stability, flexible
@@ -3317,15 +3260,6 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
 
       <article class="ai-vision-panel ai-vision-panel-mission">
         <div class="ai-vision-side">
-          <span class="ai-vision-side-icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="31" cy="33" r="17" />
-              <circle cx="31" cy="33" r="9" />
-              <circle cx="31" cy="33" r="2.8" fill="currentColor" stroke="none" />
-              <path d="M31 33l17-16" />
-              <path d="M42 17h8v8" />
-            </svg>
-          </span>
           <h3>Mission</h3>
           <span class="ai-vision-side-line" aria-hidden="true"></span>
         </div>
@@ -3339,62 +3273,34 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
           <div class="ai-vision-benefit-grid">
             <article class="ai-vision-benefit">
               <h4>
-                <span class="ai-vision-benefit-icon" aria-hidden="true">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="21" cy="25" r="5.5" />
-                    <circle cx="32" cy="22" r="6.5" />
-                    <circle cx="43" cy="25" r="5.5" />
-                    <path d="M12 44c1.4-6 5.4-9.6 10.4-9.6s9.2 3.6 10.5 9.6" />
-                    <path d="M26 44c1.5-7.2 6-11.4 11.4-11.4S47.3 36.8 49 44" />
-                  </svg>
-                </span>
                 For Customers
               </h4>
               <ul>
-                <li>access manufacturing systems in multiple countries through one unified platform</li>
-                <li>reduce risk in cross-border manufacturing</li>
-                <li>ensure quality and schedule at scale</li>
+                <li>Access manufacturing systems in multiple countries through one unified platform</li>
+                <li>Reduce risk in cross-border manufacturing</li>
+                <li>Ensure quality and schedule at scale</li>
               </ul>
             </article>
 
             <article class="ai-vision-benefit">
               <h4>
-                <span class="ai-vision-benefit-icon" aria-hidden="true">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 48V20h14v8l11-8v8l11-8v28H12z" />
-                    <path d="M20 48V38" />
-                    <path d="M27 48V34" />
-                    <path d="M34 48V40" />
-                    <path d="M41 48V35" />
-                  </svg>
-                </span>
                 For Factories
               </h4>
               <ul>
-                <li>join the global manufacturing network</li>
-                <li>operate under international standards</li>
-                <li>improve manufacturing and management capabilities</li>
+                <li>Join the global manufacturing network</li>
+                <li>Operate under international standards</li>
+                <li>Improve manufacturing and management capabilities</li>
               </ul>
             </article>
 
             <article class="ai-vision-benefit">
               <h4>
-                <span class="ai-vision-benefit-icon" aria-hidden="true">
-                  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="32" cy="32" r="17" />
-                    <path d="M15 32h34" />
-                    <path d="M32 15a25 25 0 0 0 0 34" />
-                    <path d="M32 15a25 25 0 0 1 0 34" />
-                    <path d="M19 24c3.4 2.4 8.3 3.8 13 3.8s9.6-1.4 13-3.8" />
-                    <path d="M19 40c3.4-2.4 8.3-3.8 13-3.8s9.6 1.4 13 3.8" />
-                  </svg>
-                </span>
                 For the Ecosystem
               </h4>
               <ul>
-                <li>connect manufacturing resources across multiple countries</li>
-                <li>standardize processes and quality control systems</li>
-                <li>create a production platform that can scale flexibly with market demand</li>
+                <li>Connect manufacturing resources across multiple countries</li>
+                <li>Standardize processes and quality control systems</li>
+                <li>Create a production platform that can scale flexibly with market demand</li>
               </ul>
             </article>
           </div>

@@ -174,6 +174,7 @@ const TRANSLATIONS: Record<
     'Kết nối ANSLIFE': 'Connect with ANSLIFE',
     'Theo dõi ANSLIFE': 'Follow ANSLIFE',
     'Tìm kiếm': 'Search',
+    'Đóng tìm kiếm': 'Close search',
     'Tìm sản phẩm, dự án, tin tức...': 'Search products, projects, news...',
     'Tìm sản phẩm, dự án, báo giá, năng lực sản xuất...':
       'Search products, projects, quotes, production capabilities...',
@@ -689,6 +690,7 @@ const TRANSLATIONS: Record<
     'Kết nối ANSLIFE': 'ANSLIFEとつながる',
     'Theo dõi ANSLIFE': 'ANSLIFEをフォロー',
     'Tìm kiếm': '検索',
+    'Đóng tìm kiếm': '検索を閉じる',
     'Tìm sản phẩm, dự án, tin tức...': '製品・プロジェクト・ニュースを検索...',
     'Tìm sản phẩm, dự án, báo giá, năng lực sản xuất...':
       '製品・プロジェクト・見積り・生産能力を検索...',
@@ -1073,6 +1075,7 @@ const TRANSLATIONS: Record<
     'Kết nối ANSLIFE': 'ANSLIFE 연결',
     'Theo dõi ANSLIFE': 'ANSLIFE 팔로우',
     'Tìm kiếm': '검색',
+    'Đóng tìm kiếm': '검색 닫기',
     'Tìm sản phẩm, dự án, tin tức...': '제품, 프로젝트, 뉴스를 검색...',
     'Tìm sản phẩm, dự án, báo giá, năng lực sản xuất...':
       '제품, 프로젝트, 견적, 생산 역량 검색...',

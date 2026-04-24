@@ -1,4 +1,12 @@
-import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  type FormEvent,
+  type ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { createPortal } from 'react-dom';
 import { TOP_MENU, type MenuChildItem } from '../../config/site';
@@ -396,6 +404,7 @@ function renderFooterContactIcon(icon: FooterContactIcon) {
 
 export default function SiteLayout() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [desktopOpenMenuPath, setDesktopOpenMenuPath] = useState<string | null>(null);
   const [activeProductMegaCategoryPath, setActiveProductMegaCategoryPath] = useState('');
   const [mobileSegmentOpen, setMobileSegmentOpen] = useState(false);
@@ -414,7 +423,6 @@ export default function SiteLayout() {
     Record<string, boolean>
   >({});
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchFocused, setSearchFocused] = useState(false);
   const [searchLoading, setSearchLoading] = useState(false);
   const [searchReady, setSearchReady] = useState(false);
   const [searchIndex, setSearchIndex] = useState<HeaderSearchSuggestion[]>([]);
@@ -423,7 +431,7 @@ export default function SiteLayout() {
     TOAM_PRODUCT_MENU_FALLBACK,
   );
   const [headerAuthUser, setHeaderAuthUser] = useState<AuthUser | null>(null);
-  const desktopSearchBoxRef = useRef<HTMLDivElement | null>(null);
+  const desktopMenuCloseTimerRef = useRef<number | null>(null);
   const mobileSearchBoxRef = useRef<HTMLDivElement | null>(null);
   const location = useLocation();
   const navigate = useNavigate();
@@ -531,6 +539,48 @@ export default function SiteLayout() {
   const mobileLanguageFlag = activeLanguageOption?.flag ?? '🌐';
   const footerYear = new Date().getFullYear();
 
+  const clearDesktopMenuCloseTimer = useCallback(() => {
+    if (desktopMenuCloseTimerRef.current !== null) {
+      window.clearTimeout(desktopMenuCloseTimerRef.current);
+      desktopMenuCloseTimerRef.current = null;
+    }
+  }, []);
+
+  const openDesktopMenu = useCallback(
+    (path: string) => {
+      clearDesktopMenuCloseTimer();
+      setDesktopOpenMenuPath(path);
+    },
+    [clearDesktopMenuCloseTimer],
+  );
+
+  const scheduleDesktopMenuClose = useCallback(
+    (path: string) => {
+      clearDesktopMenuCloseTimer();
+      desktopMenuCloseTimerRef.current = window.setTimeout(() => {
+        setDesktopOpenMenuPath((currentPath) => (currentPath === path ? null : currentPath));
+        desktopMenuCloseTimerRef.current = null;
+      }, 260);
+    },
+    [clearDesktopMenuCloseTimer],
+  );
+
+  const closeNavigationMenus = useCallback(() => {
+    setMobileOpen(false);
+    setDesktopOpenMenuPath(null);
+  }, []);
+
+  const resetMobileUtilityHierarchy = useCallback(() => {
+    setMobileUtilityActivePath(null);
+    setMobileUtilityExpandedGroups({});
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      clearDesktopMenuCloseTimer();
+    };
+  }, [clearDesktopMenuCloseTimer]);
+
   useEffect(() => {
     if (productRootCategories.length === 0) {
       setActiveProductMegaCategoryPath('');
@@ -555,19 +605,25 @@ export default function SiteLayout() {
   }, []);
 
   useEffect(() => {
-    setMobileOpen(false);
-    setDesktopOpenMenuPath(null);
+    closeNavigationMenus();
+    setMobileSearchOpen(false);
+    clearDesktopMenuCloseTimer();
     setMobileSegmentOpen(false);
-    setSearchFocused(false);
+    resetMobileUtilityHierarchy();
     setSearchQuery('');
     setExpandedFooterSections({});
-  }, [location.pathname]);
+  }, [
+    clearDesktopMenuCloseTimer,
+    closeNavigationMenus,
+    location.pathname,
+    resetMobileUtilityHierarchy,
+  ]);
 
   useEffect(() => {
     if (isAdminRoute) {
-      setMobileOpen(false);
+      closeNavigationMenus();
     }
-  }, [isAdminRoute]);
+  }, [closeNavigationMenus, isAdminRoute]);
 
   useEffect(() => {
     let isMounted = true;
@@ -628,21 +684,6 @@ export default function SiteLayout() {
     };
   }, []);
 
-  const isPathMatch = useCallback(
-    (path: string) => {
-      const localizedPath = toLocalizedPath(path);
-      if (path === '/') {
-        return location.pathname === localizedPath;
-      }
-
-      return (
-        location.pathname === localizedPath ||
-        location.pathname.startsWith(`${localizedPath}/`)
-      );
-    },
-    [location.pathname, toLocalizedPath],
-  );
-
   const authMenuPath = headerAuthUser ? '/admin/users' : '/admin/login';
   const headerLoginLabel = headerAuthUser ? t('Quản trị') : t('Đăng nhập');
   const isExternalPath = useCallback(
@@ -665,8 +706,7 @@ export default function SiteLayout() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={(event) => {
-              setMobileOpen(false);
-              setDesktopOpenMenuPath(null);
+              closeNavigationMenus();
               if (event.detail > 0) {
                 event.currentTarget.blur();
               }
@@ -683,8 +723,7 @@ export default function SiteLayout() {
           to={resolvedPath}
           className={className}
           onClick={(event) => {
-            setMobileOpen(false);
-            setDesktopOpenMenuPath(null);
+            closeNavigationMenus();
             if (event.detail > 0) {
               event.currentTarget.blur();
             }
@@ -694,7 +733,7 @@ export default function SiteLayout() {
         </NavLink>
       );
     },
-    [isExternalPath, t, toLocalizedPath],
+    [closeNavigationMenus, isExternalPath, t, toLocalizedPath],
   );
 
   const renderProductMegaLeaf = useCallback(
@@ -718,10 +757,7 @@ export default function SiteLayout() {
             className={className}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => {
-              setMobileOpen(false);
-              setDesktopOpenMenuPath(null);
-            }}
+            onClick={closeNavigationMenus}
           >
             {resolvedLabel}
           </a>
@@ -732,16 +768,13 @@ export default function SiteLayout() {
         <NavLink
           to={resolvedPath}
           className={className}
-          onClick={() => {
-            setMobileOpen(false);
-            setDesktopOpenMenuPath(null);
-          }}
+          onClick={closeNavigationMenus}
         >
           {resolvedLabel}
         </NavLink>
       );
     },
-    [isExternalPath, t, toLocalizedPath],
+    [closeNavigationMenus, isExternalPath, t, toLocalizedPath],
   );
 
   function renderProductMegaTreeList(
@@ -836,31 +869,48 @@ export default function SiteLayout() {
     if (!mobileOpen) {
       setMobileSegmentOpen(false);
       setMobileLanguageOpen(false);
-      setMobileUtilityActivePath(null);
-      setMobileUtilityExpandedGroups({});
+      resetMobileUtilityHierarchy();
     }
+  }, [mobileOpen, resetMobileUtilityHierarchy]);
+
+  useEffect(() => {
+    if (!mobileOpen) {
+      return;
+    }
+
+    setMobileSearchOpen(false);
   }, [mobileOpen]);
 
   useEffect(() => {
-    function handlePointerDown(event: PointerEvent) {
-      const target = event.target;
-      if (!(target instanceof Node)) {
-        return;
-      }
-
-      if (
-        desktopSearchBoxRef.current?.contains(target) ||
-        mobileSearchBoxRef.current?.contains(target)
-      ) {
-        return;
-      }
-
-      setSearchFocused(false);
+    if (!mobileSearchOpen) {
+      return;
     }
 
-    document.addEventListener('pointerdown', handlePointerDown);
-    return () => document.removeEventListener('pointerdown', handlePointerDown);
-  }, []);
+    const rafId = window.requestAnimationFrame(() => {
+      const inputNode = mobileSearchBoxRef.current?.querySelector('input');
+      if (inputNode instanceof HTMLInputElement) {
+        inputNode.focus();
+        inputNode.select();
+      }
+    });
+
+    return () => window.cancelAnimationFrame(rafId);
+  }, [mobileSearchOpen]);
+
+  useEffect(() => {
+    if (!mobileSearchOpen) {
+      return;
+    }
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        closeMobileSearchOverlay();
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [mobileSearchOpen]);
 
   useEffect(() => {
     if (!mobileOpen) {
@@ -888,7 +938,7 @@ export default function SiteLayout() {
       code,
     );
     navigate(targetPath, { replace: true });
-    setMobileOpen(false);
+    closeNavigationMenus();
   }
 
   const loadSearchIndex = useCallback(async () => {
@@ -947,9 +997,38 @@ export default function SiteLayout() {
 
   function handleSearchResultClick(path: string) {
     navigate(toLocalizedPath(path));
-    setSearchFocused(false);
+    setMobileSearchOpen(false);
     setSearchQuery('');
-    setMobileOpen(false);
+    closeNavigationMenus();
+  }
+
+  useEffect(() => {
+    if (!mobileSearchOpen || searchReady || searchLoading) {
+      return;
+    }
+
+    void loadSearchIndex();
+  }, [loadSearchIndex, mobileSearchOpen, searchLoading, searchReady]);
+
+  function handleMobileSearchSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (normalizedQuery.length === 0) {
+      return;
+    }
+
+    if (!searchReady && !searchLoading) {
+      void loadSearchIndex();
+      return;
+    }
+
+    if (searchResults.length > 0) {
+      handleSearchResultClick(searchResults[0].path);
+    }
+  }
+
+  function closeMobileSearchOverlay() {
+    setMobileSearchOpen(false);
+    setSearchQuery('');
   }
 
   function scrollToTopAfterNavigation() {
@@ -961,71 +1040,10 @@ export default function SiteLayout() {
   }
 
   function handleBrandClick() {
-    setMobileOpen(false);
-    setDesktopOpenMenuPath(null);
-    setSearchFocused(false);
+    closeNavigationMenus();
+    setMobileSearchOpen(false);
     setSearchQuery('');
     scrollToTopAfterNavigation();
-  }
-
-  function renderSearchBox(className: string, ref: { current: HTMLDivElement | null }) {
-    return (
-      <div className={className} role="search" ref={ref}>
-        <input
-          type="text"
-          inputMode="search"
-          aria-label={t('Tìm kiếm')}
-          placeholder={t('Tìm sản phẩm, dự án, tin tức...')}
-          value={searchQuery}
-          autoComplete="off"
-          autoCorrect="off"
-          autoCapitalize="none"
-          spellCheck={false}
-          onFocus={() => {
-            setSearchFocused(true);
-            if (!searchReady && !searchLoading) {
-              void loadSearchIndex();
-            }
-          }}
-          onChange={(event) => setSearchQuery(event.target.value)}
-          onBlur={() => {
-            setSearchFocused(false);
-          }}
-          onKeyDown={(event) => {
-            event.stopPropagation();
-            if (event.key === 'Enter') {
-              event.preventDefault();
-              if (searchResults.length > 0) {
-                handleSearchResultClick(searchResults[0].path);
-              }
-            }
-          }}
-        />
-        {searchFocused && normalizedQuery.length > 0 && (
-          <div className="header-search-dropdown" role="listbox">
-            {searchLoading && (
-              <p className="header-search-empty">{t('Đang tải dữ liệu tìm kiếm...')}</p>
-            )}
-            {!searchLoading && searchResults.length === 0 && (
-              <p className="header-search-empty">{t('Không tìm thấy kết quả phù hợp.')}</p>
-            )}
-            {!searchLoading &&
-              searchResults.map((item) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  className="header-search-item"
-                  onMouseDown={(event) => event.preventDefault()}
-                  onClick={() => handleSearchResultClick(item.path)}
-                >
-                  <strong>{item.title}</strong>
-                  <span>{t(item.kind === 'product' ? 'Sản phẩm' : 'Dự án')}</span>
-                </button>
-              ))}
-          </div>
-        )}
-      </div>
-    );
   }
 
   function renderMobileUtilitySubmenuItems(
@@ -1053,10 +1071,8 @@ export default function SiteLayout() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
-                setMobileOpen(false);
-                setDesktopOpenMenuPath(null);
-                setMobileUtilityActivePath(null);
-                setMobileUtilityExpandedGroups({});
+                closeNavigationMenus();
+                resetMobileUtilityHierarchy();
               }}
             >
               {t(item.label)}
@@ -1075,10 +1091,8 @@ export default function SiteLayout() {
             }
             style={{ paddingLeft }}
             onClick={() => {
-              setMobileOpen(false);
-              setDesktopOpenMenuPath(null);
-              setMobileUtilityActivePath(null);
-              setMobileUtilityExpandedGroups({});
+              closeNavigationMenus();
+              resetMobileUtilityHierarchy();
             }}
           >
             {t(item.label)}
@@ -1272,10 +1286,7 @@ export default function SiteLayout() {
                       className={({ isActive }) =>
                         `topbar-meta-link ${isActive ? 'is-active' : ''}`
                       }
-                      onClick={() => {
-                        setMobileOpen(false);
-                        setDesktopOpenMenuPath(null);
-                      }}
+                      onClick={closeNavigationMenus}
                     >
                       {t(item.label)}
                     </NavLink>
@@ -1293,6 +1304,24 @@ export default function SiteLayout() {
           )}
 
           <div className={`topbar-primary ${isAdminRoute ? 'is-admin-route' : ''}`}>
+            {!isAdminRoute && (
+              <button
+                type="button"
+                className="mobile-home-menu-fab"
+                aria-expanded={mobileOpen}
+                aria-controls="mobile-menu-panel"
+                aria-label={mobileOpen ? t('Đóng menu') : t('Mở menu')}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  closeMobileSearchOverlay();
+                  setMobileOpen(true);
+                }}
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+              </button>
+            )}
             <NavLink
               to={toLocalizedPath('/')}
               className="brand"
@@ -1307,32 +1336,28 @@ export default function SiteLayout() {
               />
             </NavLink>
             {!isAdminRoute && (
-              <div className="mobile-home-header-actions">
-                <Link
-                  to={toLocalizedPath(authMenuPath)}
-                  className="mobile-home-login-fab"
-                  aria-label={headerLoginLabel}
-                  onClick={() => {
-                    setMobileOpen(false);
-                    setDesktopOpenMenuPath(null);
-                  }}
-                >
-                  <span aria-hidden="true">↪</span>
-                </Link>
-                <button
-                  type="button"
-                  className="mobile-home-menu-fab"
-                  aria-expanded={mobileOpen}
-                  aria-controls="mobile-menu-panel"
-                  aria-label={mobileOpen ? t('Đóng menu') : t('Mở menu')}
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    setMobileOpen(true);
-                  }}
-                >
-                  <span aria-hidden="true">☰</span>
-                </button>
-              </div>
+              <button
+                type="button"
+                className={`mobile-home-search-fab ${mobileSearchOpen ? 'is-active' : ''}`}
+                aria-expanded={mobileSearchOpen}
+                aria-label={t('Tìm kiếm')}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  closeNavigationMenus();
+                  setMobileSearchOpen((currentState) => {
+                    const nextState = !currentState;
+                    if (!nextState) {
+                      setSearchQuery('');
+                    }
+                    return nextState;
+                  });
+                }}
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="11" cy="11" r="6.5" />
+                  <path d="m16 16 4 4" />
+                </svg>
+              </button>
             )}
             {isAdminRoute && renderLanguageSwitcher('language-switcher-admin')}
           </div>
@@ -1356,18 +1381,15 @@ export default function SiteLayout() {
                         desktopOpenMenuPath === item.path ? 'is-open' : ''
                       } ${isProductMegaMenu ? 'is-product-menu' : ''}`}
                       onMouseEnter={
-                        hasChildren ? () => setDesktopOpenMenuPath(item.path) : undefined
+                        hasChildren ? () => openDesktopMenu(item.path) : undefined
                       }
                       onMouseLeave={
                         hasChildren
-                          ? () =>
-                              setDesktopOpenMenuPath((currentPath) =>
-                                currentPath === item.path ? null : currentPath,
-                              )
+                          ? () => scheduleDesktopMenuClose(item.path)
                           : undefined
                       }
                       onFocusCapture={
-                        hasChildren ? () => setDesktopOpenMenuPath(item.path) : undefined
+                        hasChildren ? () => openDesktopMenu(item.path) : undefined
                       }
                       onBlurCapture={
                         hasChildren
@@ -1379,9 +1401,7 @@ export default function SiteLayout() {
                               ) {
                                 return;
                               }
-                              setDesktopOpenMenuPath((currentPath) =>
-                                currentPath === item.path ? null : currentPath,
-                              );
+                              scheduleDesktopMenuClose(item.path);
                             }
                           : undefined
                       }
@@ -1390,7 +1410,7 @@ export default function SiteLayout() {
                         <button
                           type="button"
                           className={`${linkClassName} menu-link-button ${
-                            isPathMatch(item.path) ? 'is-active' : ''
+                            desktopOpenMenuPath === item.path ? 'is-active' : ''
                           }`}
                           aria-haspopup="true"
                           aria-expanded={desktopOpenMenuPath === item.path}
@@ -1412,8 +1432,7 @@ export default function SiteLayout() {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(event) => {
-                            setMobileOpen(false);
-                            setDesktopOpenMenuPath(null);
+                            closeNavigationMenus();
                             if (event.detail > 0) {
                               event.currentTarget.blur();
                             }
@@ -1428,8 +1447,7 @@ export default function SiteLayout() {
                             `${linkClassName} ${isActive ? 'is-active' : ''}`
                           }
                           onClick={(event) => {
-                            setMobileOpen(false);
-                            setDesktopOpenMenuPath(null);
+                            closeNavigationMenus();
                             if (event.detail > 0) {
                               event.currentTarget.blur();
                             }
@@ -1443,10 +1461,10 @@ export default function SiteLayout() {
                       {hasChildren &&
                         (isProductMegaMenu ? (
                           <div
-                            className="submenu product-mega-menu"
+                            className="submenu product-mega-menu product-mega-sheet"
                             role="menu"
                             aria-label={t('Danh mục sản phẩm')}
-                            onMouseEnter={() => setDesktopOpenMenuPath(item.path)}
+                            onMouseEnter={() => openDesktopMenu(item.path)}
                           >
                             <div className="product-mega-shell">
                               <aside className="product-mega-sidebar">
@@ -1633,21 +1651,78 @@ export default function SiteLayout() {
               <Link
                 to={toLocalizedPath(authMenuPath)}
                 className="header-login-button"
-                onClick={() => {
-                  setMobileOpen(false);
-                  setDesktopOpenMenuPath(null);
-                }}
+                onClick={closeNavigationMenus}
               >
                 {headerLoginLabel}
               </Link>
 
-              <div className="mobile-search-row">
-                {renderSearchBox('header-search mobile-search', mobileSearchBoxRef)}
-              </div>
             </>
           )}
         </div>
       </header>
+
+      {!isAdminRoute &&
+        typeof document !== 'undefined' &&
+        createPortal(
+          <div
+            className={`mobile-search-overlay ${mobileSearchOpen ? 'is-open' : ''}`}
+            aria-hidden={!mobileSearchOpen}
+          >
+            <div
+              className="mobile-search-panel"
+              role="dialog"
+              aria-modal="true"
+              aria-label={t('Tìm kiếm')}
+              ref={mobileSearchBoxRef}
+            >
+              <button
+                type="button"
+                className="mobile-search-close"
+                aria-label={t('Đóng tìm kiếm')}
+                onClick={closeMobileSearchOverlay}
+              >
+                ×
+              </button>
+
+              <form
+                className="mobile-search-content"
+                role="search"
+                onSubmit={handleMobileSearchSubmit}
+              >
+                <p className="mobile-search-title">{t('Tìm kiếm')}</p>
+                <div className="mobile-search-field-row">
+                  <input
+                    type="text"
+                    inputMode="search"
+                    aria-label={t('Tìm kiếm')}
+                    placeholder={t('Tìm sản phẩm, dự án, tin tức...')}
+                    value={searchQuery}
+                    autoComplete="off"
+                    autoCorrect="off"
+                    autoCapitalize="none"
+                    spellCheck={false}
+                    className="mobile-search-field-input"
+                    onChange={(event) => setSearchQuery(event.target.value)}
+                  />
+                  <button
+                    type="submit"
+                    className="mobile-search-field-icon"
+                    aria-label={t('Tìm kiếm')}
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <circle cx="11" cy="11" r="6.5" />
+                      <path d="m16 16 4 4" />
+                    </svg>
+                  </button>
+                </div>
+                <button type="submit" className="mobile-search-submit">
+                  {t('Tìm kiếm')}
+                </button>
+              </form>
+            </div>
+          </div>,
+          document.body,
+        )}
 
       {!isAdminRoute &&
         mobileOpen &&
@@ -1674,10 +1749,7 @@ export default function SiteLayout() {
               <Link
                 to={toLocalizedPath('/')}
                 className="mobile-menu-brand"
-                onClick={() => {
-                  setMobileOpen(false);
-                  setDesktopOpenMenuPath(null);
-                }}
+                onClick={closeNavigationMenus}
               >
                 <img
                   src="/assets/anslife-logo.png"
@@ -1741,10 +1813,7 @@ export default function SiteLayout() {
                   <Link
                     to={toLocalizedPath(authMenuPath)}
                     className="mobile-menu-login-row"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setDesktopOpenMenuPath(null);
-                    }}
+                    onClick={closeNavigationMenus}
                   >
                     {headerLoginLabel}
                   </Link>
@@ -1759,10 +1828,7 @@ export default function SiteLayout() {
                   <button
                     type="button"
                     className="mobile-menu-utility-back"
-                    onClick={() => {
-                      setMobileUtilityActivePath(null);
-                      setMobileUtilityExpandedGroups({});
-                    }}
+                    onClick={resetMobileUtilityHierarchy}
                   >
                     <span className="mobile-menu-utility-back-icon" aria-hidden="true">
                       ←
@@ -1789,10 +1855,7 @@ export default function SiteLayout() {
                           className={({ isActive }) =>
                             `mobile-menu-utility-link ${isActive ? 'is-active' : ''}`
                           }
-                          onClick={() => {
-                            setMobileOpen(false);
-                            setDesktopOpenMenuPath(null);
-                          }}
+                          onClick={closeNavigationMenus}
                         >
                           {t(item.label)}
                         </NavLink>
@@ -1924,10 +1987,7 @@ export default function SiteLayout() {
                         key={`${column.title}-${item.path}`}
                         to={toLocalizedPath(item.path)}
                         className="site-footer-link"
-                        onClick={() => {
-                          setMobileOpen(false);
-                          setDesktopOpenMenuPath(null);
-                        }}
+                        onClick={closeNavigationMenus}
                       >
                         {t(item.label)}
                       </Link>
@@ -1975,10 +2035,7 @@ export default function SiteLayout() {
                   key={item.path}
                   to={toLocalizedPath(item.path)}
                   className="site-footer-legal-link"
-                  onClick={() => {
-                    setMobileOpen(false);
-                    setDesktopOpenMenuPath(null);
-                  }}
+                  onClick={closeNavigationMenus}
                 >
                   {t(item.label)}
                 </Link>
