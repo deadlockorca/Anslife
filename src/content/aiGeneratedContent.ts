@@ -230,7 +230,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   <section id="core-values" class="ai-section ai-core-values">
     <div class="ai-core-shell">
       <header class="ai-core-header">
-        <h2>Giá trị cốt lõi</h2>
+        <h1>Giá trị cốt lõi</h1>
         <span class="ai-core-header-accent" aria-hidden="true"></span>
         <div class="ai-core-header-meta">
           <p class="ai-core-kicker">GIÁ TRỊ CỐT LÕI</p>
@@ -457,110 +457,79 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   </section>
 
   <section id="production-philosophy" class="ai-section ai-operating-philosophy">
-    <p class="ai-op-kicker">ANSLIFE OPERATING PHILOSOPHY</p>
-    <h2>Triết lý vận hành ANSLIFE</h2>
-    <p class="ai-op-subtitle">(Chất lượng là ưu tiên số 1 - Giá là ưu tiên số 2)</p>
-
-    <figure class="ai-op-hero">
-      <img
-        src="/assets/about/production-philosophy-operations-real.jpg"
-        alt="Không gian vận hành sản xuất nội thất tại nhà máy"
-        loading="lazy"
-        decoding="async"
-      />
-    </figure>
+    <h2>Triết lý vận hành</h2>
+    <p class="ai-op-kicker">TRIẾT LÝ VẬN HÀNH ANSLIFE</p>
+    <p class="ai-op-subtitle">(Chất lượng là ưu tiên số 1 – Giá là ưu tiên số 2)</p>
 
     <article class="ai-op-core">
       <h3>1. Nguyên tắc cốt lõi</h3>
       <p>Chúng tôi không cạnh tranh bằng việc trở thành đơn vị rẻ nhất.</p>
       <p>Chúng tôi cạnh tranh bằng việc trở thành đơn vị đáng tin cậy nhất.</p>
-      <p><strong>Chất lượng là ưu tiên hàng đầu. Giá chỉ đứng sau.</strong></p>
+      <p class="ai-op-emphasis">Chất lượng là ưu tiên hàng đầu. Giá chỉ đứng sau.</p>
     </article>
 
     <div class="ai-op-grid">
       <article class="ai-op-card">
-        <h3><span>2</span>“Chất lượng” tại ANSLIFE là gì</h3>
-        <p>Chất lượng không phải là lời nói. Chất lượng là một hệ thống.</p>
+        <h3>2. “Chất lượng” tại ANSLIFE là gì</h3>
+        <p>Chất lượng không phải là lời nói.</p>
+        <p>Chất lượng là một hệ thống.</p>
         <p>Tại ANSLIFE, chất lượng được đảm bảo thông qua:</p>
         <ul>
-          <li>Lựa chọn nguyên liệu nghiêm ngặt (chỉ sử dụng gỗ đạt chuẩn).</li>
-          <li>Hệ thống kiểm soát chất lượng nhiều lớp.</li>
-          <li>Tách biệt các công đoạn sản xuất (hàng trắng / hoàn thiện).</li>
-          <li>Kiểm tra trước sản xuất và trong quá trình sản xuất.</li>
-          <li>Sản xuất dư để phòng ngừa rủi ro giao hàng.</li>
+          <li>Lựa chọn nguyên liệu nghiêm ngặt (chỉ sử dụng gỗ đạt chuẩn)</li>
+          <li>Hệ thống kiểm soát chất lượng nhiều lớp</li>
+          <li>Tách biệt các công đoạn sản xuất (hàng trắng / hoàn thiện)</li>
+          <li>Kiểm tra trước sản xuất và trong quá trình sản xuất</li>
+          <li>Sản xuất dư để phòng ngừa rủi ro giao hàng</li>
         </ul>
-        <p class="ai-op-emphasis">
-          Chúng tôi không tập trung sửa lỗi. Chúng tôi thiết kế hệ thống để lỗi không có cơ hội xảy ra.
-        </p>
+        <p class="ai-op-note-mini">Chúng tôi không tập trung sửa lỗi.</p>
+        <p class="ai-op-note-mini">Chúng tôi thiết kế hệ thống để lỗi không có cơ hội xảy ra.</p>
       </article>
 
       <article class="ai-op-card">
-        <h3><span>3</span>Cam kết của chúng tôi</h3>
-        <p>Chúng tôi ưu tiên theo thứ tự:</p>
+        <h3>3. Cam kết của chúng tôi</h3>
+        <p>Chúng tôi ưu tiên:</p>
         <ol class="ai-op-priority">
-          <li>Không có lỗi nghiêm trọng.</li>
-          <li>Không trễ tiến độ giao hàng.</li>
-          <li>Không lặp lại lỗi.</li>
+          <li>Không có lỗi nghiêm trọng</li>
+          <li>Không trễ tiến độ giao hàng</li>
+          <li>Không lặp lại lỗi</li>
         </ol>
-        <p class="ai-op-note-mini">
-          Chỉ khi đảm bảo được các điều trên, chúng tôi mới xem xét đến tối ưu chi phí.
-        </p>
+        <p>Chỉ khi đảm bảo được các điều trên, chúng tôi mới xem xét đến tối ưu chi phí.</p>
       </article>
 
       <article class="ai-op-card">
-        <h3><span>4</span>Cách tiếp cận về giá</h3>
+        <h3>4. Cách tiếp cận về giá</h3>
         <p>Giá không phải là công cụ cạnh tranh chính của chúng tôi.</p>
         <p>Chúng tôi duy trì mức giá:</p>
         <ul>
-          <li>Ổn định.</li>
-          <li>Hợp lý.</li>
-          <li>Tương xứng với chất lượng.</li>
+          <li>Ổn định</li>
+          <li>Hợp lý</li>
+          <li>Tương xứng với chất lượng</li>
         </ul>
-        <p class="ai-op-note-mini">
-          Chúng tôi không theo đuổi lợi nhuận ngắn hạn bằng cách đánh đổi sự ổn định dài hạn.
-        </p>
+        <p>Chúng tôi không theo đuổi lợi nhuận ngắn hạn bằng cách đánh đổi sự ổn định dài hạn.</p>
       </article>
 
       <article class="ai-op-card">
-        <h3><span>5</span>Hợp tác dài hạn</h3>
-        <p>Một mối quan hệ bền vững được xây dựng dựa trên:</p>
+        <h3>5. Hợp tác dài hạn</h3>
+        <p>Chúng tôi tin rằng một mối quan hệ bền vững được xây dựng dựa trên:</p>
         <ul>
-          <li>Niềm tin.</li>
-          <li>Sự ổn định.</li>
-          <li>Tính minh bạch.</li>
+          <li>Niềm tin</li>
+          <li>Sự ổn định</li>
+          <li>Tính minh bạch</li>
         </ul>
         <p>Mục tiêu của chúng tôi là trở thành đối tác:</p>
         <ul>
-          <li>Luôn cung cấp chất lượng ổn định.</li>
-          <li>Giảm thiểu rủi ro vận hành cho khách hàng.</li>
-          <li>Đồng hành và phát triển cùng khách hàng trong dài hạn.</li>
+          <li>Luôn cung cấp chất lượng ổn định</li>
+          <li>Giảm thiểu rủi ro vận hành cho khách hàng</li>
+          <li>Đồng hành và phát triển cùng khách hàng trong dài hạn</li>
         </ul>
       </article>
-    </div>
-
-    <div class="ai-op-visual-row">
-      <figure class="ai-op-visual">
-        <img
-          src="/assets/about/production-philosophy-qc-v2-real.jpg"
-          alt="Kỹ thuật viên đo kiểm kích thước gỗ trong công đoạn kiểm soát chất lượng"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure class="ai-op-visual">
-        <img
-          src="/assets/about/production-philosophy-partnership-real.jpg"
-          alt="Đội ngũ vận hành phối hợp theo kế hoạch sản xuất"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
     </div>
 
     <article class="ai-op-philosophy">
       <h3>6. Triết lý của chúng tôi</h3>
       <p>Chúng tôi không tối đa hóa lợi nhuận trên từng đơn hàng.</p>
       <p>Chúng tôi tối đa hóa niềm tin theo thời gian.</p>
+      <p>Bởi vì:</p>
       <div class="ai-op-formula">
         <p>Niềm tin tạo ra sản lượng.</p>
         <p>Sản lượng tạo ra sự ổn định.</p>
@@ -3313,7 +3282,7 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
   <section id="core-values" class="ai-section ai-core-values">
     <div class="ai-core-shell">
       <header class="ai-core-header">
-        <h2>Core Values</h2>
+        <h1>Core Values</h1>
         <span class="ai-core-header-accent" aria-hidden="true"></span>
         <div class="ai-core-header-meta">
           <p class="ai-core-kicker">CORE VALUES</p>
@@ -3571,7 +3540,8 @@ export function getAIFallbackSectionHtml(
       pageSlug === 'about-anslife' &&
       (sectionId === 'company-intro' ||
         sectionId === 'vision-mission' ||
-        sectionId === 'core-values')
+        sectionId === 'core-values' ||
+        sectionId === 'production-philosophy')
     );
 
   const translatedSectionOverride =

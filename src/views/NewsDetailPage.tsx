@@ -31,7 +31,7 @@ export default function NewsDetailPage() {
         }
       />
 
-      <section className="page-hero compact">
+      <section className="page-hero">
         <p className="kicker">{t('CHI TIẾT TIN TỨC')}</p>
         <h1>{data?.title.rendered ?? t('Chi tiết bài viết')}</h1>
         {data && <p className="meta-line">{t('Ngày đăng')}: {formatDate(data.date)}</p>}

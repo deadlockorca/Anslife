@@ -178,7 +178,7 @@ const TRANSLATIONS: Record<
     'Tìm sản phẩm, dự án, tin tức...': 'Search products, projects, news...',
     'Tìm sản phẩm, dự án, báo giá, năng lực sản xuất...':
       'Search products, projects, quotes, production capabilities...',
-    'Sản phẩm nội thất, dự án, báo giá...': 'Furniture products, projects, quotes...',
+    'Tìm sản phẩm, dự án,...': 'Search products, projects,...',
     'Quý khách đang tìm kiếm gì hôm nay?': 'What are you looking for today?',
     'Đóng': 'Close',
     'Truy cập nhanh': 'Quick access',
@@ -601,7 +601,7 @@ const TRANSLATIONS: Record<
     'Không gian hoàng hôn': '夕暮れのシーン',
     'Không gian ban đêm': '夜のシーン',
     'Quý khách đang tìm kiếm gì hôm nay?': '本日は何をお探しですか？',
-    'Sản phẩm nội thất, dự án, báo giá...': '家具製品、プロジェクト、見積り...',
+    'Tìm sản phẩm, dự án,...': '製品・プロジェクトを検索...',
     'ANSLIFE vận hành hệ sinh thái từ nguyên liệu, sản xuất, QC tới giao hàng theo tiêu chuẩn quốc tế.':
       'ANSLIFEは原材料・生産・QC・出荷まで、国際基準に沿ったエコシステムを運営しています。',
     'Truy cập nhanh': 'クイックアクセス',
@@ -986,7 +986,7 @@ const TRANSLATIONS: Record<
     'Không gian hoàng hôn': '노을 장면',
     'Không gian ban đêm': '야간 장면',
     'Quý khách đang tìm kiếm gì hôm nay?': '오늘 무엇을 찾고 계신가요?',
-    'Sản phẩm nội thất, dự án, báo giá...': '가구 제품, 프로젝트, 견적...',
+    'Tìm sản phẩm, dự án,...': '제품, 프로젝트 검색...',
     'ANSLIFE vận hành hệ sinh thái từ nguyên liệu, sản xuất, QC tới giao hàng theo tiêu chuẩn quốc tế.':
       'ANSLIFE는 원자재, 생산, QC, 납품까지 국제 기준에 맞춘 생태계를 운영합니다.',
     'Truy cập nhanh': '빠른 이동',

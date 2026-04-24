@@ -54,6 +54,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     (section.id === 'company-intro' ||
       section.id === 'vision-mission' ||
       section.id === 'core-values');
+  const shouldHideSectionHero =
+    isCustomAboutSection ||
+    (config.slug === 'about-anslife' && section.id === 'production-philosophy');
   const shouldForceTemplateHtml =
     (config.slug === 'manufacturing-ecosystem' && section.id === 'production-system') ||
     (config.slug === 'about-anslife' &&
@@ -74,8 +77,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   return (
     <>
       <Seo title={`${t(section.title)} | ${t(config.title)}`} description={t(section.description)} />
-      {!isCustomAboutSection && (
-        <section className="page-hero compact">
+      {!shouldHideSectionHero && (
+        <section className="page-hero">
           <p className="kicker">{t(config.title)}</p>
           <h1>{t(section.title)}</h1>
           <p>{t(section.description)}</p>

@@ -138,7 +138,7 @@ export default function ProductDetailPage() {
         }
         image={image ?? undefined}
       />
-      <section className="page-hero compact">
+      <section className="page-hero">
         <p className="kicker">{t('CHI TIẾT SẢN PHẨM')}</p>
         <h1>{data?.title.rendered ?? t('Chi tiết sản phẩm')}</h1>
       </section>

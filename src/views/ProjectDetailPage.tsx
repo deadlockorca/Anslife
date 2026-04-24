@@ -26,7 +26,7 @@ export default function ProjectDetailPage() {
         }
       />
 
-      <section className="page-hero compact">
+      <section className="page-hero">
         <p className="kicker">{t('CHI TIẾT DỰ ÁN')}</p>
         <h1>{data?.title.rendered ?? t('Chi tiết dự án')}</h1>
       </section>

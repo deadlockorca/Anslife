@@ -528,7 +528,7 @@ export default function HomePage() {
               <span className="home-anslife-screen-search-icon" aria-hidden="true">
                 ⌕
               </span>
-              <span>{t('Sản phẩm nội thất, dự án, báo giá...')}</span>
+              <span>{t('Tìm sản phẩm, dự án,...')}</span>
             </button>
 
             <p>

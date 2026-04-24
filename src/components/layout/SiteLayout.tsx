@@ -461,6 +461,13 @@ export default function SiteLayout() {
     () => location.pathname.includes('/about-anslife/company-intro'),
     [location.pathname],
   );
+  const isAboutWideRoute = useMemo(
+    () =>
+      /\/about-anslife\/(?:company-intro|vision-mission|core-values|production-philosophy)(?:\/|$)/.test(
+        location.pathname,
+      ),
+    [location.pathname],
+  );
   const isWoodThemeRoute = !isAdminRoute && !isHomeRoute;
   const showGlobalVideoBackground =
     hasGlobalVideoBackground && !isAdminRoute && isHomeRoute;
@@ -1219,6 +1226,8 @@ export default function SiteLayout() {
         !isAdminRoute && isHomeRoute ? 'is-home-route' : ''
       } ${
         !isAdminRoute && isCompanyIntroRoute ? 'is-company-intro-route' : ''
+      } ${
+        !isAdminRoute && isAboutWideRoute ? 'is-about-wide-route' : ''
       } ${
         isWoodThemeRoute ? 'is-wood-theme-route' : ''
       } ${
