@@ -3520,12 +3520,12 @@ ul {
   gap: 0.12rem;
 }
 
-.ai-core-header h1 {
+.ai-core-header h2 {
   margin: 0;
   color: #2d1b10;
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4.2vw, 3.84rem);
-  line-height: 1.04;
+  font-size: clamp(2.2rem, 3.4vw, 4rem);
+  line-height: 1.05;
   letter-spacing: 0.01em;
 }
 
@@ -3806,6 +3806,47 @@ ul {
   padding-left: 1.18rem;
 }
 
+.ai-op-core-visual {
+  margin: 0.58rem 0 0;
+  border: 1px solid #e3e6ea;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f8f2e8;
+}
+
+.ai-op-core-visual img {
+  display: block;
+  width: 100%;
+  height: 108px;
+  object-fit: cover;
+  filter: none;
+}
+
+.ai-op-core-visual figcaption {
+  margin: 0;
+  padding: 0.32rem 0.56rem 0.36rem;
+  color: #6a5138;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  background: linear-gradient(180deg, #f6ecdf 0%, #f2e6d5 100%);
+}
+
+.ai-op-visual-card {
+  padding: 0;
+  overflow: hidden;
+  background: #f3e5d1;
+  display: grid;
+}
+
+.ai-op-visual-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 256px;
+  object-fit: cover;
+  filter: saturate(0.86) contrast(0.95) brightness(1.01);
+}
+
 .ai-op-note-mini,
 .ai-op-emphasis {
   margin-top: 0.56rem;
@@ -3865,6 +3906,15 @@ ul {
   color: #3a3a3a;
   font-size: 0.91rem;
   line-height: 1.58;
+}
+
+#organization.ai-operating-philosophy :is(h2, h3, p, li, strong, span) {
+  color: #1f1f1f;
+}
+
+#organization.ai-operating-philosophy .ai-op-kicker,
+#organization.ai-operating-philosophy .ai-op-subtitle {
+  color: #1f1f1f;
 }
 
 .ai-org-structure {
@@ -7069,7 +7119,7 @@ ul {
     padding: 0.62rem 0.56rem 0.64rem;
   }
 
-  .ai-core-header h1 {
+  .ai-core-header h2 {
     font-size: clamp(1.95rem, 10.4vw, 2.85rem);
   }
 
@@ -7196,6 +7246,14 @@ ul {
   .ai-op-card,
   .ai-op-philosophy {
     padding: 0.72rem 0.74rem;
+  }
+
+  .ai-op-core-visual img {
+    height: 92px;
+  }
+
+  .ai-op-visual-card img {
+    min-height: 184px;
   }
 
   .ai-org-model,

@@ -56,7 +56,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       section.id === 'core-values');
   const shouldHideSectionHero =
     isCustomAboutSection ||
-    (config.slug === 'about-anslife' && section.id === 'production-philosophy');
+    (config.slug === 'about-anslife' &&
+      (section.id === 'production-philosophy' || section.id === 'organization'));
   const shouldForceTemplateHtml =
     (config.slug === 'manufacturing-ecosystem' && section.id === 'production-system') ||
     (config.slug === 'about-anslife' &&

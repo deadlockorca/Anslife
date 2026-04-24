@@ -230,7 +230,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   <section id="core-values" class="ai-section ai-core-values">
     <div class="ai-core-shell">
       <header class="ai-core-header">
-        <h1>Giá trị cốt lõi</h1>
+        <h2>Giá trị cốt lõi</h2>
         <span class="ai-core-header-accent" aria-hidden="true"></span>
         <div class="ai-core-header-meta">
           <p class="ai-core-kicker">GIÁ TRỊ CỐT LÕI</p>
@@ -465,6 +465,15 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       <h3>1. Nguyên tắc cốt lõi</h3>
       <p>Chúng tôi không cạnh tranh bằng việc trở thành đơn vị rẻ nhất.</p>
       <p>Chúng tôi cạnh tranh bằng việc trở thành đơn vị đáng tin cậy nhất.</p>
+      <figure class="ai-op-core-visual">
+        <img
+          src="/assets/about/production-philosophy-core-system.svg"
+          alt="Sơ đồ nguyên tắc vận hành và kiểm soát chất lượng ANSLIFE"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Chuẩn quy trình - kiểm theo ca - dữ liệu minh bạch.</figcaption>
+      </figure>
       <p class="ai-op-emphasis">Chất lượng là ưu tiên hàng đầu. Giá chỉ đứng sau.</p>
     </article>
 
@@ -543,186 +552,142 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     </p>
   </section>
 
-  <section id="organization" class="ai-section ai-org-structure">
-    <p class="ai-org-kicker">ANSLIFE ORGANIZATIONAL ARCHITECTURE</p>
-    <h2>Cơ cấu tổ chức ANSLIFE</h2>
-    <p class="ai-org-lead">
-      ANSLIFE không vận hành theo mô hình nhà máy truyền thống. Chúng tôi vận hành theo mô hình hệ sinh thái sản xuất
-      được kiểm soát tập trung, trong đó mọi vai trò kết nối với nhau bằng cùng một nền tảng dữ liệu.
-    </p>
+  <section id="organization" class="ai-section ai-operating-philosophy">
+    <h2>Cơ cấu tổ chức</h2>
+    <p class="ai-op-kicker">CƠ CẤU TỔ CHỨC ANSLIFE</p>
+    <p class="ai-op-subtitle">Vận hành theo hệ sinh thái sản xuất được kiểm soát tập trung.</p>
 
-    <figure class="ai-org-hero">
-      <img
-        src="/assets/about/organization-hero-real.jpg"
-        alt="Ban vận hành và điều phối hệ thống sản xuất ANSLIFE"
-        loading="lazy"
-        decoding="async"
-      />
-    </figure>
-
-    <article class="ai-org-model">
+    <article class="ai-op-core">
       <h3>1. Mô hình tổ chức</h3>
-      <p>Cấu trúc tổ chức của ANSLIFE được chia thành 3 lớp chính:</p>
-      <div class="ai-org-layer-grid">
-        <article class="ai-org-layer">
-          <strong>Lớp điều hành hệ thống</strong>
-          <p>Định hướng, phân bổ nguồn lực và điều phối toàn hệ sinh thái.</p>
-        </article>
-        <article class="ai-org-layer">
-          <strong>Lớp kiểm soát & dữ liệu</strong>
-          <p>Kiểm soát chất lượng, xác thực thông tin và chuẩn hóa dữ liệu vận hành.</p>
-        </article>
-        <article class="ai-org-layer">
-          <strong>Lớp thực thi sản xuất</strong>
-          <p>Triển khai sản xuất tại nhà máy ANSLIFE và mạng lưới đối tác vệ tinh.</p>
-        </article>
-      </div>
+      <p>ANSLIFE không vận hành theo mô hình nhà máy truyền thống.</p>
+      <p>Chúng tôi vận hành theo mô hình hệ sinh thái sản xuất được kiểm soát tập trung.</p>
+      <p>Cấu trúc tổ chức được chia thành 3 lớp chính:</p>
+      <ul>
+        <li>Lớp điều hành hệ thống</li>
+        <li>Lớp kiểm soát & dữ liệu</li>
+        <li>Lớp thực thi sản xuất</li>
+      </ul>
+      <p class="ai-op-emphasis">Mỗi lớp có vai trò rõ ràng, kết nối với nhau thông qua hệ thống dữ liệu.</p>
     </article>
 
-    <div class="ai-org-grid">
-      <article class="ai-org-card">
-        <h3><span>2</span>Lớp điều hành hệ thống</h3>
+    <div class="ai-op-grid">
+      <article class="ai-op-card">
+        <h3>2. Lớp điều hành hệ thống</h3>
         <p>Đây là trung tâm kiểm soát toàn bộ hoạt động của ANSLIFE.</p>
         <p>Bao gồm:</p>
         <ul>
-          <li>Ban điều hành.</li>
-          <li>Bộ phận chiến lược & vận hành.</li>
-          <li>Bộ phận thương mại (Sales / Trading).</li>
+          <li>Ban điều hành</li>
+          <li>Bộ phận chiến lược & vận hành</li>
+          <li>Bộ phận thương mại (Sales / Trading)</li>
         </ul>
         <p>Vai trò:</p>
         <ul>
-          <li>Định hướng sản xuất.</li>
-          <li>Tiếp nhận và phân bổ đơn hàng.</li>
-          <li>Quản lý khách hàng.</li>
-          <li>Điều phối hệ sinh thái nhà máy.</li>
+          <li>Định hướng sản xuất</li>
+          <li>Tiếp nhận và phân bổ đơn hàng</li>
+          <li>Quản lý khách hàng</li>
+          <li>Điều phối hệ sinh thái nhà máy</li>
         </ul>
       </article>
 
-      <article class="ai-org-card">
-        <h3><span>3</span>Lớp kiểm soát & dữ liệu</h3>
+      <article class="ai-op-card">
+        <h3>3. Lớp kiểm soát & dữ liệu</h3>
         <p>Đây là lõi vận hành của hệ thống ANSLIFE.</p>
         <p>Bao gồm:</p>
         <ul>
-          <li>Hệ thống QC (tổ trưởng QC, QC nhân sự).</li>
-          <li>Data Controller / Data Admin.</li>
-          <li>Bộ phận thu thập dữ liệu nhà máy.</li>
+          <li>Hệ thống QC (tổ trưởng QC, QC nhân sự)</li>
+          <li>Data Controller / Data Admin</li>
+          <li>Bộ phận thu thập dữ liệu nhà máy</li>
         </ul>
         <p>Vai trò:</p>
         <ul>
-          <li>Kiểm soát chất lượng theo từng công đoạn.</li>
-          <li>Ghi nhận và xử lý dữ liệu sản xuất.</li>
-          <li>Chuẩn hóa và phân phối dữ liệu.</li>
-          <li>Đảm bảo dữ liệu cung cấp cho sale và khách hàng đã được kiểm soát.</li>
+          <li>Kiểm soát chất lượng theo từng công đoạn</li>
+          <li>Ghi nhận và xử lý dữ liệu sản xuất</li>
+          <li>Chuẩn hóa và phân phối dữ liệu</li>
+          <li>Đảm bảo dữ liệu cung cấp cho sale và khách hàng là dữ liệu đã được kiểm soát</li>
         </ul>
-        <p class="ai-org-note-mini">
-          Hệ thống này giúp loại bỏ sai lệch thông tin, giảm rủi ro vận hành và đảm bảo tính minh bạch.
-        </p>
+        <p class="ai-op-note-mini">Hệ thống này giúp loại bỏ sai lệch thông tin, giảm rủi ro vận hành và đảm bảo tính minh bạch.</p>
       </article>
 
-      <article class="ai-org-card">
-        <h3><span>4</span>Lớp thực thi sản xuất</h3>
+      <article class="ai-op-card">
+        <h3>4. Lớp thực thi sản xuất</h3>
         <p>Bao gồm:</p>
         <ul>
-          <li>Nhà máy ANSLIFE.</li>
-          <li>Các nhà máy đối tác (vệ tinh).</li>
+          <li>Nhà máy ANSLIFE</li>
+          <li>Các nhà máy đối tác (vệ tinh)</li>
         </ul>
         <p>Vai trò:</p>
         <ul>
-          <li>Thực hiện sản xuất theo tiêu chuẩn ANSLIFE.</li>
-          <li>Tuân thủ quy trình và hệ thống QC.</li>
-          <li>Cập nhật dữ liệu sản xuất theo thời gian thực.</li>
+          <li>Thực hiện sản xuất theo tiêu chuẩn ANSLIFE</li>
+          <li>Tuân thủ quy trình và hệ thống QC</li>
+          <li>Cập nhật dữ liệu sản xuất theo thời gian thực</li>
         </ul>
-        <p class="ai-org-note-mini">
-          Mỗi nhà máy là một phần của hệ sinh thái, không hoạt động độc lập mà được kiểm soát trong cùng một hệ thống.
-        </p>
+        <p class="ai-op-note-mini">Mỗi nhà máy là một phần của hệ sinh thái, không hoạt động độc lập mà được kiểm soát trong cùng một hệ thống.</p>
+      </article>
+
+      <article class="ai-op-card">
+        <h3>5. Khách hàng & đối tác trong hệ thống</h3>
+        <p>ANSLIFE mở rộng hệ thống để khách hàng và đối tác cùng tham gia.</p>
+        <p>Bao gồm:</p>
+        <ul>
+          <li>Khách hàng (Buyer)</li>
+          <li>Nhà máy / đối tác sản xuất</li>
+          <li>Đối tác thương mại</li>
+        </ul>
+        <p>Vai trò:</p>
+        <ul>
+          <li>Truy cập dữ liệu theo phạm vi được cấp quyền</li>
+          <li>Theo dõi tiến độ đơn hàng</li>
+          <li>Tương tác trực tiếp trên hệ thống</li>
+        </ul>
       </article>
     </div>
 
-    <div class="ai-org-visual-row">
-      <figure class="ai-org-visual">
-        <img
-          src="/assets/about/organization-control-data-v2-real.jpg"
-          alt="Nhân sự kiểm soát vận hành sử dụng tablet để xác thực dữ liệu tại hiện trường"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure class="ai-org-visual">
-        <img
-          src="/assets/about/organization-execution-real.jpg"
-          alt="Lớp thực thi sản xuất tại hệ thống nhà máy nội thất"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-    </div>
-
-    <article class="ai-org-partner">
-      <h3>5. Khách hàng & đối tác trong hệ thống</h3>
-      <p>ANSLIFE mở rộng hệ thống để khách hàng và đối tác cùng tham gia.</p>
-      <p>Bao gồm:</p>
-      <ul>
-        <li>Khách hàng (Buyer).</li>
-        <li>Nhà máy / đối tác sản xuất.</li>
-        <li>Đối tác thương mại.</li>
-      </ul>
-      <p>Vai trò:</p>
-      <ul>
-        <li>Truy cập dữ liệu theo phạm vi được cấp quyền.</li>
-        <li>Theo dõi tiến độ đơn hàng.</li>
-        <li>Tương tác trực tiếp trên hệ thống.</li>
-      </ul>
-      <figure class="ai-org-partner-visual">
-        <img
-          src="/assets/about/organization-partner-access-real.jpg"
-          alt="Khách hàng và đối tác theo dõi vận hành qua hệ thống dữ liệu"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-    </article>
-
-    <article class="ai-org-flow">
+    <article class="ai-op-philosophy">
       <h3>6. Kết nối hệ thống</h3>
       <p>Toàn bộ cơ cấu tổ chức được kết nối thông qua nền tảng dữ liệu chung.</p>
       <p>Mỗi vai trò trong hệ thống đều:</p>
       <ul>
-        <li>Có tài khoản riêng.</li>
-        <li>Có phạm vi dữ liệu riêng.</li>
-        <li>Có quyền thao tác riêng.</li>
+        <li>Có tài khoản riêng</li>
+        <li>Có phạm vi dữ liệu riêng</li>
+        <li>Có quyền thao tác riêng</li>
       </ul>
       <p>Dữ liệu được luân chuyển theo nguyên tắc:</p>
-      <div class="ai-org-flow-track">
-        <article class="ai-org-flow-step">
-          <strong>Tạo tại hiện trường</strong>
-          <p>Dữ liệu phát sinh từ hoạt động sản xuất thực tế.</p>
-        </article>
-        <article class="ai-org-flow-step">
-          <strong>Kiểm soát tại hệ thống</strong>
-          <p>Dữ liệu được QC và Data Controller xác thực.</p>
-        </article>
-        <article class="ai-org-flow-step">
-          <strong>Phân phối theo cấp quyền</strong>
-          <p>Dữ liệu được chia sẻ đúng người, đúng phạm vi.</p>
-        </article>
+      <div class="ai-op-formula">
+        <p>→ tạo tại hiện trường</p>
+        <p>→ kiểm soát tại hệ thống</p>
+        <p>→ phân phối theo cấp quyền</p>
       </div>
     </article>
 
-    <article class="ai-org-future">
+    <article class="ai-op-philosophy">
       <h3>7. Định hướng phát triển</h3>
-      <p>Cơ cấu tổ chức ANSLIFE được thiết kế để:</p>
+      <p>Cơ cấu tổ chức của ANSLIFE được thiết kế để:</p>
       <ul>
-        <li>Dễ mở rộng quy mô.</li>
-        <li>Tích hợp nhiều nhà máy.</li>
-        <li>Phục vụ nhiều thị trường khác nhau.</li>
+        <li>Dễ mở rộng quy mô</li>
+        <li>Tích hợp nhiều nhà máy</li>
+        <li>Phục vụ nhiều thị trường khác nhau</li>
       </ul>
       <p>Mô hình này cho phép ANSLIFE:</p>
       <ul>
-        <li>Không phụ thuộc vào một nhà máy.</li>
-        <li>Tăng trưởng mà vẫn giữ được kiểm soát.</li>
-        <li>Duy trì chất lượng ổn định trên toàn hệ thống.</li>
+        <li>Không phụ thuộc vào một nhà máy</li>
+        <li>Tăng trưởng mà vẫn giữ được kiểm soát</li>
+        <li>Duy trì chất lượng ổn định trên toàn hệ thống</li>
       </ul>
     </article>
+
+    <article class="ai-op-card ai-op-visual-card">
+      <img
+        src="/assets/about/organization-system-network.svg"
+        alt="Minh hoạ kết nối các lớp tổ chức trong hệ thống vận hành"
+        loading="lazy"
+        decoding="async"
+      />
+    </article>
+
+    <p class="ai-op-signoff">
+      <strong>ANSLIFE</strong>
+      <span>Tăng trưởng có kiểm soát trên nền tảng dữ liệu thống nhất.</span>
+    </p>
   </section>
 
   <section id="team" class="ai-section ai-team-system">
@@ -3282,7 +3247,7 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
   <section id="core-values" class="ai-section ai-core-values">
     <div class="ai-core-shell">
       <header class="ai-core-header">
-        <h1>Core Values</h1>
+        <h2>Core Values</h2>
         <span class="ai-core-header-accent" aria-hidden="true"></span>
         <div class="ai-core-header-meta">
           <p class="ai-core-kicker">CORE VALUES</p>
@@ -3541,7 +3506,8 @@ export function getAIFallbackSectionHtml(
       (sectionId === 'company-intro' ||
         sectionId === 'vision-mission' ||
         sectionId === 'core-values' ||
-        sectionId === 'production-philosophy')
+        sectionId === 'production-philosophy' ||
+        sectionId === 'organization')
     );
 
   const translatedSectionOverride =

@@ -1,0 +1,85 @@
+<svg width="1400" height="840" viewBox="0 0 1400 840" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="840" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8EDDB"/>
+      <stop offset="1" stop-color="#F1DFC8"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(190 170) rotate(15) scale(370 240)">
+      <stop offset="0" stop-color="#F7E3C7" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#F7E3C7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1220 720) rotate(-12) scale(420 260)">
+      <stop offset="0" stop-color="#EACDA9" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#EACDA9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#AF7E53"/>
+      <stop offset="1" stop-color="#C79262"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF8EB"/>
+      <stop offset="1" stop-color="#F5E5CF"/>
+    </linearGradient>
+    <linearGradient id="hub" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B38054"/>
+      <stop offset="1" stop-color="#C99766"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="840" rx="28" fill="url(#bg)"/>
+  <ellipse cx="240" cy="180" rx="330" ry="220" fill="url(#glowA)"/>
+  <ellipse cx="1180" cy="700" rx="390" ry="240" fill="url(#glowB)"/>
+
+  <g opacity="0.92" stroke="url(#line)" stroke-width="5" stroke-linecap="round">
+    <path d="M700 420L360 235"/>
+    <path d="M700 420L1040 235"/>
+    <path d="M700 420L360 605"/>
+    <path d="M700 420L1040 605"/>
+    <path d="M360 235L360 605"/>
+    <path d="M1040 235L1040 605"/>
+  </g>
+
+  <g>
+    <rect x="610" y="340" width="180" height="160" rx="22" fill="url(#hub)" stroke="#E9CFB0" stroke-width="4"/>
+    <circle cx="700" cy="390" r="18" fill="#F8EBDD"/>
+    <rect x="650" y="430" width="100" height="14" rx="7" fill="#F4E1CA"/>
+    <rect x="662" y="454" width="76" height="12" rx="6" fill="#EED6B9"/>
+  </g>
+
+  <g>
+    <rect x="270" y="170" width="180" height="130" rx="18" fill="url(#card)" stroke="#D6B58F" stroke-width="4"/>
+    <circle cx="330" cy="220" r="18" fill="#C9986C"/>
+    <rect x="360" y="208" width="68" height="12" rx="6" fill="#B68256"/>
+    <rect x="360" y="230" width="52" height="10" rx="5" fill="#D0AD87"/>
+    <rect x="360" y="248" width="60" height="10" rx="5" fill="#D0AD87"/>
+  </g>
+
+  <g>
+    <rect x="950" y="170" width="180" height="130" rx="18" fill="url(#card)" stroke="#D6B58F" stroke-width="4"/>
+    <circle cx="1010" cy="220" r="18" fill="#C9986C"/>
+    <rect x="1040" y="208" width="68" height="12" rx="6" fill="#B68256"/>
+    <rect x="1040" y="230" width="52" height="10" rx="5" fill="#D0AD87"/>
+    <rect x="1040" y="248" width="60" height="10" rx="5" fill="#D0AD87"/>
+  </g>
+
+  <g>
+    <rect x="270" y="540" width="180" height="130" rx="18" fill="url(#card)" stroke="#D6B58F" stroke-width="4"/>
+    <circle cx="330" cy="590" r="18" fill="#C9986C"/>
+    <rect x="360" y="578" width="68" height="12" rx="6" fill="#B68256"/>
+    <rect x="360" y="600" width="52" height="10" rx="5" fill="#D0AD87"/>
+    <rect x="360" y="618" width="60" height="10" rx="5" fill="#D0AD87"/>
+  </g>
+
+  <g>
+    <rect x="950" y="540" width="180" height="130" rx="18" fill="url(#card)" stroke="#D6B58F" stroke-width="4"/>
+    <circle cx="1010" cy="590" r="18" fill="#C9986C"/>
+    <rect x="1040" y="578" width="68" height="12" rx="6" fill="#B68256"/>
+    <rect x="1040" y="600" width="52" height="10" rx="5" fill="#D0AD87"/>
+    <rect x="1040" y="618" width="60" height="10" rx="5" fill="#D0AD87"/>
+  </g>
+
+  <g opacity="0.62" stroke="#DDBD99" stroke-width="2.5">
+    <circle cx="700" cy="420" r="254"/>
+    <circle cx="700" cy="420" r="304"/>
+  </g>
+</svg>

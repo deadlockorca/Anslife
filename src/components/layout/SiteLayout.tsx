@@ -463,7 +463,7 @@ export default function SiteLayout() {
   );
   const isAboutWideRoute = useMemo(
     () =>
-      /\/about-anslife\/(?:company-intro|vision-mission|core-values|production-philosophy)(?:\/|$)/.test(
+      /\/about-anslife\/(?:company-intro|vision-mission|core-values|production-philosophy|organization)(?:\/|$)/.test(
         location.pathname,
       ),
     [location.pathname],
