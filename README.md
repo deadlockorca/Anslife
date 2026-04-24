@@ -33,6 +33,7 @@ Kiến trúc hiện tại:
 # Tạo/cập nhật file .env trực tiếp trong thư mục project
 npm install
 npm run dev
+# mở https://localhost:3000 (chấp nhận cert self-signed lần đầu nếu trình duyệt hỏi)
 ```
 
 ## Build production

@@ -458,10 +458,10 @@ export default function HomePage() {
         description={t('Website ANSLIFE V1: hệ sinh thái sản xuất, chất lượng và năng lực toàn cầu.')}
       />
 
-      <div className="home-vcb-root">
-        <section className={`home-vcb-screen home-vcb-screen--${activeHeroScene.theme}`}>
-          <div className="home-vcb-screen-media" aria-hidden="true">
-            <picture className="home-vcb-screen-media-picture">
+      <div className="home-anslife-root">
+        <section className={`home-anslife-screen home-anslife-screen--${activeHeroScene.theme}`}>
+          <div className="home-anslife-screen-media" aria-hidden="true">
+            <picture className="home-anslife-screen-media-picture">
               <source
                 media="(min-width:1024px)"
                 srcSet={activeHeroScene.desktopImage}
@@ -481,11 +481,11 @@ export default function HomePage() {
               <img src={activeHeroScene.desktopImage} alt="" />
             </picture>
 
-            <div className="home-vcb-screen-media-fallback" style={heroStyle} />
+            <div className="home-anslife-screen-media-fallback" style={heroStyle} />
             {hasHeroVideo && (
               <video
                 key={activeHeroScene.id}
-                className="home-vcb-screen-video"
+                className="home-anslife-screen-video"
                 autoPlay
                 muted
                 loop
@@ -503,12 +503,12 @@ export default function HomePage() {
             )}
           </div>
 
-          <div className="home-vcb-screen-main">
-            <div className="home-vcb-greeting">
-              <span className="home-vcb-greeting-icon" aria-hidden="true">
+          <div className="home-anslife-screen-main">
+            <div className="home-anslife-greeting">
+              <span className="home-anslife-greeting-icon" aria-hidden="true">
                 {activeHeroScene.icon}
               </span>
-              <div className="home-vcb-greeting-copy">
+              <div className="home-anslife-greeting-copy">
                 <h1>{activeHeroScene.greetingLabel}</h1>
                 <p>{t('Quý khách đang tìm kiếm gì hôm nay?')}</p>
               </div>
@@ -539,7 +539,7 @@ export default function HomePage() {
           </div>
 
           {error && (
-            <div className="home-vcb-screen-error">
+            <div className="home-anslife-screen-error">
               <ErrorBlock message={error} />
             </div>
           )}

@@ -28,9 +28,7 @@ const supportedLanguageOptions = [
   menuLabel: string;
   flag: string;
 }>;
-const mobileMenuLanguageOptions = supportedLanguageOptions.filter(
-  (option) => option.code !== 'kr',
-);
+const mobileMenuLanguageOptions = supportedLanguageOptions;
 
 const LANGUAGE_SELECTOR_STORAGE_KEY = 'anslife_language_selector';
 const LANGUAGE_ROUTE_ALIAS: Record<string, LanguageCode> = {
@@ -1308,7 +1306,6 @@ export default function SiteLayout() {
                 decoding="async"
               />
             </NavLink>
-            {!isAdminRoute && isCompanyIntroRoute && renderLanguageSwitcher('language-switcher-company-intro')}
             {!isAdminRoute && (
               <div className="mobile-home-header-actions">
                 <Link
@@ -1970,7 +1967,7 @@ export default function SiteLayout() {
 
           <div className="site-footer-legal">
             <p className="site-footer-copy">
-              © {footerYear} ANSLIFE. All Rights Reserved.
+              © {footerYear} ANSLIFE. {t('Mọi quyền được bảo lưu.')}
             </p>
             <nav className="site-footer-legal-links" aria-label={t('Liên kết chân trang')}>
               {FOOTER_LEGAL_LINKS.map((item) => (
