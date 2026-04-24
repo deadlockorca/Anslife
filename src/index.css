@@ -1,14 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Franklin:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --font-body:
-    'Libre Franklin', 'Noto Sans KR', 'Noto Sans JP', system-ui, 'Apple SD Gothic Neo',
-    'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  --font-heading:
-    'Cormorant Garamond', 'Noto Serif KR', 'Noto Serif JP', 'Times New Roman', serif;
-  --font-ui:
-    'Libre Franklin', 'Noto Sans KR', 'Noto Sans JP', system-ui, 'Apple SD Gothic Neo',
-    'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Libre Franklin', sans-serif;
+  --font-heading: 'Libre Franklin', sans-serif;
+  --font-ui: 'Libre Franklin', sans-serif;
+  /* Aman bg-primary/theme-color */
   --bg: #f3eee7;
   --panel: #ffffff;
   --ink: #1f2733;
@@ -102,6 +98,11 @@ ul {
   position: relative;
   isolation: isolate;
   overflow-x: clip;
+}
+
+/* Keep homepage visual system untouched; apply Aman background to other public routes. */
+.site-shell:not(.is-admin-route):not(.is-home-route):not(.has-global-video) {
+  background: var(--bg);
 }
 
 .site-shell.has-global-video {
@@ -3133,6 +3134,10 @@ ul {
   gap: 0.84rem;
 }
 
+.ai-company-intro .ai-company-card-icon {
+  display: none !important;
+}
+
 .ai-company-hero {
   position: relative;
   display: grid;
@@ -3245,8 +3250,8 @@ ul {
   background: linear-gradient(180deg, #f7ede0 0%, #f4e8d9 100%);
   padding: 0.72rem 0.86rem 0.72rem 0.88rem;
   display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  gap: 0.7rem;
+  grid-template-columns: 1fr;
+  gap: 0.44rem;
   align-items: start;
 }
 
@@ -3272,7 +3277,7 @@ ul {
   font-size: 2.12rem;
   line-height: 1.12;
   color: #2e1c12;
-  grid-column: 2;
+  grid-column: auto;
 }
 
 .ai-company-block ul,
@@ -3283,7 +3288,7 @@ ul {
   gap: 0.32rem;
   font-size: 0.82rem;
   line-height: 1.5;
-  grid-column: 2;
+  grid-column: auto;
 }
 
 .ai-company-block ul {
@@ -6298,13 +6303,13 @@ ul {
 .site-footer {
   width: min(1380px, calc(100% - 1.2rem));
   margin: 2rem auto 1rem;
-  border: 1px solid rgba(180, 203, 234, 0.22);
-  background: linear-gradient(180deg, #0a2d56 0%, #072449 100%);
+  border: 1px solid #e6e6e6;
+  background: #ffffff;
   padding: 1.45rem 1.2rem 0.92rem;
-  color: #d9e5f7;
+  color: #585858;
   display: grid;
   gap: 1.06rem;
-  box-shadow: 0 14px 32px rgba(4, 16, 33, 0.3);
+  box-shadow: none;
 }
 
 .site-footer-main {
@@ -6338,7 +6343,7 @@ ul {
 .site-footer-company-copy {
   margin: 0;
   max-width: 290px;
-  color: rgba(216, 228, 247, 0.88);
+  color: #585858;
   font-size: 0.86rem;
   font-weight: 400;
   line-height: 1.56;
@@ -6351,18 +6356,18 @@ ul {
 .site-footer-social-icons .social-link {
   width: 30px;
   height: 30px;
-  border-color: rgba(214, 227, 245, 0.3);
-  background: rgba(255, 255, 255, 0.08);
-  color: #edf3ff;
+  border-color: #dad9d7;
+  background: transparent;
+  color: #585858;
 }
 
 .site-footer-social-icons .social-link:hover {
-  background: rgba(255, 255, 255, 0.96);
-  color: #0a2d56;
+  background: #ebe8e5;
+  color: #313131;
 }
 
 .site-footer-section {
-  border-left: 1px solid rgba(214, 227, 245, 0.24);
+  border-left: 1px solid #e6e6e6;
   padding-left: 0.78rem;
   display: grid;
   align-content: start;
@@ -6372,7 +6377,7 @@ ul {
 .site-footer-column h3,
 .site-footer-contact h3 {
   margin: 0;
-  color: #f6f9ff;
+  color: #313131;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -6383,10 +6388,10 @@ ul {
 .site-footer-section-toggle {
   display: none;
   width: 100%;
-  border: 1px solid rgba(214, 227, 245, 0.28);
+  border: 1px solid #dad9d7;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #f6f9ff;
+  background: #ffffff;
+  color: #313131;
   padding: 0.52rem 0.62rem;
   font-size: 0.78rem;
   font-weight: 700;
@@ -6416,7 +6421,7 @@ ul {
 
 .site-footer-link {
   text-decoration: none;
-  color: rgba(216, 228, 247, 0.87);
+  color: #585858;
   font-size: 0.85rem;
   font-weight: 400;
   line-height: 1.43;
@@ -6424,9 +6429,9 @@ ul {
 
 .site-footer-link:hover,
 .site-footer-link.active {
-  color: #fff;
+  color: #313131;
   text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.4);
+  text-decoration-color: #dad9d7;
   text-underline-offset: 3px;
 }
 
@@ -6437,7 +6442,7 @@ ul {
 
 .site-footer-contact-item {
   text-decoration: none;
-  color: rgba(216, 228, 247, 0.87);
+  color: #585858;
   display: grid;
   grid-template-columns: 17px minmax(0, 1fr);
   align-items: start;
@@ -6454,11 +6459,11 @@ ul {
 }
 
 .site-footer-contact-item:hover {
-  color: #fff;
+  color: #313131;
 }
 
 .site-footer-legal {
-  border-top: 1px solid rgba(214, 227, 245, 0.24);
+  border-top: 1px solid #e6e6e6;
   padding-top: 0.8rem;
   display: flex;
   align-items: center;
@@ -6469,7 +6474,7 @@ ul {
 
 .site-footer-copy {
   margin: 0;
-  color: rgba(216, 228, 247, 0.82);
+  color: #585858;
   font-size: 0.84rem;
   font-weight: 400;
   line-height: 1.4;
@@ -6484,20 +6489,20 @@ ul {
 
 .site-footer-legal-link {
   text-decoration: none;
-  color: rgba(216, 228, 247, 0.86);
+  color: #585858;
   font-size: 0.84rem;
   line-height: 1.4;
 }
 
 .site-footer-legal-link + .site-footer-legal-link::before {
   content: '|';
-  color: rgba(216, 228, 247, 0.52);
+  color: #82847f;
   margin-right: 0.34rem;
 }
 
 .site-footer-legal-link:hover,
 .site-footer-legal-link.active {
-  color: #fff;
+  color: #313131;
 }
 
 .site-shell.is-wood-theme-route .site-footer {
@@ -6507,16 +6512,16 @@ ul {
   border-right: 0;
   border-radius: 0;
   padding: 1.22rem 0.9rem 0.84rem;
-  border-color: rgba(168, 130, 90, 0.22);
-  background: linear-gradient(180deg, #f5ebdc 0%, #efe2d0 100%);
-  color: rgba(46, 69, 94, 0.88);
-  box-shadow: 0 12px 24px rgba(58, 35, 18, 0.12);
+  border-color: #e6e6e6;
+  background: #ffffff;
+  color: #585858;
+  box-shadow: none;
 }
 
 .site-footer.is-company-intro-theme {
-  background: linear-gradient(180deg, #f5ebdc 0%, #efe2d0 100%);
-  border-color: rgba(168, 130, 90, 0.22);
-  box-shadow: 0 12px 24px rgba(58, 35, 18, 0.12);
+  background: #ffffff;
+  border-color: #e6e6e6;
+  box-shadow: none;
 }
 
 .site-shell.is-wood-theme-route .site-footer-company-copy,
@@ -6524,34 +6529,34 @@ ul {
 .site-shell.is-wood-theme-route .site-footer-contact-item,
 .site-shell.is-wood-theme-route .site-footer-copy,
 .site-shell.is-wood-theme-route .site-footer-legal-link {
-  color: rgba(46, 69, 94, 0.88);
+  color: #585858;
 }
 
 .site-shell.is-wood-theme-route .site-footer-column h3,
 .site-shell.is-wood-theme-route .site-footer-contact h3 {
-  color: #233a52;
+  color: #313131;
 }
 
 .site-shell.is-wood-theme-route .site-footer-section {
-  border-left-color: rgba(168, 130, 90, 0.24);
+  border-left-color: #e6e6e6;
 }
 
 .site-shell.is-wood-theme-route .site-footer-section-toggle {
-  border-color: rgba(68, 96, 132, 0.24);
-  background: rgba(255, 255, 255, 0.64);
-  color: #2e455e;
+  border-color: #dad9d7;
+  background: #ffffff;
+  color: #313131;
 }
 
 .site-shell.is-wood-theme-route .site-footer-social-icons .social-link {
-  border-color: rgba(68, 96, 132, 0.25);
-  background: #fff;
-  color: #39506c;
+  border-color: #dad9d7;
+  background: transparent;
+  color: #585858;
 }
 
 .site-shell.is-wood-theme-route .site-footer-social-icons .social-link:hover {
-  border-color: transparent;
-  background: linear-gradient(120deg, #3f5c80 0%, #2f4765 100%);
-  color: #fff;
+  border-color: #dad9d7;
+  background: #ebe8e5;
+  color: #313131;
 }
 
 .site-shell.is-wood-theme-route .site-footer-link:hover,
@@ -6559,15 +6564,15 @@ ul {
 .site-shell.is-wood-theme-route .site-footer-contact-item:hover,
 .site-shell.is-wood-theme-route .site-footer-legal-link:hover,
 .site-shell.is-wood-theme-route .site-footer-legal-link.active {
-  color: #183c59;
+  color: #313131;
 }
 
 .site-shell.is-wood-theme-route .site-footer-legal {
-  border-top-color: rgba(68, 96, 132, 0.2);
+  border-top-color: #e6e6e6;
 }
 
 .site-shell.is-wood-theme-route .site-footer-legal-link + .site-footer-legal-link::before {
-  color: rgba(68, 96, 132, 0.42);
+  color: #82847f;
 }
 
 @media (max-width: 1320px) {
@@ -7749,7 +7754,7 @@ ul {
 }
 
 /* Aman full-background mode for public pages, excluding footer and overlays. */
-.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route):not(.is-company-intro-route):not(.is-wood-theme-route)
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
   :where(header, main, section, article, nav, aside, div, ul, li, form):not(.site-footer):not(
     .site-footer *
   ):not(.language-popup-overlay):not(.mobile-menu-overlay):not([style*='url(']) {
@@ -7757,21 +7762,22 @@ ul {
 }
 
 .site-shell:not(.is-admin-route):not(.is-company-intro-route):not(.is-wood-theme-route) .site-footer {
-  background: linear-gradient(180deg, #0a2d56 0%, #072449 100%) !important;
+  background: #ffffff !important;
+  border-color: #e6e6e6 !important;
   position: relative;
   z-index: 0;
   isolation: isolate;
 }
 
 .site-shell:not(.is-admin-route):not(.is-company-intro-route):not(.is-wood-theme-route) .site-footer::before {
-  content: '';
+  content: none;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 50%;
   width: 100vw;
   transform: translateX(-50%);
-  background: linear-gradient(180deg, #0a2d56 0%, #072449 100%);
+  background: #ffffff;
   z-index: -1;
 }
 
@@ -7790,7 +7796,7 @@ ul {
 }
 
 .site-shell:not(.is-admin-route):not(.is-home-route):not(.is-company-intro-route):not(.is-wood-theme-route) .site-footer::before {
-  background: linear-gradient(180deg, #0a2d56 0%, #072449 100%);
+  background: #ffffff;
 }
 
 /* Square-corner mode for outer bordered frames on public pages. */

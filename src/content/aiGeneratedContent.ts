@@ -60,7 +60,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 
     <div class="ai-company-two-col">
       <article class="ai-company-block ai-company-block-valuechain">
-        <span class="ai-company-card-icon" aria-hidden="true">⌘</span>
         <h3>Chúng tôi tham gia trực tiếp vào toàn bộ chuỗi giá trị:</h3>
         <ul>
           <li>Phát triển sản phẩm theo yêu cầu</li>
@@ -70,7 +69,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
         </ul>
       </article>
       <article class="ai-company-block ai-company-block-guarantee">
-        <span class="ai-company-card-icon" aria-hidden="true">✓</span>
         <h3>Nhờ đó, ANSLIFE đảm bảo được:</h3>
         <ul>
           <li>Sự ổn định về chất lượng</li>
@@ -82,7 +80,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 
     <div class="ai-company-panels">
       <article class="ai-company-panel ai-company-panel-ecosystem">
-        <span class="ai-company-card-icon" aria-hidden="true">▦</span>
         <h3>HỆ SINH THÁI SẢN XUẤT</h3>
         <p>ANSLIFE xây dựng một hệ sinh thái sản xuất gồm:</p>
         <ul class="ai-company-plain-list">
@@ -102,7 +99,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       </article>
 
       <article class="ai-company-panel ai-company-panel-market">
-        <span class="ai-company-card-icon" aria-hidden="true">◎</span>
         <h3>THỊ TRƯỜNG</h3>
         <p>ANSLIFE hiện đang làm việc với các thị trường:</p>
         <ul class="ai-company-plain-list ai-company-market-list">
@@ -117,7 +113,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       </article>
 
       <article class="ai-company-panel ai-company-panel-direction">
-        <span class="ai-company-card-icon" aria-hidden="true">◉</span>
         <h3>ĐỊNH HƯỚNG</h3>
         <p>ANSLIFE hướng tới việc xây dựng một nền tảng sản xuất minh bạch và có thể kiểm soát, nơi:</p>
         <ul class="ai-company-plain-list">
@@ -128,7 +123,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       </article>
 
       <article class="ai-company-panel ai-company-panel-commitment">
-        <span class="ai-company-card-icon" aria-hidden="true">⟗</span>
         <h3>CAM KẾT</h3>
         <p>ANSLIFE cam kết:</p>
         <ul class="ai-company-plain-list">
@@ -3195,7 +3189,6 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
 
     <div class="ai-company-two-col">
       <article class="ai-company-block ai-company-block-valuechain">
-        <span class="ai-company-card-icon" aria-hidden="true">⌘</span>
         <h3>We are directly involved in the entire value chain:</h3>
         <ul>
           <li>Product development based on customer requirements</li>
@@ -3205,7 +3198,6 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
         </ul>
       </article>
       <article class="ai-company-block ai-company-block-guarantee">
-        <span class="ai-company-card-icon" aria-hidden="true">✓</span>
         <h3>As a result, ANSLIFE ensures:</h3>
         <ul>
           <li>Consistent quality</li>
@@ -3217,7 +3209,6 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
 
     <div class="ai-company-panels">
       <article class="ai-company-panel ai-company-panel-ecosystem">
-        <span class="ai-company-card-icon" aria-hidden="true">▦</span>
         <h3>MANUFACTURING ECOSYSTEM</h3>
         <p>ANSLIFE builds a manufacturing ecosystem including:</p>
         <ul class="ai-company-plain-list">
@@ -3237,7 +3228,6 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
       </article>
 
       <article class="ai-company-panel ai-company-panel-market">
-        <span class="ai-company-card-icon" aria-hidden="true">◎</span>
         <h3>MARKETS</h3>
         <p>ANSLIFE currently serves:</p>
         <ul class="ai-company-plain-list ai-company-market-list">
@@ -3252,7 +3242,6 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
       </article>
 
       <article class="ai-company-panel ai-company-panel-direction">
-        <span class="ai-company-card-icon" aria-hidden="true">◉</span>
         <h3>DIRECTION</h3>
         <p>ANSLIFE aims to build a transparent and controllable manufacturing platform where:</p>
         <ul class="ai-company-plain-list">
@@ -3263,7 +3252,6 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
       </article>
 
       <article class="ai-company-panel ai-company-panel-commitment">
-        <span class="ai-company-card-icon" aria-hidden="true">⟗</span>
         <h3>COMMITMENT</h3>
         <p>ANSLIFE commits to:</p>
         <ul class="ai-company-plain-list">
