@@ -1,4 +1,5 @@
 import type { LanguageCode } from '../i18n/language';
+import { translateText } from '../i18n/translations';
 
 const AI_PAGE_CONTENT: Record<string, string> = {
   'about-anslife': `
@@ -5754,8 +5755,985 @@ const AI_SCHOLARSHIP_SECTION_CONTENT: Record<string, string> = Object.fromEntrie
   ]),
 ) as Record<string, string>;
 
-export function getAIFallbackPageHtml(slug: string): string | null {
-  return AI_PAGE_CONTENT[slug] ?? null;
+const SCHOLARSHIP_SECTION_TEMPLATES_EN: Record<string, StructuredSectionContent> = {
+  'fund-overview': {
+    title: 'Fund Overview',
+    kicker: '',
+    lead:
+      'The ANSLIFE Scholarship and Community Fund is designed as a long-term impact program focused on education support and sustainable local development.',
+    keyline: 'Investing in people is the foundation of sustainable growth.',
+    panels: [
+      {
+        title: 'Fund objectives',
+        paragraphs: ['The fund is operated with clear, measurable, and continuous annual goals.'],
+        bullets: [
+          'Support students with financial hardship',
+          'Encourage consistent academic effort',
+          'Build long-term learning opportunities',
+        ],
+      },
+      {
+        title: 'Operating principles',
+        paragraphs: ['ANSLIFE operates the fund with transparency and real social accountability.'],
+        bullets: [
+          'Public criteria and scope of support',
+          'Planned and controlled resource allocation',
+          'Post-support impact tracking',
+        ],
+      },
+      {
+        title: 'Impact scope',
+        paragraphs: ['Beyond financial aid, the fund supports practical learning conditions.'],
+        bullets: [
+          'Periodic scholarships by academic cycle',
+          'Learning materials and school tool support',
+          'Community resource mobilization',
+        ],
+      },
+      {
+        title: 'Growth direction',
+        paragraphs: ['The fund follows a long-term roadmap aligned with ANSLIFE community strategy.'],
+        bullets: [
+          'Expand the number of support programs',
+          'Improve impact assessment standards',
+          'Increase local partnership depth',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'Fund KPIs',
+        paragraphs: ['Fund performance is tracked through concrete social impact metrics.'],
+        bullets: [
+          'Annual number of supported students',
+          'Study retention rate after support',
+          'Level of community partner participation',
+        ],
+      },
+      {
+        title: 'Fund message',
+        paragraphs: ['ANSLIFE believes timely support for the right learners creates long-term intergenerational impact.'],
+      },
+    ],
+  },
+  'scholarship-program': {
+    title: 'Scholarship Program',
+    kicker: '',
+    lead:
+      'The ANSLIFE Scholarship Program prioritizes students with strong learning commitment, especially those facing financial barriers but showing long-term potential.',
+    keyline: 'We do not only grant scholarships. We support the learning journey.',
+    panels: [
+      {
+        title: 'Priority beneficiaries',
+        paragraphs: ['The program focuses on learners who need support to continue education sustainably.'],
+        bullets: [
+          'Students from financially challenged backgrounds',
+          'Learners with positive academic progress',
+          'Priority groups in local communities',
+        ],
+      },
+      {
+        title: 'Support structure',
+        paragraphs: ['Multiple support tiers are designed to match practical needs.'],
+        bullets: [
+          'Tuition or study-cost support',
+          'Learning tools and materials support',
+          'Semester-based or annual support',
+        ],
+      },
+      {
+        title: 'Selection process',
+        paragraphs: ['Selection is standardized to ensure fairness and transparency.'],
+        bullets: [
+          'Application intake and verification',
+          'Assessment against published criteria',
+          'Approval and cohort-based announcement',
+        ],
+      },
+      {
+        title: 'Post-support follow-up',
+        paragraphs: ['ANSLIFE tracks outcomes to improve program quality each year.'],
+        bullets: [
+          'Periodic learning-result follow-up',
+          'Updated support needs collection',
+          'Criteria improvement based on data',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'Program KPIs',
+        paragraphs: ['The scholarship program is measured by outcome quality and sustainability of impact.'],
+        bullets: [
+          'Scholarship Retention Rate',
+          'Academic Progress Tracking',
+          'Program Coverage by Region',
+        ],
+      },
+      {
+        title: 'Program value',
+        paragraphs: ['The program aims at sustainable educational opportunity, not one-time short-term aid.'],
+      },
+    ],
+  },
+  'community-activities': {
+    title: 'Community Activities',
+    kicker: '',
+    lead:
+      'ANSLIFE runs community programs through a multi-year model, with local needs at the center and data-based impact tracking.',
+    keyline: 'Not short campaigns, but programs with a clear lifecycle.',
+    panels: [
+      {
+        title: 'Community program portfolio',
+        paragraphs: ['Each year, ANSLIFE deploys programs across three major impact groups.'],
+        bullets: [
+          'Educational support in local communities',
+          'Basic livelihood support for vulnerable households',
+          'Learning-space and living-condition improvements',
+        ],
+      },
+      {
+        title: 'Execution process',
+        paragraphs: ['Every activity follows a standardized process to maximize resource efficiency.'],
+        bullets: [
+          'Needs assessment and beneficiary identification',
+          'Target, budget, and timeline design',
+          'Result acceptance and impact reporting',
+        ],
+      },
+      {
+        title: 'Local coordination network',
+        paragraphs: ['ANSLIFE works with schools, local organizations, and social partners to increase effectiveness.'],
+        bullets: [
+          'Local focal points by program',
+          'Clear execution and supervision roles',
+          'Direct feedback channels from beneficiaries',
+        ],
+      },
+      {
+        title: 'Review and improvement cycle',
+        paragraphs: ['Program results are reviewed quarterly and annually for continuous improvement.'],
+        bullets: [
+          'Output review by committed KPIs',
+          'Bottleneck analysis from field execution',
+          'Data-based planning updates for next cycle',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'Community KPIs',
+        paragraphs: ['Community performance is measured by practical impact and result continuity.'],
+        bullets: [
+          'Beneficiary Reach by Area',
+          'Program Completion Quality Score',
+          '12-Month Impact Retention',
+        ],
+      },
+      {
+        title: 'Community commitment',
+        paragraphs: ['ANSLIFE follows a systematic community model with accountability for published outcomes.'],
+      },
+    ],
+  },
+  'workforce-development': {
+    title: 'Workforce Development',
+    kicker: '',
+    lead:
+      'ANSLIFE develops workforce capability through practical skills, systems thinking, and standard-based working methods for the next generation of industry talent.',
+    keyline: 'Investing in people builds sustainable operational capability.',
+    panels: [
+      {
+        title: 'Workforce development direction',
+        paragraphs: ['The program builds a disciplined, skilled workforce with strong practical application.'],
+        bullets: [
+          'Upgrade job skills for real production needs',
+          'Improve process and standards compliance',
+          'Expand long-term career opportunities',
+        ],
+      },
+      {
+        title: 'Training program groups',
+        paragraphs: ['Training is delivered through three core groups to ensure high applicability.'],
+        bullets: [
+          'Vocational and workplace safety training',
+          'Digital literacy and basic data operation',
+          'Soft skills and professional work attitude',
+        ],
+      },
+      {
+        title: 'Training collaboration model',
+        paragraphs: ['Programs are delivered with vocational schools, expert partners, and ANSLIFE operations teams.'],
+        bullets: [
+          'Outcome-based curriculum design',
+          'Blended theory and field practice',
+          'Unified competency assessment criteria',
+        ],
+      },
+      {
+        title: 'Post-training pathway',
+        paragraphs: ['ANSLIFE maintains post-training follow-up to improve practical career conversion.'],
+        bullets: [
+          'Connection to suitable job opportunities',
+          '6-12 month competency progress tracking',
+          'Course updates from employer feedback',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'Workforce KPIs',
+        paragraphs: ['Program effectiveness is measured by employability and job sustainability.'],
+        bullets: [
+          'Training Completion Rate',
+          'Job Placement Conversion',
+          'Workforce Retention After 12 Months',
+        ],
+      },
+      {
+        title: 'People development message',
+        paragraphs: ['ANSLIFE builds long-term professional foundations, not only short-term skill transfer.'],
+      },
+    ],
+  },
+  'join-anslife': {
+    title: 'Join ANSLIFE',
+    kicker: '',
+    lead:
+      'ANSLIFE welcomes individuals, organizations, and partners who want to co-create scholarship and community programs with measurable, long-term impact.',
+    keyline: 'Build long-term impact together through structured action.',
+    panels: [
+      {
+        title: 'Who can join',
+        paragraphs: ['The program welcomes multiple partner groups with flexible participation roles.'],
+        bullets: [
+          'Individuals contributing to community programs',
+          'Businesses sponsoring education initiatives',
+          'Social organizations co-implementing projects',
+        ],
+      },
+      {
+        title: 'Ways to collaborate',
+        paragraphs: ['ANSLIFE provides several collaboration formats for practical participation.'],
+        bullets: [
+          'Financial contribution to the fund',
+          'Co-organization of local programs',
+          'Expert support, training, or network connection',
+        ],
+      },
+      {
+        title: 'Participation process',
+        paragraphs: ['The process is simple but controlled to ensure transparency.'],
+        bullets: [
+          'Submit collaboration proposal',
+          'Define scope and shared goals',
+          'Execute agreement and track outcomes',
+        ],
+      },
+      {
+        title: 'Transparency mechanism',
+        paragraphs: ['All contributions are tracked and reported by program.'],
+        bullets: [
+          'Periodic implementation updates',
+          'Resource usage reporting',
+          'Post-program impact evaluation',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'Partnership KPIs',
+        paragraphs: ['Collaboration effectiveness is measured by program sustainability and practical impact.'],
+        bullets: [
+          'Partner Participation Growth',
+          'Program Continuity Rate',
+          'Co-created Impact Projects',
+        ],
+      },
+      {
+        title: 'Collaboration message',
+        paragraphs: ['ANSLIFE aims to build a partner community that shares social responsibility through measurable action.'],
+      },
+    ],
+  },
+};
+
+const SCHOLARSHIP_SECTION_TEMPLATES_JP: Record<string, StructuredSectionContent> = {
+  'fund-overview': {
+    title: '基金概要',
+    kicker: '',
+    lead:
+      'ANSLIFEの奨学金・地域支援基金は、教育支援と地域の持続的な発展を目的とした長期的な社会貢献プログラムです。',
+    keyline: '人への投資は、持続可能な成長の土台です。',
+    panels: [
+      {
+        title: '基金の目的',
+        paragraphs: ['基金は、明確で測定可能な年間目標に基づいて運営されます。'],
+        bullets: [
+          '経済的に困難な学生への支援',
+          '学習継続と努力の促進',
+          '長期的な学習機会の拡大',
+        ],
+      },
+      {
+        title: '運営原則',
+        paragraphs: ['ANSLIFEは透明性と実効性のある社会的責任のもとで基金を運営します。'],
+        bullets: [
+          '公開された選定基準と支援範囲',
+          '計画的な資源配分',
+          '支援後の効果追跡',
+        ],
+      },
+      {
+        title: '支援範囲',
+        paragraphs: ['資金支援だけでなく、学習環境の実質的な改善も支援します。'],
+        bullets: [
+          '学期・年度単位の奨学金',
+          '教材・学習用品の支援',
+          '地域連携による支援拡大',
+        ],
+      },
+      {
+        title: '今後の方向性',
+        paragraphs: ['基金はANSLIFEの地域戦略に沿った長期ロードマップで拡大します。'],
+        bullets: [
+          '支援プログラム数の拡大',
+          '効果評価基準の高度化',
+          '地域パートナー連携の強化',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: '基金KPI',
+        paragraphs: ['基金の成果は、具体的な社会的インパクト指標で管理されます。'],
+        bullets: [
+          '年間支援対象者数',
+          '支援後の学業継続率',
+          '地域パートナー参加度',
+        ],
+      },
+      {
+        title: '基金メッセージ',
+        paragraphs: ['適切なタイミングで適切な学習者を支援することが、世代を超えた持続的な価値につながるとANSLIFEは考えています。'],
+      },
+    ],
+  },
+  'scholarship-program': {
+    title: '奨学金プログラム',
+    kicker: '',
+    lead:
+      'ANSLIFE奨学金プログラムは、学習意欲が高く、経済的課題を抱えながらも成長可能性の高い学生を優先的に支援します。',
+    keyline: '奨学金の給付だけでなく、学びの継続を伴走します。',
+    panels: [
+      {
+        title: '優先支援対象',
+        paragraphs: ['継続的な学習のために支援が必要な学生を中心に選定します。'],
+        bullets: [
+          '経済的に厳しい環境の学生',
+          '学習成果が安定して向上している学生',
+          '地域の優先支援対象グループ',
+        ],
+      },
+      {
+        title: '支援構成',
+        paragraphs: ['実際のニーズに合わせた複数の支援レベルを設計しています。'],
+        bullets: [
+          '学費または学習費用の支援',
+          '教材・学習用品の支援',
+          '学期または年度単位の支援',
+        ],
+      },
+      {
+        title: '選考プロセス',
+        paragraphs: ['公平性と透明性を確保するため、選考プロセスを標準化しています。'],
+        bullets: [
+          '申請受付と情報確認',
+          '公開基準に基づく審査',
+          '採択と期別結果公開',
+        ],
+      },
+      {
+        title: '支援後フォロー',
+        paragraphs: ['毎年の質向上のため、支援後の成果を継続的に追跡します。'],
+        bullets: [
+          '学習成果の定期確認',
+          '追加支援ニーズの把握',
+          'データに基づく基準改善',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'プログラムKPI',
+        paragraphs: ['成果の質と持続性を中心にプログラムを評価します。'],
+        bullets: [
+          'Scholarship Retention Rate',
+          'Academic Progress Tracking',
+          'Program Coverage by Region',
+        ],
+      },
+      {
+        title: 'プログラム価値',
+        paragraphs: ['単発支援ではなく、持続的な教育機会の創出を目指します。'],
+      },
+    ],
+  },
+  'community-activities': {
+    title: '地域活動',
+    kicker: '',
+    lead:
+      'ANSLIFEは、地域ニーズを中心に据えた複数年モデルで地域活動を実施し、効果をデータで追跡します。',
+    keyline: '短期キャンペーンではなく、ライフサイクルを持つプログラムを運営します。',
+    panels: [
+      {
+        title: '活動ポートフォリオ',
+        paragraphs: ['毎年、3つの主要インパクト領域で活動を実施します。'],
+        bullets: [
+          '地域教育の支援',
+          '生活基盤が弱い世帯への支援',
+          '学習・生活環境の改善',
+        ],
+      },
+      {
+        title: '実行プロセス',
+        paragraphs: ['資源効率を高めるため、全活動を標準プロセスで実行します。'],
+        bullets: [
+          'ニーズ調査と対象者設定',
+          '目標・予算・スケジュール設計',
+          '結果確認と効果報告',
+        ],
+      },
+      {
+        title: '地域連携ネットワーク',
+        paragraphs: ['学校・地域団体・社会パートナーと連携して実効性を高めます。'],
+        bullets: [
+          'プログラム別地域窓口の設定',
+          '実行と監督の役割明確化',
+          '受益者からの直接フィードバック',
+        ],
+      },
+      {
+        title: '評価と改善サイクル',
+        paragraphs: ['四半期・年次レビューで継続的に改善します。'],
+        bullets: [
+          '合意KPIによる成果評価',
+          '現場ボトルネックの分析',
+          '次期計画への反映',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: '地域活動KPI',
+        paragraphs: ['実効性と成果継続性を中心に評価します。'],
+        bullets: [
+          'Beneficiary Reach by Area',
+          'Program Completion Quality Score',
+          '12-Month Impact Retention',
+        ],
+      },
+      {
+        title: '地域への約束',
+        paragraphs: ['ANSLIFEは、公開した成果に対して責任を持つ体系的な地域支援を継続します。'],
+      },
+    ],
+  },
+  'workforce-development': {
+    title: '人材育成',
+    kicker: '',
+    lead:
+      'ANSLIFEは、実務スキル・システム思考・標準運用力を軸に、次世代人材の育成プログラムを展開しています。',
+    keyline: '人への投資が、持続可能な運用能力を生み出します。',
+    panels: [
+      {
+        title: '育成の方向性',
+        paragraphs: ['実務適用力の高い人材を育てることを目的に設計されています。'],
+        bullets: [
+          '現場ニーズに合った職能強化',
+          'プロセス遵守と標準運用力の向上',
+          '長期的なキャリア機会の拡大',
+        ],
+      },
+      {
+        title: '研修プログラム群',
+        paragraphs: ['実効性を高めるため、3つの主要分野で研修を提供します。'],
+        bullets: [
+          '職能・安全研修',
+          'デジタル基礎とデータ運用研修',
+          'ソフトスキルと職業意識研修',
+        ],
+      },
+      {
+        title: '連携型育成モデル',
+        paragraphs: ['職業学校・専門パートナー・ANSLIFE運営チームと協働して実施します。'],
+        bullets: [
+          '成果基準に基づくカリキュラム設計',
+          '座学と現場実習の融合',
+          '統一基準による能力評価',
+        ],
+      },
+      {
+        title: '研修後の成長導線',
+        paragraphs: ['実際の就業転換を高めるため、研修後フォローを継続します。'],
+        bullets: [
+          '適切な就業機会との接続',
+          '6-12か月の能力進捗追跡',
+          '企業フィードバックに基づく内容改善',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: '人材育成KPI',
+        paragraphs: ['就業可能性と就業継続性を中心に効果を評価します。'],
+        bullets: [
+          'Training Completion Rate',
+          'Job Placement Conversion',
+          'Workforce Retention After 12 Months',
+        ],
+      },
+      {
+        title: '人材育成メッセージ',
+        paragraphs: ['ANSLIFEは短期的な技能移転ではなく、長期的な職業基盤づくりを重視します。'],
+      },
+    ],
+  },
+  'join-anslife': {
+    title: 'ANSLIFEに参加する',
+    kicker: '',
+    lead:
+      'ANSLIFEは、奨学金・地域支援を共に創り、測定可能で長期的な社会的価値を生み出したい個人・団体・企業を歓迎します。',
+    keyline: '構造化された協働で、長期インパクトを共創します。',
+    panels: [
+      {
+        title: '参加できる対象',
+        paragraphs: ['多様なパートナーが、それぞれの強みを活かして参加できます。'],
+        bullets: [
+          '地域活動に参加したい個人',
+          '教育支援を行う企業',
+          '共同実施を行う社会団体',
+        ],
+      },
+      {
+        title: '協働の形',
+        paragraphs: ['実行しやすい複数の協働形態を用意しています。'],
+        bullets: [
+          '基金への資金支援',
+          '地域プログラムの共同実施',
+          '専門支援・研修・ネットワーク連携',
+        ],
+      },
+      {
+        title: '参加プロセス',
+        paragraphs: ['透明性を確保しつつ、簡潔なプロセスで進めます。'],
+        bullets: [
+          '協働提案の提出',
+          '範囲と目標の合意',
+          '実行と成果追跡',
+        ],
+      },
+      {
+        title: '透明性の仕組み',
+        paragraphs: ['すべての拠出はプログラム単位で追跡・報告されます。'],
+        bullets: [
+          '定期的な進捗共有',
+          '資源利用の報告',
+          '終了後の効果評価',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: '協働KPI',
+        paragraphs: ['協働の成果は、持続性と実効性で評価します。'],
+        bullets: [
+          'Partner Participation Growth',
+          'Program Continuity Rate',
+          'Co-created Impact Projects',
+        ],
+      },
+      {
+        title: '協働メッセージ',
+        paragraphs: ['ANSLIFEは、測定可能な行動を通じて社会的責任を共に担うパートナーコミュニティを育てます。'],
+      },
+    ],
+  },
+};
+
+const SCHOLARSHIP_SECTION_TEMPLATES_KR: Record<string, StructuredSectionContent> = {
+  'fund-overview': {
+    title: '기금 소개',
+    kicker: '',
+    lead:
+      'ANSLIFE 장학 및 커뮤니티 기금은 교육 지원과 지역의 지속 가능한 발전을 목표로 하는 장기 사회공헌 프로그램입니다.',
+    keyline: '사람에 대한 투자가 지속 가능한 성장의 기반입니다.',
+    panels: [
+      {
+        title: '기금 목표',
+        paragraphs: ['기금은 명확하고 측정 가능한 연간 목표에 따라 운영됩니다.'],
+        bullets: [
+          '경제적 어려움이 있는 학생 지원',
+          '학습 지속과 성취 동기 강화',
+          '장기 학습 기회 확대',
+        ],
+      },
+      {
+        title: '운영 원칙',
+        paragraphs: ['ANSLIFE는 투명성과 실질적 사회책임 원칙으로 기금을 운영합니다.'],
+        bullets: [
+          '공개된 선정 기준과 지원 범위',
+          '계획 기반 자원 배분',
+          '지원 이후 효과 추적',
+        ],
+      },
+      {
+        title: '지원 범위',
+        paragraphs: ['재정 지원을 넘어 실제 학습 환경 개선까지 포함합니다.'],
+        bullets: [
+          '학기/연 단위 장학 지원',
+          '학습 자료 및 교육 도구 지원',
+          '지역 파트너와의 연계 확대',
+        ],
+      },
+      {
+        title: '성장 방향',
+        paragraphs: ['기금은 ANSLIFE 지역 전략과 연계된 장기 로드맵으로 확장됩니다.'],
+        bullets: [
+          '지원 프로그램 수 확대',
+          '성과 평가 기준 고도화',
+          '지역 협력 파트너십 강화',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: '기금 KPI',
+        paragraphs: ['기금 성과는 구체적인 사회적 임팩트 지표로 관리됩니다.'],
+        bullets: [
+          '연간 지원 대상자 수',
+          '지원 후 학업 지속률',
+          '지역 파트너 참여 수준',
+        ],
+      },
+      {
+        title: '기금 메시지',
+        paragraphs: ['ANSLIFE는 적절한 시점의 올바른 지원이 세대를 잇는 지속 가능한 변화를 만든다고 믿습니다.'],
+      },
+    ],
+  },
+  'scholarship-program': {
+    title: '장학 프로그램',
+    kicker: '',
+    lead:
+      'ANSLIFE 장학 프로그램은 학습 의지가 높고 성장 잠재력이 큰 학생, 특히 경제적 제약이 있는 학생을 우선 지원합니다.',
+    keyline: '장학금 지급에 그치지 않고 학습 여정을 함께합니다.',
+    panels: [
+      {
+        title: '우선 지원 대상',
+        paragraphs: ['지속적인 학습을 위해 지원이 필요한 학생을 우선 선정합니다.'],
+        bullets: [
+          '경제적으로 어려운 환경의 학생',
+          '학업 성과가 꾸준히 향상되는 학생',
+          '지역 우선 지원 대상 그룹',
+        ],
+      },
+      {
+        title: '지원 구조',
+        paragraphs: ['실제 필요에 맞춘 다층 지원 구조를 운영합니다.'],
+        bullets: [
+          '학비 또는 학습비 지원',
+          '교재 및 학습 도구 지원',
+          '학기 또는 연 단위 지원',
+        ],
+      },
+      {
+        title: '선발 절차',
+        paragraphs: ['공정성과 투명성을 위해 선발 절차를 표준화했습니다.'],
+        bullets: [
+          '신청 접수 및 정보 검증',
+          '공개 기준에 따른 심사',
+          '기수별 승인 및 결과 공지',
+        ],
+      },
+      {
+        title: '사후 추적',
+        paragraphs: ['프로그램 품질 향상을 위해 지원 이후 성과를 지속 추적합니다.'],
+        bullets: [
+          '정기 학업 성과 확인',
+          '추가 지원 수요 파악',
+          '데이터 기반 기준 개선',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: '프로그램 KPI',
+        paragraphs: ['성과의 질과 지속 가능성을 중심으로 평가합니다.'],
+        bullets: [
+          'Scholarship Retention Rate',
+          'Academic Progress Tracking',
+          'Program Coverage by Region',
+        ],
+      },
+      {
+        title: '프로그램 가치',
+        paragraphs: ['단기 일회성 지원이 아닌 지속 가능한 교육 기회 창출을 지향합니다.'],
+      },
+    ],
+  },
+  'community-activities': {
+    title: '커뮤니티 활동',
+    kicker: '',
+    lead:
+      'ANSLIFE는 지역 수요 중심의 다년 프로그램 모델로 커뮤니티 활동을 운영하며, 성과를 데이터로 추적합니다.',
+    keyline: '단기 캠페인이 아니라 생애주기가 있는 프로그램을 운영합니다.',
+    panels: [
+      {
+        title: '활동 포트폴리오',
+        paragraphs: ['매년 3개 핵심 임팩트 영역에서 프로그램을 실행합니다.'],
+        bullets: [
+          '지역 교육 지원',
+          '취약 가구의 기본 생활 지원',
+          '학습 및 생활 환경 개선',
+        ],
+      },
+      {
+        title: '실행 프로세스',
+        paragraphs: ['자원 효율을 높이기 위해 모든 활동을 표준 프로세스로 운영합니다.'],
+        bullets: [
+          '수요 조사 및 대상자 선정',
+          '목표·예산·일정 설계',
+          '결과 검수 및 임팩트 보고',
+        ],
+      },
+      {
+        title: '지역 협력 네트워크',
+        paragraphs: ['학교·지역 단체·사회 파트너와 협력해 실행력을 높입니다.'],
+        bullets: [
+          '프로그램별 지역 담당 창구 운영',
+          '실행·모니터링 역할 명확화',
+          '수혜자 직접 피드백 채널 운영',
+        ],
+      },
+      {
+        title: '평가·개선 사이클',
+        paragraphs: ['분기 및 연 단위 리뷰로 지속 개선합니다.'],
+        bullets: [
+          '합의 KPI 기반 성과 점검',
+          '현장 병목 분석',
+          '다음 주기 계획 반영',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: '커뮤니티 KPI',
+        paragraphs: ['실질 임팩트와 성과 지속성을 중심으로 평가합니다.'],
+        bullets: [
+          'Beneficiary Reach by Area',
+          'Program Completion Quality Score',
+          '12-Month Impact Retention',
+        ],
+      },
+      {
+        title: '커뮤니티 약속',
+        paragraphs: ['ANSLIFE는 공개한 성과에 책임을 지는 체계적 커뮤니티 모델을 지속합니다.'],
+      },
+    ],
+  },
+  'workforce-development': {
+    title: '인재 개발',
+    kicker: '',
+    lead:
+      'ANSLIFE는 실무 역량, 시스템 사고, 표준 기반 업무 능력을 중심으로 차세대 산업 인재 육성 프로그램을 운영합니다.',
+    keyline: '사람에 대한 투자가 지속 가능한 운영 역량을 만듭니다.',
+    panels: [
+      {
+        title: '인재 육성 방향',
+        paragraphs: ['현장 적용력이 높은 인재를 양성하도록 설계되었습니다.'],
+        bullets: [
+          '실제 생산 수요에 맞춘 직무 역량 강화',
+          '프로세스 준수 및 표준 운영 역량 향상',
+          '장기 경력 기회 확대',
+        ],
+      },
+      {
+        title: '교육 프로그램 구성',
+        paragraphs: ['실효성을 위해 3개 핵심 영역으로 교육을 운영합니다.'],
+        bullets: [
+          '직무 및 작업 안전 교육',
+          '디지털 기초·데이터 운영 교육',
+          '소프트 스킬·직업 태도 교육',
+        ],
+      },
+      {
+        title: '협력형 교육 모델',
+        paragraphs: ['직업학교·전문 파트너·ANSLIFE 운영팀과 협업해 실행합니다.'],
+        bullets: [
+          '성과 기준 기반 커리큘럼 설계',
+          '이론과 현장 실습 결합',
+          '통합 기준 역량 평가',
+        ],
+      },
+      {
+        title: '교육 이후 경로',
+        paragraphs: ['실질 취업 전환을 높이기 위해 교육 후 추적을 지속합니다.'],
+        bullets: [
+          '적합한 일자리 연계',
+          '6-12개월 역량 향상 추적',
+          '기업 피드백 기반 과정 개선',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: '인재 개발 KPI',
+        paragraphs: ['취업 가능성과 고용 지속성을 중심으로 효과를 평가합니다.'],
+        bullets: [
+          'Training Completion Rate',
+          'Job Placement Conversion',
+          'Workforce Retention After 12 Months',
+        ],
+      },
+      {
+        title: '인재 개발 메시지',
+        paragraphs: ['ANSLIFE는 단기 기술 이전이 아니라 장기 직업 기반 형성을 지향합니다.'],
+      },
+    ],
+  },
+  'join-anslife': {
+    title: 'ANSLIFE와 함께하기',
+    kicker: '',
+    lead:
+      'ANSLIFE는 장학 및 커뮤니티 프로그램을 함께 만들고, 측정 가능한 장기 임팩트를 추구하는 개인·기관·파트너를 환영합니다.',
+    keyline: '체계적인 협업으로 장기 임팩트를 함께 만듭니다.',
+    panels: [
+      {
+        title: '참여 대상',
+        paragraphs: ['다양한 파트너가 각자의 강점에 맞는 역할로 참여할 수 있습니다.'],
+        bullets: [
+          '커뮤니티 활동에 동참하고 싶은 개인',
+          '교육 프로그램을 후원하는 기업',
+          '공동 실행을 원하는 사회단체',
+        ],
+      },
+      {
+        title: '협력 방식',
+        paragraphs: ['실행 가능한 다양한 협력 방식을 제공합니다.'],
+        bullets: [
+          '기금 재정 후원',
+          '지역 프로그램 공동 운영',
+          '전문 지원·교육·네트워크 연계',
+        ],
+      },
+      {
+        title: '참여 절차',
+        paragraphs: ['투명성을 유지하면서도 간결한 절차로 진행합니다.'],
+        bullets: [
+          '협력 제안 접수',
+          '범위와 공동 목표 정의',
+          '실행 및 성과 추적',
+        ],
+      },
+      {
+        title: '투명성 체계',
+        paragraphs: ['모든 기여는 프로그램 단위로 추적·보고됩니다.'],
+        bullets: [
+          '정기 진행 현황 공유',
+          '자원 사용 보고',
+          '종료 후 임팩트 평가',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: '협력 KPI',
+        paragraphs: ['협력 성과는 지속성과 실효성으로 평가합니다.'],
+        bullets: [
+          'Partner Participation Growth',
+          'Program Continuity Rate',
+          'Co-created Impact Projects',
+        ],
+      },
+      {
+        title: '협력 메시지',
+        paragraphs: ['ANSLIFE는 측정 가능한 실행을 통해 사회적 책임을 함께하는 파트너 커뮤니티를 지향합니다.'],
+      },
+    ],
+  },
+};
+
+const AI_SCHOLARSHIP_SECTION_CONTENT_EN: Record<string, string> = Object.fromEntries(
+  Object.entries(SCHOLARSHIP_SECTION_TEMPLATES_EN).map(([sectionId, section]) => [
+    sectionId,
+    buildStructuredCompanySectionHtml(
+      sectionId,
+      {
+        ...section,
+      },
+      'ai-scholarship-company-intro',
+    ),
+  ]),
+) as Record<string, string>;
+
+const AI_SCHOLARSHIP_SECTION_CONTENT_JP: Record<string, string> = Object.fromEntries(
+  Object.entries(SCHOLARSHIP_SECTION_TEMPLATES_JP).map(([sectionId, section]) => [
+    sectionId,
+    buildStructuredCompanySectionHtml(
+      sectionId,
+      {
+        ...section,
+      },
+      'ai-scholarship-company-intro',
+    ),
+  ]),
+) as Record<string, string>;
+
+const AI_SCHOLARSHIP_SECTION_CONTENT_KR: Record<string, string> = Object.fromEntries(
+  Object.entries(SCHOLARSHIP_SECTION_TEMPLATES_KR).map(([sectionId, section]) => [
+    sectionId,
+    buildStructuredCompanySectionHtml(
+      sectionId,
+      {
+        ...section,
+      },
+      'ai-scholarship-company-intro',
+    ),
+  ]),
+) as Record<string, string>;
+
+function translateAiHtml(language: LanguageCode, html: string): string {
+  if (language === 'vn') {
+    return html;
+  }
+
+  const localizedTextNodes = html.replace(/>([^<>]+)</g, (fullMatch, textNode: string) => {
+    const leadingWhitespace = textNode.match(/^\s*/)?.[0] ?? '';
+    const trailingWhitespace = textNode.match(/\s*$/)?.[0] ?? '';
+    const coreText = textNode.trim();
+
+    if (!coreText) {
+      return fullMatch;
+    }
+
+    const translated = translateText(language, coreText);
+    return `>${leadingWhitespace}${translated}${trailingWhitespace}<`;
+  });
+
+  return localizedTextNodes.replace(
+    /(alt|title|aria-label|placeholder)="([^"]+)"/g,
+    (_fullMatch, attr: string, value: string) => `${attr}="${translateText(language, value)}"`,
+  );
+}
+
+export function getAIFallbackPageHtml(slug: string, language: LanguageCode = 'vn'): string | null {
+  const pageHtml = AI_PAGE_CONTENT[slug];
+  if (!pageHtml) {
+    return null;
+  }
+
+  return translateAiHtml(language, pageHtml);
 }
 
 function escapeRegExp(input: string): string {
@@ -5809,7 +6787,29 @@ export function getAIFallbackSectionHtml(
 </div>
 `.trim();
 
-    return composedTranslatedHtml;
+    return translateAiHtml(language, composedTranslatedHtml);
+  }
+
+  const scholarshipTranslatedSectionOverride =
+    pageSlug === 'scholarship-community'
+      ? language === 'en'
+        ? AI_SCHOLARSHIP_SECTION_CONTENT_EN[sectionId] ?? null
+        : language === 'jp'
+          ? AI_SCHOLARSHIP_SECTION_CONTENT_JP[sectionId] ?? null
+          : language === 'kr'
+            ? AI_SCHOLARSHIP_SECTION_CONTENT_KR[sectionId] ?? null
+            : null
+      : null;
+  if (scholarshipTranslatedSectionOverride) {
+    const composedScholarshipTranslatedHtml = `
+<div class="ai-content">
+  ${shouldRenderPageBannerAndIntro ? bannerMatch?.[0] ?? '' : ''}
+  ${shouldRenderPageBannerAndIntro ? introMatch?.[0] ?? '' : ''}
+  ${scholarshipTranslatedSectionOverride}
+</div>
+`.trim();
+
+    return translateAiHtml(language, composedScholarshipTranslatedHtml);
   }
 
   const manufacturingSectionOverride =
@@ -5825,7 +6825,7 @@ export function getAIFallbackSectionHtml(
 </div>
 `.trim();
 
-    return composedManufacturingHtml;
+    return translateAiHtml(language, composedManufacturingHtml);
   }
 
   const qualitySectionOverride =
@@ -5839,7 +6839,7 @@ export function getAIFallbackSectionHtml(
 </div>
 `.trim();
 
-    return composedQualityHtml;
+    return translateAiHtml(language, composedQualityHtml);
   }
 
   const commercialSectionOverride =
@@ -5853,7 +6853,7 @@ export function getAIFallbackSectionHtml(
 </div>
 `.trim();
 
-    return composedCommercialHtml;
+    return translateAiHtml(language, composedCommercialHtml);
   }
 
   const globalNetworkSectionOverride =
@@ -5867,7 +6867,7 @@ export function getAIFallbackSectionHtml(
 </div>
 `.trim();
 
-    return composedGlobalNetworkHtml;
+    return translateAiHtml(language, composedGlobalNetworkHtml);
   }
 
   const scholarshipSectionOverride =
@@ -5881,7 +6881,7 @@ export function getAIFallbackSectionHtml(
 </div>
 `.trim();
 
-    return composedScholarshipHtml;
+    return translateAiHtml(language, composedScholarshipHtml);
   }
 
   const escapedSectionId = escapeRegExp(sectionId);
@@ -5902,5 +6902,5 @@ export function getAIFallbackSectionHtml(
 </div>
 `.trim();
 
-  return composedHtml;
+  return translateAiHtml(language, composedHtml);
 }

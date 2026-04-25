@@ -15,10 +15,10 @@ interface CmsSectionPageProps {
 }
 
 export default function CmsSectionPage({ config }: CmsSectionPageProps) {
-  const { t } = useSiteI18n();
+  const { language, t } = useSiteI18n();
   const loadPage = useCallback(() => getPageBySlug(config.slug), [config.slug]);
   const { data, loading, error } = useAsyncResource(loadPage);
-  const fallbackHtml = getAIFallbackPageHtml(config.slug);
+  const fallbackHtml = getAIFallbackPageHtml(config.slug, language);
   const resolvedHtml = data?.content.rendered ?? fallbackHtml;
   const displayHtml = useMemo(() => {
     if (!resolvedHtml || config.slug !== 'manufacturing-ecosystem') {

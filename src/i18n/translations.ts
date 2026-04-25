@@ -1,4 +1,5 @@
 import type { LanguageCode } from './language';
+import { AUTO_TRANSLATIONS } from './autoTranslations';
 
 const VIETNAMESE = 'vn';
 
@@ -454,6 +455,21 @@ const TRANSLATIONS: Record<
     'Văn phòng Hà Nội': 'Hanoi Office',
     'Văn phòng TP.HCM': 'Ho Chi Minh City Office',
     'Địa chỉ nhà máy': 'Factory Address',
+    'Bản đồ ANSLIFE': 'ANSLIFE Map',
+    'Trang này tập trung vào điều hướng vị trí. Bạn có thể mở trực tiếp từng địa điểm trên Google Maps để lấy chỉ đường nhanh.':
+      'This page focuses on location navigation. You can open each destination directly on Google Maps for quick directions.',
+    'Bản đồ trụ sở ANSLIFE': 'ANSLIFE Headquarters Map',
+    'Mở trên Google Maps': 'Open in Google Maps',
+    'Trụ sở chính': 'Headquarters',
+    'Nhà máy Đồng Nai': 'Dong Nai Factory',
+    'Số 15, Đường D2, Khu dân cư Hiệp Phát, Phường Phú Lợi, Thành phố Hồ Chí Minh.':
+      'No. 15, D2 Street, Hiep Phat Residential Area, Phu Loi Ward, Ho Chi Minh City.',
+    'Điểm điều phối thương mại và vận hành trung tâm của ANSLIFE.':
+      'Central coordination point for ANSLIFE commercial and operations activities.',
+    'Phù hợp cho lịch hẹn trao đổi dự án và xác nhận mẫu.':
+      'Suitable for project discussion meetings and sample confirmation appointments.',
+    'Tham quan nhà máy theo lịch đăng ký trước với đội ngũ ANSLIFE.':
+      'Factory visits are available by prior registration with the ANSLIFE team.',
     'Tầng 5, Tòa nhà Zen Tower, Số 12 đường Khuất Duy Tiến, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội.':
       '5th Floor, Zen Tower, No. 12 Khuat Duy Tien Street, Thanh Xuan Trung Ward, Thanh Xuan District, Hanoi.',
     'Số 15, Đường D2, Khu dân cư Hiệp Phát, Phường Phú Lợi, Thành phố Hồ Chí Minh':
@@ -764,6 +780,21 @@ const TRANSLATIONS: Record<
     'Thông tin công ty': '会社情報',
     'Gửi yêu cầu báo giá': '見積り依頼',
     'Đặt lịch làm việc': '打ち合わせ予約',
+    'Bản đồ ANSLIFE': 'ANSLIFEマップ',
+    'Trang này tập trung vào điều hướng vị trí. Bạn có thể mở trực tiếp từng địa điểm trên Google Maps để lấy chỉ đường nhanh.':
+      'このページは位置案内に特化しています。各地点をGoogleマップで直接開き、すぐに経路案内を確認できます。',
+    'Bản đồ trụ sở ANSLIFE': 'ANSLIFE本社マップ',
+    'Mở trên Google Maps': 'Googleマップで開く',
+    'Trụ sở chính': '本社',
+    'Nhà máy Đồng Nai': 'ドンナイ工場',
+    'Số 15, Đường D2, Khu dân cư Hiệp Phát, Phường Phú Lợi, Thành phố Hồ Chí Minh.':
+      'ホーチミン市フーロイ坊ヒエップファット住宅地D2通り15番地',
+    'Điểm điều phối thương mại và vận hành trung tâm của ANSLIFE.':
+      'ANSLIFEの商務および運営を統括する中核拠点です。',
+    'Phù hợp cho lịch hẹn trao đổi dự án và xác nhận mẫu.':
+      'プロジェクト打ち合わせとサンプル確認の面談に適しています。',
+    'Tham quan nhà máy theo lịch đăng ký trước với đội ngũ ANSLIFE.':
+      '工場見学はANSLIFEチームへの事前予約にて対応します。',
     'Vui lòng điền biểu mẫu để đội ngũ ANSLIFE phản hồi báo giá trong thời gian sớm nhất.':
       'ANSLIFEチームができるだけ早くお見積りをご案内できるよう、フォームをご入力ください。',
     'Đăng ký lịch làm việc để ANSLIFE chủ động sắp xếp tư vấn theo nhu cầu của bạn.':
@@ -1149,6 +1180,21 @@ const TRANSLATIONS: Record<
     'Thông tin công ty': '회사 정보',
     'Gửi yêu cầu báo giá': '견적 요청',
     'Đặt lịch làm việc': '미팅 예약',
+    'Bản đồ ANSLIFE': 'ANSLIFE 지도',
+    'Trang này tập trung vào điều hướng vị trí. Bạn có thể mở trực tiếp từng địa điểm trên Google Maps để lấy chỉ đường nhanh.':
+      '이 페이지는 위치 안내에 집중되어 있습니다. 각 지점을 Google 지도에서 직접 열어 빠르게 길찾기를 확인할 수 있습니다.',
+    'Bản đồ trụ sở ANSLIFE': 'ANSLIFE 본사 지도',
+    'Mở trên Google Maps': 'Google 지도에서 열기',
+    'Trụ sở chính': '본사',
+    'Nhà máy Đồng Nai': '동나이 공장',
+    'Số 15, Đường D2, Khu dân cư Hiệp Phát, Phường Phú Lợi, Thành phố Hồ Chí Minh.':
+      '호치민시 푸로이동 히엡팟 주거단지 D2도로 15번지',
+    'Điểm điều phối thương mại và vận hành trung tâm của ANSLIFE.':
+      'ANSLIFE의 상업 및 운영을 총괄하는 중앙 조정 거점입니다.',
+    'Phù hợp cho lịch hẹn trao đổi dự án và xác nhận mẫu.':
+      '프로젝트 협의 및 샘플 확인 미팅에 적합합니다.',
+    'Tham quan nhà máy theo lịch đăng ký trước với đội ngũ ANSLIFE.':
+      '공장 방문은 ANSLIFE 팀과 사전 예약 후 진행됩니다.',
     'Vui lòng điền biểu mẫu để đội ngũ ANSLIFE phản hồi báo giá trong thời gian sớm nhất.':
       'ANSLIFE 팀이 최대한 빠르게 견적을 안내할 수 있도록 양식을 입력해 주세요.',
     'Đăng ký lịch làm việc để ANSLIFE chủ động sắp xếp tư vấn theo nhu cầu của bạn.':
@@ -1239,5 +1285,11 @@ export function translateText(language: LanguageCode, text: string): string {
     return text;
   }
 
-  return TRANSLATIONS[language][text] ?? TRANSLATIONS.en[text] ?? text;
+  return (
+    TRANSLATIONS[language][text] ??
+    AUTO_TRANSLATIONS[language][text] ??
+    TRANSLATIONS.en[text] ??
+    AUTO_TRANSLATIONS.en[text] ??
+    text
+  );
 }

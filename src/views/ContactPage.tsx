@@ -71,7 +71,7 @@ function parseListQueryParam(value: string | null): string[] {
 }
 
 export default function ContactPage() {
-  const { t } = useSiteI18n();
+  const { language, t } = useSiteI18n();
   const { section: sectionParam } = useParams();
   const [searchParams] = useSearchParams();
   const loadContactPage = useCallback(() => getPageBySlug('contact'), []);
@@ -82,7 +82,7 @@ export default function ContactPage() {
     loading: quoteProductsLoading,
     error: quoteProductsError,
   } = useAsyncResource(loadQuoteProducts);
-  const fallbackContactHtml = getAIFallbackPageHtml('contact');
+  const fallbackContactHtml = getAIFallbackPageHtml('contact', language);
   const resolvedHtml = data?.content.rendered ?? fallbackContactHtml;
   const shouldShowError = Boolean(error) && !resolvedHtml;
   const activeSection: ContactSection | 'all' = contactSections.includes(
