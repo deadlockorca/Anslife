@@ -3072,15 +3072,6 @@ ul {
   color: #2c1a10;
 }
 
-.ai-company-kicker {
-  margin: 0;
-  font-size: 0.8rem;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  font-weight: 700;
-  color: #8b5921;
-}
-
 .ai-company-lead {
   margin: 0;
   color: #2d2018;
@@ -3178,6 +3169,14 @@ ul {
   font-size: clamp(1.16rem, 1.65vw, 1.42rem);
   line-height: 1.22;
   color: #2e1c12;
+  grid-column: auto;
+}
+
+.ai-company-block p {
+  margin: 0.12rem 0 0;
+  color: #2f2319;
+  font-size: 0.8rem;
+  line-height: 1.52;
   grid-column: auto;
 }
 
@@ -3384,7 +3383,6 @@ ul {
 }
 
 .ai-team-company-intro .ai-company-title,
-.ai-team-company-intro .ai-company-kicker,
 .ai-team-company-intro .ai-company-lead,
 .ai-team-company-intro .ai-company-copy p,
 .ai-team-company-intro .ai-company-keyline,
@@ -3396,6 +3394,12 @@ ul {
 .ai-team-company-intro .ai-company-panel p,
 .ai-team-company-intro .ai-company-panel ul {
   color: #2d2018;
+}
+
+/* Keep text color consistent across AI-rendered content pages. */
+.html-content .ai-content,
+.html-content .ai-content :is(h1, h2, h3, h4, h5, h6, p, li, span, strong, em, small, a, label) {
+  color: #000 !important;
 }
 
 .ai-vision-mission {
@@ -5133,6 +5137,59 @@ ul {
   scroll-margin-top: 98px;
 }
 
+#ban-do {
+  scroll-margin-top: 98px;
+}
+
+.contact-map-section {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contact-map-overview h2 {
+  margin: 0;
+}
+
+.contact-map-overview p {
+  margin: 0.52rem 0 0;
+  color: #556a81;
+}
+
+.contact-map-frame {
+  border: 1px solid rgba(68, 96, 132, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  min-height: 380px;
+}
+
+.contact-map-frame iframe {
+  display: block;
+  width: 100%;
+  min-height: 380px;
+  border: 0;
+}
+
+.contact-map-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.contact-map-point {
+  display: grid;
+  align-content: start;
+  gap: 0.34rem;
+}
+
+.contact-map-point h3 {
+  margin: 0;
+}
+
+.contact-map-point p {
+  margin: 0;
+}
+
 .form-card form {
   display: grid;
   gap: 0.72rem;
@@ -6760,7 +6817,8 @@ ul {
   .home-ans-grid-compact,
   .home-ans-factory-grid,
   .ai-highlight-grid,
-  .ai-stat-grid {
+  .ai-stat-grid,
+  .contact-map-points {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -7181,6 +7239,10 @@ ul {
   }
 
   .ai-company-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-map-points {
     grid-template-columns: 1fr;
   }
 

@@ -595,7 +595,7 @@ export const TOP_MENU: TopMenuItem[] = [
       },
       {
         label: "Phát triển nguồn nhân lực",
-        path: "/scholarship-community/community-activities"
+        path: "/scholarship-community/workforce-development"
       },
       {
         label: "Tham gia cùng ANSLIFE",
@@ -621,7 +621,7 @@ export const TOP_MENU: TopMenuItem[] = [
       },
       {
         label: "Bản đồ",
-        path: "/contact/company-info"
+        path: "/contact/map"
       }
     ]
   }
@@ -970,6 +970,11 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
         id: 'community-activities',
         title: 'Hoạt động cộng đồng',
         description: 'Dự án từ thiện và chương trình xã hội theo từng giai đoạn.',
+      },
+      {
+        id: 'workforce-development',
+        title: 'Phát triển nguồn nhân lực',
+        description: 'Chương trình đào tạo, hướng nghiệp và nâng cao năng lực con người.',
       },
       {
         id: 'join-anslife',

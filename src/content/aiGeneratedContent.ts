@@ -35,7 +35,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     <div class="ai-company-hero">
       <div class="ai-company-copy">
         <h1 class="ai-company-title">Giới thiệu về công ty</h1>
-        <p class="ai-company-kicker">GIỚI THIỆU ANSLIFE</p>
         <p class="ai-company-lead">
           ANSLIFE là một hệ thống sản xuất và xuất khẩu nội thất được xây dựng tại Việt Nam, tập trung vào việc tổ chức
           chuỗi sản xuất, kiểm soát chất lượng và kết nối các nguồn lực trong ngành.
@@ -676,7 +675,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     <div class="ai-company-hero">
       <div class="ai-company-copy">
         <h1 class="ai-company-title">Đội ngũ</h1>
-        <p class="ai-company-kicker">ĐỘI NGŨ ANSLIFE</p>
         <p class="ai-company-lead">
           ANSLIFE xây dựng đội ngũ vận hành xoay quanh hệ sinh thái sản xuất, không chỉ là nhân sự nội bộ mà bao gồm
           toàn bộ lực lượng tham gia vào chuỗi giá trị.
@@ -823,7 +821,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     <div class="ai-company-hero">
       <div class="ai-company-copy">
         <h1 class="ai-company-title">Hệ sinh thái ANSLIFE</h1>
-        <p class="ai-company-kicker">HỆ SINH THÁI ANSLIFE</p>
         <p class="ai-company-lead">
           ANSLIFE không vận hành như một nhà máy đơn lẻ. Chúng tôi xây dựng một hệ sinh thái sản xuất được kiểm soát
           tập trung.
@@ -987,7 +984,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     <div class="ai-company-hero">
       <div class="ai-company-copy">
         <h1 class="ai-company-title">Lịch sử phát triển</h1>
-        <p class="ai-company-kicker">LỊCH SỬ PHÁT TRIỂN</p>
         <p class="ai-company-lead">
           Từ một đơn vị thiết kế, ANSLIFE đã phát triển thành một hệ sinh thái sản xuất và xuất khẩu.
         </p>
@@ -2916,7 +2912,6 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
     <div class="ai-company-hero">
       <div class="ai-company-copy">
         <h1 class="ai-company-title">Company Introduction</h1>
-        <p class="ai-company-kicker">ABOUT ANSLIFE</p>
         <p class="ai-company-lead">
           ANSLIFE is a furniture manufacturing and export system built in Vietnam, focused on organizing the production
           chain, quality control, and connecting industry resources.
@@ -3418,7 +3413,6 @@ ${section.blocks.map((block) => renderStructuredBlock(block)).join('\n')}
     <div class="ai-company-hero">
       <div class="ai-company-copy">
         <h1 class="ai-company-title">${section.title}</h1>
-        <p class="ai-company-kicker">${section.kicker}</p>
         <p class="ai-company-lead">${section.lead}</p>
         <div class="ai-company-keyline">
           <strong>${section.keyline}</strong>
@@ -5447,7 +5441,7 @@ const AI_GLOBAL_NETWORK_SECTION_CONTENT: Record<string, string> = Object.fromEnt
 const SCHOLARSHIP_SECTION_TEMPLATES: Record<string, StructuredSectionContent> = {
   'fund-overview': {
     title: 'Giới thiệu quỹ',
-    kicker: 'FUND OVERVIEW',
+    kicker: '',
     lead:
       'Quỹ học bổng và cộng đồng ANSLIFE được xây dựng như một chương trình phát triển bền vững, tập trung hỗ trợ giáo dục và tạo tác động tích cực lâu dài cho địa phương.',
     keyline: 'Đầu tư cho con người là nền tảng của phát triển dài hạn.',
@@ -5507,7 +5501,7 @@ const SCHOLARSHIP_SECTION_TEMPLATES: Record<string, StructuredSectionContent> = 
   },
   'scholarship-program': {
     title: 'Chương trình học bổng',
-    kicker: 'SCHOLARSHIP PROGRAM',
+    kicker: '',
     lead:
       'Chương trình học bổng ANSLIFE tập trung hỗ trợ học sinh, sinh viên có nỗ lực học tập tốt, ưu tiên nhóm có hoàn cảnh khó khăn và tiềm năng phát triển lâu dài.',
     keyline: 'Không chỉ trao học bổng, chúng tôi đồng hành cùng hành trình học tập.',
@@ -5567,67 +5561,127 @@ const SCHOLARSHIP_SECTION_TEMPLATES: Record<string, StructuredSectionContent> = 
   },
   'community-activities': {
     title: 'Hoạt động cộng đồng',
-    kicker: 'COMMUNITY ACTIVITIES',
+    kicker: '',
     lead:
-      'ANSLIFE triển khai các hoạt động cộng đồng theo hướng thực chất, dài hạn và có đo lường tác động, tập trung vào giáo dục, hỗ trợ đời sống và phát triển địa phương.',
-    keyline: 'Mỗi hoạt động đều có mục tiêu rõ ràng và kết quả theo dõi.',
+      'ANSLIFE triển khai hoạt động cộng đồng theo mô hình chương trình nhiều năm, lấy nhu cầu địa phương làm trung tâm và theo dõi hiệu quả bằng dữ liệu thực tế.',
+    keyline: 'Không làm theo chiến dịch ngắn hạn, mà xây chương trình có vòng đời rõ ràng.',
     panels: [
       {
-        title: 'Nhóm hoạt động trọng tâm',
-        paragraphs: ['Các hoạt động cộng đồng được xây theo nhu cầu thực tế của từng địa phương.'],
+        title: 'Danh mục chương trình cộng đồng',
+        paragraphs: ['Mỗi năm ANSLIFE triển khai danh mục hoạt động theo ba nhóm tác động chính.'],
         bullets: [
-          'Hỗ trợ giáo dục cho học sinh khó khăn',
-          'Chương trình thiện nguyện theo mùa',
-          'Hoạt động nâng cao điều kiện sống cơ bản',
+          'Hỗ trợ giáo dục và điều kiện học tập tại địa phương',
+          'Hỗ trợ sinh kế cơ bản cho hộ gia đình khó khăn',
+          'Cải thiện môi trường sống và không gian học tập cộng đồng',
         ],
       },
       {
-        title: 'Cách thức tổ chức',
-        paragraphs: ['Hoạt động được triển khai theo kế hoạch và phối hợp với các bên liên quan tại địa phương.'],
+        title: 'Quy trình triển khai chương trình',
+        paragraphs: ['Mọi hoạt động đều đi qua quy trình chuẩn để bảo đảm hiệu quả nguồn lực.'],
         bullets: [
-          'Khảo sát nhu cầu trước khi thực hiện',
-          'Phân bổ nguồn lực theo mức ưu tiên',
-          'Đánh giá kết quả sau từng chương trình',
+          'Khảo sát nhu cầu thực địa và xác định nhóm thụ hưởng',
+          'Thiết kế mục tiêu, ngân sách và mốc thực hiện',
+          'Nghiệm thu kết quả và tổng hợp báo cáo tác động',
         ],
       },
       {
-        title: 'Huy động nguồn lực',
-        paragraphs: ['ANSLIFE khuyến khích sự tham gia của nhân sự nội bộ và đối tác xã hội.'],
+        title: 'Mạng lưới phối hợp địa phương',
+        paragraphs: ['ANSLIFE phối hợp cùng trường học, tổ chức địa phương và đối tác xã hội để tăng hiệu lực thực thi.'],
         bullets: [
-          'Kết nối đội ngũ tình nguyện nội bộ',
-          'Hợp tác với trường học và tổ chức địa phương',
-          'Mở rộng nguồn hỗ trợ từ đối tác đồng hành',
+          'Thiết lập đầu mối địa phương theo từng chương trình',
+          'Phân vai trách nhiệm triển khai và giám sát',
+          'Duy trì kênh phản hồi trực tiếp từ cộng đồng thụ hưởng',
         ],
       },
       {
-        title: 'Đo lường tác động',
-        paragraphs: ['Tác động cộng đồng được theo dõi bằng dữ liệu thay vì cảm tính.'],
+        title: 'Chu kỳ đánh giá và cải tiến',
+        paragraphs: ['Kết quả chương trình được đánh giá theo chu kỳ quý và năm để liên tục nâng chất lượng hoạt động.'],
         bullets: [
-          'Số lượng người hưởng lợi trực tiếp',
-          'Mức độ cải thiện theo mục tiêu chương trình',
-          'Tỷ lệ duy trì hoạt động theo năm',
+          'Đánh giá đầu ra theo chỉ số đã cam kết',
+          'Phân tích điểm nghẽn trong triển khai thực tế',
+          'Điều chỉnh kế hoạch năm tiếp theo dựa trên dữ liệu',
         ],
       },
     ],
     blocks: [
       {
-        title: 'KPI cộng đồng',
-        paragraphs: ['Các chương trình cộng đồng được đánh giá định kỳ để tăng hiệu quả triển khai.'],
+        title: 'KPI hoạt động cộng đồng',
+        paragraphs: ['Hiệu quả cộng đồng được đo bằng mức độ tác động thực tế và khả năng duy trì kết quả.'],
         bullets: [
-          'Beneficiary Reach',
-          'Program Completion Rate',
-          'Impact Follow-up Score',
+          'Beneficiary Reach theo từng địa phương',
+          'Program Completion Quality Score',
+          '12-Month Impact Retention',
         ],
       },
       {
-        title: 'Cam kết xã hội',
-        paragraphs: ['ANSLIFE hướng tới mô hình trách nhiệm xã hội có hệ thống, không triển khai theo phong trào ngắn hạn.'],
+        title: 'Cam kết cộng đồng',
+        paragraphs: ['ANSLIFE theo đuổi mô hình phụng sự cộng đồng có hệ thống, có theo dõi và có trách nhiệm đến cùng với kết quả đã công bố.'],
+      },
+    ],
+  },
+  'workforce-development': {
+    title: 'Phát triển nguồn nhân lực',
+    kicker: '',
+    lead:
+      'ANSLIFE xây chương trình phát triển nguồn nhân lực tập trung vào kỹ năng nghề, tư duy hệ thống và khả năng làm việc theo tiêu chuẩn quốc tế cho thế hệ lao động trẻ.',
+    keyline: 'Đầu tư vào con người để tạo năng lực vận hành bền vững cho cộng đồng và doanh nghiệp.',
+    panels: [
+      {
+        title: 'Định hướng phát triển nhân lực',
+        paragraphs: ['Chương trình được thiết kế để hình thành lực lượng lao động có kỹ năng và kỷ luật vận hành.'],
+        bullets: [
+          'Nâng kỹ năng thực hành phù hợp nhu cầu sản xuất thực tế',
+          'Tăng năng lực làm việc theo quy trình và tiêu chuẩn',
+          'Mở rộng cơ hội nghề nghiệp dài hạn cho người lao động',
+        ],
+      },
+      {
+        title: 'Nhóm chương trình đào tạo',
+        paragraphs: ['ANSLIFE triển khai đào tạo theo ba nhóm trọng tâm để bảo đảm tính ứng dụng cao.'],
+        bullets: [
+          'Đào tạo kỹ năng nghề và an toàn làm việc',
+          'Đào tạo kỹ năng số và quản trị dữ liệu cơ bản',
+          'Đào tạo kỹ năng mềm và tác phong nghề nghiệp',
+        ],
+      },
+      {
+        title: 'Mô hình phối hợp đào tạo',
+        paragraphs: ['Chương trình được triển khai cùng trường nghề, đối tác chuyên môn và đội ngũ vận hành nội bộ.'],
+        bullets: [
+          'Thiết kế giáo trình theo năng lực đầu ra',
+          'Kết hợp học lý thuyết với thực hành tại hiện trường',
+          'Đánh giá năng lực theo tiêu chí thống nhất',
+        ],
+      },
+      {
+        title: 'Lộ trình sau đào tạo',
+        paragraphs: ['ANSLIFE duy trì cơ chế theo dõi sau đào tạo để tăng tỷ lệ chuyển đổi nghề nghiệp thực chất.'],
+        bullets: [
+          'Kết nối học viên với cơ hội việc làm phù hợp',
+          'Theo dõi tiến bộ năng lực trong 6-12 tháng',
+          'Cập nhật nội dung đào tạo theo phản hồi doanh nghiệp',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI phát triển nguồn nhân lực',
+        paragraphs: ['Hiệu quả chương trình được đánh giá bằng khả năng ứng dụng nghề và tính bền vững của việc làm.'],
+        bullets: [
+          'Training Completion Rate',
+          'Job Placement Conversion',
+          'Workforce Retention After 12 Months',
+        ],
+      },
+      {
+        title: 'Thông điệp phát triển con người',
+        paragraphs: ['ANSLIFE không chỉ đào tạo kỹ năng, mà xây nền tảng nghề nghiệp để người lao động phát triển bền vững trong hệ sinh thái sản xuất hiện đại.'],
       },
     ],
   },
   'join-anslife': {
     title: 'Tham gia cùng ANSLIFE',
-    kicker: 'JOIN ANSLIFE',
+    kicker: '',
     lead:
       'ANSLIFE mở rộng cơ hội đồng hành cho cá nhân, tổ chức và đối tác mong muốn cùng xây dựng các chương trình học bổng và hoạt động cộng đồng có tác động bền vững.',
     keyline: 'Cùng hành động có hệ thống để tạo tác động dài hạn.',

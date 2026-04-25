@@ -13,7 +13,33 @@ import { getPageBySlug, getProducts, submitContactForm } from '../lib/wp';
 
 const quoteFormId = Number(process.env.NEXT_PUBLIC_CF7_QUOTE_FORM_ID ?? 1);
 const meetingFormId = Number(process.env.NEXT_PUBLIC_CF7_MEETING_FORM_ID ?? 2);
-const contactSections = ['company-info', 'quote-request', 'schedule-meeting'] as const;
+const contactSections = ['company-info', 'quote-request', 'schedule-meeting', 'map'] as const;
+
+const contactMapLocations = [
+  {
+    id: 'hq',
+    name: 'Trụ sở chính',
+    address:
+      'Tầng 5, Tòa nhà Zen Tower, Số 12 đường Khuất Duy Tiến, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội.',
+    note: 'Điểm điều phối thương mại và vận hành trung tâm của ANSLIFE.',
+    mapQuery: 'Zen Tower 12 Khuat Duy Tien Thanh Xuan Trung Ha Noi',
+  },
+  {
+    id: 'hcm',
+    name: 'Văn phòng TP.HCM',
+    address:
+      'Số 15, Đường D2, Khu dân cư Hiệp Phát, Phường Phú Lợi, Thành phố Hồ Chí Minh.',
+    note: 'Phù hợp cho lịch hẹn trao đổi dự án và xác nhận mẫu.',
+    mapQuery: 'So 15 Duong D2 Khu dan cu Hiep Phat Phuong Phu Loi Thanh pho Ho Chi Minh',
+  },
+  {
+    id: 'factory',
+    name: 'Nhà máy Đồng Nai',
+    address: 'Số 609, Tổ 3, Khu phố 1, Phường Long Bình, Tỉnh Đồng Nai, Việt Nam.',
+    note: 'Tham quan nhà máy theo lịch đăng ký trước với đội ngũ ANSLIFE.',
+    mapQuery: 'So 609 To 3 Khu pho 1 Phuong Long Binh Dong Nai Viet Nam',
+  },
+] as const;
 
 type ContactSection = (typeof contactSections)[number];
 interface QuoteProductOption {
@@ -67,6 +93,7 @@ export default function ContactPage() {
   const showCompanyInfo = activeSection === 'all' || activeSection === 'company-info';
   const showQuoteForm = activeSection === 'all' || activeSection === 'quote-request';
   const showMeetingForm = activeSection === 'all' || activeSection === 'schedule-meeting';
+  const showMapSection = activeSection === 'map';
 
   const [quoteState, setQuoteState] = useState<SubmissionState>(idleState);
   const [meetingState, setMeetingState] = useState<SubmissionState>(idleState);
@@ -242,11 +269,55 @@ export default function ContactPage() {
         description={t('Thông tin công ty ANSLIFE, form báo giá và đặt lịch làm việc.')}
       />
 
-      {loading && <LoadingBlock />}
-      {shouldShowError && <ErrorBlock message={error as string} />}
+      {showCompanyInfo && loading && <LoadingBlock />}
+      {showCompanyInfo && shouldShowError && <ErrorBlock message={error as string} />}
       {showCompanyInfo && resolvedHtml && (
         <section id="thong-tin-cong-ty">
           <HtmlContent html={resolvedHtml} className="html-content html-panel" />
+        </section>
+      )}
+
+      {showMapSection && (
+        <section id="ban-do" className="contact-map-section">
+          <article className="form-card contact-map-overview">
+            <h2>{t('Bản đồ ANSLIFE')}</h2>
+            <p>
+              {t(
+                'Trang này tập trung vào điều hướng vị trí. Bạn có thể mở trực tiếp từng địa điểm trên Google Maps để lấy chỉ đường nhanh.',
+              )}
+            </p>
+          </article>
+
+          <div className="contact-map-frame">
+            <iframe
+              title={t('Bản đồ trụ sở ANSLIFE')}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src={`https://www.google.com/maps?q=${encodeURIComponent(
+                'Zen Tower 12 Khuat Duy Tien Thanh Xuan Trung Ha Noi',
+              )}&output=embed`}
+            />
+          </div>
+
+          <div className="contact-map-points">
+            {contactMapLocations.map((location) => (
+              <article key={location.id} className="ai-highlight-card contact-map-point">
+                <h3>{t(location.name)}</h3>
+                <p>{t(location.address)}</p>
+                <p>{t(location.note)}</p>
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    location.mapQuery,
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-link"
+                >
+                  {t('Mở trên Google Maps')}
+                </a>
+              </article>
+            ))}
+          </div>
         </section>
       )}
 
