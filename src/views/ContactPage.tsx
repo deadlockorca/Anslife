@@ -67,20 +67,6 @@ export default function ContactPage() {
   const showCompanyInfo = activeSection === 'all' || activeSection === 'company-info';
   const showQuoteForm = activeSection === 'all' || activeSection === 'quote-request';
   const showMeetingForm = activeSection === 'all' || activeSection === 'schedule-meeting';
-  const heroTitle =
-    activeSection === 'quote-request'
-      ? t('Gửi yêu cầu báo giá')
-      : activeSection === 'schedule-meeting'
-        ? t('Đặt lịch làm việc')
-        : t('Liên hệ');
-  const heroDescription =
-    activeSection === 'quote-request'
-      ? t('Vui lòng điền biểu mẫu để đội ngũ ANSLIFE phản hồi báo giá trong thời gian sớm nhất.')
-      : activeSection === 'schedule-meeting'
-        ? t('Đăng ký lịch làm việc để ANSLIFE chủ động sắp xếp tư vấn theo nhu cầu của bạn.')
-      : t(
-            'Gửi yêu cầu báo giá hoặc đặt lịch làm việc. Dữ liệu được lưu trực tiếp vào hệ thống nội bộ.',
-          );
 
   const [quoteState, setQuoteState] = useState<SubmissionState>(idleState);
   const [meetingState, setMeetingState] = useState<SubmissionState>(idleState);
@@ -255,11 +241,6 @@ export default function ContactPage() {
         title={t('Liên hệ')}
         description={t('Thông tin công ty ANSLIFE, form báo giá và đặt lịch làm việc.')}
       />
-      <section className="page-hero">
-        <p className="kicker">{t('LIÊN HỆ')}</p>
-        <h1>{heroTitle}</h1>
-        <p>{heroDescription}</p>
-      </section>
 
       {loading && <LoadingBlock />}
       {shouldShowError && <ErrorBlock message={error as string} />}

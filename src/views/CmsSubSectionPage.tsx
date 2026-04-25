@@ -56,6 +56,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       section.id === 'core-values');
   const shouldHideSectionHero =
     config.slug === 'manufacturing-ecosystem' ||
+    config.slug === 'quality-control' ||
+    config.slug === 'commercial-process' ||
+    config.slug === 'global-network' ||
+    config.slug === 'scholarship-community' ||
     isCustomAboutSection ||
     (config.slug === 'about-anslife' &&
       (section.id === 'production-philosophy' ||
@@ -65,6 +69,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         section.id === 'development-history'));
   const shouldForceTemplateHtml =
     config.slug === 'manufacturing-ecosystem' ||
+    config.slug === 'quality-control' ||
+    config.slug === 'commercial-process' ||
+    config.slug === 'global-network' ||
+    config.slug === 'scholarship-community' ||
     (config.slug === 'about-anslife' &&
       (section.id === 'company-intro' ||
         section.id === 'vision-mission' ||

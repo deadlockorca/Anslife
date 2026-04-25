@@ -3315,6 +3315,74 @@ ul {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.ai-quality-company-intro .ai-company-hero {
+  grid-template-columns: 1fr;
+  min-height: 0;
+}
+
+.ai-quality-company-intro .ai-company-copy {
+  padding: 0.98rem 0.9rem;
+}
+
+.ai-quality-company-intro .ai-company-copy p {
+  max-width: 78ch;
+}
+
+.ai-quality-company-intro .ai-company-panels {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ai-commercial-company-intro .ai-company-hero {
+  grid-template-columns: 1fr;
+  min-height: 0;
+}
+
+.ai-commercial-company-intro .ai-company-copy {
+  padding: 0.98rem 0.9rem;
+}
+
+.ai-commercial-company-intro .ai-company-copy p {
+  max-width: 78ch;
+}
+
+.ai-commercial-company-intro .ai-company-panels {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ai-global-company-intro .ai-company-hero {
+  grid-template-columns: 1fr;
+  min-height: 0;
+}
+
+.ai-global-company-intro .ai-company-copy {
+  padding: 0.98rem 0.9rem;
+}
+
+.ai-global-company-intro .ai-company-copy p {
+  max-width: 78ch;
+}
+
+.ai-global-company-intro .ai-company-panels {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ai-scholarship-company-intro .ai-company-hero {
+  grid-template-columns: 1fr;
+  min-height: 0;
+}
+
+.ai-scholarship-company-intro .ai-company-copy {
+  padding: 0.98rem 0.9rem;
+}
+
+.ai-scholarship-company-intro .ai-company-copy p {
+  max-width: 78ch;
+}
+
+.ai-scholarship-company-intro .ai-company-panels {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .ai-team-company-intro .ai-company-title,
 .ai-team-company-intro .ai-company-kicker,
 .ai-team-company-intro .ai-company-lead,
@@ -6725,6 +6793,22 @@ ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .ai-quality-company-intro .ai-company-panels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-commercial-company-intro .ai-company-panels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-global-company-intro .ai-company-panels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-scholarship-company-intro .ai-company-panels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .ai-vision-panel {
     grid-template-columns: 1fr;
   }
@@ -7105,6 +7189,22 @@ ul {
   }
 
   .ai-manufacturing-company-intro .ai-company-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-quality-company-intro .ai-company-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-commercial-company-intro .ai-company-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-global-company-intro .ai-company-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-scholarship-company-intro .ai-company-panels {
     grid-template-columns: 1fr;
   }
 

@@ -2846,10 +2846,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 
   contact: `
 <div class="ai-content ai-contact-content">
-  <figure class="ai-banner">
-    <img src="/assets/ai/contact.svg" alt="Liên hệ ANSLIFE" loading="lazy" decoding="async" />
-  </figure>
-
   <p class="ai-intro">
     Đội ngũ ANSLIFE sẵn sàng tiếp nhận yêu cầu báo giá, hỗ trợ kỹ thuật sản phẩm,
     đặt lịch làm việc và trao đổi kế hoạch hợp tác theo từng thị trường.
@@ -3406,6 +3402,7 @@ ${paragraphs}${bullets}${note}
 function buildStructuredCompanySectionHtml(
   sectionId: string,
   section: StructuredSectionContent,
+  sectionClassName = 'ai-manufacturing-company-intro',
 ): string {
   const panelsHtml = section.panels.map((panel) => renderStructuredPanel(panel)).join('\n');
   const blocksHtml = section.blocks
@@ -3417,7 +3414,7 @@ ${section.blocks.map((block) => renderStructuredBlock(block)).join('\n')}
     : '';
 
   return `
-  <section id="${sectionId}" class="ai-section ai-company-intro ai-manufacturing-company-intro">
+  <section id="${sectionId}" class="ai-section ai-company-intro ${sectionClassName}">
     <div class="ai-company-hero">
       <div class="ai-company-copy">
         <h1 class="ai-company-title">${section.title}</h1>
@@ -4438,6 +4435,1271 @@ const AI_MANUFACTURING_SECTION_CONTENT: Record<string, string> = Object.fromEntr
   }),
 ) as Record<string, string>;
 
+const QUALITY_SECTION_TEMPLATES: Record<string, StructuredSectionContent> = {
+  'qc-philosophy': {
+    title: 'Triết lý QC',
+    kicker: 'QUALITY PHILOSOPHY',
+    lead:
+      'ANSLIFE vận hành QC theo triết lý phòng ngừa trước, phát hiện sớm và cải tiến liên tục để giữ chất lượng ổn định ở quy mô xuất khẩu.',
+    keyline: 'Chất lượng được tạo ra bởi hệ thống kiểm soát, không phải kiểm tra cuối kỳ.',
+    panels: [
+      {
+        title: 'Nguyên tắc cốt lõi',
+        paragraphs: ['QC tại ANSLIFE được xây trên ba nguyên tắc vận hành xuyên suốt.'],
+        bullets: [
+          'Ngăn lỗi từ gốc thay vì sửa lỗi ở cuối',
+          'Đo lường theo dữ liệu hiện trường theo thời gian thực',
+          'Chuẩn hóa bài học để ngăn lỗi tái diễn',
+        ],
+      },
+      {
+        title: 'Định nghĩa chất lượng tại ANSLIFE',
+        paragraphs: ['Chất lượng không chỉ là ngoại quan thành phẩm mà là độ ổn định của toàn bộ quá trình.'],
+        bullets: [
+          'Đúng chuẩn kỹ thuật đã cam kết',
+          'Đúng tiến độ giao hàng đã xác nhận',
+          'Đúng hồ sơ truy xuất và chứng từ liên quan',
+        ],
+      },
+      {
+        title: 'Trách nhiệm liên phòng ban',
+        paragraphs: ['QC không tách rời sản xuất, kỹ thuật và kế hoạch; mọi bộ phận cùng chịu trách nhiệm chất lượng.'],
+        bullets: [
+          'Kỹ thuật chốt chuẩn trước thực thi',
+          'Sản xuất tuân thủ SOP theo checkpoint',
+          'QC xác minh và phản hồi theo dữ liệu',
+        ],
+      },
+      {
+        title: 'Giá trị mang lại cho khách hàng',
+        paragraphs: ['Triết lý QC giúp khách hàng giảm rủi ro vận hành trong suốt vòng đời đơn hàng.'],
+        bullets: [
+          'Giảm lỗi lặp giữa các lô',
+          'Tăng độ tin cậy giao hàng',
+          'Minh bạch nguyên nhân và hành động khắc phục',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI định hướng chất lượng',
+        paragraphs: ['ANSLIFE theo dõi KPI chất lượng theo tuần và theo tháng để cải tiến có mục tiêu.'],
+        bullets: [
+          'First Pass Yield theo công đoạn',
+          'Rework Rate theo line sản xuất',
+          'Repeat Defect Rate theo mã lỗi',
+        ],
+      },
+      {
+        title: 'Cam kết QC',
+        paragraphs: ['Chúng tôi ưu tiên chất lượng nhất quán và khả năng kiểm soát rủi ro dài hạn cho khách hàng quốc tế.'],
+      },
+    ],
+  },
+  'qc-system': {
+    title: 'Hệ thống QC',
+    kicker: 'QUALITY CONTROL SYSTEM',
+    lead:
+      'Hệ thống QC của ANSLIFE được thiết kế đa lớp theo từng công đoạn, kết nối kiểm tra hiện trường với dữ liệu điều hành tập trung.',
+    keyline: 'Một hệ thống QC đồng bộ cho toàn bộ chuỗi sản xuất.',
+    panels: [
+      {
+        title: 'Cấu trúc tổ chức QC',
+        paragraphs: ['Tổ chức QC gồm nhiều vai trò phối hợp để tăng độ phủ kiểm soát.'],
+        bullets: [
+          'QC line tại nhà máy',
+          'QC leader theo cụm công đoạn',
+          'Data controller tổng hợp và phân tích lỗi',
+        ],
+      },
+      {
+        title: 'Checkpoint theo công đoạn',
+        paragraphs: ['Mỗi công đoạn đều có điểm kiểm bắt buộc trước khi chuyển tiếp.'],
+        bullets: [
+          'Input check trước khi cấp phát vật tư',
+          'In-line check trong quá trình gia công/lắp ráp',
+          'Final check trước đóng gói và xuất hàng',
+        ],
+      },
+      {
+        title: 'Dữ liệu QC và truy xuất',
+        paragraphs: ['Mọi kết quả kiểm tra được gắn theo mã lô, mã đơn và công đoạn để truy xuất nhanh.'],
+        bullets: [
+          'Ghi nhận lỗi theo mã nguyên nhân',
+          'Lưu lịch sử kiểm tra theo ca',
+          'Đối chiếu dữ liệu khi phát sinh khiếu nại',
+        ],
+      },
+      {
+        title: 'Cơ chế CAPA',
+        paragraphs: ['Khi phát hiện lỗi trọng yếu, hệ thống kích hoạt CAPA và theo dõi tới khi đóng hoàn toàn.'],
+        bullets: [
+          'Xác định nguyên nhân gốc',
+          'Triển khai khắc phục và phòng ngừa',
+          'Xác minh hiệu lực sau cải tiến',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI hệ thống QC',
+        paragraphs: ['Đội QC theo dõi KPI để đánh giá cả chất lượng lẫn tốc độ phản hồi.'],
+        bullets: [
+          'Defect Rate theo công đoạn',
+          'CAPA Closure On-time',
+          'Line Hold Frequency',
+        ],
+      },
+      {
+        title: 'Hiệu quả vận hành',
+        paragraphs: ['Hệ thống QC tốt giúp giảm rework, giảm trễ tiến độ và tăng độ ổn định khi scale sản lượng.'],
+      },
+    ],
+  },
+  'input-inspection': {
+    title: 'Kiểm tra nguyên liệu',
+    kicker: 'INPUT INSPECTION',
+    lead:
+      'Kiểm tra đầu vào là lớp bảo vệ đầu tiên của hệ thống chất lượng, giúp chặn lỗi ngay trước khi vật tư vào line sản xuất.',
+    keyline: 'Kiểm chặt đầu vào để giảm lỗi truyền công đoạn.',
+    panels: [
+      {
+        title: 'Phạm vi kiểm tra',
+        paragraphs: ['Input inspection áp dụng cho cả gỗ chính và vật tư phụ trợ.'],
+        bullets: [
+          'Độ ẩm, quy cách và dung sai kích thước',
+          'Chất lượng bề mặt, cấu trúc và tính đồng đều',
+          'Mức phù hợp với tiêu chuẩn mã hàng',
+        ],
+      },
+      {
+        title: 'Quy trình kiểm đầu vào',
+        paragraphs: ['Quy trình được chuẩn hóa để bảo đảm tính nhất quán giữa các lô.'],
+        bullets: [
+          'Lấy mẫu theo tỷ lệ định nghĩa',
+          'Đo kiểm và đối chiếu tiêu chí kỹ thuật',
+          'Phân loại đạt/chưa đạt theo checklist',
+        ],
+      },
+      {
+        title: 'Xử lý lô không phù hợp',
+        paragraphs: ['Lô không đạt được cách ly và xử lý theo cơ chế CAPA nội bộ.'],
+        bullets: [
+          'Tạm ngừng cấp phát vào sản xuất',
+          'Thông báo nhà cung cấp và yêu cầu hành động',
+          'Theo dõi tái diễn theo mã lỗi',
+        ],
+      },
+      {
+        title: 'Phối hợp với nhà cung cấp',
+        paragraphs: ['Dữ liệu đầu vào được dùng để đánh giá và nâng cấp năng lực nhà cung ứng.'],
+        bullets: [
+          'Xếp hạng chất lượng theo chu kỳ',
+          'Rà soát kế hoạch cải tiến định kỳ',
+          'Tối ưu nguồn cung theo hiệu suất thực',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI đầu vào',
+        paragraphs: ['Chỉ số đầu vào là cơ sở dự báo sớm rủi ro chất lượng cho toàn đơn hàng.'],
+        bullets: [
+          'Incoming Pass Rate',
+          'Supplier Defect PPM',
+          'Lot Rejection Frequency',
+        ],
+      },
+      {
+        title: 'Giá trị kiểm soát',
+        paragraphs: ['Input inspection giúp giảm chi phí ẩn do lỗi gốc và tăng độ ổn định của công đoạn gia công phía sau.'],
+      },
+    ],
+  },
+  'in-process-inspection': {
+    title: 'Kiểm tra trong sản xuất',
+    kicker: 'IN-PROCESS INSPECTION',
+    lead:
+      'In-process inspection được triển khai trực tiếp tại line để phát hiện sai lệch sớm và xử lý ngay trong cùng ca sản xuất.',
+    keyline: 'Phát hiện sớm để giảm lỗi hàng loạt.',
+    panels: [
+      {
+        title: 'Điểm kiểm trong công đoạn',
+        paragraphs: ['QC in-line tập trung tại các điểm có rủi ro chất lượng cao.'],
+        bullets: [
+          'Gia công: kích thước, dung sai, độ vuông góc',
+          'Lắp ráp: độ khít, độ vững, lực siết',
+          'Sơn: độ phủ, màu sắc, ngoại quan',
+        ],
+      },
+      {
+        title: 'Cơ chế phản hồi nhanh',
+        paragraphs: ['Khi phát hiện sai lệch, QC phối hợp kỹ thuật và sản xuất để điều chỉnh ngay tại line.'],
+        bullets: [
+          'Khoanh vùng lỗi theo ca và mã hàng',
+          'Can thiệp tham số/ thao tác tức thời',
+          'Xác nhận lại trước khi tiếp tục sản lượng',
+        ],
+      },
+      {
+        title: 'Chuẩn hóa dữ liệu lỗi',
+        paragraphs: ['Mọi lỗi in-line được mã hóa để phân tích xu hướng cải tiến dài hạn.'],
+        bullets: [
+          'Mã lỗi theo nhóm nguyên nhân',
+          'Tần suất lỗi theo line',
+          'Tác động lỗi tới tiến độ và rework',
+        ],
+      },
+      {
+        title: 'Đóng vòng cải tiến',
+        paragraphs: ['Dữ liệu in-line được tổng hợp cuối ca và đưa vào hành động cải tiến liên tục.'],
+        bullets: [
+          'Cập nhật SOP khi có lỗi tái diễn',
+          'Đào tạo lại thao tác trọng yếu',
+          'Theo dõi hiệu quả cải tiến theo tuần',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI in-line',
+        paragraphs: ['Mục tiêu của in-line inspection là vừa giảm lỗi vừa bảo vệ nhịp sản xuất.'],
+        bullets: [
+          'In-line Defect Rate',
+          'Rework Rate theo công đoạn',
+          'Reaction Time từ phát hiện đến xử lý',
+        ],
+      },
+      {
+        title: 'Hiệu quả thực thi',
+        paragraphs: ['Kiểm trong sản xuất giúp giảm gánh nặng kiểm cuối và tăng xác suất giao hàng đúng kế hoạch.'],
+      },
+    ],
+  },
+  'pre-shipment-inspection': {
+    title: 'Kiểm tra trước xuất hàng',
+    kicker: 'PRE-SHIPMENT INSPECTION',
+    lead:
+      'Pre-shipment inspection là cổng kiểm cuối cùng trước logistics, bảo đảm lô hàng đạt chuẩn kỹ thuật, đóng gói và chứng từ.',
+    keyline: 'Chỉ xuất hàng khi đạt đủ điều kiện giao quốc tế.',
+    panels: [
+      {
+        title: 'Phạm vi kiểm tra PSI',
+        paragraphs: ['PSI đánh giá toàn diện lô hàng trước bàn giao logistics.'],
+        bullets: [
+          'Ngoại quan và chức năng sản phẩm',
+          'Số lượng và cấu hình đóng gói',
+          'Nhãn mác, manual, packing list',
+        ],
+      },
+      {
+        title: 'Phương pháp lấy mẫu',
+        paragraphs: ['Lấy mẫu được thực hiện theo mức AQL phù hợp với yêu cầu đơn hàng.'],
+        bullets: [
+          'Định mức sample size theo quy định',
+          'Đánh giá mức lỗi critical/major/minor',
+          'Quy tắc pass/fail minh bạch',
+        ],
+      },
+      {
+        title: 'Kiểm soát chứng từ',
+        paragraphs: ['Bộ chứng từ được kiểm tra chéo với dữ liệu thực tế trước khi phát hành.'],
+        bullets: [
+          'Khớp số liệu kiện và số lượng',
+          'Đúng thông tin model/spec',
+          'Sẵn sàng cho mốc booking/shipment',
+        ],
+      },
+      {
+        title: 'Shipment readiness gate',
+        paragraphs: ['Lô hàng chỉ được release khi toàn bộ điều kiện PSI đều đạt.'],
+        bullets: [
+          'Đạt chất lượng theo tiêu chí chốt',
+          'Đạt tiêu chuẩn đóng gói xuất khẩu',
+          'Đủ bộ hồ sơ bàn giao',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI trước xuất hàng',
+        paragraphs: ['Đội QC theo dõi KPI PSI để nâng độ tin cậy giao hàng theo từng thị trường.'],
+        bullets: [
+          'PSI Pass Rate',
+          'Shipment Hold Rate',
+          'Claim Rate sau giao hàng',
+        ],
+      },
+      {
+        title: 'Cam kết giao hàng',
+        paragraphs: ['Mục tiêu là khách hàng nhận đúng chất lượng, đúng số lượng, đúng thời gian và đúng hồ sơ đã thống nhất.'],
+      },
+    ],
+  },
+  'quality-improvement-cases': {
+    title: 'Case cải tiến chất lượng',
+    kicker: 'QUALITY IMPROVEMENT CASES',
+    lead:
+      'ANSLIFE chuẩn hóa các case cải tiến thành tài sản hệ thống để rút ngắn thời gian xử lý và tăng tốc độ nâng chuẩn chất lượng.',
+    keyline: 'Mỗi lỗi được đóng thành bài học có thể nhân rộng.',
+    panels: [
+      {
+        title: 'Framework cải tiến',
+        paragraphs: ['Mỗi case đều đi qua chu trình phân tích và xác minh hiệu lực rõ ràng.'],
+        bullets: [
+          'Define vấn đề theo dữ liệu thực tế',
+          'Analyze nguyên nhân gốc đa chiều',
+          'Implement hành động khắc phục/phòng ngừa',
+          'Verify hiệu quả trước khi đóng case',
+        ],
+      },
+      {
+        title: 'Case kết cấu & lắp ráp',
+        paragraphs: ['Nhóm case này tập trung giảm lỗi sai khớp và tăng ổn định kết cấu.'],
+        bullets: [
+          'Chuẩn hóa trình tự lắp ráp',
+          'Tối ưu điểm kiểm lực siết',
+          'Giảm lỗi lệch khớp ở sản phẩm module',
+        ],
+      },
+      {
+        title: 'Case bề mặt & hoàn thiện',
+        paragraphs: ['Nhóm case hoàn thiện giúp tăng độ đồng đều ngoại quan giữa các lô.'],
+        bullets: [
+          'Ổn định tham số sơn theo điều kiện line',
+          'Giảm sai lệch màu theo batch',
+          'Tăng độ bền bề mặt sau vận chuyển',
+        ],
+      },
+      {
+        title: 'Case đóng gói & logistics',
+        paragraphs: ['Nhóm case này tập trung giảm hư hại trong chuỗi vận chuyển quốc tế.'],
+        bullets: [
+          'Tối ưu cấu trúc carton và vật liệu đệm',
+          'Chuẩn hóa vị trí kiện hóa theo model',
+          'Giảm tỷ lệ damage claim sau giao hàng',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'Cơ chế nhân rộng bài học',
+        paragraphs: ['Case đã đóng được chuyển thành chuẩn vận hành để áp dụng cho dự án tương tự.'],
+        bullets: [
+          'Cập nhật SOP và checklist QC',
+          'Huấn luyện lại đội vận hành liên quan',
+          'Theo dõi chỉ số sau cải tiến',
+        ],
+      },
+      {
+        title: 'Thông điệp cải tiến',
+        paragraphs: ['ANSLIFE không chỉ sửa lỗi đã xảy ra, mà xây hệ thống để lỗi khó lặp lại trong tương lai.'],
+      },
+    ],
+  },
+};
+
+const AI_QUALITY_SECTION_CONTENT: Record<string, string> = Object.fromEntries(
+  Object.entries(QUALITY_SECTION_TEMPLATES).map(([sectionId, section]) => [
+    sectionId,
+    buildStructuredCompanySectionHtml(
+      sectionId,
+      {
+        ...section,
+      },
+      'ai-quality-company-intro',
+    ),
+  ]),
+) as Record<string, string>;
+
+const COMMERCIAL_SECTION_TEMPLATES: Record<string, StructuredSectionContent> = {
+  'order-flow': {
+    title: 'Quy trình đặt hàng',
+    kicker: 'ORDER FLOW',
+    lead:
+      'ANSLIFE vận hành quy trình đặt hàng theo chuỗi dữ liệu minh bạch từ RFQ đến bàn giao, giúp khách hàng quốc tế kiểm soát rõ chất lượng, tiến độ và rủi ro thương mại.',
+    keyline: 'Mỗi đơn hàng đi qua các mốc kiểm soát rõ ràng, có dữ liệu xác nhận.',
+    panels: [
+      {
+        title: 'Bước 1 - Tiếp nhận yêu cầu',
+        paragraphs: ['Đội ngũ thương mại tiếp nhận RFQ và chuẩn hóa thông tin đầu vào trước khi báo giá.'],
+        bullets: [
+          'Xác định quy cách kỹ thuật và tiêu chuẩn chất lượng',
+          'Đối chiếu điều kiện giao hàng mục tiêu',
+          'Lập danh mục dữ liệu cần xác minh với nhà máy',
+        ],
+      },
+      {
+        title: 'Bước 2 - Chốt giải pháp & báo giá',
+        paragraphs: ['ANSLIFE phối hợp kỹ thuật, sản xuất và QC để xây dựng phương án khả thi trước khi xác nhận giá.'],
+        bullets: [
+          'Phân tích BOM, công đoạn và rủi ro kỹ thuật',
+          'Ước tính lead time theo năng lực thực tế',
+          'Chốt phạm vi trách nhiệm thương mại và chứng từ',
+        ],
+      },
+      {
+        title: 'Bước 3 - Xác nhận đơn hàng',
+        paragraphs: ['Đơn hàng chỉ được mở khi điều kiện kỹ thuật và thương mại được chốt đầy đủ.'],
+        bullets: [
+          'PO/PI được đối chiếu và khóa thông số',
+          'Xác nhận milestone thanh toán và sản xuất',
+          'Phân bổ nhà máy theo năng lực phù hợp',
+        ],
+      },
+      {
+        title: 'Bước 4 - Theo dõi thực thi',
+        paragraphs: ['Trong suốt quá trình sản xuất, khách hàng nhận cập nhật dựa trên dữ liệu đã kiểm soát.'],
+        bullets: [
+          'Theo dõi tiến độ theo từng mốc',
+          'Ghi nhận QC theo công đoạn trọng yếu',
+          'Phát hành cập nhật định kỳ theo chuẩn báo cáo',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI đơn hàng',
+        paragraphs: ['Quy trình đặt hàng được đo bằng chỉ số hiệu quả thực thi để duy trì độ ổn định dài hạn.'],
+        bullets: [
+          'Order Confirmation Lead Time',
+          'On-time Milestone Completion',
+          'Order Change Frequency',
+        ],
+      },
+      {
+        title: 'Giá trị cho khách hàng',
+        paragraphs: ['Order flow chuẩn giúp giảm trao đổi lặp, giảm hiểu sai yêu cầu và tăng tính dự báo của toàn bộ dự án.'],
+      },
+    ],
+  },
+  incoterms: {
+    title: 'Điều kiện giao hàng (Incoterms)',
+    kicker: 'INCOTERMS EXECUTION',
+    lead:
+      'ANSLIFE tư vấn và vận hành điều kiện giao hàng dựa trên đặc thù từng thị trường, giúp khách hàng kiểm soát tối ưu chi phí, rủi ro và quyền chủ động logistics.',
+    keyline: 'Chọn đúng Incoterms để kiểm soát đúng trách nhiệm.',
+    panels: [
+      {
+        title: 'Nguyên tắc lựa chọn Incoterms',
+        paragraphs: ['Incoterms được lựa chọn theo năng lực logistics, cấu trúc mua hàng và mức độ kiểm soát mong muốn của khách hàng.'],
+        bullets: [
+          'Đánh giá điểm giao nhận phù hợp',
+          'Phân tích trách nhiệm chi phí - rủi ro',
+          'Đồng bộ với phương thức vận chuyển',
+        ],
+      },
+      {
+        title: 'Các điều kiện vận hành phổ biến',
+        paragraphs: ['ANSLIFE triển khai linh hoạt các điều kiện giao hàng theo bối cảnh đơn hàng.'],
+        bullets: [
+          'FOB: phù hợp khi khách hàng chủ động hãng tàu',
+          'CIF/CFR: phù hợp khi cần tối ưu quy trình mua hàng',
+          'EXW: áp dụng khi khách hàng tự quản trị toàn tuyến',
+        ],
+      },
+      {
+        title: 'Kiểm soát rủi ro theo điều kiện giao',
+        paragraphs: ['Mỗi điều kiện giao hàng đi kèm checklist thực thi để hạn chế tranh chấp.'],
+        bullets: [
+          'Khóa trách nhiệm tại từng mốc bàn giao',
+          'Xác nhận bộ chứng từ tương ứng',
+          'Rà soát điểm chuyển giao rủi ro hàng hóa',
+        ],
+      },
+      {
+        title: 'Đồng bộ hợp đồng và vận hành',
+        paragraphs: ['Điều kiện Incoterms được tích hợp từ hợp đồng đến lịch vận chuyển thực tế.'],
+        bullets: [
+          'Liên kết điều khoản với PO/PI',
+          'Khớp điều kiện booking và chứng từ',
+          'Theo dõi tuân thủ trong suốt chu kỳ shipment',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI giao nhận',
+        paragraphs: ['ANSLIFE theo dõi chỉ số giao nhận để đo hiệu quả lựa chọn và vận hành Incoterms.'],
+        bullets: [
+          'On-time Shipment',
+          'Document Accuracy Rate',
+          'Logistics Exception Rate',
+        ],
+      },
+      {
+        title: 'Cam kết thương mại',
+        paragraphs: ['Mục tiêu là giao dịch rõ trách nhiệm, giảm chi phí ẩn và giữ trải nghiệm hợp tác ổn định qua nhiều đơn hàng.'],
+      },
+    ],
+  },
+  payment: {
+    title: 'Phương thức thanh toán',
+    kicker: 'PAYMENT TERMS',
+    lead:
+      'Chính sách thanh toán của ANSLIFE được thiết kế để cân bằng an toàn dòng tiền, tính minh bạch chứng từ và tốc độ triển khai đơn hàng quốc tế.',
+    keyline: 'Thanh toán minh bạch để vận hành bền vững.',
+    panels: [
+      {
+        title: 'Các hình thức áp dụng',
+        paragraphs: ['ANSLIFE triển khai các phương thức thanh toán phù hợp hồ sơ rủi ro và mức độ hợp tác.'],
+        bullets: [
+          'T/T theo mốc đặt cọc - trước giao hàng',
+          'L/C theo điều kiện chứng từ đã thống nhất',
+          'Điều khoản linh hoạt cho đối tác chiến lược',
+        ],
+      },
+      {
+        title: 'Mốc thanh toán theo tiến độ',
+        paragraphs: ['Milestone thanh toán được gắn chặt với trạng thái thực thi đơn hàng.'],
+        bullets: [
+          'Kích hoạt sản xuất sau khi xác nhận đặt cọc',
+          'Đối chiếu tiến độ sản xuất theo mốc',
+          'Giải ngân cuối kỳ theo điều kiện giao hàng',
+        ],
+      },
+      {
+        title: 'Kiểm soát chứng từ tài chính',
+        paragraphs: ['Bộ chứng từ tài chính được kiểm tra đa lớp trước khi phát hành.'],
+        bullets: [
+          'Khớp dữ liệu hóa đơn với PO/PI',
+          'Kiểm tra điều khoản thanh toán theo hợp đồng',
+          'Theo dõi tình trạng công nợ theo khách hàng',
+        ],
+      },
+      {
+        title: 'Quản trị rủi ro thanh toán',
+        paragraphs: ['Rủi ro thanh toán được quản lý theo nguyên tắc phòng ngừa từ đầu giao dịch.'],
+        bullets: [
+          'Đánh giá tín nhiệm đối tác định kỳ',
+          'Thiết lập ngưỡng cảnh báo công nợ',
+          'Kích hoạt quy trình xử lý khi quá hạn',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI tài chính thương mại',
+        paragraphs: ['Đội ngũ theo dõi KPI để bảo đảm dòng tiền và độ an toàn giao dịch.'],
+        bullets: [
+          'Collection On-time Rate',
+          'Overdue Ratio',
+          'Dispute Resolution Lead Time',
+        ],
+      },
+      {
+        title: 'Giá trị hợp tác',
+        paragraphs: ['Khung thanh toán rõ ràng giúp hai bên giảm tranh chấp, tăng độ tin cậy và nâng hiệu suất vận hành đơn hàng dài hạn.'],
+      },
+    ],
+  },
+  'lead-time': {
+    title: 'Thời gian sản xuất',
+    kicker: 'LEAD TIME MANAGEMENT',
+    lead:
+      'ANSLIFE quản trị lead time theo từng nhóm sản phẩm, năng lực nhà máy và mức độ phức tạp kỹ thuật để cam kết tiến độ có cơ sở.',
+    keyline: 'Lead time được lập theo dữ liệu năng lực thực, không ước lượng cảm tính.',
+    panels: [
+      {
+        title: 'Cấu trúc lead time',
+        paragraphs: ['Lead time được chia thành các pha để kiểm soát chi tiết thay vì quản trị tổng quát.'],
+        bullets: [
+          'Kỹ thuật & xác nhận mẫu',
+          'Mua vật tư và chuẩn bị line',
+          'Sản xuất, QC, đóng gói và sẵn sàng xuất',
+        ],
+      },
+      {
+        title: 'Yếu tố ảnh hưởng tiến độ',
+        paragraphs: ['ANSLIFE đánh giá sớm các yếu tố có thể gây chậm để chủ động phương án dự phòng.'],
+        bullets: [
+          'Mức độ mới của sản phẩm',
+          'Tình trạng nguồn cung nguyên liệu',
+          'Mùa cao điểm logistics và lịch tàu',
+        ],
+      },
+      {
+        title: 'Cơ chế điều phối tiến độ',
+        paragraphs: ['Tiến độ được điều phối tập trung để giữ nhịp thực thi ổn định giữa các nhà máy.'],
+        bullets: [
+          'Phân bổ công suất theo năng lực',
+          'Theo dõi daily output theo line',
+          'Can thiệp sớm khi có tín hiệu trễ',
+        ],
+      },
+      {
+        title: 'Cập nhật cho khách hàng',
+        paragraphs: ['Thông tin tiến độ được chia sẻ theo mốc thống nhất và có dữ liệu đối chiếu.'],
+        bullets: [
+          'Báo cáo milestone theo tuần',
+          'Cảnh báo sớm khi phát sinh rủi ro',
+          'Đề xuất phương án phục hồi tiến độ',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI tiến độ',
+        paragraphs: ['Mục tiêu lead time là đúng hạn nhưng vẫn bảo toàn chuẩn chất lượng đầu ra.'],
+        bullets: [
+          'OTD - On-time Delivery',
+          'Schedule Adherence',
+          'Recovery Time từ sự cố tiến độ',
+        ],
+      },
+      {
+        title: 'Cam kết tiến độ',
+        paragraphs: ['ANSLIFE ưu tiên tiến độ có kiểm soát, tránh đẩy nhanh bằng cách đánh đổi chất lượng hoặc tính minh bạch dữ liệu.'],
+      },
+    ],
+  },
+  logistics: {
+    title: 'Hậu cần',
+    kicker: 'LOGISTICS EXECUTION',
+    lead:
+      'ANSLIFE điều phối hậu cần từ đóng gói xuất khẩu, booking đến bàn giao chứng từ để đảm bảo lô hàng đi đúng tuyến, đúng lịch và đúng tiêu chuẩn.',
+    keyline: 'Logistics là phần mở rộng của hệ thống kiểm soát chất lượng.',
+    panels: [
+      {
+        title: 'Chuẩn đóng gói xuất khẩu',
+        paragraphs: ['Đóng gói được thiết kế theo đặc tính sản phẩm và yêu cầu thị trường đích.'],
+        bullets: [
+          'Tối ưu cấu trúc carton và vật liệu đệm',
+          'Kiểm soát nhãn mác và mã truy xuất',
+          'Đáp ứng yêu cầu bảo vệ hàng hóa tuyến dài',
+        ],
+      },
+      {
+        title: 'Điều phối vận chuyển',
+        paragraphs: ['Đội logistics phối hợp với thương mại để chốt booking phù hợp lịch giao đã cam kết.'],
+        bullets: [
+          'Lựa chọn tuyến vận chuyển tối ưu',
+          'Theo dõi cut-off và lịch tàu',
+          'Giám sát cột mốc bàn giao container',
+        ],
+      },
+      {
+        title: 'Quản lý chứng từ giao hàng',
+        paragraphs: ['Bộ chứng từ được kiểm tra chéo trước phát hành để giảm lỗi thủ tục quốc tế.'],
+        bullets: [
+          'Commercial Invoice và Packing List',
+          'Bill of Lading và chứng từ liên quan',
+          'Đối chiếu số liệu kiện hóa và mã hàng',
+        ],
+      },
+      {
+        title: 'Xử lý ngoại lệ logistics',
+        paragraphs: ['Khi phát sinh sự cố, hệ thống kích hoạt quy trình phản ứng nhanh liên phòng ban.'],
+        bullets: [
+          'Khoanh vùng nguyên nhân theo mốc sự cố',
+          'Cập nhật khách hàng theo thời gian thực',
+          'Triển khai hành động khắc phục và phòng ngừa',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI hậu cần',
+        paragraphs: ['Hiệu quả logistics được đo đồng thời trên tốc độ, độ chính xác và mức rủi ro sau giao hàng.'],
+        bullets: [
+          'On-time Shipment Rate',
+          'Documentation Accuracy',
+          'Damage/Claim Rate',
+        ],
+      },
+      {
+        title: 'Thông điệp vận hành',
+        paragraphs: ['ANSLIFE không chỉ giao hàng đúng hạn mà còn duy trì trải nghiệm giao nhận ổn định, minh bạch và có thể dự báo.'],
+      },
+    ],
+  },
+};
+
+const AI_COMMERCIAL_SECTION_CONTENT: Record<string, string> = Object.fromEntries(
+  Object.entries(COMMERCIAL_SECTION_TEMPLATES).map(([sectionId, section]) => [
+    sectionId,
+    buildStructuredCompanySectionHtml(
+      sectionId,
+      {
+        ...section,
+      },
+      'ai-commercial-company-intro',
+    ),
+  ]),
+) as Record<string, string>;
+
+const GLOBAL_NETWORK_SECTION_TEMPLATES: Record<string, StructuredSectionContent> = {
+  'vietnam-hq': {
+    title: 'Việt Nam - Trụ sở',
+    kicker: 'VIETNAM HEADQUARTERS',
+    lead:
+      'Trụ sở Việt Nam là trung tâm điều phối vận hành của ANSLIFE, nơi kết nối sản xuất, QC, dữ liệu và thương mại quốc tế trên cùng một hệ thống quản trị.',
+    keyline: 'Một đầu mối điều phối để toàn mạng lưới vận hành đồng bộ.',
+    panels: [
+      {
+        title: 'Vai trò điều phối trung tâm',
+        paragraphs: ['Trụ sở chịu trách nhiệm điều phối các hoạt động xuyên suốt hệ sinh thái sản xuất.'],
+        bullets: [
+          'Hoạch định năng lực và kế hoạch đơn hàng',
+          'Điều phối phối hợp giữa nhà máy - QC - thương mại',
+          'Kiểm soát chuẩn dữ liệu và báo cáo vận hành',
+        ],
+      },
+      {
+        title: 'Chuẩn hóa hệ thống',
+        paragraphs: ['Mọi chuẩn kỹ thuật và tiêu chí kiểm soát được xây dựng và cập nhật từ trụ sở.'],
+        bullets: [
+          'Chuẩn bản vẽ, BOM và quy trình công đoạn',
+          'Chuẩn checklist QC theo nhóm sản phẩm',
+          'Chuẩn báo cáo theo mốc tiến độ và rủi ro',
+        ],
+      },
+      {
+        title: 'Quản trị rủi ro chuỗi cung ứng',
+        paragraphs: ['Trụ sở theo dõi tín hiệu rủi ro để can thiệp sớm trước khi ảnh hưởng giao hàng.'],
+        bullets: [
+          'Cảnh báo sớm về vật tư và công suất',
+          'Phân bổ lại sản lượng giữa các nhà máy',
+          'Kích hoạt phương án dự phòng logistics',
+        ],
+      },
+      {
+        title: 'Hỗ trợ khách hàng quốc tế',
+        paragraphs: ['Trụ sở là đầu mối giao tiếp kỹ thuật và vận hành cho các thị trường xuất khẩu chính.'],
+        bullets: [
+          'Đồng bộ thông tin dự án theo thời gian thực',
+          'Phản hồi thay đổi kỹ thuật có kiểm soát',
+          'Theo dõi cam kết chất lượng và tiến độ dài hạn',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI vận hành trụ sở',
+        paragraphs: ['Hiệu quả điều phối của trụ sở được đo bằng chỉ số xuyên chuỗi.'],
+        bullets: [
+          'OTD - On-time Delivery',
+          'Cross-site Defect Consistency',
+          'Issue Resolution Lead Time',
+        ],
+      },
+      {
+        title: 'Thông điệp trung tâm',
+        paragraphs: ['Trụ sở không chỉ quản lý giao dịch mà quản trị toàn bộ hệ thống để khách hàng nhận được năng lực sản xuất ổn định ở quy mô quốc tế.'],
+      },
+    ],
+  },
+  'singapore-office': {
+    title: 'Singapore - Văn phòng đại diện',
+    kicker: 'SINGAPORE REPRESENTATIVE OFFICE',
+    lead:
+      'Văn phòng Singapore là điểm kết nối thương mại khu vực, hỗ trợ ANSLIFE mở rộng hợp tác với đối tác quốc tế thông qua cơ chế làm việc linh hoạt và minh bạch.',
+    keyline: 'Cầu nối khu vực giữa thị trường và năng lực sản xuất.',
+    panels: [
+      {
+        title: 'Vai trò thị trường khu vực',
+        paragraphs: ['Singapore office tập trung kết nối nhu cầu thị trường với khả năng thực thi của hệ sinh thái ANSLIFE.'],
+        bullets: [
+          'Tiếp cận đối tác tại ASEAN và châu Á - Thái Bình Dương',
+          'Thu thập yêu cầu sản phẩm theo xu hướng tiêu dùng',
+          'Định hướng ưu tiên danh mục hàng xuất khẩu',
+        ],
+      },
+      {
+        title: 'Hỗ trợ phát triển khách hàng',
+        paragraphs: ['Văn phòng hỗ trợ giai đoạn pre-sales và triển khai dự án ban đầu cho khách hàng mới.'],
+        bullets: [
+          'Chuẩn hóa yêu cầu RFQ và tiêu chí kỹ thuật',
+          'Điều phối mẫu thử và timeline xác nhận',
+          'Đồng bộ thông tin hợp đồng với trụ sở',
+        ],
+      },
+      {
+        title: 'Điều phối thương mại',
+        paragraphs: ['Singapore office hỗ trợ chuẩn hóa nghiệp vụ thương mại theo thông lệ quốc tế.'],
+        bullets: [
+          'Rà soát điều kiện giao hàng và thanh toán',
+          'Hỗ trợ đối chiếu chứng từ thương mại',
+          'Giảm sai lệch thông tin giữa các bên',
+        ],
+      },
+      {
+        title: 'Tăng tốc phản hồi thị trường',
+        paragraphs: ['Dữ liệu từ thị trường được truyền ngược về trụ sở để cải thiện sản phẩm và dịch vụ.'],
+        bullets: [
+          'Tổng hợp phản hồi khách hàng theo ngành hàng',
+          'Đề xuất điều chỉnh chiến lược sản phẩm',
+          'Ưu tiên hành động theo cơ hội thị trường',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI phát triển thị trường',
+        paragraphs: ['Văn phòng Singapore được đánh giá theo chỉ số tăng trưởng và chất lượng triển khai cơ hội mới.'],
+        bullets: [
+          'New Qualified Accounts',
+          'RFQ-to-PO Conversion',
+          'Regional Response Time',
+        ],
+      },
+      {
+        title: 'Giá trị chiến lược',
+        paragraphs: ['Singapore office giúp ANSLIFE rút ngắn khoảng cách giữa thị trường khu vực và hệ thống sản xuất tại Việt Nam.'],
+      },
+    ],
+  },
+  'japan-office': {
+    title: 'Nhật Bản - Văn phòng đại diện',
+    kicker: 'JAPAN REPRESENTATIVE OFFICE',
+    lead:
+      'Văn phòng Nhật Bản hỗ trợ ANSLIFE đáp ứng chuẩn chất lượng và chuẩn vận hành khắt khe của thị trường Nhật, đồng thời tăng độ tin cậy hợp tác dài hạn với khách hàng bản địa.',
+    keyline: 'Hiểu chuẩn Nhật để thực thi đúng ngay từ đầu.',
+    panels: [
+      {
+        title: 'Kết nối tiêu chuẩn thị trường Nhật',
+        paragraphs: ['Japan office làm rõ yêu cầu tiêu chuẩn trước khi đưa vào sản xuất.'],
+        bullets: [
+          'Diễn giải yêu cầu kỹ thuật chi tiết',
+          'Chuẩn hóa kỳ vọng chất lượng và hoàn thiện',
+          'Đồng bộ yêu cầu nhãn mác, chứng từ đặc thù',
+        ],
+      },
+      {
+        title: 'Hỗ trợ phát triển sản phẩm',
+        paragraphs: ['Văn phòng phối hợp R&D để tăng tính khả thi sản xuất cho nhóm sản phẩm theo thị trường Nhật.'],
+        bullets: [
+          'Phản biện thiết kế theo điều kiện thực thi',
+          'Đề xuất tối ưu cấu trúc và vật liệu',
+          'Kiểm soát rủi ro trước khi chạy đơn hàng',
+        ],
+      },
+      {
+        title: 'Quản trị giao tiếp dự án',
+        paragraphs: ['Japan office giúp tăng chất lượng giao tiếp xuyên biên giới trong các dự án nhiều mốc kiểm soát.'],
+        bullets: [
+          'Chuẩn hóa thông tin theo format khách hàng',
+          'Theo dõi tiến độ milestone định kỳ',
+          'Rà soát khác biệt trước khi phát sinh tranh chấp',
+        ],
+      },
+      {
+        title: 'Củng cố độ tin cậy',
+        paragraphs: ['Văn phòng tập trung xây quan hệ dài hạn dựa trên tính ổn định và minh bạch.'],
+        bullets: [
+          'Duy trì tần suất cập nhật đều đặn',
+          'Theo dõi mức hài lòng theo từng dự án',
+          'Đóng vòng phản hồi để cải tiến liên tục',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI thị trường Nhật',
+        paragraphs: ['Thành công tại thị trường Nhật được đo bằng chất lượng thực thi và độ ổn định qua nhiều lô hàng.'],
+        bullets: [
+          'First Pass Acceptance',
+          'Repeat Order Ratio',
+          'Customer Claim Closure Time',
+        ],
+      },
+      {
+        title: 'Cam kết thị trường',
+        paragraphs: ['ANSLIFE vận hành theo tinh thần chính xác, nhất quán và tôn trọng tiêu chuẩn cao của khách hàng Nhật Bản.'],
+      },
+    ],
+  },
+  'us-office': {
+    title: 'Hoa Kỳ - Văn phòng đại diện',
+    kicker: 'UNITED STATES REPRESENTATIVE OFFICE',
+    lead:
+      'Văn phòng Hoa Kỳ là điểm tiếp cận thị trường chủ lực của ANSLIFE, tập trung vào tốc độ phản hồi, khả năng scale sản lượng và tính ổn định của chuỗi cung ứng cho khách hàng Bắc Mỹ.',
+    keyline: 'Kết nối nhu cầu quy mô lớn với năng lực sản xuất có kiểm soát.',
+    panels: [
+      {
+        title: 'Điều phối cơ hội thị trường',
+        paragraphs: ['US office hỗ trợ đánh giá cơ hội theo nhóm khách hàng và nhóm sản phẩm có tiềm năng tăng trưởng.'],
+        bullets: [
+          'Phân tích nhu cầu theo mùa vụ và kênh bán',
+          'Ưu tiên dự án phù hợp năng lực hệ sinh thái',
+          'Định hướng chiến lược giá theo mục tiêu dài hạn',
+        ],
+      },
+      {
+        title: 'Hỗ trợ dự án quy mô lớn',
+        paragraphs: ['Văn phòng Hoa Kỳ phối hợp chặt với trụ sở để triển khai các đơn hàng có sản lượng cao.'],
+        bullets: [
+          'Khóa yêu cầu kỹ thuật từ giai đoạn sớm',
+          'Theo dõi năng lực cung ứng theo quý',
+          'Điều phối timeline triển khai nhiều đợt hàng',
+        ],
+      },
+      {
+        title: 'Quản trị tuân thủ thương mại',
+        paragraphs: ['US office hỗ trợ rà soát yêu cầu tuân thủ và chứng từ phù hợp thị trường nhập khẩu.'],
+        bullets: [
+          'Đồng bộ yêu cầu chứng từ theo lô',
+          'Theo dõi cập nhật quy định thị trường',
+          'Giảm rủi ro phát sinh tại khâu thông quan',
+        ],
+      },
+      {
+        title: 'Nâng chất lượng dịch vụ khách hàng',
+        paragraphs: ['Văn phòng tập trung cải thiện trải nghiệm khách hàng qua phản hồi nhanh và dữ liệu minh bạch.'],
+        bullets: [
+          'Rút ngắn thời gian phản hồi yêu cầu',
+          'Chuẩn hóa cách cập nhật tình trạng đơn hàng',
+          'Theo dõi chỉ số hài lòng theo tài khoản',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI thị trường Hoa Kỳ',
+        paragraphs: ['US office được đánh giá theo tăng trưởng bền vững và hiệu quả triển khai dự án quy mô lớn.'],
+        bullets: [
+          'Account Growth Rate',
+          'On-time Program Delivery',
+          'Escalation Frequency',
+        ],
+      },
+      {
+        title: 'Định hướng vận hành',
+        paragraphs: ['ANSLIFE ưu tiên xây năng lực phục vụ dài hạn tại Hoa Kỳ bằng hệ thống ổn định thay vì tăng trưởng ngắn hạn thiếu kiểm soát.'],
+      },
+    ],
+  },
+  'international-partners': {
+    title: 'Đối tác quốc tế',
+    kicker: 'INTERNATIONAL PARTNER NETWORK',
+    lead:
+      'Mạng lưới đối tác quốc tế của ANSLIFE bao gồm khách hàng, nhà cung ứng, đơn vị logistics và đối tác thương mại, cùng vận hành trên nguyên tắc minh bạch và tiêu chuẩn hóa.',
+    keyline: 'Mở rộng toàn cầu bằng mạng lưới đối tác được kiểm soát.',
+    panels: [
+      {
+        title: 'Cấu trúc mạng lưới đối tác',
+        paragraphs: ['ANSLIFE xây mạng lưới đa lớp để tối ưu hiệu quả từ đầu vào đến đầu ra.'],
+        bullets: [
+          'Đối tác khách hàng theo từng thị trường',
+          'Đối tác nguyên vật liệu theo nhóm ngành hàng',
+          'Đối tác vận chuyển và dịch vụ logistics',
+        ],
+      },
+      {
+        title: 'Tiêu chí lựa chọn đối tác',
+        paragraphs: ['Đối tác được đánh giá theo năng lực thực thi và mức độ phù hợp hệ thống.'],
+        bullets: [
+          'Năng lực ổn định và khả năng mở rộng',
+          'Tuân thủ chuẩn chất lượng và dữ liệu',
+          'Mức độ minh bạch trong phối hợp',
+        ],
+      },
+      {
+        title: 'Cơ chế hợp tác dài hạn',
+        paragraphs: ['ANSLIFE định hướng hợp tác theo mô hình đồng phát triển thay vì giao dịch ngắn hạn.'],
+        bullets: [
+          'Đồng bộ kế hoạch sản lượng theo chu kỳ',
+          'Chia sẻ bài học cải tiến xuyên đối tác',
+          'Xây dựng chuẩn phối hợp thống nhất',
+        ],
+      },
+      {
+        title: 'Quản trị hiệu suất đối tác',
+        paragraphs: ['Mỗi nhóm đối tác đều có KPI và cơ chế review định kỳ để duy trì hiệu quả lâu dài.'],
+        bullets: [
+          'Đánh giá OTIF và chất lượng định kỳ',
+          'Theo dõi rủi ro chuỗi cung ứng',
+          'Triển khai kế hoạch nâng chuẩn theo dữ liệu',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI mạng lưới đối tác',
+        paragraphs: ['Hiệu quả mạng lưới được đo bằng năng lực phục vụ khách hàng toàn cầu theo chuẩn thống nhất.'],
+        bullets: [
+          'Partner Onboarding Lead Time',
+          'Cross-partner Quality Consistency',
+          'Supply Continuity Index',
+        ],
+      },
+      {
+        title: 'Thông điệp hợp tác',
+        paragraphs: ['ANSLIFE xem đối tác là một phần của hệ sinh thái và cùng xây chuẩn vận hành để phát triển bền vững trên thị trường quốc tế.'],
+      },
+    ],
+  },
+};
+
+const AI_GLOBAL_NETWORK_SECTION_CONTENT: Record<string, string> = Object.fromEntries(
+  Object.entries(GLOBAL_NETWORK_SECTION_TEMPLATES).map(([sectionId, section]) => [
+    sectionId,
+    buildStructuredCompanySectionHtml(
+      sectionId,
+      {
+        ...section,
+      },
+      'ai-global-company-intro',
+    ),
+  ]),
+) as Record<string, string>;
+
+const SCHOLARSHIP_SECTION_TEMPLATES: Record<string, StructuredSectionContent> = {
+  'fund-overview': {
+    title: 'Giới thiệu quỹ',
+    kicker: 'FUND OVERVIEW',
+    lead:
+      'Quỹ học bổng và cộng đồng ANSLIFE được xây dựng như một chương trình phát triển bền vững, tập trung hỗ trợ giáo dục và tạo tác động tích cực lâu dài cho địa phương.',
+    keyline: 'Đầu tư cho con người là nền tảng của phát triển dài hạn.',
+    panels: [
+      {
+        title: 'Mục tiêu của quỹ',
+        paragraphs: ['Quỹ được thiết kế với mục tiêu rõ ràng, đo lường được và có tính liên tục qua từng năm.'],
+        bullets: [
+          'Hỗ trợ học sinh, sinh viên có hoàn cảnh khó khăn',
+          'Khuyến khích nỗ lực học tập và phát triển năng lực',
+          'Tạo nền tảng để người học theo đuổi mục tiêu dài hạn',
+        ],
+      },
+      {
+        title: 'Nguyên tắc vận hành',
+        paragraphs: ['ANSLIFE vận hành quỹ theo nguyên tắc minh bạch và trách nhiệm xã hội thực chất.'],
+        bullets: [
+          'Công khai tiêu chí và phạm vi hỗ trợ',
+          'Phân bổ nguồn lực theo kế hoạch rõ ràng',
+          'Theo dõi kết quả sau hỗ trợ theo từng giai đoạn',
+        ],
+      },
+      {
+        title: 'Phạm vi tác động',
+        paragraphs: ['Quỹ không chỉ hỗ trợ tài chính mà còn thúc đẩy cơ hội học tập bền vững.'],
+        bullets: [
+          'Học bổng định kỳ theo năm học',
+          'Hỗ trợ dụng cụ, tài liệu và điều kiện học tập',
+          'Kết nối nguồn lực cộng đồng cùng tham gia',
+        ],
+      },
+      {
+        title: 'Định hướng phát triển',
+        paragraphs: ['Quỹ được xây theo lộ trình dài hạn, gắn với chiến lược phát triển cộng đồng của ANSLIFE.'],
+        bullets: [
+          'Mở rộng số lượng chương trình hỗ trợ',
+          'Nâng chuẩn đánh giá hiệu quả tác động',
+          'Tăng mức độ đồng hành với địa phương',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI của quỹ',
+        paragraphs: ['Hiệu quả quỹ được theo dõi bằng các chỉ số tác động xã hội cụ thể.'],
+        bullets: [
+          'Số lượng suất hỗ trợ theo năm',
+          'Tỷ lệ duy trì học tập của học viên nhận hỗ trợ',
+          'Mức độ tham gia của đối tác cộng đồng',
+        ],
+      },
+      {
+        title: 'Thông điệp quỹ',
+        paragraphs: ['ANSLIFE tin rằng hỗ trợ đúng người, đúng thời điểm sẽ tạo ra thay đổi bền vững cho nhiều thế hệ.'],
+      },
+    ],
+  },
+  'scholarship-program': {
+    title: 'Chương trình học bổng',
+    kicker: 'SCHOLARSHIP PROGRAM',
+    lead:
+      'Chương trình học bổng ANSLIFE tập trung hỗ trợ học sinh, sinh viên có nỗ lực học tập tốt, ưu tiên nhóm có hoàn cảnh khó khăn và tiềm năng phát triển lâu dài.',
+    keyline: 'Không chỉ trao học bổng, chúng tôi đồng hành cùng hành trình học tập.',
+    panels: [
+      {
+        title: 'Đối tượng ưu tiên',
+        paragraphs: ['Chương trình ưu tiên nhóm học viên cần hỗ trợ để duy trì và phát triển việc học.'],
+        bullets: [
+          'Học sinh, sinh viên có hoàn cảnh khó khăn',
+          'Học viên có ý chí và kết quả học tập tích cực',
+          'Nhóm đối tượng tại khu vực ưu tiên cộng đồng',
+        ],
+      },
+      {
+        title: 'Cơ cấu hỗ trợ',
+        paragraphs: ['Học bổng được thiết kế theo nhiều mức để phù hợp nhu cầu thực tế.'],
+        bullets: [
+          'Hỗ trợ học phí hoặc chi phí học tập',
+          'Hỗ trợ tài liệu, dụng cụ phục vụ học tập',
+          'Hỗ trợ theo kỳ hoặc theo năm học',
+        ],
+      },
+      {
+        title: 'Quy trình xét chọn',
+        paragraphs: ['Quy trình xét chọn được chuẩn hóa để bảo đảm công bằng và minh bạch.'],
+        bullets: [
+          'Tiếp nhận hồ sơ và xác minh thông tin',
+          'Đánh giá theo bộ tiêu chí đã công bố',
+          'Phê duyệt và công bố kết quả theo đợt',
+        ],
+      },
+      {
+        title: 'Theo dõi sau hỗ trợ',
+        paragraphs: ['ANSLIFE theo dõi hiệu quả học bổng để tăng chất lượng chương trình qua từng năm.'],
+        bullets: [
+          'Cập nhật kết quả học tập định kỳ',
+          'Ghi nhận nhu cầu hỗ trợ tiếp theo',
+          'Cải tiến tiêu chí dựa trên dữ liệu thực tế',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI chương trình',
+        paragraphs: ['Chương trình học bổng được đánh giá bằng chỉ số đầu ra và mức độ bền vững của tác động.'],
+        bullets: [
+          'Scholarship Retention Rate',
+          'Academic Progress Tracking',
+          'Program Coverage by Region',
+        ],
+      },
+      {
+        title: 'Giá trị đồng hành',
+        paragraphs: ['Chương trình hướng tới trao cơ hội học tập bền vững thay vì hỗ trợ ngắn hạn một lần.'],
+      },
+    ],
+  },
+  'community-activities': {
+    title: 'Hoạt động cộng đồng',
+    kicker: 'COMMUNITY ACTIVITIES',
+    lead:
+      'ANSLIFE triển khai các hoạt động cộng đồng theo hướng thực chất, dài hạn và có đo lường tác động, tập trung vào giáo dục, hỗ trợ đời sống và phát triển địa phương.',
+    keyline: 'Mỗi hoạt động đều có mục tiêu rõ ràng và kết quả theo dõi.',
+    panels: [
+      {
+        title: 'Nhóm hoạt động trọng tâm',
+        paragraphs: ['Các hoạt động cộng đồng được xây theo nhu cầu thực tế của từng địa phương.'],
+        bullets: [
+          'Hỗ trợ giáo dục cho học sinh khó khăn',
+          'Chương trình thiện nguyện theo mùa',
+          'Hoạt động nâng cao điều kiện sống cơ bản',
+        ],
+      },
+      {
+        title: 'Cách thức tổ chức',
+        paragraphs: ['Hoạt động được triển khai theo kế hoạch và phối hợp với các bên liên quan tại địa phương.'],
+        bullets: [
+          'Khảo sát nhu cầu trước khi thực hiện',
+          'Phân bổ nguồn lực theo mức ưu tiên',
+          'Đánh giá kết quả sau từng chương trình',
+        ],
+      },
+      {
+        title: 'Huy động nguồn lực',
+        paragraphs: ['ANSLIFE khuyến khích sự tham gia của nhân sự nội bộ và đối tác xã hội.'],
+        bullets: [
+          'Kết nối đội ngũ tình nguyện nội bộ',
+          'Hợp tác với trường học và tổ chức địa phương',
+          'Mở rộng nguồn hỗ trợ từ đối tác đồng hành',
+        ],
+      },
+      {
+        title: 'Đo lường tác động',
+        paragraphs: ['Tác động cộng đồng được theo dõi bằng dữ liệu thay vì cảm tính.'],
+        bullets: [
+          'Số lượng người hưởng lợi trực tiếp',
+          'Mức độ cải thiện theo mục tiêu chương trình',
+          'Tỷ lệ duy trì hoạt động theo năm',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI cộng đồng',
+        paragraphs: ['Các chương trình cộng đồng được đánh giá định kỳ để tăng hiệu quả triển khai.'],
+        bullets: [
+          'Beneficiary Reach',
+          'Program Completion Rate',
+          'Impact Follow-up Score',
+        ],
+      },
+      {
+        title: 'Cam kết xã hội',
+        paragraphs: ['ANSLIFE hướng tới mô hình trách nhiệm xã hội có hệ thống, không triển khai theo phong trào ngắn hạn.'],
+      },
+    ],
+  },
+  'join-anslife': {
+    title: 'Tham gia cùng ANSLIFE',
+    kicker: 'JOIN ANSLIFE',
+    lead:
+      'ANSLIFE mở rộng cơ hội đồng hành cho cá nhân, tổ chức và đối tác mong muốn cùng xây dựng các chương trình học bổng và hoạt động cộng đồng có tác động bền vững.',
+    keyline: 'Cùng hành động có hệ thống để tạo tác động dài hạn.',
+    panels: [
+      {
+        title: 'Đối tượng có thể tham gia',
+        paragraphs: ['Chương trình chào đón nhiều nhóm đối tác với vai trò phù hợp năng lực đóng góp.'],
+        bullets: [
+          'Cá nhân muốn đồng hành các hoạt động cộng đồng',
+          'Doanh nghiệp muốn tài trợ chương trình giáo dục',
+          'Tổ chức xã hội muốn phối hợp triển khai',
+        ],
+      },
+      {
+        title: 'Hình thức đồng hành',
+        paragraphs: ['ANSLIFE triển khai nhiều hình thức để đối tác lựa chọn linh hoạt.'],
+        bullets: [
+          'Đóng góp nguồn lực tài chính cho quỹ',
+          'Đồng tổ chức chương trình tại địa phương',
+          'Hỗ trợ chuyên môn, đào tạo hoặc kết nối mạng lưới',
+        ],
+      },
+      {
+        title: 'Quy trình tham gia',
+        paragraphs: ['Quy trình được thiết kế ngắn gọn nhưng có kiểm soát để bảo đảm tính minh bạch.'],
+        bullets: [
+          'Tiếp nhận đề xuất đồng hành',
+          'Xác định phạm vi hợp tác và mục tiêu',
+          'Ký kết triển khai và theo dõi kết quả',
+        ],
+      },
+      {
+        title: 'Cơ chế minh bạch',
+        paragraphs: ['Mọi đóng góp đều được theo dõi và báo cáo theo từng chương trình.'],
+        bullets: [
+          'Cập nhật tiến độ thực hiện định kỳ',
+          'Báo cáo kết quả sử dụng nguồn lực',
+          'Đánh giá tác động sau chương trình',
+        ],
+      },
+    ],
+    blocks: [
+      {
+        title: 'KPI hợp tác',
+        paragraphs: ['Hiệu quả đồng hành được đánh giá bằng độ bền vững của chương trình và kết quả thực tế.'],
+        bullets: [
+          'Partner Participation Growth',
+          'Program Continuity Rate',
+          'Co-created Impact Projects',
+        ],
+      },
+      {
+        title: 'Thông điệp đồng hành',
+        paragraphs: ['ANSLIFE mong muốn xây cộng đồng đối tác cùng chia sẻ trách nhiệm xã hội bằng hành động cụ thể và có thể đo lường.'],
+      },
+    ],
+  },
+};
+
+const AI_SCHOLARSHIP_SECTION_CONTENT: Record<string, string> = Object.fromEntries(
+  Object.entries(SCHOLARSHIP_SECTION_TEMPLATES).map(([sectionId, section]) => [
+    sectionId,
+    buildStructuredCompanySectionHtml(
+      sectionId,
+      {
+        ...section,
+      },
+      'ai-scholarship-company-intro',
+    ),
+  ]),
+) as Record<string, string>;
+
 export function getAIFallbackPageHtml(slug: string): string | null {
   return AI_PAGE_CONTENT[slug] ?? null;
 }
@@ -4464,6 +5726,10 @@ export function getAIFallbackSectionHtml(
   );
   const shouldRenderPageBannerAndIntro =
     pageSlug !== 'manufacturing-ecosystem' &&
+    pageSlug !== 'quality-control' &&
+    pageSlug !== 'commercial-process' &&
+    pageSlug !== 'global-network' &&
+    pageSlug !== 'scholarship-community' &&
     !(
       pageSlug === 'about-anslife' &&
       (sectionId === 'company-intro' ||
@@ -4506,6 +5772,62 @@ export function getAIFallbackSectionHtml(
 `.trim();
 
     return composedManufacturingHtml;
+  }
+
+  const qualitySectionOverride =
+    pageSlug === 'quality-control' ? AI_QUALITY_SECTION_CONTENT[sectionId] ?? null : null;
+  if (qualitySectionOverride) {
+    const composedQualityHtml = `
+<div class="ai-content">
+  ${shouldRenderPageBannerAndIntro ? bannerMatch?.[0] ?? '' : ''}
+  ${shouldRenderPageBannerAndIntro ? introMatch?.[0] ?? '' : ''}
+  ${qualitySectionOverride}
+</div>
+`.trim();
+
+    return composedQualityHtml;
+  }
+
+  const commercialSectionOverride =
+    pageSlug === 'commercial-process' ? AI_COMMERCIAL_SECTION_CONTENT[sectionId] ?? null : null;
+  if (commercialSectionOverride) {
+    const composedCommercialHtml = `
+<div class="ai-content">
+  ${shouldRenderPageBannerAndIntro ? bannerMatch?.[0] ?? '' : ''}
+  ${shouldRenderPageBannerAndIntro ? introMatch?.[0] ?? '' : ''}
+  ${commercialSectionOverride}
+</div>
+`.trim();
+
+    return composedCommercialHtml;
+  }
+
+  const globalNetworkSectionOverride =
+    pageSlug === 'global-network' ? AI_GLOBAL_NETWORK_SECTION_CONTENT[sectionId] ?? null : null;
+  if (globalNetworkSectionOverride) {
+    const composedGlobalNetworkHtml = `
+<div class="ai-content">
+  ${shouldRenderPageBannerAndIntro ? bannerMatch?.[0] ?? '' : ''}
+  ${shouldRenderPageBannerAndIntro ? introMatch?.[0] ?? '' : ''}
+  ${globalNetworkSectionOverride}
+</div>
+`.trim();
+
+    return composedGlobalNetworkHtml;
+  }
+
+  const scholarshipSectionOverride =
+    pageSlug === 'scholarship-community' ? AI_SCHOLARSHIP_SECTION_CONTENT[sectionId] ?? null : null;
+  if (scholarshipSectionOverride) {
+    const composedScholarshipHtml = `
+<div class="ai-content">
+  ${shouldRenderPageBannerAndIntro ? bannerMatch?.[0] ?? '' : ''}
+  ${shouldRenderPageBannerAndIntro ? introMatch?.[0] ?? '' : ''}
+  ${scholarshipSectionOverride}
+</div>
+`.trim();
+
+    return composedScholarshipHtml;
   }
 
   const escapedSectionId = escapeRegExp(sectionId);
