@@ -127,7 +127,7 @@ const FOOTER_NAV_COLUMNS = [
       { label: 'Giới thiệu triết lý', path: '/scholarship-community/fund-overview' },
       { label: 'Hoạt động cộng đồng', path: '/scholarship-community/community-activities' },
       { label: 'Quỹ học bổng', path: '/scholarship-community/scholarship-program' },
-      { label: 'Báo cáo & tác động', path: '/scholarship-community/community-activities' },
+      { label: 'Báo cáo & tác động', path: '/scholarship-community/workforce-development' },
     ],
   },
 ] as const;
@@ -1991,9 +1991,9 @@ export default function SiteLayout() {
                     id={sectionId}
                     className={`site-footer-links ${isSectionExpanded ? 'is-open' : ''}`}
                   >
-                    {column.links.map((item) => (
+                    {column.links.map((item, itemIndex) => (
                       <Link
-                        key={`${column.title}-${item.path}`}
+                        key={`${column.title}-${item.path}-${itemIndex}`}
                         to={toLocalizedPath(item.path)}
                         className="site-footer-link"
                         onClick={closeNavigationMenus}
