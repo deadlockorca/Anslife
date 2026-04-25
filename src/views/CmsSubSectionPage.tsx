@@ -55,11 +55,16 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       section.id === 'vision-mission' ||
       section.id === 'core-values');
   const shouldHideSectionHero =
+    config.slug === 'manufacturing-ecosystem' ||
     isCustomAboutSection ||
     (config.slug === 'about-anslife' &&
-      (section.id === 'production-philosophy' || section.id === 'organization'));
+      (section.id === 'production-philosophy' ||
+        section.id === 'organization' ||
+        section.id === 'team' ||
+        section.id === 'anslife-ecosystem' ||
+        section.id === 'development-history'));
   const shouldForceTemplateHtml =
-    (config.slug === 'manufacturing-ecosystem' && section.id === 'production-system') ||
+    config.slug === 'manufacturing-ecosystem' ||
     (config.slug === 'about-anslife' &&
       (section.id === 'company-intro' ||
         section.id === 'vision-mission' ||

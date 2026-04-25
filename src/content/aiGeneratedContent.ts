@@ -465,15 +465,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       <h3>1. Nguyên tắc cốt lõi</h3>
       <p>Chúng tôi không cạnh tranh bằng việc trở thành đơn vị rẻ nhất.</p>
       <p>Chúng tôi cạnh tranh bằng việc trở thành đơn vị đáng tin cậy nhất.</p>
-      <figure class="ai-op-core-visual">
-        <img
-          src="/assets/about/production-philosophy-core-system.svg"
-          alt="Sơ đồ nguyên tắc vận hành và kiểm soát chất lượng ANSLIFE"
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption>Chuẩn quy trình - kiểm theo ca - dữ liệu minh bạch.</figcaption>
-      </figure>
       <p class="ai-op-emphasis">Chất lượng là ưu tiên hàng đầu. Giá chỉ đứng sau.</p>
     </article>
 
@@ -675,556 +666,434 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       </ul>
     </article>
 
-    <article class="ai-op-card ai-op-visual-card">
-      <img
-        src="/assets/about/organization-system-network.svg"
-        alt="Minh hoạ kết nối các lớp tổ chức trong hệ thống vận hành"
-        loading="lazy"
-        decoding="async"
-      />
-    </article>
-
     <p class="ai-op-signoff">
       <strong>ANSLIFE</strong>
       <span>Tăng trưởng có kiểm soát trên nền tảng dữ liệu thống nhất.</span>
     </p>
   </section>
 
-  <section id="team" class="ai-section ai-team-system">
-    <p class="ai-team-kicker">ANSLIFE OPERATIONAL TEAMS</p>
-    <h2>Đội ngũ ANSLIFE</h2>
-    <p class="ai-team-lead">
-      ANSLIFE xây dựng đội ngũ vận hành xoay quanh hệ sinh thái sản xuất, không chỉ là nhân sự nội bộ mà bao gồm toàn
-      bộ lực lượng tham gia vào chuỗi giá trị.
-    </p>
-    <p class="ai-team-lead">
-      Chúng tôi không tách rời con người khỏi hệ thống. Mỗi cá nhân là một phần trong hệ vận hành chung.
-    </p>
+  <section id="team" class="ai-section ai-company-intro ai-team-company-intro">
+    <div class="ai-company-hero">
+      <div class="ai-company-copy">
+        <h1 class="ai-company-title">Đội ngũ</h1>
+        <p class="ai-company-kicker">ĐỘI NGŨ ANSLIFE</p>
+        <p class="ai-company-lead">
+          ANSLIFE xây dựng đội ngũ vận hành xoay quanh hệ sinh thái sản xuất, không chỉ là nhân sự nội bộ mà bao gồm
+          toàn bộ lực lượng tham gia vào chuỗi giá trị.
+        </p>
+        <div class="ai-company-keyline">
+          <strong>Chúng tôi không tách rời con người khỏi hệ thống.</strong>
+        </div>
+        <p>Mỗi cá nhân là một phần trong hệ vận hành chung.</p>
+      </div>
+    </div>
 
-    <figure class="ai-team-hero">
-      <img
-        src="/assets/about/team-hero-real.jpg"
-        alt="Đội ngũ vận hành nội thất phối hợp trong xưởng sản xuất"
-        loading="lazy"
-        decoding="async"
-      />
-    </figure>
+    <div class="ai-company-panels">
+      <article class="ai-company-panel">
+        <h3>1. Đội ngũ vận hành trong hệ sinh thái sản xuất</h3>
+        <p>Đội ngũ ANSLIFE bao gồm:</p>
+        <ul class="ai-company-plain-list">
+          <li>Bộ phận điều hành và thương mại</li>
+          <li>Hệ thống kiểm soát chất lượng (QC)</li>
+          <li>Bộ phận dữ liệu và vận hành hệ thống</li>
+          <li>Bộ phận R&amp;D phát triển sản phẩm</li>
+          <li>Bộ phận pháp chế</li>
+          <li>Nhân sự tại các nhà máy trong hệ sinh thái</li>
+        </ul>
+      </article>
 
-    <article class="ai-team-core">
-      <h3>1. Đội ngũ vận hành trong hệ sinh thái sản xuất</h3>
-      <p>Đội ngũ ANSLIFE bao gồm:</p>
-      <ul>
-        <li>Bộ phận điều hành và thương mại.</li>
-        <li>Hệ thống kiểm soát chất lượng (QC).</li>
-        <li>Bộ phận dữ liệu và vận hành hệ thống.</li>
-        <li>Bộ phận R&D phát triển sản phẩm.</li>
-        <li>Bộ phận pháp chế.</li>
-        <li>Nhân sự tại các nhà máy trong hệ sinh thái.</li>
-      </ul>
-    </article>
-
-    <div class="ai-team-grid">
-      <article class="ai-team-card">
-        <h3><span>2</span>Đội ngũ QC - Trung tâm của hệ thống</h3>
+      <article class="ai-company-panel">
+        <h3>2. Đội ngũ QC - Trung tâm của hệ thống</h3>
         <p>Hệ thống QC là lực lượng quan trọng nhất trong vận hành của ANSLIFE.</p>
         <p>Đội ngũ QC bao gồm:</p>
-        <ul>
-          <li>Tổ trưởng QC.</li>
-          <li>Nhân sự QC tại các nhà máy.</li>
-          <li>Nhân sự kiểm tra theo từng công đoạn.</li>
+        <ul class="ai-company-plain-list">
+          <li>Tổ trưởng QC</li>
+          <li>Nhân sự QC tại các nhà máy</li>
+          <li>Nhân sự kiểm tra theo từng công đoạn</li>
         </ul>
-        <p>Vai trò:</p>
-        <ul>
-          <li>Kiểm tra chất lượng theo tiêu chuẩn.</li>
-          <li>Ghi nhận dữ liệu sản xuất thực tế.</li>
-          <li>Phát hiện và kiểm soát lỗi từ sớm.</li>
-          <li>Đảm bảo sản phẩm đạt yêu cầu trước khi xuất hàng.</li>
+        <p class="ai-company-divider-note">Vai trò:</p>
+        <ul class="ai-company-plain-list">
+          <li>Kiểm tra chất lượng theo tiêu chuẩn</li>
+          <li>Ghi nhận dữ liệu sản xuất thực tế</li>
+          <li>Phát hiện và kiểm soát lỗi từ sớm</li>
+          <li>Đảm bảo sản phẩm đạt yêu cầu trước khi xuất hàng</li>
         </ul>
-        <p class="ai-team-note-mini">ANSLIFE không phụ thuộc vào kinh nghiệm cá nhân, mà xây QC dựa trên hệ thống.</p>
+        <p class="ai-company-divider-note">
+          ANSLIFE không phụ thuộc vào kinh nghiệm cá nhân. Chúng tôi xây dựng QC dựa trên hệ thống.
+        </p>
       </article>
-
-      <article class="ai-team-card">
-        <h3><span>3</span>Đội ngũ dữ liệu và kiểm soát</h3>
+      <article class="ai-company-panel">
+        <h3>3. Đội ngũ dữ liệu và kiểm soát</h3>
         <p>Bao gồm:</p>
-        <ul>
-          <li>Data Controller.</li>
-          <li>Data Admin.</li>
-          <li>Bộ phận thu thập dữ liệu nhà máy.</li>
+        <ul class="ai-company-plain-list">
+          <li>Data Controller</li>
+          <li>Data Admin</li>
+          <li>Bộ phận thu thập dữ liệu nhà máy</li>
         </ul>
-        <p>Vai trò:</p>
-        <ul>
-          <li>Tiếp nhận dữ liệu từ hiện trường.</li>
-          <li>Kiểm tra và chuẩn hóa dữ liệu.</li>
-          <li>Phân loại, gắn nhãn và lưu trữ dữ liệu.</li>
-          <li>Cung cấp dữ liệu sạch cho sale và khách hàng.</li>
+        <p class="ai-company-divider-note">Vai trò:</p>
+        <ul class="ai-company-plain-list">
+          <li>Tiếp nhận dữ liệu từ hiện trường</li>
+          <li>Kiểm tra và chuẩn hóa dữ liệu</li>
+          <li>Phân loại, gắn nhãn và lưu trữ dữ liệu</li>
+          <li>Cung cấp dữ liệu sạch cho sale và khách hàng</li>
         </ul>
-        <p class="ai-team-note-mini">Bộ phận này đảm bảo dữ liệu chính xác, thông tin minh bạch và vận hành không phụ thuộc cảm tính.</p>
+        <p class="ai-company-divider-note">Bộ phận này đảm bảo dữ liệu chính xác, thông tin minh bạch và vận hành không phụ thuộc cảm tính.</p>
       </article>
 
-      <article class="ai-team-card">
-        <h3><span>4</span>Đội ngũ R&D - Hỗ trợ phát triển sản phẩm</h3>
-        <p>ANSLIFE sở hữu đội ngũ R&D hoạt động theo hướng support sản xuất thực tế, không phải thiết kế thuần ý tưởng.</p>
-        <p>Vai trò:</p>
-        <ul>
-          <li>Hỗ trợ khách hàng phát triển sản phẩm.</li>
-          <li>Làm việc từ bản vẽ, hình ảnh hoặc mẫu thực tế.</li>
-          <li>Đề xuất điều chỉnh về kết cấu, vật liệu, màu sơn và khả năng sản xuất.</li>
+      <article class="ai-company-panel">
+        <h3>4. Đội ngũ R&amp;D - Hỗ trợ phát triển sản phẩm</h3>
+        <p>ANSLIFE sở hữu đội ngũ R&amp;D hoạt động theo hướng support sản xuất thực tế, không phải thiết kế thuần ý tưởng.</p>
+        <p class="ai-company-divider-note">Vai trò:</p>
+        <ul class="ai-company-plain-list">
+          <li>Hỗ trợ khách hàng phát triển sản phẩm</li>
+          <li>Làm việc từ bản vẽ, hình ảnh hoặc mẫu thực tế</li>
+          <li>Đề xuất điều chỉnh về kết cấu, vật liệu, màu sơn và khả năng sản xuất</li>
         </ul>
-        <p class="ai-team-note-mini">R&D giúp rút ngắn thời gian phát triển mẫu, tăng tính khả thi và tối ưu chi phí nhưng vẫn giữ chất lượng.</p>
+        <p class="ai-company-divider-note">R&amp;D giúp rút ngắn thời gian phát triển mẫu, tăng tính khả thi khi sản xuất và tối ưu chi phí mà vẫn giữ chất lượng.</p>
       </article>
 
-      <article class="ai-team-card">
-        <h3><span>5</span>Đội ngũ Sale / Trading</h3>
+      <article class="ai-company-panel">
+        <h3>5. Đội ngũ Sale / Trading</h3>
         <p>Đội ngũ thương mại của ANSLIFE vận hành dựa trên dữ liệu thực tế.</p>
-        <p>Vai trò:</p>
-        <ul>
-          <li>Làm việc trực tiếp với khách hàng quốc tế.</li>
-          <li>Tiếp nhận yêu cầu sản xuất.</li>
-          <li>Theo dõi tiến độ đơn hàng qua hệ thống.</li>
-          <li>Cung cấp thông tin đã được kiểm soát.</li>
+        <p class="ai-company-divider-note">Vai trò:</p>
+        <ul class="ai-company-plain-list">
+          <li>Làm việc trực tiếp với khách hàng quốc tế</li>
+          <li>Tiếp nhận yêu cầu sản xuất</li>
+          <li>Theo dõi tiến độ đơn hàng qua hệ thống</li>
+          <li>Cung cấp thông tin đã được kiểm soát</li>
         </ul>
-        <p class="ai-team-note-mini">Sale không sử dụng dữ liệu cảm tính, mọi thông tin đều dựa trên dữ liệu đã xác nhận.</p>
+        <p class="ai-company-divider-note">Sale không sử dụng dữ liệu cảm tính. Mọi thông tin đều dựa trên dữ liệu đã được xác nhận.</p>
       </article>
 
-      <article class="ai-team-card">
-        <h3><span>6</span>Đội ngũ pháp chế</h3>
-        <p>ANSLIFE xây dựng bộ phận pháp chế để đảm bảo an toàn và minh bạch trong toàn bộ hoạt động thương mại.</p>
-        <p>Vai trò:</p>
-        <ul>
-          <li>Kiểm soát hợp đồng thương mại.</li>
-          <li>Đảm bảo quyền lợi của các bên tham gia.</li>
-          <li>Tuân thủ quy định pháp lý tại từng thị trường.</li>
-          <li>Hỗ trợ xử lý vấn đề phát sinh trong giao dịch quốc tế.</li>
+      <article class="ai-company-panel">
+        <h3>6. Đội ngũ pháp chế</h3>
+        <p>ANSLIFE xây dựng bộ phận pháp chế nhằm đảm bảo sự an toàn và minh bạch trong toàn bộ hoạt động thương mại.</p>
+        <p class="ai-company-divider-note">Vai trò:</p>
+        <ul class="ai-company-plain-list">
+          <li>Kiểm soát hợp đồng thương mại</li>
+          <li>Đảm bảo quyền lợi của các bên tham gia</li>
+          <li>Tuân thủ quy định pháp lý tại từng thị trường</li>
+          <li>Hỗ trợ xử lý các vấn đề phát sinh trong giao dịch quốc tế</li>
         </ul>
-        <p class="ai-team-note-mini">Bộ phận pháp chế giúp giảm rủi ro pháp lý, tăng độ tin cậy với đối tác và đảm bảo xuất khẩu ổn định.</p>
+        <p class="ai-company-divider-note">Bộ phận pháp chế giúp giảm thiểu rủi ro pháp lý, tăng độ tin cậy với đối tác quốc tế và đảm bảo hoạt động xuất khẩu ổn định.</p>
+      </article>
+
+      <article class="ai-company-panel">
+        <h3>7. Đội ngũ nhà máy trong hệ sinh thái</h3>
+        <p>ANSLIFE vận hành 01 nhà máy chính và hệ thống các nhà máy vệ tinh.</p>
+        <p>Tổng lực lượng sản xuất lên đến hàng nghìn nhân sự.</p>
+        <p class="ai-company-divider-note">Các nhà máy:</p>
+        <ul class="ai-company-plain-list">
+          <li>Sản xuất theo tiêu chuẩn ANSLIFE</li>
+          <li>Tuân thủ hệ thống QC</li>
+          <li>Cập nhật dữ liệu sản xuất theo thời gian thực</li>
+        </ul>
+      </article>
+
+      <article class="ai-company-panel">
+        <h3>8. Phát triển đội ngũ</h3>
+        <p>ANSLIFE xây dựng đội ngũ thông qua:</p>
+        <ul class="ai-company-plain-list">
+          <li>Đào tạo thực tế trong sản xuất</li>
+          <li>Tiêu chuẩn hóa quy trình</li>
+          <li>Tích lũy dữ liệu vận hành</li>
+        </ul>
+        <p class="ai-company-divider-note">Chúng tôi hướng tới đội ngũ:</p>
+        <ul class="ai-company-plain-list">
+          <li>Hiểu hệ thống</li>
+          <li>Làm việc theo tiêu chuẩn</li>
+          <li>Vận hành ổn định trong dài hạn</li>
+        </ul>
+      </article>
+
+      <article class="ai-company-panel">
+        <h3>9. Cách ANSLIFE nhìn nhận con người</h3>
+        <p>Tại ANSLIFE, con người không vận hành độc lập. Con người vận hành trong hệ thống.</p>
+        <p class="ai-company-divider-note">Giá trị của đội ngũ nằm ở khả năng:</p>
+        <ul class="ai-company-plain-list">
+          <li>Phối hợp</li>
+          <li>Tuân thủ tiêu chuẩn</li>
+          <li>Vận hành theo dữ liệu</li>
+        </ul>
       </article>
     </div>
-
-    <div class="ai-team-visual-row">
-      <figure class="ai-team-visual">
-        <img
-          src="/assets/about/team-qc-real.jpg"
-          alt="Nhân sự QC kiểm tra chi tiết sản phẩm gỗ tại công đoạn"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure class="ai-team-visual">
-        <img
-          src="/assets/about/team-data-real.jpg"
-          alt="Nhân sự vận hành sử dụng dữ liệu để theo dõi quá trình sản xuất"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure class="ai-team-visual">
-        <img
-          src="/assets/about/team-rnd-real.jpg"
-          alt="Đội ngũ R&D làm việc với bản vẽ và thông số kỹ thuật sản phẩm"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-    </div>
-
-    <article class="ai-team-factory">
-      <h3>7. Đội ngũ nhà máy trong hệ sinh thái</h3>
-      <p>ANSLIFE vận hành 01 nhà máy chính cùng hệ thống các nhà máy vệ tinh, với tổng lực lượng sản xuất lên đến hàng nghìn nhân sự.</p>
-      <p>Các nhà máy:</p>
-      <ul>
-        <li>Sản xuất theo tiêu chuẩn ANSLIFE.</li>
-        <li>Tuân thủ hệ thống QC.</li>
-        <li>Cập nhật dữ liệu sản xuất theo thời gian thực.</li>
-      </ul>
-    </article>
-
-    <article class="ai-team-development">
-      <h3>8. Phát triển đội ngũ</h3>
-      <p>ANSLIFE xây dựng đội ngũ thông qua:</p>
-      <ul>
-        <li>Đào tạo thực tế trong sản xuất.</li>
-        <li>Tiêu chuẩn hóa quy trình.</li>
-        <li>Tích lũy dữ liệu vận hành.</li>
-      </ul>
-      <p>Chúng tôi hướng tới đội ngũ:</p>
-      <ul>
-        <li>Hiểu hệ thống.</li>
-        <li>Làm việc theo tiêu chuẩn.</li>
-        <li>Vận hành ổn định trong dài hạn.</li>
-      </ul>
-    </article>
-
-    <article class="ai-team-view">
-      <h3>9. Cách ANSLIFE nhìn nhận con người</h3>
-      <p>Tại ANSLIFE, con người không vận hành độc lập. Con người vận hành trong hệ thống.</p>
-      <p>Giá trị của đội ngũ nằm ở khả năng:</p>
-      <ul>
-        <li>Phối hợp.</li>
-        <li>Tuân thủ tiêu chuẩn.</li>
-        <li>Vận hành theo dữ liệu.</li>
-      </ul>
-    </article>
   </section>
 
-  <section id="anslife-ecosystem" class="ai-section ai-ans-eco-system">
-    <p class="ai-ans-eco-kicker">ANSLIFE ECOSYSTEM PLATFORM</p>
-    <h2>Hệ sinh thái ANSLIFE</h2>
-    <p class="ai-ans-eco-lead">
-      ANSLIFE không vận hành như một nhà máy đơn lẻ. Chúng tôi xây dựng một hệ sinh thái sản xuất được kiểm soát tập
-      trung, nơi sản xuất, chất lượng, dữ liệu và thương mại toàn cầu vận hành trên cùng một nền tảng.
-    </p>
-
-    <figure class="ai-ans-eco-hero">
-      <img
-        src="/assets/about/ecosystem-hero-real.jpg"
-        alt="Đội ngũ vận hành hệ sinh thái sản xuất phối hợp tại trung tâm logistics"
-        loading="lazy"
-        decoding="async"
-      />
-    </figure>
-
-    <article class="ai-ans-eco-concept">
-      <h3>1. Khái niệm hệ sinh thái</h3>
-      <p>Hệ sinh thái ANSLIFE là sự kết nối giữa:</p>
-      <ul>
-        <li>Hệ thống nhà máy.</li>
-        <li>Hệ thống kiểm soát chất lượng.</li>
-        <li>Hệ thống dữ liệu.</li>
-        <li>Hệ thống thương mại toàn cầu.</li>
-      </ul>
-      <p class="ai-ans-eco-note-mini">Tất cả thành phần vận hành trên cùng một nền tảng kiểm soát thống nhất.</p>
-    </article>
-
-    <div class="ai-ans-eco-grid">
-      <article class="ai-ans-eco-card">
-        <h3><span>2</span>Hệ thống sản xuất</h3>
-        <p>ANSLIFE vận hành 01 nhà máy chính cùng hệ thống nhà máy vệ tinh.</p>
-        <p>Các nhà máy trong hệ sinh thái:</p>
-        <ul>
-          <li>Được lựa chọn theo tiêu chuẩn.</li>
-          <li>Được đánh giá và kiểm soát định kỳ.</li>
-          <li>Sản xuất theo quy trình thống nhất.</li>
-        </ul>
-        <p>Mô hình này cho phép mở rộng công suất linh hoạt, giảm phụ thuộc vào một đơn vị và tối ưu chi phí tiến độ.</p>
-      </article>
-
-      <article class="ai-ans-eco-card">
-        <h3><span>3</span>Hệ thống kiểm soát chất lượng</h3>
-        <p>QC là lõi của hệ sinh thái ANSLIFE, bao gồm:</p>
-        <ul>
-          <li>Kiểm tra nguyên liệu đầu vào.</li>
-          <li>Kiểm tra trong quá trình sản xuất.</li>
-          <li>Kiểm tra trước khi xuất hàng.</li>
-        </ul>
-        <p>Dữ liệu QC được ghi nhận trực tiếp tại hiện trường, lưu trữ trên hệ thống và kiểm soát nhiều lớp.</p>
-        <p class="ai-ans-eco-note-mini">Chất lượng không được đảm bảo bằng lời nói. Chất lượng được đảm bảo bằng hệ thống kiểm soát.</p>
-      </article>
-
-      <article class="ai-ans-eco-card">
-        <h3><span>4</span>Hệ thống dữ liệu</h3>
-        <p>Nền tảng dữ liệu kết nối toàn bộ hệ sinh thái với các nhóm dữ liệu:</p>
-        <ul>
-          <li>Tiến độ sản xuất và hình ảnh công đoạn.</li>
-          <li>Báo cáo QC và tài liệu kỹ thuật.</li>
-          <li>Lịch giao hàng và trạng thái đơn.</li>
-        </ul>
-        <p>Dữ liệu được cập nhật thời gian thực, kiểm soát trước khi chia sẻ và phân quyền theo từng tài khoản.</p>
-      </article>
-
-      <article class="ai-ans-eco-card">
-        <h3><span>5</span>Hệ thống thương mại toàn cầu</h3>
-        <p>ANSLIFE kết nối hệ sinh thái sản xuất với thị trường quốc tế:</p>
-        <ul class="ai-ans-eco-market-list">
-          <li><span>🇺🇸</span>Hoa Kỳ</li>
-          <li><span>🇯🇵</span>Nhật Bản</li>
-          <li><span>🇰🇷</span>Hàn Quốc</li>
-          <li><span>🇪🇺</span>Châu Âu</li>
-        </ul>
-        <p>ANSLIFE không chỉ bán sản phẩm, mà cung cấp giải pháp sản xuất phù hợp từng thị trường.</p>
-      </article>
-
-      <article class="ai-ans-eco-card">
-        <h3><span>6</span>Hệ thống R&amp;D</h3>
-        <p>R&amp;D phát triển sản phẩm dựa trên khả năng sản xuất thực tế:</p>
-        <ul>
-          <li>Hỗ trợ từ bản vẽ, hình ảnh hoặc mẫu.</li>
-          <li>Điều chỉnh thiết kế để phù hợp sản xuất.</li>
-          <li>Tối ưu kết cấu, vật liệu và chi phí.</li>
-        </ul>
-        <p class="ai-ans-eco-note-mini">R&amp;D không tách rời sản xuất. R&amp;D là một phần của hệ sinh thái sản xuất.</p>
-      </article>
-
-      <article class="ai-ans-eco-card">
-        <h3><span>7</span>Hệ thống pháp chế &amp; kiểm soát rủi ro</h3>
-        <p>ANSLIFE xây dựng hệ thống pháp chế để đảm bảo hoạt động toàn cầu ổn định:</p>
-        <ul>
-          <li>Kiểm soát hợp đồng.</li>
-          <li>Tuân thủ quy định từng thị trường.</li>
-          <li>Bảo vệ quyền lợi các bên tham gia.</li>
-        </ul>
-        <p>Hệ thống này giúp giảm rủi ro pháp lý, tăng độ tin cậy đối tác và đảm bảo hoạt động dài hạn.</p>
-      </article>
-    </div>
-
-    <div class="ai-ans-eco-visual-row">
-      <figure class="ai-ans-eco-visual">
-        <img
-          src="/assets/about/ecosystem-production-real.jpg"
-          alt="Công đoạn sản xuất gỗ vận hành theo tiêu chuẩn tại nhà máy"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure class="ai-ans-eco-visual">
-        <img
-          src="/assets/about/ecosystem-qc-real.jpg"
-          alt="Nhân sự kiểm tra và đối chiếu hàng hóa tại khu vực kho vận"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure class="ai-ans-eco-visual">
-        <img
-          src="/assets/about/ecosystem-data-real.jpg"
-          alt="Nhân sự vận hành sử dụng thiết bị số để cập nhật dữ liệu sản xuất"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-    </div>
-
-    <div class="ai-ans-eco-visual-row ai-ans-eco-visual-row-secondary">
-      <figure class="ai-ans-eco-visual">
-        <img
-          src="/assets/about/ecosystem-global-real.jpg"
-          alt="Hệ thống container tại cảng phục vụ thương mại quốc tế"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure class="ai-ans-eco-visual">
-        <img
-          src="/assets/about/ecosystem-rnd-real.jpg"
-          alt="Đội ngũ kỹ thuật họp điều chỉnh phương án phát triển sản phẩm"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure class="ai-ans-eco-visual">
-        <img
-          src="/assets/about/ecosystem-legal-real.jpg"
-          alt="Ký kết hợp đồng thương mại trong hệ thống kiểm soát pháp lý"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-    </div>
-
-    <article class="ai-ans-eco-partner">
-      <h3>8. Hệ thống đối tác</h3>
-      <p>Hệ sinh thái ANSLIFE không chỉ bao gồm khách hàng, mà còn bao gồm:</p>
-      <ul>
-        <li>Nhà máy.</li>
-        <li>Nhà cung cấp nguyên vật liệu.</li>
-        <li>Đối tác logistics.</li>
-        <li>Đối tác thương mại.</li>
-      </ul>
-      <p>Tất cả đối tác đều được đánh giá, được kiểm soát và được tích hợp vào cùng hệ thống vận hành.</p>
-    </article>
-
-    <article class="ai-ans-eco-platform">
-      <h3>9. Nền tảng công nghệ</h3>
-      <p>ANSLIFE sử dụng nền tảng website làm trung tâm vận hành, cho phép:</p>
-      <ul>
-        <li>QC upload dữ liệu trực tiếp.</li>
-        <li>Nhà máy cập nhật tiến độ.</li>
-        <li>Sale theo dõi đơn hàng.</li>
-        <li>Khách hàng truy cập thông tin theo quyền.</li>
-      </ul>
-      <p>Mỗi tài khoản có quyền truy cập riêng, phạm vi dữ liệu riêng nhưng làm việc trên cùng một hệ thống.</p>
-      <div class="ai-ans-eco-flow">
-        <article class="ai-ans-eco-flow-item">
-          <strong>Tạo tại hiện trường</strong>
-          <p>Dữ liệu được tạo từ nhà máy, QC và tiến độ thực tế.</p>
-        </article>
-        <article class="ai-ans-eco-flow-item">
-          <strong>Kiểm soát trên hệ thống</strong>
-          <p>Dữ liệu được xác thực trước khi dùng cho thương mại.</p>
-        </article>
-        <article class="ai-ans-eco-flow-item">
-          <strong>Phân phối theo cấp quyền</strong>
-          <p>Sale, đối tác và khách hàng xem đúng dữ liệu họ được cấp.</p>
-        </article>
+  <section id="anslife-ecosystem" class="ai-section ai-company-intro ai-team-company-intro">
+    <div class="ai-company-hero">
+      <div class="ai-company-copy">
+        <h1 class="ai-company-title">Hệ sinh thái ANSLIFE</h1>
+        <p class="ai-company-kicker">HỆ SINH THÁI ANSLIFE</p>
+        <p class="ai-company-lead">
+          ANSLIFE không vận hành như một nhà máy đơn lẻ. Chúng tôi xây dựng một hệ sinh thái sản xuất được kiểm soát
+          tập trung.
+        </p>
+        <div class="ai-company-keyline">
+          <strong>Tất cả được vận hành trên cùng một nền tảng.</strong>
+        </div>
       </div>
-    </article>
+    </div>
 
-    <article class="ai-ans-eco-scale">
-      <h3>10. Khả năng mở rộng</h3>
-      <p>Hệ sinh thái ANSLIFE được thiết kế để:</p>
-      <ul>
-        <li>Mở rộng thêm nhà máy.</li>
-        <li>Mở rộng thị trường.</li>
-        <li>Tăng công suất sản xuất.</li>
-      </ul>
-      <p>Mà vẫn giữ được:</p>
-      <ul>
-        <li>Kiểm soát.</li>
-        <li>Chất lượng.</li>
-        <li>Tính minh bạch.</li>
-      </ul>
-    </article>
+    <div class="ai-company-panels">
+      <article class="ai-company-panel">
+        <h3>1. Khái niệm hệ sinh thái</h3>
+        <p>Hệ sinh thái ANSLIFE là sự kết nối giữa:</p>
+        <ul class="ai-company-plain-list">
+          <li>Hệ thống nhà máy</li>
+          <li>Hệ thống kiểm soát chất lượng</li>
+          <li>Hệ thống dữ liệu</li>
+          <li>Hệ thống thương mại toàn cầu</li>
+        </ul>
+      </article>
 
-    <article class="ai-ans-eco-conclusion">
-      <h3>Kết luận</h3>
-      <p>ANSLIFE không xây dựng một nhà máy lớn. Chúng tôi xây dựng một hệ sinh thái sản xuất có thể mở rộng.</p>
-      <p>ANSLIFE kết nối sản xuất, dữ liệu và thương mại thành một hệ thống thống nhất.</p>
-      <p><strong>ANSLIFE không phải là nhà cung cấp.</strong> <strong>ANSLIFE là nền tảng điều phối và kiểm soát sản xuất.</strong></p>
-    </article>
+      <article class="ai-company-panel">
+        <h3>2. Hệ thống sản xuất</h3>
+        <p>ANSLIFE vận hành:</p>
+        <ul class="ai-company-plain-list">
+          <li>01 nhà máy chính</li>
+          <li>Hệ thống các nhà máy vệ tinh</li>
+        </ul>
+        <p class="ai-company-divider-note">Các nhà máy trong hệ sinh thái:</p>
+        <ul class="ai-company-plain-list">
+          <li>Được lựa chọn theo tiêu chuẩn</li>
+          <li>Được đánh giá và kiểm soát định kỳ</li>
+          <li>Sản xuất theo quy trình thống nhất</li>
+        </ul>
+        <p class="ai-company-divider-note">Mô hình này cho phép mở rộng công suất linh hoạt, giảm phụ thuộc vào một đơn vị sản xuất và tối ưu chi phí, tiến độ.</p>
+      </article>
+
+      <article class="ai-company-panel">
+        <h3>3. Hệ thống kiểm soát chất lượng</h3>
+        <p>QC là lõi của hệ sinh thái ANSLIFE.</p>
+        <p>Hệ thống QC bao gồm:</p>
+        <ul class="ai-company-plain-list">
+          <li>Kiểm tra nguyên liệu đầu vào</li>
+          <li>Kiểm tra trong quá trình sản xuất</li>
+          <li>Kiểm tra trước khi xuất hàng</li>
+        </ul>
+        <p class="ai-company-divider-note">Dữ liệu QC được ghi nhận trực tiếp tại hiện trường, lưu trữ trên hệ thống và kiểm soát nhiều lớp trước khi sử dụng.</p>
+        <p class="ai-company-divider-note">Chất lượng không được đảm bảo bằng lời nói. Chất lượng được đảm bảo bằng hệ thống kiểm soát.</p>
+      </article>
+
+      <article class="ai-company-panel">
+        <h3>4. Hệ thống dữ liệu</h3>
+        <p>ANSLIFE xây dựng nền tảng dữ liệu để kết nối toàn bộ hệ sinh thái.</p>
+        <p>Dữ liệu bao gồm:</p>
+        <ul class="ai-company-plain-list">
+          <li>Tiến độ sản xuất</li>
+          <li>Hình ảnh công đoạn</li>
+          <li>Báo cáo QC</li>
+          <li>Tài liệu kỹ thuật</li>
+          <li>Lịch giao hàng</li>
+        </ul>
+        <p class="ai-company-divider-note">Dữ liệu được cập nhật theo thời gian thực, kiểm soát trước khi chia sẻ và phân quyền theo từng tài khoản.</p>
+        <p class="ai-company-divider-note">Hệ thống dữ liệu giúp giảm phụ thuộc vào con người, tăng tính minh bạch và hỗ trợ ra quyết định nhanh.</p>
+      </article>
+
+      <article class="ai-company-panel">
+        <h3>5. Hệ thống thương mại toàn cầu</h3>
+        <p>ANSLIFE kết nối hệ sinh thái sản xuất với thị trường quốc tế.</p>
+        <p>Các thị trường chính:</p>
+        <ul class="ai-company-plain-list">
+          <li>Hoa Kỳ</li>
+          <li>Nhật Bản</li>
+          <li>Hàn Quốc</li>
+          <li>Châu Âu</li>
+        </ul>
+        <p class="ai-company-divider-note">Chúng tôi không chỉ bán sản phẩm, mà cung cấp giải pháp sản xuất phù hợp với từng thị trường.</p>
+      </article>
+
+      <article class="ai-company-panel">
+        <h3>6. Hệ thống R&amp;D</h3>
+        <p>ANSLIFE phát triển sản phẩm dựa trên khả năng sản xuất thực tế.</p>
+        <p>Hệ thống R&amp;D:</p>
+        <ul class="ai-company-plain-list">
+          <li>Hỗ trợ khách hàng từ bản vẽ, hình ảnh hoặc mẫu</li>
+          <li>Điều chỉnh thiết kế để phù hợp sản xuất</li>
+          <li>Tối ưu kết cấu, vật liệu và chi phí</li>
+        </ul>
+        <p class="ai-company-divider-note">R&amp;D không tách rời sản xuất. R&amp;D là một phần của hệ sinh thái sản xuất.</p>
+      </article>
+
+      <article class="ai-company-panel">
+        <h3>7. Hệ thống pháp chế &amp; kiểm soát rủi ro</h3>
+        <p>ANSLIFE xây dựng hệ thống pháp chế để đảm bảo hoạt động toàn cầu ổn định.</p>
+        <p>Bao gồm:</p>
+        <ul class="ai-company-plain-list">
+          <li>Kiểm soát hợp đồng</li>
+          <li>Tuân thủ quy định từng thị trường</li>
+          <li>Bảo vệ quyền lợi các bên tham gia</li>
+        </ul>
+        <p class="ai-company-divider-note">Hệ thống này giúp giảm rủi ro pháp lý, tăng độ tin cậy với đối tác và đảm bảo hoạt động dài hạn.</p>
+      </article>
+
+      <article class="ai-company-panel">
+        <h3>8. Hệ thống đối tác</h3>
+        <p>Hệ sinh thái ANSLIFE không chỉ bao gồm khách hàng, mà còn bao gồm:</p>
+        <ul class="ai-company-plain-list">
+          <li>Nhà máy</li>
+          <li>Nhà cung cấp nguyên vật liệu</li>
+          <li>Đối tác logistics</li>
+          <li>Đối tác thương mại</li>
+        </ul>
+        <p class="ai-company-divider-note">Tất cả đối tác được đánh giá, được kiểm soát và được tích hợp vào hệ thống.</p>
+      </article>
+
+      <article class="ai-company-panel">
+        <h3>9. Nền tảng công nghệ</h3>
+        <p>ANSLIFE sử dụng nền tảng website làm trung tâm vận hành.</p>
+        <p>Hệ thống cho phép:</p>
+        <ul class="ai-company-plain-list">
+          <li>QC upload dữ liệu trực tiếp</li>
+          <li>Nhà máy cập nhật tiến độ</li>
+          <li>Sale theo dõi đơn hàng</li>
+          <li>Khách hàng truy cập thông tin</li>
+        </ul>
+        <p class="ai-company-divider-note">Mỗi tài khoản có quyền truy cập riêng, có phạm vi dữ liệu riêng và làm việc trên cùng một hệ thống.</p>
+      </article>
+    </div>
+
+    <div class="ai-company-two-col">
+      <article class="ai-company-block">
+        <h3>10. Khả năng mở rộng</h3>
+        <p>Hệ sinh thái ANSLIFE được thiết kế để:</p>
+        <ul>
+          <li>Mở rộng thêm nhà máy</li>
+          <li>Mở rộng thị trường</li>
+          <li>Tăng công suất sản xuất</li>
+        </ul>
+        <p class="ai-company-divider-note">Mà vẫn:</p>
+        <ul>
+          <li>Giữ được kiểm soát</li>
+          <li>Giữ được chất lượng</li>
+          <li>Giữ được tính minh bạch</li>
+        </ul>
+      </article>
+
+      <article class="ai-company-block">
+        <h3>Kết luận</h3>
+        <p>ANSLIFE không xây dựng một nhà máy lớn.</p>
+        <p>Chúng tôi xây dựng một hệ sinh thái sản xuất có thể mở rộng.</p>
+        <p>ANSLIFE kết nối sản xuất, dữ liệu và thương mại thành một hệ thống thống nhất.</p>
+        <p class="ai-company-divider-note">
+          <strong>ANSLIFE không phải là nhà cung cấp.</strong>
+          <strong>ANSLIFE là nền tảng điều phối và kiểm soát sản xuất.</strong>
+        </p>
+      </article>
+    </div>
   </section>
 
-  <section id="development-history" class="ai-section ai-development-history">
-    <p class="ai-history-kicker">LỊCH SỬ PHÁT TRIỂN ANSLIFE</p>
-    <h2>Lịch sử phát triển</h2>
-    <p class="ai-history-lead">
-      ANSLIFE phát triển theo từng giai đoạn liên tục, từ nền tảng thiết kế đến sản xuất xuất khẩu và hiện tại là mô
-      hình hệ sinh thái sản xuất có thể kiểm soát, mở rộng.
-    </p>
+  <section id="development-history" class="ai-section ai-company-intro ai-team-company-intro">
+    <div class="ai-company-hero">
+      <div class="ai-company-copy">
+        <h1 class="ai-company-title">Lịch sử phát triển</h1>
+        <p class="ai-company-kicker">LỊCH SỬ PHÁT TRIỂN</p>
+        <p class="ai-company-lead">
+          Từ một đơn vị thiết kế, ANSLIFE đã phát triển thành một hệ sinh thái sản xuất và xuất khẩu.
+        </p>
+        <div class="ai-company-keyline">
+          <strong>ANSLIFE phát triển theo hệ thống, không theo quy mô đơn lẻ.</strong>
+        </div>
+      </div>
+    </div>
 
-    <figure class="ai-history-hero">
-      <img
-        src="/assets/about/history-hero-real.jpg"
-        alt="Đội vận hành logistics triển khai luồng hàng trong hệ sinh thái ANSLIFE"
-        loading="lazy"
-        decoding="async"
-      />
-    </figure>
-
-    <article class="ai-history-core">
-      <h3>Tổng quan hành trình</h3>
-      <p>
-        Từ một văn phòng thiết kế vào năm 2012, ANSLIFE từng bước chuyển dịch sang sản xuất và xuất khẩu từ năm 2018,
-        sau đó xây dựng hệ thống nhà máy, QC, dữ liệu và thương mại quốc tế thành một cấu trúc vận hành thống nhất.
-      </p>
-    </article>
-
-    <div class="ai-history-phase-grid">
-      <article class="ai-history-phase-card">
-        <h3><span>01</span>Giai đoạn khởi nguồn (2012 - 2017)</h3>
+    <div class="ai-company-panels">
+      <article class="ai-company-panel">
+        <h3>1. Giai đoạn khởi nguồn (2012 - 2017)</h3>
         <p>ANSLIFE bắt đầu từ một văn phòng thiết kế kiến trúc và nội thất vào năm 2012.</p>
-        <p>Hoạt động chính:</p>
-        <ul>
-          <li>Thiết kế kiến trúc và nội thất.</li>
-          <li>Quản lý dự án dân dụng và thương mại.</li>
-          <li>Triển khai công trình nhà ở, khách sạn, cửa hàng.</li>
+        <p>Hoạt động chính trong giai đoạn này:</p>
+        <ul class="ai-company-plain-list">
+          <li>Thiết kế kiến trúc và nội thất</li>
+          <li>Quản lý các dự án dân dụng và thương mại</li>
+          <li>Triển khai các công trình như nhà ở, khách sạn, cửa hàng</li>
         </ul>
-        <p>Giai đoạn này giúp ANSLIFE hiểu sâu sản phẩm nội thất từ góc độ sử dụng thực tế và xây nền tảng thiết kế vật liệu.</p>
+        <p class="ai-company-divider-note">Giai đoạn này giúp ANSLIFE hiểu sâu về sản phẩm nội thất từ góc độ sử dụng thực tế, tích lũy kinh nghiệm triển khai dự án và xây dựng nền tảng về thiết kế, vật liệu.</p>
       </article>
 
-      <article class="ai-history-phase-card">
-        <h3><span>02</span>Bước chuyển sang sản xuất &amp; xuất khẩu (từ 2018)</h3>
-        <p>Năm 2018 là bước chuyển quan trọng của ANSLIFE:</p>
-        <ul>
-          <li>Từ thiết kế sang sản xuất.</li>
-          <li>Từ thị trường nội địa sang thị trường quốc tế.</li>
-          <li>Tiếp cận tiêu chuẩn quốc tế và làm việc với khách hàng nước ngoài.</li>
+      <article class="ai-company-panel">
+        <h3>2. Bước chuyển sang sản xuất &amp; xuất khẩu (từ 2018)</h3>
+        <p>Năm 2018, ANSLIFE bắt đầu tham gia vào lĩnh vực sản xuất và xuất khẩu nội thất.</p>
+        <p>Đây là bước chuyển quan trọng:</p>
+        <ul class="ai-company-plain-list">
+          <li>Từ thiết kế sang sản xuất</li>
+          <li>Từ thị trường nội địa sang thị trường quốc tế</li>
         </ul>
+        <p class="ai-company-divider-note">ANSLIFE bắt đầu tiếp cận các tiêu chuẩn quốc tế, làm việc với khách hàng nước ngoài và xây dựng hệ thống sản xuất phục vụ xuất khẩu.</p>
       </article>
 
-      <article class="ai-history-phase-card">
-        <h3><span>03</span>Xây dựng hệ thống sản xuất</h3>
-        <p>ANSLIFE không chọn mô hình một nhà máy đơn lẻ, mà phát triển hệ thống:</p>
-        <ul>
-          <li>Nhà máy chính và nhà máy vệ tinh.</li>
-          <li>Hệ thống kiểm soát chất lượng.</li>
-          <li>Hệ thống dữ liệu sản xuất và quy trình vận hành tiêu chuẩn.</li>
+      <article class="ai-company-panel">
+        <h3>3. Xây dựng hệ thống sản xuất</h3>
+        <p>Trong quá trình phát triển, ANSLIFE không lựa chọn xây dựng một nhà máy đơn lẻ.</p>
+        <p>Thay vào đó, chúng tôi phát triển:</p>
+        <ul class="ai-company-plain-list">
+          <li>Hệ thống nhà máy chính</li>
+          <li>Hệ thống nhà máy vệ tinh</li>
         </ul>
-        <p>Mục tiêu là mở rộng năng lực nhưng vẫn giữ kiểm soát chất lượng và tính linh hoạt.</p>
+        <p class="ai-company-divider-note">Đi kèm với đó là hệ thống kiểm soát chất lượng, hệ thống dữ liệu sản xuất và quy trình vận hành tiêu chuẩn.</p>
+        <p class="ai-company-divider-note">Mục tiêu: mở rộng năng lực sản xuất, giữ kiểm soát chất lượng, đảm bảo tính linh hoạt.</p>
       </article>
 
-      <article class="ai-history-phase-card">
-        <h3><span>04</span>Phát triển hệ sinh thái</h3>
-        <p>ANSLIFE mở rộng từ đơn vị sản xuất thành hệ sinh thái vận hành gồm:</p>
-        <ul>
-          <li>Sản xuất.</li>
-          <li>Kiểm soát chất lượng.</li>
-          <li>Dữ liệu vận hành.</li>
-          <li>Thương mại quốc tế.</li>
+      <article class="ai-company-panel">
+        <h3>4. Phát triển hệ sinh thái</h3>
+        <p>ANSLIFE dần mở rộng từ một đơn vị sản xuất thành một hệ sinh thái.</p>
+        <p>Hệ sinh thái bao gồm:</p>
+        <ul class="ai-company-plain-list">
+          <li>Sản xuất</li>
+          <li>Kiểm soát chất lượng</li>
+          <li>Dữ liệu vận hành</li>
+          <li>Thương mại quốc tế</li>
         </ul>
-        <p>Chúng tôi không chỉ sản xuất sản phẩm, mà xây hệ thống để kết nối nhà máy và phục vụ khách hàng toàn cầu.</p>
+        <p class="ai-company-divider-note">Chúng tôi không chỉ sản xuất sản phẩm, mà xây dựng hệ thống để kết nối các nhà máy, kiểm soát chất lượng và phục vụ khách hàng toàn cầu.</p>
       </article>
 
-      <article class="ai-history-phase-card">
-        <h3><span>05</span>Giai đoạn hiện tại</h3>
-        <p>Hiện tại ANSLIFE vận hành:</p>
-        <ul>
-          <li>Hệ thống sản xuất với nhiều nhà máy.</li>
-          <li>Đội ngũ QC và kiểm soát dữ liệu.</li>
-          <li>Mạng lưới khách hàng quốc tế tại Hoa Kỳ, Nhật Bản, Hàn Quốc, Châu Âu.</li>
+      <article class="ai-company-panel">
+        <h3>5. Giai đoạn hiện tại</h3>
+        <p>Hiện tại, ANSLIFE vận hành:</p>
+        <ul class="ai-company-plain-list">
+          <li>Hệ thống sản xuất với nhiều nhà máy</li>
+          <li>Đội ngũ QC và kiểm soát dữ liệu</li>
+          <li>Mạng lưới khách hàng quốc tế</li>
         </ul>
-        <p>Trọng tâm hiện tại là ổn định chất lượng, mở rộng hệ sinh thái và nâng cao năng lực vận hành.</p>
+        <p class="ai-company-divider-note">Các thị trường chính: Hoa Kỳ, Nhật Bản, Hàn Quốc, Châu Âu.</p>
+        <p class="ai-company-divider-note">ANSLIFE tập trung vào ổn định chất lượng, mở rộng hệ sinh thái và nâng cao năng lực vận hành.</p>
       </article>
 
-      <article class="ai-history-phase-card">
-        <h3><span>06</span>Định hướng tương lai</h3>
+      <article class="ai-company-panel">
+        <h3>6. Định hướng tương lai</h3>
         <p>ANSLIFE hướng tới:</p>
-        <ul>
-          <li>Mở rộng hệ sinh thái sản xuất ra nhiều quốc gia.</li>
-          <li>Xây dựng hệ thống sản xuất toàn cầu.</li>
-          <li>Phát triển nền tảng dữ liệu kết nối sản xuất và thương mại.</li>
+        <ul class="ai-company-plain-list">
+          <li>Mở rộng hệ sinh thái sản xuất ra nhiều quốc gia</li>
+          <li>Xây dựng hệ thống sản xuất toàn cầu</li>
+          <li>Phát triển nền tảng dữ liệu kết nối sản xuất và thương mại</li>
         </ul>
-        <p>Mục tiêu không chỉ là tăng trưởng, mà là kiểm soát tốt hơn, vận hành hiệu quả hơn và phát triển bền vững hơn.</p>
+        <p class="ai-company-divider-note">Mục tiêu không chỉ là tăng trưởng, mà là kiểm soát tốt hơn, vận hành hiệu quả hơn và phát triển bền vững hơn.</p>
       </article>
     </div>
 
-    <div class="ai-history-visual-row">
-      <figure class="ai-history-visual">
-        <img
-          src="/assets/about/history-foundation-real.jpg"
-          alt="Nhân sự vận hành tại kho trong giai đoạn hình thành nền tảng"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure class="ai-history-visual">
-        <img
-          src="/assets/about/history-scale-real.jpg"
-          alt="Đội sản xuất triển khai mở rộng công suất theo hệ sinh thái"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure class="ai-history-visual">
-        <img
-          src="/assets/about/history-global-real.jpg"
-          alt="Hạ tầng logistics container kết nối hoạt động thương mại toàn cầu"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-      <figure class="ai-history-visual">
-        <img
-          src="/assets/about/history-platform-real.jpg"
-          alt="Nhân sự phối hợp trên nền tảng dữ liệu vận hành tập trung"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
+    <div class="ai-company-two-col">
+      <article class="ai-company-block">
+        <h3>Kết luận</h3>
+        <p>Từ một đơn vị thiết kế, ANSLIFE đã phát triển thành một hệ sinh thái sản xuất và xuất khẩu.</p>
+        <p>Mỗi giai đoạn phát triển đều hướng tới một mục tiêu chung:</p>
+        <ul>
+          <li>Xây dựng một hệ thống vận hành ổn định</li>
+          <li>Có thể mở rộng</li>
+          <li>Kiểm soát được</li>
+        </ul>
+        <p class="ai-company-divider-note">
+          <strong>ANSLIFE không phát triển theo quy mô đơn lẻ.</strong>
+          <strong>ANSLIFE phát triển theo hệ thống.</strong>
+        </p>
+      </article>
+
+      <article class="ai-company-block">
+        <h3>Thông điệp cốt lõi</h3>
+        <p>
+          <strong>ANSLIFE phát triển từ nền tảng thiết kế, trưởng thành trong sản xuất và đang mở rộng như một hệ sinh
+          thái sản xuất toàn cầu.</strong>
+        </p>
+      </article>
     </div>
-
-    <article class="ai-history-core">
-      <h3>Kết luận</h3>
-      <p>Từ một đơn vị thiết kế, ANSLIFE đã phát triển thành một hệ sinh thái sản xuất và xuất khẩu.</p>
-      <p>
-        Mỗi giai đoạn phát triển đều hướng tới một mục tiêu chung: xây dựng một hệ thống vận hành ổn định, có thể mở
-        rộng và kiểm soát được.
-      </p>
-      <p><strong>ANSLIFE không phát triển theo quy mô đơn lẻ.</strong> <strong>ANSLIFE phát triển theo hệ thống.</strong></p>
-    </article>
-
-    <p class="ai-history-note">
-      <strong>Câu chốt:</strong> ANSLIFE phát triển từ nền tảng thiết kế, trưởng thành trong sản xuất và đang mở rộng
-      như một hệ sinh thái sản xuất toàn cầu.
-    </p>
   </section>
 </div>
 `.trim(),
@@ -3475,6 +3344,1100 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
   `.trim(),
 };
 
+interface StructuredPanelContent {
+  title: string;
+  paragraphs: string[];
+  bullets?: string[];
+  note?: string;
+}
+
+interface StructuredBlockContent {
+  title: string;
+  paragraphs: string[];
+  bullets?: string[];
+  note?: string;
+}
+
+interface StructuredSectionContent {
+  title: string;
+  kicker: string;
+  lead: string;
+  keyline: string;
+  panels: StructuredPanelContent[];
+  blocks?: StructuredBlockContent[];
+}
+
+function renderStructuredPanel(panel: StructuredPanelContent): string {
+  const paragraphs = panel.paragraphs.map((paragraph) => `        <p>${paragraph}</p>`).join('\n');
+  const bullets = panel.bullets
+    ? `
+        <ul class="ai-company-plain-list">
+${panel.bullets.map((item) => `          <li>${item}</li>`).join('\n')}
+        </ul>`
+    : '';
+  const note = panel.note ? `\n        <p class="ai-company-divider-note">${panel.note}</p>` : '';
+
+  return `
+      <article class="ai-company-panel">
+        <h3>${panel.title}</h3>
+${paragraphs}${bullets}${note}
+      </article>
+`.trim();
+}
+
+function renderStructuredBlock(block: StructuredBlockContent): string {
+  const paragraphs = block.paragraphs.map((paragraph) => `        <p>${paragraph}</p>`).join('\n');
+  const bullets = block.bullets
+    ? `
+        <ul>
+${block.bullets.map((item) => `          <li>${item}</li>`).join('\n')}
+        </ul>`
+    : '';
+  const note = block.note ? `\n        <p class="ai-company-divider-note">${block.note}</p>` : '';
+
+  return `
+      <article class="ai-company-block">
+        <h3>${block.title}</h3>
+${paragraphs}${bullets}${note}
+      </article>
+`.trim();
+}
+
+function buildStructuredCompanySectionHtml(
+  sectionId: string,
+  section: StructuredSectionContent,
+): string {
+  const panelsHtml = section.panels.map((panel) => renderStructuredPanel(panel)).join('\n');
+  const blocksHtml = section.blocks
+    ? `
+    <div class="ai-company-two-col">
+${section.blocks.map((block) => renderStructuredBlock(block)).join('\n')}
+    </div>
+`
+    : '';
+
+  return `
+  <section id="${sectionId}" class="ai-section ai-company-intro ai-manufacturing-company-intro">
+    <div class="ai-company-hero">
+      <div class="ai-company-copy">
+        <h1 class="ai-company-title">${section.title}</h1>
+        <p class="ai-company-kicker">${section.kicker}</p>
+        <p class="ai-company-lead">${section.lead}</p>
+        <div class="ai-company-keyline">
+          <strong>${section.keyline}</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-company-panels">
+${panelsHtml}
+    </div>${blocksHtml}
+  </section>
+`.trim();
+}
+
+const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> = {
+  'production-system': {
+    title: 'Hệ thống sản xuất',
+    kicker: 'MANUFACTURING SYSTEM',
+    lead:
+      'ANSLIFE vận hành hệ thống sản xuất theo mô hình điều phối tập trung, thực thi phân tán và kiểm soát chất lượng đồng bộ.',
+    keyline: 'Mở rộng năng lực bằng hệ thống, không đánh đổi độ ổn định.',
+    panels: [
+      {
+        title: 'Cấu trúc vận hành',
+        paragraphs: ['Hệ thống được tổ chức theo ba lớp điều phối chính:'],
+        bullets: [
+          'Trung tâm kỹ thuật và kế hoạch sản xuất',
+          'Mạng lưới nhà máy thực thi theo năng lực',
+          'Lớp QC và dữ liệu kiểm soát xuyên suốt',
+        ],
+        note: 'Mỗi lớp có KPI riêng nhưng dùng cùng một chuẩn dữ liệu và checklist vận hành.',
+      },
+      {
+        title: 'Mục tiêu quản trị',
+        paragraphs: ['Hệ thống sản xuất được thiết kế để đáp ứng đồng thời các mục tiêu:'],
+        bullets: [
+          'Ổn định chất lượng theo lô và theo mùa vụ',
+          'Tăng khả năng giao hàng đúng hạn (OTIF)',
+          'Giảm rủi ro phụ thuộc vào một điểm sản xuất',
+        ],
+        note: 'Khách hàng nhận được năng lực sản xuất linh hoạt nhưng vẫn kiểm soát được tiêu chuẩn đầu ra.',
+      },
+    ],
+  },
+  'raw-material-zone': {
+    title: 'Vùng nguyên liệu',
+    kicker: 'RAW MATERIAL ZONE',
+    lead:
+      'ANSLIFE xây vùng nguyên liệu theo hướng ổn định nguồn cung, truy xuất rõ ràng và phù hợp chuẩn kỹ thuật của từng nhóm sản phẩm.',
+    keyline: 'Nguyên liệu tốt là nền tảng của chất lượng ổn định.',
+    panels: [
+      {
+        title: 'Nguyên tắc phát triển vùng nguyên liệu',
+        paragraphs: ['Mỗi vùng nguyên liệu được lựa chọn dựa trên:'],
+        bullets: [
+          'Độ phù hợp về chủng loại và chất lượng gỗ',
+          'Khả năng cung ứng ổn định theo kế hoạch sản xuất',
+          'Mức độ đáp ứng yêu cầu truy xuất và tuân thủ',
+        ],
+      },
+      {
+        title: 'Cơ chế kiểm soát đầu vào',
+        paragraphs: ['Trước khi đưa vào sản xuất, nguyên liệu được kiểm theo bộ tiêu chí chuẩn.'],
+        bullets: [
+          'Độ ẩm, quy cách, dung sai',
+          'Bề mặt, kết cấu, mức độ đồng đều',
+          'Mã lô và hồ sơ truy xuất nhà cung ứng',
+        ],
+        note: 'Kiểm soát đầu vào tốt giúp giảm đáng kể lỗi phát sinh ở các công đoạn sau.',
+      },
+    ],
+  },
+  'manufacturing-process': {
+    title: 'Quy trình sản xuất',
+    kicker: 'MANUFACTURING PROCESS',
+    lead:
+      'Quy trình sản xuất của ANSLIFE được chuẩn hóa theo stage-gate để kiểm soát kỹ thuật, tiến độ và chất lượng theo từng công đoạn.',
+    keyline: 'Chuẩn hóa quy trình để tăng tính lặp lại và giảm biến động.',
+    panels: [
+      {
+        title: '5 công đoạn chuẩn',
+        paragraphs: ['Mỗi đơn hàng được triển khai theo trình tự thống nhất:'],
+        bullets: [
+          'Phát triển mẫu và chốt thông số kỹ thuật',
+          'Gia công chi tiết theo dung sai mục tiêu',
+          'Lắp ráp và kiểm tra kết cấu',
+          'Sơn hoàn thiện theo mẫu duyệt',
+          'Đóng gói theo tiêu chuẩn xuất khẩu',
+        ],
+      },
+      {
+        title: 'Điểm kiểm soát then chốt',
+        paragraphs: ['Mỗi công đoạn đều có checkpoint bắt buộc để ngăn lỗi truyền line.'],
+        bullets: [
+          'First-piece check đầu ca',
+          'In-line inspection theo tần suất định nghĩa',
+          'Final check trước đóng gói và bàn giao',
+        ],
+        note: 'Quy trình này giúp duy trì độ ổn định cho cả đơn hàng nhỏ và đơn hàng quy mô lớn.',
+      },
+    ],
+  },
+  'standards-certificates': {
+    title: 'Tiêu chuẩn & chứng chỉ',
+    kicker: 'STANDARDS AND CERTIFICATIONS',
+    lead:
+      'ANSLIFE quản trị tiêu chuẩn và chứng chỉ như một phần của hệ thống vận hành, không phải tài liệu hình thức.',
+    keyline: 'Tuân thủ được chuẩn hóa ngay trong quy trình sản xuất.',
+    panels: [
+      {
+        title: 'Khung tiêu chuẩn vận hành',
+        paragraphs: ['Tiêu chuẩn được xây theo ba lớp kiểm soát:'],
+        bullets: [
+          'Tiêu chuẩn kỹ thuật theo nhóm sản phẩm',
+          'Tiêu chuẩn chất lượng theo công đoạn',
+          'Tiêu chuẩn hồ sơ và truy xuất dữ liệu',
+        ],
+      },
+      {
+        title: 'Quản trị chứng chỉ hệ sinh thái',
+        paragraphs: ['Hồ sơ chứng chỉ được liên kết với lô sản xuất để dễ audit và đối chiếu.'],
+        bullets: [
+          'Lưu trữ và cập nhật theo thị trường đích',
+          'Kiểm tra hiệu lực theo chu kỳ',
+          'Phối hợp đối tác để duy trì tuân thủ liên tục',
+        ],
+      },
+    ],
+  },
+  'anslife-factory': {
+    title: 'Nhà máy ANSLIFE',
+    kicker: 'ANSLIFE FACTORY',
+    lead:
+      'Nhà máy ANSLIFE đóng vai trò trung tâm kỹ thuật và điều phối chất lượng cho toàn bộ hệ sinh thái sản xuất.',
+    keyline: 'Trung tâm sản xuất chủ lực và trung tâm chuẩn hóa vận hành.',
+    panels: [
+      {
+        title: 'Vai trò nhà máy trung tâm',
+        paragraphs: ['Không chỉ sản xuất, nhà máy trung tâm còn chịu trách nhiệm:'],
+        bullets: [
+          'Chuẩn hóa bản vẽ, BOM và hướng dẫn công đoạn',
+          'Thiết lập checkpoint QC cho toàn hệ thống',
+          'Đào tạo và chuyển giao chuẩn cho nhà máy liên kết',
+        ],
+      },
+      {
+        title: 'Năng lực triển khai',
+        paragraphs: ['Nhà máy trung tâm tập trung các đơn hàng cần kiểm soát kỹ thuật chặt chẽ.'],
+        bullets: [
+          'Sản phẩm có cấu trúc phức tạp',
+          'Đơn hàng yêu cầu lead time tối ưu',
+          'Dự án cần pilot trước khi scale mạng lưới',
+        ],
+        note: 'Đây là nền tảng để ANSLIFE mở rộng công suất nhưng vẫn giữ chuẩn đầu ra nhất quán.',
+      },
+    ],
+  },
+  'satellite-factories': {
+    title: 'Nhà máy vệ tinh',
+    kicker: 'SATELLITE FACTORY NETWORK',
+    lead:
+      'Mạng lưới nhà máy vệ tinh giúp ANSLIFE mở rộng công suất linh hoạt theo mùa vụ và theo nhóm ngành hàng.',
+    keyline: 'Phân tán sản xuất, tập trung kiểm soát.',
+    panels: [
+      {
+        title: 'Nguyên tắc tích hợp nhà máy vệ tinh',
+        paragraphs: ['Mỗi nhà máy tham gia hệ sinh thái phải vượt qua quy trình thẩm định năng lực.'],
+        bullets: [
+          'Đánh giá hiện trường theo checklist chuẩn',
+          'Pilot lô thử trước khi nhận đơn chính thức',
+          'Tuân thủ cùng quy trình QC và dữ liệu vận hành',
+        ],
+      },
+      {
+        title: 'Giá trị đối với khách hàng',
+        paragraphs: ['Mô hình vệ tinh tạo lợi thế rõ ràng trong vận hành đơn hàng xuất khẩu:'],
+        bullets: [
+          'Tăng năng lực đáp ứng khi sản lượng cao',
+          'Giảm rủi ro gián đoạn tại một điểm sản xuất',
+          'Giữ tiến độ giao hàng ổn định ở nhiều thị trường',
+        ],
+      },
+    ],
+  },
+  'ecosystem-operating-model': {
+    title: 'Mô hình vận hành hệ sinh thái',
+    kicker: 'ECOSYSTEM OPERATING MODEL',
+    lead:
+      'ANSLIFE vận hành theo mô hình Centralized Control - Distributed Execution để mở rộng công suất mà vẫn giữ cùng chuẩn chất lượng.',
+    keyline: 'Một hệ thống, nhiều điểm thực thi, một chuẩn kiểm soát.',
+    panels: [
+      {
+        title: 'Bốn trụ cột điều hành',
+        paragraphs: ['Mô hình được xây trên bốn trụ cột vận hành thống nhất:'],
+        bullets: [
+          'Plan Governance: quản trị kế hoạch và ưu tiên đơn hàng',
+          'Capacity Allocation: phân bổ công suất theo năng lực thực',
+          'Quality Gate: kiểm soát chất lượng đa lớp',
+          'Data Visibility: theo dõi tiến độ theo thời gian thực',
+        ],
+      },
+      {
+        title: 'Chu kỳ điều phối',
+        paragraphs: ['Mỗi chu kỳ vận hành đều có cơ chế review và chốt hành động.'],
+        bullets: [
+          'Review kỹ thuật trước khi mở lệnh',
+          'Theo dõi tiến độ - lỗi - năng suất theo ngày',
+          'Đóng CAPA và khóa hành động phòng ngừa',
+        ],
+      },
+    ],
+  },
+  'manufacturing-partner-registration': {
+    title: 'Đăng ký đối tác sản xuất',
+    kicker: 'MANUFACTURING PARTNER REGISTRATION',
+    lead:
+      'ANSLIFE phát triển đối tác sản xuất theo quy trình có kiểm soát để đảm bảo năng lực thật và khả năng tuân thủ chuẩn hệ thống.',
+    keyline: 'Gia nhập hệ sinh thái bằng năng lực đã được xác thực.',
+    panels: [
+      {
+        title: 'Điều kiện tham gia',
+        paragraphs: ['Đối tác cần đáp ứng đồng thời yêu cầu năng lực và tuân thủ:'],
+        bullets: [
+          'Năng lực máy móc và nhân sự theo ngành hàng mục tiêu',
+          'Khả năng vận hành theo SOP và QC gate',
+          'Cam kết chuẩn dữ liệu và minh bạch báo cáo',
+        ],
+      },
+      {
+        title: 'Quy trình onboarding',
+        paragraphs: ['Quy trình triển khai gồm bốn bước chính:'],
+        bullets: [
+          'Sơ tuyển hồ sơ và xếp hạng mức phù hợp',
+          'Khảo sát hiện trường và đánh giá năng lực thực',
+          'Chạy pilot để kiểm chứng chất lượng và lead time',
+          'Phê duyệt tích hợp và triển khai đơn hàng',
+        ],
+      },
+    ],
+  },
+  'wood-supply': {
+    title: 'Nguồn cung gỗ',
+    kicker: 'WOOD SUPPLY',
+    lead:
+      'Nguồn cung gỗ được quản trị theo tiêu chí ổn định, đồng nhất và truy xuất được để bảo đảm đầu vào cho sản xuất xuất khẩu.',
+    keyline: 'Nguồn cung ổn định tạo nên năng lực giao hàng bền vững.',
+    panels: [
+      {
+        title: 'Chiến lược nguồn cung',
+        paragraphs: ['ANSLIFE duy trì cơ cấu nhà cung cấp theo nhiều lớp để giảm rủi ro thiếu hụt.'],
+        bullets: [
+          'Nhà cung cấp chiến lược theo nhóm vật liệu',
+          'Nhà cung cấp dự phòng theo mùa vụ',
+          'Kế hoạch mua theo forecast đơn hàng',
+        ],
+      },
+      {
+        title: 'Kiểm soát chất lượng nguồn gỗ',
+        paragraphs: ['Mỗi lô gỗ đều được đánh giá trước khi nhập kho sản xuất.'],
+        bullets: [
+          'Độ ẩm, độ ổn định và dung sai quy cách',
+          'Đặc tính bề mặt theo yêu cầu thành phẩm',
+          'Mã hóa lô để phục vụ truy xuất khi cần',
+        ],
+      },
+    ],
+  },
+  'supply-system': {
+    title: 'Hệ thống cung ứng',
+    kicker: 'SUPPLY SYSTEM',
+    lead:
+      'Hệ thống cung ứng của ANSLIFE kết nối kế hoạch mua hàng, tồn kho và tiến độ sản xuất để đảm bảo dòng vật tư thông suốt.',
+    keyline: 'Đúng vật tư, đúng thời điểm, đúng tiêu chuẩn.',
+    panels: [
+      {
+        title: 'Cấu trúc điều phối vật tư',
+        paragraphs: ['Vật tư được điều phối theo cấu trúc rolling plan để bám sát tiến độ đơn hàng.'],
+        bullets: [
+          'Dự báo nhu cầu theo tuần và theo mã hàng',
+          'Kiểm soát mức tồn kho an toàn',
+          'Ưu tiên cấp phát theo kế hoạch giao hàng',
+        ],
+      },
+      {
+        title: 'Hiệu quả vận hành',
+        paragraphs: ['Hệ thống cung ứng tốt giúp giảm chi phí ẩn trong sản xuất.'],
+        bullets: [
+          'Giảm thiếu hụt vật tư tại line',
+          'Giảm thời gian chờ giữa công đoạn',
+          'Tăng độ ổn định lead time toàn chuỗi',
+        ],
+      },
+    ],
+  },
+  'material-control': {
+    title: 'Kiểm soát nguyên liệu',
+    kicker: 'MATERIAL CONTROL',
+    lead:
+      'Kiểm soát nguyên liệu được tổ chức như lớp phòng ngừa lỗi đầu tiên, bảo vệ toàn bộ chuỗi sản xuất phía sau.',
+    keyline: 'Chặn lỗi từ gốc để giảm rework và rủi ro giao hàng.',
+    panels: [
+      {
+        title: 'Bộ tiêu chí kiểm soát',
+        paragraphs: ['Nguyên liệu đầu vào được kiểm theo bộ tiêu chí chuẩn hóa của hệ thống.'],
+        bullets: [
+          'Quy cách, độ ẩm và dung sai',
+          'Đặc tính vật lý và mức độ phù hợp công đoạn',
+          'Trạng thái bề mặt và mức độ ổn định',
+        ],
+      },
+      {
+        title: 'Quản trị dữ liệu nguyên liệu',
+        paragraphs: ['Mỗi lô được gắn mã và lưu hồ sơ để phục vụ truy xuất toàn vòng đời.'],
+        bullets: [
+          'Phân loại đạt / chưa đạt theo checklist',
+          'Cách ly lô không phù hợp',
+          'Ghi nhận CAPA cho nguồn lỗi lặp lại',
+        ],
+      },
+    ],
+  },
+  'equipment-technology': {
+    title: 'Thiết bị & công nghệ',
+    kicker: 'EQUIPMENT AND TECHNOLOGY',
+    lead:
+      'ANSLIFE đầu tư thiết bị và công nghệ theo định hướng tăng độ chính xác, độ lặp lại và năng lực mở rộng sản xuất.',
+    keyline: 'Công nghệ phục vụ độ tin cậy giao hàng, không chỉ phục vụ tốc độ.',
+    panels: [
+      {
+        title: 'Nguyên tắc đầu tư công nghệ',
+        paragraphs: ['Mỗi quyết định đầu tư đều bám theo yêu cầu kỹ thuật và năng lực thương mại.'],
+        bullets: [
+          'Đáp ứng dung sai và yêu cầu hoàn thiện',
+          'Ổn định thông số giữa các ca sản xuất',
+          'Dễ chuẩn hóa và nhân rộng giữa các line',
+        ],
+      },
+      {
+        title: 'Vận hành công nghệ theo dữ liệu',
+        paragraphs: ['Thiết bị chỉ tạo giá trị khi gắn với cơ chế theo dõi và cải tiến liên tục.'],
+        bullets: [
+          'Theo dõi hiệu suất máy theo ca',
+          'Phân tích downtime và nguyên nhân chính',
+          'Tối ưu tham số để giảm biến động chất lượng',
+        ],
+      },
+    ],
+  },
+  'production-machinery': {
+    title: 'Máy móc sản xuất',
+    kicker: 'PRODUCTION MACHINERY',
+    lead:
+      'Hệ thống máy móc được bố trí theo cụm công đoạn để tối ưu dòng chảy sản xuất và giảm thao tác trung gian.',
+    keyline: 'Tổ chức máy theo luồng công đoạn để tăng năng suất thực.',
+    panels: [
+      {
+        title: 'Phân cụm máy móc',
+        paragraphs: ['Máy móc được quản trị theo vai trò trong chuỗi sản xuất.'],
+        bullets: [
+          'Cụm gia công chính xác',
+          'Cụm lắp ráp và kiểm kết cấu',
+          'Cụm hoàn thiện và đóng gói',
+        ],
+      },
+      {
+        title: 'Bảo trì và độ sẵn sàng',
+        paragraphs: ['Độ tin cậy máy móc được kiểm soát bằng chương trình bảo trì định kỳ.'],
+        bullets: [
+          'Bảo trì phòng ngừa theo lịch',
+          'Theo dõi chỉ số downtime và MTBF',
+          'Hiệu chuẩn định kỳ cho máy trọng yếu',
+        ],
+      },
+    ],
+  },
+  'processing-technology': {
+    title: 'Công nghệ gia công',
+    kicker: 'PROCESSING TECHNOLOGY',
+    lead:
+      'Công nghệ gia công của ANSLIFE tập trung vào kiểm soát sai số, tính đồng nhất và khả năng tái lập ở quy mô lớn.',
+    keyline: 'Gia công chính xác để giảm lỗi truyền công đoạn.',
+    panels: [
+      {
+        title: 'Công nghệ kiểm soát sai số',
+        paragraphs: ['Sai số công đoạn được giảm bằng kết hợp công nghệ và quy trình.'],
+        bullets: [
+          'Chuẩn hóa setup theo mã hàng',
+          'Khóa tham số trọng yếu theo vật liệu',
+          'Kiểm tra first-piece đầu ca',
+        ],
+      },
+      {
+        title: 'Tối ưu hiệu quả line',
+        paragraphs: ['Đội kỹ thuật theo dõi dữ liệu công đoạn để cải tiến chu kỳ sản xuất.'],
+        bullets: [
+          'Giảm thời gian đổi mã',
+          'Giảm tỷ lệ rework ở công đoạn sau',
+          'Tăng năng suất ổn định theo ca',
+        ],
+      },
+    ],
+  },
+  'sample-development': {
+    title: 'Phát triển mẫu',
+    kicker: 'SAMPLE DEVELOPMENT',
+    lead:
+      'Phát triển mẫu được quản trị theo stage-gate để rút ngắn vòng lặp thử - sửa và tăng tỷ lệ chuyển sang sản xuất hàng loạt.',
+    keyline: 'Mẫu tốt là mẫu có thể sản xuất ổn định ở quy mô thương mại.',
+    panels: [
+      {
+        title: 'Khung triển khai mẫu',
+        paragraphs: ['Mỗi dự án mẫu đi qua chuỗi bước xác thực kỹ thuật rõ ràng.'],
+        bullets: [
+          'Tiếp nhận brief và mục tiêu thị trường',
+          'Đánh giá thiết kế theo DFM',
+          'Dựng mẫu và kiểm thử chức năng',
+          'Pilot công đoạn trước khi release',
+        ],
+      },
+      {
+        title: 'Đầu ra bàn giao sản xuất',
+        paragraphs: ['Sau khi chốt mẫu, bộ tài liệu được chuẩn hóa để bàn giao line.'],
+        bullets: [
+          'Bản vẽ kỹ thuật và BOM đã xác nhận',
+          'Checklist QC theo điểm kiểm trọng yếu',
+          'Tiêu chuẩn đóng gói theo thị trường',
+        ],
+      },
+    ],
+  },
+  processing: {
+    title: 'Gia công',
+    kicker: 'PROCESSING',
+    lead:
+      'Công đoạn gia công được tổ chức theo chuẩn dung sai và quy trình kiểm soát tại nguồn để bảo đảm độ chính xác đầu ra.',
+    keyline: 'Kiểm soát ngay tại line để ngăn lỗi lan rộng.',
+    panels: [
+      {
+        title: 'Chuẩn vận hành công đoạn',
+        paragraphs: ['Đội vận hành thực thi theo SOP và tham số đã chuẩn hóa.'],
+        bullets: [
+          'Setup máy theo từng mã hàng',
+          'Kiểm first-piece trước khi chạy sản lượng',
+          'Theo dõi độ ổn định theo tần suất định nghĩa',
+        ],
+      },
+      {
+        title: 'Kiểm soát chất lượng gia công',
+        paragraphs: ['QC phối hợp trực tiếp tại hiện trường để xử lý sai lệch sớm.'],
+        bullets: [
+          'Đo kích thước tại các điểm quan trọng',
+          'Ghi nhận lỗi theo mã nguyên nhân',
+          'Đóng hành động phòng ngừa trong cùng chu kỳ',
+        ],
+      },
+    ],
+  },
+  assembly: {
+    title: 'Lắp ráp',
+    kicker: 'ASSEMBLY',
+    lead:
+      'Lắp ráp là công đoạn quyết định độ vững kết cấu và trải nghiệm sử dụng của sản phẩm trước khi chuyển sang hoàn thiện.',
+    keyline: 'Lắp đúng chuẩn để khóa chất lượng kết cấu từ sớm.',
+    panels: [
+      {
+        title: 'Tiêu chuẩn lắp ráp',
+        paragraphs: ['Mọi thao tác lắp ráp được kiểm theo chuẩn kỹ thuật đã duyệt.'],
+        bullets: [
+          'Độ khít và độ vuông góc kết cấu',
+          'Lực siết và vị trí liên kết',
+          'Độ ổn định khi thử tải sử dụng',
+        ],
+      },
+      {
+        title: 'Cơ chế chuyển giao công đoạn',
+        paragraphs: ['Chỉ sản phẩm đạt điều kiện lắp ráp mới được chuyển sang hoàn thiện.'],
+        bullets: [
+          'Checklist bắt buộc trước transfer',
+          'Ghi nhận lỗi để cập nhật SOP',
+          'Truy xuất theo mã lô công đoạn',
+        ],
+      },
+    ],
+  },
+  finishing: {
+    title: 'Sơn hoàn thiện',
+    kicker: 'FINISHING',
+    lead:
+      'Công đoạn hoàn thiện bề mặt được kiểm soát theo chuẩn màu, độ phủ và độ bền để đảm bảo tính đồng nhất giữa các lô.',
+    keyline: 'Ngoại quan ổn định là kết quả của quy trình, không phải may mắn.',
+    panels: [
+      {
+        title: 'Kiểm soát quy trình sơn',
+        paragraphs: ['Các thông số sơn được quản trị theo từng mã hàng và từng lớp phủ.'],
+        bullets: [
+          'Chuẩn bị bề mặt và xử lý nền',
+          'Quản trị độ dày lớp phủ',
+          'Ổn định màu theo mẫu duyệt',
+        ],
+      },
+      {
+        title: 'Nghiệm thu hoàn thiện',
+        paragraphs: ['Sản phẩm được kiểm ngoại quan trước khi chuyển đóng gói.'],
+        bullets: [
+          'Độ đồng đều bề mặt',
+          'Khả năng chống trầy ở mức yêu cầu',
+          'Màu sắc đúng theo mẫu chốt',
+        ],
+      },
+    ],
+  },
+  packaging: {
+    title: 'Đóng gói',
+    kicker: 'PACKAGING',
+    lead:
+      'Đóng gói được thiết kế theo tiêu chuẩn vận chuyển quốc tế nhằm giảm hư hại và đảm bảo trải nghiệm nhận hàng của khách.',
+    keyline: 'Đóng gói là một phần của chất lượng giao hàng.',
+    panels: [
+      {
+        title: 'Tiêu chuẩn đóng gói xuất khẩu',
+        paragraphs: ['Mỗi nhóm sản phẩm có cấu trúc đóng gói riêng theo đặc tính vận chuyển.'],
+        bullets: [
+          'Vật liệu bảo vệ theo mức độ rủi ro va đập',
+          'Nhãn carton, mã kiện và hướng dẫn xử lý',
+          'Kiểm đếm và đối chiếu packing list',
+        ],
+      },
+      {
+        title: 'Kiểm soát trước bàn giao logistics',
+        paragraphs: ['Trước khi xuất kho, kiện hàng được kiểm tra theo checklist cuối.'],
+        bullets: [
+          'Tình trạng kiện và niêm phong',
+          'Đủ bộ chứng từ theo đơn hàng',
+          'Khớp số lượng giữa hệ thống và thực tế',
+        ],
+      },
+    ],
+  },
+  'production-standards': {
+    title: 'Tiêu chuẩn sản xuất',
+    kicker: 'PRODUCTION STANDARDS',
+    lead:
+      'Bộ tiêu chuẩn sản xuất được áp dụng xuyên suốt từ nguyên liệu, công đoạn, nghiệm thu đến đóng gói và giao hàng.',
+    keyline: 'Một chuẩn chung cho toàn hệ thống sản xuất.',
+    panels: [
+      {
+        title: 'Cấu trúc tiêu chuẩn',
+        paragraphs: ['Tiêu chuẩn được phân lớp để dễ triển khai và dễ kiểm soát.'],
+        bullets: [
+          'Tiêu chuẩn vật tư và đầu vào',
+          'Tiêu chuẩn thao tác theo công đoạn',
+          'Tiêu chuẩn nghiệm thu và hồ sơ',
+        ],
+      },
+      {
+        title: 'Cơ chế cập nhật',
+        paragraphs: ['Bộ tiêu chuẩn được cập nhật định kỳ dựa trên dữ liệu vận hành thực tế.'],
+        bullets: [
+          'Phản hồi từ QC và khách hàng',
+          'Dữ liệu lỗi và CAPA theo tháng',
+          'Yêu cầu mới từ thị trường xuất khẩu',
+        ],
+      },
+    ],
+  },
+  'ecosystem-certifications': {
+    title: 'Chứng chỉ trong hệ sinh thái',
+    kicker: 'ECOSYSTEM CERTIFICATIONS',
+    lead:
+      'ANSLIFE quản trị chứng chỉ theo hướng chủ động, đảm bảo hồ sơ tuân thủ luôn sẵn sàng khi triển khai đơn hàng quốc tế.',
+    keyline: 'Tuân thủ rõ ràng để mở rộng thị trường bền vững.',
+    panels: [
+      {
+        title: 'Quản trị hồ sơ chứng chỉ',
+        paragraphs: ['Hồ sơ được liên kết với mã lô và mã đơn hàng để dễ truy xuất khi audit.'],
+        bullets: [
+          'Phân loại theo thị trường và yêu cầu khách hàng',
+          'Theo dõi hiệu lực và lịch gia hạn',
+          'Kiểm tra chéo trước khi phát hành',
+        ],
+      },
+      {
+        title: 'Phối hợp trong hệ sinh thái',
+        paragraphs: ['Trung tâm điều phối làm việc cùng nhà máy và nhà cung ứng để duy trì chuẩn tuân thủ.'],
+        bullets: [
+          'Đồng bộ tài liệu giữa các bên',
+          'Rà soát định kỳ theo kế hoạch nội bộ',
+          'Đóng hành động khắc phục khi có điểm chưa phù hợp',
+        ],
+      },
+    ],
+  },
+  'production-ecosystem-scale': {
+    title: 'Quy mô hệ sinh thái sản xuất',
+    kicker: 'ECOSYSTEM SCALE',
+    lead:
+      'Quy mô hệ sinh thái được xây để tăng năng lực phục vụ đa thị trường mà vẫn giữ cùng hệ chuẩn kỹ thuật và chất lượng.',
+    keyline: 'Quy mô lớn chỉ có ý nghĩa khi vẫn kiểm soát được.',
+    panels: [
+      {
+        title: 'Mô hình mở rộng quy mô',
+        paragraphs: ['ANSLIFE mở rộng theo mô hình hub-and-network.'],
+        bullets: [
+          'Hub trung tâm kiểm soát kỹ thuật và QC',
+          'Network thực thi theo năng lực ngành hàng',
+          'Data layer kết nối tiến độ toàn hệ thống',
+        ],
+      },
+      {
+        title: 'Năng lực đáp ứng thị trường',
+        paragraphs: ['Quy mô hệ sinh thái hỗ trợ triển khai đơn hàng theo nhiều cấp độ công suất.'],
+        bullets: [
+          'Đơn hàng lặp lại với lead time ổn định',
+          'Đơn hàng mới cần pilot nhanh',
+          'Đơn hàng cao điểm theo mùa vụ',
+        ],
+      },
+    ],
+  },
+  'production-capacity': {
+    title: 'Công suất sản xuất',
+    kicker: 'PRODUCTION CAPACITY',
+    lead:
+      'Công suất được quản trị theo line, theo công đoạn và theo mức độ ưu tiên đơn hàng để tối ưu tiến độ giao hàng.',
+    keyline: 'Công suất thực phải đi cùng khả năng giao hàng thực.',
+    panels: [
+      {
+        title: 'Quản trị công suất theo dữ liệu',
+        paragraphs: ['Năng lực sản xuất được cập nhật theo chu kỳ để đảm bảo kế hoạch sát thực tế.'],
+        bullets: [
+          'Theo dõi sản lượng theo ca',
+          'Đo tải line và điểm nghẽn',
+          'Điều chỉnh phân bổ theo mức ưu tiên',
+        ],
+      },
+      {
+        title: 'Cam kết năng lực',
+        paragraphs: ['ANSLIFE duy trì cơ chế dự phòng để ổn định tiến độ đơn hàng.'],
+        bullets: [
+          'Bổ sung công suất qua mạng lưới vệ tinh',
+          'Kế hoạch tăng ca có kiểm soát',
+          'Rà soát weekly capacity versus demand',
+        ],
+      },
+    ],
+  },
+  'product-development-capability': {
+    title: 'Năng lực phát triển sản phẩm',
+    kicker: 'PRODUCT DEVELOPMENT CAPABILITY',
+    lead:
+      'Năng lực phát triển sản phẩm của ANSLIFE kết nối chặt giữa R&D, kỹ thuật, QC và sản xuất để giảm rủi ro khi scale.',
+    keyline: 'Phát triển sản phẩm theo tư duy triển khai thương mại thực tế.',
+    panels: [
+      {
+        title: 'Năng lực từ ý tưởng đến mẫu',
+        paragraphs: ['Đội ngũ phát triển xử lý linh hoạt nhiều dạng đầu vào từ khách hàng.'],
+        bullets: [
+          'Brief ý tưởng, bản vẽ, hoặc mẫu tham chiếu',
+          'Đánh giá DFM/feasibility theo line sản xuất',
+          'Đề xuất tối ưu kết cấu và vật liệu',
+        ],
+      },
+      {
+        title: 'Năng lực chuyển mẫu sang sản xuất',
+        paragraphs: ['Mục tiêu là rút ngắn khoảng cách giữa mẫu duyệt và sản xuất đại trà.'],
+        bullets: [
+          'Pilot validation theo công đoạn',
+          'Chuẩn hóa tech pack trước release',
+          'Đo tỷ lệ pass ngay vòng đầu để cải tiến',
+        ],
+      },
+    ],
+  },
+  'order-handling-capability': {
+    title: 'Khả năng xử lý đơn hàng',
+    kicker: 'ORDER HANDLING CAPABILITY',
+    lead:
+      'ANSLIFE chuẩn hóa quy trình xử lý đơn hàng theo từng cột mốc để khách hàng theo dõi minh bạch từ đầu đến cuối.',
+    keyline: 'Đơn hàng được quản trị như một chuỗi dữ liệu có kiểm soát.',
+    panels: [
+      {
+        title: 'Luồng xử lý chuẩn',
+        paragraphs: ['Mỗi đơn hàng đi qua chuỗi xử lý cố định trước khi giao hàng.'],
+        bullets: [
+          'Xác nhận kỹ thuật và BOM',
+          'Lập kế hoạch vật tư và năng lực',
+          'Theo dõi tiến độ, QC và shipment readiness',
+        ],
+      },
+      {
+        title: 'Năng lực quản trị rủi ro',
+        paragraphs: ['Đội điều phối theo dõi các điểm rủi ro chính để can thiệp sớm.'],
+        bullets: [
+          'Rủi ro vật tư và công suất',
+          'Rủi ro chất lượng theo công đoạn',
+          'Rủi ro tiến độ theo mốc giao hàng',
+        ],
+      },
+    ],
+  },
+  'custom-production-oem-odm': {
+    title: 'Sản xuất theo yêu cầu (OEM / ODM)',
+    kicker: 'CUSTOM PRODUCTION',
+    lead:
+      'ANSLIFE triển khai song song OEM và ODM, phù hợp cả khách hàng có thiết kế sẵn lẫn khách hàng cần đồng phát triển sản phẩm.',
+    keyline: 'Linh hoạt mô hình hợp tác nhưng giữ chuẩn vận hành thống nhất.',
+    panels: [
+      {
+        title: 'Mô hình OEM',
+        paragraphs: ['Với OEM, ANSLIFE triển khai theo bản vẽ và tiêu chuẩn khách hàng đã chốt.'],
+        bullets: [
+          'Bảo mật thiết kế và thông số kỹ thuật',
+          'Kiểm soát chất lượng theo spec khách hàng',
+          'Tối ưu sản xuất để giữ lead time ổn định',
+        ],
+      },
+      {
+        title: 'Mô hình ODM',
+        paragraphs: ['Với ODM, đội ngũ ANSLIFE cùng khách hàng đồng phát triển giải pháp sản phẩm.'],
+        bullets: [
+          'Phát triển concept theo phân khúc thị trường',
+          'Tối ưu thiết kế theo khả năng sản xuất',
+          'Đồng bộ chi phí, chất lượng và tính thương mại',
+        ],
+      },
+    ],
+  },
+  'export-markets': {
+    title: 'Thị trường xuất khẩu',
+    kicker: 'EXPORT MARKETS',
+    lead:
+      'ANSLIFE phục vụ đa thị trường xuất khẩu với hệ tiêu chuẩn vận hành được điều chỉnh theo yêu cầu từng khu vực.',
+    keyline: 'Một hệ thống sản xuất, nhiều chuẩn thị trường.',
+    panels: [
+      {
+        title: 'Năng lực phục vụ thị trường',
+        paragraphs: ['Hệ thống hiện tại tập trung vào các thị trường xuất khẩu trọng điểm.'],
+        bullets: ['Hoa Kỳ', 'Nhật Bản', 'Hàn Quốc', 'Châu Âu'],
+      },
+      {
+        title: 'Cơ chế đáp ứng yêu cầu thị trường',
+        paragraphs: ['Mỗi thị trường được quản trị bằng bộ yêu cầu kỹ thuật và hồ sơ riêng.'],
+        bullets: [
+          'Chuẩn chất lượng và ngoại quan theo phân khúc',
+          'Chuẩn đóng gói, nhãn và chứng từ giao hàng',
+          'Chuẩn vận hành thương mại và logistics',
+        ],
+        note: 'Đội vận hành cập nhật định kỳ để bảo đảm khả năng đáp ứng bền vững khi thị trường thay đổi.',
+      },
+    ],
+  },
+};
+
+type ManufacturingSectionCategory = 'system' | 'supply' | 'process' | 'market';
+
+function getManufacturingSectionCategory(sectionId: string): ManufacturingSectionCategory {
+  const supplyIds = new Set(['raw-material-zone', 'wood-supply', 'supply-system', 'material-control']);
+  const processIds = new Set([
+    'manufacturing-process',
+    'equipment-technology',
+    'production-machinery',
+    'processing-technology',
+    'sample-development',
+    'processing',
+    'assembly',
+    'finishing',
+    'packaging',
+  ]);
+  const marketIds = new Set([
+    'standards-certificates',
+    'production-standards',
+    'ecosystem-certifications',
+    'product-development-capability',
+    'order-handling-capability',
+    'custom-production-oem-odm',
+    'export-markets',
+  ]);
+
+  if (supplyIds.has(sectionId)) {
+    return 'supply';
+  }
+  if (processIds.has(sectionId)) {
+    return 'process';
+  }
+  if (marketIds.has(sectionId)) {
+    return 'market';
+  }
+
+  return 'system';
+}
+
+function getManufacturingDeepPanels(
+  sectionId: string,
+  sectionTitle: string,
+): StructuredPanelContent[] {
+  const category = getManufacturingSectionCategory(sectionId);
+
+  if (category === 'supply') {
+    return [
+      {
+        title: 'Chu trình vận hành chuỗi cung ứng',
+        paragraphs: ['Chuỗi cung ứng cho mục "' + sectionTitle + '" được vận hành theo chu kỳ kiểm soát khép kín.'],
+        bullets: [
+          'Forecast nhu cầu vật tư theo rolling plan 4-12 tuần',
+          'Đối chiếu năng lực cung ứng với kế hoạch đơn hàng',
+          'Theo dõi độ lệch cung ứng và kích hoạt phương án dự phòng',
+          'Đóng báo cáo tuần để tối ưu tồn kho và lead time',
+        ],
+        note: 'Vận hành theo chu kỳ giúp giảm thiếu hụt đầu vào và hạn chế gián đoạn line sản xuất.',
+      },
+      {
+        title: 'KPI trọng yếu cần đạt',
+        paragraphs: ['ANSLIFE theo dõi nhóm chỉ số định lượng để duy trì ổn định chuỗi cung ứng.'],
+        bullets: [
+          'Supplier OTD (On-time Delivery) theo nhà cung cấp',
+          'Material Pass Rate tại bước kiểm tra đầu vào',
+          'Inventory Health theo từng nhóm vật tư chiến lược',
+          'Stock-out Frequency tại các công đoạn trọng yếu',
+        ],
+      },
+    ];
+  }
+
+  if (category === 'process') {
+    return [
+      {
+        title: 'Khung thực thi tại hiện trường',
+        paragraphs: ['Mỗi công đoạn trong "' + sectionTitle + '" đều được triển khai theo khung thực thi chuẩn.'],
+        bullets: [
+          'Brief đầu ca: mục tiêu sản lượng, chất lượng, điểm rủi ro',
+          'First-piece validation trước khi chạy sản lượng',
+          'In-line control theo tần suất đã định nghĩa',
+          'End-of-shift review để khóa hành động cải tiến',
+        ],
+        note: 'Cách vận hành này giúp giảm sai lệch giữa các ca và giữa các line.',
+      },
+      {
+        title: 'Nhóm chỉ số điều hành công đoạn',
+        paragraphs: ['Hiệu quả công đoạn được theo dõi bằng nhóm KPI thống nhất toàn hệ thống.'],
+        bullets: [
+          'First Pass Yield theo line và theo mã hàng',
+          'Rework Rate theo từng công đoạn',
+          'Cycle Time so với chuẩn kế hoạch',
+          'Downtime và nguyên nhân gốc theo ca',
+        ],
+      },
+    ];
+  }
+
+  if (category === 'market') {
+    return [
+      {
+        title: 'Chuẩn triển khai theo thị trường',
+        paragraphs: ['Nội dung "' + sectionTitle + '" được gắn với yêu cầu thương mại và kỹ thuật của từng khu vực.'],
+        bullets: [
+          'Chốt tiêu chuẩn kỹ thuật theo market profile',
+          'Đồng bộ hồ sơ vận hành - chứng từ - truy xuất',
+          'Kiểm tra readiness trước mốc giao hàng quốc tế',
+          'Cập nhật định kỳ theo yêu cầu khách hàng chiến lược',
+        ],
+      },
+      {
+        title: 'Giá trị mang lại cho khách hàng quốc tế',
+        paragraphs: ['Cách triển khai theo hệ thống tạo lợi thế rõ ràng trong hợp tác dài hạn.'],
+        bullets: [
+          'Giảm rủi ro sai lệch tiêu chuẩn giữa các lô',
+          'Tăng tính minh bạch dữ liệu đơn hàng',
+          'Rút ngắn vòng phản hồi khi có phát sinh',
+          'Giữ độ ổn định khi mở rộng sản lượng theo mùa vụ',
+        ],
+      },
+    ];
+  }
+
+  return [
+    {
+      title: 'Cơ chế điều phối vận hành',
+      paragraphs: ['Phần "' + sectionTitle + '" được vận hành theo cơ chế điều phối đa lớp của ANSLIFE.'],
+      bullets: [
+        'Kỹ thuật chốt chuẩn trước khi thực thi',
+        'Kế hoạch phân bổ năng lực theo ưu tiên đơn hàng',
+        'QC và data kiểm soát xuyên suốt theo checkpoint',
+        'Review tuần để đóng CAPA và tối ưu hệ thống',
+      ],
+    },
+    {
+      title: 'KPI hệ thống theo dõi',
+      paragraphs: ['Đội điều hành bám sát KPI theo chu kỳ để bảo đảm hiệu quả triển khai thực tế.'],
+      bullets: [
+        'OTIF theo đơn hàng và theo thị trường',
+        'Tỷ lệ lỗi trọng yếu theo công đoạn',
+        'Lead time thực tế so với kế hoạch cam kết',
+        'Tỷ lệ đóng hành động cải tiến đúng hạn',
+      ],
+    },
+  ];
+}
+
+function getManufacturingDeepBlocks(
+  sectionId: string,
+  sectionTitle: string,
+): StructuredBlockContent[] {
+  const category = getManufacturingSectionCategory(sectionId);
+
+  if (category === 'supply') {
+    return [
+      {
+        title: 'Giá trị vận hành',
+        paragraphs: ['Với "' + sectionTitle + '", ANSLIFE tập trung tạo lợi thế bằng độ ổn định đầu vào thay vì phản ứng thụ động.'],
+        bullets: [
+          'Tăng độ chắc chắn của kế hoạch sản xuất',
+          'Giảm chi phí phát sinh do thiếu hụt vật tư',
+          'Giữ chất lượng đầu vào đồng đều theo lô',
+        ],
+      },
+      {
+        title: 'Cam kết hệ sinh thái',
+        paragraphs: ['ANSLIFE duy trì cơ chế phối hợp liên phòng ban để bảo vệ tính liên tục của chuỗi cung ứng.'],
+        bullets: [
+          'Mua hàng, kho, QC và sản xuất dùng cùng một nguồn dữ liệu',
+          'Rà soát rủi ro nhà cung cấp theo chu kỳ',
+          'Kích hoạt phương án dự phòng trước khi ảnh hưởng giao hàng',
+        ],
+      },
+    ];
+  }
+
+  if (category === 'process') {
+    return [
+      {
+        title: 'Giá trị cho khách hàng',
+        paragraphs: ['Chuẩn hóa "' + sectionTitle + '" giúp khách hàng nhận được chất lượng ổn định ở quy mô thương mại.'],
+        bullets: [
+          'Giảm biến động giữa mẫu duyệt và sản phẩm giao',
+          'Rút ngắn thời gian xử lý lỗi tái diễn',
+          'Tăng độ tin cậy của tiến độ bàn giao',
+        ],
+      },
+      {
+        title: 'Định hướng cải tiến liên tục',
+        paragraphs: ['ANSLIFE xem mỗi công đoạn là một hệ thống có thể đo lường và cải tiến.'],
+        bullets: [
+          'Cập nhật SOP dựa trên dữ liệu thực thi',
+          'Đóng vòng CAPA theo nguyên nhân gốc',
+          'Nâng chuẩn vận hành theo từng quý',
+        ],
+      },
+    ];
+  }
+
+  if (category === 'market') {
+    return [
+      {
+        title: 'Giá trị thương mại',
+        paragraphs: ['Nội dung "' + sectionTitle + '" giúp ANSLIFE đồng bộ sản xuất với yêu cầu thương mại quốc tế.'],
+        bullets: [
+          'Rõ tiêu chuẩn, rõ chứng từ, rõ trách nhiệm',
+          'Giảm tranh chấp dữ liệu trong quá trình giao dịch',
+          'Tăng năng lực phục vụ khách hàng dài hạn',
+        ],
+      },
+      {
+        title: 'Năng lực mở rộng',
+        paragraphs: ['Cơ chế vận hành theo chuẩn giúp mở rộng thị trường mà không đánh đổi chất lượng thực thi.'],
+        bullets: [
+          'Nhân rộng nhanh qua mạng lưới nhà máy',
+          'Đồng bộ chuẩn tuân thủ giữa các bên',
+          'Duy trì minh bạch dữ liệu khi tăng sản lượng',
+        ],
+      },
+    ];
+  }
+
+  return [
+    {
+      title: 'Giá trị hệ thống',
+      paragraphs: ['Phần "' + sectionTitle + '" được thiết kế để phục vụ mục tiêu tăng trưởng có kiểm soát của ANSLIFE.'],
+      bullets: [
+        'Mở rộng năng lực thực thi theo kế hoạch',
+        'Giữ chuẩn chất lượng trên toàn hệ sinh thái',
+        'Tăng mức minh bạch trong toàn bộ chuỗi vận hành',
+      ],
+    },
+    {
+      title: 'Cam kết triển khai',
+      paragraphs: ['ANSLIFE cam kết duy trì cơ chế quản trị dựa trên dữ liệu thực tế, không dựa vào cảm tính.'],
+      bullets: [
+        'Đo lường định kỳ theo KPI trọng yếu',
+        'Can thiệp sớm khi phát hiện rủi ro',
+        'Duy trì cải tiến liên tục theo chu kỳ',
+      ],
+    },
+  ];
+}
+
+function enrichManufacturingSectionContent(
+  sectionId: string,
+  section: StructuredSectionContent,
+): StructuredSectionContent {
+  const enrichedPanels = [...section.panels, ...getManufacturingDeepPanels(sectionId, section.title)];
+  const enrichedBlocks = [...(section.blocks ?? []), ...getManufacturingDeepBlocks(sectionId, section.title)];
+
+  return {
+    ...section,
+    panels: enrichedPanels,
+    blocks: enrichedBlocks,
+  };
+}
+
+const AI_MANUFACTURING_SECTION_CONTENT: Record<string, string> = Object.fromEntries(
+  Object.entries(MANUFACTURING_SECTION_TEMPLATES).map(([sectionId, section]) => {
+    const enrichedSection = enrichManufacturingSectionContent(sectionId, section);
+    return [sectionId, buildStructuredCompanySectionHtml(sectionId, enrichedSection)];
+  }),
+) as Record<string, string>;
+
 export function getAIFallbackPageHtml(slug: string): string | null {
   return AI_PAGE_CONTENT[slug] ?? null;
 }
@@ -3507,7 +4470,10 @@ export function getAIFallbackSectionHtml(
         sectionId === 'vision-mission' ||
         sectionId === 'core-values' ||
         sectionId === 'production-philosophy' ||
-        sectionId === 'organization')
+        sectionId === 'organization' ||
+        sectionId === 'team' ||
+        sectionId === 'anslife-ecosystem' ||
+        sectionId === 'development-history')
     );
 
   const translatedSectionOverride =
@@ -3524,6 +4490,22 @@ export function getAIFallbackSectionHtml(
 `.trim();
 
     return composedTranslatedHtml;
+  }
+
+  const manufacturingSectionOverride =
+    pageSlug === 'manufacturing-ecosystem'
+      ? AI_MANUFACTURING_SECTION_CONTENT[sectionId] ?? null
+      : null;
+  if (manufacturingSectionOverride) {
+    const composedManufacturingHtml = `
+<div class="ai-content">
+  ${shouldRenderPageBannerAndIntro ? bannerMatch?.[0] ?? '' : ''}
+  ${shouldRenderPageBannerAndIntro ? introMatch?.[0] ?? '' : ''}
+  ${manufacturingSectionOverride}
+</div>
+`.trim();
+
+    return composedManufacturingHtml;
   }
 
   const escapedSectionId = escapeRegExp(sectionId);
