@@ -9,7 +9,7 @@ import {
 } from 'react';
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { createPortal } from 'react-dom';
-import { TOP_MENU, type MenuChildItem } from '../../config/site';
+import { STATIC_PAGE_MAP, TOP_MENU, type MenuChildItem } from '../../config/site';
 import {
   getStoredLanguage,
   isLanguageCode,
@@ -55,13 +55,14 @@ const additionalLanguageOptions = WORLD_LANGUAGE_OPTIONS.filter(
 
 interface HeaderSearchSuggestion {
   id: string;
-  kind: 'product' | 'project';
+  kind: 'product' | 'project' | 'navigation' | 'section';
   title: string;
   path: string;
   searchKey: string;
 }
 
 const PRODUCT_MENU_PATH = '/products';
+const HEADER_PRIMARY_MENU_COUNT = 6;
 const HEADER_HOTLINE_NUMBER = '+84 901.827.555';
 const HEADER_HOTLINE_TEL = '+84901827555';
 const HEADER_SEGMENT_ITEMS = [
@@ -287,10 +288,42 @@ const DEFAULT_SITE_BG_VIDEO_POSTER = '/assets/videos/home-bg-poster.jpg';
 function normalizeSearchText(value: string): string {
   return value
     .normalize('NFD')
+    .replace(/[đĐ]/g, 'd')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+interface MenuSearchNode {
+  label: string;
+  path: string;
+  trail: string[];
+}
+
+function flattenMenuItemsForSearch(
+  items: MenuChildItem[],
+  parentTrail: string[] = [],
+): MenuSearchNode[] {
+  const flattenedItems: MenuSearchNode[] = [];
+
+  for (const item of items) {
+    const label = item.label.trim();
+    const path = item.path.trim();
+    if (!label || !path) {
+      continue;
+    }
+
+    const trail = [...parentTrail, label];
+    flattenedItems.push({ label, path, trail });
+
+    if (item.children && item.children.length > 0) {
+      flattenedItems.push(...flattenMenuItemsForSearch(item.children, trail));
+    }
+  }
+
+  return flattenedItems;
 }
 
 function normalizeCategoryId(
@@ -463,7 +496,7 @@ export default function SiteLayout() {
   );
   const isAboutWideRoute = useMemo(
     () =>
-      /\/about-anslife\/(?:company-intro|vision-mission|core-values|production-philosophy|organization)(?:\/|$)/.test(
+      /\/about-anslife\/(?:company-intro|vision-mission|core-values|production-philosophy|organization|team|anslife-ecosystem|development-history)(?:\/|$)/.test(
         location.pathname,
       ),
     [location.pathname],
@@ -500,6 +533,14 @@ export default function SiteLayout() {
         children: item.children,
       })),
     [topMenuItems],
+  );
+  const desktopPrimaryTopMenuItems = useMemo(
+    () => desktopTopMenuItems.slice(0, HEADER_PRIMARY_MENU_COUNT),
+    [desktopTopMenuItems],
+  );
+  const desktopSecondaryTopMenuItems = useMemo(
+    () => desktopTopMenuItems.slice(HEADER_PRIMARY_MENU_COUNT),
+    [desktopTopMenuItems],
   );
   const mobileUtilityMenuItems = useMemo(
     () =>
@@ -948,6 +989,56 @@ export default function SiteLayout() {
     closeNavigationMenus();
   }
 
+  const structuralSearchSuggestions = useMemo<HeaderSearchSuggestion[]>(() => {
+    const menuSuggestions = flattenMenuItemsForSearch(TOP_MENU as MenuChildItem[]).map(
+      (item, index) => {
+        const translatedTrail = item.trail.map((label) => t(label));
+        const translatedTitle = translatedTrail[translatedTrail.length - 1] ?? t(item.label);
+
+        return {
+          id: `search-navigation-${index}-${item.path}`,
+          kind: 'navigation' as const,
+          title: translatedTitle,
+          path: item.path,
+          searchKey: normalizeSearchText(
+            `${item.label} ${translatedTitle} ${item.trail.join(' ')} ${translatedTrail.join(' ')} ${item.path}`,
+          ),
+        };
+      },
+    );
+
+    const sectionSuggestions = Object.values(STATIC_PAGE_MAP).flatMap((page) => [
+      {
+        id: `search-section-page-${page.slug}`,
+        kind: 'section' as const,
+        title: t(page.title),
+        path: page.path,
+        searchKey: normalizeSearchText(
+          `${page.title} ${t(page.title)} ${page.summary} ${t(page.summary)} ${page.slug} ${page.path}`,
+        ),
+      },
+      ...page.sections.map((section) => ({
+        id: `search-section-${page.slug}-${section.id}`,
+        kind: 'section' as const,
+        title: t(section.title),
+        path: `${page.path}/${section.id}`,
+        searchKey: normalizeSearchText(
+          `${section.title} ${t(section.title)} ${section.description} ${t(section.description)} ${page.title} ${t(page.title)} ${section.id} ${page.slug}`,
+        ),
+      })),
+    ]);
+
+    const uniqueSuggestions = new Map<string, HeaderSearchSuggestion>();
+    for (const item of [...menuSuggestions, ...sectionSuggestions]) {
+      const uniqueKey = `${item.path}__${normalizeSearchText(item.title)}`;
+      if (!uniqueSuggestions.has(uniqueKey)) {
+        uniqueSuggestions.set(uniqueKey, item);
+      }
+    }
+
+    return Array.from(uniqueSuggestions.values());
+  }, [t]);
+
   const loadSearchIndex = useCallback(async () => {
     setSearchLoading(true);
     try {
@@ -984,23 +1075,27 @@ export default function SiteLayout() {
         };
       });
 
-      setSearchIndex([...productSuggestions, ...projectSuggestions]);
+      setSearchIndex([...structuralSearchSuggestions, ...productSuggestions, ...projectSuggestions]);
     } finally {
       setSearchLoading(false);
       setSearchReady(true);
     }
-  }, []);
+  }, [structuralSearchSuggestions]);
 
   const normalizedQuery = useMemo(() => normalizeSearchText(searchQuery), [searchQuery]);
+  const activeSearchIndex = useMemo<HeaderSearchSuggestion[]>(
+    () => (searchIndex.length > 0 ? searchIndex : structuralSearchSuggestions),
+    [searchIndex, structuralSearchSuggestions],
+  );
   const searchResults = useMemo(() => {
     if (!normalizedQuery) {
       return [];
     }
 
-    return searchIndex
+    return activeSearchIndex
       .filter((item) => item.searchKey.includes(normalizedQuery))
       .slice(0, 8);
-  }, [normalizedQuery, searchIndex]);
+  }, [activeSearchIndex, normalizedQuery]);
 
   function handleSearchResultClick(path: string) {
     navigate(toLocalizedPath(path));
@@ -1019,18 +1114,15 @@ export default function SiteLayout() {
 
   function handleMobileSearchSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (normalizedQuery.length === 0) {
+    const rawQuery = searchQuery.trim();
+    if (!rawQuery) {
       return;
     }
 
-    if (!searchReady && !searchLoading) {
-      void loadSearchIndex();
-      return;
-    }
-
-    if (searchResults.length > 0) {
-      handleSearchResultClick(searchResults[0].path);
-    }
+    navigate(toLocalizedPath(`/search?q=${encodeURIComponent(rawQuery)}`));
+    setMobileSearchOpen(false);
+    setSearchQuery('');
+    closeNavigationMenus();
   }
 
   function closeMobileSearchOverlay() {
@@ -1139,6 +1231,288 @@ export default function SiteLayout() {
         </div>
       );
     });
+  }
+
+  function renderDesktopMenuItem(item: MenuChildItem): ReactNode {
+    const isProductMegaMenu = item.path === PRODUCT_MENU_PATH;
+    const hasChildren = isProductMegaMenu
+      ? true
+      : Boolean(item.children && item.children.length > 0);
+    const resolvedPath = item.path;
+    const resolvedLabel = t(item.label);
+    const linkClassName = `menu-link ${hasChildren ? 'has-children' : ''}`;
+
+    return (
+      <div
+        key={item.path}
+        className={`menu-item-group ${hasChildren ? 'has-children' : ''} ${
+          desktopOpenMenuPath === item.path ? 'is-open' : ''
+        } ${isProductMegaMenu ? 'is-product-menu' : ''}`}
+        onMouseEnter={
+          hasChildren ? () => openDesktopMenu(item.path) : undefined
+        }
+        onMouseLeave={
+          hasChildren
+            ? () => scheduleDesktopMenuClose(item.path)
+            : undefined
+        }
+        onFocusCapture={
+          hasChildren ? () => openDesktopMenu(item.path) : undefined
+        }
+        onBlurCapture={
+          hasChildren
+            ? (event) => {
+                const nextTarget = event.relatedTarget;
+                if (
+                  nextTarget instanceof Node &&
+                  event.currentTarget.contains(nextTarget)
+                ) {
+                  return;
+                }
+                scheduleDesktopMenuClose(item.path);
+              }
+            : undefined
+        }
+      >
+        {hasChildren && item.path !== '/' ? (
+          <button
+            type="button"
+            className={`${linkClassName} menu-link-button ${
+              desktopOpenMenuPath === item.path ? 'is-active' : ''
+            }`}
+            aria-haspopup="true"
+            aria-expanded={desktopOpenMenuPath === item.path}
+            aria-label={resolvedLabel}
+            onMouseDown={(event) => {
+              // Keep desktop dropdown open-by-hover only for pointer interaction.
+              event.preventDefault();
+            }}
+            onClick={(event) => {
+              event.preventDefault();
+            }}
+          >
+            {resolvedLabel}
+          </button>
+        ) : isExternalPath(resolvedPath) ? (
+          <a
+            href={toLocalizedPath(resolvedPath)}
+            className={linkClassName}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(event) => {
+              closeNavigationMenus();
+              if (event.detail > 0) {
+                event.currentTarget.blur();
+              }
+            }}
+          >
+            {resolvedLabel}
+          </a>
+        ) : (
+          <NavLink
+            to={toLocalizedPath(resolvedPath)}
+            className={({ isActive }) =>
+              `${linkClassName} ${isActive ? 'is-active' : ''}`
+            }
+            onClick={(event) => {
+              closeNavigationMenus();
+              if (event.detail > 0) {
+                event.currentTarget.blur();
+              }
+            }}
+            end={item.path === '/'}
+          >
+            {resolvedLabel}
+          </NavLink>
+        )}
+
+        {hasChildren &&
+          (isProductMegaMenu ? (
+            <div
+              className="submenu product-mega-menu product-mega-sheet"
+              role="menu"
+              aria-label={t('Danh mục sản phẩm')}
+              onMouseEnter={() => openDesktopMenu(item.path)}
+            >
+              <div className="product-mega-shell">
+                <aside className="product-mega-sidebar">
+                  {!productMenuLoaded && productRootCategories.length === 0 ? (
+                    <p className="product-mega-empty">
+                      {t('Đang tải danh mục sản phẩm...')}
+                    </p>
+                  ) : productRootCategories.length > 0 ? (
+                    <div className="product-mega-root-list">
+                      {productRootCategories.map((category) => {
+                        const isActive =
+                          activeProductMegaCategory?.path === category.path;
+                        const childCount = category.children?.length ?? 0;
+                        const hasCategoryChildren = childCount > 0;
+                        const categoryLabel = t(category.label);
+
+                        if (hasCategoryChildren) {
+                          return (
+                            <button
+                              key={`product-root-${category.path}`}
+                              type="button"
+                              onMouseEnter={() =>
+                                setActiveProductMegaCategoryPath(category.path)
+                              }
+                              onFocus={() =>
+                                setActiveProductMegaCategoryPath(category.path)
+                              }
+                              onClick={(event) => {
+                                event.preventDefault();
+                                setActiveProductMegaCategoryPath(category.path);
+                              }}
+                              className={`product-mega-root-item ${
+                                isActive ? 'active' : ''
+                              }`}
+                            >
+                              <span>{categoryLabel}</span>
+                              <span className="product-mega-root-count">
+                                {childCount > 0 ? childCount : '•'}
+                              </span>
+                            </button>
+                          );
+                        }
+
+                        if (isExternalPath(category.path)) {
+                          return (
+                            <a
+                              key={`product-root-${category.path}`}
+                              href={toLocalizedPath(category.path)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onMouseEnter={() =>
+                                setActiveProductMegaCategoryPath(category.path)
+                              }
+                              onFocus={() =>
+                                setActiveProductMegaCategoryPath(category.path)
+                              }
+                              onClick={() => setDesktopOpenMenuPath(null)}
+                              className={`product-mega-root-item ${
+                                isActive ? 'active' : ''
+                              }`}
+                            >
+                              <span>{categoryLabel}</span>
+                              <span className="product-mega-root-count">
+                                {childCount > 0 ? childCount : '•'}
+                              </span>
+                            </a>
+                          );
+                        }
+
+                        return (
+                          <NavLink
+                            key={`product-root-${category.path}`}
+                            to={toLocalizedPath(category.path)}
+                            onMouseEnter={() =>
+                              setActiveProductMegaCategoryPath(category.path)
+                            }
+                            onFocus={() =>
+                              setActiveProductMegaCategoryPath(category.path)
+                            }
+                            onClick={() => setDesktopOpenMenuPath(null)}
+                            className={`product-mega-root-item ${
+                              isActive ? 'active' : ''
+                            }`}
+                          >
+                            <span>{categoryLabel}</span>
+                            <span className="product-mega-root-count">
+                              {childCount > 0 ? childCount : '•'}
+                            </span>
+                          </NavLink>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <p className="product-mega-empty">
+                      {t('Chưa có danh mục trong cơ sở dữ liệu.')}
+                    </p>
+                  )}
+                </aside>
+
+                <div className="product-mega-content">
+                  {activeProductMegaCategory ? (
+                    <>
+                      {renderProductMegaLeaf(
+                        activeProductMegaCategory,
+                        'product-mega-heading',
+                      )}
+                      <p className="product-mega-caption">
+                        {activeProductMegaCategory.children?.length
+                          ? `${activeProductMegaCategory.children.length} ${t(
+                              'nhóm sản phẩm',
+                            )}`
+                          : t('Danh mục này chưa có nhóm con.')}
+                      </p>
+
+                      {activeProductMegaCategory.children &&
+                      activeProductMegaCategory.children.length > 0 ? (
+                        <div className="product-mega-card-grid">
+                          {activeProductMegaCategory.children.map((branch) => (
+                            <article
+                              key={`product-branch-${branch.path}-${branch.label}`}
+                              className="product-mega-card"
+                            >
+                              {renderProductMegaLeaf(
+                                branch,
+                                'product-mega-card-title',
+                              )}
+
+                              {branch.children && branch.children.length > 0 ? (
+                                <div className="product-mega-card-list">
+                                  {renderProductMegaTreeList(branch.children)}
+                                </div>
+                              ) : isExternalPath(branch.path) ? (
+                                <a
+                                  href={toLocalizedPath(branch.path)}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="product-mega-card-action"
+                                  onClick={() => setDesktopOpenMenuPath(null)}
+                                >
+                                  {t('Xem sản phẩm')}
+                                </a>
+                              ) : (
+                                <NavLink
+                                  to={toLocalizedPath(branch.path)}
+                                  className="product-mega-card-action"
+                                  onClick={() => setDesktopOpenMenuPath(null)}
+                                >
+                                  {t('Xem sản phẩm')}
+                                </NavLink>
+                              )}
+                            </article>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="product-mega-empty">
+                          {t(
+                            'Nội dung danh mục này đang được cập nhật.',
+                          )}
+                        </p>
+                      )}
+                    </>
+                  ) : (
+                    <p className="product-mega-empty">
+                      {t('Chưa có danh mục để hiển thị.')}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div
+              className="submenu"
+              role="menu"
+              aria-label={`Mục con ${item.label}`}
+            >
+              {renderDesktopSubmenuItems(item.children ?? [])}
+            </div>
+          ))}
+      </div>
+    );
   }
 
   function renderLanguageSwitcher(selectId = 'language-switcher') {
@@ -1373,289 +1747,14 @@ export default function SiteLayout() {
 
           {!isAdminRoute && (
             <>
-              <nav className="main-nav" aria-label={t('Danh mục điều hướng')}>
-                {desktopTopMenuItems.map((item) => {
-                  const isProductMegaMenu = item.path === PRODUCT_MENU_PATH;
-                  const hasChildren = isProductMegaMenu
-                    ? true
-                    : Boolean(item.children && item.children.length > 0);
-                  const resolvedPath = item.path;
-                  const resolvedLabel = t(item.label);
-                  const linkClassName = `menu-link ${hasChildren ? 'has-children' : ''}`;
-
-                  return (
-                    <div
-                      key={item.path}
-                      className={`menu-item-group ${hasChildren ? 'has-children' : ''} ${
-                        desktopOpenMenuPath === item.path ? 'is-open' : ''
-                      } ${isProductMegaMenu ? 'is-product-menu' : ''}`}
-                      onMouseEnter={
-                        hasChildren ? () => openDesktopMenu(item.path) : undefined
-                      }
-                      onMouseLeave={
-                        hasChildren
-                          ? () => scheduleDesktopMenuClose(item.path)
-                          : undefined
-                      }
-                      onFocusCapture={
-                        hasChildren ? () => openDesktopMenu(item.path) : undefined
-                      }
-                      onBlurCapture={
-                        hasChildren
-                          ? (event) => {
-                              const nextTarget = event.relatedTarget;
-                              if (
-                                nextTarget instanceof Node &&
-                                event.currentTarget.contains(nextTarget)
-                              ) {
-                                return;
-                              }
-                              scheduleDesktopMenuClose(item.path);
-                            }
-                          : undefined
-                      }
-                    >
-                      {hasChildren && item.path !== '/' ? (
-                        <button
-                          type="button"
-                          className={`${linkClassName} menu-link-button ${
-                            desktopOpenMenuPath === item.path ? 'is-active' : ''
-                          }`}
-                          aria-haspopup="true"
-                          aria-expanded={desktopOpenMenuPath === item.path}
-                          aria-label={resolvedLabel}
-                          onMouseDown={(event) => {
-                            // Keep desktop dropdown open-by-hover only for pointer interaction.
-                            event.preventDefault();
-                          }}
-                          onClick={(event) => {
-                            event.preventDefault();
-                          }}
-                        >
-                          {resolvedLabel}
-                        </button>
-                      ) : isExternalPath(resolvedPath) ? (
-                        <a
-                          href={toLocalizedPath(resolvedPath)}
-                          className={linkClassName}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(event) => {
-                            closeNavigationMenus();
-                            if (event.detail > 0) {
-                              event.currentTarget.blur();
-                            }
-                          }}
-                        >
-                          {resolvedLabel}
-                        </a>
-                      ) : (
-                        <NavLink
-                          to={toLocalizedPath(resolvedPath)}
-                          className={({ isActive }) =>
-                            `${linkClassName} ${isActive ? 'is-active' : ''}`
-                          }
-                          onClick={(event) => {
-                            closeNavigationMenus();
-                            if (event.detail > 0) {
-                              event.currentTarget.blur();
-                            }
-                          }}
-                          end={item.path === '/'}
-                        >
-                          {resolvedLabel}
-                        </NavLink>
-                      )}
-
-                      {hasChildren &&
-                        (isProductMegaMenu ? (
-                          <div
-                            className="submenu product-mega-menu product-mega-sheet"
-                            role="menu"
-                            aria-label={t('Danh mục sản phẩm')}
-                            onMouseEnter={() => openDesktopMenu(item.path)}
-                          >
-                            <div className="product-mega-shell">
-                              <aside className="product-mega-sidebar">
-                                {!productMenuLoaded && productRootCategories.length === 0 ? (
-                                  <p className="product-mega-empty">
-                                    {t('Đang tải danh mục sản phẩm...')}
-                                  </p>
-                                ) : productRootCategories.length > 0 ? (
-                                  <div className="product-mega-root-list">
-                                    {productRootCategories.map((category) => {
-                                      const isActive =
-                                        activeProductMegaCategory?.path === category.path;
-                                      const childCount = category.children?.length ?? 0;
-                                      const hasChildren = childCount > 0;
-                                      const categoryLabel = t(category.label);
-
-                                      if (hasChildren) {
-                                        return (
-                                          <button
-                                            key={`product-root-${category.path}`}
-                                            type="button"
-                                            onMouseEnter={() =>
-                                              setActiveProductMegaCategoryPath(category.path)
-                                            }
-                                            onFocus={() =>
-                                              setActiveProductMegaCategoryPath(category.path)
-                                            }
-                                            onClick={(event) => {
-                                              event.preventDefault();
-                                              setActiveProductMegaCategoryPath(category.path);
-                                            }}
-                                            className={`product-mega-root-item ${
-                                              isActive ? 'active' : ''
-                                            }`}
-                                          >
-                                            <span>{categoryLabel}</span>
-                                            <span className="product-mega-root-count">
-                                              {childCount > 0 ? childCount : '•'}
-                                            </span>
-                                          </button>
-                                        );
-                                      }
-
-                                      if (isExternalPath(category.path)) {
-                                        return (
-                                          <a
-                                            key={`product-root-${category.path}`}
-                                            href={toLocalizedPath(category.path)}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            onMouseEnter={() =>
-                                              setActiveProductMegaCategoryPath(category.path)
-                                            }
-                                            onFocus={() =>
-                                              setActiveProductMegaCategoryPath(category.path)
-                                            }
-                                            onClick={() => setDesktopOpenMenuPath(null)}
-                                            className={`product-mega-root-item ${
-                                              isActive ? 'active' : ''
-                                            }`}
-                                          >
-                                            <span>{categoryLabel}</span>
-                                            <span className="product-mega-root-count">
-                                              {childCount > 0 ? childCount : '•'}
-                                            </span>
-                                          </a>
-                                        );
-                                      }
-
-                                      return (
-                                        <NavLink
-                                          key={`product-root-${category.path}`}
-                                          to={toLocalizedPath(category.path)}
-                                          onMouseEnter={() =>
-                                            setActiveProductMegaCategoryPath(category.path)
-                                          }
-                                          onFocus={() =>
-                                            setActiveProductMegaCategoryPath(category.path)
-                                          }
-                                          onClick={() => setDesktopOpenMenuPath(null)}
-                                          className={`product-mega-root-item ${
-                                            isActive ? 'active' : ''
-                                          }`}
-                                        >
-                                          <span>{categoryLabel}</span>
-                                          <span className="product-mega-root-count">
-                                            {childCount > 0 ? childCount : '•'}
-                                          </span>
-                                        </NavLink>
-                                      );
-                                    })}
-                                  </div>
-                                ) : (
-                                  <p className="product-mega-empty">
-                                    {t('Chưa có danh mục trong cơ sở dữ liệu.')}
-                                  </p>
-                                )}
-                              </aside>
-
-                              <div className="product-mega-content">
-                                {activeProductMegaCategory ? (
-                                  <>
-                                    {renderProductMegaLeaf(
-                                      activeProductMegaCategory,
-                                      'product-mega-heading',
-                                    )}
-                                    <p className="product-mega-caption">
-                                      {activeProductMegaCategory.children?.length
-                                        ? `${activeProductMegaCategory.children.length} ${t(
-                                            'nhóm sản phẩm',
-                                          )}`
-                                        : t('Danh mục này chưa có nhóm con.')}
-                                    </p>
-
-                                    {activeProductMegaCategory.children &&
-                                    activeProductMegaCategory.children.length > 0 ? (
-                                      <div className="product-mega-card-grid">
-                                        {activeProductMegaCategory.children.map((branch) => (
-                                          <article
-                                            key={`product-branch-${branch.path}-${branch.label}`}
-                                            className="product-mega-card"
-                                          >
-                                            {renderProductMegaLeaf(
-                                              branch,
-                                              'product-mega-card-title',
-                                            )}
-
-                                            {branch.children && branch.children.length > 0 ? (
-                                              <div className="product-mega-card-list">
-                                                {renderProductMegaTreeList(branch.children)}
-                                              </div>
-                                            ) : isExternalPath(branch.path) ? (
-                                              <a
-                                                href={toLocalizedPath(branch.path)}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="product-mega-card-action"
-                                                onClick={() => setDesktopOpenMenuPath(null)}
-                                              >
-                                                {t('Xem sản phẩm')}
-                                              </a>
-                                            ) : (
-                                              <NavLink
-                                                to={toLocalizedPath(branch.path)}
-                                                className="product-mega-card-action"
-                                                onClick={() => setDesktopOpenMenuPath(null)}
-                                              >
-                                                {t('Xem sản phẩm')}
-                                              </NavLink>
-                                            )}
-                                          </article>
-                                        ))}
-                                      </div>
-                                    ) : (
-                                      <p className="product-mega-empty">
-                                        {t(
-                                          'Nội dung danh mục này đang được cập nhật.',
-                                        )}
-                                      </p>
-                                    )}
-                                  </>
-                                ) : (
-                                  <p className="product-mega-empty">
-                                    {t('Chưa có danh mục để hiển thị.')}
-                                  </p>
-                                )}
-                              </div>
-                            </div>
-                          </div>
-                        ) : (
-                          <div
-                            className="submenu"
-                            role="menu"
-                            aria-label={`Mục con ${item.label}`}
-                          >
-                            {renderDesktopSubmenuItems(item.children ?? [])}
-                          </div>
-                        ))}
-                    </div>
-                );
-              })}
+              <nav className="main-nav main-nav-primary" aria-label={t('Danh mục điều hướng')}>
+                {desktopPrimaryTopMenuItems.map((item) => renderDesktopMenuItem(item))}
               </nav>
+              {desktopSecondaryTopMenuItems.length > 0 && (
+                <nav className="main-nav main-nav-secondary" aria-label={t('Liên kết nhanh')}>
+                  {desktopSecondaryTopMenuItems.map((item) => renderDesktopMenuItem(item))}
+                </nav>
+              )}
 
               <Link
                 to={toLocalizedPath(authMenuPath)}

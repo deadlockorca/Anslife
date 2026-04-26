@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ErrorBlock from '../components/common/ErrorBlock';
 import Seo from '../components/seo/Seo';
+import { STATIC_PAGE_MAP, TOP_MENU, type MenuChildItem } from '../config/site';
 import { useAsyncResource } from '../hooks/useAsyncResource';
 import useSiteI18n from '../hooks/useSiteI18n';
-import { getFeaturedImage, getTermsByTaxonomy } from '../lib/content';
+import { decodeHtml, getFeaturedImage, getTermsByTaxonomy } from '../lib/content';
 import { getNews, getProducts, getProjects } from '../lib/wp';
 import type { WpEntity } from '../types/wp';
 
@@ -47,6 +48,16 @@ interface HomeSearchGroupItem {
   to: string;
 }
 
+interface HomeSearchResultItem extends HomeSearchGroupItem {
+  searchText: string;
+}
+
+interface HomeNavigationSearchItem {
+  label: string;
+  path: string;
+  trail: string[];
+}
+
 const EMPTY_ENTITIES: WpEntity[] = [];
 const DEMO_HERO_VIDEO_DAY =
   'https://www.vietcombank.com.vn/-/media/Project/VCB-Sites/VCB/Home-page/KHCN/UPDATE-2024/KHCN/VCB_CN-DAY_v3fix2_20260331.mp4?mh=900&mw=1440&ts=20260331104213&hash=607110EA73560F74A2B7A2552076CD7B';
@@ -85,14 +96,76 @@ function isHourInRange(hour: number, minHour: number, maxHour: number): boolean 
 }
 
 function normalizeSearchValue(value: string): string {
-  return value.trim().toLocaleLowerCase('vi');
+  return value
+    .normalize('NFD')
+    .replace(/[đĐ]/g, 'd')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLocaleLowerCase('vi')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function searchContainsText(searchText: string, normalizedQuery: string): boolean {
+  if (!normalizedQuery) {
+    return true;
+  }
+
+  const normalizedSearchText = normalizeSearchValue(searchText);
+  const queryTokens = normalizedQuery.split(' ').filter(Boolean);
+  if (queryTokens.length === 0) {
+    return true;
+  }
+
+  return queryTokens.every((token) => normalizedSearchText.includes(token));
+}
+
+function flattenMenuItemsForSearch(
+  items: MenuChildItem[],
+  parentTrail: string[] = [],
+): HomeNavigationSearchItem[] {
+  const flattenedItems: HomeNavigationSearchItem[] = [];
+
+  for (const item of items) {
+    const label = item.label.trim();
+    const path = item.path.trim();
+    if (!label || !path) {
+      continue;
+    }
+
+    const trail = [...parentTrail, label];
+    flattenedItems.push({
+      label,
+      path,
+      trail,
+    });
+
+    if (item.children && item.children.length > 0) {
+      flattenedItems.push(...flattenMenuItemsForSearch(item.children, trail));
+    }
+  }
+
+  return flattenedItems;
+}
+
+function buildProductDetailPath(product: WpEntity): string {
+  const primaryCategory = getTermsByTaxonomy(product, 'product_category')[0];
+  if (primaryCategory?.slug) {
+    return `/products/${primaryCategory.slug}/${product.slug}`;
+  }
+
+  return `/products/${product.slug}`;
 }
 
 export default function HomePage() {
   const { t, toLocalizedPath } = useSiteI18n();
+  const navigate = useNavigate();
   const [currentHour, setCurrentHour] = useState(() => new Date().getHours());
   const [isSearchPopupOpen, setIsSearchPopupOpen] = useState(false);
   const [searchPopupQuery, setSearchPopupQuery] = useState('');
+  const [searchIndexItems, setSearchIndexItems] = useState<HomeSearchResultItem[]>([]);
+  const [searchIndexLoading, setSearchIndexLoading] = useState(false);
+  const [searchIndexReady, setSearchIndexReady] = useState(false);
   const searchPopupInputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
@@ -354,12 +427,7 @@ export default function HomePage() {
       return '/products';
     }
 
-    const primaryCategory = getTermsByTaxonomy(featuredProduct, 'product_category')[0];
-    if (primaryCategory?.slug) {
-      return `/products/${primaryCategory.slug}/${featuredProduct.slug}`;
-    }
-
-    return `/products/${featuredProduct.slug}`;
+    return buildProductDetailPath(featuredProduct);
   }, [products]);
 
   const searchRecentKeywords = useMemo(
@@ -417,11 +485,237 @@ export default function HomePage() {
     }
 
     return searchGroupItems.filter((item) =>
-      normalizeSearchValue(`${item.title} ${item.description}`).includes(
+      searchContainsText(
+        `${item.title} ${item.description}`,
         normalizedSearchPopupQuery,
       ),
     );
   }, [normalizedSearchPopupQuery, searchGroupItems]);
+
+  const navigationSearchItems = useMemo<HomeSearchResultItem[]>(() => {
+    const flattenedMenuItems = flattenMenuItemsForSearch(TOP_MENU as MenuChildItem[]);
+    const uniqueMenuItems = new Map<string, HomeNavigationSearchItem>();
+    for (const item of flattenedMenuItems) {
+      const uniqueKey = `${item.path}__${item.label}`;
+      if (!uniqueMenuItems.has(uniqueKey)) {
+        uniqueMenuItems.set(uniqueKey, item);
+      }
+    }
+
+    return Array.from(uniqueMenuItems.values()).map((item, index) => {
+      const translatedTrail = item.trail.map((label) => t(label));
+      const translatedTitle = translatedTrail[translatedTrail.length - 1] ?? t(item.label);
+      const breadcrumb = translatedTrail.slice(0, -1).join(' · ');
+      const normalizedPath = item.path.replace(/[/-]+/g, ' ');
+
+      return {
+        id: `search-navigation-${index}-${item.path}`,
+        icon: '🧭',
+        title: translatedTitle,
+        description: breadcrumb || t('Truy cập nhanh'),
+        to: item.path,
+        searchText: `${item.label} ${translatedTitle} ${item.trail.join(' ')} ${translatedTrail.join(
+          ' ',
+        )} ${normalizedPath}`,
+      };
+    });
+  }, [t]);
+
+  const staticSectionSearchItems = useMemo<HomeSearchResultItem[]>(() => {
+    const items: HomeSearchResultItem[] = [];
+
+    for (const page of Object.values(STATIC_PAGE_MAP)) {
+      const pageTitle = t(page.title);
+      const pageSummary = t(page.summary);
+
+      items.push({
+        id: `search-static-page-${page.slug}`,
+        icon: '🧭',
+        title: pageTitle,
+        description: pageSummary,
+        to: page.path,
+        searchText: `${page.title} ${pageTitle} ${page.summary} ${pageSummary} ${page.slug} ${page.path}`,
+      });
+
+      for (const section of page.sections) {
+        const sectionTitle = t(section.title);
+        const sectionDescription = t(section.description);
+        items.push({
+          id: `search-static-section-${page.slug}-${section.id}`,
+          icon: '🧭',
+          title: sectionTitle,
+          description: `${pageTitle} · ${sectionDescription}`,
+          to: `${page.path}/${section.id}`,
+          searchText: `${section.title} ${sectionTitle} ${section.description} ${sectionDescription} ${page.title} ${pageTitle} ${section.id} ${page.slug}`,
+        });
+      }
+    }
+
+    return items;
+  }, [t]);
+
+  const structuralSearchItems = useMemo<HomeSearchResultItem[]>(() => {
+    const uniqueItems = new Map<string, HomeSearchResultItem>();
+    for (const item of [...navigationSearchItems, ...staticSectionSearchItems]) {
+      const uniqueKey = `${item.to}__${normalizeSearchValue(item.title)}`;
+      if (!uniqueItems.has(uniqueKey)) {
+        uniqueItems.set(uniqueKey, item);
+      }
+    }
+
+    return Array.from(uniqueItems.values());
+  }, [navigationSearchItems, staticSectionSearchItems]);
+
+  const buildSearchResultItems = useCallback(
+    ({ products: nextProducts, projects: nextProjects, news: nextNews }: HomeData) => {
+      const productItems: HomeSearchResultItem[] = nextProducts.map((product) => {
+        const productTitle = decodeHtml(product.title.rendered).trim() || product.slug;
+        const categoryNames = getTermsByTaxonomy(product, 'product_category')
+          .map((term) => term.name.trim())
+          .filter(Boolean)
+          .join(', ');
+        const description = categoryNames
+          ? `${t('Sản phẩm')}: ${categoryNames}`
+          : t('Sản phẩm');
+
+        return {
+          id: `search-product-${product.id}`,
+          icon: '🪑',
+          title: productTitle,
+          description,
+          to: buildProductDetailPath(product),
+          searchText: `${productTitle} ${description} ${product.slug}`,
+        };
+      });
+
+      const projectItems: HomeSearchResultItem[] = nextProjects.map((project) => {
+        const projectTitle = decodeHtml(project.title.rendered).trim() || project.slug;
+        const projectTypeNames = getTermsByTaxonomy(project, 'project_type')
+          .map((term) => term.name.trim())
+          .filter(Boolean)
+          .join(', ');
+        const description = projectTypeNames
+          ? `${t('Dự án')}: ${projectTypeNames}`
+          : t('Dự án');
+
+        return {
+          id: `search-project-${project.id}`,
+          icon: '📦',
+          title: projectTitle,
+          description,
+          to: `/projects/${project.slug}`,
+          searchText: `${projectTitle} ${description} ${project.slug}`,
+        };
+      });
+
+      const newsItems: HomeSearchResultItem[] = nextNews.map((post) => {
+        const newsTitle = decodeHtml(post.title.rendered).trim() || post.slug;
+        const newsCategoryNames = getTermsByTaxonomy(post, 'category')
+          .map((term) => term.name.trim())
+          .filter(Boolean)
+          .join(', ');
+        const description = newsCategoryNames
+          ? `${t('Tin tức')}: ${newsCategoryNames}`
+          : t('Tin tức');
+
+        return {
+          id: `search-news-${post.id}`,
+          icon: '📰',
+          title: newsTitle,
+          description,
+          to: `/news/${post.slug}`,
+          searchText: `${newsTitle} ${description} ${post.slug}`,
+        };
+      });
+
+      return [...productItems, ...projectItems, ...newsItems];
+    },
+    [t],
+  );
+
+  const searchResultItems = useMemo<HomeSearchResultItem[]>(
+    () => [
+      ...structuralSearchItems,
+      ...buildSearchResultItems({
+        products,
+        projects,
+        news,
+      }),
+    ],
+    [buildSearchResultItems, news, products, projects, structuralSearchItems],
+  );
+
+  const loadSearchIndex = useCallback(async () => {
+    if (searchIndexLoading) {
+      return;
+    }
+
+    setSearchIndexLoading(true);
+    try {
+      const [productsResult, projectsResult, newsResult] = await Promise.allSettled([
+        getProducts(100),
+        getProjects(100),
+        getNews(100),
+      ]);
+
+      setSearchIndexItems(
+        [
+          ...structuralSearchItems,
+          ...buildSearchResultItems({
+            products: productsResult.status === 'fulfilled' ? productsResult.value : [],
+            projects: projectsResult.status === 'fulfilled' ? projectsResult.value : [],
+            news: newsResult.status === 'fulfilled' ? newsResult.value : [],
+          }),
+        ],
+      );
+    } finally {
+      setSearchIndexLoading(false);
+      setSearchIndexReady(true);
+    }
+  }, [buildSearchResultItems, searchIndexLoading, structuralSearchItems]);
+
+  const activeSearchResultItems = useMemo(
+    () =>
+      searchIndexReady && searchIndexItems.length > 0
+        ? searchIndexItems
+        : searchResultItems,
+    [searchIndexItems, searchIndexReady, searchResultItems],
+  );
+
+  const filteredSearchResultItems = useMemo(() => {
+    if (!normalizedSearchPopupQuery) {
+      return activeSearchResultItems.slice(0, 8);
+    }
+
+    return activeSearchResultItems
+      .filter((item) =>
+        searchContainsText(item.searchText, normalizedSearchPopupQuery),
+      )
+      .slice(0, 12);
+  }, [activeSearchResultItems, normalizedSearchPopupQuery]);
+
+  const handleSearchSubmit = useCallback(() => {
+    const rawQuery = searchPopupQuery.trim();
+    if (!rawQuery) {
+      return;
+    }
+
+    setSearchPopupQuery('');
+    setIsSearchPopupOpen(false);
+    navigate(toLocalizedPath(`/search?q=${encodeURIComponent(rawQuery)}`));
+  }, [
+    navigate,
+    searchPopupQuery,
+    toLocalizedPath,
+  ]);
+
+  useEffect(() => {
+    if (!isSearchPopupOpen || searchIndexReady || searchIndexLoading) {
+      return;
+    }
+
+    void loadSearchIndex();
+  }, [isSearchPopupOpen, loadSearchIndex, searchIndexLoading, searchIndexReady]);
 
   useEffect(() => {
     if (!isSearchPopupOpen) {
@@ -607,6 +901,16 @@ export default function HomePage() {
                     inputMode="search"
                     value={searchPopupQuery}
                     onChange={(event) => setSearchPopupQuery(event.target.value)}
+                    autoComplete="off"
+                    autoCorrect="off"
+                    autoCapitalize="none"
+                    spellCheck={false}
+                    onKeyDown={(event) => {
+                      if (event.key === 'Enter') {
+                        event.preventDefault();
+                        handleSearchSubmit();
+                      }
+                    }}
                     placeholder={t('Tìm sản phẩm, dự án, báo giá, năng lực sản xuất...')}
                   />
                 </div>
@@ -632,32 +936,68 @@ export default function HomePage() {
                 </section>
 
                 <section className="home-anslife-search-popup-section">
-                  <h3>{t('Các nhóm giải pháp của ANSLIFE')}</h3>
+                  {!normalizedSearchPopupQuery && (
+                    <h3>{t('Các nhóm giải pháp của ANSLIFE')}</h3>
+                  )}
                   <div className="home-anslife-search-popup-groups">
-                    {filteredSearchGroupItems.length === 0 ? (
-                      <p className="home-anslife-search-popup-empty">
-                        {t('Không tìm thấy nhóm phù hợp. Hãy thử từ khóa khác.')}
-                      </p>
+                    {normalizedSearchPopupQuery ? (
+                      searchIndexLoading &&
+                      !searchIndexReady &&
+                      filteredSearchResultItems.length === 0 ? (
+                        <p className="home-anslife-search-popup-empty">
+                          {t('Đang tải dữ liệu tìm kiếm...')}
+                        </p>
+                      ) : filteredSearchResultItems.length === 0 ? (
+                        <p className="home-anslife-search-popup-empty">
+                          {t('Không tìm thấy kết quả phù hợp.')}
+                        </p>
+                      ) : (
+                        filteredSearchResultItems.map((item) => (
+                          <Link
+                            key={item.id}
+                            to={toLocalizedPath(item.to)}
+                            className="home-anslife-search-popup-group"
+                            onClick={() => {
+                              setSearchPopupQuery('');
+                              setIsSearchPopupOpen(false);
+                            }}
+                          >
+                            <span className="home-anslife-search-popup-group-icon" aria-hidden="true">
+                              {item.icon}
+                            </span>
+                            <span className="home-anslife-search-popup-group-copy">
+                              <strong>{item.title}</strong>
+                              <span>{item.description}</span>
+                            </span>
+                          </Link>
+                        ))
+                      )
                     ) : (
-                      filteredSearchGroupItems.map((item) => (
-                        <Link
-                          key={item.id}
-                          to={toLocalizedPath(item.to)}
-                          className="home-anslife-search-popup-group"
-                          onClick={() => {
-                            setSearchPopupQuery('');
-                            setIsSearchPopupOpen(false);
-                          }}
-                        >
-                          <span className="home-anslife-search-popup-group-icon" aria-hidden="true">
-                            {item.icon}
-                          </span>
-                          <span className="home-anslife-search-popup-group-copy">
-                            <strong>{item.title}</strong>
-                            <span>{item.description}</span>
-                          </span>
-                        </Link>
-                      ))
+                      filteredSearchGroupItems.length === 0 ? (
+                        <p className="home-anslife-search-popup-empty">
+                          {t('Không tìm thấy nhóm phù hợp. Hãy thử từ khóa khác.')}
+                        </p>
+                      ) : (
+                        filteredSearchGroupItems.map((item) => (
+                          <Link
+                            key={item.id}
+                            to={toLocalizedPath(item.to)}
+                            className="home-anslife-search-popup-group"
+                            onClick={() => {
+                              setSearchPopupQuery('');
+                              setIsSearchPopupOpen(false);
+                            }}
+                          >
+                            <span className="home-anslife-search-popup-group-icon" aria-hidden="true">
+                              {item.icon}
+                            </span>
+                            <span className="home-anslife-search-popup-group-copy">
+                              <strong>{item.title}</strong>
+                              <span>{item.description}</span>
+                            </span>
+                          </Link>
+                        ))
+                      )
                     )}
                   </div>
                 </section>

@@ -548,20 +548,20 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     <p class="ai-op-kicker">CƠ CẤU TỔ CHỨC ANSLIFE</p>
     <p class="ai-op-subtitle">Vận hành theo hệ sinh thái sản xuất được kiểm soát tập trung.</p>
 
-    <article class="ai-op-core">
-      <h3>1. Mô hình tổ chức</h3>
-      <p>ANSLIFE không vận hành theo mô hình nhà máy truyền thống.</p>
-      <p>Chúng tôi vận hành theo mô hình hệ sinh thái sản xuất được kiểm soát tập trung.</p>
-      <p>Cấu trúc tổ chức được chia thành 3 lớp chính:</p>
-      <ul>
-        <li>Lớp điều hành hệ thống</li>
-        <li>Lớp kiểm soát & dữ liệu</li>
-        <li>Lớp thực thi sản xuất</li>
-      </ul>
-      <p class="ai-op-emphasis">Mỗi lớp có vai trò rõ ràng, kết nối với nhau thông qua hệ thống dữ liệu.</p>
-    </article>
-
     <div class="ai-op-grid">
+      <article class="ai-op-card">
+        <h3>1. Mô hình tổ chức</h3>
+        <p>ANSLIFE không vận hành theo mô hình nhà máy truyền thống.</p>
+        <p>Chúng tôi vận hành theo mô hình hệ sinh thái sản xuất được kiểm soát tập trung.</p>
+        <p>Cấu trúc tổ chức được chia thành 3 lớp chính:</p>
+        <ul>
+          <li>Lớp điều hành hệ thống</li>
+          <li>Lớp kiểm soát & dữ liệu</li>
+          <li>Lớp thực thi sản xuất</li>
+        </ul>
+        <p class="ai-op-emphasis">Mỗi lớp có vai trò rõ ràng, kết nối với nhau thông qua hệ thống dữ liệu.</p>
+      </article>
+
       <article class="ai-op-card">
         <h3>2. Lớp điều hành hệ thống</h3>
         <p>Đây là trung tâm kiểm soát toàn bộ hoạt động của ANSLIFE.</p>
@@ -631,40 +631,40 @@ const AI_PAGE_CONTENT: Record<string, string> = {
           <li>Tương tác trực tiếp trên hệ thống</li>
         </ul>
       </article>
+
+      <article class="ai-op-card">
+        <h3>6. Kết nối hệ thống</h3>
+        <p>Toàn bộ cơ cấu tổ chức được kết nối thông qua nền tảng dữ liệu chung.</p>
+        <p>Mỗi vai trò trong hệ thống đều:</p>
+        <ul>
+          <li>Có tài khoản riêng</li>
+          <li>Có phạm vi dữ liệu riêng</li>
+          <li>Có quyền thao tác riêng</li>
+        </ul>
+        <p>Dữ liệu được luân chuyển theo nguyên tắc:</p>
+        <div class="ai-op-formula">
+          <p>→ tạo tại hiện trường</p>
+          <p>→ kiểm soát tại hệ thống</p>
+          <p>→ phân phối theo cấp quyền</p>
+        </div>
+      </article>
+
+      <article class="ai-op-card">
+        <h3>7. Định hướng phát triển</h3>
+        <p>Cơ cấu tổ chức của ANSLIFE được thiết kế để:</p>
+        <ul>
+          <li>Dễ mở rộng quy mô</li>
+          <li>Tích hợp nhiều nhà máy</li>
+          <li>Phục vụ nhiều thị trường khác nhau</li>
+        </ul>
+        <p>Mô hình này cho phép ANSLIFE:</p>
+        <ul>
+          <li>Không phụ thuộc vào một nhà máy</li>
+          <li>Tăng trưởng mà vẫn giữ được kiểm soát</li>
+          <li>Duy trì chất lượng ổn định trên toàn hệ thống</li>
+        </ul>
+      </article>
     </div>
-
-    <article class="ai-op-philosophy">
-      <h3>6. Kết nối hệ thống</h3>
-      <p>Toàn bộ cơ cấu tổ chức được kết nối thông qua nền tảng dữ liệu chung.</p>
-      <p>Mỗi vai trò trong hệ thống đều:</p>
-      <ul>
-        <li>Có tài khoản riêng</li>
-        <li>Có phạm vi dữ liệu riêng</li>
-        <li>Có quyền thao tác riêng</li>
-      </ul>
-      <p>Dữ liệu được luân chuyển theo nguyên tắc:</p>
-      <div class="ai-op-formula">
-        <p>→ tạo tại hiện trường</p>
-        <p>→ kiểm soát tại hệ thống</p>
-        <p>→ phân phối theo cấp quyền</p>
-      </div>
-    </article>
-
-    <article class="ai-op-philosophy">
-      <h3>7. Định hướng phát triển</h3>
-      <p>Cơ cấu tổ chức của ANSLIFE được thiết kế để:</p>
-      <ul>
-        <li>Dễ mở rộng quy mô</li>
-        <li>Tích hợp nhiều nhà máy</li>
-        <li>Phục vụ nhiều thị trường khác nhau</li>
-      </ul>
-      <p>Mô hình này cho phép ANSLIFE:</p>
-      <ul>
-        <li>Không phụ thuộc vào một nhà máy</li>
-        <li>Tăng trưởng mà vẫn giữ được kiểm soát</li>
-        <li>Duy trì chất lượng ổn định trên toàn hệ thống</li>
-      </ul>
-    </article>
 
     <p class="ai-op-signoff">
       <strong>ANSLIFE</strong>

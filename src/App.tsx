@@ -19,6 +19,7 @@ const ProjectDetailPage = lazy(() => import('./views/ProjectDetailPage'));
 const NewsPage = lazy(() => import('./views/NewsPage'));
 const NewsDetailPage = lazy(() => import('./views/NewsDetailPage'));
 const ContactPage = lazy(() => import('./views/ContactPage'));
+const SearchPage = lazy(() => import('./views/SearchPage'));
 const AdminLoginPage = lazy(() => import('./views/AdminLoginPage'));
 const AdminDashboardPage = lazy(() => import('./views/AdminDashboardPage'));
 const AdminProductsPage = lazy(() => import('./views/AdminProductsPage'));
@@ -132,6 +133,7 @@ export default function App() {
             <Route path="news" element={<NewsPage />} />
             <Route path="news/category/:category" element={<NewsPage />} />
             <Route path="news/:slug" element={<NewsDetailPage />} />
+            <Route path="search" element={<SearchPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="contact/:section" element={<ContactPage />} />
             <Route path="admin/login" element={<AdminLoginPage />} />

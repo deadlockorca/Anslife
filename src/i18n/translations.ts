@@ -175,20 +175,38 @@ const TRANSLATIONS: Record<
     'Kết nối ANSLIFE': 'Connect with ANSLIFE',
     'Theo dõi ANSLIFE': 'Follow ANSLIFE',
     'Tìm kiếm': 'Search',
+    'Trang kết quả tìm kiếm theo từ khóa trên hệ sinh thái ANSLIFE.':
+      'Search results page for keywords across the ANSLIFE ecosystem.',
+    'Nhập từ khóa để tìm sản phẩm, dự án, tin tức và các trang thông tin liên quan.':
+      'Enter keywords to find products, projects, news, and related information pages.',
     'Đóng tìm kiếm': 'Close search',
     'Tìm sản phẩm, dự án, tin tức...': 'Search products, projects, news...',
     'Tìm sản phẩm, dự án, báo giá, năng lực sản xuất...':
       'Search products, projects, quotes, production capabilities...',
+    'Tìm sản phẩm, dự án, QC, triết lý vận hành...':
+      'Search products, projects, QC, operating philosophy...',
     'Tìm sản phẩm, dự án,...': 'Search products, projects,...',
+    'Từ khóa tìm kiếm': 'Search keyword',
+    'Từ khóa': 'Keyword',
+    'Kết quả': 'Results',
+    'Kết quả tìm kiếm': 'Search results',
+    'Gợi ý dữ liệu mới nhất': 'Latest suggestions',
+    'Vui lòng nhập từ khóa để bắt đầu tìm kiếm.':
+      'Please enter a keyword to start searching.',
     'Quý khách đang tìm kiếm gì hôm nay?': 'What are you looking for today?',
     'Đóng': 'Close',
     'Truy cập nhanh': 'Quick access',
     'Từ khóa gần đây': 'Recent keywords',
+    'Điều hướng website': 'Website navigation',
+    'Điều hướng': 'Navigation',
+    'Trang thông tin': 'Information page',
     'Các nhóm giải pháp của ANSLIFE': 'ANSLIFE solution groups',
     'Không tìm thấy nhóm phù hợp. Hãy thử từ khóa khác.':
       'No matching groups found. Please try another keyword.',
     'Đang tải dữ liệu tìm kiếm...': 'Loading search data...',
     'Không tìm thấy kết quả phù hợp.': 'No matching results found.',
+    'Không tìm thấy kết quả phù hợp. Bạn có thể thử từ khóa khác.':
+      'No matching results found. You can try another keyword.',
     'Giới thiệu công ty': 'Company Introduction',
     'Tầm nhìn - Sứ mệnh': 'Vision - Mission',
     'Giá trị cốt lõi': 'Core Values',
@@ -706,12 +724,30 @@ const TRANSLATIONS: Record<
     'Kết nối ANSLIFE': 'ANSLIFEとつながる',
     'Theo dõi ANSLIFE': 'ANSLIFEをフォロー',
     'Tìm kiếm': '検索',
+    'Trang kết quả tìm kiếm theo từ khóa trên hệ sinh thái ANSLIFE.':
+      'ANSLIFEエコシステム内のキーワード検索結果ページです。',
+    'Nhập từ khóa để tìm sản phẩm, dự án, tin tức và các trang thông tin liên quan.':
+      'キーワードを入力して、製品・プロジェクト・ニュース・関連情報ページを検索できます。',
     'Đóng tìm kiếm': '検索を閉じる',
     'Tìm sản phẩm, dự án, tin tức...': '製品・プロジェクト・ニュースを検索...',
     'Tìm sản phẩm, dự án, báo giá, năng lực sản xuất...':
       '製品・プロジェクト・見積り・生産能力を検索...',
+    'Tìm sản phẩm, dự án, QC, triết lý vận hành...':
+      '製品・プロジェクト・QC・運用方針を検索...',
+    'Từ khóa tìm kiếm': '検索キーワード',
+    'Từ khóa': 'キーワード',
+    'Kết quả': '結果',
+    'Kết quả tìm kiếm': '検索結果',
+    'Gợi ý dữ liệu mới nhất': '最新のおすすめ',
+    'Vui lòng nhập từ khóa để bắt đầu tìm kiếm.':
+      '検索を開始するにはキーワードを入力してください。',
     'Đang tải dữ liệu tìm kiếm...': '検索データを読み込み中...',
     'Không tìm thấy kết quả phù hợp.': '該当する結果が見つかりません。',
+    'Không tìm thấy kết quả phù hợp. Bạn có thể thử từ khóa khác.':
+      '該当する結果が見つかりません。別のキーワードをお試しください。',
+    'Điều hướng website': 'サイトナビゲーション',
+    'Điều hướng': 'ナビゲーション',
+    'Trang thông tin': '情報ページ',
     'Giới thiệu công ty': '会社紹介',
     'Tầm nhìn - Sứ mệnh': 'ビジョン - ミッション',
     'Giá trị cốt lõi': 'コアバリュー',
@@ -1106,12 +1142,30 @@ const TRANSLATIONS: Record<
     'Kết nối ANSLIFE': 'ANSLIFE 연결',
     'Theo dõi ANSLIFE': 'ANSLIFE 팔로우',
     'Tìm kiếm': '검색',
+    'Trang kết quả tìm kiếm theo từ khóa trên hệ sinh thái ANSLIFE.':
+      'ANSLIFE 생태계 전반의 키워드 검색 결과 페이지입니다.',
+    'Nhập từ khóa để tìm sản phẩm, dự án, tin tức và các trang thông tin liên quan.':
+      '키워드를 입력해 제품, 프로젝트, 뉴스 및 관련 정보 페이지를 검색하세요.',
     'Đóng tìm kiếm': '검색 닫기',
     'Tìm sản phẩm, dự án, tin tức...': '제품, 프로젝트, 뉴스를 검색...',
     'Tìm sản phẩm, dự án, báo giá, năng lực sản xuất...':
       '제품, 프로젝트, 견적, 생산 역량 검색...',
+    'Tìm sản phẩm, dự án, QC, triết lý vận hành...':
+      '제품, 프로젝트, QC, 운영 철학 검색...',
+    'Từ khóa tìm kiếm': '검색 키워드',
+    'Từ khóa': '키워드',
+    'Kết quả': '결과',
+    'Kết quả tìm kiếm': '검색 결과',
+    'Gợi ý dữ liệu mới nhất': '최신 추천',
+    'Vui lòng nhập từ khóa để bắt đầu tìm kiếm.':
+      '검색을 시작하려면 키워드를 입력하세요.',
     'Đang tải dữ liệu tìm kiếm...': '검색 데이터를 불러오는 중...',
     'Không tìm thấy kết quả phù hợp.': '일치하는 결과가 없습니다.',
+    'Không tìm thấy kết quả phù hợp. Bạn có thể thử từ khóa khác.':
+      '일치하는 결과가 없습니다. 다른 키워드를 시도해 보세요.',
+    'Điều hướng website': '웹사이트 내비게이션',
+    'Điều hướng': '내비게이션',
+    'Trang thông tin': '정보 페이지',
     'Giới thiệu công ty': '회사 소개',
     'Tầm nhìn - Sứ mệnh': '비전 - 미션',
     'Giá trị cốt lõi': '핵심 가치',
