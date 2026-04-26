@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import HtmlContent from '../components/common/HtmlContent';
 import LoadingBlock from '../components/common/LoadingBlock';
 import ErrorBlock from '../components/common/ErrorBlock';
@@ -15,7 +15,7 @@ interface CmsSubSectionPageProps {
 }
 
 export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
-  const { language, t, toLocalizedPath } = useSiteI18n();
+  const { language, t } = useSiteI18n();
   const { sectionId = '' } = useParams();
 
   const section = useMemo(
@@ -41,9 +41,6 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
           description={t('Đường dẫn không tồn tại trên hệ thống frontend hiện tại.')}
         />
         <ErrorBlock message={t('Đường dẫn không tồn tại trên hệ thống frontend hiện tại.')} />
-        <Link to={toLocalizedPath(config.path)} className="inline-link back-link">
-          {t('Xem toàn bộ')} {t(config.title)}
-        </Link>
       </>
     );
   }
@@ -111,12 +108,6 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         <article className="html-content html-panel">
           <p>{t(section.description)}</p>
         </article>
-      )}
-
-      {!isCustomAboutSection && (
-        <Link to={toLocalizedPath(config.path)} className="inline-link back-link">
-          {t('Xem toàn bộ')} {t(config.title)}
-        </Link>
       )}
     </>
   );
