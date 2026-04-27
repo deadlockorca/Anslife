@@ -9,10 +9,6 @@ Ghi chú nhanh: Website của mình **cơ bản đã xong phần giao diện và
 ### 1.1 Giao diện và nội dung website
 - Đã hoàn thành khung giao diện cho website giới thiệu.
 - Đã triển khai nội dung chính bằng AI cho các nhóm trang quan trọng.
-- Đã làm sâu nhóm hệ sinh thái sản xuất (`manufacturing-ecosystem`).
-- Đã hoàn thiện chi tiết trang mô hình vận hành hệ sinh thái (`ecosystem-operating-model`) theo hướng thực tế.
-- Đã nâng cấp trang năng lực phát triển sản phẩm (`product-development-capability`) với quy trình theo giai đoạn và chỉ số theo dõi.
-- Đã chuẩn hóa nguyên tắc dùng hình ảnh, hạn chế trùng lặp trong cùng một nhóm nội dung.
 
 ### 1.2 Nền tảng kỹ thuật
 - Đã có bộ khung dự án `Next.js 16 + React 19 + TypeScript`.
@@ -29,7 +25,6 @@ Ghi chú nhanh: Website của mình **cơ bản đã xong phần giao diện và
 ### 1.3 Nghiệp vụ và tài liệu
 - Đã chốt bộ vai trò chuẩn V1 và các trạng thái luồng duyệt dữ liệu.
 - Đã có tài liệu phân quyền và chuyển trạng thái để duyệt nhanh.
-- Đã có tài liệu quy trình triển khai và mốc thời gian dự án.
 
 ## 2. Việc chưa làm được / Chưa hoàn thành
 
