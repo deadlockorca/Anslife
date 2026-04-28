@@ -1034,7 +1034,6 @@ ul {
   align-items: center;
   justify-content: space-between;
   gap: 0.34rem;
-  font-weight: 600;
 }
 
 .submenu-link-arrow {
@@ -1103,7 +1102,7 @@ ul {
 
 .submenu-flyout-panel .submenu-link-nested {
   padding-left: 0.58rem;
-  font-size: 1rem;
+  font-size: 0.83rem;
 }
 
 .submenu-group {
@@ -1138,7 +1137,7 @@ ul {
 
 .submenu-link-nested {
   padding-left: 0.6rem;
-  font-size: 1rem;
+  font-size: 0.83rem;
   font-weight: 500;
 }
 
