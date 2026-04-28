@@ -496,6 +496,40 @@ const TRANSLATIONS: Record<
       'No. 609, Group 3, Quarter 1, Long Binh Ward, Dong Nai Province, Vietnam.',
     'Giao diện SPA + CMS WordPress': 'SPA Interface + WordPress CMS',
     'Giao diện Next.js + CMS WordPress': 'Next.js Interface + WordPress CMS',
+    'Đội ngũ ANSLIFE sẵn sàng tiếp nhận yêu cầu báo giá, hỗ trợ kỹ thuật sản phẩm, đặt lịch làm việc và trao đổi kế hoạch hợp tác theo từng thị trường.':
+      'The ANSLIFE team is ready to receive quote requests, provide product technical support, schedule meetings, and discuss cooperation plans by market.',
+    'Phản hồi nhanh': 'Fast response',
+    'Ưu tiên phản hồi thông tin trong khung thời gian làm việc gần nhất.':
+      'We prioritize replies during the nearest business hours.',
+    'Hỗ trợ kỹ thuật': 'Technical support',
+    'Tư vấn theo mã hàng, vật liệu, cấu trúc và tiêu chuẩn hoàn thiện.':
+      'Consulting by product code, materials, structure, and finishing standards.',
+    'Hỗ trợ thương mại': 'Commercial support',
+    'Đồng bộ báo giá, điều kiện giao hàng và quy trình đơn hàng.':
+      'Aligning quotations, delivery terms, and order processing workflow.',
+    'Làm việc đa kênh': 'Multi-channel collaboration',
+    'Hỗ trợ email, điện thoại và lịch hẹn trực tiếp.':
+      'Support via email, phone, and in-person appointments.',
+    'Giờ làm việc: Thứ 2 - Thứ 7, 08:00 - 17:30':
+      'Working hours: Monday - Saturday, 08:00 - 17:30',
+    'Hỗ trợ gặp trực tiếp theo lịch hẹn.':
+      'In-person meetings available by appointment.',
+    'Phù hợp cho trao đổi dự án và xác nhận mẫu.':
+      'Ideal for project discussions and sample confirmations.',
+    'Nhà máy': 'Factory',
+    'Đón tiếp tham quan nhà máy theo đăng ký trước.':
+      'Factory visits welcomed by prior registration.',
+    'Hỗ trợ khảo sát năng lực sản xuất theo từng nhóm sản phẩm.':
+      'Production capability surveys supported by product group.',
+    'Hướng dẫn gửi yêu cầu nhanh': 'Quick request guidelines',
+    'Để nhận phản hồi chính xác và nhanh hơn, bạn nên cung cấp rõ nhóm sản phẩm, thị trường mục tiêu, số lượng dự kiến và yêu cầu chất lượng ưu tiên.':
+      'For a faster and more accurate response, please share the product group, target market, expected volume, and priority quality requirements.',
+    'Đính kèm bản vẽ hoặc ảnh tham chiếu nếu đã có.':
+      'Attach drawings or reference images if available.',
+    'Nêu rõ thời gian mong muốn nhận báo giá / triển khai.':
+      'State the desired timeline for receiving the quote or starting execution.',
+    'Cho biết điều kiện giao hàng dự kiến để tư vấn phù hợp.':
+      'Share the expected delivery terms so we can advise accordingly.',
   },
   jp: {
     'Trang chủ': 'ホーム',
@@ -914,6 +948,40 @@ const TRANSLATIONS: Record<
     'Giao diện SPA + CMS WordPress': 'SPAインターフェース + WordPress CMS',
     'Giao diện Next.js + CMS WordPress':
       'Next.jsインターフェース + WordPress CMS',
+    'Đội ngũ ANSLIFE sẵn sàng tiếp nhận yêu cầu báo giá, hỗ trợ kỹ thuật sản phẩm, đặt lịch làm việc và trao đổi kế hoạch hợp tác theo từng thị trường.':
+      'ANSLIFEチームは、見積依頼の受付、製品の技術サポート、商談の予約、市場ごとの協業プランのご相談まで対応いたします。',
+    'Phản hồi nhanh': '迅速な対応',
+    'Ưu tiên phản hồi thông tin trong khung thời gian làm việc gần nhất.':
+      '直近の営業時間内を優先して回答いたします。',
+    'Hỗ trợ kỹ thuật': '技術サポート',
+    'Tư vấn theo mã hàng, vật liệu, cấu trúc và tiêu chuẩn hoàn thiện.':
+      '製品コード・素材・構造・仕上げ基準に基づきご相談を承ります。',
+    'Hỗ trợ thương mại': '商務サポート',
+    'Đồng bộ báo giá, điều kiện giao hàng và quy trình đơn hàng.':
+      '見積・納品条件・発注プロセスを一貫して調整いたします。',
+    'Làm việc đa kênh': 'マルチチャネル対応',
+    'Hỗ trợ email, điện thoại và lịch hẹn trực tiếp.':
+      'メール、電話、対面での打ち合わせに対応します。',
+    'Giờ làm việc: Thứ 2 - Thứ 7, 08:00 - 17:30':
+      '営業時間:月曜日 - 土曜日 08:00 - 17:30',
+    'Hỗ trợ gặp trực tiếp theo lịch hẹn.':
+      '事前予約による対面対応が可能です。',
+    'Phù hợp cho trao đổi dự án và xác nhận mẫu.':
+      'プロジェクト協議やサンプル確認に適しています。',
+    'Nhà máy': '工場',
+    'Đón tiếp tham quan nhà máy theo đăng ký trước.':
+      '事前登録により工場見学をご案内いたします。',
+    'Hỗ trợ khảo sát năng lực sản xuất theo từng nhóm sản phẩm.':
+      '製品カテゴリーごとの生産能力調査に対応いたします。',
+    'Hướng dẫn gửi yêu cầu nhanh': 'スムーズな依頼のためのご案内',
+    'Để nhận phản hồi chính xác và nhanh hơn, bạn nên cung cấp rõ nhóm sản phẩm, thị trường mục tiêu, số lượng dự kiến và yêu cầu chất lượng ưu tiên.':
+      'より正確で迅速な回答のため、製品カテゴリー、対象市場、想定数量、優先すべき品質要件を明確にお知らせください。',
+    'Đính kèm bản vẽ hoặc ảnh tham chiếu nếu đã có.':
+      '図面や参考画像があれば添付してください。',
+    'Nêu rõ thời gian mong muốn nhận báo giá / triển khai.':
+      '見積受領および着手を希望される時期をお知らせください。',
+    'Cho biết điều kiện giao hàng dự kiến để tư vấn phù hợp.':
+      '想定される納品条件をお知らせいただければ適切にご提案いたします。',
   },
   kr: {
     'Trang chủ': '홈',
@@ -1331,6 +1399,40 @@ const TRANSLATIONS: Record<
       '베트남 동나이성 롱빈동 1구역 3조 609번지',
     'Giao diện SPA + CMS WordPress': 'SPA 인터페이스 + WordPress CMS',
     'Giao diện Next.js + CMS WordPress': 'Next.js 인터페이스 + WordPress CMS',
+    'Đội ngũ ANSLIFE sẵn sàng tiếp nhận yêu cầu báo giá, hỗ trợ kỹ thuật sản phẩm, đặt lịch làm việc và trao đổi kế hoạch hợp tác theo từng thị trường.':
+      'ANSLIFE 팀은 견적 요청 접수, 제품 기술 지원, 미팅 일정 조율, 시장별 협력 방안 논의를 모두 지원합니다.',
+    'Phản hồi nhanh': '빠른 응대',
+    'Ưu tiên phản hồi thông tin trong khung thời gian làm việc gần nhất.':
+      '가장 가까운 업무 시간 내 우선 회신해 드립니다.',
+    'Hỗ trợ kỹ thuật': '기술 지원',
+    'Tư vấn theo mã hàng, vật liệu, cấu trúc và tiêu chuẩn hoàn thiện.':
+      '제품 코드, 소재, 구조, 마감 기준에 따라 상담해 드립니다.',
+    'Hỗ trợ thương mại': '상업 지원',
+    'Đồng bộ báo giá, điều kiện giao hàng và quy trình đơn hàng.':
+      '견적, 배송 조건, 주문 프로세스를 일관되게 조율합니다.',
+    'Làm việc đa kênh': '멀티 채널 대응',
+    'Hỗ trợ email, điện thoại và lịch hẹn trực tiếp.':
+      '이메일, 전화, 직접 미팅 일정을 지원합니다.',
+    'Giờ làm việc: Thứ 2 - Thứ 7, 08:00 - 17:30':
+      '업무 시간: 월요일 - 토요일, 08:00 - 17:30',
+    'Hỗ trợ gặp trực tiếp theo lịch hẹn.':
+      '사전 예약을 통한 대면 미팅이 가능합니다.',
+    'Phù hợp cho trao đổi dự án và xác nhận mẫu.':
+      '프로젝트 협의와 샘플 확인에 적합합니다.',
+    'Nhà máy': '공장',
+    'Đón tiếp tham quan nhà máy theo đăng ký trước.':
+      '사전 등록 시 공장 견학을 안내해 드립니다.',
+    'Hỗ trợ khảo sát năng lực sản xuất theo từng nhóm sản phẩm.':
+      '제품군별 생산 역량 조사를 지원합니다.',
+    'Hướng dẫn gửi yêu cầu nhanh': '빠른 요청 가이드',
+    'Để nhận phản hồi chính xác và nhanh hơn, bạn nên cung cấp rõ nhóm sản phẩm, thị trường mục tiêu, số lượng dự kiến và yêu cầu chất lượng ưu tiên.':
+      '더 정확하고 빠른 회신을 위해 제품군, 목표 시장, 예상 수량, 우선 품질 요건을 명확히 알려 주세요.',
+    'Đính kèm bản vẽ hoặc ảnh tham chiếu nếu đã có.':
+      '도면이나 참고 이미지가 있다면 첨부해 주세요.',
+    'Nêu rõ thời gian mong muốn nhận báo giá / triển khai.':
+      '견적 수령 및 진행을 희망하는 일정을 알려 주세요.',
+    'Cho biết điều kiện giao hàng dự kiến để tư vấn phù hợp.':
+      '예상 배송 조건을 알려 주시면 그에 맞추어 안내해 드립니다.',
   },
 };
 

@@ -2843,10 +2843,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 
   contact: `
 <div class="ai-content ai-contact-content">
-  <p class="ai-intro">
-    Đội ngũ ANSLIFE sẵn sàng tiếp nhận yêu cầu báo giá, hỗ trợ kỹ thuật sản phẩm,
-    đặt lịch làm việc và trao đổi kế hoạch hợp tác theo từng thị trường.
-  </p>
+  <p class="ai-intro">Đội ngũ ANSLIFE sẵn sàng tiếp nhận yêu cầu báo giá, hỗ trợ kỹ thuật sản phẩm, đặt lịch làm việc và trao đổi kế hoạch hợp tác theo từng thị trường.</p>
 
   <div class="ai-stat-grid">
     <article class="ai-stat-card">
@@ -2893,10 +2890,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 
   <section class="ai-section">
     <h2>Hướng dẫn gửi yêu cầu nhanh</h2>
-    <p>
-      Để nhận phản hồi chính xác và nhanh hơn, bạn nên cung cấp rõ nhóm sản phẩm,
-      thị trường mục tiêu, số lượng dự kiến và yêu cầu chất lượng ưu tiên.
-    </p>
+    <p>Để nhận phản hồi chính xác và nhanh hơn, bạn nên cung cấp rõ nhóm sản phẩm, thị trường mục tiêu, số lượng dự kiến và yêu cầu chất lượng ưu tiên.</p>
     <ul>
       <li>Đính kèm bản vẽ hoặc ảnh tham chiếu nếu đã có.</li>
       <li>Nêu rõ thời gian mong muốn nhận báo giá / triển khai.</li>
