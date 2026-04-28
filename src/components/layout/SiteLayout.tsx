@@ -9,7 +9,7 @@ import {
 } from 'react';
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { createPortal } from 'react-dom';
-import { STATIC_PAGE_MAP, TOP_MENU, type MenuChildItem } from '../../config/site';
+import { TOP_MENU, type MenuChildItem } from '../../config/site';
 import {
   getStoredLanguage,
   isLanguageCode,
@@ -20,8 +20,7 @@ import {
 import SocialLinks from './SocialLinks';
 import useSiteI18n from '../../hooks/useSiteI18n';
 import { WORLD_LANGUAGE_OPTIONS } from '../../i18n/worldLanguages';
-import { decodeHtml, getTermsByTaxonomy } from '../../lib/content';
-import { getProductCategories, getProducts, getProjects } from '../../lib/wp';
+import { getProductCategories } from '../../lib/wp';
 import { getCurrentUser, type AuthUser } from '../../lib/internalAuth';
 import type { WpCategory } from '../../types/wp';
 
@@ -52,14 +51,6 @@ const LANGUAGE_ROUTE_ALIAS: Record<string, LanguageCode> = {
 const additionalLanguageOptions = WORLD_LANGUAGE_OPTIONS.filter(
   (item) => item.code !== 'en',
 );
-
-interface HeaderSearchSuggestion {
-  id: string;
-  kind: 'product' | 'project' | 'navigation' | 'section';
-  title: string;
-  path: string;
-  searchKey: string;
-}
 
 const PRODUCT_MENU_PATH = '/products';
 const HEADER_PRIMARY_MENU_COUNT = 6;
@@ -285,47 +276,6 @@ const TOAM_PRODUCT_MENU_FALLBACK: MenuChildItem[] = [
 const DEFAULT_SITE_BG_VIDEO_MP4 = '/assets/videos/home-bg.mp4';
 const DEFAULT_SITE_BG_VIDEO_POSTER = '/assets/videos/home-bg-poster.jpg';
 
-function normalizeSearchText(value: string): string {
-  return value
-    .normalize('NFD')
-    .replace(/[đĐ]/g, 'd')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-interface MenuSearchNode {
-  label: string;
-  path: string;
-  trail: string[];
-}
-
-function flattenMenuItemsForSearch(
-  items: MenuChildItem[],
-  parentTrail: string[] = [],
-): MenuSearchNode[] {
-  const flattenedItems: MenuSearchNode[] = [];
-
-  for (const item of items) {
-    const label = item.label.trim();
-    const path = item.path.trim();
-    if (!label || !path) {
-      continue;
-    }
-
-    const trail = [...parentTrail, label];
-    flattenedItems.push({ label, path, trail });
-
-    if (item.children && item.children.length > 0) {
-      flattenedItems.push(...flattenMenuItemsForSearch(item.children, trail));
-    }
-  }
-
-  return flattenedItems;
-}
-
 function normalizeCategoryId(
   value: number | string | null | undefined,
 ): string | null {
@@ -456,9 +406,6 @@ export default function SiteLayout() {
     Record<string, boolean>
   >({});
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchLoading, setSearchLoading] = useState(false);
-  const [searchReady, setSearchReady] = useState(false);
-  const [searchIndex, setSearchIndex] = useState<HeaderSearchSuggestion[]>([]);
   const [productMenuLoaded, setProductMenuLoaded] = useState(false);
   const [productMenuChildren, setProductMenuChildren] = useState<MenuChildItem[]>(
     TOAM_PRODUCT_MENU_FALLBACK,
@@ -988,129 +935,6 @@ export default function SiteLayout() {
     navigate(targetPath, { replace: true });
     closeNavigationMenus();
   }
-
-  const structuralSearchSuggestions = useMemo<HeaderSearchSuggestion[]>(() => {
-    const menuSuggestions = flattenMenuItemsForSearch(TOP_MENU as MenuChildItem[]).map(
-      (item, index) => {
-        const translatedTrail = item.trail.map((label) => t(label));
-        const translatedTitle = translatedTrail[translatedTrail.length - 1] ?? t(item.label);
-
-        return {
-          id: `search-navigation-${index}-${item.path}`,
-          kind: 'navigation' as const,
-          title: translatedTitle,
-          path: item.path,
-          searchKey: normalizeSearchText(
-            `${item.label} ${translatedTitle} ${item.trail.join(' ')} ${translatedTrail.join(' ')} ${item.path}`,
-          ),
-        };
-      },
-    );
-
-    const sectionSuggestions = Object.values(STATIC_PAGE_MAP).flatMap((page) => [
-      {
-        id: `search-section-page-${page.slug}`,
-        kind: 'section' as const,
-        title: t(page.title),
-        path: page.path,
-        searchKey: normalizeSearchText(
-          `${page.title} ${t(page.title)} ${page.summary} ${t(page.summary)} ${page.slug} ${page.path}`,
-        ),
-      },
-      ...page.sections.map((section) => ({
-        id: `search-section-${page.slug}-${section.id}`,
-        kind: 'section' as const,
-        title: t(section.title),
-        path: `${page.path}/${section.id}`,
-        searchKey: normalizeSearchText(
-          `${section.title} ${t(section.title)} ${section.description} ${t(section.description)} ${page.title} ${t(page.title)} ${section.id} ${page.slug}`,
-        ),
-      })),
-    ]);
-
-    const uniqueSuggestions = new Map<string, HeaderSearchSuggestion>();
-    for (const item of [...menuSuggestions, ...sectionSuggestions]) {
-      const uniqueKey = `${item.path}__${normalizeSearchText(item.title)}`;
-      if (!uniqueSuggestions.has(uniqueKey)) {
-        uniqueSuggestions.set(uniqueKey, item);
-      }
-    }
-
-    return Array.from(uniqueSuggestions.values());
-  }, [t]);
-
-  const loadSearchIndex = useCallback(async () => {
-    setSearchLoading(true);
-    try {
-      const [productsResult, projectsResult] = await Promise.allSettled([
-        getProducts(100),
-        getProjects(100),
-      ]);
-
-      const products = productsResult.status === 'fulfilled' ? productsResult.value : [];
-      const projects = projectsResult.status === 'fulfilled' ? projectsResult.value : [];
-
-      const productSuggestions = products.map((product) => {
-        const title = decodeHtml(product.title.rendered).trim();
-        const category = getTermsByTaxonomy(product, 'product_category')[0];
-        const categorySlug = category?.slug ?? 'all';
-
-        return {
-          id: `product-${product.id}`,
-          kind: 'product' as const,
-          title,
-          path: `/products/${categorySlug}/${product.slug}`,
-          searchKey: normalizeSearchText(title),
-        };
-      });
-
-      const projectSuggestions = projects.map((project) => {
-        const title = decodeHtml(project.title.rendered).trim();
-        return {
-          id: `project-${project.id}`,
-          kind: 'project' as const,
-          title,
-          path: `/projects/${project.slug}`,
-          searchKey: normalizeSearchText(title),
-        };
-      });
-
-      setSearchIndex([...structuralSearchSuggestions, ...productSuggestions, ...projectSuggestions]);
-    } finally {
-      setSearchLoading(false);
-      setSearchReady(true);
-    }
-  }, [structuralSearchSuggestions]);
-
-  const normalizedQuery = useMemo(() => normalizeSearchText(searchQuery), [searchQuery]);
-  const activeSearchIndex = useMemo<HeaderSearchSuggestion[]>(
-    () => (searchIndex.length > 0 ? searchIndex : structuralSearchSuggestions),
-    [searchIndex, structuralSearchSuggestions],
-  );
-  const searchResults = useMemo(() => {
-    if (!normalizedQuery) {
-      return [];
-    }
-
-    return activeSearchIndex
-      .filter((item) => item.searchKey.includes(normalizedQuery))
-      .slice(0, 8);
-  }, [activeSearchIndex, normalizedQuery]);
-
-  function handleSearchResultClick(path: string) {
-    navigate(toLocalizedPath(path));
-    setMobileSearchOpen(false);
-    setSearchQuery('');
-    closeNavigationMenus();
-  }
-
-  useEffect(() => {
-    if (!mobileSearchOpen || searchReady || searchLoading) {
-      return;
-    }
-
-    void loadSearchIndex();
-  }, [loadSearchIndex, mobileSearchOpen, searchLoading, searchReady]);
 
   function handleMobileSearchSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
