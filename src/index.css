@@ -4345,6 +4345,10 @@ ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  #organization.ai-operating-philosophy .ai-op-card {
+    grid-column: span 1;
+  }
+
   #organization.ai-operating-philosophy .ai-op-grid > .ai-op-card:nth-child(n + 5) {
     grid-column: span 1;
   }
@@ -4353,6 +4357,11 @@ ul {
 @media (max-width: 980px) {
   #organization.ai-operating-philosophy .ai-op-grid {
     grid-template-columns: 1fr;
+  }
+
+  #organization.ai-operating-philosophy .ai-op-card,
+  #organization.ai-operating-philosophy .ai-op-grid > .ai-op-card:nth-child(n + 5) {
+    grid-column: span 1;
   }
 }
 
