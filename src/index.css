@@ -1,9 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&family=Spectral:wght@300;400;500&display=swap');
+
+@font-face {
+  font-family: 'Lyon Display Web';
+  src:
+    local('Lyon Display Web'),
+    local('LyonDisplay-Light'),
+    local('Lyon Display Light');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lyon Text Web';
+  src:
+    local('Lyon Text Web'),
+    local('LyonText-Regular'),
+    local('Lyon Text Regular');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Whitney SSm';
+  src:
+    local('Whitney SSm Light'),
+    local('Whitney SSm Book'),
+    local('Whitney SSm'),
+    local('Whitney SSm A'),
+    local('Whitney SSm B');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Whitney SSm';
+  src:
+    local('Whitney SSm Book'),
+    local('Whitney SSm'),
+    local('Whitney SSm A'),
+    local('Whitney SSm B');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Whitney SSm';
+  src:
+    local('Whitney SSm Medium'),
+    local('Whitney SSm Semibold'),
+    local('Whitney SSm Bold');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
 
 :root {
-  --font-body: 'Libre Franklin', sans-serif;
-  --font-heading: 'Libre Franklin', sans-serif;
-  --font-ui: 'Libre Franklin', sans-serif;
+  --font-body: 'Whitney SSm', 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+  --font-heading: 'Lyon Display Web', 'Lyon Text Web', 'Spectral', 'Times New Roman', serif;
+  --font-ui: 'Whitney SSm', 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
   /* Aman bg-primary/theme-color */
   --bg: #f3eee7;
   --panel: #ffffff;
@@ -36,8 +94,19 @@ body {
   min-width: 320px;
   background-color: var(--bg);
   font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: 0.0571428571rem;
+  color: #313131;
   max-width: 100%;
   overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-ui);
 }
 
 h1,
@@ -48,6 +117,7 @@ h5,
 h6 {
   font-family: var(--font-heading);
   font-weight: 400;
+  letter-spacing: 0.0357142857rem;
 }
 
 body.mobile-menu-open {
@@ -59,9 +129,11 @@ body.mobile-menu-open {
 }
 
 html {
+  font-size: 14px;
   scroll-behavior: auto;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -498,7 +570,7 @@ ul {
   background: #fff;
   color: #2f4562;
   padding: 0.48rem 0.8rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   white-space: nowrap;
   transition: all 0.2s ease;
@@ -1031,7 +1103,7 @@ ul {
 
 .submenu-flyout-panel .submenu-link-nested {
   padding-left: 0.58rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .submenu-group {
@@ -1066,7 +1138,7 @@ ul {
 
 .submenu-link-nested {
   padding-left: 0.6rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -2103,14 +2175,6 @@ ul {
 
 .home-ans-side-card a {
   width: fit-content;
-  text-decoration: none;
-  color: var(--primary-strong);
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-
-.home-ans-side-card a:hover {
-  text-decoration: underline;
 }
 
 .home-ans-metrics {
@@ -2214,13 +2278,7 @@ ul {
 }
 
 .home-ans-head a {
-  color: var(--primary-strong);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.home-ans-head a:hover {
-  text-decoration: underline;
+  width: fit-content;
 }
 
 .home-ans-category-strip {
@@ -2494,15 +2552,73 @@ ul {
   letter-spacing: 0.05em;
 }
 
+/* Aman-inspired slim CTA link style */
+.cta__link.card__link__cta.underline.single-link,
+.home-ans-side-card a,
+.home-ans-head a,
 .block-head a,
 .inline-link {
-  color: var(--primary-strong);
-  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  color: #313131;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.0571428571rem;
+  line-height: 1.45;
   text-decoration: none;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
 
-.inline-link:hover {
-  text-decoration: underline;
+.cta__link.card__link__cta.underline.single-link::after,
+.home-ans-side-card a::after,
+.home-ans-head a::after,
+.block-head a::after,
+.inline-link::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 4px;
+  border-bottom: 1px solid #7c7c7c;
+  transition: border-color 0.2s ease;
+}
+
+.cta__link.card__link__cta.underline.single-link,
+.home-ans-side-card a,
+.home-ans-head a,
+.inline-link {
+  width: fit-content;
+}
+
+.cta__link.card__link__cta.underline.single-link:hover,
+.home-ans-side-card a:hover,
+.home-ans-head a:hover,
+.block-head a:hover,
+.inline-link:hover,
+.cta__link.card__link__cta.underline.single-link:focus-visible,
+.home-ans-side-card a:focus-visible,
+.home-ans-head a:focus-visible,
+.block-head a:focus-visible,
+.inline-link:focus-visible {
+  color: #313131;
+  opacity: 0.9;
+}
+
+.cta__link.card__link__cta.underline.single-link:hover::after,
+.home-ans-side-card a:hover::after,
+.home-ans-head a:hover::after,
+.block-head a:hover::after,
+.inline-link:hover::after,
+.cta__link.card__link__cta.underline.single-link:focus-visible::after,
+.home-ans-side-card a:focus-visible::after,
+.home-ans-head a:focus-visible::after,
+.block-head a:focus-visible::after,
+.inline-link:focus-visible::after {
+  border-bottom-color: #313131;
 }
 
 .card-grid {
@@ -2627,7 +2743,7 @@ ul {
 
 .products-catalog-link span:first-child {
   color: #8393a8;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .products-catalog-link:hover {
@@ -3319,7 +3435,7 @@ ul {
 .ai-company-block p {
   margin: 0.12rem 0 0;
   color: #2f2319;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.52;
   grid-column: auto;
 }
@@ -3383,7 +3499,7 @@ ul {
 .ai-company-panel p {
   margin: 0.08rem 0 0;
   color: #2f2319;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.52;
 }
 
@@ -3392,7 +3508,7 @@ ul {
   color: #2f2319;
   display: grid;
   gap: 0.24rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -4465,7 +4581,7 @@ ul {
 .ai-org-flow-step p {
   margin: 0.32rem 0 0;
   color: #586d84;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.42;
 }
 
@@ -4792,7 +4908,7 @@ ul {
 .ai-history-milestone-item p {
   margin: 0.32rem 0 0;
   color: #586d84;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.42;
 }
 
@@ -4983,7 +5099,7 @@ ul {
   border-radius: 8px;
   background: rgba(248, 252, 255, 0.9);
   color: #38526f;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.4;
   padding: 0.32rem 0.44rem;
   display: inline-flex;
@@ -5022,7 +5138,7 @@ ul {
 .ai-ans-eco-flow-item p {
   margin: 0.32rem 0 0;
   color: #586d84;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.42;
 }
 
@@ -6186,7 +6302,7 @@ ul {
 .admin-product-block-head p {
   margin: 0;
   color: #59718b;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .admin-product-row-card {
@@ -6603,7 +6719,7 @@ ul {
 .site-footer-contact h3 {
   margin: 0;
   color: #313131;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -6874,7 +6990,7 @@ ul {
   }
 
   .site-footer-copy {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -6894,7 +7010,7 @@ ul {
   }
 
   .menu-link {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding-inline: 0.5rem;
   }
 
