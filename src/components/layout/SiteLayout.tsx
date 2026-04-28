@@ -481,13 +481,24 @@ export default function SiteLayout() {
       })),
     [topMenuItems],
   );
+  const desktopPrimaryMenuCount = useMemo(() => {
+    if (!isHomeRoute) {
+      return HEADER_PRIMARY_MENU_COUNT;
+    }
+
+    const homePreferredPrimaryCount = Math.max(
+      HEADER_PRIMARY_MENU_COUNT,
+      desktopTopMenuItems.length - 2,
+    );
+    return Math.min(homePreferredPrimaryCount, desktopTopMenuItems.length);
+  }, [desktopTopMenuItems.length, isHomeRoute]);
   const desktopPrimaryTopMenuItems = useMemo(
-    () => desktopTopMenuItems.slice(0, HEADER_PRIMARY_MENU_COUNT),
-    [desktopTopMenuItems],
+    () => desktopTopMenuItems.slice(0, desktopPrimaryMenuCount),
+    [desktopPrimaryMenuCount, desktopTopMenuItems],
   );
   const desktopSecondaryTopMenuItems = useMemo(
-    () => desktopTopMenuItems.slice(HEADER_PRIMARY_MENU_COUNT),
-    [desktopTopMenuItems],
+    () => desktopTopMenuItems.slice(desktopPrimaryMenuCount),
+    [desktopPrimaryMenuCount, desktopTopMenuItems],
   );
   const mobileUtilityMenuItems = useMemo(
     () =>

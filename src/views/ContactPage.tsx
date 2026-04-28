@@ -41,6 +41,14 @@ const contactMapLocations = [
   },
 ] as const;
 
+const calendarDayLabels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] as const;
+const calendarLocaleByLanguage: Record<string, string> = {
+  vn: 'en-US',
+  en: 'en-US',
+  jp: 'en-US',
+  kr: 'en-US',
+};
+
 type ContactSection = (typeof contactSections)[number];
 interface QuoteProductOption {
   slug: string;
@@ -68,6 +76,52 @@ function parseListQueryParam(value: string | null): string[] {
     .split(',')
     .map((item) => item.trim())
     .filter(Boolean);
+}
+
+function startOfMonth(date: Date): Date {
+  return new Date(date.getFullYear(), date.getMonth(), 1);
+}
+
+function addMonths(date: Date, delta: number): Date {
+  return new Date(date.getFullYear(), date.getMonth() + delta, 1);
+}
+
+function toIsoDateString(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function parseIsoDate(value: string): Date | null {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (!match) {
+    return null;
+  }
+
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const parsed = new Date(year, month - 1, day);
+  if (
+    parsed.getFullYear() !== year ||
+    parsed.getMonth() !== month - 1 ||
+    parsed.getDate() !== day
+  ) {
+    return null;
+  }
+
+  return parsed;
+}
+
+function formatCalendarMonthLabel(date: Date, language: string): string {
+  const locale = calendarLocaleByLanguage[language] ?? 'en-US';
+  return new Intl.DateTimeFormat(locale, {
+    month: 'long',
+    year: 'numeric',
+  })
+    .format(date)
+    .toUpperCase();
 }
 
 export default function ContactPage() {
@@ -100,6 +154,10 @@ export default function ContactPage() {
   const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
   const [productInput, setProductInput] = useState('');
   const [isProductInputFocused, setIsProductInputFocused] = useState(false);
+  const [selectedMeetingDate, setSelectedMeetingDate] = useState('');
+  const [calendarBaseMonth, setCalendarBaseMonth] = useState(() =>
+    startOfMonth(new Date()),
+  );
 
   const productOptions = useMemo<QuoteProductOption[]>(() => {
     const products = quoteProductsData ?? [];
@@ -190,6 +248,27 @@ export default function ContactPage() {
       .filter((option) => option.title.toLowerCase().includes(keyword))
       .slice(0, 16);
   }, [productInput, productOptions, selectedProducts]);
+
+  const meetingCalendarMonths = useMemo(
+    () => [calendarBaseMonth, addMonths(calendarBaseMonth, 1)],
+    [calendarBaseMonth],
+  );
+
+  const selectedMeetingDateLabel = useMemo(() => {
+    const selectedDate = parseIsoDate(selectedMeetingDate);
+    if (!selectedDate) {
+      return t('Chưa chọn ngày');
+    }
+
+    return new Intl.DateTimeFormat('en-US', {
+      weekday: 'short',
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+    }).format(selectedDate);
+  }, [selectedMeetingDate, t]);
+
+  const todayIsoDate = useMemo(() => toIsoDateString(new Date()), []);
 
   const addProductChoice = useCallback(
     (rawValue: string) => {
@@ -321,167 +400,252 @@ export default function ContactPage() {
         </section>
       )}
 
-      {(showQuoteForm || showMeetingForm) && (
-        <section className={`form-grid ${showQuoteForm && showMeetingForm ? '' : 'single-col'}`}>
-          {showQuoteForm && (
-            <article className="form-card" id="gui-yeu-cau-bao-gia">
-              <h2>{t('Gửi yêu cầu báo giá')}</h2>
-              <form
-                onSubmit={(event) =>
-                  submitByFormId(quoteFormId, event, setQuoteState, () => {
-                    setSelectedProducts([]);
-                    setProductInput('');
-                  })
-                }
-              >
-                <label>
-                  {t('Họ tên')}
-                  <input name="your-name" required />
-                </label>
-                <label>
-                  {t('Email')}
-                  <input type="email" name="your-email" required />
-                </label>
-                <label>
-                  {t('Công ty')}
-                  <input name="your-company" required />
-                </label>
-                <div className="product-interest-field">
-                  <label htmlFor="product-interest-input">{t('Sản phẩm quan tâm')}</label>
-                  <div className="product-interest-inline">
-                    <div className="product-interest-autocomplete">
-                      <input
-                        id="product-interest-input"
-                        value={productInput}
-                        placeholder={t('Nhập tên sản phẩm rồi bấm Thêm')}
-                        onFocus={() => setIsProductInputFocused(true)}
-                        onBlur={() => {
-                          window.setTimeout(() => setIsProductInputFocused(false), 120);
-                        }}
-                        onChange={(event) => setProductInput(event.target.value)}
-                        onKeyDown={(event) => {
-                          if (event.key === 'Enter' || event.key === ',') {
-                            event.preventDefault();
-                            addProductChoice(productInput);
-                          }
-                        }}
-                      />
-                      {isProductInputFocused && filteredProductSuggestions.length > 0 && (
-                        <div className="product-interest-suggestions" role="listbox">
-                          {filteredProductSuggestions.map((option) => (
-                            <button
-                              key={option.slug}
-                              type="button"
-                              className="product-interest-suggestion-item"
-                              onMouseDown={(event) => event.preventDefault()}
-                              onClick={() => addProductChoice(option.title)}
-                            >
-                              {option.title}
-                            </button>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                    <button
-                      type="button"
-                      className="button-ghost form-inline-button"
-                      onClick={() => addProductChoice(productInput)}
-                    >
-                      {t('Thêm')}
-                    </button>
-                  </div>
-                  <input type="hidden" name="product-interest" value={productInterestPayload} />
-                  {selectedProducts.length > 0 && (
-                    <div className="product-interest-chip-list">
-                      {selectedProducts.map((item) => (
-                        <span key={item} className="product-interest-chip">
-                          {item}
+      {showQuoteForm && (
+        <section className="form-grid single-col">
+          <article className="form-card" id="gui-yeu-cau-bao-gia">
+            <h2>{t('Gửi yêu cầu báo giá')}</h2>
+            <form
+              onSubmit={(event) =>
+                submitByFormId(quoteFormId, event, setQuoteState, () => {
+                  setSelectedProducts([]);
+                  setProductInput('');
+                })
+              }
+            >
+              <label>
+                {t('Họ tên')}
+                <input name="your-name" required />
+              </label>
+              <label>
+                {t('Email')}
+                <input type="email" name="your-email" required />
+              </label>
+              <label>
+                {t('Công ty')}
+                <input name="your-company" required />
+              </label>
+              <div className="product-interest-field">
+                <label htmlFor="product-interest-input">{t('Sản phẩm quan tâm')}</label>
+                <div className="product-interest-inline">
+                  <div className="product-interest-autocomplete">
+                    <input
+                      id="product-interest-input"
+                      value={productInput}
+                      placeholder={t('Nhập tên sản phẩm rồi bấm Thêm')}
+                      onFocus={() => setIsProductInputFocused(true)}
+                      onBlur={() => {
+                        window.setTimeout(() => setIsProductInputFocused(false), 120);
+                      }}
+                      onChange={(event) => setProductInput(event.target.value)}
+                      onKeyDown={(event) => {
+                        if (event.key === 'Enter' || event.key === ',') {
+                          event.preventDefault();
+                          addProductChoice(productInput);
+                        }
+                      }}
+                    />
+                    {isProductInputFocused && filteredProductSuggestions.length > 0 && (
+                      <div className="product-interest-suggestions" role="listbox">
+                        {filteredProductSuggestions.map((option) => (
                           <button
+                            key={option.slug}
                             type="button"
-                            onClick={() => removeProductChoice(item)}
-                            aria-label={`${t('Xóa')} ${item}`}
+                            className="product-interest-suggestion-item"
+                            onMouseDown={(event) => event.preventDefault()}
+                            onClick={() => addProductChoice(option.title)}
                           >
-                            ×
+                            {option.title}
                           </button>
-                        </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <button
+                    type="button"
+                    className="button-ghost form-inline-button"
+                    onClick={() => addProductChoice(productInput)}
+                  >
+                    {t('Thêm')}
+                  </button>
+                </div>
+                <input type="hidden" name="product-interest" value={productInterestPayload} />
+                {selectedProducts.length > 0 && (
+                  <div className="product-interest-chip-list">
+                    {selectedProducts.map((item) => (
+                      <span key={item} className="product-interest-chip">
+                        {item}
+                        <button
+                          type="button"
+                          onClick={() => removeProductChoice(item)}
+                          aria-label={`${t('Xóa')} ${item}`}
+                        >
+                          ×
+                        </button>
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <p className="form-helper-text">
+                  {quoteProductsLoading
+                    ? t('Đang tải danh sách sản phẩm...')
+                    : quoteProductsError
+                      ? t(
+                          'Không tải được gợi ý sản phẩm từ hệ thống dữ liệu. Bạn vẫn có thể nhập thủ công.',
+                        )
+                      : productOptions.length === 0
+                        ? t('Chưa có sản phẩm trong hệ thống để gợi ý.')
+                        : t(
+                            'Bạn có thể chọn nhiều sản phẩm. Nếu không thấy trong gợi ý, nhập thủ công rồi bấm Thêm.',
+                          )}
+                </p>
+              </div>
+              <label>
+                {t('Nội dung')}
+                <textarea name="your-message" rows={4} required />
+              </label>
+              <button
+                type="submit"
+                className="button-solid"
+                disabled={quoteState.status === 'loading'}
+              >
+                {quoteState.status === 'loading' ? t('Đang gửi...') : t('Gửi báo giá')}
+              </button>
+              {quoteState.status !== 'idle' && (
+                <p className={quoteState.status === 'success' ? 'success-text' : 'error-text'}>
+                  {quoteState.message}
+                </p>
+              )}
+            </form>
+          </article>
+        </section>
+      )}
+
+      {showMeetingForm && (
+        <section className="meeting-schedule-layout">
+          <article className="meeting-calendar-shell meeting-schedule-calendar" aria-label={t('Chọn ngày làm việc')}>
+            <header className="meeting-calendar-header">
+              <h3>{t('Select your dates')}</h3>
+              <button
+                type="button"
+                className="meeting-calendar-next"
+                onClick={() => setCalendarBaseMonth((current) => addMonths(current, 1))}
+                aria-label={t('Tháng tiếp theo')}
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+            </header>
+
+            <div className="meeting-calendar-months">
+              {meetingCalendarMonths.map((monthDate) => {
+                const year = monthDate.getFullYear();
+                const month = monthDate.getMonth();
+                const firstDayIndex = new Date(year, month, 1).getDay();
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+                const trailingEmptyCells = (7 - ((firstDayIndex + daysInMonth) % 7)) % 7;
+
+                return (
+                  <article
+                    key={`${year}-${month}`}
+                    className="meeting-calendar-month-panel"
+                  >
+                    <h4>{formatCalendarMonthLabel(monthDate, language)}</h4>
+
+                    <div className="meeting-calendar-weekdays">
+                      {calendarDayLabels.map((dayLabel) => (
+                        <span key={`${year}-${month}-day-${dayLabel}`}>{dayLabel}</span>
                       ))}
                     </div>
-                  )}
-                  <p className="form-helper-text">
-                    {quoteProductsLoading
-                        ? t('Đang tải danh sách sản phẩm...')
-                      : quoteProductsError
-                        ? t(
-                            'Không tải được gợi ý sản phẩm từ hệ thống dữ liệu. Bạn vẫn có thể nhập thủ công.',
-                          )
-                        : productOptions.length === 0
-                          ? t('Chưa có sản phẩm trong hệ thống để gợi ý.')
-                      : t(
-                          'Bạn có thể chọn nhiều sản phẩm. Nếu không thấy trong gợi ý, nhập thủ công rồi bấm Thêm.',
-                        )}
-                  </p>
-                </div>
-                <label>
-                  {t('Nội dung')}
-                  <textarea name="your-message" rows={4} required />
-                </label>
-                <button
-                  type="submit"
-                  className="button-solid"
-                  disabled={quoteState.status === 'loading'}
-                >
-                  {quoteState.status === 'loading' ? t('Đang gửi...') : t('Gửi báo giá')}
-                </button>
-                {quoteState.status !== 'idle' && (
-                  <p className={quoteState.status === 'success' ? 'success-text' : 'error-text'}>
-                    {quoteState.message}
-                  </p>
-                )}
-              </form>
-            </article>
-          )}
 
-          {showMeetingForm && (
-            <article className="form-card" id="dat-lich-lam-viec">
-              <h2>{t('Đặt lịch làm việc')}</h2>
-              <form
-                onSubmit={(event) => submitByFormId(meetingFormId, event, setMeetingState)}
+                    <div className="meeting-calendar-days-grid">
+                      {Array.from({ length: firstDayIndex }).map((_, index) => (
+                        <span
+                          key={`${year}-${month}-leading-empty-${index}`}
+                          className="meeting-calendar-day-empty"
+                          aria-hidden="true"
+                        />
+                      ))}
+
+                      {Array.from({ length: daysInMonth }).map((_, index) => {
+                        const dayNumber = index + 1;
+                        const dateValue = new Date(year, month, dayNumber);
+                        const isoDate = toIsoDateString(dateValue);
+                        const isSelected = selectedMeetingDate === isoDate;
+                        const isDisabled = isoDate < todayIsoDate;
+                        const isToday = isoDate === todayIsoDate;
+
+                        return (
+                          <button
+                            key={isoDate}
+                            type="button"
+                            className={`meeting-calendar-day${
+                              isSelected ? ' is-selected' : ''
+                            }${isToday ? ' is-today' : ''}`}
+                            disabled={isDisabled}
+                            aria-pressed={isSelected}
+                            onClick={() => setSelectedMeetingDate(isoDate)}
+                          >
+                            {dayNumber}
+                          </button>
+                        );
+                      })}
+
+                      {Array.from({ length: trailingEmptyCells }).map((_, index) => (
+                        <span
+                          key={`${year}-${month}-trailing-empty-${index}`}
+                          className="meeting-calendar-day-empty"
+                          aria-hidden="true"
+                        />
+                      ))}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </article>
+
+          <article className="form-card meeting-schedule-form" id="dat-lich-lam-viec">
+            <h2>{t('Schedule a Meeting')}</h2>
+            <form
+              onSubmit={(event) =>
+                submitByFormId(meetingFormId, event, setMeetingState, () =>
+                  setSelectedMeetingDate(''),
+                )
+              }
+            >
+              <label>
+                {t('Họ tên')}
+                <input name="your-name" required />
+              </label>
+              <label>
+                {t('Email')}
+                <input type="email" name="your-email" required />
+              </label>
+              <label>
+                {t('Số điện thoại')}
+                <input name="your-phone" required />
+              </label>
+              <input type="hidden" name="meeting-date" value={selectedMeetingDate} />
+              <p className="meeting-date-selected-note">
+                {t('Ngày đã chọn')}: <strong>{selectedMeetingDateLabel}</strong>
+              </p>
+              <label>
+                {t('Nội dung')}
+                <textarea name="your-message" rows={4} required />
+              </label>
+              <button
+                type="submit"
+                className="button-solid"
+                disabled={meetingState.status === 'loading'}
               >
-                <label>
-                  {t('Họ tên')}
-                  <input name="your-name" required />
-                </label>
-                <label>
-                  {t('Email')}
-                  <input type="email" name="your-email" required />
-                </label>
-                <label>
-                  {t('Số điện thoại')}
-                  <input name="your-phone" required />
-                </label>
-                <label>
-                  {t('Ngày mong muốn')}
-                  <input type="date" name="meeting-date" required />
-                </label>
-                <label>
-                  {t('Nội dung')}
-                  <textarea name="your-message" rows={4} required />
-                </label>
-                <button
-                  type="submit"
-                  className="button-solid"
-                  disabled={meetingState.status === 'loading'}
-                >
-                  {meetingState.status === 'loading' ? t('Đang gửi...') : t('Đặt lịch')}
-                </button>
-                {meetingState.status !== 'idle' && (
-                  <p className={meetingState.status === 'success' ? 'success-text' : 'error-text'}>
-                    {meetingState.message}
-                  </p>
-                )}
-              </form>
-            </article>
-          )}
+                {meetingState.status === 'loading' ? t('Đang gửi...') : t('Đặt lịch')}
+              </button>
+              {meetingState.status !== 'idle' && (
+                <p className={meetingState.status === 'success' ? 'success-text' : 'error-text'}>
+                  {meetingState.message}
+                </p>
+              )}
+            </form>
+          </article>
         </section>
       )}
     </>
