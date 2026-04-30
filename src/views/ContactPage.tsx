@@ -41,13 +41,21 @@ const contactMapLocations = [
   },
 ] as const;
 
-const calendarDayLabels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] as const;
 const calendarLocaleByLanguage: Record<string, string> = {
-  vn: 'en-US',
+  vn: 'vi-VN',
   en: 'en-US',
-  jp: 'en-US',
-  kr: 'en-US',
+  jp: 'ja-JP',
+  kr: 'ko-KR',
 };
+
+function getCalendarWeekdayLabels(language: string): string[] {
+  const locale = calendarLocaleByLanguage[language] ?? 'en-US';
+  const formatter = new Intl.DateTimeFormat(locale, { weekday: 'short' });
+  // 2024-01-07 is a Sunday; build labels Sun..Sat using local-time dates.
+  return Array.from({ length: 7 }, (_, index) =>
+    formatter.format(new Date(2024, 0, 7 + index)),
+  );
+}
 
 type ContactSection = (typeof contactSections)[number];
 interface QuoteProductOption {
@@ -260,15 +268,20 @@ export default function ContactPage() {
       return t('Chưa chọn ngày');
     }
 
-    return new Intl.DateTimeFormat('en-US', {
+    const locale = calendarLocaleByLanguage[language] ?? 'en-US';
+    return new Intl.DateTimeFormat(locale, {
       weekday: 'short',
       month: 'short',
       day: 'numeric',
       year: 'numeric',
     }).format(selectedDate);
-  }, [selectedMeetingDate, t]);
+  }, [language, selectedMeetingDate, t]);
 
   const todayIsoDate = useMemo(() => toIsoDateString(new Date()), []);
+  const calendarDayLabels = useMemo(
+    () => getCalendarWeekdayLabels(language),
+    [language],
+  );
 
   const addProductChoice = useCallback(
     (rawValue: string) => {
@@ -524,7 +537,7 @@ export default function ContactPage() {
         <section className="meeting-schedule-layout">
           <article className="meeting-calendar-shell meeting-schedule-calendar" aria-label={t('Chọn ngày làm việc')}>
             <header className="meeting-calendar-header">
-              <h3>{t('Select your dates')}</h3>
+              <h3>{t('Chọn ngày của bạn')}</h3>
               <button
                 type="button"
                 className="meeting-calendar-next"
@@ -604,7 +617,7 @@ export default function ContactPage() {
           </article>
 
           <article className="form-card meeting-schedule-form" id="dat-lich-lam-viec">
-            <h2>{t('Schedule a Meeting')}</h2>
+            <h2>{t('Đặt lịch làm việc')}</h2>
             <form
               onSubmit={(event) =>
                 submitByFormId(meetingFormId, event, setMeetingState, () =>
