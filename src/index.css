@@ -7722,22 +7722,6 @@ ul {
     padding: 0.9rem;
   }
 
-  .site-shell:not(.is-admin-route):not(.is-home-route) .page-hero,
-  .site-shell:not(.is-admin-route):not(.is-home-route) .html-panel,
-  .site-shell:not(.is-admin-route):not(.is-home-route) .section-list {
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-    padding: 0;
-  }
-
-  .site-shell:not(.is-admin-route):not(.is-home-route) .section-card,
-  .site-shell:not(.is-admin-route):not(.is-home-route) .html-content :is(section, article, figure) {
-    border-color: transparent;
-    box-shadow: none;
-  }
-
   .home-ans-banner,
   .home-ans-section,
   .home-ans-side-card {
