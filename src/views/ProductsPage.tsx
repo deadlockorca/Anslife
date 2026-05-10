@@ -6,7 +6,7 @@ import Seo from '../components/seo/Seo';
 import { useAsyncResource } from '../hooks/useAsyncResource';
 import useSiteI18n from '../hooks/useSiteI18n';
 import { getFeaturedImage, getTermsByTaxonomy, stripHtmlTags } from '../lib/content';
-import { getProductCategories, getProducts } from '../lib/wp';
+import { getAllProducts, getProductCategories } from '../lib/wp';
 import type { WpCategory, WpEntity } from '../types/wp';
 
 interface ProductResource {
@@ -118,7 +118,7 @@ export default function ProductsPage() {
   const [sortKey, setSortKey] = useState<ProductSortKey>('newest');
   const loadProducts = useCallback(async () => {
     const [productsResult, categoriesResult] = await Promise.allSettled([
-      getProducts(100),
+      getAllProducts(),
       getProductCategories(),
     ]);
 

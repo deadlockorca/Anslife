@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import {
   getProductBySlug,
+  listAllProducts,
   listProducts,
 } from '../../../../lib/repositories/contentRepository';
 import { getCorsHeaders } from '../../../../lib/http/cors';
@@ -19,6 +20,8 @@ function parsePerPage(value: string | null): number {
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const slug = url.searchParams.get('slug')?.trim() ?? '';
+  const perPageRaw = url.searchParams.get('per_page')?.trim().toLowerCase() ?? '';
+  const shouldLoadAll = perPageRaw === 'all';
   const perPage = parsePerPage(url.searchParams.get('per_page'));
   const headers = getCorsHeaders(request.headers.get('origin'), 'GET, OPTIONS');
 
@@ -28,7 +31,9 @@ export async function GET(request: Request) {
       return NextResponse.json(product ? [product] : [], { headers });
     }
 
-    const products = await listProducts(perPage);
+    const products = shouldLoadAll
+      ? await listAllProducts()
+      : await listProducts(perPage);
     return NextResponse.json(products, { headers });
   } catch (error) {
     console.error('[API][products] Failed to load products:', error);

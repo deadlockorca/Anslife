@@ -50,6 +50,10 @@ export async function getProducts(perPage = 24): Promise<WpEntity[]> {
   return fetchJson<WpEntity[]>(`/products?per_page=${normalizedPerPage}`);
 }
 
+export async function getAllProducts(): Promise<WpEntity[]> {
+  return fetchJson<WpEntity[]>(`/products?per_page=all`);
+}
+
 export async function getProductBySlug(slug: string): Promise<WpEntity | null> {
   const data = await fetchJson<WpEntity[]>(`/products?slug=${encodeURIComponent(slug)}`);
   return firstOrNull(data);

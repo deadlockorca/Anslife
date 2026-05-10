@@ -811,9 +811,15 @@ export async function getCatalogProductBySlug(slug: string): Promise<PublicCatal
   }
 }
 
-export async function listPublicCatalogProducts(perPage: number): Promise<PublicCatalogProductRecord[]> {
-  const limit = Math.min(100, Math.max(1, Math.floor(perPage)));
+async function queryPublicCatalogProducts(
+  limit: number | null,
+): Promise<PublicCatalogProductRecord[]> {
   const pool = await getReadyPool();
+  const limitSql = typeof limit === 'number' ? 'LIMIT ?' : '';
+  const queryValues: Array<string | number> = [];
+  if (typeof limit === 'number') {
+    queryValues.push(limit);
+  }
 
   try {
     const [rows] = await pool.query<CatalogProductRow[]>(
@@ -841,8 +847,8 @@ export async function listPublicCatalogProducts(perPage: number): Promise<Public
          AND p.isPublished = 1
          AND p.inStock = 1
        ORDER BY p.createdAt DESC
-       LIMIT ?`,
-      [limit],
+       ${limitSql}`,
+      queryValues,
     );
 
     const productIds = rows.map((row) => row.id);
@@ -890,6 +896,15 @@ export async function listPublicCatalogProducts(perPage: number): Promise<Public
     }
     throw error;
   }
+}
+
+export async function listPublicCatalogProducts(perPage: number): Promise<PublicCatalogProductRecord[]> {
+  const limit = Math.min(100, Math.max(1, Math.floor(perPage)));
+  return queryPublicCatalogProducts(limit);
+}
+
+export async function listAllPublicCatalogProducts(): Promise<PublicCatalogProductRecord[]> {
+  return queryPublicCatalogProducts(null);
 }
 
 export async function parseCatalogProductInput(

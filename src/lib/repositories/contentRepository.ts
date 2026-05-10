@@ -4,6 +4,7 @@ import type { WpCategory, WpEntity, WpTerm } from '../../types/wp';
 import {
   getCatalogProductBySlug as getCatalogProductBySlugRecord,
   isCatalogProductSchemaAvailable,
+  listAllPublicCatalogProducts,
   listCatalogCategories,
   listPublicCatalogProducts,
   type PublicCatalogProductRecord,
@@ -235,6 +236,36 @@ async function listEntitiesByKind(
   return rows.map((row) => toWpEntity(row, termGroupsByItem.get(row.id) ?? []));
 }
 
+async function listAllEntitiesByKind(kind: EntityKind): Promise<WpEntity[]> {
+  if (!isDatabaseConfigured()) {
+    return [];
+  }
+
+  const ready = await ensureDatabaseSchema();
+  if (!ready) {
+    return [];
+  }
+
+  const pool = getDbPool();
+  if (!pool) {
+    return [];
+  }
+
+  const [rows] = await pool.query<EntityRow[]>(
+    `SELECT id, kind, slug, title, excerpt_html, content_html, featured_image,
+            gallery_json, specifications_json, published_at
+     FROM content_items
+     WHERE kind = ?
+     ORDER BY published_at DESC, id DESC`,
+    [kind],
+  );
+
+  const itemIds = rows.map((row) => row.id);
+  const termGroupsByItem = await loadTermGroupsByItemId(itemIds);
+
+  return rows.map((row) => toWpEntity(row, termGroupsByItem.get(row.id) ?? []));
+}
+
 async function getEntityByKindAndSlug(
   kind: EntityKind,
   slug: string,
@@ -288,6 +319,17 @@ export async function listProducts(perPage?: number): Promise<WpEntity[]> {
   }
 
   return listEntitiesByKind('product', perPage);
+}
+
+export async function listAllProducts(): Promise<WpEntity[]> {
+  if (await isCatalogProductSchemaAvailable()) {
+    const products = await listAllPublicCatalogProducts();
+    if (products.length > 0) {
+      return products.map(toWpEntityFromCatalogRecord);
+    }
+  }
+
+  return listAllEntitiesByKind('product');
 }
 
 export async function getProductBySlug(slug: string): Promise<WpEntity | null> {
