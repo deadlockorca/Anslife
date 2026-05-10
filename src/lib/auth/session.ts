@@ -11,6 +11,32 @@ const SESSION_TTL_DAYS_DEFAULT = 7;
 const SECONDS_PER_DAY = 24 * 60 * 60;
 const SESSION_TOKEN_BYTES = 32;
 
+function shouldUseSecureCookie(): boolean {
+  const explicit = process.env.APP_SESSION_COOKIE_SECURE?.trim();
+  if (explicit === '1') {
+    return true;
+  }
+  if (explicit === '0') {
+    return false;
+  }
+
+  if (process.env.NODE_ENV !== 'production') {
+    return false;
+  }
+
+  const siteUrlRaw = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (siteUrlRaw) {
+    try {
+      const siteUrl = new URL(siteUrlRaw);
+      return siteUrl.protocol === 'https:';
+    } catch {
+      // Fall through to safe production default.
+    }
+  }
+
+  return true;
+}
+
 export interface SessionPayload {
   sessionId: number;
   userId: number;
@@ -71,7 +97,7 @@ export function attachSessionCookie(response: NextResponse, token: string): void
     name: SESSION_COOKIE_NAME,
     value: token,
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
+    secure: shouldUseSecureCookie(),
     sameSite: 'lax',
     path: '/',
     maxAge: SESSION_TTL_DAYS_DEFAULT * SECONDS_PER_DAY,
@@ -83,7 +109,7 @@ export function clearSessionCookie(response: NextResponse): void {
     name: SESSION_COOKIE_NAME,
     value: '',
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
+    secure: shouldUseSecureCookie(),
     sameSite: 'lax',
     path: '/',
     maxAge: 0,
