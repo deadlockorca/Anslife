@@ -5,6 +5,7 @@ import ErrorBlock from '../components/common/ErrorBlock';
 import LoadingBlock from '../components/common/LoadingBlock';
 import Seo from '../components/seo/Seo';
 import useSiteI18n from '../hooks/useSiteI18n';
+import { isLanguageCode } from '../i18n/language';
 import { getCurrentUser, loginInternal } from '../lib/internalAuth';
 
 type LoginState =
@@ -13,6 +14,30 @@ type LoginState =
   | { status: 'error'; message: string };
 
 const idleState: LoginState = { status: 'idle', message: '' };
+const DEFAULT_ADMIN_NEXT_PATH = '/admin/dashboard';
+
+function resolveAdminNextPath(rawValue: string): string {
+  const trimmed = rawValue.trim();
+  if (!trimmed.startsWith('/')) {
+    return DEFAULT_ADMIN_NEXT_PATH;
+  }
+
+  let parsed: URL;
+  try {
+    parsed = new URL(trimmed, 'http://localhost');
+  } catch {
+    return DEFAULT_ADMIN_NEXT_PATH;
+  }
+
+  const segments = parsed.pathname.split('/').filter(Boolean);
+  const normalizedSegments = isLanguageCode(segments[0]) ? segments.slice(1) : segments;
+  if (normalizedSegments[0] !== 'admin' || normalizedSegments.length < 2) {
+    return DEFAULT_ADMIN_NEXT_PATH;
+  }
+
+  const normalizedPathname = `/${normalizedSegments.join('/')}`;
+  return `${normalizedPathname}${parsed.search}${parsed.hash}`;
+}
 
 export default function AdminLoginPage() {
   const { t, toLocalizedPath } = useSiteI18n();
@@ -24,12 +49,8 @@ export default function AdminLoginPage() {
   const [state, setState] = useState<LoginState>(idleState);
 
   const nextPath = useMemo(() => {
-    const rawValue = searchParams.get('next')?.trim() ?? '';
-    if (!rawValue.startsWith('/')) {
-      return '/admin/dashboard';
-    }
-
-    return rawValue;
+    const rawValue = searchParams.get('next') ?? '';
+    return resolveAdminNextPath(rawValue);
   }, [searchParams]);
 
   useEffect(() => {
