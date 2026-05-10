@@ -7,7 +7,7 @@ import { STATIC_PAGE_MAP, TOP_MENU, type MenuChildItem } from '../config/site';
 import { useAsyncResource } from '../hooks/useAsyncResource';
 import useSiteI18n from '../hooks/useSiteI18n';
 import { decodeHtml, getFeaturedImage, getTermsByTaxonomy } from '../lib/content';
-import { getAllProducts, getNews, getProducts, getProjects } from '../lib/wp';
+import { getNews, getProducts, getProjects } from '../lib/wp';
 import type { WpEntity } from '../types/wp';
 
 interface HomeData {
@@ -653,7 +653,7 @@ export default function HomePage() {
     setSearchIndexLoading(true);
     try {
       const [productsResult, projectsResult, newsResult] = await Promise.allSettled([
-        getAllProducts(),
+        getProducts(100),
         getProjects(100),
         getNews(100),
       ]);

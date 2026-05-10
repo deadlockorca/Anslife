@@ -12,6 +12,24 @@ import {
 
 type EntityKind = 'page' | 'product' | 'project' | 'news';
 type ContactFormType = 'quote' | 'meeting' | 'contact';
+export type PublicProductSortKey = 'newest' | 'name-asc' | 'name-desc';
+
+export interface ListProductsPageInput {
+  perPage: number;
+  page: number;
+  categorySlugs?: string[];
+  sort?: PublicProductSortKey;
+}
+
+export interface ListProductsPageResult {
+  items: WpEntity[];
+  pagination: {
+    page: number;
+    perPage: number;
+    total: number;
+    totalPages: number;
+  };
+}
 
 interface EntityRow extends RowDataPacket {
   id: number;
@@ -47,6 +65,26 @@ function normalizePerPage(perPage: number | null | undefined, fallback = 24): nu
   }
 
   return Math.min(100, Math.max(1, Math.floor(perPage as number)));
+}
+
+function normalizePage(page: number | null | undefined): number {
+  if (!Number.isFinite(page)) {
+    return 1;
+  }
+
+  return Math.max(1, Math.floor(page as number));
+}
+
+function normalizeCategorySlugs(values: string[] | undefined): Set<string> {
+  if (!Array.isArray(values) || values.length === 0) {
+    return new Set();
+  }
+
+  const normalized = values
+    .map((value) => String(value ?? '').trim().toLowerCase())
+    .filter(Boolean);
+
+  return new Set(normalized);
 }
 
 function parseJsonValue<T>(value: string | null): T | undefined {
@@ -85,6 +123,16 @@ function toWpEntity(row: EntityRow, termGroups: WpTerm[][]): WpEntity {
     specifications: parseJsonValue(row.specifications_json),
     _embedded: embedded,
   };
+}
+
+function getTermsFromEmbedded(post: WpEntity, taxonomy: string): WpTerm[] {
+  const allTermGroups = post._embedded?.['wp:term'];
+  if (!allTermGroups) {
+    return [];
+  }
+
+  const allTerms = allTermGroups.flat();
+  return allTerms.filter((term) => term.taxonomy === taxonomy);
 }
 
 function escapeHtml(value: string): string {
@@ -154,6 +202,30 @@ function toWpEntityFromCatalogRecord(record: PublicCatalogProductRecord): WpEnti
         : undefined,
     _embedded: embedded,
   };
+}
+
+function sortWpEntities(items: WpEntity[], sort: PublicProductSortKey): WpEntity[] {
+  const cloned = [...items];
+  if (sort === 'name-asc') {
+    cloned.sort((left, right) =>
+      left.title.rendered.localeCompare(right.title.rendered, 'vi'),
+    );
+    return cloned;
+  }
+
+  if (sort === 'name-desc') {
+    cloned.sort((left, right) =>
+      right.title.rendered.localeCompare(left.title.rendered, 'vi'),
+    );
+    return cloned;
+  }
+
+  cloned.sort((left, right) => {
+    const leftTime = Date.parse(left.date);
+    const rightTime = Date.parse(right.date);
+    return (Number.isNaN(rightTime) ? 0 : rightTime) - (Number.isNaN(leftTime) ? 0 : leftTime);
+  });
+  return cloned;
 }
 
 async function loadTermGroupsByItemId(
@@ -330,6 +402,60 @@ export async function listAllProducts(): Promise<WpEntity[]> {
   }
 
   return listAllEntitiesByKind('product');
+}
+
+export async function listProductsPage(
+  input: ListProductsPageInput,
+): Promise<ListProductsPageResult> {
+  const perPage = normalizePerPage(input.perPage, 24);
+  const page = normalizePage(input.page);
+  const sort: PublicProductSortKey = input.sort ?? 'newest';
+  const categorySlugs = normalizeCategorySlugs(input.categorySlugs);
+
+  let items: WpEntity[];
+  if (await isCatalogProductSchemaAvailable()) {
+    const products = await listAllPublicCatalogProducts();
+    const filteredProducts = products.filter((product) => {
+      if (categorySlugs.size === 0) {
+        return true;
+      }
+      const slug = product.category?.slug?.trim().toLowerCase() ?? '';
+      return Boolean(slug) && categorySlugs.has(slug);
+    });
+
+    const mapped = filteredProducts.map(toWpEntityFromCatalogRecord);
+    items = sortWpEntities(mapped, sort);
+  } else {
+    const products = await listAllEntitiesByKind('product');
+    const filteredProducts = products.filter((product) => {
+      if (categorySlugs.size === 0) {
+        return true;
+      }
+
+      const termSlugs = getTermsFromEmbedded(product, 'product_category').map((term) =>
+        term.slug.trim().toLowerCase(),
+      );
+      return termSlugs.some((slug) => categorySlugs.has(slug));
+    });
+
+    items = sortWpEntities(filteredProducts, sort);
+  }
+
+  const total = items.length;
+  const totalPages = Math.max(1, Math.ceil(total / perPage));
+  const safePage = Math.min(page, totalPages);
+  const offset = (safePage - 1) * perPage;
+  const pagedItems = items.slice(offset, offset + perPage);
+
+  return {
+    items: pagedItems,
+    pagination: {
+      page: safePage,
+      perPage,
+      total,
+      totalPages,
+    },
+  };
 }
 
 export async function getProductBySlug(slug: string): Promise<WpEntity | null> {

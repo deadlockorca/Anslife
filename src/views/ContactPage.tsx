@@ -9,7 +9,7 @@ import Seo from '../components/seo/Seo';
 import { useAsyncResource } from '../hooks/useAsyncResource';
 import useSiteI18n from '../hooks/useSiteI18n';
 import { decodeHtml } from '../lib/content';
-import { getAllProducts, getPageBySlug, submitContactForm } from '../lib/wp';
+import { getPageBySlug, getProducts, submitContactForm } from '../lib/wp';
 
 const quoteFormId = Number(process.env.NEXT_PUBLIC_CF7_QUOTE_FORM_ID ?? 1);
 const meetingFormId = Number(process.env.NEXT_PUBLIC_CF7_MEETING_FORM_ID ?? 2);
@@ -137,7 +137,7 @@ export default function ContactPage() {
   const { section: sectionParam } = useParams();
   const [searchParams] = useSearchParams();
   const loadContactPage = useCallback(() => getPageBySlug('contact'), []);
-  const loadQuoteProducts = useCallback(() => getAllProducts(), []);
+  const loadQuoteProducts = useCallback(() => getProducts(100), []);
   const { data, loading, error } = useAsyncResource(loadContactPage);
   const {
     data: quoteProductsData,

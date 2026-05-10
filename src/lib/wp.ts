@@ -49,9 +49,69 @@ export async function getProducts(perPage = 24): Promise<WpEntity[]> {
   const normalizedPerPage = normalizePerPage(perPage);
   return fetchJson<WpEntity[]>(`/products?per_page=${normalizedPerPage}`);
 }
+export interface ProductPageResponse {
+  items: WpEntity[];
+  total: number;
+  totalPages: number;
+  page: number;
+  perPage: number;
+}
 
-export async function getAllProducts(): Promise<WpEntity[]> {
-  return fetchJson<WpEntity[]>(`/products?per_page=all`);
+function parseHeaderNumber(value: string | null, fallback: number): number {
+  const parsed = Number(value ?? '');
+  if (!Number.isFinite(parsed)) {
+    return fallback;
+  }
+
+  return parsed;
+}
+
+export async function getProductsPage(input?: {
+  perPage?: number;
+  page?: number;
+  categorySlugs?: string[];
+  sort?: 'newest' | 'name-asc' | 'name-desc';
+}): Promise<ProductPageResponse> {
+  const perPage = normalizePerPage(input?.perPage ?? 24);
+  const pageRaw = Number(input?.page ?? 1);
+  const page = Number.isFinite(pageRaw) ? Math.max(1, Math.floor(pageRaw)) : 1;
+  const params = new URLSearchParams();
+  params.set('per_page', String(perPage));
+  params.set('page', String(page));
+
+  if (Array.isArray(input?.categorySlugs) && input.categorySlugs.length > 0) {
+    params.set('category_slugs', input.categorySlugs.join(','));
+  }
+
+  if (input?.sort && input.sort !== 'newest') {
+    params.set('sort', input.sort);
+  }
+
+  const endpoint = `${API_BASE}/products?${params.toString()}`;
+  const response = await fetch(endpoint, {
+    cache: 'no-store',
+    headers: {
+      Accept: 'application/json',
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Request failed (${response.status}) at ${endpoint}`);
+  }
+
+  const items = (await response.json()) as WpEntity[];
+  const total = parseHeaderNumber(response.headers.get('X-WP-Total'), items.length);
+  const totalPages = parseHeaderNumber(response.headers.get('X-WP-TotalPages'), 1);
+  const currentPage = parseHeaderNumber(response.headers.get('X-WP-Page'), page);
+  const currentPerPage = parseHeaderNumber(response.headers.get('X-WP-Per-Page'), perPage);
+
+  return {
+    items,
+    total,
+    totalPages,
+    page: currentPage,
+    perPage: currentPerPage,
+  };
 }
 
 export async function getProductBySlug(slug: string): Promise<WpEntity | null> {

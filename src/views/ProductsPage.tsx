@@ -6,17 +6,33 @@ import Seo from '../components/seo/Seo';
 import { useAsyncResource } from '../hooks/useAsyncResource';
 import useSiteI18n from '../hooks/useSiteI18n';
 import { getFeaturedImage, getTermsByTaxonomy, stripHtmlTags } from '../lib/content';
-import { getAllProducts, getProductCategories } from '../lib/wp';
+import { getProductCategories, getProductsPage } from '../lib/wp';
 import type { WpCategory, WpEntity } from '../types/wp';
 
 interface ProductResource {
   products: WpEntity[];
   categories: WpCategory[];
+  pagination: {
+    page: number;
+    perPage: number;
+    total: number;
+    totalPages: number;
+  };
 }
 
 type ProductSortKey = 'newest' | 'name-asc' | 'name-desc';
 
 const EMPTY_PRODUCT_CATEGORIES: WpCategory[] = [];
+const PRODUCTS_PER_PAGE = 24;
+
+function parsePageParam(value: string | null): number {
+  const parsed = Number(value ?? '1');
+  if (!Number.isFinite(parsed)) {
+    return 1;
+  }
+
+  return Math.max(1, Math.floor(parsed));
+}
 
 function normalizeCategoryId(
   value: number | string | null | undefined,
@@ -115,29 +131,56 @@ export default function ProductsPage() {
   const { t, toLocalizedPath } = useSiteI18n();
   const navigate = useNavigate();
   const { category: categoryParam } = useParams();
-  const [sortKey, setSortKey] = useState<ProductSortKey>('newest');
-  const loadProducts = useCallback(async () => {
-    const [productsResult, categoriesResult] = await Promise.allSettled([
-      getAllProducts(),
-      getProductCategories(),
-    ]);
-
-    return {
-      products: productsResult.status === 'fulfilled' ? productsResult.value : [],
-      categories:
-        categoriesResult.status === 'fulfilled' ? categoriesResult.value : [],
-    };
-  }, []);
-
-  const { data, loading, error } = useAsyncResource<ProductResource>(loadProducts);
   const [searchParams] = useSearchParams();
-  const categories = data?.categories ?? EMPTY_PRODUCT_CATEGORIES;
+  const [sortKey, setSortKey] = useState<ProductSortKey>('newest');
 
   const requestedCategory = categoryParam ?? searchParams.get('category') ?? 'all';
   const activeCategory = useMemo(
     () => (requestedCategory === 'all' ? 'all' : requestedCategory),
     [requestedCategory],
   );
+  const currentPage = useMemo(
+    () => parsePageParam(searchParams.get('page')),
+    [searchParams],
+  );
+  const loadProducts = useCallback(async () => {
+    const categories = await getProductCategories().catch(() => EMPTY_PRODUCT_CATEGORIES);
+    const categorySlugs =
+      activeCategory === 'all'
+        ? []
+        : Array.from(getCategorySlugSetWithDescendants(categories, activeCategory));
+    const pageResponse = await getProductsPage({
+      perPage: PRODUCTS_PER_PAGE,
+      page: currentPage,
+      categorySlugs,
+      sort: sortKey,
+    });
+
+    return {
+      products: pageResponse.items,
+      categories,
+      pagination: {
+        page: pageResponse.page,
+        perPage: pageResponse.perPage,
+        total: pageResponse.total,
+        totalPages: pageResponse.totalPages,
+      },
+    };
+  }, [activeCategory, currentPage, sortKey]);
+
+  const { data, loading, error } = useAsyncResource<ProductResource>(loadProducts);
+  const categories = data?.categories ?? EMPTY_PRODUCT_CATEGORIES;
+  const products = data?.products ?? [];
+  const pagination = data?.pagination ?? {
+    page: currentPage,
+    perPage: PRODUCTS_PER_PAGE,
+    total: products.length,
+    totalPages: 1,
+  };
+  const resultStart = pagination.total === 0 ? 0 : (pagination.page - 1) * pagination.perPage + 1;
+  const resultEnd = pagination.total === 0
+    ? 0
+    : Math.min((pagination.page - 1) * pagination.perPage + products.length, pagination.total);
   const topLevelCategories = useMemo(() => {
     const roots = categories.filter((category) => !normalizeCategoryId(category.parentId));
     return roots.length > 0 ? roots : categories;
@@ -179,54 +222,21 @@ export default function ProductsPage() {
 
     return childrenByParentId.get(activeTopLevelId) ?? [];
   }, [activeTopLevelCategory, categories, childrenByParentId]);
-  const categorySlugsToMatch = useMemo(() => {
-    if (activeCategory === 'all') {
-      return null;
+  function navigateToPage(nextPage: number) {
+    const basePath =
+      activeCategory === 'all' ? '/products' : `/products/category/${activeCategory}`;
+    const normalizedPage = Math.max(1, Math.floor(nextPage));
+    const nextParams = new URLSearchParams(searchParams);
+    nextParams.delete('category');
+    if (normalizedPage <= 1) {
+      nextParams.delete('page');
+    } else {
+      nextParams.set('page', String(normalizedPage));
     }
 
-    return getCategorySlugSetWithDescendants(categories, activeCategory);
-  }, [activeCategory, categories]);
-
-  const filteredProducts = useMemo(() => {
-    if (!data) {
-      return [];
-    }
-
-    if (!categorySlugsToMatch) {
-      return data.products;
-    }
-
-    return data.products.filter((product) =>
-      getTermsByTaxonomy(product, 'product_category').some(
-        (term) => categorySlugsToMatch.has(term.slug),
-      ),
-    );
-  }, [categorySlugsToMatch, data]);
-  const sortedProducts = useMemo(() => {
-    const products = [...filteredProducts];
-
-    if (sortKey === 'name-asc') {
-      products.sort((left, right) =>
-        left.title.rendered.localeCompare(right.title.rendered, 'vi'),
-      );
-      return products;
-    }
-
-    if (sortKey === 'name-desc') {
-      products.sort((left, right) =>
-        right.title.rendered.localeCompare(left.title.rendered, 'vi'),
-      );
-      return products;
-    }
-
-    products.sort((left, right) => {
-      const leftTime = Date.parse(left.date);
-      const rightTime = Date.parse(right.date);
-
-      return (Number.isNaN(rightTime) ? 0 : rightTime) - (Number.isNaN(leftTime) ? 0 : leftTime);
-    });
-    return products;
-  }, [filteredProducts, sortKey]);
+    const query = nextParams.toString();
+    navigate(`${toLocalizedPath(basePath)}${query ? `?${query}` : ''}`, { replace: true });
+  }
 
   function handleCategoryChange(nextCategory: string) {
     if (nextCategory === 'all') {
@@ -344,13 +354,19 @@ export default function ProductsPage() {
 
             <div className="products-catalog-toolbar">
               <p className="products-catalog-result">
-                {t('Hiển thị')} <strong>{sortedProducts.length}</strong> {t('sản phẩm')}
+                {t('Hiển thị')} <strong>{resultStart}-{resultEnd}</strong> /{' '}
+                <strong>{pagination.total}</strong> {t('sản phẩm')}
               </p>
               <label className="products-catalog-sort">
                 <span>{t('Sắp xếp')}</span>
                 <select
                   value={sortKey}
-                  onChange={(event) => setSortKey(event.target.value as ProductSortKey)}
+                  onChange={(event) => {
+                    setSortKey(event.target.value as ProductSortKey);
+                    if (currentPage !== 1) {
+                      navigateToPage(1);
+                    }
+                  }}
                 >
                   <option value="newest">{t('Mới nhất')}</option>
                   <option value="name-asc">{t('Tên A-Z')}</option>
@@ -360,14 +376,14 @@ export default function ProductsPage() {
             </div>
 
             <div className="products-catalog-grid">
-              {sortedProducts.length === 0 && (
+              {products.length === 0 && (
                 <article className="products-catalog-empty">
                   <h3>{t('Chưa có sản phẩm')}</h3>
                   <p>{t('Hiện chưa có sản phẩm nào trong hệ thống dữ liệu.')}</p>
                 </article>
               )}
 
-              {sortedProducts.map((product) => {
+              {products.map((product) => {
                 const image = getFeaturedImage(product);
                 const category = getTermsByTaxonomy(product, 'product_category')[0];
                 const categorySlug = category?.slug ?? 'all';
@@ -406,6 +422,31 @@ export default function ProductsPage() {
                 );
               })}
             </div>
+
+            {pagination.totalPages > 1 && (
+              <div className="products-catalog-pagination" aria-label={t('Phân trang sản phẩm')}>
+                <button
+                  type="button"
+                  className="button-ghost"
+                  onClick={() => navigateToPage(pagination.page - 1)}
+                  disabled={pagination.page <= 1}
+                >
+                  {t('Trang trước')}
+                </button>
+                <p>
+                  {t('Trang')} <strong>{pagination.page}</strong> /{' '}
+                  <strong>{pagination.totalPages}</strong>
+                </p>
+                <button
+                  type="button"
+                  className="button-ghost"
+                  onClick={() => navigateToPage(pagination.page + 1)}
+                  disabled={pagination.page >= pagination.totalPages}
+                >
+                  {t('Trang sau')}
+                </button>
+              </div>
+            )}
           </div>
         </section>
       )}

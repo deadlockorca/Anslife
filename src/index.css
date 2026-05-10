@@ -2852,8 +2852,24 @@ ul {
 .products-catalog-grid {
   margin-top: 0.82rem;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.75rem;
+}
+
+.products-catalog-pagination {
+  margin-top: 0.9rem;
+  border-top: 1px solid rgba(68, 96, 132, 0.18);
+  padding-top: 0.72rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.68rem;
+}
+
+.products-catalog-pagination p {
+  margin: 0;
+  color: #4f6078;
+  font-size: 0.9rem;
 }
 
 .products-catalog-empty {
