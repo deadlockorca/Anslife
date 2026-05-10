@@ -16,13 +16,34 @@ interface CmsSectionPageProps {
 
 export default function CmsSectionPage({ config }: CmsSectionPageProps) {
   const { language, t } = useSiteI18n();
+  const hiddenAboutSectionIds = useMemo(
+    () => new Set(['company-intro', 'vision-mission', 'core-values']),
+    [],
+  );
   const loadPage = useCallback(() => getPageBySlug(config.slug), [config.slug]);
   const { data, loading, error } = useAsyncResource(loadPage);
   const fallbackHtml = getAIFallbackPageHtml(config.slug, language);
   const resolvedHtml = data?.content.rendered ?? fallbackHtml;
+  const sectionListForNavigation = useMemo(
+    () =>
+      config.slug === 'about-anslife'
+        ? config.sections.filter((section) => !hiddenAboutSectionIds.has(section.id))
+        : config.sections,
+    [config.sections, config.slug, hiddenAboutSectionIds],
+  );
+  const shouldHideAboutHeroMeta = config.slug === 'about-anslife';
   const displayHtml = useMemo(() => {
-    if (!resolvedHtml || config.slug !== 'manufacturing-ecosystem') {
+    if (!resolvedHtml) {
       return resolvedHtml;
+    }
+
+    const htmlWithoutBanner =
+      config.slug === 'about-anslife'
+        ? resolvedHtml.replace(/<figure class="ai-banner">[\s\S]*?<\/figure>/i, '')
+        : resolvedHtml;
+
+    if (config.slug !== 'manufacturing-ecosystem') {
+      return htmlWithoutBanner;
     }
 
     return config.sections.reduce((html, section) => {
@@ -32,7 +53,7 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
         'gi',
       );
       return html.replace(sectionPattern, '');
-    }, resolvedHtml);
+    }, htmlWithoutBanner);
   }, [config.sections, config.slug, resolvedHtml]);
   const shouldShowLoading = loading && !resolvedHtml;
   const shouldShowError = Boolean(error) && !resolvedHtml;
@@ -41,9 +62,9 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
     <>
       <Seo title={t(config.title)} description={t(config.summary)} />
       <section className="page-hero">
-        <p className="kicker">{t('TRANG WEB ANSLIFE V1')}</p>
+        {!shouldHideAboutHeroMeta && <p className="kicker">{t('TRANG WEB ANSLIFE V1')}</p>}
         <h1>{t(config.title)}</h1>
-        <p>{t(config.summary)}</p>
+        {!shouldHideAboutHeroMeta && <p>{t(config.summary)}</p>}
       </section>
 
       {shouldShowLoading && <LoadingBlock />}
@@ -55,7 +76,7 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
         />
       )}
 
-      <PageSections sections={config.sections} basePath={config.path} />
+      <PageSections sections={sectionListForNavigation} basePath={config.path} />
     </>
   );
 }

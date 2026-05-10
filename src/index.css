@@ -8953,7 +8953,7 @@ ul {
   margin: 0 auto 0.18rem;
   border: 1px solid rgba(255, 255, 255, 0.92);
   border-radius: 999px;
-  background: #efe2d0 !important;
+  background: #fff !important;
   background-image: none !important;
   box-shadow: 0 14px 28px rgba(27, 47, 71, 0.16);
   overflow: hidden;
@@ -8961,7 +8961,7 @@ ul {
 
 .home-anslife-root .home-anslife-screen-quick-item {
   text-decoration: none;
-  background: #efe2d0 !important;
+  background: #fff !important;
   min-height: 88px;
   padding: 0.64rem 0.52rem;
   display: grid;
@@ -9170,7 +9170,7 @@ ul {
     overflow-x: auto;
     border-radius: 22px;
     border-color: rgba(255, 255, 255, 0.94);
-    background: #efe2d0 !important;
+    background: #fff !important;
     background-image: none !important;
     box-shadow: 0 16px 30px rgba(18, 35, 53, 0.24);
     scrollbar-width: none;
@@ -9187,7 +9187,7 @@ ul {
     border-top: 0;
     border-left: 1px solid rgba(62, 86, 112, 0.16);
     gap: 0.18rem;
-    background: #efe2d0 !important;
+    background: #fff !important;
   }
 
   .home-anslife-root .home-anslife-screen-quick-item:first-child {

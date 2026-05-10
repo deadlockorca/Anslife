@@ -396,8 +396,8 @@ export default function HomePage() {
       {
         id: 'online-register',
         icon: '🗓',
-        title: t('Đăng ký trực tuyến'),
-        to: '/contact',
+        title: t('Đặt lịch làm việc'),
+        to: '/contact/schedule-meeting',
       },
       {
         id: 'products',
