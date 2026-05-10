@@ -106,7 +106,7 @@ const emptyFormState: ProductFormState = {
   shortDescription: '',
   description: '',
   specs: [{ name: '', value: '' }],
-  showContactPrice: false,
+  showContactPrice: true,
   price: '',
   originalPrice: '',
   badge: '',
@@ -161,9 +161,9 @@ function mapProductToFormState(product: AdminProduct): ProductFormState {
             .sort((a, b) => a.sortOrder - b.sortOrder)
             .map((item) => ({ name: item.name, value: item.value }))
         : [{ name: '', value: '' }],
-    showContactPrice: product.showContactPrice,
-    price: String(product.price),
-    originalPrice: product.originalPrice == null ? '' : String(product.originalPrice),
+    showContactPrice: true,
+    price: '',
+    originalPrice: '',
     badge: product.badge ?? '',
     tab: product.tab,
     inStock: product.inStock,
@@ -239,8 +239,6 @@ export default function AdminProductsPage() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
-
-  const currencyFormatter = useMemo(() => new Intl.NumberFormat('vi-VN'), []);
 
   const loadData = useCallback(async () => {
     setLoading(true);
@@ -505,9 +503,9 @@ export default function AdminProductsPage() {
           shortDescription: form.shortDescription,
           description: form.description,
           specs: cleanSpecs,
-          showContactPrice: form.showContactPrice,
-          price: form.price,
-          originalPrice: form.originalPrice,
+          showContactPrice: true,
+          price: 0,
+          originalPrice: null,
           badge: form.badge,
           tab: form.tab,
           inStock: form.inStock,
@@ -700,37 +698,6 @@ export default function AdminProductsPage() {
               </label>
 
               <label>
-                {form.showContactPrice ? t('Giá bán (đang ẩn)') : t('Giá bán *')}
-                <input
-                  required={!form.showContactPrice}
-                  disabled={isSubmitting || form.showContactPrice}
-                  inputMode="numeric"
-                  value={form.price}
-                  onChange={(event) =>
-                    setForm((previous) => ({
-                      ...previous,
-                      price: event.target.value,
-                    }))
-                  }
-                />
-              </label>
-
-              <label>
-                {form.showContactPrice ? t('Giá gốc (đang ẩn)') : t('Giá gốc')}
-                <input
-                  disabled={isSubmitting || form.showContactPrice}
-                  inputMode="numeric"
-                  value={form.originalPrice}
-                  onChange={(event) =>
-                    setForm((previous) => ({
-                      ...previous,
-                      originalPrice: event.target.value,
-                    }))
-                  }
-                />
-              </label>
-
-              <label>
                 {t('Badge')}
                 <input
                   value={form.badge}
@@ -745,20 +712,7 @@ export default function AdminProductsPage() {
               </label>
 
               <div className="admin-product-checkboxes">
-                <label className="admin-checkbox-inline">
-                  <input
-                    type="checkbox"
-                    checked={form.showContactPrice}
-                    onChange={(event) =>
-                      setForm((previous) => ({
-                        ...previous,
-                        showContactPrice: event.target.checked,
-                      }))
-                    }
-                    disabled={isSubmitting}
-                  />
-                  {t('Hiển thị giá dạng "Liên hệ"')}
-                </label>
+                <span className="admin-empty">{t('Giá hiển thị cố định dạng "Liên hệ".')}</span>
 
                 <label className="admin-checkbox-inline">
                   <input
@@ -1057,7 +1011,7 @@ export default function AdminProductsPage() {
                   <tr>
                     <th>{t('Tên sản phẩm')}</th>
                     <th>{t('Tab')}</th>
-                    <th>{t('Giá')}</th>
+                    <th>{t('Giá hiển thị')}</th>
                     <th>{t('Danh mục')}</th>
                     <th>{t('Trạng thái')}</th>
                     <th>{t('Cập nhật')}</th>
@@ -1073,18 +1027,7 @@ export default function AdminProductsPage() {
                       </td>
                       <td>{product.tab}</td>
                       <td>
-                        {product.showContactPrice ? (
-                          <span className="error-text">{t('Liên hệ')}</span>
-                        ) : (
-                          <>
-                            {currencyFormatter.format(product.price)}
-                            {product.originalPrice != null && (
-                              <span className="admin-product-old-price">
-                                {currencyFormatter.format(product.originalPrice)}
-                              </span>
-                            )}
-                          </>
-                        )}
+                        <span className="error-text">{t('Liên hệ')}</span>
                       </td>
                       <td>{product.categoryName ?? t('Chưa gán')}</td>
                       <td>

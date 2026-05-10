@@ -103,6 +103,7 @@ export default function ProductDetailPage() {
   const activeImage = galleryItems[activeImageIndex] ?? galleryItems[0] ?? null;
   const specs = data?.specifications;
   const dimensionLabel = data ? buildDimensionsLabel(data) : '';
+  const productTitle = data ? decodeHtml(data.title.rendered) : '';
 
   const genericSpecificationRows =
     specs?.items
@@ -124,6 +125,20 @@ export default function ProductDetailPage() {
           { label: 'Seat height', value: specs?.seat?.height || '' },
         ].filter((row) => row.value && row.value.trim().length > 0);
 
+  const summarySource = data
+    ? stripHtmlTags(data.excerpt.rendered || data.content.rendered)
+    : '';
+  const summaryText =
+    summarySource.length > 260
+      ? `${summarySource.slice(0, 257).trimEnd()}...`
+      : summarySource;
+
+  const quickFacts = [
+    { label: t('Mã sản phẩm'), value: specs?.product_code || '' },
+    { label: t('Chất liệu'), value: specs?.material || '' },
+    { label: t('Kích thước (L x D x H)'), value: dimensionLabel },
+  ].filter((fact) => fact.value.trim().length > 0);
+
   const hasExcerpt = Boolean(data?.excerpt?.rendered && stripHtmlTags(data.excerpt.rendered));
   const hasContent = Boolean(data?.content?.rendered && stripHtmlTags(data.content.rendered));
 
@@ -140,7 +155,7 @@ export default function ProductDetailPage() {
       />
       <section className="page-hero">
         <p className="kicker">{t('CHI TIẾT SẢN PHẨM')}</p>
-        <h1>{data?.title.rendered ?? t('Chi tiết sản phẩm')}</h1>
+        <h1>{productTitle || t('Chi tiết sản phẩm')}</h1>
       </section>
 
       {loading && <LoadingBlock />}
@@ -158,12 +173,19 @@ export default function ProductDetailPage() {
         <section className="detail-layout product-detail-layout">
           <div className="product-media">
             {activeImage ? (
-              <img
-                src={activeImage.src}
-                alt={activeImage.alt || decodeHtml(data.title.rendered)}
-                loading="lazy"
-                className="product-main-image"
-              />
+              <figure className="product-main-image-wrap">
+                <img
+                  src={activeImage.src}
+                  alt={activeImage.alt || productTitle}
+                  loading="lazy"
+                  className="product-main-image"
+                />
+                {galleryItems.length > 1 && (
+                  <figcaption className="product-image-count-badge">
+                    {t('Thư viện ảnh')}: {galleryItems.length}
+                  </figcaption>
+                )}
+              </figure>
             ) : (
               <div className="product-empty-media">{t('Chưa có ảnh sản phẩm')}</div>
             )}
@@ -188,12 +210,39 @@ export default function ProductDetailPage() {
           </div>
 
           <div className="product-detail-content">
-            <p className="detail-meta">
-              {t('Danh mục')}:{' '}
-              {productCategories
-                .map((term) => term.name)
-                .join(', ') || t('Chưa gán')}
-            </p>
+            <section className="product-summary-card">
+              <p className="product-summary-kicker">{t('Bộ sưu tập ANSLIFE')}</p>
+              <h2>{productTitle}</h2>
+
+              <div className="product-category-row" aria-label={t('Danh mục')}>
+                {productCategories.length > 0 ? (
+                  productCategories.map((term) => (
+                    <Link
+                      key={`${term.id}-${term.slug}`}
+                      to={toLocalizedPath(`/products/category/${term.slug}`)}
+                      className="product-category-chip"
+                    >
+                      {term.name}
+                    </Link>
+                  ))
+                ) : (
+                  <span className="product-category-chip is-muted">{t('Chưa gán')}</span>
+                )}
+              </div>
+
+              {summaryText && <p className="product-summary-description">{summaryText}</p>}
+
+              {quickFacts.length > 0 && (
+                <div className="product-quick-facts">
+                  {quickFacts.map((fact) => (
+                    <div key={fact.label} className="product-quick-fact">
+                      <span>{fact.label}</span>
+                      <strong>{fact.value}</strong>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </section>
 
             {(finishOptions.length > 0 || seatOptions.length > 0) && (
               <div className="product-options-grid">
@@ -225,8 +274,8 @@ export default function ProductDetailPage() {
               <section className="product-spec-card">
                 <h3>{t('Thông số kỹ thuật')}</h3>
                 <div className="product-spec-table">
-                  {specificationRows.map((row) => (
-                    <div key={row.label} className="product-spec-row">
+                  {specificationRows.map((row, index) => (
+                    <div key={`${row.label}-${index}`} className="product-spec-row">
                       <span>{row.label}</span>
                       <strong>{row.value}</strong>
                     </div>
@@ -250,16 +299,30 @@ export default function ProductDetailPage() {
               </section>
             )}
 
-            <div className="product-action-row">
-              <Link
-                to={toLocalizedPath(
-                  `/contact/quote-request?product=${encodeURIComponent(data.slug)}`,
+            <section className="product-contact-card">
+              <h3>{t('Liên hệ đội ngũ ANSLIFE')}</h3>
+              <p>
+                {t(
+                  'Để nhận tư vấn nhanh, vui lòng gửi yêu cầu báo giá hoặc đặt lịch làm việc trực tiếp với đội ngũ phụ trách.',
                 )}
-                className="button-solid"
-              >
-                {t('Gửi yêu cầu báo giá')}
-              </Link>
-            </div>
+              </p>
+              <div className="product-action-row">
+                <Link
+                  to={toLocalizedPath(
+                    `/contact/quote-request?product=${encodeURIComponent(data.slug)}`,
+                  )}
+                  className="button-solid"
+                >
+                  {t('Gửi yêu cầu báo giá')}
+                </Link>
+                <Link
+                  to={toLocalizedPath('/contact/schedule-meeting')}
+                  className="button-ghost"
+                >
+                  {t('Đặt lịch làm việc')}
+                </Link>
+              </div>
+            </section>
           </div>
         </section>
       )}

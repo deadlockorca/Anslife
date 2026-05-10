@@ -276,26 +276,6 @@ const toStringArray = (value: unknown): string[] => {
   return [];
 };
 
-const toNumber = (value: unknown): number | null => {
-  if (typeof value === 'number' && Number.isFinite(value)) {
-    return Math.round(value);
-  }
-
-  if (typeof value === 'string') {
-    const cleaned = value.trim();
-    if (!cleaned) {
-      return null;
-    }
-
-    const parsed = Number(cleaned.replace(/,/g, ''));
-    if (Number.isFinite(parsed)) {
-      return Math.round(parsed);
-    }
-  }
-
-  return null;
-};
-
 const toTab = (value: unknown): CatalogProductTab => {
   if (typeof value === 'string') {
     const cleaned = value.trim().toUpperCase();
@@ -921,20 +901,10 @@ export async function parseCatalogProductInput(
     return { ok: false, error: 'Tên sản phẩm là bắt buộc.' };
   }
 
-  const showContactPrice = toBooleanInput(payload.showContactPrice, false);
-  const parsedPrice = toNumber(payload.price);
-  const parsedOriginalPrice = toNumber(payload.originalPrice);
-
-  if (!showContactPrice && (parsedPrice === null || parsedPrice < 0)) {
-    return { ok: false, error: 'Giá bán không hợp lệ.' };
-  }
-
-  if (parsedOriginalPrice !== null && parsedOriginalPrice < 0) {
-    return { ok: false, error: 'Giá gốc không hợp lệ.' };
-  }
-
-  const price = showContactPrice ? 0 : (parsedPrice ?? 0);
-  const originalPrice = showContactPrice ? null : parsedOriginalPrice;
+  // ANSLIFE policy: public product price is always hidden and shown as "Liên hệ".
+  const showContactPrice = true;
+  const price = 0;
+  const originalPrice = null;
 
   const specsParsed = toSpecs(payload.specs);
   if (!specsParsed.ok) {
