@@ -19,24 +19,76 @@ npm run prisma:push
 npm run db:seed
 ```
 
-## Import SQL gốc `toamhoanhao-2.sql` (giữ nguyên 1:1)
-File dump đã được đưa vào project tại `prisma/sql/toamhoanhao-2.sql`.
+## Import SQL chỉ phần sản phẩm từ `toamhoanhao-3.sql`
+Mục tiêu của Anslife là chỉ dùng phần sản phẩm (không kéo theo bảng phân quyền/ecommerce khác).
 
-Chạy import:
+### Bước 1: Tạo file import products-only từ dump gốc
+Mặc định script đọc file:
+`/Users/bowthoois/Downloads/toamhoanhao-3.sql`
 
 ```bash
-npx prisma db execute --file ./prisma/sql/toamhoanhao-2.sql --schema ./prisma/schema.prisma
+npm run db:build-products-sql
+```
+
+Nếu bạn muốn chỉ định file nguồn khác:
+
+```bash
+node scripts/build-products-only-sql.mjs \
+  --source /duong-dan/toamhoanhao-3.sql \
+  --output prisma/sql/toamhoanhao-products-only.sql
+```
+
+### Bước 2: Import vào database Anslife
+
+```bash
+npx prisma db execute --file ./prisma/sql/toamhoanhao-products-only.sql --schema ./prisma/schema.prisma
 ```
 
 Lưu ý:
-1. File này là schema/data ecommerce khác với Prisma schema hiện tại của Anslife.
-2. Nên import vào database riêng (không dùng chung DB đang chạy app Anslife) để tránh lệch schema.
+1. File import này chỉ tạo + nạp dữ liệu cho 4 bảng: `category`, `product`, `productimage`, `productspec`.
+2. Không import các bảng phân quyền/user/session của hệ thống `toamhoanhao`.
 
-Sau khi import xong, module quản trị sản phẩm dùng trực tiếp các bảng `product/category/productimage/productspec`:
-1. URL: `/vn/admin/products`
-2. API nội bộ: `/api/internal/catalog-products` và `/api/internal/catalog-products/:id`
+Sau khi import xong, module quản trị sản phẩm dùng trực tiếp các bảng trên:
+1. URL admin: `/vn/admin/products`
+2. API nội bộ: `GET/POST /api/internal/catalog-products`
+3. API nội bộ: `PATCH/DELETE /api/internal/catalog-products/:id`
+4. API upload ảnh R2: `POST /api/internal/catalog-products/upload`
 
-Sau khi chạy xong, DB sẽ có các bảng chính:
+## Cấu hình R2 dùng chung với Toamhoanhao
+Khai báo cùng bộ biến môi trường R2 như dự án `Toamhoanhao`:
+
+```env
+R2_ACCOUNT_ID=...
+R2_ACCESS_KEY_ID=...
+R2_SECRET_ACCESS_KEY=...
+R2_BUCKET=...
+R2_PUBLIC_BASE_URL=...
+R2_REGION=auto
+R2_MAX_FILE_SIZE_BYTES=8388608
+```
+
+Gợi ý:
+1. Có thể dùng `R2_ENDPOINT` thay cho `R2_ACCOUNT_ID` nếu cần endpoint custom.
+2. Trang admin sản phẩm hỗ trợ upload ảnh trực tiếp từ máy lên R2 và tự điền URL vào form.
+
+## Cách thêm/sửa/xóa sản phẩm
+1. Đăng nhập admin và vào `/vn/admin/products`.
+2. Thêm mới:
+- Điền thông tin sản phẩm.
+- Upload ảnh từ máy hoặc dán URL ảnh.
+- Bấm `Thêm sản phẩm`.
+3. Sửa:
+- Bấm `Sửa` ở dòng sản phẩm.
+- Cập nhật dữ liệu.
+- Bấm `Cập nhật sản phẩm`.
+4. Xóa:
+- Bấm `Xóa` và xác nhận.
+
+Ghi chú:
+1. Luồng upload ảnh chỉ upload lên R2, không xóa file trên R2 khi xóa bản ghi sản phẩm.
+2. Đây là chủ ý để tránh ảnh hưởng dữ liệu đang dùng chung với hệ thống `Toamhoanhao`.
+
+Sau khi chạy xong (bao gồm bước Prisma + import products-only), DB sẽ có các bảng chính:
 1. `content_items`
 2. `taxonomies`
 3. `content_item_taxonomies`
@@ -50,6 +102,10 @@ Sau khi chạy xong, DB sẽ có các bảng chính:
 11. `data_share_links`
 12. `audit_logs`
 13. `app_user_sessions`
+14. `category`
+15. `product`
+16. `productimage`
+17. `productspec`
 
 ## Bootstrap tài khoản admin đầu tiên
 Thêm các biến sau vào `.env` trước khi chạy production:

@@ -63,6 +63,13 @@ type AdminListResponse = {
   error?: string;
 };
 
+type UploadImageResponse = {
+  ok?: boolean;
+  url?: string;
+  message?: string;
+  error?: string;
+};
+
 type ProductFormState = {
   name: string;
   slug: string;
@@ -227,6 +234,7 @@ export default function AdminProductsPage() {
   const [form, setForm] = useState<ProductFormState>(emptyFormState);
   const [loading, setLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [uploadingImageIndex, setUploadingImageIndex] = useState<number | null>(null);
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState('');
@@ -383,6 +391,41 @@ export default function AdminProductsPage() {
       };
     });
   };
+
+  async function handleUploadImage(index: number, file: File) {
+    if (uploadingImageIndex !== null || isSubmitting) {
+      return;
+    }
+
+    setError('');
+    setSuccessMessage('');
+    setUploadingImageIndex(index);
+
+    try {
+      const formData = new FormData();
+      formData.set('file', file);
+      formData.set('folder', 'products');
+
+      const response = await fetch('/api/internal/catalog-products/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const payload = (await response.json()) as UploadImageResponse;
+      if (!response.ok || payload.ok !== true || typeof payload.url !== 'string') {
+        throw new Error(parseErrorMessage(payload, 'Không thể tải ảnh lên R2.'));
+      }
+
+      updateImageAt(index, payload.url);
+      setSuccessMessage('Đã tải ảnh lên R2.');
+    } catch (uploadError) {
+      const message =
+        uploadError instanceof Error ? uploadError.message : 'Không thể tải ảnh lên R2.';
+      setError(message);
+    } finally {
+      setUploadingImageIndex(null);
+    }
+  }
 
   const updateSpecAt = (index: number, key: 'name' | 'value', value: string) => {
     setForm((previous) => {
@@ -798,6 +841,27 @@ export default function AdminProductsPage() {
                       placeholder="https://..."
                     />
                   </label>
+
+                  <label>
+                    {t('Upload ảnh từ máy')}
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={(event) => {
+                        const nextFile = event.currentTarget.files?.[0];
+                        event.currentTarget.value = '';
+                        if (!nextFile) {
+                          return;
+                        }
+                        void handleUploadImage(index, nextFile);
+                      }}
+                      disabled={isSubmitting || uploadingImageIndex !== null}
+                    />
+                  </label>
+
+                  {uploadingImageIndex === index && (
+                    <p className="admin-empty">{t('Đang tải ảnh lên R2...')}</p>
+                  )}
 
                   {index > 0 && (
                     <button

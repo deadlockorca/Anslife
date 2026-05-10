@@ -56,6 +56,12 @@ npm run prisma:migrate -- --name init
 npm run db:seed
 ```
 
+Import phần sản phẩm từ dump `toamhoanhao-3.sql`:
+```bash
+npm run db:build-products-sql
+npx prisma db execute --file ./prisma/sql/toamhoanhao-products-only.sql --schema ./prisma/schema.prisma
+```
+
 Reset cứng database (xoá toàn bộ object):
 ```bash
 npx prisma migrate reset
@@ -83,6 +89,13 @@ npm run db:seed
 13. `ADMIN_ROTATE_PASSWORD` (`1` để rotate password admin mỗi lần start)
 14. `ADMIN_SYNC_NAME` (`1` để đồng bộ tên admin từ ENV)
 15. Legacy compatibility: vẫn hỗ trợ `APP_BOOTSTRAP_ADMIN_*` nếu cần chuyển tiếp.
+16. `R2_ACCOUNT_ID` hoặc `R2_ENDPOINT`
+17. `R2_ACCESS_KEY_ID`
+18. `R2_SECRET_ACCESS_KEY`
+19. `R2_BUCKET`
+20. `R2_PUBLIC_BASE_URL`
+21. `R2_REGION` (mặc định `auto`)
+22. `R2_MAX_FILE_SIZE_BYTES` (mặc định `8388608`)
 
 ## Notes
 1. Schema DB được quản lý bằng Prisma (`prisma/schema.prisma`).
