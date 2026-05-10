@@ -626,6 +626,22 @@ export default function SiteLayout() {
   ]);
 
   useEffect(() => {
+    let nestedFrameId: number | null = null;
+    const frameId = window.requestAnimationFrame(() => {
+      nestedFrameId = window.requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      if (nestedFrameId !== null) {
+        window.cancelAnimationFrame(nestedFrameId);
+      }
+    };
+  }, [location.pathname, location.search]);
+
+  useEffect(() => {
     if (isAdminRoute) {
       closeNavigationMenus();
     }

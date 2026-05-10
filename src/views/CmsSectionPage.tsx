@@ -31,14 +31,16 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
         : config.sections,
     [config.sections, config.slug, hiddenAboutSectionIds],
   );
-  const shouldHideAboutHeroMeta = config.slug === 'about-anslife';
+  const shouldHideHeroKicker =
+    config.slug === 'about-anslife' || config.slug === 'global-network';
+  const shouldHideAboutHeroSummary = config.slug === 'about-anslife';
   const displayHtml = useMemo(() => {
     if (!resolvedHtml) {
       return resolvedHtml;
     }
 
     const htmlWithoutBanner =
-      config.slug === 'about-anslife'
+      config.slug === 'about-anslife' || config.slug === 'global-network'
         ? resolvedHtml.replace(/<figure class="ai-banner">[\s\S]*?<\/figure>/i, '')
         : resolvedHtml;
 
@@ -62,9 +64,9 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
     <>
       <Seo title={t(config.title)} description={t(config.summary)} />
       <section className="page-hero">
-        {!shouldHideAboutHeroMeta && <p className="kicker">{t('TRANG WEB ANSLIFE V1')}</p>}
+        {!shouldHideHeroKicker && <p className="kicker">{t('TRANG WEB ANSLIFE V1')}</p>}
         <h1>{t(config.title)}</h1>
-        {!shouldHideAboutHeroMeta && <p>{t(config.summary)}</p>}
+        {!shouldHideAboutHeroSummary && <p>{t(config.summary)}</p>}
       </section>
 
       {shouldShowLoading && <LoadingBlock />}
