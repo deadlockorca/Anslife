@@ -9478,6 +9478,73 @@ ul {
   }
 }
 
+.site-shell:not(.is-admin-route):not(.is-home-route) .page-hero,
+.site-shell:not(.is-admin-route):not(.is-home-route) .html-panel,
+.site-shell:not(.is-admin-route):not(.is-home-route) .section-list,
+.site-shell:not(.is-admin-route):not(.is-home-route) .content-block,
+.site-shell:not(.is-admin-route):not(.is-home-route) .filter-bar {
+  border: 0;
+  box-shadow: none;
+}
+
+.site-shell:not(.is-admin-route):not(.is-home-route) .page-hero {
+  border-radius: 0;
+  background: transparent;
+  padding-inline: 0;
+}
+
+.site-shell:not(.is-admin-route):not(.is-home-route) .html-panel,
+.site-shell:not(.is-admin-route):not(.is-home-route) .section-list,
+.site-shell:not(.is-admin-route):not(.is-home-route) .content-block,
+.site-shell:not(.is-admin-route):not(.is-home-route) .filter-bar {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.site-shell:not(.is-admin-route):not(.is-home-route) .content-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) .section-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) .products-catalog-panel,
+.site-shell:not(.is-admin-route):not(.is-home-route) .products-catalog-main,
+.site-shell:not(.is-admin-route):not(.is-home-route) .products-catalog-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) .products-catalog-empty,
+.site-shell:not(.is-admin-route):not(.is-home-route) .product-summary-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) .product-option-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) .product-spec-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) .product-richtext-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) .product-contact-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) .contact-map-overview,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-highlight-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) .meeting-calendar-shell,
+.site-shell:not(.is-admin-route):not(.is-home-route) .meeting-schedule-form {
+  border-color: transparent;
+  box-shadow: 0 10px 24px rgba(28, 42, 64, 0.06);
+}
+
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-company-hero,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-company-block,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-company-panel,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-vision-shell,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-core-shell,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-core-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-core-note-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-op-core,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-op-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-op-philosophy,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-op-core-visual,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-op-formula,
+.site-shell:not(.is-admin-route):not(.is-home-route) #organization.ai-operating-philosophy .ai-op-core,
+.site-shell:not(.is-admin-route):not(.is-home-route) #organization.ai-operating-philosophy .ai-op-card,
+.site-shell:not(.is-admin-route):not(.is-home-route) #organization.ai-operating-philosophy .ai-op-philosophy,
+.site-shell:not(.is-admin-route):not(.is-home-route) #organization.ai-operating-philosophy .ai-op-signoff {
+  border-color: rgba(49, 49, 49, 0.08);
+}
+
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-company-divider-note,
+.site-shell:not(.is-admin-route):not(.is-home-route) .ai-op-signoff,
+.site-shell:not(.is-admin-route):not(.is-home-route) .products-catalog-toolbar,
+.site-shell:not(.is-admin-route):not(.is-home-route) .products-catalog-pagination {
+  border-color: rgba(49, 49, 49, 0.08);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .site-shell.has-global-video .site-global-video {
     display: none;

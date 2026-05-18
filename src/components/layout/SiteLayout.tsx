@@ -20,9 +20,7 @@ import {
 import SocialLinks from './SocialLinks';
 import useSiteI18n from '../../hooks/useSiteI18n';
 import { WORLD_LANGUAGE_OPTIONS } from '../../i18n/worldLanguages';
-import { getProductCategories } from '../../lib/wp';
 import { getCurrentUser, type AuthUser } from '../../lib/internalAuth';
-import type { WpCategory } from '../../types/wp';
 
 const supportedLanguageOptions = [
   { code: 'vn', label: 'Tiếng Việt', menuLabel: 'VN', flag: '🇻🇳' },
@@ -148,211 +146,8 @@ const FOOTER_LEGAL_LINKS = [
   { label: 'Chính sách bảo mật', path: '/contact/company-info' },
   { label: 'Điều khoản sử dụng', path: '/commercial-process' },
 ] as const;
-const TOAM_PRODUCT_MENU_FALLBACK: MenuChildItem[] = [
-  {
-    label: 'Sofa - Ghế thư giãn',
-    path: '/products/category/sofa-ghe-thu-gian',
-    children: [
-      { label: 'Ưu đãi độc quyền', path: '/products/category/sofa-uu-dai-doc-quyen' },
-      { label: 'Sofa góc - Sofa bộ', path: '/products/category/sofa-goc-sofa-bo' },
-      { label: 'Sofa thư giãn Recliner', path: '/products/category/sofa-thu-gian-recliner' },
-      { label: 'Sofa đơn', path: '/products/category/sofa-don' },
-      { label: 'Sofa 2 chỗ', path: '/products/category/sofa-2-cho' },
-      { label: 'Sofa 3 chỗ', path: '/products/category/sofa-3-cho' },
-      { label: 'Sofa bed', path: '/products/category/sofa-bed' },
-      { label: 'Đôn - Ottoman', path: '/products/category/sofa-don-ottoman' },
-      { label: 'Sofa da bò', path: '/products/category/sofa-da-bo' },
-    ],
-  },
-  {
-    label: 'Bàn',
-    path: '/products/category/ban',
-    children: [
-      { label: 'Bộ bàn ăn', path: '/products/category/ban-bo-ban-an' },
-      { label: 'Bàn ăn', path: '/products/category/ban-ban-an' },
-      { label: 'Bàn Cafe - Bàn trà', path: '/products/category/ban-cafe-ban-tra' },
-      { label: 'Bàn Console - Kệ Console', path: '/products/category/ban-console-ke-console' },
-      { label: 'Bàn Lamp - Bàn góc', path: '/products/category/ban-lamp-ban-goc' },
-      { label: 'Bàn học - Bàn làm việc', path: '/products/category/ban-hoc-ban-lam-viec' },
-      { label: 'Bàn - Tủ trang điểm', path: '/products/category/ban-tu-trang-diem' },
-      { label: 'Bàn ngoài trời', path: '/products/category/ban-ngoai-troi' },
-    ],
-  },
-  {
-    label: 'Ghế',
-    path: '/products/category/ghe',
-    children: [
-      { label: 'Ghế', path: '/products/category/ghe-ghe' },
-      { label: 'Ghế Bar - Ghế đôn', path: '/products/category/ghe-bar-ghe-don' },
-      { label: 'Ghế Bench', path: '/products/category/ghe-bench' },
-      { label: 'Ghế ngoài trời', path: '/products/category/ghe-ngoai-troi' },
-      { label: 'Ghế học - Ghế làm việc', path: '/products/category/ghe-hoc-ghe-lam-viec' },
-    ],
-  },
-  {
-    label: 'Tủ - Kệ',
-    path: '/products/category/tu-ke',
-    children: [
-      { label: 'Tủ Tivi - Kệ Tivi', path: '/products/category/tu-ke-tu-tivi-ke-tivi' },
-      { label: 'Tủ đầu giường', path: '/products/category/tu-ke-tu-dau-giuong' },
-      {
-        label: 'Tủ kính - Tủ trưng bầy - Tủ sách',
-        path: '/products/category/tu-ke-tu-kinh-trung-bay-tu-sach',
-      },
-      {
-        label: 'Tủ Sideboard - Tủ Buffet',
-        path: '/products/category/tu-ke-tu-sideboard-tu-buffet',
-      },
-      {
-        label: 'Tủ ngăn kéo - Tủ trang trí nhỏ',
-        path: '/products/category/tu-ke-tu-ngan-keo-tu-trang-tri-nho',
-      },
-      { label: 'Tủ nhà tắm - Lavabo', path: '/products/category/tu-ke-tu-nha-tam-lavabo' },
-      { label: 'Tủ - Kệ giầy', path: '/products/category/tu-ke-tu-ke-giay' },
-      { label: 'Tủ quần áo', path: '/products/category/tu-ke-tu-quan-ao' },
-    ],
-  },
-  {
-    label: 'Giường',
-    path: '/products/category/giuong',
-    children: [
-      { label: 'Giường đơn - Cũi', path: '/products/category/giuong-don-cui' },
-      { label: 'Giường tầng', path: '/products/category/giuong-tang' },
-      { label: 'Giường Queen', path: '/products/category/giuong-queen' },
-      { label: 'Giường King', path: '/products/category/giuong-king' },
-      { label: 'Giường 2m2', path: '/products/category/giuong-2m2' },
-      { label: 'Bộ phòng ngủ', path: '/products/category/bo-phong-ngu' },
-    ],
-  },
-  { label: 'Đệm', path: '/products/category/dem' },
-  {
-    label: 'Đồ trang trí',
-    path: '/products/category/do-trang-tri',
-    children: [
-      { label: 'Đồ trang trí Giáng Sinh', path: '/products/category/do-trang-tri-giang-sinh' },
-      { label: 'Pha lê cao cấp Bohemia', path: '/products/category/pha-le-cao-cap-bohemia' },
-      { label: 'Tranh', path: '/products/category/do-trang-tri-tranh' },
-      { label: 'Phụ kiện trang trí', path: '/products/category/phu-kien-trang-tri' },
-      { label: 'Đèn', path: '/products/category/do-trang-tri-den' },
-      { label: 'Bình hoa - Lọ hoa', path: '/products/category/binh-hoa-lo-hoa' },
-      { label: 'Hoa giả- cây giả', path: '/products/category/hoa-gia-cay-gia' },
-    ],
-  },
-  {
-    label: 'Đồ gia dụng',
-    path: '/products/category/do-gia-dung',
-    children: [
-      { label: 'Đồ gia dụng - Đồ nhà bếp', path: '/products/category/do-gia-dung-do-nha-bep' },
-      {
-        label: 'Khăn trải bàn - Tấm lót trang trí',
-        path: '/products/category/khan-trai-ban-tam-lot-trang-tri',
-      },
-      { label: 'Thảm', path: '/products/category/do-gia-dung-tham' },
-      { label: 'Giỏ trang trí - Hộp trang trí', path: '/products/category/gio-trang-tri-hop-trang-tri' },
-      { label: 'Nến - Tinh dầu thơm', path: '/products/category/nen-tinh-dau-thom' },
-      { label: 'Bộ chăn ga gối', path: '/products/category/bo-chan-ga-goi' },
-      { label: 'Vỏ gối trang trí', path: '/products/category/vo-goi-trang-tri' },
-      { label: 'Gương trang trí', path: '/products/category/guong-trang-tri' },
-    ],
-  },
-  {
-    label: 'Không gian ngoài trời',
-    path: '/products/category/khong-gian-ngoai-troi',
-    children: [
-      { label: 'Bàn ngoài trời', path: '/products/category/khong-gian-ban-ngoai-troi' },
-      { label: 'Ghế ngoài trời', path: '/products/category/khong-gian-ghe-ngoai-troi' },
-      {
-        label: 'Bộ bàn ghế ngoài trời',
-        path: '/products/category/khong-gian-bo-ban-ghe-ngoai-troi',
-      },
-      {
-        label: 'Sản phẩm ngoài trời khác',
-        path: '/products/category/khong-gian-san-pham-ngoai-troi-khac',
-      },
-    ],
-  },
-  { label: 'Đồ cho bé', path: '/products/category/do-cho-be' },
-];
 const DEFAULT_SITE_BG_VIDEO_MP4 = '/assets/videos/home-bg.mp4';
 const DEFAULT_SITE_BG_VIDEO_POSTER = '/assets/videos/home-bg-poster.jpg';
-
-function normalizeCategoryId(
-  value: number | string | null | undefined,
-): string | null {
-  if (value === null || value === undefined) {
-    return null;
-  }
-
-  const normalized = String(value).trim();
-  return normalized.length > 0 ? normalized : null;
-}
-
-function buildProductMenuChildren(categories: WpCategory[]): MenuChildItem[] {
-  const normalizedCategories = categories
-    .map((category, index) => ({
-      index,
-      id: normalizeCategoryId(category.id),
-      parentId: normalizeCategoryId(category.parentId),
-      slug: category.slug?.trim(),
-      name: category.name?.trim(),
-    }))
-    .filter(
-      (category): category is { index: number; id: string; parentId: string | null; slug: string; name: string } =>
-        Boolean(category.id && category.slug && category.name),
-    );
-
-  if (normalizedCategories.length === 0) {
-    return [];
-  }
-
-  const nodeById = new Map<string, MenuChildItem>();
-  for (const category of normalizedCategories) {
-    nodeById.set(category.id, {
-      label: category.name,
-      path: `/products/category/${category.slug}`,
-      children: [],
-    });
-  }
-
-  const roots: MenuChildItem[] = [];
-  for (const category of normalizedCategories) {
-    const node = nodeById.get(category.id);
-    if (!node) {
-      continue;
-    }
-
-    if (category.parentId && nodeById.has(category.parentId)) {
-      const parentNode = nodeById.get(category.parentId);
-      if (parentNode) {
-        parentNode.children = parentNode.children ?? [];
-        parentNode.children.push(node);
-      }
-      continue;
-    }
-
-    roots.push(node);
-  }
-
-  const source = roots.length > 0 ? roots : normalizedCategories.map((category) => nodeById.get(category.id)).filter((item): item is MenuChildItem => Boolean(item));
-
-  const pruneEmptyChildren = (items: MenuChildItem[]): MenuChildItem[] =>
-    items.map((item) => {
-      const nestedChildren = item.children ? pruneEmptyChildren(item.children) : [];
-      if (nestedChildren.length > 0) {
-        return {
-          ...item,
-          children: nestedChildren,
-        };
-      }
-
-      return {
-        label: item.label,
-        path: item.path,
-      };
-    });
-
-  return pruneEmptyChildren(source);
-}
 
 function renderFooterContactIcon(icon: FooterContactIcon) {
   switch (icon) {
@@ -406,10 +201,6 @@ export default function SiteLayout() {
     Record<string, boolean>
   >({});
   const [searchQuery, setSearchQuery] = useState('');
-  const [productMenuLoaded, setProductMenuLoaded] = useState(false);
-  const [productMenuChildren, setProductMenuChildren] = useState<MenuChildItem[]>(
-    TOAM_PRODUCT_MENU_FALLBACK,
-  );
   const [headerAuthUser, setHeaderAuthUser] = useState<AuthUser | null>(null);
   const desktopMenuCloseTimerRef = useRef<number | null>(null);
   const mobileSearchBoxRef = useRef<HTMLDivElement | null>(null);
@@ -458,20 +249,7 @@ export default function SiteLayout() {
 
     return window.localStorage.getItem(LANGUAGE_SELECTOR_STORAGE_KEY) ?? language;
   });
-  const topMenuItems = useMemo(
-    () =>
-      TOP_MENU.map((item) => {
-        if (item.path !== PRODUCT_MENU_PATH) {
-          return item;
-        }
-
-        return {
-          ...item,
-          children: productMenuChildren,
-        };
-      }),
-    [productMenuChildren],
-  );
+  const topMenuItems = useMemo(() => TOP_MENU, []);
   const desktopTopMenuItems = useMemo(
     () =>
       topMenuItems.map((item) => ({
@@ -675,37 +453,6 @@ export default function SiteLayout() {
     );
   }, [language, resolveRouteLanguage]);
 
-  useEffect(() => {
-    let isMounted = true;
-
-    async function loadProductMenuCategories() {
-      try {
-        const categories = await getProductCategories();
-        const nextProductMenuChildren = buildProductMenuChildren(categories);
-
-        if (!isMounted) {
-          return;
-        }
-
-        if (nextProductMenuChildren.length > 0) {
-          setProductMenuChildren(nextProductMenuChildren);
-        }
-      } catch (error) {
-        console.error('[SiteLayout] Failed to load product menu categories:', error);
-      } finally {
-        if (isMounted) {
-          setProductMenuLoaded(true);
-        }
-      }
-    }
-
-    void loadProductMenuCategories();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
   const authMenuPath = headerAuthUser ? '/admin/users' : '/admin/login';
   const headerLoginLabel = headerAuthUser ? t('Quản trị') : t('Đăng nhập');
   const isExternalPath = useCallback(
@@ -834,58 +581,59 @@ export default function SiteLayout() {
     );
   }
 
-  const renderDesktopSubmenuItems = useCallback(
-    (items: MenuChildItem[], depth = 0): ReactNode =>
-      items.map((item) => {
-        const hasChildren = Boolean(item.children && item.children.length > 0);
-        if (!hasChildren) {
-          const className = depth === 0 ? 'submenu-link' : 'submenu-link submenu-link-nested';
-          return renderMenuLeaf(item, className, `desktop-${depth}`);
-        }
+  function renderDesktopSubmenuItems(
+    items: MenuChildItem[],
+    depth = 0,
+  ): ReactNode {
+    return items.map((item) => {
+      const hasChildren = Boolean(item.children && item.children.length > 0);
+      if (!hasChildren) {
+        const className = depth === 0 ? 'submenu-link' : 'submenu-link submenu-link-nested';
+        return renderMenuLeaf(item, className, `desktop-${depth}`);
+      }
 
-        if (depth === 0) {
-          const key = `desktop-parent-${depth}-${item.path}-${item.label}`;
-          const label = t(item.label);
-          const parentNode = (
-            <button
-              key={key}
-              type="button"
-              className="submenu-link submenu-link-parent submenu-link-button"
-              aria-haspopup="true"
-              aria-label={label}
-              onClick={(event) => event.preventDefault()}
-            >
-              {label}
-              <span className="submenu-link-arrow" aria-hidden="true">
-                ›
-              </span>
-            </button>
-          );
-
-          return (
-            <div key={`desktop-group-${item.path}-${item.label}`} className="submenu-flyout-item">
-              {parentNode}
-              <div className="submenu-flyout-panel">
-                {renderDesktopSubmenuItems(item.children ?? [], depth + 1)}
-              </div>
-            </div>
-          );
-        }
+      if (depth === 0) {
+        const key = `desktop-parent-${depth}-${item.path}-${item.label}`;
+        const label = t(item.label);
+        const parentNode = (
+          <button
+            key={key}
+            type="button"
+            className="submenu-link submenu-link-parent submenu-link-button"
+            aria-haspopup="true"
+            aria-label={label}
+            onClick={(event) => event.preventDefault()}
+          >
+            {label}
+            <span className="submenu-link-arrow" aria-hidden="true">
+              ›
+            </span>
+          </button>
+        );
 
         return (
-          <div
-            key={`desktop-nested-${item.path}-${item.label}`}
-            className="submenu-group"
-          >
-            <p className="submenu-group-title">{t(item.label)}</p>
-            <div className="submenu-group-list">
+          <div key={`desktop-group-${item.path}-${item.label}`} className="submenu-flyout-item">
+            {parentNode}
+            <div className="submenu-flyout-panel">
               {renderDesktopSubmenuItems(item.children ?? [], depth + 1)}
             </div>
           </div>
         );
-      }),
-    [renderMenuLeaf, t],
-  );
+      }
+
+      return (
+        <div
+          key={`desktop-nested-${item.path}-${item.label}`}
+          className="submenu-group"
+        >
+          <p className="submenu-group-title">{t(item.label)}</p>
+          <div className="submenu-group-list">
+            {renderDesktopSubmenuItems(item.children ?? [], depth + 1)}
+          </div>
+        </div>
+      );
+    });
+  }
 
   useEffect(() => {
     if (!mobileOpen) {
@@ -918,6 +666,11 @@ export default function SiteLayout() {
 
     return () => window.cancelAnimationFrame(rafId);
   }, [mobileSearchOpen]);
+
+  function closeMobileSearchOverlay() {
+    setMobileSearchOpen(false);
+    setSearchQuery('');
+  }
 
   useEffect(() => {
     if (!mobileSearchOpen) {
@@ -974,11 +727,6 @@ export default function SiteLayout() {
     setMobileSearchOpen(false);
     setSearchQuery('');
     closeNavigationMenus();
-  }
-
-  function closeMobileSearchOverlay() {
-    setMobileSearchOpen(false);
-    setSearchQuery('');
   }
 
   function scrollToTopAfterNavigation() {
@@ -1187,11 +935,7 @@ export default function SiteLayout() {
             >
               <div className="product-mega-shell">
                 <aside className="product-mega-sidebar">
-                  {!productMenuLoaded && productRootCategories.length === 0 ? (
-                    <p className="product-mega-empty">
-                      {t('Đang tải danh mục sản phẩm...')}
-                    </p>
-                  ) : productRootCategories.length > 0 ? (
+                  {productRootCategories.length > 0 ? (
                     <div className="product-mega-root-list">
                       {productRootCategories.map((category) => {
                         const isActive =

@@ -58,573 +58,167 @@ export interface StaticPageConfig {
   sections: SectionItem[];
 }
 
+export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
+  {
+    label: 'Finished Furniture',
+    path: '/products',
+    children: [
+      { label: 'Sofa - Lounge Chair', path: '/products/category/sofa-ghe-thu-gian' },
+      { label: 'Tables', path: '/products/category/ban' },
+      { label: 'Chairs', path: '/products/category/ghe' },
+      { label: 'Cabinet & Storage', path: '/products/category/tu-ke' },
+      { label: 'Beds', path: '/products/category/giuong' },
+      { label: 'Mattress', path: '/products/category/dem' },
+      { label: 'Home Decor', path: '/products/category/do-trang-tri' },
+      { label: 'Household Products', path: '/products/category/do-gia-dung' },
+      { label: 'Outdoor Products', path: '/products/category/khong-gian-ngoai-troi' },
+      { label: 'Kids Furniture', path: '/products/category/do-cho-be' },
+    ],
+  },
+  {
+    label: 'Furniture Components',
+    path: '/manufacturing-ecosystem/product-development-capability',
+  },
+  {
+    label: 'Plywood & Boards',
+    path: '/manufacturing-ecosystem/supply-system',
+  },
+  {
+    label: 'Wood Materials',
+    path: '/manufacturing-ecosystem/wood-supply',
+  },
+  {
+    label: 'Foam & Upholstery Materials',
+    path: '/manufacturing-ecosystem/supply-system',
+  },
+  {
+    label: 'Rattan & Bamboo Materials',
+    path: '/manufacturing-ecosystem/raw-material-zone',
+  },
+  {
+    label: 'Packing Materials',
+    path: '/manufacturing-ecosystem/packaging',
+  },
+  {
+    label: 'OEM/ODM Development',
+    path: '/manufacturing-ecosystem/custom-production-oem-odm',
+  },
+  {
+    label: 'Vietnam Storage Solution',
+    path: '/commercial-process/vietnam-supply-hub',
+  },
+  {
+    label: 'Export Consolidation',
+    path: '/commercial-process/export-consolidation',
+  },
+];
+
 export const TOP_MENU: TopMenuItem[] = [
   {
-    label: "Giới thiệu về Anslife",
-    path: "/about-anslife",
-    children: [
-      {
-        label: "Giới thiệu về công ty",
-        path: "/about-anslife/company-intro"
-      },
-      {
-        label: "Tầm nhìn, sứ mệnh",
-        path: "/about-anslife/vision-mission"
-      },
-      {
-        label: "Giá trị cốt lõi",
-        path: "/about-anslife/core-values"
-      },
-      {
-        label: "Triết lý vận hành",
-        path: "/about-anslife/production-philosophy"
-      },
-      {
-        label: "Cơ cấu tổ chức",
-        path: "/about-anslife/organization"
-      },
-      {
-        label: "Đội ngũ",
-        path: "/about-anslife/team"
-      },
-      {
-        label: "Hệ sinh thái Anslife",
-        path: "/about-anslife/anslife-ecosystem"
-      },
-      {
-        label: "Lịch sử phát triển",
-        path: "/about-anslife/development-history"
-      }
-    ]
+    label: 'HOME',
+    path: '/',
   },
   {
-    label: "Hệ sinh thái sản xuất",
-    path: "/manufacturing-ecosystem",
+    label: 'ABOUT US',
+    path: '/about-anslife',
     children: [
-      {
-        label: "Hệ thống sản xuất",
-        path: "/manufacturing-ecosystem/production-system",
-        children: [
-          {
-            label: "Mô hình vận hành hệ sinh thái",
-            path: "/manufacturing-ecosystem/ecosystem-operating-model"
-          },
-          {
-            label: "Nhà máy vệ tinh",
-            path: "/manufacturing-ecosystem/satellite-factories"
-          },
-          {
-            label: "Nhà máy ANSLIFE",
-            path: "/manufacturing-ecosystem/anslife-factory"
-          }
-        ]
-      },
-      {
-        label: "Vùng nguyên liệu",
-        path: "/manufacturing-ecosystem/raw-material-zone",
-        children: [
-          {
-            label: "Nguồn cung gỗ",
-            path: "/manufacturing-ecosystem/wood-supply"
-          },
-          {
-            label: "Vật liệu công nghiệp",
-            path: "/manufacturing-ecosystem/supply-system",
-            children: [
-              {
-                label: "Vật liệu liên quan",
-                path: "/manufacturing-ecosystem/supply-system"
-              },
-              {
-                label: "MDF / PB / ván công nghiệp",
-                path: "/manufacturing-ecosystem/supply-system"
-              },
-              {
-                label: "Plywood",
-                path: "/manufacturing-ecosystem/supply-system"
-              }
-            ]
-          },
-          {
-            label: "Kiểm soát nguyên liệu",
-            path: "/manufacturing-ecosystem/material-control"
-          }
-        ]
-      },
-      {
-        label: "Thiết bị & công nghệ",
-        path: "/manufacturing-ecosystem/equipment-technology",
-        children: [
-          {
-            label: "Máy móc sản xuất",
-            path: "/manufacturing-ecosystem/production-machinery"
-          },
-          {
-            label: "Công nghệ gia công",
-            path: "/manufacturing-ecosystem/processing-technology"
-          }
-        ]
-      },
-      {
-        label: "Quy trình sản xuất",
-        path: "/manufacturing-ecosystem/manufacturing-process",
-        children: [
-          {
-            label: "Phát triển mẫu",
-            path: "/manufacturing-ecosystem/sample-development"
-          },
-          {
-            label: "Gia công",
-            path: "/manufacturing-ecosystem/processing"
-          },
-          {
-            label: "Lắp ráp",
-            path: "/manufacturing-ecosystem/assembly"
-          },
-          {
-            label: "Sơn hoàn thiện",
-            path: "/manufacturing-ecosystem/finishing"
-          },
-          {
-            label: "Đóng gói",
-            path: "/manufacturing-ecosystem/packaging"
-          }
-        ]
-      },
-      {
-        label: "Tiêu chuẩn & chứng chỉ",
-        path: "/manufacturing-ecosystem/standards-certificates",
-        children: [
-          {
-            label: "Tiêu chuẩn sản xuất",
-            path: "/manufacturing-ecosystem/production-standards"
-          },
-          {
-            label: "Chứng chỉ trong hệ sinh thái",
-            path: "/manufacturing-ecosystem/ecosystem-certifications"
-          }
-        ]
-      },
-      {
-        label: "Đăng ký đối tác sản xuất",
-        path: "/manufacturing-ecosystem/manufacturing-partner-registration",
-        children: [
-          {
-            label: "Giới thiệu chương trình đối tác",
-            path: "/manufacturing-ecosystem/manufacturing-partner-registration"
-          },
-          {
-            label: "Điều kiện tham gia",
-            path: "/manufacturing-ecosystem/manufacturing-partner-registration"
-          },
-          {
-            label: "Quy trình đánh giá",
-            path: "/manufacturing-ecosystem/manufacturing-partner-registration"
-          },
-          {
-            label: "Form đăng ký nhà máy",
-            path: "/manufacturing-ecosystem/manufacturing-partner-registration"
-          }
-        ]
-      }
-    ]
+      { label: 'Company Overview', path: '/about-anslife/company-intro' },
+      { label: 'Vision & Mission', path: '/about-anslife/vision-mission' },
+      { label: 'Core Values', path: '/about-anslife/core-values' },
+      { label: 'Manufacturing Philosophy', path: '/about-anslife/production-philosophy' },
+      { label: 'Organization', path: '/about-anslife/organization' },
+      { label: 'Team', path: '/about-anslife/team' },
+      { label: 'Global Network', path: '/global-network' },
+      { label: 'Social Responsibility', path: '/scholarship-community' },
+    ],
   },
   {
-    label: "Năng lực sản xuất",
-    path: "/manufacturing-ecosystem/production-ecosystem-scale",
-    children: [
-      {
-        label: "Quy mô hệ sinh thái",
-        path: "/manufacturing-ecosystem/production-ecosystem-scale"
-      },
-      {
-        label: "Công suất sản xuất",
-        path: "/manufacturing-ecosystem/production-capacity"
-      },
-      {
-        label: "Năng lực phát triển sản phẩm",
-        path: "/manufacturing-ecosystem/product-development-capability"
-      },
-      {
-        label: "Khả năng xử lý đơn hàng",
-        path: "/manufacturing-ecosystem/order-handling-capability"
-      },
-      {
-        label: "Sản xuất theo yêu cầu",
-        path: "/manufacturing-ecosystem/custom-production-oem-odm",
-        children: [
-          {
-            label: "OEM",
-            path: "/manufacturing-ecosystem/custom-production-oem-odm"
-          },
-          {
-            label: "ODM",
-            path: "/manufacturing-ecosystem/custom-production-oem-odm"
-          },
-          {
-            label: "Custom Design",
-            path: "/manufacturing-ecosystem/custom-production-oem-odm"
-          }
-        ]
-      },
-      {
-        label: "Thị trường xuất khẩu",
-        path: "/manufacturing-ecosystem/export-markets"
-      }
-    ]
+    label: 'PRODUCTS & SOLUTIONS',
+    path: '/products',
+    children: PRODUCTS_AND_SOLUTIONS_MENU,
   },
   {
-    label: "Hệ thống kiểm soát chất lượng",
-    path: "/quality-control",
+    label: 'MANUFACTURING CAPABILITY',
+    path: '/manufacturing-ecosystem/production-ecosystem-scale',
     children: [
+      { label: 'Factory Network', path: '/manufacturing-ecosystem/production-system' },
+      { label: 'ANSLIFE Factory', path: '/manufacturing-ecosystem/anslife-factory' },
+      { label: 'Satellite Factories', path: '/manufacturing-ecosystem/satellite-factories' },
+      { label: 'Production Capacity', path: '/manufacturing-ecosystem/production-capacity' },
       {
-        label: "Triết lý QC",
-        path: "/quality-control/qc-philosophy"
+        label: 'Product Development',
+        path: '/manufacturing-ecosystem/product-development-capability',
       },
+      { label: 'Materials & Supply Chain', path: '/manufacturing-ecosystem/raw-material-zone' },
+      { label: 'Equipment & Technology', path: '/manufacturing-ecosystem/equipment-technology' },
+      { label: 'QC & Packing', path: '/quality-control' },
       {
-        label: "Hệ thống QC",
-        path: "/quality-control/qc-system"
+        label: 'Standards & Certifications',
+        path: '/manufacturing-ecosystem/standards-certificates',
       },
-      {
-        label: "Kiểm tra nguyên liệu",
-        path: "/quality-control/input-inspection"
-      },
-      {
-        label: "Kiểm tra trong sản xuất",
-        path: "/quality-control/in-process-inspection"
-      },
-      {
-        label: "Kiểm tra trước xuất hàng",
-        path: "/quality-control/pre-shipment-inspection"
-      },
-      {
-        label: "Quy trình xử lý lỗi",
-        path: "/quality-control/quality-improvement-cases"
-      },
-      {
-        label: "Case cải tiến chất lượng",
-        path: "/quality-control/quality-improvement-cases"
-      }
-    ]
+      { label: 'Export Markets', path: '/manufacturing-ecosystem/export-markets' },
+    ],
   },
   {
-    label: "Sản phẩm",
-    path: "/products",
+    label: 'OEM/ODM SERVICE',
+    path: '/manufacturing-ecosystem/custom-production-oem-odm',
     children: [
-      {
-        label: "Nội thất gỗ",
-        path: "/products/category/noi-that-go",
-        children: [
-          {
-            label: "Ghế",
-            path: "/products/category/ghe",
-            children: [
-              {
-                label: "Ghế ăn",
-                path: "/products/category/ghe-an"
-              },
-              {
-                label: "Ghế lounge",
-                path: "/products/category/ghe-lounge"
-              },
-              {
-                label: "Ghế bar",
-                path: "/products/category/ghe-bar"
-              }
-            ]
-          },
-          {
-            label: "Bàn",
-            path: "/products/category/ban",
-            children: [
-              {
-                label: "Bàn ăn",
-                path: "/products/category/ban-an"
-              },
-              {
-                label: "Bàn cà phê",
-                path: "/products/category/ban-ca-phe"
-              },
-              {
-                label: "Bàn phụ",
-                path: "/products/category/ban-phu"
-              }
-            ]
-          },
-          {
-            label: "Tủ / Kệ",
-            path: "/products/category/tu-ke",
-            children: [
-              {
-                label: "Tủ quần áo",
-                path: "/products/category/tu-quan-ao"
-              },
-              {
-                label: "Kệ trang trí",
-                path: "/products/category/ke-trang-tri"
-              },
-              {
-                label: "Tủ lưu trữ",
-                path: "/products/category/tu-luu-tru"
-              }
-            ]
-          },
-          {
-            label: "Bộ phòng ngủ",
-            path: "/products/category/bo-phong-ngu",
-            children: [
-              {
-                label: "Giường ngủ",
-                path: "/products/category/giuong-ngu"
-              },
-              {
-                label: "Tủ đầu giường",
-                path: "/products/category/tu-dau-giuong"
-              },
-              {
-                label: "Tủ quần áo",
-                path: "/products/category/tu-quan-ao"
-              },
-              {
-                label: "Bàn trang điểm",
-                path: "/products/category/ban-trang-diem"
-              },
-              {
-                label: "Bộ phòng ngủ hoàn chỉnh",
-                path: "/products/category/bo-phong-ngu-hoan-chinh"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        label: "Bộ bàn ăn",
-        path: "/products/category/bo-ban-an",
-        children: [
-          {
-            label: "Bàn ăn",
-            path: "/products/category/ban-an"
-          },
-          {
-            label: "Ghế ăn",
-            path: "/products/category/ghe-an"
-          }
-        ]
-      },
-      {
-        label: "Mây tre đan",
-        path: "/products/category/may-tre-dan",
-        children: [
-          {
-            label: "Ghế mây",
-            path: "/products/category/ghe-may"
-          },
-          {
-            label: "Bàn mây",
-            path: "/products/category/ban-may"
-          },
-          {
-            label: "Giỏ mây",
-            path: "/products/category/gio-may"
-          },
-          {
-            label: "Khay mây",
-            path: "/products/category/khay-may"
-          },
-          {
-            label: "Decor mây tre",
-            path: "/products/category/decor-may-tre"
-          },
-          {
-            label: "Sản phẩm mây tre theo thiết kế",
-            path: "/products/category/san-pham-may-tre-theo-thiet-ke"
-          }
-        ]
-      },
-      {
-        label: "Kitchenware gỗ",
-        path: "/products/category/kitchenware-go",
-        children: [
-          {
-            label: "Thớt gỗ",
-            path: "/products/category/thot-go"
-          },
-          {
-            label: "Khay gỗ",
-            path: "/products/category/khay-go"
-          },
-          {
-            label: "Muỗng gỗ",
-            path: "/products/category/muong-go"
-          },
-          {
-            label: "Dụng cụ nhà bếp",
-            path: "/products/category/dung-cu-nha-bep"
-          }
-        ]
-      },
-      {
-        label: "Decor & Thủ công mỹ nghệ",
-        path: "/products/category/decor-thu-cong-my-nghe",
-        children: [
-          {
-            label: "Sơn mài",
-            path: "/products/category/son-mai"
-          },
-          {
-            label: "Khảm trai",
-            path: "/products/category/kham-trai"
-          },
-          {
-            label: "Trang trí gỗ",
-            path: "/products/category/trang-tri-go"
-          },
-          {
-            label: "Art objects",
-            path: "/products/category/art-objects"
-          }
-        ]
-      },
-      {
-        label: "Sản phẩm theo thiết kế",
-        path: "/products/category/thiet-ke-rieng"
-      },
-      {
-        label: "OEM / ODM",
-        path: "/products/category/oem-odm"
-      }
-    ]
+      { label: 'OEM Service', path: '/manufacturing-ecosystem/custom-production-oem-odm' },
+      { label: 'ODM Service', path: '/manufacturing-ecosystem/custom-production-oem-odm' },
+      { label: 'Custom Design', path: '/manufacturing-ecosystem/custom-production-oem-odm' },
+      { label: 'Sample Development', path: '/manufacturing-ecosystem/sample-development' },
+      { label: 'Order Process', path: '/commercial-process/order-flow' },
+      { label: 'Incoterms', path: '/commercial-process/incoterms' },
+      { label: 'Payment', path: '/commercial-process/payment' },
+      { label: 'Lead Time', path: '/commercial-process/lead-time' },
+      { label: 'Logistics', path: '/commercial-process/logistics' },
+    ],
   },
   {
-    label: "Quy trình thương mại",
-    path: "/commercial-process",
+    label: 'VIETNAM SUPPLY HUB',
+    path: '/commercial-process/vietnam-supply-hub',
     children: [
+      { label: 'Storage in Vietnam', path: '/commercial-process/vietnam-supply-hub' },
+      { label: 'Partner Standard Room', path: '/commercial-process/partner-standard-room' },
       {
-        label: "Quy trình đặt hàng",
-        path: "/commercial-process/order-flow"
+        label: 'Sample & Standard Management',
+        path: '/commercial-process/partner-standard-room',
       },
       {
-        label: "Quy trình phát triển mẫu",
-        path: "/manufacturing-ecosystem/sample-development"
+        label: 'Weekly Shipment Arrangement',
+        path: '/commercial-process/weekly-shipment-arrangement',
       },
-      {
-        label: "Điều kiện giao hàng (Incoterms)",
-        path: "/commercial-process/incoterms"
-      },
-      {
-        label: "Phương thức thanh toán",
-        path: "/commercial-process/payment"
-      },
-      {
-        label: "Thời gian sản xuất",
-        path: "/commercial-process/lead-time"
-      },
-      {
-        label: "Logistics",
-        path: "/commercial-process/logistics"
-      }
-    ]
+      { label: 'QC Before Shipment', path: '/quality-control/pre-shipment-inspection' },
+      { label: 'Export Packing', path: '/manufacturing-ecosystem/packaging' },
+      { label: 'Container / LCL Consolidation', path: '/commercial-process/export-consolidation' },
+      { label: 'Documentation Support', path: '/commercial-process/documentation-support' },
+    ],
   },
   {
-    label: "Dự án & Case Study",
-    path: "/projects",
+    label: 'PROJECTS',
+    path: '/projects',
     children: [
-      {
-        label: "Dự án xuất khẩu",
-        path: "/projects/type/du-an-xuat-khau"
-      },
-      {
-        label: "Case sản xuất",
-        path: "/projects/type/case-san-xuat"
-      },
-      {
-        label: "Case cải tiến",
-        path: "/projects/type/case-cai-tien"
-      },
-      {
-        label: "Hình ảnh giao hàng",
-        path: "/projects/type/hinh-anh-giao-hang"
-      },
-      {
-        label: "Hình ảnh container",
-        path: "/projects/type/hinh-anh-container"
-      }
-    ]
+      { label: 'Export Projects', path: '/projects/type/du-an-xuat-khau' },
+      { label: 'Manufacturing Cases', path: '/projects/type/case-san-xuat' },
+      { label: 'Improvement Cases', path: '/projects/type/case-cai-tien' },
+      { label: 'Delivery Gallery', path: '/projects/type/hinh-anh-giao-hang' },
+      { label: 'Container Loading', path: '/projects/type/hinh-anh-container' },
+    ],
   },
   {
-    label: "Hệ thống toàn cầu",
-    path: "/global-network",
-    children: [
-      {
-        label: "Việt Nam – Trụ sở",
-        path: "/global-network/vietnam-hq"
-      },
-      {
-        label: "Singapore – Văn phòng đại diện",
-        path: "/global-network/singapore-office"
-      },
-      {
-        label: "Nhật Bản – Văn phòng đại diện",
-        path: "/global-network/japan-office"
-      },
-      {
-        label: "Hoa Kỳ – Văn phòng đại diện",
-        path: "/global-network/us-office"
-      },
-      {
-        label: "Đối tác quốc tế",
-        path: "/global-network/international-partners"
-      }
-    ]
+    label: 'NEWS',
+    path: '/news',
   },
   {
-    label: "Phụng sự xã hội",
-    path: "/scholarship-community",
+    label: 'CONTACT',
+    path: '/contact',
     children: [
-      {
-        label: "Giới thiệu triết lý",
-        path: "/scholarship-community/fund-overview"
-      },
-      {
-        label: "Quỹ học bổng",
-        path: "/scholarship-community/scholarship-program"
-      },
-      {
-        label: "Hoạt động cộng đồng",
-        path: "/scholarship-community/community-activities"
-      },
-      {
-        label: "Phát triển nguồn nhân lực",
-        path: "/scholarship-community/workforce-development"
-      },
-      {
-        label: "Tham gia cùng ANSLIFE",
-        path: "/scholarship-community/join-anslife"
-      }
-    ]
+      { label: 'Company Information', path: '/contact/company-info' },
+      { label: 'Request a Quote', path: '/contact/quote-request' },
+      { label: 'Schedule a Meeting', path: '/contact/schedule-meeting' },
+      { label: 'Map', path: '/contact/map' },
+    ],
   },
-  {
-    label: "Liên hệ",
-    path: "/contact",
-    children: [
-      {
-        label: "Thông tin công ty",
-        path: "/contact/company-info"
-      },
-      {
-        label: "Gửi yêu cầu báo giá",
-        path: "/contact/quote-request"
-      },
-      {
-        label: "Đặt lịch làm việc",
-        path: "/contact/schedule-meeting"
-      },
-      {
-        label: "Bản đồ",
-        path: "/contact/map"
-      }
-    ]
-  }
 ];
 
 export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
@@ -914,6 +508,36 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
         id: 'logistics',
         title: 'Hậu cần',
         description: 'Tổ chức vận tải, đóng gói và theo dõi tiến độ giao hàng.',
+      },
+      {
+        id: 'vietnam-supply-hub',
+        title: 'Vietnam Supply Hub',
+        description:
+          'Giải pháp lưu kho, quản lý tồn kho, QC, đóng gói và điều phối xuất hàng từ Việt Nam cho buyer quốc tế.',
+      },
+      {
+        id: 'partner-standard-room',
+        title: 'Partner Standard Room',
+        description:
+          'Không gian lưu mẫu, bản vẽ, mẫu vật liệu, mẫu sơn, tiêu chuẩn đóng gói và checklist QC riêng cho từng đối tác.',
+      },
+      {
+        id: 'weekly-shipment-arrangement',
+        title: 'Weekly Shipment Arrangement',
+        description:
+          'Tổ chức lịch xuất hàng định kỳ từ Việt Nam sang Nhật Bản, Singapore và các thị trường quốc tế.',
+      },
+      {
+        id: 'export-consolidation',
+        title: 'Export Consolidation',
+        description:
+          'Gom hàng container hoặc LCL, phối hợp hàng hóa, vật liệu và chứng từ trước khi xuất khẩu.',
+      },
+      {
+        id: 'documentation-support',
+        title: 'Documentation Support',
+        description:
+          'Hỗ trợ chứng từ xuất khẩu, hồ sơ giao hàng và thông tin lô hàng theo yêu cầu của khách hàng.',
       },
     ],
   },
