@@ -62,18 +62,6 @@ export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
   {
     label: 'Finished Furniture',
     path: '/products',
-    children: [
-      { label: 'Sofa - Lounge Chair', path: '/products/category/sofa-ghe-thu-gian' },
-      { label: 'Tables', path: '/products/category/ban' },
-      { label: 'Chairs', path: '/products/category/ghe' },
-      { label: 'Cabinet & Storage', path: '/products/category/tu-ke' },
-      { label: 'Beds', path: '/products/category/giuong' },
-      { label: 'Mattress', path: '/products/category/dem' },
-      { label: 'Home Decor', path: '/products/category/do-trang-tri' },
-      { label: 'Household Products', path: '/products/category/do-gia-dung' },
-      { label: 'Outdoor Products', path: '/products/category/khong-gian-ngoai-troi' },
-      { label: 'Kids Furniture', path: '/products/category/do-cho-be' },
-    ],
   },
   {
     label: 'Furniture Components',
