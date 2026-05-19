@@ -61,43 +61,43 @@ export interface StaticPageConfig {
 export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
   {
     label: 'Finished Furniture',
-    path: '/products',
+    path: '/products-solutions/finished-furniture',
   },
   {
     label: 'Furniture Components',
-    path: '/manufacturing-ecosystem/product-development-capability',
+    path: '/products-solutions/furniture-components',
   },
   {
     label: 'Plywood & Boards',
-    path: '/manufacturing-ecosystem/supply-system',
+    path: '/products-solutions/plywood-boards',
   },
   {
     label: 'Wood Materials',
-    path: '/manufacturing-ecosystem/wood-supply',
+    path: '/products-solutions/wood-materials',
   },
   {
     label: 'Foam & Upholstery Materials',
-    path: '/manufacturing-ecosystem/supply-system',
+    path: '/products-solutions/foam-upholstery-materials',
   },
   {
     label: 'Rattan & Bamboo Materials',
-    path: '/manufacturing-ecosystem/raw-material-zone',
+    path: '/products-solutions/rattan-bamboo-materials',
   },
   {
     label: 'Packing Materials',
-    path: '/manufacturing-ecosystem/packaging',
+    path: '/products-solutions/packing-materials',
   },
   {
     label: 'OEM/ODM Development',
-    path: '/manufacturing-ecosystem/custom-production-oem-odm',
+    path: '/products-solutions/oem-odm-development',
   },
   {
     label: 'Vietnam Storage Solution',
-    path: '/commercial-process/vietnam-supply-hub',
+    path: '/products-solutions/vietnam-storage-solution',
   },
   {
     label: 'Export Consolidation',
-    path: '/commercial-process/export-consolidation',
+    path: '/products-solutions/export-consolidation',
   },
 ];
 
@@ -122,7 +122,7 @@ export const TOP_MENU: TopMenuItem[] = [
   },
   {
     label: 'PRODUCTS & SOLUTIONS',
-    path: '/products',
+    path: '/products-solutions',
     children: PRODUCTS_AND_SOLUTIONS_MENU,
   },
   {
@@ -210,6 +210,64 @@ export const TOP_MENU: TopMenuItem[] = [
 ];
 
 export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
+  productSolutions: {
+    path: '/products-solutions',
+    title: 'Products & Solutions',
+    slug: 'products-solutions',
+    summary: '',
+    sections: [
+      {
+        id: 'finished-furniture',
+        title: 'Finished Furniture',
+        description: '',
+      },
+      {
+        id: 'furniture-components',
+        title: 'Furniture Components',
+        description: '',
+      },
+      {
+        id: 'plywood-boards',
+        title: 'Plywood & Boards',
+        description: '',
+      },
+      {
+        id: 'wood-materials',
+        title: 'Wood Materials',
+        description: '',
+      },
+      {
+        id: 'foam-upholstery-materials',
+        title: 'Foam & Upholstery Materials',
+        description: '',
+      },
+      {
+        id: 'rattan-bamboo-materials',
+        title: 'Rattan & Bamboo Materials',
+        description: '',
+      },
+      {
+        id: 'packing-materials',
+        title: 'Packing Materials',
+        description: '',
+      },
+      {
+        id: 'oem-odm-development',
+        title: 'OEM/ODM Development',
+        description: '',
+      },
+      {
+        id: 'vietnam-storage-solution',
+        title: 'Vietnam Storage Solution',
+        description: '',
+      },
+      {
+        id: 'export-consolidation',
+        title: 'Export Consolidation',
+        description: '',
+      },
+    ],
+  },
   about: {
     path: '/about-anslife',
     title: 'Về ANSLIFE',

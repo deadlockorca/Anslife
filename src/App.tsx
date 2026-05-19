@@ -81,6 +81,14 @@ export default function App() {
               element={<CmsSubSectionPage config={STATIC_PAGE_MAP.about} />}
             />
             <Route
+              path={trimLeadingSlash(STATIC_PAGE_MAP.productSolutions.path)}
+              element={<CmsSectionPage config={STATIC_PAGE_MAP.productSolutions} />}
+            />
+            <Route
+              path={trimLeadingSlash(`${STATIC_PAGE_MAP.productSolutions.path}/:sectionId`)}
+              element={<CmsSubSectionPage config={STATIC_PAGE_MAP.productSolutions} />}
+            />
+            <Route
               path={trimLeadingSlash(STATIC_PAGE_MAP.ecosystem.path)}
               element={<CmsSectionPage config={STATIC_PAGE_MAP.ecosystem} />}
             />
