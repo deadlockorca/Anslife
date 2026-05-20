@@ -388,16 +388,10 @@ export default function HomePage() {
   const quickAccessItems = useMemo<HomeQuickAccessItem[]>(
     () => [
       {
-        id: 'hot-news',
-        icon: '🏷',
-        title: t('Tin nổi bật'),
-        to: '/news',
-      },
-      {
-        id: 'online-register',
-        icon: '🗓',
-        title: t('Đặt lịch làm việc'),
-        to: '/contact/schedule-meeting',
+        id: 'factory',
+        icon: '🏭',
+        title: t('Nhà máy'),
+        to: '/manufacturing-ecosystem/anslife-factory',
       },
       {
         id: 'products',
@@ -406,10 +400,16 @@ export default function HomePage() {
         to: '/products',
       },
       {
-        id: 'projects',
+        id: 'materials',
+        icon: '🧱',
+        title: t('Nguyên liệu'),
+        to: '/manufacturing-ecosystem/raw-material-zone',
+      },
+      {
+        id: 'supply-hub',
         icon: '📦',
-        title: t('Dự án'),
-        to: '/projects',
+        title: t('Trung tâm cung ứng'),
+        to: '/commercial-process/vietnam-supply-hub',
       },
       {
         id: 'contact',
