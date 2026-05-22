@@ -391,7 +391,7 @@ export default function HomePage() {
         id: 'factory',
         icon: '🏭',
         title: t('Nhà máy'),
-        to: '/manufacturing-ecosystem/anslife-factory',
+        to: '/manufacturing/factory-overview',
       },
       {
         id: 'products',
@@ -403,13 +403,13 @@ export default function HomePage() {
         id: 'materials',
         icon: '🧱',
         title: t('Nguyên liệu'),
-        to: '/manufacturing-ecosystem/raw-material-zone',
+        to: '/materials',
       },
       {
         id: 'supply-hub',
         icon: '📦',
         title: t('Trung tâm cung ứng'),
-        to: '/commercial-process/vietnam-supply-hub',
+        to: '/vietnam-supply-hub',
       },
       {
         id: 'contact',
@@ -822,7 +822,7 @@ export default function HomePage() {
               <span className="home-anslife-screen-search-icon" aria-hidden="true">
                 ⌕
               </span>
-              <span>{t('Tìm sản phẩm, dự án,...')}</span>
+              <span>{t('Tìm sản phẩm, vật liệu, dịch vụ cung ứng...')}</span>
             </button>
 
             <p>
@@ -911,7 +911,7 @@ export default function HomePage() {
                         handleSearchSubmit();
                       }
                     }}
-                    placeholder={t('Tìm sản phẩm, dự án, báo giá, năng lực sản xuất...')}
+                    placeholder={t('Tìm sản phẩm, vật liệu, dịch vụ cung ứng...')}
                   />
                 </div>
 

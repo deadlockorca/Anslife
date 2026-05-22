@@ -324,7 +324,7 @@ export default function SearchPage() {
               autoCorrect="off"
               autoCapitalize="none"
               spellCheck={false}
-              placeholder={t('Tìm sản phẩm, dự án, QC, triết lý vận hành...')}
+              placeholder={t('Tìm sản phẩm, vật liệu, dịch vụ cung ứng...')}
               aria-label={t('Từ khóa tìm kiếm')}
             />
           </div>

@@ -89,6 +89,46 @@ export default function App() {
               element={<CmsSubSectionPage config={STATIC_PAGE_MAP.productSolutions} />}
             />
             <Route
+              path={trimLeadingSlash(`${STATIC_PAGE_MAP.productSolutions.path}/:sectionId/*`)}
+              element={<CmsSubSectionPage config={STATIC_PAGE_MAP.productSolutions} />}
+            />
+            <Route
+              path={trimLeadingSlash(STATIC_PAGE_MAP.materials.path)}
+              element={<CmsSectionPage config={STATIC_PAGE_MAP.materials} />}
+            />
+            <Route
+              path={trimLeadingSlash(`${STATIC_PAGE_MAP.materials.path}/:sectionId`)}
+              element={<CmsSubSectionPage config={STATIC_PAGE_MAP.materials} />}
+            />
+            <Route
+              path={trimLeadingSlash(`${STATIC_PAGE_MAP.materials.path}/:sectionId/*`)}
+              element={<CmsSubSectionPage config={STATIC_PAGE_MAP.materials} />}
+            />
+            <Route
+              path={trimLeadingSlash(STATIC_PAGE_MAP.manufacturing.path)}
+              element={<CmsSectionPage config={STATIC_PAGE_MAP.manufacturing} />}
+            />
+            <Route
+              path={trimLeadingSlash(`${STATIC_PAGE_MAP.manufacturing.path}/:sectionId`)}
+              element={<CmsSubSectionPage config={STATIC_PAGE_MAP.manufacturing} />}
+            />
+            <Route
+              path={trimLeadingSlash(`${STATIC_PAGE_MAP.manufacturing.path}/:sectionId/*`)}
+              element={<CmsSubSectionPage config={STATIC_PAGE_MAP.manufacturing} />}
+            />
+            <Route
+              path={trimLeadingSlash(STATIC_PAGE_MAP.supplyHub.path)}
+              element={<CmsSectionPage config={STATIC_PAGE_MAP.supplyHub} />}
+            />
+            <Route
+              path={trimLeadingSlash(`${STATIC_PAGE_MAP.supplyHub.path}/:sectionId`)}
+              element={<CmsSubSectionPage config={STATIC_PAGE_MAP.supplyHub} />}
+            />
+            <Route
+              path={trimLeadingSlash(`${STATIC_PAGE_MAP.supplyHub.path}/:sectionId/*`)}
+              element={<CmsSubSectionPage config={STATIC_PAGE_MAP.supplyHub} />}
+            />
+            <Route
               path={trimLeadingSlash(STATIC_PAGE_MAP.ecosystem.path)}
               element={<CmsSectionPage config={STATIC_PAGE_MAP.ecosystem} />}
             />
@@ -103,6 +143,14 @@ export default function App() {
             <Route
               path={trimLeadingSlash(`${STATIC_PAGE_MAP.quality.path}/:sectionId`)}
               element={<CmsSubSectionPage config={STATIC_PAGE_MAP.quality} />}
+            />
+            <Route
+              path={trimLeadingSlash(STATIC_PAGE_MAP.resources.path)}
+              element={<CmsSectionPage config={STATIC_PAGE_MAP.resources} />}
+            />
+            <Route
+              path={trimLeadingSlash(`${STATIC_PAGE_MAP.resources.path}/:sectionId`)}
+              element={<CmsSubSectionPage config={STATIC_PAGE_MAP.resources} />}
             />
             <Route path="products" element={<ProductsPage />} />
             <Route path="products/category/:category" element={<ProductsPage />} />

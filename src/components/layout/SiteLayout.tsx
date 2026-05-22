@@ -1398,7 +1398,7 @@ export default function SiteLayout() {
                     type="text"
                     inputMode="search"
                     aria-label={t('Tìm kiếm')}
-                    placeholder={t('Tìm sản phẩm, dự án, tin tức...')}
+                    placeholder={t('Tìm sản phẩm, vật liệu, dịch vụ cung ứng...')}
                     value={searchQuery}
                     autoComplete="off"
                     autoCorrect="off"

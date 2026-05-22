@@ -17,7 +17,7 @@ interface CmsSectionPageProps {
 export default function CmsSectionPage({ config }: CmsSectionPageProps) {
   const { language, t } = useSiteI18n();
   const hiddenAboutSectionIds = useMemo(
-    () => new Set(['company-intro', 'vision-mission', 'core-values']),
+    () => new Set(['vision-mission', 'core-values']),
     [],
   );
   const loadPage = useCallback(() => getPageBySlug(config.slug), [config.slug]);
