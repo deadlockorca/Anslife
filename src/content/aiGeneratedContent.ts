@@ -32,7 +32,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     </article>
   </div>
 
-  <section id="company-intro" class="ai-section ai-company-intro">
+  <section id="company-intro" class="ai-section ai-company-intro ai-company-overview">
     <div class="ai-company-hero">
       <div class="ai-company-copy">
         <h1 class="ai-company-title">Giới thiệu về công ty</h1>
@@ -48,14 +48,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
           máy đối tác, được liên kết thông qua quy trình quản lý thống nhất và hệ thống kiểm soát chất lượng độc lập.
         </p>
       </div>
-      <figure class="ai-company-cover">
-        <img
-          src="/assets/about/company-intro-hero-match-v3.png"
-          alt="Hệ thống sản xuất và xuất khẩu nội thất ANSLIFE tại Việt Nam"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
     </div>
 
     <div class="ai-company-two-col">
@@ -2903,7 +2895,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 
 const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
   'company-intro': `
-  <section id="company-intro" class="ai-section ai-company-intro">
+  <section id="company-intro" class="ai-section ai-company-intro ai-company-overview">
     <div class="ai-company-hero">
       <div class="ai-company-copy">
         <h1 class="ai-company-title">Company Introduction</h1>
@@ -2919,14 +2911,6 @@ const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
           connected through a unified management process and an independent quality control system.
         </p>
       </div>
-      <figure class="ai-company-cover">
-        <img
-          src="/assets/about/company-intro-hero-match-v3.png"
-          alt="ANSLIFE furniture manufacturing and export system in Vietnam"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
     </div>
 
     <div class="ai-company-two-col">

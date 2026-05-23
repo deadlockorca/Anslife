@@ -3568,6 +3568,65 @@ ul {
   object-fit: cover;
 }
 
+.ai-company-overview .ai-company-hero {
+  grid-template-columns: 1fr;
+  min-height: 0;
+  border: 1px solid #e4ded6;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fffdf9;
+}
+
+.ai-company-overview .ai-company-copy {
+  grid-template-columns: 1fr;
+  row-gap: 0.78rem;
+  align-items: start;
+  padding: clamp(1.15rem, 2.2vw, 1.85rem);
+  border-bottom: 0;
+}
+
+.ai-company-overview .ai-company-title {
+  font-size: clamp(2rem, 3vw, 3.15rem);
+  line-height: 1.04;
+  max-width: none;
+  width: 100%;
+  color: #24170f;
+}
+
+.ai-company-overview .ai-company-lead,
+.ai-company-overview .ai-company-copy p {
+  max-width: none;
+  width: 100%;
+  color: #342820;
+  font-size: 0.94rem;
+  line-height: 1.66;
+}
+
+.ai-company-overview .ai-company-keyline {
+  max-width: none;
+  width: 100%;
+  margin: 0.08rem 0;
+  border-left: 3px solid #8b5a26;
+  border-radius: 0 8px 8px 0;
+  background: #f7f1e8;
+  padding: 0.72rem 0.82rem;
+}
+
+.ai-company-overview .ai-company-keyline strong {
+  display: block;
+  color: #4b2d17;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+.ai-company-overview .ai-company-two-col,
+.ai-company-overview .ai-company-panels {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .ai-company-two-col {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
