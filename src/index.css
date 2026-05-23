@@ -3627,6 +3627,13 @@ ul {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+@media (max-width: 760px) {
+  .ai-company-overview .ai-company-two-col,
+  .ai-company-overview .ai-company-panels {
+    grid-template-columns: 1fr;
+  }
+}
+
 .ai-company-two-col {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
