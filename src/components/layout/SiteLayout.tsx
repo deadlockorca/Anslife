@@ -23,9 +23,9 @@ import { WORLD_LANGUAGE_OPTIONS } from '../../i18n/worldLanguages';
 import { getCurrentUser, type AuthUser } from '../../lib/internalAuth';
 
 const supportedLanguageOptions = [
-  { code: 'vn', label: 'Tiếng Việt', menuLabel: 'VN', flag: '🇻🇳' },
   { code: 'en', label: 'English', menuLabel: 'EN', flag: '🇬🇧' },
   { code: 'jp', label: '日本語', menuLabel: 'JP', flag: '🇯🇵' },
+  { code: 'vn', label: 'Tiếng Việt', menuLabel: 'VN', flag: '🇻🇳' },
   { code: 'kr', label: '한국어', menuLabel: 'KR', flag: '🇰🇷' },
 ] as const satisfies ReadonlyArray<{
   code: LanguageCode;
@@ -322,6 +322,7 @@ export default function SiteLayout() {
   const [headerAuthUser, setHeaderAuthUser] = useState<AuthUser | null>(null);
   const desktopMenuCloseTimerRef = useRef<number | null>(null);
   const mobileSearchBoxRef = useRef<HTMLDivElement | null>(null);
+  const mobileHomeActionsRef = useRef<HTMLDivElement | null>(null);
   const location = useLocation();
   const navigate = useNavigate();
   const { language, t, toLocalizedPath } = useSiteI18n();
@@ -509,6 +510,7 @@ export default function SiteLayout() {
   useEffect(() => {
     closeNavigationMenus();
     setMobileSearchOpen(false);
+    setMobileLanguageOpen(false);
     clearDesktopMenuCloseTimer();
     setMobileSegmentOpen(false);
     resetMobileUtilityHierarchy();
@@ -517,7 +519,9 @@ export default function SiteLayout() {
   }, [
     clearDesktopMenuCloseTimer,
     closeNavigationMenus,
+    location.hash,
     location.pathname,
+    location.search,
     resetMobileUtilityHierarchy,
   ]);
 
@@ -806,6 +810,37 @@ export default function SiteLayout() {
   }, [mobileSearchOpen]);
 
   useEffect(() => {
+    if (!mobileLanguageOpen || mobileOpen) {
+      return;
+    }
+
+    const handlePointerDown = (event: PointerEvent) => {
+      const target = event.target;
+      if (
+        target instanceof Node &&
+        mobileHomeActionsRef.current?.contains(target)
+      ) {
+        return;
+      }
+
+      setMobileLanguageOpen(false);
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMobileLanguageOpen(false);
+      }
+    };
+
+    document.addEventListener('pointerdown', handlePointerDown);
+    document.addEventListener('keydown', handleEscape);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [mobileLanguageOpen, mobileOpen]);
+
+  useEffect(() => {
     if (!mobileOpen) {
       return;
     }
@@ -858,6 +893,7 @@ export default function SiteLayout() {
   function handleBrandClick() {
     closeNavigationMenus();
     setMobileSearchOpen(false);
+    setMobileLanguageOpen(false);
     setSearchQuery('');
     scrollToTopAfterNavigation();
   }
@@ -1410,6 +1446,7 @@ export default function SiteLayout() {
                 onClick={(event) => {
                   event.stopPropagation();
                   closeMobileSearchOverlay();
+                  setMobileLanguageOpen(false);
                   setMobileOpen(true);
                 }}
               >
@@ -1432,28 +1469,87 @@ export default function SiteLayout() {
               />
             </NavLink>
             {!isAdminRoute && (
-              <button
-                type="button"
-                className={`mobile-home-search-fab ${mobileSearchOpen ? 'is-active' : ''}`}
-                aria-expanded={mobileSearchOpen}
-                aria-label={t('Tìm kiếm')}
-                onClick={(event) => {
-                  event.stopPropagation();
-                  closeNavigationMenus();
-                  setMobileSearchOpen((currentState) => {
-                    const nextState = !currentState;
-                    if (!nextState) {
-                      setSearchQuery('');
-                    }
-                    return nextState;
-                  });
-                }}
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <circle cx="11" cy="11" r="6.5" />
-                  <path d="m16 16 4 4" />
-                </svg>
-              </button>
+              <div className="mobile-home-actions" ref={mobileHomeActionsRef}>
+                <button
+                  type="button"
+                  className={`mobile-home-language-fab ${mobileLanguageOpen ? 'is-active' : ''}`}
+                  aria-expanded={mobileLanguageOpen}
+                  aria-controls="home-mobile-language-options"
+                  aria-label={t('Chọn ngôn ngữ')}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    closeNavigationMenus();
+                    setMobileSearchOpen(false);
+                    setSearchQuery('');
+                    setMobileLanguageOpen((currentState) => !currentState);
+                  }}
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18" />
+                    <path d="M12 3a14 14 0 0 1 0 18" />
+                    <path d="M12 3a14 14 0 0 0 0 18" />
+                  </svg>
+                </button>
+
+                {!isHomeRoute && (
+                  <button
+                    type="button"
+                    className={`mobile-home-search-fab ${mobileSearchOpen ? 'is-active' : ''}`}
+                    aria-expanded={mobileSearchOpen}
+                    aria-label={t('Tìm kiếm')}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      closeNavigationMenus();
+                      setMobileLanguageOpen(false);
+                      setMobileSearchOpen((currentState) => {
+                        const nextState = !currentState;
+                        if (!nextState) {
+                          setSearchQuery('');
+                        }
+                        return nextState;
+                      });
+                    }}
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <circle cx="11" cy="11" r="6.5" />
+                      <path d="m16 16 4 4" />
+                    </svg>
+                  </button>
+                )}
+
+                {mobileLanguageOpen && (
+                  <div
+                    id="home-mobile-language-options"
+                    className="home-mobile-language-menu"
+                    role="menu"
+                    aria-label={t('Chọn ngôn ngữ')}
+                  >
+                    {mobileMenuLanguageOptions.map((option) => (
+                      <button
+                        key={option.code}
+                        type="button"
+                        role="menuitemradio"
+                        aria-checked={language === option.code}
+                        className={`home-mobile-language-option ${
+                          language === option.code ? 'is-active' : ''
+                        }`}
+                        onClick={() => handleLanguageSelect(option.code)}
+                      >
+                        <span className="home-mobile-language-flag" aria-hidden="true">
+                          {option.flag}
+                        </span>
+                        <span className="home-mobile-language-label">{option.label}</span>
+                        {language === option.code && (
+                          <span className="home-mobile-language-check" aria-hidden="true">
+                            ✓
+                          </span>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             )}
             {isAdminRoute && renderLanguageSwitcher('language-switcher-admin')}
           </div>
