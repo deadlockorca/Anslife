@@ -1,11 +1,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import ErrorBlock from '../components/common/ErrorBlock';
 import Seo from '../components/seo/Seo';
 import { STATIC_PAGE_MAP, TOP_MENU, type MenuChildItem } from '../config/site';
 import { useAsyncResource } from '../hooks/useAsyncResource';
 import useSiteI18n from '../hooks/useSiteI18n';
+import {
+  LANGUAGE_STORAGE_KEY,
+  type LanguageCode,
+  withLanguagePath,
+} from '../i18n/language';
 import { decodeHtml, getFeaturedImage, getTermsByTaxonomy } from '../lib/content';
 import { getNews, getProducts, getProjects } from '../lib/wp';
 import type { WpEntity } from '../types/wp';
@@ -71,6 +76,16 @@ const DEMO_HERO_IMAGE_EVENING =
   'https://www.vietcombank.com.vn/-/media/Project/VCB-Sites/VCB/Home-page/KHCN/UPDATE-2024/KHCN/KHCN_MB-NGANG_2.jpg?h=1125&w=2436&ts=20260331085523&hash=A63823446760C9C352210BEECA745FD4';
 const DEMO_HERO_IMAGE_NIGHT =
   'https://www.vietcombank.com.vn/-/media/Project/VCB-Sites/VCB/Home-page/KHCN/UPDATE-2024/KHCN/KHCN_MB-NGANG_Dark.jpg?h=1125&w=2436&sc_lang=vi-VN&ts=20260331085537&hash=C9484EA2003C1A8C67FB3EC10F121E94';
+const HOME_MOBILE_LANGUAGE_OPTIONS = [
+  { code: 'en', label: 'English', menuLabel: 'EN' },
+  { code: 'jp', label: 'Japanese', menuLabel: 'JP' },
+  { code: 'vn', label: 'Vietnamese', menuLabel: 'VN' },
+  { code: 'kr', label: 'Korean', menuLabel: 'KR' },
+] as const satisfies ReadonlyArray<{
+  code: LanguageCode;
+  label: string;
+  menuLabel: string;
+}>;
 
 function readPublicEnv(name: string): string {
   return process.env[name]?.trim() ?? '';
@@ -158,10 +173,12 @@ function buildProductDetailPath(product: WpEntity): string {
 }
 
 export default function HomePage() {
-  const { t, toLocalizedPath } = useSiteI18n();
+  const { language, t, toLocalizedPath } = useSiteI18n();
+  const location = useLocation();
   const navigate = useNavigate();
   const [currentHour, setCurrentHour] = useState(() => new Date().getHours());
   const [isSearchPopupOpen, setIsSearchPopupOpen] = useState(false);
+  const [isMobileLanguageOpen, setIsMobileLanguageOpen] = useState(false);
   const [searchPopupQuery, setSearchPopupQuery] = useState('');
   const [searchIndexItems, setSearchIndexItems] = useState<HomeSearchResultItem[]>([]);
   const [searchIndexLoading, setSearchIndexLoading] = useState(false);
@@ -419,6 +436,12 @@ export default function HomePage() {
       },
     ],
     [t],
+  );
+  const activeMobileLanguageLabel = useMemo(
+    () =>
+      HOME_MOBILE_LANGUAGE_OPTIONS.find((option) => option.code === language)?.label ??
+      language.toUpperCase(),
+    [language],
   );
 
   const featuredProductPath = useMemo(() => {
@@ -709,6 +732,18 @@ export default function HomePage() {
     toLocalizedPath,
   ]);
 
+  const handleMobileLanguageSelect = useCallback(
+    (code: LanguageCode) => {
+      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, code);
+      setIsMobileLanguageOpen(false);
+      navigate(
+        withLanguagePath(`${location.pathname}${location.search}${location.hash}`, code),
+        { replace: true },
+      );
+    },
+    [location.hash, location.pathname, location.search, navigate],
+  );
+
   useEffect(() => {
     if (!isSearchPopupOpen || searchIndexReady || searchIndexLoading) {
       return;
@@ -744,6 +779,10 @@ export default function HomePage() {
       document.removeEventListener('keydown', handleEscape);
     };
   }, [isSearchPopupOpen]);
+
+  useEffect(() => {
+    setIsMobileLanguageOpen(false);
+  }, [location.pathname, location.search]);
 
   return (
     <>
@@ -824,6 +863,57 @@ export default function HomePage() {
               </span>
               <span>{t('Tìm sản phẩm, vật liệu, dịch vụ cung ứng...')}</span>
             </button>
+
+            <div className="home-anslife-mobile-language">
+              <button
+                type="button"
+                className={`home-anslife-mobile-language-toggle ${
+                  isMobileLanguageOpen ? 'is-open' : ''
+                }`}
+                aria-expanded={isMobileLanguageOpen}
+                aria-controls="home-anslife-mobile-language-options"
+                aria-label="Choose language"
+                onClick={() => setIsMobileLanguageOpen((currentValue) => !currentValue)}
+              >
+                <span className="home-anslife-mobile-language-globe" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21M12 3c-2.3 2.5-3.5 5.5-3.5 9s1.2 6.5 3.5 9" />
+                  </svg>
+                </span>
+                <span>{activeMobileLanguageLabel}</span>
+                <span className="home-anslife-mobile-language-caret" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </span>
+              </button>
+
+              {isMobileLanguageOpen && (
+                <div
+                  id="home-anslife-mobile-language-options"
+                  className="home-anslife-mobile-language-options"
+                  role="menu"
+                  aria-label="Choose language"
+                >
+                  {HOME_MOBILE_LANGUAGE_OPTIONS.map((option) => (
+                    <button
+                      key={option.code}
+                      type="button"
+                      role="menuitemradio"
+                      aria-checked={language === option.code}
+                      className={`home-anslife-mobile-language-option ${
+                        language === option.code ? 'is-active' : ''
+                      }`}
+                      onClick={() => handleMobileLanguageSelect(option.code)}
+                    >
+                      <span>{option.menuLabel}</span>
+                      <strong>{option.label}</strong>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <p>
               {t(
