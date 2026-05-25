@@ -1573,7 +1573,6 @@ export default function SiteLayout() {
                         onClick={() => {
                           setMobileUtilityActivePath(item.path);
                           setMobileUtilityExpandedGroups({});
-                          setMobileLanguageOpen(false);
                           setMobileSegmentOpen(false);
                         }}
                       >

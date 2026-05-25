@@ -1951,7 +1951,7 @@ ul {
 }
 
 .mobile-menu-language-wrap {
-  display: grid;
+  display: none !important;
   gap: 0.38rem;
   padding-bottom: calc(0.12rem + env(safe-area-inset-bottom));
 }
