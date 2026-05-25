@@ -149,6 +149,124 @@ const FOOTER_LEGAL_LINKS = [
 const DEFAULT_SITE_BG_VIDEO_MP4 = '/assets/videos/home-bg.mp4';
 const DEFAULT_SITE_BG_VIDEO_POSTER = '/assets/videos/home-bg-poster.jpg';
 
+type MobileMenuIcon =
+  | 'home'
+  | 'building'
+  | 'box'
+  | 'leaf'
+  | 'factory'
+  | 'pin'
+  | 'shield'
+  | 'document'
+  | 'send';
+
+function getMobileMenuIcon(path: string): MobileMenuIcon {
+  if (path === '/') {
+    return 'home';
+  }
+
+  if (path.startsWith('/about-anslife')) {
+    return 'building';
+  }
+
+  if (path.startsWith('/products-solutions') || path.startsWith('/products')) {
+    return 'box';
+  }
+
+  if (path.startsWith('/materials')) {
+    return 'leaf';
+  }
+
+  if (path.startsWith('/manufacturing')) {
+    return 'factory';
+  }
+
+  if (path.startsWith('/vietnam-supply-hub')) {
+    return 'pin';
+  }
+
+  if (path.startsWith('/quality-control')) {
+    return 'shield';
+  }
+
+  if (path.startsWith('/resources')) {
+    return 'document';
+  }
+
+  return 'send';
+}
+
+function renderMobileMenuIcon(icon: MobileMenuIcon): ReactNode {
+  switch (icon) {
+    case 'home':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3.5 10.8 12 3.7l8.5 7.1" />
+          <path d="M5.7 9.8v9.4h4.4v-5.4h3.8v5.4h4.4V9.8" />
+        </svg>
+      );
+    case 'building':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M5 20V5.4L14 3v17" />
+          <path d="M14 9h5v11" />
+          <path d="M8 8h2M8 12h2M8 16h2M16 12h1M16 16h1" />
+        </svg>
+      );
+    case 'box':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="m12 3.5 7.5 4.1v8.8L12 20.5l-7.5-4.1V7.6L12 3.5Z" />
+          <path d="M4.9 7.8 12 12l7.1-4.2M12 12v8.1" />
+        </svg>
+      );
+    case 'leaf':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20.5 4.1c-7.2.3-12 2.8-13.9 7.1-1.4 3.3.2 6.3 2.8 7.5 3 1.4 6.5-.2 8.2-3.6 1.3-2.5 1.4-5.6 2.9-11Z" />
+          <path d="M4 20c3.5-5.2 7.2-8.3 11.5-9.7" />
+        </svg>
+      );
+    case 'factory':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 20V9.2l4.4 2.6V8.9l4.5 2.7V6h3v5.6h4.1V20H4Z" />
+          <path d="M7 16h2M12 16h2M17 16h2" />
+        </svg>
+      );
+    case 'pin':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 21s7-6.1 7-11.2A7 7 0 0 0 5 9.8C5 14.9 12 21 12 21Z" />
+          <circle cx="12" cy="9.8" r="2.2" />
+        </svg>
+      );
+    case 'shield':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 3.5 19 6v5.4c0 4.3-2.8 7.2-7 9.1-4.2-1.9-7-4.8-7-9.1V6l7-2.5Z" />
+          <path d="m8.8 12 2.1 2.1 4.5-4.6" />
+        </svg>
+      );
+    case 'document':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6.5 3.5h7l4 4V20.5h-11v-17Z" />
+          <path d="M13.5 3.7V8h4M9 12h6M9 16h5" />
+        </svg>
+      );
+    case 'send':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20.5 3.8 3.8 11l7 2.2 2.2 7 7.5-16.4Z" />
+          <path d="m10.8 13.2 4.7-4.7" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
 function renderFooterContactIcon(icon: FooterContactIcon) {
   switch (icon) {
     case 'location':
@@ -1560,7 +1678,10 @@ export default function SiteLayout() {
                           }
                           onClick={closeNavigationMenus}
                         >
-                          {t(item.label)}
+                          <span className="mobile-menu-utility-icon" aria-hidden="true">
+                            {renderMobileMenuIcon(getMobileMenuIcon(item.path))}
+                          </span>
+                          <span className="mobile-menu-utility-label">{t(item.label)}</span>
                         </NavLink>
                       );
                     }
@@ -1576,7 +1697,10 @@ export default function SiteLayout() {
                           setMobileSegmentOpen(false);
                         }}
                       >
-                        <span>{t(item.label)}</span>
+                        <span className="mobile-menu-utility-icon" aria-hidden="true">
+                          {renderMobileMenuIcon(getMobileMenuIcon(item.path))}
+                        </span>
+                        <span className="mobile-menu-utility-label">{t(item.label)}</span>
                         <span className="mobile-menu-utility-trigger-arrow" aria-hidden="true">
                           ›
                         </span>
