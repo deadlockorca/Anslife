@@ -33,7 +33,23 @@ const supportedLanguageOptions = [
   menuLabel: string;
   flag: string;
 }>;
-const mobileMenuLanguageOptions = supportedLanguageOptions;
+const mobilePanelLanguageOptions = supportedLanguageOptions;
+const homeMobileLanguageOptions: ReadonlyArray<{
+  code: string;
+  label: string;
+  menuLabel: string;
+  flag: string;
+  routeCode?: LanguageCode;
+}> = [
+  ...supportedLanguageOptions.map((option) => ({
+    ...option,
+    routeCode: option.code,
+  })),
+  { code: 'sv', label: 'Swedish', menuLabel: 'SV', flag: '🇸🇪' },
+  { code: 'fr', label: 'French', menuLabel: 'FR', flag: '🇫🇷' },
+  { code: 'ru', label: 'Russian', menuLabel: 'RU', flag: '🇷🇺' },
+  { code: 'es', label: 'Spanish', menuLabel: 'ES', flag: '🇪🇸' },
+];
 
 const LANGUAGE_SELECTOR_STORAGE_KEY = 'anslife_language_selector';
 const LANGUAGE_ROUTE_ALIAS: Record<string, LanguageCode> = {
@@ -1525,7 +1541,7 @@ export default function SiteLayout() {
                     role="menu"
                     aria-label={t('Chọn ngôn ngữ')}
                   >
-                    {mobileMenuLanguageOptions.map((option) => (
+                    {homeMobileLanguageOptions.map((option) => (
                       <button
                         key={option.code}
                         type="button"
@@ -1534,7 +1550,19 @@ export default function SiteLayout() {
                         className={`home-mobile-language-option ${
                           language === option.code ? 'is-active' : ''
                         }`}
-                        onClick={() => handleLanguageSelect(option.code)}
+                        onClick={() => {
+                          if (option.routeCode) {
+                            handleLanguageSelect(option.routeCode);
+                            return;
+                          }
+
+                          setSelectedLanguageOption(option.code);
+                          window.localStorage.setItem(
+                            LANGUAGE_SELECTOR_STORAGE_KEY,
+                            option.code,
+                          );
+                          setMobileLanguageOpen(false);
+                        }}
                       >
                         <span className="home-mobile-language-flag" aria-hidden="true">
                           {option.flag}
@@ -1831,7 +1859,7 @@ export default function SiteLayout() {
                       role="menu"
                       aria-label={t('Chọn ngôn ngữ')}
                     >
-                      {mobileMenuLanguageOptions.map((option) => (
+                      {mobilePanelLanguageOptions.map((option) => (
                         <button
                           key={option.code}
                           type="button"
