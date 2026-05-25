@@ -9471,18 +9471,19 @@ ul {
     bottom: calc(100% + 0.44rem);
     width: min(260px, calc(100vw - 2rem));
     border-radius: 18px;
-    border: 1px solid rgba(244, 126, 48, 0.28);
-    background: #fff;
-    box-shadow: 0 18px 34px rgba(18, 35, 53, 0.2);
+    border: 0;
+    background: transparent;
+    box-shadow: none;
     padding: 0.34rem;
     display: grid;
     gap: 0.22rem;
   }
 
   .home-anslife-mobile-language-option {
-    border: 1px solid rgba(31, 47, 61, 0.08);
+    border: 0;
     border-radius: 14px;
     background: #fff;
+    box-shadow: none;
     color: #1f2f3d;
     display: grid;
     grid-template-columns: 40px minmax(0, 1fr);
@@ -9512,7 +9513,6 @@ ul {
 
   .home-anslife-mobile-language-option.is-active,
   .home-anslife-mobile-language-option:hover {
-    border-color: rgba(244, 126, 48, 0.28);
     background: #fff3ea;
     color: #1f2f3d;
   }
