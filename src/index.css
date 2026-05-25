@@ -9472,7 +9472,7 @@ ul {
     width: min(260px, calc(100vw - 2rem));
     border-radius: 18px;
     border: 1px solid rgba(244, 126, 48, 0.28);
-    background: rgba(255, 255, 255, 0.98);
+    background: #fff;
     box-shadow: 0 18px 34px rgba(18, 35, 53, 0.2);
     padding: 0.34rem;
     display: grid;
@@ -9480,9 +9480,9 @@ ul {
   }
 
   .home-anslife-mobile-language-option {
-    border: 0;
+    border: 1px solid rgba(31, 47, 61, 0.08);
     border-radius: 14px;
-    background: transparent;
+    background: #fff;
     color: #1f2f3d;
     display: grid;
     grid-template-columns: 40px minmax(0, 1fr);
@@ -9512,7 +9512,8 @@ ul {
 
   .home-anslife-mobile-language-option.is-active,
   .home-anslife-mobile-language-option:hover {
-    background: rgba(244, 126, 48, 0.12);
+    border-color: rgba(244, 126, 48, 0.28);
+    background: #fff3ea;
     color: #1f2f3d;
   }
 
