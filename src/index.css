@@ -3805,22 +3805,21 @@ a.mobile-menu-utility-link {
 }
 
 .ai-company-info-accordion summary::after {
-  content: '+';
+  content: '';
   flex: 0 0 auto;
   width: 28px;
   height: 28px;
   border: 1px solid #d9cfc3;
   border-radius: 999px;
-  display: inline-grid;
-  place-items: center;
-  color: #6d431f;
-  font-family: var(--font-body);
-  font-size: 1.15rem;
-  line-height: 1;
+  background-color: #fffdf9;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9L12 15L18 9' stroke='%236d431f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
 }
 
 .ai-company-info-accordion[open] summary::after {
-  content: '-';
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 15L12 9L18 15' stroke='%236d431f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 .ai-company-info-body {
