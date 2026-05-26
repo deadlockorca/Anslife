@@ -26,7 +26,7 @@ export default function PageSections({ sections, basePath }: PageSectionsProps) 
             <h3>{t(section.title)}</h3>
             <p>{t(section.description)}</p>
             <Link
-              to={toLocalizedPath(`${basePath}/${section.id}`)}
+              to={toLocalizedPath(section.path ?? `${basePath}/${section.id}`)}
               className="inline-link"
             >
               {t('Xem chi tiết')}

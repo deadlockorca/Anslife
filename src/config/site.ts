@@ -48,6 +48,7 @@ export interface SectionItem {
   id: string;
   title: string;
   description: string;
+  path?: string;
 }
 
 export interface StaticPageConfig {
@@ -165,10 +166,8 @@ export const TOP_MENU: TopMenuItem[] = [
     children: [
       { label: 'Tổng quan công ty', path: '/about-anslife/company-intro' },
       { label: 'Chúng tôi làm gì', path: '/about-anslife/what-we-do' },
-      { label: 'Vì sao chọn Việt Nam', path: '/about-anslife/why-vietnam' },
-      { label: 'Thị trường xuất khẩu', path: '/about-anslife/export-markets' },
-      { label: 'Tiêu chuẩn làm việc của chúng tôi', path: '/about-anslife/working-standards' },
-      { label: 'Người liên hệ / Thông tin công ty', path: '/contact/company-info' },
+      { label: 'Tiêu chuẩn & QC', path: '/about-anslife/working-standards' },
+      { label: 'Thông tin công ty', path: '/contact/company-info' },
     ],
   },
   {
@@ -436,19 +435,15 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
         description: 'Năng lực sản xuất, cung ứng và điều phối xuất khẩu của ANSLIFE.',
       },
       {
-        id: 'why-vietnam',
-        title: 'Vì sao chọn Việt Nam',
-        description: 'Lợi thế nguồn lực, sản xuất và xuất khẩu từ Việt Nam.',
-      },
-      {
-        id: 'export-markets',
-        title: 'Thị trường xuất khẩu',
-        description: 'Các thị trường quốc tế và yêu cầu phục vụ theo buyer.',
-      },
-      {
         id: 'working-standards',
-        title: 'Tiêu chuẩn làm việc của chúng tôi',
+        title: 'Tiêu chuẩn & QC',
         description: 'Cách ANSLIFE quản lý mẫu, kỹ thuật, QC và giao tiếp dự án.',
+      },
+      {
+        id: 'company-info',
+        title: 'Thông tin công ty',
+        description: 'Thông tin công ty ANSLIFE, form báo giá và đặt lịch làm việc.',
+        path: '/contact/company-info',
       },
     ],
   },

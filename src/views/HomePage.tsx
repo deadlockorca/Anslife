@@ -543,7 +543,7 @@ export default function HomePage() {
           icon: '🧭',
           title: sectionTitle,
           description: `${pageTitle} · ${sectionDescription}`,
-          to: `${page.path}/${section.id}`,
+          to: section.path ?? `${page.path}/${section.id}`,
           searchText: `${section.title} ${sectionTitle} ${section.description} ${sectionDescription} ${page.title} ${pageTitle} ${section.id} ${page.slug}`,
         });
       }
