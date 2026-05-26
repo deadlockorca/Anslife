@@ -283,6 +283,144 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
   </section>
 `.trim();
 
+const ABOUT_WORKING_STANDARDS_SECTION_VN = `
+  <section id="working-standards" class="ai-section ai-working-standards">
+    <header class="ai-working-standards-header">
+      <h1>Tiêu chuẩn làm việc của ANSLIFE</h1>
+      <p>
+        ANSLIFE JSC làm việc dựa trên nguyên tắc rõ ràng, có thể kiểm soát và có thể truy xuất. Mỗi dự án được quản lý dựa trên mẫu đã duyệt, bản vẽ kỹ thuật, tiêu chuẩn vật liệu, checklist kiểm hàng, tiêu chuẩn đóng gói và kế hoạch giao hàng đã thống nhất.
+      </p>
+    </header>
+
+    <div class="ai-working-standards-list">
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">01</span>
+          <span>Kiểm soát mẫu đã duyệt</span>
+        </summary>
+        <p>Mẫu sản phẩm, cấu kiện, màu sắc, vật liệu và bề mặt hoàn thiện được lưu giữ làm tiêu chuẩn đối chiếu trong quá trình sản xuất và kiểm hàng.</p>
+      </details>
+
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">02</span>
+          <span>Quản lý bản vẽ kỹ thuật</span>
+        </summary>
+        <p>Bản vẽ, kích thước, kết cấu, thông số vật liệu và yêu cầu kỹ thuật được ghi nhận rõ ràng trước khi triển khai sản xuất.</p>
+      </details>
+
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">03</span>
+          <span>Quản lý vật liệu & màu sắc</span>
+        </summary>
+        <p>Vật liệu, mẫu sơn, bảng màu, veneer, plywood, foam, vải, phụ kiện và vật liệu đóng gói được kiểm soát theo tiêu chuẩn của từng buyer và từng thị trường.</p>
+      </details>
+
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">04</span>
+          <span>Checklist kiểm hàng</span>
+        </summary>
+        <p>Mỗi đơn hàng có checklist kiểm tra riêng, bao gồm kích thước, kết cấu, độ hoàn thiện, màu sắc, độ ẩm, đóng gói, nhãn mác và tình trạng hàng trước khi xuất.</p>
+      </details>
+
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">05</span>
+          <span>QC độc lập</span>
+        </summary>
+        <p>Hệ thống QC của ANSLIFE hoạt động độc lập với bộ máy sản xuất, nhằm đảm bảo việc kiểm tra được thực hiện khách quan theo tiêu chuẩn đã thống nhất.</p>
+      </details>
+
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">06</span>
+          <span>Tiêu chuẩn đóng gói</span>
+        </summary>
+        <p>Quy cách đóng gói, carton mark, nhãn hàng, mã sản phẩm, pallet, container loading hoặc LCL/FCL shipment được kiểm soát theo yêu cầu của từng buyer.</p>
+      </details>
+
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">07</span>
+          <span>Báo cáo minh bạch</span>
+        </summary>
+        <p>Các vấn đề phát sinh trong sản xuất, kiểm hàng hoặc xuất hàng được ghi nhận, báo cáo và trao đổi rõ ràng để có phương án xử lý kịp thời.</p>
+      </details>
+    </div>
+  </section>
+`.trim();
+
+const ABOUT_WORKING_STANDARDS_SECTION_EN = `
+  <section id="working-standards" class="ai-section ai-working-standards">
+    <header class="ai-working-standards-header">
+      <h1>Our Working Standards</h1>
+      <p>
+        ANSLIFE JSC works based on clear, controllable and traceable standards. Each project is managed through approved samples, technical drawings, material standards, inspection checklists, packing requirements and agreed shipment plans.
+      </p>
+    </header>
+
+    <div class="ai-working-standards-list">
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">01</span>
+          <span>Approved Sample Control</span>
+        </summary>
+        <p>Approved product samples, components, colors, materials and finishes are maintained as reference standards for production and inspection.</p>
+      </details>
+
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">02</span>
+          <span>Technical Drawing Management</span>
+        </summary>
+        <p>Drawings, dimensions, structures, material specifications and technical requirements are clearly recorded before production starts.</p>
+      </details>
+
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">03</span>
+          <span>Material & Color Management</span>
+        </summary>
+        <p>Materials, color panels, paint samples, veneer, plywood, foam, fabric, accessories and packing materials are controlled according to buyer and market requirements.</p>
+      </details>
+
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">04</span>
+          <span>Order-Specific Inspection Checklist</span>
+        </summary>
+        <p>Each order follows its own inspection checklist covering dimensions, structure, finish, color, moisture, packing, labeling and pre-shipment condition.</p>
+      </details>
+
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">05</span>
+          <span>Independent QC</span>
+        </summary>
+        <p>ANSLIFE's QC system operates independently from the production team to ensure objective inspection based on agreed standards.</p>
+      </details>
+
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">06</span>
+          <span>Packing & Shipment Standards</span>
+        </summary>
+        <p>Packing method, carton marks, labels, item codes, pallets, container loading and LCL/FCL shipment requirements are controlled according to each buyer's standard.</p>
+      </details>
+
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">07</span>
+          <span>Transparent Reporting</span>
+        </summary>
+        <p>Issues during production, inspection or shipment are recorded, reported and discussed clearly so that corrective actions can be taken in time.</p>
+      </details>
+    </div>
+  </section>
+`.trim();
+
 const AI_PAGE_CONTENT: Record<string, string> = {
   'about-anslife': `
 <div class="ai-content">
@@ -315,6 +453,8 @@ const AI_PAGE_CONTENT: Record<string, string> = {
   </div>
 
   ${ABOUT_COMPANY_INFO_SECTION_VN}
+
+  ${ABOUT_WORKING_STANDARDS_SECTION_VN}
 
   <section id="vision-mission" class="ai-section ai-vision-mission">
     <div class="ai-vision-shell">
@@ -3084,6 +3224,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 
 const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
   'company-intro': ABOUT_COMPANY_INFO_SECTION_EN,
+  'working-standards': ABOUT_WORKING_STANDARDS_SECTION_EN,
   'vision-mission': `
   <section id="vision-mission" class="ai-section ai-vision-mission">
     <div class="ai-vision-shell">
@@ -6839,6 +6980,7 @@ export function getAIFallbackSectionHtml(
       (sectionId === 'company-intro' ||
         sectionId === 'vision-mission' ||
         sectionId === 'core-values' ||
+        sectionId === 'working-standards' ||
         sectionId === 'production-philosophy' ||
         sectionId === 'organization' ||
         sectionId === 'team' ||

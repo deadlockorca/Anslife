@@ -3964,6 +3964,116 @@ a.mobile-menu-utility-link {
   font-weight: 700;
 }
 
+.ai-working-standards {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  display: grid;
+  gap: 0.92rem;
+  padding: 0;
+}
+
+.ai-working-standards-header {
+  border: 1px solid #e4ded6;
+  border-radius: 8px;
+  background: #fffdf9;
+  padding: clamp(1rem, 2vw, 1.45rem);
+  display: grid;
+  gap: 0.6rem;
+}
+
+.ai-working-standards-header h1 {
+  margin: 0;
+  color: #24170f;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 3.1rem);
+  line-height: 1.04;
+}
+
+.ai-working-standards-header p {
+  margin: 0;
+  color: #342820;
+  font-size: 0.96rem;
+  line-height: 1.64;
+  max-width: 86ch;
+}
+
+.ai-working-standards-list {
+  display: grid;
+  gap: 0.58rem;
+}
+
+.ai-working-standard-card {
+  border: 1px solid #e8dfd4;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.ai-working-standard-card summary {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: 0.74rem;
+  min-height: 58px;
+  padding: 0.78rem 0.88rem;
+  color: #2c1a10;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.32;
+}
+
+.ai-working-standard-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.ai-working-standard-card summary::after {
+  content: '+';
+  width: 28px;
+  height: 28px;
+  border: 1px solid #d9cfc3;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  color: #6d431f;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.ai-working-standard-card[open] summary {
+  border-bottom: 1px solid #eee5da;
+  background: #fbf6ef;
+}
+
+.ai-working-standard-card[open] summary::after {
+  content: '-';
+}
+
+.ai-working-standard-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: #f0e4d6;
+  color: #6d431f;
+  display: inline-grid;
+  place-items: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.ai-working-standard-card p {
+  margin: 0;
+  padding: 0.78rem 0.9rem 0.9rem 4.42rem;
+  color: #342820;
+  font-size: 0.95rem;
+  line-height: 1.62;
+}
+
 .ai-company-overview .ai-company-two-col,
 .ai-company-overview .ai-company-panels {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4010,6 +4120,31 @@ a.mobile-menu-utility-link {
 
   .ai-company-info-row dd {
     padding: 0.48rem 0.72rem 0.68rem;
+  }
+
+  .ai-working-standards-header {
+    padding: 0.9rem;
+  }
+
+  .ai-working-standards-header h1 {
+    font-size: clamp(1.82rem, 8vw, 2.45rem);
+  }
+
+  .ai-working-standard-card summary {
+    grid-template-columns: 36px minmax(0, 1fr) 26px;
+    gap: 0.58rem;
+    padding: 0.72rem;
+    font-size: 0.94rem;
+  }
+
+  .ai-working-standard-number {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ai-working-standard-card p {
+    padding: 0.68rem 0.72rem 0.78rem;
+    font-size: 0.92rem;
   }
 }
 

@@ -445,7 +445,7 @@ const TRANSLATIONS: Record<
     'Bản vẽ kỹ thuật': 'Technical Drawings',
     'Bảng màu / hoàn thiện': 'Color / Finish Boards',
     'Tài liệu vật liệu': 'Material References',
-    'Tiêu chuẩn đóng gói': 'Packing Standards',
+    'Tiêu chuẩn đóng gói': 'Packing & Shipment Standards',
     'Checklist QC': 'QC Checklists',
     'Chất lượng & Tiêu chuẩn': 'Quality & Standards',
     'Quy trình kiểm soát chất lượng': 'Quality Control Process',
@@ -564,6 +564,29 @@ const TRANSLATIONS: Record<
     'Địa chỉ': 'Address',
     'Địa chỉ đang cập nhật': 'Address updating',
     'VIỆT NAM': 'VIETNAM',
+    'Tiêu chuẩn làm việc của ANSLIFE': 'Our Working Standards',
+    'ANSLIFE JSC làm việc dựa trên nguyên tắc rõ ràng, có thể kiểm soát và có thể truy xuất. Mỗi dự án được quản lý dựa trên mẫu đã duyệt, bản vẽ kỹ thuật, tiêu chuẩn vật liệu, checklist kiểm hàng, tiêu chuẩn đóng gói và kế hoạch giao hàng đã thống nhất.':
+      'ANSLIFE JSC works based on clear, controllable and traceable standards. Each project is managed through approved samples, technical drawings, material standards, inspection checklists, packing requirements and agreed shipment plans.',
+    'Kiểm soát mẫu đã duyệt': 'Approved Sample Control',
+    'Mẫu sản phẩm, cấu kiện, màu sắc, vật liệu và bề mặt hoàn thiện được lưu giữ làm tiêu chuẩn đối chiếu trong quá trình sản xuất và kiểm hàng.':
+      'Approved product samples, components, colors, materials and finishes are maintained as reference standards for production and inspection.',
+    'Quản lý bản vẽ kỹ thuật': 'Technical Drawing Management',
+    'Bản vẽ, kích thước, kết cấu, thông số vật liệu và yêu cầu kỹ thuật được ghi nhận rõ ràng trước khi triển khai sản xuất.':
+      'Drawings, dimensions, structures, material specifications and technical requirements are clearly recorded before production starts.',
+    'Quản lý vật liệu & màu sắc': 'Material & Color Management',
+    'Vật liệu, mẫu sơn, bảng màu, veneer, plywood, foam, vải, phụ kiện và vật liệu đóng gói được kiểm soát theo tiêu chuẩn của từng buyer và từng thị trường.':
+      'Materials, color panels, paint samples, veneer, plywood, foam, fabric, accessories and packing materials are controlled according to buyer and market requirements.',
+    'Checklist kiểm hàng': 'Order-Specific Inspection Checklist',
+    'Mỗi đơn hàng có checklist kiểm tra riêng, bao gồm kích thước, kết cấu, độ hoàn thiện, màu sắc, độ ẩm, đóng gói, nhãn mác và tình trạng hàng trước khi xuất.':
+      'Each order follows its own inspection checklist covering dimensions, structure, finish, color, moisture, packing, labeling and pre-shipment condition.',
+    'QC độc lập': 'Independent QC',
+    'Hệ thống QC của ANSLIFE hoạt động độc lập với bộ máy sản xuất, nhằm đảm bảo việc kiểm tra được thực hiện khách quan theo tiêu chuẩn đã thống nhất.':
+      "ANSLIFE's QC system operates independently from the production team to ensure objective inspection based on agreed standards.",
+    'Quy cách đóng gói, carton mark, nhãn hàng, mã sản phẩm, pallet, container loading hoặc LCL/FCL shipment được kiểm soát theo yêu cầu của từng buyer.':
+      "Packing method, carton marks, labels, item codes, pallets, container loading and LCL/FCL shipment requirements are controlled according to each buyer's standard.",
+    'Báo cáo minh bạch': 'Transparent Reporting',
+    'Các vấn đề phát sinh trong sản xuất, kiểm hàng hoặc xuất hàng được ghi nhận, báo cáo và trao đổi rõ ràng để có phương án xử lý kịp thời.':
+      'Issues during production, inspection or shipment are recorded, reported and discussed clearly so that corrective actions can be taken in time.',
     'Gửi yêu cầu báo giá hoặc đặt lịch làm việc. Dữ liệu được lưu vào WordPress qua Contact Form 7 + Flamingo.':
       'Send a quote request or schedule a meeting. Data is saved to WordPress via Contact Form 7 + Flamingo.',
     'Vui lòng điền biểu mẫu để đội ngũ ANSLIFE phản hồi báo giá trong thời gian sớm nhất.':
@@ -1178,6 +1201,30 @@ const TRANSLATIONS: Record<
     'Địa chỉ': '住所',
     'Địa chỉ đang cập nhật': '住所更新中',
     'VIỆT NAM': 'ベトナム',
+    'Tiêu chuẩn làm việc của ANSLIFE': 'ANSLIFEの業務基準',
+    'ANSLIFE JSC làm việc dựa trên nguyên tắc rõ ràng, có thể kiểm soát và có thể truy xuất. Mỗi dự án được quản lý dựa trên mẫu đã duyệt, bản vẽ kỹ thuật, tiêu chuẩn vật liệu, checklist kiểm hàng, tiêu chuẩn đóng gói và kế hoạch giao hàng đã thống nhất.':
+      'ANSLIFE JSCは、明確で管理可能かつ追跡可能な基準に基づいて業務を行います。各プロジェクトは、承認サンプル、技術図面、材料基準、検品チェックリスト、梱包基準、合意済みの出荷計画に基づいて管理されます。',
+    'Kiểm soát mẫu đã duyệt': '承認サンプル管理',
+    'Mẫu sản phẩm, cấu kiện, màu sắc, vật liệu và bề mặt hoàn thiện được lưu giữ làm tiêu chuẩn đối chiếu trong quá trình sản xuất và kiểm hàng.':
+      '承認済みの製品サンプル、部材、色、材料、仕上げ面は、生産と検品時の照合基準として保管されます。',
+    'Quản lý bản vẽ kỹ thuật': '技術図面管理',
+    'Bản vẽ, kích thước, kết cấu, thông số vật liệu và yêu cầu kỹ thuật được ghi nhận rõ ràng trước khi triển khai sản xuất.':
+      '図面、寸法、構造、材料仕様、技術要件は、生産開始前に明確に記録されます。',
+    'Quản lý vật liệu & màu sắc': '材料・色管理',
+    'Vật liệu, mẫu sơn, bảng màu, veneer, plywood, foam, vải, phụ kiện và vật liệu đóng gói được kiểm soát theo tiêu chuẩn của từng buyer và từng thị trường.':
+      '材料、塗装サンプル、カラーパネル、突板、合板、フォーム、生地、付属品、梱包材は、各バイヤーと市場の基準に従って管理されます。',
+    'Checklist kiểm hàng': '検品チェックリスト',
+    'Mỗi đơn hàng có checklist kiểm tra riêng, bao gồm kích thước, kết cấu, độ hoàn thiện, màu sắc, độ ẩm, đóng gói, nhãn mác và tình trạng hàng trước khi xuất.':
+      '各注文には、寸法、構造、仕上げ、色、含水率、梱包、ラベル、出荷前状態を含む専用の検品チェックリストがあります。',
+    'QC độc lập': '独立QC',
+    'Hệ thống QC của ANSLIFE hoạt động độc lập với bộ máy sản xuất, nhằm đảm bảo việc kiểm tra được thực hiện khách quan theo tiêu chuẩn đã thống nhất.':
+      'ANSLIFEのQC体制は生産部門から独立して運用され、合意済み基準に基づき客観的な検査を行います。',
+    'Tiêu chuẩn đóng gói': '梱包・出荷基準',
+    'Quy cách đóng gói, carton mark, nhãn hàng, mã sản phẩm, pallet, container loading hoặc LCL/FCL shipment được kiểm soát theo yêu cầu của từng buyer.':
+      '梱包仕様、カートンマーク、ラベル、商品コード、パレット、コンテナ積載、LCL/FCL出荷要件は、各バイヤーの基準に従って管理されます。',
+    'Báo cáo minh bạch': '透明な報告',
+    'Các vấn đề phát sinh trong sản xuất, kiểm hàng hoặc xuất hàng được ghi nhận, báo cáo và trao đổi rõ ràng để có phương án xử lý kịp thời.':
+      '生産、検品、出荷中に発生した問題は記録、報告、明確に共有され、適時に是正対応が取れるようにします。',
     'Gửi yêu cầu báo giá': '見積り依頼',
     'Đặt lịch làm việc': '打ち合わせ予約',
     'Họ tên': 'お名前',
@@ -1740,6 +1787,30 @@ const TRANSLATIONS: Record<
     'Địa chỉ': '주소',
     'Địa chỉ đang cập nhật': '주소 업데이트 중',
     'VIỆT NAM': '베트남',
+    'Tiêu chuẩn làm việc của ANSLIFE': 'ANSLIFE 업무 기준',
+    'ANSLIFE JSC làm việc dựa trên nguyên tắc rõ ràng, có thể kiểm soát và có thể truy xuất. Mỗi dự án được quản lý dựa trên mẫu đã duyệt, bản vẽ kỹ thuật, tiêu chuẩn vật liệu, checklist kiểm hàng, tiêu chuẩn đóng gói và kế hoạch giao hàng đã thống nhất.':
+      'ANSLIFE JSC는 명확하고 관리 가능하며 추적 가능한 기준에 따라 업무를 수행합니다. 각 프로젝트는 승인 샘플, 기술 도면, 자재 기준, 검사 체크리스트, 포장 기준, 합의된 출하 계획을 바탕으로 관리됩니다.',
+    'Kiểm soát mẫu đã duyệt': '승인 샘플 관리',
+    'Mẫu sản phẩm, cấu kiện, màu sắc, vật liệu và bề mặt hoàn thiện được lưu giữ làm tiêu chuẩn đối chiếu trong quá trình sản xuất và kiểm hàng.':
+      '승인된 제품 샘플, 부품, 색상, 자재 및 마감 표면은 생산과 검사 과정의 기준 샘플로 보관됩니다.',
+    'Quản lý bản vẽ kỹ thuật': '기술 도면 관리',
+    'Bản vẽ, kích thước, kết cấu, thông số vật liệu và yêu cầu kỹ thuật được ghi nhận rõ ràng trước khi triển khai sản xuất.':
+      '도면, 치수, 구조, 자재 사양 및 기술 요구사항은 생산 시작 전에 명확히 기록됩니다.',
+    'Quản lý vật liệu & màu sắc': '자재 및 색상 관리',
+    'Vật liệu, mẫu sơn, bảng màu, veneer, plywood, foam, vải, phụ kiện và vật liệu đóng gói được kiểm soát theo tiêu chuẩn của từng buyer và từng thị trường.':
+      '자재, 도장 샘플, 컬러 패널, 베니어, 합판, 폼, 원단, 부자재 및 포장재는 각 바이어와 시장 기준에 따라 관리됩니다.',
+    'Checklist kiểm hàng': '검사 체크리스트',
+    'Mỗi đơn hàng có checklist kiểm tra riêng, bao gồm kích thước, kết cấu, độ hoàn thiện, màu sắc, độ ẩm, đóng gói, nhãn mác và tình trạng hàng trước khi xuất.':
+      '각 주문은 치수, 구조, 마감, 색상, 함수율, 포장, 라벨, 출하 전 상태를 포함한 전용 검사 체크리스트를 따릅니다.',
+    'QC độc lập': '독립 QC',
+    'Hệ thống QC của ANSLIFE hoạt động độc lập với bộ máy sản xuất, nhằm đảm bảo việc kiểm tra được thực hiện khách quan theo tiêu chuẩn đã thống nhất.':
+      'ANSLIFE의 QC 시스템은 생산 조직과 독립적으로 운영되어 합의된 기준에 따라 객관적인 검사가 이루어지도록 합니다.',
+    'Tiêu chuẩn đóng gói': '포장 및 출하 기준',
+    'Quy cách đóng gói, carton mark, nhãn hàng, mã sản phẩm, pallet, container loading hoặc LCL/FCL shipment được kiểm soát theo yêu cầu của từng buyer.':
+      '포장 방식, 카톤 마크, 라벨, 품목 코드, 팔레트, 컨테이너 적재 및 LCL/FCL 출하 요구사항은 각 바이어 기준에 따라 관리됩니다.',
+    'Báo cáo minh bạch': '투명한 보고',
+    'Các vấn đề phát sinh trong sản xuất, kiểm hàng hoặc xuất hàng được ghi nhận, báo cáo và trao đổi rõ ràng để có phương án xử lý kịp thời.':
+      '생산, 검사 또는 출하 중 발생한 문제는 기록, 보고, 명확히 공유되어 적시에 시정 조치를 취할 수 있도록 합니다.',
     'Gửi yêu cầu báo giá': '견적 요청',
     'Đặt lịch làm việc': '미팅 예약',
     'Họ tên': '이름',
