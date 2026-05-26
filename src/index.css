@@ -7523,6 +7523,14 @@ a.mobile-menu-utility-link {
     gap: 0;
   }
 
+  .site-footer-column {
+    display: none;
+  }
+
+  .site-footer-contact {
+    display: none;
+  }
+
   .site-footer-column > h3,
   .site-footer-contact > h3 {
     display: none;
