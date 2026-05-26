@@ -167,7 +167,7 @@ export const TOP_MENU: TopMenuItem[] = [
       { label: 'Tổng quan công ty', path: '/about-anslife/company-intro' },
       { label: 'Chúng tôi làm gì', path: '/about-anslife/what-we-do' },
       { label: 'Tiêu chuẩn & QC', path: '/about-anslife/working-standards' },
-      { label: 'Thông tin công ty', path: '/contact/company-info' },
+      { label: 'Thông tin công ty', path: '/about-anslife/company-info' },
     ],
   },
   {
@@ -442,8 +442,8 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
       {
         id: 'company-info',
         title: 'Thông tin công ty',
-        description: 'Thông tin công ty ANSLIFE, form báo giá và đặt lịch làm việc.',
-        path: '/contact/company-info',
+        description:
+          'ANSLIFE là một hệ thống sản xuất và xuất khẩu nội thất tập trung vào chuỗi sản xuất, kiểm soát chất lượng và kết nối nguồn lực trong ngành.',
       },
     ],
   },

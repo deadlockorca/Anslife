@@ -364,12 +364,14 @@ export default function SiteLayout() {
     [location.pathname],
   );
   const isCompanyIntroRoute = useMemo(
-    () => location.pathname.includes('/about-anslife/company-intro'),
+    () =>
+      location.pathname.includes('/about-anslife/company-intro') ||
+      location.pathname.includes('/about-anslife/company-info'),
     [location.pathname],
   );
   const isAboutWideRoute = useMemo(
     () =>
-      /\/about-anslife\/(?:company-intro|vision-mission|core-values|production-philosophy|organization|team|anslife-ecosystem|development-history)(?:\/|$)/.test(
+      /\/about-anslife\/(?:company-intro|company-info|vision-mission|core-values|production-philosophy|organization|team|anslife-ecosystem|development-history)(?:\/|$)/.test(
         location.pathname,
       ),
     [location.pathname],

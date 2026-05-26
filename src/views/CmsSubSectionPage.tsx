@@ -49,6 +49,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const isCustomAboutSection =
     config.slug === 'about-anslife' &&
     (section.id === 'company-intro' ||
+      section.id === 'company-info' ||
       section.id === 'vision-mission' ||
       section.id === 'core-values');
   const shouldHideSectionHero =
@@ -73,6 +74,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'scholarship-community' ||
     (config.slug === 'about-anslife' &&
       (section.id === 'company-intro' ||
+        section.id === 'company-info' ||
         section.id === 'vision-mission' ||
         section.id === 'core-values' ||
         section.id === 'working-standards' ||

@@ -2,7 +2,7 @@ import type { LanguageCode } from '../i18n/language';
 import { translateText } from '../i18n/translations';
 
 const ABOUT_COMPANY_INFO_SECTION_VN = `
-  <section id="company-intro" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
+  <section id="company-info" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
     <details class="ai-company-info-accordion" open>
       <summary>
         <span>Thông tin công ty</span>
@@ -143,7 +143,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
 `.trim();
 
 const ABOUT_COMPANY_INFO_SECTION_EN = `
-  <section id="company-intro" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
+  <section id="company-info" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
     <details class="ai-company-info-accordion" open>
       <summary>
         <span>Company Information</span>
@@ -3223,7 +3223,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 };
 
 const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
-  'company-intro': ABOUT_COMPANY_INFO_SECTION_EN,
+  'company-info': ABOUT_COMPANY_INFO_SECTION_EN,
   'working-standards': ABOUT_WORKING_STANDARDS_SECTION_EN,
   'vision-mission': `
   <section id="vision-mission" class="ai-section ai-vision-mission">
@@ -6978,6 +6978,7 @@ export function getAIFallbackSectionHtml(
     !(
       pageSlug === 'about-anslife' &&
       (sectionId === 'company-intro' ||
+        sectionId === 'company-info' ||
         sectionId === 'vision-mission' ||
         sectionId === 'core-values' ||
         sectionId === 'working-standards' ||
