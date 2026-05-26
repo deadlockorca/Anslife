@@ -537,6 +537,32 @@ const TRANSLATIONS: Record<
     'Mọi quyền được bảo lưu.': 'All Rights Reserved.',
     'Thông tin công ty ANSLIFE, form báo giá và đặt lịch làm việc.':
       'ANSLIFE company information, quote request form and meeting booking.',
+    'ANSLIFE JSC là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi có văn phòng đại diện tại Hà Nội, TP. Hồ Chí Minh, Tokyo, Singapore và Hong Kong.':
+      'ANSLIFE JSC is a manufacturing, supply chain and export partner in Vietnam for international buyers in furniture, components and materials. We have representative offices in Hanoi, Ho Chi Minh City, Tokyo, Singapore and Hong Kong.',
+    'Tên công ty': 'Company Name',
+    'Vai trò': 'Role',
+    'Đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam':
+      'Manufacturing, supply chain and export partner in Vietnam',
+    'Lĩnh vực hoạt động': 'Business Scope',
+    'Sản xuất nội thất, cấu kiện, chuỗi cung ứng vật liệu, lưu kho, QC độc lập, vận hành dự án, tài trợ thương mại, đóng gói và xuất hàng':
+      'Furniture production, components, material supply chain, warehousing, independent QC, project operations, trade finance, packing and export shipment',
+    'Thị trường phục vụ': 'Markets Served',
+    'Nhật Bản, Hoa Kỳ, EU và buyer quốc tế':
+      'Japan, United States, EU and international buyers',
+    'Văn phòng trong nước': 'Vietnam Offices',
+    'Hà Nội, TP. Hồ Chí Minh': 'Hanoi, Ho Chi Minh City',
+    'Văn phòng quốc tế': 'International Offices',
+    'Ngôn ngữ hỗ trợ': 'Supported Languages',
+    'Tiếng Việt, tiếng Anh, tiếng Nhật': 'Vietnamese, English, Japanese',
+    'Buyer có thể liên hệ ANSLIFE JSC để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
+      'Buyers can contact ANSLIFE JSC to send product requirements, drawings, samples, materials or warehousing and export shipment plans from Vietnam.',
+    'Văn phòng & liên hệ': 'Offices & Contact',
+    'ANSLIFE JSC có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
+      'ANSLIFE JSC operates representative offices in Vietnam, Japan, Singapore and Hong Kong to support international buyers with requirement exchange, project management, standards control and supply chain organization from Vietnam.',
+    'Văn phòng đại diện': 'Representative Offices',
+    'Địa chỉ': 'Address',
+    'Địa chỉ đang cập nhật': 'Address updating',
+    'VIỆT NAM': 'VIETNAM',
     'Gửi yêu cầu báo giá hoặc đặt lịch làm việc. Dữ liệu được lưu vào WordPress qua Contact Form 7 + Flamingo.':
       'Send a quote request or schedule a meeting. Data is saved to WordPress via Contact Form 7 + Flamingo.',
     'Vui lòng điền biểu mẫu để đội ngũ ANSLIFE phản hồi báo giá trong thời gian sớm nhất.':
@@ -1124,6 +1150,32 @@ const TRANSLATIONS: Record<
     'Thông tin công ty': '会社情報',
     'Thông tin công ty ANSLIFE, form báo giá và đặt lịch làm việc.':
       'ANSLIFEの会社情報、見積り依頼フォーム、打ち合わせ予約。',
+    'ANSLIFE JSC là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi có văn phòng đại diện tại Hà Nội, TP. Hồ Chí Minh, Tokyo, Singapore và Hong Kong.':
+      'ANSLIFE JSCは、家具、部材、素材分野の海外バイヤー向けに、ベトナムで生産、サプライチェーン、輸出を支援するパートナーです。ハノイ、ホーチミン市、東京、シンガポール、香港に代表オフィスがあります。',
+    'Tên công ty': '会社名',
+    'Vai trò': '役割',
+    'Đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam':
+      'ベトナムにおける生産、サプライチェーン、輸出パートナー',
+    'Lĩnh vực hoạt động': '事業領域',
+    'Sản xuất nội thất, cấu kiện, chuỗi cung ứng vật liệu, lưu kho, QC độc lập, vận hành dự án, tài trợ thương mại, đóng gói và xuất hàng':
+      '家具製造、部材、素材サプライチェーン、保管、独立QC、プロジェクト運営、貿易金融、梱包、出荷',
+    'Thị trường phục vụ': '対応市場',
+    'Nhật Bản, Hoa Kỳ, EU và buyer quốc tế':
+      '日本、米国、EU、海外バイヤー',
+    'Văn phòng trong nước': 'ベトナム国内オフィス',
+    'Hà Nội, TP. Hồ Chí Minh': 'ハノイ、ホーチミン市',
+    'Văn phòng quốc tế': '海外オフィス',
+    'Ngôn ngữ hỗ trợ': '対応言語',
+    'Tiếng Việt, tiếng Anh, tiếng Nhật': 'ベトナム語、英語、日本語',
+    'Buyer có thể liên hệ ANSLIFE JSC để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
+      'バイヤーはANSLIFE JSCに連絡し、製品要件、図面、サンプル、素材、またはベトナムからの保管・出荷計画を送ることができます。',
+    'Văn phòng & liên hệ': 'オフィス・連絡先',
+    'ANSLIFE JSC có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
+      'ANSLIFE JSCは、ベトナム、日本、シンガポール、香港に代表オフィスを展開し、海外バイヤーの要件確認、プロジェクト管理、基準管理、ベトナムからのサプライチェーン構築を支援します。',
+    'Văn phòng đại diện': '代表オフィス',
+    'Địa chỉ': '住所',
+    'Địa chỉ đang cập nhật': '住所更新中',
+    'VIỆT NAM': 'ベトナム',
     'Gửi yêu cầu báo giá': '見積り依頼',
     'Đặt lịch làm việc': '打ち合わせ予約',
     'Họ tên': 'お名前',
@@ -1659,6 +1711,32 @@ const TRANSLATIONS: Record<
     'Thông tin công ty': '회사 정보',
     'Thông tin công ty ANSLIFE, form báo giá và đặt lịch làm việc.':
       'ANSLIFE 회사 정보, 견적 요청 양식 및 미팅 예약.',
+    'ANSLIFE JSC là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi có văn phòng đại diện tại Hà Nội, TP. Hồ Chí Minh, Tokyo, Singapore và Hong Kong.':
+      'ANSLIFE JSC는 가구, 부품, 소재 분야의 해외 바이어를 위한 베트남 내 생산, 공급망, 수출 파트너입니다. 하노이, 호치민시, 도쿄, 싱가포르, 홍콩에 대표 사무소를 두고 있습니다.',
+    'Tên công ty': '회사명',
+    'Vai trò': '역할',
+    'Đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam':
+      '베트남 내 생산, 공급망 및 수출 파트너',
+    'Lĩnh vực hoạt động': '사업 분야',
+    'Sản xuất nội thất, cấu kiện, chuỗi cung ứng vật liệu, lưu kho, QC độc lập, vận hành dự án, tài trợ thương mại, đóng gói và xuất hàng':
+      '가구 생산, 부품, 소재 공급망, 보관, 독립 QC, 프로젝트 운영, 무역 금융, 포장 및 출하',
+    'Thị trường phục vụ': '서비스 시장',
+    'Nhật Bản, Hoa Kỳ, EU và buyer quốc tế':
+      '일본, 미국, EU 및 해외 바이어',
+    'Văn phòng trong nước': '베트남 국내 사무소',
+    'Hà Nội, TP. Hồ Chí Minh': '하노이, 호치민시',
+    'Văn phòng quốc tế': '해외 사무소',
+    'Ngôn ngữ hỗ trợ': '지원 언어',
+    'Tiếng Việt, tiếng Anh, tiếng Nhật': '베트남어, 영어, 일본어',
+    'Buyer có thể liên hệ ANSLIFE JSC để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
+      '바이어는 ANSLIFE JSC에 연락해 제품 요구사항, 도면, 샘플, 소재 또는 베트남발 보관 및 출하 계획을 보낼 수 있습니다.',
+    'Văn phòng & liên hệ': '사무소 및 연락처',
+    'ANSLIFE JSC có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
+      'ANSLIFE JSC는 베트남, 일본, 싱가포르, 홍콩에 대표 사무소를 운영하며 해외 바이어의 요구사항 협의, 프로젝트 관리, 기준 관리, 베트남발 공급망 구축을 지원합니다.',
+    'Văn phòng đại diện': '대표 사무소',
+    'Địa chỉ': '주소',
+    'Địa chỉ đang cập nhật': '주소 업데이트 중',
+    'VIỆT NAM': '베트남',
     'Gửi yêu cầu báo giá': '견적 요청',
     'Đặt lịch làm việc': '미팅 예약',
     'Họ tên': '이름',

@@ -3774,6 +3774,196 @@ a.mobile-menu-utility-link {
   letter-spacing: 0.01em;
 }
 
+.ai-company-info-section {
+  gap: 1rem;
+}
+
+.ai-company-info-accordion {
+  border: 1px solid #e4ded6;
+  border-radius: 8px;
+  background: #fffdf9;
+  overflow: hidden;
+}
+
+.ai-company-info-accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  min-height: 58px;
+  padding: 0.9rem 1rem;
+  color: #24170f;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  line-height: 1.15;
+  list-style: none;
+}
+
+.ai-company-info-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.ai-company-info-accordion summary::after {
+  content: '+';
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #d9cfc3;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  color: #6d431f;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.ai-company-info-accordion[open] summary::after {
+  content: '-';
+}
+
+.ai-company-info-body {
+  border-top: 1px solid #eee5da;
+  padding: 1rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.ai-company-info-lead,
+.ai-company-info-cta,
+.ai-company-office-header p {
+  margin: 0;
+  color: #342820;
+  font-size: 0.95rem;
+  line-height: 1.62;
+}
+
+.ai-company-info-list {
+  margin: 0;
+  border: 1px solid #e8dfd4;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.ai-company-info-row {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.28fr) minmax(0, 1fr);
+  min-height: 48px;
+}
+
+.ai-company-info-row + .ai-company-info-row {
+  border-top: 1px solid #eee5da;
+}
+
+.ai-company-info-row dt,
+.ai-company-info-row dd {
+  margin: 0;
+  padding: 0.72rem 0.85rem;
+  color: #2f2319;
+  font-size: 0.94rem;
+  line-height: 1.52;
+}
+
+.ai-company-info-row dt {
+  border-right: 1px solid #eee5da;
+  background: #f8f2ea;
+  color: #5c4027;
+  font-weight: 700;
+}
+
+.ai-company-info-row dd {
+  background: #ffffff;
+}
+
+.ai-company-info-row a,
+.ai-company-office-card a {
+  color: #5f3b1f;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ai-company-info-row a:hover,
+.ai-company-office-card a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ai-company-info-cta {
+  border-left: 3px solid #8b5a26;
+  background: #f7f1e8;
+  border-radius: 0 8px 8px 0;
+  padding: 0.78rem 0.86rem;
+}
+
+.ai-company-office-section {
+  display: grid;
+  gap: 0.78rem;
+}
+
+.ai-company-office-header {
+  display: grid;
+  gap: 0.42rem;
+}
+
+.ai-company-office-header h2 {
+  margin: 0;
+  color: #24170f;
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  line-height: 1.16;
+}
+
+.ai-company-office-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.72rem;
+}
+
+.ai-company-office-card {
+  border: 1px solid #e8dfd4;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 0.86rem;
+  display: grid;
+  align-content: start;
+  gap: 0.62rem;
+}
+
+.ai-company-office-card h3 {
+  margin: 0;
+  color: #2c1a10;
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+}
+
+.ai-company-office-card dl {
+  display: grid;
+  gap: 0.54rem;
+  margin: 0;
+}
+
+.ai-company-office-card dl div {
+  display: grid;
+  gap: 0.14rem;
+}
+
+.ai-company-office-card dt,
+.ai-company-office-card dd {
+  margin: 0;
+  color: #2f2319;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.ai-company-office-card dt {
+  color: #6d4f36;
+  font-weight: 700;
+}
+
 .ai-company-overview .ai-company-two-col,
 .ai-company-overview .ai-company-panels {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3781,8 +3971,45 @@ a.mobile-menu-utility-link {
 
 @media (max-width: 760px) {
   .ai-company-overview .ai-company-two-col,
-  .ai-company-overview .ai-company-panels {
+  .ai-company-overview .ai-company-panels,
+  .ai-company-office-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ai-company-info-body {
+    padding: 0.78rem;
+  }
+
+  .ai-company-info-list {
+    display: grid;
+    gap: 0.58rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .ai-company-info-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 0;
+    border: 1px solid #e8dfd4;
+    border-radius: 8px;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  .ai-company-info-row + .ai-company-info-row {
+    border-top: 1px solid #e8dfd4;
+  }
+
+  .ai-company-info-row dt {
+    border-right: 0;
+    border-bottom: 1px solid #eee5da;
+    padding: 0.62rem 0.72rem 0.42rem;
+  }
+
+  .ai-company-info-row dd {
+    padding: 0.48rem 0.72rem 0.68rem;
   }
 }
 

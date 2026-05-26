@@ -1,6 +1,288 @@
 import type { LanguageCode } from '../i18n/language';
 import { translateText } from '../i18n/translations';
 
+const ABOUT_COMPANY_INFO_SECTION_VN = `
+  <section id="company-intro" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
+    <details class="ai-company-info-accordion" open>
+      <summary>
+        <span>Thông tin công ty</span>
+      </summary>
+      <div class="ai-company-info-body">
+        <p class="ai-company-info-lead">
+          ANSLIFE JSC là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi có văn phòng đại diện tại Hà Nội, TP. Hồ Chí Minh, Tokyo, Singapore và Hong Kong.
+        </p>
+
+        <dl class="ai-company-info-list">
+          <div class="ai-company-info-row">
+            <dt>Tên công ty</dt>
+            <dd>ANSLIFE JSC</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Vai trò</dt>
+            <dd>Đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Lĩnh vực hoạt động</dt>
+            <dd>Sản xuất nội thất, cấu kiện, chuỗi cung ứng vật liệu, lưu kho, QC độc lập, vận hành dự án, tài trợ thương mại, đóng gói và xuất hàng</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Thị trường phục vụ</dt>
+            <dd>Nhật Bản, Hoa Kỳ, EU và buyer quốc tế</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Văn phòng trong nước</dt>
+            <dd>Hà Nội, TP. Hồ Chí Minh</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Văn phòng quốc tế</dt>
+            <dd>Tokyo, Singapore, Hong Kong</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Website</dt>
+            <dd><a href="https://anslife.com" target="_blank" rel="noopener noreferrer">anslife.com</a></dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Email</dt>
+            <dd><a href="mailto:global@anslife.com">global@anslife.com</a></dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Ngôn ngữ hỗ trợ</dt>
+            <dd>Tiếng Việt, tiếng Anh, tiếng Nhật</dd>
+          </div>
+        </dl>
+
+        <p class="ai-company-info-cta">
+          Buyer có thể liên hệ ANSLIFE JSC để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.
+        </p>
+      </div>
+    </details>
+
+    <div class="ai-company-office-section">
+      <header class="ai-company-office-header">
+        <h2>Văn phòng & liên hệ</h2>
+        <p>
+          ANSLIFE JSC có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.
+        </p>
+      </header>
+
+      <div class="ai-company-office-grid">
+        <article class="ai-company-office-card">
+          <h3>VIỆT NAM</h3>
+          <dl>
+            <div>
+              <dt>Văn phòng đại diện</dt>
+              <dd>Hà Nội, TP. Hồ Chí Minh</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.vn">contact@anslife.vn</a></dd>
+            </div>
+            <div>
+              <dt>Địa chỉ</dt>
+              <dd>No. 15, Street D2, Hiep Phat Residential Area, Phu Loi Ward, Ho Chi Minh City, Vietnam</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="ai-company-office-card">
+          <h3>JAPAN</h3>
+          <dl>
+            <div>
+              <dt>Văn phòng đại diện</dt>
+              <dd>Tokyo, Japan</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.jp">contact@anslife.jp</a></dd>
+            </div>
+            <div>
+              <dt>Địa chỉ</dt>
+              <dd>Địa chỉ đang cập nhật</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="ai-company-office-card">
+          <h3>SINGAPORE</h3>
+          <dl>
+            <div>
+              <dt>Văn phòng đại diện</dt>
+              <dd>Singapore</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.sg">contact@anslife.sg</a></dd>
+            </div>
+            <div>
+              <dt>Địa chỉ</dt>
+              <dd>Địa chỉ đang cập nhật</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="ai-company-office-card">
+          <h3>HONG KONG</h3>
+          <dl>
+            <div>
+              <dt>Văn phòng đại diện</dt>
+              <dd>Hong Kong</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.hk">contact@anslife.hk</a></dd>
+            </div>
+            <div>
+              <dt>Địa chỉ</dt>
+              <dd>Địa chỉ đang cập nhật</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const ABOUT_COMPANY_INFO_SECTION_EN = `
+  <section id="company-intro" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
+    <details class="ai-company-info-accordion" open>
+      <summary>
+        <span>Company Information</span>
+      </summary>
+      <div class="ai-company-info-body">
+        <p class="ai-company-info-lead">
+          ANSLIFE JSC is a manufacturing, supply chain and export partner in Vietnam for international buyers in furniture, components and materials. We have representative offices in Hanoi, Ho Chi Minh City, Tokyo, Singapore and Hong Kong.
+        </p>
+
+        <dl class="ai-company-info-list">
+          <div class="ai-company-info-row">
+            <dt>Company Name</dt>
+            <dd>ANSLIFE JSC</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Role</dt>
+            <dd>Manufacturing, supply chain and export partner in Vietnam</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Business Scope</dt>
+            <dd>Furniture production, components, material supply chain, warehousing, independent QC, project operations, trade finance, packing and export shipment</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Markets Served</dt>
+            <dd>Japan, United States, EU and international buyers</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Vietnam Offices</dt>
+            <dd>Hanoi, Ho Chi Minh City</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>International Offices</dt>
+            <dd>Tokyo, Singapore, Hong Kong</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Website</dt>
+            <dd><a href="https://anslife.com" target="_blank" rel="noopener noreferrer">anslife.com</a></dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Email</dt>
+            <dd><a href="mailto:global@anslife.com">global@anslife.com</a></dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Supported Languages</dt>
+            <dd>Vietnamese, English, Japanese</dd>
+          </div>
+        </dl>
+
+        <p class="ai-company-info-cta">
+          Buyers can contact ANSLIFE JSC to send product requirements, drawings, samples, materials or warehousing and export shipment plans from Vietnam.
+        </p>
+      </div>
+    </details>
+
+    <div class="ai-company-office-section">
+      <header class="ai-company-office-header">
+        <h2>Offices & Contact</h2>
+        <p>
+          ANSLIFE JSC operates representative offices in Vietnam, Japan, Singapore and Hong Kong to support international buyers with requirement exchange, project management, standards control and supply chain organization from Vietnam.
+        </p>
+      </header>
+
+      <div class="ai-company-office-grid">
+        <article class="ai-company-office-card">
+          <h3>VIETNAM</h3>
+          <dl>
+            <div>
+              <dt>Representative Offices</dt>
+              <dd>Hanoi, Ho Chi Minh City</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.vn">contact@anslife.vn</a></dd>
+            </div>
+            <div>
+              <dt>Address</dt>
+              <dd>No. 15, Street D2, Hiep Phat Residential Area, Phu Loi Ward, Ho Chi Minh City, Vietnam</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="ai-company-office-card">
+          <h3>JAPAN</h3>
+          <dl>
+            <div>
+              <dt>Representative Office</dt>
+              <dd>Tokyo, Japan</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.jp">contact@anslife.jp</a></dd>
+            </div>
+            <div>
+              <dt>Address</dt>
+              <dd>Address updating</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="ai-company-office-card">
+          <h3>SINGAPORE</h3>
+          <dl>
+            <div>
+              <dt>Representative Office</dt>
+              <dd>Singapore</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.sg">contact@anslife.sg</a></dd>
+            </div>
+            <div>
+              <dt>Address</dt>
+              <dd>Address updating</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="ai-company-office-card">
+          <h3>HONG KONG</h3>
+          <dl>
+            <div>
+              <dt>Representative Office</dt>
+              <dd>Hong Kong</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.hk">contact@anslife.hk</a></dd>
+            </div>
+            <div>
+              <dt>Address</dt>
+              <dd>Address updating</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+`.trim();
+
 const AI_PAGE_CONTENT: Record<string, string> = {
   'about-anslife': `
 <div class="ai-content">
@@ -32,100 +314,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
     </article>
   </div>
 
-  <section id="company-intro" class="ai-section ai-company-intro ai-company-overview">
-    <div class="ai-company-hero">
-      <div class="ai-company-copy">
-        <h1 class="ai-company-title">Giới thiệu về công ty</h1>
-        <p class="ai-company-lead">
-          ANSLIFE là một hệ thống sản xuất và xuất khẩu nội thất được xây dựng tại Việt Nam, tập trung vào việc tổ chức
-          chuỗi sản xuất, kiểm soát chất lượng và kết nối các nguồn lực trong ngành.
-        </p>
-        <div class="ai-company-keyline">
-          <strong>ANSLIFE is not a factory. It is a controllable manufacturing system.</strong>
-        </div>
-        <p>
-          ANSLIFE không hoạt động như một nhà máy đơn lẻ, mà vận hành một hệ sinh thái gồm nhà máy chính và các nhà
-          máy đối tác, được liên kết thông qua quy trình quản lý thống nhất và hệ thống kiểm soát chất lượng độc lập.
-        </p>
-      </div>
-    </div>
-
-    <div class="ai-company-two-col">
-      <article class="ai-company-block ai-company-block-valuechain">
-        <h3>Chúng tôi tham gia trực tiếp vào toàn bộ chuỗi giá trị:</h3>
-        <ul>
-          <li>Phát triển sản phẩm theo yêu cầu</li>
-          <li>Tổ chức sản xuất tại hệ thống nhà máy</li>
-          <li>Kiểm soát chất lượng theo tiêu chuẩn từng thị trường</li>
-          <li>Hoàn thiện và xuất khẩu</li>
-        </ul>
-      </article>
-      <article class="ai-company-block ai-company-block-guarantee">
-        <h3>Nhờ đó, ANSLIFE đảm bảo được:</h3>
-        <ul>
-          <li>Sự ổn định về chất lượng</li>
-          <li>Tính linh hoạt trong sản xuất</li>
-          <li>Khả năng đáp ứng đa dạng yêu cầu của khách hàng</li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="ai-company-panels">
-      <article class="ai-company-panel ai-company-panel-ecosystem">
-        <h3>Hệ sinh thái sản xuất</h3>
-        <p>ANSLIFE xây dựng một hệ sinh thái sản xuất gồm:</p>
-        <ul class="ai-company-plain-list">
-          <li>Hệ thống nhà máy chính</li>
-          <li>Các nhà máy đối tác vệ tinh</li>
-          <li>Hệ thống kiểm soát chất lượng độc lập</li>
-          <li>Mạng lưới cung ứng nguyên vật liệu</li>
-        </ul>
-        <p class="ai-company-divider-note">
-          Tất cả được vận hành theo cùng một tiêu chuẩn và quy trình, giúp:
-        </p>
-        <ul class="ai-company-plain-list">
-          <li>Đồng bộ chất lượng</li>
-          <li>Tối ưu chi phí</li>
-          <li>Linh hoạt mở rộng công suất</li>
-        </ul>
-      </article>
-
-      <article class="ai-company-panel ai-company-panel-market">
-        <h3>Thị trường</h3>
-        <p>ANSLIFE hiện đang làm việc với các thị trường:</p>
-        <ul class="ai-company-plain-list ai-company-market-list">
-          <li><span class="ai-country-flag" aria-hidden="true">🇺🇸</span>Hoa Kỳ</li>
-          <li><span class="ai-country-flag" aria-hidden="true">🇯🇵</span>Nhật Bản</li>
-          <li><span class="ai-country-flag" aria-hidden="true">🇪🇺</span>Châu Âu</li>
-        </ul>
-        <p class="ai-company-divider-note">
-          Mỗi thị trường có những tiêu chuẩn riêng biệt, và hệ thống của ANSLIFE được thiết kế để đáp ứng các yêu cầu
-          đó một cách ổn định và dài hạn.
-        </p>
-      </article>
-
-      <article class="ai-company-panel ai-company-panel-direction">
-        <h3>Định hướng</h3>
-        <p>ANSLIFE hướng tới việc xây dựng một nền tảng sản xuất minh bạch và có thể kiểm soát, nơi:</p>
-        <ul class="ai-company-plain-list">
-          <li>Khách hàng có thể tiếp cận trực tiếp hệ thống sản xuất</li>
-          <li>Nhà máy có thể tham gia vào chuỗi cung ứng chất lượng cao</li>
-          <li>Dữ liệu sản xuất và chất lượng được ghi nhận và quản lý tập trung</li>
-        </ul>
-      </article>
-
-      <article class="ai-company-panel ai-company-panel-commitment">
-        <h3>Cam kết</h3>
-        <p>ANSLIFE cam kết:</p>
-        <ul class="ai-company-plain-list">
-          <li>Đảm bảo chất lượng sản phẩm theo tiêu chuẩn đã thống nhất</li>
-          <li>Đảm bảo tiến độ sản xuất</li>
-          <li>Minh bạch thông tin trong toàn bộ quá trình làm việc</li>
-          <li>Xây dựng mối quan hệ hợp tác lâu dài với khách hàng và đối tác</li>
-        </ul>
-      </article>
-    </div>
-  </section>
+  ${ABOUT_COMPANY_INFO_SECTION_VN}
 
   <section id="vision-mission" class="ai-section ai-vision-mission">
     <div class="ai-vision-shell">
@@ -2894,102 +3083,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 };
 
 const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
-  'company-intro': `
-  <section id="company-intro" class="ai-section ai-company-intro ai-company-overview">
-    <div class="ai-company-hero">
-      <div class="ai-company-copy">
-        <h1 class="ai-company-title">Company Introduction</h1>
-        <p class="ai-company-lead">
-          ANSLIFE is a furniture manufacturing and export system built in Vietnam, focused on organizing the production
-          chain, quality control, and connecting industry resources.
-        </p>
-        <div class="ai-company-keyline">
-          <strong>ANSLIFE is not a factory. It is a controllable manufacturing system.</strong>
-        </div>
-        <p>
-          ANSLIFE does not operate as a single factory. We run an ecosystem of a core factory and partner factories,
-          connected through a unified management process and an independent quality control system.
-        </p>
-      </div>
-    </div>
-
-    <div class="ai-company-two-col">
-      <article class="ai-company-block ai-company-block-valuechain">
-        <h3>We are directly involved in the entire value chain:</h3>
-        <ul>
-          <li>Product development based on customer requirements</li>
-          <li>Production organization across our factory network</li>
-          <li>Quality control by market-specific standards</li>
-          <li>Finishing and export</li>
-        </ul>
-      </article>
-      <article class="ai-company-block ai-company-block-guarantee">
-        <h3>As a result, ANSLIFE ensures:</h3>
-        <ul>
-          <li>Consistent quality</li>
-          <li>Flexible production</li>
-          <li>Ability to meet diverse customer requirements</li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="ai-company-panels">
-      <article class="ai-company-panel ai-company-panel-ecosystem">
-        <h3>Manufacturing Ecosystem</h3>
-        <p>ANSLIFE builds a manufacturing ecosystem including:</p>
-        <ul class="ai-company-plain-list">
-          <li>Core factory system</li>
-          <li>Satellite partner factories</li>
-          <li>Independent quality control system</li>
-          <li>Raw material supply network</li>
-        </ul>
-        <p class="ai-company-divider-note">
-          All operations follow the same standards and processes to:
-        </p>
-        <ul class="ai-company-plain-list">
-          <li>Standardize quality</li>
-          <li>Optimize cost</li>
-          <li>Scale capacity flexibly</li>
-        </ul>
-      </article>
-
-      <article class="ai-company-panel ai-company-panel-market">
-        <h3>Markets</h3>
-        <p>ANSLIFE currently serves:</p>
-        <ul class="ai-company-plain-list ai-company-market-list">
-          <li><span class="ai-country-flag" aria-hidden="true">🇺🇸</span>United States</li>
-          <li><span class="ai-country-flag" aria-hidden="true">🇯🇵</span>Japan</li>
-          <li><span class="ai-country-flag" aria-hidden="true">🇪🇺</span>Europe</li>
-        </ul>
-        <p class="ai-company-divider-note">
-          Each market has specific standards, and ANSLIFE's system is designed to meet those requirements consistently
-          and sustainably.
-        </p>
-      </article>
-
-      <article class="ai-company-panel ai-company-panel-direction">
-        <h3>Direction</h3>
-        <p>ANSLIFE aims to build a transparent and controllable manufacturing platform where:</p>
-        <ul class="ai-company-plain-list">
-          <li>Customers can directly access the manufacturing system</li>
-          <li>Factories can join a high-standard supply chain</li>
-          <li>Production and quality data are captured and centrally managed</li>
-        </ul>
-      </article>
-
-      <article class="ai-company-panel ai-company-panel-commitment">
-        <h3>Commitment</h3>
-        <p>ANSLIFE commits to:</p>
-        <ul class="ai-company-plain-list">
-          <li>Ensuring product quality according to agreed standards</li>
-          <li>Ensuring production timelines</li>
-          <li>Maintaining transparent information throughout collaboration</li>
-          <li>Building long-term partnerships with customers and partners</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-  `.trim(),
+  'company-intro': ABOUT_COMPANY_INFO_SECTION_EN,
   'vision-mission': `
   <section id="vision-mission" class="ai-section ai-vision-mission">
     <div class="ai-vision-shell">
