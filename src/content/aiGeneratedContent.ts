@@ -39,15 +39,15 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
           </div>
           <div class="ai-company-info-row">
             <dt>Website</dt>
-            <dd><a href="https://anslife.com" target="_blank" rel="noopener noreferrer">anslife.com</a></dd>
+            <dd><a href="https://anslife.net" target="_blank" rel="noopener noreferrer">anslife.net</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Email</dt>
-            <dd><a href="mailto:global@anslife.com">global@anslife.com</a></dd>
+            <dd><a href="mailto:global@anslife.net">global@anslife.net</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Ngôn ngữ hỗ trợ</dt>
-            <dd>Tiếng Việt, tiếng Anh, tiếng Nhật</dd>
+            <dd>Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn</dd>
           </div>
         </dl>
 
@@ -180,15 +180,15 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
           </div>
           <div class="ai-company-info-row">
             <dt>Website</dt>
-            <dd><a href="https://anslife.com" target="_blank" rel="noopener noreferrer">anslife.com</a></dd>
+            <dd><a href="https://anslife.net" target="_blank" rel="noopener noreferrer">anslife.net</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Email</dt>
-            <dd><a href="mailto:global@anslife.com">global@anslife.com</a></dd>
+            <dd><a href="mailto:global@anslife.net">global@anslife.net</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Supported Languages</dt>
-            <dd>Vietnamese, English, Japanese</dd>
+            <dd>English, Japanese, Vietnamese, Korean</dd>
           </div>
         </dl>
 

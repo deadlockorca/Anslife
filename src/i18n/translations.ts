@@ -553,7 +553,8 @@ const TRANSLATIONS: Record<
     'Hà Nội, TP. Hồ Chí Minh': 'Hanoi, Ho Chi Minh City',
     'Văn phòng quốc tế': 'International Offices',
     'Ngôn ngữ hỗ trợ': 'Supported Languages',
-    'Tiếng Việt, tiếng Anh, tiếng Nhật': 'Vietnamese, English, Japanese',
+    'Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn':
+      'English, Japanese, Vietnamese, Korean',
     'Buyer có thể liên hệ ANSLIFE JSC để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
       'Buyers can contact ANSLIFE JSC to send product requirements, drawings, samples, materials or warehousing and export shipment plans from Vietnam.',
     'Văn phòng & liên hệ': 'Offices & Contact',
@@ -1166,7 +1167,8 @@ const TRANSLATIONS: Record<
     'Hà Nội, TP. Hồ Chí Minh': 'ハノイ、ホーチミン市',
     'Văn phòng quốc tế': '海外オフィス',
     'Ngôn ngữ hỗ trợ': '対応言語',
-    'Tiếng Việt, tiếng Anh, tiếng Nhật': 'ベトナム語、英語、日本語',
+    'Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn':
+      '英語、日本語、ベトナム語、韓国語',
     'Buyer có thể liên hệ ANSLIFE JSC để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
       'バイヤーはANSLIFE JSCに連絡し、製品要件、図面、サンプル、素材、またはベトナムからの保管・出荷計画を送ることができます。',
     'Văn phòng & liên hệ': 'オフィス・連絡先',
@@ -1727,7 +1729,8 @@ const TRANSLATIONS: Record<
     'Hà Nội, TP. Hồ Chí Minh': '하노이, 호치민시',
     'Văn phòng quốc tế': '해외 사무소',
     'Ngôn ngữ hỗ trợ': '지원 언어',
-    'Tiếng Việt, tiếng Anh, tiếng Nhật': '베트남어, 영어, 일본어',
+    'Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn':
+      '영어, 일본어, 베트남어, 한국어',
     'Buyer có thể liên hệ ANSLIFE JSC để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
       '바이어는 ANSLIFE JSC에 연락해 제품 요구사항, 도면, 샘플, 소재 또는 베트남발 보관 및 출하 계획을 보낼 수 있습니다.',
     'Văn phòng & liên hệ': '사무소 및 연락처',
