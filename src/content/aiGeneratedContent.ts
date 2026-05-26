@@ -1,6 +1,77 @@
 import type { LanguageCode } from '../i18n/language';
 import { translateText } from '../i18n/translations';
 
+const ABOUT_COMPANY_INTRO_SECTION_VN = `
+  <section id="company-intro" class="ai-section ai-company-intro ai-company-overview">
+    <article class="ai-company-hero">
+      <div class="ai-company-copy">
+        <h2 class="ai-company-title">Tổng quan công ty</h2>
+        <p class="ai-company-lead">
+          ANSLIFE JSC là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu.
+        </p>
+        <p>
+          Chúng tôi vận hành một hệ thống gồm nhà máy do ANSLIFE điều phối, mạng lưới nhà máy vệ tinh, chuỗi cung ứng vật liệu liên tục, hệ thống QC độc lập, kho lưu trữ tại Việt Nam và cơ chế xuất hàng định kỳ.
+        </p>
+        <p>
+          ANSLIFE JSC hỗ trợ buyer từ phát triển sản phẩm, chuẩn bị vật liệu, tổ chức sản xuất, kiểm soát chất lượng, quản lý dự án, tài trợ thương mại đến đóng gói và xuất hàng sang Nhật Bản, Hoa Kỳ, EU và các thị trường quốc tế.
+        </p>
+        <div class="ai-company-keyline">
+          <strong>ANSLIFE JSC là một hệ thống sản xuất - chuỗi cung ứng - QC độc lập - lưu kho - tài trợ thương mại - xuất khẩu tại Việt Nam cho buyer quốc tế.</strong>
+        </div>
+      </div>
+    </article>
+
+    <div class="ai-stat-grid">
+      <article class="ai-stat-card">
+        <strong>Vai trò</strong>
+        <p>Đối tác sản xuất, chuỗi cung ứng & xuất khẩu</p>
+      </article>
+      <article class="ai-stat-card">
+        <strong>Địa điểm</strong>
+        <p>Việt Nam. Văn phòng đại diện: Tokyo, Singapore, Hong Kong</p>
+      </article>
+      <article class="ai-stat-card">
+        <strong>Thị trường</strong>
+        <p>Nhật Bản, Hoa Kỳ, EU và buyer quốc tế</p>
+      </article>
+      <article class="ai-stat-card">
+        <strong>Dịch vụ chính</strong>
+        <p>Sản xuất, vật liệu, QC độc lập, lưu kho, vận hành dự án, tài trợ thương mại và xuất hàng</p>
+      </article>
+    </div>
+
+    <section class="ai-section">
+      <h2>ANSLIFE hỗ trợ buyer những gì?</h2>
+      <div class="ai-highlight-grid">
+        <article class="ai-highlight-card">
+          <h3>Sản xuất</h3>
+          <p>Tổ chức sản xuất nội thất, cấu kiện và sản phẩm theo yêu cầu dự án.</p>
+        </article>
+        <article class="ai-highlight-card">
+          <h3>Chuỗi cung ứng vật liệu</h3>
+          <p>Chuẩn bị, điều phối và duy trì nguồn vật liệu liên tục tại Việt Nam.</p>
+        </article>
+        <article class="ai-highlight-card">
+          <h3>QC độc lập</h3>
+          <p>Kiểm soát chất lượng tách khỏi nhà máy để giảm rủi ro lỗi trước khi xuất hàng.</p>
+        </article>
+        <article class="ai-highlight-card">
+          <h3>Lưu kho tại Việt Nam</h3>
+          <p>Lưu trữ hàng hóa, vật liệu và đơn hàng để hỗ trợ kế hoạch xuất hàng định kỳ.</p>
+        </article>
+        <article class="ai-highlight-card">
+          <h3>Vận hành & quản lý dự án</h3>
+          <p>Theo dõi tiến độ, mẫu, tiêu chuẩn, phản hồi kỹ thuật và phối hợp giữa các bên.</p>
+        </article>
+        <article class="ai-highlight-card">
+          <h3>Tài trợ thương mại</h3>
+          <p>Hỗ trợ dòng tiền sản xuất và kế hoạch cung ứng cho các đơn hàng phù hợp.</p>
+        </article>
+      </div>
+    </section>
+  </section>
+`.trim();
+
 const ABOUT_COMPANY_INFO_SECTION_VN = `
   <section id="company-info" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
     <details class="ai-company-info-accordion" open>
@@ -78,6 +149,10 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
               <dd><a href="mailto:contact@anslife.vn">contact@anslife.vn</a></dd>
             </div>
             <div>
+              <dt>Số điện thoại</dt>
+              <dd><a href="tel:+84901827555">+84 901 827 555</a></dd>
+            </div>
+            <div>
               <dt>Địa chỉ</dt>
               <dd>No. 15, Street D2, Hiep Phat Residential Area, Phu Loi Ward, Ho Chi Minh City, Vietnam</dd>
             </div>
@@ -139,6 +214,77 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
         </article>
       </div>
     </div>
+  </section>
+`.trim();
+
+const ABOUT_COMPANY_INTRO_SECTION_EN = `
+  <section id="company-intro" class="ai-section ai-company-intro ai-company-overview">
+    <article class="ai-company-hero">
+      <div class="ai-company-copy">
+        <h2 class="ai-company-title">Company Overview</h2>
+        <p class="ai-company-lead">
+          ANSLIFE JSC is a manufacturing, supply chain and export partner in Vietnam for international buyers in furniture, components and materials.
+        </p>
+        <p>
+          We operate a system that includes ANSLIFE-coordinated factories, a satellite factory network, continuous material supply, independent QC, warehousing in Vietnam and recurring export shipment operations.
+        </p>
+        <p>
+          ANSLIFE JSC supports buyers from product development, material preparation, production organization, quality control, project management and trade finance to packing and export shipment to Japan, the United States, EU and international markets.
+        </p>
+        <div class="ai-company-keyline">
+          <strong>ANSLIFE JSC is a production, supply chain, independent QC, warehousing, trade finance and export system in Vietnam for international buyers.</strong>
+        </div>
+      </div>
+    </article>
+
+    <div class="ai-stat-grid">
+      <article class="ai-stat-card">
+        <strong>Role</strong>
+        <p>Manufacturing, supply chain & export partner</p>
+      </article>
+      <article class="ai-stat-card">
+        <strong>Location</strong>
+        <p>Vietnam. Representative offices: Tokyo, Singapore, Hong Kong</p>
+      </article>
+      <article class="ai-stat-card">
+        <strong>Markets</strong>
+        <p>Japan, United States, EU and international buyers</p>
+      </article>
+      <article class="ai-stat-card">
+        <strong>Core services</strong>
+        <p>Production, materials, independent QC, warehousing, project operations, trade finance and export shipment</p>
+      </article>
+    </div>
+
+    <section class="ai-section">
+      <h2>How ANSLIFE Supports Buyers</h2>
+      <div class="ai-highlight-grid">
+        <article class="ai-highlight-card">
+          <h3>Production</h3>
+          <p>Organizing furniture, component and project-based production in Vietnam.</p>
+        </article>
+        <article class="ai-highlight-card">
+          <h3>Material Supply Chain</h3>
+          <p>Preparing, coordinating and maintaining continuous material supply in Vietnam.</p>
+        </article>
+        <article class="ai-highlight-card">
+          <h3>Independent QC</h3>
+          <p>Quality control separated from factories to reduce defects before export shipment.</p>
+        </article>
+        <article class="ai-highlight-card">
+          <h3>Warehousing in Vietnam</h3>
+          <p>Storing goods, materials and orders to support recurring export shipment plans.</p>
+        </article>
+        <article class="ai-highlight-card">
+          <h3>Project Operations</h3>
+          <p>Tracking schedule, samples, standards, technical feedback and coordination between parties.</p>
+        </article>
+        <article class="ai-highlight-card">
+          <h3>Trade Finance</h3>
+          <p>Supporting production cash flow and supply planning for suitable orders.</p>
+        </article>
+      </div>
+    </section>
   </section>
 `.trim();
 
@@ -217,6 +363,10 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
             <div>
               <dt>Email</dt>
               <dd><a href="mailto:contact@anslife.vn">contact@anslife.vn</a></dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd><a href="tel:+84901827555">+84 901 827 555</a></dd>
             </div>
             <div>
               <dt>Address</dt>
@@ -451,6 +601,8 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       <p>Ra quyết định dựa trên dữ liệu lỗi, lead time và phản hồi sau giao hàng.</p>
     </article>
   </div>
+
+  ${ABOUT_COMPANY_INTRO_SECTION_VN}
 
   ${ABOUT_COMPANY_INFO_SECTION_VN}
 
@@ -3223,6 +3375,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 };
 
 const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
+  'company-intro': ABOUT_COMPANY_INTRO_SECTION_EN,
   'company-info': ABOUT_COMPANY_INFO_SECTION_EN,
   'working-standards': ABOUT_WORKING_STANDARDS_SECTION_EN,
   'vision-mission': `
