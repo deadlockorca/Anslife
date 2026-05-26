@@ -153,8 +153,12 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
               <dd><a href="tel:+84901827555">+84 901 827 555</a></dd>
             </div>
             <div>
-              <dt>Địa chỉ</dt>
-              <dd>No. 15, Street D2, Hiep Phat Residential Area, Phu Loi Ward, Ho Chi Minh City, Vietnam</dd>
+              <dt>Địa chỉ Hà Nội</dt>
+              <dd>Tầng 5, Tòa nhà Zen Tower, Số 12 đường Khuất Duy Tiến, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội, Việt Nam</dd>
+            </div>
+            <div>
+              <dt>Địa chỉ TP. Hồ Chí Minh</dt>
+              <dd>Số 63 KDC Hiệp Thành 1, Phường Phú Lợi, Thành Phố Hồ Chí Minh, Việt Nam</dd>
             </div>
           </dl>
         </article>
@@ -296,7 +300,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
       </summary>
       <div class="ai-company-info-body">
         <p class="ai-company-info-lead">
-          ANSLIFE JSC is a manufacturing, supply chain and export partner in Vietnam for international buyers in furniture, components and materials. We have representative offices in Hanoi, Ho Chi Minh City, Tokyo, Singapore and Hong Kong.
+          ANSLIFE JSC is a manufacturing, supply chain and export partner in Vietnam for international buyers in furniture, components and materials. We have representative offices in Ha Noi, Ho Chi Minh City, Tokyo, Singapore and Hong Kong.
         </p>
 
         <dl class="ai-company-info-list">
@@ -318,7 +322,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
           </div>
           <div class="ai-company-info-row">
             <dt>Vietnam Offices</dt>
-            <dd>Hanoi, Ho Chi Minh City</dd>
+            <dd>Ha Noi, Ho Chi Minh City</dd>
           </div>
           <div class="ai-company-info-row">
             <dt>International Offices</dt>
@@ -358,7 +362,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
           <dl>
             <div>
               <dt>Representative Offices</dt>
-              <dd>Hanoi, Ho Chi Minh City</dd>
+              <dd>Ha Noi, Ho Chi Minh City</dd>
             </div>
             <div>
               <dt>Email</dt>
@@ -369,8 +373,12 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
               <dd><a href="tel:+84901827555">+84 901 827 555</a></dd>
             </div>
             <div>
-              <dt>Address</dt>
-              <dd>No. 15, Street D2, Hiep Phat Residential Area, Phu Loi Ward, Ho Chi Minh City, Vietnam</dd>
+              <dt>Hanoi Address</dt>
+              <dd>5th Floor, Zen Tower, No. 12 Khuat Duy Tien Street, Thanh Xuan Trung Ward, Thanh Xuan District, Ha Noi, Viet Nam</dd>
+            </div>
+            <div>
+              <dt>Ho Chi Minh City Address</dt>
+              <dd>No. 63 Hiep Thanh 1 Residential Area, Phu Loi Ward, Ho Chi Minh City, Viet Nam</dd>
             </div>
           </dl>
         </article>
@@ -425,6 +433,304 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
             <div>
               <dt>Address</dt>
               <dd>Address updating</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const ABOUT_COMPANY_INFO_SECTION_JP = `
+  <section id="company-info" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
+    <details class="ai-company-info-accordion" open>
+      <summary>
+        <span>会社情報</span>
+      </summary>
+      <div class="ai-company-info-body">
+        <p class="ai-company-info-lead">
+          ANSLIFE JSCは、家具、部材、素材分野の海外バイヤー向けに、ベトナムにおける製造、サプライチェーン、輸出を支援するパートナーです。Ha Noi、Ho Chi Minh City、東京、シンガポール、香港に代表拠点があります。
+        </p>
+
+        <dl class="ai-company-info-list">
+          <div class="ai-company-info-row">
+            <dt>会社名</dt>
+            <dd>ANSLIFE JSC</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>役割</dt>
+            <dd>ベトナムにおける製造、サプライチェーン、輸出パートナー</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>事業領域</dt>
+            <dd>家具製造、部材、素材サプライチェーン、倉庫保管、独立QC、プロジェクト運営、貿易金融、梱包、輸出出荷</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>対応市場</dt>
+            <dd>日本、米国、EU、海外バイヤー</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>ベトナム拠点</dt>
+            <dd>Ha Noi、Ho Chi Minh City</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>海外拠点</dt>
+            <dd>東京、シンガポール、香港</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>ウェブサイト</dt>
+            <dd><a href="https://anslife.net" target="_blank" rel="noopener noreferrer">anslife.net</a></dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Email</dt>
+            <dd><a href="mailto:global@anslife.net">global@anslife.net</a></dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>対応言語</dt>
+            <dd>英語、日本語、ベトナム語、韓国語</dd>
+          </div>
+        </dl>
+
+        <p class="ai-company-info-cta">
+          バイヤーは、製品要件、図面、サンプル、素材、またはベトナムからの倉庫保管・輸出出荷計画についてANSLIFE JSCへお問い合わせいただけます。
+        </p>
+      </div>
+    </details>
+
+    <div class="ai-company-office-section">
+      <header class="ai-company-office-header">
+        <h2>拠点・お問い合わせ</h2>
+        <p>
+          ANSLIFE JSCは、ベトナム、日本、シンガポール、香港に代表拠点を置き、海外バイヤーの要件確認、プロジェクト管理、基準管理、ベトナムからのサプライチェーン構築を支援します。
+        </p>
+      </header>
+
+      <div class="ai-company-office-grid">
+        <article class="ai-company-office-card">
+          <h3>ベトナム</h3>
+          <dl>
+            <div>
+              <dt>代表オフィス</dt>
+              <dd>Ha Noi、Ho Chi Minh City</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.vn">contact@anslife.vn</a></dd>
+            </div>
+            <div>
+              <dt>電話番号</dt>
+              <dd><a href="tel:+84901827555">+84 901 827 555</a></dd>
+            </div>
+            <div>
+              <dt>ハノイ住所</dt>
+              <dd>5th Floor, Zen Tower, No. 12 Khuat Duy Tien Street, Thanh Xuan Trung Ward, Thanh Xuan District, Ha Noi, Viet Nam</dd>
+            </div>
+            <div>
+              <dt>ホーチミン市住所</dt>
+              <dd>No. 63 Hiep Thanh 1 Residential Area, Phu Loi Ward, Ho Chi Minh City, Viet Nam</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="ai-company-office-card">
+          <h3>日本</h3>
+          <dl>
+            <div>
+              <dt>代表オフィス</dt>
+              <dd>東京、日本</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.jp">contact@anslife.jp</a></dd>
+            </div>
+            <div>
+              <dt>住所</dt>
+              <dd>更新中</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="ai-company-office-card">
+          <h3>シンガポール</h3>
+          <dl>
+            <div>
+              <dt>代表オフィス</dt>
+              <dd>シンガポール</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.sg">contact@anslife.sg</a></dd>
+            </div>
+            <div>
+              <dt>住所</dt>
+              <dd>更新中</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="ai-company-office-card">
+          <h3>香港</h3>
+          <dl>
+            <div>
+              <dt>代表オフィス</dt>
+              <dd>香港</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.hk">contact@anslife.hk</a></dd>
+            </div>
+            <div>
+              <dt>住所</dt>
+              <dd>更新中</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const ABOUT_COMPANY_INFO_SECTION_KR = `
+  <section id="company-info" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
+    <details class="ai-company-info-accordion" open>
+      <summary>
+        <span>회사 정보</span>
+      </summary>
+      <div class="ai-company-info-body">
+        <p class="ai-company-info-lead">
+          ANSLIFE JSC는 가구, 부품, 소재 분야의 해외 바이어를 위한 베트남 내 생산, 공급망, 수출 파트너입니다. Ha Noi, Ho Chi Minh City, 도쿄, 싱가포르, 홍콩에 대표 거점을 두고 있습니다.
+        </p>
+
+        <dl class="ai-company-info-list">
+          <div class="ai-company-info-row">
+            <dt>회사명</dt>
+            <dd>ANSLIFE JSC</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>역할</dt>
+            <dd>베트남 내 생산, 공급망 및 수출 파트너</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>사업 영역</dt>
+            <dd>가구 생산, 부품, 소재 공급망, 창고 보관, 독립 QC, 프로젝트 운영, 무역 금융, 포장 및 수출 선적</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>대상 시장</dt>
+            <dd>일본, 미국, EU 및 해외 바이어</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>베트남 사무소</dt>
+            <dd>Ha Noi, Ho Chi Minh City</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>해외 사무소</dt>
+            <dd>도쿄, 싱가포르, 홍콩</dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>웹사이트</dt>
+            <dd><a href="https://anslife.net" target="_blank" rel="noopener noreferrer">anslife.net</a></dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>Email</dt>
+            <dd><a href="mailto:global@anslife.net">global@anslife.net</a></dd>
+          </div>
+          <div class="ai-company-info-row">
+            <dt>지원 언어</dt>
+            <dd>영어, 일본어, 베트남어, 한국어</dd>
+          </div>
+        </dl>
+
+        <p class="ai-company-info-cta">
+          바이어는 제품 요구사항, 도면, 샘플, 소재 또는 베트남 내 창고 보관 및 수출 선적 계획에 대해 ANSLIFE JSC에 문의할 수 있습니다.
+        </p>
+      </div>
+    </details>
+
+    <div class="ai-company-office-section">
+      <header class="ai-company-office-header">
+        <h2>사무소 및 연락처</h2>
+        <p>
+          ANSLIFE JSC는 베트남, 일본, 싱가포르, 홍콩에 대표 거점을 운영하며 해외 바이어의 요구사항 협의, 프로젝트 관리, 기준 관리 및 베트남 기반 공급망 구축을 지원합니다.
+        </p>
+      </header>
+
+      <div class="ai-company-office-grid">
+        <article class="ai-company-office-card">
+          <h3>베트남</h3>
+          <dl>
+            <div>
+              <dt>대표 사무소</dt>
+              <dd>Ha Noi, Ho Chi Minh City</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.vn">contact@anslife.vn</a></dd>
+            </div>
+            <div>
+              <dt>전화번호</dt>
+              <dd><a href="tel:+84901827555">+84 901 827 555</a></dd>
+            </div>
+            <div>
+              <dt>하노이 주소</dt>
+              <dd>5th Floor, Zen Tower, No. 12 Khuat Duy Tien Street, Thanh Xuan Trung Ward, Thanh Xuan District, Ha Noi, Viet Nam</dd>
+            </div>
+            <div>
+              <dt>호치민시 주소</dt>
+              <dd>No. 63 Hiep Thanh 1 Residential Area, Phu Loi Ward, Ho Chi Minh City, Viet Nam</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="ai-company-office-card">
+          <h3>일본</h3>
+          <dl>
+            <div>
+              <dt>대표 사무소</dt>
+              <dd>도쿄, 일본</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.jp">contact@anslife.jp</a></dd>
+            </div>
+            <div>
+              <dt>주소</dt>
+              <dd>업데이트 중</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="ai-company-office-card">
+          <h3>싱가포르</h3>
+          <dl>
+            <div>
+              <dt>대표 사무소</dt>
+              <dd>싱가포르</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.sg">contact@anslife.sg</a></dd>
+            </div>
+            <div>
+              <dt>주소</dt>
+              <dd>업데이트 중</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="ai-company-office-card">
+          <h3>홍콩</h3>
+          <dl>
+            <div>
+              <dt>대표 사무소</dt>
+              <dd>홍콩</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:contact@anslife.hk">contact@anslife.hk</a></dd>
+            </div>
+            <div>
+              <dt>주소</dt>
+              <dd>업데이트 중</dd>
             </div>
           </dl>
         </article>
@@ -4775,6 +5081,14 @@ function getManufacturingDeepBlocks(
   ];
 }
 
+const AI_ABOUT_SECTION_CONTENT_JP: Record<string, string> = {
+  'company-info': ABOUT_COMPANY_INFO_SECTION_JP,
+};
+
+const AI_ABOUT_SECTION_CONTENT_KR: Record<string, string> = {
+  'company-info': ABOUT_COMPANY_INFO_SECTION_KR,
+};
+
 function enrichManufacturingSectionContent(
   sectionId: string,
   section: StructuredSectionContent,
@@ -7143,8 +7457,14 @@ export function getAIFallbackSectionHtml(
     );
 
   const translatedSectionOverride =
-    pageSlug === 'about-anslife' && language === 'en'
-      ? AI_ABOUT_SECTION_CONTENT_EN[sectionId] ?? null
+    pageSlug === 'about-anslife'
+      ? language === 'en'
+        ? AI_ABOUT_SECTION_CONTENT_EN[sectionId] ?? null
+        : language === 'jp'
+          ? AI_ABOUT_SECTION_CONTENT_JP[sectionId] ?? null
+          : language === 'kr'
+            ? AI_ABOUT_SECTION_CONTENT_KR[sectionId] ?? null
+            : null
       : null;
   if (translatedSectionOverride) {
     const composedTranslatedHtml = `
