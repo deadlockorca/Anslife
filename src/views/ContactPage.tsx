@@ -13,7 +13,18 @@ import { getPageBySlug, getProducts, submitContactForm } from '../lib/wp';
 
 const quoteFormId = Number(process.env.NEXT_PUBLIC_CF7_QUOTE_FORM_ID ?? 1);
 const meetingFormId = Number(process.env.NEXT_PUBLIC_CF7_MEETING_FORM_ID ?? 2);
-const contactSections = ['company-info', 'quote-request', 'schedule-meeting', 'map'] as const;
+const contactSections = [
+  'company-info',
+  'quote-request',
+  'request-quotation',
+  'general-inquiry',
+  'upload-drawing',
+  'oem-odm-request',
+  'supply-hub-inquiry',
+  'schedule-meeting',
+  'factory-visit-request',
+  'map',
+] as const;
 
 const contactMapLocations = [
   {
@@ -58,6 +69,108 @@ function getCalendarWeekdayLabels(language: string): string[] {
 }
 
 type ContactSection = (typeof contactSections)[number];
+
+type QuoteContactSection =
+  | 'quote-request'
+  | 'request-quotation'
+  | 'general-inquiry'
+  | 'upload-drawing'
+  | 'oem-odm-request'
+  | 'supply-hub-inquiry';
+
+interface QuoteFormCopy {
+  title: string;
+  intro: string;
+  productLabel: string;
+  messageLabel: string;
+  messagePlaceholder: string;
+  buttonLabel: string;
+  inquiryType: string;
+  referenceLabel?: string;
+  referencePlaceholder?: string;
+}
+
+function isQuoteContactSection(
+  section: ContactSection | 'all',
+): section is QuoteContactSection {
+  return (
+    section === 'quote-request' ||
+    section === 'request-quotation' ||
+    section === 'general-inquiry' ||
+    section === 'upload-drawing' ||
+    section === 'oem-odm-request' ||
+    section === 'supply-hub-inquiry'
+  );
+}
+
+function isMeetingContactSection(section: ContactSection | 'all'): boolean {
+  return section === 'schedule-meeting' || section === 'factory-visit-request';
+}
+
+function getQuoteFormCopy(section: ContactSection | 'all'): QuoteFormCopy {
+  switch (section) {
+    case 'general-inquiry':
+      return {
+        title: 'Gửi yêu cầu chung',
+        intro: 'Gửi thông tin liên hệ và nội dung cần trao đổi với đội ngũ ANSLIFE.',
+        productLabel: 'Sản phẩm / nhóm hàng quan tâm',
+        messageLabel: 'Nội dung yêu cầu',
+        messagePlaceholder: 'Mô tả nhu cầu, thị trường, thời gian cần phản hồi hoặc thông tin cần tư vấn.',
+        buttonLabel: 'Gửi yêu cầu',
+        inquiryType: 'general_inquiry',
+      };
+    case 'upload-drawing':
+      return {
+        title: 'Tải bản vẽ / ảnh tham chiếu',
+        intro: 'Gửi link bản vẽ, ảnh tham chiếu hoặc mã sản phẩm để ANSLIFE kiểm tra khả năng phát triển.',
+        productLabel: 'Sản phẩm / bản vẽ liên quan',
+        messageLabel: 'Thông tin bản vẽ / ảnh tham chiếu',
+        messagePlaceholder:
+          'Dán link Google Drive, Dropbox, WeTransfer hoặc mô tả file bạn muốn gửi. Nếu cần gửi file trực tiếp, đội ngũ ANSLIFE sẽ phản hồi qua email.',
+        buttonLabel: 'Gửi thông tin tham chiếu',
+        inquiryType: 'upload_drawing',
+        referenceLabel: 'Link bản vẽ / ảnh tham chiếu',
+        referencePlaceholder: 'https://drive.google.com/... hoặc link thư mục tham chiếu',
+      };
+    case 'oem-odm-request':
+      return {
+        title: 'Gửi yêu cầu OEM / ODM',
+        intro: 'Gửi brief sản phẩm, target giá, thị trường và yêu cầu kỹ thuật để bắt đầu trao đổi OEM / ODM.',
+        productLabel: 'Sản phẩm / ý tưởng OEM ODM',
+        messageLabel: 'Thông tin OEM / ODM',
+        messagePlaceholder:
+          'Mô tả sản phẩm, vật liệu, kích thước, target giá, số lượng dự kiến, thị trường và timeline.',
+        buttonLabel: 'Gửi yêu cầu OEM / ODM',
+        inquiryType: 'oem_odm_request',
+        referenceLabel: 'Link brief / bản vẽ / ảnh mẫu',
+        referencePlaceholder: 'Dán link tài liệu kỹ thuật, hình ảnh mẫu hoặc brief sản phẩm nếu có.',
+      };
+    case 'supply-hub-inquiry':
+      return {
+        title: 'Gửi yêu cầu Supply Hub',
+        intro: 'Gửi nhu cầu lưu kho, gom hàng, kiểm soát mẫu hoặc điều phối xuất hàng từ Việt Nam.',
+        productLabel: 'Nhóm hàng / vật liệu cần điều phối',
+        messageLabel: 'Nhu cầu Supply Hub',
+        messagePlaceholder:
+          'Mô tả nhu cầu lưu kho, tần suất xuất hàng, thị trường nhận hàng, LCL/FCL và yêu cầu chứng từ.',
+        buttonLabel: 'Gửi yêu cầu Supply Hub',
+        inquiryType: 'supply_hub_inquiry',
+      };
+    case 'quote-request':
+    case 'request-quotation':
+    default:
+      return {
+        title: 'Gửi yêu cầu báo giá',
+        intro: 'Gửi thông tin sản phẩm, số lượng và yêu cầu kỹ thuật để ANSLIFE phản hồi báo giá.',
+        productLabel: 'Sản phẩm quan tâm',
+        messageLabel: 'Nội dung',
+        messagePlaceholder: 'Mô tả yêu cầu báo giá, số lượng dự kiến, tiêu chuẩn đóng gói hoặc thị trường.',
+        buttonLabel: 'Gửi báo giá',
+        inquiryType: 'request_quotation',
+      };
+  }
+}
+
 interface QuoteProductOption {
   slug: string;
   title: string;
@@ -153,9 +266,10 @@ export default function ContactPage() {
     ? (sectionParam as ContactSection)
     : 'all';
   const showCompanyInfo = activeSection === 'all' || activeSection === 'company-info';
-  const showQuoteForm = activeSection === 'all' || activeSection === 'quote-request';
-  const showMeetingForm = activeSection === 'all' || activeSection === 'schedule-meeting';
+  const showQuoteForm = activeSection === 'all' || isQuoteContactSection(activeSection);
+  const showMeetingForm = activeSection === 'all' || isMeetingContactSection(activeSection);
   const showMapSection = activeSection === 'map';
+  const quoteFormCopy = useMemo(() => getQuoteFormCopy(activeSection), [activeSection]);
 
   const [quoteState, setQuoteState] = useState<SubmissionState>(idleState);
   const [meetingState, setMeetingState] = useState<SubmissionState>(idleState);
@@ -416,7 +530,8 @@ export default function ContactPage() {
       {showQuoteForm && (
         <section className="form-grid single-col">
           <article className="form-card" id="gui-yeu-cau-bao-gia">
-            <h2>{t('Gửi yêu cầu báo giá')}</h2>
+            <h2>{t(quoteFormCopy.title)}</h2>
+            <p>{t(quoteFormCopy.intro)}</p>
             <form
               onSubmit={(event) =>
                 submitByFormId(quoteFormId, event, setQuoteState, () => {
@@ -437,8 +552,18 @@ export default function ContactPage() {
                 {t('Công ty')}
                 <input name="your-company" required />
               </label>
+              <input type="hidden" name="inquiry-type" value={quoteFormCopy.inquiryType} />
+              {quoteFormCopy.referenceLabel && (
+                <label>
+                  {t(quoteFormCopy.referenceLabel)}
+                  <input
+                    name="reference-link"
+                    placeholder={t(quoteFormCopy.referencePlaceholder ?? '')}
+                  />
+                </label>
+              )}
               <div className="product-interest-field">
-                <label htmlFor="product-interest-input">{t('Sản phẩm quan tâm')}</label>
+                <label htmlFor="product-interest-input">{t(quoteFormCopy.productLabel)}</label>
                 <div className="product-interest-inline">
                   <div className="product-interest-autocomplete">
                     <input
@@ -513,15 +638,20 @@ export default function ContactPage() {
                 </p>
               </div>
               <label>
-                {t('Nội dung')}
-                <textarea name="your-message" rows={4} required />
+                {t(quoteFormCopy.messageLabel)}
+                <textarea
+                  name="your-message"
+                  rows={4}
+                  placeholder={t(quoteFormCopy.messagePlaceholder)}
+                  required
+                />
               </label>
               <button
                 type="submit"
                 className="button-solid"
                 disabled={quoteState.status === 'loading'}
               >
-                {quoteState.status === 'loading' ? t('Đang gửi...') : t('Gửi báo giá')}
+                {quoteState.status === 'loading' ? t('Đang gửi...') : t(quoteFormCopy.buttonLabel)}
               </button>
               {quoteState.status !== 'idle' && (
                 <p className={quoteState.status === 'success' ? 'success-text' : 'error-text'}>
