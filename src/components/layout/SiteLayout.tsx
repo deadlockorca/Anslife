@@ -158,10 +158,6 @@ const FOOTER_CONTACT_ITEMS = [
   },
 ] as const;
 
-const FOOTER_LEGAL_LINKS = [
-  { label: 'Chính sách bảo mật', path: '/contact/company-info' },
-  { label: 'Điều khoản sử dụng', path: '/commercial-process' },
-] as const;
 const DEFAULT_SITE_BG_VIDEO_MP4 = '/assets/videos/home-bg.mp4';
 const DEFAULT_SITE_BG_VIDEO_POSTER = '/assets/videos/home-bg-poster.jpg';
 
@@ -1981,18 +1977,6 @@ export default function SiteLayout() {
             <p className="site-footer-copy">
               © {footerYear} ANSLIFE. {t('Mọi quyền được bảo lưu.')}
             </p>
-            <nav className="site-footer-legal-links" aria-label={t('Liên kết chân trang')}>
-              {FOOTER_LEGAL_LINKS.map((item) => (
-                <Link
-                  key={item.path}
-                  to={toLocalizedPath(item.path)}
-                  className="site-footer-legal-link"
-                  onClick={closeNavigationMenus}
-                >
-                  {t(item.label)}
-                </Link>
-              ))}
-            </nav>
           </div>
         </footer>
       )}
