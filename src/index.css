@@ -10406,9 +10406,69 @@ a.mobile-menu-utility-link {
   backdrop-filter: none;
 }
 
+.site-shell.is-home-route .topbar::before,
+.site-shell:has(.home-anslife-root) .topbar::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 -1.2rem;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 16, 28, 0.68) 0%,
+    rgba(7, 16, 28, 0.42) 56%,
+    rgba(7, 16, 28, 0) 100%
+  );
+}
+
 .site-shell.is-home-route .topbar-inner,
 .site-shell:has(.home-anslife-root) .topbar-inner {
   width: min(var(--layout-max-wide-width), calc(100% - var(--layout-gutter)));
+  position: relative;
+  z-index: 1;
+}
+
+.site-shell.is-home-route .topbar-segment-link,
+.site-shell:has(.home-anslife-root) .topbar-segment-link,
+.site-shell.is-home-route .topbar-meta-link,
+.site-shell:has(.home-anslife-root) .topbar-meta-link,
+.site-shell.is-home-route .menu-link,
+.site-shell:has(.home-anslife-root) .menu-link,
+.site-shell.is-home-route .topbar-hotline,
+.site-shell:has(.home-anslife-root) .topbar-hotline,
+.site-shell.is-home-route .language-switcher,
+.site-shell:has(.home-anslife-root) .language-switcher {
+  color: #f7fbff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+
+.site-shell.is-home-route .menu-link.has-children::after,
+.site-shell:has(.home-anslife-root) .menu-link.has-children::after {
+  color: rgba(247, 251, 255, 0.82);
+}
+
+.site-shell.is-home-route .topbar-hotline,
+.site-shell:has(.home-anslife-root) .topbar-hotline,
+.site-shell.is-home-route .language-switcher,
+.site-shell:has(.home-anslife-root) .language-switcher {
+  border-color: rgba(255, 255, 255, 0.32);
+  background: rgba(7, 16, 28, 0.18);
+}
+
+.site-shell.is-home-route .topbar-segment-link:hover,
+.site-shell:has(.home-anslife-root) .topbar-segment-link:hover,
+.site-shell.is-home-route .topbar-segment-link.is-active,
+.site-shell:has(.home-anslife-root) .topbar-segment-link.is-active,
+.site-shell.is-home-route .topbar-meta-link:hover,
+.site-shell:has(.home-anslife-root) .topbar-meta-link:hover,
+.site-shell.is-home-route .topbar-meta-link.is-active,
+.site-shell:has(.home-anslife-root) .topbar-meta-link.is-active,
+.site-shell.is-home-route .menu-link:hover,
+.site-shell:has(.home-anslife-root) .menu-link:hover,
+.site-shell.is-home-route .menu-link.is-active,
+.site-shell:has(.home-anslife-root) .menu-link.is-active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .site-shell.is-home-route .mobile-home-menu-fab,
@@ -10422,6 +10482,7 @@ a.mobile-menu-utility-link {
   box-shadow: none;
   color: #f7fbff;
   font-size: 1.56rem;
+  filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.42));
 }
 
 .site-shell.is-home-route .topbar-utility,
