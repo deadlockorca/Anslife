@@ -83,61 +83,6 @@ const HEADER_UTILITY_LINKS = [
   { label: 'Mạng lưới', path: '/global-network' },
   { label: 'Tuyển dụng', path: '/scholarship-community/join-anslife' },
 ] as const;
-const FOOTER_NAV_COLUMNS = [
-  {
-    title: 'VỀ ANSLIFE',
-    links: [
-      { label: 'Giới thiệu về công ty', path: '/about-anslife/company-intro' },
-      { label: 'Hệ sinh thái sản xuất', path: '/manufacturing-ecosystem' },
-      {
-        label: 'Năng lực sản xuất',
-        path: '/manufacturing-ecosystem/production-ecosystem-scale',
-      },
-      { label: 'Hệ thống kiểm soát chất lượng', path: '/quality-control' },
-    ],
-  },
-  {
-    title: 'QUY TRÌNH THƯƠNG MẠI',
-    links: [
-      { label: 'Quy trình phát triển mẫu', path: '/manufacturing-ecosystem/sample-development' },
-      { label: 'Quy trình đặt hàng', path: '/commercial-process/order-flow' },
-      { label: 'Điều kiện giao hàng (Incoterms)', path: '/commercial-process/incoterms' },
-      { label: 'Phương thức thanh toán', path: '/commercial-process/payment' },
-      { label: 'Thời gian sản xuất', path: '/commercial-process/lead-time' },
-      { label: 'Logistics', path: '/commercial-process/logistics' },
-    ],
-  },
-  {
-    title: 'DỰ ÁN & CASE STUDY',
-    links: [
-      { label: 'Dự án xuất khẩu', path: '/projects/type/du-an-xuat-khau' },
-      { label: 'Case sản xuất', path: '/projects/type/case-san-xuat' },
-      { label: 'Case cải tiến', path: '/projects/type/case-cai-tien' },
-      { label: 'Hình ảnh giao hàng', path: '/projects/type/hinh-anh-giao-hang' },
-      { label: 'Hình ảnh container', path: '/projects/type/hinh-anh-container' },
-    ],
-  },
-  {
-    title: 'HỆ THỐNG TOÀN CẦU',
-    links: [
-      { label: 'Việt Nam – Trụ sở', path: '/global-network/vietnam-hq' },
-      { label: 'Singapore – Văn phòng', path: '/global-network/singapore-office' },
-      { label: 'Nhật Bản – Văn phòng', path: '/global-network/japan-office' },
-      { label: 'Hoa Kỳ – Văn phòng', path: '/global-network/us-office' },
-      { label: 'Đối tác quốc tế', path: '/global-network/international-partners' },
-    ],
-  },
-  {
-    title: 'PHỤNG SỰ XÃ HỘI',
-    links: [
-      { label: 'Giới thiệu triết lý', path: '/scholarship-community/fund-overview' },
-      { label: 'Hoạt động cộng đồng', path: '/scholarship-community/community-activities' },
-      { label: 'Quỹ học bổng', path: '/scholarship-community/scholarship-program' },
-      { label: 'Báo cáo & tác động', path: '/scholarship-community/workforce-development' },
-    ],
-  },
-] as const;
-
 type FooterContactIcon = 'location' | 'phone' | 'mail' | 'website';
 
 const FOOTER_CONTACT_ITEMS = [
@@ -410,6 +355,16 @@ export default function SiteLayout() {
   const desktopSecondaryTopMenuItems = useMemo(
     () => desktopTopMenuItems.slice(desktopPrimaryMenuCount),
     [desktopPrimaryMenuCount, desktopTopMenuItems],
+  );
+  const footerTopMenuItems = useMemo(
+    () =>
+      desktopTopMenuItems.filter(
+        (item) =>
+          item.path !== '/' &&
+          item.path !== '/vietnam-supply-hub' &&
+          item.path !== '/quality-control',
+      ),
+    [desktopTopMenuItems],
   );
   const mobileUtilityMenuItems = useMemo(
     () =>
@@ -1353,6 +1308,39 @@ export default function SiteLayout() {
     );
   }
 
+  function renderFooterHeaderMenuItems(
+    items: MenuChildItem[] = [],
+    keyPrefix: string,
+  ): ReactNode {
+    return items.map((item, index) => {
+      const itemKey = `${keyPrefix}-${item.path}-${index}`;
+
+      return (
+        <div key={itemKey} className="site-footer-menu-item">
+          {isExternalPath(item.path) ? (
+            <a
+              href={toLocalizedPath(item.path)}
+              className="site-footer-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeNavigationMenus}
+            >
+              {t(item.label)}
+            </a>
+          ) : (
+            <Link
+              to={toLocalizedPath(item.path)}
+              className="site-footer-link"
+              onClick={closeNavigationMenus}
+            >
+              {t(item.label)}
+            </Link>
+          )}
+        </div>
+      );
+    });
+  }
+
   const footerContactSectionKey = 'contact';
   const footerContactSectionId = 'site-footer-contact-list';
   const isFooterContactExpanded = Boolean(expandedFooterSections[footerContactSectionKey]);
@@ -1907,39 +1895,53 @@ export default function SiteLayout() {
                 />
               </Link>
               <p className="site-footer-company-copy">
-                {t('Nhà sản xuất và xuất khẩu nội thất gỗ uy tín cho các thương hiệu toàn cầu.')}
+                {t('Sản xuất và xuất khẩu nội thất gỗ.')}
               </p>
               <SocialLinks className="site-footer-social-icons" />
             </section>
 
-            {FOOTER_NAV_COLUMNS.map((column, index) => {
+            {footerTopMenuItems.map((column, index) => {
               const sectionKey = `column-${index}`;
               const sectionId = `site-footer-links-${index}`;
               const isSectionExpanded = Boolean(expandedFooterSections[sectionKey]);
-              const columnTitle = t(column.title);
+              const columnTitle = t(column.label);
 
               return (
                 <nav
-                  key={column.title}
+                  key={column.path}
                   className="site-footer-section site-footer-column"
                   aria-label={columnTitle}
                 >
                   {renderFooterSectionToggle(sectionKey, sectionId, columnTitle, isSectionExpanded)}
-                  <h3>{columnTitle}</h3>
+                  <h3>
+                    {isExternalPath(column.path) ? (
+                      <a
+                        href={toLocalizedPath(column.path)}
+                        className="site-footer-heading-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={closeNavigationMenus}
+                      >
+                        {columnTitle}
+                      </a>
+                    ) : (
+                      <Link
+                        to={toLocalizedPath(column.path)}
+                        className="site-footer-heading-link"
+                        onClick={closeNavigationMenus}
+                      >
+                        {columnTitle}
+                      </Link>
+                    )}
+                  </h3>
                   <div
                     id={sectionId}
                     className={`site-footer-links ${isSectionExpanded ? 'is-open' : ''}`}
                   >
-                    {column.links.map((item, itemIndex) => (
-                      <Link
-                        key={`${column.title}-${item.path}-${itemIndex}`}
-                        to={toLocalizedPath(item.path)}
-                        className="site-footer-link"
-                        onClick={closeNavigationMenus}
-                      >
-                        {t(item.label)}
-                      </Link>
-                    ))}
+                    {renderFooterHeaderMenuItems(
+                      column.children ?? [],
+                      `footer-header-menu-${column.path}`,
+                    )}
                   </div>
                 </nav>
               );

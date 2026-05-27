@@ -165,7 +165,7 @@ export const TOP_MENU: TopMenuItem[] = [
     path: '/about-anslife',
     children: [
       { label: 'Tổng quan công ty', path: '/about-anslife/company-intro' },
-      { label: 'Chúng tôi làm gì', path: '/about-anslife/what-we-do' },
+      { label: 'Lịch sử phát triển', path: '/about-anslife/development-history' },
       { label: 'Tiêu chuẩn & QC', path: '/about-anslife/working-standards' },
       { label: 'Thông tin công ty', path: '/about-anslife/company-info' },
     ],
@@ -430,9 +430,9 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
           'ANSLIFE là một hệ thống sản xuất và xuất khẩu nội thất tập trung vào chuỗi sản xuất, kiểm soát chất lượng và kết nối nguồn lực trong ngành.',
       },
       {
-        id: 'what-we-do',
-        title: 'Chúng tôi làm gì',
-        description: 'Năng lực sản xuất, cung ứng và điều phối xuất khẩu của ANSLIFE.',
+        id: 'development-history',
+        title: 'Lịch sử phát triển',
+        description: 'Các giai đoạn phát triển của ANSLIFE từ thiết kế, sản xuất đến hệ sinh thái xuất khẩu.',
       },
       {
         id: 'working-standards',

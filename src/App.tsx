@@ -77,6 +77,10 @@ export default function App() {
               element={<CmsSectionPage config={STATIC_PAGE_MAP.about} />}
             />
             <Route
+              path={trimLeadingSlash(`${STATIC_PAGE_MAP.about.path}/what-we-do`)}
+              element={<Navigate to={`/${language}/about-anslife/development-history`} replace />}
+            />
+            <Route
               path={trimLeadingSlash(`${STATIC_PAGE_MAP.about.path}/:sectionId`)}
               element={<CmsSubSectionPage config={STATIC_PAGE_MAP.about} />}
             />

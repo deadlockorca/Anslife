@@ -64,8 +64,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         section.id === 'working-standards' ||
         section.id === 'organization' ||
         section.id === 'team' ||
-        section.id === 'anslife-ecosystem' ||
-        section.id === 'development-history'));
+        section.id === 'anslife-ecosystem'));
   const shouldForceTemplateHtml =
     config.slug === 'manufacturing-ecosystem' ||
     config.slug === 'quality-control' ||
@@ -81,8 +80,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         section.id === 'production-philosophy' ||
         section.id === 'organization' ||
         section.id === 'team' ||
-        section.id === 'anslife-ecosystem' ||
-        section.id === 'development-history'));
+        section.id === 'anslife-ecosystem'));
   const resolvedHtml = shouldForceTemplateHtml
     ? fallbackHtml ?? data?.content.rendered
     : data?.content.rendered ?? fallbackHtml;
