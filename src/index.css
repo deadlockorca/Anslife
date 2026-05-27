@@ -8982,7 +8982,13 @@ a.mobile-menu-utility-link {
   }
 
   .anslife-faq-topic-head {
-    position: static;
+    position: sticky;
+    top: 150px;
+    z-index: 2;
+  }
+
+  .anslife-faq-topic {
+    scroll-margin-top: 220px;
   }
 
   .meeting-calendar-months {
@@ -9115,7 +9121,9 @@ a.mobile-menu-utility-link {
   }
 
   .ai-history-year {
-    position: static;
+    position: sticky;
+    top: 72px;
+    align-self: start;
     width: 54px;
     min-height: 36px;
     font-size: 0.82rem;
@@ -9752,16 +9760,17 @@ a.mobile-menu-utility-link {
   }
 
   .ai-history-timeline::before {
-    left: 20px;
+    left: 28px;
   }
 
   .ai-history-timeline-card {
-    grid-template-columns: 40px minmax(0, 1fr);
-    gap: 0.72rem;
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 1.35rem;
   }
 
   .ai-history-year {
-    width: 40px;
+    top: 68px;
+    width: 54px;
     min-height: 32px;
     font-size: 0.72rem;
   }
@@ -9772,7 +9781,7 @@ a.mobile-menu-utility-link {
 
   .ai-history-card-copy::before {
     top: 0.94rem;
-    left: -0.98rem;
+    left: -1.05rem;
     width: 11px;
     height: 11px;
   }
@@ -9950,10 +9959,19 @@ a.mobile-menu-utility-link {
   }
 
   .anslife-faq-topic-nav {
-    position: static;
+    position: sticky;
+    top: 68px;
     overflow-x: auto;
     flex-wrap: nowrap;
     scrollbar-width: none;
+  }
+
+  .anslife-faq-topic {
+    scroll-margin-top: 190px;
+  }
+
+  .anslife-faq-topic-head {
+    top: 128px;
   }
 
   .anslife-faq-topic-nav::-webkit-scrollbar {
