@@ -4912,6 +4912,413 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
       },
     ],
   },
+  /* FAQ localized content is defined near getResourcesFaqSectionHtml.
+  sv: buildCompactResourcesFaqContent({
+    title: 'Vanliga frågor för köpare',
+    intro:
+      'Här finns svar på vanliga frågor från internationella köpare om samarbete med ANSLIFE JSC kring produktion, leveranskedja, QC, lager, betalning och internationell leverans.',
+    labels: {
+      about: ['Om ANSLIFE', 'Om ANSLIFE JSC'],
+      products: ['Produkter & material', 'Produkter, material och produktion'],
+      operations: ['Projektledning', 'Projektledning i Vietnam'],
+      quality: ['QC & standarder', 'Kvalitetskontroll och standarder'],
+      warehouse: ['Lager & export', 'Lager, Vietnam Supply Hub och export'],
+      payment: ['Betalning', 'Internationell betalning och handelsfinansiering'],
+      trade: ['Internationell leverans', 'Handelsvillkor och internationell leverans'],
+    },
+    questions: {
+      aboutCompany: 'Vilken typ av företag är ANSLIFE JSC?',
+      aboutFactory: 'Är ANSLIFE JSC en fabrik?',
+      aboutDifference: 'Hur skiljer sig ANSLIFE från en vanlig fabrik?',
+      productsScope: 'Vilka produktgrupper kan ANSLIFE stödja?',
+      productsDrawings: 'Kan ANSLIFE utveckla produkter från ritningar eller prover?',
+      productsOem: 'Stödjer ANSLIFE OEM eller ODM?',
+      operationsExistingFactory: 'Hur kan ANSLIFE hjälpa om köparen redan har en fabrik i Vietnam?',
+      operationsRepresentative: 'Kan ANSLIFE vara operativ representant i Vietnam?',
+      operationsIssues: 'Kan ANSLIFE hjälpa till att hantera produktionsproblem?',
+      qualityIndependent: 'Är ANSLIFE QC oberoende från fabriken?',
+      qualityStandards: 'Vilka standarder kan ANSLIFE kontrollera?',
+      qualityReports: 'Kan ANSLIFE ta fram inspektionsrapporter?',
+      warehouseSupport: 'Stödjer ANSLIFE lagerhållning i Vietnam?',
+      warehouseConsolidate: 'Kan ANSLIFE samla gods från flera källor?',
+      warehouseDocuments: 'Kan ANSLIFE stödja exportdokument?',
+      paymentMethods: 'Vilka internationella betalningssätt kan ANSLIFE stödja?',
+      paymentLc: 'Kan ANSLIFE arbeta med remburs?',
+      paymentMilestone: 'Kan betalning följa produktionsmilstolpar?',
+      tradeTerms: 'Vilka handelsvillkor kan ANSLIFE arbeta med?',
+      tradeFob: 'Kan ANSLIFE offerera FOB?',
+      tradeForwarder: 'Kan köparen använda egen speditör?',
+    },
+    answers: {
+      aboutCompany:
+        'ANSLIFE JSC är en Vietnam-baserad partner för produktion, leveranskedja och export inom möbler, komponenter och material.',
+      aboutFactory:
+        'ANSLIFE är inte bara en enskild fabrik. Modellen kombinerar fabriker, satellitpartners, materialförsörjning, oberoende QC, lager och exportdrift.',
+      aboutDifference:
+        'En vanlig fabrik fokuserar mest på tillverkning. ANSLIFE samordnar även produktutveckling, material, QC, lager, projektuppföljning, dokument och export.',
+      productsScope:
+        'ANSLIFE stödjer färdiga möbler, möbelkomponenter, produktionsmaterial, QC, packning, lager och planerad export från Vietnam.',
+      productsDrawings:
+        'Ja. Produkter kan utvecklas från ritningar, referensbilder, fysiska prover eller tekniska krav med provtagning och förberedelse för serieproduktion.',
+      productsOem:
+        'Ja. ANSLIFE stödjer både OEM och ODM från idé, ritning och prov till materialval, ytfinish, packning och produktion.',
+      operationsExistingFactory:
+        'ANSLIFE kan stödja fabriksuppföljning, materialkontroll, oberoende QC, packningskontroll, lager, rapporter och exportplanering.',
+      operationsRepresentative:
+        'Ja. ANSLIFE kan följa framdrift, registrera produktionsstatus, kontrollera kvalitet, lagra prover, följa dokument och rapportera enligt avtalad omfattning.',
+      operationsIssues:
+        'Ja. Vid problem med material, tidplan, kvalitet, packning, dokument eller leverans registrerar ANSLIFE läget och samordnar tydliga lösningar.',
+      qualityIndependent:
+        'Ja. QC-funktionen är separerad från produktionen för att ge mer objektiv kontroll enligt köparens godkända standard.',
+      qualityStandards:
+        'ANSLIFE kan kontrollera struktur, mått, färg, fukt, ytfinish, material, komponenter, packning, etiketter och skick före leverans.',
+      qualityReports:
+        'Ja. Rapporter kan göras per fas eller före leverans med bilder, status, avvikelser, mått, färg, fukt, packning och åtgärdsförslag.',
+      warehouseSupport:
+        'Ja. ANSLIFE stödjer lagerhållning av varor, prover, material, komponenter, standards och buffertlager i Vietnam.',
+      warehouseConsolidate:
+        'Ja. Varor från flera fabriker, leverantörer eller produktgrupper kan samlas för kontroll, packning, lager och export enligt plan.',
+      warehouseDocuments:
+        'Ja. ANSLIFE kan samordna Commercial Invoice, Packing List, Bill of Lading, Certificate of Origin och andra nödvändiga dokument.',
+      paymentMethods:
+        'ANSLIFE kan arbeta med internationell banköverföring, remburs, documentary collection, milstolpsbetalning och andra avtalade handelsbetalningar.',
+      paymentLc:
+        'Ja, för lämpliga order. Villkor, bank, leveransperiod, giltighet, dokument och betalningsvillkor ska bekräftas före order.',
+      paymentMilestone:
+        'Ja. Vissa projekt kan använda betalning vid order, prov, produktionsslut, efter inspektion eller före leverans.',
+      tradeTerms:
+        'ANSLIFE kan arbeta med EXW, FCA, FOB, CFR, CIF, leverans till destination och i vissa fall DDP beroende på order och marknad.',
+      tradeFob:
+        'Ja. FOB kan offereras från lämpliga exporthamnar i Vietnam med lokala kostnader, lastning, dokument och fartygstidplan bekräftade per order.',
+      tradeForwarder:
+        'Ja. Köparen kan utse egen speditör eller logistikpartner, medan ANSLIFE koordinerar varor, dokument, lastning och överlämning inom avtalad omfattning.',
+    },
+  }),
+  fr: buildCompactResourcesFaqContent({
+    title: 'Questions fréquentes pour les acheteurs',
+    intro:
+      'Cette page répond aux questions fréquentes des acheteurs internationaux sur la collaboration avec ANSLIFE JSC pour la production, la supply chain, le QC, le stockage, le paiement et la livraison internationale.',
+    labels: {
+      about: ['À propos d’ANSLIFE', 'À propos d’ANSLIFE JSC'],
+      products: ['Produits & matériaux', 'Produits, matériaux et production'],
+      operations: ['Opération projet', 'Opération de projet au Vietnam'],
+      quality: ['QC & standards', 'Contrôle qualité et standards'],
+      warehouse: ['Stockage & export', 'Stockage, Vietnam Supply Hub et export'],
+      payment: ['Paiement', 'Paiement international et financement commercial'],
+      trade: ['Livraison internationale', 'Conditions commerciales et livraison internationale'],
+    },
+    questions: {
+      aboutCompany: 'Quel type d’entreprise est ANSLIFE JSC ?',
+      aboutFactory: 'ANSLIFE JSC est-elle une usine ?',
+      aboutDifference: 'Quelle est la différence avec une usine classique ?',
+      productsScope: 'Quels groupes de produits ANSLIFE peut-elle prendre en charge ?',
+      productsDrawings: 'ANSLIFE peut-elle développer un produit à partir de plans ou d’échantillons ?',
+      productsOem: 'ANSLIFE prend-elle en charge l’OEM ou l’ODM ?',
+      operationsExistingFactory: 'Comment ANSLIFE aide-t-elle si l’acheteur a déjà une usine au Vietnam ?',
+      operationsRepresentative: 'ANSLIFE peut-elle agir comme représentant opérationnel au Vietnam ?',
+      operationsIssues: 'ANSLIFE peut-elle aider à traiter les problèmes de production ?',
+      qualityIndependent: 'Le QC d’ANSLIFE est-il indépendant de l’usine ?',
+      qualityStandards: 'Quels standards ANSLIFE peut-elle contrôler ?',
+      qualityReports: 'ANSLIFE peut-elle préparer des rapports d’inspection ?',
+      warehouseSupport: 'ANSLIFE prend-elle en charge le stockage au Vietnam ?',
+      warehouseConsolidate: 'ANSLIFE peut-elle consolider des marchandises de plusieurs sources ?',
+      warehouseDocuments: 'ANSLIFE peut-elle soutenir les documents export ?',
+      paymentMethods: 'Quels modes de paiement international ANSLIFE peut-elle soutenir ?',
+      paymentLc: 'ANSLIFE peut-elle travailler avec une lettre de crédit ?',
+      paymentMilestone: 'Le paiement peut-il suivre les étapes de production ?',
+      tradeTerms: 'Avec quelles conditions commerciales ANSLIFE peut-elle travailler ?',
+      tradeFob: 'ANSLIFE peut-elle établir un devis FOB ?',
+      tradeForwarder: 'L’acheteur peut-il utiliser son propre transitaire ?',
+    },
+    answers: {
+      aboutCompany:
+        'ANSLIFE JSC est un partenaire vietnamien de production, de supply chain et d’export pour les acheteurs internationaux de meubles, composants et matériaux.',
+      aboutFactory:
+        'ANSLIFE n’est pas seulement une usine unique. Le modèle combine usines, partenaires satellites, approvisionnement matériaux, QC indépendant, stockage et opérations export.',
+      aboutDifference:
+        'Une usine classique se concentre surtout sur la fabrication. ANSLIFE coordonne aussi développement produit, matériaux, QC, stockage, suivi projet, documents et export.',
+      productsScope:
+        'ANSLIFE soutient meubles finis, composants, matériaux de production, QC, emballage, stockage et export planifié depuis le Vietnam.',
+      productsDrawings:
+        'Oui. Les produits peuvent être développés depuis des plans, images de référence, échantillons physiques ou exigences techniques, jusqu’à l’échantillonnage et la préparation série.',
+      productsOem:
+        'Oui. ANSLIFE soutient OEM et ODM depuis l’idée, le plan ou l’échantillon jusqu’au choix des matériaux, finition, emballage et production.',
+      operationsExistingFactory:
+        'ANSLIFE peut soutenir suivi usine, contrôle matériaux, QC indépendant, contrôle emballage, stockage, rapports et planification export.',
+      operationsRepresentative:
+        'Oui. ANSLIFE peut suivre l’avancement, enregistrer l’état de production, contrôler la qualité, stocker les échantillons, suivre les documents et reporter selon le périmètre convenu.',
+      operationsIssues:
+        'Oui. En cas de problème de matériaux, délai, qualité, emballage, documents ou livraison, ANSLIFE enregistre la situation et coordonne des solutions claires.',
+      qualityIndependent:
+        'Oui. Le QC est séparé de la production afin d’assurer un contrôle plus objectif selon les standards approuvés par l’acheteur.',
+      qualityStandards:
+        'ANSLIFE peut contrôler structure, dimensions, couleur, humidité, finition, matériaux, composants, emballage, étiquettes et état avant expédition.',
+      qualityReports:
+        'Oui. Les rapports peuvent être établis par étape ou avant expédition avec photos, état, écarts, dimensions, couleur, humidité, emballage et propositions d’action.',
+      warehouseSupport:
+        'Oui. ANSLIFE soutient le stockage de marchandises, échantillons, matériaux, composants, standards produit et stock tampon au Vietnam.',
+      warehouseConsolidate:
+        'Oui. Les marchandises de plusieurs usines, fournisseurs ou groupes produits peuvent être consolidées pour contrôle, emballage, stockage et export.',
+      warehouseDocuments:
+        'Oui. ANSLIFE peut coordonner Commercial Invoice, Packing List, Bill of Lading, Certificate of Origin et autres documents nécessaires.',
+      paymentMethods:
+        'ANSLIFE peut travailler avec virement international, lettre de crédit, remise documentaire, paiement par jalons et autres modes convenus.',
+      paymentLc:
+        'Oui, pour les commandes adaptées. Conditions, banque, période d’expédition, validité, documents et paiement doivent être confirmés avant commande.',
+      paymentMilestone:
+        'Oui. Certains projets peuvent prévoir un paiement à la commande, après échantillon, fin de production, après inspection ou avant expédition.',
+      tradeTerms:
+        'ANSLIFE peut travailler avec EXW, FCA, FOB, CFR, CIF, livraison à destination et parfois DDP selon commande et marché.',
+      tradeFob:
+        'Oui. Un devis FOB peut être établi depuis des ports export appropriés au Vietnam, avec coûts locaux, chargement, documents et planning confirmés par commande.',
+      tradeForwarder:
+        'Oui. L’acheteur peut désigner son transitaire ou logisticien, ANSLIFE coordonnant marchandises, documents, chargement et remise dans le périmètre convenu.',
+    },
+  }),
+  ru: buildCompactResourcesFaqContent({
+    title: 'Частые вопросы для покупателей',
+    intro:
+      'Эта страница отвечает на частые вопросы международных покупателей о работе с ANSLIFE JSC по производству, цепочке поставок, QC, складу, оплате и международной доставке.',
+    labels: {
+      about: ['Об ANSLIFE', 'Об ANSLIFE JSC'],
+      products: ['Продукты и материалы', 'Продукты, материалы и производство'],
+      operations: ['Управление проектом', 'Управление проектом во Вьетнаме'],
+      quality: ['QC и стандарты', 'Контроль качества и стандарты'],
+      warehouse: ['Склад и экспорт', 'Склад, Vietnam Supply Hub и экспорт'],
+      payment: ['Оплата', 'Международная оплата и торговое финансирование'],
+      trade: ['Международная доставка', 'Торговые условия и международная доставка'],
+    },
+    questions: {
+      aboutCompany: 'Что представляет собой ANSLIFE JSC?',
+      aboutFactory: 'ANSLIFE JSC является фабрикой?',
+      aboutDifference: 'Чем ANSLIFE отличается от обычной фабрики?',
+      productsScope: 'Какие группы продуктов поддерживает ANSLIFE?',
+      productsDrawings: 'Может ли ANSLIFE разработать продукт по чертежам или образцам?',
+      productsOem: 'Поддерживает ли ANSLIFE OEM или ODM?',
+      operationsExistingFactory: 'Как ANSLIFE помогает, если у покупателя уже есть фабрика во Вьетнаме?',
+      operationsRepresentative: 'Может ли ANSLIFE быть операционным представителем во Вьетнаме?',
+      operationsIssues: 'Может ли ANSLIFE помогать с производственными проблемами?',
+      qualityIndependent: 'QC ANSLIFE независим от фабрики?',
+      qualityStandards: 'Какие стандарты ANSLIFE может проверять?',
+      qualityReports: 'Может ли ANSLIFE готовить инспекционные отчеты?',
+      warehouseSupport: 'Поддерживает ли ANSLIFE складирование во Вьетнаме?',
+      warehouseConsolidate: 'Может ли ANSLIFE консолидировать товары из разных источников?',
+      warehouseDocuments: 'Может ли ANSLIFE поддержать экспортные документы?',
+      paymentMethods: 'Какие международные способы оплаты поддерживает ANSLIFE?',
+      paymentLc: 'Может ли ANSLIFE работать с аккредитивом?',
+      paymentMilestone: 'Может ли оплата идти по этапам производства?',
+      tradeTerms: 'С какими торговыми условиями работает ANSLIFE?',
+      tradeFob: 'Может ли ANSLIFE дать цену FOB?',
+      tradeForwarder: 'Может ли покупатель назначить своего экспедитора?',
+    },
+    answers: {
+      aboutCompany:
+        'ANSLIFE JSC - вьетнамский партнер по производству, цепочке поставок и экспорту для международных покупателей мебели, компонентов и материалов.',
+      aboutFactory:
+        'ANSLIFE не является только одной фабрикой. Модель объединяет фабрики, спутниковых партнеров, поставку материалов, независимый QC, склад и экспортные операции.',
+      aboutDifference:
+        'Обычная фабрика в основном производит. ANSLIFE также координирует разработку продукта, материалы, QC, склад, проектное сопровождение, документы и экспорт.',
+      productsScope:
+        'ANSLIFE поддерживает готовую мебель, компоненты, производственные материалы, QC, упаковку, склад и плановый экспорт из Вьетнама.',
+      productsDrawings:
+        'Да. Продукты могут разрабатываться по чертежам, референсам, физическим образцам или техническим требованиям, включая образцы и подготовку к серии.',
+      productsOem:
+        'Да. ANSLIFE поддерживает OEM и ODM от идеи, чертежа или образца до выбора материалов, отделки, упаковки и производства.',
+      operationsExistingFactory:
+        'ANSLIFE может поддержать контроль фабрики, материалов, независимый QC, упаковку, склад, отчеты и экспортное планирование.',
+      operationsRepresentative:
+        'Да. ANSLIFE может отслеживать прогресс, фиксировать статус производства, контролировать качество, хранить образцы, следить за документами и предоставлять отчеты.',
+      operationsIssues:
+        'Да. При проблемах с материалами, сроками, качеством, упаковкой, документами или доставкой ANSLIFE фиксирует ситуацию и координирует решения.',
+      qualityIndependent:
+        'Да. QC отделен от производства, чтобы обеспечить более объективный контроль по утвержденным стандартам покупателя.',
+      qualityStandards:
+        'ANSLIFE может проверять конструкцию, размеры, цвет, влажность, отделку, материалы, компоненты, упаковку, маркировку и состояние перед отгрузкой.',
+      qualityReports:
+        'Да. Отчеты могут готовиться по этапам или перед отгрузкой с фото, статусом, отклонениями, размерами, цветом, влажностью, упаковкой и рекомендациями.',
+      warehouseSupport:
+        'Да. ANSLIFE поддерживает складирование товаров, образцов, материалов, компонентов, стандартов продукта и буферного запаса во Вьетнаме.',
+      warehouseConsolidate:
+        'Да. Товары от разных фабрик, поставщиков или групп продуктов могут консолидироваться для проверки, упаковки, склада и экспорта.',
+      warehouseDocuments:
+        'Да. ANSLIFE может координировать Commercial Invoice, Packing List, Bill of Lading, Certificate of Origin и другие документы.',
+      paymentMethods:
+        'ANSLIFE может работать с международным переводом, аккредитивом, документарным инкассо, оплатой по этапам и другими согласованными методами.',
+      paymentLc:
+        'Да, для подходящих заказов. Условия, банк, срок отгрузки, срок действия, документы и платежные условия подтверждаются до заказа.',
+      paymentMilestone:
+        'Да. Некоторые проекты могут предусматривать оплату при заказе, после образца, завершения производства, инспекции или перед отгрузкой.',
+      tradeTerms:
+        'ANSLIFE может работать с EXW, FCA, FOB, CFR, CIF, доставкой до места назначения и иногда DDP в зависимости от заказа и рынка.',
+      tradeFob:
+        'Да. FOB может быть рассчитан от подходящих экспортных портов Вьетнама с подтверждением местных расходов, загрузки, документов и графика.',
+      tradeForwarder:
+        'Да. Покупатель может назначить своего экспедитора или логистического партнера, а ANSLIFE координирует товар, документы, загрузку и передачу.',
+    },
+  }),
+  es: buildCompactResourcesFaqContent({
+    title: 'Preguntas frecuentes para compradores',
+    intro:
+      'Esta página responde preguntas comunes de compradores internacionales sobre trabajar con ANSLIFE JSC en producción, cadena de suministro, QC, almacén, pago y entrega internacional.',
+    labels: {
+      about: ['Sobre ANSLIFE', 'Sobre ANSLIFE JSC'],
+      products: ['Productos y materiales', 'Productos, materiales y producción'],
+      operations: ['Operación de proyecto', 'Operación de proyecto en Vietnam'],
+      quality: ['QC y estándares', 'Control de calidad y estándares'],
+      warehouse: ['Almacén y exportación', 'Almacén, Vietnam Supply Hub y exportación'],
+      payment: ['Pago', 'Pago internacional y financiación comercial'],
+      trade: ['Entrega internacional', 'Términos comerciales y entrega internacional'],
+    },
+    questions: {
+      aboutCompany: '¿Qué tipo de empresa es ANSLIFE JSC?',
+      aboutFactory: '¿ANSLIFE JSC es una fábrica?',
+      aboutDifference: '¿En qué se diferencia ANSLIFE de una fábrica normal?',
+      productsScope: '¿Qué grupos de productos puede apoyar ANSLIFE?',
+      productsDrawings: '¿ANSLIFE puede desarrollar productos desde planos o muestras?',
+      productsOem: '¿ANSLIFE apoya OEM u ODM?',
+      operationsExistingFactory: '¿Cómo ayuda ANSLIFE si el comprador ya tiene una fábrica en Vietnam?',
+      operationsRepresentative: '¿ANSLIFE puede actuar como representante operativo en Vietnam?',
+      operationsIssues: '¿ANSLIFE puede ayudar a manejar problemas de producción?',
+      qualityIndependent: '¿El QC de ANSLIFE es independiente de la fábrica?',
+      qualityStandards: '¿Qué estándares puede inspeccionar ANSLIFE?',
+      qualityReports: '¿ANSLIFE puede preparar reportes de inspección?',
+      warehouseSupport: '¿ANSLIFE apoya almacenamiento en Vietnam?',
+      warehouseConsolidate: '¿ANSLIFE puede consolidar mercancías de varias fuentes?',
+      warehouseDocuments: '¿ANSLIFE puede apoyar documentos de exportación?',
+      paymentMethods: '¿Qué métodos de pago internacional puede apoyar ANSLIFE?',
+      paymentLc: '¿ANSLIFE puede trabajar con carta de crédito?',
+      paymentMilestone: '¿El pago puede seguir hitos de producción?',
+      tradeTerms: '¿Con qué términos comerciales puede trabajar ANSLIFE?',
+      tradeFob: '¿ANSLIFE puede cotizar FOB?',
+      tradeForwarder: '¿El comprador puede usar su propio forwarder?',
+    },
+    answers: {
+      aboutCompany:
+        'ANSLIFE JSC es un socio en Vietnam para producción, cadena de suministro y exportación para compradores internacionales de muebles, componentes y materiales.',
+      aboutFactory:
+        'ANSLIFE no es solo una fábrica. El modelo combina fábricas, socios satélite, suministro de materiales, QC independiente, almacén y operación de exportación.',
+      aboutDifference:
+        'Una fábrica normal se enfoca principalmente en fabricar. ANSLIFE también coordina desarrollo de producto, materiales, QC, almacén, seguimiento, documentos y exportación.',
+      productsScope:
+        'ANSLIFE apoya muebles terminados, componentes, materiales de producción, QC, empaque, almacén y exportación programada desde Vietnam.',
+      productsDrawings:
+        'Sí. Los productos pueden desarrollarse desde planos, imágenes de referencia, muestras físicas o requisitos técnicos, incluyendo muestreo y preparación para producción.',
+      productsOem:
+        'Sí. ANSLIFE apoya OEM y ODM desde idea, plano o muestra hasta selección de materiales, acabado, empaque y producción.',
+      operationsExistingFactory:
+        'ANSLIFE puede apoyar seguimiento de fábrica, control de materiales, QC independiente, control de empaque, almacén, reportes y planificación de exportación.',
+      operationsRepresentative:
+        'Sí. ANSLIFE puede seguir avances, registrar estado de producción, controlar calidad, guardar muestras, seguir documentos y reportar según el alcance acordado.',
+      operationsIssues:
+        'Sí. Si hay problemas de materiales, calendario, calidad, empaque, documentos o entrega, ANSLIFE registra la situación y coordina soluciones claras.',
+      qualityIndependent:
+        'Sí. El QC está separado de producción para ofrecer control más objetivo según estándares aprobados por el comprador.',
+      qualityStandards:
+        'ANSLIFE puede inspeccionar estructura, medidas, color, humedad, acabado, materiales, componentes, empaque, etiquetas y condición antes del embarque.',
+      qualityReports:
+        'Sí. Los reportes pueden hacerse por etapa o antes del embarque con fotos, estado, desviaciones, medidas, color, humedad, empaque y acciones sugeridas.',
+      warehouseSupport:
+        'Sí. ANSLIFE apoya almacenamiento de mercancías, muestras, materiales, componentes, estándares de producto y stock de seguridad en Vietnam.',
+      warehouseConsolidate:
+        'Sí. Mercancías de varias fábricas, proveedores o grupos de producto pueden consolidarse para inspección, empaque, almacén y exportación.',
+      warehouseDocuments:
+        'Sí. ANSLIFE puede coordinar Commercial Invoice, Packing List, Bill of Lading, Certificate of Origin y otros documentos necesarios.',
+      paymentMethods:
+        'ANSLIFE puede trabajar con transferencia internacional, carta de crédito, cobranza documentaria, pago por hitos y otros métodos comerciales acordados.',
+      paymentLc:
+        'Sí, para pedidos adecuados. Condiciones, banco, período de embarque, vigencia, documentos y pago deben confirmarse antes del pedido.',
+      paymentMilestone:
+        'Sí. Algunos proyectos pueden usar pagos al confirmar pedido, tras muestra, fin de producción, inspección o antes del embarque.',
+      tradeTerms:
+        'ANSLIFE puede trabajar con EXW, FCA, FOB, CFR, CIF, entrega a destino y en algunos casos DDP según pedido y mercado.',
+      tradeFob:
+        'Sí. FOB puede cotizarse desde puertos de exportación adecuados en Vietnam, confirmando costos locales, carga, documentos y cronograma por pedido.',
+      tradeForwarder:
+        'Sí. El comprador puede designar su forwarder o socio logístico, y ANSLIFE coordina mercancía, documentos, carga y entrega dentro del alcance acordado.',
+    },
+  }),
+  zh: buildCompactResourcesFaqContent({
+    title: '买家常见问题',
+    intro:
+      '本页回答国际买家与 ANSLIFE JSC 合作时关于生产、供应链、QC、仓储、付款和国际交付的常见问题。',
+    labels: {
+      about: ['关于 ANSLIFE', '关于 ANSLIFE JSC'],
+      products: ['产品与材料', '产品、材料与生产'],
+      operations: ['项目运营', '越南项目运营'],
+      quality: ['QC 与标准', '质量控制与标准'],
+      warehouse: ['仓储与出口', '仓储、越南 Supply Hub 与出口'],
+      payment: ['付款', '国际付款与贸易融资'],
+      trade: ['国际交付', '贸易条款与国际交付'],
+    },
+    questions: {
+      aboutCompany: 'ANSLIFE JSC 是什么类型的公司？',
+      aboutFactory: 'ANSLIFE JSC 是一家工厂吗？',
+      aboutDifference: 'ANSLIFE 与普通工厂有什么不同？',
+      productsScope: 'ANSLIFE 可以支持哪些产品类别？',
+      productsDrawings: 'ANSLIFE 可以根据图纸或样品开发产品吗？',
+      productsOem: 'ANSLIFE 支持 OEM 或 ODM 吗？',
+      operationsExistingFactory: '如果买家在越南已有工厂，ANSLIFE 如何支持？',
+      operationsRepresentative: 'ANSLIFE 可以作为越南运营代表吗？',
+      operationsIssues: 'ANSLIFE 可以协助处理生产问题吗？',
+      qualityIndependent: 'ANSLIFE 的 QC 是否独立于工厂？',
+      qualityStandards: 'ANSLIFE 可以检查哪些标准？',
+      qualityReports: 'ANSLIFE 可以准备验货报告吗？',
+      warehouseSupport: 'ANSLIFE 支持越南仓储吗？',
+      warehouseConsolidate: 'ANSLIFE 可以整合多个来源的货物吗？',
+      warehouseDocuments: 'ANSLIFE 可以支持出口文件吗？',
+      paymentMethods: 'ANSLIFE 支持哪些国际付款方式？',
+      paymentLc: 'ANSLIFE 可以操作信用证吗？',
+      paymentMilestone: '付款可以按生产节点进行吗？',
+      tradeTerms: 'ANSLIFE 可以操作哪些贸易条款？',
+      tradeFob: 'ANSLIFE 可以报 FOB 价格吗？',
+      tradeForwarder: '买家可以指定自己的货代吗？',
+    },
+    answers: {
+      aboutCompany:
+        'ANSLIFE JSC 是越南的生产、供应链与出口合作伙伴，服务于家具、部件和材料领域的国际买家。',
+      aboutFactory:
+        'ANSLIFE 不只是单一工厂。该模式结合工厂、卫星合作伙伴、材料供应、独立 QC、仓储和出口运营。',
+      aboutDifference:
+        '普通工厂主要关注生产。ANSLIFE 还协调产品开发、材料、QC、仓储、项目跟进、文件和出口。',
+      productsScope:
+        'ANSLIFE 支持成品家具、家具部件、生产材料、QC、包装、仓储以及从越南计划出口。',
+      productsDrawings:
+        '可以。产品可根据图纸、参考图片、实物样品或技术要求开发，并包含打样和量产准备。',
+      productsOem:
+        '可以。ANSLIFE 支持 OEM 和 ODM，从想法、图纸或样品到材料选择、表面处理、包装和生产。',
+      operationsExistingFactory:
+        'ANSLIFE 可支持工厂跟进、材料检查、独立 QC、包装检查、仓储、报告和出口计划。',
+      operationsRepresentative:
+        '可以。ANSLIFE 可跟进进度、记录生产状态、控制质量、保存样品、跟进文件并按约定范围报告。',
+      operationsIssues:
+        '可以。遇到材料、进度、质量、包装、文件或交付问题时，ANSLIFE 会记录情况并协调清晰方案。',
+      qualityIndependent:
+        '是。QC 与生产分离，按买家确认标准提供更客观的检查。',
+      qualityStandards:
+        'ANSLIFE 可检查结构、尺寸、颜色、含水率、表面效果、材料、部件、包装、标签和出货前状态。',
+      qualityReports:
+        '可以。报告可按阶段或出货前准备，包含照片、状态、偏差、尺寸、颜色、含水率、包装和处理建议。',
+      warehouseSupport:
+        '可以。ANSLIFE 支持在越南储存货物、样品、材料、部件、产品标准和安全库存。',
+      warehouseConsolidate:
+        '可以。来自多个工厂、供应商或产品组的货物可整合后进行检查、包装、仓储和出口。',
+      warehouseDocuments:
+        '可以。ANSLIFE 可协调 Commercial Invoice、Packing List、Bill of Lading、Certificate of Origin 及其他必要文件。',
+      paymentMethods:
+        'ANSLIFE 可配合国际汇款、信用证、跟单托收、节点付款及其他约定的贸易付款方式。',
+      paymentLc:
+        '可以，适用于合适订单。条款、银行、装运期、有效期、文件和付款条件需在下单前确认。',
+      paymentMilestone:
+        '可以。部分项目可按订单确认、样品完成、生产完成、验货后或出货前设置节点付款。',
+      tradeTerms:
+        'ANSLIFE 可根据订单和市场操作 EXW、FCA、FOB、CFR、CIF、目的地交付，部分情况下可评估 DDP。',
+      tradeFob:
+        '可以。可基于越南合适出口港报 FOB，并按订单确认本地费用、装柜、文件和船期。',
+      tradeForwarder:
+        '可以。买家可指定自己的货代或物流伙伴，ANSLIFE 在约定范围内协调货物、文件、装柜和交接。',
+    },
+  }),
+  */
 };
 
 type ManufacturingSectionCategory = 'system' | 'supply' | 'process' | 'market';
@@ -5163,6 +5570,580 @@ const AI_ABOUT_SECTION_CONTENT_JP: Record<string, string> = {
 const AI_ABOUT_SECTION_CONTENT_KR: Record<string, string> = {
   'company-info': ABOUT_COMPANY_INFO_SECTION_KR,
 };
+
+type ExtraAboutLanguage = Extract<LanguageCode, 'en' | 'jp' | 'kr' | 'sv' | 'fr' | 'ru' | 'es' | 'zh'>;
+type ExtraAboutSectionId =
+  | 'company-intro'
+  | 'development-history'
+  | 'working-standards'
+  | 'company-info';
+
+interface ExtraAboutLocalizedContent {
+  companyIntro: {
+    title: string;
+    lead: string;
+    cards: Array<{ title: string; text: string }>;
+    cta: string;
+  };
+  developmentHistory: {
+    title: string;
+    intro: string;
+    cards: Array<{ year: string; title: string; text: string }>;
+  };
+  workingStandards: {
+    title: string;
+    lead: string;
+    items: Array<{ title: string; text: string }>;
+  };
+  companyInfo: {
+    title: string;
+    lead: string;
+    rows: Array<{ term: string; description: string }>;
+    note: string;
+  };
+}
+
+const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocalizedContent> = {
+  en: {
+    companyIntro: {
+      title: 'Company Overview',
+      lead:
+        'ANSLIFE JSC is a Vietnam-based manufacturing, supply chain and export partner for international buyers in furniture, components and materials.',
+      cards: [
+        { title: 'Manufacturing network', text: 'We coordinate operating facilities, satellite factories and material suppliers for flexible OEM and ODM projects.' },
+        { title: 'Quality control', text: 'QC is managed through approved samples, drawings, inspection checklists and packing standards.' },
+        { title: 'Export operations', text: 'ANSLIFE supports warehousing, packing, documentation, project tracking and international shipment.' },
+        { title: 'Long-term partnership', text: 'The model is designed for repeat orders, transparent communication and controlled improvement.' },
+      ],
+      cta: 'Send drawings, product requirements or material needs so the ANSLIFE team can review a suitable solution.',
+    },
+    developmentHistory: {
+      title: 'Development History',
+      intro:
+        'ANSLIFE has grown from practical furniture production in Vietnam into a system connecting manufacturing, material supply, quality control, warehousing and export operations.',
+      cards: [
+        { year: '2012', title: 'Started from furniture manufacturing practice', text: 'The company began with hands-on furniture production for homes, offices and local interior projects.' },
+        { year: '2018-2020', title: 'Brand building and export orientation', text: 'ANSLIFE expanded from interior project experience into export manufacturing and launched the ANSLIFE brand.' },
+        { year: '2021-2023', title: 'Japan market, material supply and QC', text: 'Export work for Japan strengthened requirements for stable quality, documentation, packing and independent inspection.' },
+        { year: '2025-2026', title: 'Operating system, satellite network and testing capability', text: 'The company expanded operations around Ho Chi Minh City, broadened its satellite factory network and developed independent testing capacity.' },
+      ],
+    },
+    workingStandards: {
+      title: 'Working Standards',
+      lead:
+        'Each project is managed through approved samples, technical drawings, material standards, QC checklists, packing requirements and agreed shipment plans.',
+      items: [
+        { title: 'Approved samples', text: 'Samples, colors, materials and finishes are kept as reference standards for production and inspection.' },
+        { title: 'Technical drawings', text: 'Dimensions, structures, material specifications and technical requirements are recorded before production starts.' },
+        { title: 'Materials and colors', text: 'Wood, boards, veneer, foam, fabric, hardware and packing materials are controlled according to buyer requirements.' },
+        { title: 'Order checklist', text: 'Each order is checked for dimensions, structure, finish, moisture, labels, packing and pre-shipment condition.' },
+        { title: 'Independent QC', text: 'Inspection is separated from production to improve objectivity and traceability.' },
+        { title: 'Transparent reporting', text: 'Issues are recorded, reported and followed with corrective actions.' },
+      ],
+    },
+    companyInfo: {
+      title: 'Company Information',
+      lead: 'ANSLIFE JSC organizes furniture production, material supply, QC, warehousing and export support from Vietnam.',
+      rows: [
+        { term: 'Company', description: 'ANSLIFE Joint Stock Company' },
+        { term: 'Head office', description: 'Ho Chi Minh City, Vietnam' },
+        { term: 'Activities', description: 'Manufacturing, supply chain, quality control, warehousing and export operations' },
+        { term: 'Product scope', description: 'Furniture, furniture components, wood-based materials and related production materials' },
+        { term: 'Markets', description: 'Japan, the United States, Europe, Korea and international buyers' },
+      ],
+      note: 'This information helps buyers evaluate ANSLIFE as a manufacturing and export partner in Vietnam.',
+    },
+  },
+  jp: {
+    companyIntro: {
+      title: '会社概要',
+      lead:
+        'ANSLIFE JSC は、家具、部材、材料分野の海外バイヤーに向けて、ベトナムでの生産、サプライチェーン、品質管理、輸出運営を支援するパートナーです。',
+      cards: [
+        { title: '生産ネットワーク', text: '自社運営拠点、協力工場、材料サプライヤーを組み合わせ、OEM・ODM案件に柔軟に対応します。' },
+        { title: '品質管理', text: '承認サンプル、図面、検品チェックリスト、梱包基準に基づき、製造とは独立した視点で品質を確認します。' },
+        { title: '輸出オペレーション', text: '倉庫保管、梱包、書類、進捗管理、国際出荷まで、案件全体の運営をサポートします。' },
+        { title: '長期パートナーシップ', text: '単発取引ではなく、継続発注、透明な情報共有、安定した改善を前提にした体制です。' },
+      ],
+      cta: '図面、製品要件、材料ニーズをお送りいただければ、ANSLIFE チームが適切な対応案を確認します。',
+    },
+    developmentHistory: {
+      title: '発展の歩み',
+      intro:
+        'ANSLIFE は、ベトナムでの実際の家具生産を出発点に、生産、材料供給、品質管理、倉庫、輸出運営をつなぐ体制へ発展してきました。',
+      cards: [
+        { year: '2012', title: '家具製造の現場からスタート', text: '住宅・オフィス向け家具の実制作を通じて、素材、構造、仕上げ、現場管理の基礎を蓄積しました。' },
+        { year: '2018-2020', title: 'ブランド化と輸出案件への展開', text: '国内インテリア案件で得た経験をもとに、輸出向けの家具製造と ANSLIFE ブランドの展開を進めました。' },
+        { year: '2021-2023', title: '日本市場、材料供給、QC体制', text: '日本向け案件を通じて、安定品質、梱包、記録、独立した品質確認の重要性をさらに高めました。' },
+        { year: '2025-2026', title: '運営拠点と検査機能の強化', text: 'ホーチミン市を中心に運営体制を広げ、協力工場ネットワークと独立検査エリアの整備を進めています。' },
+      ],
+    },
+    workingStandards: {
+      title: 'ANSLIFE の業務基準',
+      lead:
+        '各案件は、承認サンプル、技術図面、材料基準、検品チェックリスト、梱包要件、合意済みの出荷計画に基づいて管理されます。',
+      items: [
+        { title: '承認サンプルの管理', text: '製品サンプル、色、材料、表面仕上げを、生産および検品時の基準として保管します。' },
+        { title: '技術図面の管理', text: '寸法、構造、材料仕様、技術要件を生産前に明確に記録します。' },
+        { title: '材料と色の管理', text: '木材、板材、突板、フォーム、生地、金物、梱包材をバイヤー基準に沿って確認します。' },
+        { title: '注文別チェックリスト', text: '各注文ごとに寸法、構造、仕上げ、含水率、ラベル、梱包、出荷前状態を確認します。' },
+        { title: '独立したQC', text: '品質確認を製造工程から切り離し、客観性とトレーサビリティを高めます。' },
+        { title: '透明な報告', text: '生産、検品、出荷で発生した問題は記録し、共有し、必要な是正対応につなげます。' },
+      ],
+    },
+    companyInfo: {
+      title: '会社情報',
+      lead: 'ANSLIFE JSC は、ベトナムを拠点に家具生産、材料供給、品質管理、倉庫、輸出支援を行っています。',
+      rows: [
+        { term: '会社名', description: 'ANSLIFE Joint Stock Company' },
+        { term: '本社', description: 'Ho Chi Minh City, Vietnam' },
+        { term: '事業内容', description: '生産、サプライチェーン、品質管理、倉庫、輸出運営' },
+        { term: '製品分野', description: '家具、家具部材、木質材料、関連生産材料' },
+        { term: '市場', description: '日本、米国、欧州、韓国、その他海外バイヤー' },
+      ],
+      note: 'この情報は、ANSLIFE をベトナムの生産・輸出パートナーとして評価する際の基本情報です。',
+    },
+  },
+  kr: {
+    companyIntro: {
+      title: '회사 개요',
+      lead:
+        'ANSLIFE JSC는 가구, 부품, 소재 분야의 해외 바이어를 위해 베트남 생산, 공급망, 품질관리, 수출 운영을 지원하는 파트너입니다.',
+      cards: [
+        { title: '생산 네트워크', text: '주요 운영 거점, 협력 공장, 소재 공급처를 연결해 OEM 및 ODM 프로젝트를 유연하게 운영합니다.' },
+        { title: '품질 관리', text: '승인 샘플, 도면, 검사 체크리스트, 포장 기준을 기반으로 생산과 분리된 관점에서 품질을 확인합니다.' },
+        { title: '수출 운영', text: '창고 보관, 포장, 문서, 프로젝트 진행 관리, 국제 출하까지 전체 운영을 지원합니다.' },
+        { title: '장기 파트너십', text: '단기 거래보다 반복 주문, 투명한 커뮤니케이션, 지속적인 개선을 전제로 한 협력 구조입니다.' },
+      ],
+      cta: '도면, 제품 요구사항 또는 소재 니즈를 보내주시면 ANSLIFE 팀이 적합한 방안을 검토합니다.',
+    },
+    developmentHistory: {
+      title: '발전 과정',
+      intro:
+        'ANSLIFE는 베트남의 실제 가구 생산 현장에서 출발해 생산, 소재 공급, 품질관리, 창고, 수출 운영을 연결하는 시스템으로 발전해 왔습니다.',
+      cards: [
+        { year: '2012', title: '가구 생산 현장에서 시작', text: '주거 및 사무공간용 가구 제작을 통해 소재, 구조, 마감, 현장 운영의 기초를 축적했습니다.' },
+        { year: '2018-2020', title: '브랜드 구축과 수출 방향 전환', text: '국내 인테리어 프로젝트 경험을 바탕으로 수출용 가구 생산과 ANSLIFE 브랜드 운영을 확대했습니다.' },
+        { year: '2021-2023', title: '일본 시장, 소재 공급망, QC 체계', text: '일본향 프로젝트를 통해 안정적인 품질, 포장, 기록 관리, 독립 검사의 중요성을 강화했습니다.' },
+        { year: '2025-2026', title: '운영 거점과 검사 기능 강화', text: '호치민시를 중심으로 운영 체계를 넓히고, 협력 공장 네트워크와 독립 검사 공간을 구축하고 있습니다.' },
+      ],
+    },
+    workingStandards: {
+      title: 'ANSLIFE 업무 기준',
+      lead:
+        '각 프로젝트는 승인 샘플, 기술 도면, 소재 기준, QC 체크리스트, 포장 요구사항, 합의된 출하 계획을 기준으로 관리됩니다.',
+      items: [
+        { title: '승인 샘플 관리', text: '제품 샘플, 색상, 소재, 표면 마감은 생산과 검사 기준으로 보관됩니다.' },
+        { title: '기술 도면 관리', text: '치수, 구조, 소재 사양, 기술 요구사항은 생산 시작 전에 명확히 기록됩니다.' },
+        { title: '소재와 색상 관리', text: '목재, 보드, 무늬목, 폼, 원단, 부자재, 포장재는 바이어 기준에 맞춰 관리됩니다.' },
+        { title: '주문별 체크리스트', text: '각 주문은 치수, 구조, 마감, 함수율, 라벨, 포장, 출하 전 상태를 별도로 확인합니다.' },
+        { title: '독립 QC', text: '품질 확인을 생산 조직과 분리해 객관성과 추적 가능성을 높입니다.' },
+        { title: '투명한 보고', text: '생산, 검사, 출하 과정의 이슈는 기록, 공유하고 필요한 개선 조치로 연결합니다.' },
+      ],
+    },
+    companyInfo: {
+      title: '회사 정보',
+      lead: 'ANSLIFE JSC는 베트남을 기반으로 가구 생산, 소재 공급, 품질관리, 창고, 수출 지원을 운영합니다.',
+      rows: [
+        { term: '회사명', description: 'ANSLIFE Joint Stock Company' },
+        { term: '본사', description: 'Ho Chi Minh City, Vietnam' },
+        { term: '주요 업무', description: '생산, 공급망, 품질관리, 창고, 수출 운영' },
+        { term: '제품 분야', description: '가구, 가구 부품, 목재 기반 소재, 관련 생산 소재' },
+        { term: '시장', description: '일본, 미국, 유럽, 한국 및 해외 바이어' },
+      ],
+      note: '이 정보는 ANSLIFE를 베트남 생산 및 수출 파트너로 검토하는 바이어를 위한 기본 정보입니다.',
+    },
+  },
+  sv: {
+    companyIntro: {
+      title: 'Företagsöversikt',
+      lead:
+        'ANSLIFE JSC är en Vietnam-baserad produktions-, leveranskedje- och exportpartner för internationella köpare inom möbler, komponenter och material.',
+      cards: [
+        { title: 'Produktionsnätverk', text: 'Vi samordnar huvudfabrik, satellitfabriker och materialleverantörer för flexibla OEM- och ODM-projekt.' },
+        { title: 'Kvalitetskontroll', text: 'QC-teamet arbetar separat från produktionen och följer godkända prover, ritningar, checklistor och packningskrav.' },
+        { title: 'Exportdrift', text: 'ANSLIFE stödjer lager, packning, dokument, projektuppföljning och internationella leveranser.' },
+        { title: 'Långsiktigt partnerskap', text: 'Modellen är byggd för återkommande order, transparent kommunikation och kontrollerbar tillväxt.' },
+      ],
+      cta: 'Skicka ritningar, produktkrav eller materialbehov så granskar ANSLIFE-teamet en lämplig lösning.',
+    },
+    developmentHistory: {
+      title: 'Utvecklingshistorik',
+      intro:
+        'ANSLIFE har utvecklats från praktisk möbelproduktion i Vietnam till ett system för produktion, leveranskedja, QC och exportdrift.',
+      cards: [
+        { year: '2012', title: 'Start från hantverksmässig möbelproduktion', text: 'Verksamheten började med praktisk produktion av möbler för hem, kontor och lokala projekt.' },
+        { year: '2018-2020', title: 'Varumärke och exportinriktning', text: 'ANSLIFE byggde vidare på inredningskompetens, började hantera exportorder och lanserade varumärket ANSLIFE.' },
+        { year: '2021-2023', title: 'Japan, materialkedja och QC', text: 'Exporten till Japan stärkte kraven på stabil kvalitet, dokumentation, packning och oberoende kvalitetskontroll.' },
+        { year: '2025-2026', title: 'System, satellitnätverk och testområde', text: 'Bolaget flyttade tyngdpunkten till Ho Chi Minh City, breddade satellitnätverket och byggde oberoende testkapacitet.' },
+      ],
+    },
+    workingStandards: {
+      title: 'Arbetsstandarder',
+      lead:
+        'Varje projekt styrs genom godkända prover, tekniska ritningar, materialstandarder, QC-checklistor, packningskrav och överenskommen leveransplan.',
+      items: [
+        { title: 'Godkända prover', text: 'Prover, färger, material och ytfinish sparas som referens för produktion och kontroll.' },
+        { title: 'Tekniska ritningar', text: 'Mått, konstruktion, materialdata och tekniska krav dokumenteras innan produktion startar.' },
+        { title: 'Material och färg', text: 'Trä, skivor, faner, foam, textil, beslag och packmaterial kontrolleras enligt köparens krav.' },
+        { title: 'Orderchecklista', text: 'Varje order har en egen checklista för mått, struktur, finish, fukt, etikett, packning och leveransskick.' },
+        { title: 'Oberoende QC', text: 'Kontrollen utförs separat från produktionen för att minska subjektiva bedömningar.' },
+        { title: 'Transparent rapportering', text: 'Avvikelser registreras, rapporteras och följs upp med korrigerande åtgärder.' },
+      ],
+    },
+    companyInfo: {
+      title: 'Företagsinformation',
+      lead: 'ANSLIFE JSC organiserar möbelproduktion, materialförsörjning, QC, lager och exportstöd från Vietnam.',
+      rows: [
+        { term: 'Företag', description: 'ANSLIFE Joint Stock Company' },
+        { term: 'Huvudkontor', description: 'Ho Chi Minh City, Vietnam' },
+        { term: 'Verksamhet', description: 'Produktion, leveranskedja, kvalitetskontroll, lager och exportdrift' },
+        { term: 'Produktgrupper', description: 'Möbler, möbelkomponenter, träbaserade material och relaterade produktionsmaterial' },
+        { term: 'Marknader', description: 'Japan, USA, Europa, Korea och internationella köpare' },
+      ],
+      note: 'Företagsinformationen används som bas för köpare som vill utvärdera ANSLIFE som produktions- och exportpartner i Vietnam.',
+    },
+  },
+  fr: {
+    companyIntro: {
+      title: "Vue d'ensemble de l'entreprise",
+      lead:
+        'ANSLIFE JSC est un partenaire vietnamien de production, de chaîne d’approvisionnement et d’export pour les acheteurs internationaux de meubles, composants et matériaux.',
+      cards: [
+        { title: 'Réseau de production', text: 'Nous coordonnons usine principale, usines satellites et fournisseurs de matériaux pour des projets OEM et ODM flexibles.' },
+        { title: 'Contrôle qualité', text: 'L’équipe QC travaille indépendamment de la production, avec échantillons validés, plans, checklists et exigences d’emballage.' },
+        { title: 'Opérations export', text: 'ANSLIFE prend en charge stockage, emballage, documents, suivi de projet et expéditions internationales.' },
+        { title: 'Partenariat durable', text: 'Le modèle est conçu pour des commandes récurrentes, une communication claire et une croissance contrôlable.' },
+      ],
+      cta: 'Envoyez vos plans, exigences produit ou besoins matériaux afin que l’équipe ANSLIFE propose une solution adaptée.',
+    },
+    developmentHistory: {
+      title: 'Historique de développement',
+      intro:
+        'ANSLIFE est passé d’une base de production de meubles au Vietnam à un système combinant production, supply chain, QC et opérations export.',
+      cards: [
+        { year: '2012', title: 'Départ avec la production artisanale de meubles', text: 'L’activité a commencé par la fabrication pratique de meubles pour l’habitat, les bureaux et les projets locaux.' },
+        { year: '2018-2020', title: 'Marque et orientation export', text: 'ANSLIFE a renforcé son expérience d’aménagement intérieur, traité des commandes export et lancé la marque ANSLIFE.' },
+        { year: '2021-2023', title: 'Japon, matériaux et QC', text: 'L’export vers le Japon a consolidé les exigences de qualité stable, documentation, emballage et contrôle indépendant.' },
+        { year: '2025-2026', title: 'Système, réseau satellite et essais', text: 'L’entreprise a déplacé son centre opérationnel vers Ho Chi Minh City, élargi son réseau satellite et développé une capacité de test indépendante.' },
+      ],
+    },
+    workingStandards: {
+      title: 'Standards de travail',
+      lead:
+        'Chaque projet est piloté par des échantillons validés, plans techniques, standards matériaux, checklists QC, exigences d’emballage et planning d’expédition convenu.',
+      items: [
+        { title: 'Échantillons validés', text: 'Les échantillons, couleurs, matériaux et finitions servent de référence pour la production et l’inspection.' },
+        { title: 'Plans techniques', text: 'Dimensions, structure, matériaux et exigences techniques sont documentés avant lancement.' },
+        { title: 'Matériaux et couleurs', text: 'Bois, panneaux, placage, mousse, tissu, accessoires et emballages sont contrôlés selon les exigences du buyer.' },
+        { title: 'Checklist par commande', text: 'Chaque commande couvre dimensions, structure, finition, humidité, étiquettes, emballage et état avant expédition.' },
+        { title: 'QC indépendant', text: 'Le contrôle est séparé de la production pour garantir une évaluation objective.' },
+        { title: 'Reporting transparent', text: 'Les écarts sont enregistrés, partagés et suivis avec des actions correctives.' },
+      ],
+    },
+    companyInfo: {
+      title: 'Informations société',
+      lead: 'ANSLIFE JSC organise production de meubles, approvisionnement matériaux, QC, stockage et support export depuis le Vietnam.',
+      rows: [
+        { term: 'Société', description: 'ANSLIFE Joint Stock Company' },
+        { term: 'Siège principal', description: 'Ho Chi Minh City, Vietnam' },
+        { term: 'Activités', description: 'Production, supply chain, contrôle qualité, stockage et opérations export' },
+        { term: 'Produits', description: 'Meubles, composants, matériaux bois et matériaux liés à la production' },
+        { term: 'Marchés', description: 'Japon, États-Unis, Europe, Corée et acheteurs internationaux' },
+      ],
+      note: 'Ces informations aident les acheteurs à évaluer ANSLIFE comme partenaire de production et d’export au Vietnam.',
+    },
+  },
+  ru: {
+    companyIntro: {
+      title: 'Обзор компании',
+      lead:
+        'ANSLIFE JSC - вьетнамский партнер по производству, цепочке поставок и экспорту для международных покупателей мебели, компонентов и материалов.',
+      cards: [
+        { title: 'Производственная сеть', text: 'Мы координируем основную фабрику, спутниковые фабрики и поставщиков материалов для гибких OEM и ODM проектов.' },
+        { title: 'Контроль качества', text: 'QC-команда работает отдельно от производства и использует утвержденные образцы, чертежи, чек-листы и требования к упаковке.' },
+        { title: 'Экспортные операции', text: 'ANSLIFE поддерживает складирование, упаковку, документы, контроль проекта и международные отгрузки.' },
+        { title: 'Долгосрочное партнерство', text: 'Модель рассчитана на повторные заказы, прозрачную коммуникацию и управляемый рост.' },
+      ],
+      cta: 'Отправьте чертежи, требования к продукту или материалам, и команда ANSLIFE предложит подходящее решение.',
+    },
+    developmentHistory: {
+      title: 'История развития',
+      intro:
+        'ANSLIFE прошла путь от практического мебельного производства во Вьетнаме к системе производства, поставок, QC и экспортных операций.',
+      cards: [
+        { year: '2012', title: 'Начало с мебельного производства', text: 'Компания начинала с практического изготовления мебели для домов, офисов и локальных проектов.' },
+        { year: '2018-2020', title: 'Бренд и экспортная ориентация', text: 'ANSLIFE усилила опыт интерьерных проектов, начала работать с экспортными заказами и запустила бренд ANSLIFE.' },
+        { year: '2021-2023', title: 'Япония, материалы и QC', text: 'Экспорт в Японию повысил требования к стабильному качеству, документации, упаковке и независимому контролю.' },
+        { year: '2025-2026', title: 'Система, спутниковая сеть и испытания', text: 'Компания перенесла операционный центр в Ho Chi Minh City, расширила сеть фабрик и развивает независимые испытания.' },
+      ],
+    },
+    workingStandards: {
+      title: 'Рабочие стандарты',
+      lead:
+        'Каждый проект управляется через утвержденные образцы, технические чертежи, стандарты материалов, QC-чек-листы, требования к упаковке и согласованный план отгрузки.',
+      items: [
+        { title: 'Утвержденные образцы', text: 'Образцы, цвета, материалы и отделки сохраняются как эталон для производства и инспекции.' },
+        { title: 'Технические чертежи', text: 'Размеры, конструкция, материалы и технические требования фиксируются до запуска производства.' },
+        { title: 'Материалы и цвет', text: 'Дерево, панели, шпон, пена, ткань, фурнитура и упаковка контролируются по требованиям покупателя.' },
+        { title: 'Чек-лист заказа', text: 'Для каждого заказа проверяются размеры, конструкция, отделка, влажность, маркировка, упаковка и состояние перед отгрузкой.' },
+        { title: 'Независимый QC', text: 'Контроль отделен от производства для более объективной оценки.' },
+        { title: 'Прозрачная отчетность', text: 'Отклонения фиксируются, передаются и закрываются корректирующими действиями.' },
+      ],
+    },
+    companyInfo: {
+      title: 'Информация о компании',
+      lead: 'ANSLIFE JSC организует производство мебели, поставки материалов, QC, складирование и экспортную поддержку из Вьетнама.',
+      rows: [
+        { term: 'Компания', description: 'ANSLIFE Joint Stock Company' },
+        { term: 'Главный офис', description: 'Ho Chi Minh City, Vietnam' },
+        { term: 'Деятельность', description: 'Производство, цепочка поставок, контроль качества, склад и экспортные операции' },
+        { term: 'Продукты', description: 'Мебель, мебельные компоненты, древесные материалы и производственные материалы' },
+        { term: 'Рынки', description: 'Япония, США, Европа, Корея и международные покупатели' },
+      ],
+      note: 'Информация помогает покупателям оценить ANSLIFE как производственного и экспортного партнера во Вьетнаме.',
+    },
+  },
+  es: {
+    companyIntro: {
+      title: 'Resumen de la empresa',
+      lead:
+        'ANSLIFE JSC es un socio de producción, cadena de suministro y exportación en Vietnam para compradores internacionales de muebles, componentes y materiales.',
+      cards: [
+        { title: 'Red de producción', text: 'Coordinamos fábrica principal, fábricas satélite y proveedores de materiales para proyectos OEM y ODM flexibles.' },
+        { title: 'Control de calidad', text: 'El equipo QC trabaja separado de producción con muestras aprobadas, planos, checklists y requisitos de empaque.' },
+        { title: 'Operación de exportación', text: 'ANSLIFE apoya almacenamiento, empaque, documentos, seguimiento de proyecto y envíos internacionales.' },
+        { title: 'Alianza a largo plazo', text: 'El modelo está diseñado para pedidos recurrentes, comunicación transparente y crecimiento controlable.' },
+      ],
+      cta: 'Envíe planos, requisitos de producto o necesidades de materiales para que el equipo ANSLIFE proponga una solución adecuada.',
+    },
+    developmentHistory: {
+      title: 'Historia de desarrollo',
+      intro:
+        'ANSLIFE evolucionó desde una base real de fabricación de muebles en Vietnam hasta un sistema de producción, supply chain, QC y operación de exportación.',
+      cards: [
+        { year: '2012', title: 'Inicio con producción artesanal de muebles', text: 'La actividad comenzó con fabricación práctica de muebles para hogares, oficinas y proyectos locales.' },
+        { year: '2018-2020', title: 'Marca y enfoque exportador', text: 'ANSLIFE consolidó experiencia en interiores, gestionó pedidos de exportación y lanzó la marca ANSLIFE.' },
+        { year: '2021-2023', title: 'Japón, materiales y QC', text: 'La exportación a Japón reforzó los requisitos de calidad estable, documentación, empaque y control independiente.' },
+        { year: '2025-2026', title: 'Sistema, red satélite y pruebas', text: 'La empresa movió su centro operativo a Ho Chi Minh City, amplió la red satélite y desarrolló capacidad de prueba independiente.' },
+      ],
+    },
+    workingStandards: {
+      title: 'Estándares de trabajo',
+      lead:
+        'Cada proyecto se gestiona con muestras aprobadas, planos técnicos, estándares de materiales, checklists QC, requisitos de empaque y plan de embarque acordado.',
+      items: [
+        { title: 'Muestras aprobadas', text: 'Muestras, colores, materiales y acabados se conservan como referencia para producción e inspección.' },
+        { title: 'Planos técnicos', text: 'Dimensiones, estructura, materiales y requisitos técnicos se documentan antes de producir.' },
+        { title: 'Materiales y color', text: 'Madera, tableros, chapa, espuma, tela, herrajes y empaque se controlan según requisitos del comprador.' },
+        { title: 'Checklist por pedido', text: 'Cada pedido revisa dimensiones, estructura, acabado, humedad, etiquetas, empaque y condición antes del envío.' },
+        { title: 'QC independiente', text: 'La inspección está separada de producción para mantener objetividad.' },
+        { title: 'Reporte transparente', text: 'Las desviaciones se registran, reportan y cierran con acciones correctivas.' },
+      ],
+    },
+    companyInfo: {
+      title: 'Información de la empresa',
+      lead: 'ANSLIFE JSC organiza producción de muebles, suministro de materiales, QC, almacenamiento y soporte de exportación desde Vietnam.',
+      rows: [
+        { term: 'Empresa', description: 'ANSLIFE Joint Stock Company' },
+        { term: 'Oficina principal', description: 'Ho Chi Minh City, Vietnam' },
+        { term: 'Actividad', description: 'Producción, cadena de suministro, control de calidad, almacén y operación de exportación' },
+        { term: 'Productos', description: 'Muebles, componentes, materiales de madera y materiales relacionados con producción' },
+        { term: 'Mercados', description: 'Japón, Estados Unidos, Europa, Corea y compradores internacionales' },
+      ],
+      note: 'Esta información ayuda a compradores a evaluar ANSLIFE como socio de producción y exportación en Vietnam.',
+    },
+  },
+  zh: {
+    companyIntro: {
+      title: '公司概览',
+      lead:
+        'ANSLIFE JSC 是一家位于越南的生产、供应链与出口合作伙伴，服务于家具、部件和材料领域的国际买家。',
+      cards: [
+        { title: '生产网络', text: '我们协调主工厂、卫星工厂和材料供应商，支持灵活的 OEM 与 ODM 项目。' },
+        { title: '质量控制', text: 'QC 团队独立于生产体系，依据确认样、图纸、检查清单和包装要求执行控制。' },
+        { title: '出口运营', text: 'ANSLIFE 支持仓储、包装、文件、项目跟进以及国际出货。' },
+        { title: '长期合作', text: '该模式面向持续订单、透明沟通和可控增长。' },
+      ],
+      cta: '请发送图纸、产品要求或材料需求，ANSLIFE 团队将评估并提出合适方案。',
+    },
+    developmentHistory: {
+      title: '发展历程',
+      intro:
+        'ANSLIFE 从越南实际家具生产基础发展为覆盖生产、供应链、质量控制和出口运营的系统。',
+      cards: [
+        { year: '2012', title: '从家具手工生产起步', text: '公司最初从家居、办公及本地项目的家具生产实践开始。' },
+        { year: '2018-2020', title: '品牌与出口方向', text: 'ANSLIFE 积累室内项目经验，开始参与出口订单，并正式推出 ANSLIFE 品牌。' },
+        { year: '2021-2023', title: '日本市场、材料链与 QC', text: '日本出口项目强化了稳定质量、文件、包装和独立质量控制的要求。' },
+        { year: '2025-2026', title: '系统、卫星网络与测试能力', text: '公司将运营重心转向 Ho Chi Minh City，扩展卫星工厂网络，并建设独立测试能力。' },
+      ],
+    },
+    workingStandards: {
+      title: '工作标准',
+      lead:
+        '每个项目都通过确认样、技术图纸、材料标准、QC 检查清单、包装要求和约定出货计划进行管理。',
+      items: [
+        { title: '确认样控制', text: '样品、颜色、材料和表面效果作为生产与检验的对照标准保存。' },
+        { title: '技术图纸管理', text: '尺寸、结构、材料参数和技术要求在生产前明确记录。' },
+        { title: '材料与颜色', text: '木材、板材、贴皮、海绵、面料、五金和包装材料按买家要求控制。' },
+        { title: '订单检查清单', text: '每个订单检查尺寸、结构、完成度、含水率、标签、包装和出货前状态。' },
+        { title: '独立 QC', text: '质量检查与生产分离，以提高客观性和可追溯性。' },
+        { title: '透明报告', text: '生产、检验或出货中的问题会被记录、报告并跟进纠正措施。' },
+      ],
+    },
+    companyInfo: {
+      title: '公司信息',
+      lead: 'ANSLIFE JSC 从越南组织家具生产、材料供应、QC、仓储和出口支持。',
+      rows: [
+        { term: '公司', description: 'ANSLIFE Joint Stock Company' },
+        { term: '总部', description: 'Ho Chi Minh City, Vietnam' },
+        { term: '业务', description: '生产、供应链、质量控制、仓储和出口运营' },
+        { term: '产品', description: '家具、家具部件、木质材料及相关生产材料' },
+        { term: '市场', description: '日本、美国、欧洲、韩国及国际买家' },
+      ],
+      note: '这些信息用于帮助买家评估 ANSLIFE 作为越南生产与出口合作伙伴的能力。',
+    },
+  },
+};
+
+function buildExtraCompanyIntroSection(content: ExtraAboutLocalizedContent['companyIntro']): string {
+  return `
+  <section id="company-intro" class="ai-section ai-company-intro ai-company-overview ai-company-overview-new">
+    <section class="ai-company-hero">
+      <div class="ai-company-hero-copy">
+        <p class="ai-company-kicker">ANSLIFE JSC</p>
+        <h1>${content.title}</h1>
+        <p>${content.lead}</p>
+      </div>
+    </section>
+    <div class="ai-company-panels">
+      ${content.cards
+        .map(
+          (card) => `
+      <article class="ai-company-panel">
+        <h3>${card.title}</h3>
+        <p>${card.text}</p>
+      </article>`,
+        )
+        .join('')}
+    </div>
+    <p class="ai-company-divider-note">${content.cta}</p>
+  </section>
+`.trim();
+}
+
+function buildExtraDevelopmentHistorySection(
+  content: ExtraAboutLocalizedContent['developmentHistory'],
+): string {
+  return `
+  <section id="development-history" class="ai-section ai-development-history">
+    <header class="ai-history-header">
+      <h2>${content.title}</h2>
+      <div class="ai-history-intro">
+        <p>${content.intro}</p>
+      </div>
+    </header>
+    <div class="ai-history-timeline">
+      ${content.cards
+        .map(
+          (card) => `
+      <article class="ai-history-timeline-card">
+        <div class="ai-history-year">${card.year}</div>
+        <div class="ai-history-card-copy">
+          <h3>${card.title}</h3>
+          <p>${card.text}</p>
+        </div>
+      </article>`,
+        )
+        .join('')}
+    </div>
+  </section>
+`.trim();
+}
+
+function buildExtraWorkingStandardsSection(
+  content: ExtraAboutLocalizedContent['workingStandards'],
+): string {
+  return `
+  <section id="working-standards" class="ai-section ai-working-standards">
+    <header class="ai-working-standards-header">
+      <h1>${content.title}</h1>
+      <p>${content.lead}</p>
+    </header>
+    <div class="ai-working-standards-list">
+      ${content.items
+        .map(
+          (item, index) => `
+      <details class="ai-working-standard-card">
+        <summary>
+          <span class="ai-working-standard-number">${String(index + 1).padStart(2, '0')}</span>
+          <span>${item.title}</span>
+        </summary>
+        <p>${item.text}</p>
+      </details>`,
+        )
+        .join('')}
+    </div>
+  </section>
+`.trim();
+}
+
+function buildExtraCompanyInfoSection(content: ExtraAboutLocalizedContent['companyInfo']): string {
+  return `
+  <section id="company-info" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
+    <details class="ai-company-info-accordion" open>
+      <summary>${content.title}</summary>
+      <div class="ai-company-info-body">
+        <p class="ai-company-info-lead">${content.lead}</p>
+        <dl class="ai-company-info-list">
+          ${content.rows
+            .map(
+              (row) => `
+          <div class="ai-company-info-row">
+            <dt>${row.term}</dt>
+            <dd>${row.description}</dd>
+          </div>`,
+            )
+            .join('')}
+        </dl>
+        <p class="ai-company-info-cta">${content.note}</p>
+      </div>
+    </details>
+  </section>
+`.trim();
+}
+
+function getExtraAboutSectionHtml(
+  language: LanguageCode,
+  sectionId: string,
+): string | null {
+  if (
+    language !== 'en' &&
+    language !== 'jp' &&
+    language !== 'kr' &&
+    language !== 'sv' &&
+    language !== 'fr' &&
+    language !== 'ru' &&
+    language !== 'es' &&
+    language !== 'zh'
+  ) {
+    return null;
+  }
+
+  const content = EXTRA_ABOUT_LOCALIZED_CONTENT[language];
+  switch (sectionId as ExtraAboutSectionId) {
+    case 'company-intro':
+      return buildExtraCompanyIntroSection(content.companyIntro);
+    case 'development-history':
+      return buildExtraDevelopmentHistorySection(content.developmentHistory);
+    case 'working-standards':
+      return buildExtraWorkingStandardsSection(content.workingStandards);
+    case 'company-info':
+      return buildExtraCompanyInfoSection(content.companyInfo);
+    default:
+      return null;
+  }
+}
 
 function enrichManufacturingSectionContent(
   sectionId: string,
@@ -8795,12 +9776,254 @@ const RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
   },
 };
 
+interface CompactResourcesFaqContentInput {
+  title: string;
+  intro: string;
+  labels: {
+    about: [string, string];
+    products: [string, string];
+    operations: [string, string];
+    quality: [string, string];
+    warehouse: [string, string];
+    payment: [string, string];
+    trade: [string, string];
+  };
+  questions: Record<
+    | 'aboutCompany'
+    | 'aboutFactory'
+    | 'aboutDifference'
+    | 'productsScope'
+    | 'productsDrawings'
+    | 'productsOem'
+    | 'operationsExistingFactory'
+    | 'operationsRepresentative'
+    | 'operationsIssues'
+    | 'qualityIndependent'
+    | 'qualityStandards'
+    | 'qualityReports'
+    | 'warehouseSupport'
+    | 'warehouseConsolidate'
+    | 'warehouseDocuments'
+    | 'paymentMethods'
+    | 'paymentLc'
+    | 'paymentMilestone'
+    | 'tradeTerms'
+    | 'tradeFob'
+    | 'tradeForwarder',
+    string
+  >;
+  answers: CompactResourcesFaqContentInput['questions'];
+}
+
+function buildCompactResourcesFaqContent(
+  input: CompactResourcesFaqContentInput,
+): ResourcesFaqLocalizedContent {
+  return {
+    title: input.title,
+    intro: input.intro,
+    footer: 'ANSLIFE JSC | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+    topics: [
+      {
+        id: 'faq-about',
+        nav: input.labels.about[0],
+        title: input.labels.about[1],
+        items: [
+          { question: input.questions.aboutCompany, answer: input.answers.aboutCompany },
+          { question: input.questions.aboutFactory, answer: input.answers.aboutFactory },
+          { question: input.questions.aboutDifference, answer: input.answers.aboutDifference },
+        ],
+      },
+      {
+        id: 'faq-products',
+        nav: input.labels.products[0],
+        title: input.labels.products[1],
+        items: [
+          { question: input.questions.productsScope, answer: input.answers.productsScope },
+          { question: input.questions.productsDrawings, answer: input.answers.productsDrawings },
+          { question: input.questions.productsOem, answer: input.answers.productsOem },
+        ],
+      },
+      {
+        id: 'faq-operations',
+        nav: input.labels.operations[0],
+        title: input.labels.operations[1],
+        items: [
+          {
+            question: input.questions.operationsExistingFactory,
+            answer: input.answers.operationsExistingFactory,
+          },
+          {
+            question: input.questions.operationsRepresentative,
+            answer: input.answers.operationsRepresentative,
+          },
+          { question: input.questions.operationsIssues, answer: input.answers.operationsIssues },
+        ],
+      },
+      {
+        id: 'faq-quality',
+        nav: input.labels.quality[0],
+        title: input.labels.quality[1],
+        items: [
+          { question: input.questions.qualityIndependent, answer: input.answers.qualityIndependent },
+          { question: input.questions.qualityStandards, answer: input.answers.qualityStandards },
+          { question: input.questions.qualityReports, answer: input.answers.qualityReports },
+        ],
+      },
+      {
+        id: 'faq-warehouse',
+        nav: input.labels.warehouse[0],
+        title: input.labels.warehouse[1],
+        items: [
+          { question: input.questions.warehouseSupport, answer: input.answers.warehouseSupport },
+          {
+            question: input.questions.warehouseConsolidate,
+            answer: input.answers.warehouseConsolidate,
+          },
+          { question: input.questions.warehouseDocuments, answer: input.answers.warehouseDocuments },
+        ],
+      },
+      {
+        id: 'faq-payment',
+        nav: input.labels.payment[0],
+        title: input.labels.payment[1],
+        items: [
+          { question: input.questions.paymentMethods, answer: input.answers.paymentMethods },
+          { question: input.questions.paymentLc, answer: input.answers.paymentLc },
+          { question: input.questions.paymentMilestone, answer: input.answers.paymentMilestone },
+        ],
+      },
+      {
+        id: 'faq-trade',
+        nav: input.labels.trade[0],
+        title: input.labels.trade[1],
+        items: [
+          { question: input.questions.tradeTerms, answer: input.answers.tradeTerms },
+          { question: input.questions.tradeFob, answer: input.answers.tradeFob },
+          { question: input.questions.tradeForwarder, answer: input.answers.tradeForwarder },
+        ],
+      },
+    ],
+  };
+}
+
+function buildMinimalResourcesFaqContent(input: {
+  title: string;
+  intro: string;
+  topics: Array<[string, string, string, string, string]>;
+}): ResourcesFaqLocalizedContent {
+  const ids = [
+    'faq-about',
+    'faq-products',
+    'faq-operations',
+    'faq-quality',
+    'faq-warehouse',
+    'faq-payment',
+    'faq-trade',
+  ];
+
+  return {
+    title: input.title,
+    intro: input.intro,
+    footer: 'ANSLIFE JSC | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+    topics: input.topics.map(([nav, title, question, answer, extraQuestion], index) => ({
+      id: ids[index],
+      nav,
+      title,
+      items: [
+        { question, answer },
+        {
+          question: extraQuestion,
+          answer:
+            answer,
+        },
+      ],
+    })),
+  };
+}
+
+const EXTRA_RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
+  Record<LanguageCode, ResourcesFaqLocalizedContent>
+> = {
+  sv: buildMinimalResourcesFaqContent({
+    title: 'Vanliga frågor för köpare',
+    intro:
+      'Svar på vanliga frågor om att arbeta med ANSLIFE JSC kring produktion, leveranskedja, QC, lager, betalning och internationell leverans.',
+    topics: [
+      ['Om ANSLIFE', 'Om ANSLIFE JSC', 'Vilken typ av företag är ANSLIFE JSC?', 'ANSLIFE JSC är en Vietnam-baserad partner för produktion, leveranskedja och export inom möbler, komponenter och material.', 'Är ANSLIFE bara en fabrik?'],
+      ['Produkter & material', 'Produkter, material och produktion', 'Vilka produkter kan ANSLIFE stödja?', 'ANSLIFE stödjer färdiga möbler, möbelkomponenter, produktionsmaterial, QC, packning, lager och planerad export från Vietnam.', 'Kan ANSLIFE arbeta från ritningar eller prover?'],
+      ['Projektledning', 'Projektledning i Vietnam', 'Kan ANSLIFE följa projekt i Vietnam?', 'ANSLIFE kan följa framdrift, kontrollera material, samordna fabrik, göra QC, följa dokument och rapportera enligt avtalad omfattning.', 'Kan ANSLIFE hantera produktionsproblem?'],
+      ['QC & standarder', 'Kvalitetskontroll och standarder', 'Är QC oberoende från produktionen?', 'Ja. QC-funktionen är separerad från produktionen och bygger på köparens godkända prover, ritningar, checklistor och packningskrav.', 'Kan ANSLIFE göra inspektionsrapporter?'],
+      ['Lager & export', 'Lager, Vietnam Supply Hub och export', 'Stödjer ANSLIFE lager i Vietnam?', 'Ja. ANSLIFE kan lagra varor, prover, material, komponenter, produktstandarder och buffertlager samt samordna export.', 'Kan ANSLIFE samla gods från flera källor?'],
+      ['Betalning', 'Internationell betalning och handelsfinansiering', 'Vilka betalningssätt kan ANSLIFE stödja?', 'ANSLIFE kan arbeta med internationell banköverföring, remburs, documentary collection, milstolpsbetalning och andra avtalade handelsbetalningar.', 'Kan betalning följa produktionsmilstolpar?'],
+      ['Internationell leverans', 'Handelsvillkor och internationell leverans', 'Vilka handelsvillkor kan ANSLIFE arbeta med?', 'ANSLIFE kan arbeta med EXW, FCA, FOB, CFR, CIF, leverans till destination och i vissa fall DDP beroende på order och marknad.', 'Kan köparen använda egen speditör?'],
+    ],
+  }),
+  fr: buildMinimalResourcesFaqContent({
+    title: 'Questions fréquentes pour les acheteurs',
+    intro:
+      'Réponses aux questions fréquentes sur la collaboration avec ANSLIFE JSC pour la production, la supply chain, le QC, le stockage, le paiement et la livraison internationale.',
+    topics: [
+      ['À propos d’ANSLIFE', 'À propos d’ANSLIFE JSC', 'Quel type d’entreprise est ANSLIFE JSC ?', 'ANSLIFE JSC est un partenaire vietnamien de production, de supply chain et d’export pour les acheteurs internationaux de meubles, composants et matériaux.', 'ANSLIFE est-elle seulement une usine ?'],
+      ['Produits & matériaux', 'Produits, matériaux et production', 'Quels produits ANSLIFE peut-elle prendre en charge ?', 'ANSLIFE soutient meubles finis, composants, matériaux de production, QC, emballage, stockage et export planifié depuis le Vietnam.', 'ANSLIFE peut-elle travailler à partir de plans ou d’échantillons ?'],
+      ['Opération projet', 'Opération de projet au Vietnam', 'ANSLIFE peut-elle suivre un projet au Vietnam ?', 'ANSLIFE peut suivre l’avancement, contrôler les matériaux, coordonner l’usine, faire le QC, suivre les documents et reporter selon le périmètre convenu.', 'ANSLIFE peut-elle traiter les problèmes de production ?'],
+      ['QC & standards', 'Contrôle qualité et standards', 'Le QC est-il indépendant de la production ?', 'Oui. Le QC est séparé de la production et s’appuie sur les échantillons validés, plans, checklists et exigences d’emballage du buyer.', 'ANSLIFE peut-elle préparer des rapports d’inspection ?'],
+      ['Stockage & export', 'Stockage, Vietnam Supply Hub et export', 'ANSLIFE prend-elle en charge le stockage au Vietnam ?', 'Oui. ANSLIFE peut stocker marchandises, échantillons, matériaux, composants, standards produit et stock tampon, puis coordonner l’export.', 'ANSLIFE peut-elle consolider des marchandises de plusieurs sources ?'],
+      ['Paiement', 'Paiement international et financement commercial', 'Quels modes de paiement ANSLIFE peut-elle soutenir ?', 'ANSLIFE peut travailler avec virement international, lettre de crédit, remise documentaire, paiement par jalons et autres modes convenus.', 'Le paiement peut-il suivre les étapes de production ?'],
+      ['Livraison internationale', 'Conditions commerciales et livraison internationale', 'Avec quelles conditions commerciales ANSLIFE peut-elle travailler ?', 'ANSLIFE peut travailler avec EXW, FCA, FOB, CFR, CIF, livraison à destination et parfois DDP selon commande et marché.', 'L’acheteur peut-il utiliser son propre transitaire ?'],
+    ],
+  }),
+  ru: buildMinimalResourcesFaqContent({
+    title: 'Частые вопросы для покупателей',
+    intro:
+      'Ответы на частые вопросы о работе с ANSLIFE JSC по производству, цепочке поставок, QC, складу, оплате и международной доставке.',
+    topics: [
+      ['Об ANSLIFE', 'Об ANSLIFE JSC', 'Что представляет собой ANSLIFE JSC?', 'ANSLIFE JSC - вьетнамский партнер по производству, цепочке поставок и экспорту для международных покупателей мебели, компонентов и материалов.', 'ANSLIFE является только фабрикой?'],
+      ['Продукты и материалы', 'Продукты, материалы и производство', 'Какие продукты поддерживает ANSLIFE?', 'ANSLIFE поддерживает готовую мебель, компоненты, производственные материалы, QC, упаковку, склад и плановый экспорт из Вьетнама.', 'Может ли ANSLIFE работать по чертежам или образцам?'],
+      ['Управление проектом', 'Управление проектом во Вьетнаме', 'Может ли ANSLIFE сопровождать проект во Вьетнаме?', 'ANSLIFE может отслеживать прогресс, проверять материалы, координировать фабрику, проводить QC, следить за документами и предоставлять отчеты.', 'Может ли ANSLIFE решать производственные проблемы?'],
+      ['QC и стандарты', 'Контроль качества и стандарты', 'QC независим от производства?', 'Да. QC отделен от производства и основан на утвержденных образцах, чертежах, чек-листах и требованиях к упаковке покупателя.', 'Может ли ANSLIFE готовить инспекционные отчеты?'],
+      ['Склад и экспорт', 'Склад, Vietnam Supply Hub и экспорт', 'Поддерживает ли ANSLIFE склад во Вьетнаме?', 'Да. ANSLIFE может хранить товары, образцы, материалы, компоненты, стандарты продукта и буферный запас, а также координировать экспорт.', 'Может ли ANSLIFE консолидировать товары из разных источников?'],
+      ['Оплата', 'Международная оплата и торговое финансирование', 'Какие способы оплаты поддерживает ANSLIFE?', 'ANSLIFE может работать с международным переводом, аккредитивом, документарным инкассо, оплатой по этапам и другими согласованными методами.', 'Может ли оплата идти по этапам производства?'],
+      ['Международная доставка', 'Торговые условия и международная доставка', 'С какими торговыми условиями работает ANSLIFE?', 'ANSLIFE может работать с EXW, FCA, FOB, CFR, CIF, доставкой до места назначения и иногда DDP в зависимости от заказа и рынка.', 'Может ли покупатель назначить своего экспедитора?'],
+    ],
+  }),
+  es: buildMinimalResourcesFaqContent({
+    title: 'Preguntas frecuentes para compradores',
+    intro:
+      'Respuestas a preguntas comunes sobre trabajar con ANSLIFE JSC en producción, cadena de suministro, QC, almacén, pago y entrega internacional.',
+    topics: [
+      ['Sobre ANSLIFE', 'Sobre ANSLIFE JSC', '¿Qué tipo de empresa es ANSLIFE JSC?', 'ANSLIFE JSC es un socio en Vietnam para producción, cadena de suministro y exportación para compradores internacionales de muebles, componentes y materiales.', '¿ANSLIFE es solo una fábrica?'],
+      ['Productos y materiales', 'Productos, materiales y producción', '¿Qué productos puede apoyar ANSLIFE?', 'ANSLIFE apoya muebles terminados, componentes, materiales de producción, QC, empaque, almacén y exportación programada desde Vietnam.', '¿ANSLIFE puede trabajar desde planos o muestras?'],
+      ['Operación de proyecto', 'Operación de proyecto en Vietnam', '¿ANSLIFE puede hacer seguimiento de un proyecto en Vietnam?', 'ANSLIFE puede seguir avances, controlar materiales, coordinar fábrica, hacer QC, seguir documentos y reportar según el alcance acordado.', '¿ANSLIFE puede manejar problemas de producción?'],
+      ['QC y estándares', 'Control de calidad y estándares', '¿El QC es independiente de producción?', 'Sí. El QC está separado de producción y se basa en muestras aprobadas, planos, checklists y requisitos de empaque del comprador.', '¿ANSLIFE puede preparar reportes de inspección?'],
+      ['Almacén y exportación', 'Almacén, Vietnam Supply Hub y exportación', '¿ANSLIFE apoya almacenamiento en Vietnam?', 'Sí. ANSLIFE puede almacenar mercancías, muestras, materiales, componentes, estándares de producto y stock de seguridad, y coordinar exportación.', '¿ANSLIFE puede consolidar mercancías de varias fuentes?'],
+      ['Pago', 'Pago internacional y financiación comercial', '¿Qué métodos de pago puede apoyar ANSLIFE?', 'ANSLIFE puede trabajar con transferencia internacional, carta de crédito, cobranza documentaria, pago por hitos y otros métodos acordados.', '¿El pago puede seguir hitos de producción?'],
+      ['Entrega internacional', 'Términos comerciales y entrega internacional', '¿Con qué términos comerciales puede trabajar ANSLIFE?', 'ANSLIFE puede trabajar con EXW, FCA, FOB, CFR, CIF, entrega a destino y en algunos casos DDP según pedido y mercado.', '¿El comprador puede usar su propio forwarder?'],
+    ],
+  }),
+  zh: buildMinimalResourcesFaqContent({
+    title: '买家常见问题',
+    intro:
+      '关于与 ANSLIFE JSC 合作时生产、供应链、QC、仓储、付款和国际交付的常见问题。',
+    topics: [
+      ['关于 ANSLIFE', '关于 ANSLIFE JSC', 'ANSLIFE JSC 是什么类型的公司？', 'ANSLIFE JSC 是越南的生产、供应链与出口合作伙伴，服务于家具、部件和材料领域的国际买家。', 'ANSLIFE 只是工厂吗？'],
+      ['产品与材料', '产品、材料与生产', 'ANSLIFE 可以支持哪些产品？', 'ANSLIFE 支持成品家具、部件、生产材料、QC、包装、仓储以及从越南计划出口。', 'ANSLIFE 可以根据图纸或样品工作吗？'],
+      ['项目运营', '越南项目运营', 'ANSLIFE 可以在越南跟进项目吗？', 'ANSLIFE 可以跟进进度、检查材料、协调工厂、执行 QC、跟进文件并按约定范围报告。', 'ANSLIFE 可以处理生产问题吗？'],
+      ['QC 与标准', '质量控制与标准', 'QC 是否独立于生产？', '是。QC 与生产分离，并基于买家确认样、图纸、检查清单和包装要求执行。', 'ANSLIFE 可以准备验货报告吗？'],
+      ['仓储与出口', '仓储、越南 Supply Hub 与出口', 'ANSLIFE 支持越南仓储吗？', '可以。ANSLIFE 可储存货物、样品、材料、部件、产品标准和安全库存，并协调出口。', 'ANSLIFE 可以整合多个来源的货物吗？'],
+      ['付款', '国际付款与贸易融资', 'ANSLIFE 支持哪些付款方式？', 'ANSLIFE 可配合国际汇款、信用证、跟单托收、节点付款及其他约定的贸易付款方式。', '付款可以按生产节点进行吗？'],
+      ['国际交付', '贸易条款与国际交付', 'ANSLIFE 可以操作哪些贸易条款？', 'ANSLIFE 可根据订单和市场操作 EXW、FCA、FOB、CFR、CIF、目的地交付，部分情况下可评估 DDP。', '买家可以指定自己的货代吗？'],
+    ],
+  }),
+};
+
 function getResourcesFaqSectionHtml(language: LanguageCode): string {
   if (language === 'vn') {
     return RESOURCES_FAQ_SECTION_VN;
   }
 
-  const content = RESOURCES_FAQ_LOCALIZED_CONTENT[language];
+  const content =
+    RESOURCES_FAQ_LOCALIZED_CONTENT[language] ??
+    EXTRA_RESOURCES_FAQ_LOCALIZED_CONTENT[language];
   return content ? buildResourcesFaqSection(content) : RESOURCES_FAQ_SECTION_VN;
 }
 
@@ -8848,6 +10071,13 @@ export function getAIFallbackSectionHtml(
 ): string | null {
   if (pageSlug === 'resources' && sectionId === 'faq') {
     return `<div class="ai-content">${getResourcesFaqSectionHtml(language)}</div>`;
+  }
+
+  if (pageSlug === 'about-anslife') {
+    const extraAboutSectionHtml = getExtraAboutSectionHtml(language, sectionId);
+    if (extraAboutSectionHtml) {
+      return `<div class="ai-content">${extraAboutSectionHtml}</div>`;
+    }
   }
 
   if (pageSlug === 'about-anslife' && sectionId === 'development-history') {

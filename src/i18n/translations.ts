@@ -3,10 +3,10 @@ import { AUTO_TRANSLATIONS } from './autoTranslations';
 
 const VIETNAMESE = 'vn';
 
-const TRANSLATIONS: Record<
+const TRANSLATIONS: Partial<Record<
   Exclude<LanguageCode, typeof VIETNAMESE>,
-  Record<string, string>
-> = {
+  Partial<Record<string, string>>
+>> = {
   en: {
     'Trang chủ': 'Home',
     'Bàn - Tủ trang điểm': 'Table - Dressing cabinet',
@@ -1966,10 +1966,10 @@ export function translateText(language: LanguageCode, text: string): string {
   }
 
   return (
-    TRANSLATIONS[language][text] ??
-    AUTO_TRANSLATIONS[language][text] ??
-    TRANSLATIONS.en[text] ??
-    AUTO_TRANSLATIONS.en[text] ??
+    TRANSLATIONS[language]?.[text] ??
+    AUTO_TRANSLATIONS[language]?.[text] ??
+    TRANSLATIONS.en?.[text] ??
+    AUTO_TRANSLATIONS.en?.[text] ??
     text
   );
 }

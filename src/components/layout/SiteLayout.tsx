@@ -13,13 +13,13 @@ import { TOP_MENU, type MenuChildItem } from '../../config/site';
 import {
   getStoredLanguage,
   isLanguageCode,
+  LANGUAGE_SELECTOR_STORAGE_KEY,
   LANGUAGE_STORAGE_KEY,
   type LanguageCode,
   withLanguagePath,
 } from '../../i18n/language';
 import SocialLinks from './SocialLinks';
 import useSiteI18n from '../../hooks/useSiteI18n';
-import { WORLD_LANGUAGE_OPTIONS } from '../../i18n/worldLanguages';
 import { getCurrentUser, type AuthUser } from '../../lib/internalAuth';
 
 const supportedLanguageOptions = [
@@ -27,6 +27,11 @@ const supportedLanguageOptions = [
   { code: 'jp', label: '日本語', menuLabel: 'JP', flag: '🇯🇵' },
   { code: 'vn', label: 'Tiếng Việt', menuLabel: 'VN', flag: '🇻🇳' },
   { code: 'kr', label: '한국어', menuLabel: 'KR', flag: '🇰🇷' },
+  { code: 'sv', label: 'Swedish', menuLabel: 'SV', flag: '🇸🇪' },
+  { code: 'fr', label: 'Français', menuLabel: 'FR', flag: '🇫🇷' },
+  { code: 'ru', label: 'Русский', menuLabel: 'RU', flag: '🇷🇺' },
+  { code: 'es', label: 'Español', menuLabel: 'ES', flag: '🇪🇸' },
+  { code: 'zh', label: '中文', menuLabel: 'ZH', flag: '🇨🇳' },
 ] as const satisfies ReadonlyArray<{
   code: LanguageCode;
   label: string;
@@ -45,13 +50,23 @@ const homeMobileLanguageOptions: ReadonlyArray<{
     ...option,
     routeCode: option.code,
   })),
-  { code: 'sv', label: 'Swedish', menuLabel: 'SV', flag: '🇸🇪' },
-  { code: 'fr', label: 'French', menuLabel: 'FR', flag: '🇫🇷' },
-  { code: 'ru', label: 'Russian', menuLabel: 'RU', flag: '🇷🇺' },
-  { code: 'es', label: 'Spanish', menuLabel: 'ES', flag: '🇪🇸' },
 ];
+const desktopLanguageOptions: ReadonlyArray<{
+  code: string;
+  label: string;
+}> = [
+  { code: 'en', label: 'English' },
+  { code: 'jp', label: '日本語' },
+  { code: 'vn', label: 'Tiếng Việt' },
+  { code: 'kr', label: '한국어' },
+  { code: 'sv', label: 'Swedish' },
+  { code: 'fr', label: 'Français' },
+  { code: 'ru', label: 'Русский' },
+  { code: 'es', label: 'Español' },
+  { code: 'zh', label: '中文' },
+];
+const desktopLanguageCodes = new Set(desktopLanguageOptions.map((option) => option.code));
 
-const LANGUAGE_SELECTOR_STORAGE_KEY = 'anslife_language_selector';
 const LANGUAGE_ROUTE_ALIAS: Record<string, LanguageCode> = {
   vn: 'vn',
   vi: 'vn',
@@ -60,11 +75,13 @@ const LANGUAGE_ROUTE_ALIAS: Record<string, LanguageCode> = {
   ja: 'jp',
   kr: 'kr',
   ko: 'kr',
+  sv: 'sv',
+  fr: 'fr',
+  ru: 'ru',
+  es: 'es',
+  zh: 'zh',
+  cn: 'zh',
 };
-
-const additionalLanguageOptions = WORLD_LANGUAGE_OPTIONS.filter(
-  (item) => item.code !== 'en',
-);
 
 const PRODUCT_MENU_PATH = '/products';
 const HEADER_PRIMARY_MENU_COUNT = 6;
@@ -1248,6 +1265,10 @@ export default function SiteLayout() {
   }
 
   function renderLanguageSwitcher(selectId = 'language-switcher') {
+    const selectedDesktopLanguage = desktopLanguageCodes.has(selectedLanguageOption)
+      ? selectedLanguageOption
+      : language;
+
     return (
       <div className="header-language">
         <label htmlFor={selectId} className="sr-only">
@@ -1256,7 +1277,7 @@ export default function SiteLayout() {
         <select
           id={selectId}
           className="language-switcher"
-          value={selectedLanguageOption}
+          value={selectedDesktopLanguage}
           onChange={(event) => {
             const nextValue = event.target.value;
             setSelectedLanguageOption(nextValue);
@@ -1274,20 +1295,11 @@ export default function SiteLayout() {
             setShowLanguagePopup(false);
           }}
         >
-          <optgroup label={t('Ngôn ngữ đã hỗ trợ')}>
-            {supportedLanguageOptions.map((option) => (
-              <option key={option.code} value={option.code}>
-                {option.label}
-              </option>
-            ))}
-          </optgroup>
-          <optgroup label={t('Tất cả ngôn ngữ khác (sẽ hỗ trợ sau)')}>
-            {additionalLanguageOptions.map((option) => (
-              <option key={option.code} value={option.code}>
-                {option.name}
-              </option>
-            ))}
-          </optgroup>
+          {desktopLanguageOptions.map((option) => (
+            <option key={option.code} value={option.code}>
+              {option.label}
+            </option>
+          ))}
         </select>
       </div>
     );

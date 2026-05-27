@@ -1,6 +1,8 @@
 import type { LanguageCode } from './language';
 
-export const AUTO_TRANSLATIONS: Record<Exclude<LanguageCode, 'vn'>, Record<string, string>> = {
+export const AUTO_TRANSLATIONS: Partial<
+  Record<Exclude<LanguageCode, 'vn'>, Record<string, string>>
+> = {
   en: {
     "(Chất lượng là ưu tiên số 1 – Giá là ưu tiên số 2)": "(Quality is priority number 1 - Price is priority number 2)",
     "→ kiểm soát tại hệ thống": "→ control at the system",

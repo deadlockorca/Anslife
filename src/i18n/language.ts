@@ -1,7 +1,8 @@
-export const LANGUAGE_CODES = ['vn', 'en', 'jp', 'kr'] as const;
+export const LANGUAGE_CODES = ['vn', 'en', 'jp', 'kr', 'sv', 'fr', 'ru', 'es', 'zh'] as const;
 export type LanguageCode = (typeof LANGUAGE_CODES)[number];
 
 export const LANGUAGE_STORAGE_KEY = 'anslife_selected_language';
+export const LANGUAGE_SELECTOR_STORAGE_KEY = 'anslife_language_selector';
 export const DEFAULT_LANGUAGE: LanguageCode = 'en';
 
 export function isLanguageCode(value: string | null | undefined): value is LanguageCode {
@@ -23,7 +24,12 @@ export function getStoredLanguage(): LanguageCode | null {
   }
 
   const saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-  return isLanguageCode(saved) ? saved : null;
+  if (isLanguageCode(saved)) {
+    return saved;
+  }
+
+  const selected = window.localStorage.getItem(LANGUAGE_SELECTOR_STORAGE_KEY);
+  return isLanguageCode(selected) ? selected : null;
 }
 
 export function getPreferredLanguage(): LanguageCode {
