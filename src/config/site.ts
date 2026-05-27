@@ -374,6 +374,10 @@ export const TOP_MENU: TopMenuItem[] = [
     ],
   },
   {
+    label: 'Câu hỏi thường gặp',
+    path: '/resources/faq',
+  },
+  {
     label: 'Liên hệ / Gửi yêu cầu',
     path: '/contact',
     children: [

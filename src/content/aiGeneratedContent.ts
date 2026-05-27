@@ -7458,6 +7458,1352 @@ const AI_SCHOLARSHIP_SECTION_CONTENT_KR: Record<string, string> = Object.fromEnt
   ]),
 ) as Record<string, string>;
 
+const ABOUT_DEVELOPMENT_HISTORY_SECTION_VN = `
+  <section id="development-history" class="ai-section ai-development-history">
+    <header class="ai-history-header">
+      <h2>Lịch sử hình thành &amp; phát triển</h2>
+      <div class="ai-history-intro">
+        <p>
+          <strong>ANSLIFE JSC</strong> được hình thành từ nền tảng sản xuất nội thất thực tế tại Việt Nam. Từ một xưởng sản xuất thủ công tại làng nghề Cần Kiệm, Thạch Thất, Hà Nội, ANSLIFE từng bước phát triển năng lực thiết kế, thi công, gia công xuất khẩu, kiểm soát chất lượng, <strong>chuỗi cung ứng vật liệu</strong> và <strong>vận hành dự án xuất khẩu</strong> cho buyer quốc tế.
+        </p>
+        <p>
+          Qua từng giai đoạn, ANSLIFE không chỉ phát triển như một đơn vị sản xuất nội thất, mà dần hình thành một hệ thống sản xuất, chuỗi cung ứng, kiểm soát chất lượng và xuất khẩu có thể vận hành linh hoạt tại Việt Nam.
+        </p>
+      </div>
+    </header>
+
+    <div class="ai-history-timeline">
+      <article class="ai-history-timeline-card">
+        <div class="ai-history-year">2012</div>
+        <div class="ai-history-card-copy">
+          <h3>Khởi đầu từ xưởng sản xuất nội thất thủ công</h3>
+          <p>ANSLIFE bắt đầu từ một xưởng sản xuất nội thất thủ công tại làng nghề Cần Kiệm, huyện Thạch Thất, thành phố Hà Nội, Việt Nam.</p>
+          <p>Giai đoạn này tập trung vào các sản phẩm nội thất gia đình như tủ áo, giường, bàn, ghế và các sản phẩm gỗ phục vụ nhu cầu nhà ở.</p>
+        </div>
+      </article>
+
+      <article class="ai-history-timeline-card">
+        <div class="ai-history-year">2014</div>
+        <div class="ai-history-card-copy">
+          <h3>Thành lập phòng thiết kế kiến trúc và nội thất</h3>
+          <p>ANSLIFE thành lập phòng thiết kế kiến trúc và nội thất, phục vụ các công trình nhà ở và văn phòng.</p>
+          <p>Trong giai đoạn này, công ty chuyển trụ sở chính về Tầng 5, Số 12 Khuất Duy Tiến, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội, Việt Nam.</p>
+          <p>Đây là giai đoạn ANSLIFE mở rộng từ sản xuất nội thất sang thiết kế, tư vấn và triển khai không gian nội thất hoàn chỉnh.</p>
+        </div>
+      </article>
+
+      <article class="ai-history-timeline-card">
+        <div class="ai-history-year">2018</div>
+        <div class="ai-history-card-copy">
+          <h3>Phát triển thương hiệu nội thất tại Việt Nam</h3>
+          <p>ANSLIFE mở thêm thương hiệu thiết kế và thi công nội thất tại Việt Nam với tên thương hiệu Tổ Ấm Hoàn Hảo.</p>
+          <p>Website: <a href="https://toamhoanhao.vn" target="_blank" rel="noopener noreferrer">toamhoanhao.vn</a>.</p>
+          <p>Giai đoạn này giúp ANSLIFE tích lũy thêm kinh nghiệm về nhu cầu người dùng, thiết kế nội thất, thi công thực tế và quản lý dự án nội thất trong nước.</p>
+        </div>
+      </article>
+
+      <article class="ai-history-timeline-card">
+        <div class="ai-history-year">2019</div>
+        <div class="ai-history-card-copy">
+          <h3>Bắt đầu tham gia chuỗi gia công xuất khẩu</h3>
+          <p>ANSLIFE bắt đầu nhận các đơn hàng xuất khẩu liên quan đến sản phẩm đồ gỗ nội thất, bao gồm các sản phẩm làm từ gỗ tự nhiên, MDF và các vật liệu liên quan.</p>
+          <p>Ở giai đoạn này, ANSLIFE tham gia với vai trò gia công cho các nhà xuất khẩu tại Việt Nam, phục vụ các đơn hàng xuất khẩu sang thị trường Hoa Kỳ.</p>
+        </div>
+      </article>
+
+      <article class="ai-history-timeline-card">
+        <div class="ai-history-year">2020</div>
+        <div class="ai-history-card-copy">
+          <h3>Mở rộng xuất khẩu và ra mắt thương hiệu ANSLIFE</h3>
+          <p>ANSLIFE mở rộng hoạt động xuất khẩu sang các thị trường như Hoa Kỳ, Hàn Quốc và Châu Âu.</p>
+          <p>Các nhóm sản phẩm xuất khẩu bao gồm sản phẩm làm từ gỗ tự nhiên, MDF, plywood và các vật liệu phục vụ sản xuất nội thất.</p>
+          <p>Trong năm này, thương hiệu ANSLIFE chính thức được ra mắt, đánh dấu bước chuyển từ hoạt động gia công đơn lẻ sang định hướng xây dựng hệ thống sản xuất và xuất khẩu nội thất.</p>
+        </div>
+      </article>
+
+      <article class="ai-history-timeline-card">
+        <div class="ai-history-year">2021</div>
+        <div class="ai-history-card-copy">
+          <h3>Xuất khẩu thành công sang thị trường Nhật Bản</h3>
+          <p>ANSLIFE xuất khẩu thành công hàng hóa nội thất đến thị trường Nhật Bản.</p>
+          <p>Đây là một cột mốc quan trọng, vì thị trường Nhật Bản có yêu cầu cao về chất lượng, độ ổn định, tiêu chuẩn đóng gói, kiểm soát chi tiết và khả năng duy trì tiêu chuẩn sản phẩm trong dài hạn.</p>
+        </div>
+      </article>
+
+      <article class="ai-history-timeline-card">
+        <div class="ai-history-year">2022</div>
+        <div class="ai-history-card-copy">
+          <h3>Hoàn thiện chuỗi cung ứng vật tư và thành lập phòng kiểm soát chất lượng</h3>
+          <p>ANSLIFE tiếp tục hoàn thiện <strong>chuỗi cung ứng vật liệu</strong> ngành nội thất, bao gồm các nguồn cung cấp gỗ cao su, gỗ tràm, vải không dệt và các vật liệu phục vụ sản xuất nội thất.</p>
+          <p>Trong năm này, ANSLIFE thành lập phòng kiểm soát chất lượng để thực hiện nhiệm vụ kiểm tra, theo dõi và kiểm soát chất lượng cho các đơn hàng.</p>
+          <p>Đây là nền tảng quan trọng để ANSLIFE phát triển hệ thống <strong>kiểm soát chất lượng độc lập</strong> trong các giai đoạn sau.</p>
+        </div>
+      </article>
+
+      <article class="ai-history-timeline-card">
+        <div class="ai-history-year">2023</div>
+        <div class="ai-history-card-copy">
+          <h3>Mở rộng vai trò vận hành và quản lý dự án xuất khẩu</h3>
+          <p>ANSLIFE tiếp tục hoàn thiện chuỗi cung ứng vật liệu và mở rộng vai trò trong các dự án xuất khẩu.</p>
+          <p>Ngoài hoạt động sản xuất và cung ứng, ANSLIFE bắt đầu tham gia sâu hơn vào việc vận hành, điều phối và quản lý các dự án xuất khẩu, bao gồm theo dõi tiến độ, phối hợp nhà máy, kiểm tra chất lượng, chuẩn bị hàng hóa và hỗ trợ kế hoạch xuất hàng.</p>
+        </div>
+      </article>
+
+      <article class="ai-history-timeline-card">
+        <div class="ai-history-year">2025</div>
+        <div class="ai-history-card-copy">
+          <h3>Chuyển trụ sở chính về Thành phố Hồ Chí Minh và mở rộng hệ thống vệ tinh</h3>
+          <p>ANSLIFE chuyển trụ sở chính về hoạt động tại Thành phố Hồ Chí Minh và mở thêm chi nhánh hoạt động tại Đồng Nai.</p>
+          <p>Đến giai đoạn này, ANSLIFE sở hữu năng lực sản xuất thông qua hệ thống nhà máy vệ tinh đa dạng, mạng lưới cung cấp nguyên liệu và kinh nghiệm vận hành các đơn hàng xuất khẩu.</p>
+          <p>ANSLIFE tiếp tục phát triển theo định hướng trở thành đối tác sản xuất, chuỗi cung ứng, kiểm soát chất lượng, lưu kho và xuất khẩu tại Việt Nam cho buyer quốc tế.</p>
+        </div>
+      </article>
+
+      <article class="ai-history-timeline-card">
+        <div class="ai-history-year">2026</div>
+        <div class="ai-history-card-copy">
+          <h3>Xây dựng khu vực kiểm định chất lượng độc lập</h3>
+          <p>ANSLIFE xây dựng <strong>khu vực kiểm định chất lượng độc lập</strong>, tập trung vào các tiêu chuẩn cơ học của đồ nội thất.</p>
+          <p>Khu vực này được phát triển nhằm hỗ trợ kiểm tra độ bền, kết cấu, khả năng chịu lực, độ ổn định và các tiêu chuẩn cơ học khác theo yêu cầu của từng buyer và từng thị trường.</p>
+          <p>Đây là bước phát triển quan trọng trong việc tách hoạt động kiểm soát chất lượng khỏi bộ máy sản xuất, giúp ANSLIFE nâng cao tính khách quan, khả năng truy xuất và mức độ kiểm soát trong các đơn hàng xuất khẩu.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+`.trim();
+
+const RESOURCES_FAQ_SECTION_VN = `
+  <section id="faq" class="ai-section anslife-faq-page">
+    <header class="anslife-faq-hero">
+      <div class="anslife-faq-hero-copy">
+        <h2>Câu hỏi thường gặp dành cho buyer</h2>
+        <p>
+          Tài liệu tổng hợp các câu hỏi buyer quốc tế thường đặt ra khi tìm hiểu và làm việc với ANSLIFE JSC về sản xuất,
+          chuỗi cung ứng, kiểm soát chất lượng, lưu kho, tài trợ thương mại, thanh toán và giao hàng quốc tế.
+        </p>
+      </div>
+    </header>
+
+    <nav class="anslife-faq-topic-nav" aria-label="Nhóm câu hỏi">
+      <a href="#faq-about">Về ANSLIFE</a>
+      <a href="#faq-products">Sản phẩm & vật liệu</a>
+      <a href="#faq-operations">Vận hành dự án</a>
+      <a href="#faq-quality">QC & tiêu chuẩn</a>
+      <a href="#faq-warehouse">Lưu kho & xuất hàng</a>
+      <a href="#faq-payment">Thanh toán</a>
+      <a href="#faq-trade">Giao hàng quốc tế</a>
+    </nav>
+
+    <div class="anslife-faq-sections">
+      <section id="faq-about" class="anslife-faq-topic">
+        <div class="anslife-faq-topic-head">
+          <span>01</span>
+          <h3>Về ANSLIFE JSC</h3>
+        </div>
+        <div class="anslife-faq-list">
+          <details open>
+            <summary><span>01</span>ANSLIFE JSC là công ty gì?</summary>
+            <p>ANSLIFE JSC là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi hỗ trợ phát triển sản phẩm, tổ chức sản xuất, cung ứng vật liệu, QC độc lập, lưu kho, vận hành dự án, tài trợ thương mại, đóng gói và xuất hàng quốc tế.</p>
+          </details>
+          <details>
+            <summary><span>02</span>ANSLIFE JSC có phải là một nhà máy không?</summary>
+            <p>Không chỉ là một nhà máy đơn lẻ. ANSLIFE vận hành một hệ thống gồm nhà máy do ANSLIFE điều phối, mạng lưới nhà máy vệ tinh, chuỗi cung ứng vật liệu, QC độc lập, kho lưu trữ tại Việt Nam và cơ chế xuất hàng định kỳ.</p>
+          </details>
+          <details>
+            <summary><span>03</span>ANSLIFE JSC khác gì so với một nhà máy thông thường?</summary>
+            <p>Nhà máy thông thường chủ yếu tập trung vào sản xuất. ANSLIFE tổ chức nhiều phần trong chuỗi giá trị: phát triển sản phẩm, chuẩn bị vật liệu, điều phối sản xuất, QC độc lập, lưu kho, quản lý dự án, tài trợ thương mại, đóng gói, chứng từ và xuất hàng.</p>
+          </details>
+          <details>
+            <summary><span>04</span>ANSLIFE JSC phục vụ những thị trường nào?</summary>
+            <p>ANSLIFE phục vụ buyer tại Nhật Bản, Hoa Kỳ, EU và các thị trường quốc tế khác, với hệ thống đáp ứng yêu cầu khác nhau về vật liệu, kết cấu, màu sắc, độ ẩm, hoàn thiện bề mặt, đóng gói, chứng từ và tiêu chuẩn kiểm hàng.</p>
+          </details>
+          <details>
+            <summary><span>05</span>ANSLIFE JSC có văn phòng đại diện ở đâu?</summary>
+            <p>ANSLIFE có văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong. Tại Việt Nam, văn phòng đại diện đặt tại Hà Nội và TP. Hồ Chí Minh; văn phòng quốc tế gồm Tokyo, Singapore và Hong Kong.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="faq-products" class="anslife-faq-topic">
+        <div class="anslife-faq-topic-head">
+          <span>02</span>
+          <h3>Sản phẩm, vật liệu và sản xuất</h3>
+        </div>
+        <div class="anslife-faq-list">
+          <details>
+            <summary><span>01</span>ANSLIFE JSC cung cấp những nhóm sản phẩm nào?</summary>
+            <p>ANSLIFE hỗ trợ nội thất hoàn thiện, cấu kiện nội thất, vật liệu phục vụ sản xuất, giải pháp lưu kho, QC, đóng gói và xuất hàng định kỳ từ Việt Nam. Sản phẩm có thể phát triển theo mẫu có sẵn, bản vẽ kỹ thuật, hình ảnh tham khảo hoặc tiêu chuẩn riêng của buyer.</p>
+          </details>
+          <details>
+            <summary><span>02</span>ANSLIFE có hỗ trợ phát triển sản phẩm theo bản vẽ hoặc mẫu của buyer không?</summary>
+            <p>Có. ANSLIFE có thể phát triển sản phẩm từ bản vẽ, hình ảnh tham khảo, mẫu thật hoặc yêu cầu kỹ thuật của buyer, bao gồm phân tích kết cấu, đề xuất vật liệu, phát triển mẫu, điều chỉnh mẫu, kiểm tra mẫu và chuẩn bị sản xuất hàng loạt.</p>
+          </details>
+          <details>
+            <summary><span>03</span>ANSLIFE có thể sản xuất cấu kiện thay vì sản phẩm hoàn thiện không?</summary>
+            <p>Có. ANSLIFE có thể sản xuất cấu kiện nội thất, chi tiết gỗ, khung, panel, bộ phận theo bản vẽ, linh kiện phục vụ lắp ráp và các bán thành phẩm theo yêu cầu của buyer hoặc nhà máy đối tác.</p>
+          </details>
+          <details>
+            <summary><span>04</span>ANSLIFE có chuỗi cung ứng vật liệu như thế nào?</summary>
+            <p>ANSLIFE duy trì chuỗi cung ứng vật liệu liên tục tại Việt Nam cho gỗ, plywood, veneer, foam, vải, phụ kiện, vật liệu đóng gói và các vật liệu phục vụ sản xuất nội thất. Đây là mạng lưới cung ứng được duy trì cho sản xuất, lưu kho, QC và xuất hàng dài hạn.</p>
+          </details>
+          <details>
+            <summary><span>05</span>ANSLIFE có thể cung cấp vật liệu cho buyer hoặc nhà máy không?</summary>
+            <p>Có. Việc cung ứng vật liệu được xem xét theo yêu cầu kỹ thuật, số lượng, tiêu chuẩn QC và kế hoạch sản xuất của từng dự án.</p>
+          </details>
+          <details>
+            <summary><span>06</span>ANSLIFE có hỗ trợ OEM hoặc ODM không?</summary>
+            <p>Có. ANSLIFE hỗ trợ OEM và ODM từ ý tưởng, bản vẽ, hình ảnh tham khảo, mẫu thật, tiêu chuẩn kỹ thuật, phát triển mẫu, chọn vật liệu, hoàn thiện bề mặt, đóng gói đến chuẩn bị sản xuất hàng loạt.</p>
+          </details>
+          <details>
+            <summary><span>07</span>Buyer cần cung cấp gì để ANSLIFE đánh giá sản phẩm?</summary>
+            <p>Buyer có thể gửi bản vẽ kỹ thuật, hình ảnh tham khảo, mẫu thật nếu có, kích thước, vật liệu, màu sắc, hoàn thiện bề mặt, số lượng dự kiến, tiêu chuẩn đóng gói, thị trường xuất khẩu, kế hoạch giao hàng và mức giá mục tiêu nếu có.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="faq-operations" class="anslife-faq-topic">
+        <div class="anslife-faq-topic-head">
+          <span>03</span>
+          <h3>Vận hành dự án tại Việt Nam</h3>
+        </div>
+        <div class="anslife-faq-list">
+          <details>
+            <summary><span>01</span>ANSLIFE có thể vận hành dự án mà không can thiệp quan hệ thương mại hiện có không?</summary>
+            <p>Có. ANSLIFE có thể theo dõi tiến độ, điều phối thông tin, QC, kiểm tra đóng gói, theo dõi chứng từ và báo cáo độc lập mà không nhất thiết can thiệp hợp đồng, giá cả hoặc điều kiện thương mại hiện có giữa buyer và nhà máy.</p>
+          </details>
+          <details>
+            <summary><span>02</span>Nếu buyer đã có nhà máy tại Việt Nam, ANSLIFE hỗ trợ gì?</summary>
+            <p>ANSLIFE có thể hỗ trợ kiểm tra nhà máy, theo dõi tiến độ, kiểm tra vật liệu, QC độc lập, kiểm tra đóng gói, lưu mẫu, lưu kho, báo cáo sản xuất và hỗ trợ kế hoạch xuất hàng. Phạm vi công việc được thống nhất theo từng dự án.</p>
+          </details>
+          <details>
+            <summary><span>03</span>ANSLIFE có thể làm đại diện vận hành tại Việt Nam cho buyer không?</summary>
+            <p>Có. ANSLIFE có thể làm việc với nhà máy, kiểm tra tiến độ, ghi nhận tình trạng sản xuất, QC, lưu mẫu, theo dõi chứng từ và báo cáo định kỳ theo phạm vi đã thống nhất.</p>
+          </details>
+          <details>
+            <summary><span>04</span>ANSLIFE có thể điều phối thông tin giữa buyer và nhà máy không?</summary>
+            <p>Có. ANSLIFE có thể điều phối thông tin giữa buyer, nhà máy, kỹ thuật, QC, kho, đóng gói và logistics để giảm sai lệch thông tin, theo dõi tiến độ rõ hơn và ghi nhận đầy đủ yêu cầu kỹ thuật.</p>
+          </details>
+          <details>
+            <summary><span>05</span>ANSLIFE có hỗ trợ xử lý vấn đề phát sinh trong sản xuất không?</summary>
+            <p>Có. Khi phát sinh vấn đề về vật liệu, tiến độ, chất lượng, đóng gói, chứng từ hoặc kế hoạch giao hàng, ANSLIFE ghi nhận, báo cáo và phối hợp các bên để đề xuất phương án xử lý minh bạch theo tiêu chuẩn đã thống nhất.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="faq-quality" class="anslife-faq-topic">
+        <div class="anslife-faq-topic-head">
+          <span>04</span>
+          <h3>Kiểm soát chất lượng và tiêu chuẩn</h3>
+        </div>
+        <div class="anslife-faq-list">
+          <details>
+            <summary><span>01</span>Hệ thống QC của ANSLIFE có độc lập với nhà máy không?</summary>
+            <p>Có. Hệ thống QC của ANSLIFE hoạt động độc lập với bộ máy sản xuất để đảm bảo kiểm tra khách quan theo tiêu chuẩn đã thống nhất với buyer và hạn chế xung đột lợi ích giữa sản xuất và kiểm hàng.</p>
+          </details>
+          <details>
+            <summary><span>02</span>ANSLIFE kiểm tra những tiêu chuẩn nào?</summary>
+            <p>ANSLIFE có thể kiểm tra kết cấu, kích thước, màu sắc, độ ẩm, hoàn thiện bề mặt, vật liệu, cấu kiện, đóng gói, nhãn mác và tình trạng hàng trước khi xuất. Nội dung kiểm tra được xây dựng theo từng buyer và từng thị trường.</p>
+          </details>
+          <details>
+            <summary><span>03</span>ANSLIFE có thể kiểm tra theo tiêu chuẩn riêng của từng thị trường không?</summary>
+            <p>Có. ANSLIFE có thể xây dựng checklist theo buyer và thị trường như Nhật Bản, Hoa Kỳ, EU hoặc thị trường khác, gồm yêu cầu cơ học, vật lý, màu sắc, độ ẩm, độ bền, hoàn thiện bề mặt, đóng gói và điều kiện xuất hàng.</p>
+          </details>
+          <details>
+            <summary><span>04</span>ANSLIFE có khu kiểm định chất lượng độc lập không?</summary>
+            <p>ANSLIFE phát triển khu kiểm định chất lượng độc lập để hỗ trợ kiểm tra theo tiêu chuẩn tùy biến của từng thị trường, bao gồm cơ học, vật lý, màu sắc, độ ẩm, hoàn thiện bề mặt, đóng gói và yêu cầu riêng của buyer.</p>
+          </details>
+          <details>
+            <summary><span>05</span>ANSLIFE có lưu mẫu chuẩn, bảng màu và tiêu chuẩn đóng gói không?</summary>
+            <p>Có. ANSLIFE có thể lưu mẫu sản phẩm, mẫu cấu kiện, bảng màu, mẫu vật liệu, tiêu chuẩn đóng gói, checklist kiểm hàng và tài liệu kỹ thuật tại Việt Nam. Với đối tác lâu dài, ANSLIFE có thể thiết lập phòng tiêu chuẩn riêng.</p>
+          </details>
+          <details>
+            <summary><span>06</span>ANSLIFE có thể lập báo cáo kiểm hàng không?</summary>
+            <p>Có. Báo cáo kiểm hàng có thể lập theo từng giai đoạn hoặc trước xuất hàng, gồm hình ảnh, tình trạng sản phẩm, lỗi phát hiện, kết quả kiểm tra kích thước, màu sắc, độ ẩm, đóng gói và đề xuất xử lý nếu có vấn đề.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="faq-warehouse" class="anslife-faq-topic">
+        <div class="anslife-faq-topic-head">
+          <span>05</span>
+          <h3>Lưu kho, Supply Hub Việt Nam và xuất hàng</h3>
+        </div>
+        <div class="anslife-faq-list">
+          <details>
+            <summary><span>01</span>ANSLIFE có hỗ trợ lưu kho tại Việt Nam không?</summary>
+            <p>Có. ANSLIFE hỗ trợ lưu kho hàng hóa, mẫu đã duyệt, vật liệu, cấu kiện, tiêu chuẩn sản phẩm và hàng tồn dự phòng tại Việt Nam, giúp buyer giảm chi phí lưu trữ tại các thị trường có chi phí cao.</p>
+          </details>
+          <details>
+            <summary><span>02</span>ANSLIFE có thể thiết lập phòng tiêu chuẩn riêng cho đối tác không?</summary>
+            <p>Có. Với đối tác dài hạn, ANSLIFE có thể thiết lập khu vực hoặc phòng tiêu chuẩn riêng để lưu mẫu sản phẩm, cấu kiện, bản vẽ, mẫu màu, mẫu vật liệu, tiêu chuẩn đóng gói và checklist kiểm hàng.</p>
+          </details>
+          <details>
+            <summary><span>03</span>ANSLIFE có thể tổ chức xuất hàng định kỳ không?</summary>
+            <p>Có. ANSLIFE có thể tổ chức xuất hàng theo kế hoạch định kỳ, bao gồm hàng nguyên container, hàng lẻ hoặc các lô hàng theo nhu cầu buyer, dựa trên tiến độ sản xuất, lịch kiểm hàng, đóng gói, chứng từ và lịch vận chuyển.</p>
+          </details>
+          <details>
+            <summary><span>04</span>ANSLIFE có hỗ trợ gom hàng từ nhiều nguồn không?</summary>
+            <p>Có. ANSLIFE có thể gom hàng từ nhiều nhà máy, nhà cung cấp hoặc nhóm sản phẩm tại Việt Nam để kiểm tra, đóng gói, lưu kho và xuất hàng theo kế hoạch, phù hợp với buyer cần một đầu mối điều phối chung.</p>
+          </details>
+          <details>
+            <summary><span>05</span>ANSLIFE có hỗ trợ chứng từ xuất khẩu không?</summary>
+            <p>Có. ANSLIFE có thể phối hợp chuẩn bị Commercial Invoice, Packing List, Bill of Lading, Certificate of Origin và các chứng từ khác theo yêu cầu thị trường hoặc buyer.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="faq-payment" class="anslife-faq-topic">
+        <div class="anslife-faq-topic-head">
+          <span>06</span>
+          <h3>Thanh toán quốc tế và tài trợ thương mại</h3>
+        </div>
+        <div class="anslife-faq-list">
+          <details>
+            <summary><span>01</span>ANSLIFE hỗ trợ những hình thức thanh toán quốc tế nào?</summary>
+            <p>ANSLIFE có thể làm việc với chuyển khoản quốc tế, thư tín dụng, nhờ thu trả tiền đổi chứng từ, nhờ thu chấp nhận trả tiền sau, thanh toán theo tiến độ, thanh toán sau khi kiểm hàng hoặc các phương thức thương mại khác theo thỏa thuận.</p>
+          </details>
+          <details>
+            <summary><span>02</span>ANSLIFE có chấp nhận chuyển khoản quốc tế không?</summary>
+            <p>Có. Tỷ lệ đặt cọc, thời điểm thanh toán phần còn lại và điều kiện giao hàng sẽ được thống nhất theo từng đơn hàng, từng buyer và mức độ hợp tác.</p>
+          </details>
+          <details>
+            <summary><span>03</span>ANSLIFE có chấp nhận thư tín dụng không?</summary>
+            <p>Có. ANSLIFE có thể làm việc với thư tín dụng cho đơn hàng phù hợp. Điều kiện L/C, ngân hàng phát hành, thời hạn giao hàng, hiệu lực, bộ chứng từ và điều khoản thanh toán cần thống nhất trước khi xác nhận đơn hàng.</p>
+          </details>
+          <details>
+            <summary><span>04</span>ANSLIFE có thể làm việc với nhờ thu chứng từ hoặc nhờ thu trả sau không?</summary>
+            <p>Có thể xem xét theo từng trường hợp, tùy lịch sử hợp tác, mức độ tín nhiệm của buyer, giá trị đơn hàng, thị trường xuất khẩu, bảo hiểm rủi ro và thỏa thuận thương mại cụ thể.</p>
+          </details>
+          <details>
+            <summary><span>05</span>ANSLIFE có thể thanh toán theo tiến độ sản xuất không?</summary>
+            <p>Có. Một số dự án có thể áp dụng thanh toán theo tiến độ như đặt cọc khi xác nhận đơn hàng, thanh toán khi hoàn thành mẫu, hoàn thành sản xuất, sau kiểm hàng hoặc trước xuất hàng.</p>
+          </details>
+          <details>
+            <summary><span>06</span>ANSLIFE có thể hỗ trợ thanh toán sau khi kiểm hàng không?</summary>
+            <p>Có thể xem xét theo từng đơn hàng. Việc thanh toán sau kiểm hàng cần gắn với báo cáo kiểm hàng, tình trạng hàng hóa, điều kiện đóng gói, chứng từ xuất khẩu và thỏa thuận thương mại giữa các bên.</p>
+          </details>
+          <details>
+            <summary><span>07</span>ANSLIFE có cung cấp giải pháp tài trợ thương mại không?</summary>
+            <p>Có. ANSLIFE cung cấp giải pháp tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng đã xác nhận, vật liệu, tiến độ sản xuất, QC, chứng từ và xuất hàng.</p>
+          </details>
+          <details>
+            <summary><span>08</span>Tài trợ thương mại của ANSLIFE có phải dịch vụ tài chính độc lập không?</summary>
+            <p>Không. Đây không phải dịch vụ tài chính độc lập, mà là giải pháp hỗ trợ chuỗi cung ứng gắn với đơn hàng thực tế, vật liệu, sản xuất, QC, chứng từ và kế hoạch xuất hàng.</p>
+          </details>
+          <details>
+            <summary><span>09</span>Điều kiện thanh toán có thể tùy chỉnh theo từng buyer không?</summary>
+            <p>Có. Điều kiện thanh toán có thể điều chỉnh theo từng buyer, từng đơn hàng, lịch sử hợp tác, yêu cầu chứng từ, kế hoạch sản xuất, kế hoạch xuất hàng và mức độ kiểm soát rủi ro.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="faq-trade" class="anslife-faq-topic">
+        <div class="anslife-faq-topic-head">
+          <span>07</span>
+          <h3>Điều kiện thương mại và giao hàng quốc tế</h3>
+        </div>
+        <div class="anslife-faq-list">
+          <details>
+            <summary><span>01</span>ANSLIFE có thể làm việc theo những điều kiện thương mại nào?</summary>
+            <p>ANSLIFE có thể làm việc theo nhiều điều kiện thương mại tùy đơn hàng, thị trường, phương thức vận chuyển và yêu cầu buyer, gồm giao tại xưởng, giao cho người chuyên chở, giao lên tàu, tiền hàng và cước phí, tiền hàng bảo hiểm và cước phí, giao tại nơi đến hoặc giao hàng đã nộp thuế.</p>
+          </details>
+          <details>
+            <summary><span>02</span>ANSLIFE có thể báo giá theo điều kiện giao lên tàu không?</summary>
+            <p>Có. ANSLIFE có thể báo giá theo điều kiện giao lên tàu tại cảng xuất hàng phù hợp tại Việt Nam. Cảng xuất hàng, chi phí nội địa, điều kiện đóng hàng, chứng từ và lịch tàu sẽ được xác nhận theo từng đơn hàng.</p>
+          </details>
+          <details>
+            <summary><span>03</span>ANSLIFE có thể làm việc theo điều kiện giao tại xưởng không?</summary>
+            <p>Có. ANSLIFE có thể làm việc theo điều kiện giao tại xưởng khi buyer hoặc đơn vị logistics của buyer tự tổ chức nhận hàng tại nhà máy, kho hoặc điểm giao hàng đã thống nhất tại Việt Nam.</p>
+          </details>
+          <details>
+            <summary><span>04</span>ANSLIFE có thể làm việc theo điều kiện giao cho người chuyên chở không?</summary>
+            <p>Có. ANSLIFE có thể làm việc theo điều kiện giao cho người chuyên chở khi buyer chỉ định đơn vị vận chuyển hoặc điểm giao hàng tại Việt Nam. Trách nhiệm giao hàng và chứng từ được thống nhất theo từng đơn hàng.</p>
+          </details>
+          <details>
+            <summary><span>05</span>ANSLIFE có thể báo giá theo CFR hoặc CIF không?</summary>
+            <p>Có thể. ANSLIFE có thể xem xét báo giá theo điều kiện tiền hàng và cước phí hoặc tiền hàng, bảo hiểm và cước phí tùy tuyến vận chuyển, thị trường nhập khẩu, loại hàng hóa, bảo hiểm, lịch tàu và điều kiện từng đơn hàng.</p>
+          </details>
+          <details>
+            <summary><span>06</span>ANSLIFE có thể hỗ trợ giao hàng đến kho của buyer không?</summary>
+            <p>Có thể xem xét theo từng thị trường và đơn hàng. ANSLIFE có thể phối hợp đối tác logistics để hỗ trợ giao hàng đến nơi nhận hoặc giao hàng đã nộp thuế nếu điều kiện pháp lý, thuế, hải quan và logistics cho phép.</p>
+          </details>
+          <details>
+            <summary><span>07</span>Buyer có thể chỉ định forwarder hoặc logistics riêng không?</summary>
+            <p>Có. Buyer có thể chỉ định forwarder, hãng tàu hoặc đơn vị logistics riêng. ANSLIFE sẽ phối hợp trong phạm vi đã thống nhất để chuẩn bị hàng, chứng từ, lịch đóng hàng và giao hàng theo yêu cầu.</p>
+          </details>
+          <details>
+            <summary><span>08</span>ANSLIFE có hỗ trợ hàng nguyên container và hàng lẻ không?</summary>
+            <p>Có. ANSLIFE có thể hỗ trợ cả hàng nguyên container và hàng lẻ tùy khối lượng hàng, kế hoạch giao hàng, điểm đến và yêu cầu buyer. Phương án được chọn theo số lượng, chi phí vận chuyển, lịch giao hàng và kế hoạch xuất khẩu.</p>
+          </details>
+          <details>
+            <summary><span>09</span>Điều kiện thương mại có thể thay đổi theo từng đơn hàng không?</summary>
+            <p>Có. Điều kiện thương mại có thể thống nhất riêng theo từng đơn hàng, tùy sản phẩm, số lượng, thị trường, phương thức vận chuyển, điều kiện thanh toán, chứng từ và mức hỗ trợ logistics cần thiết.</p>
+          </details>
+        </div>
+      </section>
+    </div>
+
+    <footer class="anslife-faq-footer">
+      <p>ANSLIFE JSC | anslife.com | global@anslife.com | Tel: +84 901 827 555</p>
+    </footer>
+  </section>
+`.trim();
+
+interface ResourcesFaqLocalizedTopic {
+  id: string;
+  nav: string;
+  title: string;
+  items: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
+interface ResourcesFaqLocalizedContent {
+  title: string;
+  intro: string;
+  footer: string;
+  topics: ResourcesFaqLocalizedTopic[];
+}
+
+function escapeFaqHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function buildResourcesFaqSection(content: ResourcesFaqLocalizedContent): string {
+  const navHtml = content.topics
+    .map((topic) => `<a href="#${topic.id}">${escapeFaqHtml(topic.nav)}</a>`)
+    .join('\n      ');
+
+  const topicsHtml = content.topics
+    .map((topic, topicIndex) => {
+      const itemsHtml = topic.items
+        .map((item, itemIndex) => {
+          const itemNumber = String(itemIndex + 1).padStart(2, '0');
+          return `
+          <details${topicIndex === 0 && itemIndex === 0 ? ' open' : ''}>
+            <summary><span>${itemNumber}</span>${escapeFaqHtml(item.question)}</summary>
+            <p>${escapeFaqHtml(item.answer)}</p>
+          </details>`.trim();
+        })
+        .join('\n          ');
+
+      return `
+      <section id="${topic.id}" class="anslife-faq-topic">
+        <div class="anslife-faq-topic-head">
+          <span>${String(topicIndex + 1).padStart(2, '0')}</span>
+          <h3>${escapeFaqHtml(topic.title)}</h3>
+        </div>
+        <div class="anslife-faq-list">
+          ${itemsHtml}
+        </div>
+      </section>`.trim();
+    })
+    .join('\n\n      ');
+
+  return `
+  <section id="faq" class="ai-section anslife-faq-page">
+    <header class="anslife-faq-hero">
+      <div class="anslife-faq-hero-copy">
+        <h2>${escapeFaqHtml(content.title)}</h2>
+        <p>${escapeFaqHtml(content.intro)}</p>
+      </div>
+    </header>
+
+    <nav class="anslife-faq-topic-nav" aria-label="${escapeFaqHtml(content.title)}">
+      ${navHtml}
+    </nav>
+
+    <div class="anslife-faq-sections">
+      ${topicsHtml}
+    </div>
+
+    <footer class="anslife-faq-footer">
+      <p>${escapeFaqHtml(content.footer)}</p>
+    </footer>
+  </section>
+`.trim();
+}
+
+const RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
+  Record<LanguageCode, ResourcesFaqLocalizedContent>
+> = {
+  en: {
+    title: 'Frequently Asked Questions for Buyers',
+    intro:
+      'This page answers common questions from international buyers about working with ANSLIFE JSC on production, supply chain, quality control, warehousing, trade finance, payment and international delivery.',
+    footer: 'ANSLIFE JSC | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+    topics: [
+      {
+        id: 'faq-about',
+        nav: 'About ANSLIFE',
+        title: 'About ANSLIFE JSC',
+        items: [
+          {
+            question: 'What kind of company is ANSLIFE JSC?',
+            answer:
+              'ANSLIFE JSC is a Vietnam-based production, supply chain and export partner for international buyers in furniture, components and materials. We support product development, manufacturing coordination, material supply, independent QC, warehousing, project operation, trade finance, packing and international shipment.',
+          },
+          {
+            question: 'Is ANSLIFE JSC a factory?',
+            answer:
+              'ANSLIFE is not only a single factory. We operate a coordinated system of factories, satellite production partners, continuous material supply, independent quality control, warehousing in Vietnam and scheduled export operations.',
+          },
+          {
+            question: 'How is ANSLIFE different from a normal factory?',
+            answer:
+              'A normal factory mainly focuses on production. ANSLIFE manages more parts of the value chain, including product development, material preparation, production coordination, independent QC, warehousing, project management, trade finance, packing, documents and export.',
+          },
+          {
+            question: 'Which markets does ANSLIFE serve?',
+            answer:
+              'ANSLIFE serves buyers in Japan, the United States, the EU and other international markets. The system is built to support different requirements for materials, structure, color, moisture, finishing, packing, documents and inspection standards.',
+          },
+          {
+            question: 'Where does ANSLIFE have representative offices?',
+            answer:
+              'ANSLIFE has representative offices in Vietnam, Japan, Singapore and Hong Kong. In Vietnam, we have offices in Hanoi and Ho Chi Minh City. International representative offices include Tokyo, Singapore and Hong Kong.',
+          },
+        ],
+      },
+      {
+        id: 'faq-products',
+        nav: 'Products & materials',
+        title: 'Products, Materials and Manufacturing',
+        items: [
+          {
+            question: 'What product groups does ANSLIFE provide?',
+            answer:
+              'ANSLIFE supports finished furniture, furniture components, production materials, warehousing solutions, quality control, packing and scheduled export from Vietnam. Products can be developed from existing samples, drawings, reference images or buyer-specific standards.',
+          },
+          {
+            question: 'Can ANSLIFE develop products from buyer drawings or samples?',
+            answer:
+              'Yes. ANSLIFE can develop products from drawings, reference images, physical samples or technical requirements. The process may include structure review, material proposals, sampling, sample adjustment, sample inspection and preparation for mass production.',
+          },
+          {
+            question: 'Can ANSLIFE produce components instead of finished products?',
+            answer:
+              'Yes. ANSLIFE can produce furniture components, wooden parts, frames, panels, drawing-based parts, assembly components and semi-finished items for buyers or partner factories.',
+          },
+          {
+            question: 'How does ANSLIFE manage material supply?',
+            answer:
+              'ANSLIFE maintains a continuous material supply network in Vietnam for wood, plywood, veneer, foam, fabric, accessories, packing materials and other furniture production materials. This network supports long-term production, warehousing, QC and export.',
+          },
+          {
+            question: 'Can ANSLIFE supply materials to buyers or factories?',
+            answer:
+              'Yes. Material supply is reviewed according to technical requirements, quantity, quality control standards and the production plan of each project.',
+          },
+          {
+            question: 'Does ANSLIFE support OEM or ODM production?',
+            answer:
+              'Yes. ANSLIFE supports OEM and ODM from ideas, drawings, reference images, physical samples and technical standards through sampling, material selection, surface finishing, packing and preparation for mass production.',
+          },
+          {
+            question: 'What should buyers provide for product evaluation?',
+            answer:
+              'Buyers can provide technical drawings, reference images, physical samples if available, dimensions, materials, colors, surface finishing, estimated quantity, packing standards, export market, delivery plan and target price if available.',
+          },
+        ],
+      },
+      {
+        id: 'faq-operations',
+        nav: 'Project operation',
+        title: 'Project Operation in Vietnam',
+        items: [
+          {
+            question: 'Can ANSLIFE operate a project without interfering with existing commercial relationships?',
+            answer:
+              'Yes. ANSLIFE can monitor schedule, coordinate information, control quality, inspect packing, follow documents and provide independent reports without necessarily changing the contract, price or commercial terms between buyer and factory.',
+          },
+          {
+            question: 'If a buyer already has a factory in Vietnam, how can ANSLIFE help?',
+            answer:
+              'ANSLIFE can support factory checks, production follow-up, material inspection, independent QC, packing inspection, sample storage, warehousing, production status reports and export planning. The scope is agreed project by project.',
+          },
+          {
+            question: 'Can ANSLIFE act as an operating representative in Vietnam?',
+            answer:
+              'Yes. ANSLIFE can work with factories, check progress, record production status, control quality, store samples, follow documents and provide periodic reports according to the agreed scope.',
+          },
+          {
+            question: 'Can ANSLIFE coordinate information between buyer and factory?',
+            answer:
+              'Yes. ANSLIFE can coordinate information among buyer, factory, engineering, QC, warehouse, packing and logistics teams to reduce miscommunication and keep technical requirements clearly recorded.',
+          },
+          {
+            question: 'Can ANSLIFE help handle production issues?',
+            answer:
+              'Yes. When issues arise in materials, schedule, quality, packing, documents or delivery plan, ANSLIFE records, reports and coordinates with relevant parties to propose transparent solutions based on agreed standards.',
+          },
+        ],
+      },
+      {
+        id: 'faq-quality',
+        nav: 'QC & standards',
+        title: 'Quality Control and Standards',
+        items: [
+          {
+            question: 'Is ANSLIFE quality control independent from the factory?',
+            answer:
+              'Yes. ANSLIFE quality control operates independently from production to provide objective inspection according to buyer-approved standards and to reduce conflicts of interest between production and inspection.',
+          },
+          {
+            question: 'What standards can ANSLIFE inspect?',
+            answer:
+              'ANSLIFE can inspect structure, dimensions, color, moisture, surface finishing, materials, components, packing, labels and pre-shipment condition. Inspection content is built for each buyer and market.',
+          },
+          {
+            question: 'Can ANSLIFE inspect according to market-specific standards?',
+            answer:
+              'Yes. ANSLIFE can create inspection checklists for buyers and markets such as Japan, the United States, the EU and others, including mechanical, physical, color, moisture, durability, finishing, packing and export requirements.',
+          },
+          {
+            question: 'Does ANSLIFE have an independent quality inspection area?',
+            answer:
+              'ANSLIFE develops independent quality inspection areas to support customized market standards, including mechanical checks, physical checks, color inspection, moisture control, surface finishing checks, packing checks and buyer-specific requirements.',
+          },
+          {
+            question: 'Can ANSLIFE store approved samples, color boards and packing standards?',
+            answer:
+              'Yes. ANSLIFE can store approved product samples, component samples, color boards, material samples, packing standards, inspection checklists and technical documents in Vietnam. For long-term partners, ANSLIFE can set up a dedicated standard room.',
+          },
+          {
+            question: 'Can ANSLIFE prepare inspection reports?',
+            answer:
+              'Yes. Inspection reports can be prepared by stage or before shipment, including photos, product status, detected defects, dimension, color, moisture and packing results, plus handling suggestions when issues arise.',
+          },
+        ],
+      },
+      {
+        id: 'faq-warehouse',
+        nav: 'Warehouse & export',
+        title: 'Warehousing, Vietnam Supply Hub and Export',
+        items: [
+          {
+            question: 'Does ANSLIFE support warehousing in Vietnam?',
+            answer:
+              'Yes. ANSLIFE supports warehousing of goods, approved samples, materials, components, product standards and buffer stock in Vietnam, helping buyers reduce storage costs in higher-cost markets.',
+          },
+          {
+            question: 'Can ANSLIFE set up a dedicated standard room for partners?',
+            answer:
+              'Yes. For long-term partners, ANSLIFE can set up an area or standard room to store product samples, components, drawings, color samples, material samples, packing standards and inspection checklists.',
+          },
+          {
+            question: 'Can ANSLIFE organize scheduled export shipments?',
+            answer:
+              'Yes. ANSLIFE can organize scheduled shipments, including full-container, less-than-container and project-based lots, based on production progress, inspection schedule, packing plan, documents and shipping schedule.',
+          },
+          {
+            question: 'Can ANSLIFE consolidate goods from multiple sources?',
+            answer:
+              'Yes. ANSLIFE can consolidate goods from multiple factories, suppliers or product groups in Vietnam for inspection, packing, warehousing and export according to plan. This suits buyers needing one coordination point.',
+          },
+          {
+            question: 'Can ANSLIFE support export documents?',
+            answer:
+              'Yes. ANSLIFE can coordinate Commercial Invoice, Packing List, Bill of Lading, Certificate of Origin and other documents required by the market or buyer.',
+          },
+        ],
+      },
+      {
+        id: 'faq-payment',
+        nav: 'Payment',
+        title: 'International Payment and Trade Finance',
+        items: [
+          {
+            question: 'What international payment methods can ANSLIFE support?',
+            answer:
+              'ANSLIFE can work with international wire transfer, letter of credit, documentary collection, deferred collection, milestone payment, payment after inspection or other trade methods by agreement.',
+          },
+          {
+            question: 'Does ANSLIFE accept international wire transfer?',
+            answer:
+              'Yes. Deposit ratio, balance payment timing and delivery conditions are agreed according to each order, buyer and cooperation level.',
+          },
+          {
+            question: 'Does ANSLIFE accept letter of credit?',
+            answer:
+              'Yes. ANSLIFE can work with L/C for suitable orders. L/C conditions, issuing bank, shipment period, validity, document set and payment terms should be agreed before order confirmation.',
+          },
+          {
+            question: 'Can ANSLIFE work with documentary collection or deferred collection?',
+            answer:
+              'It can be reviewed case by case, depending on cooperation history, buyer credit, order value, export market, risk coverage and specific commercial agreement.',
+          },
+          {
+            question: 'Can payment follow production milestones?',
+            answer:
+              'Yes. Some projects can use milestone payment, such as deposit at order confirmation, payment after sample completion, after production completion, after inspection or before shipment.',
+          },
+          {
+            question: 'Can ANSLIFE support payment after inspection?',
+            answer:
+              'It can be reviewed by order. Payment after inspection should be connected with inspection reports, goods condition, packing conditions, export documents and commercial agreement.',
+          },
+          {
+            question: 'Does ANSLIFE provide trade finance solutions?',
+            answer:
+              'Yes. ANSLIFE provides controlled trade finance solutions for buyers and processing factories, linked to confirmed orders, materials, production progress, QC, documents and export.',
+          },
+          {
+            question: 'Is ANSLIFE trade finance an independent financial service?',
+            answer:
+              'No. It is not an independent financial service. It is a supply chain support solution linked to real orders, materials, production, QC, documents and export planning.',
+          },
+          {
+            question: 'Can payment terms be customized by buyer?',
+            answer:
+              'Yes. Payment terms can be adjusted by buyer, order, cooperation history, document requirements, production plan, export plan and risk control level.',
+          },
+        ],
+      },
+      {
+        id: 'faq-trade',
+        nav: 'International delivery',
+        title: 'Trade Terms and International Delivery',
+        items: [
+          {
+            question: 'Which trade terms can ANSLIFE work with?',
+            answer:
+              'ANSLIFE can work with many trade terms depending on order, market, transport method and buyer requirements, including ex works, delivery to carrier, FOB, CFR, CIF, delivery at destination or duty-paid delivery where applicable.',
+          },
+          {
+            question: 'Can ANSLIFE quote FOB?',
+            answer:
+              'Yes. ANSLIFE can quote FOB at suitable export ports in Vietnam. Export port, local charges, loading conditions, documents and vessel schedule are confirmed by order.',
+          },
+          {
+            question: 'Can ANSLIFE work with ex works terms?',
+            answer:
+              'Yes. ANSLIFE can work with ex works when the buyer or buyer logistics provider arranges pickup at the factory, warehouse or agreed handover point in Vietnam.',
+          },
+          {
+            question: 'Can ANSLIFE work with delivery to carrier terms?',
+            answer:
+              'Yes. ANSLIFE can work with delivery to carrier when the buyer appoints a transport provider or handover point in Vietnam. Delivery responsibility and documents are agreed by order.',
+          },
+          {
+            question: 'Can ANSLIFE quote CFR or CIF?',
+            answer:
+              'It can be reviewed. ANSLIFE can consider CFR or CIF depending on route, import market, goods type, insurance, vessel schedule and order conditions.',
+          },
+          {
+            question: 'Can ANSLIFE support delivery to buyer warehouse?',
+            answer:
+              'It can be reviewed by market and order. ANSLIFE can coordinate with logistics partners for delivery to destination or duty-paid delivery if legal, tax, customs and logistics conditions allow.',
+          },
+          {
+            question: 'Can buyers appoint their own forwarder or logistics provider?',
+            answer:
+              'Yes. Buyers can appoint their own forwarder, shipping line or logistics provider. ANSLIFE will coordinate within the agreed scope to prepare goods, documents, loading schedule and delivery.',
+          },
+          {
+            question: 'Can ANSLIFE support FCL and LCL shipments?',
+            answer:
+              'Yes. ANSLIFE can support both full-container and less-than-container shipments depending on volume, delivery plan, destination and buyer requirements.',
+          },
+          {
+            question: 'Can trade terms change by order?',
+            answer:
+              'Yes. Trade terms can be agreed separately by order, depending on product, quantity, market, transport method, payment terms, documents and required logistics support.',
+          },
+        ],
+      },
+    ],
+  },
+  jp: {
+    title: 'バイヤー向けよくある質問',
+    intro:
+      'このページでは、海外バイヤーがANSLIFE JSCと生産、サプライチェーン、品質管理、保管、貿易金融、決済、国際配送について協業する際によく確認する内容をまとめています。',
+    footer: 'ANSLIFE JSC | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+    topics: [
+      {
+        id: 'faq-about',
+        nav: 'ANSLIFEについて',
+        title: 'ANSLIFE JSCについて',
+        items: [
+          {
+            question: 'ANSLIFE JSCはどのような会社ですか？',
+            answer:
+              'ANSLIFE JSCは、家具、部材、素材分野の海外バイヤー向けに、ベトナムで生産、サプライチェーン、輸出を支援するパートナーです。商品開発、生産手配、素材供給、独立QC、保管、プロジェクト運営、貿易金融、梱包、国際出荷を支援します。',
+          },
+          {
+            question: 'ANSLIFE JSCは工場ですか？',
+            answer:
+              'ANSLIFEは単独の工場だけではありません。ANSLIFEが調整する工場、サテライト工場、継続的な素材供給、独立した品質管理、ベトナム国内倉庫、定期出荷の仕組みを含む運営システムです。',
+          },
+          {
+            question: '一般的な工場との違いは何ですか？',
+            answer:
+              '一般的な工場は主に製造に集中します。ANSLIFEは商品開発、素材準備、生産調整、独立QC、保管、プロジェクト管理、貿易金融、梱包、書類、輸出まで、より広いバリューチェーンを運営します。',
+          },
+          {
+            question: 'ANSLIFEはどの市場に対応していますか？',
+            answer:
+              'ANSLIFEは日本、米国、EU、その他の国際市場のバイヤーに対応しています。素材、構造、色、含水率、表面仕上げ、梱包、書類、検品基準など、市場ごとの要求に対応できる体制を構築しています。',
+          },
+          {
+            question: 'ANSLIFEの代表オフィスはどこにありますか？',
+            answer:
+              'ANSLIFEはベトナム、日本、シンガポール、香港に代表オフィスがあります。ベトナムではハノイとホーチミン市、海外では東京、シンガポール、香港に拠点があります。',
+          },
+        ],
+      },
+      {
+        id: 'faq-products',
+        nav: '製品・素材',
+        title: '製品、素材、生産',
+        items: [
+          {
+            question: 'ANSLIFEはどのような製品群を提供していますか？',
+            answer:
+              'ANSLIFEは完成家具、家具部材、生産用素材、保管ソリューション、品質管理、梱包、ベトナムからの定期出荷を支援します。既存サンプル、図面、参考画像、バイヤー独自基準に基づく開発も可能です。',
+          },
+          {
+            question: 'バイヤーの図面やサンプルから商品開発できますか？',
+            answer:
+              'はい。図面、参考画像、実物サンプル、技術要求から商品開発を支援できます。構造分析、素材提案、サンプル作成、サンプル修正、サンプル検査、量産準備まで対応可能です。',
+          },
+          {
+            question: '完成品ではなく部材だけの生産は可能ですか？',
+            answer:
+              'はい。家具部材、木製パーツ、フレーム、パネル、図面ベースの部品、組立用部材、半製品を、バイヤーまたは提携工場の要求に合わせて生産できます。',
+          },
+          {
+            question: '素材供給はどのように管理していますか？',
+            answer:
+              'ANSLIFEは木材、合板、突板、フォーム、生地、金具、梱包材など、家具生産向け素材の継続的な供給ネットワークをベトナムで維持しています。このネットワークは長期的な生産、保管、QC、輸出を支えます。',
+          },
+          {
+            question: 'バイヤーや工場へ素材供給できますか？',
+            answer:
+              'はい。素材供給は、技術要求、数量、品質管理基準、各プロジェクトの生産計画に基づいて検討します。',
+          },
+          {
+            question: 'OEMまたはODMに対応していますか？',
+            answer:
+              'はい。アイデア、図面、参考画像、実物サンプル、技術基準から、サンプル開発、素材選定、表面仕上げ、梱包、量産準備までOEM・ODMを支援します。',
+          },
+          {
+            question: '製品評価のために何を提供すればよいですか？',
+            answer:
+              '技術図面、参考画像、実物サンプル、寸法、素材、色、表面仕上げ、予定数量、梱包基準、輸出市場、納期計画、目標価格があれば共有してください。',
+          },
+        ],
+      },
+      {
+        id: 'faq-operations',
+        nav: 'プロジェクト運営',
+        title: 'ベトナムでのプロジェクト運営',
+        items: [
+          {
+            question: '既存の商流に介入せずプロジェクト運営できますか？',
+            answer:
+              'はい。ANSLIFEは進捗管理、情報調整、品質管理、梱包確認、書類確認、独立報告を行いながら、バイヤーと工場の既存契約、価格、商業条件を必ずしも変更せずに支援できます。',
+          },
+          {
+            question: '既にベトナムの工場がある場合、何を支援できますか？',
+            answer:
+              '工場確認、生産進捗フォロー、素材検査、独立QC、梱包検査、サンプル保管、倉庫管理、生産状況報告、出荷計画を支援できます。業務範囲はプロジェクトごとに合意します。',
+          },
+          {
+            question: 'ベトナムでの運営代表として対応できますか？',
+            answer:
+              'はい。工場との連絡、進捗確認、生産状況記録、品質管理、サンプル保管、書類追跡、定期報告を、合意範囲に応じて支援します。',
+          },
+          {
+            question: 'バイヤーと工場間の情報調整は可能ですか？',
+            answer:
+              'はい。バイヤー、工場、技術、QC、倉庫、梱包、物流の各チーム間の情報を調整し、認識違いを減らし、技術要求を明確に記録します。',
+          },
+          {
+            question: '生産中の問題対応を支援できますか？',
+            answer:
+              'はい。素材、進捗、品質、梱包、書類、納品計画の問題が発生した場合、ANSLIFEは記録、報告、関係者調整を行い、合意基準に基づく対応案を提案します。',
+          },
+        ],
+      },
+      {
+        id: 'faq-quality',
+        nav: 'QC・基準',
+        title: '品質管理と基準',
+        items: [
+          {
+            question: 'ANSLIFEのQCは工場から独立していますか？',
+            answer:
+              'はい。ANSLIFEのQCは生産部門から独立して運営され、バイヤーと合意した基準に基づき客観的に検査します。これにより生産と検品の利益相反を抑えます。',
+          },
+          {
+            question: 'どのような基準を検査できますか？',
+            answer:
+              '構造、寸法、色、含水率、表面仕上げ、素材、部材、梱包、ラベル、出荷前状態などを検査できます。検査内容はバイヤーと市場ごとに設計します。',
+          },
+          {
+            question: '市場別の独自基準で検査できますか？',
+            answer:
+              'はい。日本、米国、EUなどの市場やバイヤー要求に合わせ、機械的・物理的基準、色、含水率、耐久性、仕上げ、梱包、出荷条件を含むチェックリストを作成できます。',
+          },
+          {
+            question: '独立した品質検査エリアはありますか？',
+            answer:
+              'ANSLIFEは市場別のカスタム基準に対応するため、機械検査、物理検査、色確認、含水率管理、表面仕上げ確認、梱包確認、バイヤー独自要求に対応する独立検査エリアを整備しています。',
+          },
+          {
+            question: '承認サンプル、色板、梱包基準を保管できますか？',
+            answer:
+              'はい。承認済み製品サンプル、部材サンプル、色板、素材サンプル、梱包基準、検品チェックリスト、技術資料をベトナムで保管できます。長期パートナーには専用標準ルームも設置可能です。',
+          },
+          {
+            question: '検品レポートを作成できますか？',
+            answer:
+              'はい。段階別または出荷前に、写真、製品状態、不具合、寸法、色、含水率、梱包結果、問題発生時の対応提案を含む検品レポートを作成できます。',
+          },
+        ],
+      },
+      {
+        id: 'faq-warehouse',
+        nav: '倉庫・輸出',
+        title: '保管、ベトナムSupply Hub、輸出',
+        items: [
+          {
+            question: 'ベトナムでの保管を支援できますか？',
+            answer:
+              'はい。商品、承認サンプル、素材、部材、製品基準、予備在庫をベトナムで保管できます。これにより保管コストの高い市場での負担を軽減できます。',
+          },
+          {
+            question: 'パートナー専用の標準ルームを設置できますか？',
+            answer:
+              'はい。長期パートナー向けに、製品サンプル、部材、図面、色サンプル、素材サンプル、梱包基準、検品チェックリストを保管する専用エリアまたは標準ルームを設置できます。',
+          },
+          {
+            question: '定期出荷を手配できますか？',
+            answer:
+              'はい。生産進捗、検品スケジュール、梱包計画、書類、船積み予定に基づき、FCL、LCL、プロジェクト単位の定期出荷を手配できます。',
+          },
+          {
+            question: '複数ソースからの商品集約は可能ですか？',
+            answer:
+              'はい。複数の工場、サプライヤー、製品群から商品を集約し、検査、梱包、保管、計画出荷を行えます。ベトナムで一つの調整窓口を必要とするバイヤーに適しています。',
+          },
+          {
+            question: '輸出書類を支援できますか？',
+            answer:
+              'はい。Commercial Invoice、Packing List、Bill of Lading、Certificate of Origin、その他市場またはバイヤーが求める書類の準備を調整できます。',
+          },
+        ],
+      },
+      {
+        id: 'faq-payment',
+        nav: '決済',
+        title: '国際決済と貿易金融',
+        items: [
+          {
+            question: 'どの国際決済方法に対応できますか？',
+            answer:
+              '国際送金、信用状、D/P、D/A、マイルストーン決済、検品後決済、その他合意された貿易決済方法に対応を検討できます。',
+          },
+          {
+            question: '国際送金は可能ですか？',
+            answer:
+              'はい。前金比率、残金支払い時期、引渡条件は、各注文、バイヤー、協力レベルに応じて合意します。',
+          },
+          {
+            question: '信用状に対応できますか？',
+            answer:
+              'はい。適切な注文ではL/Cに対応できます。L/C条件、発行銀行、出荷期限、有効期限、書類一式、決済条件は注文確定前に合意する必要があります。',
+          },
+          {
+            question: 'D/PまたはD/Aに対応できますか？',
+            answer:
+              'ケースごとに検討します。協力履歴、バイヤー信用、注文金額、輸出市場、リスクカバー、具体的な商業合意によって判断します。',
+          },
+          {
+            question: '生産進捗に応じた支払いは可能ですか？',
+            answer:
+              'はい。一部プロジェクトでは、注文確定時、サンプル完了時、生産完了時、検品後、出荷前などのマイルストーン決済を設定できます。',
+          },
+          {
+            question: '検品後支払いを支援できますか？',
+            answer:
+              '注文ごとに検討します。検品後支払いは、検品レポート、商品状態、梱包条件、輸出書類、商業合意と連動する必要があります。',
+          },
+          {
+            question: '貿易金融ソリューションはありますか？',
+            answer:
+              'はい。ANSLIFEは、確定注文、素材、生産進捗、QC、書類、輸出に紐づく管理型の貿易金融ソリューションを、バイヤーおよび加工工場向けに提供します。',
+          },
+          {
+            question: 'ANSLIFEの貿易金融は独立した金融サービスですか？',
+            answer:
+              'いいえ。独立した金融サービスではなく、実際の注文、素材、生産、QC、書類、出荷計画に紐づくサプライチェーン支援です。',
+          },
+          {
+            question: '支払条件はバイヤーごとに調整できますか？',
+            answer:
+              'はい。支払条件は、バイヤー、注文、協力履歴、書類要求、生産計画、出荷計画、リスク管理レベルに応じて調整できます。',
+          },
+        ],
+      },
+      {
+        id: 'faq-trade',
+        nav: '国際配送',
+        title: '貿易条件と国際配送',
+        items: [
+          {
+            question: 'どの貿易条件に対応できますか？',
+            answer:
+              '注文、市場、輸送方法、バイヤー要求に応じ、EXW、FCA、FOB、CFR、CIF、目的地渡し、条件が整う場合のDDPなど、さまざまな条件に対応を検討できます。',
+          },
+          {
+            question: 'FOBで見積できますか？',
+            answer:
+              'はい。ベトナムの適切な輸出港でFOB見積が可能です。港、国内費用、積み込み条件、書類、船積み予定は注文ごとに確認します。',
+          },
+          {
+            question: 'EXW条件に対応できますか？',
+            answer:
+              'はい。バイヤーまたはバイヤー指定の物流会社が、ベトナムの工場、倉庫、合意済み引渡地点で引き取る場合、EXWに対応できます。',
+          },
+          {
+            question: 'FCA条件に対応できますか？',
+            answer:
+              'はい。バイヤーが輸送会社またはベトナム国内の引渡地点を指定する場合、FCA条件に対応できます。引渡責任と書類は注文ごとに合意します。',
+          },
+          {
+            question: 'CFRまたはCIFで見積できますか？',
+            answer:
+              '検討可能です。航路、輸入市場、商品種別、保険、船積み予定、注文条件に応じてCFRまたはCIFを検討します。',
+          },
+          {
+            question: 'バイヤー倉庫までの配送を支援できますか？',
+            answer:
+              '市場と注文ごとに検討します。法務、税務、通関、物流条件が許す場合、物流パートナーと連携して目的地配送またはDDPを支援できます。',
+          },
+          {
+            question: 'バイヤー指定のフォワーダーや物流会社を使えますか？',
+            answer:
+              'はい。バイヤーはフォワーダー、船会社、物流会社を指定できます。ANSLIFEは合意範囲内で商品、書類、積み込み予定、引渡を調整します。',
+          },
+          {
+            question: 'FCLとLCLの両方に対応できますか？',
+            answer:
+              'はい。貨物量、納品計画、目的地、バイヤー要求に応じて、FCLとLCLの両方を支援できます。',
+          },
+          {
+            question: '貿易条件は注文ごとに変更できますか？',
+            answer:
+              'はい。製品、数量、市場、輸送方法、支払条件、書類、必要な物流支援に応じ、注文ごとに貿易条件を合意できます。',
+          },
+        ],
+      },
+    ],
+  },
+  kr: {
+    title: '바이어를 위한 자주 묻는 질문',
+    intro:
+      '이 페이지는 해외 바이어가 ANSLIFE JSC와 생산, 공급망, 품질관리, 보관, 무역금융, 결제, 국제 배송을 진행할 때 자주 확인하는 질문을 정리한 자료입니다.',
+    footer: 'ANSLIFE JSC | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+    topics: [
+      {
+        id: 'faq-about',
+        nav: 'ANSLIFE 소개',
+        title: 'ANSLIFE JSC 소개',
+        items: [
+          {
+            question: 'ANSLIFE JSC는 어떤 회사인가요?',
+            answer:
+              'ANSLIFE JSC는 가구, 부품, 소재 분야의 해외 바이어를 위해 베트남에서 생산, 공급망, 수출을 지원하는 파트너입니다. 제품 개발, 생산 조율, 소재 공급, 독립 QC, 보관, 프로젝트 운영, 무역금융, 포장, 국제 출하를 지원합니다.',
+          },
+          {
+            question: 'ANSLIFE JSC는 공장인가요?',
+            answer:
+              'ANSLIFE는 단일 공장만이 아닙니다. ANSLIFE가 조율하는 공장, 위성 공장 네트워크, 지속적인 소재 공급, 독립 품질관리, 베트남 내 창고, 정기 출하 체계를 포함한 운영 시스템입니다.',
+          },
+          {
+            question: '일반 공장과 무엇이 다른가요?',
+            answer:
+              '일반 공장은 주로 생산에 집중합니다. ANSLIFE는 제품 개발, 소재 준비, 생산 조율, 독립 QC, 보관, 프로젝트 관리, 무역금융, 포장, 서류, 수출까지 가치사슬의 더 넓은 범위를 운영합니다.',
+          },
+          {
+            question: 'ANSLIFE는 어떤 시장을 지원하나요?',
+            answer:
+              'ANSLIFE는 일본, 미국, EU 및 기타 국제 시장의 바이어를 지원합니다. 소재, 구조, 색상, 함수율, 표면 마감, 포장, 서류, 검사 기준 등 시장별 요구에 대응하는 시스템을 갖추고 있습니다.',
+          },
+          {
+            question: 'ANSLIFE의 대표 사무소는 어디에 있나요?',
+            answer:
+              'ANSLIFE는 베트남, 일본, 싱가포르, 홍콩에 대표 사무소가 있습니다. 베트남에는 하노이와 호치민시에 사무소가 있으며, 해외 사무소는 도쿄, 싱가포르, 홍콩에 있습니다.',
+          },
+        ],
+      },
+      {
+        id: 'faq-products',
+        nav: '제품 & 소재',
+        title: '제품, 소재 및 생산',
+        items: [
+          {
+            question: 'ANSLIFE는 어떤 제품군을 제공하나요?',
+            answer:
+              'ANSLIFE는 완제품 가구, 가구 부품, 생산용 소재, 보관 솔루션, 품질관리, 포장, 베트남 정기 출하를 지원합니다. 기존 샘플, 도면, 참고 이미지 또는 바이어 고유 기준에 따라 제품을 개발할 수 있습니다.',
+          },
+          {
+            question: '바이어 도면이나 샘플로 제품 개발이 가능한가요?',
+            answer:
+              '네. 도면, 참고 이미지, 실제 샘플 또는 기술 요구사항을 바탕으로 제품 개발을 지원합니다. 구조 검토, 소재 제안, 샘플 제작, 샘플 수정, 샘플 검사, 양산 준비까지 포함될 수 있습니다.',
+          },
+          {
+            question: '완제품 대신 부품 생산도 가능한가요?',
+            answer:
+              '네. 가구 부품, 목재 부품, 프레임, 패널, 도면 기반 부품, 조립용 부품, 반제품을 바이어 또는 파트너 공장의 요구에 맞춰 생산할 수 있습니다.',
+          },
+          {
+            question: '소재 공급망은 어떻게 운영되나요?',
+            answer:
+              'ANSLIFE는 목재, 합판, 무늬목, 폼, 원단, 부자재, 포장재 등 가구 생산 소재의 지속적인 공급망을 베트남에서 유지합니다. 이 네트워크는 장기 생산, 보관, QC, 수출을 지원합니다.',
+          },
+          {
+            question: '바이어나 공장에 소재 공급이 가능한가요?',
+            answer:
+              '네. 소재 공급은 기술 요구사항, 수량, 품질관리 기준, 각 프로젝트의 생산 계획에 따라 검토됩니다.',
+          },
+          {
+            question: 'OEM 또는 ODM 생산을 지원하나요?',
+            answer:
+              '네. 아이디어, 도면, 참고 이미지, 실제 샘플, 기술 기준부터 샘플 개발, 소재 선택, 표면 마감, 포장, 양산 준비까지 OEM과 ODM을 지원합니다.',
+          },
+          {
+            question: '제품 평가를 위해 바이어가 제공해야 할 정보는 무엇인가요?',
+            answer:
+              '기술 도면, 참고 이미지, 실제 샘플, 치수, 소재, 색상, 표면 마감, 예상 수량, 포장 기준, 수출 시장, 납기 계획, 목표 가격이 있으면 제공할 수 있습니다.',
+          },
+        ],
+      },
+      {
+        id: 'faq-operations',
+        nav: '프로젝트 운영',
+        title: '베트남 프로젝트 운영',
+        items: [
+          {
+            question: '기존 거래 관계를 변경하지 않고 프로젝트 운영이 가능한가요?',
+            answer:
+              '네. ANSLIFE는 일정 관리, 정보 조율, 품질관리, 포장 검사, 서류 추적, 독립 보고를 지원하면서도 바이어와 공장 간 기존 계약, 가격, 상업 조건을 반드시 변경하지 않아도 됩니다.',
+          },
+          {
+            question: '이미 베트남 공장이 있는 경우 ANSLIFE는 무엇을 지원하나요?',
+            answer:
+              '공장 점검, 생산 진행 확인, 소재 검사, 독립 QC, 포장 검사, 샘플 보관, 창고 관리, 생산 상태 보고, 출하 계획을 지원할 수 있습니다. 업무 범위는 프로젝트별로 합의합니다.',
+          },
+          {
+            question: '베트남 운영 대리 역할을 할 수 있나요?',
+            answer:
+              '네. 공장과의 업무, 진행 확인, 생산 상태 기록, 품질관리, 샘플 보관, 서류 추적, 정기 보고를 합의된 범위에 따라 지원할 수 있습니다.',
+          },
+          {
+            question: '바이어와 공장 사이의 정보 조율이 가능한가요?',
+            answer:
+              '네. 바이어, 공장, 기술, QC, 창고, 포장, 물류팀 간 정보를 조율하여 오해를 줄이고 기술 요구사항을 명확히 기록합니다.',
+          },
+          {
+            question: '생산 중 발생하는 문제 처리를 지원하나요?',
+            answer:
+              '네. 소재, 일정, 품질, 포장, 서류, 납품 계획에 문제가 발생하면 ANSLIFE가 기록, 보고, 관계자 조율을 통해 합의된 기준에 따른 해결안을 제안합니다.',
+          },
+        ],
+      },
+      {
+        id: 'faq-quality',
+        nav: 'QC & 기준',
+        title: '품질관리 및 기준',
+        items: [
+          {
+            question: 'ANSLIFE의 QC는 공장과 독립되어 있나요?',
+            answer:
+              '네. ANSLIFE의 QC는 생산 조직과 독립적으로 운영되어 바이어와 합의한 기준에 따라 객관적으로 검사합니다. 이를 통해 생산과 검사 사이의 이해상충을 줄입니다.',
+          },
+          {
+            question: '어떤 기준을 검사할 수 있나요?',
+            answer:
+              '구조, 치수, 색상, 함수율, 표면 마감, 소재, 부품, 포장, 라벨, 출하 전 상태 등을 검사할 수 있습니다. 검사 내용은 바이어와 시장별로 설계됩니다.',
+          },
+          {
+            question: '시장별 고유 기준에 맞춘 검사가 가능한가요?',
+            answer:
+              '네. 일본, 미국, EU 등 시장과 바이어 요구에 맞춰 기계적, 물리적, 색상, 함수율, 내구성, 마감, 포장, 출하 조건을 포함한 체크리스트를 만들 수 있습니다.',
+          },
+          {
+            question: '독립 품질 검사 구역이 있나요?',
+            answer:
+              'ANSLIFE는 시장별 맞춤 기준을 지원하기 위해 기계 검사, 물리 검사, 색상 확인, 함수율 관리, 표면 마감 확인, 포장 확인, 바이어 고유 요구를 위한 독립 검사 구역을 개발하고 있습니다.',
+          },
+          {
+            question: '승인 샘플, 컬러보드, 포장 기준을 보관할 수 있나요?',
+            answer:
+              '네. 승인 제품 샘플, 부품 샘플, 컬러보드, 소재 샘플, 포장 기준, 검사 체크리스트, 기술 문서를 베트남에서 보관할 수 있습니다. 장기 파트너에게는 전용 표준룸도 설치할 수 있습니다.',
+          },
+          {
+            question: '검사 보고서를 작성할 수 있나요?',
+            answer:
+              '네. 단계별 또는 출하 전 검사 보고서를 작성할 수 있으며, 사진, 제품 상태, 발견된 결함, 치수, 색상, 함수율, 포장 결과 및 문제 발생 시 처리 제안을 포함할 수 있습니다.',
+          },
+        ],
+      },
+      {
+        id: 'faq-warehouse',
+        nav: '창고 & 수출',
+        title: '보관, 베트남 Supply Hub 및 수출',
+        items: [
+          {
+            question: '베트남 내 보관을 지원하나요?',
+            answer:
+              '네. 상품, 승인 샘플, 소재, 부품, 제품 기준, 예비 재고를 베트남에서 보관할 수 있습니다. 이를 통해 보관 비용이 높은 시장에서 바이어의 비용 부담을 줄일 수 있습니다.',
+          },
+          {
+            question: '파트너 전용 표준룸을 만들 수 있나요?',
+            answer:
+              '네. 장기 파트너를 위해 제품 샘플, 부품, 도면, 컬러 샘플, 소재 샘플, 포장 기준, 검사 체크리스트를 보관하는 전용 구역 또는 표준룸을 만들 수 있습니다.',
+          },
+          {
+            question: '정기 출하를 구성할 수 있나요?',
+            answer:
+              '네. 생산 진행, 검사 일정, 포장 계획, 서류, 선적 일정에 따라 FCL, LCL 또는 프로젝트 단위의 정기 출하를 구성할 수 있습니다.',
+          },
+          {
+            question: '여러 공급처의 상품을 통합할 수 있나요?',
+            answer:
+              '네. 베트남의 여러 공장, 공급업체 또는 제품군에서 상품을 모아 검사, 포장, 보관, 계획 출하를 진행할 수 있습니다. 하나의 조율 창구가 필요한 바이어에게 적합합니다.',
+          },
+          {
+            question: '수출 서류를 지원하나요?',
+            answer:
+              '네. Commercial Invoice, Packing List, Bill of Lading, Certificate of Origin 및 시장 또는 바이어가 요구하는 기타 서류 준비를 조율할 수 있습니다.',
+          },
+        ],
+      },
+      {
+        id: 'faq-payment',
+        nav: '결제',
+        title: '국제 결제 및 무역금융',
+        items: [
+          {
+            question: '어떤 국제 결제 방식을 지원하나요?',
+            answer:
+              '국제 송금, 신용장, D/P, D/A, 단계별 결제, 검사 후 결제 또는 합의된 기타 무역 결제 방식을 검토할 수 있습니다.',
+          },
+          {
+            question: '국제 송금을 받을 수 있나요?',
+            answer:
+              '네. 계약금 비율, 잔금 지급 시점, 납품 조건은 각 주문, 바이어, 협력 수준에 따라 합의합니다.',
+          },
+          {
+            question: '신용장 결제가 가능한가요?',
+            answer:
+              '네. 적합한 주문의 경우 L/C로 진행할 수 있습니다. L/C 조건, 발행 은행, 선적 기간, 유효기간, 서류 세트, 결제 조건은 주문 확정 전에 합의해야 합니다.',
+          },
+          {
+            question: 'D/P 또는 D/A 방식도 가능한가요?',
+            answer:
+              '건별로 검토합니다. 협력 이력, 바이어 신용도, 주문 금액, 수출 시장, 위험 보장, 구체적인 상업 합의에 따라 결정됩니다.',
+          },
+          {
+            question: '생산 진행 단계에 따른 결제가 가능한가요?',
+            answer:
+              '네. 일부 프로젝트는 주문 확정 시, 샘플 완료 시, 생산 완료 시, 검사 후 또는 출하 전 등 단계별 결제를 설정할 수 있습니다.',
+          },
+          {
+            question: '검사 후 결제를 지원하나요?',
+            answer:
+              '주문별로 검토할 수 있습니다. 검사 후 결제는 검사 보고서, 상품 상태, 포장 조건, 수출 서류, 상업 합의와 연결되어야 합니다.',
+          },
+          {
+            question: '무역금융 솔루션을 제공하나요?',
+            answer:
+              '네. ANSLIFE는 확정 주문, 소재, 생산 진행, QC, 서류, 수출과 연결된 관리형 무역금융 솔루션을 바이어와 가공 공장에 제공합니다.',
+          },
+          {
+            question: 'ANSLIFE의 무역금융은 독립 금융 서비스인가요?',
+            answer:
+              '아니요. 독립 금융 서비스가 아니라 실제 주문, 소재, 생산, QC, 서류, 출하 계획과 연결된 공급망 지원 솔루션입니다.',
+          },
+          {
+            question: '결제 조건은 바이어별로 조정 가능한가요?',
+            answer:
+              '네. 결제 조건은 바이어, 주문, 협력 이력, 서류 요구, 생산 계획, 출하 계획, 위험 관리 수준에 따라 조정할 수 있습니다.',
+          },
+        ],
+      },
+      {
+        id: 'faq-trade',
+        nav: '국제 배송',
+        title: '무역 조건 및 국제 배송',
+        items: [
+          {
+            question: '어떤 무역 조건으로 진행할 수 있나요?',
+            answer:
+              '주문, 시장, 운송 방식, 바이어 요구에 따라 EXW, FCA, FOB, CFR, CIF, 목적지 인도 또는 조건이 허용되는 경우 DDP 등 다양한 조건을 검토할 수 있습니다.',
+          },
+          {
+            question: 'FOB 조건으로 견적이 가능한가요?',
+            answer:
+              '네. 베트남 내 적합한 수출항 기준 FOB 견적이 가능합니다. 수출항, 내륙 비용, 적재 조건, 서류, 선박 일정은 주문별로 확인합니다.',
+          },
+          {
+            question: 'EXW 조건도 가능한가요?',
+            answer:
+              '네. 바이어 또는 바이어 지정 물류사가 베트남의 공장, 창고 또는 합의된 인도 지점에서 직접 인수하는 경우 EXW 조건으로 진행할 수 있습니다.',
+          },
+          {
+            question: 'FCA 조건도 가능한가요?',
+            answer:
+              '네. 바이어가 운송사 또는 베트남 내 인도 지점을 지정하는 경우 FCA 조건으로 진행할 수 있습니다. 인도 책임과 서류는 주문별로 합의합니다.',
+          },
+          {
+            question: 'CFR 또는 CIF 견적이 가능한가요?',
+            answer:
+              '검토 가능합니다. 운송 노선, 수입 시장, 상품 유형, 보험, 선박 일정, 주문 조건에 따라 CFR 또는 CIF 견적을 검토할 수 있습니다.',
+          },
+          {
+            question: '바이어 창고까지 배송을 지원하나요?',
+            answer:
+              '시장과 주문별로 검토할 수 있습니다. 법률, 세금, 통관, 물류 조건이 허용되는 경우 물류 파트너와 협력하여 목적지 배송 또는 DDP를 지원할 수 있습니다.',
+          },
+          {
+            question: '바이어 지정 포워더나 물류사를 사용할 수 있나요?',
+            answer:
+              '네. 바이어는 포워더, 선사 또는 물류사를 지정할 수 있습니다. ANSLIFE는 합의된 범위 내에서 상품, 서류, 적재 일정, 인도를 조율합니다.',
+          },
+          {
+            question: 'FCL과 LCL 모두 지원하나요?',
+            answer:
+              '네. 화물량, 납품 계획, 목적지, 바이어 요구에 따라 FCL과 LCL 모두 지원할 수 있습니다.',
+          },
+          {
+            question: '무역 조건은 주문별로 바뀔 수 있나요?',
+            answer:
+              '네. 제품, 수량, 시장, 운송 방식, 결제 조건, 서류, 필요한 물류 지원에 따라 주문별로 무역 조건을 별도 합의할 수 있습니다.',
+          },
+        ],
+      },
+    ],
+  },
+};
+
+function getResourcesFaqSectionHtml(language: LanguageCode): string {
+  if (language === 'vn') {
+    return RESOURCES_FAQ_SECTION_VN;
+  }
+
+  const content = RESOURCES_FAQ_LOCALIZED_CONTENT[language];
+  return content ? buildResourcesFaqSection(content) : RESOURCES_FAQ_SECTION_VN;
+}
+
 function translateAiHtml(language: LanguageCode, html: string): string {
   if (language === 'vn') {
     return html;
@@ -7500,6 +8846,17 @@ export function getAIFallbackSectionHtml(
   sectionId: string,
   language: LanguageCode = 'vn',
 ): string | null {
+  if (pageSlug === 'resources' && sectionId === 'faq') {
+    return `<div class="ai-content">${getResourcesFaqSectionHtml(language)}</div>`;
+  }
+
+  if (pageSlug === 'about-anslife' && sectionId === 'development-history') {
+    return translateAiHtml(
+      language,
+      `<div class="ai-content">${ABOUT_DEVELOPMENT_HISTORY_SECTION_VN}</div>`,
+    );
+  }
+
   const pageHtml = AI_PAGE_CONTENT[pageSlug];
   if (!pageHtml) {
     return null;

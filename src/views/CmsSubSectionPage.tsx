@@ -58,9 +58,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'commercial-process' ||
     config.slug === 'global-network' ||
     config.slug === 'scholarship-community' ||
+    (config.slug === 'resources' && section.id === 'faq') ||
     isCustomAboutSection ||
     (config.slug === 'about-anslife' &&
       (section.id === 'production-philosophy' ||
+        section.id === 'development-history' ||
         section.id === 'working-standards' ||
         section.id === 'organization' ||
         section.id === 'team' ||
@@ -71,11 +73,13 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'commercial-process' ||
     config.slug === 'global-network' ||
     config.slug === 'scholarship-community' ||
+    (config.slug === 'resources' && section.id === 'faq') ||
     (config.slug === 'about-anslife' &&
       (section.id === 'company-intro' ||
         section.id === 'company-info' ||
         section.id === 'vision-mission' ||
         section.id === 'core-values' ||
+        section.id === 'development-history' ||
         section.id === 'working-standards' ||
         section.id === 'production-philosophy' ||
         section.id === 'organization' ||

@@ -115,6 +115,7 @@ type MobileMenuIcon =
   | 'pin'
   | 'shield'
   | 'document'
+  | 'question'
   | 'send';
 
 function getMobileMenuIcon(path: string): MobileMenuIcon {
@@ -144,6 +145,10 @@ function getMobileMenuIcon(path: string): MobileMenuIcon {
 
   if (path.startsWith('/quality-control')) {
     return 'shield';
+  }
+
+  if (path === '/resources/faq') {
+    return 'question';
   }
 
   if (path.startsWith('/resources')) {
@@ -210,6 +215,14 @@ function renderMobileMenuIcon(icon: MobileMenuIcon): ReactNode {
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M6.5 3.5h7l4 4V20.5h-11v-17Z" />
           <path d="M13.5 3.7V8h4M9 12h6M9 16h5" />
+        </svg>
+      );
+    case 'question':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="8.5" />
+          <path d="M9.4 9.2a2.9 2.9 0 0 1 2.8-2c1.8 0 3.1 1.1 3.1 2.7 0 1.3-.8 2-2.1 2.8-.9.6-1.2 1.1-1.2 2.1" />
+          <path d="M12 17.6h.01" />
         </svg>
       );
     case 'send':
@@ -362,7 +375,8 @@ export default function SiteLayout() {
         (item) =>
           item.path !== '/' &&
           item.path !== '/vietnam-supply-hub' &&
-          item.path !== '/quality-control',
+          item.path !== '/quality-control' &&
+          item.path !== '/resources/faq',
       ),
     [desktopTopMenuItems],
   );

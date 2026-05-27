@@ -3618,6 +3618,213 @@ a.mobile-menu-utility-link {
   font-size: 0.9rem;
 }
 
+.anslife-faq-page {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.anslife-faq-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  border: 1px solid #e4ded6;
+  border-radius: 8px;
+  background: #ebe4da;
+  padding: clamp(1rem, 2vw, 1.4rem);
+}
+
+.anslife-faq-hero-copy {
+  display: grid;
+  align-content: center;
+  gap: 0.62rem;
+}
+
+.anslife-faq-hero h2 {
+  margin: 0;
+  color: #24170f;
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.anslife-faq-hero p {
+  margin: 0;
+  max-width: 76ch;
+  color: #3b3027 !important;
+  font-size: 0.98rem;
+  line-height: 1.66;
+}
+
+.anslife-faq-topic-nav {
+  position: sticky;
+  top: 104px;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+  border: 1px solid #e4ded6;
+  border-radius: 8px;
+  background: rgba(243, 238, 231, 0.94);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem;
+}
+
+.anslife-faq-topic-nav a {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #ded4c8;
+  border-radius: 999px;
+  background: #fffaf3;
+  color: #3b3027;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.44rem 0.72rem;
+}
+
+.anslife-faq-topic-nav a:hover {
+  background: #e7ded3;
+  color: #24170f;
+}
+
+.anslife-faq-sections {
+  display: grid;
+  gap: 0.82rem;
+}
+
+.anslife-faq-topic {
+  scroll-margin-top: 170px;
+  display: grid;
+  grid-template-columns: minmax(190px, 0.28fr) minmax(0, 1fr);
+  gap: 0.82rem;
+  align-items: start;
+}
+
+.anslife-faq-topic-head {
+  position: sticky;
+  top: 166px;
+  display: grid;
+  gap: 0.44rem;
+  border: 1px solid #e4ded6;
+  border-radius: 8px;
+  background: #f3eee7;
+  padding: 0.78rem;
+}
+
+.anslife-faq-topic-head span {
+  width: fit-content;
+  border: 1px solid #ded4c8;
+  border-radius: 999px;
+  background: #e7ded3;
+  color: #5b4634;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0.34rem 0.46rem;
+}
+
+.anslife-faq-topic-head h3 {
+  margin: 0;
+  color: #24170f;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.anslife-faq-list {
+  display: grid;
+  gap: 0.48rem;
+}
+
+.anslife-faq-list details {
+  border: 1px solid #e4ded6;
+  border-radius: 8px;
+  background: #fffaf3;
+  overflow: hidden;
+}
+
+.anslife-faq-list summary {
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.62rem;
+  min-height: 56px;
+  padding: 0.72rem 0.82rem;
+  color: #2b3547;
+  font-size: 0.95rem;
+  font-weight: 780;
+  line-height: 1.35;
+  cursor: pointer;
+}
+
+.anslife-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.anslife-faq-list summary::after {
+  content: '+';
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #e7ded3;
+  color: #3b3027;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.anslife-faq-list details[open] summary::after {
+  content: '-';
+}
+
+.anslife-faq-list summary span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #ebe4da;
+  color: #5a4b3f;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.anslife-faq-list details[open] summary {
+  border-bottom: 1px solid #e4ded6;
+  background: #f3eee7;
+}
+
+.anslife-faq-list details p {
+  margin: 0;
+  padding: 0.82rem 0.96rem 0.96rem 4.05rem;
+  color: #4c4239 !important;
+  font-size: 0.93rem;
+  line-height: 1.68;
+}
+
+.anslife-faq-footer {
+  border-top: 1px solid #e4ded6;
+  padding-top: 0.8rem;
+}
+
+.anslife-faq-footer p {
+  margin: 0;
+  color: #6f6257 !important;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
 .ai-company-intro {
   padding: 0;
   border: 0;
@@ -6123,40 +6330,159 @@ a.mobile-menu-utility-link {
 }
 
 .ai-development-history {
-  background: linear-gradient(
-    162deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(247, 251, 255, 1) 52%,
-    rgba(240, 247, 255, 1) 100%
-  );
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.ai-history-header {
+  display: grid;
+  gap: 0.8rem;
+  border: 1px solid #e4ded6;
+  border-radius: 8px;
+  background: #ebe4da;
+  padding: clamp(1rem, 2.4vw, 1.45rem);
+}
+
+.ai-history-header h2 {
+  margin: 0;
+  color: #111111;
+  font-size: clamp(1.9rem, 3.4vw, 3.2rem);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.ai-history-intro {
+  display: grid;
+  gap: 0.58rem;
+  max-width: 92ch;
+}
+
+.ai-history-intro p {
+  margin: 0;
+  color: #202020 !important;
+  font-size: 0.98rem;
+  line-height: 1.68;
+}
+
+.ai-history-intro strong,
+.ai-history-card-copy strong {
+  color: #111111;
+  font-weight: 600;
+}
+
+.ai-history-timeline {
+  position: relative;
   display: grid;
   gap: 0.74rem;
 }
 
+.ai-history-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 145px;
+  width: 1px;
+  background: #d6ccbf;
+}
+
+.ai-history-timeline-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.ai-history-year {
+  position: sticky;
+  top: 148px;
+  z-index: 1;
+  width: 90px;
+  min-height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d8cfc2;
+  border-radius: 999px;
+  background: #f3eee7;
+  color: #111111;
+  font-size: 1.04rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.ai-history-card-copy {
+  position: relative;
+  border: 1px solid #e4ded6;
+  border-radius: 8px;
+  background: #fffaf3;
+  padding: 0.88rem 0.95rem;
+}
+
+.ai-history-card-copy::before {
+  content: '';
+  position: absolute;
+  top: 1.08rem;
+  left: -1.66rem;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #f3eee7;
+  border-radius: 999px;
+  background: #111111;
+  box-shadow: 0 0 0 1px #d6ccbf;
+}
+
+.ai-history-card-copy h3 {
+  margin: 0;
+  color: #111111;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.34;
+}
+
+.ai-history-card-copy p {
+  margin: 0.48rem 0 0;
+  color: #222222 !important;
+  font-size: 0.94rem;
+  line-height: 1.62;
+}
+
+.ai-history-card-copy a {
+  color: #111111;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
 .ai-history-kicker {
   margin: 0;
-  color: #2e4b68;
+  color: #111111;
   font-size: 0.75rem;
   line-height: 1.2;
   letter-spacing: 0.11em;
   font-weight: 700;
 }
 
-.ai-history-lead {
-  margin: 0;
-  color: #4d627b;
-  font-size: 0.94rem;
-  line-height: 1.6;
+.ai-history-lead,
+.ai-history-core p,
+.ai-history-phase-card p,
+.ai-history-milestone-item p,
+.ai-history-note {
+  color: #222222;
 }
 
 .ai-history-hero,
 .ai-history-visual {
   margin: 0;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(68, 96, 132, 0.24);
-  background: #fff;
-  box-shadow: 0 10px 22px rgba(21, 43, 68, 0.1);
+  border: 1px solid #e4ded6;
+  background: #fffaf3;
 }
 
 .ai-history-hero img,
@@ -6174,48 +6500,35 @@ a.mobile-menu-utility-link {
   aspect-ratio: 16 / 8;
 }
 
-.ai-history-core {
-  border: 1px solid rgba(68, 96, 132, 0.22);
-  border-radius: 12px;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+.ai-history-core,
+.ai-history-phase-card,
+.ai-history-milestone-item {
+  border: 1px solid #e4ded6;
+  border-radius: 8px;
+  background: #fffaf3;
   padding: 0.74rem 0.78rem;
 }
 
-.ai-history-core h3 {
-  margin: 0;
-  color: #29415e;
-  font-size: 0.94rem;
-  line-height: 1.36;
+.ai-history-core h3,
+.ai-history-phase-card h3,
+.ai-history-milestone-item strong {
+  color: #111111;
 }
 
-.ai-history-core p {
-  margin: 0.4rem 0 0;
-  color: #546981;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-
-.ai-history-phase-grid {
+.ai-history-phase-grid,
+.ai-history-milestone-grid,
+.ai-history-visual-row {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.56rem;
 }
 
-.ai-history-phase-card {
-  border: 1px solid rgba(68, 96, 132, 0.2);
-  border-radius: 11px;
-  background: #fff;
-  padding: 0.7rem 0.74rem;
+.ai-history-phase-grid,
+.ai-history-milestone-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.ai-history-phase-card h3 {
-  margin: 0;
-  color: #2a425e;
-  font-size: 0.86rem;
-  line-height: 1.42;
-  display: flex;
-  align-items: center;
-  gap: 0.34rem;
+.ai-history-visual-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .ai-history-phase-card h3 span {
@@ -6225,70 +6538,35 @@ a.mobile-menu-utility-link {
   min-width: 30px;
   height: 22px;
   border-radius: 999px;
-  border: 1px solid rgba(49, 88, 129, 0.26);
-  background: rgba(49, 88, 129, 0.12);
-  color: #2f4c6a;
+  border: 1px solid #d8cfc2;
+  background: #ebe4da;
+  color: #111111;
   font-size: 0.7rem;
   letter-spacing: 0.03em;
   font-weight: 700;
 }
 
-.ai-history-phase-card p {
-  margin: 0.4rem 0 0;
-  color: #546981;
-  font-size: 0.84rem;
-  line-height: 1.5;
-}
-
 .ai-history-phase-card ul {
   margin: 0.4rem 0 0;
   padding-left: 0.96rem;
-  color: #576c84;
+  color: #222222;
   display: grid;
   gap: 0.26rem;
   font-size: 0.81rem;
   line-height: 1.45;
 }
 
-.ai-history-visual-row {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.56rem;
-}
-
-.ai-history-milestone-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.52rem;
-}
-
-.ai-history-milestone-item {
-  border: 1px solid rgba(68, 96, 132, 0.2);
-  border-radius: 10px;
-  background: #fff;
-  padding: 0.58rem;
-}
-
 .ai-history-milestone-item strong {
   display: block;
-  color: #2d4561;
   font-size: 0.83rem;
   line-height: 1.4;
 }
 
-.ai-history-milestone-item p {
-  margin: 0.32rem 0 0;
-  color: #586d84;
-  font-size: 1rem;
-  line-height: 1.42;
-}
-
 .ai-history-note {
   margin: 0;
-  border-left: 4px solid rgba(58, 98, 142, 0.58);
-  border-radius: 10px;
-  background: rgba(66, 102, 143, 0.11);
-  color: #3f5670;
+  border-left: 4px solid #111111;
+  border-radius: 8px;
+  background: #ebe4da;
   padding: 0.62rem 0.7rem;
   font-size: 0.89rem;
   line-height: 1.54;
@@ -8698,6 +8976,15 @@ a.mobile-menu-utility-link {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .anslife-faq-hero,
+  .anslife-faq-topic {
+    grid-template-columns: 1fr;
+  }
+
+  .anslife-faq-topic-head {
+    position: static;
+  }
+
   .meeting-calendar-months {
     grid-template-columns: 1fr;
   }
@@ -8816,6 +9103,26 @@ a.mobile-menu-utility-link {
   .ai-history-phase-grid,
   .ai-history-milestone-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-history-timeline::before {
+    left: 68px;
+  }
+
+  .ai-history-timeline-card {
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .ai-history-year {
+    position: static;
+    width: 54px;
+    min-height: 36px;
+    font-size: 0.82rem;
+  }
+
+  .ai-history-card-copy::before {
+    left: -1.28rem;
   }
 
   .ai-ans-eco-grid {
@@ -9427,6 +9734,59 @@ a.mobile-menu-utility-link {
     grid-template-columns: 1fr;
   }
 
+  .ai-history-header {
+    padding: 0.84rem 0.74rem;
+  }
+
+  .ai-history-header h2 {
+    font-size: clamp(1.68rem, 9vw, 2.22rem);
+  }
+
+  .ai-history-intro p {
+    font-size: 0.92rem;
+    line-height: 1.58;
+  }
+
+  .ai-history-timeline {
+    gap: 0.64rem;
+  }
+
+  .ai-history-timeline::before {
+    left: 20px;
+  }
+
+  .ai-history-timeline-card {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 0.72rem;
+  }
+
+  .ai-history-year {
+    width: 40px;
+    min-height: 32px;
+    font-size: 0.72rem;
+  }
+
+  .ai-history-card-copy {
+    padding: 0.72rem 0.74rem;
+  }
+
+  .ai-history-card-copy::before {
+    top: 0.94rem;
+    left: -0.98rem;
+    width: 11px;
+    height: 11px;
+  }
+
+  .ai-history-card-copy h3 {
+    font-size: 0.98rem;
+    line-height: 1.32;
+  }
+
+  .ai-history-card-copy p {
+    font-size: 0.9rem;
+    line-height: 1.56;
+  }
+
   .ai-ans-eco-grid,
   .ai-ans-eco-visual-row,
   .ai-ans-eco-flow,
@@ -9583,6 +9943,41 @@ a.mobile-menu-utility-link {
   .ai-highlight-grid,
   .ai-stat-grid {
     grid-template-columns: 1fr;
+  }
+
+  .anslife-faq-hero {
+    padding: 0.86rem;
+  }
+
+  .anslife-faq-topic-nav {
+    position: static;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+
+  .anslife-faq-topic-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .anslife-faq-topic-nav a {
+    white-space: nowrap;
+  }
+
+  .anslife-faq-list summary {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.48rem;
+    font-size: 0.9rem;
+    padding: 0.66rem;
+  }
+
+  .anslife-faq-list summary span {
+    width: 30px;
+    height: 30px;
+  }
+
+  .anslife-faq-list details p {
+    padding: 0.72rem 0.72rem 0.82rem;
   }
 
   .product-interest-inline {
