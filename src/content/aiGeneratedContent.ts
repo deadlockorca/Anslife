@@ -167,7 +167,7 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
         </p>
       </div>
       <figure class="ai-operations-hero-media">
-        <img src="/assets/about/operations-supply-hero-map-v2.png" alt="Minh họa logistics và chuỗi cung ứng toàn cầu" loading="lazy" decoding="async" />
+        <img src="/assets/about/operations-supply-container-v3.png" alt="Minh họa logistics và chuỗi cung ứng toàn cầu" loading="lazy" decoding="async" />
       </figure>
     </div>
 
