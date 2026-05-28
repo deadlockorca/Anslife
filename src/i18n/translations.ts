@@ -120,6 +120,85 @@ const TRANSLATIONS: Partial<Record<
     'Vật liệu đóng gói': 'Packing Materials',
     'Phát triển OEM/ODM': 'OEM/ODM Development',
     'Giải pháp dịch vụ': 'Service Solutions',
+    'Giải pháp vận hành & cung ứng': 'Operations & Supply Solutions',
+    'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
+      'Operations, supply, warehousing, QC, packing, and export consolidation solutions for international buyers.',
+    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE JSC supports international buyers in operating projects in Vietnam, from feasibility assessment, product development, factory assessment, quality control, logistics, and warehousing to trade finance and shipment.',
+    'Minh họa logistics và chuỗi cung ứng toàn cầu':
+      'Illustration of logistics and the global supply chain',
+    '1. Phát triển sản phẩm OEM / ODM': '1. OEM / ODM Product Development',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt.':
+      'From drawings, physical samples, or product ideas to sample development and mass production.',
+    '2. Đánh giá khả thi dự án & chuỗi cung ứng':
+      '2. Project & Supply Chain Feasibility Assessment',
+    'Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng tại Việt Nam.':
+      'Assessing product, material, factory, capacity, timeline, cost, and Vietnam supply chain fit.',
+    '3. Thẩm định năng lực nhà máy': '3. Factory Capability Assessment',
+    'Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.':
+      'Assessing factory capability by product, material, output, quality standards, and delivery schedule.',
+    '4. Vận hành & quản lý dự án xuất khẩu':
+      '4. Export Project Operation & Management',
+    'Theo dõi tiến độ, điều phối thông tin, quản lý sản xuất, xử lý vấn đề phát sinh và báo cáo dự án.':
+      'Tracking progress, coordinating information, managing production, handling issues, and reporting project status.',
+    '5. QC độc lập trong dự án': '5. Independent QC in Projects',
+    'Kiểm soát chất lượng độc lập với nhà máy, theo tiêu chuẩn buyer và từng thị trường.':
+      'Quality control independent from the factory, aligned with buyer standards and each target market.',
+    '6. Điều phối logistics & xuất nhập khẩu dự án':
+      '6. Project Logistics & Import-Export Coordination',
+    'Hỗ trợ nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế.':
+      'Supporting import of supplies, components, and materials; consolidation, warehousing, documents, and international shipment.',
+    '7. Lưu kho tại Việt Nam': '7. Warehousing in Vietnam',
+    'Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn, tiêu chuẩn đóng gói và hàng tồn dự phòng tại Việt Nam.':
+      'Storing goods, materials, components, approved samples, packing standards, and buffer inventory in Vietnam.',
+    '8. Tài trợ thương mại': '8. Trade Finance',
+    'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
+      'Controlled trade finance for buyers and subcontracting factories, linked to orders, materials, production, QC, and shipment.',
+    'Hành trình của một dự án tại ANSLIFE JSC':
+      'The Journey of a Project at ANSLIFE JSC',
+    'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
+      'We accompany buyers throughout the project journey, from concept to final delivery.',
+    'Ý tưởng & yêu cầu': 'Concept & Requirements',
+    'Đánh giá khả thi dự án & chuỗi cung ứng':
+      'Project & Supply Chain Feasibility Assessment',
+    'Đánh giá khả thi': 'Feasibility Assessment',
+    'Kiểm tra sản phẩm, vật liệu, chi phí và tiến độ.':
+      'Reviewing product, materials, cost, and timeline.',
+    'Phát triển sản phẩm OEM / ODM.': 'OEM / ODM product development.',
+    'Thẩm định nhà máy': 'Factory Assessment',
+    'Thẩm định năng lực nhà máy.': 'Factory capability assessment.',
+    'Vận hành dự án': 'Project Operation',
+    'Vận hành dự án xuất khẩu và tài trợ thương mại.':
+      'Export project operation and trade finance.',
+    'QC độc lập trong dự án.': 'Independent QC in projects.',
+    'Logistics & xuất nhập khẩu': 'Logistics & Import-Export',
+    'Điều phối logistics & xuất nhập khẩu dự án.':
+      'Project logistics and import-export coordination.',
+    'Lưu kho & hỗ trợ': 'Warehousing & Support',
+    'Lưu kho tại Việt Nam và tài trợ thương mại.':
+      'Warehousing in Vietnam and trade finance.',
+    'Vì sao buyer chọn giải pháp vận hành & cung ứng của ANSLIFE?':
+      'Why do buyers choose ANSLIFE operations & supply solutions?',
+    'Một đầu mối - toàn bộ giải pháp': 'One contact point - complete solution',
+    'Từ phát triển sản phẩm đến xuất hàng, tất cả trong một hệ sinh thái.':
+      'From product development to shipment, all within one ecosystem.',
+    'Độc lập - khách quan - minh bạch': 'Independent - objective - transparent',
+    'Đại diện lợi ích của buyer, kiểm soát chất lượng và rủi ro một cách độc lập.':
+      'Representing buyer interests while independently controlling quality and risk.',
+    'Hiểu thị trường quốc tế': 'International market understanding',
+    'Am hiểu tiêu chuẩn, quy định và thông lệ của các thị trường lớn.':
+      'Understanding the standards, regulations, and practices of major markets.',
+    'Tối ưu chi phí & hiệu quả': 'Cost & efficiency optimization',
+    'Tối ưu chuỗi cung ứng, giảm chi phí và rút ngắn thời gian dự án.':
+      'Optimizing the supply chain, reducing costs, and shortening project timelines.',
+    'Đồng hành dài hạn': 'Long-term partnership',
+    'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
+      'Committed to long-term partnership and sustainable growth with buyers.',
+    'Sẵn sàng bắt đầu dự án của bạn?': 'Ready to start your project?',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
+      'Send your request today and the ANSLIFE JSC team will respond as soon as possible.',
+    'Gửi yêu cầu': 'Send inquiry',
+    'Tải tài liệu / bản vẽ lên': 'Upload documents / drawings',
     'QC & Kiểm định': 'QC & Inspection',
     'Giải pháp lưu kho tại Việt Nam': 'Vietnam Storage Solution',
     'Gom hàng xuất khẩu': 'Export Consolidation',
@@ -980,6 +1059,82 @@ const TRANSLATIONS: Partial<Record<
     'Vật liệu đóng gói': '梱包資材',
     'Phát triển OEM/ODM': 'OEM/ODM開発',
     'Giải pháp dịch vụ': 'サービスソリューション',
+    'Giải pháp vận hành & cung ứng': '運営・供給ソリューション',
+    'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
+      '海外バイヤー向けの運営、供給、保管、QC、梱包、輸出混載ソリューション。',
+    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE JSCは、実現可能性評価、製品開発、工場評価、品質管理、物流、保管から貿易金融、出荷まで、海外バイヤーのベトナムでのプロジェクト運営を支援します。',
+    'Minh họa logistics và chuỗi cung ứng toàn cầu':
+      '物流とグローバルサプライチェーンのイラスト',
+    '1. Phát triển sản phẩm OEM / ODM': '1. OEM / ODM製品開発',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt.':
+      '図面、実物サンプル、または製品アイデアからサンプル開発と量産まで対応します。',
+    '2. Đánh giá khả thi dự án & chuỗi cung ứng':
+      '2. プロジェクト・サプライチェーン実現可能性評価',
+    'Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng tại Việt Nam.':
+      '製品、材料、工場、生産能力、期間、コスト、ベトナムのサプライチェーン適合性を評価します。',
+    '3. Thẩm định năng lực nhà máy': '3. 工場能力評価',
+    'Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.':
+      '製品、材料、生産量、品質基準、納期に基づいて工場能力を評価します。',
+    '4. Vận hành & quản lý dự án xuất khẩu': '4. 輸出プロジェクト運営・管理',
+    'Theo dõi tiến độ, điều phối thông tin, quản lý sản xuất, xử lý vấn đề phát sinh và báo cáo dự án.':
+      '進捗管理、情報調整、生産管理、発生課題の対応、プロジェクト報告を行います。',
+    '5. QC độc lập trong dự án': '5. プロジェクト内の独立QC',
+    'Kiểm soát chất lượng độc lập với nhà máy, theo tiêu chuẩn buyer và từng thị trường.':
+      '工場から独立した品質管理を、バイヤー基準と各市場の要件に沿って実施します。',
+    '6. Điều phối logistics & xuất nhập khẩu dự án':
+      '6. プロジェクト物流・輸出入調整',
+    'Hỗ trợ nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế.':
+      '資材、部品、原材料の輸入、貨物混載、保管、書類、国際出荷を支援します。',
+    '7. Lưu kho tại Việt Nam': '7. ベトナムでの保管',
+    'Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn, tiêu chuẩn đóng gói và hàng tồn dự phòng tại Việt Nam.':
+      '商品、材料、部材、承認サンプル、梱包基準、予備在庫をベトナムで保管します。',
+    '8. Tài trợ thương mại': '8. 貿易金融',
+    'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
+      '注文、材料、生産、QC、出荷に連動した、バイヤーと委託工場向けの管理型貿易金融を提供します。',
+    'Hành trình của một dự án tại ANSLIFE JSC':
+      'ANSLIFE JSCにおけるプロジェクトの流れ',
+    'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
+      'アイデア段階から商品が顧客に届くまで、プロジェクト全体を通じてバイヤーに伴走します。',
+    'Ý tưởng & yêu cầu': 'アイデア・要件',
+    'Đánh giá khả thi dự án & chuỗi cung ứng':
+      'プロジェクト・サプライチェーン実現可能性評価',
+    'Đánh giá khả thi': '実現可能性評価',
+    'Kiểm tra sản phẩm, vật liệu, chi phí và tiến độ.':
+      '製品、材料、コスト、スケジュールを確認します。',
+    'Phát triển sản phẩm OEM / ODM.': 'OEM / ODM製品開発。',
+    'Thẩm định nhà máy': '工場評価',
+    'Thẩm định năng lực nhà máy.': '工場能力評価。',
+    'Vận hành dự án': 'プロジェクト運営',
+    'Vận hành dự án xuất khẩu và tài trợ thương mại.':
+      '輸出プロジェクト運営と貿易金融。',
+    'QC độc lập trong dự án.': 'プロジェクト内の独立QC。',
+    'Logistics & xuất nhập khẩu': '物流・輸出入',
+    'Điều phối logistics & xuất nhập khẩu dự án.': 'プロジェクト物流・輸出入調整。',
+    'Lưu kho & hỗ trợ': '保管・サポート',
+    'Lưu kho tại Việt Nam và tài trợ thương mại.': 'ベトナムでの保管と貿易金融。',
+    'Vì sao buyer chọn giải pháp vận hành & cung ứng của ANSLIFE?':
+      'なぜバイヤーはANSLIFEの運営・供給ソリューションを選ぶのか',
+    'Một đầu mối - toàn bộ giải pháp': '単一窓口・包括的ソリューション',
+    'Từ phát triển sản phẩm đến xuất hàng, tất cả trong một hệ sinh thái.':
+      '製品開発から出荷まで、すべてを一つのエコシステムで対応します。',
+    'Độc lập - khách quan - minh bạch': '独立・客観・透明',
+    'Đại diện lợi ích của buyer, kiểm soát chất lượng và rủi ro một cách độc lập.':
+      'バイヤーの利益を代表し、品質とリスクを独立して管理します。',
+    'Hiểu thị trường quốc tế': '国際市場への理解',
+    'Am hiểu tiêu chuẩn, quy định và thông lệ của các thị trường lớn.':
+      '主要市場の基準、規制、商慣行を理解しています。',
+    'Tối ưu chi phí & hiệu quả': 'コストと効率の最適化',
+    'Tối ưu chuỗi cung ứng, giảm chi phí và rút ngắn thời gian dự án.':
+      'サプライチェーンを最適化し、コストを削減し、プロジェクト期間を短縮します。',
+    'Đồng hành dài hạn': '長期的な伴走',
+    'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
+      'バイヤーと共に持続的に成長する長期的なパートナーシップを重視します。',
+    'Sẵn sàng bắt đầu dự án của bạn?': 'プロジェクトを始める準備はできていますか？',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
+      '本日お問い合わせいただければ、ANSLIFE JSCチームができるだけ早く返信します。',
+    'Gửi yêu cầu': 'お問い合わせ',
+    'Tải tài liệu / bản vẽ lên': '資料 / 図面をアップロード',
     'QC & Kiểm định': 'QC・検査',
     'Giải pháp lưu kho tại Việt Nam': 'ベトナム保管ソリューション',
     'Gom hàng xuất khẩu': '輸出混載',
@@ -1567,6 +1722,78 @@ const TRANSLATIONS: Partial<Record<
     'Vật liệu đóng gói': '포장 자재',
     'Phát triển OEM/ODM': 'OEM/ODM 개발',
     'Giải pháp dịch vụ': '서비스 솔루션',
+    'Giải pháp vận hành & cung ứng': '운영 및 공급 솔루션',
+    'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
+      '국제 바이어를 위한 운영, 공급, 보관, QC, 포장 및 수출 통합 솔루션.',
+    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE JSC는 타당성 평가, 제품 개발, 공장 평가, 품질 관리, 물류, 보관부터 무역 금융과 출하까지 국제 바이어의 베트남 프로젝트 운영을 지원합니다.',
+    'Minh họa logistics và chuỗi cung ứng toàn cầu': '물류 및 글로벌 공급망 일러스트',
+    '1. Phát triển sản phẩm OEM / ODM': '1. OEM / ODM 제품 개발',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt.':
+      '도면, 실물 샘플 또는 제품 아이디어에서 샘플 개발과 대량 생산까지 지원합니다.',
+    '2. Đánh giá khả thi dự án & chuỗi cung ứng':
+      '2. 프로젝트 및 공급망 타당성 평가',
+    'Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng tại Việt Nam.':
+      '제품, 소재, 공장, 생산량, 일정, 비용 및 베트남 공급망 적합성을 평가합니다.',
+    '3. Thẩm định năng lực nhà máy': '3. 공장 역량 평가',
+    'Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.':
+      '제품, 소재, 생산량, 품질 기준 및 납기 일정에 따라 공장 역량을 평가합니다.',
+    '4. Vận hành & quản lý dự án xuất khẩu': '4. 수출 프로젝트 운영 및 관리',
+    'Theo dõi tiến độ, điều phối thông tin, quản lý sản xuất, xử lý vấn đề phát sinh và báo cáo dự án.':
+      '진행 상황 추적, 정보 조율, 생산 관리, 이슈 대응 및 프로젝트 보고를 수행합니다.',
+    '5. QC độc lập trong dự án': '5. 프로젝트 독립 QC',
+    'Kiểm soát chất lượng độc lập với nhà máy, theo tiêu chuẩn buyer và từng thị trường.':
+      '공장과 독립적으로 바이어 기준 및 각 시장 요구사항에 맞춰 품질을 관리합니다.',
+    '6. Điều phối logistics & xuất nhập khẩu dự án':
+      '6. 프로젝트 물류 및 수출입 조율',
+    'Hỗ trợ nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế.':
+      '자재, 부품, 원자재 수입과 화물 통합, 보관, 문서 및 국제 출하를 지원합니다.',
+    '7. Lưu kho tại Việt Nam': '7. 베트남 보관',
+    'Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn, tiêu chuẩn đóng gói và hàng tồn dự phòng tại Việt Nam.':
+      '상품, 소재, 구성품, 승인 샘플, 포장 기준 및 예비 재고를 베트남에서 보관합니다.',
+    '8. Tài trợ thương mại': '8. 무역 금융',
+    'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
+      '주문, 자재, 생산, QC 및 출하와 연결된 바이어 및 외주 공장 대상의 관리형 무역 금융을 제공합니다.',
+    'Hành trình của một dự án tại ANSLIFE JSC': 'ANSLIFE JSC 프로젝트 진행 과정',
+    'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
+      '아이디어 단계부터 상품이 고객에게 도착할 때까지 프로젝트 전 과정을 바이어와 함께합니다.',
+    'Ý tưởng & yêu cầu': '아이디어 및 요구사항',
+    'Đánh giá khả thi dự án & chuỗi cung ứng': '프로젝트 및 공급망 타당성 평가',
+    'Đánh giá khả thi': '타당성 평가',
+    'Kiểm tra sản phẩm, vật liệu, chi phí và tiến độ.':
+      '제품, 소재, 비용 및 일정을 검토합니다.',
+    'Phát triển sản phẩm OEM / ODM.': 'OEM / ODM 제품 개발.',
+    'Thẩm định nhà máy': '공장 평가',
+    'Thẩm định năng lực nhà máy.': '공장 역량 평가.',
+    'Vận hành dự án': '프로젝트 운영',
+    'Vận hành dự án xuất khẩu và tài trợ thương mại.': '수출 프로젝트 운영 및 무역 금융.',
+    'QC độc lập trong dự án.': '프로젝트 독립 QC.',
+    'Logistics & xuất nhập khẩu': '물류 및 수출입',
+    'Điều phối logistics & xuất nhập khẩu dự án.': '프로젝트 물류 및 수출입 조율.',
+    'Lưu kho & hỗ trợ': '보관 및 지원',
+    'Lưu kho tại Việt Nam và tài trợ thương mại.': '베트남 보관 및 무역 금융.',
+    'Vì sao buyer chọn giải pháp vận hành & cung ứng của ANSLIFE?':
+      '바이어가 ANSLIFE의 운영 및 공급 솔루션을 선택하는 이유',
+    'Một đầu mối - toàn bộ giải pháp': '단일 창구 - 전체 솔루션',
+    'Từ phát triển sản phẩm đến xuất hàng, tất cả trong một hệ sinh thái.':
+      '제품 개발부터 출하까지 하나의 생태계 안에서 지원합니다.',
+    'Độc lập - khách quan - minh bạch': '독립성 - 객관성 - 투명성',
+    'Đại diện lợi ích của buyer, kiểm soát chất lượng và rủi ro một cách độc lập.':
+      '바이어의 이익을 대변하며 품질과 리스크를 독립적으로 관리합니다.',
+    'Hiểu thị trường quốc tế': '국제 시장 이해',
+    'Am hiểu tiêu chuẩn, quy định và thông lệ của các thị trường lớn.':
+      '주요 시장의 기준, 규정 및 관행을 이해합니다.',
+    'Tối ưu chi phí & hiệu quả': '비용 및 효율 최적화',
+    'Tối ưu chuỗi cung ứng, giảm chi phí và rút ngắn thời gian dự án.':
+      '공급망을 최적화하고 비용을 줄이며 프로젝트 기간을 단축합니다.',
+    'Đồng hành dài hạn': '장기 파트너십',
+    'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
+      '바이어와 함께 지속 가능한 성장을 이루는 장기 협력을 지향합니다.',
+    'Sẵn sàng bắt đầu dự án của bạn?': '프로젝트를 시작할 준비가 되셨나요?',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
+      '오늘 요청을 보내주시면 ANSLIFE JSC 팀이 최대한 빠르게 답변드리겠습니다.',
+    'Gửi yêu cầu': '문의 보내기',
+    'Tải tài liệu / bản vẽ lên': '자료 / 도면 업로드',
     'QC & Kiểm định': 'QC 및 검사',
     'Giải pháp lưu kho tại Việt Nam': '베트남 보관 솔루션',
     'Gom hàng xuất khẩu': '수출 화물 통합',
@@ -1957,6 +2184,416 @@ const TRANSLATIONS: Partial<Record<
       '견적 수령 및 진행을 희망하는 일정을 알려 주세요.',
     'Cho biết điều kiện giao hàng dự kiến để tư vấn phù hợp.':
       '예상 배송 조건을 알려 주시면 그에 맞추어 안내해 드립니다.',
+  },
+  sv: {
+    'Giải pháp vận hành & cung ứng': 'Drift- och leveranslösningar',
+    'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
+      'Drift, leverans, lagerhållning, QC, packning och exportkonsolidering för internationella köpare.',
+    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE JSC hjälper internationella köpare att driva projekt i Vietnam, från genomförbarhetsbedömning, produktutveckling, fabriksbedömning, kvalitetskontroll, logistik och lager till handelsfinansiering och leverans.',
+    'Minh họa logistics và chuỗi cung ứng toàn cầu':
+      'Illustration av logistik och global leveranskedja',
+    '1. Phát triển sản phẩm OEM / ODM': '1. OEM / ODM-produktutveckling',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt.':
+      'Från ritningar, fysiska prover eller produktidéer till provutveckling och massproduktion.',
+    'Xem chi tiết': 'Visa detaljer',
+    '2. Đánh giá khả thi dự án & chuỗi cung ứng':
+      '2. Genomförbarhetsbedömning av projekt och leveranskedja',
+    'Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng tại Việt Nam.':
+      'Bedömning av produkt, material, fabrik, kapacitet, tidsplan, kostnad och leveranskedja i Vietnam.',
+    '3. Thẩm định năng lực nhà máy': '3. Bedömning av fabrikskapacitet',
+    'Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.':
+      'Bedömning av fabrikskapacitet utifrån produkt, material, volym, kvalitetsstandarder och leveransplan.',
+    '4. Vận hành & quản lý dự án xuất khẩu': '4. Drift och hantering av exportprojekt',
+    'Theo dõi tiến độ, điều phối thông tin, quản lý sản xuất, xử lý vấn đề phát sinh và báo cáo dự án.':
+      'Uppföljning av framsteg, informationssamordning, produktionsstyrning, hantering av problem och projektrapportering.',
+    '5. QC độc lập trong dự án': '5. Oberoende QC i projektet',
+    'Kiểm soát chất lượng độc lập với nhà máy, theo tiêu chuẩn buyer và từng thị trường.':
+      'Kvalitetskontroll oberoende av fabriken, enligt köparens standarder och varje målmarknad.',
+    '6. Điều phối logistics & xuất nhập khẩu dự án':
+      '6. Samordning av projektlogistik och import-export',
+    'Hỗ trợ nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế.':
+      'Stöd för import av förnödenheter, komponenter och material samt konsolidering, lager, dokument och internationell leverans.',
+    '7. Lưu kho tại Việt Nam': '7. Lagerhållning i Vietnam',
+    'Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn, tiêu chuẩn đóng gói và hàng tồn dự phòng tại Việt Nam.':
+      'Lagring av varor, material, komponenter, godkända prover, packstandarder och buffertlager i Vietnam.',
+    '8. Tài trợ thương mại': '8. Handelsfinansiering',
+    'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
+      'Kontrollerad handelsfinansiering för köpare och underleverantörer, kopplad till order, material, produktion, QC och leverans.',
+    'Hành trình của một dự án tại ANSLIFE JSC': 'Projektresan hos ANSLIFE JSC',
+    'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
+      'Vi följer köparen genom hela projektresan, från idé till slutleverans.',
+    'Ý tưởng & yêu cầu': 'Idé och krav',
+    'Đánh giá khả thi dự án & chuỗi cung ứng':
+      'Genomförbarhetsbedömning av projekt och leveranskedja',
+    'Đánh giá khả thi': 'Genomförbarhetsbedömning',
+    'Kiểm tra sản phẩm, vật liệu, chi phí và tiến độ.':
+      'Granskning av produkt, material, kostnad och tidsplan.',
+    'Phát triển sản phẩm': 'Produktutveckling',
+    'Phát triển sản phẩm OEM / ODM.': 'OEM / ODM-produktutveckling.',
+    'Thẩm định nhà máy': 'Fabriksbedömning',
+    'Thẩm định năng lực nhà máy.': 'Bedömning av fabrikskapacitet.',
+    'Vận hành dự án': 'Projektdrift',
+    'Vận hành dự án xuất khẩu và tài trợ thương mại.':
+      'Drift av exportprojekt och handelsfinansiering.',
+    'QC độc lập': 'Oberoende QC',
+    'QC độc lập trong dự án.': 'Oberoende QC i projektet.',
+    'Logistics & xuất nhập khẩu': 'Logistik och import-export',
+    'Điều phối logistics & xuất nhập khẩu dự án.':
+      'Samordning av projektlogistik och import-export.',
+    'Lưu kho & hỗ trợ': 'Lager och support',
+    'Lưu kho tại Việt Nam và tài trợ thương mại.':
+      'Lagerhållning i Vietnam och handelsfinansiering.',
+    'Vì sao buyer chọn giải pháp vận hành & cung ứng của ANSLIFE?':
+      'Varför väljer köpare ANSLIFE:s drift- och leveranslösningar?',
+    'Một đầu mối - toàn bộ giải pháp': 'En kontaktpunkt - komplett lösning',
+    'Từ phát triển sản phẩm đến xuất hàng, tất cả trong một hệ sinh thái.':
+      'Från produktutveckling till leverans, allt i ett ekosystem.',
+    'Độc lập - khách quan - minh bạch': 'Oberoende - objektivt - transparent',
+    'Đại diện lợi ích của buyer, kiểm soát chất lượng và rủi ro một cách độc lập.':
+      'Vi företräder köparens intressen och kontrollerar kvalitet och risk oberoende.',
+    'Hiểu thị trường quốc tế': 'Förståelse för internationella marknader',
+    'Am hiểu tiêu chuẩn, quy định và thông lệ của các thị trường lớn.':
+      'Kunskap om standarder, regler och praxis på större marknader.',
+    'Tối ưu chi phí & hiệu quả': 'Optimering av kostnad och effektivitet',
+    'Tối ưu chuỗi cung ứng, giảm chi phí và rút ngắn thời gian dự án.':
+      'Optimerar leveranskedjan, minskar kostnader och kortar projekttiden.',
+    'Đồng hành dài hạn': 'Långsiktigt partnerskap',
+    'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
+      'Engagerade i långsiktigt samarbete och hållbar tillväxt med köpare.',
+    'Sẵn sàng bắt đầu dự án của bạn?': 'Redo att starta ditt projekt?',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
+      'Skicka din förfrågan idag så svarar ANSLIFE JSC-teamet så snart som möjligt.',
+    'Gửi yêu cầu': 'Skicka förfrågan',
+    'Tải tài liệu / bản vẽ lên': 'Ladda upp dokument / ritningar',
+  },
+  fr: {
+    'Giải pháp vận hành & cung ứng': 'Solutions opérationnelles et d’approvisionnement',
+    'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
+      'Solutions d’exploitation, d’approvisionnement, de stockage, de QC, d’emballage et de groupage export pour les acheteurs internationaux.',
+    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE JSC accompagne les acheteurs internationaux dans l’exploitation de projets au Vietnam, de l’étude de faisabilité, du développement produit, de l’évaluation d’usine, du contrôle qualité, de la logistique et du stockage jusqu’au financement commercial et à l’expédition.',
+    'Minh họa logistics và chuỗi cung ứng toàn cầu':
+      'Illustration de la logistique et de la chaîne d’approvisionnement mondiale',
+    '1. Phát triển sản phẩm OEM / ODM': '1. Développement produit OEM / ODM',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt.':
+      'Des plans, échantillons physiques ou idées produit jusqu’au développement d’échantillons et à la production en série.',
+    'Xem chi tiết': 'Voir les détails',
+    '2. Đánh giá khả thi dự án & chuỗi cung ứng':
+      '2. Étude de faisabilité du projet et de la supply chain',
+    'Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng tại Việt Nam.':
+      'Évaluation de l’adéquation du produit, des matériaux, de l’usine, de la capacité, du calendrier, des coûts et de la supply chain au Vietnam.',
+    '3. Thẩm định năng lực nhà máy': '3. Évaluation des capacités de l’usine',
+    'Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.':
+      'Évaluation des capacités de l’usine selon le produit, les matériaux, le volume, les standards qualité et le calendrier de livraison.',
+    '4. Vận hành & quản lý dự án xuất khẩu':
+      '4. Exploitation et gestion de projets export',
+    'Theo dõi tiến độ, điều phối thông tin, quản lý sản xuất, xử lý vấn đề phát sinh và báo cáo dự án.':
+      'Suivi de l’avancement, coordination de l’information, gestion de production, traitement des problèmes et reporting projet.',
+    '5. QC độc lập trong dự án': '5. QC indépendant dans le projet',
+    'Kiểm soát chất lượng độc lập với nhà máy, theo tiêu chuẩn buyer và từng thị trường.':
+      'Contrôle qualité indépendant de l’usine, selon les standards de l’acheteur et de chaque marché cible.',
+    '6. Điều phối logistics & xuất nhập khẩu dự án':
+      '6. Coordination logistique et import-export du projet',
+    'Hỗ trợ nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế.':
+      'Support pour l’importation de fournitures, composants et matériaux; groupage, stockage, documents et expédition internationale.',
+    '7. Lưu kho tại Việt Nam': '7. Stockage au Vietnam',
+    'Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn, tiêu chuẩn đóng gói và hàng tồn dự phòng tại Việt Nam.':
+      'Stockage au Vietnam des marchandises, matériaux, composants, échantillons approuvés, standards d’emballage et stocks tampons.',
+    '8. Tài trợ thương mại': '8. Financement commercial',
+    'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
+      'Financement commercial contrôlé pour les acheteurs et usines sous-traitantes, lié aux commandes, matériaux, production, QC et expédition.',
+    'Hành trình của một dự án tại ANSLIFE JSC':
+      'Le parcours d’un projet chez ANSLIFE JSC',
+    'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
+      'Nous accompagnons l’acheteur tout au long du projet, de l’idée jusqu’à la livraison finale.',
+    'Ý tưởng & yêu cầu': 'Idée et exigences',
+    'Đánh giá khả thi dự án & chuỗi cung ứng':
+      'Étude de faisabilité du projet et de la supply chain',
+    'Đánh giá khả thi': 'Étude de faisabilité',
+    'Kiểm tra sản phẩm, vật liệu, chi phí và tiến độ.':
+      'Vérification du produit, des matériaux, des coûts et du calendrier.',
+    'Phát triển sản phẩm': 'Développement produit',
+    'Phát triển sản phẩm OEM / ODM.': 'Développement produit OEM / ODM.',
+    'Thẩm định nhà máy': 'Évaluation d’usine',
+    'Thẩm định năng lực nhà máy.': 'Évaluation des capacités de l’usine.',
+    'Vận hành dự án': 'Exploitation du projet',
+    'Vận hành dự án xuất khẩu và tài trợ thương mại.':
+      'Exploitation du projet export et financement commercial.',
+    'QC độc lập': 'QC indépendant',
+    'QC độc lập trong dự án.': 'QC indépendant dans le projet.',
+    'Logistics & xuất nhập khẩu': 'Logistique et import-export',
+    'Điều phối logistics & xuất nhập khẩu dự án.':
+      'Coordination logistique et import-export du projet.',
+    'Lưu kho & hỗ trợ': 'Stockage et support',
+    'Lưu kho tại Việt Nam và tài trợ thương mại.':
+      'Stockage au Vietnam et financement commercial.',
+    'Vì sao buyer chọn giải pháp vận hành & cung ứng của ANSLIFE?':
+      'Pourquoi les acheteurs choisissent-ils les solutions opérationnelles et d’approvisionnement d’ANSLIFE ?',
+    'Một đầu mối - toàn bộ giải pháp': 'Un interlocuteur unique - une solution complète',
+    'Từ phát triển sản phẩm đến xuất hàng, tất cả trong một hệ sinh thái.':
+      'Du développement produit à l’expédition, tout dans un même écosystème.',
+    'Độc lập - khách quan - minh bạch': 'Indépendant - objectif - transparent',
+    'Đại diện lợi ích của buyer, kiểm soát chất lượng và rủi ro một cách độc lập.':
+      'Représenter les intérêts de l’acheteur et contrôler indépendamment la qualité et les risques.',
+    'Hiểu thị trường quốc tế': 'Compréhension des marchés internationaux',
+    'Am hiểu tiêu chuẩn, quy định và thông lệ của các thị trường lớn.':
+      'Maîtrise des standards, réglementations et pratiques des grands marchés.',
+    'Tối ưu chi phí & hiệu quả': 'Optimisation des coûts et de l’efficacité',
+    'Tối ưu chuỗi cung ứng, giảm chi phí và rút ngắn thời gian dự án.':
+      'Optimiser la supply chain, réduire les coûts et raccourcir les délais projet.',
+    'Đồng hành dài hạn': 'Accompagnement long terme',
+    'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
+      'Engagement dans un partenariat long terme et une croissance durable avec les acheteurs.',
+    'Sẵn sàng bắt đầu dự án của bạn?': 'Prêt à démarrer votre projet ?',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
+      'Envoyez votre demande aujourd’hui, l’équipe ANSLIFE JSC vous répondra dès que possible.',
+    'Gửi yêu cầu': 'Envoyer une demande',
+    'Tải tài liệu / bản vẽ lên': 'Téléverser documents / plans',
+  },
+  ru: {
+    'Giải pháp vận hành & cung ứng': 'Операционные и снабженческие решения',
+    'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
+      'Решения для международных покупателей: операционное сопровождение, снабжение, хранение, QC, упаковка и консолидация экспортных грузов.',
+    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE JSC поддерживает международных покупателей в ведении проектов во Вьетнаме: от оценки осуществимости, разработки продукта, аудита фабрики, контроля качества, логистики и хранения до торгового финансирования и отгрузки.',
+    'Minh họa logistics và chuỗi cung ứng toàn cầu':
+      'Иллюстрация логистики и глобальной цепочки поставок',
+    '1. Phát triển sản phẩm OEM / ODM': '1. Разработка продукта OEM / ODM',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt.':
+      'От чертежей, физических образцов или идеи продукта до разработки образца и массового производства.',
+    'Xem chi tiết': 'Подробнее',
+    '2. Đánh giá khả thi dự án & chuỗi cung ứng':
+      '2. Оценка осуществимости проекта и цепочки поставок',
+    'Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng tại Việt Nam.':
+      'Оценка соответствия продукта, материалов, фабрики, мощности, сроков, стоимости и цепочки поставок во Вьетнаме.',
+    '3. Thẩm định năng lực nhà máy': '3. Оценка возможностей фабрики',
+    'Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.':
+      'Оценка возможностей фабрики по продукту, материалам, объему, стандартам качества и графику поставки.',
+    '4. Vận hành & quản lý dự án xuất khẩu':
+      '4. Операционное управление экспортным проектом',
+    'Theo dõi tiến độ, điều phối thông tin, quản lý sản xuất, xử lý vấn đề phát sinh và báo cáo dự án.':
+      'Отслеживание прогресса, координация информации, управление производством, решение возникающих вопросов и проектная отчетность.',
+    '5. QC độc lập trong dự án': '5. Независимый QC в проекте',
+    'Kiểm soát chất lượng độc lập với nhà máy, theo tiêu chuẩn buyer và từng thị trường.':
+      'Контроль качества, независимый от фабрики, в соответствии со стандартами покупателя и каждого целевого рынка.',
+    '6. Điều phối logistics & xuất nhập khẩu dự án':
+      '6. Координация логистики и импорта-экспорта проекта',
+    'Hỗ trợ nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế.':
+      'Поддержка импорта материалов, комплектующих и сырья; консолидация, хранение, документы и международная отгрузка.',
+    '7. Lưu kho tại Việt Nam': '7. Хранение во Вьетнаме',
+    'Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn, tiêu chuẩn đóng gói và hàng tồn dự phòng tại Việt Nam.':
+      'Хранение товаров, материалов, компонентов, утвержденных образцов, стандартов упаковки и резервных запасов во Вьетнаме.',
+    '8. Tài trợ thương mại': '8. Торговое финансирование',
+    'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
+      'Контролируемое торговое финансирование для покупателей и подрядных фабрик, связанное с заказами, материалами, производством, QC и отгрузкой.',
+    'Hành trình của một dự án tại ANSLIFE JSC': 'Путь проекта в ANSLIFE JSC',
+    'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
+      'Мы сопровождаем покупателя на всем пути проекта, от идеи до доставки товара конечному клиенту.',
+    'Ý tưởng & yêu cầu': 'Идея и требования',
+    'Đánh giá khả thi dự án & chuỗi cung ứng':
+      'Оценка осуществимости проекта и цепочки поставок',
+    'Đánh giá khả thi': 'Оценка осуществимости',
+    'Kiểm tra sản phẩm, vật liệu, chi phí và tiến độ.':
+      'Проверка продукта, материалов, стоимости и графика.',
+    'Phát triển sản phẩm': 'Разработка продукта',
+    'Phát triển sản phẩm OEM / ODM.': 'Разработка продукта OEM / ODM.',
+    'Thẩm định nhà máy': 'Аудит фабрики',
+    'Thẩm định năng lực nhà máy.': 'Оценка возможностей фабрики.',
+    'Vận hành dự án': 'Операционное ведение проекта',
+    'Vận hành dự án xuất khẩu và tài trợ thương mại.':
+      'Операционное ведение экспортного проекта и торговое финансирование.',
+    'QC độc lập': 'Независимый QC',
+    'QC độc lập trong dự án.': 'Независимый QC в проекте.',
+    'Logistics & xuất nhập khẩu': 'Логистика и импорт-экспорт',
+    'Điều phối logistics & xuất nhập khẩu dự án.':
+      'Координация логистики и импорта-экспорта проекта.',
+    'Lưu kho & hỗ trợ': 'Хранение и поддержка',
+    'Lưu kho tại Việt Nam và tài trợ thương mại.':
+      'Хранение во Вьетнаме и торговое финансирование.',
+    'Vì sao buyer chọn giải pháp vận hành & cung ứng của ANSLIFE?':
+      'Почему покупатели выбирают операционные и снабженческие решения ANSLIFE?',
+    'Một đầu mối - toàn bộ giải pháp': 'Одна точка контакта - полное решение',
+    'Từ phát triển sản phẩm đến xuất hàng, tất cả trong một hệ sinh thái.':
+      'От разработки продукта до отгрузки, все в одной экосистеме.',
+    'Độc lập - khách quan - minh bạch': 'Независимо - объективно - прозрачно',
+    'Đại diện lợi ích của buyer, kiểm soát chất lượng và rủi ro một cách độc lập.':
+      'Представляем интересы покупателя и независимо контролируем качество и риски.',
+    'Hiểu thị trường quốc tế': 'Понимание международных рынков',
+    'Am hiểu tiêu chuẩn, quy định và thông lệ của các thị trường lớn.':
+      'Понимание стандартов, правил и практик основных рынков.',
+    'Tối ưu chi phí & hiệu quả': 'Оптимизация затрат и эффективности',
+    'Tối ưu chuỗi cung ứng, giảm chi phí và rút ngắn thời gian dự án.':
+      'Оптимизация цепочки поставок, снижение затрат и сокращение сроков проекта.',
+    'Đồng hành dài hạn': 'Долгосрочное партнерство',
+    'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
+      'Нацелены на долгосрочное сотрудничество и устойчивый рост вместе с покупателями.',
+    'Sẵn sàng bắt đầu dự án của bạn?': 'Готовы начать ваш проект?',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
+      'Отправьте запрос сегодня, и команда ANSLIFE JSC ответит как можно скорее.',
+    'Gửi yêu cầu': 'Отправить запрос',
+    'Tải tài liệu / bản vẽ lên': 'Загрузить документы / чертежи',
+  },
+  es: {
+    'Giải pháp vận hành & cung ứng': 'Soluciones de operación y suministro',
+    'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
+      'Soluciones de operación, suministro, almacenamiento, QC, embalaje y consolidación de exportación para compradores internacionales.',
+    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE JSC apoya a compradores internacionales en la operación de proyectos en Vietnam, desde la evaluación de viabilidad, desarrollo de producto, evaluación de fábrica, control de calidad, logística y almacenamiento hasta la financiación comercial y el despacho.',
+    'Minh họa logistics và chuỗi cung ứng toàn cầu':
+      'Ilustración de logística y cadena de suministro global',
+    '1. Phát triển sản phẩm OEM / ODM': '1. Desarrollo de producto OEM / ODM',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt.':
+      'Desde planos, muestras físicas o ideas de producto hasta desarrollo de muestras y producción en serie.',
+    'Xem chi tiết': 'Ver detalles',
+    '2. Đánh giá khả thi dự án & chuỗi cung ứng':
+      '2. Evaluación de viabilidad del proyecto y la cadena de suministro',
+    'Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng tại Việt Nam.':
+      'Evaluación de la adecuación del producto, materiales, fábrica, capacidad, plazo, coste y cadena de suministro en Vietnam.',
+    '3. Thẩm định năng lực nhà máy': '3. Evaluación de capacidad de fábrica',
+    'Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.':
+      'Evaluación de la capacidad de la fábrica según producto, materiales, volumen, estándares de calidad y calendario de entrega.',
+    '4. Vận hành & quản lý dự án xuất khẩu':
+      '4. Operación y gestión de proyectos de exportación',
+    'Theo dõi tiến độ, điều phối thông tin, quản lý sản xuất, xử lý vấn đề phát sinh và báo cáo dự án.':
+      'Seguimiento del avance, coordinación de información, gestión de producción, resolución de incidencias e informes del proyecto.',
+    '5. QC độc lập trong dự án': '5. QC independiente en el proyecto',
+    'Kiểm soát chất lượng độc lập với nhà máy, theo tiêu chuẩn buyer và từng thị trường.':
+      'Control de calidad independiente de la fábrica, según los estándares del comprador y de cada mercado objetivo.',
+    '6. Điều phối logistics & xuất nhập khẩu dự án':
+      '6. Coordinación logística e importación-exportación del proyecto',
+    'Hỗ trợ nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế.':
+      'Soporte para importación de suministros, componentes y materiales; consolidación, almacenamiento, documentos y despacho internacional.',
+    '7. Lưu kho tại Việt Nam': '7. Almacenamiento en Vietnam',
+    'Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn, tiêu chuẩn đóng gói và hàng tồn dự phòng tại Việt Nam.':
+      'Almacenamiento en Vietnam de mercancías, materiales, componentes, muestras aprobadas, estándares de embalaje e inventario de reserva.',
+    '8. Tài trợ thương mại': '8. Financiación comercial',
+    'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
+      'Financiación comercial controlada para compradores y fábricas subcontratadas, vinculada a pedidos, materiales, producción, QC y despacho.',
+    'Hành trình của một dự án tại ANSLIFE JSC':
+      'El recorrido de un proyecto en ANSLIFE JSC',
+    'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
+      'Acompañamos al comprador durante todo el proyecto, desde la idea hasta la entrega final.',
+    'Ý tưởng & yêu cầu': 'Idea y requisitos',
+    'Đánh giá khả thi dự án & chuỗi cung ứng':
+      'Evaluación de viabilidad del proyecto y la cadena de suministro',
+    'Đánh giá khả thi': 'Evaluación de viabilidad',
+    'Kiểm tra sản phẩm, vật liệu, chi phí và tiến độ.':
+      'Revisión del producto, materiales, coste y calendario.',
+    'Phát triển sản phẩm': 'Desarrollo de producto',
+    'Phát triển sản phẩm OEM / ODM.': 'Desarrollo de producto OEM / ODM.',
+    'Thẩm định nhà máy': 'Evaluación de fábrica',
+    'Thẩm định năng lực nhà máy.': 'Evaluación de capacidad de fábrica.',
+    'Vận hành dự án': 'Operación del proyecto',
+    'Vận hành dự án xuất khẩu và tài trợ thương mại.':
+      'Operación del proyecto de exportación y financiación comercial.',
+    'QC độc lập': 'QC independiente',
+    'QC độc lập trong dự án.': 'QC independiente en el proyecto.',
+    'Logistics & xuất nhập khẩu': 'Logística e importación-exportación',
+    'Điều phối logistics & xuất nhập khẩu dự án.':
+      'Coordinación logística e importación-exportación del proyecto.',
+    'Lưu kho & hỗ trợ': 'Almacenamiento y soporte',
+    'Lưu kho tại Việt Nam và tài trợ thương mại.':
+      'Almacenamiento en Vietnam y financiación comercial.',
+    'Vì sao buyer chọn giải pháp vận hành & cung ứng của ANSLIFE?':
+      '¿Por qué los compradores eligen las soluciones de operación y suministro de ANSLIFE?',
+    'Một đầu mối - toàn bộ giải pháp': 'Un solo punto de contacto - solución completa',
+    'Từ phát triển sản phẩm đến xuất hàng, tất cả trong một hệ sinh thái.':
+      'Desde el desarrollo de producto hasta el despacho, todo en un mismo ecosistema.',
+    'Độc lập - khách quan - minh bạch': 'Independiente - objetivo - transparente',
+    'Đại diện lợi ích của buyer, kiểm soát chất lượng và rủi ro một cách độc lập.':
+      'Representamos los intereses del comprador y controlamos la calidad y el riesgo de forma independiente.',
+    'Hiểu thị trường quốc tế': 'Comprensión de mercados internacionales',
+    'Am hiểu tiêu chuẩn, quy định và thông lệ của các thị trường lớn.':
+      'Conocimiento de estándares, normativas y prácticas de los principales mercados.',
+    'Tối ưu chi phí & hiệu quả': 'Optimización de costes y eficiencia',
+    'Tối ưu chuỗi cung ứng, giảm chi phí và rút ngắn thời gian dự án.':
+      'Optimizar la cadena de suministro, reducir costes y acortar los plazos del proyecto.',
+    'Đồng hành dài hạn': 'Acompañamiento a largo plazo',
+    'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
+      'Compromiso de colaboración a largo plazo y crecimiento sostenible junto con los compradores.',
+    'Sẵn sàng bắt đầu dự án của bạn?': '¿Listo para iniciar tu proyecto?',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
+      'Envía tu solicitud hoy y el equipo de ANSLIFE JSC responderá lo antes posible.',
+    'Gửi yêu cầu': 'Enviar solicitud',
+    'Tải tài liệu / bản vẽ lên': 'Subir documentos / planos',
+  },
+  zh: {
+    'Giải pháp vận hành & cung ứng': '运营与供应解决方案',
+    'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
+      '面向国际买家的运营、供应、仓储、QC、包装和出口集货解决方案。',
+    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE JSC 支持国际买家在越南运营项目，涵盖可行性评估、产品开发、工厂评估、质量控制、物流、仓储、贸易融资和出货。',
+    'Minh họa logistics và chuỗi cung ứng toàn cầu': '物流与全球供应链示意图',
+    '1. Phát triển sản phẩm OEM / ODM': '1. OEM / ODM 产品开发',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt.':
+      '从图纸、实物样品或产品想法，到样品开发和批量生产。',
+    'Xem chi tiết': '查看详情',
+    '2. Đánh giá khả thi dự án & chuỗi cung ứng':
+      '2. 项目与供应链可行性评估',
+    'Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng tại Việt Nam.':
+      '评估产品、材料、工厂、产能、时间、成本及越南供应链的匹配度。',
+    '3. Thẩm định năng lực nhà máy': '3. 工厂能力评估',
+    'Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.':
+      '根据产品、材料、产量、质量标准和交付进度评估工厂能力。',
+    '4. Vận hành & quản lý dự án xuất khẩu': '4. 出口项目运营与管理',
+    'Theo dõi tiến độ, điều phối thông tin, quản lý sản xuất, xử lý vấn đề phát sinh và báo cáo dự án.':
+      '跟踪进度、协调信息、管理生产、处理问题并进行项目报告。',
+    '5. QC độc lập trong dự án': '5. 项目独立 QC',
+    'Kiểm soát chất lượng độc lập với nhà máy, theo tiêu chuẩn buyer và từng thị trường.':
+      '独立于工厂进行质量控制，符合买家标准和各目标市场要求。',
+    '6. Điều phối logistics & xuất nhập khẩu dự án':
+      '6. 项目物流与进出口协调',
+    'Hỗ trợ nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế.':
+      '支持物资、零部件和原材料进口；集货、仓储、单证和国际出货。',
+    '7. Lưu kho tại Việt Nam': '7. 越南仓储',
+    'Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn, tiêu chuẩn đóng gói và hàng tồn dự phòng tại Việt Nam.':
+      '在越南存放货物、材料、构件、确认样品、包装标准和备用库存。',
+    '8. Tài trợ thương mại': '8. 贸易融资',
+    'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
+      '为买家和代工厂提供受控贸易融资，与订单、材料、生产、QC 和出货挂钩。',
+    'Hành trình của một dự án tại ANSLIFE JSC': 'ANSLIFE JSC 的项目流程',
+    'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
+      '我们陪伴买家完成整个项目流程，从想法到货物交付给客户。',
+    'Ý tưởng & yêu cầu': '想法与需求',
+    'Đánh giá khả thi dự án & chuỗi cung ứng': '项目与供应链可行性评估',
+    'Đánh giá khả thi': '可行性评估',
+    'Kiểm tra sản phẩm, vật liệu, chi phí và tiến độ.':
+      '检查产品、材料、成本和进度。',
+    'Phát triển sản phẩm': '产品开发',
+    'Phát triển sản phẩm OEM / ODM.': 'OEM / ODM 产品开发。',
+    'Thẩm định nhà máy': '工厂评估',
+    'Thẩm định năng lực nhà máy.': '工厂能力评估。',
+    'Vận hành dự án': '项目运营',
+    'Vận hành dự án xuất khẩu và tài trợ thương mại.': '出口项目运营与贸易融资。',
+    'QC độc lập': '独立 QC',
+    'QC độc lập trong dự án.': '项目独立 QC。',
+    'Logistics & xuất nhập khẩu': '物流与进出口',
+    'Điều phối logistics & xuất nhập khẩu dự án.': '项目物流与进出口协调。',
+    'Lưu kho & hỗ trợ': '仓储与支持',
+    'Lưu kho tại Việt Nam và tài trợ thương mại.': '越南仓储与贸易融资。',
+    'Vì sao buyer chọn giải pháp vận hành & cung ứng của ANSLIFE?':
+      '为什么买家选择 ANSLIFE 的运营与供应解决方案？',
+    'Một đầu mối - toàn bộ giải pháp': '一个窗口 - 完整解决方案',
+    'Từ phát triển sản phẩm đến xuất hàng, tất cả trong một hệ sinh thái.':
+      '从产品开发到出货，全部在一个生态系统内完成。',
+    'Độc lập - khách quan - minh bạch': '独立 - 客观 - 透明',
+    'Đại diện lợi ích của buyer, kiểm soát chất lượng và rủi ro một cách độc lập.':
+      '代表买家利益，独立控制质量和风险。',
+    'Hiểu thị trường quốc tế': '理解国际市场',
+    'Am hiểu tiêu chuẩn, quy định và thông lệ của các thị trường lớn.':
+      '熟悉主要市场的标准、法规和商业惯例。',
+    'Tối ưu chi phí & hiệu quả': '优化成本与效率',
+    'Tối ưu chuỗi cung ứng, giảm chi phí và rút ngắn thời gian dự án.':
+      '优化供应链，降低成本并缩短项目周期。',
+    'Đồng hành dài hạn': '长期陪伴',
+    'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
+      '致力于与买家长期合作，共同实现可持续增长。',
+    'Sẵn sàng bắt đầu dự án của bạn?': '准备开始您的项目了吗？',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
+      '今天发送需求，ANSLIFE JSC 团队会尽快回复。',
+    'Gửi yêu cầu': '发送需求',
+    'Tải tài liệu / bản vẽ lên': '上传资料 / 图纸',
   },
 };
 

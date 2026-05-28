@@ -10323,7 +10323,7 @@ export function getAIFallbackSectionHtml(
     return translateAiHtml(
       language,
       `<div class="ai-content">${PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN}</div>`,
-    );
+    ).replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
   }
 
   if (pageSlug === 'resources' && sectionId === 'faq') {
