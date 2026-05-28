@@ -124,34 +124,8 @@ export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
     ],
   },
   {
-    label: 'Giải pháp dịch vụ',
-    path: '/products-solutions/service-solutions',
-    children: [
-      {
-        label: 'Phát triển OEM / ODM',
-        path: '/products-solutions/service-solutions/oem-odm-development',
-      },
-      {
-        label: 'Lưu kho tại Việt Nam',
-        path: '/products-solutions/service-solutions/storage-in-vietnam',
-      },
-      {
-        label: 'Phòng mẫu chuẩn đối tác',
-        path: '/products-solutions/service-solutions/partner-standard-room',
-      },
-      {
-        label: 'QC & Kiểm định',
-        path: '/products-solutions/service-solutions/qc-inspection',
-      },
-      {
-        label: 'Đóng gói theo tiêu chuẩn buyer',
-        path: '/products-solutions/service-solutions/buyer-standard-packing',
-      },
-      {
-        label: 'Gom hàng xuất khẩu',
-        path: '/products-solutions/service-solutions/export-consolidation',
-      },
-    ],
+    label: 'Giải pháp vận hành & cung ứng',
+    path: '/products-solutions/operations-supply-solutions',
   },
 ];
 
@@ -415,9 +389,10 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
         description: 'Ván, gỗ tự nhiên, veneer, foam, vật liệu bọc và vật liệu đóng gói.',
       },
       {
-        id: 'service-solutions',
-        title: 'Giải pháp dịch vụ',
-        description: 'OEM / ODM, lưu kho, phòng mẫu chuẩn, QC, đóng gói và gom hàng xuất khẩu.',
+        id: 'operations-supply-solutions',
+        title: 'Giải pháp vận hành & cung ứng',
+        description:
+          'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.',
       },
     ],
   },

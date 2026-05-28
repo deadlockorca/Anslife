@@ -157,6 +157,112 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
   </section>
 `.trim();
 
+const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
+  <section id="operations-supply-solutions" class="ai-section ai-operations-supply ai-company-overview">
+    <div class="ai-operations-hero">
+      <div class="ai-operations-hero-copy">
+        <h2>Giải pháp vận hành & cung ứng</h2>
+        <p>
+          ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.
+        </p>
+      </div>
+      <figure class="ai-operations-hero-media">
+        <img src="/assets/about/operations-supply-hero-map-v2.png" alt="Minh họa logistics và chuỗi cung ứng toàn cầu" loading="lazy" decoding="async" />
+      </figure>
+    </div>
+
+    <div class="ai-operations-card-grid">
+      <article class="ai-operations-card">
+        <span class="ai-company-overview-icon ai-icon-file-plus" aria-hidden="true"></span>
+        <h3>1. Phát triển sản phẩm OEM / ODM</h3>
+        <p>Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt.</p>
+        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+      </article>
+      <article class="ai-operations-card">
+        <span class="ai-company-overview-icon ai-icon-search" aria-hidden="true"></span>
+        <h3>2. Đánh giá khả thi dự án & chuỗi cung ứng</h3>
+        <p>Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng tại Việt Nam.</p>
+        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+      </article>
+      <article class="ai-operations-card">
+        <span class="ai-company-overview-icon ai-icon-factory" aria-hidden="true"></span>
+        <h3>3. Thẩm định năng lực nhà máy</h3>
+        <p>Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.</p>
+        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+      </article>
+      <article class="ai-operations-card">
+        <span class="ai-company-overview-icon ai-icon-operations" aria-hidden="true"></span>
+        <h3>4. Vận hành & quản lý dự án xuất khẩu</h3>
+        <p>Theo dõi tiến độ, điều phối thông tin, quản lý sản xuất, xử lý vấn đề phát sinh và báo cáo dự án.</p>
+        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+      </article>
+      <article class="ai-operations-card">
+        <span class="ai-company-overview-icon ai-icon-clipboard-check" aria-hidden="true"></span>
+        <h3>5. QC độc lập trong dự án</h3>
+        <p>Kiểm soát chất lượng độc lập với nhà máy, theo tiêu chuẩn buyer và từng thị trường.</p>
+        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+      </article>
+      <article class="ai-operations-card">
+        <span class="ai-company-overview-icon ai-icon-truck" aria-hidden="true"></span>
+        <h3>6. Điều phối logistics & xuất nhập khẩu dự án</h3>
+        <p>Hỗ trợ nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế.</p>
+        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+      </article>
+      <article class="ai-operations-card">
+        <span class="ai-company-overview-icon ai-icon-warehouse" aria-hidden="true"></span>
+        <h3>7. Lưu kho tại Việt Nam</h3>
+        <p>Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn, tiêu chuẩn đóng gói và hàng tồn dự phòng tại Việt Nam.</p>
+        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+      </article>
+      <article class="ai-operations-card">
+        <span class="ai-company-overview-icon ai-icon-hand-coin" aria-hidden="true"></span>
+        <h3>8. Tài trợ thương mại</h3>
+        <p>Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.</p>
+        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+      </article>
+    </div>
+
+    <div id="operations-project-journey" class="ai-operations-journey">
+      <header>
+        <h2>Hành trình của một dự án tại ANSLIFE JSC</h2>
+        <p>Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.</p>
+      </header>
+      <div class="ai-operations-timeline">
+        <article><span class="ai-process-step">1</span><i class="ai-process-icon ai-icon-file-plus" aria-hidden="true"></i><strong>Ý tưởng & yêu cầu</strong><p>Đánh giá khả thi dự án & chuỗi cung ứng</p></article>
+        <article><span class="ai-process-step">2</span><i class="ai-process-icon ai-icon-search" aria-hidden="true"></i><strong>Đánh giá khả thi</strong><p>Kiểm tra sản phẩm, vật liệu, chi phí và tiến độ.</p></article>
+        <article><span class="ai-process-step">3</span><i class="ai-process-icon ai-icon-clipboard-check" aria-hidden="true"></i><strong>Phát triển sản phẩm</strong><p>Phát triển sản phẩm OEM / ODM.</p></article>
+        <article><span class="ai-process-step">4</span><i class="ai-process-icon ai-icon-factory" aria-hidden="true"></i><strong>Thẩm định nhà máy</strong><p>Thẩm định năng lực nhà máy.</p></article>
+        <article><span class="ai-process-step">5</span><i class="ai-process-icon ai-icon-operations" aria-hidden="true"></i><strong>Vận hành dự án</strong><p>Vận hành dự án xuất khẩu và tài trợ thương mại.</p></article>
+        <article><span class="ai-process-step">6</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>QC độc lập</strong><p>QC độc lập trong dự án.</p></article>
+        <article><span class="ai-process-step">7</span><i class="ai-process-icon ai-icon-truck" aria-hidden="true"></i><strong>Logistics & xuất nhập khẩu</strong><p>Điều phối logistics & xuất nhập khẩu dự án.</p></article>
+        <article><span class="ai-process-step">8</span><i class="ai-process-icon ai-icon-warehouse" aria-hidden="true"></i><strong>Lưu kho & hỗ trợ</strong><p>Lưu kho tại Việt Nam và tài trợ thương mại.</p></article>
+      </div>
+    </div>
+
+    <div class="ai-operations-reasons">
+      <h2>Vì sao buyer chọn giải pháp vận hành & cung ứng của ANSLIFE?</h2>
+      <div class="ai-operations-reason-grid">
+        <article><span class="ai-company-overview-icon ai-icon-handshake" aria-hidden="true"></span><h3>Một đầu mối - toàn bộ giải pháp</h3><p>Từ phát triển sản phẩm đến xuất hàng, tất cả trong một hệ sinh thái.</p></article>
+        <article><span class="ai-company-overview-icon ai-icon-shield-check" aria-hidden="true"></span><h3>Độc lập - khách quan - minh bạch</h3><p>Đại diện lợi ích của buyer, kiểm soát chất lượng và rủi ro một cách độc lập.</p></article>
+        <article><span class="ai-company-overview-icon ai-icon-globe" aria-hidden="true"></span><h3>Hiểu thị trường quốc tế</h3><p>Am hiểu tiêu chuẩn, quy định và thông lệ của các thị trường lớn.</p></article>
+        <article><span class="ai-company-overview-icon ai-icon-chart" aria-hidden="true"></span><h3>Tối ưu chi phí & hiệu quả</h3><p>Tối ưu chuỗi cung ứng, giảm chi phí và rút ngắn thời gian dự án.</p></article>
+        <article><span class="ai-company-overview-icon ai-icon-team" aria-hidden="true"></span><h3>Đồng hành dài hạn</h3><p>Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.</p></article>
+      </div>
+    </div>
+
+    <div class="ai-company-request-panel ai-operations-request-panel">
+      <div>
+        <h2>Sẵn sàng bắt đầu dự án của bạn?</h2>
+        <p>Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải tài liệu / bản vẽ lên</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
 const ABOUT_COMPANY_INFO_SECTION_VN = `
   <section id="company-info" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
     <details class="ai-company-info-accordion" open>
@@ -6113,6 +6219,148 @@ function buildExtraCompanyInfoSection(content: ExtraAboutLocalizedContent['compa
 `.trim();
 }
 
+const DEVELOPMENT_HISTORY_TRANSLATIONS: Record<
+  ExtraAboutLanguage,
+  ExtraAboutLocalizedContent['developmentHistory']
+> = {
+  en: {
+    title: 'Formation & Development History',
+    intro:
+      'ANSLIFE JSC was built from a real furniture manufacturing foundation in Vietnam. From a handcrafted furniture workshop in Can Kiem craft village, Thach That, Hanoi, ANSLIFE gradually developed capabilities in design, fit-out, export processing, quality control, material supply chain and export project operation for international buyers. Through each stage, ANSLIFE evolved from a furniture manufacturer into a flexible production, supply chain, quality control and export system in Vietnam.',
+    cards: [
+      { year: '2012', title: 'Started from a handcrafted furniture workshop', text: 'ANSLIFE began as a handcrafted furniture workshop in Can Kiem craft village, Thach That district, Hanoi, Vietnam, focusing on home furniture such as wardrobes, beds, tables, chairs and wooden products for residential needs.' },
+      { year: '2014', title: 'Established the architecture and interior design department', text: 'ANSLIFE established an architecture and interior design department for residential and office projects. The head office moved to Floor 5, No. 12 Khuat Duy Tien, Thanh Xuan Trung Ward, Thanh Xuan District, Hanoi. This stage expanded ANSLIFE from furniture production into design, consulting and complete interior implementation.' },
+      { year: '2018', title: 'Developed a furniture brand in Vietnam', text: 'ANSLIFE launched an interior design and fit-out brand in Vietnam named To Am Hoan Hao. Website: <a href="https://toamhoanhao.vn" target="_blank" rel="noopener noreferrer">toamhoanhao.vn</a>. This stage helped ANSLIFE accumulate experience in user needs, interior design, real project execution and domestic project management.' },
+      { year: '2019', title: 'Started joining the export processing chain', text: 'ANSLIFE began receiving export-related orders for wooden furniture products, including items made from solid wood, MDF and related materials. At this stage, ANSLIFE participated as a processing partner for exporters in Vietnam serving orders to the United States.' },
+      { year: '2020', title: 'Expanded exports and launched the ANSLIFE brand', text: 'ANSLIFE expanded export activities to markets such as the United States, Korea and Europe. Export product groups included solid wood, MDF, plywood and materials for furniture production. The ANSLIFE brand was officially launched, marking the shift from individual processing activities toward a furniture manufacturing and export system.' },
+      { year: '2021', title: 'Successfully exported to Japan', text: 'ANSLIFE successfully exported furniture goods to Japan. This was an important milestone because the Japanese market requires high quality, stability, packing standards, detailed control and long-term consistency.' },
+      { year: '2022', title: 'Completed the material supply chain and established QC', text: 'ANSLIFE continued completing the furniture material supply chain, including sources of rubber wood, acacia wood, non-woven fabric and materials for furniture production. The company established a quality control department for inspection, monitoring and quality control, creating the foundation for an independent QC system.' },
+      { year: '2023', title: 'Expanded export project operation and management', text: 'ANSLIFE continued improving the material supply chain and expanded its role in export projects. Beyond production and supply, ANSLIFE became more involved in operating, coordinating and managing export projects, including progress tracking, factory coordination, quality inspection, goods preparation and shipment planning support.' },
+      { year: '2025', title: 'Moved head office to Ho Chi Minh City and expanded satellite system', text: 'ANSLIFE moved its head office operations to Ho Chi Minh City and opened an additional branch in Dong Nai. By this stage, ANSLIFE had production capacity through a diverse satellite factory system, a material supply network and experience operating export orders.' },
+      { year: '2026', title: 'Built an independent quality testing area', text: 'ANSLIFE built an independent quality testing area focused on mechanical standards for furniture. This area supports testing durability, structure, load capacity, stability and other mechanical standards required by each buyer and market, separating quality control from production and increasing objectivity, traceability and control.' },
+    ],
+  },
+  jp: {
+    title: '設立と発展の歩み',
+    intro:
+      'ANSLIFE JSCは、ベトナムにおける実際の家具生産基盤から形成されました。ハノイ市タックタット郡カンキエム工芸村の手工家具工房から始まり、設計、施工、輸出加工、品質管理、材料サプライチェーン、海外バイヤー向け輸出プロジェクト運営の能力を段階的に発展させてきました。',
+    cards: [
+      { year: '2012', title: '手工家具工房からの出発', text: 'ANSLIFEは、ベトナム・ハノイ市タックタット郡カンキエム工芸村の手工家具工房から始まり、ワードローブ、ベッド、テーブル、椅子など住宅向け木製家具に注力しました。' },
+      { year: '2014', title: '建築・インテリア設計部門を設立', text: '住宅・オフィス向けに建築・インテリア設計部門を設立し、本社をハノイ市タインスアン区クアットズイティエン12番地5階へ移転しました。生産から設計、コンサルティング、空間実装へ領域を広げた段階です。' },
+      { year: '2018', title: 'ベトナム国内インテリアブランドを発展', text: 'ANSLIFEは「Tổ Ấm Hoàn Hảo」というインテリア設計・施工ブランドを展開しました。ウェブサイト: <a href="https://toamhoanhao.vn" target="_blank" rel="noopener noreferrer">toamhoanhao.vn</a>。この時期に顧客ニーズ、設計、実施工、国内プロジェクト管理の経験を蓄積しました。' },
+      { year: '2019', title: '輸出加工チェーンへ参加開始', text: '無垢材、MDF、関連素材を使った木製家具の輸出関連注文を受け始め、米国向け輸出案件を扱うベトナムの輸出業者に対して加工パートナーとして参加しました。' },
+      { year: '2020', title: '輸出拡大とANSLIFEブランドの始動', text: '米国、韓国、欧州などへ輸出活動を拡大しました。無垢材、MDF、合板、家具生産向け素材を扱い、ANSLIFEブランドを正式に立ち上げ、単発加工から製造・輸出システム構築へ移行しました。' },
+      { year: '2021', title: '日本市場への輸出成功', text: 'ANSLIFEは日本市場へ家具の輸出に成功しました。日本市場は品質、安定性、梱包基準、詳細管理、長期的な製品標準維持を高く求めるため、重要な節目となりました。' },
+      { year: '2022', title: '材料供給チェーン完成とQC部門設立', text: 'ゴム材、アカシア材、不織布、家具生産用素材などの供給体制を整備し、注文ごとの検査・追跡・品質管理を担うQC部門を設立しました。独立品質管理システムの重要な基盤です。' },
+      { year: '2023', title: '輸出プロジェクト運営・管理の役割を拡大', text: '材料供給チェーンをさらに整え、輸出プロジェクトでの役割を拡大しました。生産・供給に加え、進捗確認、工場調整、品質検査、出荷準備、出荷計画支援まで深く関与しました。' },
+      { year: '2025', title: '本社をホーチミン市へ移転し衛星システムを拡大', text: '本社機能をホーチミン市へ移し、ドンナイに支店を開設しました。多様な衛星工場、材料供給ネットワーク、輸出注文の運営経験を通じて生産能力を強化しました。' },
+      { year: '2026', title: '独立品質試験エリアを構築', text: '家具の機械的基準に重点を置いた独立品質試験エリアを構築しました。耐久性、構造、耐荷重、安定性など市場・バイヤー別基準の確認を支援し、品質管理を生産から切り離して客観性と追跡性を高めます。' },
+    ],
+  },
+  kr: {
+    title: '설립 및 발전 과정',
+    intro:
+      'ANSLIFE JSC는 베트남의 실제 가구 생산 기반에서 형성되었습니다. 하노이 탁탓현 껀끼엠 공예마을의 수공 가구 작업장에서 시작해 설계, 시공, 수출 가공, 품질관리, 소재 공급망, 해외 바이어 대상 수출 프로젝트 운영 역량을 단계적으로 발전시켰습니다.',
+    cards: [
+      { year: '2012', title: '수공 가구 작업장에서 시작', text: 'ANSLIFE는 베트남 하노이 탁탓현 껀끼엠 공예마을의 수공 가구 작업장에서 시작했으며, 옷장, 침대, 테이블, 의자 등 주거용 목재 가구에 집중했습니다.' },
+      { year: '2014', title: '건축 및 인테리어 설계 부서 설립', text: '주거 및 사무공간 프로젝트를 위한 설계 부서를 설립하고 본사를 하노이 타인쑤언구 쿠앗주이띠엔 12번지 5층으로 이전했습니다. 생산에서 설계, 컨설팅, 공간 구현으로 확장한 단계입니다.' },
+      { year: '2018', title: '베트남 내 인테리어 브랜드 발전', text: 'ANSLIFE는 Tổ Ấm Hoàn Hảo라는 인테리어 설계·시공 브랜드를 추가로 운영했습니다. 웹사이트: <a href="https://toamhoanhao.vn" target="_blank" rel="noopener noreferrer">toamhoanhao.vn</a>. 사용자 니즈, 인테리어 설계, 실제 시공, 국내 프로젝트 관리 경험을 축적했습니다.' },
+      { year: '2019', title: '수출 가공 체인 참여 시작', text: '무가공 목재, MDF 및 관련 소재로 만든 목재 가구 수출 주문을 받기 시작했고, 미국 시장을 대상으로 하는 베트남 수출업체의 가공 파트너로 참여했습니다.' },
+      { year: '2020', title: '수출 확대와 ANSLIFE 브랜드 출시', text: '미국, 한국, 유럽 등으로 수출 활동을 확대했습니다. 수출 제품군은 원목, MDF, 합판 및 가구 생산 소재를 포함했으며, ANSLIFE 브랜드를 공식 출시해 단순 가공에서 제조·수출 시스템 구축으로 전환했습니다.' },
+      { year: '2021', title: '일본 시장 수출 성공', text: 'ANSLIFE는 일본 시장으로 가구 수출에 성공했습니다. 일본은 품질, 안정성, 포장 기준, 세부 관리, 장기적 제품 표준 유지 요구가 높기 때문에 중요한 이정표였습니다.' },
+      { year: '2022', title: '소재 공급망 완성 및 QC 부서 설립', text: '고무나무, 아카시아, 부직포 및 가구 생산 소재 공급망을 계속 완성하고, 주문 검수·추적·품질 관리를 담당하는 품질관리 부서를 설립했습니다. 독립 QC 시스템 발전의 기반입니다.' },
+      { year: '2023', title: '수출 프로젝트 운영 및 관리 역할 확대', text: '소재 공급망을 계속 완성하고 수출 프로젝트에서 역할을 확대했습니다. 생산과 공급을 넘어 진도 추적, 공장 조율, 품질 검사, 상품 준비, 출하 계획 지원까지 깊이 참여했습니다.' },
+      { year: '2025', title: '본사를 호치민시로 이전하고 위성 시스템 확대', text: '본사 운영을 호치민시로 이전하고 동나이에 지점을 열었습니다. 다양한 위성 공장, 원자재 공급망, 수출 주문 운영 경험을 통해 생산 역량을 확보했습니다.' },
+      { year: '2026', title: '독립 품질 시험 구역 구축', text: '가구의 기계적 기준에 중점을 둔 독립 품질 시험 구역을 구축했습니다. 내구성, 구조, 하중, 안정성 등 바이어와 시장별 기준 검사를 지원하며, 품질관리를 생산과 분리해 객관성과 추적성을 높입니다.' },
+    ],
+  },
+  sv: {
+    title: 'Bildande och utvecklingshistorik',
+    intro:
+      'ANSLIFE JSC växte fram ur verklig möbelproduktion i Vietnam. Från en hantverksverkstad i Can Kiem, Thach That, Hanoi utvecklade ANSLIFE stegvis kapacitet inom design, installation, exportbearbetning, kvalitetskontroll, materialförsörjning och exportprojekt för internationella köpare.',
+    cards: [
+      { year: '2012', title: 'Start från en hantverksmässig möbelverkstad', text: 'ANSLIFE började i hantverksbyn Can Kiem, Thach That, Hanoi, med möbler för hemmet som garderober, sängar, bord, stolar och träprodukter för bostäder.' },
+      { year: '2014', title: 'Arkitektur- och inredningsavdelning etablerades', text: 'ANSLIFE etablerade en avdelning för arkitektur och inredning för bostäder och kontor. Huvudkontoret flyttades till våning 5, nr 12 Khuat Duy Tien, Thanh Xuan Trung, Hanoi, och verksamheten breddades från produktion till design, rådgivning och genomförande.' },
+      { year: '2018', title: 'Utvecklade ett inredningsvarumärke i Vietnam', text: 'ANSLIFE lanserade varumärket Tổ Ấm Hoàn Hảo för inredningsdesign och utförande i Vietnam. Webbplats: <a href="https://toamhoanhao.vn" target="_blank" rel="noopener noreferrer">toamhoanhao.vn</a>. Perioden gav mer erfarenhet av användarbehov, design, praktiskt utförande och projektledning.' },
+      { year: '2019', title: 'Började delta i exportbearbetningskedjan', text: 'ANSLIFE började ta emot exportrelaterade order för trämöbler, inklusive produkter av massivt trä, MDF och relaterade material, som bearbetningspartner för exportörer i Vietnam med order till USA.' },
+      { year: '2020', title: 'Utökad export och lansering av ANSLIFE', text: 'Exporten utökades till USA, Korea och Europa. Produktgrupperna omfattade massivt trä, MDF, plywood och material för möbelproduktion. ANSLIFE-varumärket lanserades officiellt och markerade övergången mot ett tillverknings- och exportsystem.' },
+      { year: '2021', title: 'Framgångsrik export till Japan', text: 'ANSLIFE exporterade möbelvaror till Japan, en viktig milstolpe eftersom den japanska marknaden kräver hög kvalitet, stabilitet, packningsstandarder, detaljkontroll och långsiktig standardhållning.' },
+      { year: '2022', title: 'Materialkedja färdigställdes och QC etablerades', text: 'ANSLIFE fortsatte att bygga materialkedjan med gummiträ, akacia, non-woven och andra möbelmaterial. En QC-avdelning etablerades för inspektion, uppföljning och kvalitetskontroll av order, som grund för oberoende QC.' },
+      { year: '2023', title: 'Större roll i exportprojekt och drift', text: 'ANSLIFE stärkte materialkedjan och tog en större roll i exportprojekt, inklusive tidsuppföljning, fabrikssamordning, kvalitetskontroll, varuförberedelse och stöd för leveransplaner.' },
+      { year: '2025', title: 'Huvudkontoret flyttades till Ho Chi Minh City', text: 'ANSLIFE flyttade huvudkontoret till Ho Chi Minh City och öppnade en filial i Dong Nai. Vid denna tid hade bolaget produktionskapacitet via satellitfabriker, materialnätverk och erfarenhet av exportorder.' },
+      { year: '2026', title: 'Oberoende kvalitetsprovningsområde byggdes', text: 'ANSLIFE byggde ett oberoende område för kvalitetsprovning med fokus på mekaniska möbelstandarder, såsom hållbarhet, konstruktion, bärförmåga och stabilitet enligt varje köpares och marknads krav.' },
+    ],
+  },
+  fr: {
+    title: 'Historique de création et de développement',
+    intro:
+      'ANSLIFE JSC est née d’une base réelle de production de meubles au Vietnam. Depuis un atelier artisanal du village de métier de Can Kiem, Thach That, Hanoi, ANSLIFE a progressivement développé ses capacités en design, exécution, sous-traitance export, contrôle qualité, chaîne d’approvisionnement matériaux et opération de projets export pour les acheteurs internationaux.',
+    cards: [
+      { year: '2012', title: 'Départ depuis un atelier artisanal de meubles', text: 'ANSLIFE a commencé dans le village de métier de Can Kiem, Thach That, Hanoi, avec des meubles domestiques comme armoires, lits, tables, chaises et produits bois pour l’habitat.' },
+      { year: '2014', title: 'Création du département architecture et intérieur', text: 'ANSLIFE a créé un département de conception architecturale et intérieure pour les logements et bureaux. Le siège a été transféré au 5e étage, 12 Khuat Duy Tien, Thanh Xuan Trung, Hanoi, marquant l’extension vers design, conseil et réalisation complète.' },
+      { year: '2018', title: 'Développement d’une marque d’intérieur au Vietnam', text: 'ANSLIFE a lancé la marque de design et exécution intérieure Tổ Ấm Hoàn Hảo. Site web: <a href="https://toamhoanhao.vn" target="_blank" rel="noopener noreferrer">toamhoanhao.vn</a>. Cette étape a renforcé l’expérience en besoins utilisateurs, design, chantier réel et gestion de projets domestiques.' },
+      { year: '2019', title: 'Entrée dans la chaîne de sous-traitance export', text: 'ANSLIFE a commencé à recevoir des commandes liées à l’export de meubles bois, incluant bois massif, MDF et matériaux associés, comme partenaire de sous-traitance pour des exportateurs vietnamiens vers les États-Unis.' },
+      { year: '2020', title: 'Extension export et lancement de la marque ANSLIFE', text: 'ANSLIFE a étendu l’export vers les États-Unis, la Corée et l’Europe. Les groupes produits comprenaient bois massif, MDF, plywood et matériaux de production. Le lancement officiel d’ANSLIFE a marqué le passage vers un système de production et d’export.' },
+      { year: '2021', title: 'Export réussi vers le Japon', text: 'ANSLIFE a exporté avec succès des meubles vers le Japon, étape importante car ce marché exige qualité élevée, stabilité, standards d’emballage, contrôle détaillé et maintien durable des standards.' },
+      { year: '2022', title: 'Chaîne matériaux complétée et QC créé', text: 'ANSLIFE a continué à compléter la chaîne matériaux avec bois d’hévéa, acacia, non-tissé et matériaux de production. Un département QC a été créé pour inspection, suivi et contrôle qualité, base du système QC indépendant.' },
+      { year: '2023', title: 'Rôle élargi dans l’opération de projets export', text: 'ANSLIFE a renforcé sa chaîne matériaux et élargi son rôle dans les projets export : suivi d’avancement, coordination usine, inspection qualité, préparation des marchandises et soutien au planning d’expédition.' },
+      { year: '2025', title: 'Siège transféré à Ho Chi Minh City et réseau satellite élargi', text: 'ANSLIFE a transféré ses opérations principales à Ho Chi Minh City et ouvert une branche à Dong Nai. À ce stade, l’entreprise disposait d’une capacité de production via un réseau d’usines satellites, de fournisseurs et d’expérience export.' },
+      { year: '2026', title: 'Création d’une zone indépendante de test qualité', text: 'ANSLIFE a créé une zone indépendante de test qualité centrée sur les standards mécaniques du mobilier, pour contrôler durabilité, structure, résistance, stabilité et autres exigences propres à chaque buyer et marché.' },
+    ],
+  },
+  ru: {
+    title: 'История становления и развития',
+    intro:
+      'ANSLIFE JSC сформировалась на основе реального мебельного производства во Вьетнаме. От ремесленной мастерской в деревне Can Kiem, Thach That, Hanoi компания постепенно развила компетенции в дизайне, реализации интерьеров, экспортной переработке, контроле качества, цепочке поставок материалов и управлении экспортными проектами для международных покупателей.',
+    cards: [
+      { year: '2012', title: 'Начало с ремесленной мебельной мастерской', text: 'ANSLIFE началась в ремесленной деревне Can Kiem, Thach That, Hanoi, с бытовой мебели: шкафов, кроватей, столов, стульев и деревянных изделий для жилья.' },
+      { year: '2014', title: 'Создан отдел архитектуры и интерьеров', text: 'ANSLIFE создала отдел архитектурного и интерьерного дизайна для жилых и офисных проектов. Главный офис переехал на 5 этаж, 12 Khuat Duy Tien, Thanh Xuan Trung, Hanoi. Это расширило деятельность от производства к дизайну, консультациям и реализации интерьеров.' },
+      { year: '2018', title: 'Развитие интерьерного бренда во Вьетнаме', text: 'ANSLIFE запустила бренд дизайна и реализации интерьеров Tổ Ấm Hoàn Hảo. Сайт: <a href="https://toamhoanhao.vn" target="_blank" rel="noopener noreferrer">toamhoanhao.vn</a>. Период дал опыт потребностей пользователей, дизайна, практического строительства и управления внутренними проектами.' },
+      { year: '2019', title: 'Начало участия в экспортной производственной цепочке', text: 'ANSLIFE начала получать экспортные заказы на деревянную мебель, включая изделия из массива, MDF и связанных материалов, как производственный партнер вьетнамских экспортеров для рынка США.' },
+      { year: '2020', title: 'Расширение экспорта и запуск бренда ANSLIFE', text: 'ANSLIFE расширила экспорт в США, Корею и Европу. Продуктовые группы включали массив, MDF, фанеру и материалы для мебельного производства. Официальный запуск бренда отметил переход к системе производства и экспорта.' },
+      { year: '2021', title: 'Успешный экспорт в Японию', text: 'ANSLIFE успешно экспортировала мебель в Японию. Это важная веха, поскольку японский рынок требует высокого качества, стабильности, стандартов упаковки, детального контроля и долгосрочного соблюдения стандартов.' },
+      { year: '2022', title: 'Завершение цепочки материалов и создание QC', text: 'ANSLIFE продолжила развивать цепочку материалов, включая каучуковое дерево, акацию, нетканые материалы и материалы для мебели. Был создан отдел QC для инспекции, мониторинга и контроля качества заказов.' },
+      { year: '2023', title: 'Расширение роли в управлении экспортными проектами', text: 'ANSLIFE укрепила цепочку материалов и расширила роль в экспортных проектах: контроль сроков, координация фабрик, инспекция качества, подготовка товаров и поддержка плана отгрузки.' },
+      { year: '2025', title: 'Перенос главного офиса в Ho Chi Minh City', text: 'ANSLIFE перенесла основные операции в Ho Chi Minh City и открыла филиал в Dong Nai. К этому этапу компания обладала производственными возможностями через сеть спутниковых фабрик, поставщиков и опыт экспортных заказов.' },
+      { year: '2026', title: 'Создание независимой зоны испытаний качества', text: 'ANSLIFE создала независимую зону испытаний качества с фокусом на механические стандарты мебели: прочность, конструкцию, нагрузку, устойчивость и другие требования каждого покупателя и рынка.' },
+    ],
+  },
+  es: {
+    title: 'Historia de formación y desarrollo',
+    intro:
+      'ANSLIFE JSC se formó a partir de una base real de producción de muebles en Vietnam. Desde un taller artesanal en la aldea de Can Kiem, Thach That, Hanoi, ANSLIFE desarrolló gradualmente capacidades de diseño, ejecución, procesamiento para exportación, control de calidad, cadena de suministro de materiales y operación de proyectos de exportación para compradores internacionales.',
+    cards: [
+      { year: '2012', title: 'Inicio desde un taller artesanal de muebles', text: 'ANSLIFE comenzó en la aldea artesanal de Can Kiem, Thach That, Hanoi, enfocándose en muebles para el hogar como armarios, camas, mesas, sillas y productos de madera para vivienda.' },
+      { year: '2014', title: 'Creación del departamento de arquitectura e interiores', text: 'ANSLIFE creó un departamento de diseño arquitectónico e interior para viviendas y oficinas. La sede se trasladó al piso 5, 12 Khuat Duy Tien, Thanh Xuan Trung, Hanoi, ampliando la actividad hacia diseño, consultoría y ejecución integral.' },
+      { year: '2018', title: 'Desarrollo de una marca de interiores en Vietnam', text: 'ANSLIFE lanzó la marca de diseño y ejecución interior Tổ Ấm Hoàn Hảo. Sitio web: <a href="https://toamhoanhao.vn" target="_blank" rel="noopener noreferrer">toamhoanhao.vn</a>. Esta etapa aportó experiencia en necesidades de usuarios, diseño, obra real y gestión de proyectos domésticos.' },
+      { year: '2019', title: 'Inicio en la cadena de procesamiento para exportación', text: 'ANSLIFE empezó a recibir pedidos de exportación relacionados con muebles de madera, incluyendo madera maciza, MDF y materiales relacionados, como socio de procesamiento para exportadores vietnamitas hacia Estados Unidos.' },
+      { year: '2020', title: 'Expansión exportadora y lanzamiento de ANSLIFE', text: 'ANSLIFE amplió exportaciones a Estados Unidos, Corea y Europa. Los productos incluyeron madera maciza, MDF, plywood y materiales para producción de muebles. El lanzamiento oficial marcó el paso hacia un sistema de fabricación y exportación.' },
+      { year: '2021', title: 'Exportación exitosa a Japón', text: 'ANSLIFE exportó con éxito muebles a Japón. Fue un hito importante por las altas exigencias del mercado japonés en calidad, estabilidad, empaque, control detallado y mantenimiento de estándares a largo plazo.' },
+      { year: '2022', title: 'Cadena de materiales completada y QC establecido', text: 'ANSLIFE continuó completando la cadena de materiales, incluyendo madera de caucho, acacia, tela no tejida y materiales para muebles. Se creó el departamento de QC para inspección, seguimiento y control de calidad.' },
+      { year: '2023', title: 'Mayor rol en operación de proyectos de exportación', text: 'ANSLIFE reforzó la cadena de materiales y amplió su rol en proyectos de exportación: seguimiento de progreso, coordinación de fábricas, inspección de calidad, preparación de mercancías y soporte del plan de embarque.' },
+      { year: '2025', title: 'Sede trasladada a Ho Chi Minh City y red satélite ampliada', text: 'ANSLIFE trasladó su operación principal a Ho Chi Minh City y abrió una sucursal en Dong Nai. Para esta etapa contaba con capacidad productiva por fábricas satélite, red de materiales y experiencia en pedidos de exportación.' },
+      { year: '2026', title: 'Construcción de área independiente de pruebas de calidad', text: 'ANSLIFE construyó un área independiente de pruebas de calidad enfocada en estándares mecánicos de muebles, para evaluar durabilidad, estructura, carga, estabilidad y otros requisitos de cada comprador y mercado.' },
+    ],
+  },
+  zh: {
+    title: '形成与发展历程',
+    intro:
+      'ANSLIFE JSC 形成于越南真实的家具生产基础。从河内市石室县 Cần Kiệm 工艺村的一家手工家具作坊开始，ANSLIFE 逐步发展出设计、施工、出口加工、质量控制、材料供应链以及面向国际买家的出口项目运营能力。',
+    cards: [
+      { year: '2012', title: '从手工家具作坊起步', text: 'ANSLIFE 起步于越南河内市石室县 Cần Kiệm 工艺村的一家手工家具作坊，主要生产衣柜、床、桌、椅等家庭家具和住宅用木制产品。' },
+      { year: '2014', title: '成立建筑与室内设计部门', text: 'ANSLIFE 成立建筑与室内设计部门，服务住宅和办公项目。公司总部迁至河内市 Thanh Xuan 区 Khuat Duy Tien 12号5层，并从家具生产扩展到设计、咨询和完整空间实施。' },
+      { year: '2018', title: '发展越南本土室内品牌', text: 'ANSLIFE 增设室内设计与施工品牌 Tổ Ấm Hoàn Hảo。网站: <a href="https://toamhoanhao.vn" target="_blank" rel="noopener noreferrer">toamhoanhao.vn</a>。该阶段积累了用户需求、室内设计、实际施工和国内项目管理经验。' },
+      { year: '2019', title: '开始参与出口加工链', text: 'ANSLIFE 开始承接木制家具相关出口订单，包括实木、MDF 及相关材料产品，并作为越南出口商的加工伙伴服务美国市场订单。' },
+      { year: '2020', title: '扩大出口并推出 ANSLIFE 品牌', text: 'ANSLIFE 将出口活动扩展到美国、韩国和欧洲。出口产品包括实木、MDF、胶合板及家具生产材料。ANSLIFE 品牌正式推出，标志着从单一加工转向家具生产与出口系统建设。' },
+      { year: '2021', title: '成功出口日本市场', text: 'ANSLIFE 成功向日本市场出口家具产品。日本市场对质量、稳定性、包装标准、细节控制和长期标准保持有很高要求，因此这是重要里程碑。' },
+      { year: '2022', title: '完善材料供应链并成立 QC 部门', text: 'ANSLIFE 继续完善家具材料供应链，包括橡胶木、相思木、无纺布及家具生产材料，并成立质量控制部门负责订单检查、跟踪和质量控制，为独立 QC 系统奠定基础。' },
+      { year: '2023', title: '扩大出口项目运营与管理角色', text: 'ANSLIFE 继续完善材料供应链，并在出口项目中承担更深角色，包括进度跟踪、工厂协调、质量检查、货物准备和出货计划支持。' },
+      { year: '2025', title: '总部迁至胡志明市并扩大卫星系统', text: 'ANSLIFE 将总部运营迁至胡志明市，并在同奈开设分支。此阶段通过多样化卫星工厂、原料供应网络和出口订单运营经验形成生产能力。' },
+      { year: '2026', title: '建设独立质量检测区域', text: 'ANSLIFE 建设了独立质量检测区域，聚焦家具机械标准，用于支持耐久性、结构、承重、稳定性及各买家和市场要求的其他机械标准检测。' },
+    ],
+  },
+};
+
 function getExtraAboutSectionHtml(
   language: LanguageCode,
   sectionId: string,
@@ -6135,7 +6383,9 @@ function getExtraAboutSectionHtml(
     case 'company-intro':
       return buildExtraCompanyIntroSection(content.companyIntro);
     case 'development-history':
-      return buildExtraDevelopmentHistorySection(content.developmentHistory);
+      return buildExtraDevelopmentHistorySection(
+        DEVELOPMENT_HISTORY_TRANSLATIONS[language] ?? content.developmentHistory,
+      );
     case 'working-standards':
       return buildExtraWorkingStandardsSection(content.workingStandards);
     case 'company-info':
@@ -10069,6 +10319,13 @@ export function getAIFallbackSectionHtml(
   sectionId: string,
   language: LanguageCode = 'vn',
 ): string | null {
+  if (pageSlug === 'products-solutions' && sectionId === 'operations-supply-solutions') {
+    return translateAiHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN}</div>`,
+    );
+  }
+
   if (pageSlug === 'resources' && sectionId === 'faq') {
     return `<div class="ai-content">${getResourcesFaqSectionHtml(language)}</div>`;
   }

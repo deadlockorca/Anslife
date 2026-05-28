@@ -340,12 +340,19 @@ export default function SiteLayout() {
       location.pathname.includes('/about-anslife/company-info'),
     [location.pathname],
   );
+  const isOperationsSupplyRoute = useMemo(
+    () =>
+      /\/products-solutions\/operations-supply-solutions(?:\/|$)/.test(
+        location.pathname,
+      ),
+    [location.pathname],
+  );
   const isAboutWideRoute = useMemo(
     () =>
       /\/about-anslife\/(?:company-intro|company-info|vision-mission|core-values|production-philosophy|organization|team|anslife-ecosystem|development-history)(?:\/|$)/.test(
         location.pathname,
-      ),
-    [location.pathname],
+      ) || isOperationsSupplyRoute,
+    [isOperationsSupplyRoute, location.pathname],
   );
   const isWoodThemeRoute = !isAdminRoute && !isHomeRoute;
   const showGlobalVideoBackground =
@@ -1379,6 +1386,8 @@ export default function SiteLayout() {
         !isAdminRoute && isCompanyIntroRoute ? 'is-company-intro-route' : ''
       } ${
         !isAdminRoute && isAboutWideRoute ? 'is-about-wide-route' : ''
+      } ${
+        !isAdminRoute && isOperationsSupplyRoute ? 'is-operations-supply-route' : ''
       } ${
         isWoodThemeRoute ? 'is-wood-theme-route' : ''
       } ${
