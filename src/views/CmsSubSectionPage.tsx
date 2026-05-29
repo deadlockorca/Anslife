@@ -54,6 +54,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'operations-supply-solutions' &&
     detailSlug === 'project-supply-chain-feasibility-assessment';
+  const isOperationsFactoryAssessmentDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'operations-supply-solutions' &&
+    detailSlug === 'factory-capability-assessment';
   const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
   const oemOdmSeoDescription = t(
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.',
@@ -61,6 +65,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const feasibilitySeoTitle = t('Đánh giá khả thi dự án & chuỗi cung ứng');
   const feasibilitySeoDescription = t(
     'Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng trước khi triển khai dự án tại Việt Nam.',
+  );
+  const factoryAssessmentSeoTitle = t('Thẩm định năng lực nhà máy');
+  const factoryAssessmentSeoDescription = t(
+    'Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.',
   );
   const fallbackHtml = getAIFallbackSectionHtml(
     config.slug,
@@ -120,11 +128,15 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     ? `${oemOdmSeoTitle} | ${t(config.title)}`
     : isOperationsFeasibilityDetail
       ? `${feasibilitySeoTitle} | ${t(config.title)}`
+      : isOperationsFactoryAssessmentDetail
+        ? `${factoryAssessmentSeoTitle} | ${t(config.title)}`
       : `${t(section.title)} | ${t(config.title)}`;
   const seoDescription = isOperationsOemOdmDetail
     ? oemOdmSeoDescription
     : isOperationsFeasibilityDetail
       ? feasibilitySeoDescription
+      : isOperationsFactoryAssessmentDetail
+        ? factoryAssessmentSeoDescription
       : t(section.description);
 
   return (

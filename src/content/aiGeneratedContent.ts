@@ -188,7 +188,7 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
         <span class="ai-company-overview-icon ai-icon-factory" aria-hidden="true"></span>
         <h3>3. Thẩm định năng lực nhà máy</h3>
         <p>Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.</p>
-        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+        <a href="/vn/products-solutions/operations-supply-solutions/factory-capability-assessment">Xem chi tiết <span>→</span></a>
       </article>
       <article class="ai-operations-card">
         <span class="ai-company-overview-icon ai-icon-operations" aria-hidden="true"></span>
@@ -2018,6 +2018,197 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_LOCALIZED: Re
   ru: PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_RU,
   es: PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_ES,
   zh: PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_ZH,
+};
+
+const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_VN = `
+  <section id="factory-capability-assessment" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Thẩm định năng lực nhà máy</h2>
+      <p class="ai-oem-odm-subtitle">Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.</p>
+      <p>ANSLIFE JSC hỗ trợ buyer quốc tế thẩm định năng lực hoạt động của nhà máy tại Việt Nam trước khi triển khai sản xuất hoặc mở rộng dự án.</p>
+      <p>Việc thẩm định không chỉ xem nhà máy có máy móc hay không, mà cần đánh giá toàn diện khả năng thực hiện sản phẩm cụ thể, bao gồm kinh nghiệm sản xuất, năng lực xử lý vật liệu, công suất thực tế, hệ thống quản lý chất lượng, năng lực đóng gói, khả năng đáp ứng sản lượng và mức độ phù hợp với tiêu chuẩn của buyer.</p>
+      <p>Từ kết quả thẩm định, ANSLIFE JSC giúp buyer xác định nhà máy có phù hợp với dự án hay không, rủi ro nằm ở đâu và cần điều chỉnh điều kiện vận hành nào trước khi đặt hàng hoặc triển khai sản xuất hàng loạt.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>Nhà máy được thẩm định dựa trên những yếu tố nào?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Nhóm sản phẩm phù hợp</h3><p>Đánh giá nhà máy có kinh nghiệm sản xuất nhóm sản phẩm tương tự hay không, bao gồm nội thất hoàn thiện, cấu kiện, sản phẩm gỗ tự nhiên, sản phẩm ván công nghiệp, sản phẩm bọc nệm hoặc sản phẩm kết hợp nhiều vật liệu.</p></article>
+        <article><h3>2. Năng lực vật liệu</h3><p>Đánh giá khả năng xử lý các nhóm vật liệu như gỗ tự nhiên, plywood, MDF, veneer, foam, vải, da, phụ kiện, keo, sơn và vật liệu đóng gói theo yêu cầu của sản phẩm.</p></article>
+        <article><h3>3. Máy móc & thiết bị</h3><p>Kiểm tra hệ thống máy móc, thiết bị sản xuất, thiết bị hoàn thiện, khu vực lắp ráp, khu vực đóng gói và mức độ phù hợp của thiết bị với sản phẩm cần thực hiện.</p></article>
+        <article><h3>4. Nhân sự & tay nghề</h3><p>Đánh giá đội ngũ quản lý sản xuất, kỹ thuật, công nhân, QC nội bộ và khả năng duy trì chất lượng ổn định trong quá trình sản xuất.</p></article>
+        <article><h3>5. Công suất thực tế</h3><p>Xem xét năng lực sản xuất thực tế theo ngày, tuần, tháng hoặc theo đơn hàng; đánh giá khả năng đáp ứng sản lượng mục tiêu và khả năng mở rộng sản lượng khi dự án tăng trưởng.</p></article>
+        <article><h3>6. Hệ thống kiểm soát chất lượng</h3><p>Đánh giá quy trình kiểm tra nội bộ, khả năng phối hợp với QC độc lập, cách ghi nhận lỗi, xử lý lỗi và duy trì tiêu chuẩn chất lượng theo yêu cầu của buyer.</p></article>
+        <article><h3>7. Năng lực đóng gói xuất khẩu</h3><p>Kiểm tra khả năng đóng gói, carton mark, nhãn mác, pallet, tiêu chuẩn chống ẩm, chống va đập, container loading và yêu cầu đóng gói theo từng thị trường.</p></article>
+        <article><h3>8. Khả năng đáp ứng tiến độ</h3><p>Đánh giá khả năng lập kế hoạch sản xuất, kiểm soát tiến độ, chuẩn bị vật liệu, xử lý vấn đề phát sinh và giao hàng đúng thời gian đã cam kết.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>ANSLIFE JSC thẩm định điều gì?</h2>
+      <ul>
+        <li>Nhà máy có phù hợp với nhóm sản phẩm cần sản xuất hay không</li>
+        <li>Nhà máy có đủ kinh nghiệm với vật liệu và kết cấu sản phẩm hay không</li>
+        <li>Máy móc và thiết bị có đáp ứng quy trình sản xuất không</li>
+        <li>Công suất thực tế có phù hợp với sản lượng yêu cầu không</li>
+        <li>Nhà máy có khả năng duy trì chất lượng ổn định không</li>
+        <li>Hệ thống QC nội bộ có đủ tốt không</li>
+        <li>Nhà máy có thể phối hợp với QC độc lập của ANSLIFE JSC không</li>
+        <li>Năng lực đóng gói xuất khẩu có đáp ứng tiêu chuẩn buyer không</li>
+        <li>Tiến độ sản xuất có khả thi với thời gian giao hàng yêu cầu không</li>
+        <li>Những rủi ro chính cần kiểm soát trước khi đặt hàng là gì</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Quy trình thẩm định năng lực nhà máy</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Tiếp nhận yêu cầu dự án:</strong> Buyer cung cấp thông tin về sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng, thị trường xuất khẩu, thời gian giao hàng và yêu cầu đặc biệt nếu có.</p></li>
+        <li><p><strong>Xác định tiêu chí thẩm định:</strong> ANSLIFE JSC xác định các tiêu chí cần kiểm tra theo từng dự án, bao gồm sản phẩm, vật liệu, máy móc, nhân sự, công suất, QC, đóng gói và tiến độ.</p></li>
+        <li><p><strong>Khảo sát và kiểm tra nhà máy:</strong> ANSLIFE JSC kiểm tra thực tế hoặc làm việc với nhà máy để đánh giá điều kiện sản xuất, thiết bị, quy trình vận hành, khu vực vật liệu, sản phẩm đang sản xuất, khu vực hoàn thiện và đóng gói.</p></li>
+        <li><p><strong>Đánh giá mức độ phù hợp:</strong> ANSLIFE JSC đối chiếu năng lực nhà máy với yêu cầu của dự án để xác định mức độ phù hợp, các điểm mạnh, điểm hạn chế và rủi ro cần kiểm soát.</p></li>
+        <li><p><strong>Báo cáo và đề xuất:</strong> ANSLIFE JSC tổng hợp kết quả thẩm định và đề xuất hướng xử lý, bao gồm lựa chọn nhà máy, điều chỉnh sản lượng, bổ sung QC độc lập, sản xuất thử hoặc thay đổi mô hình triển khai nếu cần.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Kết quả buyer nhận được</h2>
+      <ul>
+        <li>Nhận định nhà máy có phù hợp với dự án hay không</li>
+        <li>Đánh giá năng lực sản xuất theo sản phẩm cụ thể</li>
+        <li>Đánh giá công suất thực tế so với sản lượng yêu cầu</li>
+        <li>Đánh giá khả năng xử lý vật liệu</li>
+        <li>Đánh giá hệ thống QC nội bộ của nhà máy</li>
+        <li>Đánh giá năng lực đóng gói xuất khẩu</li>
+        <li>Nhận diện rủi ro về chất lượng, tiến độ, vật liệu hoặc sản lượng</li>
+        <li>Đề xuất mức độ cần thiết của QC độc lập</li>
+        <li>Đề xuất phương án vận hành dự án phù hợp</li>
+        <li>Cơ sở để buyer quyết định đặt hàng, thử mẫu hoặc mở rộng hợp tác</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Trước khi đặt hàng cần xác minh điều gì?</h2>
+      <p>Trước khi đặt hàng, ANSLIFE JSC giúp buyer xác minh liệu nhà máy có thực sự đủ năng lực để sản xuất đúng sản phẩm, đúng tiêu chuẩn, đúng sản lượng và đúng thời gian giao hàng hay không.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Gửi yêu cầu thẩm định nhà máy</h2>
+        <p>Buyer có thể gửi thông tin sản phẩm, sản lượng, tiêu chuẩn chất lượng, nhà máy hiện có hoặc nhóm nhà máy cần đánh giá. ANSLIFE JSC sẽ xem xét yêu cầu và đề xuất phạm vi thẩm định phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu thẩm định</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải tài liệu dự án lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN = `
+  <section id="factory-capability-assessment" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Factory Capability Assessment</h2>
+      <p class="ai-oem-odm-subtitle">Assess factory capability by product type, materials, required volume, quality standards, and delivery schedule.</p>
+      <p>ANSLIFE JSC supports international buyers in assessing factory operating capability in Vietnam before launching production or scaling a project.</p>
+      <p>This assessment is not only about whether a factory has machinery. It evaluates the real ability to execute a specific product, including relevant production experience, material handling capability, actual capacity, quality management system, packing capability, output reliability, and fit with buyer standards.</p>
+      <p>Based on the assessment result, ANSLIFE JSC helps buyers determine whether the factory is suitable for the project, where key risks are, and what operating conditions should be adjusted before placing orders or starting mass production.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>What factors are used to assess a factory?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Product group fit</h3><p>Evaluate whether the factory has proven experience with similar product groups, including finished furniture, components, solid wood products, engineered wood products, upholstered products, or multi-material products.</p></article>
+        <article><h3>2. Material capability</h3><p>Assess ability to process material groups such as solid wood, plywood, MDF, veneer, foam, fabric, leather, hardware, adhesives, coatings, and packing materials according to product requirements.</p></article>
+        <article><h3>3. Machinery & equipment</h3><p>Check production machinery, finishing equipment, assembly area, packing area, and how well equipment setup matches the product to be produced.</p></article>
+        <article><h3>4. Team & skill level</h3><p>Assess production management, engineering team, operators, internal QC team, and ability to maintain stable quality during production.</p></article>
+        <article><h3>5. Actual capacity</h3><p>Review real production capability by day, week, month, or order cycle; assess ability to meet target volume and scale output when project demand grows.</p></article>
+        <article><h3>6. Quality control system</h3><p>Assess internal inspection workflow, collaboration capability with independent QC, defect recording, corrective handling, and consistency in maintaining buyer-required standards.</p></article>
+        <article><h3>7. Export packing capability</h3><p>Check packing execution, carton marks, labels, pallets, moisture and impact protection, container loading practice, and market-specific packing requirements.</p></article>
+        <article><h3>8. Delivery reliability</h3><p>Assess production planning, schedule control, material readiness, issue handling, and ability to deliver on committed timelines.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>What does ANSLIFE JSC assess in practice?</h2>
+      <ul>
+        <li>Whether the factory fits the target product group</li>
+        <li>Whether the factory has sufficient experience with required materials and structure</li>
+        <li>Whether machinery and equipment support the production workflow</li>
+        <li>Whether actual capacity matches required output</li>
+        <li>Whether the factory can maintain stable quality performance</li>
+        <li>Whether the internal QC system is strong enough</li>
+        <li>Whether the factory can work effectively with ANSLIFE JSC independent QC</li>
+        <li>Whether export packing capability meets buyer standards</li>
+        <li>Whether production timeline is feasible for required delivery window</li>
+        <li>What key risks must be controlled before order placement</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>5-step factory assessment workflow</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Receive project requirements:</strong> Buyer shares product, materials, volume, quality standards, export market, delivery timeline, and any special requirements.</p></li>
+        <li><p><strong>Define assessment criteria:</strong> ANSLIFE JSC defines project-specific criteria covering product, materials, machinery, workforce, capacity, QC, packing, and schedule control.</p></li>
+        <li><p><strong>Factory survey and inspection:</strong> ANSLIFE JSC conducts on-site checks or structured factory review to assess production conditions, equipment, operations, material zones, in-process products, finishing, and packing areas.</p></li>
+        <li><p><strong>Fit-gap evaluation:</strong> ANSLIFE JSC compares actual factory capability against project requirements to identify fit level, strengths, constraints, and risk points to control.</p></li>
+        <li><p><strong>Report and recommendations:</strong> ANSLIFE JSC consolidates findings and recommends actions such as factory selection, volume adjustment, independent QC reinforcement, pilot production, or execution model changes where needed.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>What buyers receive</h2>
+      <ul>
+        <li>Clear view on whether the factory is suitable for the project</li>
+        <li>Capability assessment against specific product requirements</li>
+        <li>Actual capacity assessment versus required output</li>
+        <li>Material handling capability assessment</li>
+        <li>Internal QC system assessment</li>
+        <li>Export packing capability assessment</li>
+        <li>Risk identification across quality, schedule, material, or output</li>
+        <li>Recommendation on required level of independent QC</li>
+        <li>Recommended project operating approach</li>
+        <li>Decision basis for order placement, pilot run, or partnership expansion</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>What should be verified before placing orders?</h2>
+      <p>Before placing orders, ANSLIFE JSC helps buyers verify whether the factory truly has the capability to deliver the right product, to the right standard, at the right volume, within the required delivery timeline.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Submit a factory assessment request</h2>
+        <p>Buyers can share product information, required volume, quality standards, existing factory candidates, or factory groups to be evaluated. ANSLIFE JSC will review and propose a suitable assessment scope.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit assessment request</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload project documents</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+type FactoryAssessmentDetailLanguage = Extract<
+  LanguageCode,
+  'en' | 'jp' | 'kr' | 'sv' | 'fr' | 'ru' | 'es' | 'zh'
+>;
+
+const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_LOCALIZED: Record<
+  FactoryAssessmentDetailLanguage,
+  string
+> = {
+  en: PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN,
+  jp: PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN,
+  kr: PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN,
+  sv: PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN,
+  fr: PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN,
+  ru: PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN,
+  es: PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN,
+  zh: PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN,
 };
 
 const ABOUT_COMPANY_INFO_SECTION_VN = `
@@ -12113,6 +12304,25 @@ function getOperationsSupplyDetailHtml(
     );
   }
 
+  if (detailSlug === 'factory-capability-assessment') {
+    if (language === 'vn') {
+      return `<div class="ai-content">${PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_VN}</div>`.replace(
+        /href="\/vn\/contact\//g,
+        `href="/${language}/contact/`,
+      );
+    }
+
+    const localizedSectionHtml =
+      PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_LOCALIZED[
+        language as FactoryAssessmentDetailLanguage
+      ] ?? PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN;
+
+    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+      /href="\/vn\/contact\//g,
+      `href="/${language}/contact/`,
+    );
+  }
+
   return null;
 }
 
@@ -12139,6 +12349,10 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/project-supply-chain-feasibility-assessment"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/project-supply-chain-feasibility-assessment"`,
+      )
+      .replace(
+        /href="\/vn\/products-solutions\/operations-supply-solutions\/factory-capability-assessment"/g,
+        `href="/${language}/products-solutions/operations-supply-solutions/factory-capability-assessment"`,
       )
       .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
   }

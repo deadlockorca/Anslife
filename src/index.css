@@ -5612,7 +5612,8 @@ a.mobile-menu-utility-link {
   column-gap: 1.05rem;
 }
 
-#project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul {
+#project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul,
+#factory-capability-assessment .ai-oem-odm-difference ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -5621,7 +5622,8 @@ a.mobile-menu-utility-link {
   gap: 0.68rem 0.82rem;
 }
 
-#project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul li {
+#project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul li,
+#factory-capability-assessment .ai-oem-odm-difference ul li {
   position: relative;
   margin: 0;
   border: 1px solid #eadfd4;
@@ -5630,7 +5632,8 @@ a.mobile-menu-utility-link {
   padding: 0.78rem 0.88rem 0.78rem 2rem;
 }
 
-#project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul li::before {
+#project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul li::before,
+#factory-capability-assessment .ai-oem-odm-difference ul li::before {
   content: '';
   position: absolute;
   left: 0.88rem;
@@ -5641,7 +5644,8 @@ a.mobile-menu-utility-link {
   background: #7c4f34;
 }
 
-#project-supply-chain-feasibility-assessment .ai-oem-odm-checklist ul {
+#project-supply-chain-feasibility-assessment .ai-oem-odm-checklist ul,
+#factory-capability-assessment .ai-oem-odm-checklist ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -5650,7 +5654,8 @@ a.mobile-menu-utility-link {
   gap: 0.68rem 0.82rem;
 }
 
-#project-supply-chain-feasibility-assessment .ai-oem-odm-checklist ul li {
+#project-supply-chain-feasibility-assessment .ai-oem-odm-checklist ul li,
+#factory-capability-assessment .ai-oem-odm-checklist ul li {
   position: relative;
   margin: 0;
   border: 1px solid #eadfd4;
@@ -5659,7 +5664,8 @@ a.mobile-menu-utility-link {
   padding: 0.78rem 0.88rem 0.78rem 2rem;
 }
 
-#project-supply-chain-feasibility-assessment .ai-oem-odm-checklist ul li::before {
+#project-supply-chain-feasibility-assessment .ai-oem-odm-checklist ul li::before,
+#factory-capability-assessment .ai-oem-odm-checklist ul li::before {
   content: '';
   position: absolute;
   left: 0.88rem;
@@ -5828,11 +5834,13 @@ a.mobile-menu-utility-link {
     padding-left: 1rem;
   }
 
-  #project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul {
+  #project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul,
+  #factory-capability-assessment .ai-oem-odm-difference ul {
     grid-template-columns: 1fr;
   }
 
-  #project-supply-chain-feasibility-assessment .ai-oem-odm-checklist ul {
+  #project-supply-chain-feasibility-assessment .ai-oem-odm-checklist ul,
+  #factory-capability-assessment .ai-oem-odm-checklist ul {
     grid-template-columns: 1fr;
   }
 }
