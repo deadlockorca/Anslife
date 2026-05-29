@@ -66,6 +66,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'operations-supply-solutions' &&
     detailSlug === 'independent-project-qc-service';
+  const isOperationsLogisticsCoordinationDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'operations-supply-solutions' &&
+    detailSlug === 'project-logistics-import-export-coordination';
   const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
   const oemOdmSeoDescription = t(
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.',
@@ -85,6 +89,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const independentQcSeoTitle = t('QC độc lập trong dự án');
   const independentQcSeoDescription = t(
     'Kiểm soát chất lượng độc lập theo tiêu chuẩn buyer, sản phẩm, vật liệu, đóng gói và từng thị trường xuất khẩu.',
+  );
+  const logisticsCoordinationSeoTitle = t('Điều phối logistics & xuất nhập khẩu dự án');
+  const logisticsCoordinationSeoDescription = t(
+    'Điều phối nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế cho các dự án tại Việt Nam.',
   );
   const fallbackHtml = getAIFallbackSectionHtml(
     config.slug,
@@ -150,6 +158,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
           ? `${exportOperationSeoTitle} | ${t(config.title)}`
           : isOperationsIndependentQcDetail
             ? `${independentQcSeoTitle} | ${t(config.title)}`
+            : isOperationsLogisticsCoordinationDetail
+              ? `${logisticsCoordinationSeoTitle} | ${t(config.title)}`
       : `${t(section.title)} | ${t(config.title)}`;
   const seoDescription = isOperationsOemOdmDetail
     ? oemOdmSeoDescription
@@ -161,6 +171,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
           ? exportOperationSeoDescription
           : isOperationsIndependentQcDetail
             ? independentQcSeoDescription
+            : isOperationsLogisticsCoordinationDetail
+              ? logisticsCoordinationSeoDescription
       : t(section.description);
 
   return (

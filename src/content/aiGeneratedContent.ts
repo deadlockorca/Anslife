@@ -206,7 +206,7 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
         <span class="ai-company-overview-icon ai-icon-truck" aria-hidden="true"></span>
         <h3>6. Điều phối logistics & xuất nhập khẩu dự án</h3>
         <p>Hỗ trợ nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế.</p>
-        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+        <a href="/vn/products-solutions/operations-supply-solutions/project-logistics-import-export-coordination">Xem chi tiết <span>→</span></a>
       </article>
       <article class="ai-operations-card">
         <span class="ai-company-overview-icon ai-icon-warehouse" aria-hidden="true"></span>
@@ -2591,6 +2591,203 @@ const PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_LOCALIZED: Record<
   ru: PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN,
   es: PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN,
   zh: PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN,
+};
+
+const PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_VN = `
+  <section id="project-logistics-import-export-coordination" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Điều phối logistics & xuất nhập khẩu dự án</h2>
+      <p class="ai-oem-odm-subtitle">Điều phối nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế cho các dự án tại Việt Nam.</p>
+      <p>ANSLIFE JSC hỗ trợ buyer quốc tế điều phối logistics và hoạt động xuất nhập khẩu cho các dự án sản xuất, vật liệu, cấu kiện, lưu kho và xuất hàng tại Việt Nam.</p>
+      <p>Dịch vụ này không chỉ bao gồm xuất hàng từ Việt Nam ra thị trường quốc tế, mà còn hỗ trợ nhập khẩu vật tư, linh kiện, nguyên liệu hoặc mẫu phục vụ cho quá trình phát triển sản phẩm, sản xuất, lắp ráp, kiểm định và hoàn thiện đơn hàng.</p>
+      <p>Thông qua việc phối hợp với nhà máy, kho, forwarder, đơn vị vận chuyển và các bên liên quan, ANSLIFE JSC giúp dự án được vận hành rõ ràng hơn về lịch hàng về, lịch sản xuất, lưu kho, chứng từ, đóng hàng và xuất hàng quốc tế.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>ANSLIFE JSC điều phối những phần nào?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Nhập khẩu vật tư, linh kiện, nguyên liệu</h3><p>Hỗ trợ điều phối nhập khẩu vật tư, linh kiện, nguyên liệu, mẫu sản phẩm hoặc vật liệu đặc thù từ nước ngoài vào Việt Nam để phục vụ phát triển mẫu, sản xuất hoặc hoàn thiện đơn hàng.</p></article>
+        <article><h3>2. Phối hợp forwarder và đơn vị logistics</h3><p>ANSLIFE JSC phối hợp với forwarder, hãng tàu, đơn vị vận chuyển nội địa và các bên logistics liên quan để theo dõi lịch hàng, lịch giao nhận, lịch đóng hàng và kế hoạch vận chuyển.</p></article>
+        <article><h3>3. Theo dõi hàng nhập về Việt Nam</h3><p>Theo dõi lịch hàng về, tình trạng vận chuyển, thời gian dự kiến đến, kế hoạch thông quan và lịch giao hàng về kho, nhà máy hoặc địa điểm đã thống nhất.</p></article>
+        <article><h3>4. Kiểm tra tình trạng hàng khi nhập kho</h3><p>Hỗ trợ kiểm tra số lượng, tình trạng bao bì, nhãn mác, vật liệu, linh kiện hoặc hàng hóa khi về Việt Nam trước khi lưu kho, cấp phát cho nhà máy hoặc đưa vào sản xuất.</p></article>
+        <article><h3>5. Lưu kho và cấp phát vật tư cho dự án</h3><p>ANSLIFE JSC hỗ trợ lưu kho vật tư, linh kiện, nguyên liệu hoặc cấu kiện tại Việt Nam và cấp phát cho nhà máy theo kế hoạch sản xuất của từng dự án.</p></article>
+        <article><h3>6. Gom hàng từ nhiều nguồn</h3><p>Hỗ trợ gom hàng từ nhiều nhà máy, nhà cung cấp hoặc điểm giao hàng khác nhau tại Việt Nam để kiểm tra, lưu kho, đóng gói và xuất hàng theo một kế hoạch chung.</p></article>
+        <article><h3>7. Hỗ trợ chứng từ xuất nhập khẩu</h3><p>Phối hợp chuẩn bị, kiểm tra hoặc theo dõi các chứng từ liên quan đến nhập khẩu, xuất khẩu, giao nhận, đóng hàng và vận chuyển theo yêu cầu của từng dự án.</p></article>
+        <article><h3>8. Tổ chức xuất hàng quốc tế</h3><p>Điều phối đóng hàng, lịch tàu, lịch bay, hàng nguyên container, hàng lẻ, chứng từ, forwarder và kế hoạch xuất hàng từ Việt Nam đến thị trường đích.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Dịch vụ này phù hợp với dự án nào?</h2>
+      <ul>
+        <li>Buyer cần nhập khẩu vật tư, linh kiện hoặc nguyên liệu vào Việt Nam để phục vụ sản xuất</li>
+        <li>Dự án cần đưa mẫu, phụ kiện hoặc vật liệu đặc thù từ nước ngoài về Việt Nam</li>
+        <li>Buyer có nhiều nhà cung cấp hoặc nhiều nhà máy tại Việt Nam cần gom hàng</li>
+        <li>Dự án cần lưu kho vật tư, cấu kiện hoặc hàng hóa trước khi sản xuất hoặc xuất hàng</li>
+        <li>Buyer cần phối hợp forwarder, chứng từ, lịch tàu, lịch đóng hàng và xuất hàng quốc tế</li>
+        <li>Dự án có cả hàng nhập khẩu đầu vào và hàng xuất khẩu đầu ra</li>
+        <li>Buyer muốn có một đầu mối tại Việt Nam để theo dõi logistics của dự án</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Quy trình điều phối logistics & xuất nhập khẩu dự án</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Xác định nhu cầu logistics của dự án:</strong> Buyer cung cấp thông tin về vật tư, linh kiện, nguyên liệu, hàng hóa, điểm đi, điểm đến, nhà máy, kho, thời gian yêu cầu, điều kiện thương mại và kế hoạch sản xuất hoặc xuất hàng.</p></li>
+        <li><p><strong>Lập kế hoạch nhập khẩu / xuất khẩu:</strong> ANSLIFE JSC phối hợp với các bên liên quan để xác định phương án logistics phù hợp, bao gồm nhập khẩu vật tư, lưu kho, giao cho nhà máy, gom hàng, đóng hàng và xuất hàng quốc tế.</p></li>
+        <li><p><strong>Phối hợp forwarder, kho và nhà máy:</strong> ANSLIFE JSC điều phối thông tin giữa buyer, forwarder, kho, nhà máy, nhà cung cấp và các bên liên quan nhằm đảm bảo lịch hàng và trách nhiệm từng bên được rõ ràng.</p></li>
+        <li><p><strong>Theo dõi hàng hóa và chứng từ:</strong> Chúng tôi theo dõi tình trạng hàng hóa, lịch vận chuyển, lịch thông quan, giao nhận, chứng từ nhập khẩu / xuất khẩu và các mốc quan trọng của dự án.</p></li>
+        <li><p><strong>Kiểm tra, lưu kho và cấp phát:</strong> Khi hàng về Việt Nam hoặc trước khi xuất hàng, ANSLIFE JSC có thể hỗ trợ kiểm tra tình trạng hàng, lưu kho, phân loại, cấp phát vật tư cho nhà máy hoặc gom hàng theo kế hoạch.</p></li>
+        <li><p><strong>Xuất hàng và báo cáo tình trạng:</strong> ANSLIFE JSC phối hợp kế hoạch đóng hàng, chứng từ, forwarder, lịch tàu hoặc lịch bay, đồng thời cập nhật tình trạng xuất hàng cho buyer theo từng giai đoạn.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Buyer nhận được gì?</h2>
+      <ul>
+        <li>Một đầu mối điều phối logistics tại Việt Nam</li>
+        <li>Kế hoạch nhập khẩu vật tư, linh kiện hoặc nguyên liệu phục vụ dự án</li>
+        <li>Theo dõi tình trạng hàng nhập về Việt Nam</li>
+        <li>Kiểm soát tốt hơn việc lưu kho và cấp phát vật tư cho nhà máy</li>
+        <li>Phối hợp gom hàng từ nhiều nhà cung cấp hoặc nhiều nhà máy</li>
+        <li>Hỗ trợ chứng từ nhập khẩu / xuất khẩu theo từng dự án</li>
+        <li>Theo dõi lịch đóng hàng, lịch tàu, lịch giao nhận và xuất hàng quốc tế</li>
+        <li>Báo cáo tình trạng hàng hóa theo từng giai đoạn</li>
+        <li>Giảm rủi ro chậm tiến độ do thiếu vật tư, chứng từ hoặc thiếu điều phối logistics</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Điểm khác biệt của ANSLIFE JSC</h2>
+      <p>Điểm khác biệt của ANSLIFE JSC là logistics được đặt trong tổng thể vận hành dự án, không tách rời khỏi sản phẩm, vật liệu, nhà máy, QC, lưu kho và xuất hàng.</p>
+      <p>Điều này giúp buyer kiểm soát tốt hơn cả đầu vào và đầu ra của dự án: từ vật tư, linh kiện, nguyên liệu nhập khẩu vào Việt Nam đến hàng hóa hoàn thiện được đóng gói và xuất đi thị trường quốc tế.</p>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Vai trò logistics trong vòng đời dự án</h2>
+      <p>ANSLIFE JSC đóng vai trò đầu mối logistics tại Việt Nam, giúp buyer điều phối hàng nhập, hàng lưu kho, hàng sản xuất và hàng xuất khẩu trong cùng một hệ thống dự án.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Gửi yêu cầu điều phối logistics dự án</h2>
+        <p>Buyer có thể gửi thông tin về vật tư, linh kiện, nguyên liệu, nhà máy, kho, điểm giao nhận, điều kiện thương mại, chứng từ hoặc kế hoạch xuất hàng. ANSLIFE JSC sẽ xem xét và đề xuất phạm vi điều phối logistics phù hợp cho dự án.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu logistics</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải tài liệu dự án lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN = `
+  <section id="project-logistics-import-export-coordination" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Project Logistics & Import-Export Coordination</h2>
+      <p class="ai-oem-odm-subtitle">Coordinate inbound materials, components, and inputs; consolidation, warehousing, documentation, and international outbound shipment for projects in Vietnam.</p>
+      <p>ANSLIFE JSC supports international buyers in coordinating logistics and import-export activities for manufacturing, material, component, warehousing, and shipment projects in Vietnam.</p>
+      <p>This service covers not only outbound shipment from Vietnam to global markets, but also inbound import coordination for materials, components, special inputs, or samples needed for product development, production, assembly, testing, and order completion.</p>
+      <p>By coordinating with factories, warehouses, forwarders, transport providers, and related stakeholders, ANSLIFE JSC helps projects run with clearer visibility on inbound schedules, production timing, storage, documents, loading, and international shipment execution.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>What does ANSLIFE JSC coordinate?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Import of materials, components, and inputs</h3><p>Support inbound coordination of materials, components, raw inputs, product samples, or special items from overseas into Vietnam for sample development, production, or order completion.</p></article>
+        <article><h3>2. Forwarder and logistics-party coordination</h3><p>ANSLIFE JSC coordinates with forwarders, carriers, domestic transport providers, and related logistics parties to track vessel/air schedules, handover timing, loading plans, and transport execution.</p></article>
+        <article><h3>3. Inbound cargo tracking to Vietnam</h3><p>Track inbound schedules, transit status, ETA, customs clearance plan, and delivery timing to warehouse, factory, or agreed destination points.</p></article>
+        <article><h3>4. Condition check on inbound warehouse receipt</h3><p>Support quantity and condition checks for packaging, labels, materials, components, or cargo upon arrival before storage, factory allocation, or production release.</p></article>
+        <article><h3>5. Warehousing and material allocation for projects</h3><p>ANSLIFE JSC supports storage of materials, components, inputs, or parts in Vietnam and staged allocation to factories in line with project production plans.</p></article>
+        <article><h3>6. Multi-source consolidation</h3><p>Support cargo consolidation from multiple factories, suppliers, or delivery points in Vietnam for inspection, warehousing, packing, and outbound shipment under one execution plan.</p></article>
+        <article><h3>7. Import-export documentation support</h3><p>Coordinate preparation, checking, and tracking of documents related to import, export, cargo handover, loading, and transport per project requirements.</p></article>
+        <article><h3>8. International outbound shipment organization</h3><p>Coordinate loading plans, vessel/flight schedules, FCL/LCL handling, documents, forwarders, and shipment execution from Vietnam to destination markets.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Which projects is this service suitable for?</h2>
+      <ul>
+        <li>Buyers who need inbound import of materials/components/inputs into Vietnam for production</li>
+        <li>Projects requiring overseas samples, accessories, or special materials to be brought into Vietnam</li>
+        <li>Buyers managing multiple suppliers or multiple factories in Vietnam that require cargo consolidation</li>
+        <li>Projects requiring warehousing of materials, parts, or goods before production or outbound shipment</li>
+        <li>Buyers needing coordination of forwarders, documents, vessel schedules, loading schedules, and international shipments</li>
+        <li>Projects with both inbound imported inputs and outbound exported finished goods</li>
+        <li>Buyers who want a single coordination point in Vietnam for project logistics</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>6-step logistics and import-export workflow</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Define project logistics requirements:</strong> Buyer provides details on materials, components, goods, origin, destination, factory, warehouse, required timing, trade terms, and production/shipment plans.</p></li>
+        <li><p><strong>Build import/export plan:</strong> ANSLIFE JSC works with relevant parties to define suitable logistics setup for inbound imports, warehousing, factory delivery, consolidation, loading, and international outbound shipment.</p></li>
+        <li><p><strong>Coordinate forwarder, warehouse, and factory:</strong> ANSLIFE JSC aligns information among buyer, forwarder, warehouse, factory, suppliers, and stakeholders to keep cargo schedules and responsibilities clear.</p></li>
+        <li><p><strong>Track cargo and documentation:</strong> We track cargo status, transit schedules, customs milestones, handover, import/export documents, and critical project checkpoints.</p></li>
+        <li><p><strong>Inspect, store, and allocate:</strong> Upon inbound receipt or pre-shipment stage, ANSLIFE JSC can support condition checks, storage, sorting, material allocation to factories, or consolidation as planned.</p></li>
+        <li><p><strong>Ship and report status:</strong> ANSLIFE JSC coordinates loading, documents, forwarders, vessel/flight plans, and provides staged shipment status updates to buyers.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>What buyers receive</h2>
+      <ul>
+        <li>A single logistics coordination point in Vietnam</li>
+        <li>Import plan for project materials, components, or inputs</li>
+        <li>Inbound cargo tracking visibility in Vietnam</li>
+        <li>Better control of warehousing and material allocation to factories</li>
+        <li>Consolidation support across multiple suppliers or factories</li>
+        <li>Import-export document support by project</li>
+        <li>Tracking of loading schedules, vessel schedules, handover timing, and international outbound shipment</li>
+        <li>Stage-based cargo status reporting</li>
+        <li>Lower delay risk from missing materials, documentation gaps, or weak logistics coordination</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>What makes ANSLIFE JSC different?</h2>
+      <p>ANSLIFE JSC positions logistics within total project operations, not as a separate standalone task from product, materials, factory execution, QC, warehousing, and outbound shipment.</p>
+      <p>This gives buyers stronger control over both project inputs and outputs: from imported materials/components into Vietnam to finished goods packed and exported to destination markets.</p>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Logistics across the full project lifecycle</h2>
+      <p>ANSLIFE JSC acts as the logistics focal point in Vietnam, helping buyers coordinate inbound, warehoused, in-production, and outbound cargo within one project system.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Submit a project logistics coordination request</h2>
+        <p>Buyers can share details on materials, components, inputs, factories, warehouses, handover points, trade terms, documents, or shipment plans. ANSLIFE JSC will review and propose a suitable logistics coordination scope.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit logistics request</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload project documents</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+type ProjectLogisticsImportExportDetailLanguage = Extract<
+  LanguageCode,
+  'en' | 'jp' | 'kr' | 'sv' | 'fr' | 'ru' | 'es' | 'zh'
+>;
+
+const PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_LOCALIZED: Record<
+  ProjectLogisticsImportExportDetailLanguage,
+  string
+> = {
+  en: PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN,
+  jp: PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN,
+  kr: PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN,
+  sv: PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN,
+  fr: PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN,
+  ru: PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN,
+  es: PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN,
+  zh: PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN,
 };
 
 const ABOUT_COMPANY_INFO_SECTION_VN = `
@@ -12743,6 +12940,25 @@ function getOperationsSupplyDetailHtml(
     );
   }
 
+  if (detailSlug === 'project-logistics-import-export-coordination') {
+    if (language === 'vn') {
+      return `<div class="ai-content">${PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_VN}</div>`.replace(
+        /href="\/vn\/contact\//g,
+        `href="/${language}/contact/`,
+      );
+    }
+
+    const localizedSectionHtml =
+      PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_LOCALIZED[
+        language as ProjectLogisticsImportExportDetailLanguage
+      ] ?? PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN;
+
+    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+      /href="\/vn\/contact\//g,
+      `href="/${language}/contact/`,
+    );
+  }
+
   return null;
 }
 
@@ -12781,6 +12997,10 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/independent-project-qc-service"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/independent-project-qc-service"`,
+      )
+      .replace(
+        /href="\/vn\/products-solutions\/operations-supply-solutions\/project-logistics-import-export-coordination"/g,
+        `href="/${language}/products-solutions/operations-supply-solutions/project-logistics-import-export-coordination"`,
       )
       .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
   }
