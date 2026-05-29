@@ -5614,7 +5614,8 @@ a.mobile-menu-utility-link {
 
 #project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul,
 #factory-capability-assessment .ai-oem-odm-difference ul,
-#export-project-operation-management .ai-oem-odm-difference ul {
+#export-project-operation-management .ai-oem-odm-difference ul,
+#independent-project-qc-service .ai-oem-odm-difference ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -5625,7 +5626,8 @@ a.mobile-menu-utility-link {
 
 #project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul li,
 #factory-capability-assessment .ai-oem-odm-difference ul li,
-#export-project-operation-management .ai-oem-odm-difference ul li {
+#export-project-operation-management .ai-oem-odm-difference ul li,
+#independent-project-qc-service .ai-oem-odm-difference ul li {
   position: relative;
   margin: 0;
   border: 1px solid #eadfd4;
@@ -5636,7 +5638,8 @@ a.mobile-menu-utility-link {
 
 #project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul li::before,
 #factory-capability-assessment .ai-oem-odm-difference ul li::before,
-#export-project-operation-management .ai-oem-odm-difference ul li::before {
+#export-project-operation-management .ai-oem-odm-difference ul li::before,
+#independent-project-qc-service .ai-oem-odm-difference ul li::before {
   content: '';
   position: absolute;
   left: 0.88rem;
@@ -5649,7 +5652,8 @@ a.mobile-menu-utility-link {
 
 #project-supply-chain-feasibility-assessment .ai-oem-odm-checklist ul,
 #factory-capability-assessment .ai-oem-odm-checklist ul,
-#export-project-operation-management .ai-oem-odm-checklist ul {
+#export-project-operation-management .ai-oem-odm-checklist ul,
+#independent-project-qc-service .ai-oem-odm-checklist ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -5660,7 +5664,8 @@ a.mobile-menu-utility-link {
 
 #project-supply-chain-feasibility-assessment .ai-oem-odm-checklist ul li,
 #factory-capability-assessment .ai-oem-odm-checklist ul li,
-#export-project-operation-management .ai-oem-odm-checklist ul li {
+#export-project-operation-management .ai-oem-odm-checklist ul li,
+#independent-project-qc-service .ai-oem-odm-checklist ul li {
   position: relative;
   margin: 0;
   border: 1px solid #eadfd4;
@@ -5671,7 +5676,8 @@ a.mobile-menu-utility-link {
 
 #project-supply-chain-feasibility-assessment .ai-oem-odm-checklist ul li::before,
 #factory-capability-assessment .ai-oem-odm-checklist ul li::before,
-#export-project-operation-management .ai-oem-odm-checklist ul li::before {
+#export-project-operation-management .ai-oem-odm-checklist ul li::before,
+#independent-project-qc-service .ai-oem-odm-checklist ul li::before {
   content: '';
   position: absolute;
   left: 0.88rem;
@@ -5842,13 +5848,15 @@ a.mobile-menu-utility-link {
 
   #project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul,
   #factory-capability-assessment .ai-oem-odm-difference ul,
-  #export-project-operation-management .ai-oem-odm-difference ul {
+  #export-project-operation-management .ai-oem-odm-difference ul,
+  #independent-project-qc-service .ai-oem-odm-difference ul {
     grid-template-columns: 1fr;
   }
 
   #project-supply-chain-feasibility-assessment .ai-oem-odm-checklist ul,
   #factory-capability-assessment .ai-oem-odm-checklist ul,
-  #export-project-operation-management .ai-oem-odm-checklist ul {
+  #export-project-operation-management .ai-oem-odm-checklist ul,
+  #independent-project-qc-service .ai-oem-odm-checklist ul {
     grid-template-columns: 1fr;
   }
 }

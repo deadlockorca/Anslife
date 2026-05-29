@@ -200,7 +200,7 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
         <span class="ai-company-overview-icon ai-icon-clipboard-check" aria-hidden="true"></span>
         <h3>5. QC độc lập trong dự án</h3>
         <p>Kiểm soát chất lượng độc lập với nhà máy, theo tiêu chuẩn buyer và từng thị trường.</p>
-        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+        <a href="/vn/products-solutions/operations-supply-solutions/independent-project-qc-service">Xem chi tiết <span>→</span></a>
       </article>
       <article class="ai-operations-card">
         <span class="ai-company-overview-icon ai-icon-truck" aria-hidden="true"></span>
@@ -2394,6 +2394,203 @@ const PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_LOCALIZED: Record<
   ru: PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN,
   es: PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN,
   zh: PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN,
+};
+
+const PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_VN = `
+  <section id="independent-project-qc-service" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>QC độc lập trong dự án</h2>
+      <p class="ai-oem-odm-subtitle">Kiểm soát chất lượng độc lập theo tiêu chuẩn buyer, sản phẩm, vật liệu, đóng gói và từng thị trường xuất khẩu.</p>
+      <p>ANSLIFE JSC cung cấp dịch vụ QC độc lập cho các dự án sản xuất và xuất khẩu tại Việt Nam.</p>
+      <p>Dịch vụ này phù hợp với buyer đã có nhà máy, đã có đơn hàng hoặc đang triển khai dự án tại Việt Nam nhưng cần một đơn vị độc lập để kiểm tra vật liệu, mẫu duyệt, tiến độ sản xuất, sản phẩm, đóng gói và tình trạng hàng trước khi xuất.</p>
+      <p>Hệ thống QC của ANSLIFE JSC hoạt động độc lập với bộ máy sản xuất, nhằm đảm bảo việc kiểm tra được thực hiện khách quan theo tiêu chuẩn đã thống nhất với buyer và yêu cầu của từng thị trường.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>QC độc lập kiểm soát những gì?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Kiểm tra vật liệu đầu vào</h3><p>Kiểm tra vật liệu chính và vật liệu phụ trước khi đưa vào sản xuất, bao gồm gỗ, plywood, MDF, veneer, foam, vải, phụ kiện, keo, sơn và vật liệu đóng gói.</p></article>
+        <article><h3>2. Kiểm tra mẫu đã duyệt</h3><p>Đối chiếu sản phẩm sản xuất với mẫu đã duyệt, bảng màu, mẫu vật liệu, bản vẽ kỹ thuật và tiêu chuẩn hoàn thiện đã thống nhất với buyer.</p></article>
+        <article><h3>3. Kiểm tra kích thước & kết cấu</h3><p>Kiểm tra kích thước, kết cấu, độ ổn định, liên kết, chi tiết lắp ráp và khả năng đáp ứng yêu cầu kỹ thuật của sản phẩm.</p></article>
+        <article><h3>4. Kiểm soát màu sắc & hoàn thiện bề mặt</h3><p>Kiểm tra màu sắc, độ đồng đều, bề mặt sơn, veneer, vải, da, lớp hoàn thiện và các yêu cầu thẩm mỹ theo mẫu chuẩn.</p></article>
+        <article><h3>5. Kiểm soát độ ẩm & điều kiện vật liệu</h3><p>Kiểm tra độ ẩm và điều kiện vật liệu phù hợp với sản phẩm, thị trường xuất khẩu và yêu cầu lưu kho, vận chuyển.</p></article>
+        <article><h3>6. Kiểm tra trong quá trình sản xuất</h3><p>Theo dõi chất lượng tại các giai đoạn sản xuất quan trọng để phát hiện sớm lỗi về vật liệu, kết cấu, hoàn thiện, tiến độ hoặc quy trình.</p></article>
+        <article><h3>7. Kiểm tra đóng gói & nhãn mác</h3><p>Kiểm tra quy cách đóng gói, carton mark, nhãn mác, mã sản phẩm, phụ kiện đi kèm, hướng dẫn lắp ráp, pallet và yêu cầu đóng gói theo từng buyer.</p></article>
+        <article><h3>8. Kiểm tra trước khi xuất hàng</h3><p>Kiểm tra tình trạng hàng trước khi xuất, bao gồm số lượng, chất lượng, đóng gói, nhãn mác, tình trạng container hoặc phương án giao hàng theo kế hoạch.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>ANSLIFE JSC có thể thực hiện QC ở những giai đoạn nào?</h2>
+      <ul>
+        <li>Kiểm tra vật liệu trước sản xuất</li>
+        <li>Kiểm tra mẫu trước sản xuất hàng loạt</li>
+        <li>Kiểm tra trong quá trình sản xuất</li>
+        <li>Kiểm tra sau hoàn thiện</li>
+        <li>Kiểm tra đóng gói</li>
+        <li>Kiểm tra trước khi xuất hàng</li>
+        <li>Kiểm tra hàng nhập kho tại Việt Nam</li>
+        <li>Kiểm tra hàng xuất kho trước khi giao</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Quy trình QC độc lập</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Xác nhận tiêu chuẩn kiểm tra:</strong> Buyer cung cấp mẫu duyệt, bản vẽ, bảng màu, tiêu chuẩn vật liệu, tiêu chuẩn đóng gói, yêu cầu thị trường và checklist nếu có.</p></li>
+        <li><p><strong>Thiết lập checklist QC:</strong> ANSLIFE JSC xây dựng checklist kiểm tra dựa trên tiêu chuẩn buyer, sản phẩm, vật liệu, thị trường xuất khẩu và rủi ro thực tế của dự án.</p></li>
+        <li><p><strong>Kiểm tra tại nhà máy / kho:</strong> Đội QC của ANSLIFE JSC kiểm tra vật liệu, sản phẩm, đóng gói hoặc tình trạng hàng tại nhà máy, kho hoặc địa điểm đã thống nhất.</p></li>
+        <li><p><strong>Ghi nhận kết quả và hình ảnh:</strong> Kết quả kiểm tra được ghi nhận bằng báo cáo, hình ảnh, thông số đo, lỗi phát hiện và tình trạng thực tế của hàng hóa.</p></li>
+        <li><p><strong>Báo cáo cho buyer:</strong> ANSLIFE JSC gửi báo cáo kiểm hàng cho buyer, nêu rõ tình trạng đạt / chưa đạt, lỗi cần xử lý và đề xuất phương án nếu phát sinh vấn đề.</p></li>
+        <li><p><strong>Theo dõi xử lý sau kiểm tra:</strong> Nếu có lỗi hoặc điểm chưa phù hợp, ANSLIFE JSC có thể phối hợp với nhà máy để theo dõi việc điều chỉnh, kiểm tra lại hoặc cập nhật tình trạng trước khi xuất hàng.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Buyer nhận được gì?</h2>
+      <ul>
+        <li>Checklist kiểm hàng theo từng dự án</li>
+        <li>Báo cáo kiểm hàng độc lập</li>
+        <li>Hình ảnh và ghi nhận tình trạng thực tế</li>
+        <li>Đánh giá mức độ phù hợp so với mẫu duyệt</li>
+        <li>Nhận diện lỗi về vật liệu, kết cấu, màu sắc, hoàn thiện, đóng gói hoặc số lượng</li>
+        <li>Cảnh báo rủi ro trước khi xuất hàng</li>
+        <li>Cơ sở để quyết định cho xuất hàng, yêu cầu sửa lỗi hoặc kiểm tra lại</li>
+        <li>Dữ liệu kiểm hàng được lưu lại cho các đơn hàng tiếp theo</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Điểm khác biệt của QC độc lập ANSLIFE</h2>
+      <p>Điểm khác biệt của ANSLIFE JSC nằm ở việc QC không trực thuộc bộ máy sản xuất. Hoạt động kiểm tra được thực hiện với vai trò độc lập, dựa trên tiêu chuẩn của buyer, mẫu đã duyệt, checklist kiểm hàng và yêu cầu của từng thị trường.</p>
+      <p>Điều này giúp buyer có thêm một lớp kiểm soát khách quan tại Việt Nam, đặc biệt trong các dự án sản xuất từ xa, dự án có nhiều nhà máy hoặc dự án cần duy trì tiêu chuẩn ổn định trong dài hạn.</p>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Vai trò QC độc lập trong dự án</h2>
+      <p>ANSLIFE JSC đóng vai trò đối tác QC độc lập tại Việt Nam, giúp buyer kiểm chứng chất lượng sản phẩm trước khi hàng được đóng gói, lưu kho hoặc xuất khẩu.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Gửi yêu cầu QC độc lập</h2>
+        <p>Buyer có thể gửi mẫu duyệt, bản vẽ, tiêu chuẩn kiểm hàng, hình ảnh sản phẩm, thông tin nhà máy hoặc kế hoạch xuất hàng. ANSLIFE JSC sẽ xem xét và đề xuất phạm vi QC phù hợp cho từng dự án.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu QC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải tiêu chuẩn kiểm hàng lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN = `
+  <section id="independent-project-qc-service" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Independent Project QC Service</h2>
+      <p class="ai-oem-odm-subtitle">Independent quality control aligned with buyer standards, product specs, materials, packing requirements, and export market needs.</p>
+      <p>ANSLIFE JSC provides independent QC service for manufacturing and export projects in Vietnam.</p>
+      <p>This service fits buyers who already have factories, confirmed orders, or active projects in Vietnam but require an independent unit to inspect materials, approved samples, production progress, products, packing, and shipment readiness.</p>
+      <p>ANSLIFE JSC QC operates independently from production teams, ensuring objective inspection based on agreed buyer standards and market-specific requirements.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>What does independent QC control?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Incoming material inspection</h3><p>Inspect primary and secondary materials before production, including wood, plywood, MDF, veneer, foam, fabric, hardware, adhesives, coating, and packing materials.</p></article>
+        <article><h3>2. Approved sample verification</h3><p>Cross-check production output against approved sample, color board, material sample, technical drawing, and agreed finishing standards.</p></article>
+        <article><h3>3. Dimension & structure inspection</h3><p>Inspect dimensions, structure, stability, connections, assembly details, and compliance with technical requirements.</p></article>
+        <article><h3>4. Color & surface finishing control</h3><p>Check color consistency, coating surface, veneer, fabric, leather, finishing layers, and appearance requirements against approved reference.</p></article>
+        <article><h3>5. Moisture & material condition control</h3><p>Verify moisture and material condition suitability for product use, export market conditions, and warehousing/transport requirements.</p></article>
+        <article><h3>6. In-process production inspection</h3><p>Monitor quality at critical production stages to detect early issues in material, structure, finishing, schedule, or process execution.</p></article>
+        <article><h3>7. Packing & labeling inspection</h3><p>Inspect packing method, carton marks, labels, SKU coding, included accessories, assembly instructions, pallets, and buyer-specific packing requirements.</p></article>
+        <article><h3>8. Pre-shipment inspection</h3><p>Inspect shipment readiness including quantity, quality, packing, labels, container condition, or planned delivery arrangement before release.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>At which stages can ANSLIFE JSC perform QC?</h2>
+      <ul>
+        <li>Material inspection before production</li>
+        <li>Sample verification before mass production</li>
+        <li>In-process production inspection</li>
+        <li>Post-finishing inspection</li>
+        <li>Packing inspection</li>
+        <li>Pre-shipment inspection</li>
+        <li>Inbound warehouse inspection in Vietnam</li>
+        <li>Outbound warehouse inspection before delivery</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>6-step independent QC workflow</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Confirm inspection standards:</strong> Buyer provides approved sample, drawings, color board, material standards, packing standards, market requirements, and checklist if available.</p></li>
+        <li><p><strong>Build QC checklist:</strong> ANSLIFE JSC prepares project-specific checklist based on buyer standards, product, materials, export market, and actual risk profile.</p></li>
+        <li><p><strong>Inspect at factory / warehouse:</strong> ANSLIFE JSC QC team inspects materials, products, packing, or shipment status at factory, warehouse, or agreed location.</p></li>
+        <li><p><strong>Record findings and evidence:</strong> Inspection outcomes are documented with report, photos, measured data, detected defects, and actual shipment condition.</p></li>
+        <li><p><strong>Report to buyer:</strong> ANSLIFE JSC sends QC report with pass/fail status, issues to be corrected, and recommended actions when needed.</p></li>
+        <li><p><strong>Follow-up after inspection:</strong> For non-conformities, ANSLIFE JSC can coordinate with factory for correction tracking, re-check, and final status update before shipment.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>What buyers receive</h2>
+      <ul>
+        <li>Project-specific QC checklist</li>
+        <li>Independent inspection report</li>
+        <li>Photos and recorded actual condition</li>
+        <li>Conformity assessment against approved sample</li>
+        <li>Defect identification in material, structure, color, finishing, packing, or quantity</li>
+        <li>Pre-shipment risk warnings</li>
+        <li>Decision basis for shipment release, correction request, or re-inspection</li>
+        <li>Inspection data retained for future orders</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>What makes ANSLIFE independent QC different?</h2>
+      <p>ANSLIFE JSC QC is not part of the production organization. Inspection is executed in an independent role based on buyer standards, approved samples, inspection checklist, and market requirements.</p>
+      <p>This provides buyers with an additional objective control layer in Vietnam, especially for remote projects, multi-factory projects, or long-term programs requiring stable standards.</p>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Independent QC role in your project</h2>
+      <p>ANSLIFE JSC acts as an independent QC partner in Vietnam, helping buyers verify product quality before goods are packed, warehoused, or exported.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Submit an independent QC request</h2>
+        <p>Buyers can provide approved samples, drawings, inspection standards, product images, factory information, or shipment plans. ANSLIFE JSC will review and propose a suitable QC scope for each project.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit QC request</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload inspection standards</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+type IndependentProjectQcDetailLanguage = Extract<
+  LanguageCode,
+  'en' | 'jp' | 'kr' | 'sv' | 'fr' | 'ru' | 'es' | 'zh'
+>;
+
+const PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_LOCALIZED: Record<
+  IndependentProjectQcDetailLanguage,
+  string
+> = {
+  en: PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN,
+  jp: PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN,
+  kr: PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN,
+  sv: PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN,
+  fr: PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN,
+  ru: PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN,
+  es: PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN,
+  zh: PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN,
 };
 
 const ABOUT_COMPANY_INFO_SECTION_VN = `
@@ -12527,6 +12724,25 @@ function getOperationsSupplyDetailHtml(
     );
   }
 
+  if (detailSlug === 'independent-project-qc-service') {
+    if (language === 'vn') {
+      return `<div class="ai-content">${PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_VN}</div>`.replace(
+        /href="\/vn\/contact\//g,
+        `href="/${language}/contact/`,
+      );
+    }
+
+    const localizedSectionHtml =
+      PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_LOCALIZED[
+        language as IndependentProjectQcDetailLanguage
+      ] ?? PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN;
+
+    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+      /href="\/vn\/contact\//g,
+      `href="/${language}/contact/`,
+    );
+  }
+
   return null;
 }
 
@@ -12561,6 +12777,10 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/export-project-operation-management"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/export-project-operation-management"`,
+      )
+      .replace(
+        /href="\/vn\/products-solutions\/operations-supply-solutions\/independent-project-qc-service"/g,
+        `href="/${language}/products-solutions/operations-supply-solutions/independent-project-qc-service"`,
       )
       .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
   }

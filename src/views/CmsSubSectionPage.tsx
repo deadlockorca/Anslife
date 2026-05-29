@@ -62,6 +62,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'operations-supply-solutions' &&
     detailSlug === 'export-project-operation-management';
+  const isOperationsIndependentQcDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'operations-supply-solutions' &&
+    detailSlug === 'independent-project-qc-service';
   const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
   const oemOdmSeoDescription = t(
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.',
@@ -77,6 +81,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const exportOperationSeoTitle = t('Vận hành & quản lý dự án xuất khẩu');
   const exportOperationSeoDescription = t(
     'Điều phối tiến độ, nhà máy, vật liệu, chất lượng, chứng từ và xuất hàng cho các dự án xuất khẩu tại Việt Nam.',
+  );
+  const independentQcSeoTitle = t('QC độc lập trong dự án');
+  const independentQcSeoDescription = t(
+    'Kiểm soát chất lượng độc lập theo tiêu chuẩn buyer, sản phẩm, vật liệu, đóng gói và từng thị trường xuất khẩu.',
   );
   const fallbackHtml = getAIFallbackSectionHtml(
     config.slug,
@@ -140,6 +148,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         ? `${factoryAssessmentSeoTitle} | ${t(config.title)}`
         : isOperationsExportOperationDetail
           ? `${exportOperationSeoTitle} | ${t(config.title)}`
+          : isOperationsIndependentQcDetail
+            ? `${independentQcSeoTitle} | ${t(config.title)}`
       : `${t(section.title)} | ${t(config.title)}`;
   const seoDescription = isOperationsOemOdmDetail
     ? oemOdmSeoDescription
@@ -149,6 +159,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         ? factoryAssessmentSeoDescription
         : isOperationsExportOperationDetail
           ? exportOperationSeoDescription
+          : isOperationsIndependentQcDetail
+            ? independentQcSeoDescription
       : t(section.description);
 
   return (
