@@ -16,7 +16,7 @@ interface CmsSubSectionPageProps {
 
 export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const { language, t } = useSiteI18n();
-  const { sectionId = '' } = useParams();
+  const { sectionId = '', '*': nestedPath = '' } = useParams();
 
   const section = useMemo(
     () => config.sections.find((item) => item.id === sectionId) ?? null,
@@ -45,7 +45,21 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     );
   }
 
-  const fallbackHtml = getAIFallbackSectionHtml(config.slug, section.id, language);
+  const detailSlug = nestedPath.split('/').filter(Boolean)[0] ?? '';
+  const isOperationsOemOdmDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'operations-supply-solutions' &&
+    detailSlug === 'oem-odm-product-development';
+  const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
+  const oemOdmSeoDescription = t(
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.',
+  );
+  const fallbackHtml = getAIFallbackSectionHtml(
+    config.slug,
+    section.id,
+    language,
+    detailSlug,
+  );
   const isCustomAboutSection =
     config.slug === 'about-anslife' &&
     (section.id === 'company-intro' ||
@@ -94,10 +108,16 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     : data?.content.rendered ?? fallbackHtml;
   const shouldShowLoading = loading && !resolvedHtml;
   const shouldShowError = Boolean(error) && !resolvedHtml;
+  const seoTitle = isOperationsOemOdmDetail
+    ? `${oemOdmSeoTitle} | ${t(config.title)}`
+    : `${t(section.title)} | ${t(config.title)}`;
+  const seoDescription = isOperationsOemOdmDetail
+    ? oemOdmSeoDescription
+    : t(section.description);
 
   return (
     <>
-      <Seo title={`${t(section.title)} | ${t(config.title)}`} description={t(section.description)} />
+      <Seo title={seoTitle} description={seoDescription} />
       {!shouldHideSectionHero && (
         <section className="page-hero">
           <p className="kicker">{t(config.title)}</p>

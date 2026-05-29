@@ -176,7 +176,7 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
         <span class="ai-company-overview-icon ai-icon-file-plus" aria-hidden="true"></span>
         <h3>1. Phát triển sản phẩm OEM / ODM</h3>
         <p>Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt.</p>
-        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+        <a href="/vn/products-solutions/operations-supply-solutions/oem-odm-product-development">Xem chi tiết <span>→</span></a>
       </article>
       <article class="ai-operations-card">
         <span class="ai-company-overview-icon ai-icon-search" aria-hidden="true"></span>
@@ -262,6 +262,997 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
     </div>
   </section>
 `.trim();
+
+const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN = `
+  <section id="oem-odm-product-development" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Phát triển sản phẩm OEM / ODM</h2>
+      <p class="ai-oem-odm-subtitle">Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.</p>
+      <p>ANSLIFE JSC hỗ trợ buyer quốc tế phát triển và sản xuất sản phẩm nội thất theo hình thức OEM / ODM tại Việt Nam.</p>
+      <p>Chúng tôi có thể tiếp nhận yêu cầu từ bản vẽ kỹ thuật, mẫu thật, hình ảnh tham khảo, tiêu chuẩn vật liệu hoặc ý tưởng sản phẩm ban đầu. Từ đó, ANSLIFE JSC phối hợp với hệ thống nhà máy, chuỗi cung ứng vật liệu, bộ phận kỹ thuật và đội kiểm soát chất lượng độc lập để phát triển sản phẩm phù hợp với sản xuất thực tế, tiêu chuẩn thị trường và kế hoạch xuất khẩu.</p>
+    </header>
+
+    <section class="ai-oem-odm-dual">
+      <article>
+        <h3>OEM</h3>
+        <p>OEM là hình thức buyer đã có thiết kế, bản vẽ, mẫu hoặc tiêu chuẩn sản phẩm rõ ràng. ANSLIFE JSC tổ chức sản xuất theo đúng yêu cầu đã được thống nhất.</p>
+        <h4>Buyer thường cung cấp:</h4>
+        <ul>
+          <li>Bản vẽ kỹ thuật</li>
+          <li>Mẫu sản phẩm</li>
+          <li>Kích thước</li>
+          <li>Vật liệu</li>
+          <li>Màu sắc</li>
+          <li>Hoàn thiện bề mặt</li>
+          <li>Tiêu chuẩn đóng gói</li>
+          <li>Số lượng đặt hàng</li>
+          <li>Thị trường xuất khẩu</li>
+        </ul>
+      </article>
+      <article>
+        <h3>ODM</h3>
+        <p>ODM là hình thức buyer có ý tưởng, hình ảnh tham khảo, phong cách sản phẩm hoặc nhu cầu thị trường, nhưng cần ANSLIFE JSC hỗ trợ phát triển sản phẩm chi tiết hơn.</p>
+        <h4>ANSLIFE JSC có thể hỗ trợ:</h4>
+        <ul>
+          <li>Phân tích ý tưởng sản phẩm</li>
+          <li>Đề xuất kết cấu</li>
+          <li>Đề xuất vật liệu</li>
+          <li>Tối ưu chi phí sản xuất</li>
+          <li>Phát triển mẫu</li>
+          <li>Điều chỉnh mẫu</li>
+          <li>Kiểm tra khả năng sản xuất hàng loạt</li>
+          <li>Đề xuất tiêu chuẩn đóng gói và xuất khẩu</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-oem-odm-support">
+      <h2>ANSLIFE JSC hỗ trợ những gì?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Tiếp nhận yêu cầu sản phẩm</h3><p>ANSLIFE JSC tiếp nhận bản vẽ, mẫu thật, hình ảnh tham khảo, thông số kỹ thuật hoặc ý tưởng sản phẩm từ buyer.</p></article>
+        <article><h3>2. Phân tích kỹ thuật</h3><p>Chúng tôi kiểm tra kết cấu, kích thước, vật liệu, độ ổn định, khả năng sản xuất và tiêu chuẩn đóng gói của sản phẩm.</p></article>
+        <article><h3>3. Đề xuất vật liệu</h3><p>ANSLIFE JSC sử dụng chuỗi cung ứng vật liệu tại Việt Nam để đề xuất các lựa chọn phù hợp như gỗ tự nhiên, plywood, MDF, veneer, foam, vải, da, phụ kiện và vật liệu đóng gói.</p></article>
+        <article><h3>4. Phát triển mẫu</h3><p>ANSLIFE JSC phối hợp với nhà máy và bộ phận kỹ thuật để phát triển mẫu, điều chỉnh mẫu và hoàn thiện theo phản hồi của buyer.</p></article>
+        <article><h3>5. Kiểm soát chất lượng mẫu</h3><p>Đội kiểm soát chất lượng độc lập của ANSLIFE JSC kiểm tra mẫu theo tiêu chuẩn đã thống nhất, bao gồm kết cấu, kích thước, màu sắc, độ ẩm, hoàn thiện bề mặt và đóng gói.</p></article>
+        <article><h3>6. Chuẩn bị sản xuất hàng loạt</h3><p>Sau khi mẫu được duyệt, ANSLIFE JSC hỗ trợ chuẩn hóa bản vẽ, vật liệu, màu sắc, tiêu chuẩn kiểm hàng và quy cách đóng gói trước khi sản xuất hàng loạt.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Quy trình OEM / ODM</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li>Buyer gửi yêu cầu</li>
+        <li>ANSLIFE JSC kiểm tra bản vẽ / mẫu / hình ảnh tham khảo</li>
+        <li>Phân tích kết cấu, vật liệu và khả năng sản xuất</li>
+        <li>Đề xuất phương án phát triển mẫu</li>
+        <li>Phát triển mẫu</li>
+        <li>Buyer duyệt mẫu hoặc yêu cầu điều chỉnh</li>
+        <li>Chuẩn hóa vật liệu, màu sắc, bản vẽ và tiêu chuẩn đóng gói</li>
+        <li>Sản xuất hàng loạt</li>
+        <li>Kiểm soát chất lượng độc lập</li>
+        <li>Đóng gói và xuất hàng</li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Điểm khác biệt của ANSLIFE JSC</h2>
+      <p>Điểm khác biệt của ANSLIFE JSC không chỉ nằm ở việc phát triển mẫu, mà ở khả năng kết nối sản phẩm với toàn bộ hệ thống sản xuất, chuỗi cung ứng vật liệu, kiểm soát chất lượng độc lập, lưu kho và xuất hàng tại Việt Nam.</p>
+      <p>Điều này giúp buyer không chỉ phát triển một sản phẩm đơn lẻ, mà có thể xây dựng một quy trình sản xuất ổn định, có thể lặp lại và kiểm soát được trong dài hạn.</p>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Buyer nên gửi gì cho ANSLIFE JSC?</h2>
+      <ul>
+        <li>Bản vẽ kỹ thuật nếu có</li>
+        <li>Hình ảnh tham khảo</li>
+        <li>Mẫu thật nếu có</li>
+        <li>Kích thước mong muốn</li>
+        <li>Vật liệu mong muốn</li>
+        <li>Màu sắc / hoàn thiện bề mặt</li>
+        <li>Số lượng dự kiến</li>
+        <li>Thị trường xuất khẩu</li>
+        <li>Tiêu chuẩn đóng gói</li>
+        <li>Mức giá mục tiêu nếu có</li>
+        <li>Kế hoạch giao hàng</li>
+      </ul>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Gửi yêu cầu phát triển sản phẩm cho ANSLIFE JSC</h2>
+        <p>Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc ý tưởng sản phẩm. Đội ngũ ANSLIFE JSC sẽ xem xét yêu cầu và đề xuất phương án phát triển sản phẩm, vật liệu, mẫu, sản xuất và xuất hàng phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN = `
+  <section id="oem-odm-product-development" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>OEM / ODM Product Development</h2>
+      <p class="ai-oem-odm-subtitle">From technical drawings, physical samples, or initial ideas to sample development and mass production in Vietnam.</p>
+      <p>ANSLIFE JSC supports international buyers in developing and manufacturing furniture products under OEM / ODM models in Vietnam.</p>
+      <p>We can receive requirements from technical drawings, physical samples, reference images, material standards, or initial product concepts. From there, ANSLIFE JSC coordinates with factory partners, material supply chains, engineering teams, and independent quality control teams to develop products aligned with real production conditions, market standards, and export plans.</p>
+    </header>
+
+    <section class="ai-oem-odm-dual">
+      <article>
+        <h3>OEM</h3>
+        <p>OEM applies when the buyer already has a clear design, drawing, sample, or product standard. ANSLIFE JSC organizes production exactly according to the agreed requirements.</p>
+        <h4>Buyers usually provide:</h4>
+        <ul>
+          <li>Technical drawings</li>
+          <li>Product samples</li>
+          <li>Dimensions</li>
+          <li>Materials</li>
+          <li>Colors</li>
+          <li>Surface finishing</li>
+          <li>Packing standards</li>
+          <li>Order quantity</li>
+          <li>Export market</li>
+        </ul>
+      </article>
+      <article>
+        <h3>ODM</h3>
+        <p>ODM applies when the buyer has ideas, references, style direction, or market demand but needs ANSLIFE JSC to further develop the product in detail.</p>
+        <h4>ANSLIFE JSC can support:</h4>
+        <ul>
+          <li>Product concept analysis</li>
+          <li>Structure proposals</li>
+          <li>Material proposals</li>
+          <li>Production cost optimization</li>
+          <li>Sample development</li>
+          <li>Sample adjustments</li>
+          <li>Mass production feasibility checks</li>
+          <li>Packing and export standard proposals</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-oem-odm-support">
+      <h2>How ANSLIFE JSC supports your project</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Requirement intake</h3><p>ANSLIFE JSC receives drawings, physical samples, reference images, technical specifications, or product ideas from buyers.</p></article>
+        <article><h3>2. Technical analysis</h3><p>We review structure, dimensions, materials, stability, production feasibility, and packing standards.</p></article>
+        <article><h3>3. Material recommendations</h3><p>ANSLIFE JSC uses Vietnam-based supply chains to recommend suitable options including solid wood, plywood, MDF, veneer, foam, fabric, leather, accessories, and packing materials.</p></article>
+        <article><h3>4. Sample development</h3><p>ANSLIFE JSC coordinates with factories and engineering teams to develop, adjust, and finalize samples based on buyer feedback.</p></article>
+        <article><h3>5. Independent sample QC</h3><p>Our independent quality control team checks samples against agreed standards for structure, dimensions, color, moisture, surface finish, and packing.</p></article>
+        <article><h3>6. Mass production readiness</h3><p>After sample approval, ANSLIFE JSC supports standardizing drawings, materials, colors, inspection standards, and packing specifications before mass production.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>OEM / ODM Process</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li>Buyer submits requirements</li>
+        <li>ANSLIFE JSC reviews drawings / samples / references</li>
+        <li>Structure, material, and production feasibility analysis</li>
+        <li>Sample development proposal</li>
+        <li>Sample development</li>
+        <li>Buyer approval or adjustment request</li>
+        <li>Standardize materials, colors, drawings, and packing standards</li>
+        <li>Mass production</li>
+        <li>Independent quality control</li>
+        <li>Packing and shipment</li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>What makes ANSLIFE JSC different</h2>
+      <p>The value is not only in sample development, but in connecting the product to our full production system, material supply chain, independent quality control, warehousing, and export execution in Vietnam.</p>
+      <p>This helps buyers build not just one product, but a stable, repeatable, and controllable production workflow for long-term growth.</p>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>What buyers should send to ANSLIFE JSC</h2>
+      <ul>
+        <li>Technical drawing (if available)</li>
+        <li>Reference images</li>
+        <li>Physical sample (if available)</li>
+        <li>Target dimensions</li>
+        <li>Preferred materials</li>
+        <li>Color / finishing requirement</li>
+        <li>Estimated quantity</li>
+        <li>Export market</li>
+        <li>Packing standard</li>
+        <li>Target price (if available)</li>
+        <li>Delivery plan</li>
+      </ul>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Send your product development request to ANSLIFE JSC</h2>
+        <p>Buyers can send drawings, physical samples, reference images, or initial concepts. The ANSLIFE JSC team will review and propose suitable development, material, sampling, manufacturing, and shipment plans.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Send inquiry</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload drawing</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_JP = `
+  <section id="oem-odm-product-development" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>OEM / ODM製品開発</h2>
+      <p class="ai-oem-odm-subtitle">図面、現物サンプル、または初期アイデアから、試作開発とベトナムでの量産まで。</p>
+      <p>ANSLIFE JSCは、ベトナムにおけるOEM / ODM方式で、海外バイヤーの家具製品開発と生産を支援します。</p>
+      <p>技術図面、現物サンプル、参考画像、材料基準、または初期の製品コンセプトから要件を受け付け可能です。ANSLIFE JSCは工場ネットワーク、材料サプライチェーン、技術チーム、独立した品質管理チームと連携し、実際の生産条件、市場基準、輸出計画に適合する製品へと開発を進めます。</p>
+    </header>
+
+    <section class="ai-oem-odm-dual">
+      <article>
+        <h3>OEM</h3>
+        <p>OEMは、バイヤー側で設計、図面、サンプル、または製品基準が明確に定義されている場合の形態です。ANSLIFE JSCは合意済み要件に沿って生産を実行します。</p>
+        <h4>バイヤーが通常提供する情報:</h4>
+        <ul>
+          <li>技術図面</li>
+          <li>製品サンプル</li>
+          <li>寸法</li>
+          <li>材料</li>
+          <li>色</li>
+          <li>表面仕上げ</li>
+          <li>梱包基準</li>
+          <li>発注数量</li>
+          <li>輸出市場</li>
+        </ul>
+      </article>
+      <article>
+        <h3>ODM</h3>
+        <p>ODMは、バイヤーが製品アイデア、参考画像、スタイル方向性、または市場ニーズを持っているものの、詳細設計の開発支援を必要とする場合の形態です。</p>
+        <h4>ANSLIFE JSCが支援できる内容:</h4>
+        <ul>
+          <li>製品コンセプトの分析</li>
+          <li>構造提案</li>
+          <li>材料提案</li>
+          <li>生産コスト最適化</li>
+          <li>試作開発</li>
+          <li>試作調整</li>
+          <li>量産実現性の確認</li>
+          <li>梱包および輸出基準の提案</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-oem-odm-support">
+      <h2>ANSLIFE JSCは何を支援するのか</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. 要件受付</h3><p>ANSLIFE JSCは、図面、現物サンプル、参考画像、技術仕様、または製品アイデアをバイヤーから受け付けます。</p></article>
+        <article><h3>2. 技術分析</h3><p>製品の構造、寸法、材料、安定性、生産実現性、梱包基準を確認します。</p></article>
+        <article><h3>3. 材料提案</h3><p>ANSLIFE JSCは、ベトナムの材料サプライチェーンを活用し、無垢材、合板、MDF、ベニヤ、フォーム、ファブリック、レザー、金具、梱包材などの適切な選択肢を提案します。</p></article>
+        <article><h3>4. 試作開発</h3><p>ANSLIFE JSCは工場と技術チームと連携し、バイヤーのフィードバックに基づいて試作を開発・調整・完成させます。</p></article>
+        <article><h3>5. 試作品質管理</h3><p>独立した品質管理チームが、構造、寸法、色、含水率、表面仕上げ、梱包を含む合意基準に従って試作を検査します。</p></article>
+        <article><h3>6. 量産準備</h3><p>試作承認後、ANSLIFE JSCは量産前に図面、材料、色、検品基準、梱包仕様の標準化を支援します。</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>OEM / ODMプロセス</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li>バイヤーが要件を送付</li>
+        <li>ANSLIFE JSCが図面 / サンプル / 参考画像を確認</li>
+        <li>構造、材料、生産実現性を分析</li>
+        <li>試作開発案を提案</li>
+        <li>試作開発</li>
+        <li>バイヤーが承認または調整依頼</li>
+        <li>材料、色、図面、梱包基準を標準化</li>
+        <li>量産</li>
+        <li>独立品質管理</li>
+        <li>梱包および出荷</li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>ANSLIFE JSCの差別化ポイント</h2>
+      <p>ANSLIFE JSCの価値は、試作開発だけではなく、製品を生産システム全体、材料サプライチェーン、独立品質管理、倉庫運用、ベトナムからの輸出実行までつなげられる点にあります。</p>
+      <p>これにより、バイヤーは単一製品の開発にとどまらず、長期的に再現可能で管理可能な安定した生産ワークフローを構築できます。</p>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>バイヤーがANSLIFE JSCへ共有すべき情報</h2>
+      <ul>
+        <li>技術図面（あれば）</li>
+        <li>参考画像</li>
+        <li>現物サンプル（あれば）</li>
+        <li>希望寸法</li>
+        <li>希望材料</li>
+        <li>色 / 表面仕上げ要件</li>
+        <li>予定数量</li>
+        <li>輸出市場</li>
+        <li>梱包基準</li>
+        <li>目標価格（あれば）</li>
+        <li>納品計画</li>
+      </ul>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>ANSLIFE JSCへ製品開発リクエストを送る</h2>
+        <p>バイヤーは図面、現物サンプル、参考画像、または初期アイデアを共有できます。ANSLIFE JSCチームが要件を確認し、開発、材料、試作、生産、出荷の最適な計画を提案します。</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">お問い合わせ送信</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">図面をアップロード</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">ANSLIFE JSCに連絡</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_KR = `
+  <section id="oem-odm-product-development" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>OEM / ODM 제품 개발</h2>
+      <p class="ai-oem-odm-subtitle">기술 도면, 실물 샘플 또는 초기 아이디어부터 베트남 내 샘플 개발과 대량생산까지.</p>
+      <p>ANSLIFE JSC는 베트남에서 OEM / ODM 방식으로 국제 바이어의 가구 제품 개발과 생산을 지원합니다.</p>
+      <p>기술 도면, 실물 샘플, 참고 이미지, 자재 기준 또는 초기 제품 아이디어를 기반으로 요구사항을 접수할 수 있습니다. 이후 ANSLIFE JSC는 공장 파트너, 자재 공급망, 엔지니어링 팀, 독립 품질관리 팀과 협업하여 실제 생산 조건, 시장 기준, 수출 계획에 맞는 제품을 개발합니다.</p>
+    </header>
+
+    <section class="ai-oem-odm-dual">
+      <article>
+        <h3>OEM</h3>
+        <p>OEM은 바이어가 이미 명확한 설계, 도면, 샘플 또는 제품 기준을 보유한 경우에 적용됩니다. ANSLIFE JSC는 합의된 요구사항에 따라 정확히 생산을 수행합니다.</p>
+        <h4>바이어가 일반적으로 제공하는 항목:</h4>
+        <ul>
+          <li>기술 도면</li>
+          <li>제품 샘플</li>
+          <li>치수</li>
+          <li>자재</li>
+          <li>색상</li>
+          <li>표면 마감</li>
+          <li>포장 기준</li>
+          <li>발주 수량</li>
+          <li>수출 시장</li>
+        </ul>
+      </article>
+      <article>
+        <h3>ODM</h3>
+        <p>ODM은 바이어가 아이디어, 참고 이미지, 제품 스타일 방향 또는 시장 수요를 가지고 있지만, 상세 제품 개발에 대한 지원이 필요한 경우에 적용됩니다.</p>
+        <h4>ANSLIFE JSC 지원 범위:</h4>
+        <ul>
+          <li>제품 컨셉 분석</li>
+          <li>구조 제안</li>
+          <li>자재 제안</li>
+          <li>생산 비용 최적화</li>
+          <li>샘플 개발</li>
+          <li>샘플 조정</li>
+          <li>대량생산 가능성 검토</li>
+          <li>포장 및 수출 기준 제안</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-oem-odm-support">
+      <h2>ANSLIFE JSC는 무엇을 지원하나요?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. 제품 요구사항 접수</h3><p>ANSLIFE JSC는 바이어의 도면, 실물 샘플, 참고 이미지, 기술 사양 또는 제품 아이디어를 접수합니다.</p></article>
+        <article><h3>2. 기술 분석</h3><p>제품의 구조, 치수, 자재, 안정성, 생산 가능성, 포장 기준을 검토합니다.</p></article>
+        <article><h3>3. 자재 제안</h3><p>ANSLIFE JSC는 베트남 자재 공급망을 활용해 원목, 합판, MDF, 베니어, 폼, 원단, 가죽, 부자재, 포장재 등 적합한 옵션을 제안합니다.</p></article>
+        <article><h3>4. 샘플 개발</h3><p>ANSLIFE JSC는 공장 및 엔지니어링 팀과 협력하여 바이어 피드백에 맞춰 샘플을 개발, 조정, 완성합니다.</p></article>
+        <article><h3>5. 샘플 품질관리</h3><p>독립 품질관리 팀이 구조, 치수, 색상, 함수율, 표면 마감, 포장 기준에 따라 샘플을 검사합니다.</p></article>
+        <article><h3>6. 대량생산 준비</h3><p>샘플 승인 후 ANSLIFE JSC는 대량생산 전 도면, 자재, 색상, 검사 기준, 포장 사양의 표준화를 지원합니다.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>OEM / ODM 프로세스</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li>바이어 요구사항 접수</li>
+        <li>ANSLIFE JSC가 도면 / 샘플 / 참고 이미지 검토</li>
+        <li>구조, 자재, 생산 가능성 분석</li>
+        <li>샘플 개발 방안 제안</li>
+        <li>샘플 개발</li>
+        <li>바이어 승인 또는 수정 요청</li>
+        <li>자재, 색상, 도면, 포장 기준 표준화</li>
+        <li>대량생산</li>
+        <li>독립 품질관리</li>
+        <li>포장 및 출하</li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>ANSLIFE JSC의 차별점</h2>
+      <p>ANSLIFE JSC의 강점은 샘플 개발에만 있지 않습니다. 제품을 전체 생산 시스템, 자재 공급망, 독립 품질관리, 창고 운영, 베트남 수출 실행까지 연결합니다.</p>
+      <p>이를 통해 바이어는 단일 제품 개발을 넘어 장기적으로 반복 가능하고 통제 가능한 안정적 생산 체계를 구축할 수 있습니다.</p>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>바이어가 ANSLIFE JSC에 보내야 할 자료</h2>
+      <ul>
+        <li>기술 도면 (가능한 경우)</li>
+        <li>참고 이미지</li>
+        <li>실물 샘플 (가능한 경우)</li>
+        <li>희망 치수</li>
+        <li>희망 자재</li>
+        <li>색상 / 마감 요구사항</li>
+        <li>예상 수량</li>
+        <li>수출 시장</li>
+        <li>포장 기준</li>
+        <li>목표 단가 (가능한 경우)</li>
+        <li>납품 계획</li>
+      </ul>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>ANSLIFE JSC에 제품 개발 요청 보내기</h2>
+        <p>바이어는 도면, 실물 샘플, 참고 이미지 또는 초기 아이디어를 보낼 수 있습니다. ANSLIFE JSC 팀이 요구사항을 검토하고 개발, 자재, 샘플, 생산, 출하 계획을 제안합니다.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">문의 보내기</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">도면 업로드</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">ANSLIFE JSC 문의</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_SV = `
+  <section id="oem-odm-product-development" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>OEM / ODM-produktutveckling</h2>
+      <p class="ai-oem-odm-subtitle">Från tekniska ritningar, fysiska prover eller tidiga idéer till provutveckling och massproduktion i Vietnam.</p>
+      <p>ANSLIFE JSC stödjer internationella köpare i att utveckla och tillverka möbelprodukter enligt OEM / ODM i Vietnam.</p>
+      <p>Vi kan ta emot krav baserade på tekniska ritningar, fysiska prover, referensbilder, materialstandarder eller initiala produktidéer. Därefter samordnar ANSLIFE JSC fabriksnätverk, materialförsörjning, teknikteam och oberoende kvalitetskontroll för att utveckla produkter som passar verklig produktion, marknadsstandarder och exportplaner.</p>
+    </header>
+
+    <section class="ai-oem-odm-dual">
+      <article>
+        <h3>OEM</h3>
+        <p>OEM gäller när köparen redan har en tydlig design, ritning, prov eller produktstandard. ANSLIFE JSC organiserar produktionen exakt enligt överenskomna krav.</p>
+        <h4>Köpare brukar tillhandahålla:</h4>
+        <ul>
+          <li>Tekniska ritningar</li>
+          <li>Produktprover</li>
+          <li>Mått</li>
+          <li>Material</li>
+          <li>Färger</li>
+          <li>Ytbehandling</li>
+          <li>Förpackningsstandarder</li>
+          <li>Ordervolym</li>
+          <li>Exportmarknad</li>
+        </ul>
+      </article>
+      <article>
+        <h3>ODM</h3>
+        <p>ODM gäller när köparen har idéer, referenser, stilriktning eller marknadsbehov men behöver ANSLIFE JSC för att utveckla produkten mer i detalj.</p>
+        <h4>ANSLIFE JSC kan stödja med:</h4>
+        <ul>
+          <li>Analys av produktkoncept</li>
+          <li>Förslag på konstruktion</li>
+          <li>Förslag på material</li>
+          <li>Optimering av produktionskostnad</li>
+          <li>Provutveckling</li>
+          <li>Provjusteringar</li>
+          <li>Kontroll av massproduktionsbarhet</li>
+          <li>Förslag för förpackning och exportstandard</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-oem-odm-support">
+      <h2>Hur ANSLIFE JSC stödjer ert projekt</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Mottagning av produktkrav</h3><p>ANSLIFE JSC tar emot ritningar, fysiska prover, referensbilder, tekniska specifikationer eller produktidéer från köparen.</p></article>
+        <article><h3>2. Teknisk analys</h3><p>Vi granskar konstruktion, mått, material, stabilitet, produktionsbarhet och förpackningsstandarder.</p></article>
+        <article><h3>3. Materialrekommendationer</h3><p>ANSLIFE JSC använder Vietnam-baserade leveranskedjor för att rekommendera lämpliga alternativ som massivt trä, plywood, MDF, faner, skum, tyg, läder, tillbehör och förpackningsmaterial.</p></article>
+        <article><h3>4. Provutveckling</h3><p>ANSLIFE JSC samarbetar med fabriker och teknikteam för att utveckla, justera och färdigställa prover utifrån köparens feedback.</p></article>
+        <article><h3>5. Oberoende prov-QC</h3><p>Vårt oberoende kvalitetskontrollteam kontrollerar prover enligt överenskomna standarder för konstruktion, mått, färg, fukthalt, ytfinish och förpackning.</p></article>
+        <article><h3>6. Förberedelse för massproduktion</h3><p>Efter godkänt prov stödjer ANSLIFE JSC standardisering av ritningar, material, färger, inspektionsstandarder och förpackningsspecifikationer före massproduktion.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>OEM / ODM-process</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li>Köparen skickar krav</li>
+        <li>ANSLIFE JSC granskar ritningar / prover / referenser</li>
+        <li>Analys av konstruktion, material och produktionsbarhet</li>
+        <li>Förslag på provutvecklingsplan</li>
+        <li>Provutveckling</li>
+        <li>Köparen godkänner eller begär justering</li>
+        <li>Standardisering av material, färger, ritningar och förpackningskrav</li>
+        <li>Massproduktion</li>
+        <li>Oberoende kvalitetskontroll</li>
+        <li>Förpackning och leverans</li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Vad som gör ANSLIFE JSC annorlunda</h2>
+      <p>Värdet ligger inte bara i provutveckling, utan i förmågan att koppla produkten till hela produktionssystemet, materialförsörjningen, oberoende kvalitetskontroll, lagerhållning och export från Vietnam.</p>
+      <p>Detta hjälper köpare att bygga inte bara en enskild produkt, utan ett stabilt, repeterbart och kontrollerbart produktionsflöde för långsiktig utveckling.</p>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Vad köpare bör skicka till ANSLIFE JSC</h2>
+      <ul>
+        <li>Teknisk ritning (om tillgänglig)</li>
+        <li>Referensbilder</li>
+        <li>Fysiskt prov (om tillgängligt)</li>
+        <li>Önskade mått</li>
+        <li>Föredragna material</li>
+        <li>Krav på färg / ytbehandling</li>
+        <li>Uppskattad volym</li>
+        <li>Exportmarknad</li>
+        <li>Förpackningsstandard</li>
+        <li>Målpris (om tillgängligt)</li>
+        <li>Leveransplan</li>
+      </ul>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Skicka din produktutvecklingsförfrågan till ANSLIFE JSC</h2>
+        <p>Köpare kan skicka ritningar, fysiska prover, referensbilder eller initiala idéer. ANSLIFE JSC-teamet granskar kraven och föreslår lämplig utveckling, material, provtagning, tillverkning och leveransplan.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Skicka förfrågan</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Ladda upp ritning</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Kontakta ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_FR = `
+  <section id="oem-odm-product-development" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Développement produit OEM / ODM</h2>
+      <p class="ai-oem-odm-subtitle">Des plans techniques, échantillons physiques ou idées initiales vers le développement d’échantillons et la production de masse au Vietnam.</p>
+      <p>ANSLIFE JSC accompagne les acheteurs internationaux dans le développement et la fabrication de produits d’ameublement en modèle OEM / ODM au Vietnam.</p>
+      <p>Nous pouvons recevoir des exigences à partir de plans techniques, échantillons physiques, images de référence, normes matières ou concepts produits initiaux. Ensuite, ANSLIFE JSC coordonne usines partenaires, chaîne d’approvisionnement matière, équipe technique et contrôle qualité indépendant pour développer des produits alignés avec la production réelle, les standards du marché et les plans d’export.</p>
+    </header>
+
+    <section class="ai-oem-odm-dual">
+      <article>
+        <h3>OEM</h3>
+        <p>Le modèle OEM s’applique lorsque l’acheteur dispose déjà d’un design, d’un plan, d’un échantillon ou d’un standard produit clair. ANSLIFE JSC organise la production conformément aux exigences convenues.</p>
+        <h4>L’acheteur fournit généralement :</h4>
+        <ul>
+          <li>Plans techniques</li>
+          <li>Échantillons produit</li>
+          <li>Dimensions</li>
+          <li>Matériaux</li>
+          <li>Couleurs</li>
+          <li>Finition de surface</li>
+          <li>Normes d’emballage</li>
+          <li>Quantité de commande</li>
+          <li>Marché d’exportation</li>
+        </ul>
+      </article>
+      <article>
+        <h3>ODM</h3>
+        <p>Le modèle ODM s’applique lorsque l’acheteur a des idées, des références, une direction stylistique ou un besoin marché, mais a besoin d’un accompagnement ANSLIFE JSC pour détailler le produit.</p>
+        <h4>ANSLIFE JSC peut accompagner sur :</h4>
+        <ul>
+          <li>Analyse du concept produit</li>
+          <li>Propositions de structure</li>
+          <li>Propositions de matériaux</li>
+          <li>Optimisation du coût de production</li>
+          <li>Développement d’échantillons</li>
+          <li>Ajustements d’échantillons</li>
+          <li>Vérification de faisabilité en production de masse</li>
+          <li>Propositions de normes d’emballage et d’export</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-oem-odm-support">
+      <h2>Comment ANSLIFE JSC soutient votre projet</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Réception des exigences produit</h3><p>ANSLIFE JSC reçoit plans, échantillons physiques, images de référence, spécifications techniques ou idées produit de l’acheteur.</p></article>
+        <article><h3>2. Analyse technique</h3><p>Nous vérifions structure, dimensions, matériaux, stabilité, faisabilité de production et standards d’emballage.</p></article>
+        <article><h3>3. Recommandations matériaux</h3><p>ANSLIFE JSC s’appuie sur la chaîne d’approvisionnement vietnamienne pour proposer des options adaptées : bois massif, contreplaqué, MDF, placage, mousse, tissu, cuir, accessoires et matériaux d’emballage.</p></article>
+        <article><h3>4. Développement d’échantillons</h3><p>ANSLIFE JSC coordonne usines et équipes techniques pour développer, ajuster et finaliser les échantillons selon les retours de l’acheteur.</p></article>
+        <article><h3>5. QC indépendant des échantillons</h3><p>Notre équipe de contrôle qualité indépendante vérifie les échantillons selon les standards convenus : structure, dimensions, couleur, humidité, finition et emballage.</p></article>
+        <article><h3>6. Préparation à la production de masse</h3><p>Après validation de l’échantillon, ANSLIFE JSC accompagne la standardisation des plans, matériaux, couleurs, critères d’inspection et spécifications d’emballage avant la production.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Processus OEM / ODM</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li>L’acheteur envoie ses exigences</li>
+        <li>ANSLIFE JSC examine plans / échantillons / références</li>
+        <li>Analyse de la structure, des matériaux et de la faisabilité de production</li>
+        <li>Proposition de plan de développement d’échantillon</li>
+        <li>Développement d’échantillon</li>
+        <li>Validation de l’acheteur ou demande d’ajustement</li>
+        <li>Standardisation des matériaux, couleurs, plans et normes d’emballage</li>
+        <li>Production de masse</li>
+        <li>Contrôle qualité indépendant</li>
+        <li>Emballage et expédition</li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Ce qui différencie ANSLIFE JSC</h2>
+      <p>La valeur ne se limite pas au développement d’échantillons, mais à la connexion du produit avec l’ensemble du système de production, la supply chain matière, le contrôle qualité indépendant, le stockage et l’exécution export depuis le Vietnam.</p>
+      <p>Cela aide l’acheteur à construire non seulement un produit, mais un flux de production stable, reproductible et maîtrisable sur le long terme.</p>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Ce que l’acheteur doit envoyer à ANSLIFE JSC</h2>
+      <ul>
+        <li>Plan technique (si disponible)</li>
+        <li>Images de référence</li>
+        <li>Échantillon physique (si disponible)</li>
+        <li>Dimensions cibles</li>
+        <li>Matériaux souhaités</li>
+        <li>Exigence couleur / finition</li>
+        <li>Quantité estimée</li>
+        <li>Marché d’exportation</li>
+        <li>Standard d’emballage</li>
+        <li>Prix cible (si disponible)</li>
+        <li>Plan de livraison</li>
+      </ul>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Envoyer votre demande de développement produit à ANSLIFE JSC</h2>
+        <p>Les acheteurs peuvent envoyer des plans, échantillons physiques, images de référence ou idées initiales. L’équipe ANSLIFE JSC examinera la demande et proposera un plan adapté de développement, matériaux, échantillonnage, fabrication et expédition.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Envoyer une demande</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Téléverser un plan</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contacter ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_RU = `
+  <section id="oem-odm-product-development" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Разработка продукта OEM / ODM</h2>
+      <p class="ai-oem-odm-subtitle">От технических чертежей, физических образцов или начальной идеи до разработки образца и серийного производства во Вьетнаме.</p>
+      <p>ANSLIFE JSC поддерживает международных покупателей в разработке и производстве мебельной продукции по моделям OEM / ODM во Вьетнаме.</p>
+      <p>Мы принимаем требования на основе технических чертежей, физических образцов, референс-изображений, стандартов материалов или исходной концепции продукта. Далее ANSLIFE JSC координирует заводы-партнеры, цепочку поставок материалов, инженерные команды и независимый контроль качества для разработки продукта под реальные производственные условия, рыночные стандарты и экспортные планы.</p>
+    </header>
+
+    <section class="ai-oem-odm-dual">
+      <article>
+        <h3>OEM</h3>
+        <p>OEM применяется, когда у покупателя уже есть четкий дизайн, чертеж, образец или стандарт продукта. ANSLIFE JSC организует производство строго по согласованным требованиям.</p>
+        <h4>Покупатель обычно предоставляет:</h4>
+        <ul>
+          <li>Технические чертежи</li>
+          <li>Образцы продукции</li>
+          <li>Размеры</li>
+          <li>Материалы</li>
+          <li>Цвета</li>
+          <li>Отделку поверхности</li>
+          <li>Стандарты упаковки</li>
+          <li>Объем заказа</li>
+          <li>Рынок экспорта</li>
+        </ul>
+      </article>
+      <article>
+        <h3>ODM</h3>
+        <p>ODM применяется, когда у покупателя есть идея, референсы, стиль или рыночный запрос, но нужна поддержка ANSLIFE JSC для детальной разработки продукта.</p>
+        <h4>ANSLIFE JSC может поддержать:</h4>
+        <ul>
+          <li>Анализ продуктовой концепции</li>
+          <li>Предложения по конструкции</li>
+          <li>Предложения по материалам</li>
+          <li>Оптимизацию производственной себестоимости</li>
+          <li>Разработку образца</li>
+          <li>Корректировку образца</li>
+          <li>Проверку готовности к серийному производству</li>
+          <li>Предложения по стандартам упаковки и экспорта</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-oem-odm-support">
+      <h2>Как ANSLIFE JSC поддерживает ваш проект</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Прием требований к продукту</h3><p>ANSLIFE JSC принимает чертежи, физические образцы, референс-изображения, технические спецификации или идеи продукта от покупателя.</p></article>
+        <article><h3>2. Технический анализ</h3><p>Мы проверяем конструкцию, размеры, материалы, стабильность, производственную реализуемость и стандарты упаковки.</p></article>
+        <article><h3>3. Рекомендации по материалам</h3><p>ANSLIFE JSC использует вьетнамские цепочки поставок для подбора подходящих вариантов: массив дерева, фанера, MDF, шпон, пена, ткани, кожа, фурнитура и упаковочные материалы.</p></article>
+        <article><h3>4. Разработка образца</h3><p>ANSLIFE JSC координирует работу заводов и инженерных команд для разработки, корректировки и финализации образца по обратной связи покупателя.</p></article>
+        <article><h3>5. Независимый QC образца</h3><p>Наша независимая команда контроля качества проверяет образец по согласованным стандартам: конструкция, размеры, цвет, влажность, отделка поверхности и упаковка.</p></article>
+        <article><h3>6. Подготовка к серийному производству</h3><p>После утверждения образца ANSLIFE JSC помогает стандартизировать чертежи, материалы, цвета, критерии инспекции и упаковочные спецификации перед запуском серии.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Процесс OEM / ODM</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li>Покупатель отправляет требования</li>
+        <li>ANSLIFE JSC проверяет чертежи / образцы / референсы</li>
+        <li>Анализ конструкции, материалов и производственной реализуемости</li>
+        <li>Предложение плана разработки образца</li>
+        <li>Разработка образца</li>
+        <li>Утверждение покупателем или запрос на корректировку</li>
+        <li>Стандартизация материалов, цветов, чертежей и стандартов упаковки</li>
+        <li>Серийное производство</li>
+        <li>Независимый контроль качества</li>
+        <li>Упаковка и отгрузка</li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Что отличает ANSLIFE JSC</h2>
+      <p>Ценность ANSLIFE JSC не только в разработке образца, но и в интеграции продукта со всей производственной системой, цепочкой поставок материалов, независимым QC, складированием и экспортной отгрузкой из Вьетнама.</p>
+      <p>Это помогает покупателю выстроить не единичный продукт, а стабильный, повторяемый и управляемый производственный процесс на долгий срок.</p>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Что покупателю стоит отправить в ANSLIFE JSC</h2>
+      <ul>
+        <li>Технический чертеж (если есть)</li>
+        <li>Референс-изображения</li>
+        <li>Физический образец (если есть)</li>
+        <li>Целевые размеры</li>
+        <li>Предпочтительные материалы</li>
+        <li>Требования по цвету / отделке</li>
+        <li>Ожидаемый объем</li>
+        <li>Рынок экспорта</li>
+        <li>Стандарт упаковки</li>
+        <li>Целевая цена (если есть)</li>
+        <li>План поставки</li>
+      </ul>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Отправить запрос на разработку продукта в ANSLIFE JSC</h2>
+        <p>Покупатели могут отправить чертежи, физические образцы, референс-изображения или начальные идеи. Команда ANSLIFE JSC рассмотрит запрос и предложит подходящий план разработки, материалов, образцов, производства и отгрузки.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Отправить запрос</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Загрузить чертеж</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Связаться с ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ES = `
+  <section id="oem-odm-product-development" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Desarrollo de producto OEM / ODM</h2>
+      <p class="ai-oem-odm-subtitle">Desde planos técnicos, muestras físicas o ideas iniciales hasta desarrollo de muestras y producción masiva en Vietnam.</p>
+      <p>ANSLIFE JSC apoya a compradores internacionales en el desarrollo y fabricación de productos de mobiliario bajo modelos OEM / ODM en Vietnam.</p>
+      <p>Podemos recibir requerimientos a partir de planos técnicos, muestras físicas, imágenes de referencia, estándares de materiales o conceptos iniciales de producto. A partir de ahí, ANSLIFE JSC coordina con fábricas asociadas, cadena de suministro de materiales, equipos técnicos y control de calidad independiente para desarrollar productos alineados con condiciones reales de producción, estándares de mercado y planes de exportación.</p>
+    </header>
+
+    <section class="ai-oem-odm-dual">
+      <article>
+        <h3>OEM</h3>
+        <p>OEM aplica cuando el comprador ya tiene un diseño, plano, muestra o estándar de producto claramente definido. ANSLIFE JSC organiza la producción exactamente según los requisitos acordados.</p>
+        <h4>El comprador normalmente proporciona:</h4>
+        <ul>
+          <li>Planos técnicos</li>
+          <li>Muestras de producto</li>
+          <li>Dimensiones</li>
+          <li>Materiales</li>
+          <li>Colores</li>
+          <li>Acabado superficial</li>
+          <li>Estándares de empaque</li>
+          <li>Cantidad de pedido</li>
+          <li>Mercado de exportación</li>
+        </ul>
+      </article>
+      <article>
+        <h3>ODM</h3>
+        <p>ODM aplica cuando el comprador tiene ideas, referencias, dirección de estilo o demanda del mercado, pero necesita apoyo de ANSLIFE JSC para desarrollar el producto con más detalle.</p>
+        <h4>ANSLIFE JSC puede apoyar en:</h4>
+        <ul>
+          <li>Análisis del concepto de producto</li>
+          <li>Propuestas estructurales</li>
+          <li>Propuestas de materiales</li>
+          <li>Optimización del costo de producción</li>
+          <li>Desarrollo de muestras</li>
+          <li>Ajustes de muestras</li>
+          <li>Verificación de viabilidad para producción masiva</li>
+          <li>Propuestas de estándares de empaque y exportación</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-oem-odm-support">
+      <h2>Cómo ANSLIFE JSC respalda su proyecto</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Recepción de requerimientos</h3><p>ANSLIFE JSC recibe planos, muestras físicas, imágenes de referencia, especificaciones técnicas o ideas de producto del comprador.</p></article>
+        <article><h3>2. Análisis técnico</h3><p>Revisamos estructura, dimensiones, materiales, estabilidad, viabilidad de producción y estándares de empaque.</p></article>
+        <article><h3>3. Recomendaciones de materiales</h3><p>ANSLIFE JSC utiliza cadenas de suministro en Vietnam para recomendar opciones adecuadas como madera maciza, plywood, MDF, chapa, espuma, tela, cuero, accesorios y materiales de empaque.</p></article>
+        <article><h3>4. Desarrollo de muestras</h3><p>ANSLIFE JSC coordina con fábricas y equipos técnicos para desarrollar, ajustar y finalizar muestras según la retroalimentación del comprador.</p></article>
+        <article><h3>5. QC independiente de muestras</h3><p>Nuestro equipo independiente de control de calidad verifica las muestras según estándares acordados de estructura, dimensiones, color, humedad, acabado superficial y empaque.</p></article>
+        <article><h3>6. Preparación para producción masiva</h3><p>Tras la aprobación de la muestra, ANSLIFE JSC apoya la estandarización de planos, materiales, colores, criterios de inspección y especificaciones de empaque antes de producir en masa.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Proceso OEM / ODM</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li>El comprador envía requerimientos</li>
+        <li>ANSLIFE JSC revisa planos / muestras / referencias</li>
+        <li>Análisis de estructura, materiales y viabilidad de producción</li>
+        <li>Propuesta de desarrollo de muestra</li>
+        <li>Desarrollo de muestra</li>
+        <li>Aprobación del comprador o solicitud de ajuste</li>
+        <li>Estandarizar materiales, colores, planos y normas de empaque</li>
+        <li>Producción masiva</li>
+        <li>Control de calidad independiente</li>
+        <li>Empaque y envío</li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Qué hace diferente a ANSLIFE JSC</h2>
+      <p>El valor no está solo en desarrollar muestras, sino en conectar el producto con todo el sistema de producción, la cadena de suministro de materiales, el control de calidad independiente, el almacenamiento y la ejecución de exportación desde Vietnam.</p>
+      <p>Esto ayuda al comprador a construir no solo un producto, sino un flujo de producción estable, repetible y controlable a largo plazo.</p>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Qué debe enviar el comprador a ANSLIFE JSC</h2>
+      <ul>
+        <li>Plano técnico (si está disponible)</li>
+        <li>Imágenes de referencia</li>
+        <li>Muestra física (si está disponible)</li>
+        <li>Dimensiones objetivo</li>
+        <li>Materiales preferidos</li>
+        <li>Requisito de color / acabado</li>
+        <li>Cantidad estimada</li>
+        <li>Mercado de exportación</li>
+        <li>Estándar de empaque</li>
+        <li>Precio objetivo (si está disponible)</li>
+        <li>Plan de entrega</li>
+      </ul>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Envíe su solicitud de desarrollo de producto a ANSLIFE JSC</h2>
+        <p>Los compradores pueden enviar planos, muestras físicas, imágenes de referencia o conceptos iniciales. El equipo de ANSLIFE JSC revisará la solicitud y propondrá un plan adecuado de desarrollo, materiales, muestreo, fabricación y envío.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Enviar solicitud</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Subir plano</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contactar con ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ZH = `
+  <section id="oem-odm-product-development" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>OEM / ODM 产品开发</h2>
+      <p class="ai-oem-odm-subtitle">从技术图纸、实物样品或初步想法，到打样开发与越南量产落地。</p>
+      <p>ANSLIFE JSC 在越南为国际买家提供 OEM / ODM 家具产品开发与制造支持。</p>
+      <p>我们可基于技术图纸、实物样品、参考图片、材料标准或初步产品概念接收需求。随后，ANSLIFE JSC 协调工厂伙伴、材料供应链、工程团队与独立质控团队，开发符合实际生产条件、市场标准与出口计划的产品。</p>
+    </header>
+
+    <section class="ai-oem-odm-dual">
+      <article>
+        <h3>OEM</h3>
+        <p>当买家已有明确设计、图纸、样品或产品标准时，适用 OEM。ANSLIFE JSC 将按双方确认要求组织生产。</p>
+        <h4>买家通常提供：</h4>
+        <ul>
+          <li>技术图纸</li>
+          <li>产品样品</li>
+          <li>尺寸要求</li>
+          <li>材料要求</li>
+          <li>颜色要求</li>
+          <li>表面处理要求</li>
+          <li>包装标准</li>
+          <li>订单数量</li>
+          <li>出口市场</li>
+        </ul>
+      </article>
+      <article>
+        <h3>ODM</h3>
+        <p>当买家有产品想法、参考图、风格方向或市场需求，但需要 ANSLIFE JSC 进一步细化开发时，适用 ODM。</p>
+        <h4>ANSLIFE JSC 可提供支持：</h4>
+        <ul>
+          <li>产品概念分析</li>
+          <li>结构方案建议</li>
+          <li>材料方案建议</li>
+          <li>生产成本优化</li>
+          <li>样品开发</li>
+          <li>样品调整</li>
+          <li>量产可行性验证</li>
+          <li>包装与出口标准建议</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-oem-odm-support">
+      <h2>ANSLIFE JSC 如何支持您的项目</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. 接收产品需求</h3><p>ANSLIFE JSC 接收买家的图纸、实物样品、参考图片、技术规格或产品想法。</p></article>
+        <article><h3>2. 技术分析</h3><p>我们评估产品结构、尺寸、材料、稳定性、量产可行性与包装标准。</p></article>
+        <article><h3>3. 材料建议</h3><p>ANSLIFE JSC 依托越南供应链，推荐实木、胶合板、MDF、木皮、泡棉、面料、皮革、五金及包装材料等合适选项。</p></article>
+        <article><h3>4. 样品开发</h3><p>ANSLIFE JSC 协同工厂与工程团队，根据买家反馈进行打样、调整并完成样品。</p></article>
+        <article><h3>5. 样品独立质控</h3><p>我们的独立质控团队按约定标准检查样品，包括结构、尺寸、颜色、含水率、表面处理与包装。</p></article>
+        <article><h3>6. 量产准备</h3><p>样品确认后，ANSLIFE JSC 在量产前支持图纸、材料、颜色、检验标准与包装规范的标准化。</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>OEM / ODM 流程</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li>买家提交需求</li>
+        <li>ANSLIFE JSC 审核图纸 / 样品 / 参考资料</li>
+        <li>分析结构、材料与量产可行性</li>
+        <li>提出打样开发方案</li>
+        <li>样品开发</li>
+        <li>买家确认样品或提出调整</li>
+        <li>标准化材料、颜色、图纸与包装标准</li>
+        <li>批量生产</li>
+        <li>独立质量控制</li>
+        <li>包装与出货</li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>ANSLIFE JSC 的差异化优势</h2>
+      <p>ANSLIFE JSC 的价值不只在打样开发，更在于将产品连接到完整生产系统、材料供应链、独立质控、仓储与越南出口执行能力。</p>
+      <p>这让买家不只是开发单一产品，而是建立长期稳定、可复制、可管控的生产体系。</p>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>买家应向 ANSLIFE JSC 提供什么</h2>
+      <ul>
+        <li>技术图纸（如有）</li>
+        <li>参考图片</li>
+        <li>实物样品（如有）</li>
+        <li>目标尺寸</li>
+        <li>期望材料</li>
+        <li>颜色 / 表面处理要求</li>
+        <li>预计数量</li>
+        <li>出口市场</li>
+        <li>包装标准</li>
+        <li>目标价格（如有）</li>
+        <li>交付计划</li>
+      </ul>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>向 ANSLIFE JSC 提交产品开发需求</h2>
+        <p>买家可提交图纸、实物样品、参考图片或初步产品想法。ANSLIFE JSC 团队将评估需求并提出匹配的开发、材料、打样、生产与出货方案。</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">提交需求</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">上传图纸</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">联系 ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+type OemOdmDetailLanguage = Extract<
+  LanguageCode,
+  'en' | 'jp' | 'kr' | 'sv' | 'fr' | 'ru' | 'es' | 'zh'
+>;
+
+const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_LOCALIZED: Record<
+  OemOdmDetailLanguage,
+  string
+> = {
+  en: PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN,
+  jp: PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_JP,
+  kr: PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_KR,
+  sv: PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_SV,
+  fr: PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_FR,
+  ru: PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_RU,
+  es: PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ES,
+  zh: PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ZH,
+};
 
 const ABOUT_COMPANY_INFO_SECTION_VN = `
   <section id="company-info" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
@@ -10314,16 +11305,53 @@ function escapeRegExp(input: string): string {
   return input.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+function getOperationsSupplyDetailHtml(
+  detailSlug: string,
+  language: LanguageCode,
+): string | null {
+  if (detailSlug !== 'oem-odm-product-development') {
+    return null;
+  }
+
+  if (language === 'vn') {
+    return `<div class="ai-content">${PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN}</div>`.replace(
+      /href="\/vn\/contact\//g,
+      `href="/${language}/contact/`,
+    );
+  }
+
+  const localizedSectionHtml =
+    PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_LOCALIZED[
+      language as OemOdmDetailLanguage
+    ] ?? PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN;
+
+  return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+    /href="\/vn\/contact\//g,
+    `href="/${language}/contact/`,
+  );
+}
+
 export function getAIFallbackSectionHtml(
   pageSlug: string,
   sectionId: string,
   language: LanguageCode = 'vn',
+  subSectionSlug = '',
 ): string | null {
   if (pageSlug === 'products-solutions' && sectionId === 'operations-supply-solutions') {
+    const detailHtml = getOperationsSupplyDetailHtml(subSectionSlug, language);
+    if (detailHtml) {
+      return detailHtml;
+    }
+
     return translateAiHtml(
       language,
       `<div class="ai-content">${PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN}</div>`,
-    ).replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
+    )
+      .replace(
+        /href="\/vn\/products-solutions\/operations-supply-solutions\/oem-odm-product-development"/g,
+        `href="/${language}/products-solutions/operations-supply-solutions/oem-odm-product-development"`,
+      )
+      .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
   }
 
   if (pageSlug === 'resources' && sectionId === 'faq') {

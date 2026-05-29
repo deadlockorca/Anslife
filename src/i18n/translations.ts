@@ -121,6 +121,9 @@ const TRANSLATIONS: Partial<Record<
     'Phát triển OEM/ODM': 'OEM/ODM Development',
     'Giải pháp dịch vụ': 'Service Solutions',
     'Giải pháp vận hành & cung ứng': 'Operations & Supply Solutions',
+    'Phát triển sản phẩm OEM / ODM': 'OEM / ODM Product Development',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
+      'From technical drawings, physical samples, or product ideas to sample development and mass production in Vietnam.',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       'Operations, supply, warehousing, QC, packing, and export consolidation solutions for international buyers.',
     'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
@@ -1060,6 +1063,9 @@ const TRANSLATIONS: Partial<Record<
     'Phát triển OEM/ODM': 'OEM/ODM開発',
     'Giải pháp dịch vụ': 'サービスソリューション',
     'Giải pháp vận hành & cung ứng': '運営・供給ソリューション',
+    'Phát triển sản phẩm OEM / ODM': 'OEM / ODM製品開発',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
+      '図面、実物サンプル、または製品アイデアからサンプル開発とベトナムでの量産まで。',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       '海外バイヤー向けの運営、供給、保管、QC、梱包、輸出混載ソリューション。',
     'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
@@ -1135,6 +1141,8 @@ const TRANSLATIONS: Partial<Record<
       '本日お問い合わせいただければ、ANSLIFE JSCチームができるだけ早く返信します。',
     'Gửi yêu cầu': 'お問い合わせ',
     'Tải tài liệu / bản vẽ lên': '資料 / 図面をアップロード',
+    'Tải bản vẽ lên': '図面をアップロード',
+    'Liên hệ ANSLIFE JSC': 'ANSLIFE JSCに連絡',
     'QC & Kiểm định': 'QC・検査',
     'Giải pháp lưu kho tại Việt Nam': 'ベトナム保管ソリューション',
     'Gom hàng xuất khẩu': '輸出混載',
@@ -1723,6 +1731,9 @@ const TRANSLATIONS: Partial<Record<
     'Phát triển OEM/ODM': 'OEM/ODM 개발',
     'Giải pháp dịch vụ': '서비스 솔루션',
     'Giải pháp vận hành & cung ứng': '운영 및 공급 솔루션',
+    'Phát triển sản phẩm OEM / ODM': 'OEM / ODM 제품 개발',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
+      '도면, 실물 샘플 또는 제품 아이디어부터 샘플 개발과 베트남 대량 생산까지.',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       '국제 바이어를 위한 운영, 공급, 보관, QC, 포장 및 수출 통합 솔루션.',
     'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
@@ -2187,6 +2198,9 @@ const TRANSLATIONS: Partial<Record<
   },
   sv: {
     'Giải pháp vận hành & cung ứng': 'Drift- och leveranslösningar',
+    'Phát triển sản phẩm OEM / ODM': 'OEM / ODM-produktutveckling',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
+      'Från ritningar, fysiska prover eller produktidéer till provutveckling och massproduktion i Vietnam.',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       'Drift, leverans, lagerhållning, QC, packning och exportkonsolidering för internationella köpare.',
     'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
@@ -2269,6 +2283,9 @@ const TRANSLATIONS: Partial<Record<
   },
   fr: {
     'Giải pháp vận hành & cung ứng': 'Solutions opérationnelles et d’approvisionnement',
+    'Phát triển sản phẩm OEM / ODM': 'Développement produit OEM / ODM',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
+      'Des plans, échantillons réels ou idées produit jusqu’au développement d’échantillons et à la production en série au Vietnam.',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       'Solutions d’exploitation, d’approvisionnement, de stockage, de QC, d’emballage et de groupage export pour les acheteurs internationaux.',
     'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
@@ -2353,6 +2370,9 @@ const TRANSLATIONS: Partial<Record<
   },
   ru: {
     'Giải pháp vận hành & cung ứng': 'Операционные и снабженческие решения',
+    'Phát triển sản phẩm OEM / ODM': 'Разработка продукта OEM / ODM',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
+      'От чертежей, реальных образцов или идеи продукта до разработки образца и массового производства во Вьетнаме.',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       'Решения для международных покупателей: операционное сопровождение, снабжение, хранение, QC, упаковка и консолидация экспортных грузов.',
     'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
@@ -2433,9 +2453,14 @@ const TRANSLATIONS: Partial<Record<
       'Отправьте запрос сегодня, и команда ANSLIFE JSC ответит как можно скорее.',
     'Gửi yêu cầu': 'Отправить запрос',
     'Tải tài liệu / bản vẽ lên': 'Загрузить документы / чертежи',
+    'Tải bản vẽ lên': 'Загрузить чертеж',
+    'Liên hệ ANSLIFE JSC': 'Связаться с ANSLIFE JSC',
   },
   es: {
     'Giải pháp vận hành & cung ứng': 'Soluciones de operación y suministro',
+    'Phát triển sản phẩm OEM / ODM': 'Desarrollo de producto OEM / ODM',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
+      'Desde planos, muestras físicas o ideas de producto hasta desarrollo de muestras y producción en serie en Vietnam.',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       'Soluciones de operación, suministro, almacenamiento, QC, embalaje y consolidación de exportación para compradores internacionales.',
     'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
@@ -2520,6 +2545,9 @@ const TRANSLATIONS: Partial<Record<
   },
   zh: {
     'Giải pháp vận hành & cung ứng': '运营与供应解决方案',
+    'Phát triển sản phẩm OEM / ODM': 'OEM / ODM 产品开发',
+    'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
+      '从图纸、实物样品或产品想法，到样品开发和在越南批量生产。',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       '面向国际买家的运营、供应、仓储、QC、包装和出口集货解决方案。',
     'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':

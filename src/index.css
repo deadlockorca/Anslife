@@ -5457,6 +5457,165 @@ a.mobile-menu-utility-link {
   line-height: 1.08;
 }
 
+.ai-oem-odm-page {
+  display: grid;
+  gap: 1rem;
+  color: #2d2018;
+}
+
+.ai-oem-odm-hero,
+.ai-oem-odm-support,
+.ai-oem-odm-process,
+.ai-oem-odm-difference,
+.ai-oem-odm-checklist {
+  display: grid;
+  gap: 0.72rem;
+}
+
+.ai-oem-odm-hero h2,
+.ai-oem-odm-support h2,
+.ai-oem-odm-process h2,
+.ai-oem-odm-difference h2,
+.ai-oem-odm-checklist h2 {
+  margin: 0;
+  color: #2c1a10 !important;
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 2.7vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.ai-oem-odm-hero p,
+.ai-oem-odm-dual p,
+.ai-oem-odm-support p,
+.ai-oem-odm-difference p,
+.ai-oem-odm-checklist li,
+.ai-oem-odm-timeline li {
+  margin: 0;
+  color: #2d2018 !important;
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.ai-oem-odm-subtitle {
+  font-size: 1.04rem !important;
+  font-weight: 700;
+}
+
+.ai-oem-odm-dual {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.82rem;
+}
+
+.ai-oem-odm-dual article,
+.ai-oem-odm-support-grid article,
+.ai-oem-odm-timeline li {
+  border: 1px solid #eadfd4;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.ai-oem-odm-dual article {
+  display: grid;
+  gap: 0.52rem;
+  align-content: start;
+  padding: 1rem;
+}
+
+.ai-oem-odm-dual h3,
+.ai-oem-odm-dual h4,
+.ai-oem-odm-support-grid h3 {
+  margin: 0;
+  color: #2c1a10 !important;
+}
+
+.ai-oem-odm-dual h3,
+.ai-oem-odm-support-grid h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.ai-oem-odm-dual h4 {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.ai-oem-odm-dual ul,
+.ai-oem-odm-checklist ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.28rem;
+}
+
+.ai-oem-odm-support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.82rem;
+}
+
+.ai-oem-odm-support-grid article {
+  display: grid;
+  align-content: start;
+  gap: 0.52rem;
+  padding: 1rem;
+}
+
+.ai-oem-odm-timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: oemOdmStep;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.72rem;
+}
+
+.ai-oem-odm-timeline li {
+  counter-increment: oemOdmStep;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: start;
+  gap: 0.62rem;
+  padding: 0.85rem 0.9rem;
+}
+
+.ai-oem-odm-timeline li::before {
+  content: counter(oemOdmStep);
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid #d5c2b2;
+  background: #f8efe5;
+  color: #7c4f34;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ai-oem-odm-checklist ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.05rem;
+}
+
+.ai-oem-odm-request-panel {
+  border: 0;
+  box-shadow: none;
+}
+
+.ai-oem-odm-request-panel .ai-company-request-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.58rem;
+}
+
 @media (max-width: 1180px) {
   .ai-operations-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -5468,6 +5627,14 @@ a.mobile-menu-utility-link {
 
   .ai-operations-reason-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ai-oem-odm-support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-oem-odm-checklist ul {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -5551,6 +5718,49 @@ a.mobile-menu-utility-link {
   .ai-operations-timeline p {
     grid-column: 3;
     min-height: 0;
+  }
+
+  .ai-oem-odm-page {
+    gap: 0.82rem;
+  }
+
+  .ai-oem-odm-hero h2,
+  .ai-oem-odm-support h2,
+  .ai-oem-odm-process h2,
+  .ai-oem-odm-difference h2,
+  .ai-oem-odm-checklist h2 {
+    font-family: var(--font-body);
+    font-size: 1.48rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .ai-oem-odm-dual,
+  .ai-oem-odm-support-grid,
+  .ai-oem-odm-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-oem-odm-dual article,
+  .ai-oem-odm-support-grid article {
+    padding: 0.86rem 0.72rem;
+  }
+
+  .ai-oem-odm-timeline li {
+    padding: 0.78rem 0.72rem;
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 0.52rem;
+  }
+
+  .ai-oem-odm-timeline li::before {
+    width: 30px;
+    height: 30px;
+    font-size: 0.84rem;
+  }
+
+  .ai-oem-odm-checklist ul {
+    grid-template-columns: 1fr;
+    padding-left: 1rem;
   }
 }
 
