@@ -194,7 +194,7 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
         <span class="ai-company-overview-icon ai-icon-operations" aria-hidden="true"></span>
         <h3>4. Vận hành & quản lý dự án xuất khẩu</h3>
         <p>Theo dõi tiến độ, điều phối thông tin, quản lý sản xuất, xử lý vấn đề phát sinh và báo cáo dự án.</p>
-        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+        <a href="/vn/products-solutions/operations-supply-solutions/export-project-operation-management">Xem chi tiết <span>→</span></a>
       </article>
       <article class="ai-operations-card">
         <span class="ai-company-overview-icon ai-icon-clipboard-check" aria-hidden="true"></span>
@@ -2209,6 +2209,191 @@ const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_LOCALIZED: Record<
   ru: PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN,
   es: PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN,
   zh: PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN,
+};
+
+const PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_VN = `
+  <section id="export-project-operation-management" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Vận hành & quản lý dự án xuất khẩu</h2>
+      <p class="ai-oem-odm-subtitle">Điều phối tiến độ, nhà máy, vật liệu, chất lượng, chứng từ và xuất hàng cho các dự án xuất khẩu tại Việt Nam.</p>
+      <p>ANSLIFE JSC hỗ trợ buyer quốc tế vận hành và quản lý các dự án xuất khẩu tại Việt Nam, từ giai đoạn tiếp nhận yêu cầu, lập kế hoạch triển khai, điều phối nhà máy, chuẩn bị vật liệu, theo dõi tiến độ, kiểm soát chất lượng, đóng gói, chứng từ đến xuất hàng.</p>
+      <p>Dịch vụ này phù hợp với các dự án mới cần triển khai tại Việt Nam, cũng như các dự án đã có sẵn giữa buyer và nhà máy nhưng cần một đơn vị vận hành độc lập tại Việt Nam để theo dõi, kiểm soát và báo cáo theo từng giai đoạn.</p>
+      <p>Trong trường hợp buyer đã có quan hệ thương mại trực tiếp với nhà máy, ANSLIFE JSC có thể tham gia với vai trò đơn vị vận hành dự án mà không nhất thiết can thiệp vào hợp đồng, giá cả hoặc điều kiện thương mại hiện có giữa hai bên.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>ANSLIFE JSC vận hành những phần nào của dự án?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Tiếp nhận yêu cầu dự án</h3><p>ANSLIFE JSC tiếp nhận thông tin về sản phẩm, bản vẽ, mẫu, vật liệu, sản lượng, tiêu chuẩn chất lượng, thị trường xuất khẩu, thời gian giao hàng và điều kiện thương mại của dự án.</p></article>
+        <article><h3>2. Lập kế hoạch triển khai</h3><p>Chúng tôi hỗ trợ xây dựng kế hoạch triển khai dự án, bao gồm phát triển mẫu, chuẩn bị vật liệu, lịch sản xuất, lịch kiểm hàng, đóng gói, chứng từ và kế hoạch xuất hàng.</p></article>
+        <article><h3>3. Điều phối nhà máy và vật liệu</h3><p>ANSLIFE JSC phối hợp với nhà máy, nhà cung cấp vật liệu và các bên liên quan để đảm bảo vật liệu, cấu kiện và điều kiện sản xuất được chuẩn bị đúng theo yêu cầu dự án.</p></article>
+        <article><h3>4. Theo dõi tiến độ sản xuất</h3><p>Chúng tôi theo dõi tiến độ sản xuất theo từng giai đoạn, ghi nhận tình trạng thực tế, cảnh báo rủi ro chậm tiến độ và phối hợp xử lý các vấn đề phát sinh.</p></article>
+        <article><h3>5. Kiểm soát chất lượng trong dự án</h3><p>ANSLIFE JSC phối hợp với hệ thống QC độc lập để kiểm tra mẫu, vật liệu, sản phẩm trong quá trình sản xuất, đóng gói và tình trạng hàng trước khi xuất.</p></article>
+        <article><h3>6. Quản lý thông tin và báo cáo</h3><p>Chúng tôi tổng hợp, cập nhật và báo cáo tình trạng dự án cho buyer theo từng giai đoạn, giúp thông tin giữa buyer, nhà máy, QC, kho và logistics được rõ ràng.</p></article>
+        <article><h3>7. Điều phối chứng từ và xuất hàng</h3><p>ANSLIFE JSC hỗ trợ theo dõi chứng từ, lịch đóng hàng, lịch tàu, forwarder, điều kiện giao hàng và quá trình xuất hàng theo kế hoạch đã thống nhất.</p></article>
+        <article><h3>8. Xử lý vấn đề phát sinh</h3><p>Khi phát sinh vấn đề về vật liệu, chất lượng, tiến độ, đóng gói, chứng từ hoặc logistics, ANSLIFE JSC ghi nhận, báo cáo và phối hợp đề xuất phương án xử lý phù hợp.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Dịch vụ này phù hợp với buyer nào?</h2>
+      <ul>
+        <li>Buyer đang triển khai dự án sản xuất tại Việt Nam</li>
+        <li>Buyer đã có nhà máy nhưng thiếu đơn vị theo dõi độc lập tại Việt Nam</li>
+        <li>Buyer có nhiều nhà máy hoặc nhiều nhà cung cấp cần điều phối chung</li>
+        <li>Buyer cần theo dõi tiến độ, chất lượng, đóng gói và xuất hàng từ xa</li>
+        <li>Buyer muốn duy trì quan hệ thương mại trực tiếp với nhà máy nhưng cần thêm đơn vị vận hành dự án</li>
+        <li>Buyer muốn giảm rủi ro về tiến độ, chất lượng, thông tin và chứng từ</li>
+        <li>Buyer chuẩn bị mở rộng sản lượng hoặc triển khai dự án dài hạn tại Việt Nam</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Quy trình vận hành dự án</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Tiếp nhận phạm vi dự án:</strong> Buyer cung cấp thông tin về sản phẩm, nhà máy, vật liệu, sản lượng, tiến độ, tiêu chuẩn chất lượng, chứng từ và kế hoạch xuất hàng.</p></li>
+        <li><p><strong>Xác định vai trò của ANSLIFE JSC:</strong> ANSLIFE JSC xác định phạm vi tham gia trong dự án: điều phối tiến độ, QC độc lập, quản lý vật liệu, theo dõi đóng gói, logistics, chứng từ hoặc báo cáo dự án.</p></li>
+        <li><p><strong>Lập kế hoạch vận hành:</strong> ANSLIFE JSC xây dựng kế hoạch vận hành theo từng giai đoạn, bao gồm lịch sản xuất, lịch kiểm hàng, lịch đóng gói, lịch xuất hàng và mốc báo cáo.</p></li>
+        <li><p><strong>Theo dõi và điều phối thực tế:</strong> Chúng tôi phối hợp với nhà máy, nhà cung cấp, QC, kho và đơn vị logistics để theo dõi tình trạng thực tế và cập nhật tiến độ dự án.</p></li>
+        <li><p><strong>Báo cáo và xử lý vấn đề:</strong> ANSLIFE JSC báo cáo tình trạng dự án, ghi nhận vấn đề phát sinh và phối hợp với các bên để đề xuất phương án xử lý kịp thời.</p></li>
+        <li><p><strong>Hoàn tất, xuất hàng và lưu dữ liệu:</strong> Sau khi hàng được xuất, ANSLIFE JSC có thể hỗ trợ lưu mẫu chuẩn, lưu checklist, lưu dữ liệu kiểm hàng, tiêu chuẩn đóng gói và kinh nghiệm vận hành cho các đơn hàng tiếp theo.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Kết quả buyer nhận được</h2>
+      <ul>
+        <li>Một đầu mối vận hành dự án tại Việt Nam</li>
+        <li>Kế hoạch triển khai rõ ràng theo từng giai đoạn</li>
+        <li>Theo dõi tiến độ sản xuất thực tế</li>
+        <li>Báo cáo tình trạng dự án định kỳ</li>
+        <li>Kiểm soát tốt hơn về vật liệu, mẫu, chất lượng và đóng gói</li>
+        <li>Cảnh báo sớm các rủi ro về tiến độ, chất lượng hoặc logistics</li>
+        <li>Phối hợp tốt hơn giữa buyer, nhà máy, QC, kho và forwarder</li>
+        <li>Dữ liệu dự án được lưu lại cho các đơn hàng tiếp theo</li>
+        <li>Khả năng duy trì chuỗi cung ứng ổn định trong dài hạn</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Vai trò vận hành của ANSLIFE JSC</h2>
+      <p>ANSLIFE JSC đóng vai trò đơn vị vận hành dự án tại Việt Nam, giúp buyer kiểm soát tiến độ, chất lượng, thông tin, chứng từ và xuất hàng mà không nhất thiết phải trực tiếp hiện diện tại Việt Nam.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Gửi yêu cầu vận hành dự án</h2>
+        <p>Buyer có thể gửi thông tin dự án, nhà máy hiện có, bản vẽ, sản lượng, tiến độ, tiêu chuẩn chất lượng hoặc kế hoạch xuất hàng. ANSLIFE JSC sẽ xem xét phạm vi công việc và đề xuất mô hình vận hành phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu vận hành</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải tài liệu dự án lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN = `
+  <section id="export-project-operation-management" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Export Project Operation & Management</h2>
+      <p class="ai-oem-odm-subtitle">Coordinate timeline, factories, materials, quality, documents, and shipment for export projects in Vietnam.</p>
+      <p>ANSLIFE JSC supports international buyers in operating and managing export projects in Vietnam, from initial requirement intake and deployment planning to factory coordination, material readiness, progress tracking, quality control, packing, documentation, and shipment execution.</p>
+      <p>This service is suitable for new projects to be launched in Vietnam, as well as existing buyer-factory projects that need an independent operating unit in Vietnam for tracking, control, and stage-by-stage reporting.</p>
+      <p>Where buyers already maintain direct commercial relationships with factories, ANSLIFE JSC can act as the project operation unit in Vietnam without necessarily interfering with existing contracts, pricing, or commercial terms between the two parties.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>Which parts of the project can ANSLIFE JSC operate?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Project requirement intake</h3><p>ANSLIFE JSC receives project inputs including product specs, drawings, samples, materials, volume, quality standards, export market, delivery timeline, and commercial conditions.</p></article>
+        <article><h3>2. Deployment planning</h3><p>We support deployment planning covering sample development, material preparation, production schedule, inspection schedule, packing, documentation, and shipment planning.</p></article>
+        <article><h3>3. Factory and material coordination</h3><p>ANSLIFE JSC coordinates with factories, material suppliers, and related stakeholders to ensure material, component, and production conditions are prepared as required.</p></article>
+        <article><h3>4. Production progress tracking</h3><p>We track progress by stage, record actual status, flag delay risks early, and coordinate issue resolution.</p></article>
+        <article><h3>5. In-project quality control</h3><p>ANSLIFE JSC coordinates with independent QC teams to inspect samples, materials, in-process products, packing, and shipment readiness.</p></article>
+        <article><h3>6. Information management and reporting</h3><p>We consolidate updates and provide stage-based reporting to buyers, keeping information flow clear across buyer, factory, QC, warehouse, and logistics parties.</p></article>
+        <article><h3>7. Documentation and shipment coordination</h3><p>ANSLIFE JSC supports tracking of documents, loading schedules, vessel schedules, forwarders, delivery terms, and shipment execution against the agreed plan.</p></article>
+        <article><h3>8. Issue handling</h3><p>When issues arise in material, quality, schedule, packing, documentation, or logistics, ANSLIFE JSC records, reports, and coordinates practical corrective actions.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Which buyers is this service for?</h2>
+      <ul>
+        <li>Buyers running production projects in Vietnam</li>
+        <li>Buyers with existing factories but without an independent local operating unit</li>
+        <li>Buyers coordinating multiple factories or suppliers in one project</li>
+        <li>Buyers who need remote visibility on timeline, quality, packing, and shipment</li>
+        <li>Buyers who keep direct commercial terms with factories but need project operations support</li>
+        <li>Buyers looking to reduce risks in schedule, quality, information, and documentation</li>
+        <li>Buyers preparing to scale volume or expand long-term projects in Vietnam</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>6-step project operation workflow</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Project scope intake:</strong> Buyer shares product, factory setup, materials, volume, timeline, quality standards, documentation requirements, and shipment plan.</p></li>
+        <li><p><strong>Define ANSLIFE JSC role:</strong> ANSLIFE JSC defines service scope such as progress coordination, independent QC, material management, packing follow-up, logistics, documentation, or project reporting.</p></li>
+        <li><p><strong>Build operation plan:</strong> ANSLIFE JSC prepares phased operating plans including production schedule, inspection schedule, packing schedule, shipment schedule, and reporting milestones.</p></li>
+        <li><p><strong>Monitor and coordinate execution:</strong> We coordinate with factories, suppliers, QC, warehouse, and logistics teams to track real-time status and update project progress.</p></li>
+        <li><p><strong>Report and resolve issues:</strong> ANSLIFE JSC reports project status, records issues, and works with all parties to implement timely corrective actions.</p></li>
+        <li><p><strong>Close-out, shipment, and data retention:</strong> After shipment, ANSLIFE JSC can support retention of approved samples, checklists, inspection data, packing standards, and operational lessons for future orders.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>What buyers receive</h2>
+      <ul>
+        <li>A dedicated project operation focal point in Vietnam</li>
+        <li>Clear phase-based deployment planning</li>
+        <li>Real progress tracking in production</li>
+        <li>Regular project status reporting</li>
+        <li>Stronger control over materials, samples, quality, and packing</li>
+        <li>Early warnings on schedule, quality, or logistics risks</li>
+        <li>Better coordination between buyer, factory, QC, warehouse, and forwarder</li>
+        <li>Structured project data retained for future orders</li>
+        <li>Improved long-term supply chain stability</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>ANSLIFE JSC operation role in Vietnam</h2>
+      <p>ANSLIFE JSC acts as the project operation unit in Vietnam, helping buyers control timeline, quality, information, documentation, and shipment without requiring constant on-site presence in Vietnam.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Submit a project operation request</h2>
+        <p>Buyers can share project information, existing factory setup, drawings, volume targets, timeline, quality standards, or shipment plan. ANSLIFE JSC will review the scope and propose a suitable operation model.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit operation request</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload project documents</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+type ExportProjectOperationDetailLanguage = Extract<
+  LanguageCode,
+  'en' | 'jp' | 'kr' | 'sv' | 'fr' | 'ru' | 'es' | 'zh'
+>;
+
+const PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_LOCALIZED: Record<
+  ExportProjectOperationDetailLanguage,
+  string
+> = {
+  en: PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN,
+  jp: PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN,
+  kr: PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN,
+  sv: PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN,
+  fr: PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN,
+  ru: PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN,
+  es: PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN,
+  zh: PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN,
 };
 
 const ABOUT_COMPANY_INFO_SECTION_VN = `
@@ -12323,6 +12508,25 @@ function getOperationsSupplyDetailHtml(
     );
   }
 
+  if (detailSlug === 'export-project-operation-management') {
+    if (language === 'vn') {
+      return `<div class="ai-content">${PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_VN}</div>`.replace(
+        /href="\/vn\/contact\//g,
+        `href="/${language}/contact/`,
+      );
+    }
+
+    const localizedSectionHtml =
+      PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_LOCALIZED[
+        language as ExportProjectOperationDetailLanguage
+      ] ?? PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN;
+
+    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+      /href="\/vn\/contact\//g,
+      `href="/${language}/contact/`,
+    );
+  }
+
   return null;
 }
 
@@ -12353,6 +12557,10 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/factory-capability-assessment"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/factory-capability-assessment"`,
+      )
+      .replace(
+        /href="\/vn\/products-solutions\/operations-supply-solutions\/export-project-operation-management"/g,
+        `href="/${language}/products-solutions/operations-supply-solutions/export-project-operation-management"`,
       )
       .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
   }
