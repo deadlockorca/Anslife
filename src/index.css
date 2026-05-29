@@ -5616,7 +5616,8 @@ a.mobile-menu-utility-link {
 #factory-capability-assessment .ai-oem-odm-difference ul,
 #export-project-operation-management .ai-oem-odm-difference ul,
 #independent-project-qc-service .ai-oem-odm-difference ul,
-#project-logistics-import-export-coordination .ai-oem-odm-difference ul {
+#project-logistics-import-export-coordination .ai-oem-odm-difference ul,
+#vietnam-storage-solution .ai-oem-odm-difference ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -5629,7 +5630,8 @@ a.mobile-menu-utility-link {
 #factory-capability-assessment .ai-oem-odm-difference ul li,
 #export-project-operation-management .ai-oem-odm-difference ul li,
 #independent-project-qc-service .ai-oem-odm-difference ul li,
-#project-logistics-import-export-coordination .ai-oem-odm-difference ul li {
+#project-logistics-import-export-coordination .ai-oem-odm-difference ul li,
+#vietnam-storage-solution .ai-oem-odm-difference ul li {
   position: relative;
   margin: 0;
   border: 1px solid #eadfd4;
@@ -5642,7 +5644,8 @@ a.mobile-menu-utility-link {
 #factory-capability-assessment .ai-oem-odm-difference ul li::before,
 #export-project-operation-management .ai-oem-odm-difference ul li::before,
 #independent-project-qc-service .ai-oem-odm-difference ul li::before,
-#project-logistics-import-export-coordination .ai-oem-odm-difference ul li::before {
+#project-logistics-import-export-coordination .ai-oem-odm-difference ul li::before,
+#vietnam-storage-solution .ai-oem-odm-difference ul li::before {
   content: '';
   position: absolute;
   left: 0.88rem;
@@ -5657,7 +5660,8 @@ a.mobile-menu-utility-link {
 #factory-capability-assessment .ai-oem-odm-checklist ul,
 #export-project-operation-management .ai-oem-odm-checklist ul,
 #independent-project-qc-service .ai-oem-odm-checklist ul,
-#project-logistics-import-export-coordination .ai-oem-odm-checklist ul {
+#project-logistics-import-export-coordination .ai-oem-odm-checklist ul,
+#vietnam-storage-solution .ai-oem-odm-checklist ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -5670,7 +5674,8 @@ a.mobile-menu-utility-link {
 #factory-capability-assessment .ai-oem-odm-checklist ul li,
 #export-project-operation-management .ai-oem-odm-checklist ul li,
 #independent-project-qc-service .ai-oem-odm-checklist ul li,
-#project-logistics-import-export-coordination .ai-oem-odm-checklist ul li {
+#project-logistics-import-export-coordination .ai-oem-odm-checklist ul li,
+#vietnam-storage-solution .ai-oem-odm-checklist ul li {
   position: relative;
   margin: 0;
   border: 1px solid #eadfd4;
@@ -5683,7 +5688,8 @@ a.mobile-menu-utility-link {
 #factory-capability-assessment .ai-oem-odm-checklist ul li::before,
 #export-project-operation-management .ai-oem-odm-checklist ul li::before,
 #independent-project-qc-service .ai-oem-odm-checklist ul li::before,
-#project-logistics-import-export-coordination .ai-oem-odm-checklist ul li::before {
+#project-logistics-import-export-coordination .ai-oem-odm-checklist ul li::before,
+#vietnam-storage-solution .ai-oem-odm-checklist ul li::before {
   content: '';
   position: absolute;
   left: 0.88rem;
@@ -5856,7 +5862,8 @@ a.mobile-menu-utility-link {
   #factory-capability-assessment .ai-oem-odm-difference ul,
   #export-project-operation-management .ai-oem-odm-difference ul,
   #independent-project-qc-service .ai-oem-odm-difference ul,
-  #project-logistics-import-export-coordination .ai-oem-odm-difference ul {
+  #project-logistics-import-export-coordination .ai-oem-odm-difference ul,
+  #vietnam-storage-solution .ai-oem-odm-difference ul {
     grid-template-columns: 1fr;
   }
 
@@ -5864,7 +5871,8 @@ a.mobile-menu-utility-link {
   #factory-capability-assessment .ai-oem-odm-checklist ul,
   #export-project-operation-management .ai-oem-odm-checklist ul,
   #independent-project-qc-service .ai-oem-odm-checklist ul,
-  #project-logistics-import-export-coordination .ai-oem-odm-checklist ul {
+  #project-logistics-import-export-coordination .ai-oem-odm-checklist ul,
+  #vietnam-storage-solution .ai-oem-odm-checklist ul {
     grid-template-columns: 1fr;
   }
 }

@@ -212,7 +212,7 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
         <span class="ai-company-overview-icon ai-icon-warehouse" aria-hidden="true"></span>
         <h3>7. Lưu kho tại Việt Nam</h3>
         <p>Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn, tiêu chuẩn đóng gói và hàng tồn dự phòng tại Việt Nam.</p>
-        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+        <a href="/vn/products-solutions/operations-supply-solutions/vietnam-storage-solution">Xem chi tiết <span>→</span></a>
       </article>
       <article class="ai-operations-card">
         <span class="ai-company-overview-icon ai-icon-hand-coin" aria-hidden="true"></span>
@@ -2788,6 +2788,205 @@ const PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_LOCALIZED: R
   ru: PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN,
   es: PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN,
   zh: PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN,
+};
+
+const PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_VN = `
+  <section id="vietnam-storage-solution" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Lưu kho tại Việt Nam</h2>
+      <p class="ai-oem-odm-subtitle">Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn và hàng tồn dự phòng tại Việt Nam để hỗ trợ sản xuất, kiểm soát chất lượng và xuất hàng định kỳ.</p>
+      <p>ANSLIFE JSC hỗ trợ buyer quốc tế lưu kho hàng hóa, vật liệu, cấu kiện, mẫu chuẩn và hàng tồn dự phòng tại Việt Nam.</p>
+      <p>Dịch vụ này giúp buyer giảm chi phí lưu kho tại các thị trường có chi phí cao như Nhật Bản, Singapore, Hong Kong, Hoa Kỳ hoặc Châu Âu, đồng thời vẫn duy trì khả năng bổ sung hàng, kiểm soát tiêu chuẩn sản phẩm và xuất hàng theo kế hoạch.</p>
+      <p>Việc lưu kho tại Việt Nam không chỉ là lưu trữ hàng hóa, mà còn là một phần của hệ thống vận hành chuỗi cung ứng, bao gồm quản lý mẫu duyệt, vật liệu, tiêu chuẩn đóng gói, checklist kiểm hàng, hàng tồn và kế hoạch xuất hàng định kỳ.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>ANSLIFE JSC có thể lưu kho những gì?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Hàng hóa hoàn thiện</h3><p>Lưu trữ sản phẩm đã hoàn thiện, đã kiểm tra hoặc chờ xuất hàng theo kế hoạch của buyer.</p></article>
+        <article><h3>2. Cấu kiện nội thất</h3><p>Lưu trữ cấu kiện, chi tiết gỗ, khung, panel, bộ phận bán thành phẩm hoặc linh kiện phục vụ sản xuất và lắp ráp.</p></article>
+        <article><h3>3. Vật liệu sản xuất</h3><p>Lưu kho các nhóm vật liệu như gỗ, plywood, MDF, veneer, foam, vải, phụ kiện, keo, sơn và vật liệu đóng gói phục vụ dự án.</p></article>
+        <article><h3>4. Mẫu sản phẩm đã duyệt</h3><p>Lưu giữ mẫu sản phẩm đã được buyer phê duyệt để làm tiêu chuẩn đối chiếu trong sản xuất, kiểm hàng và các đơn hàng lặp lại.</p></article>
+        <article><h3>5. Bảng màu và mẫu vật liệu</h3><p>Lưu bảng màu, mẫu sơn, mẫu veneer, mẫu vải, mẫu da, mẫu foam và các vật liệu tham chiếu theo tiêu chuẩn của từng buyer.</p></article>
+        <article><h3>6. Tiêu chuẩn đóng gói</h3><p>Lưu tiêu chuẩn đóng gói, carton mark, nhãn mác, mã sản phẩm, hướng dẫn lắp ráp, yêu cầu pallet hoặc tiêu chuẩn container loading.</p></article>
+        <article><h3>7. Checklist QC và dữ liệu kiểm hàng</h3><p>Lưu checklist kiểm hàng, tiêu chuẩn kiểm tra, báo cáo lỗi, hình ảnh kiểm tra và dữ liệu chất lượng phục vụ cho các đơn hàng tiếp theo.</p></article>
+        <article><h3>8. Hàng tồn dự phòng / buffer stock</h3><p>Lưu hàng tồn dự phòng tại Việt Nam để hỗ trợ xuất hàng nhanh, bổ sung hàng định kỳ hoặc duy trì nguồn hàng ổn định cho buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Dịch vụ này phù hợp với buyer nào?</h2>
+      <ul>
+        <li>Buyer muốn giảm chi phí lưu kho tại Nhật Bản, Singapore, Hong Kong, Hoa Kỳ hoặc Châu Âu</li>
+        <li>Buyer cần duy trì hàng tồn dự phòng tại Việt Nam</li>
+        <li>Buyer có đơn hàng lặp lại theo tháng, quý hoặc theo mùa</li>
+        <li>Buyer cần lưu mẫu chuẩn, bảng màu, vật liệu và tiêu chuẩn đóng gói</li>
+        <li>Buyer muốn gom hàng từ nhiều nhà máy trước khi xuất</li>
+        <li>Buyer cần kiểm hàng, đóng gói và xuất hàng theo kế hoạch định kỳ</li>
+        <li>Buyer muốn xây dựng phòng tiêu chuẩn riêng tại Việt Nam</li>
+        <li>Buyer cần duy trì chuỗi cung ứng linh hoạt mà không phải vận hành kho riêng tại Việt Nam</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Quy trình lưu kho tại Việt Nam</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Xác định nhu cầu lưu kho:</strong> Buyer cung cấp thông tin về loại hàng cần lưu, số lượng, thời gian lưu kho, tiêu chuẩn bảo quản, kế hoạch xuất hàng và yêu cầu quản lý dữ liệu.</p></li>
+        <li><p><strong>Phân loại hàng hóa / vật liệu / mẫu chuẩn:</strong> ANSLIFE JSC phân loại hàng hóa theo nhóm: hàng hoàn thiện, cấu kiện, vật liệu, mẫu chuẩn, bảng màu, tiêu chuẩn đóng gói hoặc hàng tồn dự phòng.</p></li>
+        <li><p><strong>Kiểm tra hàng trước khi nhập kho:</strong> Trước khi nhập kho, ANSLIFE JSC có thể kiểm tra số lượng, tình trạng hàng, bao bì, nhãn mác, mẫu chuẩn hoặc tiêu chuẩn liên quan.</p></li>
+        <li><p><strong>Lưu kho và quản lý dữ liệu:</strong> Hàng hóa, vật liệu, mẫu chuẩn và tài liệu liên quan được lưu trữ theo mã hàng, dự án, buyer, tiêu chuẩn và kế hoạch sử dụng hoặc xuất hàng.</p></li>
+        <li><p><strong>Cấp phát / gom hàng / chuẩn bị xuất:</strong> ANSLIFE JSC có thể hỗ trợ cấp phát vật liệu cho nhà máy, gom hàng từ nhiều nguồn, kiểm tra trước xuất, đóng gói lại nếu cần và chuẩn bị hàng theo kế hoạch.</p></li>
+        <li><p><strong>Xuất kho và báo cáo:</strong> Khi có yêu cầu, ANSLIFE JSC hỗ trợ xuất kho, cập nhật tình trạng hàng, phối hợp logistics, lưu chứng từ và báo cáo tồn kho cho buyer.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Buyer nhận được gì?</h2>
+      <ul>
+        <li>Một điểm lưu trữ và quản lý hàng hóa tại Việt Nam</li>
+        <li>Khả năng giảm chi phí lưu kho tại thị trường nhập khẩu</li>
+        <li>Hàng tồn dự phòng phục vụ xuất hàng nhanh hoặc định kỳ</li>
+        <li>Mẫu chuẩn, bảng màu và vật liệu được lưu giữ có hệ thống</li>
+        <li>Tiêu chuẩn đóng gói và checklist QC được duy trì cho đơn hàng lặp lại</li>
+        <li>Khả năng gom hàng từ nhiều nhà máy hoặc nhà cung cấp</li>
+        <li>Báo cáo tồn kho và tình trạng hàng theo từng giai đoạn</li>
+        <li>Cơ sở dữ liệu phục vụ quản lý chất lượng và xuất hàng dài hạn</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Điểm khác biệt của ANSLIFE JSC</h2>
+      <p>Điểm khác biệt của ANSLIFE JSC là hoạt động lưu kho được kết nối với toàn bộ hệ thống sản xuất, QC, vật liệu, logistics và xuất khẩu.</p>
+      <p>Điều này có nghĩa là hàng hóa không chỉ được lưu trữ, mà còn được quản lý trong cùng một hệ thống gồm mẫu chuẩn, tiêu chuẩn chất lượng, checklist kiểm hàng, kế hoạch xuất hàng và dữ liệu dự án.</p>
+      <p>Với các đối tác dài hạn, ANSLIFE JSC có thể thiết lập khu vực hoặc phòng tiêu chuẩn riêng tại Việt Nam để lưu mẫu sản phẩm, cấu kiện, vật liệu, bảng màu, tiêu chuẩn đóng gói và dữ liệu kỹ thuật của từng buyer.</p>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Vai trò lưu kho trong chuỗi cung ứng</h2>
+      <p>ANSLIFE JSC giúp buyer biến Việt Nam thành điểm lưu kho, lưu mẫu, lưu tiêu chuẩn và điều phối xuất hàng cho các dự án sản xuất và cung ứng dài hạn.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Gửi yêu cầu lưu kho tại Việt Nam</h2>
+        <p>Buyer có thể gửi thông tin về loại hàng hóa, vật liệu, mẫu chuẩn, số lượng, thời gian lưu kho, yêu cầu bảo quản hoặc kế hoạch xuất hàng. ANSLIFE JSC sẽ xem xét và đề xuất phương án lưu kho phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu lưu kho</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải danh sách hàng hóa lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN = `
+  <section id="vietnam-storage-solution" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Vietnam Storage Solution</h2>
+      <p class="ai-oem-odm-subtitle">Store finished goods, materials, components, approved references, and buffer stock in Vietnam to support production, quality control, and recurring shipment plans.</p>
+      <p>ANSLIFE JSC supports international buyers with storage of goods, materials, components, approved samples, and backup inventory in Vietnam.</p>
+      <p>This service helps buyers reduce storage costs in higher-cost markets such as Japan, Singapore, Hong Kong, the US, or Europe while maintaining replenishment flexibility, product standard control, and shipment readiness.</p>
+      <p>Storage in Vietnam is not only about warehousing goods. It is part of a broader supply chain operating system that includes approved sample management, material control, packing standards, inspection checklists, buffer stock, and scheduled shipment execution.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>What can ANSLIFE JSC store?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Finished goods</h3><p>Store completed products that are inspected or waiting for shipment according to buyer plans.</p></article>
+        <article><h3>2. Furniture components</h3><p>Store components, wood parts, frames, panels, semi-finished modules, or parts for production and assembly.</p></article>
+        <article><h3>3. Production materials</h3><p>Store material groups such as wood, plywood, MDF, veneer, foam, fabric, hardware, adhesives, coatings, and packing materials for project use.</p></article>
+        <article><h3>4. Approved product samples</h3><p>Retain buyer-approved samples as reference standards for production, inspection, and repeat orders.</p></article>
+        <article><h3>5. Color boards and material references</h3><p>Store color boards, coating samples, veneer samples, fabric samples, leather samples, foam samples, and buyer-specific reference materials.</p></article>
+        <article><h3>6. Packing standards</h3><p>Store packing standards, carton marks, labels, SKU coding, assembly instructions, pallet requirements, and container loading standards.</p></article>
+        <article><h3>7. QC checklists and inspection data</h3><p>Store inspection checklists, control standards, defect reports, inspection photos, and quality data for future orders.</p></article>
+        <article><h3>8. Buffer stock</h3><p>Store buffer stock in Vietnam to support fast dispatch, scheduled replenishment, and stable supply continuity.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Which buyers is this service for?</h2>
+      <ul>
+        <li>Buyers aiming to reduce storage costs in Japan, Singapore, Hong Kong, the US, or Europe</li>
+        <li>Buyers who need to maintain buffer stock in Vietnam</li>
+        <li>Buyers with recurring monthly, quarterly, or seasonal orders</li>
+        <li>Buyers who need to retain approved samples, color boards, materials, and packing standards</li>
+        <li>Buyers who need cargo consolidation from multiple factories before export</li>
+        <li>Buyers who need planned inspection, packing, and recurring shipment execution</li>
+        <li>Buyers who want a dedicated standards area in Vietnam</li>
+        <li>Buyers who need flexible supply chain capability without operating their own warehouse in Vietnam</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>6-step storage workflow in Vietnam</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Define storage requirements:</strong> Buyer shares cargo category, quantity, storage duration, preservation standards, shipment plan, and data management requirements.</p></li>
+        <li><p><strong>Categorize goods / materials / references:</strong> ANSLIFE JSC categorizes by finished goods, components, materials, approved samples, color/material references, packing standards, or buffer stock.</p></li>
+        <li><p><strong>Pre-storage inspection:</strong> Before inbound storage, ANSLIFE JSC can check quantity, condition, packaging, labels, approved sample status, or related standards.</p></li>
+        <li><p><strong>Storage and data management:</strong> Goods, materials, approved references, and related documents are stored and managed by SKU, project, buyer, standards, and use/dispatch plan.</p></li>
+        <li><p><strong>Allocation / consolidation / pre-shipment prep:</strong> ANSLIFE JSC can support material allocation to factories, multi-source consolidation, pre-shipment checks, repacking when required, and shipment preparation.</p></li>
+        <li><p><strong>Dispatch and reporting:</strong> Upon request, ANSLIFE JSC supports outbound release, stock status updates, logistics coordination, document retention, and inventory reporting.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>What buyers receive</h2>
+      <ul>
+        <li>A storage and inventory management point in Vietnam</li>
+        <li>Potential reduction of storage cost in import markets</li>
+        <li>Buffer stock availability for fast or scheduled shipment</li>
+        <li>Structured retention of approved samples, color boards, and materials</li>
+        <li>Packing standards and QC checklists maintained for repeat orders</li>
+        <li>Consolidation capability across multiple factories or suppliers</li>
+        <li>Inventory and cargo condition reporting by stage</li>
+        <li>A long-term data base for quality management and shipment execution</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>What makes ANSLIFE JSC different?</h2>
+      <p>ANSLIFE JSC storage operations are connected to the full system of production, QC, materials, logistics, and export execution.</p>
+      <p>This means goods are not only stored, but managed in one system with approved references, quality standards, inspection checklists, shipment plans, and project data.</p>
+      <p>For long-term partners, ANSLIFE JSC can set up dedicated standards areas in Vietnam to retain product samples, components, materials, color references, packing standards, and technical data for each buyer.</p>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Storage as part of supply chain control</h2>
+      <p>ANSLIFE JSC helps buyers turn Vietnam into a storage, reference, standards, and shipment coordination base for long-term production and supply projects.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Submit a Vietnam storage request</h2>
+        <p>Buyers can share cargo type, materials, approved references, quantity, storage duration, preservation requirements, or shipment plans. ANSLIFE JSC will review and propose a suitable storage model.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit storage request</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload inventory list</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+type VietnamStorageSolutionDetailLanguage = Extract<
+  LanguageCode,
+  'en' | 'jp' | 'kr' | 'sv' | 'fr' | 'ru' | 'es' | 'zh'
+>;
+
+const PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_LOCALIZED: Record<
+  VietnamStorageSolutionDetailLanguage,
+  string
+> = {
+  en: PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN,
+  jp: PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN,
+  kr: PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN,
+  sv: PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN,
+  fr: PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN,
+  ru: PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN,
+  es: PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN,
+  zh: PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN,
 };
 
 const ABOUT_COMPANY_INFO_SECTION_VN = `
@@ -12959,6 +13158,25 @@ function getOperationsSupplyDetailHtml(
     );
   }
 
+  if (detailSlug === 'vietnam-storage-solution') {
+    if (language === 'vn') {
+      return `<div class="ai-content">${PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_VN}</div>`.replace(
+        /href="\/vn\/contact\//g,
+        `href="/${language}/contact/`,
+      );
+    }
+
+    const localizedSectionHtml =
+      PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_LOCALIZED[
+        language as VietnamStorageSolutionDetailLanguage
+      ] ?? PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN;
+
+    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+      /href="\/vn\/contact\//g,
+      `href="/${language}/contact/`,
+    );
+  }
+
   return null;
 }
 
@@ -13001,6 +13219,10 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/project-logistics-import-export-coordination"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/project-logistics-import-export-coordination"`,
+      )
+      .replace(
+        /href="\/vn\/products-solutions\/operations-supply-solutions\/vietnam-storage-solution"/g,
+        `href="/${language}/products-solutions/operations-supply-solutions/vietnam-storage-solution"`,
       )
       .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
   }
