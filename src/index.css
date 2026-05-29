@@ -5497,6 +5497,13 @@ a.mobile-menu-utility-link {
   line-height: 1.65;
 }
 
+.ai-oem-odm-timeline li p {
+  margin: 0;
+  color: #2d2018 !important;
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
 .ai-oem-odm-subtitle {
   font-size: 1.04rem !important;
   font-weight: 700;
@@ -5603,6 +5610,35 @@ a.mobile-menu-utility-link {
 .ai-oem-odm-checklist ul {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 1.05rem;
+}
+
+#project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.68rem 0.82rem;
+}
+
+#project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul li {
+  position: relative;
+  margin: 0;
+  border: 1px solid #eadfd4;
+  border-radius: 8px;
+  background: #fff;
+  padding: 0.78rem 0.88rem 0.78rem 2rem;
+}
+
+#project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul li::before {
+  content: '';
+  position: absolute;
+  left: 0.88rem;
+  top: 1.15rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #7c4f34;
 }
 
 .ai-oem-odm-request-panel {
@@ -5761,6 +5797,10 @@ a.mobile-menu-utility-link {
   .ai-oem-odm-checklist ul {
     grid-template-columns: 1fr;
     padding-left: 1rem;
+  }
+
+  #project-supply-chain-feasibility-assessment .ai-oem-odm-difference ul {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -182,7 +182,7 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
         <span class="ai-company-overview-icon ai-icon-search" aria-hidden="true"></span>
         <h3>2. Đánh giá khả thi dự án & chuỗi cung ứng</h3>
         <p>Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng tại Việt Nam.</p>
-        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+        <a href="/vn/products-solutions/operations-supply-solutions/project-supply-chain-feasibility-assessment">Xem chi tiết <span>→</span></a>
       </article>
       <article class="ai-operations-card">
         <span class="ai-company-overview-icon ai-icon-factory" aria-hidden="true"></span>
@@ -1252,6 +1252,772 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_LOCALIZED: Record<
   ru: PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_RU,
   es: PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ES,
   zh: PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ZH,
+};
+
+const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_VN = `
+  <section id="project-supply-chain-feasibility-assessment" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Đánh giá khả thi dự án & chuỗi cung ứng</h2>
+      <p class="ai-oem-odm-subtitle">Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng trước khi triển khai dự án tại Việt Nam.</p>
+      <p>ANSLIFE JSC hỗ trợ buyer quốc tế đánh giá tính khả thi của các dự án sản xuất, vật liệu, cấu kiện, lưu kho và xuất khẩu tại Việt Nam trước khi triển khai thực tế.</p>
+      <p>Một dự án khi đưa vào Việt Nam không chỉ cần xem xét sản phẩm có thể sản xuất được hay không, mà còn cần đánh giá toàn bộ các yếu tố liên quan như quy cách sản phẩm, tiêu chuẩn sản phẩm, tiêu chuẩn vật liệu, năng lực nhà máy, sản lượng, thời gian giao hàng, mức đầu tư, logistics và mô hình chuỗi cung ứng.</p>
+      <p>Từ các dữ liệu này, ANSLIFE JSC giúp buyer xác định dự án có phù hợp để triển khai tại Việt Nam hay không, cần điều chỉnh những điểm nào và mô hình vận hành nào là phù hợp nhất.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>Dự án được đánh giá dựa trên những yếu tố nào?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Quy cách sản phẩm</h3><p>ANSLIFE JSC đánh giá kích thước, kết cấu, công năng, bản vẽ kỹ thuật, mẫu thật, hình ảnh tham khảo và quy cách đóng gói để xác định sản phẩm có phù hợp với năng lực sản xuất tại Việt Nam hay không.</p></article>
+        <article><h3>2. Tiêu chuẩn sản phẩm</h3><p>Chúng tôi xem xét các tiêu chuẩn về cơ học, vật lý, độ bền, độ ổn định, màu sắc, độ ẩm, hoàn thiện bề mặt, đóng gói và yêu cầu kiểm hàng theo từng thị trường.</p></article>
+        <article><h3>3. Tiêu chuẩn vật liệu cấu tạo</h3><p>ANSLIFE JSC đánh giá vật liệu chính và vật liệu phụ của sản phẩm, bao gồm gỗ tự nhiên, plywood, MDF, veneer, foam, vải, da, phụ kiện, keo, sơn và vật liệu đóng gói.</p></article>
+        <article><h3>4. Tiêu chuẩn nhà máy thực hiện</h3><p>Chúng tôi đánh giá loại nhà máy phù hợp để thực hiện sản phẩm, dựa trên máy móc, nhân sự, kinh nghiệm sản xuất, năng lực xử lý vật liệu, công suất và khả năng đáp ứng tiêu chuẩn của buyer.</p></article>
+        <article><h3>5. Sản lượng của dự án</h3><p>ANSLIFE JSC xem xét sản lượng mẫu, đơn hàng đầu tiên, sản lượng theo tháng, theo quý hoặc theo năm, số lượng mã sản phẩm và khả năng lặp lại đơn hàng trong dài hạn.</p></article>
+        <article><h3>6. Thời gian giao hàng</h3><p>Chúng tôi phân tích thời gian cần thiết cho phát triển mẫu, duyệt mẫu, chuẩn bị vật liệu, sản xuất, kiểm soát chất lượng, đóng gói, xuất hàng và vận chuyển đến thị trường đích.</p></article>
+        <article><h3>7. Mức đầu tư của dự án</h3><p>ANSLIFE JSC xem xét mức giá mục tiêu, ngân sách phát triển mẫu, chi phí vật liệu, chi phí sản xuất, chi phí kiểm soát chất lượng, logistics, lưu kho và mức đầu tư cho đơn hàng đầu tiên hoặc hợp tác dài hạn.</p></article>
+        <article><h3>8. Chuỗi cung ứng & logistics</h3><p>Chúng tôi đánh giá nguồn vật liệu, nguồn linh kiện, khả năng nhập khẩu vật tư phục vụ dự án, lưu kho tại Việt Nam, gom hàng, chứng từ, forwarder, điều kiện thương mại và phương án xuất hàng quốc tế.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>ANSLIFE JSC đánh giá điều gì?</h2>
+      <ul>
+        <li>Dự án có phù hợp với năng lực sản xuất tại Việt Nam hay không</li>
+        <li>Sản phẩm cần điều chỉnh gì về kết cấu, vật liệu hoặc tiêu chuẩn</li>
+        <li>Nguồn vật liệu tại Việt Nam có đáp ứng được không</li>
+        <li>Nhà máy nào phù hợp với sản phẩm và sản lượng yêu cầu</li>
+        <li>Thời gian giao hàng có thực tế không</li>
+        <li>Mức đầu tư có phù hợp với mục tiêu dự án không</li>
+        <li>Rủi ro chính nằm ở sản phẩm, vật liệu, nhà máy, chất lượng, logistics hay chi phí</li>
+        <li>Mô hình triển khai nào là phù hợp nhất cho giai đoạn đầu và dài hạn</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Quy trình đánh giá khả thi</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Buyer gửi dữ liệu dự án:</strong> Buyer gửi bản vẽ, mẫu sản phẩm, hình ảnh tham khảo, nhóm sản phẩm, vật liệu mong muốn, sản lượng dự kiến, thị trường xuất khẩu, mức giá mục tiêu và thời gian giao hàng mong muốn.</p></li>
+        <li><p><strong>ANSLIFE JSC phân tích sản phẩm và tiêu chuẩn:</strong> ANSLIFE JSC xem xét quy cách sản phẩm, tiêu chuẩn kỹ thuật, tiêu chuẩn vật liệu, tiêu chuẩn đóng gói và yêu cầu kiểm hàng theo từng thị trường.</p></li>
+        <li><p><strong>Đánh giá vật liệu, nhà máy và sản lượng:</strong> Chúng tôi đánh giá chuỗi cung ứng vật liệu, nhóm nhà máy phù hợp, công suất thực tế, sản lượng yêu cầu và khả năng duy trì đơn hàng trong dài hạn.</p></li>
+        <li><p><strong>Đánh giá thời gian, chi phí và logistics:</strong> ANSLIFE JSC phân tích thời gian phát triển mẫu, sản xuất, kiểm hàng, đóng gói, lưu kho, xuất hàng, chi phí vận hành và phương án logistics nhập khẩu hoặc xuất khẩu.</p></li>
+        <li><p><strong>Đề xuất mô hình triển khai:</strong> Sau quá trình đánh giá, ANSLIFE JSC đề xuất mô hình triển khai phù hợp, có thể bao gồm phát triển mẫu, thẩm định nhà máy, sản xuất thử, QC độc lập, lưu kho, logistics, tài trợ thương mại hoặc vận hành dự án theo từng giai đoạn.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Kết quả buyer nhận được</h2>
+      <ul>
+        <li>Nhận định dự án có phù hợp triển khai tại Việt Nam hay không</li>
+        <li>Các điểm cần điều chỉnh trước khi triển khai</li>
+        <li>Đề xuất vật liệu và nguồn cung phù hợp</li>
+        <li>Đề xuất nhóm nhà máy hoặc mô hình sản xuất phù hợp</li>
+        <li>Nhận diện rủi ro chính của dự án</li>
+        <li>Dự kiến timeline triển khai</li>
+        <li>Đề xuất mô hình kiểm soát chất lượng</li>
+        <li>Đề xuất logistics, lưu kho và xuất hàng</li>
+        <li>Đánh giá mức độ hiệu quả của dự án tại Việt Nam</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Khi nào dự án thực sự phù hợp với Việt Nam?</h2>
+      <p>Một dự án chỉ thực sự phù hợp với Việt Nam khi quy cách sản phẩm, tiêu chuẩn chất lượng, năng lực nhà máy, nguồn cung vật liệu, sản lượng, thời gian giao hàng và mức đầu tư có thể vận hành cùng nhau như một hệ thống có thể kiểm soát.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Gửi yêu cầu đánh giá dự án</h2>
+        <p>Buyer có thể gửi bản vẽ, mẫu sản phẩm, hình ảnh tham khảo, yêu cầu vật liệu, sản lượng dự kiến, thị trường xuất khẩu, mức giá mục tiêu hoặc kế hoạch triển khai dự án. ANSLIFE JSC sẽ xem xét và đề xuất hướng đánh giá phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu đánh giá</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_EN = `
+  <section id="project-supply-chain-feasibility-assessment" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Project & Supply Chain Feasibility Assessment</h2>
+      <p class="ai-oem-odm-subtitle">Assess product fit, materials, factory capability, capacity, timeline, investment, and supply chain readiness before launching your project in Vietnam.</p>
+      <p>ANSLIFE JSC supports international buyers with pre-launch feasibility assessment for manufacturing, materials, components, warehousing, and export projects in Vietnam.</p>
+      <p>Before moving a project into Vietnam, the key question is not only whether a product can be manufactured, but whether product specifications, quality standards, material standards, factory capability, capacity, lead time, investment level, logistics, and supply chain model can work together.</p>
+      <p>Based on these inputs, ANSLIFE JSC helps buyers decide whether the project is feasible in Vietnam, what needs to be adjusted, and which operating model is most suitable for launch and scale.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>What factors are assessed?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Product specifications</h3><p>We assess dimensions, structure, functionality, technical drawings, physical samples, reference images, and packing requirements to confirm production fit in Vietnam.</p></article>
+        <article><h3>2. Product standards</h3><p>We review mechanical and physical standards, durability, stability, color, moisture, surface finish, packing, and inspection requirements by target market.</p></article>
+        <article><h3>3. Material standards</h3><p>ANSLIFE JSC evaluates primary and secondary materials including solid wood, plywood, MDF, veneer, foam, fabric, leather, hardware, adhesives, coating, and packing materials.</p></article>
+        <article><h3>4. Factory fit</h3><p>We identify suitable factory profiles based on machinery, workforce, production experience, material handling capability, output capacity, and compliance with buyer standards.</p></article>
+        <article><h3>5. Project volume</h3><p>We review sample volume, first order quantity, monthly/quarterly/annual plans, SKU count, and long-term repeat-order potential.</p></article>
+        <article><h3>6. Lead time</h3><p>We analyze timing for sample development, approvals, material preparation, production, quality control, packing, shipment, and destination transit.</p></article>
+        <article><h3>7. Investment level</h3><p>ANSLIFE JSC reviews target price, sample development budget, material cost, production cost, QC cost, logistics, warehousing, and investment for first order or long-term cooperation.</p></article>
+        <article><h3>8. Supply chain & logistics</h3><p>We evaluate material sources, component sources, import feasibility for project inputs, warehousing in Vietnam, cargo consolidation, documentation, forwarder options, trade terms, and export plans.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>What does ANSLIFE JSC conclude from the assessment?</h2>
+      <ul>
+        <li>Whether the project fits Vietnam's production capability</li>
+        <li>What should be adjusted in structure, materials, or standards</li>
+        <li>Whether local material sources can meet project requirements</li>
+        <li>Which factory group best matches product type and required volume</li>
+        <li>Whether the requested lead time is realistic</li>
+        <li>Whether the investment level aligns with project objectives</li>
+        <li>Where key risks sit: product, materials, factory, quality, logistics, or cost</li>
+        <li>Which implementation model is most suitable for initial phase and long-term operation</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>5-step feasibility workflow</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Buyer submits project inputs:</strong> drawings, product samples, references, product group, target materials, planned volume, export market, target price, and expected delivery window.</p></li>
+        <li><p><strong>ANSLIFE JSC analyzes product and standards:</strong> product specs, technical requirements, material standards, packing standards, and market-specific inspection requirements.</p></li>
+        <li><p><strong>Assessment of materials, factories, and capacity:</strong> material supply chain, suitable factory groups, real capacity, required output, and long-term order sustainability.</p></li>
+        <li><p><strong>Assessment of timeline, cost, and logistics:</strong> sample timeline, production, inspections, packing, warehousing, shipment, operating cost, and import/export logistics options.</p></li>
+        <li><p><strong>Implementation model proposal:</strong> ANSLIFE JSC proposes a suitable model that may include sample development, factory due diligence, pilot production, independent QC, warehousing, logistics, trade finance, and phased project operations.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>What buyers receive</h2>
+      <ul>
+        <li>Clear feasibility view for launching in Vietnam</li>
+        <li>Required adjustments before execution</li>
+        <li>Recommended materials and sourcing options</li>
+        <li>Recommended factory groups or production model</li>
+        <li>Identification of key project risks</li>
+        <li>Expected implementation timeline</li>
+        <li>Recommended quality control model</li>
+        <li>Recommended logistics, warehousing, and shipping setup</li>
+        <li>Overall project efficiency outlook in Vietnam</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>When is a project truly ready for Vietnam?</h2>
+      <p>A project is truly suitable for Vietnam only when product specifications, quality standards, factory capability, material supply, volume, lead time, and investment can operate together as one controllable system.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Submit a project assessment request</h2>
+        <p>Buyers can send drawings, product samples, reference images, material requirements, expected volume, export market, target price, or implementation plan. ANSLIFE JSC will review and propose a suitable assessment direction.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit assessment request</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload drawing</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_JP = `
+  <section id="project-supply-chain-feasibility-assessment" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>プロジェクト・サプライチェーン実現性評価</h2>
+      <p class="ai-oem-odm-subtitle">ベトナムでの立ち上げ前に、製品適合性、材料、工場能力、生産量、納期、投資、サプライチェーン体制を評価します。</p>
+      <p>ANSLIFE JSCは、ベトナムでの製造、材料、部材、保管、輸出プロジェクトに対して、海外バイヤー向けの事前実現性評価を提供します。</p>
+      <p>プロジェクトをベトナムへ移管する際は、製造可否だけでなく、製品仕様、品質基準、材料基準、工場能力、生産量、リードタイム、投資水準、物流、供給モデルが一体として機能するかを確認する必要があります。</p>
+      <p>これらの情報をもとに、ANSLIFE JSCは、ベトナムでの実行可否、調整が必要な項目、初期導入と拡張に最適な運用モデルを明確化します。</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>評価する主な要素</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. 製品仕様</h3><p>寸法、構造、機能、技術図面、実物サンプル、参考画像、梱包要件を確認し、ベトナムでの生産適合性を評価します。</p></article>
+        <article><h3>2. 製品基準</h3><p>力学・物性基準、耐久性、安定性、色、含水率、表面仕上げ、梱包、仕向地ごとの検品要件を確認します。</p></article>
+        <article><h3>3. 材料基準</h3><p>無垢材、合板、MDF、ベニヤ、フォーム、生地、レザー、金具、接着剤、塗装、梱包材を含む主材・副資材を評価します。</p></article>
+        <article><h3>4. 工場適合性</h3><p>設備、人員、実績、材料処理能力、生産能力、バイヤー基準への適合性に基づき、適切な工場タイプを選定します。</p></article>
+        <article><h3>5. プロジェクト生産量</h3><p>試作数量、初回発注、月次・四半期・年次計画、SKU数、長期リピート可能性を確認します。</p></article>
+        <article><h3>6. 納期</h3><p>試作、承認、材料準備、生産、品質管理、梱包、出荷、目的地までの輸送に必要な期間を分析します。</p></article>
+        <article><h3>7. 投資水準</h3><p>目標価格、試作予算、材料費、製造費、QC費用、物流費、倉庫費、初回または長期協業に必要な投資を確認します。</p></article>
+        <article><h3>8. サプライチェーン・物流</h3><p>材料ソース、部材ソース、資材輸入可否、ベトナム倉庫、混載、書類、フォワーダー、取引条件、輸出計画を評価します。</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>ANSLIFE JSCが提示する評価結果</h2>
+      <ul>
+        <li>プロジェクトがベトナムの生産能力に適合するか</li>
+        <li>構造・材料・基準で調整が必要な点</li>
+        <li>ベトナム国内の材料調達で要件を満たせるか</li>
+        <li>製品と必要数量に適した工場グループ</li>
+        <li>要求納期が現実的か</li>
+        <li>投資水準がプロジェクト目標に合致するか</li>
+        <li>主要リスクの所在（製品・材料・工場・品質・物流・コスト）</li>
+        <li>初期導入と長期運用に最適な実行モデル</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>実現性評価の5ステップ</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>バイヤーが情報提出:</strong> 図面、サンプル、参考資料、製品群、希望材料、予定数量、輸出市場、目標価格、希望納期を提出します。</p></li>
+        <li><p><strong>製品・基準の分析:</strong> 製品仕様、技術基準、材料基準、梱包基準、市場別検品要件を確認します。</p></li>
+        <li><p><strong>材料・工場・生産量評価:</strong> 材料供給網、適切な工場群、実稼働能力、要求数量、長期継続可能性を評価します。</p></li>
+        <li><p><strong>納期・コスト・物流評価:</strong> 試作、生産、検品、梱包、保管、出荷、運用コスト、輸出入物流オプションを分析します。</p></li>
+        <li><p><strong>実行モデル提案:</strong> 試作開発、工場デューデリジェンス、試験生産、独立QC、倉庫、物流、貿易金融、段階運用を組み合わせた提案を行います。</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>バイヤーが受け取る成果</h2>
+      <ul>
+        <li>ベトナム展開可否の明確な判断</li>
+        <li>実行前に必要な調整ポイント</li>
+        <li>推奨材料と調達案</li>
+        <li>推奨工場グループまたは生産モデル</li>
+        <li>主要リスクの特定</li>
+        <li>想定導入スケジュール</li>
+        <li>推奨品質管理モデル</li>
+        <li>推奨物流・保管・出荷体制</li>
+        <li>ベトナムでの総合効率見通し</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>ベトナム展開に本当に適した状態とは</h2>
+      <p>製品仕様、品質基準、工場能力、材料供給、生産量、納期、投資が、ひとつの制御可能なシステムとして機能するとき、プロジェクトは初めてベトナムに適合していると言えます。</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>プロジェクト評価を依頼する</h2>
+        <p>図面、サンプル、参考画像、材料要件、予定数量、輸出市場、目標価格、実行計画を共有してください。ANSLIFE JSCが評価方針を提案します。</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">評価依頼を送信</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">図面をアップロード</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">ANSLIFE JSCに連絡</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_KR = `
+  <section id="project-supply-chain-feasibility-assessment" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>프로젝트 및 공급망 타당성 평가</h2>
+      <p class="ai-oem-odm-subtitle">베트남 프로젝트 착수 전, 제품 적합성, 자재, 공장 역량, 물량, 일정, 투자, 공급망 준비도를 평가합니다.</p>
+      <p>ANSLIFE JSC는 베트남 내 제조, 자재, 부품, 창고, 수출 프로젝트를 대상으로 국제 바이어의 사전 타당성 평가를 지원합니다.</p>
+      <p>프로젝트를 베트남으로 이전할 때는 단순 생산 가능 여부뿐 아니라 제품 사양, 품질 기준, 자재 기준, 공장 역량, 물량, 리드타임, 투자 수준, 물류, 공급망 모델이 함께 작동하는지 확인해야 합니다.</p>
+      <p>이 데이터를 기반으로 ANSLIFE JSC는 베트남 실행 가능성, 조정 필요 항목, 초기 및 장기 운영에 적합한 모델을 제안합니다.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>평가 핵심 항목</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. 제품 사양</h3><p>치수, 구조, 기능, 기술 도면, 실물 샘플, 참고 이미지, 포장 요구를 검토해 베트남 생산 적합성을 확인합니다.</p></article>
+        <article><h3>2. 제품 기준</h3><p>기계·물성 기준, 내구성, 안정성, 색상, 함수율, 표면 마감, 포장, 시장별 검사 요구를 검토합니다.</p></article>
+        <article><h3>3. 자재 기준</h3><p>원목, 합판, MDF, 베니어, 폼, 원단, 가죽, 하드웨어, 접착제, 도장, 포장재 등 주요·보조 자재를 평가합니다.</p></article>
+        <article><h3>4. 공장 적합성</h3><p>설비, 인력, 생산 경험, 자재 처리 역량, 생산 능력, 바이어 기준 대응 가능성을 기준으로 적합 공장을 선정합니다.</p></article>
+        <article><h3>5. 프로젝트 물량</h3><p>샘플 물량, 초도 발주, 월·분기·연간 계획, SKU 수, 장기 반복 발주 가능성을 확인합니다.</p></article>
+        <article><h3>6. 납기</h3><p>샘플 개발, 승인, 자재 준비, 생산, 품질관리, 포장, 출하, 목적지 운송까지의 리드타임을 분석합니다.</p></article>
+        <article><h3>7. 투자 수준</h3><p>목표 단가, 샘플 개발 예산, 자재비, 생산비, QC비용, 물류비, 창고비, 초도·장기 협력 투자 수준을 검토합니다.</p></article>
+        <article><h3>8. 공급망 및 물류</h3><p>자재/부품 소싱, 프로젝트 자재 수입 가능성, 베트남 창고, 혼재, 서류, 포워더, 거래조건, 수출 계획을 평가합니다.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>ANSLIFE JSC 평가 결과</h2>
+      <ul>
+        <li>프로젝트가 베트남 생산 역량에 적합한지 여부</li>
+        <li>구조, 자재, 기준에서 조정이 필요한 항목</li>
+        <li>베트남 내 자재 공급으로 요구사항 충족 가능 여부</li>
+        <li>제품과 요구 물량에 맞는 공장 그룹</li>
+        <li>요청 납기가 현실적인지 여부</li>
+        <li>투자 수준이 프로젝트 목표와 부합하는지 여부</li>
+        <li>핵심 리스크 위치(제품, 자재, 공장, 품질, 물류, 비용)</li>
+        <li>초기 단계와 장기 운영에 가장 적합한 실행 모델</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>5단계 타당성 평가 프로세스</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>바이어 데이터 제출:</strong> 도면, 샘플, 참고자료, 제품군, 목표 자재, 예상 물량, 수출 시장, 목표 단가, 희망 납기를 제출합니다.</p></li>
+        <li><p><strong>제품·기준 분석:</strong> 제품 사양, 기술 기준, 자재 기준, 포장 기준, 시장별 검사 요건을 분석합니다.</p></li>
+        <li><p><strong>자재·공장·물량 평가:</strong> 자재 공급망, 적합 공장군, 실제 생산능력, 요구 물량, 장기 반복 발주 가능성을 평가합니다.</p></li>
+        <li><p><strong>일정·비용·물류 평가:</strong> 샘플, 생산, 검사, 포장, 보관, 출하 일정과 운영비 및 수출입 물류 옵션을 분석합니다.</p></li>
+        <li><p><strong>실행 모델 제안:</strong> 샘플 개발, 공장 실사, 파일럿 생산, 독립 QC, 창고, 물류, 무역금융, 단계별 운영을 포함한 모델을 제안합니다.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>바이어가 받는 결과</h2>
+      <ul>
+        <li>베트남 실행 가능성에 대한 명확한 판단</li>
+        <li>실행 전 조정 필요 항목</li>
+        <li>권장 자재 및 소싱 방안</li>
+        <li>권장 공장 그룹 또는 생산 모델</li>
+        <li>핵심 리스크 식별</li>
+        <li>예상 실행 타임라인</li>
+        <li>권장 품질관리 모델</li>
+        <li>권장 물류·창고·출하 체계</li>
+        <li>베트남 내 프로젝트 효율성 전망</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>베트남에 진입할 준비가 된 프로젝트란?</h2>
+      <p>제품 사양, 품질 기준, 공장 역량, 자재 공급, 물량, 납기, 투자 수준이 하나의 통제 가능한 시스템으로 함께 작동할 때 프로젝트는 비로소 베트남에 적합합니다.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>프로젝트 평가 요청 보내기</h2>
+        <p>도면, 샘플, 참고 이미지, 자재 요구, 예상 물량, 수출 시장, 목표 단가 또는 실행 계획을 보내주시면 ANSLIFE JSC가 적합한 평가 방향을 제안합니다.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">평가 요청 보내기</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">도면 업로드</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">ANSLIFE JSC 문의</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_SV = `
+  <section id="project-supply-chain-feasibility-assessment" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Bedömning av projekt- och leveranskedjans genomförbarhet</h2>
+      <p class="ai-oem-odm-subtitle">Bedöm produktanpassning, material, fabrikskapacitet, volym, ledtid, investering och leveranskedjans beredskap innan projektstart i Vietnam.</p>
+      <p>ANSLIFE JSC stödjer internationella köpare med förhandsbedömning av genomförbarhet för tillverkning, material, komponenter, lager och exportprojekt i Vietnam.</p>
+      <p>Inför etablering i Vietnam räcker det inte att kontrollera om produkten går att tillverka. Specifikationer, kvalitetskrav, materialstandarder, fabrikskapacitet, volym, ledtid, investeringsnivå, logistik och försörjningsmodell måste fungera tillsammans.</p>
+      <p>Utifrån dessa data hjälper ANSLIFE JSC köparen att avgöra om projektet är genomförbart i Vietnam, vad som behöver justeras och vilken modell som är bäst för start och långsiktig drift.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>Vilka faktorer bedöms?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Produktspecifikation</h3><p>Vi bedömer mått, konstruktion, funktion, ritningar, fysiska prover, referensbilder och förpackningskrav för att bekräfta produktionsanpassning i Vietnam.</p></article>
+        <article><h3>2. Produktstandarder</h3><p>Vi granskar mekaniska/fysiska krav, hållbarhet, stabilitet, färg, fukthalt, ytfinish, förpackning och marknadsspecifika inspektionskrav.</p></article>
+        <article><h3>3. Materialstandarder</h3><p>ANSLIFE JSC utvärderar huvud- och hjälpmaterial: massivt trä, plywood, MDF, faner, skum, tyg, läder, beslag, lim, coating och emballage.</p></article>
+        <article><h3>4. Fabriksanpassning</h3><p>Vi identifierar lämpliga fabriker utifrån maskinpark, personal, erfarenhet, materialhantering, kapacitet och förmåga att uppfylla köparens standarder.</p></article>
+        <article><h3>5. Projektvolym</h3><p>Vi granskar provvolym, första order, månads-/kvartals-/årsvolym, antal SKU och potential för återkommande order.</p></article>
+        <article><h3>6. Ledtid</h3><p>Vi analyserar tid för provutveckling, godkännande, materialförberedelse, produktion, QC, packning, leverans och transport till slutmarknad.</p></article>
+        <article><h3>7. Investeringsnivå</h3><p>ANSLIFE JSC granskar målpris, budget för provutveckling, materialkostnad, produktionskostnad, QC-kostnad, logistik, lager och investering för första eller långsiktigt samarbete.</p></article>
+        <article><h3>8. Leveranskedja & logistik</h3><p>Vi bedömer materialkällor, komponentkällor, importmöjlighet, lager i Vietnam, samlastning, dokumentation, speditörer, handelsvillkor och exportupplägg.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Vad levererar ANSLIFE JSC i bedömningen?</h2>
+      <ul>
+        <li>Om projektet passar Vietnams produktionskapacitet</li>
+        <li>Vilka justeringar som krävs i struktur, material eller standard</li>
+        <li>Om lokala materialkällor kan möta kraven</li>
+        <li>Vilken fabriksgrupp som bäst matchar produkt och volym</li>
+        <li>Om önskad ledtid är realistisk</li>
+        <li>Om investeringsnivån stödjer projektmålen</li>
+        <li>Var huvudrisker finns: produkt, material, fabrik, kvalitet, logistik eller kostnad</li>
+        <li>Vilken implementeringsmodell som passar bäst kort och lång sikt</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>5-stegs arbetsflöde</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Köparen skickar underlag:</strong> ritningar, prover, referenser, produktgrupp, målmaterial, planerad volym, exportmarknad, målpris och önskad leveranstid.</p></li>
+        <li><p><strong>Analys av produkt och standarder:</strong> produktspecifikationer, tekniska krav, materialstandarder, packningsstandarder och marknadsspecifika kontroller.</p></li>
+        <li><p><strong>Bedömning av material, fabriker och kapacitet:</strong> materialförsörjning, lämpliga fabriksgrupper, faktisk kapacitet och långsiktig orderhållbarhet.</p></li>
+        <li><p><strong>Bedömning av tid, kostnad och logistik:</strong> tidsplan för prov, produktion, inspektion, packning, lagring, leverans samt driftkostnad och import-/exportalternativ.</p></li>
+        <li><p><strong>Förslag på implementeringsmodell:</strong> kan inkludera provutveckling, fabriksgranskning, pilotproduktion, oberoende QC, lager, logistik, handelsfinansiering och etappdrift.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Vad köparen får</h2>
+      <ul>
+        <li>Tydlig genomförbarhetsbild för Vietnam</li>
+        <li>Justeringspunkter före genomförande</li>
+        <li>Rekommenderade material och sourcingalternativ</li>
+        <li>Rekommenderade fabriksgrupper eller produktionsmodell</li>
+        <li>Identifiering av nyckelrisker</li>
+        <li>Förväntad implementeringstidsplan</li>
+        <li>Rekommenderad kvalitetskontrollmodell</li>
+        <li>Rekommenderad logistik-, lager- och leveranslösning</li>
+        <li>Övergripande effektivitetsbedömning i Vietnam</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>När är ett projekt redo för Vietnam?</h2>
+      <p>Ett projekt är redo först när produktspecifikation, kvalitetskrav, fabrikskapacitet, materialförsörjning, volym, ledtid och investering fungerar tillsammans som ett kontrollerbart system.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Skicka en projektbedömningsförfrågan</h2>
+        <p>Köpare kan skicka ritningar, prover, referensbilder, materialkrav, förväntad volym, exportmarknad, målpris eller implementeringsplan. ANSLIFE JSC återkommer med lämplig bedömningsinriktning.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Skicka bedömningsförfrågan</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Ladda upp ritning</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Kontakta ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_FR = `
+  <section id="project-supply-chain-feasibility-assessment" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Évaluation de faisabilité projet & supply chain</h2>
+      <p class="ai-oem-odm-subtitle">Évaluer l’adéquation produit, matériaux, capacité usine, volume, délai, investissement et chaîne logistique avant lancement au Vietnam.</p>
+      <p>ANSLIFE JSC accompagne les acheteurs internationaux avec une évaluation de faisabilité en amont pour les projets de fabrication, matériaux, composants, stockage et export au Vietnam.</p>
+      <p>Avant de lancer un projet au Vietnam, la question n’est pas seulement la fabricabilité. Les spécifications produit, standards qualité, standards matière, capacité usine, volume, délai, niveau d’investissement, logistique et modèle supply chain doivent fonctionner ensemble.</p>
+      <p>À partir de ces données, ANSLIFE JSC aide l’acheteur à décider si le projet est faisable au Vietnam, quels ajustements sont nécessaires et quel modèle opérationnel convient au démarrage et au long terme.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>Facteurs évalués</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Spécifications produit</h3><p>Nous évaluons dimensions, structure, fonctionnalité, plans techniques, échantillons physiques, références visuelles et exigences d’emballage pour confirmer l’adéquation production.</p></article>
+        <article><h3>2. Standards produit</h3><p>Nous examinons normes mécaniques et physiques, durabilité, stabilité, couleur, humidité, finition, emballage et exigences de contrôle par marché.</p></article>
+        <article><h3>3. Standards matière</h3><p>ANSLIFE JSC évalue matières principales et secondaires: bois massif, plywood, MDF, placage, mousse, tissu, cuir, quincaillerie, colle, peinture et emballage.</p></article>
+        <article><h3>4. Adéquation usine</h3><p>Nous identifions les usines adaptées selon équipements, main-d’œuvre, expérience, capacité de traitement matière, capacité de sortie et conformité aux standards de l’acheteur.</p></article>
+        <article><h3>5. Volume projet</h3><p>Nous analysons volume échantillon, première commande, plans mensuels/trimestriels/annuels, nombre de SKU et potentiel de récurrence.</p></article>
+        <article><h3>6. Délai</h3><p>Nous analysons les délais pour développement échantillon, validation, préparation matière, production, QC, emballage, expédition et transit marché final.</p></article>
+        <article><h3>7. Niveau d’investissement</h3><p>ANSLIFE JSC examine prix cible, budget échantillon, coût matière, coût production, coût QC, logistique, stockage et investissement pour première commande ou partenariat long terme.</p></article>
+        <article><h3>8. Supply chain & logistique</h3><p>Nous évaluons sources matière/composants, faisabilité import, stockage au Vietnam, consolidation, documentation, transitaires, incoterms et plan d’export.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Ce qu’ANSLIFE JSC conclut</h2>
+      <ul>
+        <li>Compatibilité du projet avec la capacité de production au Vietnam</li>
+        <li>Ajustements nécessaires sur structure, matière ou standards</li>
+        <li>Capacité d’approvisionnement local à répondre au besoin</li>
+        <li>Groupe d’usines le plus adapté au produit et au volume</li>
+        <li>Réalisme du délai demandé</li>
+        <li>Alignement du niveau d’investissement avec les objectifs</li>
+        <li>Localisation des risques clés: produit, matière, usine, qualité, logistique, coût</li>
+        <li>Modèle de déploiement optimal pour phase initiale et long terme</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Processus en 5 étapes</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Envoi des données projet:</strong> plans, échantillons, références, famille produit, matières cibles, volume prévu, marché export, prix cible et délai souhaité.</p></li>
+        <li><p><strong>Analyse produit et standards:</strong> spécifications produit, exigences techniques, standards matière, standards d’emballage et exigences de contrôle par marché.</p></li>
+        <li><p><strong>Évaluation matière, usines, capacité:</strong> chaîne d’approvisionnement matière, groupes d’usines, capacité réelle, volume requis et soutenabilité long terme.</p></li>
+        <li><p><strong>Évaluation délai, coût, logistique:</strong> planning échantillon/production/inspection/emballage/stockage/expédition et options logistiques import-export.</p></li>
+        <li><p><strong>Proposition de modèle d’exécution:</strong> pouvant inclure développement échantillon, audit usine, pilote, QC indépendant, stockage, logistique, financement trade et déploiement par phases.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Livrables pour l’acheteur</h2>
+      <ul>
+        <li>Vision claire de la faisabilité au Vietnam</li>
+        <li>Points d’ajustement avant exécution</li>
+        <li>Recommandations matière et sourcing</li>
+        <li>Recommandations usines ou modèle de production</li>
+        <li>Identification des risques majeurs</li>
+        <li>Timeline de déploiement prévisionnelle</li>
+        <li>Recommandation de modèle QC</li>
+        <li>Recommandation logistique, stockage et expédition</li>
+        <li>Perspective d’efficacité globale du projet au Vietnam</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Quand un projet est-il vraiment prêt pour le Vietnam ?</h2>
+      <p>Un projet est réellement adapté au Vietnam lorsque spécifications produit, standards qualité, capacité usine, approvisionnement matière, volume, délai et investissement fonctionnent ensemble comme un système maîtrisable.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Envoyer une demande d’évaluation projet</h2>
+        <p>L’acheteur peut envoyer plans, échantillons, références, exigences matière, volume prévu, marché export, prix cible ou plan de déploiement. ANSLIFE JSC proposera une approche d’évaluation adaptée.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Envoyer la demande</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Téléverser un plan</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contacter ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_RU = `
+  <section id="project-supply-chain-feasibility-assessment" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Оценка реализуемости проекта и цепочки поставок</h2>
+      <p class="ai-oem-odm-subtitle">До запуска проекта во Вьетнаме оцениваем продукт, материалы, возможности фабрик, объем, сроки, инвестиции и готовность цепочки поставок.</p>
+      <p>ANSLIFE JSC помогает международным покупателям с предварительной оценкой реализуемости проектов производства, материалов, компонентов, складирования и экспорта во Вьетнаме.</p>
+      <p>Перед запуском во Вьетнаме важно не только понять, можно ли произвести продукт, но и проверить, как вместе работают спецификация, стандарты качества и материалов, возможности фабрики, объем, сроки, бюджет, логистика и модель supply chain.</p>
+      <p>На основе этих данных ANSLIFE JSC определяет целесообразность проекта во Вьетнаме, необходимые корректировки и оптимальную модель запуска и долгосрочной работы.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>Ключевые факторы оценки</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Спецификация продукта</h3><p>Оцениваем размеры, конструкцию, функциональность, чертежи, физические образцы, референсы и требования к упаковке для подтверждения производственной совместимости.</p></article>
+        <article><h3>2. Стандарты продукта</h3><p>Проверяем механические и физические требования, долговечность, стабильность, цвет, влажность, финиш, упаковку и требования инспекции по рынкам.</p></article>
+        <article><h3>3. Стандарты материалов</h3><p>ANSLIFE JSC оценивает основные и вспомогательные материалы: массив, plywood, MDF, шпон, пену, ткани, кожу, фурнитуру, клей, покрытие и упаковку.</p></article>
+        <article><h3>4. Подходящая фабрика</h3><p>Определяем релевантный тип фабрики по оборудованию, персоналу, опыту, работе с материалами, мощности и соответствию стандартам покупателя.</p></article>
+        <article><h3>5. Объем проекта</h3><p>Анализируем объем образцов, первую партию, месячные/квартальные/годовые планы, количество SKU и потенциал повторных заказов.</p></article>
+        <article><h3>6. Сроки</h3><p>Оцениваем сроки разработки образца, утверждения, подготовки материалов, производства, QC, упаковки, отгрузки и доставки до целевого рынка.</p></article>
+        <article><h3>7. Уровень инвестиций</h3><p>ANSLIFE JSC проверяет целевую цену, бюджет разработки образцов, стоимость материалов, производства, QC, логистики, хранения и объем инвестиций для первого или долгосрочного этапа.</p></article>
+        <article><h3>8. Supply chain и логистика</h3><p>Оцениваем источники материалов и компонентов, импортную реализуемость, хранение во Вьетнаме, консолидацию, документы, forwarder, условия торговли и экспортный план.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Что показывает оценка ANSLIFE JSC</h2>
+      <ul>
+        <li>Соответствует ли проект производственным возможностям Вьетнама</li>
+        <li>Какие корректировки нужны в конструкции, материалах или стандартах</li>
+        <li>Могут ли локальные источники материалов закрыть требования</li>
+        <li>Какая группа фабрик лучше подходит под продукт и объем</li>
+        <li>Реалистичен ли требуемый срок поставки</li>
+        <li>Соответствует ли уровень инвестиций целям проекта</li>
+        <li>Где расположены ключевые риски: продукт, материалы, фабрика, качество, логистика или стоимость</li>
+        <li>Какая модель запуска и долгосрочной работы наиболее эффективна</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>5 этапов оценки</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Покупатель отправляет данные:</strong> чертежи, образцы, референсы, продуктовую группу, целевые материалы, плановый объем, экспортный рынок, целевую цену и желаемые сроки.</p></li>
+        <li><p><strong>Анализ продукта и стандартов:</strong> спецификация, технические требования, стандарты материалов и упаковки, инспекционные требования по рынкам.</p></li>
+        <li><p><strong>Оценка материалов, фабрик и мощности:</strong> supply chain материалов, подходящие фабрики, фактическая мощность, требуемый объем и устойчивость повторных заказов.</p></li>
+        <li><p><strong>Оценка сроков, затрат и логистики:</strong> график образцов, производства, инспекций, упаковки, хранения, отгрузки, операционные затраты и варианты импорт/экспорт логистики.</p></li>
+        <li><p><strong>Предложение модели реализации:</strong> может включать разработку образцов, аудит фабрики, пилотное производство, независимый QC, склад, логистику, trade finance и поэтапное управление проектом.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Что получает покупатель</h2>
+      <ul>
+        <li>Ясная картина реализуемости запуска во Вьетнаме</li>
+        <li>Список корректировок до старта</li>
+        <li>Рекомендации по материалам и sourcing</li>
+        <li>Рекомендации по фабричным группам или модели производства</li>
+        <li>Идентификация ключевых рисков</li>
+        <li>Прогнозный таймлайн внедрения</li>
+        <li>Рекомендация по модели контроля качества</li>
+        <li>Рекомендация по логистике, складу и отгрузке</li>
+        <li>Оценка общей эффективности проекта во Вьетнаме</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Когда проект действительно готов к Вьетнаму?</h2>
+      <p>Проект действительно подходит для Вьетнама, когда спецификация продукта, стандарты качества, возможности фабрики, supply материалов, объем, сроки и инвестиции работают как единая управляемая система.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Отправить запрос на оценку проекта</h2>
+        <p>Вы можете отправить чертежи, образцы, референсы, требования к материалам, плановый объем, экспортный рынок, целевую цену или план запуска. ANSLIFE JSC предложит подходящий формат оценки.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Отправить запрос</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Загрузить чертеж</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Связаться с ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_ES = `
+  <section id="project-supply-chain-feasibility-assessment" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Evaluación de viabilidad de proyecto y cadena de suministro</h2>
+      <p class="ai-oem-odm-subtitle">Antes de lanzar en Vietnam, evaluamos ajuste del producto, materiales, capacidad de fábrica, volumen, plazo, inversión y preparación de la cadena de suministro.</p>
+      <p>ANSLIFE JSC apoya a compradores internacionales con evaluación de viabilidad previa para proyectos de fabricación, materiales, componentes, almacenamiento y exportación en Vietnam.</p>
+      <p>Antes de ejecutar en Vietnam, no basta con saber si el producto se puede fabricar. Deben funcionar en conjunto especificaciones, estándares de calidad y materiales, capacidad de fábrica, volumen, lead time, nivel de inversión, logística y modelo de suministro.</p>
+      <p>Con estos datos, ANSLIFE JSC ayuda a definir si el proyecto es viable en Vietnam, qué ajustes son necesarios y qué modelo operativo conviene para inicio y largo plazo.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>¿Qué factores se evalúan?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Especificaciones del producto</h3><p>Evaluamos dimensiones, estructura, funcionalidad, planos técnicos, muestras físicas, imágenes de referencia y requisitos de empaque para confirmar ajuste productivo en Vietnam.</p></article>
+        <article><h3>2. Estándares del producto</h3><p>Revisamos estándares mecánicos y físicos, durabilidad, estabilidad, color, humedad, acabado superficial, empaque y requisitos de inspección por mercado.</p></article>
+        <article><h3>3. Estándares de materiales</h3><p>ANSLIFE JSC evalúa materiales principales y auxiliares: madera maciza, plywood, MDF, chapa, espuma, tela, cuero, herrajes, adhesivo, recubrimiento y materiales de empaque.</p></article>
+        <article><h3>4. Ajuste de fábrica</h3><p>Identificamos perfiles de fábrica adecuados según maquinaria, personal, experiencia, capacidad de manejo de materiales, capacidad productiva y cumplimiento de estándares del comprador.</p></article>
+        <article><h3>5. Volumen del proyecto</h3><p>Revisamos volumen de muestras, primer pedido, planes mensuales/trimestrales/anuales, cantidad de SKU y potencial de repetición de pedidos.</p></article>
+        <article><h3>6. Lead time</h3><p>Analizamos tiempos de desarrollo de muestra, aprobación, preparación de materiales, producción, control de calidad, empaque, embarque y tránsito al mercado destino.</p></article>
+        <article><h3>7. Nivel de inversión</h3><p>ANSLIFE JSC revisa precio objetivo, presupuesto de muestra, costo de materiales, producción, QC, logística, almacenamiento e inversión para primer pedido o cooperación de largo plazo.</p></article>
+        <article><h3>8. Cadena de suministro y logística</h3><p>Evaluamos fuentes de materiales/componentes, viabilidad de importación, almacenamiento en Vietnam, consolidación, documentación, forwarder, términos comerciales y plan de exportación.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>¿Qué concluye ANSLIFE JSC?</h2>
+      <ul>
+        <li>Si el proyecto encaja con la capacidad productiva de Vietnam</li>
+        <li>Qué ajustes se requieren en estructura, materiales o estándares</li>
+        <li>Si el abastecimiento local puede cumplir los requisitos</li>
+        <li>Qué grupo de fábricas se ajusta mejor a producto y volumen</li>
+        <li>Si el plazo solicitado es realista</li>
+        <li>Si el nivel de inversión está alineado con los objetivos</li>
+        <li>Dónde están los riesgos clave: producto, materiales, fábrica, calidad, logística o costo</li>
+        <li>Qué modelo de implementación conviene para fase inicial y operación de largo plazo</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Flujo de viabilidad en 5 pasos</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>El comprador envía insumos:</strong> planos, muestras, referencias, grupo de producto, materiales objetivo, volumen previsto, mercado de exportación, precio objetivo y ventana de entrega.</p></li>
+        <li><p><strong>Análisis de producto y estándares:</strong> especificaciones, requisitos técnicos, estándares de materiales y empaque, y requisitos de inspección por mercado.</p></li>
+        <li><p><strong>Evaluación de materiales, fábricas y capacidad:</strong> cadena de suministro, grupos de fábrica adecuados, capacidad real, volumen requerido y sostenibilidad de pedidos.</p></li>
+        <li><p><strong>Evaluación de tiempo, costo y logística:</strong> tiempos de muestra/producción/inspección/empaque/almacenaje/embarque, costo operativo y opciones logísticas de importación/exportación.</p></li>
+        <li><p><strong>Propuesta de modelo de implementación:</strong> puede incluir desarrollo de muestra, due diligence de fábrica, producción piloto, QC independiente, almacenamiento, logística, financiamiento comercial y ejecución por etapas.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Qué recibe el comprador</h2>
+      <ul>
+        <li>Visión clara de viabilidad para lanzar en Vietnam</li>
+        <li>Ajustes necesarios antes de ejecutar</li>
+        <li>Recomendaciones de materiales y abastecimiento</li>
+        <li>Recomendaciones de fábricas o modelo productivo</li>
+        <li>Identificación de riesgos clave</li>
+        <li>Timeline estimado de implementación</li>
+        <li>Modelo recomendado de control de calidad</li>
+        <li>Recomendación de logística, almacén y embarque</li>
+        <li>Perspectiva general de eficiencia del proyecto en Vietnam</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>¿Cuándo un proyecto está realmente listo para Vietnam?</h2>
+      <p>Un proyecto es realmente apto para Vietnam cuando especificaciones, estándares de calidad, capacidad de fábrica, suministro de materiales, volumen, lead time e inversión pueden operar como un sistema controlable.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Enviar solicitud de evaluación de proyecto</h2>
+        <p>El comprador puede enviar planos, muestras, imágenes de referencia, requisitos de materiales, volumen estimado, mercado de exportación, precio objetivo o plan de implementación. ANSLIFE JSC propondrá el enfoque de evaluación adecuado.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Enviar solicitud de evaluación</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Subir plano</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contactar ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_ZH = `
+  <section id="project-supply-chain-feasibility-assessment" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>项目与供应链可行性评估</h2>
+      <p class="ai-oem-odm-subtitle">在越南落地前，评估产品适配性、材料、工厂能力、产量、交期、投入与供应链准备度。</p>
+      <p>ANSLIFE JSC 为国际买家提供越南项目的前置可行性评估，覆盖制造、材料、部件、仓储与出口。</p>
+      <p>项目进入越南前，不仅要看能否生产，还要验证产品规格、质量标准、材料标准、工厂能力、产量、交期、投资水平、物流与供应链模型能否协同运行。</p>
+      <p>基于这些输入，ANSLIFE JSC 帮助买家判断项目是否适合在越南执行、需要调整哪些环节，以及初期与长期最合适的运营模型。</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>评估依据的核心要素</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. 产品规格</h3><p>评估尺寸、结构、功能、技术图纸、实物样、参考图及包装要求，确认是否匹配越南生产条件。</p></article>
+        <article><h3>2. 产品标准</h3><p>审核力学/物理标准、耐久性、稳定性、颜色、含水率、表面处理、包装及目标市场验货要求。</p></article>
+        <article><h3>3. 材料标准</h3><p>ANSLIFE JSC 评估主辅材料，包括实木、胶合板、MDF、木皮、泡棉、面料、皮革、五金、胶黏剂、涂装及包装材料。</p></article>
+        <article><h3>4. 工厂匹配度</h3><p>基于设备、人力、生产经验、材料处理能力、产能与买家标准满足能力，匹配合适工厂类型。</p></article>
+        <article><h3>5. 项目产量</h3><p>评估打样量、首单量、月/季/年计划、SKU 数量及长期复购可持续性。</p></article>
+        <article><h3>6. 交期</h3><p>分析打样、确认、备料、生产、质检、包装、出货与到港运输各环节所需时间。</p></article>
+        <article><h3>7. 投入水平</h3><p>ANSLIFE JSC 审核目标价格、打样预算、材料成本、制造成本、QC 成本、物流与仓储成本，以及首单或长期合作投入。</p></article>
+        <article><h3>8. 供应链与物流</h3><p>评估材料与部件来源、项目物资进口可行性、越南仓储、拼柜、单证、货代、贸易条款与出口方案。</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>ANSLIFE JSC 将给出哪些判断？</h2>
+      <ul>
+        <li>项目是否匹配越南制造能力</li>
+        <li>产品结构、材料或标准需要做哪些调整</li>
+        <li>越南本地材料供应是否能满足需求</li>
+        <li>哪类工厂最适配产品与目标产量</li>
+        <li>目标交期是否现实可执行</li>
+        <li>投入水平是否与项目目标一致</li>
+        <li>主要风险位于产品、材料、工厂、质量、物流还是成本</li>
+        <li>初期与长期最适合的落地模型是什么</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>5 步可行性流程</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>买家提交项目资料：</strong> 图纸、样品、参考图、产品组别、目标材料、预计产量、出口市场、目标价格与期望交期。</p></li>
+        <li><p><strong>分析产品与标准：</strong> 产品规格、技术标准、材料标准、包装标准及各市场验货要求。</p></li>
+        <li><p><strong>评估材料、工厂与产能：</strong> 材料供应链、匹配工厂群、实际产能、所需产量及长期订单可持续性。</p></li>
+        <li><p><strong>评估时间、成本与物流：</strong> 打样/生产/检验/包装/仓储/出货时间，运营成本及进出口物流方案。</p></li>
+        <li><p><strong>提出落地模型：</strong> 可包含打样开发、工厂尽调、试产、独立 QC、仓储、物流、贸易融资与分阶段项目运营。</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>买家将获得的结果</h2>
+      <ul>
+        <li>是否适合在越南落地的清晰结论</li>
+        <li>执行前需调整的关键点</li>
+        <li>材料与供应来源建议</li>
+        <li>工厂群或生产模型建议</li>
+        <li>项目主要风险识别</li>
+        <li>预计落地时间线</li>
+        <li>质量控制模型建议</li>
+        <li>物流、仓储与出货方案建议</li>
+        <li>项目在越南的整体效率评估</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>项目何时才算真正适配越南？</h2>
+      <p>当产品规格、质量标准、工厂能力、材料供应、产量、交期与投入能够作为一个可控系统协同运行时，项目才真正适合在越南执行。</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>提交项目评估需求</h2>
+        <p>买家可提交图纸、样品、参考图、材料要求、预计产量、出口市场、目标价格或实施计划。ANSLIFE JSC 将评估并提出匹配的评估方向。</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">提交评估需求</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">上传图纸</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">联系 ANSLIFE JSC</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+type FeasibilityDetailLanguage = Extract<
+  LanguageCode,
+  'en' | 'jp' | 'kr' | 'sv' | 'fr' | 'ru' | 'es' | 'zh'
+>;
+
+const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_LOCALIZED: Record<
+  FeasibilityDetailLanguage,
+  string
+> = {
+  en: PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_EN,
+  jp: PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_JP,
+  kr: PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_KR,
+  sv: PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_SV,
+  fr: PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_FR,
+  ru: PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_RU,
+  es: PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_ES,
+  zh: PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_ZH,
 };
 
 const ABOUT_COMPANY_INFO_SECTION_VN = `
@@ -11309,26 +12075,45 @@ function getOperationsSupplyDetailHtml(
   detailSlug: string,
   language: LanguageCode,
 ): string | null {
-  if (detailSlug !== 'oem-odm-product-development') {
-    return null;
-  }
+  if (detailSlug === 'oem-odm-product-development') {
+    if (language === 'vn') {
+      return `<div class="ai-content">${PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN}</div>`.replace(
+        /href="\/vn\/contact\//g,
+        `href="/${language}/contact/`,
+      );
+    }
 
-  if (language === 'vn') {
-    return `<div class="ai-content">${PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN}</div>`.replace(
+    const localizedSectionHtml =
+      PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_LOCALIZED[
+        language as OemOdmDetailLanguage
+      ] ?? PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN;
+
+    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
       /href="\/vn\/contact\//g,
       `href="/${language}/contact/`,
     );
   }
 
-  const localizedSectionHtml =
-    PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_LOCALIZED[
-      language as OemOdmDetailLanguage
-    ] ?? PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN;
+  if (detailSlug === 'project-supply-chain-feasibility-assessment') {
+    if (language === 'vn') {
+      return `<div class="ai-content">${PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_VN}</div>`.replace(
+        /href="\/vn\/contact\//g,
+        `href="/${language}/contact/`,
+      );
+    }
 
-  return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
-    /href="\/vn\/contact\//g,
-    `href="/${language}/contact/`,
-  );
+    const localizedSectionHtml =
+      PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_LOCALIZED[
+        language as FeasibilityDetailLanguage
+      ] ?? PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_EN;
+
+    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+      /href="\/vn\/contact\//g,
+      `href="/${language}/contact/`,
+    );
+  }
+
+  return null;
 }
 
 export function getAIFallbackSectionHtml(
@@ -11350,6 +12135,10 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/oem-odm-product-development"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/oem-odm-product-development"`,
+      )
+      .replace(
+        /href="\/vn\/products-solutions\/operations-supply-solutions\/project-supply-chain-feasibility-assessment"/g,
+        `href="/${language}/products-solutions/operations-supply-solutions/project-supply-chain-feasibility-assessment"`,
       )
       .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
   }
