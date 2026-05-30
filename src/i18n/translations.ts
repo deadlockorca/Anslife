@@ -3,6 +3,107 @@ import { AUTO_TRANSLATIONS } from './autoTranslations';
 
 const VIETNAMESE = 'vn';
 
+const PRIMARY_NAV_TRANSLATIONS: Partial<
+  Record<Exclude<LanguageCode, typeof VIETNAMESE>, Partial<Record<string, string>>>
+> = {
+  en: {
+    'Trang chủ': 'Home',
+    'Về ANSLIFE': 'About ANSLIFE',
+    'Sản phẩm & Giải pháp': 'Products & Solutions',
+    'Nguyên liệu': 'Materials',
+    'Sản xuất': 'Manufacturing',
+    'Trung tâm cung ứng Việt Nam': 'Vietnam Supply Hub',
+    'Chất lượng & Tiêu chuẩn': 'Quality & Standards',
+    'Tài nguyên': 'Resources',
+    'Câu hỏi thường gặp': 'Frequently Asked Questions',
+    'Liên hệ / Gửi yêu cầu': 'Contact / Send Inquiry',
+  },
+  jp: {
+    'Trang chủ': 'ホーム',
+    'Về ANSLIFE': 'ANSLIFEについて',
+    'Sản phẩm & Giải pháp': '製品・ソリューション',
+    'Nguyên liệu': '原材料',
+    'Sản xuất': '製造',
+    'Trung tâm cung ứng Việt Nam': 'ベトナム供給ハブ',
+    'Chất lượng & Tiêu chuẩn': '品質・基準',
+    'Tài nguyên': 'リソース',
+    'Câu hỏi thường gặp': 'よくある質問',
+    'Liên hệ / Gửi yêu cầu': 'お問い合わせ / 依頼送信',
+  },
+  kr: {
+    'Trang chủ': '홈',
+    'Về ANSLIFE': 'ANSLIFE 소개',
+    'Sản phẩm & Giải pháp': '제품 및 솔루션',
+    'Nguyên liệu': '원자재',
+    'Sản xuất': '제조',
+    'Trung tâm cung ứng Việt Nam': '베트남 공급 허브',
+    'Chất lượng & Tiêu chuẩn': '품질 및 표준',
+    'Tài nguyên': '리소스',
+    'Câu hỏi thường gặp': '자주 묻는 질문',
+    'Liên hệ / Gửi yêu cầu': '문의 / 요청 보내기',
+  },
+  sv: {
+    'Trang chủ': 'Hem',
+    'Về ANSLIFE': 'Om ANSLIFE',
+    'Sản phẩm & Giải pháp': 'Produkter & Lösningar',
+    'Nguyên liệu': 'Material',
+    'Sản xuất': 'Tillverkning',
+    'Trung tâm cung ứng Việt Nam': 'Vietnams Supply Hub',
+    'Chất lượng & Tiêu chuẩn': 'Kvalitet & Standarder',
+    'Tài nguyên': 'Resurser',
+    'Câu hỏi thường gặp': 'Vanliga frågor',
+    'Liên hệ / Gửi yêu cầu': 'Kontakt / Skicka förfrågan',
+  },
+  fr: {
+    'Trang chủ': 'Accueil',
+    'Về ANSLIFE': 'À propos d’ANSLIFE',
+    'Sản phẩm & Giải pháp': 'Produits & Solutions',
+    'Nguyên liệu': 'Matériaux',
+    'Sản xuất': 'Production',
+    'Trung tâm cung ứng Việt Nam': 'Hub d’approvisionnement au Vietnam',
+    'Chất lượng & Tiêu chuẩn': 'Qualité & Standards',
+    'Tài nguyên': 'Ressources',
+    'Câu hỏi thường gặp': 'Questions fréquentes',
+    'Liên hệ / Gửi yêu cầu': 'Contact / Envoyer une demande',
+  },
+  ru: {
+    'Trang chủ': 'Главная',
+    'Về ANSLIFE': 'Об ANSLIFE',
+    'Sản phẩm & Giải pháp': 'Продукты и решения',
+    'Nguyên liệu': 'Материалы',
+    'Sản xuất': 'Производство',
+    'Trung tâm cung ứng Việt Nam': 'Центр поставок во Вьетнаме',
+    'Chất lượng & Tiêu chuẩn': 'Качество и стандарты',
+    'Tài nguyên': 'Ресурсы',
+    'Câu hỏi thường gặp': 'Часто задаваемые вопросы',
+    'Liên hệ / Gửi yêu cầu': 'Контакты / Отправить запрос',
+  },
+  es: {
+    'Trang chủ': 'Inicio',
+    'Về ANSLIFE': 'Sobre ANSLIFE',
+    'Sản phẩm & Giải pháp': 'Productos y Soluciones',
+    'Nguyên liệu': 'Materiales',
+    'Sản xuất': 'Producción',
+    'Trung tâm cung ứng Việt Nam': 'Centro de Suministro en Vietnam',
+    'Chất lượng & Tiêu chuẩn': 'Calidad y Estándares',
+    'Tài nguyên': 'Recursos',
+    'Câu hỏi thường gặp': 'Preguntas Frecuentes',
+    'Liên hệ / Gửi yêu cầu': 'Contacto / Enviar solicitud',
+  },
+  zh: {
+    'Trang chủ': '首页',
+    'Về ANSLIFE': '关于 ANSLIFE',
+    'Sản phẩm & Giải pháp': '产品与解决方案',
+    'Nguyên liệu': '原材料',
+    'Sản xuất': '生产',
+    'Trung tâm cung ứng Việt Nam': '越南供应中心',
+    'Chất lượng & Tiêu chuẩn': '质量与标准',
+    'Tài nguyên': '资源',
+    'Câu hỏi thường gặp': '常见问题',
+    'Liên hệ / Gửi yêu cầu': '联系 / 提交需求',
+  },
+};
+
 const TRANSLATIONS: Partial<Record<
   Exclude<LanguageCode, typeof VIETNAMESE>,
   Partial<Record<string, string>>
@@ -126,8 +227,8 @@ const TRANSLATIONS: Partial<Record<
       'From technical drawings, physical samples, or product ideas to sample development and mass production in Vietnam.',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       'Operations, supply, warehousing, QC, packing, and export consolidation solutions for international buyers.',
-    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
-      'ANSLIFE JSC supports international buyers in operating projects in Vietnam, from feasibility assessment, product development, factory assessment, quality control, logistics, and warehousing to trade finance and shipment.',
+    'ANSLIFE hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE supports international buyers in operating projects in Vietnam, from feasibility assessment, product development, factory assessment, quality control, logistics, and warehousing to trade finance and shipment.',
     'Minh họa logistics và chuỗi cung ứng toàn cầu':
       'Illustration of logistics and the global supply chain',
     '1. Phát triển sản phẩm OEM / ODM': '1. OEM / ODM Product Development',
@@ -157,8 +258,8 @@ const TRANSLATIONS: Partial<Record<
     '8. Tài trợ thương mại': '8. Trade Finance',
     'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
       'Controlled trade finance for buyers and subcontracting factories, linked to orders, materials, production, QC, and shipment.',
-    'Hành trình của một dự án tại ANSLIFE JSC':
-      'The Journey of a Project at ANSLIFE JSC',
+    'Hành trình của một dự án tại ANSLIFE':
+      'The Journey of a Project at ANSLIFE',
     'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
       'We accompany buyers throughout the project journey, from concept to final delivery.',
     'Ý tưởng & yêu cầu': 'Concept & Requirements',
@@ -198,8 +299,8 @@ const TRANSLATIONS: Partial<Record<
     'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
       'Committed to long-term partnership and sustainable growth with buyers.',
     'Sẵn sàng bắt đầu dự án của bạn?': 'Ready to start your project?',
-    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
-      'Send your request today and the ANSLIFE JSC team will respond as soon as possible.',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE sẽ phản hồi trong thời gian sớm nhất.':
+      'Send your request today and the ANSLIFE team will respond as soon as possible.',
     'Gửi yêu cầu': 'Send inquiry',
     'Tải tài liệu / bản vẽ lên': 'Upload documents / drawings',
     'QC & Kiểm định': 'QC & Inspection',
@@ -620,8 +721,8 @@ const TRANSLATIONS: Partial<Record<
     'Mọi quyền được bảo lưu.': 'All Rights Reserved.',
     'Thông tin công ty ANSLIFE, form báo giá và đặt lịch làm việc.':
       'ANSLIFE company information, quote request form and meeting booking.',
-    'ANSLIFE JSC là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi có văn phòng đại diện tại Hà Nội, TP. Hồ Chí Minh, Tokyo, Singapore và Hong Kong.':
-      'ANSLIFE JSC is a manufacturing, supply chain and export partner in Vietnam for international buyers in furniture, components and materials. We have representative offices in Hanoi, Ho Chi Minh City, Tokyo, Singapore and Hong Kong.',
+    'ANSLIFE là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi có văn phòng đại diện tại Hà Nội, TP. Hồ Chí Minh, Tokyo, Singapore và Hong Kong.':
+      'ANSLIFE is a manufacturing, supply chain and export partner in Vietnam for international buyers in furniture, components and materials. We have representative offices in Hanoi, Ho Chi Minh City, Tokyo, Singapore and Hong Kong.',
     'Tên công ty': 'Company Name',
     'Vai trò': 'Role',
     'Đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam':
@@ -638,18 +739,18 @@ const TRANSLATIONS: Partial<Record<
     'Ngôn ngữ hỗ trợ': 'Supported Languages',
     'Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn':
       'English, Japanese, Vietnamese, Korean',
-    'Buyer có thể liên hệ ANSLIFE JSC để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
-      'Buyers can contact ANSLIFE JSC to send product requirements, drawings, samples, materials or warehousing and export shipment plans from Vietnam.',
+    'Buyer có thể liên hệ ANSLIFE để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
+      'Buyers can contact ANSLIFE to send product requirements, drawings, samples, materials or warehousing and export shipment plans from Vietnam.',
     'Văn phòng & liên hệ': 'Offices & Contact',
-    'ANSLIFE JSC có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
-      'ANSLIFE JSC operates representative offices in Vietnam, Japan, Singapore and Hong Kong to support international buyers with requirement exchange, project management, standards control and supply chain organization from Vietnam.',
+    'ANSLIFE có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
+      'ANSLIFE operates representative offices in Vietnam, Japan, Singapore and Hong Kong to support international buyers with requirement exchange, project management, standards control and supply chain organization from Vietnam.',
     'Văn phòng đại diện': 'Representative Offices',
     'Địa chỉ': 'Address',
     'Địa chỉ đang cập nhật': 'Address updating',
     'VIỆT NAM': 'VIETNAM',
     'Tiêu chuẩn làm việc của ANSLIFE': 'Our Working Standards',
-    'ANSLIFE JSC làm việc dựa trên nguyên tắc rõ ràng, có thể kiểm soát và có thể truy xuất. Mỗi dự án được quản lý dựa trên mẫu đã duyệt, bản vẽ kỹ thuật, tiêu chuẩn vật liệu, checklist kiểm hàng, tiêu chuẩn đóng gói và kế hoạch giao hàng đã thống nhất.':
-      'ANSLIFE JSC works based on clear, controllable and traceable standards. Each project is managed through approved samples, technical drawings, material standards, inspection checklists, packing requirements and agreed shipment plans.',
+    'ANSLIFE làm việc dựa trên nguyên tắc rõ ràng, có thể kiểm soát và có thể truy xuất. Mỗi dự án được quản lý dựa trên mẫu đã duyệt, bản vẽ kỹ thuật, tiêu chuẩn vật liệu, checklist kiểm hàng, tiêu chuẩn đóng gói và kế hoạch giao hàng đã thống nhất.':
+      'ANSLIFE works based on clear, controllable and traceable standards. Each project is managed through approved samples, technical drawings, material standards, inspection checklists, packing requirements and agreed shipment plans.',
     'Kiểm soát mẫu đã duyệt': 'Approved Sample Control',
     'Mẫu sản phẩm, cấu kiện, màu sắc, vật liệu và bề mặt hoàn thiện được lưu giữ làm tiêu chuẩn đối chiếu trong quá trình sản xuất và kiểm hàng.':
       'Approved product samples, components, colors, materials and finishes are maintained as reference standards for production and inspection.',
@@ -1068,8 +1169,8 @@ const TRANSLATIONS: Partial<Record<
       '図面、実物サンプル、または製品アイデアからサンプル開発とベトナムでの量産まで。',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       '海外バイヤー向けの運営、供給、保管、QC、梱包、輸出混載ソリューション。',
-    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
-      'ANSLIFE JSCは、実現可能性評価、製品開発、工場評価、品質管理、物流、保管から貿易金融、出荷まで、海外バイヤーのベトナムでのプロジェクト運営を支援します。',
+    'ANSLIFE hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFEは、実現可能性評価、製品開発、工場評価、品質管理、物流、保管から貿易金融、出荷まで、海外バイヤーのベトナムでのプロジェクト運営を支援します。',
     'Minh họa logistics và chuỗi cung ứng toàn cầu':
       '物流とグローバルサプライチェーンのイラスト',
     '1. Phát triển sản phẩm OEM / ODM': '1. OEM / ODM製品開発',
@@ -1098,8 +1199,8 @@ const TRANSLATIONS: Partial<Record<
     '8. Tài trợ thương mại': '8. 貿易金融',
     'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
       '注文、材料、生産、QC、出荷に連動した、バイヤーと委託工場向けの管理型貿易金融を提供します。',
-    'Hành trình của một dự án tại ANSLIFE JSC':
-      'ANSLIFE JSCにおけるプロジェクトの流れ',
+    'Hành trình của một dự án tại ANSLIFE':
+      'ANSLIFEにおけるプロジェクトの流れ',
     'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
       'アイデア段階から商品が顧客に届くまで、プロジェクト全体を通じてバイヤーに伴走します。',
     'Ý tưởng & yêu cầu': 'アイデア・要件',
@@ -1137,12 +1238,12 @@ const TRANSLATIONS: Partial<Record<
     'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
       'バイヤーと共に持続的に成長する長期的なパートナーシップを重視します。',
     'Sẵn sàng bắt đầu dự án của bạn?': 'プロジェクトを始める準備はできていますか？',
-    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
-      '本日お問い合わせいただければ、ANSLIFE JSCチームができるだけ早く返信します。',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE sẽ phản hồi trong thời gian sớm nhất.':
+      '本日お問い合わせいただければ、ANSLIFEチームができるだけ早く返信します。',
     'Gửi yêu cầu': 'お問い合わせ',
     'Tải tài liệu / bản vẽ lên': '資料 / 図面をアップロード',
     'Tải bản vẽ lên': '図面をアップロード',
-    'Liên hệ ANSLIFE JSC': 'ANSLIFE JSCに連絡',
+    'Liên hệ ANSLIFE': 'ANSLIFEに連絡',
     'QC & Kiểm định': 'QC・検査',
     'Giải pháp lưu kho tại Việt Nam': 'ベトナム保管ソリューション',
     'Gom hàng xuất khẩu': '輸出混載',
@@ -1339,8 +1440,8 @@ const TRANSLATIONS: Partial<Record<
     'Thông tin công ty': '会社情報',
     'Thông tin công ty ANSLIFE, form báo giá và đặt lịch làm việc.':
       'ANSLIFEの会社情報、見積り依頼フォーム、打ち合わせ予約。',
-    'ANSLIFE JSC là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi có văn phòng đại diện tại Hà Nội, TP. Hồ Chí Minh, Tokyo, Singapore và Hong Kong.':
-      'ANSLIFE JSCは、家具、部材、素材分野の海外バイヤー向けに、ベトナムで生産、サプライチェーン、輸出を支援するパートナーです。ハノイ、ホーチミン市、東京、シンガポール、香港に代表オフィスがあります。',
+    'ANSLIFE là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi có văn phòng đại diện tại Hà Nội, TP. Hồ Chí Minh, Tokyo, Singapore và Hong Kong.':
+      'ANSLIFEは、家具、部材、素材分野の海外バイヤー向けに、ベトナムで生産、サプライチェーン、輸出を支援するパートナーです。ハノイ、ホーチミン市、東京、シンガポール、香港に代表オフィスがあります。',
     'Tên công ty': '会社名',
     'Vai trò': '役割',
     'Đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam':
@@ -1357,18 +1458,18 @@ const TRANSLATIONS: Partial<Record<
     'Ngôn ngữ hỗ trợ': '対応言語',
     'Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn':
       '英語、日本語、ベトナム語、韓国語',
-    'Buyer có thể liên hệ ANSLIFE JSC để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
-      'バイヤーはANSLIFE JSCに連絡し、製品要件、図面、サンプル、素材、またはベトナムからの保管・出荷計画を送ることができます。',
+    'Buyer có thể liên hệ ANSLIFE để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
+      'バイヤーはANSLIFEに連絡し、製品要件、図面、サンプル、素材、またはベトナムからの保管・出荷計画を送ることができます。',
     'Văn phòng & liên hệ': 'オフィス・連絡先',
-    'ANSLIFE JSC có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
-      'ANSLIFE JSCは、ベトナム、日本、シンガポール、香港に代表オフィスを展開し、海外バイヤーの要件確認、プロジェクト管理、基準管理、ベトナムからのサプライチェーン構築を支援します。',
+    'ANSLIFE có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
+      'ANSLIFEは、ベトナム、日本、シンガポール、香港に代表オフィスを展開し、海外バイヤーの要件確認、プロジェクト管理、基準管理、ベトナムからのサプライチェーン構築を支援します。',
     'Văn phòng đại diện': '代表オフィス',
     'Địa chỉ': '住所',
     'Địa chỉ đang cập nhật': '住所更新中',
     'VIỆT NAM': 'ベトナム',
     'Tiêu chuẩn làm việc của ANSLIFE': 'ANSLIFEの業務基準',
-    'ANSLIFE JSC làm việc dựa trên nguyên tắc rõ ràng, có thể kiểm soát và có thể truy xuất. Mỗi dự án được quản lý dựa trên mẫu đã duyệt, bản vẽ kỹ thuật, tiêu chuẩn vật liệu, checklist kiểm hàng, tiêu chuẩn đóng gói và kế hoạch giao hàng đã thống nhất.':
-      'ANSLIFE JSCは、明確で管理可能かつ追跡可能な基準に基づいて業務を行います。各プロジェクトは、承認サンプル、技術図面、材料基準、検品チェックリスト、梱包基準、合意済みの出荷計画に基づいて管理されます。',
+    'ANSLIFE làm việc dựa trên nguyên tắc rõ ràng, có thể kiểm soát và có thể truy xuất. Mỗi dự án được quản lý dựa trên mẫu đã duyệt, bản vẽ kỹ thuật, tiêu chuẩn vật liệu, checklist kiểm hàng, tiêu chuẩn đóng gói và kế hoạch giao hàng đã thống nhất.':
+      'ANSLIFEは、明確で管理可能かつ追跡可能な基準に基づいて業務を行います。各プロジェクトは、承認サンプル、技術図面、材料基準、検品チェックリスト、梱包基準、合意済みの出荷計画に基づいて管理されます。',
     'Kiểm soát mẫu đã duyệt': '承認サンプル管理',
     'Mẫu sản phẩm, cấu kiện, màu sắc, vật liệu và bề mặt hoàn thiện được lưu giữ làm tiêu chuẩn đối chiếu trong quá trình sản xuất và kiểm hàng.':
       '承認済みの製品サンプル、部材、色、材料、仕上げ面は、生産と検品時の照合基準として保管されます。',
@@ -1736,8 +1837,8 @@ const TRANSLATIONS: Partial<Record<
       '도면, 실물 샘플 또는 제품 아이디어부터 샘플 개발과 베트남 대량 생산까지.',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       '국제 바이어를 위한 운영, 공급, 보관, QC, 포장 및 수출 통합 솔루션.',
-    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
-      'ANSLIFE JSC는 타당성 평가, 제품 개발, 공장 평가, 품질 관리, 물류, 보관부터 무역 금융과 출하까지 국제 바이어의 베트남 프로젝트 운영을 지원합니다.',
+    'ANSLIFE hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE는 타당성 평가, 제품 개발, 공장 평가, 품질 관리, 물류, 보관부터 무역 금융과 출하까지 국제 바이어의 베트남 프로젝트 운영을 지원합니다.',
     'Minh họa logistics và chuỗi cung ứng toàn cầu': '물류 및 글로벌 공급망 일러스트',
     '1. Phát triển sản phẩm OEM / ODM': '1. OEM / ODM 제품 개발',
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt.':
@@ -1765,7 +1866,7 @@ const TRANSLATIONS: Partial<Record<
     '8. Tài trợ thương mại': '8. 무역 금융',
     'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
       '주문, 자재, 생산, QC 및 출하와 연결된 바이어 및 외주 공장 대상의 관리형 무역 금융을 제공합니다.',
-    'Hành trình của một dự án tại ANSLIFE JSC': 'ANSLIFE JSC 프로젝트 진행 과정',
+    'Hành trình của một dự án tại ANSLIFE': 'ANSLIFE 프로젝트 진행 과정',
     'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
       '아이디어 단계부터 상품이 고객에게 도착할 때까지 프로젝트 전 과정을 바이어와 함께합니다.',
     'Ý tưởng & yêu cầu': '아이디어 및 요구사항',
@@ -1801,8 +1902,8 @@ const TRANSLATIONS: Partial<Record<
     'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
       '바이어와 함께 지속 가능한 성장을 이루는 장기 협력을 지향합니다.',
     'Sẵn sàng bắt đầu dự án của bạn?': '프로젝트를 시작할 준비가 되셨나요?',
-    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
-      '오늘 요청을 보내주시면 ANSLIFE JSC 팀이 최대한 빠르게 답변드리겠습니다.',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE sẽ phản hồi trong thời gian sớm nhất.':
+      '오늘 요청을 보내주시면 ANSLIFE 팀이 최대한 빠르게 답변드리겠습니다.',
     'Gửi yêu cầu': '문의 보내기',
     'Tải tài liệu / bản vẽ lên': '자료 / 도면 업로드',
     'QC & Kiểm định': 'QC 및 검사',
@@ -2001,8 +2102,8 @@ const TRANSLATIONS: Partial<Record<
     'Thông tin công ty': '회사 정보',
     'Thông tin công ty ANSLIFE, form báo giá và đặt lịch làm việc.':
       'ANSLIFE 회사 정보, 견적 요청 양식 및 미팅 예약.',
-    'ANSLIFE JSC là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi có văn phòng đại diện tại Hà Nội, TP. Hồ Chí Minh, Tokyo, Singapore và Hong Kong.':
-      'ANSLIFE JSC는 가구, 부품, 소재 분야의 해외 바이어를 위한 베트남 내 생산, 공급망, 수출 파트너입니다. 하노이, 호치민시, 도쿄, 싱가포르, 홍콩에 대표 사무소를 두고 있습니다.',
+    'ANSLIFE là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi có văn phòng đại diện tại Hà Nội, TP. Hồ Chí Minh, Tokyo, Singapore và Hong Kong.':
+      'ANSLIFE는 가구, 부품, 소재 분야의 해외 바이어를 위한 베트남 내 생산, 공급망, 수출 파트너입니다. 하노이, 호치민시, 도쿄, 싱가포르, 홍콩에 대표 사무소를 두고 있습니다.',
     'Tên công ty': '회사명',
     'Vai trò': '역할',
     'Đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam':
@@ -2019,18 +2120,18 @@ const TRANSLATIONS: Partial<Record<
     'Ngôn ngữ hỗ trợ': '지원 언어',
     'Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn':
       '영어, 일본어, 베트남어, 한국어',
-    'Buyer có thể liên hệ ANSLIFE JSC để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
-      '바이어는 ANSLIFE JSC에 연락해 제품 요구사항, 도면, 샘플, 소재 또는 베트남발 보관 및 출하 계획을 보낼 수 있습니다.',
+    'Buyer có thể liên hệ ANSLIFE để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
+      '바이어는 ANSLIFE에 연락해 제품 요구사항, 도면, 샘플, 소재 또는 베트남발 보관 및 출하 계획을 보낼 수 있습니다.',
     'Văn phòng & liên hệ': '사무소 및 연락처',
-    'ANSLIFE JSC có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
-      'ANSLIFE JSC는 베트남, 일본, 싱가포르, 홍콩에 대표 사무소를 운영하며 해외 바이어의 요구사항 협의, 프로젝트 관리, 기준 관리, 베트남발 공급망 구축을 지원합니다.',
+    'ANSLIFE có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
+      'ANSLIFE는 베트남, 일본, 싱가포르, 홍콩에 대표 사무소를 운영하며 해외 바이어의 요구사항 협의, 프로젝트 관리, 기준 관리, 베트남발 공급망 구축을 지원합니다.',
     'Văn phòng đại diện': '대표 사무소',
     'Địa chỉ': '주소',
     'Địa chỉ đang cập nhật': '주소 업데이트 중',
     'VIỆT NAM': '베트남',
     'Tiêu chuẩn làm việc của ANSLIFE': 'ANSLIFE 업무 기준',
-    'ANSLIFE JSC làm việc dựa trên nguyên tắc rõ ràng, có thể kiểm soát và có thể truy xuất. Mỗi dự án được quản lý dựa trên mẫu đã duyệt, bản vẽ kỹ thuật, tiêu chuẩn vật liệu, checklist kiểm hàng, tiêu chuẩn đóng gói và kế hoạch giao hàng đã thống nhất.':
-      'ANSLIFE JSC는 명확하고 관리 가능하며 추적 가능한 기준에 따라 업무를 수행합니다. 각 프로젝트는 승인 샘플, 기술 도면, 자재 기준, 검사 체크리스트, 포장 기준, 합의된 출하 계획을 바탕으로 관리됩니다.',
+    'ANSLIFE làm việc dựa trên nguyên tắc rõ ràng, có thể kiểm soát và có thể truy xuất. Mỗi dự án được quản lý dựa trên mẫu đã duyệt, bản vẽ kỹ thuật, tiêu chuẩn vật liệu, checklist kiểm hàng, tiêu chuẩn đóng gói và kế hoạch giao hàng đã thống nhất.':
+      'ANSLIFE는 명확하고 관리 가능하며 추적 가능한 기준에 따라 업무를 수행합니다. 각 프로젝트는 승인 샘플, 기술 도면, 자재 기준, 검사 체크리스트, 포장 기준, 합의된 출하 계획을 바탕으로 관리됩니다.',
     'Kiểm soát mẫu đã duyệt': '승인 샘플 관리',
     'Mẫu sản phẩm, cấu kiện, màu sắc, vật liệu và bề mặt hoàn thiện được lưu giữ làm tiêu chuẩn đối chiếu trong quá trình sản xuất và kiểm hàng.':
       '승인된 제품 샘플, 부품, 색상, 자재 및 마감 표면은 생산과 검사 과정의 기준 샘플로 보관됩니다.',
@@ -2203,8 +2304,8 @@ const TRANSLATIONS: Partial<Record<
       'Från ritningar, fysiska prover eller produktidéer till provutveckling och massproduktion i Vietnam.',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       'Drift, leverans, lagerhållning, QC, packning och exportkonsolidering för internationella köpare.',
-    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
-      'ANSLIFE JSC hjälper internationella köpare att driva projekt i Vietnam, från genomförbarhetsbedömning, produktutveckling, fabriksbedömning, kvalitetskontroll, logistik och lager till handelsfinansiering och leverans.',
+    'ANSLIFE hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE hjälper internationella köpare att driva projekt i Vietnam, från genomförbarhetsbedömning, produktutveckling, fabriksbedömning, kvalitetskontroll, logistik och lager till handelsfinansiering och leverans.',
     'Minh họa logistics và chuỗi cung ứng toàn cầu':
       'Illustration av logistik och global leveranskedja',
     '1. Phát triển sản phẩm OEM / ODM': '1. OEM / ODM-produktutveckling',
@@ -2234,7 +2335,7 @@ const TRANSLATIONS: Partial<Record<
     '8. Tài trợ thương mại': '8. Handelsfinansiering',
     'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
       'Kontrollerad handelsfinansiering för köpare och underleverantörer, kopplad till order, material, produktion, QC och leverans.',
-    'Hành trình của một dự án tại ANSLIFE JSC': 'Projektresan hos ANSLIFE JSC',
+    'Hành trình của một dự án tại ANSLIFE': 'Projektresan hos ANSLIFE',
     'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
       'Vi följer köparen genom hela projektresan, från idé till slutleverans.',
     'Ý tưởng & yêu cầu': 'Idé och krav',
@@ -2276,8 +2377,8 @@ const TRANSLATIONS: Partial<Record<
     'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
       'Engagerade i långsiktigt samarbete och hållbar tillväxt med köpare.',
     'Sẵn sàng bắt đầu dự án của bạn?': 'Redo att starta ditt projekt?',
-    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
-      'Skicka din förfrågan idag så svarar ANSLIFE JSC-teamet så snart som möjligt.',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE sẽ phản hồi trong thời gian sớm nhất.':
+      'Skicka din förfrågan idag så svarar ANSLIFE-teamet så snart som möjligt.',
     'Gửi yêu cầu': 'Skicka förfrågan',
     'Tải tài liệu / bản vẽ lên': 'Ladda upp dokument / ritningar',
   },
@@ -2288,8 +2389,8 @@ const TRANSLATIONS: Partial<Record<
       'Des plans, échantillons réels ou idées produit jusqu’au développement d’échantillons et à la production en série au Vietnam.',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       'Solutions d’exploitation, d’approvisionnement, de stockage, de QC, d’emballage et de groupage export pour les acheteurs internationaux.',
-    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
-      'ANSLIFE JSC accompagne les acheteurs internationaux dans l’exploitation de projets au Vietnam, de l’étude de faisabilité, du développement produit, de l’évaluation d’usine, du contrôle qualité, de la logistique et du stockage jusqu’au financement commercial et à l’expédition.',
+    'ANSLIFE hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE accompagne les acheteurs internationaux dans l’exploitation de projets au Vietnam, de l’étude de faisabilité, du développement produit, de l’évaluation d’usine, du contrôle qualité, de la logistique et du stockage jusqu’au financement commercial et à l’expédition.',
     'Minh họa logistics và chuỗi cung ứng toàn cầu':
       'Illustration de la logistique et de la chaîne d’approvisionnement mondiale',
     '1. Phát triển sản phẩm OEM / ODM': '1. Développement produit OEM / ODM',
@@ -2320,8 +2421,8 @@ const TRANSLATIONS: Partial<Record<
     '8. Tài trợ thương mại': '8. Financement commercial',
     'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
       'Financement commercial contrôlé pour les acheteurs et usines sous-traitantes, lié aux commandes, matériaux, production, QC et expédition.',
-    'Hành trình của một dự án tại ANSLIFE JSC':
-      'Le parcours d’un projet chez ANSLIFE JSC',
+    'Hành trình của một dự án tại ANSLIFE':
+      'Le parcours d’un projet chez ANSLIFE',
     'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
       'Nous accompagnons l’acheteur tout au long du projet, de l’idée jusqu’à la livraison finale.',
     'Ý tưởng & yêu cầu': 'Idée et exigences',
@@ -2363,8 +2464,8 @@ const TRANSLATIONS: Partial<Record<
     'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
       'Engagement dans un partenariat long terme et une croissance durable avec les acheteurs.',
     'Sẵn sàng bắt đầu dự án của bạn?': 'Prêt à démarrer votre projet ?',
-    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
-      'Envoyez votre demande aujourd’hui, l’équipe ANSLIFE JSC vous répondra dès que possible.',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE sẽ phản hồi trong thời gian sớm nhất.':
+      'Envoyez votre demande aujourd’hui, l’équipe ANSLIFE vous répondra dès que possible.',
     'Gửi yêu cầu': 'Envoyer une demande',
     'Tải tài liệu / bản vẽ lên': 'Téléverser documents / plans',
   },
@@ -2375,8 +2476,8 @@ const TRANSLATIONS: Partial<Record<
       'От чертежей, реальных образцов или идеи продукта до разработки образца и массового производства во Вьетнаме.',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       'Решения для международных покупателей: операционное сопровождение, снабжение, хранение, QC, упаковка и консолидация экспортных грузов.',
-    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
-      'ANSLIFE JSC поддерживает международных покупателей в ведении проектов во Вьетнаме: от оценки осуществимости, разработки продукта, аудита фабрики, контроля качества, логистики и хранения до торгового финансирования и отгрузки.',
+    'ANSLIFE hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE поддерживает международных покупателей в ведении проектов во Вьетнаме: от оценки осуществимости, разработки продукта, аудита фабрики, контроля качества, логистики и хранения до торгового финансирования и отгрузки.',
     'Minh họa logistics và chuỗi cung ứng toàn cầu':
       'Иллюстрация логистики и глобальной цепочки поставок',
     '1. Phát triển sản phẩm OEM / ODM': '1. Разработка продукта OEM / ODM',
@@ -2407,7 +2508,7 @@ const TRANSLATIONS: Partial<Record<
     '8. Tài trợ thương mại': '8. Торговое финансирование',
     'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
       'Контролируемое торговое финансирование для покупателей и подрядных фабрик, связанное с заказами, материалами, производством, QC и отгрузкой.',
-    'Hành trình của một dự án tại ANSLIFE JSC': 'Путь проекта в ANSLIFE JSC',
+    'Hành trình của một dự án tại ANSLIFE': 'Путь проекта в ANSLIFE',
     'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
       'Мы сопровождаем покупателя на всем пути проекта, от идеи до доставки товара конечному клиенту.',
     'Ý tưởng & yêu cầu': 'Идея и требования',
@@ -2449,12 +2550,12 @@ const TRANSLATIONS: Partial<Record<
     'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
       'Нацелены на долгосрочное сотрудничество и устойчивый рост вместе с покупателями.',
     'Sẵn sàng bắt đầu dự án của bạn?': 'Готовы начать ваш проект?',
-    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
-      'Отправьте запрос сегодня, и команда ANSLIFE JSC ответит как можно скорее.',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE sẽ phản hồi trong thời gian sớm nhất.':
+      'Отправьте запрос сегодня, и команда ANSLIFE ответит как можно скорее.',
     'Gửi yêu cầu': 'Отправить запрос',
     'Tải tài liệu / bản vẽ lên': 'Загрузить документы / чертежи',
     'Tải bản vẽ lên': 'Загрузить чертеж',
-    'Liên hệ ANSLIFE JSC': 'Связаться с ANSLIFE JSC',
+    'Liên hệ ANSLIFE': 'Связаться с ANSLIFE',
   },
   es: {
     'Giải pháp vận hành & cung ứng': 'Soluciones de operación y suministro',
@@ -2463,8 +2564,8 @@ const TRANSLATIONS: Partial<Record<
       'Desde planos, muestras físicas o ideas de producto hasta desarrollo de muestras y producción en serie en Vietnam.',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       'Soluciones de operación, suministro, almacenamiento, QC, embalaje y consolidación de exportación para compradores internacionales.',
-    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
-      'ANSLIFE JSC apoya a compradores internacionales en la operación de proyectos en Vietnam, desde la evaluación de viabilidad, desarrollo de producto, evaluación de fábrica, control de calidad, logística y almacenamiento hasta la financiación comercial y el despacho.',
+    'ANSLIFE hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE apoya a compradores internacionales en la operación de proyectos en Vietnam, desde la evaluación de viabilidad, desarrollo de producto, evaluación de fábrica, control de calidad, logística y almacenamiento hasta la financiación comercial y el despacho.',
     'Minh họa logistics và chuỗi cung ứng toàn cầu':
       'Ilustración de logística y cadena de suministro global',
     '1. Phát triển sản phẩm OEM / ODM': '1. Desarrollo de producto OEM / ODM',
@@ -2495,8 +2596,8 @@ const TRANSLATIONS: Partial<Record<
     '8. Tài trợ thương mại': '8. Financiación comercial',
     'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
       'Financiación comercial controlada para compradores y fábricas subcontratadas, vinculada a pedidos, materiales, producción, QC y despacho.',
-    'Hành trình của một dự án tại ANSLIFE JSC':
-      'El recorrido de un proyecto en ANSLIFE JSC',
+    'Hành trình của một dự án tại ANSLIFE':
+      'El recorrido de un proyecto en ANSLIFE',
     'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
       'Acompañamos al comprador durante todo el proyecto, desde la idea hasta la entrega final.',
     'Ý tưởng & yêu cầu': 'Idea y requisitos',
@@ -2538,8 +2639,8 @@ const TRANSLATIONS: Partial<Record<
     'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
       'Compromiso de colaboración a largo plazo y crecimiento sostenible junto con los compradores.',
     'Sẵn sàng bắt đầu dự án của bạn?': '¿Listo para iniciar tu proyecto?',
-    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
-      'Envía tu solicitud hoy y el equipo de ANSLIFE JSC responderá lo antes posible.',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE sẽ phản hồi trong thời gian sớm nhất.':
+      'Envía tu solicitud hoy y el equipo de ANSLIFE responderá lo antes posible.',
     'Gửi yêu cầu': 'Enviar solicitud',
     'Tải tài liệu / bản vẽ lên': 'Subir documentos / planos',
   },
@@ -2550,8 +2651,8 @@ const TRANSLATIONS: Partial<Record<
       '从图纸、实物样品或产品想法，到样品开发和在越南批量生产。',
     'Giải pháp vận hành, cung ứng, lưu kho, QC, đóng gói và gom hàng xuất khẩu cho buyer quốc tế.':
       '面向国际买家的运营、供应、仓储、QC、包装和出口集货解决方案。',
-    'ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
-      'ANSLIFE JSC 支持国际买家在越南运营项目，涵盖可行性评估、产品开发、工厂评估、质量控制、物流、仓储、贸易融资和出货。',
+    'ANSLIFE hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.':
+      'ANSLIFE 支持国际买家在越南运营项目，涵盖可行性评估、产品开发、工厂评估、质量控制、物流、仓储、贸易融资和出货。',
     'Minh họa logistics và chuỗi cung ứng toàn cầu': '物流与全球供应链示意图',
     '1. Phát triển sản phẩm OEM / ODM': '1. OEM / ODM 产品开发',
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt.':
@@ -2580,7 +2681,7 @@ const TRANSLATIONS: Partial<Record<
     '8. Tài trợ thương mại': '8. 贸易融资',
     'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.':
       '为买家和代工厂提供受控贸易融资，与订单、材料、生产、QC 和出货挂钩。',
-    'Hành trình của một dự án tại ANSLIFE JSC': 'ANSLIFE JSC 的项目流程',
+    'Hành trình của một dự án tại ANSLIFE': 'ANSLIFE 的项目流程',
     'Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.':
       '我们陪伴买家完成整个项目流程，从想法到货物交付给客户。',
     'Ý tưởng & yêu cầu': '想法与需求',
@@ -2618,8 +2719,8 @@ const TRANSLATIONS: Partial<Record<
     'Cam kết đồng hành lâu dài, cùng buyer phát triển bền vững.':
       '致力于与买家长期合作，共同实现可持续增长。',
     'Sẵn sàng bắt đầu dự án của bạn?': '准备开始您的项目了吗？',
-    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.':
-      '今天发送需求，ANSLIFE JSC 团队会尽快回复。',
+    'Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE sẽ phản hồi trong thời gian sớm nhất.':
+      '今天发送需求，ANSLIFE 团队会尽快回复。',
     'Gửi yêu cầu': '发送需求',
     'Tải tài liệu / bản vẽ lên': '上传资料 / 图纸',
   },
@@ -2631,6 +2732,7 @@ export function translateText(language: LanguageCode, text: string): string {
   }
 
   return (
+    PRIMARY_NAV_TRANSLATIONS[language]?.[text] ??
     TRANSLATIONS[language]?.[text] ??
     AUTO_TRANSLATIONS[language]?.[text] ??
     TRANSLATIONS.en?.[text] ??

@@ -74,6 +74,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'operations-supply-solutions' &&
     detailSlug === 'vietnam-storage-solution';
+  const isOperationsTradeFinancingDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'operations-supply-solutions' &&
+    detailSlug === 'trade-financing';
   const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
   const oemOdmSeoDescription = t(
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.',
@@ -101,6 +105,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const vietnamStorageSeoTitle = t('Lưu kho tại Việt Nam');
   const vietnamStorageSeoDescription = t(
     'Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn và hàng tồn dự phòng tại Việt Nam để hỗ trợ sản xuất, kiểm soát chất lượng và xuất hàng định kỳ.',
+  );
+  const tradeFinancingSeoTitle = t('Tài trợ thương mại');
+  const tradeFinancingSeoDescription = t(
+    'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC, chứng từ và xuất hàng.',
   );
   const fallbackHtml = getAIFallbackSectionHtml(
     config.slug,
@@ -170,6 +178,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               ? `${logisticsCoordinationSeoTitle} | ${t(config.title)}`
               : isOperationsVietnamStorageDetail
                 ? `${vietnamStorageSeoTitle} | ${t(config.title)}`
+                : isOperationsTradeFinancingDetail
+                  ? `${tradeFinancingSeoTitle} | ${t(config.title)}`
       : `${t(section.title)} | ${t(config.title)}`;
   const seoDescription = isOperationsOemOdmDetail
     ? oemOdmSeoDescription
@@ -185,6 +195,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               ? logisticsCoordinationSeoDescription
               : isOperationsVietnamStorageDetail
                 ? vietnamStorageSeoDescription
+                : isOperationsTradeFinancingDetail
+                  ? tradeFinancingSeoDescription
       : t(section.description);
 
   return (

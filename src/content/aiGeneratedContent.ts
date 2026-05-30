@@ -5,10 +5,10 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
   <section id="company-intro" class="ai-section ai-company-intro ai-company-overview ai-company-overview-new">
     <div class="ai-company-overview-hero">
       <div class="ai-company-overview-copy">
-        <h2>Tổng quan công ty</h2>
-        <p>ANSLIFE JSC là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu.</p>
+        <h2>Tổng quan ANSLIFE</h2>
+        <p>ANSLIFE không chỉ là một công ty đơn lẻ, ANSLIFE vận hành là hệ thống bao gồm nhiều công ty với đa dạng dịch vụ như đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu.</p>
         <p>Chúng tôi vận hành một hệ thống gồm nhà máy do ANSLIFE điều phối, mạng lưới nhà máy vệ tinh, chuỗi cung ứng vật liệu liên tục, hệ thống QC độc lập, kho lưu trữ tại Việt Nam và cơ chế xuất hàng định kỳ.</p>
-        <p>ANSLIFE JSC hỗ trợ buyer từ phát triển sản phẩm, chuẩn bị vật liệu, tổ chức sản xuất, kiểm soát chất lượng, quản lý dự án, tài trợ thương mại đến đóng gói và xuất hàng sang Nhật Bản, Hoa Kỳ, EU và các thị trường quốc tế.</p>
+        <p>ANSLIFE hỗ trợ buyer từ phát triển sản phẩm, chuẩn bị vật liệu, tổ chức sản xuất, kiểm soát chất lượng, quản lý dự án, tài trợ thương mại đến đóng gói và xuất hàng sang Nhật Bản, Hoa Kỳ, EU và các thị trường quốc tế.</p>
       </div>
 
       <div class="ai-company-overview-cards">
@@ -101,8 +101,8 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
 
     <div class="ai-company-overview-info-grid">
       <article class="ai-company-overview-info-card">
-        <h2>Về ANSLIFE JSC</h2>
-        <p>ANSLIFE JSC là đối tác chiến lược của buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi kết hợp sản xuất, chuỗi cung ứng, kiểm soát chất lượng độc lập, lưu kho và tài trợ thương mại thành một hệ thống tích hợp.</p>
+        <h2>Về ANSLIFE</h2>
+        <p>ANSLIFE là đối tác chiến lược của buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi kết hợp sản xuất, chuỗi cung ứng, kiểm soát chất lượng độc lập, lưu kho và tài trợ thương mại thành một hệ thống tích hợp.</p>
         <div class="ai-company-mini-icons">
           <span><i class="ai-mini-icon ai-icon-system-doc" aria-hidden="true"></i>Hệ thống vận hành tích hợp</span>
           <span><i class="ai-mini-icon ai-icon-upload-tray" aria-hidden="true"></i>Mạng lưới nhà máy vệ tinh</span>
@@ -114,7 +114,7 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
       <article class="ai-company-overview-info-card">
         <h2>Thông tin công ty</h2>
         <dl class="ai-company-overview-table">
-          <div><dt>Tên công ty</dt><dd>ANSLIFE JSC</dd></div>
+          <div><dt>Tên công ty</dt><dd>ANSLIFE</dd></div>
           <div><dt>Lĩnh vực hoạt động</dt><dd>Sản xuất & chuỗi cung ứng</dd></div>
           <div><dt>Trụ sở</dt><dd>Việt Nam</dd></div>
           <div><dt>Văn phòng đại diện</dt><dd>Tokyo, Singapore, Hong Kong</dd></div>
@@ -138,7 +138,7 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
     <div class="ai-company-request-panel">
       <div>
         <h2>Gửi yêu cầu cho ANSLIFE</h2>
-        <p>Gửi bản vẽ, yêu cầu sản phẩm, vật liệu hoặc nhu cầu lưu kho để đội ngũ ANSLIFE JSC xem xét và đề xuất giải pháp phù hợp.</p>
+        <p>Gửi bản vẽ, yêu cầu sản phẩm, vật liệu hoặc nhu cầu lưu kho để đội ngũ ANSLIFE xem xét và đề xuất giải pháp phù hợp.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu <span>→</span></a>
@@ -163,7 +163,7 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
       <div class="ai-operations-hero-copy">
         <h2>Giải pháp vận hành & cung ứng</h2>
         <p>
-          ANSLIFE JSC hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.
+          ANSLIFE hỗ trợ buyer quốc tế vận hành các dự án tại Việt Nam từ giai đoạn đánh giá khả thi, phát triển sản phẩm, thẩm định nhà máy, kiểm soát chất lượng, logistics, lưu kho đến tài trợ thương mại và xuất hàng.
         </p>
       </div>
       <figure class="ai-operations-hero-media">
@@ -218,13 +218,13 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
         <span class="ai-company-overview-icon ai-icon-hand-coin" aria-hidden="true"></span>
         <h3>8. Tài trợ thương mại</h3>
         <p>Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC và xuất hàng.</p>
-        <a href="#operations-project-journey">Xem chi tiết <span>→</span></a>
+        <a href="/vn/products-solutions/operations-supply-solutions/trade-financing">Xem chi tiết <span>→</span></a>
       </article>
     </div>
 
     <div id="operations-project-journey" class="ai-operations-journey">
       <header>
-        <h2>Hành trình của một dự án tại ANSLIFE JSC</h2>
+        <h2>Hành trình của một dự án tại ANSLIFE</h2>
         <p>Chúng tôi đồng hành cùng buyer trong toàn bộ hành trình của dự án - từ ý tưởng đến khi hàng hóa đến tay khách hàng.</p>
       </header>
       <div class="ai-operations-timeline">
@@ -253,7 +253,7 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
     <div class="ai-company-request-panel ai-operations-request-panel">
       <div>
         <h2>Sẵn sàng bắt đầu dự án của bạn?</h2>
-        <p>Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE JSC sẽ phản hồi trong thời gian sớm nhất.</p>
+        <p>Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE sẽ phản hồi trong thời gian sớm nhất.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
@@ -268,14 +268,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN = `
     <header class="ai-oem-odm-hero">
       <h2>Phát triển sản phẩm OEM / ODM</h2>
       <p class="ai-oem-odm-subtitle">Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.</p>
-      <p>ANSLIFE JSC hỗ trợ buyer quốc tế phát triển và sản xuất sản phẩm nội thất theo hình thức OEM / ODM tại Việt Nam.</p>
-      <p>Chúng tôi có thể tiếp nhận yêu cầu từ bản vẽ kỹ thuật, mẫu thật, hình ảnh tham khảo, tiêu chuẩn vật liệu hoặc ý tưởng sản phẩm ban đầu. Từ đó, ANSLIFE JSC phối hợp với hệ thống nhà máy, chuỗi cung ứng vật liệu, bộ phận kỹ thuật và đội kiểm soát chất lượng độc lập để phát triển sản phẩm phù hợp với sản xuất thực tế, tiêu chuẩn thị trường và kế hoạch xuất khẩu.</p>
+      <p>ANSLIFE hỗ trợ buyer quốc tế phát triển và sản xuất sản phẩm nội thất theo hình thức OEM / ODM tại Việt Nam.</p>
+      <p>Chúng tôi có thể tiếp nhận yêu cầu từ bản vẽ kỹ thuật, mẫu thật, hình ảnh tham khảo, tiêu chuẩn vật liệu hoặc ý tưởng sản phẩm ban đầu. Từ đó, ANSLIFE phối hợp với hệ thống nhà máy, chuỗi cung ứng vật liệu, bộ phận kỹ thuật và đội kiểm soát chất lượng độc lập để phát triển sản phẩm phù hợp với sản xuất thực tế, tiêu chuẩn thị trường và kế hoạch xuất khẩu.</p>
     </header>
 
     <section class="ai-oem-odm-dual">
       <article>
         <h3>OEM</h3>
-        <p>OEM là hình thức buyer đã có thiết kế, bản vẽ, mẫu hoặc tiêu chuẩn sản phẩm rõ ràng. ANSLIFE JSC tổ chức sản xuất theo đúng yêu cầu đã được thống nhất.</p>
+        <p>OEM là hình thức buyer đã có thiết kế, bản vẽ, mẫu hoặc tiêu chuẩn sản phẩm rõ ràng. ANSLIFE tổ chức sản xuất theo đúng yêu cầu đã được thống nhất.</p>
         <h4>Buyer thường cung cấp:</h4>
         <ul>
           <li>Bản vẽ kỹ thuật</li>
@@ -291,8 +291,8 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN = `
       </article>
       <article>
         <h3>ODM</h3>
-        <p>ODM là hình thức buyer có ý tưởng, hình ảnh tham khảo, phong cách sản phẩm hoặc nhu cầu thị trường, nhưng cần ANSLIFE JSC hỗ trợ phát triển sản phẩm chi tiết hơn.</p>
-        <h4>ANSLIFE JSC có thể hỗ trợ:</h4>
+        <p>ODM là hình thức buyer có ý tưởng, hình ảnh tham khảo, phong cách sản phẩm hoặc nhu cầu thị trường, nhưng cần ANSLIFE hỗ trợ phát triển sản phẩm chi tiết hơn.</p>
+        <h4>ANSLIFE có thể hỗ trợ:</h4>
         <ul>
           <li>Phân tích ý tưởng sản phẩm</li>
           <li>Đề xuất kết cấu</li>
@@ -307,14 +307,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN = `
     </section>
 
     <section class="ai-oem-odm-support">
-      <h2>ANSLIFE JSC hỗ trợ những gì?</h2>
+      <h2>ANSLIFE hỗ trợ những gì?</h2>
       <div class="ai-oem-odm-support-grid">
-        <article><h3>1. Tiếp nhận yêu cầu sản phẩm</h3><p>ANSLIFE JSC tiếp nhận bản vẽ, mẫu thật, hình ảnh tham khảo, thông số kỹ thuật hoặc ý tưởng sản phẩm từ buyer.</p></article>
+        <article><h3>1. Tiếp nhận yêu cầu sản phẩm</h3><p>ANSLIFE tiếp nhận bản vẽ, mẫu thật, hình ảnh tham khảo, thông số kỹ thuật hoặc ý tưởng sản phẩm từ buyer.</p></article>
         <article><h3>2. Phân tích kỹ thuật</h3><p>Chúng tôi kiểm tra kết cấu, kích thước, vật liệu, độ ổn định, khả năng sản xuất và tiêu chuẩn đóng gói của sản phẩm.</p></article>
-        <article><h3>3. Đề xuất vật liệu</h3><p>ANSLIFE JSC sử dụng chuỗi cung ứng vật liệu tại Việt Nam để đề xuất các lựa chọn phù hợp như gỗ tự nhiên, plywood, MDF, veneer, foam, vải, da, phụ kiện và vật liệu đóng gói.</p></article>
-        <article><h3>4. Phát triển mẫu</h3><p>ANSLIFE JSC phối hợp với nhà máy và bộ phận kỹ thuật để phát triển mẫu, điều chỉnh mẫu và hoàn thiện theo phản hồi của buyer.</p></article>
-        <article><h3>5. Kiểm soát chất lượng mẫu</h3><p>Đội kiểm soát chất lượng độc lập của ANSLIFE JSC kiểm tra mẫu theo tiêu chuẩn đã thống nhất, bao gồm kết cấu, kích thước, màu sắc, độ ẩm, hoàn thiện bề mặt và đóng gói.</p></article>
-        <article><h3>6. Chuẩn bị sản xuất hàng loạt</h3><p>Sau khi mẫu được duyệt, ANSLIFE JSC hỗ trợ chuẩn hóa bản vẽ, vật liệu, màu sắc, tiêu chuẩn kiểm hàng và quy cách đóng gói trước khi sản xuất hàng loạt.</p></article>
+        <article><h3>3. Đề xuất vật liệu</h3><p>ANSLIFE sử dụng chuỗi cung ứng vật liệu tại Việt Nam để đề xuất các lựa chọn phù hợp như gỗ tự nhiên, plywood, MDF, veneer, foam, vải, da, phụ kiện và vật liệu đóng gói.</p></article>
+        <article><h3>4. Phát triển mẫu</h3><p>ANSLIFE phối hợp với nhà máy và bộ phận kỹ thuật để phát triển mẫu, điều chỉnh mẫu và hoàn thiện theo phản hồi của buyer.</p></article>
+        <article><h3>5. Kiểm soát chất lượng mẫu</h3><p>Đội kiểm soát chất lượng độc lập của ANSLIFE kiểm tra mẫu theo tiêu chuẩn đã thống nhất, bao gồm kết cấu, kích thước, màu sắc, độ ẩm, hoàn thiện bề mặt và đóng gói.</p></article>
+        <article><h3>6. Chuẩn bị sản xuất hàng loạt</h3><p>Sau khi mẫu được duyệt, ANSLIFE hỗ trợ chuẩn hóa bản vẽ, vật liệu, màu sắc, tiêu chuẩn kiểm hàng và quy cách đóng gói trước khi sản xuất hàng loạt.</p></article>
       </div>
     </section>
 
@@ -322,7 +322,7 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN = `
       <h2>Quy trình OEM / ODM</h2>
       <ol class="ai-oem-odm-timeline">
         <li>Buyer gửi yêu cầu</li>
-        <li>ANSLIFE JSC kiểm tra bản vẽ / mẫu / hình ảnh tham khảo</li>
+        <li>ANSLIFE kiểm tra bản vẽ / mẫu / hình ảnh tham khảo</li>
         <li>Phân tích kết cấu, vật liệu và khả năng sản xuất</li>
         <li>Đề xuất phương án phát triển mẫu</li>
         <li>Phát triển mẫu</li>
@@ -335,13 +335,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>Điểm khác biệt của ANSLIFE JSC</h2>
-      <p>Điểm khác biệt của ANSLIFE JSC không chỉ nằm ở việc phát triển mẫu, mà ở khả năng kết nối sản phẩm với toàn bộ hệ thống sản xuất, chuỗi cung ứng vật liệu, kiểm soát chất lượng độc lập, lưu kho và xuất hàng tại Việt Nam.</p>
+      <h2>Điểm khác biệt của ANSLIFE</h2>
+      <p>Điểm khác biệt của ANSLIFE không chỉ nằm ở việc phát triển mẫu, mà ở khả năng kết nối sản phẩm với toàn bộ hệ thống sản xuất, chuỗi cung ứng vật liệu, kiểm soát chất lượng độc lập, lưu kho và xuất hàng tại Việt Nam.</p>
       <p>Điều này giúp buyer không chỉ phát triển một sản phẩm đơn lẻ, mà có thể xây dựng một quy trình sản xuất ổn định, có thể lặp lại và kiểm soát được trong dài hạn.</p>
     </section>
 
     <section class="ai-oem-odm-checklist">
-      <h2>Buyer nên gửi gì cho ANSLIFE JSC?</h2>
+      <h2>Buyer nên gửi gì cho ANSLIFE?</h2>
       <ul>
         <li>Bản vẽ kỹ thuật nếu có</li>
         <li>Hình ảnh tham khảo</li>
@@ -359,13 +359,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN = `
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
-        <h2>Gửi yêu cầu phát triển sản phẩm cho ANSLIFE JSC</h2>
-        <p>Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc ý tưởng sản phẩm. Đội ngũ ANSLIFE JSC sẽ xem xét yêu cầu và đề xuất phương án phát triển sản phẩm, vật liệu, mẫu, sản xuất và xuất hàng phù hợp.</p>
+        <h2>Gửi yêu cầu phát triển sản phẩm cho ANSLIFE</h2>
+        <p>Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc ý tưởng sản phẩm. Đội ngũ ANSLIFE sẽ xem xét yêu cầu và đề xuất phương án phát triển sản phẩm, vật liệu, mẫu, sản xuất và xuất hàng phù hợp.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -376,14 +376,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN = `
     <header class="ai-oem-odm-hero">
       <h2>OEM / ODM Product Development</h2>
       <p class="ai-oem-odm-subtitle">From technical drawings, physical samples, or initial ideas to sample development and mass production in Vietnam.</p>
-      <p>ANSLIFE JSC supports international buyers in developing and manufacturing furniture products under OEM / ODM models in Vietnam.</p>
-      <p>We can receive requirements from technical drawings, physical samples, reference images, material standards, or initial product concepts. From there, ANSLIFE JSC coordinates with factory partners, material supply chains, engineering teams, and independent quality control teams to develop products aligned with real production conditions, market standards, and export plans.</p>
+      <p>ANSLIFE supports international buyers in developing and manufacturing furniture products under OEM / ODM models in Vietnam.</p>
+      <p>We can receive requirements from technical drawings, physical samples, reference images, material standards, or initial product concepts. From there, ANSLIFE coordinates with factory partners, material supply chains, engineering teams, and independent quality control teams to develop products aligned with real production conditions, market standards, and export plans.</p>
     </header>
 
     <section class="ai-oem-odm-dual">
       <article>
         <h3>OEM</h3>
-        <p>OEM applies when the buyer already has a clear design, drawing, sample, or product standard. ANSLIFE JSC organizes production exactly according to the agreed requirements.</p>
+        <p>OEM applies when the buyer already has a clear design, drawing, sample, or product standard. ANSLIFE organizes production exactly according to the agreed requirements.</p>
         <h4>Buyers usually provide:</h4>
         <ul>
           <li>Technical drawings</li>
@@ -399,8 +399,8 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN = `
       </article>
       <article>
         <h3>ODM</h3>
-        <p>ODM applies when the buyer has ideas, references, style direction, or market demand but needs ANSLIFE JSC to further develop the product in detail.</p>
-        <h4>ANSLIFE JSC can support:</h4>
+        <p>ODM applies when the buyer has ideas, references, style direction, or market demand but needs ANSLIFE to further develop the product in detail.</p>
+        <h4>ANSLIFE can support:</h4>
         <ul>
           <li>Product concept analysis</li>
           <li>Structure proposals</li>
@@ -415,14 +415,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN = `
     </section>
 
     <section class="ai-oem-odm-support">
-      <h2>How ANSLIFE JSC supports your project</h2>
+      <h2>How ANSLIFE supports your project</h2>
       <div class="ai-oem-odm-support-grid">
-        <article><h3>1. Requirement intake</h3><p>ANSLIFE JSC receives drawings, physical samples, reference images, technical specifications, or product ideas from buyers.</p></article>
+        <article><h3>1. Requirement intake</h3><p>ANSLIFE receives drawings, physical samples, reference images, technical specifications, or product ideas from buyers.</p></article>
         <article><h3>2. Technical analysis</h3><p>We review structure, dimensions, materials, stability, production feasibility, and packing standards.</p></article>
-        <article><h3>3. Material recommendations</h3><p>ANSLIFE JSC uses Vietnam-based supply chains to recommend suitable options including solid wood, plywood, MDF, veneer, foam, fabric, leather, accessories, and packing materials.</p></article>
-        <article><h3>4. Sample development</h3><p>ANSLIFE JSC coordinates with factories and engineering teams to develop, adjust, and finalize samples based on buyer feedback.</p></article>
+        <article><h3>3. Material recommendations</h3><p>ANSLIFE uses Vietnam-based supply chains to recommend suitable options including solid wood, plywood, MDF, veneer, foam, fabric, leather, accessories, and packing materials.</p></article>
+        <article><h3>4. Sample development</h3><p>ANSLIFE coordinates with factories and engineering teams to develop, adjust, and finalize samples based on buyer feedback.</p></article>
         <article><h3>5. Independent sample QC</h3><p>Our independent quality control team checks samples against agreed standards for structure, dimensions, color, moisture, surface finish, and packing.</p></article>
-        <article><h3>6. Mass production readiness</h3><p>After sample approval, ANSLIFE JSC supports standardizing drawings, materials, colors, inspection standards, and packing specifications before mass production.</p></article>
+        <article><h3>6. Mass production readiness</h3><p>After sample approval, ANSLIFE supports standardizing drawings, materials, colors, inspection standards, and packing specifications before mass production.</p></article>
       </div>
     </section>
 
@@ -430,7 +430,7 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN = `
       <h2>OEM / ODM Process</h2>
       <ol class="ai-oem-odm-timeline">
         <li>Buyer submits requirements</li>
-        <li>ANSLIFE JSC reviews drawings / samples / references</li>
+        <li>ANSLIFE reviews drawings / samples / references</li>
         <li>Structure, material, and production feasibility analysis</li>
         <li>Sample development proposal</li>
         <li>Sample development</li>
@@ -443,13 +443,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>What makes ANSLIFE JSC different</h2>
+      <h2>What makes ANSLIFE different</h2>
       <p>The value is not only in sample development, but in connecting the product to our full production system, material supply chain, independent quality control, warehousing, and export execution in Vietnam.</p>
       <p>This helps buyers build not just one product, but a stable, repeatable, and controllable production workflow for long-term growth.</p>
     </section>
 
     <section class="ai-oem-odm-checklist">
-      <h2>What buyers should send to ANSLIFE JSC</h2>
+      <h2>What buyers should send to ANSLIFE</h2>
       <ul>
         <li>Technical drawing (if available)</li>
         <li>Reference images</li>
@@ -467,13 +467,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN = `
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
-        <h2>Send your product development request to ANSLIFE JSC</h2>
-        <p>Buyers can send drawings, physical samples, reference images, or initial concepts. The ANSLIFE JSC team will review and propose suitable development, material, sampling, manufacturing, and shipment plans.</p>
+        <h2>Send your product development request to ANSLIFE</h2>
+        <p>Buyers can send drawings, physical samples, reference images, or initial concepts. The ANSLIFE team will review and propose suitable development, material, sampling, manufacturing, and shipment plans.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Send inquiry</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload drawing</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -484,14 +484,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_JP = `
     <header class="ai-oem-odm-hero">
       <h2>OEM / ODM製品開発</h2>
       <p class="ai-oem-odm-subtitle">図面、現物サンプル、または初期アイデアから、試作開発とベトナムでの量産まで。</p>
-      <p>ANSLIFE JSCは、ベトナムにおけるOEM / ODM方式で、海外バイヤーの家具製品開発と生産を支援します。</p>
-      <p>技術図面、現物サンプル、参考画像、材料基準、または初期の製品コンセプトから要件を受け付け可能です。ANSLIFE JSCは工場ネットワーク、材料サプライチェーン、技術チーム、独立した品質管理チームと連携し、実際の生産条件、市場基準、輸出計画に適合する製品へと開発を進めます。</p>
+      <p>ANSLIFEは、ベトナムにおけるOEM / ODM方式で、海外バイヤーの家具製品開発と生産を支援します。</p>
+      <p>技術図面、現物サンプル、参考画像、材料基準、または初期の製品コンセプトから要件を受け付け可能です。ANSLIFEは工場ネットワーク、材料サプライチェーン、技術チーム、独立した品質管理チームと連携し、実際の生産条件、市場基準、輸出計画に適合する製品へと開発を進めます。</p>
     </header>
 
     <section class="ai-oem-odm-dual">
       <article>
         <h3>OEM</h3>
-        <p>OEMは、バイヤー側で設計、図面、サンプル、または製品基準が明確に定義されている場合の形態です。ANSLIFE JSCは合意済み要件に沿って生産を実行します。</p>
+        <p>OEMは、バイヤー側で設計、図面、サンプル、または製品基準が明確に定義されている場合の形態です。ANSLIFEは合意済み要件に沿って生産を実行します。</p>
         <h4>バイヤーが通常提供する情報:</h4>
         <ul>
           <li>技術図面</li>
@@ -508,7 +508,7 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_JP = `
       <article>
         <h3>ODM</h3>
         <p>ODMは、バイヤーが製品アイデア、参考画像、スタイル方向性、または市場ニーズを持っているものの、詳細設計の開発支援を必要とする場合の形態です。</p>
-        <h4>ANSLIFE JSCが支援できる内容:</h4>
+        <h4>ANSLIFEが支援できる内容:</h4>
         <ul>
           <li>製品コンセプトの分析</li>
           <li>構造提案</li>
@@ -523,14 +523,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_JP = `
     </section>
 
     <section class="ai-oem-odm-support">
-      <h2>ANSLIFE JSCは何を支援するのか</h2>
+      <h2>ANSLIFEは何を支援するのか</h2>
       <div class="ai-oem-odm-support-grid">
-        <article><h3>1. 要件受付</h3><p>ANSLIFE JSCは、図面、現物サンプル、参考画像、技術仕様、または製品アイデアをバイヤーから受け付けます。</p></article>
+        <article><h3>1. 要件受付</h3><p>ANSLIFEは、図面、現物サンプル、参考画像、技術仕様、または製品アイデアをバイヤーから受け付けます。</p></article>
         <article><h3>2. 技術分析</h3><p>製品の構造、寸法、材料、安定性、生産実現性、梱包基準を確認します。</p></article>
-        <article><h3>3. 材料提案</h3><p>ANSLIFE JSCは、ベトナムの材料サプライチェーンを活用し、無垢材、合板、MDF、ベニヤ、フォーム、ファブリック、レザー、金具、梱包材などの適切な選択肢を提案します。</p></article>
-        <article><h3>4. 試作開発</h3><p>ANSLIFE JSCは工場と技術チームと連携し、バイヤーのフィードバックに基づいて試作を開発・調整・完成させます。</p></article>
+        <article><h3>3. 材料提案</h3><p>ANSLIFEは、ベトナムの材料サプライチェーンを活用し、無垢材、合板、MDF、ベニヤ、フォーム、ファブリック、レザー、金具、梱包材などの適切な選択肢を提案します。</p></article>
+        <article><h3>4. 試作開発</h3><p>ANSLIFEは工場と技術チームと連携し、バイヤーのフィードバックに基づいて試作を開発・調整・完成させます。</p></article>
         <article><h3>5. 試作品質管理</h3><p>独立した品質管理チームが、構造、寸法、色、含水率、表面仕上げ、梱包を含む合意基準に従って試作を検査します。</p></article>
-        <article><h3>6. 量産準備</h3><p>試作承認後、ANSLIFE JSCは量産前に図面、材料、色、検品基準、梱包仕様の標準化を支援します。</p></article>
+        <article><h3>6. 量産準備</h3><p>試作承認後、ANSLIFEは量産前に図面、材料、色、検品基準、梱包仕様の標準化を支援します。</p></article>
       </div>
     </section>
 
@@ -538,7 +538,7 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_JP = `
       <h2>OEM / ODMプロセス</h2>
       <ol class="ai-oem-odm-timeline">
         <li>バイヤーが要件を送付</li>
-        <li>ANSLIFE JSCが図面 / サンプル / 参考画像を確認</li>
+        <li>ANSLIFEが図面 / サンプル / 参考画像を確認</li>
         <li>構造、材料、生産実現性を分析</li>
         <li>試作開発案を提案</li>
         <li>試作開発</li>
@@ -551,13 +551,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_JP = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>ANSLIFE JSCの差別化ポイント</h2>
-      <p>ANSLIFE JSCの価値は、試作開発だけではなく、製品を生産システム全体、材料サプライチェーン、独立品質管理、倉庫運用、ベトナムからの輸出実行までつなげられる点にあります。</p>
+      <h2>ANSLIFEの差別化ポイント</h2>
+      <p>ANSLIFEの価値は、試作開発だけではなく、製品を生産システム全体、材料サプライチェーン、独立品質管理、倉庫運用、ベトナムからの輸出実行までつなげられる点にあります。</p>
       <p>これにより、バイヤーは単一製品の開発にとどまらず、長期的に再現可能で管理可能な安定した生産ワークフローを構築できます。</p>
     </section>
 
     <section class="ai-oem-odm-checklist">
-      <h2>バイヤーがANSLIFE JSCへ共有すべき情報</h2>
+      <h2>バイヤーがANSLIFEへ共有すべき情報</h2>
       <ul>
         <li>技術図面（あれば）</li>
         <li>参考画像</li>
@@ -575,13 +575,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_JP = `
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
-        <h2>ANSLIFE JSCへ製品開発リクエストを送る</h2>
-        <p>バイヤーは図面、現物サンプル、参考画像、または初期アイデアを共有できます。ANSLIFE JSCチームが要件を確認し、開発、材料、試作、生産、出荷の最適な計画を提案します。</p>
+        <h2>ANSLIFEへ製品開発リクエストを送る</h2>
+        <p>バイヤーは図面、現物サンプル、参考画像、または初期アイデアを共有できます。ANSLIFEチームが要件を確認し、開発、材料、試作、生産、出荷の最適な計画を提案します。</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">お問い合わせ送信</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">図面をアップロード</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">ANSLIFE JSCに連絡</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">ANSLIFEに連絡</a>
       </div>
     </div>
   </section>
@@ -592,14 +592,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_KR = `
     <header class="ai-oem-odm-hero">
       <h2>OEM / ODM 제품 개발</h2>
       <p class="ai-oem-odm-subtitle">기술 도면, 실물 샘플 또는 초기 아이디어부터 베트남 내 샘플 개발과 대량생산까지.</p>
-      <p>ANSLIFE JSC는 베트남에서 OEM / ODM 방식으로 국제 바이어의 가구 제품 개발과 생산을 지원합니다.</p>
-      <p>기술 도면, 실물 샘플, 참고 이미지, 자재 기준 또는 초기 제품 아이디어를 기반으로 요구사항을 접수할 수 있습니다. 이후 ANSLIFE JSC는 공장 파트너, 자재 공급망, 엔지니어링 팀, 독립 품질관리 팀과 협업하여 실제 생산 조건, 시장 기준, 수출 계획에 맞는 제품을 개발합니다.</p>
+      <p>ANSLIFE는 베트남에서 OEM / ODM 방식으로 국제 바이어의 가구 제품 개발과 생산을 지원합니다.</p>
+      <p>기술 도면, 실물 샘플, 참고 이미지, 자재 기준 또는 초기 제품 아이디어를 기반으로 요구사항을 접수할 수 있습니다. 이후 ANSLIFE는 공장 파트너, 자재 공급망, 엔지니어링 팀, 독립 품질관리 팀과 협업하여 실제 생산 조건, 시장 기준, 수출 계획에 맞는 제품을 개발합니다.</p>
     </header>
 
     <section class="ai-oem-odm-dual">
       <article>
         <h3>OEM</h3>
-        <p>OEM은 바이어가 이미 명확한 설계, 도면, 샘플 또는 제품 기준을 보유한 경우에 적용됩니다. ANSLIFE JSC는 합의된 요구사항에 따라 정확히 생산을 수행합니다.</p>
+        <p>OEM은 바이어가 이미 명확한 설계, 도면, 샘플 또는 제품 기준을 보유한 경우에 적용됩니다. ANSLIFE는 합의된 요구사항에 따라 정확히 생산을 수행합니다.</p>
         <h4>바이어가 일반적으로 제공하는 항목:</h4>
         <ul>
           <li>기술 도면</li>
@@ -616,7 +616,7 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_KR = `
       <article>
         <h3>ODM</h3>
         <p>ODM은 바이어가 아이디어, 참고 이미지, 제품 스타일 방향 또는 시장 수요를 가지고 있지만, 상세 제품 개발에 대한 지원이 필요한 경우에 적용됩니다.</p>
-        <h4>ANSLIFE JSC 지원 범위:</h4>
+        <h4>ANSLIFE 지원 범위:</h4>
         <ul>
           <li>제품 컨셉 분석</li>
           <li>구조 제안</li>
@@ -631,14 +631,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_KR = `
     </section>
 
     <section class="ai-oem-odm-support">
-      <h2>ANSLIFE JSC는 무엇을 지원하나요?</h2>
+      <h2>ANSLIFE는 무엇을 지원하나요?</h2>
       <div class="ai-oem-odm-support-grid">
-        <article><h3>1. 제품 요구사항 접수</h3><p>ANSLIFE JSC는 바이어의 도면, 실물 샘플, 참고 이미지, 기술 사양 또는 제품 아이디어를 접수합니다.</p></article>
+        <article><h3>1. 제품 요구사항 접수</h3><p>ANSLIFE는 바이어의 도면, 실물 샘플, 참고 이미지, 기술 사양 또는 제품 아이디어를 접수합니다.</p></article>
         <article><h3>2. 기술 분석</h3><p>제품의 구조, 치수, 자재, 안정성, 생산 가능성, 포장 기준을 검토합니다.</p></article>
-        <article><h3>3. 자재 제안</h3><p>ANSLIFE JSC는 베트남 자재 공급망을 활용해 원목, 합판, MDF, 베니어, 폼, 원단, 가죽, 부자재, 포장재 등 적합한 옵션을 제안합니다.</p></article>
-        <article><h3>4. 샘플 개발</h3><p>ANSLIFE JSC는 공장 및 엔지니어링 팀과 협력하여 바이어 피드백에 맞춰 샘플을 개발, 조정, 완성합니다.</p></article>
+        <article><h3>3. 자재 제안</h3><p>ANSLIFE는 베트남 자재 공급망을 활용해 원목, 합판, MDF, 베니어, 폼, 원단, 가죽, 부자재, 포장재 등 적합한 옵션을 제안합니다.</p></article>
+        <article><h3>4. 샘플 개발</h3><p>ANSLIFE는 공장 및 엔지니어링 팀과 협력하여 바이어 피드백에 맞춰 샘플을 개발, 조정, 완성합니다.</p></article>
         <article><h3>5. 샘플 품질관리</h3><p>독립 품질관리 팀이 구조, 치수, 색상, 함수율, 표면 마감, 포장 기준에 따라 샘플을 검사합니다.</p></article>
-        <article><h3>6. 대량생산 준비</h3><p>샘플 승인 후 ANSLIFE JSC는 대량생산 전 도면, 자재, 색상, 검사 기준, 포장 사양의 표준화를 지원합니다.</p></article>
+        <article><h3>6. 대량생산 준비</h3><p>샘플 승인 후 ANSLIFE는 대량생산 전 도면, 자재, 색상, 검사 기준, 포장 사양의 표준화를 지원합니다.</p></article>
       </div>
     </section>
 
@@ -646,7 +646,7 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_KR = `
       <h2>OEM / ODM 프로세스</h2>
       <ol class="ai-oem-odm-timeline">
         <li>바이어 요구사항 접수</li>
-        <li>ANSLIFE JSC가 도면 / 샘플 / 참고 이미지 검토</li>
+        <li>ANSLIFE가 도면 / 샘플 / 참고 이미지 검토</li>
         <li>구조, 자재, 생산 가능성 분석</li>
         <li>샘플 개발 방안 제안</li>
         <li>샘플 개발</li>
@@ -659,13 +659,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_KR = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>ANSLIFE JSC의 차별점</h2>
-      <p>ANSLIFE JSC의 강점은 샘플 개발에만 있지 않습니다. 제품을 전체 생산 시스템, 자재 공급망, 독립 품질관리, 창고 운영, 베트남 수출 실행까지 연결합니다.</p>
+      <h2>ANSLIFE의 차별점</h2>
+      <p>ANSLIFE의 강점은 샘플 개발에만 있지 않습니다. 제품을 전체 생산 시스템, 자재 공급망, 독립 품질관리, 창고 운영, 베트남 수출 실행까지 연결합니다.</p>
       <p>이를 통해 바이어는 단일 제품 개발을 넘어 장기적으로 반복 가능하고 통제 가능한 안정적 생산 체계를 구축할 수 있습니다.</p>
     </section>
 
     <section class="ai-oem-odm-checklist">
-      <h2>바이어가 ANSLIFE JSC에 보내야 할 자료</h2>
+      <h2>바이어가 ANSLIFE에 보내야 할 자료</h2>
       <ul>
         <li>기술 도면 (가능한 경우)</li>
         <li>참고 이미지</li>
@@ -683,13 +683,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_KR = `
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
-        <h2>ANSLIFE JSC에 제품 개발 요청 보내기</h2>
-        <p>바이어는 도면, 실물 샘플, 참고 이미지 또는 초기 아이디어를 보낼 수 있습니다. ANSLIFE JSC 팀이 요구사항을 검토하고 개발, 자재, 샘플, 생산, 출하 계획을 제안합니다.</p>
+        <h2>ANSLIFE에 제품 개발 요청 보내기</h2>
+        <p>바이어는 도면, 실물 샘플, 참고 이미지 또는 초기 아이디어를 보낼 수 있습니다. ANSLIFE 팀이 요구사항을 검토하고 개발, 자재, 샘플, 생산, 출하 계획을 제안합니다.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">문의 보내기</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">도면 업로드</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">ANSLIFE JSC 문의</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">ANSLIFE 문의</a>
       </div>
     </div>
   </section>
@@ -700,14 +700,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_SV = `
     <header class="ai-oem-odm-hero">
       <h2>OEM / ODM-produktutveckling</h2>
       <p class="ai-oem-odm-subtitle">Från tekniska ritningar, fysiska prover eller tidiga idéer till provutveckling och massproduktion i Vietnam.</p>
-      <p>ANSLIFE JSC stödjer internationella köpare i att utveckla och tillverka möbelprodukter enligt OEM / ODM i Vietnam.</p>
-      <p>Vi kan ta emot krav baserade på tekniska ritningar, fysiska prover, referensbilder, materialstandarder eller initiala produktidéer. Därefter samordnar ANSLIFE JSC fabriksnätverk, materialförsörjning, teknikteam och oberoende kvalitetskontroll för att utveckla produkter som passar verklig produktion, marknadsstandarder och exportplaner.</p>
+      <p>ANSLIFE stödjer internationella köpare i att utveckla och tillverka möbelprodukter enligt OEM / ODM i Vietnam.</p>
+      <p>Vi kan ta emot krav baserade på tekniska ritningar, fysiska prover, referensbilder, materialstandarder eller initiala produktidéer. Därefter samordnar ANSLIFE fabriksnätverk, materialförsörjning, teknikteam och oberoende kvalitetskontroll för att utveckla produkter som passar verklig produktion, marknadsstandarder och exportplaner.</p>
     </header>
 
     <section class="ai-oem-odm-dual">
       <article>
         <h3>OEM</h3>
-        <p>OEM gäller när köparen redan har en tydlig design, ritning, prov eller produktstandard. ANSLIFE JSC organiserar produktionen exakt enligt överenskomna krav.</p>
+        <p>OEM gäller när köparen redan har en tydlig design, ritning, prov eller produktstandard. ANSLIFE organiserar produktionen exakt enligt överenskomna krav.</p>
         <h4>Köpare brukar tillhandahålla:</h4>
         <ul>
           <li>Tekniska ritningar</li>
@@ -723,8 +723,8 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_SV = `
       </article>
       <article>
         <h3>ODM</h3>
-        <p>ODM gäller när köparen har idéer, referenser, stilriktning eller marknadsbehov men behöver ANSLIFE JSC för att utveckla produkten mer i detalj.</p>
-        <h4>ANSLIFE JSC kan stödja med:</h4>
+        <p>ODM gäller när köparen har idéer, referenser, stilriktning eller marknadsbehov men behöver ANSLIFE för att utveckla produkten mer i detalj.</p>
+        <h4>ANSLIFE kan stödja med:</h4>
         <ul>
           <li>Analys av produktkoncept</li>
           <li>Förslag på konstruktion</li>
@@ -739,14 +739,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_SV = `
     </section>
 
     <section class="ai-oem-odm-support">
-      <h2>Hur ANSLIFE JSC stödjer ert projekt</h2>
+      <h2>Hur ANSLIFE stödjer ert projekt</h2>
       <div class="ai-oem-odm-support-grid">
-        <article><h3>1. Mottagning av produktkrav</h3><p>ANSLIFE JSC tar emot ritningar, fysiska prover, referensbilder, tekniska specifikationer eller produktidéer från köparen.</p></article>
+        <article><h3>1. Mottagning av produktkrav</h3><p>ANSLIFE tar emot ritningar, fysiska prover, referensbilder, tekniska specifikationer eller produktidéer från köparen.</p></article>
         <article><h3>2. Teknisk analys</h3><p>Vi granskar konstruktion, mått, material, stabilitet, produktionsbarhet och förpackningsstandarder.</p></article>
-        <article><h3>3. Materialrekommendationer</h3><p>ANSLIFE JSC använder Vietnam-baserade leveranskedjor för att rekommendera lämpliga alternativ som massivt trä, plywood, MDF, faner, skum, tyg, läder, tillbehör och förpackningsmaterial.</p></article>
-        <article><h3>4. Provutveckling</h3><p>ANSLIFE JSC samarbetar med fabriker och teknikteam för att utveckla, justera och färdigställa prover utifrån köparens feedback.</p></article>
+        <article><h3>3. Materialrekommendationer</h3><p>ANSLIFE använder Vietnam-baserade leveranskedjor för att rekommendera lämpliga alternativ som massivt trä, plywood, MDF, faner, skum, tyg, läder, tillbehör och förpackningsmaterial.</p></article>
+        <article><h3>4. Provutveckling</h3><p>ANSLIFE samarbetar med fabriker och teknikteam för att utveckla, justera och färdigställa prover utifrån köparens feedback.</p></article>
         <article><h3>5. Oberoende prov-QC</h3><p>Vårt oberoende kvalitetskontrollteam kontrollerar prover enligt överenskomna standarder för konstruktion, mått, färg, fukthalt, ytfinish och förpackning.</p></article>
-        <article><h3>6. Förberedelse för massproduktion</h3><p>Efter godkänt prov stödjer ANSLIFE JSC standardisering av ritningar, material, färger, inspektionsstandarder och förpackningsspecifikationer före massproduktion.</p></article>
+        <article><h3>6. Förberedelse för massproduktion</h3><p>Efter godkänt prov stödjer ANSLIFE standardisering av ritningar, material, färger, inspektionsstandarder och förpackningsspecifikationer före massproduktion.</p></article>
       </div>
     </section>
 
@@ -754,7 +754,7 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_SV = `
       <h2>OEM / ODM-process</h2>
       <ol class="ai-oem-odm-timeline">
         <li>Köparen skickar krav</li>
-        <li>ANSLIFE JSC granskar ritningar / prover / referenser</li>
+        <li>ANSLIFE granskar ritningar / prover / referenser</li>
         <li>Analys av konstruktion, material och produktionsbarhet</li>
         <li>Förslag på provutvecklingsplan</li>
         <li>Provutveckling</li>
@@ -767,13 +767,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_SV = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>Vad som gör ANSLIFE JSC annorlunda</h2>
+      <h2>Vad som gör ANSLIFE annorlunda</h2>
       <p>Värdet ligger inte bara i provutveckling, utan i förmågan att koppla produkten till hela produktionssystemet, materialförsörjningen, oberoende kvalitetskontroll, lagerhållning och export från Vietnam.</p>
       <p>Detta hjälper köpare att bygga inte bara en enskild produkt, utan ett stabilt, repeterbart och kontrollerbart produktionsflöde för långsiktig utveckling.</p>
     </section>
 
     <section class="ai-oem-odm-checklist">
-      <h2>Vad köpare bör skicka till ANSLIFE JSC</h2>
+      <h2>Vad köpare bör skicka till ANSLIFE</h2>
       <ul>
         <li>Teknisk ritning (om tillgänglig)</li>
         <li>Referensbilder</li>
@@ -791,13 +791,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_SV = `
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
-        <h2>Skicka din produktutvecklingsförfrågan till ANSLIFE JSC</h2>
-        <p>Köpare kan skicka ritningar, fysiska prover, referensbilder eller initiala idéer. ANSLIFE JSC-teamet granskar kraven och föreslår lämplig utveckling, material, provtagning, tillverkning och leveransplan.</p>
+        <h2>Skicka din produktutvecklingsförfrågan till ANSLIFE</h2>
+        <p>Köpare kan skicka ritningar, fysiska prover, referensbilder eller initiala idéer. ANSLIFE-teamet granskar kraven och föreslår lämplig utveckling, material, provtagning, tillverkning och leveransplan.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Skicka förfrågan</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Ladda upp ritning</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Kontakta ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Kontakta ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -808,14 +808,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_FR = `
     <header class="ai-oem-odm-hero">
       <h2>Développement produit OEM / ODM</h2>
       <p class="ai-oem-odm-subtitle">Des plans techniques, échantillons physiques ou idées initiales vers le développement d’échantillons et la production de masse au Vietnam.</p>
-      <p>ANSLIFE JSC accompagne les acheteurs internationaux dans le développement et la fabrication de produits d’ameublement en modèle OEM / ODM au Vietnam.</p>
-      <p>Nous pouvons recevoir des exigences à partir de plans techniques, échantillons physiques, images de référence, normes matières ou concepts produits initiaux. Ensuite, ANSLIFE JSC coordonne usines partenaires, chaîne d’approvisionnement matière, équipe technique et contrôle qualité indépendant pour développer des produits alignés avec la production réelle, les standards du marché et les plans d’export.</p>
+      <p>ANSLIFE accompagne les acheteurs internationaux dans le développement et la fabrication de produits d’ameublement en modèle OEM / ODM au Vietnam.</p>
+      <p>Nous pouvons recevoir des exigences à partir de plans techniques, échantillons physiques, images de référence, normes matières ou concepts produits initiaux. Ensuite, ANSLIFE coordonne usines partenaires, chaîne d’approvisionnement matière, équipe technique et contrôle qualité indépendant pour développer des produits alignés avec la production réelle, les standards du marché et les plans d’export.</p>
     </header>
 
     <section class="ai-oem-odm-dual">
       <article>
         <h3>OEM</h3>
-        <p>Le modèle OEM s’applique lorsque l’acheteur dispose déjà d’un design, d’un plan, d’un échantillon ou d’un standard produit clair. ANSLIFE JSC organise la production conformément aux exigences convenues.</p>
+        <p>Le modèle OEM s’applique lorsque l’acheteur dispose déjà d’un design, d’un plan, d’un échantillon ou d’un standard produit clair. ANSLIFE organise la production conformément aux exigences convenues.</p>
         <h4>L’acheteur fournit généralement :</h4>
         <ul>
           <li>Plans techniques</li>
@@ -831,8 +831,8 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_FR = `
       </article>
       <article>
         <h3>ODM</h3>
-        <p>Le modèle ODM s’applique lorsque l’acheteur a des idées, des références, une direction stylistique ou un besoin marché, mais a besoin d’un accompagnement ANSLIFE JSC pour détailler le produit.</p>
-        <h4>ANSLIFE JSC peut accompagner sur :</h4>
+        <p>Le modèle ODM s’applique lorsque l’acheteur a des idées, des références, une direction stylistique ou un besoin marché, mais a besoin d’un accompagnement ANSLIFE pour détailler le produit.</p>
+        <h4>ANSLIFE peut accompagner sur :</h4>
         <ul>
           <li>Analyse du concept produit</li>
           <li>Propositions de structure</li>
@@ -847,14 +847,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_FR = `
     </section>
 
     <section class="ai-oem-odm-support">
-      <h2>Comment ANSLIFE JSC soutient votre projet</h2>
+      <h2>Comment ANSLIFE soutient votre projet</h2>
       <div class="ai-oem-odm-support-grid">
-        <article><h3>1. Réception des exigences produit</h3><p>ANSLIFE JSC reçoit plans, échantillons physiques, images de référence, spécifications techniques ou idées produit de l’acheteur.</p></article>
+        <article><h3>1. Réception des exigences produit</h3><p>ANSLIFE reçoit plans, échantillons physiques, images de référence, spécifications techniques ou idées produit de l’acheteur.</p></article>
         <article><h3>2. Analyse technique</h3><p>Nous vérifions structure, dimensions, matériaux, stabilité, faisabilité de production et standards d’emballage.</p></article>
-        <article><h3>3. Recommandations matériaux</h3><p>ANSLIFE JSC s’appuie sur la chaîne d’approvisionnement vietnamienne pour proposer des options adaptées : bois massif, contreplaqué, MDF, placage, mousse, tissu, cuir, accessoires et matériaux d’emballage.</p></article>
-        <article><h3>4. Développement d’échantillons</h3><p>ANSLIFE JSC coordonne usines et équipes techniques pour développer, ajuster et finaliser les échantillons selon les retours de l’acheteur.</p></article>
+        <article><h3>3. Recommandations matériaux</h3><p>ANSLIFE s’appuie sur la chaîne d’approvisionnement vietnamienne pour proposer des options adaptées : bois massif, contreplaqué, MDF, placage, mousse, tissu, cuir, accessoires et matériaux d’emballage.</p></article>
+        <article><h3>4. Développement d’échantillons</h3><p>ANSLIFE coordonne usines et équipes techniques pour développer, ajuster et finaliser les échantillons selon les retours de l’acheteur.</p></article>
         <article><h3>5. QC indépendant des échantillons</h3><p>Notre équipe de contrôle qualité indépendante vérifie les échantillons selon les standards convenus : structure, dimensions, couleur, humidité, finition et emballage.</p></article>
-        <article><h3>6. Préparation à la production de masse</h3><p>Après validation de l’échantillon, ANSLIFE JSC accompagne la standardisation des plans, matériaux, couleurs, critères d’inspection et spécifications d’emballage avant la production.</p></article>
+        <article><h3>6. Préparation à la production de masse</h3><p>Après validation de l’échantillon, ANSLIFE accompagne la standardisation des plans, matériaux, couleurs, critères d’inspection et spécifications d’emballage avant la production.</p></article>
       </div>
     </section>
 
@@ -862,7 +862,7 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_FR = `
       <h2>Processus OEM / ODM</h2>
       <ol class="ai-oem-odm-timeline">
         <li>L’acheteur envoie ses exigences</li>
-        <li>ANSLIFE JSC examine plans / échantillons / références</li>
+        <li>ANSLIFE examine plans / échantillons / références</li>
         <li>Analyse de la structure, des matériaux et de la faisabilité de production</li>
         <li>Proposition de plan de développement d’échantillon</li>
         <li>Développement d’échantillon</li>
@@ -875,13 +875,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_FR = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>Ce qui différencie ANSLIFE JSC</h2>
+      <h2>Ce qui différencie ANSLIFE</h2>
       <p>La valeur ne se limite pas au développement d’échantillons, mais à la connexion du produit avec l’ensemble du système de production, la supply chain matière, le contrôle qualité indépendant, le stockage et l’exécution export depuis le Vietnam.</p>
       <p>Cela aide l’acheteur à construire non seulement un produit, mais un flux de production stable, reproductible et maîtrisable sur le long terme.</p>
     </section>
 
     <section class="ai-oem-odm-checklist">
-      <h2>Ce que l’acheteur doit envoyer à ANSLIFE JSC</h2>
+      <h2>Ce que l’acheteur doit envoyer à ANSLIFE</h2>
       <ul>
         <li>Plan technique (si disponible)</li>
         <li>Images de référence</li>
@@ -899,13 +899,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_FR = `
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
-        <h2>Envoyer votre demande de développement produit à ANSLIFE JSC</h2>
-        <p>Les acheteurs peuvent envoyer des plans, échantillons physiques, images de référence ou idées initiales. L’équipe ANSLIFE JSC examinera la demande et proposera un plan adapté de développement, matériaux, échantillonnage, fabrication et expédition.</p>
+        <h2>Envoyer votre demande de développement produit à ANSLIFE</h2>
+        <p>Les acheteurs peuvent envoyer des plans, échantillons physiques, images de référence ou idées initiales. L’équipe ANSLIFE examinera la demande et proposera un plan adapté de développement, matériaux, échantillonnage, fabrication et expédition.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Envoyer une demande</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Téléverser un plan</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contacter ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contacter ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -916,14 +916,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_RU = `
     <header class="ai-oem-odm-hero">
       <h2>Разработка продукта OEM / ODM</h2>
       <p class="ai-oem-odm-subtitle">От технических чертежей, физических образцов или начальной идеи до разработки образца и серийного производства во Вьетнаме.</p>
-      <p>ANSLIFE JSC поддерживает международных покупателей в разработке и производстве мебельной продукции по моделям OEM / ODM во Вьетнаме.</p>
-      <p>Мы принимаем требования на основе технических чертежей, физических образцов, референс-изображений, стандартов материалов или исходной концепции продукта. Далее ANSLIFE JSC координирует заводы-партнеры, цепочку поставок материалов, инженерные команды и независимый контроль качества для разработки продукта под реальные производственные условия, рыночные стандарты и экспортные планы.</p>
+      <p>ANSLIFE поддерживает международных покупателей в разработке и производстве мебельной продукции по моделям OEM / ODM во Вьетнаме.</p>
+      <p>Мы принимаем требования на основе технических чертежей, физических образцов, референс-изображений, стандартов материалов или исходной концепции продукта. Далее ANSLIFE координирует заводы-партнеры, цепочку поставок материалов, инженерные команды и независимый контроль качества для разработки продукта под реальные производственные условия, рыночные стандарты и экспортные планы.</p>
     </header>
 
     <section class="ai-oem-odm-dual">
       <article>
         <h3>OEM</h3>
-        <p>OEM применяется, когда у покупателя уже есть четкий дизайн, чертеж, образец или стандарт продукта. ANSLIFE JSC организует производство строго по согласованным требованиям.</p>
+        <p>OEM применяется, когда у покупателя уже есть четкий дизайн, чертеж, образец или стандарт продукта. ANSLIFE организует производство строго по согласованным требованиям.</p>
         <h4>Покупатель обычно предоставляет:</h4>
         <ul>
           <li>Технические чертежи</li>
@@ -939,8 +939,8 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_RU = `
       </article>
       <article>
         <h3>ODM</h3>
-        <p>ODM применяется, когда у покупателя есть идея, референсы, стиль или рыночный запрос, но нужна поддержка ANSLIFE JSC для детальной разработки продукта.</p>
-        <h4>ANSLIFE JSC может поддержать:</h4>
+        <p>ODM применяется, когда у покупателя есть идея, референсы, стиль или рыночный запрос, но нужна поддержка ANSLIFE для детальной разработки продукта.</p>
+        <h4>ANSLIFE может поддержать:</h4>
         <ul>
           <li>Анализ продуктовой концепции</li>
           <li>Предложения по конструкции</li>
@@ -955,14 +955,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_RU = `
     </section>
 
     <section class="ai-oem-odm-support">
-      <h2>Как ANSLIFE JSC поддерживает ваш проект</h2>
+      <h2>Как ANSLIFE поддерживает ваш проект</h2>
       <div class="ai-oem-odm-support-grid">
-        <article><h3>1. Прием требований к продукту</h3><p>ANSLIFE JSC принимает чертежи, физические образцы, референс-изображения, технические спецификации или идеи продукта от покупателя.</p></article>
+        <article><h3>1. Прием требований к продукту</h3><p>ANSLIFE принимает чертежи, физические образцы, референс-изображения, технические спецификации или идеи продукта от покупателя.</p></article>
         <article><h3>2. Технический анализ</h3><p>Мы проверяем конструкцию, размеры, материалы, стабильность, производственную реализуемость и стандарты упаковки.</p></article>
-        <article><h3>3. Рекомендации по материалам</h3><p>ANSLIFE JSC использует вьетнамские цепочки поставок для подбора подходящих вариантов: массив дерева, фанера, MDF, шпон, пена, ткани, кожа, фурнитура и упаковочные материалы.</p></article>
-        <article><h3>4. Разработка образца</h3><p>ANSLIFE JSC координирует работу заводов и инженерных команд для разработки, корректировки и финализации образца по обратной связи покупателя.</p></article>
+        <article><h3>3. Рекомендации по материалам</h3><p>ANSLIFE использует вьетнамские цепочки поставок для подбора подходящих вариантов: массив дерева, фанера, MDF, шпон, пена, ткани, кожа, фурнитура и упаковочные материалы.</p></article>
+        <article><h3>4. Разработка образца</h3><p>ANSLIFE координирует работу заводов и инженерных команд для разработки, корректировки и финализации образца по обратной связи покупателя.</p></article>
         <article><h3>5. Независимый QC образца</h3><p>Наша независимая команда контроля качества проверяет образец по согласованным стандартам: конструкция, размеры, цвет, влажность, отделка поверхности и упаковка.</p></article>
-        <article><h3>6. Подготовка к серийному производству</h3><p>После утверждения образца ANSLIFE JSC помогает стандартизировать чертежи, материалы, цвета, критерии инспекции и упаковочные спецификации перед запуском серии.</p></article>
+        <article><h3>6. Подготовка к серийному производству</h3><p>После утверждения образца ANSLIFE помогает стандартизировать чертежи, материалы, цвета, критерии инспекции и упаковочные спецификации перед запуском серии.</p></article>
       </div>
     </section>
 
@@ -970,7 +970,7 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_RU = `
       <h2>Процесс OEM / ODM</h2>
       <ol class="ai-oem-odm-timeline">
         <li>Покупатель отправляет требования</li>
-        <li>ANSLIFE JSC проверяет чертежи / образцы / референсы</li>
+        <li>ANSLIFE проверяет чертежи / образцы / референсы</li>
         <li>Анализ конструкции, материалов и производственной реализуемости</li>
         <li>Предложение плана разработки образца</li>
         <li>Разработка образца</li>
@@ -983,13 +983,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_RU = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>Что отличает ANSLIFE JSC</h2>
-      <p>Ценность ANSLIFE JSC не только в разработке образца, но и в интеграции продукта со всей производственной системой, цепочкой поставок материалов, независимым QC, складированием и экспортной отгрузкой из Вьетнама.</p>
+      <h2>Что отличает ANSLIFE</h2>
+      <p>Ценность ANSLIFE не только в разработке образца, но и в интеграции продукта со всей производственной системой, цепочкой поставок материалов, независимым QC, складированием и экспортной отгрузкой из Вьетнама.</p>
       <p>Это помогает покупателю выстроить не единичный продукт, а стабильный, повторяемый и управляемый производственный процесс на долгий срок.</p>
     </section>
 
     <section class="ai-oem-odm-checklist">
-      <h2>Что покупателю стоит отправить в ANSLIFE JSC</h2>
+      <h2>Что покупателю стоит отправить в ANSLIFE</h2>
       <ul>
         <li>Технический чертеж (если есть)</li>
         <li>Референс-изображения</li>
@@ -1007,13 +1007,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_RU = `
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
-        <h2>Отправить запрос на разработку продукта в ANSLIFE JSC</h2>
-        <p>Покупатели могут отправить чертежи, физические образцы, референс-изображения или начальные идеи. Команда ANSLIFE JSC рассмотрит запрос и предложит подходящий план разработки, материалов, образцов, производства и отгрузки.</p>
+        <h2>Отправить запрос на разработку продукта в ANSLIFE</h2>
+        <p>Покупатели могут отправить чертежи, физические образцы, референс-изображения или начальные идеи. Команда ANSLIFE рассмотрит запрос и предложит подходящий план разработки, материалов, образцов, производства и отгрузки.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Отправить запрос</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Загрузить чертеж</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Связаться с ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Связаться с ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -1024,14 +1024,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ES = `
     <header class="ai-oem-odm-hero">
       <h2>Desarrollo de producto OEM / ODM</h2>
       <p class="ai-oem-odm-subtitle">Desde planos técnicos, muestras físicas o ideas iniciales hasta desarrollo de muestras y producción masiva en Vietnam.</p>
-      <p>ANSLIFE JSC apoya a compradores internacionales en el desarrollo y fabricación de productos de mobiliario bajo modelos OEM / ODM en Vietnam.</p>
-      <p>Podemos recibir requerimientos a partir de planos técnicos, muestras físicas, imágenes de referencia, estándares de materiales o conceptos iniciales de producto. A partir de ahí, ANSLIFE JSC coordina con fábricas asociadas, cadena de suministro de materiales, equipos técnicos y control de calidad independiente para desarrollar productos alineados con condiciones reales de producción, estándares de mercado y planes de exportación.</p>
+      <p>ANSLIFE apoya a compradores internacionales en el desarrollo y fabricación de productos de mobiliario bajo modelos OEM / ODM en Vietnam.</p>
+      <p>Podemos recibir requerimientos a partir de planos técnicos, muestras físicas, imágenes de referencia, estándares de materiales o conceptos iniciales de producto. A partir de ahí, ANSLIFE coordina con fábricas asociadas, cadena de suministro de materiales, equipos técnicos y control de calidad independiente para desarrollar productos alineados con condiciones reales de producción, estándares de mercado y planes de exportación.</p>
     </header>
 
     <section class="ai-oem-odm-dual">
       <article>
         <h3>OEM</h3>
-        <p>OEM aplica cuando el comprador ya tiene un diseño, plano, muestra o estándar de producto claramente definido. ANSLIFE JSC organiza la producción exactamente según los requisitos acordados.</p>
+        <p>OEM aplica cuando el comprador ya tiene un diseño, plano, muestra o estándar de producto claramente definido. ANSLIFE organiza la producción exactamente según los requisitos acordados.</p>
         <h4>El comprador normalmente proporciona:</h4>
         <ul>
           <li>Planos técnicos</li>
@@ -1047,8 +1047,8 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ES = `
       </article>
       <article>
         <h3>ODM</h3>
-        <p>ODM aplica cuando el comprador tiene ideas, referencias, dirección de estilo o demanda del mercado, pero necesita apoyo de ANSLIFE JSC para desarrollar el producto con más detalle.</p>
-        <h4>ANSLIFE JSC puede apoyar en:</h4>
+        <p>ODM aplica cuando el comprador tiene ideas, referencias, dirección de estilo o demanda del mercado, pero necesita apoyo de ANSLIFE para desarrollar el producto con más detalle.</p>
+        <h4>ANSLIFE puede apoyar en:</h4>
         <ul>
           <li>Análisis del concepto de producto</li>
           <li>Propuestas estructurales</li>
@@ -1063,14 +1063,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ES = `
     </section>
 
     <section class="ai-oem-odm-support">
-      <h2>Cómo ANSLIFE JSC respalda su proyecto</h2>
+      <h2>Cómo ANSLIFE respalda su proyecto</h2>
       <div class="ai-oem-odm-support-grid">
-        <article><h3>1. Recepción de requerimientos</h3><p>ANSLIFE JSC recibe planos, muestras físicas, imágenes de referencia, especificaciones técnicas o ideas de producto del comprador.</p></article>
+        <article><h3>1. Recepción de requerimientos</h3><p>ANSLIFE recibe planos, muestras físicas, imágenes de referencia, especificaciones técnicas o ideas de producto del comprador.</p></article>
         <article><h3>2. Análisis técnico</h3><p>Revisamos estructura, dimensiones, materiales, estabilidad, viabilidad de producción y estándares de empaque.</p></article>
-        <article><h3>3. Recomendaciones de materiales</h3><p>ANSLIFE JSC utiliza cadenas de suministro en Vietnam para recomendar opciones adecuadas como madera maciza, plywood, MDF, chapa, espuma, tela, cuero, accesorios y materiales de empaque.</p></article>
-        <article><h3>4. Desarrollo de muestras</h3><p>ANSLIFE JSC coordina con fábricas y equipos técnicos para desarrollar, ajustar y finalizar muestras según la retroalimentación del comprador.</p></article>
+        <article><h3>3. Recomendaciones de materiales</h3><p>ANSLIFE utiliza cadenas de suministro en Vietnam para recomendar opciones adecuadas como madera maciza, plywood, MDF, chapa, espuma, tela, cuero, accesorios y materiales de empaque.</p></article>
+        <article><h3>4. Desarrollo de muestras</h3><p>ANSLIFE coordina con fábricas y equipos técnicos para desarrollar, ajustar y finalizar muestras según la retroalimentación del comprador.</p></article>
         <article><h3>5. QC independiente de muestras</h3><p>Nuestro equipo independiente de control de calidad verifica las muestras según estándares acordados de estructura, dimensiones, color, humedad, acabado superficial y empaque.</p></article>
-        <article><h3>6. Preparación para producción masiva</h3><p>Tras la aprobación de la muestra, ANSLIFE JSC apoya la estandarización de planos, materiales, colores, criterios de inspección y especificaciones de empaque antes de producir en masa.</p></article>
+        <article><h3>6. Preparación para producción masiva</h3><p>Tras la aprobación de la muestra, ANSLIFE apoya la estandarización de planos, materiales, colores, criterios de inspección y especificaciones de empaque antes de producir en masa.</p></article>
       </div>
     </section>
 
@@ -1078,7 +1078,7 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ES = `
       <h2>Proceso OEM / ODM</h2>
       <ol class="ai-oem-odm-timeline">
         <li>El comprador envía requerimientos</li>
-        <li>ANSLIFE JSC revisa planos / muestras / referencias</li>
+        <li>ANSLIFE revisa planos / muestras / referencias</li>
         <li>Análisis de estructura, materiales y viabilidad de producción</li>
         <li>Propuesta de desarrollo de muestra</li>
         <li>Desarrollo de muestra</li>
@@ -1091,13 +1091,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ES = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>Qué hace diferente a ANSLIFE JSC</h2>
+      <h2>Qué hace diferente a ANSLIFE</h2>
       <p>El valor no está solo en desarrollar muestras, sino en conectar el producto con todo el sistema de producción, la cadena de suministro de materiales, el control de calidad independiente, el almacenamiento y la ejecución de exportación desde Vietnam.</p>
       <p>Esto ayuda al comprador a construir no solo un producto, sino un flujo de producción estable, repetible y controlable a largo plazo.</p>
     </section>
 
     <section class="ai-oem-odm-checklist">
-      <h2>Qué debe enviar el comprador a ANSLIFE JSC</h2>
+      <h2>Qué debe enviar el comprador a ANSLIFE</h2>
       <ul>
         <li>Plano técnico (si está disponible)</li>
         <li>Imágenes de referencia</li>
@@ -1115,13 +1115,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ES = `
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
-        <h2>Envíe su solicitud de desarrollo de producto a ANSLIFE JSC</h2>
-        <p>Los compradores pueden enviar planos, muestras físicas, imágenes de referencia o conceptos iniciales. El equipo de ANSLIFE JSC revisará la solicitud y propondrá un plan adecuado de desarrollo, materiales, muestreo, fabricación y envío.</p>
+        <h2>Envíe su solicitud de desarrollo de producto a ANSLIFE</h2>
+        <p>Los compradores pueden enviar planos, muestras físicas, imágenes de referencia o conceptos iniciales. El equipo de ANSLIFE revisará la solicitud y propondrá un plan adecuado de desarrollo, materiales, muestreo, fabricación y envío.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Enviar solicitud</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Subir plano</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contactar con ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contactar con ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -1132,14 +1132,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ZH = `
     <header class="ai-oem-odm-hero">
       <h2>OEM / ODM 产品开发</h2>
       <p class="ai-oem-odm-subtitle">从技术图纸、实物样品或初步想法，到打样开发与越南量产落地。</p>
-      <p>ANSLIFE JSC 在越南为国际买家提供 OEM / ODM 家具产品开发与制造支持。</p>
-      <p>我们可基于技术图纸、实物样品、参考图片、材料标准或初步产品概念接收需求。随后，ANSLIFE JSC 协调工厂伙伴、材料供应链、工程团队与独立质控团队，开发符合实际生产条件、市场标准与出口计划的产品。</p>
+      <p>ANSLIFE 在越南为国际买家提供 OEM / ODM 家具产品开发与制造支持。</p>
+      <p>我们可基于技术图纸、实物样品、参考图片、材料标准或初步产品概念接收需求。随后，ANSLIFE 协调工厂伙伴、材料供应链、工程团队与独立质控团队，开发符合实际生产条件、市场标准与出口计划的产品。</p>
     </header>
 
     <section class="ai-oem-odm-dual">
       <article>
         <h3>OEM</h3>
-        <p>当买家已有明确设计、图纸、样品或产品标准时，适用 OEM。ANSLIFE JSC 将按双方确认要求组织生产。</p>
+        <p>当买家已有明确设计、图纸、样品或产品标准时，适用 OEM。ANSLIFE 将按双方确认要求组织生产。</p>
         <h4>买家通常提供：</h4>
         <ul>
           <li>技术图纸</li>
@@ -1155,8 +1155,8 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ZH = `
       </article>
       <article>
         <h3>ODM</h3>
-        <p>当买家有产品想法、参考图、风格方向或市场需求，但需要 ANSLIFE JSC 进一步细化开发时，适用 ODM。</p>
-        <h4>ANSLIFE JSC 可提供支持：</h4>
+        <p>当买家有产品想法、参考图、风格方向或市场需求，但需要 ANSLIFE 进一步细化开发时，适用 ODM。</p>
+        <h4>ANSLIFE 可提供支持：</h4>
         <ul>
           <li>产品概念分析</li>
           <li>结构方案建议</li>
@@ -1171,14 +1171,14 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ZH = `
     </section>
 
     <section class="ai-oem-odm-support">
-      <h2>ANSLIFE JSC 如何支持您的项目</h2>
+      <h2>ANSLIFE 如何支持您的项目</h2>
       <div class="ai-oem-odm-support-grid">
-        <article><h3>1. 接收产品需求</h3><p>ANSLIFE JSC 接收买家的图纸、实物样品、参考图片、技术规格或产品想法。</p></article>
+        <article><h3>1. 接收产品需求</h3><p>ANSLIFE 接收买家的图纸、实物样品、参考图片、技术规格或产品想法。</p></article>
         <article><h3>2. 技术分析</h3><p>我们评估产品结构、尺寸、材料、稳定性、量产可行性与包装标准。</p></article>
-        <article><h3>3. 材料建议</h3><p>ANSLIFE JSC 依托越南供应链，推荐实木、胶合板、MDF、木皮、泡棉、面料、皮革、五金及包装材料等合适选项。</p></article>
-        <article><h3>4. 样品开发</h3><p>ANSLIFE JSC 协同工厂与工程团队，根据买家反馈进行打样、调整并完成样品。</p></article>
+        <article><h3>3. 材料建议</h3><p>ANSLIFE 依托越南供应链，推荐实木、胶合板、MDF、木皮、泡棉、面料、皮革、五金及包装材料等合适选项。</p></article>
+        <article><h3>4. 样品开发</h3><p>ANSLIFE 协同工厂与工程团队，根据买家反馈进行打样、调整并完成样品。</p></article>
         <article><h3>5. 样品独立质控</h3><p>我们的独立质控团队按约定标准检查样品，包括结构、尺寸、颜色、含水率、表面处理与包装。</p></article>
-        <article><h3>6. 量产准备</h3><p>样品确认后，ANSLIFE JSC 在量产前支持图纸、材料、颜色、检验标准与包装规范的标准化。</p></article>
+        <article><h3>6. 量产准备</h3><p>样品确认后，ANSLIFE 在量产前支持图纸、材料、颜色、检验标准与包装规范的标准化。</p></article>
       </div>
     </section>
 
@@ -1186,7 +1186,7 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ZH = `
       <h2>OEM / ODM 流程</h2>
       <ol class="ai-oem-odm-timeline">
         <li>买家提交需求</li>
-        <li>ANSLIFE JSC 审核图纸 / 样品 / 参考资料</li>
+        <li>ANSLIFE 审核图纸 / 样品 / 参考资料</li>
         <li>分析结构、材料与量产可行性</li>
         <li>提出打样开发方案</li>
         <li>样品开发</li>
@@ -1199,13 +1199,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ZH = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>ANSLIFE JSC 的差异化优势</h2>
-      <p>ANSLIFE JSC 的价值不只在打样开发，更在于将产品连接到完整生产系统、材料供应链、独立质控、仓储与越南出口执行能力。</p>
+      <h2>ANSLIFE 的差异化优势</h2>
+      <p>ANSLIFE 的价值不只在打样开发，更在于将产品连接到完整生产系统、材料供应链、独立质控、仓储与越南出口执行能力。</p>
       <p>这让买家不只是开发单一产品，而是建立长期稳定、可复制、可管控的生产体系。</p>
     </section>
 
     <section class="ai-oem-odm-checklist">
-      <h2>买家应向 ANSLIFE JSC 提供什么</h2>
+      <h2>买家应向 ANSLIFE 提供什么</h2>
       <ul>
         <li>技术图纸（如有）</li>
         <li>参考图片</li>
@@ -1223,13 +1223,13 @@ const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_ZH = `
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
-        <h2>向 ANSLIFE JSC 提交产品开发需求</h2>
-        <p>买家可提交图纸、实物样品、参考图片或初步产品想法。ANSLIFE JSC 团队将评估需求并提出匹配的开发、材料、打样、生产与出货方案。</p>
+        <h2>向 ANSLIFE 提交产品开发需求</h2>
+        <p>买家可提交图纸、实物样品、参考图片或初步产品想法。ANSLIFE 团队将评估需求并提出匹配的开发、材料、打样、生产与出货方案。</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">提交需求</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">上传图纸</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">联系 ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">联系 ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -1259,27 +1259,27 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_VN = `
     <header class="ai-oem-odm-hero">
       <h2>Đánh giá khả thi dự án & chuỗi cung ứng</h2>
       <p class="ai-oem-odm-subtitle">Đánh giá tính phù hợp của sản phẩm, vật liệu, nhà máy, sản lượng, thời gian, chi phí và chuỗi cung ứng trước khi triển khai dự án tại Việt Nam.</p>
-      <p>ANSLIFE JSC hỗ trợ buyer quốc tế đánh giá tính khả thi của các dự án sản xuất, vật liệu, cấu kiện, lưu kho và xuất khẩu tại Việt Nam trước khi triển khai thực tế.</p>
+      <p>ANSLIFE hỗ trợ buyer quốc tế đánh giá tính khả thi của các dự án sản xuất, vật liệu, cấu kiện, lưu kho và xuất khẩu tại Việt Nam trước khi triển khai thực tế.</p>
       <p>Một dự án khi đưa vào Việt Nam không chỉ cần xem xét sản phẩm có thể sản xuất được hay không, mà còn cần đánh giá toàn bộ các yếu tố liên quan như quy cách sản phẩm, tiêu chuẩn sản phẩm, tiêu chuẩn vật liệu, năng lực nhà máy, sản lượng, thời gian giao hàng, mức đầu tư, logistics và mô hình chuỗi cung ứng.</p>
-      <p>Từ các dữ liệu này, ANSLIFE JSC giúp buyer xác định dự án có phù hợp để triển khai tại Việt Nam hay không, cần điều chỉnh những điểm nào và mô hình vận hành nào là phù hợp nhất.</p>
+      <p>Từ các dữ liệu này, ANSLIFE giúp buyer xác định dự án có phù hợp để triển khai tại Việt Nam hay không, cần điều chỉnh những điểm nào và mô hình vận hành nào là phù hợp nhất.</p>
     </header>
 
     <section class="ai-oem-odm-support">
       <h2>Dự án được đánh giá dựa trên những yếu tố nào?</h2>
       <div class="ai-oem-odm-support-grid">
-        <article><h3>1. Quy cách sản phẩm</h3><p>ANSLIFE JSC đánh giá kích thước, kết cấu, công năng, bản vẽ kỹ thuật, mẫu thật, hình ảnh tham khảo và quy cách đóng gói để xác định sản phẩm có phù hợp với năng lực sản xuất tại Việt Nam hay không.</p></article>
+        <article><h3>1. Quy cách sản phẩm</h3><p>ANSLIFE đánh giá kích thước, kết cấu, công năng, bản vẽ kỹ thuật, mẫu thật, hình ảnh tham khảo và quy cách đóng gói để xác định sản phẩm có phù hợp với năng lực sản xuất tại Việt Nam hay không.</p></article>
         <article><h3>2. Tiêu chuẩn sản phẩm</h3><p>Chúng tôi xem xét các tiêu chuẩn về cơ học, vật lý, độ bền, độ ổn định, màu sắc, độ ẩm, hoàn thiện bề mặt, đóng gói và yêu cầu kiểm hàng theo từng thị trường.</p></article>
-        <article><h3>3. Tiêu chuẩn vật liệu cấu tạo</h3><p>ANSLIFE JSC đánh giá vật liệu chính và vật liệu phụ của sản phẩm, bao gồm gỗ tự nhiên, plywood, MDF, veneer, foam, vải, da, phụ kiện, keo, sơn và vật liệu đóng gói.</p></article>
+        <article><h3>3. Tiêu chuẩn vật liệu cấu tạo</h3><p>ANSLIFE đánh giá vật liệu chính và vật liệu phụ của sản phẩm, bao gồm gỗ tự nhiên, plywood, MDF, veneer, foam, vải, da, phụ kiện, keo, sơn và vật liệu đóng gói.</p></article>
         <article><h3>4. Tiêu chuẩn nhà máy thực hiện</h3><p>Chúng tôi đánh giá loại nhà máy phù hợp để thực hiện sản phẩm, dựa trên máy móc, nhân sự, kinh nghiệm sản xuất, năng lực xử lý vật liệu, công suất và khả năng đáp ứng tiêu chuẩn của buyer.</p></article>
-        <article><h3>5. Sản lượng của dự án</h3><p>ANSLIFE JSC xem xét sản lượng mẫu, đơn hàng đầu tiên, sản lượng theo tháng, theo quý hoặc theo năm, số lượng mã sản phẩm và khả năng lặp lại đơn hàng trong dài hạn.</p></article>
+        <article><h3>5. Sản lượng của dự án</h3><p>ANSLIFE xem xét sản lượng mẫu, đơn hàng đầu tiên, sản lượng theo tháng, theo quý hoặc theo năm, số lượng mã sản phẩm và khả năng lặp lại đơn hàng trong dài hạn.</p></article>
         <article><h3>6. Thời gian giao hàng</h3><p>Chúng tôi phân tích thời gian cần thiết cho phát triển mẫu, duyệt mẫu, chuẩn bị vật liệu, sản xuất, kiểm soát chất lượng, đóng gói, xuất hàng và vận chuyển đến thị trường đích.</p></article>
-        <article><h3>7. Mức đầu tư của dự án</h3><p>ANSLIFE JSC xem xét mức giá mục tiêu, ngân sách phát triển mẫu, chi phí vật liệu, chi phí sản xuất, chi phí kiểm soát chất lượng, logistics, lưu kho và mức đầu tư cho đơn hàng đầu tiên hoặc hợp tác dài hạn.</p></article>
+        <article><h3>7. Mức đầu tư của dự án</h3><p>ANSLIFE xem xét mức giá mục tiêu, ngân sách phát triển mẫu, chi phí vật liệu, chi phí sản xuất, chi phí kiểm soát chất lượng, logistics, lưu kho và mức đầu tư cho đơn hàng đầu tiên hoặc hợp tác dài hạn.</p></article>
         <article><h3>8. Chuỗi cung ứng & logistics</h3><p>Chúng tôi đánh giá nguồn vật liệu, nguồn linh kiện, khả năng nhập khẩu vật tư phục vụ dự án, lưu kho tại Việt Nam, gom hàng, chứng từ, forwarder, điều kiện thương mại và phương án xuất hàng quốc tế.</p></article>
       </div>
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>ANSLIFE JSC đánh giá điều gì?</h2>
+      <h2>ANSLIFE đánh giá điều gì?</h2>
       <ul>
         <li>Dự án có phù hợp với năng lực sản xuất tại Việt Nam hay không</li>
         <li>Sản phẩm cần điều chỉnh gì về kết cấu, vật liệu hoặc tiêu chuẩn</li>
@@ -1296,10 +1296,10 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_VN = `
       <h2>Quy trình đánh giá khả thi</h2>
       <ol class="ai-oem-odm-timeline">
         <li><p><strong>Buyer gửi dữ liệu dự án:</strong> Buyer gửi bản vẽ, mẫu sản phẩm, hình ảnh tham khảo, nhóm sản phẩm, vật liệu mong muốn, sản lượng dự kiến, thị trường xuất khẩu, mức giá mục tiêu và thời gian giao hàng mong muốn.</p></li>
-        <li><p><strong>ANSLIFE JSC phân tích sản phẩm và tiêu chuẩn:</strong> ANSLIFE JSC xem xét quy cách sản phẩm, tiêu chuẩn kỹ thuật, tiêu chuẩn vật liệu, tiêu chuẩn đóng gói và yêu cầu kiểm hàng theo từng thị trường.</p></li>
+        <li><p><strong>ANSLIFE phân tích sản phẩm và tiêu chuẩn:</strong> ANSLIFE xem xét quy cách sản phẩm, tiêu chuẩn kỹ thuật, tiêu chuẩn vật liệu, tiêu chuẩn đóng gói và yêu cầu kiểm hàng theo từng thị trường.</p></li>
         <li><p><strong>Đánh giá vật liệu, nhà máy và sản lượng:</strong> Chúng tôi đánh giá chuỗi cung ứng vật liệu, nhóm nhà máy phù hợp, công suất thực tế, sản lượng yêu cầu và khả năng duy trì đơn hàng trong dài hạn.</p></li>
-        <li><p><strong>Đánh giá thời gian, chi phí và logistics:</strong> ANSLIFE JSC phân tích thời gian phát triển mẫu, sản xuất, kiểm hàng, đóng gói, lưu kho, xuất hàng, chi phí vận hành và phương án logistics nhập khẩu hoặc xuất khẩu.</p></li>
-        <li><p><strong>Đề xuất mô hình triển khai:</strong> Sau quá trình đánh giá, ANSLIFE JSC đề xuất mô hình triển khai phù hợp, có thể bao gồm phát triển mẫu, thẩm định nhà máy, sản xuất thử, QC độc lập, lưu kho, logistics, tài trợ thương mại hoặc vận hành dự án theo từng giai đoạn.</p></li>
+        <li><p><strong>Đánh giá thời gian, chi phí và logistics:</strong> ANSLIFE phân tích thời gian phát triển mẫu, sản xuất, kiểm hàng, đóng gói, lưu kho, xuất hàng, chi phí vận hành và phương án logistics nhập khẩu hoặc xuất khẩu.</p></li>
+        <li><p><strong>Đề xuất mô hình triển khai:</strong> Sau quá trình đánh giá, ANSLIFE đề xuất mô hình triển khai phù hợp, có thể bao gồm phát triển mẫu, thẩm định nhà máy, sản xuất thử, QC độc lập, lưu kho, logistics, tài trợ thương mại hoặc vận hành dự án theo từng giai đoạn.</p></li>
       </ol>
     </section>
 
@@ -1326,12 +1326,12 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_VN = `
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Gửi yêu cầu đánh giá dự án</h2>
-        <p>Buyer có thể gửi bản vẽ, mẫu sản phẩm, hình ảnh tham khảo, yêu cầu vật liệu, sản lượng dự kiến, thị trường xuất khẩu, mức giá mục tiêu hoặc kế hoạch triển khai dự án. ANSLIFE JSC sẽ xem xét và đề xuất hướng đánh giá phù hợp.</p>
+        <p>Buyer có thể gửi bản vẽ, mẫu sản phẩm, hình ảnh tham khảo, yêu cầu vật liệu, sản lượng dự kiến, thị trường xuất khẩu, mức giá mục tiêu hoặc kế hoạch triển khai dự án. ANSLIFE sẽ xem xét và đề xuất hướng đánh giá phù hợp.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu đánh giá</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -1342,9 +1342,9 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_EN = `
     <header class="ai-oem-odm-hero">
       <h2>Project & Supply Chain Feasibility Assessment</h2>
       <p class="ai-oem-odm-subtitle">Assess product fit, materials, factory capability, capacity, timeline, investment, and supply chain readiness before launching your project in Vietnam.</p>
-      <p>ANSLIFE JSC supports international buyers with pre-launch feasibility assessment for manufacturing, materials, components, warehousing, and export projects in Vietnam.</p>
+      <p>ANSLIFE supports international buyers with pre-launch feasibility assessment for manufacturing, materials, components, warehousing, and export projects in Vietnam.</p>
       <p>Before moving a project into Vietnam, the key question is not only whether a product can be manufactured, but whether product specifications, quality standards, material standards, factory capability, capacity, lead time, investment level, logistics, and supply chain model can work together.</p>
-      <p>Based on these inputs, ANSLIFE JSC helps buyers decide whether the project is feasible in Vietnam, what needs to be adjusted, and which operating model is most suitable for launch and scale.</p>
+      <p>Based on these inputs, ANSLIFE helps buyers decide whether the project is feasible in Vietnam, what needs to be adjusted, and which operating model is most suitable for launch and scale.</p>
     </header>
 
     <section class="ai-oem-odm-support">
@@ -1352,17 +1352,17 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_EN = `
       <div class="ai-oem-odm-support-grid">
         <article><h3>1. Product specifications</h3><p>We assess dimensions, structure, functionality, technical drawings, physical samples, reference images, and packing requirements to confirm production fit in Vietnam.</p></article>
         <article><h3>2. Product standards</h3><p>We review mechanical and physical standards, durability, stability, color, moisture, surface finish, packing, and inspection requirements by target market.</p></article>
-        <article><h3>3. Material standards</h3><p>ANSLIFE JSC evaluates primary and secondary materials including solid wood, plywood, MDF, veneer, foam, fabric, leather, hardware, adhesives, coating, and packing materials.</p></article>
+        <article><h3>3. Material standards</h3><p>ANSLIFE evaluates primary and secondary materials including solid wood, plywood, MDF, veneer, foam, fabric, leather, hardware, adhesives, coating, and packing materials.</p></article>
         <article><h3>4. Factory fit</h3><p>We identify suitable factory profiles based on machinery, workforce, production experience, material handling capability, output capacity, and compliance with buyer standards.</p></article>
         <article><h3>5. Project volume</h3><p>We review sample volume, first order quantity, monthly/quarterly/annual plans, SKU count, and long-term repeat-order potential.</p></article>
         <article><h3>6. Lead time</h3><p>We analyze timing for sample development, approvals, material preparation, production, quality control, packing, shipment, and destination transit.</p></article>
-        <article><h3>7. Investment level</h3><p>ANSLIFE JSC reviews target price, sample development budget, material cost, production cost, QC cost, logistics, warehousing, and investment for first order or long-term cooperation.</p></article>
+        <article><h3>7. Investment level</h3><p>ANSLIFE reviews target price, sample development budget, material cost, production cost, QC cost, logistics, warehousing, and investment for first order or long-term cooperation.</p></article>
         <article><h3>8. Supply chain & logistics</h3><p>We evaluate material sources, component sources, import feasibility for project inputs, warehousing in Vietnam, cargo consolidation, documentation, forwarder options, trade terms, and export plans.</p></article>
       </div>
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>What does ANSLIFE JSC conclude from the assessment?</h2>
+      <h2>What does ANSLIFE conclude from the assessment?</h2>
       <ul>
         <li>Whether the project fits Vietnam's production capability</li>
         <li>What should be adjusted in structure, materials, or standards</li>
@@ -1379,10 +1379,10 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_EN = `
       <h2>5-step feasibility workflow</h2>
       <ol class="ai-oem-odm-timeline">
         <li><p><strong>Buyer submits project inputs:</strong> drawings, product samples, references, product group, target materials, planned volume, export market, target price, and expected delivery window.</p></li>
-        <li><p><strong>ANSLIFE JSC analyzes product and standards:</strong> product specs, technical requirements, material standards, packing standards, and market-specific inspection requirements.</p></li>
+        <li><p><strong>ANSLIFE analyzes product and standards:</strong> product specs, technical requirements, material standards, packing standards, and market-specific inspection requirements.</p></li>
         <li><p><strong>Assessment of materials, factories, and capacity:</strong> material supply chain, suitable factory groups, real capacity, required output, and long-term order sustainability.</p></li>
         <li><p><strong>Assessment of timeline, cost, and logistics:</strong> sample timeline, production, inspections, packing, warehousing, shipment, operating cost, and import/export logistics options.</p></li>
-        <li><p><strong>Implementation model proposal:</strong> ANSLIFE JSC proposes a suitable model that may include sample development, factory due diligence, pilot production, independent QC, warehousing, logistics, trade finance, and phased project operations.</p></li>
+        <li><p><strong>Implementation model proposal:</strong> ANSLIFE proposes a suitable model that may include sample development, factory due diligence, pilot production, independent QC, warehousing, logistics, trade finance, and phased project operations.</p></li>
       </ol>
     </section>
 
@@ -1409,12 +1409,12 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_EN = `
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Submit a project assessment request</h2>
-        <p>Buyers can send drawings, product samples, reference images, material requirements, expected volume, export market, target price, or implementation plan. ANSLIFE JSC will review and propose a suitable assessment direction.</p>
+        <p>Buyers can send drawings, product samples, reference images, material requirements, expected volume, export market, target price, or implementation plan. ANSLIFE will review and propose a suitable assessment direction.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit assessment request</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload drawing</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -1425,9 +1425,9 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_JP = `
     <header class="ai-oem-odm-hero">
       <h2>プロジェクト・サプライチェーン実現性評価</h2>
       <p class="ai-oem-odm-subtitle">ベトナムでの立ち上げ前に、製品適合性、材料、工場能力、生産量、納期、投資、サプライチェーン体制を評価します。</p>
-      <p>ANSLIFE JSCは、ベトナムでの製造、材料、部材、保管、輸出プロジェクトに対して、海外バイヤー向けの事前実現性評価を提供します。</p>
+      <p>ANSLIFEは、ベトナムでの製造、材料、部材、保管、輸出プロジェクトに対して、海外バイヤー向けの事前実現性評価を提供します。</p>
       <p>プロジェクトをベトナムへ移管する際は、製造可否だけでなく、製品仕様、品質基準、材料基準、工場能力、生産量、リードタイム、投資水準、物流、供給モデルが一体として機能するかを確認する必要があります。</p>
-      <p>これらの情報をもとに、ANSLIFE JSCは、ベトナムでの実行可否、調整が必要な項目、初期導入と拡張に最適な運用モデルを明確化します。</p>
+      <p>これらの情報をもとに、ANSLIFEは、ベトナムでの実行可否、調整が必要な項目、初期導入と拡張に最適な運用モデルを明確化します。</p>
     </header>
 
     <section class="ai-oem-odm-support">
@@ -1445,7 +1445,7 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_JP = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>ANSLIFE JSCが提示する評価結果</h2>
+      <h2>ANSLIFEが提示する評価結果</h2>
       <ul>
         <li>プロジェクトがベトナムの生産能力に適合するか</li>
         <li>構造・材料・基準で調整が必要な点</li>
@@ -1492,12 +1492,12 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_JP = `
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>プロジェクト評価を依頼する</h2>
-        <p>図面、サンプル、参考画像、材料要件、予定数量、輸出市場、目標価格、実行計画を共有してください。ANSLIFE JSCが評価方針を提案します。</p>
+        <p>図面、サンプル、参考画像、材料要件、予定数量、輸出市場、目標価格、実行計画を共有してください。ANSLIFEが評価方針を提案します。</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">評価依頼を送信</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">図面をアップロード</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">ANSLIFE JSCに連絡</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">ANSLIFEに連絡</a>
       </div>
     </div>
   </section>
@@ -1508,9 +1508,9 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_KR = `
     <header class="ai-oem-odm-hero">
       <h2>프로젝트 및 공급망 타당성 평가</h2>
       <p class="ai-oem-odm-subtitle">베트남 프로젝트 착수 전, 제품 적합성, 자재, 공장 역량, 물량, 일정, 투자, 공급망 준비도를 평가합니다.</p>
-      <p>ANSLIFE JSC는 베트남 내 제조, 자재, 부품, 창고, 수출 프로젝트를 대상으로 국제 바이어의 사전 타당성 평가를 지원합니다.</p>
+      <p>ANSLIFE는 베트남 내 제조, 자재, 부품, 창고, 수출 프로젝트를 대상으로 국제 바이어의 사전 타당성 평가를 지원합니다.</p>
       <p>프로젝트를 베트남으로 이전할 때는 단순 생산 가능 여부뿐 아니라 제품 사양, 품질 기준, 자재 기준, 공장 역량, 물량, 리드타임, 투자 수준, 물류, 공급망 모델이 함께 작동하는지 확인해야 합니다.</p>
-      <p>이 데이터를 기반으로 ANSLIFE JSC는 베트남 실행 가능성, 조정 필요 항목, 초기 및 장기 운영에 적합한 모델을 제안합니다.</p>
+      <p>이 데이터를 기반으로 ANSLIFE는 베트남 실행 가능성, 조정 필요 항목, 초기 및 장기 운영에 적합한 모델을 제안합니다.</p>
     </header>
 
     <section class="ai-oem-odm-support">
@@ -1528,7 +1528,7 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_KR = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>ANSLIFE JSC 평가 결과</h2>
+      <h2>ANSLIFE 평가 결과</h2>
       <ul>
         <li>프로젝트가 베트남 생산 역량에 적합한지 여부</li>
         <li>구조, 자재, 기준에서 조정이 필요한 항목</li>
@@ -1575,12 +1575,12 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_KR = `
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>프로젝트 평가 요청 보내기</h2>
-        <p>도면, 샘플, 참고 이미지, 자재 요구, 예상 물량, 수출 시장, 목표 단가 또는 실행 계획을 보내주시면 ANSLIFE JSC가 적합한 평가 방향을 제안합니다.</p>
+        <p>도면, 샘플, 참고 이미지, 자재 요구, 예상 물량, 수출 시장, 목표 단가 또는 실행 계획을 보내주시면 ANSLIFE가 적합한 평가 방향을 제안합니다.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">평가 요청 보내기</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">도면 업로드</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">ANSLIFE JSC 문의</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">ANSLIFE 문의</a>
       </div>
     </div>
   </section>
@@ -1591,9 +1591,9 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_SV = `
     <header class="ai-oem-odm-hero">
       <h2>Bedömning av projekt- och leveranskedjans genomförbarhet</h2>
       <p class="ai-oem-odm-subtitle">Bedöm produktanpassning, material, fabrikskapacitet, volym, ledtid, investering och leveranskedjans beredskap innan projektstart i Vietnam.</p>
-      <p>ANSLIFE JSC stödjer internationella köpare med förhandsbedömning av genomförbarhet för tillverkning, material, komponenter, lager och exportprojekt i Vietnam.</p>
+      <p>ANSLIFE stödjer internationella köpare med förhandsbedömning av genomförbarhet för tillverkning, material, komponenter, lager och exportprojekt i Vietnam.</p>
       <p>Inför etablering i Vietnam räcker det inte att kontrollera om produkten går att tillverka. Specifikationer, kvalitetskrav, materialstandarder, fabrikskapacitet, volym, ledtid, investeringsnivå, logistik och försörjningsmodell måste fungera tillsammans.</p>
-      <p>Utifrån dessa data hjälper ANSLIFE JSC köparen att avgöra om projektet är genomförbart i Vietnam, vad som behöver justeras och vilken modell som är bäst för start och långsiktig drift.</p>
+      <p>Utifrån dessa data hjälper ANSLIFE köparen att avgöra om projektet är genomförbart i Vietnam, vad som behöver justeras och vilken modell som är bäst för start och långsiktig drift.</p>
     </header>
 
     <section class="ai-oem-odm-support">
@@ -1601,17 +1601,17 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_SV = `
       <div class="ai-oem-odm-support-grid">
         <article><h3>1. Produktspecifikation</h3><p>Vi bedömer mått, konstruktion, funktion, ritningar, fysiska prover, referensbilder och förpackningskrav för att bekräfta produktionsanpassning i Vietnam.</p></article>
         <article><h3>2. Produktstandarder</h3><p>Vi granskar mekaniska/fysiska krav, hållbarhet, stabilitet, färg, fukthalt, ytfinish, förpackning och marknadsspecifika inspektionskrav.</p></article>
-        <article><h3>3. Materialstandarder</h3><p>ANSLIFE JSC utvärderar huvud- och hjälpmaterial: massivt trä, plywood, MDF, faner, skum, tyg, läder, beslag, lim, coating och emballage.</p></article>
+        <article><h3>3. Materialstandarder</h3><p>ANSLIFE utvärderar huvud- och hjälpmaterial: massivt trä, plywood, MDF, faner, skum, tyg, läder, beslag, lim, coating och emballage.</p></article>
         <article><h3>4. Fabriksanpassning</h3><p>Vi identifierar lämpliga fabriker utifrån maskinpark, personal, erfarenhet, materialhantering, kapacitet och förmåga att uppfylla köparens standarder.</p></article>
         <article><h3>5. Projektvolym</h3><p>Vi granskar provvolym, första order, månads-/kvartals-/årsvolym, antal SKU och potential för återkommande order.</p></article>
         <article><h3>6. Ledtid</h3><p>Vi analyserar tid för provutveckling, godkännande, materialförberedelse, produktion, QC, packning, leverans och transport till slutmarknad.</p></article>
-        <article><h3>7. Investeringsnivå</h3><p>ANSLIFE JSC granskar målpris, budget för provutveckling, materialkostnad, produktionskostnad, QC-kostnad, logistik, lager och investering för första eller långsiktigt samarbete.</p></article>
+        <article><h3>7. Investeringsnivå</h3><p>ANSLIFE granskar målpris, budget för provutveckling, materialkostnad, produktionskostnad, QC-kostnad, logistik, lager och investering för första eller långsiktigt samarbete.</p></article>
         <article><h3>8. Leveranskedja & logistik</h3><p>Vi bedömer materialkällor, komponentkällor, importmöjlighet, lager i Vietnam, samlastning, dokumentation, speditörer, handelsvillkor och exportupplägg.</p></article>
       </div>
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>Vad levererar ANSLIFE JSC i bedömningen?</h2>
+      <h2>Vad levererar ANSLIFE i bedömningen?</h2>
       <ul>
         <li>Om projektet passar Vietnams produktionskapacitet</li>
         <li>Vilka justeringar som krävs i struktur, material eller standard</li>
@@ -1658,12 +1658,12 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_SV = `
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Skicka en projektbedömningsförfrågan</h2>
-        <p>Köpare kan skicka ritningar, prover, referensbilder, materialkrav, förväntad volym, exportmarknad, målpris eller implementeringsplan. ANSLIFE JSC återkommer med lämplig bedömningsinriktning.</p>
+        <p>Köpare kan skicka ritningar, prover, referensbilder, materialkrav, förväntad volym, exportmarknad, målpris eller implementeringsplan. ANSLIFE återkommer med lämplig bedömningsinriktning.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Skicka bedömningsförfrågan</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Ladda upp ritning</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Kontakta ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Kontakta ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -1674,9 +1674,9 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_FR = `
     <header class="ai-oem-odm-hero">
       <h2>Évaluation de faisabilité projet & supply chain</h2>
       <p class="ai-oem-odm-subtitle">Évaluer l’adéquation produit, matériaux, capacité usine, volume, délai, investissement et chaîne logistique avant lancement au Vietnam.</p>
-      <p>ANSLIFE JSC accompagne les acheteurs internationaux avec une évaluation de faisabilité en amont pour les projets de fabrication, matériaux, composants, stockage et export au Vietnam.</p>
+      <p>ANSLIFE accompagne les acheteurs internationaux avec une évaluation de faisabilité en amont pour les projets de fabrication, matériaux, composants, stockage et export au Vietnam.</p>
       <p>Avant de lancer un projet au Vietnam, la question n’est pas seulement la fabricabilité. Les spécifications produit, standards qualité, standards matière, capacité usine, volume, délai, niveau d’investissement, logistique et modèle supply chain doivent fonctionner ensemble.</p>
-      <p>À partir de ces données, ANSLIFE JSC aide l’acheteur à décider si le projet est faisable au Vietnam, quels ajustements sont nécessaires et quel modèle opérationnel convient au démarrage et au long terme.</p>
+      <p>À partir de ces données, ANSLIFE aide l’acheteur à décider si le projet est faisable au Vietnam, quels ajustements sont nécessaires et quel modèle opérationnel convient au démarrage et au long terme.</p>
     </header>
 
     <section class="ai-oem-odm-support">
@@ -1684,17 +1684,17 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_FR = `
       <div class="ai-oem-odm-support-grid">
         <article><h3>1. Spécifications produit</h3><p>Nous évaluons dimensions, structure, fonctionnalité, plans techniques, échantillons physiques, références visuelles et exigences d’emballage pour confirmer l’adéquation production.</p></article>
         <article><h3>2. Standards produit</h3><p>Nous examinons normes mécaniques et physiques, durabilité, stabilité, couleur, humidité, finition, emballage et exigences de contrôle par marché.</p></article>
-        <article><h3>3. Standards matière</h3><p>ANSLIFE JSC évalue matières principales et secondaires: bois massif, plywood, MDF, placage, mousse, tissu, cuir, quincaillerie, colle, peinture et emballage.</p></article>
+        <article><h3>3. Standards matière</h3><p>ANSLIFE évalue matières principales et secondaires: bois massif, plywood, MDF, placage, mousse, tissu, cuir, quincaillerie, colle, peinture et emballage.</p></article>
         <article><h3>4. Adéquation usine</h3><p>Nous identifions les usines adaptées selon équipements, main-d’œuvre, expérience, capacité de traitement matière, capacité de sortie et conformité aux standards de l’acheteur.</p></article>
         <article><h3>5. Volume projet</h3><p>Nous analysons volume échantillon, première commande, plans mensuels/trimestriels/annuels, nombre de SKU et potentiel de récurrence.</p></article>
         <article><h3>6. Délai</h3><p>Nous analysons les délais pour développement échantillon, validation, préparation matière, production, QC, emballage, expédition et transit marché final.</p></article>
-        <article><h3>7. Niveau d’investissement</h3><p>ANSLIFE JSC examine prix cible, budget échantillon, coût matière, coût production, coût QC, logistique, stockage et investissement pour première commande ou partenariat long terme.</p></article>
+        <article><h3>7. Niveau d’investissement</h3><p>ANSLIFE examine prix cible, budget échantillon, coût matière, coût production, coût QC, logistique, stockage et investissement pour première commande ou partenariat long terme.</p></article>
         <article><h3>8. Supply chain & logistique</h3><p>Nous évaluons sources matière/composants, faisabilité import, stockage au Vietnam, consolidation, documentation, transitaires, incoterms et plan d’export.</p></article>
       </div>
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>Ce qu’ANSLIFE JSC conclut</h2>
+      <h2>Ce qu’ANSLIFE conclut</h2>
       <ul>
         <li>Compatibilité du projet avec la capacité de production au Vietnam</li>
         <li>Ajustements nécessaires sur structure, matière ou standards</li>
@@ -1741,12 +1741,12 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_FR = `
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Envoyer une demande d’évaluation projet</h2>
-        <p>L’acheteur peut envoyer plans, échantillons, références, exigences matière, volume prévu, marché export, prix cible ou plan de déploiement. ANSLIFE JSC proposera une approche d’évaluation adaptée.</p>
+        <p>L’acheteur peut envoyer plans, échantillons, références, exigences matière, volume prévu, marché export, prix cible ou plan de déploiement. ANSLIFE proposera une approche d’évaluation adaptée.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Envoyer la demande</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Téléverser un plan</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contacter ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contacter ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -1757,9 +1757,9 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_RU = `
     <header class="ai-oem-odm-hero">
       <h2>Оценка реализуемости проекта и цепочки поставок</h2>
       <p class="ai-oem-odm-subtitle">До запуска проекта во Вьетнаме оцениваем продукт, материалы, возможности фабрик, объем, сроки, инвестиции и готовность цепочки поставок.</p>
-      <p>ANSLIFE JSC помогает международным покупателям с предварительной оценкой реализуемости проектов производства, материалов, компонентов, складирования и экспорта во Вьетнаме.</p>
+      <p>ANSLIFE помогает международным покупателям с предварительной оценкой реализуемости проектов производства, материалов, компонентов, складирования и экспорта во Вьетнаме.</p>
       <p>Перед запуском во Вьетнаме важно не только понять, можно ли произвести продукт, но и проверить, как вместе работают спецификация, стандарты качества и материалов, возможности фабрики, объем, сроки, бюджет, логистика и модель supply chain.</p>
-      <p>На основе этих данных ANSLIFE JSC определяет целесообразность проекта во Вьетнаме, необходимые корректировки и оптимальную модель запуска и долгосрочной работы.</p>
+      <p>На основе этих данных ANSLIFE определяет целесообразность проекта во Вьетнаме, необходимые корректировки и оптимальную модель запуска и долгосрочной работы.</p>
     </header>
 
     <section class="ai-oem-odm-support">
@@ -1767,17 +1767,17 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_RU = `
       <div class="ai-oem-odm-support-grid">
         <article><h3>1. Спецификация продукта</h3><p>Оцениваем размеры, конструкцию, функциональность, чертежи, физические образцы, референсы и требования к упаковке для подтверждения производственной совместимости.</p></article>
         <article><h3>2. Стандарты продукта</h3><p>Проверяем механические и физические требования, долговечность, стабильность, цвет, влажность, финиш, упаковку и требования инспекции по рынкам.</p></article>
-        <article><h3>3. Стандарты материалов</h3><p>ANSLIFE JSC оценивает основные и вспомогательные материалы: массив, plywood, MDF, шпон, пену, ткани, кожу, фурнитуру, клей, покрытие и упаковку.</p></article>
+        <article><h3>3. Стандарты материалов</h3><p>ANSLIFE оценивает основные и вспомогательные материалы: массив, plywood, MDF, шпон, пену, ткани, кожу, фурнитуру, клей, покрытие и упаковку.</p></article>
         <article><h3>4. Подходящая фабрика</h3><p>Определяем релевантный тип фабрики по оборудованию, персоналу, опыту, работе с материалами, мощности и соответствию стандартам покупателя.</p></article>
         <article><h3>5. Объем проекта</h3><p>Анализируем объем образцов, первую партию, месячные/квартальные/годовые планы, количество SKU и потенциал повторных заказов.</p></article>
         <article><h3>6. Сроки</h3><p>Оцениваем сроки разработки образца, утверждения, подготовки материалов, производства, QC, упаковки, отгрузки и доставки до целевого рынка.</p></article>
-        <article><h3>7. Уровень инвестиций</h3><p>ANSLIFE JSC проверяет целевую цену, бюджет разработки образцов, стоимость материалов, производства, QC, логистики, хранения и объем инвестиций для первого или долгосрочного этапа.</p></article>
+        <article><h3>7. Уровень инвестиций</h3><p>ANSLIFE проверяет целевую цену, бюджет разработки образцов, стоимость материалов, производства, QC, логистики, хранения и объем инвестиций для первого или долгосрочного этапа.</p></article>
         <article><h3>8. Supply chain и логистика</h3><p>Оцениваем источники материалов и компонентов, импортную реализуемость, хранение во Вьетнаме, консолидацию, документы, forwarder, условия торговли и экспортный план.</p></article>
       </div>
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>Что показывает оценка ANSLIFE JSC</h2>
+      <h2>Что показывает оценка ANSLIFE</h2>
       <ul>
         <li>Соответствует ли проект производственным возможностям Вьетнама</li>
         <li>Какие корректировки нужны в конструкции, материалах или стандартах</li>
@@ -1824,12 +1824,12 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_RU = `
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Отправить запрос на оценку проекта</h2>
-        <p>Вы можете отправить чертежи, образцы, референсы, требования к материалам, плановый объем, экспортный рынок, целевую цену или план запуска. ANSLIFE JSC предложит подходящий формат оценки.</p>
+        <p>Вы можете отправить чертежи, образцы, референсы, требования к материалам, плановый объем, экспортный рынок, целевую цену или план запуска. ANSLIFE предложит подходящий формат оценки.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Отправить запрос</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Загрузить чертеж</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Связаться с ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Связаться с ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -1840,9 +1840,9 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_ES = `
     <header class="ai-oem-odm-hero">
       <h2>Evaluación de viabilidad de proyecto y cadena de suministro</h2>
       <p class="ai-oem-odm-subtitle">Antes de lanzar en Vietnam, evaluamos ajuste del producto, materiales, capacidad de fábrica, volumen, plazo, inversión y preparación de la cadena de suministro.</p>
-      <p>ANSLIFE JSC apoya a compradores internacionales con evaluación de viabilidad previa para proyectos de fabricación, materiales, componentes, almacenamiento y exportación en Vietnam.</p>
+      <p>ANSLIFE apoya a compradores internacionales con evaluación de viabilidad previa para proyectos de fabricación, materiales, componentes, almacenamiento y exportación en Vietnam.</p>
       <p>Antes de ejecutar en Vietnam, no basta con saber si el producto se puede fabricar. Deben funcionar en conjunto especificaciones, estándares de calidad y materiales, capacidad de fábrica, volumen, lead time, nivel de inversión, logística y modelo de suministro.</p>
-      <p>Con estos datos, ANSLIFE JSC ayuda a definir si el proyecto es viable en Vietnam, qué ajustes son necesarios y qué modelo operativo conviene para inicio y largo plazo.</p>
+      <p>Con estos datos, ANSLIFE ayuda a definir si el proyecto es viable en Vietnam, qué ajustes son necesarios y qué modelo operativo conviene para inicio y largo plazo.</p>
     </header>
 
     <section class="ai-oem-odm-support">
@@ -1850,17 +1850,17 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_ES = `
       <div class="ai-oem-odm-support-grid">
         <article><h3>1. Especificaciones del producto</h3><p>Evaluamos dimensiones, estructura, funcionalidad, planos técnicos, muestras físicas, imágenes de referencia y requisitos de empaque para confirmar ajuste productivo en Vietnam.</p></article>
         <article><h3>2. Estándares del producto</h3><p>Revisamos estándares mecánicos y físicos, durabilidad, estabilidad, color, humedad, acabado superficial, empaque y requisitos de inspección por mercado.</p></article>
-        <article><h3>3. Estándares de materiales</h3><p>ANSLIFE JSC evalúa materiales principales y auxiliares: madera maciza, plywood, MDF, chapa, espuma, tela, cuero, herrajes, adhesivo, recubrimiento y materiales de empaque.</p></article>
+        <article><h3>3. Estándares de materiales</h3><p>ANSLIFE evalúa materiales principales y auxiliares: madera maciza, plywood, MDF, chapa, espuma, tela, cuero, herrajes, adhesivo, recubrimiento y materiales de empaque.</p></article>
         <article><h3>4. Ajuste de fábrica</h3><p>Identificamos perfiles de fábrica adecuados según maquinaria, personal, experiencia, capacidad de manejo de materiales, capacidad productiva y cumplimiento de estándares del comprador.</p></article>
         <article><h3>5. Volumen del proyecto</h3><p>Revisamos volumen de muestras, primer pedido, planes mensuales/trimestrales/anuales, cantidad de SKU y potencial de repetición de pedidos.</p></article>
         <article><h3>6. Lead time</h3><p>Analizamos tiempos de desarrollo de muestra, aprobación, preparación de materiales, producción, control de calidad, empaque, embarque y tránsito al mercado destino.</p></article>
-        <article><h3>7. Nivel de inversión</h3><p>ANSLIFE JSC revisa precio objetivo, presupuesto de muestra, costo de materiales, producción, QC, logística, almacenamiento e inversión para primer pedido o cooperación de largo plazo.</p></article>
+        <article><h3>7. Nivel de inversión</h3><p>ANSLIFE revisa precio objetivo, presupuesto de muestra, costo de materiales, producción, QC, logística, almacenamiento e inversión para primer pedido o cooperación de largo plazo.</p></article>
         <article><h3>8. Cadena de suministro y logística</h3><p>Evaluamos fuentes de materiales/componentes, viabilidad de importación, almacenamiento en Vietnam, consolidación, documentación, forwarder, términos comerciales y plan de exportación.</p></article>
       </div>
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>¿Qué concluye ANSLIFE JSC?</h2>
+      <h2>¿Qué concluye ANSLIFE?</h2>
       <ul>
         <li>Si el proyecto encaja con la capacidad productiva de Vietnam</li>
         <li>Qué ajustes se requieren en estructura, materiales o estándares</li>
@@ -1907,12 +1907,12 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_ES = `
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Enviar solicitud de evaluación de proyecto</h2>
-        <p>El comprador puede enviar planos, muestras, imágenes de referencia, requisitos de materiales, volumen estimado, mercado de exportación, precio objetivo o plan de implementación. ANSLIFE JSC propondrá el enfoque de evaluación adecuado.</p>
+        <p>El comprador puede enviar planos, muestras, imágenes de referencia, requisitos de materiales, volumen estimado, mercado de exportación, precio objetivo o plan de implementación. ANSLIFE propondrá el enfoque de evaluación adecuado.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Enviar solicitud de evaluación</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Subir plano</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contactar ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contactar ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -1923,9 +1923,9 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_ZH = `
     <header class="ai-oem-odm-hero">
       <h2>项目与供应链可行性评估</h2>
       <p class="ai-oem-odm-subtitle">在越南落地前，评估产品适配性、材料、工厂能力、产量、交期、投入与供应链准备度。</p>
-      <p>ANSLIFE JSC 为国际买家提供越南项目的前置可行性评估，覆盖制造、材料、部件、仓储与出口。</p>
+      <p>ANSLIFE 为国际买家提供越南项目的前置可行性评估，覆盖制造、材料、部件、仓储与出口。</p>
       <p>项目进入越南前，不仅要看能否生产，还要验证产品规格、质量标准、材料标准、工厂能力、产量、交期、投资水平、物流与供应链模型能否协同运行。</p>
-      <p>基于这些输入，ANSLIFE JSC 帮助买家判断项目是否适合在越南执行、需要调整哪些环节，以及初期与长期最合适的运营模型。</p>
+      <p>基于这些输入，ANSLIFE 帮助买家判断项目是否适合在越南执行、需要调整哪些环节，以及初期与长期最合适的运营模型。</p>
     </header>
 
     <section class="ai-oem-odm-support">
@@ -1933,17 +1933,17 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_ZH = `
       <div class="ai-oem-odm-support-grid">
         <article><h3>1. 产品规格</h3><p>评估尺寸、结构、功能、技术图纸、实物样、参考图及包装要求，确认是否匹配越南生产条件。</p></article>
         <article><h3>2. 产品标准</h3><p>审核力学/物理标准、耐久性、稳定性、颜色、含水率、表面处理、包装及目标市场验货要求。</p></article>
-        <article><h3>3. 材料标准</h3><p>ANSLIFE JSC 评估主辅材料，包括实木、胶合板、MDF、木皮、泡棉、面料、皮革、五金、胶黏剂、涂装及包装材料。</p></article>
+        <article><h3>3. 材料标准</h3><p>ANSLIFE 评估主辅材料，包括实木、胶合板、MDF、木皮、泡棉、面料、皮革、五金、胶黏剂、涂装及包装材料。</p></article>
         <article><h3>4. 工厂匹配度</h3><p>基于设备、人力、生产经验、材料处理能力、产能与买家标准满足能力，匹配合适工厂类型。</p></article>
         <article><h3>5. 项目产量</h3><p>评估打样量、首单量、月/季/年计划、SKU 数量及长期复购可持续性。</p></article>
         <article><h3>6. 交期</h3><p>分析打样、确认、备料、生产、质检、包装、出货与到港运输各环节所需时间。</p></article>
-        <article><h3>7. 投入水平</h3><p>ANSLIFE JSC 审核目标价格、打样预算、材料成本、制造成本、QC 成本、物流与仓储成本，以及首单或长期合作投入。</p></article>
+        <article><h3>7. 投入水平</h3><p>ANSLIFE 审核目标价格、打样预算、材料成本、制造成本、QC 成本、物流与仓储成本，以及首单或长期合作投入。</p></article>
         <article><h3>8. 供应链与物流</h3><p>评估材料与部件来源、项目物资进口可行性、越南仓储、拼柜、单证、货代、贸易条款与出口方案。</p></article>
       </div>
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>ANSLIFE JSC 将给出哪些判断？</h2>
+      <h2>ANSLIFE 将给出哪些判断？</h2>
       <ul>
         <li>项目是否匹配越南制造能力</li>
         <li>产品结构、材料或标准需要做哪些调整</li>
@@ -1990,12 +1990,12 @@ const PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_ZH = `
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>提交项目评估需求</h2>
-        <p>买家可提交图纸、样品、参考图、材料要求、预计产量、出口市场、目标价格或实施计划。ANSLIFE JSC 将评估并提出匹配的评估方向。</p>
+        <p>买家可提交图纸、样品、参考图、材料要求、预计产量、出口市场、目标价格或实施计划。ANSLIFE 将评估并提出匹配的评估方向。</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">提交评估需求</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">上传图纸</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">联系 ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">联系 ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -2025,9 +2025,9 @@ const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_VN = `
     <header class="ai-oem-odm-hero">
       <h2>Thẩm định năng lực nhà máy</h2>
       <p class="ai-oem-odm-subtitle">Đánh giá năng lực nhà máy theo sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng và tiến độ giao hàng.</p>
-      <p>ANSLIFE JSC hỗ trợ buyer quốc tế thẩm định năng lực hoạt động của nhà máy tại Việt Nam trước khi triển khai sản xuất hoặc mở rộng dự án.</p>
+      <p>ANSLIFE hỗ trợ buyer quốc tế thẩm định năng lực hoạt động của nhà máy tại Việt Nam trước khi triển khai sản xuất hoặc mở rộng dự án.</p>
       <p>Việc thẩm định không chỉ xem nhà máy có máy móc hay không, mà cần đánh giá toàn diện khả năng thực hiện sản phẩm cụ thể, bao gồm kinh nghiệm sản xuất, năng lực xử lý vật liệu, công suất thực tế, hệ thống quản lý chất lượng, năng lực đóng gói, khả năng đáp ứng sản lượng và mức độ phù hợp với tiêu chuẩn của buyer.</p>
-      <p>Từ kết quả thẩm định, ANSLIFE JSC giúp buyer xác định nhà máy có phù hợp với dự án hay không, rủi ro nằm ở đâu và cần điều chỉnh điều kiện vận hành nào trước khi đặt hàng hoặc triển khai sản xuất hàng loạt.</p>
+      <p>Từ kết quả thẩm định, ANSLIFE giúp buyer xác định nhà máy có phù hợp với dự án hay không, rủi ro nằm ở đâu và cần điều chỉnh điều kiện vận hành nào trước khi đặt hàng hoặc triển khai sản xuất hàng loạt.</p>
     </header>
 
     <section class="ai-oem-odm-support">
@@ -2045,7 +2045,7 @@ const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_VN = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>ANSLIFE JSC thẩm định điều gì?</h2>
+      <h2>ANSLIFE thẩm định điều gì?</h2>
       <ul>
         <li>Nhà máy có phù hợp với nhóm sản phẩm cần sản xuất hay không</li>
         <li>Nhà máy có đủ kinh nghiệm với vật liệu và kết cấu sản phẩm hay không</li>
@@ -2053,7 +2053,7 @@ const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_VN = `
         <li>Công suất thực tế có phù hợp với sản lượng yêu cầu không</li>
         <li>Nhà máy có khả năng duy trì chất lượng ổn định không</li>
         <li>Hệ thống QC nội bộ có đủ tốt không</li>
-        <li>Nhà máy có thể phối hợp với QC độc lập của ANSLIFE JSC không</li>
+        <li>Nhà máy có thể phối hợp với QC độc lập của ANSLIFE không</li>
         <li>Năng lực đóng gói xuất khẩu có đáp ứng tiêu chuẩn buyer không</li>
         <li>Tiến độ sản xuất có khả thi với thời gian giao hàng yêu cầu không</li>
         <li>Những rủi ro chính cần kiểm soát trước khi đặt hàng là gì</li>
@@ -2064,10 +2064,10 @@ const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_VN = `
       <h2>Quy trình thẩm định năng lực nhà máy</h2>
       <ol class="ai-oem-odm-timeline">
         <li><p><strong>Tiếp nhận yêu cầu dự án:</strong> Buyer cung cấp thông tin về sản phẩm, vật liệu, sản lượng, tiêu chuẩn chất lượng, thị trường xuất khẩu, thời gian giao hàng và yêu cầu đặc biệt nếu có.</p></li>
-        <li><p><strong>Xác định tiêu chí thẩm định:</strong> ANSLIFE JSC xác định các tiêu chí cần kiểm tra theo từng dự án, bao gồm sản phẩm, vật liệu, máy móc, nhân sự, công suất, QC, đóng gói và tiến độ.</p></li>
-        <li><p><strong>Khảo sát và kiểm tra nhà máy:</strong> ANSLIFE JSC kiểm tra thực tế hoặc làm việc với nhà máy để đánh giá điều kiện sản xuất, thiết bị, quy trình vận hành, khu vực vật liệu, sản phẩm đang sản xuất, khu vực hoàn thiện và đóng gói.</p></li>
-        <li><p><strong>Đánh giá mức độ phù hợp:</strong> ANSLIFE JSC đối chiếu năng lực nhà máy với yêu cầu của dự án để xác định mức độ phù hợp, các điểm mạnh, điểm hạn chế và rủi ro cần kiểm soát.</p></li>
-        <li><p><strong>Báo cáo và đề xuất:</strong> ANSLIFE JSC tổng hợp kết quả thẩm định và đề xuất hướng xử lý, bao gồm lựa chọn nhà máy, điều chỉnh sản lượng, bổ sung QC độc lập, sản xuất thử hoặc thay đổi mô hình triển khai nếu cần.</p></li>
+        <li><p><strong>Xác định tiêu chí thẩm định:</strong> ANSLIFE xác định các tiêu chí cần kiểm tra theo từng dự án, bao gồm sản phẩm, vật liệu, máy móc, nhân sự, công suất, QC, đóng gói và tiến độ.</p></li>
+        <li><p><strong>Khảo sát và kiểm tra nhà máy:</strong> ANSLIFE kiểm tra thực tế hoặc làm việc với nhà máy để đánh giá điều kiện sản xuất, thiết bị, quy trình vận hành, khu vực vật liệu, sản phẩm đang sản xuất, khu vực hoàn thiện và đóng gói.</p></li>
+        <li><p><strong>Đánh giá mức độ phù hợp:</strong> ANSLIFE đối chiếu năng lực nhà máy với yêu cầu của dự án để xác định mức độ phù hợp, các điểm mạnh, điểm hạn chế và rủi ro cần kiểm soát.</p></li>
+        <li><p><strong>Báo cáo và đề xuất:</strong> ANSLIFE tổng hợp kết quả thẩm định và đề xuất hướng xử lý, bao gồm lựa chọn nhà máy, điều chỉnh sản lượng, bổ sung QC độc lập, sản xuất thử hoặc thay đổi mô hình triển khai nếu cần.</p></li>
       </ol>
     </section>
 
@@ -2089,18 +2089,18 @@ const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_VN = `
 
     <section class="ai-oem-odm-difference">
       <h2>Trước khi đặt hàng cần xác minh điều gì?</h2>
-      <p>Trước khi đặt hàng, ANSLIFE JSC giúp buyer xác minh liệu nhà máy có thực sự đủ năng lực để sản xuất đúng sản phẩm, đúng tiêu chuẩn, đúng sản lượng và đúng thời gian giao hàng hay không.</p>
+      <p>Trước khi đặt hàng, ANSLIFE giúp buyer xác minh liệu nhà máy có thực sự đủ năng lực để sản xuất đúng sản phẩm, đúng tiêu chuẩn, đúng sản lượng và đúng thời gian giao hàng hay không.</p>
     </section>
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Gửi yêu cầu thẩm định nhà máy</h2>
-        <p>Buyer có thể gửi thông tin sản phẩm, sản lượng, tiêu chuẩn chất lượng, nhà máy hiện có hoặc nhóm nhà máy cần đánh giá. ANSLIFE JSC sẽ xem xét yêu cầu và đề xuất phạm vi thẩm định phù hợp.</p>
+        <p>Buyer có thể gửi thông tin sản phẩm, sản lượng, tiêu chuẩn chất lượng, nhà máy hiện có hoặc nhóm nhà máy cần đánh giá. ANSLIFE sẽ xem xét yêu cầu và đề xuất phạm vi thẩm định phù hợp.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu thẩm định</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải tài liệu dự án lên</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -2111,9 +2111,9 @@ const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN = `
     <header class="ai-oem-odm-hero">
       <h2>Factory Capability Assessment</h2>
       <p class="ai-oem-odm-subtitle">Assess factory capability by product type, materials, required volume, quality standards, and delivery schedule.</p>
-      <p>ANSLIFE JSC supports international buyers in assessing factory operating capability in Vietnam before launching production or scaling a project.</p>
+      <p>ANSLIFE supports international buyers in assessing factory operating capability in Vietnam before launching production or scaling a project.</p>
       <p>This assessment is not only about whether a factory has machinery. It evaluates the real ability to execute a specific product, including relevant production experience, material handling capability, actual capacity, quality management system, packing capability, output reliability, and fit with buyer standards.</p>
-      <p>Based on the assessment result, ANSLIFE JSC helps buyers determine whether the factory is suitable for the project, where key risks are, and what operating conditions should be adjusted before placing orders or starting mass production.</p>
+      <p>Based on the assessment result, ANSLIFE helps buyers determine whether the factory is suitable for the project, where key risks are, and what operating conditions should be adjusted before placing orders or starting mass production.</p>
     </header>
 
     <section class="ai-oem-odm-support">
@@ -2131,7 +2131,7 @@ const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>What does ANSLIFE JSC assess in practice?</h2>
+      <h2>What does ANSLIFE assess in practice?</h2>
       <ul>
         <li>Whether the factory fits the target product group</li>
         <li>Whether the factory has sufficient experience with required materials and structure</li>
@@ -2139,7 +2139,7 @@ const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN = `
         <li>Whether actual capacity matches required output</li>
         <li>Whether the factory can maintain stable quality performance</li>
         <li>Whether the internal QC system is strong enough</li>
-        <li>Whether the factory can work effectively with ANSLIFE JSC independent QC</li>
+        <li>Whether the factory can work effectively with ANSLIFE independent QC</li>
         <li>Whether export packing capability meets buyer standards</li>
         <li>Whether production timeline is feasible for required delivery window</li>
         <li>What key risks must be controlled before order placement</li>
@@ -2150,10 +2150,10 @@ const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN = `
       <h2>5-step factory assessment workflow</h2>
       <ol class="ai-oem-odm-timeline">
         <li><p><strong>Receive project requirements:</strong> Buyer shares product, materials, volume, quality standards, export market, delivery timeline, and any special requirements.</p></li>
-        <li><p><strong>Define assessment criteria:</strong> ANSLIFE JSC defines project-specific criteria covering product, materials, machinery, workforce, capacity, QC, packing, and schedule control.</p></li>
-        <li><p><strong>Factory survey and inspection:</strong> ANSLIFE JSC conducts on-site checks or structured factory review to assess production conditions, equipment, operations, material zones, in-process products, finishing, and packing areas.</p></li>
-        <li><p><strong>Fit-gap evaluation:</strong> ANSLIFE JSC compares actual factory capability against project requirements to identify fit level, strengths, constraints, and risk points to control.</p></li>
-        <li><p><strong>Report and recommendations:</strong> ANSLIFE JSC consolidates findings and recommends actions such as factory selection, volume adjustment, independent QC reinforcement, pilot production, or execution model changes where needed.</p></li>
+        <li><p><strong>Define assessment criteria:</strong> ANSLIFE defines project-specific criteria covering product, materials, machinery, workforce, capacity, QC, packing, and schedule control.</p></li>
+        <li><p><strong>Factory survey and inspection:</strong> ANSLIFE conducts on-site checks or structured factory review to assess production conditions, equipment, operations, material zones, in-process products, finishing, and packing areas.</p></li>
+        <li><p><strong>Fit-gap evaluation:</strong> ANSLIFE compares actual factory capability against project requirements to identify fit level, strengths, constraints, and risk points to control.</p></li>
+        <li><p><strong>Report and recommendations:</strong> ANSLIFE consolidates findings and recommends actions such as factory selection, volume adjustment, independent QC reinforcement, pilot production, or execution model changes where needed.</p></li>
       </ol>
     </section>
 
@@ -2175,18 +2175,18 @@ const PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN = `
 
     <section class="ai-oem-odm-difference">
       <h2>What should be verified before placing orders?</h2>
-      <p>Before placing orders, ANSLIFE JSC helps buyers verify whether the factory truly has the capability to deliver the right product, to the right standard, at the right volume, within the required delivery timeline.</p>
+      <p>Before placing orders, ANSLIFE helps buyers verify whether the factory truly has the capability to deliver the right product, to the right standard, at the right volume, within the required delivery timeline.</p>
     </section>
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Submit a factory assessment request</h2>
-        <p>Buyers can share product information, required volume, quality standards, existing factory candidates, or factory groups to be evaluated. ANSLIFE JSC will review and propose a suitable assessment scope.</p>
+        <p>Buyers can share product information, required volume, quality standards, existing factory candidates, or factory groups to be evaluated. ANSLIFE will review and propose a suitable assessment scope.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit assessment request</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload project documents</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -2216,22 +2216,22 @@ const PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_VN = `
     <header class="ai-oem-odm-hero">
       <h2>Vận hành & quản lý dự án xuất khẩu</h2>
       <p class="ai-oem-odm-subtitle">Điều phối tiến độ, nhà máy, vật liệu, chất lượng, chứng từ và xuất hàng cho các dự án xuất khẩu tại Việt Nam.</p>
-      <p>ANSLIFE JSC hỗ trợ buyer quốc tế vận hành và quản lý các dự án xuất khẩu tại Việt Nam, từ giai đoạn tiếp nhận yêu cầu, lập kế hoạch triển khai, điều phối nhà máy, chuẩn bị vật liệu, theo dõi tiến độ, kiểm soát chất lượng, đóng gói, chứng từ đến xuất hàng.</p>
+      <p>ANSLIFE hỗ trợ buyer quốc tế vận hành và quản lý các dự án xuất khẩu tại Việt Nam, từ giai đoạn tiếp nhận yêu cầu, lập kế hoạch triển khai, điều phối nhà máy, chuẩn bị vật liệu, theo dõi tiến độ, kiểm soát chất lượng, đóng gói, chứng từ đến xuất hàng.</p>
       <p>Dịch vụ này phù hợp với các dự án mới cần triển khai tại Việt Nam, cũng như các dự án đã có sẵn giữa buyer và nhà máy nhưng cần một đơn vị vận hành độc lập tại Việt Nam để theo dõi, kiểm soát và báo cáo theo từng giai đoạn.</p>
-      <p>Trong trường hợp buyer đã có quan hệ thương mại trực tiếp với nhà máy, ANSLIFE JSC có thể tham gia với vai trò đơn vị vận hành dự án mà không nhất thiết can thiệp vào hợp đồng, giá cả hoặc điều kiện thương mại hiện có giữa hai bên.</p>
+      <p>Trong trường hợp buyer đã có quan hệ thương mại trực tiếp với nhà máy, ANSLIFE có thể tham gia với vai trò đơn vị vận hành dự án mà không nhất thiết can thiệp vào hợp đồng, giá cả hoặc điều kiện thương mại hiện có giữa hai bên.</p>
     </header>
 
     <section class="ai-oem-odm-support">
-      <h2>ANSLIFE JSC vận hành những phần nào của dự án?</h2>
+      <h2>ANSLIFE vận hành những phần nào của dự án?</h2>
       <div class="ai-oem-odm-support-grid">
-        <article><h3>1. Tiếp nhận yêu cầu dự án</h3><p>ANSLIFE JSC tiếp nhận thông tin về sản phẩm, bản vẽ, mẫu, vật liệu, sản lượng, tiêu chuẩn chất lượng, thị trường xuất khẩu, thời gian giao hàng và điều kiện thương mại của dự án.</p></article>
+        <article><h3>1. Tiếp nhận yêu cầu dự án</h3><p>ANSLIFE tiếp nhận thông tin về sản phẩm, bản vẽ, mẫu, vật liệu, sản lượng, tiêu chuẩn chất lượng, thị trường xuất khẩu, thời gian giao hàng và điều kiện thương mại của dự án.</p></article>
         <article><h3>2. Lập kế hoạch triển khai</h3><p>Chúng tôi hỗ trợ xây dựng kế hoạch triển khai dự án, bao gồm phát triển mẫu, chuẩn bị vật liệu, lịch sản xuất, lịch kiểm hàng, đóng gói, chứng từ và kế hoạch xuất hàng.</p></article>
-        <article><h3>3. Điều phối nhà máy và vật liệu</h3><p>ANSLIFE JSC phối hợp với nhà máy, nhà cung cấp vật liệu và các bên liên quan để đảm bảo vật liệu, cấu kiện và điều kiện sản xuất được chuẩn bị đúng theo yêu cầu dự án.</p></article>
+        <article><h3>3. Điều phối nhà máy và vật liệu</h3><p>ANSLIFE phối hợp với nhà máy, nhà cung cấp vật liệu và các bên liên quan để đảm bảo vật liệu, cấu kiện và điều kiện sản xuất được chuẩn bị đúng theo yêu cầu dự án.</p></article>
         <article><h3>4. Theo dõi tiến độ sản xuất</h3><p>Chúng tôi theo dõi tiến độ sản xuất theo từng giai đoạn, ghi nhận tình trạng thực tế, cảnh báo rủi ro chậm tiến độ và phối hợp xử lý các vấn đề phát sinh.</p></article>
-        <article><h3>5. Kiểm soát chất lượng trong dự án</h3><p>ANSLIFE JSC phối hợp với hệ thống QC độc lập để kiểm tra mẫu, vật liệu, sản phẩm trong quá trình sản xuất, đóng gói và tình trạng hàng trước khi xuất.</p></article>
+        <article><h3>5. Kiểm soát chất lượng trong dự án</h3><p>ANSLIFE phối hợp với hệ thống QC độc lập để kiểm tra mẫu, vật liệu, sản phẩm trong quá trình sản xuất, đóng gói và tình trạng hàng trước khi xuất.</p></article>
         <article><h3>6. Quản lý thông tin và báo cáo</h3><p>Chúng tôi tổng hợp, cập nhật và báo cáo tình trạng dự án cho buyer theo từng giai đoạn, giúp thông tin giữa buyer, nhà máy, QC, kho và logistics được rõ ràng.</p></article>
-        <article><h3>7. Điều phối chứng từ và xuất hàng</h3><p>ANSLIFE JSC hỗ trợ theo dõi chứng từ, lịch đóng hàng, lịch tàu, forwarder, điều kiện giao hàng và quá trình xuất hàng theo kế hoạch đã thống nhất.</p></article>
-        <article><h3>8. Xử lý vấn đề phát sinh</h3><p>Khi phát sinh vấn đề về vật liệu, chất lượng, tiến độ, đóng gói, chứng từ hoặc logistics, ANSLIFE JSC ghi nhận, báo cáo và phối hợp đề xuất phương án xử lý phù hợp.</p></article>
+        <article><h3>7. Điều phối chứng từ và xuất hàng</h3><p>ANSLIFE hỗ trợ theo dõi chứng từ, lịch đóng hàng, lịch tàu, forwarder, điều kiện giao hàng và quá trình xuất hàng theo kế hoạch đã thống nhất.</p></article>
+        <article><h3>8. Xử lý vấn đề phát sinh</h3><p>Khi phát sinh vấn đề về vật liệu, chất lượng, tiến độ, đóng gói, chứng từ hoặc logistics, ANSLIFE ghi nhận, báo cáo và phối hợp đề xuất phương án xử lý phù hợp.</p></article>
       </div>
     </section>
 
@@ -2252,11 +2252,11 @@ const PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_VN = `
       <h2>Quy trình vận hành dự án</h2>
       <ol class="ai-oem-odm-timeline">
         <li><p><strong>Tiếp nhận phạm vi dự án:</strong> Buyer cung cấp thông tin về sản phẩm, nhà máy, vật liệu, sản lượng, tiến độ, tiêu chuẩn chất lượng, chứng từ và kế hoạch xuất hàng.</p></li>
-        <li><p><strong>Xác định vai trò của ANSLIFE JSC:</strong> ANSLIFE JSC xác định phạm vi tham gia trong dự án: điều phối tiến độ, QC độc lập, quản lý vật liệu, theo dõi đóng gói, logistics, chứng từ hoặc báo cáo dự án.</p></li>
-        <li><p><strong>Lập kế hoạch vận hành:</strong> ANSLIFE JSC xây dựng kế hoạch vận hành theo từng giai đoạn, bao gồm lịch sản xuất, lịch kiểm hàng, lịch đóng gói, lịch xuất hàng và mốc báo cáo.</p></li>
+        <li><p><strong>Xác định vai trò của ANSLIFE:</strong> ANSLIFE xác định phạm vi tham gia trong dự án: điều phối tiến độ, QC độc lập, quản lý vật liệu, theo dõi đóng gói, logistics, chứng từ hoặc báo cáo dự án.</p></li>
+        <li><p><strong>Lập kế hoạch vận hành:</strong> ANSLIFE xây dựng kế hoạch vận hành theo từng giai đoạn, bao gồm lịch sản xuất, lịch kiểm hàng, lịch đóng gói, lịch xuất hàng và mốc báo cáo.</p></li>
         <li><p><strong>Theo dõi và điều phối thực tế:</strong> Chúng tôi phối hợp với nhà máy, nhà cung cấp, QC, kho và đơn vị logistics để theo dõi tình trạng thực tế và cập nhật tiến độ dự án.</p></li>
-        <li><p><strong>Báo cáo và xử lý vấn đề:</strong> ANSLIFE JSC báo cáo tình trạng dự án, ghi nhận vấn đề phát sinh và phối hợp với các bên để đề xuất phương án xử lý kịp thời.</p></li>
-        <li><p><strong>Hoàn tất, xuất hàng và lưu dữ liệu:</strong> Sau khi hàng được xuất, ANSLIFE JSC có thể hỗ trợ lưu mẫu chuẩn, lưu checklist, lưu dữ liệu kiểm hàng, tiêu chuẩn đóng gói và kinh nghiệm vận hành cho các đơn hàng tiếp theo.</p></li>
+        <li><p><strong>Báo cáo và xử lý vấn đề:</strong> ANSLIFE báo cáo tình trạng dự án, ghi nhận vấn đề phát sinh và phối hợp với các bên để đề xuất phương án xử lý kịp thời.</p></li>
+        <li><p><strong>Hoàn tất, xuất hàng và lưu dữ liệu:</strong> Sau khi hàng được xuất, ANSLIFE có thể hỗ trợ lưu mẫu chuẩn, lưu checklist, lưu dữ liệu kiểm hàng, tiêu chuẩn đóng gói và kinh nghiệm vận hành cho các đơn hàng tiếp theo.</p></li>
       </ol>
     </section>
 
@@ -2276,19 +2276,19 @@ const PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_VN = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>Vai trò vận hành của ANSLIFE JSC</h2>
-      <p>ANSLIFE JSC đóng vai trò đơn vị vận hành dự án tại Việt Nam, giúp buyer kiểm soát tiến độ, chất lượng, thông tin, chứng từ và xuất hàng mà không nhất thiết phải trực tiếp hiện diện tại Việt Nam.</p>
+      <h2>Vai trò vận hành của ANSLIFE</h2>
+      <p>ANSLIFE đóng vai trò đơn vị vận hành dự án tại Việt Nam, giúp buyer kiểm soát tiến độ, chất lượng, thông tin, chứng từ và xuất hàng mà không nhất thiết phải trực tiếp hiện diện tại Việt Nam.</p>
     </section>
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Gửi yêu cầu vận hành dự án</h2>
-        <p>Buyer có thể gửi thông tin dự án, nhà máy hiện có, bản vẽ, sản lượng, tiến độ, tiêu chuẩn chất lượng hoặc kế hoạch xuất hàng. ANSLIFE JSC sẽ xem xét phạm vi công việc và đề xuất mô hình vận hành phù hợp.</p>
+        <p>Buyer có thể gửi thông tin dự án, nhà máy hiện có, bản vẽ, sản lượng, tiến độ, tiêu chuẩn chất lượng hoặc kế hoạch xuất hàng. ANSLIFE sẽ xem xét phạm vi công việc và đề xuất mô hình vận hành phù hợp.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu vận hành</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải tài liệu dự án lên</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -2299,22 +2299,22 @@ const PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN = `
     <header class="ai-oem-odm-hero">
       <h2>Export Project Operation & Management</h2>
       <p class="ai-oem-odm-subtitle">Coordinate timeline, factories, materials, quality, documents, and shipment for export projects in Vietnam.</p>
-      <p>ANSLIFE JSC supports international buyers in operating and managing export projects in Vietnam, from initial requirement intake and deployment planning to factory coordination, material readiness, progress tracking, quality control, packing, documentation, and shipment execution.</p>
+      <p>ANSLIFE supports international buyers in operating and managing export projects in Vietnam, from initial requirement intake and deployment planning to factory coordination, material readiness, progress tracking, quality control, packing, documentation, and shipment execution.</p>
       <p>This service is suitable for new projects to be launched in Vietnam, as well as existing buyer-factory projects that need an independent operating unit in Vietnam for tracking, control, and stage-by-stage reporting.</p>
-      <p>Where buyers already maintain direct commercial relationships with factories, ANSLIFE JSC can act as the project operation unit in Vietnam without necessarily interfering with existing contracts, pricing, or commercial terms between the two parties.</p>
+      <p>Where buyers already maintain direct commercial relationships with factories, ANSLIFE can act as the project operation unit in Vietnam without necessarily interfering with existing contracts, pricing, or commercial terms between the two parties.</p>
     </header>
 
     <section class="ai-oem-odm-support">
-      <h2>Which parts of the project can ANSLIFE JSC operate?</h2>
+      <h2>Which parts of the project can ANSLIFE operate?</h2>
       <div class="ai-oem-odm-support-grid">
-        <article><h3>1. Project requirement intake</h3><p>ANSLIFE JSC receives project inputs including product specs, drawings, samples, materials, volume, quality standards, export market, delivery timeline, and commercial conditions.</p></article>
+        <article><h3>1. Project requirement intake</h3><p>ANSLIFE receives project inputs including product specs, drawings, samples, materials, volume, quality standards, export market, delivery timeline, and commercial conditions.</p></article>
         <article><h3>2. Deployment planning</h3><p>We support deployment planning covering sample development, material preparation, production schedule, inspection schedule, packing, documentation, and shipment planning.</p></article>
-        <article><h3>3. Factory and material coordination</h3><p>ANSLIFE JSC coordinates with factories, material suppliers, and related stakeholders to ensure material, component, and production conditions are prepared as required.</p></article>
+        <article><h3>3. Factory and material coordination</h3><p>ANSLIFE coordinates with factories, material suppliers, and related stakeholders to ensure material, component, and production conditions are prepared as required.</p></article>
         <article><h3>4. Production progress tracking</h3><p>We track progress by stage, record actual status, flag delay risks early, and coordinate issue resolution.</p></article>
-        <article><h3>5. In-project quality control</h3><p>ANSLIFE JSC coordinates with independent QC teams to inspect samples, materials, in-process products, packing, and shipment readiness.</p></article>
+        <article><h3>5. In-project quality control</h3><p>ANSLIFE coordinates with independent QC teams to inspect samples, materials, in-process products, packing, and shipment readiness.</p></article>
         <article><h3>6. Information management and reporting</h3><p>We consolidate updates and provide stage-based reporting to buyers, keeping information flow clear across buyer, factory, QC, warehouse, and logistics parties.</p></article>
-        <article><h3>7. Documentation and shipment coordination</h3><p>ANSLIFE JSC supports tracking of documents, loading schedules, vessel schedules, forwarders, delivery terms, and shipment execution against the agreed plan.</p></article>
-        <article><h3>8. Issue handling</h3><p>When issues arise in material, quality, schedule, packing, documentation, or logistics, ANSLIFE JSC records, reports, and coordinates practical corrective actions.</p></article>
+        <article><h3>7. Documentation and shipment coordination</h3><p>ANSLIFE supports tracking of documents, loading schedules, vessel schedules, forwarders, delivery terms, and shipment execution against the agreed plan.</p></article>
+        <article><h3>8. Issue handling</h3><p>When issues arise in material, quality, schedule, packing, documentation, or logistics, ANSLIFE records, reports, and coordinates practical corrective actions.</p></article>
       </div>
     </section>
 
@@ -2335,11 +2335,11 @@ const PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN = `
       <h2>6-step project operation workflow</h2>
       <ol class="ai-oem-odm-timeline">
         <li><p><strong>Project scope intake:</strong> Buyer shares product, factory setup, materials, volume, timeline, quality standards, documentation requirements, and shipment plan.</p></li>
-        <li><p><strong>Define ANSLIFE JSC role:</strong> ANSLIFE JSC defines service scope such as progress coordination, independent QC, material management, packing follow-up, logistics, documentation, or project reporting.</p></li>
-        <li><p><strong>Build operation plan:</strong> ANSLIFE JSC prepares phased operating plans including production schedule, inspection schedule, packing schedule, shipment schedule, and reporting milestones.</p></li>
+        <li><p><strong>Define ANSLIFE role:</strong> ANSLIFE defines service scope such as progress coordination, independent QC, material management, packing follow-up, logistics, documentation, or project reporting.</p></li>
+        <li><p><strong>Build operation plan:</strong> ANSLIFE prepares phased operating plans including production schedule, inspection schedule, packing schedule, shipment schedule, and reporting milestones.</p></li>
         <li><p><strong>Monitor and coordinate execution:</strong> We coordinate with factories, suppliers, QC, warehouse, and logistics teams to track real-time status and update project progress.</p></li>
-        <li><p><strong>Report and resolve issues:</strong> ANSLIFE JSC reports project status, records issues, and works with all parties to implement timely corrective actions.</p></li>
-        <li><p><strong>Close-out, shipment, and data retention:</strong> After shipment, ANSLIFE JSC can support retention of approved samples, checklists, inspection data, packing standards, and operational lessons for future orders.</p></li>
+        <li><p><strong>Report and resolve issues:</strong> ANSLIFE reports project status, records issues, and works with all parties to implement timely corrective actions.</p></li>
+        <li><p><strong>Close-out, shipment, and data retention:</strong> After shipment, ANSLIFE can support retention of approved samples, checklists, inspection data, packing standards, and operational lessons for future orders.</p></li>
       </ol>
     </section>
 
@@ -2359,19 +2359,19 @@ const PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>ANSLIFE JSC operation role in Vietnam</h2>
-      <p>ANSLIFE JSC acts as the project operation unit in Vietnam, helping buyers control timeline, quality, information, documentation, and shipment without requiring constant on-site presence in Vietnam.</p>
+      <h2>ANSLIFE operation role in Vietnam</h2>
+      <p>ANSLIFE acts as the project operation unit in Vietnam, helping buyers control timeline, quality, information, documentation, and shipment without requiring constant on-site presence in Vietnam.</p>
     </section>
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Submit a project operation request</h2>
-        <p>Buyers can share project information, existing factory setup, drawings, volume targets, timeline, quality standards, or shipment plan. ANSLIFE JSC will review the scope and propose a suitable operation model.</p>
+        <p>Buyers can share project information, existing factory setup, drawings, volume targets, timeline, quality standards, or shipment plan. ANSLIFE will review the scope and propose a suitable operation model.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit operation request</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload project documents</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -2401,9 +2401,9 @@ const PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_VN = `
     <header class="ai-oem-odm-hero">
       <h2>QC độc lập trong dự án</h2>
       <p class="ai-oem-odm-subtitle">Kiểm soát chất lượng độc lập theo tiêu chuẩn buyer, sản phẩm, vật liệu, đóng gói và từng thị trường xuất khẩu.</p>
-      <p>ANSLIFE JSC cung cấp dịch vụ QC độc lập cho các dự án sản xuất và xuất khẩu tại Việt Nam.</p>
+      <p>ANSLIFE cung cấp dịch vụ QC độc lập cho các dự án sản xuất và xuất khẩu tại Việt Nam.</p>
       <p>Dịch vụ này phù hợp với buyer đã có nhà máy, đã có đơn hàng hoặc đang triển khai dự án tại Việt Nam nhưng cần một đơn vị độc lập để kiểm tra vật liệu, mẫu duyệt, tiến độ sản xuất, sản phẩm, đóng gói và tình trạng hàng trước khi xuất.</p>
-      <p>Hệ thống QC của ANSLIFE JSC hoạt động độc lập với bộ máy sản xuất, nhằm đảm bảo việc kiểm tra được thực hiện khách quan theo tiêu chuẩn đã thống nhất với buyer và yêu cầu của từng thị trường.</p>
+      <p>Hệ thống QC của ANSLIFE hoạt động độc lập với bộ máy sản xuất, nhằm đảm bảo việc kiểm tra được thực hiện khách quan theo tiêu chuẩn đã thống nhất với buyer và yêu cầu của từng thị trường.</p>
     </header>
 
     <section class="ai-oem-odm-support">
@@ -2421,7 +2421,7 @@ const PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_VN = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>ANSLIFE JSC có thể thực hiện QC ở những giai đoạn nào?</h2>
+      <h2>ANSLIFE có thể thực hiện QC ở những giai đoạn nào?</h2>
       <ul>
         <li>Kiểm tra vật liệu trước sản xuất</li>
         <li>Kiểm tra mẫu trước sản xuất hàng loạt</li>
@@ -2438,11 +2438,11 @@ const PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_VN = `
       <h2>Quy trình QC độc lập</h2>
       <ol class="ai-oem-odm-timeline">
         <li><p><strong>Xác nhận tiêu chuẩn kiểm tra:</strong> Buyer cung cấp mẫu duyệt, bản vẽ, bảng màu, tiêu chuẩn vật liệu, tiêu chuẩn đóng gói, yêu cầu thị trường và checklist nếu có.</p></li>
-        <li><p><strong>Thiết lập checklist QC:</strong> ANSLIFE JSC xây dựng checklist kiểm tra dựa trên tiêu chuẩn buyer, sản phẩm, vật liệu, thị trường xuất khẩu và rủi ro thực tế của dự án.</p></li>
-        <li><p><strong>Kiểm tra tại nhà máy / kho:</strong> Đội QC của ANSLIFE JSC kiểm tra vật liệu, sản phẩm, đóng gói hoặc tình trạng hàng tại nhà máy, kho hoặc địa điểm đã thống nhất.</p></li>
+        <li><p><strong>Thiết lập checklist QC:</strong> ANSLIFE xây dựng checklist kiểm tra dựa trên tiêu chuẩn buyer, sản phẩm, vật liệu, thị trường xuất khẩu và rủi ro thực tế của dự án.</p></li>
+        <li><p><strong>Kiểm tra tại nhà máy / kho:</strong> Đội QC của ANSLIFE kiểm tra vật liệu, sản phẩm, đóng gói hoặc tình trạng hàng tại nhà máy, kho hoặc địa điểm đã thống nhất.</p></li>
         <li><p><strong>Ghi nhận kết quả và hình ảnh:</strong> Kết quả kiểm tra được ghi nhận bằng báo cáo, hình ảnh, thông số đo, lỗi phát hiện và tình trạng thực tế của hàng hóa.</p></li>
-        <li><p><strong>Báo cáo cho buyer:</strong> ANSLIFE JSC gửi báo cáo kiểm hàng cho buyer, nêu rõ tình trạng đạt / chưa đạt, lỗi cần xử lý và đề xuất phương án nếu phát sinh vấn đề.</p></li>
-        <li><p><strong>Theo dõi xử lý sau kiểm tra:</strong> Nếu có lỗi hoặc điểm chưa phù hợp, ANSLIFE JSC có thể phối hợp với nhà máy để theo dõi việc điều chỉnh, kiểm tra lại hoặc cập nhật tình trạng trước khi xuất hàng.</p></li>
+        <li><p><strong>Báo cáo cho buyer:</strong> ANSLIFE gửi báo cáo kiểm hàng cho buyer, nêu rõ tình trạng đạt / chưa đạt, lỗi cần xử lý và đề xuất phương án nếu phát sinh vấn đề.</p></li>
+        <li><p><strong>Theo dõi xử lý sau kiểm tra:</strong> Nếu có lỗi hoặc điểm chưa phù hợp, ANSLIFE có thể phối hợp với nhà máy để theo dõi việc điều chỉnh, kiểm tra lại hoặc cập nhật tình trạng trước khi xuất hàng.</p></li>
       </ol>
     </section>
 
@@ -2462,24 +2462,24 @@ const PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_VN = `
 
     <section class="ai-oem-odm-difference">
       <h2>Điểm khác biệt của QC độc lập ANSLIFE</h2>
-      <p>Điểm khác biệt của ANSLIFE JSC nằm ở việc QC không trực thuộc bộ máy sản xuất. Hoạt động kiểm tra được thực hiện với vai trò độc lập, dựa trên tiêu chuẩn của buyer, mẫu đã duyệt, checklist kiểm hàng và yêu cầu của từng thị trường.</p>
+      <p>Điểm khác biệt của ANSLIFE nằm ở việc QC không trực thuộc bộ máy sản xuất. Hoạt động kiểm tra được thực hiện với vai trò độc lập, dựa trên tiêu chuẩn của buyer, mẫu đã duyệt, checklist kiểm hàng và yêu cầu của từng thị trường.</p>
       <p>Điều này giúp buyer có thêm một lớp kiểm soát khách quan tại Việt Nam, đặc biệt trong các dự án sản xuất từ xa, dự án có nhiều nhà máy hoặc dự án cần duy trì tiêu chuẩn ổn định trong dài hạn.</p>
     </section>
 
     <section class="ai-oem-odm-difference">
       <h2>Vai trò QC độc lập trong dự án</h2>
-      <p>ANSLIFE JSC đóng vai trò đối tác QC độc lập tại Việt Nam, giúp buyer kiểm chứng chất lượng sản phẩm trước khi hàng được đóng gói, lưu kho hoặc xuất khẩu.</p>
+      <p>ANSLIFE đóng vai trò đối tác QC độc lập tại Việt Nam, giúp buyer kiểm chứng chất lượng sản phẩm trước khi hàng được đóng gói, lưu kho hoặc xuất khẩu.</p>
     </section>
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Gửi yêu cầu QC độc lập</h2>
-        <p>Buyer có thể gửi mẫu duyệt, bản vẽ, tiêu chuẩn kiểm hàng, hình ảnh sản phẩm, thông tin nhà máy hoặc kế hoạch xuất hàng. ANSLIFE JSC sẽ xem xét và đề xuất phạm vi QC phù hợp cho từng dự án.</p>
+        <p>Buyer có thể gửi mẫu duyệt, bản vẽ, tiêu chuẩn kiểm hàng, hình ảnh sản phẩm, thông tin nhà máy hoặc kế hoạch xuất hàng. ANSLIFE sẽ xem xét và đề xuất phạm vi QC phù hợp cho từng dự án.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu QC</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải tiêu chuẩn kiểm hàng lên</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -2490,9 +2490,9 @@ const PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN = `
     <header class="ai-oem-odm-hero">
       <h2>Independent Project QC Service</h2>
       <p class="ai-oem-odm-subtitle">Independent quality control aligned with buyer standards, product specs, materials, packing requirements, and export market needs.</p>
-      <p>ANSLIFE JSC provides independent QC service for manufacturing and export projects in Vietnam.</p>
+      <p>ANSLIFE provides independent QC service for manufacturing and export projects in Vietnam.</p>
       <p>This service fits buyers who already have factories, confirmed orders, or active projects in Vietnam but require an independent unit to inspect materials, approved samples, production progress, products, packing, and shipment readiness.</p>
-      <p>ANSLIFE JSC QC operates independently from production teams, ensuring objective inspection based on agreed buyer standards and market-specific requirements.</p>
+      <p>ANSLIFE QC operates independently from production teams, ensuring objective inspection based on agreed buyer standards and market-specific requirements.</p>
     </header>
 
     <section class="ai-oem-odm-support">
@@ -2510,7 +2510,7 @@ const PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>At which stages can ANSLIFE JSC perform QC?</h2>
+      <h2>At which stages can ANSLIFE perform QC?</h2>
       <ul>
         <li>Material inspection before production</li>
         <li>Sample verification before mass production</li>
@@ -2527,11 +2527,11 @@ const PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN = `
       <h2>6-step independent QC workflow</h2>
       <ol class="ai-oem-odm-timeline">
         <li><p><strong>Confirm inspection standards:</strong> Buyer provides approved sample, drawings, color board, material standards, packing standards, market requirements, and checklist if available.</p></li>
-        <li><p><strong>Build QC checklist:</strong> ANSLIFE JSC prepares project-specific checklist based on buyer standards, product, materials, export market, and actual risk profile.</p></li>
-        <li><p><strong>Inspect at factory / warehouse:</strong> ANSLIFE JSC QC team inspects materials, products, packing, or shipment status at factory, warehouse, or agreed location.</p></li>
+        <li><p><strong>Build QC checklist:</strong> ANSLIFE prepares project-specific checklist based on buyer standards, product, materials, export market, and actual risk profile.</p></li>
+        <li><p><strong>Inspect at factory / warehouse:</strong> ANSLIFE QC team inspects materials, products, packing, or shipment status at factory, warehouse, or agreed location.</p></li>
         <li><p><strong>Record findings and evidence:</strong> Inspection outcomes are documented with report, photos, measured data, detected defects, and actual shipment condition.</p></li>
-        <li><p><strong>Report to buyer:</strong> ANSLIFE JSC sends QC report with pass/fail status, issues to be corrected, and recommended actions when needed.</p></li>
-        <li><p><strong>Follow-up after inspection:</strong> For non-conformities, ANSLIFE JSC can coordinate with factory for correction tracking, re-check, and final status update before shipment.</p></li>
+        <li><p><strong>Report to buyer:</strong> ANSLIFE sends QC report with pass/fail status, issues to be corrected, and recommended actions when needed.</p></li>
+        <li><p><strong>Follow-up after inspection:</strong> For non-conformities, ANSLIFE can coordinate with factory for correction tracking, re-check, and final status update before shipment.</p></li>
       </ol>
     </section>
 
@@ -2551,24 +2551,24 @@ const PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN = `
 
     <section class="ai-oem-odm-difference">
       <h2>What makes ANSLIFE independent QC different?</h2>
-      <p>ANSLIFE JSC QC is not part of the production organization. Inspection is executed in an independent role based on buyer standards, approved samples, inspection checklist, and market requirements.</p>
+      <p>ANSLIFE QC is not part of the production organization. Inspection is executed in an independent role based on buyer standards, approved samples, inspection checklist, and market requirements.</p>
       <p>This provides buyers with an additional objective control layer in Vietnam, especially for remote projects, multi-factory projects, or long-term programs requiring stable standards.</p>
     </section>
 
     <section class="ai-oem-odm-difference">
       <h2>Independent QC role in your project</h2>
-      <p>ANSLIFE JSC acts as an independent QC partner in Vietnam, helping buyers verify product quality before goods are packed, warehoused, or exported.</p>
+      <p>ANSLIFE acts as an independent QC partner in Vietnam, helping buyers verify product quality before goods are packed, warehoused, or exported.</p>
     </section>
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Submit an independent QC request</h2>
-        <p>Buyers can provide approved samples, drawings, inspection standards, product images, factory information, or shipment plans. ANSLIFE JSC will review and propose a suitable QC scope for each project.</p>
+        <p>Buyers can provide approved samples, drawings, inspection standards, product images, factory information, or shipment plans. ANSLIFE will review and propose a suitable QC scope for each project.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit QC request</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload inspection standards</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -2598,19 +2598,19 @@ const PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_VN = `
     <header class="ai-oem-odm-hero">
       <h2>Điều phối logistics & xuất nhập khẩu dự án</h2>
       <p class="ai-oem-odm-subtitle">Điều phối nhập khẩu vật tư, linh kiện, nguyên liệu; gom hàng, lưu kho, chứng từ và xuất hàng quốc tế cho các dự án tại Việt Nam.</p>
-      <p>ANSLIFE JSC hỗ trợ buyer quốc tế điều phối logistics và hoạt động xuất nhập khẩu cho các dự án sản xuất, vật liệu, cấu kiện, lưu kho và xuất hàng tại Việt Nam.</p>
+      <p>ANSLIFE hỗ trợ buyer quốc tế điều phối logistics và hoạt động xuất nhập khẩu cho các dự án sản xuất, vật liệu, cấu kiện, lưu kho và xuất hàng tại Việt Nam.</p>
       <p>Dịch vụ này không chỉ bao gồm xuất hàng từ Việt Nam ra thị trường quốc tế, mà còn hỗ trợ nhập khẩu vật tư, linh kiện, nguyên liệu hoặc mẫu phục vụ cho quá trình phát triển sản phẩm, sản xuất, lắp ráp, kiểm định và hoàn thiện đơn hàng.</p>
-      <p>Thông qua việc phối hợp với nhà máy, kho, forwarder, đơn vị vận chuyển và các bên liên quan, ANSLIFE JSC giúp dự án được vận hành rõ ràng hơn về lịch hàng về, lịch sản xuất, lưu kho, chứng từ, đóng hàng và xuất hàng quốc tế.</p>
+      <p>Thông qua việc phối hợp với nhà máy, kho, forwarder, đơn vị vận chuyển và các bên liên quan, ANSLIFE giúp dự án được vận hành rõ ràng hơn về lịch hàng về, lịch sản xuất, lưu kho, chứng từ, đóng hàng và xuất hàng quốc tế.</p>
     </header>
 
     <section class="ai-oem-odm-support">
-      <h2>ANSLIFE JSC điều phối những phần nào?</h2>
+      <h2>ANSLIFE điều phối những phần nào?</h2>
       <div class="ai-oem-odm-support-grid">
         <article><h3>1. Nhập khẩu vật tư, linh kiện, nguyên liệu</h3><p>Hỗ trợ điều phối nhập khẩu vật tư, linh kiện, nguyên liệu, mẫu sản phẩm hoặc vật liệu đặc thù từ nước ngoài vào Việt Nam để phục vụ phát triển mẫu, sản xuất hoặc hoàn thiện đơn hàng.</p></article>
-        <article><h3>2. Phối hợp forwarder và đơn vị logistics</h3><p>ANSLIFE JSC phối hợp với forwarder, hãng tàu, đơn vị vận chuyển nội địa và các bên logistics liên quan để theo dõi lịch hàng, lịch giao nhận, lịch đóng hàng và kế hoạch vận chuyển.</p></article>
+        <article><h3>2. Phối hợp forwarder và đơn vị logistics</h3><p>ANSLIFE phối hợp với forwarder, hãng tàu, đơn vị vận chuyển nội địa và các bên logistics liên quan để theo dõi lịch hàng, lịch giao nhận, lịch đóng hàng và kế hoạch vận chuyển.</p></article>
         <article><h3>3. Theo dõi hàng nhập về Việt Nam</h3><p>Theo dõi lịch hàng về, tình trạng vận chuyển, thời gian dự kiến đến, kế hoạch thông quan và lịch giao hàng về kho, nhà máy hoặc địa điểm đã thống nhất.</p></article>
         <article><h3>4. Kiểm tra tình trạng hàng khi nhập kho</h3><p>Hỗ trợ kiểm tra số lượng, tình trạng bao bì, nhãn mác, vật liệu, linh kiện hoặc hàng hóa khi về Việt Nam trước khi lưu kho, cấp phát cho nhà máy hoặc đưa vào sản xuất.</p></article>
-        <article><h3>5. Lưu kho và cấp phát vật tư cho dự án</h3><p>ANSLIFE JSC hỗ trợ lưu kho vật tư, linh kiện, nguyên liệu hoặc cấu kiện tại Việt Nam và cấp phát cho nhà máy theo kế hoạch sản xuất của từng dự án.</p></article>
+        <article><h3>5. Lưu kho và cấp phát vật tư cho dự án</h3><p>ANSLIFE hỗ trợ lưu kho vật tư, linh kiện, nguyên liệu hoặc cấu kiện tại Việt Nam và cấp phát cho nhà máy theo kế hoạch sản xuất của từng dự án.</p></article>
         <article><h3>6. Gom hàng từ nhiều nguồn</h3><p>Hỗ trợ gom hàng từ nhiều nhà máy, nhà cung cấp hoặc điểm giao hàng khác nhau tại Việt Nam để kiểm tra, lưu kho, đóng gói và xuất hàng theo một kế hoạch chung.</p></article>
         <article><h3>7. Hỗ trợ chứng từ xuất nhập khẩu</h3><p>Phối hợp chuẩn bị, kiểm tra hoặc theo dõi các chứng từ liên quan đến nhập khẩu, xuất khẩu, giao nhận, đóng hàng và vận chuyển theo yêu cầu của từng dự án.</p></article>
         <article><h3>8. Tổ chức xuất hàng quốc tế</h3><p>Điều phối đóng hàng, lịch tàu, lịch bay, hàng nguyên container, hàng lẻ, chứng từ, forwarder và kế hoạch xuất hàng từ Việt Nam đến thị trường đích.</p></article>
@@ -2634,11 +2634,11 @@ const PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_VN = `
       <h2>Quy trình điều phối logistics & xuất nhập khẩu dự án</h2>
       <ol class="ai-oem-odm-timeline">
         <li><p><strong>Xác định nhu cầu logistics của dự án:</strong> Buyer cung cấp thông tin về vật tư, linh kiện, nguyên liệu, hàng hóa, điểm đi, điểm đến, nhà máy, kho, thời gian yêu cầu, điều kiện thương mại và kế hoạch sản xuất hoặc xuất hàng.</p></li>
-        <li><p><strong>Lập kế hoạch nhập khẩu / xuất khẩu:</strong> ANSLIFE JSC phối hợp với các bên liên quan để xác định phương án logistics phù hợp, bao gồm nhập khẩu vật tư, lưu kho, giao cho nhà máy, gom hàng, đóng hàng và xuất hàng quốc tế.</p></li>
-        <li><p><strong>Phối hợp forwarder, kho và nhà máy:</strong> ANSLIFE JSC điều phối thông tin giữa buyer, forwarder, kho, nhà máy, nhà cung cấp và các bên liên quan nhằm đảm bảo lịch hàng và trách nhiệm từng bên được rõ ràng.</p></li>
+        <li><p><strong>Lập kế hoạch nhập khẩu / xuất khẩu:</strong> ANSLIFE phối hợp với các bên liên quan để xác định phương án logistics phù hợp, bao gồm nhập khẩu vật tư, lưu kho, giao cho nhà máy, gom hàng, đóng hàng và xuất hàng quốc tế.</p></li>
+        <li><p><strong>Phối hợp forwarder, kho và nhà máy:</strong> ANSLIFE điều phối thông tin giữa buyer, forwarder, kho, nhà máy, nhà cung cấp và các bên liên quan nhằm đảm bảo lịch hàng và trách nhiệm từng bên được rõ ràng.</p></li>
         <li><p><strong>Theo dõi hàng hóa và chứng từ:</strong> Chúng tôi theo dõi tình trạng hàng hóa, lịch vận chuyển, lịch thông quan, giao nhận, chứng từ nhập khẩu / xuất khẩu và các mốc quan trọng của dự án.</p></li>
-        <li><p><strong>Kiểm tra, lưu kho và cấp phát:</strong> Khi hàng về Việt Nam hoặc trước khi xuất hàng, ANSLIFE JSC có thể hỗ trợ kiểm tra tình trạng hàng, lưu kho, phân loại, cấp phát vật tư cho nhà máy hoặc gom hàng theo kế hoạch.</p></li>
-        <li><p><strong>Xuất hàng và báo cáo tình trạng:</strong> ANSLIFE JSC phối hợp kế hoạch đóng hàng, chứng từ, forwarder, lịch tàu hoặc lịch bay, đồng thời cập nhật tình trạng xuất hàng cho buyer theo từng giai đoạn.</p></li>
+        <li><p><strong>Kiểm tra, lưu kho và cấp phát:</strong> Khi hàng về Việt Nam hoặc trước khi xuất hàng, ANSLIFE có thể hỗ trợ kiểm tra tình trạng hàng, lưu kho, phân loại, cấp phát vật tư cho nhà máy hoặc gom hàng theo kế hoạch.</p></li>
+        <li><p><strong>Xuất hàng và báo cáo tình trạng:</strong> ANSLIFE phối hợp kế hoạch đóng hàng, chứng từ, forwarder, lịch tàu hoặc lịch bay, đồng thời cập nhật tình trạng xuất hàng cho buyer theo từng giai đoạn.</p></li>
       </ol>
     </section>
 
@@ -2658,25 +2658,25 @@ const PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_VN = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>Điểm khác biệt của ANSLIFE JSC</h2>
-      <p>Điểm khác biệt của ANSLIFE JSC là logistics được đặt trong tổng thể vận hành dự án, không tách rời khỏi sản phẩm, vật liệu, nhà máy, QC, lưu kho và xuất hàng.</p>
+      <h2>Điểm khác biệt của ANSLIFE</h2>
+      <p>Điểm khác biệt của ANSLIFE là logistics được đặt trong tổng thể vận hành dự án, không tách rời khỏi sản phẩm, vật liệu, nhà máy, QC, lưu kho và xuất hàng.</p>
       <p>Điều này giúp buyer kiểm soát tốt hơn cả đầu vào và đầu ra của dự án: từ vật tư, linh kiện, nguyên liệu nhập khẩu vào Việt Nam đến hàng hóa hoàn thiện được đóng gói và xuất đi thị trường quốc tế.</p>
     </section>
 
     <section class="ai-oem-odm-difference">
       <h2>Vai trò logistics trong vòng đời dự án</h2>
-      <p>ANSLIFE JSC đóng vai trò đầu mối logistics tại Việt Nam, giúp buyer điều phối hàng nhập, hàng lưu kho, hàng sản xuất và hàng xuất khẩu trong cùng một hệ thống dự án.</p>
+      <p>ANSLIFE đóng vai trò đầu mối logistics tại Việt Nam, giúp buyer điều phối hàng nhập, hàng lưu kho, hàng sản xuất và hàng xuất khẩu trong cùng một hệ thống dự án.</p>
     </section>
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Gửi yêu cầu điều phối logistics dự án</h2>
-        <p>Buyer có thể gửi thông tin về vật tư, linh kiện, nguyên liệu, nhà máy, kho, điểm giao nhận, điều kiện thương mại, chứng từ hoặc kế hoạch xuất hàng. ANSLIFE JSC sẽ xem xét và đề xuất phạm vi điều phối logistics phù hợp cho dự án.</p>
+        <p>Buyer có thể gửi thông tin về vật tư, linh kiện, nguyên liệu, nhà máy, kho, điểm giao nhận, điều kiện thương mại, chứng từ hoặc kế hoạch xuất hàng. ANSLIFE sẽ xem xét và đề xuất phạm vi điều phối logistics phù hợp cho dự án.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu logistics</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải tài liệu dự án lên</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -2687,19 +2687,19 @@ const PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN = `
     <header class="ai-oem-odm-hero">
       <h2>Project Logistics & Import-Export Coordination</h2>
       <p class="ai-oem-odm-subtitle">Coordinate inbound materials, components, and inputs; consolidation, warehousing, documentation, and international outbound shipment for projects in Vietnam.</p>
-      <p>ANSLIFE JSC supports international buyers in coordinating logistics and import-export activities for manufacturing, material, component, warehousing, and shipment projects in Vietnam.</p>
+      <p>ANSLIFE supports international buyers in coordinating logistics and import-export activities for manufacturing, material, component, warehousing, and shipment projects in Vietnam.</p>
       <p>This service covers not only outbound shipment from Vietnam to global markets, but also inbound import coordination for materials, components, special inputs, or samples needed for product development, production, assembly, testing, and order completion.</p>
-      <p>By coordinating with factories, warehouses, forwarders, transport providers, and related stakeholders, ANSLIFE JSC helps projects run with clearer visibility on inbound schedules, production timing, storage, documents, loading, and international shipment execution.</p>
+      <p>By coordinating with factories, warehouses, forwarders, transport providers, and related stakeholders, ANSLIFE helps projects run with clearer visibility on inbound schedules, production timing, storage, documents, loading, and international shipment execution.</p>
     </header>
 
     <section class="ai-oem-odm-support">
-      <h2>What does ANSLIFE JSC coordinate?</h2>
+      <h2>What does ANSLIFE coordinate?</h2>
       <div class="ai-oem-odm-support-grid">
         <article><h3>1. Import of materials, components, and inputs</h3><p>Support inbound coordination of materials, components, raw inputs, product samples, or special items from overseas into Vietnam for sample development, production, or order completion.</p></article>
-        <article><h3>2. Forwarder and logistics-party coordination</h3><p>ANSLIFE JSC coordinates with forwarders, carriers, domestic transport providers, and related logistics parties to track vessel/air schedules, handover timing, loading plans, and transport execution.</p></article>
+        <article><h3>2. Forwarder and logistics-party coordination</h3><p>ANSLIFE coordinates with forwarders, carriers, domestic transport providers, and related logistics parties to track vessel/air schedules, handover timing, loading plans, and transport execution.</p></article>
         <article><h3>3. Inbound cargo tracking to Vietnam</h3><p>Track inbound schedules, transit status, ETA, customs clearance plan, and delivery timing to warehouse, factory, or agreed destination points.</p></article>
         <article><h3>4. Condition check on inbound warehouse receipt</h3><p>Support quantity and condition checks for packaging, labels, materials, components, or cargo upon arrival before storage, factory allocation, or production release.</p></article>
-        <article><h3>5. Warehousing and material allocation for projects</h3><p>ANSLIFE JSC supports storage of materials, components, inputs, or parts in Vietnam and staged allocation to factories in line with project production plans.</p></article>
+        <article><h3>5. Warehousing and material allocation for projects</h3><p>ANSLIFE supports storage of materials, components, inputs, or parts in Vietnam and staged allocation to factories in line with project production plans.</p></article>
         <article><h3>6. Multi-source consolidation</h3><p>Support cargo consolidation from multiple factories, suppliers, or delivery points in Vietnam for inspection, warehousing, packing, and outbound shipment under one execution plan.</p></article>
         <article><h3>7. Import-export documentation support</h3><p>Coordinate preparation, checking, and tracking of documents related to import, export, cargo handover, loading, and transport per project requirements.</p></article>
         <article><h3>8. International outbound shipment organization</h3><p>Coordinate loading plans, vessel/flight schedules, FCL/LCL handling, documents, forwarders, and shipment execution from Vietnam to destination markets.</p></article>
@@ -2723,11 +2723,11 @@ const PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN = `
       <h2>6-step logistics and import-export workflow</h2>
       <ol class="ai-oem-odm-timeline">
         <li><p><strong>Define project logistics requirements:</strong> Buyer provides details on materials, components, goods, origin, destination, factory, warehouse, required timing, trade terms, and production/shipment plans.</p></li>
-        <li><p><strong>Build import/export plan:</strong> ANSLIFE JSC works with relevant parties to define suitable logistics setup for inbound imports, warehousing, factory delivery, consolidation, loading, and international outbound shipment.</p></li>
-        <li><p><strong>Coordinate forwarder, warehouse, and factory:</strong> ANSLIFE JSC aligns information among buyer, forwarder, warehouse, factory, suppliers, and stakeholders to keep cargo schedules and responsibilities clear.</p></li>
+        <li><p><strong>Build import/export plan:</strong> ANSLIFE works with relevant parties to define suitable logistics setup for inbound imports, warehousing, factory delivery, consolidation, loading, and international outbound shipment.</p></li>
+        <li><p><strong>Coordinate forwarder, warehouse, and factory:</strong> ANSLIFE aligns information among buyer, forwarder, warehouse, factory, suppliers, and stakeholders to keep cargo schedules and responsibilities clear.</p></li>
         <li><p><strong>Track cargo and documentation:</strong> We track cargo status, transit schedules, customs milestones, handover, import/export documents, and critical project checkpoints.</p></li>
-        <li><p><strong>Inspect, store, and allocate:</strong> Upon inbound receipt or pre-shipment stage, ANSLIFE JSC can support condition checks, storage, sorting, material allocation to factories, or consolidation as planned.</p></li>
-        <li><p><strong>Ship and report status:</strong> ANSLIFE JSC coordinates loading, documents, forwarders, vessel/flight plans, and provides staged shipment status updates to buyers.</p></li>
+        <li><p><strong>Inspect, store, and allocate:</strong> Upon inbound receipt or pre-shipment stage, ANSLIFE can support condition checks, storage, sorting, material allocation to factories, or consolidation as planned.</p></li>
+        <li><p><strong>Ship and report status:</strong> ANSLIFE coordinates loading, documents, forwarders, vessel/flight plans, and provides staged shipment status updates to buyers.</p></li>
       </ol>
     </section>
 
@@ -2747,25 +2747,25 @@ const PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>What makes ANSLIFE JSC different?</h2>
-      <p>ANSLIFE JSC positions logistics within total project operations, not as a separate standalone task from product, materials, factory execution, QC, warehousing, and outbound shipment.</p>
+      <h2>What makes ANSLIFE different?</h2>
+      <p>ANSLIFE positions logistics within total project operations, not as a separate standalone task from product, materials, factory execution, QC, warehousing, and outbound shipment.</p>
       <p>This gives buyers stronger control over both project inputs and outputs: from imported materials/components into Vietnam to finished goods packed and exported to destination markets.</p>
     </section>
 
     <section class="ai-oem-odm-difference">
       <h2>Logistics across the full project lifecycle</h2>
-      <p>ANSLIFE JSC acts as the logistics focal point in Vietnam, helping buyers coordinate inbound, warehoused, in-production, and outbound cargo within one project system.</p>
+      <p>ANSLIFE acts as the logistics focal point in Vietnam, helping buyers coordinate inbound, warehoused, in-production, and outbound cargo within one project system.</p>
     </section>
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Submit a project logistics coordination request</h2>
-        <p>Buyers can share details on materials, components, inputs, factories, warehouses, handover points, trade terms, documents, or shipment plans. ANSLIFE JSC will review and propose a suitable logistics coordination scope.</p>
+        <p>Buyers can share details on materials, components, inputs, factories, warehouses, handover points, trade terms, documents, or shipment plans. ANSLIFE will review and propose a suitable logistics coordination scope.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit logistics request</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload project documents</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -2795,13 +2795,13 @@ const PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_VN = `
     <header class="ai-oem-odm-hero">
       <h2>Lưu kho tại Việt Nam</h2>
       <p class="ai-oem-odm-subtitle">Lưu hàng hóa, vật liệu, cấu kiện, mẫu chuẩn và hàng tồn dự phòng tại Việt Nam để hỗ trợ sản xuất, kiểm soát chất lượng và xuất hàng định kỳ.</p>
-      <p>ANSLIFE JSC hỗ trợ buyer quốc tế lưu kho hàng hóa, vật liệu, cấu kiện, mẫu chuẩn và hàng tồn dự phòng tại Việt Nam.</p>
+      <p>ANSLIFE hỗ trợ buyer quốc tế lưu kho hàng hóa, vật liệu, cấu kiện, mẫu chuẩn và hàng tồn dự phòng tại Việt Nam.</p>
       <p>Dịch vụ này giúp buyer giảm chi phí lưu kho tại các thị trường có chi phí cao như Nhật Bản, Singapore, Hong Kong, Hoa Kỳ hoặc Châu Âu, đồng thời vẫn duy trì khả năng bổ sung hàng, kiểm soát tiêu chuẩn sản phẩm và xuất hàng theo kế hoạch.</p>
       <p>Việc lưu kho tại Việt Nam không chỉ là lưu trữ hàng hóa, mà còn là một phần của hệ thống vận hành chuỗi cung ứng, bao gồm quản lý mẫu duyệt, vật liệu, tiêu chuẩn đóng gói, checklist kiểm hàng, hàng tồn và kế hoạch xuất hàng định kỳ.</p>
     </header>
 
     <section class="ai-oem-odm-support">
-      <h2>ANSLIFE JSC có thể lưu kho những gì?</h2>
+      <h2>ANSLIFE có thể lưu kho những gì?</h2>
       <div class="ai-oem-odm-support-grid">
         <article><h3>1. Hàng hóa hoàn thiện</h3><p>Lưu trữ sản phẩm đã hoàn thiện, đã kiểm tra hoặc chờ xuất hàng theo kế hoạch của buyer.</p></article>
         <article><h3>2. Cấu kiện nội thất</h3><p>Lưu trữ cấu kiện, chi tiết gỗ, khung, panel, bộ phận bán thành phẩm hoặc linh kiện phục vụ sản xuất và lắp ráp.</p></article>
@@ -2832,11 +2832,11 @@ const PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_VN = `
       <h2>Quy trình lưu kho tại Việt Nam</h2>
       <ol class="ai-oem-odm-timeline">
         <li><p><strong>Xác định nhu cầu lưu kho:</strong> Buyer cung cấp thông tin về loại hàng cần lưu, số lượng, thời gian lưu kho, tiêu chuẩn bảo quản, kế hoạch xuất hàng và yêu cầu quản lý dữ liệu.</p></li>
-        <li><p><strong>Phân loại hàng hóa / vật liệu / mẫu chuẩn:</strong> ANSLIFE JSC phân loại hàng hóa theo nhóm: hàng hoàn thiện, cấu kiện, vật liệu, mẫu chuẩn, bảng màu, tiêu chuẩn đóng gói hoặc hàng tồn dự phòng.</p></li>
-        <li><p><strong>Kiểm tra hàng trước khi nhập kho:</strong> Trước khi nhập kho, ANSLIFE JSC có thể kiểm tra số lượng, tình trạng hàng, bao bì, nhãn mác, mẫu chuẩn hoặc tiêu chuẩn liên quan.</p></li>
+        <li><p><strong>Phân loại hàng hóa / vật liệu / mẫu chuẩn:</strong> ANSLIFE phân loại hàng hóa theo nhóm: hàng hoàn thiện, cấu kiện, vật liệu, mẫu chuẩn, bảng màu, tiêu chuẩn đóng gói hoặc hàng tồn dự phòng.</p></li>
+        <li><p><strong>Kiểm tra hàng trước khi nhập kho:</strong> Trước khi nhập kho, ANSLIFE có thể kiểm tra số lượng, tình trạng hàng, bao bì, nhãn mác, mẫu chuẩn hoặc tiêu chuẩn liên quan.</p></li>
         <li><p><strong>Lưu kho và quản lý dữ liệu:</strong> Hàng hóa, vật liệu, mẫu chuẩn và tài liệu liên quan được lưu trữ theo mã hàng, dự án, buyer, tiêu chuẩn và kế hoạch sử dụng hoặc xuất hàng.</p></li>
-        <li><p><strong>Cấp phát / gom hàng / chuẩn bị xuất:</strong> ANSLIFE JSC có thể hỗ trợ cấp phát vật liệu cho nhà máy, gom hàng từ nhiều nguồn, kiểm tra trước xuất, đóng gói lại nếu cần và chuẩn bị hàng theo kế hoạch.</p></li>
-        <li><p><strong>Xuất kho và báo cáo:</strong> Khi có yêu cầu, ANSLIFE JSC hỗ trợ xuất kho, cập nhật tình trạng hàng, phối hợp logistics, lưu chứng từ và báo cáo tồn kho cho buyer.</p></li>
+        <li><p><strong>Cấp phát / gom hàng / chuẩn bị xuất:</strong> ANSLIFE có thể hỗ trợ cấp phát vật liệu cho nhà máy, gom hàng từ nhiều nguồn, kiểm tra trước xuất, đóng gói lại nếu cần và chuẩn bị hàng theo kế hoạch.</p></li>
+        <li><p><strong>Xuất kho và báo cáo:</strong> Khi có yêu cầu, ANSLIFE hỗ trợ xuất kho, cập nhật tình trạng hàng, phối hợp logistics, lưu chứng từ và báo cáo tồn kho cho buyer.</p></li>
       </ol>
     </section>
 
@@ -2855,26 +2855,26 @@ const PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_VN = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>Điểm khác biệt của ANSLIFE JSC</h2>
-      <p>Điểm khác biệt của ANSLIFE JSC là hoạt động lưu kho được kết nối với toàn bộ hệ thống sản xuất, QC, vật liệu, logistics và xuất khẩu.</p>
+      <h2>Điểm khác biệt của ANSLIFE</h2>
+      <p>Điểm khác biệt của ANSLIFE là hoạt động lưu kho được kết nối với toàn bộ hệ thống sản xuất, QC, vật liệu, logistics và xuất khẩu.</p>
       <p>Điều này có nghĩa là hàng hóa không chỉ được lưu trữ, mà còn được quản lý trong cùng một hệ thống gồm mẫu chuẩn, tiêu chuẩn chất lượng, checklist kiểm hàng, kế hoạch xuất hàng và dữ liệu dự án.</p>
-      <p>Với các đối tác dài hạn, ANSLIFE JSC có thể thiết lập khu vực hoặc phòng tiêu chuẩn riêng tại Việt Nam để lưu mẫu sản phẩm, cấu kiện, vật liệu, bảng màu, tiêu chuẩn đóng gói và dữ liệu kỹ thuật của từng buyer.</p>
+      <p>Với các đối tác dài hạn, ANSLIFE có thể thiết lập khu vực hoặc phòng tiêu chuẩn riêng tại Việt Nam để lưu mẫu sản phẩm, cấu kiện, vật liệu, bảng màu, tiêu chuẩn đóng gói và dữ liệu kỹ thuật của từng buyer.</p>
     </section>
 
     <section class="ai-oem-odm-difference">
       <h2>Vai trò lưu kho trong chuỗi cung ứng</h2>
-      <p>ANSLIFE JSC giúp buyer biến Việt Nam thành điểm lưu kho, lưu mẫu, lưu tiêu chuẩn và điều phối xuất hàng cho các dự án sản xuất và cung ứng dài hạn.</p>
+      <p>ANSLIFE giúp buyer biến Việt Nam thành điểm lưu kho, lưu mẫu, lưu tiêu chuẩn và điều phối xuất hàng cho các dự án sản xuất và cung ứng dài hạn.</p>
     </section>
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Gửi yêu cầu lưu kho tại Việt Nam</h2>
-        <p>Buyer có thể gửi thông tin về loại hàng hóa, vật liệu, mẫu chuẩn, số lượng, thời gian lưu kho, yêu cầu bảo quản hoặc kế hoạch xuất hàng. ANSLIFE JSC sẽ xem xét và đề xuất phương án lưu kho phù hợp.</p>
+        <p>Buyer có thể gửi thông tin về loại hàng hóa, vật liệu, mẫu chuẩn, số lượng, thời gian lưu kho, yêu cầu bảo quản hoặc kế hoạch xuất hàng. ANSLIFE sẽ xem xét và đề xuất phương án lưu kho phù hợp.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu lưu kho</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải danh sách hàng hóa lên</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -2885,13 +2885,13 @@ const PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN = `
     <header class="ai-oem-odm-hero">
       <h2>Vietnam Storage Solution</h2>
       <p class="ai-oem-odm-subtitle">Store finished goods, materials, components, approved references, and buffer stock in Vietnam to support production, quality control, and recurring shipment plans.</p>
-      <p>ANSLIFE JSC supports international buyers with storage of goods, materials, components, approved samples, and backup inventory in Vietnam.</p>
+      <p>ANSLIFE supports international buyers with storage of goods, materials, components, approved samples, and backup inventory in Vietnam.</p>
       <p>This service helps buyers reduce storage costs in higher-cost markets such as Japan, Singapore, Hong Kong, the US, or Europe while maintaining replenishment flexibility, product standard control, and shipment readiness.</p>
       <p>Storage in Vietnam is not only about warehousing goods. It is part of a broader supply chain operating system that includes approved sample management, material control, packing standards, inspection checklists, buffer stock, and scheduled shipment execution.</p>
     </header>
 
     <section class="ai-oem-odm-support">
-      <h2>What can ANSLIFE JSC store?</h2>
+      <h2>What can ANSLIFE store?</h2>
       <div class="ai-oem-odm-support-grid">
         <article><h3>1. Finished goods</h3><p>Store completed products that are inspected or waiting for shipment according to buyer plans.</p></article>
         <article><h3>2. Furniture components</h3><p>Store components, wood parts, frames, panels, semi-finished modules, or parts for production and assembly.</p></article>
@@ -2922,11 +2922,11 @@ const PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN = `
       <h2>6-step storage workflow in Vietnam</h2>
       <ol class="ai-oem-odm-timeline">
         <li><p><strong>Define storage requirements:</strong> Buyer shares cargo category, quantity, storage duration, preservation standards, shipment plan, and data management requirements.</p></li>
-        <li><p><strong>Categorize goods / materials / references:</strong> ANSLIFE JSC categorizes by finished goods, components, materials, approved samples, color/material references, packing standards, or buffer stock.</p></li>
-        <li><p><strong>Pre-storage inspection:</strong> Before inbound storage, ANSLIFE JSC can check quantity, condition, packaging, labels, approved sample status, or related standards.</p></li>
+        <li><p><strong>Categorize goods / materials / references:</strong> ANSLIFE categorizes by finished goods, components, materials, approved samples, color/material references, packing standards, or buffer stock.</p></li>
+        <li><p><strong>Pre-storage inspection:</strong> Before inbound storage, ANSLIFE can check quantity, condition, packaging, labels, approved sample status, or related standards.</p></li>
         <li><p><strong>Storage and data management:</strong> Goods, materials, approved references, and related documents are stored and managed by SKU, project, buyer, standards, and use/dispatch plan.</p></li>
-        <li><p><strong>Allocation / consolidation / pre-shipment prep:</strong> ANSLIFE JSC can support material allocation to factories, multi-source consolidation, pre-shipment checks, repacking when required, and shipment preparation.</p></li>
-        <li><p><strong>Dispatch and reporting:</strong> Upon request, ANSLIFE JSC supports outbound release, stock status updates, logistics coordination, document retention, and inventory reporting.</p></li>
+        <li><p><strong>Allocation / consolidation / pre-shipment prep:</strong> ANSLIFE can support material allocation to factories, multi-source consolidation, pre-shipment checks, repacking when required, and shipment preparation.</p></li>
+        <li><p><strong>Dispatch and reporting:</strong> Upon request, ANSLIFE supports outbound release, stock status updates, logistics coordination, document retention, and inventory reporting.</p></li>
       </ol>
     </section>
 
@@ -2945,26 +2945,26 @@ const PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN = `
     </section>
 
     <section class="ai-oem-odm-difference">
-      <h2>What makes ANSLIFE JSC different?</h2>
-      <p>ANSLIFE JSC storage operations are connected to the full system of production, QC, materials, logistics, and export execution.</p>
+      <h2>What makes ANSLIFE different?</h2>
+      <p>ANSLIFE storage operations are connected to the full system of production, QC, materials, logistics, and export execution.</p>
       <p>This means goods are not only stored, but managed in one system with approved references, quality standards, inspection checklists, shipment plans, and project data.</p>
-      <p>For long-term partners, ANSLIFE JSC can set up dedicated standards areas in Vietnam to retain product samples, components, materials, color references, packing standards, and technical data for each buyer.</p>
+      <p>For long-term partners, ANSLIFE can set up dedicated standards areas in Vietnam to retain product samples, components, materials, color references, packing standards, and technical data for each buyer.</p>
     </section>
 
     <section class="ai-oem-odm-difference">
       <h2>Storage as part of supply chain control</h2>
-      <p>ANSLIFE JSC helps buyers turn Vietnam into a storage, reference, standards, and shipment coordination base for long-term production and supply projects.</p>
+      <p>ANSLIFE helps buyers turn Vietnam into a storage, reference, standards, and shipment coordination base for long-term production and supply projects.</p>
     </section>
 
     <div class="ai-company-request-panel ai-oem-odm-request-panel">
       <div>
         <h2>Submit a Vietnam storage request</h2>
-        <p>Buyers can share cargo type, materials, approved references, quantity, storage duration, preservation requirements, or shipment plans. ANSLIFE JSC will review and propose a suitable storage model.</p>
+        <p>Buyers can share cargo type, materials, approved references, quantity, storage duration, preservation requirements, or shipment plans. ANSLIFE will review and propose a suitable storage model.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit storage request</a>
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload inventory list</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE JSC</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -2989,6 +2989,199 @@ const PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_LOCALIZED: Record<
   zh: PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN,
 };
 
+const PRODUCTS_TRADE_FINANCING_SECTION_VN = `
+  <section id="trade-financing" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Tài trợ thương mại</h2>
+      <p class="ai-oem-odm-subtitle">Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC, chứng từ và xuất hàng.</p>
+      <p>ANSLIFE cung cấp giải pháp tài trợ thương mại có kiểm soát cho buyer và các nhà máy gia công trong các dự án sản xuất và xuất khẩu tại Việt Nam.</p>
+      <p>Dịch vụ này được thiết kế để hỗ trợ dòng tiền trong chuỗi cung ứng, bao gồm chuẩn bị vật liệu, triển khai sản xuất, kiểm soát chất lượng, đóng gói, chứng từ và xuất hàng theo đơn hàng thực tế.</p>
+      <p>Tài trợ thương mại của ANSLIFE không phải là dịch vụ tài chính độc lập, mà là một giải pháp hỗ trợ vận hành chuỗi cung ứng, được xem xét theo từng dự án, từng buyer, từng nhà máy và mức độ kiểm soát rủi ro cụ thể.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>Tài trợ thương mại hỗ trợ những phần nào?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Hỗ trợ buyer trong kế hoạch đơn hàng</h3><p>ANSLIFE có thể hỗ trợ buyer xây dựng phương án tài trợ thương mại phù hợp với giá trị đơn hàng, lịch sản xuất, lịch kiểm hàng, chứng từ và kế hoạch xuất hàng.</p></article>
+        <article><h3>2. Hỗ trợ nhà máy gia công</h3><p>ANSLIFE có thể hỗ trợ nhà máy gia công trong việc chuẩn bị vật liệu, triển khai sản xuất và duy trì tiến độ đối với các đơn hàng đã được xác nhận.</p></article>
+        <article><h3>3. Gắn với đơn hàng thực tế</h3><p>Tài trợ thương mại chỉ được xem xét trên cơ sở đơn hàng, dự án hoặc kế hoạch sản xuất cụ thể, không tách rời khỏi hoạt động sản xuất và xuất khẩu thực tế.</p></article>
+        <article><h3>4. Gắn với vật liệu và sản xuất</h3><p>Việc hỗ trợ tài trợ có thể liên quan đến chuẩn bị vật liệu, linh kiện, cấu kiện, sản xuất, hoàn thiện, đóng gói và các chi phí trực tiếp phục vụ đơn hàng.</p></article>
+        <article><h3>5. Gắn với QC độc lập</h3><p>Hoạt động tài trợ thương mại được liên kết với cơ chế kiểm soát chất lượng, checklist kiểm hàng, báo cáo QC và tình trạng thực tế của hàng hóa trong dự án.</p></article>
+        <article><h3>6. Gắn với chứng từ và xuất hàng</h3><p>ANSLIFE có thể xem xét tài trợ thương mại trong mối liên hệ với chứng từ xuất khẩu, điều kiện thanh toán, điều kiện thương mại, lịch đóng hàng và kế hoạch xuất hàng.</p></article>
+        <article><h3>7. Kiểm soát rủi ro theo từng dự án</h3><p>Mỗi phương án tài trợ thương mại được xem xét dựa trên buyer, nhà máy, sản phẩm, giá trị đơn hàng, tiến độ, tiêu chuẩn chất lượng và mức độ rủi ro của dự án.</p></article>
+        <article><h3>8. Hỗ trợ hợp tác dài hạn</h3><p>Với các buyer và nhà máy có hợp tác ổn định, tài trợ thương mại có thể trở thành một phần của mô hình vận hành chuỗi cung ứng dài hạn.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Dịch vụ này phù hợp với trường hợp nào?</h2>
+      <ul>
+        <li>Buyer cần mô hình thanh toán linh hoạt hơn cho dự án sản xuất</li>
+        <li>Nhà máy gia công cần hỗ trợ dòng tiền để chuẩn bị vật liệu hoặc triển khai đơn hàng</li>
+        <li>Dự án có giá trị đơn hàng lớn hoặc sản lượng lặp lại</li>
+        <li>Dự án cần chuẩn bị vật liệu trước khi nhận đủ thanh toán</li>
+        <li>Buyer và nhà máy cần một cơ chế hỗ trợ có kiểm soát trong chuỗi cung ứng</li>
+        <li>Dự án cần gắn tài trợ với QC, chứng từ và kế hoạch xuất hàng</li>
+        <li>Các quan hệ hợp tác dài hạn cần tối ưu dòng tiền, tiến độ và khả năng giao hàng</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>Quy trình xem xét tài trợ thương mại</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Tiếp nhận thông tin dự án:</strong> Buyer hoặc nhà máy cung cấp thông tin về đơn hàng, sản phẩm, giá trị dự án, vật liệu, tiến độ sản xuất, điều kiện thanh toán và kế hoạch xuất hàng.</p></li>
+        <li><p><strong>Đánh giá đơn hàng và rủi ro:</strong> ANSLIFE đánh giá buyer, nhà máy, sản phẩm, sản lượng, vật liệu, tiêu chuẩn chất lượng, tiến độ, điều kiện thương mại và mức độ rủi ro của dự án.</p></li>
+        <li><p><strong>Xác định phạm vi hỗ trợ:</strong> ANSLIFE xác định tài trợ thương mại có thể hỗ trợ phần nào của dự án, ví dụ vật liệu, sản xuất, đóng gói, lưu kho, chứng từ hoặc xuất hàng.</p></li>
+        <li><p><strong>Gắn với cơ chế kiểm soát:</strong> Phương án tài trợ được gắn với các mốc kiểm soát như chuẩn bị vật liệu, tiến độ sản xuất, QC độc lập, báo cáo kiểm hàng, đóng gói, chứng từ và xuất hàng.</p></li>
+        <li><p><strong>Theo dõi quá trình thực hiện:</strong> ANSLIFE theo dõi tình trạng thực hiện dự án, bao gồm vật liệu, sản xuất, chất lượng, tiến độ, đóng gói, chứng từ và kế hoạch giao hàng.</p></li>
+        <li><p><strong>Hoàn tất theo điều kiện đã thống nhất:</strong> Việc hoàn tất nghĩa vụ tài trợ và thanh toán được thực hiện theo điều kiện thương mại, chứng từ, kết quả QC và kế hoạch xuất hàng đã thống nhất giữa các bên.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>Buyer và nhà máy nhận được gì?</h2>
+      <ul>
+        <li>Phương án hỗ trợ dòng tiền gắn với dự án thực tế</li>
+        <li>Khả năng chuẩn bị vật liệu và sản xuất ổn định hơn</li>
+        <li>Cơ chế kiểm soát rủi ro thông qua QC, tiến độ và chứng từ</li>
+        <li>Điều kiện phối hợp rõ hơn giữa buyer, nhà máy và ANSLIFE</li>
+        <li>Khả năng duy trì đơn hàng dài hạn tốt hơn</li>
+        <li>Giảm rủi ro chậm tiến độ do thiếu vật liệu hoặc thiếu dòng tiền sản xuất</li>
+        <li>Mô hình hợp tác linh hoạt hơn trong chuỗi cung ứng</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Điểm khác biệt của ANSLIFE</h2>
+      <p>Điểm khác biệt của ANSLIFE là tài trợ thương mại không tách rời khỏi hoạt động sản xuất và xuất khẩu.</p>
+      <p>Tài trợ được đặt trong một hệ thống có kiểm soát, bao gồm đơn hàng, vật liệu, nhà máy, tiến độ sản xuất, QC độc lập, chứng từ, lưu kho và xuất hàng. Điều này giúp tài trợ thương mại phục vụ trực tiếp cho hiệu quả vận hành của dự án, thay vì chỉ là một giao dịch tài chính riêng lẻ.</p>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Vai trò tài trợ thương mại trong hệ thống dự án</h2>
+      <p>ANSLIFE cung cấp tài trợ thương mại có kiểm soát nhằm hỗ trợ buyer và nhà máy gia công vận hành đơn hàng ổn định hơn, minh bạch hơn và gắn chặt với tiến độ sản xuất, QC, chứng từ và xuất hàng.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Gửi yêu cầu tài trợ thương mại</h2>
+        <p>Buyer hoặc nhà máy có thể gửi thông tin về đơn hàng, sản phẩm, giá trị dự án, điều kiện thanh toán, tiến độ sản xuất, vật liệu và kế hoạch xuất hàng. ANSLIFE sẽ xem xét và đề xuất phạm vi hỗ trợ phù hợp theo từng dự án.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu tài trợ</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải thông tin đơn hàng lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_TRADE_FINANCING_SECTION_EN = `
+  <section id="trade-financing" class="ai-section ai-oem-odm-page ai-company-overview">
+    <header class="ai-oem-odm-hero">
+      <h2>Trade Financing</h2>
+      <p class="ai-oem-odm-subtitle">Controlled trade financing for buyers and contract factories, linked to orders, materials, production, QC, documentation, and shipment.</p>
+      <p>ANSLIFE provides controlled trade financing solutions for buyers and contract factories in manufacturing and export projects in Vietnam.</p>
+      <p>This service is designed to support supply chain cash flow for material preparation, production execution, quality control, packing, documentation, and shipment against real orders.</p>
+      <p>ANSLIFE trade financing is not a standalone financial product. It is an operational support solution reviewed case by case, based on project context, buyer profile, factory profile, and specific risk-control conditions.</p>
+    </header>
+
+    <section class="ai-oem-odm-support">
+      <h2>What does trade financing support?</h2>
+      <div class="ai-oem-odm-support-grid">
+        <article><h3>1. Buyer order-planning support</h3><p>ANSLIFE can support buyers in shaping a financing approach aligned with order value, production schedule, inspection schedule, documentation, and shipment plan.</p></article>
+        <article><h3>2. Contract factory support</h3><p>ANSLIFE may support contract factories in material readiness, production execution, and timeline stability for confirmed orders.</p></article>
+        <article><h3>3. Linked to actual orders</h3><p>Trade financing is considered only on the basis of specific orders, projects, or production plans, and is not separated from real production and export operations.</p></article>
+        <article><h3>4. Linked to materials and production</h3><p>Support scope can be linked to material/components preparation, production, finishing, packing, and direct order-serving costs.</p></article>
+        <article><h3>5. Linked to independent QC</h3><p>Trade financing execution is connected to quality-control checkpoints, inspection checklists, QC reports, and actual goods status in the project.</p></article>
+        <article><h3>6. Linked to documentation and shipment</h3><p>ANSLIFE may consider financing in relation to export documentation, payment terms, trade terms, loading schedule, and shipment plan.</p></article>
+        <article><h3>7. Project-by-project risk control</h3><p>Each financing setup is reviewed based on buyer, factory, product, order value, schedule, quality standards, and overall project risk level.</p></article>
+        <article><h3>8. Long-term cooperation support</h3><p>For stable buyer-factory relationships, trade financing can become part of a long-term supply chain operating model.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Which cases is this service suitable for?</h2>
+      <ul>
+        <li>Buyers who need a more flexible payment model for production projects</li>
+        <li>Contract factories needing cash-flow support for material preparation or order execution</li>
+        <li>Projects with large order value or recurring volume</li>
+        <li>Projects requiring material preparation before full payment receipt</li>
+        <li>Buyer-factory relationships that need controlled support mechanisms in the supply chain</li>
+        <li>Projects that need financing tied to QC, documentation, and shipment planning</li>
+        <li>Long-term partnerships seeking optimization of cash flow, schedule, and delivery capability</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-process">
+      <h2>6-step trade financing review process</h2>
+      <ol class="ai-oem-odm-timeline">
+        <li><p><strong>Project information intake:</strong> Buyer or factory provides order details, product scope, project value, materials, production schedule, payment terms, and shipment plan.</p></li>
+        <li><p><strong>Order and risk assessment:</strong> ANSLIFE assesses buyer, factory, product, volume, materials, quality standards, timeline, trade conditions, and project risk level.</p></li>
+        <li><p><strong>Define support scope:</strong> ANSLIFE defines which parts may be supported, such as materials, production, packing, warehousing, documentation, or shipment.</p></li>
+        <li><p><strong>Link to control mechanisms:</strong> Financing setup is tied to checkpoints such as material readiness, production progress, independent QC, inspection reports, packing, documentation, and shipment milestones.</p></li>
+        <li><p><strong>Execution monitoring:</strong> ANSLIFE monitors project execution status across materials, production, quality, schedule, packing, documentation, and delivery planning.</p></li>
+        <li><p><strong>Close-out under agreed conditions:</strong> Financing and payment close-out follows agreed trade terms, documentation status, QC outcomes, and shipment plans among involved parties.</p></li>
+      </ol>
+    </section>
+
+    <section class="ai-oem-odm-checklist">
+      <h2>What buyers and factories receive</h2>
+      <ul>
+        <li>Cash-flow support framework tied to real projects</li>
+        <li>More stable material preparation and production execution</li>
+        <li>Risk-control mechanisms through QC, schedule, and documentation</li>
+        <li>Clearer coordination conditions among buyer, factory, and ANSLIFE</li>
+        <li>Stronger long-term order continuity</li>
+        <li>Lower delay risk caused by material gaps or production cash-flow pressure</li>
+        <li>More flexible cooperation model within the supply chain</li>
+      </ul>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>What makes ANSLIFE different?</h2>
+      <p>ANSLIFE trade financing is not separated from manufacturing and export operations.</p>
+      <p>It is embedded in a controlled system that includes orders, materials, factories, production progress, independent QC, documentation, warehousing, and shipment. This ensures financing directly supports project operating effectiveness, rather than acting as an isolated financial transaction.</p>
+    </section>
+
+    <section class="ai-oem-odm-difference">
+      <h2>Trade financing as an operating tool</h2>
+      <p>ANSLIFE provides controlled trade financing to help buyers and contract factories run orders with better stability, transparency, and alignment to production timeline, QC, documentation, and shipment execution.</p>
+    </section>
+
+    <div class="ai-company-request-panel ai-oem-odm-request-panel">
+      <div>
+        <h2>Submit a trade financing request</h2>
+        <p>Buyers or factories can share order details, product scope, project value, payment terms, production schedule, materials, and shipment plans. ANSLIFE will review and propose a suitable support scope per project.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Submit financing request</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Upload order information</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Contact ANSLIFE</a>
+      </div>
+    </div>
+  </section>
+`.trim();
+
+type TradeFinancingDetailLanguage = Extract<
+  LanguageCode,
+  'en' | 'jp' | 'kr' | 'sv' | 'fr' | 'ru' | 'es' | 'zh'
+>;
+
+const PRODUCTS_TRADE_FINANCING_SECTION_LOCALIZED: Record<
+  TradeFinancingDetailLanguage,
+  string
+> = {
+  en: PRODUCTS_TRADE_FINANCING_SECTION_EN,
+  jp: PRODUCTS_TRADE_FINANCING_SECTION_EN,
+  kr: PRODUCTS_TRADE_FINANCING_SECTION_EN,
+  sv: PRODUCTS_TRADE_FINANCING_SECTION_EN,
+  fr: PRODUCTS_TRADE_FINANCING_SECTION_EN,
+  ru: PRODUCTS_TRADE_FINANCING_SECTION_EN,
+  es: PRODUCTS_TRADE_FINANCING_SECTION_EN,
+  zh: PRODUCTS_TRADE_FINANCING_SECTION_EN,
+};
+
 const ABOUT_COMPANY_INFO_SECTION_VN = `
   <section id="company-info" class="ai-section ai-company-intro ai-company-overview ai-company-info-section">
     <details class="ai-company-info-accordion" open>
@@ -2997,13 +3190,13 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
       </summary>
       <div class="ai-company-info-body">
         <p class="ai-company-info-lead">
-          ANSLIFE JSC là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi có văn phòng đại diện tại Hà Nội, TP. Hồ Chí Minh, Tokyo, Singapore và Hong Kong.
+          ANSLIFE là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi có văn phòng đại diện tại Hà Nội, TP. Hồ Chí Minh, Tokyo, Singapore và Hong Kong.
         </p>
 
         <dl class="ai-company-info-list">
           <div class="ai-company-info-row">
             <dt>Tên công ty</dt>
-            <dd>ANSLIFE JSC</dd>
+            <dd>ANSLIFE</dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Vai trò</dt>
@@ -3040,7 +3233,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
         </dl>
 
         <p class="ai-company-info-cta">
-          Buyer có thể liên hệ ANSLIFE JSC để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.
+          Buyer có thể liên hệ ANSLIFE để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.
         </p>
       </div>
     </details>
@@ -3049,7 +3242,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
       <header class="ai-company-office-header">
         <h2>Văn phòng & liên hệ</h2>
         <p>
-          ANSLIFE JSC có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.
+          ANSLIFE có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.
         </p>
       </header>
 
@@ -3147,9 +3340,9 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
     <div class="ai-company-overview-hero">
       <div class="ai-company-overview-copy">
         <h2>Company Overview</h2>
-        <p>ANSLIFE JSC is a manufacturing, supply chain and export partner in Vietnam for international buyers in furniture, components and materials.</p>
+        <p>ANSLIFE is not just a single company. ANSLIFE operates as a system that includes multiple companies and diverse services, acting as a manufacturing, supply chain, and export partner in Vietnam for international buyers in furniture, components, and materials.</p>
         <p>We operate a system that includes ANSLIFE-coordinated factories, a satellite factory network, continuous material supply, independent QC, warehousing in Vietnam and recurring export shipment operations.</p>
-        <p>ANSLIFE JSC supports buyers from product development, material preparation, production organization, quality control, project management and trade finance to packing and export shipment to Japan, the United States, EU and international markets.</p>
+        <p>ANSLIFE supports buyers from product development, material preparation, production organization, quality control, project management and trade finance to packing and export shipment to Japan, the United States, EU and international markets.</p>
       </div>
 
       <div class="ai-company-overview-cards">
@@ -3242,8 +3435,8 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
 
     <div class="ai-company-overview-info-grid">
       <article class="ai-company-overview-info-card">
-        <h2>About ANSLIFE JSC</h2>
-        <p>ANSLIFE JSC is a strategic partner for international buyers in furniture, components and materials. We combine production, supply chain, independent quality control, warehousing and trade finance into one integrated system.</p>
+        <h2>About ANSLIFE</h2>
+        <p>ANSLIFE is a strategic partner for international buyers in furniture, components and materials. We combine production, supply chain, independent quality control, warehousing and trade finance into one integrated system.</p>
         <div class="ai-company-mini-icons">
           <span><i class="ai-mini-icon ai-icon-system-doc" aria-hidden="true"></i>Integrated operating system</span>
           <span><i class="ai-mini-icon ai-icon-upload-tray" aria-hidden="true"></i>Satellite factory network</span>
@@ -3255,7 +3448,7 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
       <article class="ai-company-overview-info-card">
         <h2>Company Information</h2>
         <dl class="ai-company-overview-table">
-          <div><dt>Company name</dt><dd>ANSLIFE JSC</dd></div>
+          <div><dt>Company name</dt><dd>ANSLIFE</dd></div>
           <div><dt>Business scope</dt><dd>Production & supply chain</dd></div>
           <div><dt>Headquarters</dt><dd>Vietnam</dd></div>
           <div><dt>Representative offices</dt><dd>Tokyo, Singapore, Hong Kong</dd></div>
@@ -3279,7 +3472,7 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
     <div class="ai-company-request-panel">
       <div>
         <h2>Send a request to ANSLIFE</h2>
-        <p>Send drawings, product requirements, material needs or warehousing needs so the ANSLIFE JSC team can review and propose a suitable solution.</p>
+        <p>Send drawings, product requirements, material needs or warehousing needs so the ANSLIFE team can review and propose a suitable solution.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request <span>→</span></a>
@@ -3306,13 +3499,13 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
       </summary>
       <div class="ai-company-info-body">
         <p class="ai-company-info-lead">
-          ANSLIFE JSC is a manufacturing, supply chain and export partner in Vietnam for international buyers in furniture, components and materials. We have representative offices in Ha Noi, Ho Chi Minh City, Tokyo, Singapore and Hong Kong.
+          ANSLIFE is a manufacturing, supply chain and export partner in Vietnam for international buyers in furniture, components and materials. We have representative offices in Ha Noi, Ho Chi Minh City, Tokyo, Singapore and Hong Kong.
         </p>
 
         <dl class="ai-company-info-list">
           <div class="ai-company-info-row">
             <dt>Company Name</dt>
-            <dd>ANSLIFE JSC</dd>
+            <dd>ANSLIFE</dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Role</dt>
@@ -3349,7 +3542,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
         </dl>
 
         <p class="ai-company-info-cta">
-          Buyers can contact ANSLIFE JSC to send product requirements, drawings, samples, materials or warehousing and export shipment plans from Vietnam.
+          Buyers can contact ANSLIFE to send product requirements, drawings, samples, materials or warehousing and export shipment plans from Vietnam.
         </p>
       </div>
     </details>
@@ -3358,7 +3551,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
       <header class="ai-company-office-header">
         <h2>Offices & Contact</h2>
         <p>
-          ANSLIFE JSC operates representative offices in Vietnam, Japan, Singapore and Hong Kong to support international buyers with requirement exchange, project management, standards control and supply chain organization from Vietnam.
+          ANSLIFE operates representative offices in Vietnam, Japan, Singapore and Hong Kong to support international buyers with requirement exchange, project management, standards control and supply chain organization from Vietnam.
         </p>
       </header>
 
@@ -3459,13 +3652,13 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
       </summary>
       <div class="ai-company-info-body">
         <p class="ai-company-info-lead">
-          ANSLIFE JSCは、家具、部材、素材分野の海外バイヤー向けに、ベトナムにおける製造、サプライチェーン、輸出を支援するパートナーです。Ha Noi、Ho Chi Minh City、東京、シンガポール、香港に代表拠点があります。
+          ANSLIFEは、家具、部材、素材分野の海外バイヤー向けに、ベトナムにおける製造、サプライチェーン、輸出を支援するパートナーです。Ha Noi、Ho Chi Minh City、東京、シンガポール、香港に代表拠点があります。
         </p>
 
         <dl class="ai-company-info-list">
           <div class="ai-company-info-row">
             <dt>会社名</dt>
-            <dd>ANSLIFE JSC</dd>
+            <dd>ANSLIFE</dd>
           </div>
           <div class="ai-company-info-row">
             <dt>役割</dt>
@@ -3502,7 +3695,7 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
         </dl>
 
         <p class="ai-company-info-cta">
-          バイヤーは、製品要件、図面、サンプル、素材、またはベトナムからの倉庫保管・輸出出荷計画についてANSLIFE JSCへお問い合わせいただけます。
+          バイヤーは、製品要件、図面、サンプル、素材、またはベトナムからの倉庫保管・輸出出荷計画についてANSLIFEへお問い合わせいただけます。
         </p>
       </div>
     </details>
@@ -3511,7 +3704,7 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
       <header class="ai-company-office-header">
         <h2>拠点・お問い合わせ</h2>
         <p>
-          ANSLIFE JSCは、ベトナム、日本、シンガポール、香港に代表拠点を置き、海外バイヤーの要件確認、プロジェクト管理、基準管理、ベトナムからのサプライチェーン構築を支援します。
+          ANSLIFEは、ベトナム、日本、シンガポール、香港に代表拠点を置き、海外バイヤーの要件確認、プロジェクト管理、基準管理、ベトナムからのサプライチェーン構築を支援します。
         </p>
       </header>
 
@@ -3612,13 +3805,13 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
       </summary>
       <div class="ai-company-info-body">
         <p class="ai-company-info-lead">
-          ANSLIFE JSC는 가구, 부품, 소재 분야의 해외 바이어를 위한 베트남 내 생산, 공급망, 수출 파트너입니다. Ha Noi, Ho Chi Minh City, 도쿄, 싱가포르, 홍콩에 대표 거점을 두고 있습니다.
+          ANSLIFE는 가구, 부품, 소재 분야의 해외 바이어를 위한 베트남 내 생산, 공급망, 수출 파트너입니다. Ha Noi, Ho Chi Minh City, 도쿄, 싱가포르, 홍콩에 대표 거점을 두고 있습니다.
         </p>
 
         <dl class="ai-company-info-list">
           <div class="ai-company-info-row">
             <dt>회사명</dt>
-            <dd>ANSLIFE JSC</dd>
+            <dd>ANSLIFE</dd>
           </div>
           <div class="ai-company-info-row">
             <dt>역할</dt>
@@ -3655,7 +3848,7 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
         </dl>
 
         <p class="ai-company-info-cta">
-          바이어는 제품 요구사항, 도면, 샘플, 소재 또는 베트남 내 창고 보관 및 수출 선적 계획에 대해 ANSLIFE JSC에 문의할 수 있습니다.
+          바이어는 제품 요구사항, 도면, 샘플, 소재 또는 베트남 내 창고 보관 및 수출 선적 계획에 대해 ANSLIFE에 문의할 수 있습니다.
         </p>
       </div>
     </details>
@@ -3664,7 +3857,7 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
       <header class="ai-company-office-header">
         <h2>사무소 및 연락처</h2>
         <p>
-          ANSLIFE JSC는 베트남, 일본, 싱가포르, 홍콩에 대표 거점을 운영하며 해외 바이어의 요구사항 협의, 프로젝트 관리, 기준 관리 및 베트남 기반 공급망 구축을 지원합니다.
+          ANSLIFE는 베트남, 일본, 싱가포르, 홍콩에 대표 거점을 운영하며 해외 바이어의 요구사항 협의, 프로젝트 관리, 기준 관리 및 베트남 기반 공급망 구축을 지원합니다.
         </p>
       </header>
 
@@ -3762,7 +3955,7 @@ const ABOUT_WORKING_STANDARDS_SECTION_VN = `
     <header class="ai-working-standards-header">
       <h1>Tiêu chuẩn làm việc của ANSLIFE</h1>
       <p>
-        ANSLIFE JSC làm việc dựa trên nguyên tắc rõ ràng, có thể kiểm soát và có thể truy xuất. Mỗi dự án được quản lý dựa trên mẫu đã duyệt, bản vẽ kỹ thuật, tiêu chuẩn vật liệu, checklist kiểm hàng, tiêu chuẩn đóng gói và kế hoạch giao hàng đã thống nhất.
+        ANSLIFE làm việc dựa trên nguyên tắc rõ ràng, có thể kiểm soát và có thể truy xuất. Mỗi dự án được quản lý dựa trên mẫu đã duyệt, bản vẽ kỹ thuật, tiêu chuẩn vật liệu, checklist kiểm hàng, tiêu chuẩn đóng gói và kế hoạch giao hàng đã thống nhất.
       </p>
     </header>
 
@@ -3831,7 +4024,7 @@ const ABOUT_WORKING_STANDARDS_SECTION_EN = `
     <header class="ai-working-standards-header">
       <h1>Our Working Standards</h1>
       <p>
-        ANSLIFE JSC works based on clear, controllable and traceable standards. Each project is managed through approved samples, technical drawings, material standards, inspection checklists, packing requirements and agreed shipment plans.
+        ANSLIFE works based on clear, controllable and traceable standards. Each project is managed through approved samples, technical drawings, material standards, inspection checklists, packing requirements and agreed shipment plans.
       </p>
     </header>
 
@@ -7748,9 +7941,9 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
   sv: buildCompactResourcesFaqContent({
     title: 'Vanliga frågor för köpare',
     intro:
-      'Här finns svar på vanliga frågor från internationella köpare om samarbete med ANSLIFE JSC kring produktion, leveranskedja, QC, lager, betalning och internationell leverans.',
+      'Här finns svar på vanliga frågor från internationella köpare om samarbete med ANSLIFE kring produktion, leveranskedja, QC, lager, betalning och internationell leverans.',
     labels: {
-      about: ['Om ANSLIFE', 'Om ANSLIFE JSC'],
+      about: ['Om ANSLIFE', 'Om ANSLIFE'],
       products: ['Produkter & material', 'Produkter, material och produktion'],
       operations: ['Projektledning', 'Projektledning i Vietnam'],
       quality: ['QC & standarder', 'Kvalitetskontroll och standarder'],
@@ -7759,8 +7952,8 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
       trade: ['Internationell leverans', 'Handelsvillkor och internationell leverans'],
     },
     questions: {
-      aboutCompany: 'Vilken typ av företag är ANSLIFE JSC?',
-      aboutFactory: 'Är ANSLIFE JSC en fabrik?',
+      aboutCompany: 'Vilken typ av företag är ANSLIFE?',
+      aboutFactory: 'Är ANSLIFE en fabrik?',
       aboutDifference: 'Hur skiljer sig ANSLIFE från en vanlig fabrik?',
       productsScope: 'Vilka produktgrupper kan ANSLIFE stödja?',
       productsDrawings: 'Kan ANSLIFE utveckla produkter från ritningar eller prover?',
@@ -7783,7 +7976,7 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
     },
     answers: {
       aboutCompany:
-        'ANSLIFE JSC är en Vietnam-baserad partner för produktion, leveranskedja och export inom möbler, komponenter och material.',
+        'ANSLIFE är en Vietnam-baserad partner för produktion, leveranskedja och export inom möbler, komponenter och material.',
       aboutFactory:
         'ANSLIFE är inte bara en enskild fabrik. Modellen kombinerar fabriker, satellitpartners, materialförsörjning, oberoende QC, lager och exportdrift.',
       aboutDifference:
@@ -7829,9 +8022,9 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
   fr: buildCompactResourcesFaqContent({
     title: 'Questions fréquentes pour les acheteurs',
     intro:
-      'Cette page répond aux questions fréquentes des acheteurs internationaux sur la collaboration avec ANSLIFE JSC pour la production, la supply chain, le QC, le stockage, le paiement et la livraison internationale.',
+      'Cette page répond aux questions fréquentes des acheteurs internationaux sur la collaboration avec ANSLIFE pour la production, la supply chain, le QC, le stockage, le paiement et la livraison internationale.',
     labels: {
-      about: ['À propos d’ANSLIFE', 'À propos d’ANSLIFE JSC'],
+      about: ['À propos d’ANSLIFE', 'À propos d’ANSLIFE'],
       products: ['Produits & matériaux', 'Produits, matériaux et production'],
       operations: ['Opération projet', 'Opération de projet au Vietnam'],
       quality: ['QC & standards', 'Contrôle qualité et standards'],
@@ -7840,8 +8033,8 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
       trade: ['Livraison internationale', 'Conditions commerciales et livraison internationale'],
     },
     questions: {
-      aboutCompany: 'Quel type d’entreprise est ANSLIFE JSC ?',
-      aboutFactory: 'ANSLIFE JSC est-elle une usine ?',
+      aboutCompany: 'Quel type d’entreprise est ANSLIFE ?',
+      aboutFactory: 'ANSLIFE est-elle une usine ?',
       aboutDifference: 'Quelle est la différence avec une usine classique ?',
       productsScope: 'Quels groupes de produits ANSLIFE peut-elle prendre en charge ?',
       productsDrawings: 'ANSLIFE peut-elle développer un produit à partir de plans ou d’échantillons ?',
@@ -7864,7 +8057,7 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
     },
     answers: {
       aboutCompany:
-        'ANSLIFE JSC est un partenaire vietnamien de production, de supply chain et d’export pour les acheteurs internationaux de meubles, composants et matériaux.',
+        'ANSLIFE est un partenaire vietnamien de production, de supply chain et d’export pour les acheteurs internationaux de meubles, composants et matériaux.',
       aboutFactory:
         'ANSLIFE n’est pas seulement une usine unique. Le modèle combine usines, partenaires satellites, approvisionnement matériaux, QC indépendant, stockage et opérations export.',
       aboutDifference:
@@ -7910,9 +8103,9 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
   ru: buildCompactResourcesFaqContent({
     title: 'Частые вопросы для покупателей',
     intro:
-      'Эта страница отвечает на частые вопросы международных покупателей о работе с ANSLIFE JSC по производству, цепочке поставок, QC, складу, оплате и международной доставке.',
+      'Эта страница отвечает на частые вопросы международных покупателей о работе с ANSLIFE по производству, цепочке поставок, QC, складу, оплате и международной доставке.',
     labels: {
-      about: ['Об ANSLIFE', 'Об ANSLIFE JSC'],
+      about: ['Об ANSLIFE', 'Об ANSLIFE'],
       products: ['Продукты и материалы', 'Продукты, материалы и производство'],
       operations: ['Управление проектом', 'Управление проектом во Вьетнаме'],
       quality: ['QC и стандарты', 'Контроль качества и стандарты'],
@@ -7921,8 +8114,8 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
       trade: ['Международная доставка', 'Торговые условия и международная доставка'],
     },
     questions: {
-      aboutCompany: 'Что представляет собой ANSLIFE JSC?',
-      aboutFactory: 'ANSLIFE JSC является фабрикой?',
+      aboutCompany: 'Что представляет собой ANSLIFE?',
+      aboutFactory: 'ANSLIFE является фабрикой?',
       aboutDifference: 'Чем ANSLIFE отличается от обычной фабрики?',
       productsScope: 'Какие группы продуктов поддерживает ANSLIFE?',
       productsDrawings: 'Может ли ANSLIFE разработать продукт по чертежам или образцам?',
@@ -7945,7 +8138,7 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
     },
     answers: {
       aboutCompany:
-        'ANSLIFE JSC - вьетнамский партнер по производству, цепочке поставок и экспорту для международных покупателей мебели, компонентов и материалов.',
+        'ANSLIFE - вьетнамский партнер по производству, цепочке поставок и экспорту для международных покупателей мебели, компонентов и материалов.',
       aboutFactory:
         'ANSLIFE не является только одной фабрикой. Модель объединяет фабрики, спутниковых партнеров, поставку материалов, независимый QC, склад и экспортные операции.',
       aboutDifference:
@@ -7991,9 +8184,9 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
   es: buildCompactResourcesFaqContent({
     title: 'Preguntas frecuentes para compradores',
     intro:
-      'Esta página responde preguntas comunes de compradores internacionales sobre trabajar con ANSLIFE JSC en producción, cadena de suministro, QC, almacén, pago y entrega internacional.',
+      'Esta página responde preguntas comunes de compradores internacionales sobre trabajar con ANSLIFE en producción, cadena de suministro, QC, almacén, pago y entrega internacional.',
     labels: {
-      about: ['Sobre ANSLIFE', 'Sobre ANSLIFE JSC'],
+      about: ['Sobre ANSLIFE', 'Sobre ANSLIFE'],
       products: ['Productos y materiales', 'Productos, materiales y producción'],
       operations: ['Operación de proyecto', 'Operación de proyecto en Vietnam'],
       quality: ['QC y estándares', 'Control de calidad y estándares'],
@@ -8002,8 +8195,8 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
       trade: ['Entrega internacional', 'Términos comerciales y entrega internacional'],
     },
     questions: {
-      aboutCompany: '¿Qué tipo de empresa es ANSLIFE JSC?',
-      aboutFactory: '¿ANSLIFE JSC es una fábrica?',
+      aboutCompany: '¿Qué tipo de empresa es ANSLIFE?',
+      aboutFactory: '¿ANSLIFE es una fábrica?',
       aboutDifference: '¿En qué se diferencia ANSLIFE de una fábrica normal?',
       productsScope: '¿Qué grupos de productos puede apoyar ANSLIFE?',
       productsDrawings: '¿ANSLIFE puede desarrollar productos desde planos o muestras?',
@@ -8026,7 +8219,7 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
     },
     answers: {
       aboutCompany:
-        'ANSLIFE JSC es un socio en Vietnam para producción, cadena de suministro y exportación para compradores internacionales de muebles, componentes y materiales.',
+        'ANSLIFE es un socio en Vietnam para producción, cadena de suministro y exportación para compradores internacionales de muebles, componentes y materiales.',
       aboutFactory:
         'ANSLIFE no es solo una fábrica. El modelo combina fábricas, socios satélite, suministro de materiales, QC independiente, almacén y operación de exportación.',
       aboutDifference:
@@ -8072,9 +8265,9 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
   zh: buildCompactResourcesFaqContent({
     title: '买家常见问题',
     intro:
-      '本页回答国际买家与 ANSLIFE JSC 合作时关于生产、供应链、QC、仓储、付款和国际交付的常见问题。',
+      '本页回答国际买家与 ANSLIFE 合作时关于生产、供应链、QC、仓储、付款和国际交付的常见问题。',
     labels: {
-      about: ['关于 ANSLIFE', '关于 ANSLIFE JSC'],
+      about: ['关于 ANSLIFE', '关于 ANSLIFE'],
       products: ['产品与材料', '产品、材料与生产'],
       operations: ['项目运营', '越南项目运营'],
       quality: ['QC 与标准', '质量控制与标准'],
@@ -8083,8 +8276,8 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
       trade: ['国际交付', '贸易条款与国际交付'],
     },
     questions: {
-      aboutCompany: 'ANSLIFE JSC 是什么类型的公司？',
-      aboutFactory: 'ANSLIFE JSC 是一家工厂吗？',
+      aboutCompany: 'ANSLIFE 是什么类型的公司？',
+      aboutFactory: 'ANSLIFE 是一家工厂吗？',
       aboutDifference: 'ANSLIFE 与普通工厂有什么不同？',
       productsScope: 'ANSLIFE 可以支持哪些产品类别？',
       productsDrawings: 'ANSLIFE 可以根据图纸或样品开发产品吗？',
@@ -8107,7 +8300,7 @@ const MANUFACTURING_SECTION_TEMPLATES: Record<string, StructuredSectionContent> 
     },
     answers: {
       aboutCompany:
-        'ANSLIFE JSC 是越南的生产、供应链与出口合作伙伴，服务于家具、部件和材料领域的国际买家。',
+        'ANSLIFE 是越南的生产、供应链与出口合作伙伴，服务于家具、部件和材料领域的国际买家。',
       aboutFactory:
         'ANSLIFE 不只是单一工厂。该模式结合工厂、卫星合作伙伴、材料供应、独立 QC、仓储和出口运营。',
       aboutDifference:
@@ -8435,12 +8628,98 @@ interface ExtraAboutLocalizedContent {
   };
 }
 
+const COMPANY_INTRO_BUYER_PANEL_TEXT: Record<
+  ExtraAboutLanguage,
+  { title: string; points: [string, string, string, string, string] }
+> = {
+  en: {
+    title: 'Why buyers work with ANSLIFE?',
+    points: [
+      'Professional & transparent operating system',
+      'Reliable independent QC',
+      'Stable & flexible supply chain',
+      'Efficient warehousing & shipment in Vietnam',
+      'Safe and controlled trade finance support',
+    ],
+  },
+  jp: {
+    title: 'なぜバイヤーはANSLIFEを選ぶのか？',
+    points: [
+      'プロフェッショナルで透明な運営体制',
+      '信頼できる独立QC',
+      '安定かつ柔軟なサプライチェーン',
+      'ベトナムでの効率的な保管・出荷',
+      '安全かつ管理された貿易金融サポート',
+    ],
+  },
+  kr: {
+    title: '왜 바이어는 ANSLIFE를 선택하나요?',
+    points: [
+      '전문적이고 투명한 운영 시스템',
+      '신뢰할 수 있는 독립 QC',
+      '안정적이고 유연한 공급망',
+      '베트남 내 효율적인 보관 및 출하',
+      '안전하고 통제된 무역금융 지원',
+    ],
+  },
+  sv: {
+    title: 'Varför väljer köpare ANSLIFE?',
+    points: [
+      'Professionellt och transparent driftsystem',
+      'Tillförlitlig oberoende QC',
+      'Stabil och flexibel leveranskedja',
+      'Effektiv lagerhållning och leverans från Vietnam',
+      'Säker och kontrollerad handelsfinansiering',
+    ],
+  },
+  fr: {
+    title: 'Pourquoi les acheteurs choisissent ANSLIFE ?',
+    points: [
+      'Système opérationnel professionnel et transparent',
+      'QC indépendant et fiable',
+      "Chaîne d'approvisionnement stable et flexible",
+      'Stockage et expédition efficaces depuis le Vietnam',
+      'Support de financement commercial sûr et contrôlé',
+    ],
+  },
+  ru: {
+    title: 'Почему покупатели выбирают ANSLIFE?',
+    points: [
+      'Профессиональная и прозрачная операционная система',
+      'Надежный независимый QC',
+      'Стабильная и гибкая цепочка поставок',
+      'Эффективное хранение и отгрузка из Вьетнама',
+      'Безопасная и контролируемая поддержка торгового финансирования',
+    ],
+  },
+  es: {
+    title: '¿Por qué los compradores eligen ANSLIFE?',
+    points: [
+      'Sistema operativo profesional y transparente',
+      'QC independiente y confiable',
+      'Cadena de suministro estable y flexible',
+      'Almacenamiento y envíos eficientes desde Vietnam',
+      'Soporte de financiamiento comercial seguro y controlado',
+    ],
+  },
+  zh: {
+    title: '为什么买家选择 ANSLIFE？',
+    points: [
+      '专业且透明的运营体系',
+      '可靠的独立 QC',
+      '稳定且灵活的供应链',
+      '在越南高效仓储与出货',
+      '安全且可控的贸易融资支持',
+    ],
+  },
+};
+
 const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocalizedContent> = {
   en: {
     companyIntro: {
       title: 'Company Overview',
       lead:
-        'ANSLIFE JSC is a Vietnam-based manufacturing, supply chain and export partner for international buyers in furniture, components and materials.',
+        'ANSLIFE is a Vietnam-based manufacturing, supply chain and export partner for international buyers in furniture, components and materials.',
       cards: [
         { title: 'Manufacturing network', text: 'We coordinate operating facilities, satellite factories and material suppliers for flexible OEM and ODM projects.' },
         { title: 'Quality control', text: 'QC is managed through approved samples, drawings, inspection checklists and packing standards.' },
@@ -8475,7 +8754,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     },
     companyInfo: {
       title: 'Company Information',
-      lead: 'ANSLIFE JSC organizes furniture production, material supply, QC, warehousing and export support from Vietnam.',
+      lead: 'ANSLIFE organizes furniture production, material supply, QC, warehousing and export support from Vietnam.',
       rows: [
         { term: 'Company', description: 'ANSLIFE Joint Stock Company' },
         { term: 'Head office', description: 'Ho Chi Minh City, Vietnam' },
@@ -8490,7 +8769,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     companyIntro: {
       title: '会社概要',
       lead:
-        'ANSLIFE JSC は、家具、部材、材料分野の海外バイヤーに向けて、ベトナムでの生産、サプライチェーン、品質管理、輸出運営を支援するパートナーです。',
+        'ANSLIFE は、家具、部材、材料分野の海外バイヤーに向けて、ベトナムでの生産、サプライチェーン、品質管理、輸出運営を支援するパートナーです。',
       cards: [
         { title: '生産ネットワーク', text: '自社運営拠点、協力工場、材料サプライヤーを組み合わせ、OEM・ODM案件に柔軟に対応します。' },
         { title: '品質管理', text: '承認サンプル、図面、検品チェックリスト、梱包基準に基づき、製造とは独立した視点で品質を確認します。' },
@@ -8525,7 +8804,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     },
     companyInfo: {
       title: '会社情報',
-      lead: 'ANSLIFE JSC は、ベトナムを拠点に家具生産、材料供給、品質管理、倉庫、輸出支援を行っています。',
+      lead: 'ANSLIFE は、ベトナムを拠点に家具生産、材料供給、品質管理、倉庫、輸出支援を行っています。',
       rows: [
         { term: '会社名', description: 'ANSLIFE Joint Stock Company' },
         { term: '本社', description: 'Ho Chi Minh City, Vietnam' },
@@ -8540,7 +8819,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     companyIntro: {
       title: '회사 개요',
       lead:
-        'ANSLIFE JSC는 가구, 부품, 소재 분야의 해외 바이어를 위해 베트남 생산, 공급망, 품질관리, 수출 운영을 지원하는 파트너입니다.',
+        'ANSLIFE는 가구, 부품, 소재 분야의 해외 바이어를 위해 베트남 생산, 공급망, 품질관리, 수출 운영을 지원하는 파트너입니다.',
       cards: [
         { title: '생산 네트워크', text: '주요 운영 거점, 협력 공장, 소재 공급처를 연결해 OEM 및 ODM 프로젝트를 유연하게 운영합니다.' },
         { title: '품질 관리', text: '승인 샘플, 도면, 검사 체크리스트, 포장 기준을 기반으로 생산과 분리된 관점에서 품질을 확인합니다.' },
@@ -8575,7 +8854,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     },
     companyInfo: {
       title: '회사 정보',
-      lead: 'ANSLIFE JSC는 베트남을 기반으로 가구 생산, 소재 공급, 품질관리, 창고, 수출 지원을 운영합니다.',
+      lead: 'ANSLIFE는 베트남을 기반으로 가구 생산, 소재 공급, 품질관리, 창고, 수출 지원을 운영합니다.',
       rows: [
         { term: '회사명', description: 'ANSLIFE Joint Stock Company' },
         { term: '본사', description: 'Ho Chi Minh City, Vietnam' },
@@ -8590,7 +8869,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     companyIntro: {
       title: 'Företagsöversikt',
       lead:
-        'ANSLIFE JSC är en Vietnam-baserad produktions-, leveranskedje- och exportpartner för internationella köpare inom möbler, komponenter och material.',
+        'ANSLIFE är en Vietnam-baserad produktions-, leveranskedje- och exportpartner för internationella köpare inom möbler, komponenter och material.',
       cards: [
         { title: 'Produktionsnätverk', text: 'Vi samordnar huvudfabrik, satellitfabriker och materialleverantörer för flexibla OEM- och ODM-projekt.' },
         { title: 'Kvalitetskontroll', text: 'QC-teamet arbetar separat från produktionen och följer godkända prover, ritningar, checklistor och packningskrav.' },
@@ -8625,7 +8904,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     },
     companyInfo: {
       title: 'Företagsinformation',
-      lead: 'ANSLIFE JSC organiserar möbelproduktion, materialförsörjning, QC, lager och exportstöd från Vietnam.',
+      lead: 'ANSLIFE organiserar möbelproduktion, materialförsörjning, QC, lager och exportstöd från Vietnam.',
       rows: [
         { term: 'Företag', description: 'ANSLIFE Joint Stock Company' },
         { term: 'Huvudkontor', description: 'Ho Chi Minh City, Vietnam' },
@@ -8640,7 +8919,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     companyIntro: {
       title: "Vue d'ensemble de l'entreprise",
       lead:
-        'ANSLIFE JSC est un partenaire vietnamien de production, de chaîne d’approvisionnement et d’export pour les acheteurs internationaux de meubles, composants et matériaux.',
+        'ANSLIFE est un partenaire vietnamien de production, de chaîne d’approvisionnement et d’export pour les acheteurs internationaux de meubles, composants et matériaux.',
       cards: [
         { title: 'Réseau de production', text: 'Nous coordonnons usine principale, usines satellites et fournisseurs de matériaux pour des projets OEM et ODM flexibles.' },
         { title: 'Contrôle qualité', text: 'L’équipe QC travaille indépendamment de la production, avec échantillons validés, plans, checklists et exigences d’emballage.' },
@@ -8675,7 +8954,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     },
     companyInfo: {
       title: 'Informations société',
-      lead: 'ANSLIFE JSC organise production de meubles, approvisionnement matériaux, QC, stockage et support export depuis le Vietnam.',
+      lead: 'ANSLIFE organise production de meubles, approvisionnement matériaux, QC, stockage et support export depuis le Vietnam.',
       rows: [
         { term: 'Société', description: 'ANSLIFE Joint Stock Company' },
         { term: 'Siège principal', description: 'Ho Chi Minh City, Vietnam' },
@@ -8690,7 +8969,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     companyIntro: {
       title: 'Обзор компании',
       lead:
-        'ANSLIFE JSC - вьетнамский партнер по производству, цепочке поставок и экспорту для международных покупателей мебели, компонентов и материалов.',
+        'ANSLIFE - вьетнамский партнер по производству, цепочке поставок и экспорту для международных покупателей мебели, компонентов и материалов.',
       cards: [
         { title: 'Производственная сеть', text: 'Мы координируем основную фабрику, спутниковые фабрики и поставщиков материалов для гибких OEM и ODM проектов.' },
         { title: 'Контроль качества', text: 'QC-команда работает отдельно от производства и использует утвержденные образцы, чертежи, чек-листы и требования к упаковке.' },
@@ -8725,7 +9004,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     },
     companyInfo: {
       title: 'Информация о компании',
-      lead: 'ANSLIFE JSC организует производство мебели, поставки материалов, QC, складирование и экспортную поддержку из Вьетнама.',
+      lead: 'ANSLIFE организует производство мебели, поставки материалов, QC, складирование и экспортную поддержку из Вьетнама.',
       rows: [
         { term: 'Компания', description: 'ANSLIFE Joint Stock Company' },
         { term: 'Главный офис', description: 'Ho Chi Minh City, Vietnam' },
@@ -8740,7 +9019,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     companyIntro: {
       title: 'Resumen de la empresa',
       lead:
-        'ANSLIFE JSC es un socio de producción, cadena de suministro y exportación en Vietnam para compradores internacionales de muebles, componentes y materiales.',
+        'ANSLIFE es un socio de producción, cadena de suministro y exportación en Vietnam para compradores internacionales de muebles, componentes y materiales.',
       cards: [
         { title: 'Red de producción', text: 'Coordinamos fábrica principal, fábricas satélite y proveedores de materiales para proyectos OEM y ODM flexibles.' },
         { title: 'Control de calidad', text: 'El equipo QC trabaja separado de producción con muestras aprobadas, planos, checklists y requisitos de empaque.' },
@@ -8775,7 +9054,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     },
     companyInfo: {
       title: 'Información de la empresa',
-      lead: 'ANSLIFE JSC organiza producción de muebles, suministro de materiales, QC, almacenamiento y soporte de exportación desde Vietnam.',
+      lead: 'ANSLIFE organiza producción de muebles, suministro de materiales, QC, almacenamiento y soporte de exportación desde Vietnam.',
       rows: [
         { term: 'Empresa', description: 'ANSLIFE Joint Stock Company' },
         { term: 'Oficina principal', description: 'Ho Chi Minh City, Vietnam' },
@@ -8790,7 +9069,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     companyIntro: {
       title: '公司概览',
       lead:
-        'ANSLIFE JSC 是一家位于越南的生产、供应链与出口合作伙伴，服务于家具、部件和材料领域的国际买家。',
+        'ANSLIFE 是一家位于越南的生产、供应链与出口合作伙伴，服务于家具、部件和材料领域的国际买家。',
       cards: [
         { title: '生产网络', text: '我们协调主工厂、卫星工厂和材料供应商，支持灵活的 OEM 与 ODM 项目。' },
         { title: '质量控制', text: 'QC 团队独立于生产体系，依据确认样、图纸、检查清单和包装要求执行控制。' },
@@ -8825,7 +9104,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
     },
     companyInfo: {
       title: '公司信息',
-      lead: 'ANSLIFE JSC 从越南组织家具生产、材料供应、QC、仓储和出口支持。',
+      lead: 'ANSLIFE 从越南组织家具生产、材料供应、QC、仓储和出口支持。',
       rows: [
         { term: '公司', description: 'ANSLIFE Joint Stock Company' },
         { term: '总部', description: 'Ho Chi Minh City, Vietnam' },
@@ -8838,28 +9117,159 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
   },
 };
 
-function buildExtraCompanyIntroSection(content: ExtraAboutLocalizedContent['companyIntro']): string {
+function buildLocalizedCompanyIntroStandardSection(
+  language: ExtraAboutLanguage,
+  content: ExtraAboutLocalizedContent,
+): string {
+  const cardIconClasses = ['ai-icon-people', 'ai-icon-shield-check', 'ai-icon-truck', 'ai-icon-layers'];
+  const capabilityIconClasses = [
+    'ai-icon-factory',
+    'ai-icon-layers',
+    'ai-icon-shield-check',
+    'ai-icon-warehouse',
+    'ai-icon-operations',
+    'ai-icon-hand-coin',
+  ];
+  const processSteps = [
+    { icon: 'ai-icon-file-plus', text: translateText(language, 'Buyer gửi yêu cầu') },
+    { icon: 'ai-icon-search', text: translateText(language, 'ANSLIFE kiểm tra bản vẽ / mẫu / tiêu chuẩn') },
+    { icon: 'ai-icon-clipboard-check', text: translateText(language, 'Phát triển mẫu') },
+    {
+      icon: 'ai-icon-factory',
+      text: translateText(
+        language,
+        'Tổ chức sản xuất, vận hành dự án & tài trợ thương mại',
+      ),
+    },
+    { icon: 'ai-icon-shield-check', text: translateText(language, 'QC độc lập & kiểm soát chất lượng') },
+    { icon: 'ai-icon-warehouse', text: translateText(language, 'Lưu kho tại Việt Nam') },
+    { icon: 'ai-icon-truck', text: translateText(language, 'Xuất hàng định kỳ') },
+  ];
+  const buyerPanelText = COMPANY_INTRO_BUYER_PANEL_TEXT[language];
+
   return `
   <section id="company-intro" class="ai-section ai-company-intro ai-company-overview ai-company-overview-new">
-    <section class="ai-company-hero">
-      <div class="ai-company-hero-copy">
-        <p class="ai-company-kicker">ANSLIFE JSC</p>
-        <h1>${content.title}</h1>
-        <p>${content.lead}</p>
+    <div class="ai-company-overview-hero">
+      <div class="ai-company-overview-copy">
+        <h2>${content.companyIntro.title}</h2>
+        <p>${content.companyIntro.lead}</p>
+        <p>${content.workingStandards.lead}</p>
+        <p>${content.companyInfo.lead}</p>
       </div>
-    </section>
-    <div class="ai-company-panels">
-      ${content.cards
-        .map(
-          (card) => `
-      <article class="ai-company-panel">
-        <h3>${card.title}</h3>
-        <p>${card.text}</p>
-      </article>`,
-        )
-        .join('')}
+
+      <div class="ai-company-overview-cards">
+        ${content.companyIntro.cards
+          .map(
+            (card, index) => `
+        <article class="ai-company-overview-card">
+          <span class="ai-company-overview-icon ${cardIconClasses[index] ?? 'ai-icon-people'}" aria-hidden="true"></span>
+          <h3>${card.title}</h3>
+          <p>${card.text}</p>
+        </article>`,
+          )
+          .join('')}
+      </div>
     </div>
-    <p class="ai-company-divider-note">${content.cta}</p>
+
+    <div class="ai-company-overview-section">
+      <h2>${content.workingStandards.title}</h2>
+      <div class="ai-company-capability-grid">
+        ${content.workingStandards.items
+          .map(
+            (item, index) => `
+        <article class="ai-company-capability-card">
+          <span class="ai-company-overview-icon ${capabilityIconClasses[index] ?? 'ai-icon-box'}" aria-hidden="true"></span>
+          <h3>${index + 1}. ${item.title}</h3>
+          <p>${item.text}</p>
+        </article>`,
+          )
+          .join('')}
+      </div>
+      <div class="ai-company-overview-action">
+        <a href="/${language}/about-anslife/company-info">${translateText(language, 'Xem chi tiết năng lực của chúng tôi')} <span>→</span></a>
+      </div>
+    </div>
+
+    <div class="ai-company-overview-section">
+      <h2>${translateText(language, 'Quy trình vận hành')}</h2>
+      <div class="ai-company-process">
+        ${processSteps
+          .map(
+            (step, index) => `
+        <article><span class="ai-process-step">${index + 1}</span><i class="ai-process-icon ${step.icon}" aria-hidden="true"></i><strong>${step.text}</strong></article>`,
+          )
+          .join('')}
+      </div>
+    </div>
+
+    <div class="ai-company-buyer-panel">
+      <h2>${buyerPanelText.title}</h2>
+      <div class="ai-company-buyer-points">
+        <span>${buyerPanelText.points[0]}</span>
+        <span>${buyerPanelText.points[1]}</span>
+        <span>${buyerPanelText.points[2]}</span>
+        <span>${buyerPanelText.points[3]}</span>
+        <span>${buyerPanelText.points[4]}</span>
+      </div>
+    </div>
+
+    <div class="ai-company-overview-info-grid">
+      <article class="ai-company-overview-info-card">
+        <h2>${translateText(language, 'Về ANSLIFE')}</h2>
+        <p>${content.companyInfo.note}</p>
+        <div class="ai-company-mini-icons">
+          ${content.companyIntro.cards
+            .slice(0, 4)
+            .map(
+              (card) => `
+          <span><i class="ai-mini-icon ai-icon-shield-check" aria-hidden="true"></i>${card.title}</span>`,
+            )
+            .join('')}
+        </div>
+      </article>
+
+      <article class="ai-company-overview-info-card">
+        <h2>${content.companyInfo.title}</h2>
+        <dl class="ai-company-overview-table">
+          ${content.companyInfo.rows
+            .map(
+              (row) => `
+          <div><dt>${row.term}</dt><dd>${row.description}</dd></div>`,
+            )
+            .join('')}
+        </dl>
+      </article>
+
+      <article class="ai-company-overview-info-card ai-company-market-card">
+        <h2>${translateText(language, 'Thị trường')}</h2>
+        <div class="ai-company-market-grid">
+          <span><i class="ai-market-flag ai-market-flag-jp" aria-hidden="true"></i><strong>${translateText(language, 'Nhật Bản')}</strong></span>
+          <span><i class="ai-market-flag ai-market-flag-us" aria-hidden="true"></i><strong>${translateText(language, 'Hoa Kỳ')}</strong></span>
+          <span><i class="ai-market-flag ai-market-flag-eu" aria-hidden="true"></i><strong>EU</strong></span>
+        </div>
+        <p class="ai-company-market-note"><i class="ai-footer-icon ai-icon-globe" aria-hidden="true"></i><span>${translateText(language, 'và các thị trường quốc tế')}</span></p>
+      </article>
+    </div>
+
+    <div class="ai-company-request-panel">
+      <div>
+        <h2>${translateText(language, 'Gửi yêu cầu cho ANSLIFE')}</h2>
+        <p>${content.companyIntro.cta}</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/${language}/contact/request-quotation">${translateText(language, 'Gửi yêu cầu')} <span>→</span></a>
+        <a class="ai-company-request-secondary" href="/${language}/contact/upload-drawing">${translateText(language, 'Tải tài liệu / bản vẽ lên')}</a>
+      </div>
+    </div>
+
+    <div class="ai-company-footer-strip">
+      <span><i class="ai-footer-icon ai-icon-ribbon" aria-hidden="true"></i>${translateText(language, 'Kinh nghiệm & uy tín')}</span>
+      <span><i class="ai-footer-icon ai-icon-team" aria-hidden="true"></i>${translateText(language, 'Đội ngũ chuyên nghiệp')}</span>
+      <span><i class="ai-footer-icon ai-icon-shield-check" aria-hidden="true"></i>${translateText(language, 'Quy trình minh bạch')}</span>
+      <span><i class="ai-footer-icon ai-icon-globe" aria-hidden="true"></i>${translateText(language, 'Hỗ trợ đa ngôn ngữ')}</span>
+      <span><i class="ai-footer-icon ai-icon-layers" aria-hidden="true"></i>${translateText(language, 'Mạng lưới nhà máy & đối tác rộng khắp')}</span>
+      <span><i class="ai-footer-icon ai-icon-shield-check" aria-hidden="true"></i>${translateText(language, 'Cam kết chất lượng & tiến độ')}</span>
+    </div>
   </section>
 `.trim();
 }
@@ -8952,7 +9362,7 @@ const DEVELOPMENT_HISTORY_TRANSLATIONS: Record<
   en: {
     title: 'Formation & Development History',
     intro:
-      'ANSLIFE JSC was built from a real furniture manufacturing foundation in Vietnam. From a handcrafted furniture workshop in Can Kiem craft village, Thach That, Hanoi, ANSLIFE gradually developed capabilities in design, fit-out, export processing, quality control, material supply chain and export project operation for international buyers. Through each stage, ANSLIFE evolved from a furniture manufacturer into a flexible production, supply chain, quality control and export system in Vietnam.',
+      'ANSLIFE was built from a real furniture manufacturing foundation in Vietnam. From a handcrafted furniture workshop in Can Kiem craft village, Thach That, Hanoi, ANSLIFE gradually developed capabilities in design, fit-out, export processing, quality control, material supply chain and export project operation for international buyers. Through each stage, ANSLIFE evolved from a furniture manufacturer into a flexible production, supply chain, quality control and export system in Vietnam.',
     cards: [
       { year: '2012', title: 'Started from a handcrafted furniture workshop', text: 'ANSLIFE began as a handcrafted furniture workshop in Can Kiem craft village, Thach That district, Hanoi, Vietnam, focusing on home furniture such as wardrobes, beds, tables, chairs and wooden products for residential needs.' },
       { year: '2014', title: 'Established the architecture and interior design department', text: 'ANSLIFE established an architecture and interior design department for residential and office projects. The head office moved to Floor 5, No. 12 Khuat Duy Tien, Thanh Xuan Trung Ward, Thanh Xuan District, Hanoi. This stage expanded ANSLIFE from furniture production into design, consulting and complete interior implementation.' },
@@ -8969,7 +9379,7 @@ const DEVELOPMENT_HISTORY_TRANSLATIONS: Record<
   jp: {
     title: '設立と発展の歩み',
     intro:
-      'ANSLIFE JSCは、ベトナムにおける実際の家具生産基盤から形成されました。ハノイ市タックタット郡カンキエム工芸村の手工家具工房から始まり、設計、施工、輸出加工、品質管理、材料サプライチェーン、海外バイヤー向け輸出プロジェクト運営の能力を段階的に発展させてきました。',
+      'ANSLIFEは、ベトナムにおける実際の家具生産基盤から形成されました。ハノイ市タックタット郡カンキエム工芸村の手工家具工房から始まり、設計、施工、輸出加工、品質管理、材料サプライチェーン、海外バイヤー向け輸出プロジェクト運営の能力を段階的に発展させてきました。',
     cards: [
       { year: '2012', title: '手工家具工房からの出発', text: 'ANSLIFEは、ベトナム・ハノイ市タックタット郡カンキエム工芸村の手工家具工房から始まり、ワードローブ、ベッド、テーブル、椅子など住宅向け木製家具に注力しました。' },
       { year: '2014', title: '建築・インテリア設計部門を設立', text: '住宅・オフィス向けに建築・インテリア設計部門を設立し、本社をハノイ市タインスアン区クアットズイティエン12番地5階へ移転しました。生産から設計、コンサルティング、空間実装へ領域を広げた段階です。' },
@@ -8986,7 +9396,7 @@ const DEVELOPMENT_HISTORY_TRANSLATIONS: Record<
   kr: {
     title: '설립 및 발전 과정',
     intro:
-      'ANSLIFE JSC는 베트남의 실제 가구 생산 기반에서 형성되었습니다. 하노이 탁탓현 껀끼엠 공예마을의 수공 가구 작업장에서 시작해 설계, 시공, 수출 가공, 품질관리, 소재 공급망, 해외 바이어 대상 수출 프로젝트 운영 역량을 단계적으로 발전시켰습니다.',
+      'ANSLIFE는 베트남의 실제 가구 생산 기반에서 형성되었습니다. 하노이 탁탓현 껀끼엠 공예마을의 수공 가구 작업장에서 시작해 설계, 시공, 수출 가공, 품질관리, 소재 공급망, 해외 바이어 대상 수출 프로젝트 운영 역량을 단계적으로 발전시켰습니다.',
     cards: [
       { year: '2012', title: '수공 가구 작업장에서 시작', text: 'ANSLIFE는 베트남 하노이 탁탓현 껀끼엠 공예마을의 수공 가구 작업장에서 시작했으며, 옷장, 침대, 테이블, 의자 등 주거용 목재 가구에 집중했습니다.' },
       { year: '2014', title: '건축 및 인테리어 설계 부서 설립', text: '주거 및 사무공간 프로젝트를 위한 설계 부서를 설립하고 본사를 하노이 타인쑤언구 쿠앗주이띠엔 12번지 5층으로 이전했습니다. 생산에서 설계, 컨설팅, 공간 구현으로 확장한 단계입니다.' },
@@ -9003,7 +9413,7 @@ const DEVELOPMENT_HISTORY_TRANSLATIONS: Record<
   sv: {
     title: 'Bildande och utvecklingshistorik',
     intro:
-      'ANSLIFE JSC växte fram ur verklig möbelproduktion i Vietnam. Från en hantverksverkstad i Can Kiem, Thach That, Hanoi utvecklade ANSLIFE stegvis kapacitet inom design, installation, exportbearbetning, kvalitetskontroll, materialförsörjning och exportprojekt för internationella köpare.',
+      'ANSLIFE växte fram ur verklig möbelproduktion i Vietnam. Från en hantverksverkstad i Can Kiem, Thach That, Hanoi utvecklade ANSLIFE stegvis kapacitet inom design, installation, exportbearbetning, kvalitetskontroll, materialförsörjning och exportprojekt för internationella köpare.',
     cards: [
       { year: '2012', title: 'Start från en hantverksmässig möbelverkstad', text: 'ANSLIFE började i hantverksbyn Can Kiem, Thach That, Hanoi, med möbler för hemmet som garderober, sängar, bord, stolar och träprodukter för bostäder.' },
       { year: '2014', title: 'Arkitektur- och inredningsavdelning etablerades', text: 'ANSLIFE etablerade en avdelning för arkitektur och inredning för bostäder och kontor. Huvudkontoret flyttades till våning 5, nr 12 Khuat Duy Tien, Thanh Xuan Trung, Hanoi, och verksamheten breddades från produktion till design, rådgivning och genomförande.' },
@@ -9020,7 +9430,7 @@ const DEVELOPMENT_HISTORY_TRANSLATIONS: Record<
   fr: {
     title: 'Historique de création et de développement',
     intro:
-      'ANSLIFE JSC est née d’une base réelle de production de meubles au Vietnam. Depuis un atelier artisanal du village de métier de Can Kiem, Thach That, Hanoi, ANSLIFE a progressivement développé ses capacités en design, exécution, sous-traitance export, contrôle qualité, chaîne d’approvisionnement matériaux et opération de projets export pour les acheteurs internationaux.',
+      'ANSLIFE est née d’une base réelle de production de meubles au Vietnam. Depuis un atelier artisanal du village de métier de Can Kiem, Thach That, Hanoi, ANSLIFE a progressivement développé ses capacités en design, exécution, sous-traitance export, contrôle qualité, chaîne d’approvisionnement matériaux et opération de projets export pour les acheteurs internationaux.',
     cards: [
       { year: '2012', title: 'Départ depuis un atelier artisanal de meubles', text: 'ANSLIFE a commencé dans le village de métier de Can Kiem, Thach That, Hanoi, avec des meubles domestiques comme armoires, lits, tables, chaises et produits bois pour l’habitat.' },
       { year: '2014', title: 'Création du département architecture et intérieur', text: 'ANSLIFE a créé un département de conception architecturale et intérieure pour les logements et bureaux. Le siège a été transféré au 5e étage, 12 Khuat Duy Tien, Thanh Xuan Trung, Hanoi, marquant l’extension vers design, conseil et réalisation complète.' },
@@ -9037,7 +9447,7 @@ const DEVELOPMENT_HISTORY_TRANSLATIONS: Record<
   ru: {
     title: 'История становления и развития',
     intro:
-      'ANSLIFE JSC сформировалась на основе реального мебельного производства во Вьетнаме. От ремесленной мастерской в деревне Can Kiem, Thach That, Hanoi компания постепенно развила компетенции в дизайне, реализации интерьеров, экспортной переработке, контроле качества, цепочке поставок материалов и управлении экспортными проектами для международных покупателей.',
+      'ANSLIFE сформировалась на основе реального мебельного производства во Вьетнаме. От ремесленной мастерской в деревне Can Kiem, Thach That, Hanoi компания постепенно развила компетенции в дизайне, реализации интерьеров, экспортной переработке, контроле качества, цепочке поставок материалов и управлении экспортными проектами для международных покупателей.',
     cards: [
       { year: '2012', title: 'Начало с ремесленной мебельной мастерской', text: 'ANSLIFE началась в ремесленной деревне Can Kiem, Thach That, Hanoi, с бытовой мебели: шкафов, кроватей, столов, стульев и деревянных изделий для жилья.' },
       { year: '2014', title: 'Создан отдел архитектуры и интерьеров', text: 'ANSLIFE создала отдел архитектурного и интерьерного дизайна для жилых и офисных проектов. Главный офис переехал на 5 этаж, 12 Khuat Duy Tien, Thanh Xuan Trung, Hanoi. Это расширило деятельность от производства к дизайну, консультациям и реализации интерьеров.' },
@@ -9054,7 +9464,7 @@ const DEVELOPMENT_HISTORY_TRANSLATIONS: Record<
   es: {
     title: 'Historia de formación y desarrollo',
     intro:
-      'ANSLIFE JSC se formó a partir de una base real de producción de muebles en Vietnam. Desde un taller artesanal en la aldea de Can Kiem, Thach That, Hanoi, ANSLIFE desarrolló gradualmente capacidades de diseño, ejecución, procesamiento para exportación, control de calidad, cadena de suministro de materiales y operación de proyectos de exportación para compradores internacionales.',
+      'ANSLIFE se formó a partir de una base real de producción de muebles en Vietnam. Desde un taller artesanal en la aldea de Can Kiem, Thach That, Hanoi, ANSLIFE desarrolló gradualmente capacidades de diseño, ejecución, procesamiento para exportación, control de calidad, cadena de suministro de materiales y operación de proyectos de exportación para compradores internacionales.',
     cards: [
       { year: '2012', title: 'Inicio desde un taller artesanal de muebles', text: 'ANSLIFE comenzó en la aldea artesanal de Can Kiem, Thach That, Hanoi, enfocándose en muebles para el hogar como armarios, camas, mesas, sillas y productos de madera para vivienda.' },
       { year: '2014', title: 'Creación del departamento de arquitectura e interiores', text: 'ANSLIFE creó un departamento de diseño arquitectónico e interior para viviendas y oficinas. La sede se trasladó al piso 5, 12 Khuat Duy Tien, Thanh Xuan Trung, Hanoi, ampliando la actividad hacia diseño, consultoría y ejecución integral.' },
@@ -9071,7 +9481,7 @@ const DEVELOPMENT_HISTORY_TRANSLATIONS: Record<
   zh: {
     title: '形成与发展历程',
     intro:
-      'ANSLIFE JSC 形成于越南真实的家具生产基础。从河内市石室县 Cần Kiệm 工艺村的一家手工家具作坊开始，ANSLIFE 逐步发展出设计、施工、出口加工、质量控制、材料供应链以及面向国际买家的出口项目运营能力。',
+      'ANSLIFE 形成于越南真实的家具生产基础。从河内市石室县 Cần Kiệm 工艺村的一家手工家具作坊开始，ANSLIFE 逐步发展出设计、施工、出口加工、质量控制、材料供应链以及面向国际买家的出口项目运营能力。',
     cards: [
       { year: '2012', title: '从手工家具作坊起步', text: 'ANSLIFE 起步于越南河内市石室县 Cần Kiệm 工艺村的一家手工家具作坊，主要生产衣柜、床、桌、椅等家庭家具和住宅用木制产品。' },
       { year: '2014', title: '成立建筑与室内设计部门', text: 'ANSLIFE 成立建筑与室内设计部门，服务住宅和办公项目。公司总部迁至河内市 Thanh Xuan 区 Khuat Duy Tien 12号5层，并从家具生产扩展到设计、咨询和完整空间实施。' },
@@ -9104,10 +9514,21 @@ function getExtraAboutSectionHtml(
     return null;
   }
 
+  // Keep English company-intro on the main about template.
+  // Other non-VN languages use explicit localized content to avoid VN fallback text.
+  if (sectionId === 'company-intro') {
+    if (language === 'en') {
+      return null;
+    }
+
+    const content = EXTRA_ABOUT_LOCALIZED_CONTENT[language];
+    return buildLocalizedCompanyIntroStandardSection(language, content);
+  }
+
   const content = EXTRA_ABOUT_LOCALIZED_CONTENT[language];
   switch (sectionId as ExtraAboutSectionId) {
     case 'company-intro':
-      return buildExtraCompanyIntroSection(content.companyIntro);
+      return buildLocalizedCompanyIntroStandardSection(language, content);
     case 'development-history':
       return buildExtraDevelopmentHistorySection(
         DEVELOPMENT_HISTORY_TRANSLATIONS[language] ?? content.developmentHistory,
@@ -11421,7 +11842,7 @@ const ABOUT_DEVELOPMENT_HISTORY_SECTION_VN = `
       <h2>Lịch sử hình thành &amp; phát triển</h2>
       <div class="ai-history-intro">
         <p>
-          <strong>ANSLIFE JSC</strong> được hình thành từ nền tảng sản xuất nội thất thực tế tại Việt Nam. Từ một xưởng sản xuất thủ công tại làng nghề Cần Kiệm, Thạch Thất, Hà Nội, ANSLIFE từng bước phát triển năng lực thiết kế, thi công, gia công xuất khẩu, kiểm soát chất lượng, <strong>chuỗi cung ứng vật liệu</strong> và <strong>vận hành dự án xuất khẩu</strong> cho buyer quốc tế.
+          <strong>ANSLIFE</strong> được hình thành từ nền tảng sản xuất nội thất thực tế tại Việt Nam. Từ một xưởng sản xuất thủ công tại làng nghề Cần Kiệm, Thạch Thất, Hà Nội, ANSLIFE từng bước phát triển năng lực thiết kế, thi công, gia công xuất khẩu, kiểm soát chất lượng, <strong>chuỗi cung ứng vật liệu</strong> và <strong>vận hành dự án xuất khẩu</strong> cho buyer quốc tế.
         </p>
         <p>
           Qua từng giai đoạn, ANSLIFE không chỉ phát triển như một đơn vị sản xuất nội thất, mà dần hình thành một hệ thống sản xuất, chuỗi cung ứng, kiểm soát chất lượng và xuất khẩu có thể vận hành linh hoạt tại Việt Nam.
@@ -11535,7 +11956,7 @@ const RESOURCES_FAQ_SECTION_VN = `
       <div class="anslife-faq-hero-copy">
         <h2>Câu hỏi thường gặp dành cho buyer</h2>
         <p>
-          Tài liệu tổng hợp các câu hỏi buyer quốc tế thường đặt ra khi tìm hiểu và làm việc với ANSLIFE JSC về sản xuất,
+          Tài liệu tổng hợp các câu hỏi buyer quốc tế thường đặt ra khi tìm hiểu và làm việc với ANSLIFE về sản xuất,
           chuỗi cung ứng, kiểm soát chất lượng, lưu kho, tài trợ thương mại, thanh toán và giao hàng quốc tế.
         </p>
       </div>
@@ -11555,27 +11976,27 @@ const RESOURCES_FAQ_SECTION_VN = `
       <section id="faq-about" class="anslife-faq-topic">
         <div class="anslife-faq-topic-head">
           <span>01</span>
-          <h3>Về ANSLIFE JSC</h3>
+          <h3>Về ANSLIFE</h3>
         </div>
         <div class="anslife-faq-list">
           <details open>
-            <summary><span>01</span>ANSLIFE JSC là công ty gì?</summary>
-            <p>ANSLIFE JSC là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi hỗ trợ phát triển sản phẩm, tổ chức sản xuất, cung ứng vật liệu, QC độc lập, lưu kho, vận hành dự án, tài trợ thương mại, đóng gói và xuất hàng quốc tế.</p>
+            <summary><span>01</span>ANSLIFE là công ty gì?</summary>
+            <p>ANSLIFE là đối tác sản xuất, chuỗi cung ứng và xuất khẩu tại Việt Nam cho buyer quốc tế trong ngành nội thất, cấu kiện và vật liệu. Chúng tôi hỗ trợ phát triển sản phẩm, tổ chức sản xuất, cung ứng vật liệu, QC độc lập, lưu kho, vận hành dự án, tài trợ thương mại, đóng gói và xuất hàng quốc tế.</p>
           </details>
           <details>
-            <summary><span>02</span>ANSLIFE JSC có phải là một nhà máy không?</summary>
+            <summary><span>02</span>ANSLIFE có phải là một nhà máy không?</summary>
             <p>Không chỉ là một nhà máy đơn lẻ. ANSLIFE vận hành một hệ thống gồm nhà máy do ANSLIFE điều phối, mạng lưới nhà máy vệ tinh, chuỗi cung ứng vật liệu, QC độc lập, kho lưu trữ tại Việt Nam và cơ chế xuất hàng định kỳ.</p>
           </details>
           <details>
-            <summary><span>03</span>ANSLIFE JSC khác gì so với một nhà máy thông thường?</summary>
+            <summary><span>03</span>ANSLIFE khác gì so với một nhà máy thông thường?</summary>
             <p>Nhà máy thông thường chủ yếu tập trung vào sản xuất. ANSLIFE tổ chức nhiều phần trong chuỗi giá trị: phát triển sản phẩm, chuẩn bị vật liệu, điều phối sản xuất, QC độc lập, lưu kho, quản lý dự án, tài trợ thương mại, đóng gói, chứng từ và xuất hàng.</p>
           </details>
           <details>
-            <summary><span>04</span>ANSLIFE JSC phục vụ những thị trường nào?</summary>
+            <summary><span>04</span>ANSLIFE phục vụ những thị trường nào?</summary>
             <p>ANSLIFE phục vụ buyer tại Nhật Bản, Hoa Kỳ, EU và các thị trường quốc tế khác, với hệ thống đáp ứng yêu cầu khác nhau về vật liệu, kết cấu, màu sắc, độ ẩm, hoàn thiện bề mặt, đóng gói, chứng từ và tiêu chuẩn kiểm hàng.</p>
           </details>
           <details>
-            <summary><span>05</span>ANSLIFE JSC có văn phòng đại diện ở đâu?</summary>
+            <summary><span>05</span>ANSLIFE có văn phòng đại diện ở đâu?</summary>
             <p>ANSLIFE có văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong. Tại Việt Nam, văn phòng đại diện đặt tại Hà Nội và TP. Hồ Chí Minh; văn phòng quốc tế gồm Tokyo, Singapore và Hong Kong.</p>
           </details>
         </div>
@@ -11588,7 +12009,7 @@ const RESOURCES_FAQ_SECTION_VN = `
         </div>
         <div class="anslife-faq-list">
           <details>
-            <summary><span>01</span>ANSLIFE JSC cung cấp những nhóm sản phẩm nào?</summary>
+            <summary><span>01</span>ANSLIFE cung cấp những nhóm sản phẩm nào?</summary>
             <p>ANSLIFE hỗ trợ nội thất hoàn thiện, cấu kiện nội thất, vật liệu phục vụ sản xuất, giải pháp lưu kho, QC, đóng gói và xuất hàng định kỳ từ Việt Nam. Sản phẩm có thể phát triển theo mẫu có sẵn, bản vẽ kỹ thuật, hình ảnh tham khảo hoặc tiêu chuẩn riêng của buyer.</p>
           </details>
           <details>
@@ -11801,7 +12222,7 @@ const RESOURCES_FAQ_SECTION_VN = `
     </div>
 
     <footer class="anslife-faq-footer">
-      <p>ANSLIFE JSC | anslife.com | global@anslife.com | Tel: +84 901 827 555</p>
+      <p>ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555</p>
     </footer>
   </section>
 `.trim();
@@ -11892,21 +12313,21 @@ const RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
   en: {
     title: 'Frequently Asked Questions for Buyers',
     intro:
-      'This page answers common questions from international buyers about working with ANSLIFE JSC on production, supply chain, quality control, warehousing, trade finance, payment and international delivery.',
-    footer: 'ANSLIFE JSC | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+      'This page answers common questions from international buyers about working with ANSLIFE on production, supply chain, quality control, warehousing, trade finance, payment and international delivery.',
+    footer: 'ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555',
     topics: [
       {
         id: 'faq-about',
         nav: 'About ANSLIFE',
-        title: 'About ANSLIFE JSC',
+        title: 'About ANSLIFE',
         items: [
           {
-            question: 'What kind of company is ANSLIFE JSC?',
+            question: 'What kind of company is ANSLIFE?',
             answer:
-              'ANSLIFE JSC is a Vietnam-based production, supply chain and export partner for international buyers in furniture, components and materials. We support product development, manufacturing coordination, material supply, independent QC, warehousing, project operation, trade finance, packing and international shipment.',
+              'ANSLIFE is a Vietnam-based production, supply chain and export partner for international buyers in furniture, components and materials. We support product development, manufacturing coordination, material supply, independent QC, warehousing, project operation, trade finance, packing and international shipment.',
           },
           {
-            question: 'Is ANSLIFE JSC a factory?',
+            question: 'Is ANSLIFE a factory?',
             answer:
               'ANSLIFE is not only a single factory. We operate a coordinated system of factories, satellite production partners, continuous material supply, independent quality control, warehousing in Vietnam and scheduled export operations.',
           },
@@ -12179,21 +12600,21 @@ const RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
   jp: {
     title: 'バイヤー向けよくある質問',
     intro:
-      'このページでは、海外バイヤーがANSLIFE JSCと生産、サプライチェーン、品質管理、保管、貿易金融、決済、国際配送について協業する際によく確認する内容をまとめています。',
-    footer: 'ANSLIFE JSC | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+      'このページでは、海外バイヤーがANSLIFEと生産、サプライチェーン、品質管理、保管、貿易金融、決済、国際配送について協業する際によく確認する内容をまとめています。',
+    footer: 'ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555',
     topics: [
       {
         id: 'faq-about',
         nav: 'ANSLIFEについて',
-        title: 'ANSLIFE JSCについて',
+        title: 'ANSLIFEについて',
         items: [
           {
-            question: 'ANSLIFE JSCはどのような会社ですか？',
+            question: 'ANSLIFEはどのような会社ですか？',
             answer:
-              'ANSLIFE JSCは、家具、部材、素材分野の海外バイヤー向けに、ベトナムで生産、サプライチェーン、輸出を支援するパートナーです。商品開発、生産手配、素材供給、独立QC、保管、プロジェクト運営、貿易金融、梱包、国際出荷を支援します。',
+              'ANSLIFEは、家具、部材、素材分野の海外バイヤー向けに、ベトナムで生産、サプライチェーン、輸出を支援するパートナーです。商品開発、生産手配、素材供給、独立QC、保管、プロジェクト運営、貿易金融、梱包、国際出荷を支援します。',
           },
           {
-            question: 'ANSLIFE JSCは工場ですか？',
+            question: 'ANSLIFEは工場ですか？',
             answer:
               'ANSLIFEは単独の工場だけではありません。ANSLIFEが調整する工場、サテライト工場、継続的な素材供給、独立した品質管理、ベトナム国内倉庫、定期出荷の仕組みを含む運営システムです。',
           },
@@ -12466,21 +12887,21 @@ const RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
   kr: {
     title: '바이어를 위한 자주 묻는 질문',
     intro:
-      '이 페이지는 해외 바이어가 ANSLIFE JSC와 생산, 공급망, 품질관리, 보관, 무역금융, 결제, 국제 배송을 진행할 때 자주 확인하는 질문을 정리한 자료입니다.',
-    footer: 'ANSLIFE JSC | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+      '이 페이지는 해외 바이어가 ANSLIFE와 생산, 공급망, 품질관리, 보관, 무역금융, 결제, 국제 배송을 진행할 때 자주 확인하는 질문을 정리한 자료입니다.',
+    footer: 'ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555',
     topics: [
       {
         id: 'faq-about',
         nav: 'ANSLIFE 소개',
-        title: 'ANSLIFE JSC 소개',
+        title: 'ANSLIFE 소개',
         items: [
           {
-            question: 'ANSLIFE JSC는 어떤 회사인가요?',
+            question: 'ANSLIFE는 어떤 회사인가요?',
             answer:
-              'ANSLIFE JSC는 가구, 부품, 소재 분야의 해외 바이어를 위해 베트남에서 생산, 공급망, 수출을 지원하는 파트너입니다. 제품 개발, 생산 조율, 소재 공급, 독립 QC, 보관, 프로젝트 운영, 무역금융, 포장, 국제 출하를 지원합니다.',
+              'ANSLIFE는 가구, 부품, 소재 분야의 해외 바이어를 위해 베트남에서 생산, 공급망, 수출을 지원하는 파트너입니다. 제품 개발, 생산 조율, 소재 공급, 독립 QC, 보관, 프로젝트 운영, 무역금융, 포장, 국제 출하를 지원합니다.',
           },
           {
-            question: 'ANSLIFE JSC는 공장인가요?',
+            question: 'ANSLIFE는 공장인가요?',
             answer:
               'ANSLIFE는 단일 공장만이 아닙니다. ANSLIFE가 조율하는 공장, 위성 공장 네트워크, 지속적인 소재 공급, 독립 품질관리, 베트남 내 창고, 정기 출하 체계를 포함한 운영 시스템입니다.',
           },
@@ -12797,7 +13218,7 @@ function buildCompactResourcesFaqContent(
   return {
     title: input.title,
     intro: input.intro,
-    footer: 'ANSLIFE JSC | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+    footer: 'ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555',
     topics: [
       {
         id: 'faq-about',
@@ -12900,7 +13321,7 @@ function buildMinimalResourcesFaqContent(input: {
   return {
     title: input.title,
     intro: input.intro,
-    footer: 'ANSLIFE JSC | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+    footer: 'ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555',
     topics: input.topics.map(([nav, title, question, answer, extraQuestion], index) => ({
       id: ids[index],
       nav,
@@ -12923,9 +13344,9 @@ const EXTRA_RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
   sv: buildMinimalResourcesFaqContent({
     title: 'Vanliga frågor för köpare',
     intro:
-      'Svar på vanliga frågor om att arbeta med ANSLIFE JSC kring produktion, leveranskedja, QC, lager, betalning och internationell leverans.',
+      'Svar på vanliga frågor om att arbeta med ANSLIFE kring produktion, leveranskedja, QC, lager, betalning och internationell leverans.',
     topics: [
-      ['Om ANSLIFE', 'Om ANSLIFE JSC', 'Vilken typ av företag är ANSLIFE JSC?', 'ANSLIFE JSC är en Vietnam-baserad partner för produktion, leveranskedja och export inom möbler, komponenter och material.', 'Är ANSLIFE bara en fabrik?'],
+      ['Om ANSLIFE', 'Om ANSLIFE', 'Vilken typ av företag är ANSLIFE?', 'ANSLIFE är en Vietnam-baserad partner för produktion, leveranskedja och export inom möbler, komponenter och material.', 'Är ANSLIFE bara en fabrik?'],
       ['Produkter & material', 'Produkter, material och produktion', 'Vilka produkter kan ANSLIFE stödja?', 'ANSLIFE stödjer färdiga möbler, möbelkomponenter, produktionsmaterial, QC, packning, lager och planerad export från Vietnam.', 'Kan ANSLIFE arbeta från ritningar eller prover?'],
       ['Projektledning', 'Projektledning i Vietnam', 'Kan ANSLIFE följa projekt i Vietnam?', 'ANSLIFE kan följa framdrift, kontrollera material, samordna fabrik, göra QC, följa dokument och rapportera enligt avtalad omfattning.', 'Kan ANSLIFE hantera produktionsproblem?'],
       ['QC & standarder', 'Kvalitetskontroll och standarder', 'Är QC oberoende från produktionen?', 'Ja. QC-funktionen är separerad från produktionen och bygger på köparens godkända prover, ritningar, checklistor och packningskrav.', 'Kan ANSLIFE göra inspektionsrapporter?'],
@@ -12937,9 +13358,9 @@ const EXTRA_RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
   fr: buildMinimalResourcesFaqContent({
     title: 'Questions fréquentes pour les acheteurs',
     intro:
-      'Réponses aux questions fréquentes sur la collaboration avec ANSLIFE JSC pour la production, la supply chain, le QC, le stockage, le paiement et la livraison internationale.',
+      'Réponses aux questions fréquentes sur la collaboration avec ANSLIFE pour la production, la supply chain, le QC, le stockage, le paiement et la livraison internationale.',
     topics: [
-      ['À propos d’ANSLIFE', 'À propos d’ANSLIFE JSC', 'Quel type d’entreprise est ANSLIFE JSC ?', 'ANSLIFE JSC est un partenaire vietnamien de production, de supply chain et d’export pour les acheteurs internationaux de meubles, composants et matériaux.', 'ANSLIFE est-elle seulement une usine ?'],
+      ['À propos d’ANSLIFE', 'À propos d’ANSLIFE', 'Quel type d’entreprise est ANSLIFE ?', 'ANSLIFE est un partenaire vietnamien de production, de supply chain et d’export pour les acheteurs internationaux de meubles, composants et matériaux.', 'ANSLIFE est-elle seulement une usine ?'],
       ['Produits & matériaux', 'Produits, matériaux et production', 'Quels produits ANSLIFE peut-elle prendre en charge ?', 'ANSLIFE soutient meubles finis, composants, matériaux de production, QC, emballage, stockage et export planifié depuis le Vietnam.', 'ANSLIFE peut-elle travailler à partir de plans ou d’échantillons ?'],
       ['Opération projet', 'Opération de projet au Vietnam', 'ANSLIFE peut-elle suivre un projet au Vietnam ?', 'ANSLIFE peut suivre l’avancement, contrôler les matériaux, coordonner l’usine, faire le QC, suivre les documents et reporter selon le périmètre convenu.', 'ANSLIFE peut-elle traiter les problèmes de production ?'],
       ['QC & standards', 'Contrôle qualité et standards', 'Le QC est-il indépendant de la production ?', 'Oui. Le QC est séparé de la production et s’appuie sur les échantillons validés, plans, checklists et exigences d’emballage du buyer.', 'ANSLIFE peut-elle préparer des rapports d’inspection ?'],
@@ -12951,9 +13372,9 @@ const EXTRA_RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
   ru: buildMinimalResourcesFaqContent({
     title: 'Частые вопросы для покупателей',
     intro:
-      'Ответы на частые вопросы о работе с ANSLIFE JSC по производству, цепочке поставок, QC, складу, оплате и международной доставке.',
+      'Ответы на частые вопросы о работе с ANSLIFE по производству, цепочке поставок, QC, складу, оплате и международной доставке.',
     topics: [
-      ['Об ANSLIFE', 'Об ANSLIFE JSC', 'Что представляет собой ANSLIFE JSC?', 'ANSLIFE JSC - вьетнамский партнер по производству, цепочке поставок и экспорту для международных покупателей мебели, компонентов и материалов.', 'ANSLIFE является только фабрикой?'],
+      ['Об ANSLIFE', 'Об ANSLIFE', 'Что представляет собой ANSLIFE?', 'ANSLIFE - вьетнамский партнер по производству, цепочке поставок и экспорту для международных покупателей мебели, компонентов и материалов.', 'ANSLIFE является только фабрикой?'],
       ['Продукты и материалы', 'Продукты, материалы и производство', 'Какие продукты поддерживает ANSLIFE?', 'ANSLIFE поддерживает готовую мебель, компоненты, производственные материалы, QC, упаковку, склад и плановый экспорт из Вьетнама.', 'Может ли ANSLIFE работать по чертежам или образцам?'],
       ['Управление проектом', 'Управление проектом во Вьетнаме', 'Может ли ANSLIFE сопровождать проект во Вьетнаме?', 'ANSLIFE может отслеживать прогресс, проверять материалы, координировать фабрику, проводить QC, следить за документами и предоставлять отчеты.', 'Может ли ANSLIFE решать производственные проблемы?'],
       ['QC и стандарты', 'Контроль качества и стандарты', 'QC независим от производства?', 'Да. QC отделен от производства и основан на утвержденных образцах, чертежах, чек-листах и требованиях к упаковке покупателя.', 'Может ли ANSLIFE готовить инспекционные отчеты?'],
@@ -12965,9 +13386,9 @@ const EXTRA_RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
   es: buildMinimalResourcesFaqContent({
     title: 'Preguntas frecuentes para compradores',
     intro:
-      'Respuestas a preguntas comunes sobre trabajar con ANSLIFE JSC en producción, cadena de suministro, QC, almacén, pago y entrega internacional.',
+      'Respuestas a preguntas comunes sobre trabajar con ANSLIFE en producción, cadena de suministro, QC, almacén, pago y entrega internacional.',
     topics: [
-      ['Sobre ANSLIFE', 'Sobre ANSLIFE JSC', '¿Qué tipo de empresa es ANSLIFE JSC?', 'ANSLIFE JSC es un socio en Vietnam para producción, cadena de suministro y exportación para compradores internacionales de muebles, componentes y materiales.', '¿ANSLIFE es solo una fábrica?'],
+      ['Sobre ANSLIFE', 'Sobre ANSLIFE', '¿Qué tipo de empresa es ANSLIFE?', 'ANSLIFE es un socio en Vietnam para producción, cadena de suministro y exportación para compradores internacionales de muebles, componentes y materiales.', '¿ANSLIFE es solo una fábrica?'],
       ['Productos y materiales', 'Productos, materiales y producción', '¿Qué productos puede apoyar ANSLIFE?', 'ANSLIFE apoya muebles terminados, componentes, materiales de producción, QC, empaque, almacén y exportación programada desde Vietnam.', '¿ANSLIFE puede trabajar desde planos o muestras?'],
       ['Operación de proyecto', 'Operación de proyecto en Vietnam', '¿ANSLIFE puede hacer seguimiento de un proyecto en Vietnam?', 'ANSLIFE puede seguir avances, controlar materiales, coordinar fábrica, hacer QC, seguir documentos y reportar según el alcance acordado.', '¿ANSLIFE puede manejar problemas de producción?'],
       ['QC y estándares', 'Control de calidad y estándares', '¿El QC es independiente de producción?', 'Sí. El QC está separado de producción y se basa en muestras aprobadas, planos, checklists y requisitos de empaque del comprador.', '¿ANSLIFE puede preparar reportes de inspección?'],
@@ -12979,9 +13400,9 @@ const EXTRA_RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
   zh: buildMinimalResourcesFaqContent({
     title: '买家常见问题',
     intro:
-      '关于与 ANSLIFE JSC 合作时生产、供应链、QC、仓储、付款和国际交付的常见问题。',
+      '关于与 ANSLIFE 合作时生产、供应链、QC、仓储、付款和国际交付的常见问题。',
     topics: [
-      ['关于 ANSLIFE', '关于 ANSLIFE JSC', 'ANSLIFE JSC 是什么类型的公司？', 'ANSLIFE JSC 是越南的生产、供应链与出口合作伙伴，服务于家具、部件和材料领域的国际买家。', 'ANSLIFE 只是工厂吗？'],
+      ['关于 ANSLIFE', '关于 ANSLIFE', 'ANSLIFE 是什么类型的公司？', 'ANSLIFE 是越南的生产、供应链与出口合作伙伴，服务于家具、部件和材料领域的国际买家。', 'ANSLIFE 只是工厂吗？'],
       ['产品与材料', '产品、材料与生产', 'ANSLIFE 可以支持哪些产品？', 'ANSLIFE 支持成品家具、部件、生产材料、QC、包装、仓储以及从越南计划出口。', 'ANSLIFE 可以根据图纸或样品工作吗？'],
       ['项目运营', '越南项目运营', 'ANSLIFE 可以在越南跟进项目吗？', 'ANSLIFE 可以跟进进度、检查材料、协调工厂、执行 QC、跟进文件并按约定范围报告。', 'ANSLIFE 可以处理生产问题吗？'],
       ['QC 与标准', '质量控制与标准', 'QC 是否独立于生产？', '是。QC 与生产分离，并基于买家确认样、图纸、检查清单和包装要求执行。', 'ANSLIFE 可以准备验货报告吗？'],
@@ -13177,6 +13598,25 @@ function getOperationsSupplyDetailHtml(
     );
   }
 
+  if (detailSlug === 'trade-financing') {
+    if (language === 'vn') {
+      return `<div class="ai-content">${PRODUCTS_TRADE_FINANCING_SECTION_VN}</div>`.replace(
+        /href="\/vn\/contact\//g,
+        `href="/${language}/contact/`,
+      );
+    }
+
+    const localizedSectionHtml =
+      PRODUCTS_TRADE_FINANCING_SECTION_LOCALIZED[
+        language as TradeFinancingDetailLanguage
+      ] ?? PRODUCTS_TRADE_FINANCING_SECTION_EN;
+
+    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+      /href="\/vn\/contact\//g,
+      `href="/${language}/contact/`,
+    );
+  }
+
   return null;
 }
 
@@ -13223,6 +13663,10 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/vietnam-storage-solution"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/vietnam-storage-solution"`,
+      )
+      .replace(
+        /href="\/vn\/products-solutions\/operations-supply-solutions\/trade-financing"/g,
+        `href="/${language}/products-solutions/operations-supply-solutions/trade-financing"`,
       )
       .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
   }
