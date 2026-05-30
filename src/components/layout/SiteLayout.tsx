@@ -331,7 +331,10 @@ export default function SiteLayout() {
     [location.pathname],
   );
   const isHomeRoute = useMemo(
-    () => /^\/(?:vn|en|jp|kr)\/?$/.test(location.pathname),
+    () => {
+      const segments = location.pathname.split('/').filter(Boolean);
+      return segments.length === 1 && isLanguageCode(segments[0]);
+    },
     [location.pathname],
   );
   const isCompanyIntroRoute = useMemo(

@@ -576,7 +576,7 @@ const TRANSLATIONS: Partial<Record<
     'Cung ứng vật liệu': 'Materials Supply',
     'Gỗ tự nhiên / gỗ xẻ': 'Solid Wood / Lumber',
     Veneer: 'Veneer',
-    'Foam / Mút / Xốp': 'Foam / Mút / Xốp',
+    'Foam / Mút / Xốp': 'Foam / Sponge / Cushion',
     'Phát triển OEM / ODM': 'OEM / ODM Development',
     'Rà soát thiết kế': 'Design Review',
     'Hỗ trợ bản vẽ kỹ thuật': 'Technical Drawing Support',
@@ -1161,6 +1161,7 @@ const TRANSLATIONS: Partial<Record<
     'Vật liệu mây tre': 'ラタン・竹素材',
     'Vải / da / vật liệu bọc': '生地・レザー・張地材料',
     'Vật liệu đóng gói': '梱包資材',
+    'Foam / Mút / Xốp': 'フォーム / スポンジ',
     'Phát triển OEM/ODM': 'OEM/ODM開発',
     'Giải pháp dịch vụ': 'サービスソリューション',
     'Giải pháp vận hành & cung ứng': '運営・供給ソリューション',
@@ -1829,6 +1830,7 @@ const TRANSLATIONS: Partial<Record<
     'Vật liệu mây tre': '라탄 및 대나무 소재',
     'Vải / da / vật liệu bọc': '패브릭 / 가죽 / 업홀스터리',
     'Vật liệu đóng gói': '포장 자재',
+    'Foam / Mút / Xốp': '폼 / 스펀지',
     'Phát triển OEM/ODM': 'OEM/ODM 개발',
     'Giải pháp dịch vụ': '서비스 솔루션',
     'Giải pháp vận hành & cung ứng': '운영 및 공급 솔루션',
@@ -2298,6 +2300,7 @@ const TRANSLATIONS: Partial<Record<
       '예상 배송 조건을 알려 주시면 그에 맞추어 안내해 드립니다.',
   },
   sv: {
+    'Foam / Mút / Xốp': 'Foam / Svamp',
     'Giải pháp vận hành & cung ứng': 'Drift- och leveranslösningar',
     'Phát triển sản phẩm OEM / ODM': 'OEM / ODM-produktutveckling',
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
@@ -2383,6 +2386,7 @@ const TRANSLATIONS: Partial<Record<
     'Tải tài liệu / bản vẽ lên': 'Ladda upp dokument / ritningar',
   },
   fr: {
+    'Foam / Mút / Xốp': 'Mousse / Éponge',
     'Giải pháp vận hành & cung ứng': 'Solutions opérationnelles et d’approvisionnement',
     'Phát triển sản phẩm OEM / ODM': 'Développement produit OEM / ODM',
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
@@ -2470,6 +2474,7 @@ const TRANSLATIONS: Partial<Record<
     'Tải tài liệu / bản vẽ lên': 'Téléverser documents / plans',
   },
   ru: {
+    'Foam / Mút / Xốp': 'Пена / Губка',
     'Giải pháp vận hành & cung ứng': 'Операционные и снабженческие решения',
     'Phát triển sản phẩm OEM / ODM': 'Разработка продукта OEM / ODM',
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
@@ -2558,6 +2563,7 @@ const TRANSLATIONS: Partial<Record<
     'Liên hệ ANSLIFE': 'Связаться с ANSLIFE',
   },
   es: {
+    'Foam / Mút / Xốp': 'Espuma / Esponja',
     'Giải pháp vận hành & cung ứng': 'Soluciones de operación y suministro',
     'Phát triển sản phẩm OEM / ODM': 'Desarrollo de producto OEM / ODM',
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
@@ -2645,6 +2651,7 @@ const TRANSLATIONS: Partial<Record<
     'Tải tài liệu / bản vẽ lên': 'Subir documentos / planos',
   },
   zh: {
+    'Foam / Mút / Xốp': '泡棉 / 海绵',
     'Giải pháp vận hành & cung ứng': '运营与供应解决方案',
     'Phát triển sản phẩm OEM / ODM': 'OEM / ODM 产品开发',
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
