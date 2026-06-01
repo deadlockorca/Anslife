@@ -15146,16 +15146,6 @@ a.mobile-menu-utility-link {
   line-height: 1;
 }
 
-.ai-chair-process .ai-chair-section-heading {
-  grid-template-columns: minmax(9rem, 0.18fr) minmax(0, 1fr);
-  align-items: end;
-  column-gap: 1rem;
-}
-
-.ai-chair-process .ai-chair-section-heading h3 {
-  font-size: clamp(1.9rem, 3vw, 3rem);
-}
-
 .ai-chair-cta {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -15213,10 +15203,6 @@ a.mobile-menu-utility-link {
   .ai-chair-hero {
     min-height: 520px;
     background-position: 60% center;
-  }
-
-  .ai-chair-process .ai-chair-section-heading {
-    grid-template-columns: 1fr;
   }
 
   .ai-chair-hero h2,

@@ -521,8 +521,8 @@ const PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_VN = `
   <section id="chairs" class="ai-section ai-chair-page ai-company-overview">
     <header class="ai-chair-hero">
       <h2>Ghế</h2>
-      <p class="ai-chair-lead">ANSLIFE hỗ trợ phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng ghế tại Việt Nam theo bản vẽ, mẫu duyệt, vật liệu, tiêu chuẩn kỹ thuật và yêu cầu riêng của từng buyer.</p>
-      <p>Trang này tập trung vào năng lực sản xuất, nhóm ghế có thể triển khai, vật liệu sử dụng, tiêu chuẩn cần kiểm soát và quy trình làm việc với buyer quốc tế.</p>
+      <p class="ai-chair-lead">ANSLIFE hỗ trợ phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng ghế tại Việt Nam theo bản vẽ, mẫu duyệt, vật liệu, tiêu chuẩn kỹ thuật và yêu cầu riêng của từng khách hàng.</p>
+      <p>Trang này tập trung vào năng lực sản xuất, nhóm ghế có thể triển khai, vật liệu sử dụng, tiêu chuẩn cần kiểm soát và quy trình làm việc với khách hàng quốc tế.</p>
     </header>
 
     <section class="ai-chair-section">
@@ -532,61 +532,61 @@ const PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_VN = `
       </div>
       <div class="ai-chair-type-grid">
         <article class="ai-chair-type-card"><span>01</span><h4>Ghế ăn</h4><p>Ghế dùng cho nhà ở, nhà hàng, khách sạn và các bộ sưu tập nội thất theo yêu cầu. Có thể triển khai ghế ăn gỗ tự nhiên, ghế ăn bọc nệm, ghế ăn kết hợp vật liệu, ghế ăn theo bản vẽ hoặc mẫu duyệt.</p></article>
-        <article class="ai-chair-type-card"><span>02</span><h4>Ghế lounge</h4><p>Ghế thư giãn, ghế tiếp khách, ghế accent cho phòng khách, khách sạn, resort và không gian thương mại. Có thể triển khai bằng gỗ, bọc nệm hoặc kết hợp nhiều vật liệu.</p></article>
-        <article class="ai-chair-type-card"><span>03</span><h4>Ghế cafe</h4><p>Ghế dùng cho quán cafe, nhà hàng, không gian thương mại và hospitality. Có thể triển khai ghế cafe trong nhà, ngoài trời, ghế gỗ, ghế bọc nệm hoặc ghế theo tiêu chuẩn thương mại.</p></article>
-        <article class="ai-chair-type-card"><span>04</span><h4>Ghế bar / counter</h4><p>Ghế cao dùng cho quầy bar, đảo bếp, nhà hàng, khách sạn hoặc không gian thương mại. Có thể triển khai theo chiều cao, vật liệu, kết cấu và tiêu chuẩn riêng của buyer.</p></article>
-        <article class="ai-chair-type-card"><span>05</span><h4>Ghế gỗ</h4><p>Ghế sử dụng gỗ tự nhiên, plywood, veneer hoặc vật liệu gỗ kỹ thuật. Có thể triển khai với gỗ cao su, Acacia, Oak, Ash, Pine hoặc vật liệu theo yêu cầu.</p></article>
-        <article class="ai-chair-type-card"><span>06</span><h4>Ghế bọc nệm</h4><p>Ghế sử dụng foam, vải, da hoặc vật liệu bọc theo mẫu duyệt. Có thể triển khai ghế ăn bọc nệm, ghế lounge bọc nệm, ghế khách sạn, ghế thương mại hoặc ghế bọc theo mẫu riêng.</p></article>
-        <article class="ai-chair-type-card"><span>07</span><h4>Ghế ngoài trời</h4><p>Ghế dùng cho sân vườn, ban công, resort, nhà hàng ngoài trời hoặc không gian có yêu cầu về độ bền vật liệu và điều kiện sử dụng. Có thể triển khai với gỗ, kim loại, vật liệu tự nhiên hoặc vật liệu phù hợp theo dự án.</p></article>
-        <article class="ai-chair-type-card"><span>08</span><h4>Ghế tùy chỉnh</h4><p>Ghế phát triển theo bản vẽ, mẫu thật, hình ảnh tham khảo, kích thước riêng, vật liệu riêng, tiêu chuẩn đóng gói riêng hoặc yêu cầu OEM / ODM của buyer.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Ghế thư giãn</h4><p>Ghế thư giãn, ghế tiếp khách, ghế điểm nhấn cho phòng khách, khách sạn, khu nghỉ dưỡng và không gian thương mại. Có thể triển khai bằng gỗ, bọc nệm hoặc kết hợp nhiều vật liệu.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Ghế quán cà phê</h4><p>Ghế dùng cho quán cà phê, nhà hàng, không gian thương mại, khách sạn và khu dịch vụ lưu trú. Có thể triển khai ghế trong nhà, ngoài trời, ghế gỗ, ghế bọc nệm hoặc ghế theo tiêu chuẩn thương mại.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Ghế quầy cao</h4><p>Ghế cao dùng cho quầy, đảo bếp, nhà hàng, khách sạn hoặc không gian thương mại. Có thể triển khai theo chiều cao, vật liệu, kết cấu và tiêu chuẩn riêng của khách hàng.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Ghế gỗ</h4><p>Ghế sử dụng gỗ tự nhiên, ván ép, ván lạng hoặc vật liệu gỗ kỹ thuật. Có thể triển khai với gỗ cao su, keo, sồi, tần bì, thông hoặc vật liệu theo yêu cầu.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Ghế bọc nệm</h4><p>Ghế sử dụng mút, vải, da hoặc vật liệu bọc theo mẫu duyệt. Có thể triển khai ghế ăn bọc nệm, ghế thư giãn bọc nệm, ghế khách sạn, ghế thương mại hoặc ghế bọc theo mẫu riêng.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Ghế ngoài trời</h4><p>Ghế dùng cho sân vườn, ban công, khu nghỉ dưỡng, nhà hàng ngoài trời hoặc không gian có yêu cầu về độ bền vật liệu và điều kiện sử dụng. Có thể triển khai với gỗ, kim loại, vật liệu tự nhiên hoặc vật liệu phù hợp theo dự án.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Ghế tùy chỉnh</h4><p>Ghế phát triển theo bản vẽ, mẫu thật, hình ảnh tham khảo, kích thước riêng, vật liệu riêng, tiêu chuẩn đóng gói riêng hoặc yêu cầu gia công và phát triển theo thiết kế của khách hàng.</p></article>
       </div>
     </section>
 
     <section class="ai-chair-section">
       <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">VẬT LIỆU</p><h3>Vật liệu có thể sử dụng</h3></div>
       <div class="ai-chair-material-grid">
-        <article><h4>Gỗ &amp; vật liệu gỗ</h4><p>Gỗ cao su, Acacia, Oak, Ash, Pine, plywood, MDF, veneer và vật liệu gỗ theo yêu cầu.</p></article>
-        <article><h4>Vật liệu bọc</h4><p>Foam, vải, da PU, da thật, vải ngoài trời và vật liệu bọc theo mẫu duyệt.</p></article>
+        <article><h4>Gỗ &amp; vật liệu gỗ</h4><p>Gỗ cao su, gỗ keo, gỗ sồi, gỗ tần bì, gỗ thông, ván ép, ván sợi tỷ trọng trung bình, ván lạng và vật liệu gỗ theo yêu cầu.</p></article>
+        <article><h4>Vật liệu bọc</h4><p>Mút, vải, da nhân tạo, da thật, vải ngoài trời và vật liệu bọc theo mẫu duyệt.</p></article>
         <article><h4>Vật liệu kết hợp</h4><p>Kim loại, mây tre hoặc vật liệu tự nhiên, phụ kiện lắp ráp, keo, sơn, vật liệu hoàn thiện và vật liệu đóng gói.</p></article>
       </div>
     </section>
 
     <section class="ai-chair-section ai-chair-checks">
-      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QC CHECKLIST</p><h3>Tiêu chuẩn cần kiểm soát</h3></div>
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">TIÊU CHUẨN KIỂM SOÁT</p><h3>Tiêu chuẩn cần kiểm soát</h3></div>
       <ul>
-        <li>Kích thước sản phẩm</li><li>Kết cấu và độ ổn định</li><li>Khả năng chịu lực</li><li>Độ ẩm vật liệu</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Độ đồng đều giữa các lô hàng</li><li>Tiêu chuẩn foam, vải, da hoặc vật liệu bọc</li><li>Độ chắc chắn của liên kết</li><li>Phụ kiện và chi tiết lắp ráp</li><li>Quy cách đóng gói</li><li>Nhãn mác, carton mark và hướng dẫn lắp ráp nếu có</li><li>Tình trạng hàng trước khi xuất khẩu</li>
+        <li>Kích thước sản phẩm</li><li>Kết cấu và độ ổn định</li><li>Khả năng chịu lực</li><li>Độ ẩm vật liệu</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Độ đồng đều giữa các lô hàng</li><li>Tiêu chuẩn mút, vải, da hoặc vật liệu bọc</li><li>Độ chắc chắn của liên kết</li><li>Phụ kiện và chi tiết lắp ráp</li><li>Quy cách đóng gói</li><li>Nhãn mác, ký mã hiệu thùng và hướng dẫn lắp ráp nếu có</li><li>Tình trạng hàng trước khi xuất khẩu</li>
       </ul>
     </section>
 
     <section class="ai-chair-section">
-      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">ANSLIFE SUPPORT</p><h3>ANSLIFE hỗ trợ gì trong dự án ghế?</h3></div>
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">HỖ TRỢ CỦA ANSLIFE</p><h3>ANSLIFE hỗ trợ gì trong dự án ghế?</h3></div>
       <div class="ai-chair-support-grid">
-        <article><span>01</span><h4>Phát triển OEM / ODM</h4><p>Hỗ trợ phát triển ghế từ bản vẽ, mẫu thật, hình ảnh tham khảo hoặc ý tưởng ban đầu đến mẫu sản xuất.</p></article>
-        <article><span>02</span><h4>Chuỗi cung ứng vật liệu</h4><p>Kết nối nguồn vật liệu phù hợp tại Việt Nam: gỗ, plywood, veneer, foam, vải, da, phụ kiện, sơn và vật liệu đóng gói.</p></article>
+        <article><span>01</span><h4>Phát triển theo yêu cầu</h4><p>Hỗ trợ phát triển ghế từ bản vẽ, mẫu thật, hình ảnh tham khảo hoặc ý tưởng ban đầu đến mẫu sản xuất.</p></article>
+        <article><span>02</span><h4>Chuỗi cung ứng vật liệu</h4><p>Kết nối nguồn vật liệu phù hợp tại Việt Nam: gỗ, ván ép, ván lạng, mút, vải, da, phụ kiện, sơn và vật liệu đóng gói.</p></article>
         <article><span>03</span><h4>Thẩm định năng lực nhà máy</h4><p>Đánh giá nhà máy phù hợp với từng nhóm ghế, vật liệu, sản lượng, tiêu chuẩn kỹ thuật và yêu cầu giao hàng.</p></article>
-        <article><span>04</span><h4>QC độc lập</h4><p>Kiểm soát chất lượng theo mẫu duyệt, bản vẽ, checklist kiểm hàng và tiêu chuẩn của từng thị trường.</p></article>
-        <article><span>05</span><h4>Đóng gói &amp; xuất khẩu</h4><p>Hỗ trợ tiêu chuẩn đóng gói, nhãn mác, chứng từ, logistics và xuất hàng quốc tế theo kế hoạch của buyer.</p></article>
+        <article><span>04</span><h4>Kiểm soát chất lượng độc lập</h4><p>Kiểm soát chất lượng theo mẫu duyệt, bản vẽ, danh sách kiểm hàng và tiêu chuẩn của từng thị trường.</p></article>
+        <article><span>05</span><h4>Đóng gói &amp; xuất khẩu</h4><p>Hỗ trợ tiêu chuẩn đóng gói, nhãn mác, chứng từ, vận chuyển và xuất hàng quốc tế theo kế hoạch của khách hàng.</p></article>
       </div>
     </section>
 
     <section class="ai-chair-section ai-chair-process">
-      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">WORKFLOW</p><h3>Quy trình triển khai</h3></div>
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QUY TRÌNH</p><h3>Quy trình triển khai</h3></div>
       <ol>
-        <li>Buyer gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu sản phẩm.</li><li>ANSLIFE đánh giá quy cách sản phẩm, vật liệu, kết cấu và khả năng sản xuất.</li><li>ANSLIFE đề xuất phương án vật liệu, nhà máy, mẫu và tiêu chuẩn kiểm soát.</li><li>Phát triển mẫu hoặc đối chiếu mẫu đã duyệt.</li><li>Chuẩn hóa bản vẽ, vật liệu, màu sắc, checklist QC và quy cách đóng gói.</li><li>Tổ chức sản xuất theo kế hoạch.</li><li>QC độc lập theo từng giai đoạn nếu cần.</li><li>Đóng gói, kiểm tra trước xuất và xuất hàng quốc tế.</li>
+        <li>Khách hàng gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu sản phẩm.</li><li>ANSLIFE đánh giá quy cách sản phẩm, vật liệu, kết cấu và khả năng sản xuất.</li><li>ANSLIFE đề xuất phương án vật liệu, nhà máy, mẫu và tiêu chuẩn kiểm soát.</li><li>Phát triển mẫu hoặc đối chiếu mẫu đã duyệt.</li><li>Chuẩn hóa bản vẽ, vật liệu, màu sắc, danh sách kiểm soát chất lượng và quy cách đóng gói.</li><li>Tổ chức sản xuất theo kế hoạch.</li><li>Kiểm soát chất lượng độc lập theo từng giai đoạn nếu cần.</li><li>Đóng gói, kiểm tra trước xuất và xuất hàng quốc tế.</li>
       </ol>
     </section>
 
     <section class="ai-chair-section ai-chair-buyer">
-      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">BUYER INPUT</p><h3>Buyer cần chuẩn bị gì?</h3></div>
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">THÔNG TIN CẦN CUNG CẤP</p><h3>Khách hàng cần chuẩn bị gì?</h3></div>
       <ul>
-        <li>Bản vẽ kỹ thuật</li><li>Hình ảnh tham khảo</li><li>Mẫu thật nếu có</li><li>Kích thước sản phẩm</li><li>Vật liệu mong muốn</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Tiêu chuẩn foam, vải, da nếu có</li><li>Số lượng dự kiến</li><li>Thị trường xuất khẩu</li><li>Tiêu chuẩn đóng gói</li><li>Mức giá mục tiêu nếu có</li><li>Kế hoạch giao hàng</li>
+        <li>Bản vẽ kỹ thuật</li><li>Hình ảnh tham khảo</li><li>Mẫu thật nếu có</li><li>Kích thước sản phẩm</li><li>Vật liệu mong muốn</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Tiêu chuẩn mút, vải, da nếu có</li><li>Số lượng dự kiến</li><li>Thị trường xuất khẩu</li><li>Tiêu chuẩn đóng gói</li><li>Mức giá mục tiêu nếu có</li><li>Kế hoạch giao hàng</li>
       </ul>
     </section>
 
     <section class="ai-chair-cta ai-company-request-panel">
       <div>
         <h3>Gửi yêu cầu sản xuất ghế cho ANSLIFE</h3>
-        <p>Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo, vật liệu, số lượng và thị trường xuất khẩu. ANSLIFE sẽ xem xét và đề xuất phương án sản xuất, vật liệu, QC, đóng gói và xuất hàng phù hợp.</p>
+        <p>Khách hàng có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo, vật liệu, số lượng và thị trường xuất khẩu. ANSLIFE sẽ xem xét và đề xuất phương án sản xuất, vật liệu, kiểm soát chất lượng, đóng gói và xuất hàng phù hợp.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
