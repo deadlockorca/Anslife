@@ -583,11 +583,6 @@ const PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_VN = `
       </ul>
     </section>
 
-    <aside class="ai-chair-note">
-      <h3>Ghi chú tránh trùng danh mục</h3>
-      <p>Các sản phẩm ghế đôn, ghế băng, ottoman và các sản phẩm mây tre chuyên biệt không đưa sâu vào trang này. Các nhóm đó được trình bày ở danh mục riêng để tránh trùng lặp nội dung.</p>
-    </aside>
-
     <section class="ai-chair-cta ai-company-request-panel">
       <div>
         <h3>Gửi yêu cầu sản xuất ghế cho ANSLIFE</h3>
@@ -664,11 +659,6 @@ const PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_EN = `
         <li>Technical drawings</li><li>Reference images</li><li>Physical sample if available</li><li>Product dimensions</li><li>Preferred materials</li><li>Color and surface finish</li><li>Foam, fabric, or leather standards if any</li><li>Expected quantity</li><li>Export market</li><li>Packing standards</li><li>Target price if any</li><li>Delivery plan</li>
       </ul>
     </section>
-
-    <aside class="ai-chair-note">
-      <h3>Category Note</h3>
-      <p>Stools, benches, ottomans, and specialist rattan or bamboo products are not covered deeply on this page. Those groups are presented separately to avoid duplicated content.</p>
-    </aside>
 
     <section class="ai-chair-cta ai-company-request-panel">
       <div>
