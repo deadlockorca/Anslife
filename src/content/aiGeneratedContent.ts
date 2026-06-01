@@ -263,6 +263,143 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
   </section>
 `.trim();
 
+const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
+  <section id="finished-furniture" class="ai-section ai-finished-page ai-company-overview">
+    <header class="ai-finished-hero">
+      <div class="ai-finished-hero-copy">
+        <h2>Nội thất hoàn thiện</h2>
+        <p>ANSLIFE sản xuất nội thất hoàn thiện theo mẫu duyệt, bản vẽ và tiêu chuẩn của buyer quốc tế tại Việt Nam, từ lựa chọn vật liệu đến kiểm soát chất lượng và đóng gói xuất khẩu.</p>
+        <p>Chúng tôi kết nối sản phẩm với hệ thống nhà máy, chuỗi cung ứng vật liệu, lưu kho và xuất hàng định kỳ để buyer có thể vận hành đơn hàng ổn định, minh bạch và phù hợp từng thị trường.</p>
+      </div>
+    </header>
+
+    <section class="ai-finished-catalog">
+      <p class="ai-finished-kicker">DANH MỤC SẢN PHẨM</p>
+      <h3>10 nhóm sản phẩm nội thất hoàn thiện</h3>
+      <div class="ai-finished-grid">
+        <article id="chairs" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-1" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">01</p>
+            <h4>Ghế</h4>
+            <p>Sản xuất đa dạng các dòng ghế ăn, ghế phòng khách, ghế bar, ghế cafe, ghế gỗ và ghế bọc nệm.</p>
+            <a href="/vn/products-solutions/finished-furniture#chairs">Xem chi tiết <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="tables" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-2" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">02</p>
+            <h4>Bàn</h4>
+            <p>Các dòng bàn ăn, bàn cafe, bàn làm việc và bàn phụ theo tiêu chuẩn chất lượng và hoàn thiện theo yêu cầu.</p>
+            <a href="/vn/products-solutions/finished-furniture#tables">Xem chi tiết <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="cabinets-storage" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-3" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">03</p>
+            <h4>Tủ & Lưu trữ</h4>
+            <p>Tủ quần áo, tủ sideboard, tủ giày và các giải pháp lưu trữ theo thiết kế và công năng của dự án.</p>
+            <a href="/vn/products-solutions/finished-furniture#cabinets-storage">Xem chi tiết <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="shelves" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-4" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">04</p>
+            <h4>Kệ</h4>
+            <p>Kệ sách, kệ trang trí và kệ lưu trữ theo bản vẽ hoặc thiết kế riêng cho từng thị trường.</p>
+            <a href="/vn/products-solutions/finished-furniture#shelves">Xem chi tiết <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="beds" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-5" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">05</p>
+            <h4>Giường</h4>
+            <p>Giường ngủ và khung giường theo các tiêu chuẩn kỹ thuật, độ bền kết cấu và yêu cầu đóng gói xuất khẩu.</p>
+            <a href="/vn/products-solutions/finished-furniture#beds">Xem chi tiết <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="stools-benches" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-6" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">06</p>
+            <h4>Ghế đôn & ghế băng</h4>
+            <p>Ghế đôn, ghế băng và ottoman theo yêu cầu kích thước, vật liệu bọc và quy cách hoàn thiện.</p>
+            <a href="/vn/products-solutions/finished-furniture#stools-benches">Xem chi tiết <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="rattan-bamboo-furniture" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-7" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">07</p>
+            <h4>Nội thất mây tre</h4>
+            <p>Ghế mây, bàn mây, sản phẩm kết hợp vật liệu tự nhiên và khung gỗ theo định hướng thương mại của buyer.</p>
+            <a href="/vn/products-solutions/finished-furniture#rattan-bamboo-furniture">Xem chi tiết <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="upholstery" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-8" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">08</p>
+            <h4>Nội thất bọc nệm</h4>
+            <p>Sofa, ghế lounge, ghế ăn bọc nệm và các sản phẩm theo mẫu duyệt, tiêu chuẩn foam và vật liệu bọc.</p>
+            <a href="/vn/products-solutions/finished-furniture#upholstery">Xem chi tiết <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="outdoor-furniture" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-9" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">09</p>
+            <h4>Nội thất ngoài trời</h4>
+            <p>Nhóm sản phẩm ngoài trời với vật liệu và hoàn thiện phù hợp điều kiện sử dụng, lưu kho và vận chuyển quốc tế.</p>
+            <a href="/vn/products-solutions/finished-furniture#outdoor-furniture">Xem chi tiết <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="custom-furniture" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-10" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">10</p>
+            <h4>Nội thất tùy chỉnh</h4>
+            <p>Sản phẩm theo bản vẽ kỹ thuật, mẫu duyệt và tiêu chuẩn riêng của từng buyer quốc tế.</p>
+            <a href="/vn/products-solutions/finished-furniture#custom-furniture">Xem chi tiết <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-finished-highlights">
+      <article><i class="ai-company-overview-icon ai-icon-factory" aria-hidden="true"></i><div><h4>Sản xuất theo yêu cầu</h4><p>Từ mẫu duyệt, bản vẽ kỹ thuật và tiêu chuẩn riêng của buyer.</p></div></article>
+      <article><i class="ai-company-overview-icon ai-icon-layers" aria-hidden="true"></i><div><h4>Chuỗi cung ứng vật liệu</h4><p>Kết nối nguồn vật liệu ổn định tại Việt Nam: gỗ tự nhiên, plywood, MDF, veneer, foam và phụ kiện.</p></div></article>
+      <article><i class="ai-company-overview-icon ai-icon-shield-check" aria-hidden="true"></i><div><h4>Kiểm soát chất lượng độc lập</h4><p>QC độc lập theo mẫu duyệt, tiêu chuẩn vật liệu, kích thước, màu sắc và quy cách đóng gói.</p></div></article>
+      <article><i class="ai-company-overview-icon ai-icon-truck" aria-hidden="true"></i><div><h4>Đóng gói & xuất khẩu</h4><p>Hỗ trợ chứng từ, logistics và xuất hàng định kỳ theo kế hoạch dự án.</p></div></article>
+    </section>
+
+    <section class="ai-finished-cta">
+      <div class="ai-finished-cta-copy">
+        <h3>Gửi yêu cầu sản phẩm cho ANSLIFE</h3>
+        <p>Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu tiêu chuẩn sản phẩm. ANSLIFE sẽ xem xét và đề xuất phương án sản xuất, vật liệu, kiểm soát chất lượng và xuất hàng phù hợp.</p>
+        <div class="ai-company-request-actions">
+          <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
+          <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
+          <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
+        </div>
+      </div>
+    </section>
+  </section>
+`.trim();
+
 const PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN = `
   <section id="oem-odm-product-development" class="ai-section ai-oem-odm-page ai-company-overview">
     <header class="ai-oem-odm-hero">
@@ -13626,6 +13763,18 @@ export function getAIFallbackSectionHtml(
   language: LanguageCode = 'vn',
   subSectionSlug = '',
 ): string | null {
+  if (pageSlug === 'products-solutions' && sectionId === 'finished-furniture') {
+    return translateAiHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_FINISHED_FURNITURE_SECTION_VN}</div>`,
+    )
+      .replace(
+        /href="\/vn\/products-solutions\/finished-furniture/g,
+        `href="/${language}/products-solutions/finished-furniture`,
+      )
+      .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
+  }
+
   if (pageSlug === 'products-solutions' && sectionId === 'operations-supply-solutions') {
     const detailHtml = getOperationsSupplyDetailHtml(subSectionSlug, language);
     if (detailHtml) {

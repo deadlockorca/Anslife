@@ -5227,6 +5227,298 @@ a.mobile-menu-utility-link {
   padding-left: 0;
 }
 
+.ai-finished-page {
+  display: grid;
+  gap: 1rem;
+  border: 0;
+  color: #2d2018;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.ai-finished-hero {
+  position: relative;
+  display: block;
+  aspect-ratio: 1774 / 887;
+  border: 0;
+  border-radius: 0;
+  min-height: clamp(360px, 34vw, 560px);
+  background: url('/assets/products/finished-furniture-banner-ai.png') center center / cover
+    no-repeat;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.ai-finished-hero-copy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  align-content: start;
+  gap: 0.9rem;
+  max-width: min(62%, 700px);
+  padding: clamp(1rem, 2.2vw, 1.8rem);
+  margin: 0;
+  background: transparent !important;
+  backdrop-filter: none;
+}
+
+.ai-finished-hero-copy,
+.ai-finished-hero-copy h2,
+.ai-finished-hero-copy p {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.ai-finished-breadcrumb {
+  margin: 0;
+  color: #8f7d6d !important;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.ai-finished-breadcrumb span {
+  margin: 0 0.32rem;
+}
+
+.ai-finished-hero-copy h2 {
+  margin: 0;
+  color: #2c1a10 !important;
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 3.4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.ai-finished-hero-copy p {
+  margin: 0;
+  max-width: 62ch;
+  color: #2d2018 !important;
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.ai-finished-catalog {
+  display: grid;
+  gap: 0.78rem;
+}
+
+.ai-finished-kicker {
+  margin: 0;
+  text-align: center;
+  color: #9f7a56 !important;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.ai-finished-catalog h3 {
+  margin: 0;
+  text-align: center;
+  color: #2c1a10 !important;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.04;
+}
+
+.ai-finished-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.76rem;
+}
+
+.ai-finished-card {
+  display: grid;
+  grid-template-rows: 152px minmax(0, 1fr);
+  border: 1px solid #eadfd4;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.ai-finished-card-media {
+  margin: 0;
+  border-bottom: 1px solid #efe6dc;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.ai-finished-media-1 {
+  background-image: url('/assets/products/finished-furniture/chair.jpg');
+}
+
+.ai-finished-media-2 {
+  background-image: url('/assets/products/finished-furniture/table.jpg');
+}
+
+.ai-finished-media-3 {
+  background-image: url('/assets/products/finished-furniture/cabinet-storage.jpg');
+}
+
+.ai-finished-media-4 {
+  background-image: url('/assets/products/finished-furniture/shelf.jpg');
+}
+
+.ai-finished-media-5 {
+  background-image: url('/assets/products/finished-furniture/bed.jpg');
+}
+
+.ai-finished-media-6 {
+  background-image: url('/assets/products/finished-furniture/stool-bench.jpg');
+}
+
+.ai-finished-media-7 {
+  background-image: url('/assets/products/finished-furniture/rattan-bamboo.jpg');
+}
+
+.ai-finished-media-8 {
+  background-image: url('/assets/products/finished-furniture/upholstery.jpg');
+}
+
+.ai-finished-media-9 {
+  background-image: url('/assets/products/finished-furniture/outdoor.jpg');
+}
+
+.ai-finished-media-10 {
+  background-image: url('/assets/products/finished-furniture/custom.jpg');
+}
+
+.ai-finished-card-body {
+  display: grid;
+  align-content: start;
+  gap: 0.44rem;
+  padding: 0.68rem;
+}
+
+.ai-finished-card-index {
+  margin: 0;
+  color: #ab835a !important;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.ai-finished-card h4 {
+  margin: 0;
+  color: #2c1a10 !important;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.ai-finished-card p {
+  margin: 0;
+  color: #2d2018 !important;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.ai-finished-card a {
+  margin-top: 0.12rem;
+  color: #2d2018 !important;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ai-finished-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.58rem;
+}
+
+.ai-finished-highlights article {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  align-items: start;
+  gap: 0.46rem;
+  border: 1px solid #eadfd4;
+  border-radius: 8px;
+  background: #fff;
+  padding: 0.76rem 0.7rem;
+}
+
+.ai-finished-highlights .ai-company-overview-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.ai-finished-highlights h4 {
+  margin: 0 0 0.2rem;
+  color: #2c1a10 !important;
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ai-finished-highlights p {
+  margin: 0;
+  color: #2d2018 !important;
+  font-size: 0.84rem;
+  line-height: 1.48;
+}
+
+.ai-finished-cta {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid #e7dbcf;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.ai-finished-cta-copy {
+  display: grid;
+  align-content: start;
+  gap: 0.7rem;
+  padding: 0.9rem;
+}
+
+.ai-finished-cta-copy h3 {
+  margin: 0;
+  color: #2c1a10 !important;
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2vw, 2.06rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.ai-finished-cta-copy p {
+  margin: 0;
+  color: #2d2018 !important;
+  font-size: 0.9rem;
+  line-height: 1.56;
+}
+
+.ai-finished-cta .ai-company-request-actions {
+  justify-content: flex-start;
+}
+
+.ai-finished-cta .ai-company-request-primary,
+.ai-finished-cta .ai-company-request-secondary {
+  min-width: 148px;
+}
+
+.ai-finished-cta-media {
+  margin: 0;
+  min-height: 100%;
+}
+
+.ai-finished-cta-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .ai-operations-supply {
   border: 0;
   color: #2d2018;
@@ -5846,6 +6138,124 @@ a.mobile-menu-utility-link {
 }
 
 @media (max-width: 820px) {
+  .ai-finished-page {
+    gap: 0.92rem;
+    padding: 0;
+  }
+
+  .ai-finished-hero {
+    border-radius: 0;
+    aspect-ratio: auto;
+    min-height: 420px;
+    background-position: center center;
+  }
+
+  .ai-finished-hero-copy {
+    gap: 0.64rem;
+    max-width: min(calc(100% - 1.8rem), 480px);
+    padding: 0.95rem 0.9rem 0.82rem;
+    margin: 0;
+    background: transparent !important;
+  }
+
+  .ai-finished-hero-copy h2 {
+    font-size: 2rem;
+  }
+
+  .ai-finished-breadcrumb {
+    font-size: 0.68rem;
+  }
+
+  .ai-finished-hero-copy p {
+    font-size: 0.93rem;
+    line-height: 1.58;
+  }
+
+  .ai-finished-catalog {
+    border: 1px solid #e7dbcf;
+    border-radius: 10px;
+    background: #fff;
+    padding: 0.88rem 0.78rem;
+  }
+
+  .ai-finished-catalog h3 {
+    font-size: 1.9rem;
+    text-align: left;
+  }
+
+  .ai-finished-kicker {
+    text-align: left;
+  }
+
+  .ai-finished-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.58rem;
+  }
+
+  .ai-finished-card {
+    grid-template-rows: 128px minmax(0, 1fr);
+    border-radius: 10px;
+  }
+
+  .ai-finished-card-body {
+    gap: 0.36rem;
+    padding: 0.66rem;
+  }
+
+  .ai-finished-card h4 {
+    font-size: 1.22rem;
+  }
+
+  .ai-finished-card p {
+    font-size: 0.86rem;
+    line-height: 1.44;
+  }
+
+  .ai-finished-card a {
+    font-size: 0.84rem;
+  }
+
+  .ai-finished-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.58rem;
+  }
+
+  .ai-finished-highlights article {
+    border-radius: 10px;
+    padding: 0.74rem 0.68rem;
+  }
+
+  .ai-finished-cta {
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+  }
+
+  .ai-finished-cta-copy {
+    padding: 0.88rem 0.8rem;
+  }
+
+  .ai-finished-cta-copy h3 {
+    font-size: 1.64rem;
+  }
+
+  .ai-finished-cta .ai-company-request-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .ai-finished-cta .ai-company-request-primary,
+  .ai-finished-cta .ai-company-request-secondary {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .ai-finished-cta-media {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+
   .ai-operations-supply {
     display: grid;
     gap: 0.95rem;
@@ -7925,6 +8335,30 @@ a.mobile-menu-utility-link {
 }
 
 @media (max-width: 480px) {
+  .ai-finished-hero-copy h2 {
+    font-size: 1.8rem;
+  }
+
+  .ai-finished-catalog h3 {
+    font-size: 1.62rem;
+  }
+
+  .ai-finished-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-finished-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-finished-card {
+    grid-template-rows: 142px minmax(0, 1fr);
+  }
+
+  .ai-finished-cta-copy h3 {
+    font-size: 1.48rem;
+  }
+
   .ai-operations-hero-copy h2 {
     font-size: 1.86rem;
   }
@@ -13130,8 +13564,41 @@ a.mobile-menu-utility-link {
     .site-footer *
   ):not(.submenu):not(.submenu *):not(.language-popup-overlay):not(.mobile-menu-overlay):not(
     [style*='url(']
+  ):not(.ai-finished-hero):not(
+    .ai-finished-hero-copy
   ) {
   background: var(--bg) !important;
+}
+
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  .ai-finished-hero {
+  background: url('/assets/products/finished-furniture-banner-ai.png') center center / cover
+    no-repeat !important;
+  border: 0 !important;
+}
+
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  .html-panel:has(.ai-finished-page),
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  .ai-section.ai-finished-page {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  .ai-finished-hero-copy,
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  .ai-finished-hero-copy
+  h2,
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  .ai-finished-hero-copy
+  p {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
 }
 
 .site-shell:not(.is-admin-route):not(.is-company-intro-route):not(.is-wood-theme-route) .site-footer {

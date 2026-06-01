@@ -129,7 +129,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'global-network' ||
     config.slug === 'scholarship-community' ||
     (config.slug === 'products-solutions' &&
-      section.id === 'operations-supply-solutions') ||
+      (section.id === 'operations-supply-solutions' ||
+        section.id === 'finished-furniture')) ||
     (config.slug === 'resources' && section.id === 'faq') ||
     isCustomAboutSection ||
     (config.slug === 'about-anslife' &&
@@ -146,7 +147,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'global-network' ||
     config.slug === 'scholarship-community' ||
     (config.slug === 'products-solutions' &&
-      section.id === 'operations-supply-solutions') ||
+      (section.id === 'operations-supply-solutions' ||
+        section.id === 'finished-furniture')) ||
     (config.slug === 'resources' && section.id === 'faq') ||
     (config.slug === 'about-anslife' &&
       (section.id === 'company-intro' ||

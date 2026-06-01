@@ -63,26 +63,6 @@ export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
   {
     label: 'Nội thất hoàn thiện',
     path: '/products-solutions/finished-furniture',
-    children: [
-      { label: 'Ghế', path: '/products-solutions/finished-furniture/chairs' },
-      { label: 'Bàn', path: '/products-solutions/finished-furniture/tables' },
-      {
-        label: 'Tủ & Lưu trữ',
-        path: '/products-solutions/finished-furniture/cabinets-storage',
-      },
-      {
-        label: 'Ghế đôn & ghế băng',
-        path: '/products-solutions/finished-furniture/stools-benches',
-      },
-      {
-        label: 'Nội thất mây tre',
-        path: '/products-solutions/finished-furniture/rattan-bamboo-furniture',
-      },
-      {
-        label: 'Nội thất tùy chỉnh',
-        path: '/products-solutions/finished-furniture/custom-furniture',
-      },
-    ],
   },
   {
     label: 'Linh kiện nội thất',
