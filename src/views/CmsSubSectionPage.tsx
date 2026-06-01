@@ -50,6 +50,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'finished-furniture' &&
     detailSlug === 'chairs';
+  const isFinishedFurnitureTablesDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finished-furniture' &&
+    detailSlug === 'tables';
   const isOperationsOemOdmDetail =
     config.slug === 'products-solutions' &&
     section.id === 'operations-supply-solutions' &&
@@ -119,6 +123,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language === 'vn'
       ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng ghế tại Việt Nam.'
       : 'Development, manufacturing, quality control, packing, and export capability for chair programs in Vietnam.';
+  const tablesSeoTitle = language === 'vn' ? 'Bàn' : 'Tables';
+  const tablesSeoDescription =
+    language === 'vn'
+      ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng bàn tại Việt Nam.'
+      : 'Development, manufacturing, quality control, packing, and export capability for table programs in Vietnam.';
   const fallbackHtml = getAIFallbackSectionHtml(
     config.slug,
     section.id,
@@ -177,6 +186,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldShowError = Boolean(error) && !resolvedHtml;
   const seoTitle = isFinishedFurnitureChairsDetail
     ? `${chairsSeoTitle} | ${t(config.title)}`
+    : isFinishedFurnitureTablesDetail
+      ? `${tablesSeoTitle} | ${t(config.title)}`
     : isOperationsOemOdmDetail
       ? `${oemOdmSeoTitle} | ${t(config.title)}`
       : isOperationsFeasibilityDetail
@@ -196,6 +207,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       : `${t(section.title)} | ${t(config.title)}`;
   const seoDescription = isFinishedFurnitureChairsDetail
     ? chairsSeoDescription
+    : isFinishedFurnitureTablesDetail
+      ? tablesSeoDescription
     : isOperationsOemOdmDetail
       ? oemOdmSeoDescription
       : isOperationsFeasibilityDetail

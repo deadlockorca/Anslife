@@ -293,7 +293,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
             <p class="ai-finished-card-index">02</p>
             <h4>Bàn</h4>
             <p>Các dòng bàn ăn, bàn cafe, bàn làm việc và bàn phụ theo tiêu chuẩn chất lượng và hoàn thiện theo yêu cầu.</p>
-            <a href="/vn/products-solutions/finished-furniture#tables">Xem chi tiết <span>→</span></a>
+            <a href="/vn/products-solutions/finished-furniture/tables">Xem chi tiết <span>→</span></a>
           </div>
         </article>
 
@@ -420,7 +420,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
             <p class="ai-finished-card-index">02</p>
             <h4>Tables</h4>
             <p>Dining tables, cafe tables, work tables, and side tables made to buyer quality and finishing requirements.</p>
-            <a href="/en/products-solutions/finished-furniture#tables">View details <span>→</span></a>
+            <a href="/en/products-solutions/finished-furniture/tables">View details <span>→</span></a>
           </div>
         </article>
 
@@ -663,6 +663,163 @@ const PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_EN = `
     <section class="ai-chair-cta ai-company-request-panel">
       <div>
         <h3>Send your chair production request to ANSLIFE</h3>
+        <p>Buyers can send drawings, physical samples, reference images, materials, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
+        <a class="ai-company-request-secondary" href="/en/contact/upload-drawing">Upload drawings</a>
+        <a class="ai-company-request-secondary" href="/en/contact/company-info">Contact ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_TABLES_SECTION_VN = `
+  <section id="tables" class="ai-section ai-chair-page ai-table-page ai-company-overview">
+    <header class="ai-chair-hero ai-table-hero">
+      <h2>Bàn</h2>
+      <p class="ai-chair-lead">ANSLIFE hỗ trợ phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng bàn tại Việt Nam theo bản vẽ, mẫu duyệt, vật liệu, tiêu chuẩn kỹ thuật và yêu cầu riêng của từng khách hàng.</p>
+      <p>Trang này tập trung vào năng lực sản xuất, nhóm bàn có thể triển khai, vật liệu sử dụng, tiêu chuẩn cần kiểm soát và quy trình làm việc với khách hàng quốc tế.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading">
+        <p class="ai-chair-eyebrow">NHÓM BÀN CÓ THỂ TRIỂN KHAI</p>
+        <h3>Các dòng bàn ANSLIFE có thể phát triển và sản xuất</h3>
+      </div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Bàn ăn</h4><p>Bàn dùng cho nhà ở, nhà hàng, khách sạn và các bộ sưu tập nội thất theo yêu cầu. Có thể triển khai bàn ăn gỗ tự nhiên, bàn ăn kết hợp vật liệu, bàn ăn theo bản vẽ hoặc mẫu duyệt.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Bàn cà phê</h4><p>Bàn dùng cho quán cà phê, nhà hàng, phòng khách, khách sạn và không gian thương mại. Có thể triển khai bàn gỗ, bàn kết hợp kim loại, bàn tròn, vuông, chữ nhật hoặc theo thiết kế riêng.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Bàn làm việc</h4><p>Bàn dùng cho văn phòng, phòng làm việc tại nhà, khách sạn, căn hộ dịch vụ hoặc không gian làm việc. Có thể triển khai bàn gỗ, bàn kết hợp hộc tủ, bàn theo kích thước và tiêu chuẩn riêng.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Bàn trang trí</h4><p>Bàn dùng cho hành lang, phòng khách, khách sạn, căn hộ hoặc không gian trang trí. Có thể triển khai theo bản vẽ, vật liệu, kích thước và hoàn thiện bề mặt của khách hàng.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Bàn phụ</h4><p>Bàn nhỏ dùng cạnh sofa, giường, ghế thư giãn hoặc không gian trang trí. Có thể triển khai bằng gỗ, ván ép, ván lạng, kim loại hoặc kết hợp vật liệu.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Bàn ngoài trời</h4><p>Bàn dùng cho sân vườn, ban công, khu nghỉ dưỡng, nhà hàng ngoài trời hoặc các khu vực có yêu cầu về độ bền vật liệu và điều kiện sử dụng.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Bàn gỗ</h4><p>Bàn sử dụng gỗ tự nhiên, ván ép, ván lạng hoặc vật liệu gỗ kỹ thuật. Có thể triển khai với gỗ cao su, gỗ keo, gỗ sồi, gỗ tần bì, gỗ thông hoặc vật liệu theo yêu cầu.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Bàn tùy chỉnh</h4><p>Bàn phát triển theo bản vẽ, mẫu thật, hình ảnh tham khảo, kích thước riêng, vật liệu riêng, tiêu chuẩn đóng gói riêng hoặc yêu cầu gia công theo thiết kế của khách hàng.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">VẬT LIỆU</p><h3>Vật liệu có thể sử dụng</h3></div>
+      <div class="ai-chair-material-grid">
+        <article><h4>Gỗ &amp; vật liệu gỗ</h4><p>Gỗ cao su, gỗ keo, gỗ sồi, gỗ tần bì, gỗ thông, ván ép, ván sợi tỷ trọng trung bình, ván lạng và vật liệu gỗ theo yêu cầu.</p></article>
+        <article><h4>Vật liệu kết hợp</h4><p>Kim loại, kính, đá, mây tre hoặc vật liệu tự nhiên, phụ kiện lắp ráp, keo, sơn và vật liệu hoàn thiện.</p></article>
+        <article><h4>Vật liệu đóng gói</h4><p>Thùng giấy, mút bảo vệ, nẹp góc, pallet, nhãn mác, ký mã hiệu thùng và vật liệu đóng gói theo tiêu chuẩn xuất khẩu.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">TIÊU CHUẨN KIỂM SOÁT</p><h3>Tiêu chuẩn cần kiểm soát</h3></div>
+      <ul>
+        <li>Kích thước sản phẩm</li><li>Kết cấu và độ ổn định</li><li>Khả năng chịu lực</li><li>Độ phẳng mặt bàn</li><li>Độ chắc chắn của chân bàn và liên kết</li><li>Độ ẩm vật liệu</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Độ đồng đều giữa các lô hàng</li><li>Phụ kiện và chi tiết lắp ráp</li><li>Khả năng tháo lắp nếu có</li><li>Quy cách đóng gói</li><li>Nhãn mác, ký mã hiệu thùng và hướng dẫn lắp ráp nếu có</li><li>Tình trạng hàng trước khi xuất khẩu</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">HỖ TRỢ CỦA ANSLIFE</p><h3>ANSLIFE hỗ trợ gì trong dự án bàn?</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>Phát triển theo yêu cầu</h4><p>Hỗ trợ phát triển bàn từ bản vẽ, mẫu thật, hình ảnh tham khảo hoặc ý tưởng ban đầu đến mẫu sản xuất.</p></article>
+        <article><span>02</span><h4>Chuỗi cung ứng vật liệu</h4><p>Kết nối nguồn vật liệu phù hợp tại Việt Nam: gỗ, ván ép, ván sợi, ván lạng, kim loại, phụ kiện, sơn và vật liệu đóng gói.</p></article>
+        <article><span>03</span><h4>Thẩm định năng lực nhà máy</h4><p>Đánh giá nhà máy phù hợp với từng nhóm bàn, vật liệu, sản lượng, tiêu chuẩn kỹ thuật và yêu cầu giao hàng.</p></article>
+        <article><span>04</span><h4>Kiểm soát chất lượng độc lập</h4><p>Kiểm soát chất lượng theo mẫu duyệt, bản vẽ, danh sách kiểm hàng và tiêu chuẩn của từng thị trường.</p></article>
+        <article><span>05</span><h4>Đóng gói &amp; xuất khẩu</h4><p>Hỗ trợ tiêu chuẩn đóng gói, nhãn mác, chứng từ, vận chuyển và xuất hàng quốc tế theo kế hoạch của khách hàng.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QUY TRÌNH</p><h3>Quy trình triển khai</h3></div>
+      <ol>
+        <li>Khách hàng gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu sản phẩm.</li><li>ANSLIFE đánh giá quy cách sản phẩm, vật liệu, kết cấu và khả năng sản xuất.</li><li>ANSLIFE đề xuất phương án vật liệu, nhà máy, mẫu và tiêu chuẩn kiểm soát.</li><li>Phát triển mẫu hoặc đối chiếu mẫu đã duyệt.</li><li>Chuẩn hóa bản vẽ, vật liệu, màu sắc, danh sách kiểm soát chất lượng và quy cách đóng gói.</li><li>Tổ chức sản xuất theo kế hoạch.</li><li>Kiểm soát chất lượng độc lập theo từng giai đoạn nếu cần.</li><li>Đóng gói, kiểm tra trước xuất và xuất hàng quốc tế.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">THÔNG TIN CẦN CUNG CẤP</p><h3>Khách hàng cần chuẩn bị gì?</h3></div>
+      <ul>
+        <li>Bản vẽ kỹ thuật</li><li>Hình ảnh tham khảo</li><li>Mẫu thật nếu có</li><li>Kích thước sản phẩm</li><li>Vật liệu mong muốn</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Yêu cầu kết cấu hoặc tháo lắp nếu có</li><li>Số lượng dự kiến</li><li>Thị trường xuất khẩu</li><li>Tiêu chuẩn đóng gói</li><li>Mức giá mục tiêu nếu có</li><li>Kế hoạch giao hàng</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Gửi yêu cầu sản xuất bàn cho ANSLIFE</h3>
+        <p>Khách hàng có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo, vật liệu, số lượng và thị trường xuất khẩu. ANSLIFE sẽ xem xét và đề xuất phương án sản xuất, vật liệu, kiểm soát chất lượng, đóng gói và xuất hàng phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_TABLES_SECTION_EN = `
+  <section id="tables" class="ai-section ai-chair-page ai-table-page ai-company-overview">
+    <header class="ai-chair-hero ai-table-hero">
+      <h2>Tables</h2>
+      <p class="ai-chair-lead">ANSLIFE supports the development, manufacturing, quality control, packing, and export of table programs in Vietnam based on drawings, approved samples, materials, technical standards, and buyer-specific requirements.</p>
+      <p>This page focuses on manufacturing capability, table groups that can be developed, usable materials, control standards, and the working process with international buyers.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">TABLE GROUPS</p><h3>Table programs ANSLIFE can develop and manufacture</h3></div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Dining Tables</h4><p>Tables for homes, restaurants, hotels, and custom furniture collections, including solid wood tables, mixed-material tables, and tables made from drawings or approved samples.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Cafe Tables</h4><p>Tables for cafes, restaurants, living rooms, hotels, and commercial spaces, including round, square, rectangular, wooden, and mixed-material designs.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Work Tables</h4><p>Tables for offices, home offices, hotels, serviced apartments, and working spaces, developed with drawers, storage units, or project-specific dimensions.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Console Tables</h4><p>Console tables for corridors, living rooms, hotels, apartments, and decorative spaces, developed to buyer drawings, materials, dimensions, and finishes.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Side Tables</h4><p>Small tables for sofas, beds, lounge chairs, and decorative areas, made in wood, plywood, veneer, metal, or mixed materials.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Outdoor Tables</h4><p>Tables for gardens, balconies, resorts, outdoor restaurants, and spaces requiring durable materials and suitable use conditions.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Wooden Tables</h4><p>Tables using solid wood, plywood, veneer, or engineered wood materials, including rubberwood, Acacia, Oak, Ash, Pine, or buyer-specified materials.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Custom Tables</h4><p>Tables developed from drawings, physical samples, reference images, custom dimensions, specific materials, packing standards, or OEM / ODM requirements.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">MATERIALS</p><h3>Materials that can be used</h3></div>
+      <div class="ai-chair-material-grid">
+        <article><h4>Wood &amp; Wood Materials</h4><p>Rubberwood, Acacia, Oak, Ash, Pine, plywood, MDF, veneer, and buyer-specified wood materials.</p></article>
+        <article><h4>Mixed Materials</h4><p>Metal, glass, stone, rattan, natural materials, assembly hardware, glue, paint, and finishing materials.</p></article>
+        <article><h4>Packing Materials</h4><p>Cartons, protective foam, corner protection, pallets, labels, carton marks, and export-standard packing materials.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QC CHECKLIST</p><h3>Standards to control</h3></div>
+      <ul>
+        <li>Product dimensions</li><li>Structure and stability</li><li>Load-bearing performance</li><li>Tabletop flatness</li><li>Leg and joint strength</li><li>Material moisture content</li><li>Color and surface finish</li><li>Consistency across production batches</li><li>Hardware and assembly details</li><li>Knock-down capability if applicable</li><li>Packing specifications</li><li>Labels, carton marks, and assembly instructions if required</li><li>Pre-export product condition</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">ANSLIFE SUPPORT</p><h3>How ANSLIFE supports table projects</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>OEM / ODM Development</h4><p>Support table development from drawings, physical samples, reference images, or early ideas to production samples.</p></article>
+        <article><span>02</span><h4>Material Supply Chain</h4><p>Connect suitable material sources in Vietnam: wood, plywood, MDF, veneer, metal, hardware, paint, and packing materials.</p></article>
+        <article><span>03</span><h4>Factory Capability Assessment</h4><p>Assess factories for each table group, material type, output requirement, technical standard, and delivery requirement.</p></article>
+        <article><span>04</span><h4>Independent QC</h4><p>Control quality against approved samples, drawings, inspection checklists, and target-market standards.</p></article>
+        <article><span>05</span><h4>Packing &amp; Export</h4><p>Support packing standards, labels, documents, logistics, and international shipment according to buyer plans.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">WORKFLOW</p><h3>Implementation process</h3></div>
+      <ol>
+        <li>Buyer sends drawings, physical samples, reference images, or product requirements.</li><li>ANSLIFE reviews specifications, materials, structure, and manufacturing feasibility.</li><li>ANSLIFE proposes materials, factory options, sample direction, and control standards.</li><li>Develop samples or benchmark against approved samples.</li><li>Standardize drawings, materials, colors, QC checklists, and packing specifications.</li><li>Organize production according to the project plan.</li><li>Run independent QC by stage when required.</li><li>Pack, inspect before export, and ship internationally.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">BUYER INPUT</p><h3>What buyers should prepare</h3></div>
+      <ul>
+        <li>Technical drawings</li><li>Reference images</li><li>Physical sample if available</li><li>Product dimensions</li><li>Preferred materials</li><li>Color and surface finish</li><li>Structure or knock-down requirements if any</li><li>Expected quantity</li><li>Export market</li><li>Packing standards</li><li>Target price if any</li><li>Delivery plan</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Send your table production request to ANSLIFE</h3>
         <p>Buyers can send drawings, physical samples, reference images, materials, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
       </div>
       <div class="ai-company-request-actions">
@@ -14043,6 +14200,25 @@ export function getAIFallbackSectionHtml(
         language === 'vn'
           ? PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_VN
           : PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_EN;
+
+      return `<div class="ai-content">${sectionHtml}</div>`
+        .replace(
+          /href="\/vn\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(
+          /href="\/en\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
+        .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
+    }
+
+    if (subSectionSlug === 'tables') {
+      const sectionHtml =
+        language === 'vn'
+          ? PRODUCTS_FINISHED_FURNITURE_TABLES_SECTION_VN
+          : PRODUCTS_FINISHED_FURNITURE_TABLES_SECTION_EN;
 
       return `<div class="ai-content">${sectionHtml}</div>`
         .replace(

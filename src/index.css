@@ -13583,6 +13583,13 @@ a.mobile-menu-utility-link {
 }
 
 .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  .ai-table-hero {
+  background: url('/assets/products/finished-furniture/tables-banner.png') center center / cover
+    no-repeat !important;
+  border: 0 !important;
+}
+
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
   .html-panel:has(.ai-finished-page),
 .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
   .ai-section.ai-finished-page {
@@ -14940,6 +14947,11 @@ a.mobile-menu-utility-link {
   background: url('/assets/products/finished-furniture/chairs-banner.png') center center / cover
     no-repeat !important;
   overflow: hidden;
+}
+
+.ai-table-hero {
+  background: url('/assets/products/finished-furniture/tables-banner.png') center center / cover
+    no-repeat !important;
 }
 
 .ai-chair-eyebrow {
