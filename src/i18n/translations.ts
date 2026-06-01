@@ -9,6 +9,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
   en: {
     'Trang chủ': 'Home',
     'Về ANSLIFE': 'About ANSLIFE',
+    'Triết lý': 'Philosophy',
     'Sản phẩm & Giải pháp': 'Products & Solutions',
     'Nguyên liệu': 'Materials',
     'Sản xuất': 'Manufacturing',
@@ -21,6 +22,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
   jp: {
     'Trang chủ': 'ホーム',
     'Về ANSLIFE': 'ANSLIFEについて',
+    'Triết lý': '理念',
     'Sản phẩm & Giải pháp': '製品・ソリューション',
     'Nguyên liệu': '原材料',
     'Sản xuất': '製造',
@@ -33,6 +35,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
   kr: {
     'Trang chủ': '홈',
     'Về ANSLIFE': 'ANSLIFE 소개',
+    'Triết lý': '철학',
     'Sản phẩm & Giải pháp': '제품 및 솔루션',
     'Nguyên liệu': '원자재',
     'Sản xuất': '제조',
@@ -45,6 +48,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
   sv: {
     'Trang chủ': 'Hem',
     'Về ANSLIFE': 'Om ANSLIFE',
+    'Triết lý': 'Filosofi',
     'Sản phẩm & Giải pháp': 'Produkter & Lösningar',
     'Nguyên liệu': 'Material',
     'Sản xuất': 'Tillverkning',
@@ -57,6 +61,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
   fr: {
     'Trang chủ': 'Accueil',
     'Về ANSLIFE': 'À propos d’ANSLIFE',
+    'Triết lý': 'Philosophie',
     'Sản phẩm & Giải pháp': 'Produits & Solutions',
     'Nguyên liệu': 'Matériaux',
     'Sản xuất': 'Production',
@@ -69,6 +74,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
   ru: {
     'Trang chủ': 'Главная',
     'Về ANSLIFE': 'Об ANSLIFE',
+    'Triết lý': 'Философия',
     'Sản phẩm & Giải pháp': 'Продукты и решения',
     'Nguyên liệu': 'Материалы',
     'Sản xuất': 'Производство',
@@ -81,6 +87,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
   es: {
     'Trang chủ': 'Inicio',
     'Về ANSLIFE': 'Sobre ANSLIFE',
+    'Triết lý': 'Filosofía',
     'Sản phẩm & Giải pháp': 'Productos y Soluciones',
     'Nguyên liệu': 'Materiales',
     'Sản xuất': 'Producción',
@@ -93,6 +100,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
   zh: {
     'Trang chủ': '首页',
     'Về ANSLIFE': '关于 ANSLIFE',
+    'Triết lý': '理念',
     'Sản phẩm & Giải pháp': '产品与解决方案',
     'Nguyên liệu': '原材料',
     'Sản xuất': '生产',
@@ -524,6 +532,7 @@ const TRANSLATIONS: Partial<Record<
     'Không tìm thấy kết quả phù hợp. Bạn có thể thử từ khóa khác.':
       'No matching results found. You can try another keyword.',
     'Giới thiệu công ty': 'Company Introduction',
+    'Triết lý': 'Philosophy',
     'Tổng quan công ty': 'Company Overview',
     'Tầm nhìn - Sứ mệnh': 'Vision - Mission',
     'Tầm nhìn & Sứ mệnh': 'Vision & Mission',
@@ -1122,6 +1131,7 @@ const TRANSLATIONS: Partial<Record<
     'Tiếng Việt': 'ベトナム語',
     'Trang trí gỗ': '木の装飾',
     'Tranh': '絵画',
+    'Triết lý': '理念',
     'Triết lý vận hành': '経営理念',
     'Tầm nhìn, sứ mệnh': 'ビジョン、ミッション',
     'Tủ - Kệ': 'キャビネット - 棚',
@@ -1791,6 +1801,7 @@ const TRANSLATIONS: Partial<Record<
     'Tiếng Việt': '베트남어',
     'Trang trí gỗ': '목재 장식',
     'Tranh': '그림',
+    'Triết lý': '철학',
     'Triết lý vận hành': '운영 철학',
     'Tầm nhìn, sứ mệnh': '비전, 미션',
     'Tủ - Kệ': '캐비닛 - 선반',
