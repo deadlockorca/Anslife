@@ -275,7 +275,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
 
     <section class="ai-finished-catalog">
       <p class="ai-finished-kicker">DANH MỤC SẢN PHẨM</p>
-      <h3>10 nhóm sản phẩm nội thất hoàn thiện</h3>
+      <h3>9 nhóm sản phẩm nội thất hoàn thiện</h3>
       <div class="ai-finished-grid">
         <article id="chairs" class="ai-finished-card">
           <figure class="ai-finished-card-media ai-finished-media-1" aria-hidden="true"></figure>
@@ -327,20 +327,10 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
           </div>
         </article>
 
-        <article id="stools-benches" class="ai-finished-card">
+        <article id="rattan-bamboo-furniture" class="ai-finished-card">
           <figure class="ai-finished-card-media ai-finished-media-6" aria-hidden="true"></figure>
           <div class="ai-finished-card-body">
             <p class="ai-finished-card-index">06</p>
-            <h4>Ghế đôn & ghế băng</h4>
-            <p>Ghế đôn, ghế băng và ottoman theo yêu cầu kích thước, vật liệu bọc và quy cách hoàn thiện.</p>
-            <a href="/vn/products-solutions/finished-furniture#stools-benches">Xem chi tiết <span>→</span></a>
-          </div>
-        </article>
-
-        <article id="rattan-bamboo-furniture" class="ai-finished-card">
-          <figure class="ai-finished-card-media ai-finished-media-7" aria-hidden="true"></figure>
-          <div class="ai-finished-card-body">
-            <p class="ai-finished-card-index">07</p>
             <h4>Nội thất mây tre</h4>
             <p>Ghế mây, bàn mây, sản phẩm kết hợp vật liệu tự nhiên và khung gỗ theo định hướng thương mại của buyer.</p>
             <a href="/vn/products-solutions/finished-furniture#rattan-bamboo-furniture">Xem chi tiết <span>→</span></a>
@@ -348,9 +338,9 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
         </article>
 
         <article id="upholstery" class="ai-finished-card">
-          <figure class="ai-finished-card-media ai-finished-media-8" aria-hidden="true"></figure>
+          <figure class="ai-finished-card-media ai-finished-media-7" aria-hidden="true"></figure>
           <div class="ai-finished-card-body">
-            <p class="ai-finished-card-index">08</p>
+            <p class="ai-finished-card-index">07</p>
             <h4>Nội thất bọc nệm</h4>
             <p>Sofa, ghế lounge, ghế ăn bọc nệm và các sản phẩm theo mẫu duyệt, tiêu chuẩn foam và vật liệu bọc.</p>
             <a href="/vn/products-solutions/finished-furniture#upholstery">Xem chi tiết <span>→</span></a>
@@ -358,22 +348,22 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
         </article>
 
         <article id="outdoor-furniture" class="ai-finished-card">
-          <figure class="ai-finished-card-media ai-finished-media-9" aria-hidden="true"></figure>
+          <figure class="ai-finished-card-media ai-finished-media-8" aria-hidden="true"></figure>
           <div class="ai-finished-card-body">
-            <p class="ai-finished-card-index">09</p>
+            <p class="ai-finished-card-index">08</p>
             <h4>Nội thất ngoài trời</h4>
             <p>Nhóm sản phẩm ngoài trời với vật liệu và hoàn thiện phù hợp điều kiện sử dụng, lưu kho và vận chuyển quốc tế.</p>
             <a href="/vn/products-solutions/finished-furniture#outdoor-furniture">Xem chi tiết <span>→</span></a>
           </div>
         </article>
 
-        <article id="custom-furniture" class="ai-finished-card">
-          <figure class="ai-finished-card-media ai-finished-media-10" aria-hidden="true"></figure>
+        <article id="hotel-resort-office-custom-furniture" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-9" aria-hidden="true"></figure>
           <div class="ai-finished-card-body">
-            <p class="ai-finished-card-index">10</p>
-            <h4>Nội thất tùy chỉnh</h4>
-            <p>Sản phẩm theo bản vẽ kỹ thuật, mẫu duyệt và tiêu chuẩn riêng của từng buyer quốc tế.</p>
-            <a href="/vn/products-solutions/finished-furniture#custom-furniture">Xem chi tiết <span>→</span></a>
+            <p class="ai-finished-card-index">09</p>
+            <h4>Nội thất tùy chỉnh dự án khách sạn, resort, văn phòng</h4>
+            <p>Sản phẩm nội thất tùy chỉnh theo bản vẽ, mẫu duyệt và tiêu chuẩn riêng cho dự án khách sạn, resort, văn phòng và không gian thương mại.</p>
+            <a href="/vn/products-solutions/finished-furniture#hotel-resort-office-custom-furniture">Xem chi tiết <span>→</span></a>
           </div>
         </article>
       </div>
@@ -394,6 +384,133 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
           <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
           <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
           <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
+        </div>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
+  <section id="finished-furniture" class="ai-section ai-finished-page ai-company-overview">
+    <header class="ai-finished-hero">
+      <div class="ai-finished-hero-copy">
+        <h2>Finished Furniture</h2>
+        <p>ANSLIFE manufactures finished furniture in Vietnam based on approved samples, technical drawings, and international buyer standards, from material selection to quality control and export packing.</p>
+        <p>We connect products with factory operations, material supply chains, warehousing, and scheduled export so buyers can manage stable, transparent orders for each target market.</p>
+      </div>
+    </header>
+
+    <section class="ai-finished-catalog">
+      <p class="ai-finished-kicker">PRODUCT CATEGORIES</p>
+      <h3>9 finished furniture product groups</h3>
+      <div class="ai-finished-grid">
+        <article id="chairs" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-1" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">01</p>
+            <h4>Chairs</h4>
+            <p>Dining chairs, lounge chairs, bar chairs, cafe chairs, wooden chairs, and upholstered chair programs.</p>
+            <a href="/en/products-solutions/finished-furniture#chairs">View details <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="tables" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-2" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">02</p>
+            <h4>Tables</h4>
+            <p>Dining tables, cafe tables, work tables, and side tables made to buyer quality and finishing requirements.</p>
+            <a href="/en/products-solutions/finished-furniture#tables">View details <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="cabinets-storage" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-3" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">03</p>
+            <h4>Cabinets & Storage</h4>
+            <p>Wardrobes, sideboards, shoe cabinets, and storage solutions based on project design and function.</p>
+            <a href="/en/products-solutions/finished-furniture#cabinets-storage">View details <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="shelves" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-4" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">04</p>
+            <h4>Shelves</h4>
+            <p>Book shelves, display shelves, and storage shelving made from drawings or market-specific designs.</p>
+            <a href="/en/products-solutions/finished-furniture#shelves">View details <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="beds" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-5" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">05</p>
+            <h4>Beds</h4>
+            <p>Bed frames and bedroom products built to technical standards, structural durability, and export packing requirements.</p>
+            <a href="/en/products-solutions/finished-furniture#beds">View details <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="rattan-bamboo-furniture" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-6" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">06</p>
+            <h4>Rattan & Bamboo Furniture</h4>
+            <p>Rattan chairs, rattan tables, natural-material products, and mixed-material furniture with wood frames.</p>
+            <a href="/en/products-solutions/finished-furniture#rattan-bamboo-furniture">View details <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="upholstery" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-7" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">07</p>
+            <h4>Upholstery</h4>
+            <p>Sofas, lounge chairs, upholstered dining chairs, and approved-sample products with foam and fabric standards.</p>
+            <a href="/en/products-solutions/finished-furniture#upholstery">View details <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="outdoor-furniture" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-8" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">08</p>
+            <h4>Outdoor Furniture</h4>
+            <p>Outdoor products with suitable materials, finishes, storage requirements, and international transport readiness.</p>
+            <a href="/en/products-solutions/finished-furniture#outdoor-furniture">View details <span>→</span></a>
+          </div>
+        </article>
+
+        <article id="hotel-resort-office-custom-furniture" class="ai-finished-card">
+          <figure class="ai-finished-card-media ai-finished-media-9" aria-hidden="true"></figure>
+          <div class="ai-finished-card-body">
+            <p class="ai-finished-card-index">09</p>
+            <h4>Custom Furniture for Hotel, Resort & Office Projects</h4>
+            <p>Custom furniture developed from technical drawings, approved samples, and project standards for hotels, resorts, offices, and commercial spaces.</p>
+            <a href="/en/products-solutions/finished-furniture#hotel-resort-office-custom-furniture">View details <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-finished-highlights">
+      <article><i class="ai-company-overview-icon ai-icon-factory" aria-hidden="true"></i><div><h4>Made to order</h4><p>Production based on approved samples, technical drawings, and buyer-specific standards.</p></div></article>
+      <article><i class="ai-company-overview-icon ai-icon-layers" aria-hidden="true"></i><div><h4>Material supply chain</h4><p>Stable sourcing in Vietnam for solid wood, plywood, MDF, veneer, foam, and hardware.</p></div></article>
+      <article><i class="ai-company-overview-icon ai-icon-shield-check" aria-hidden="true"></i><div><h4>Independent quality control</h4><p>QC against approved samples, material standards, dimensions, colors, and packing specifications.</p></div></article>
+      <article><i class="ai-company-overview-icon ai-icon-truck" aria-hidden="true"></i><div><h4>Packing & export</h4><p>Support for documentation, logistics, and scheduled export according to each project plan.</p></div></article>
+    </section>
+
+    <section class="ai-finished-cta">
+      <div class="ai-finished-cta-copy">
+        <h3>Send your product request to ANSLIFE</h3>
+        <p>Buyers can send drawings, physical samples, reference images, or product standard requirements. ANSLIFE will review and propose suitable production, material, quality control, and export options.</p>
+        <div class="ai-company-request-actions">
+          <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
+          <a class="ai-company-request-secondary" href="/en/contact/upload-drawing">Upload drawings</a>
+          <a class="ai-company-request-secondary" href="/en/contact/company-info">Contact ANSLIFE</a>
         </div>
       </div>
     </section>
@@ -13764,10 +13881,12 @@ export function getAIFallbackSectionHtml(
   subSectionSlug = '',
 ): string | null {
   if (pageSlug === 'products-solutions' && sectionId === 'finished-furniture') {
-    return translateAiHtml(
-      language,
-      `<div class="ai-content">${PRODUCTS_FINISHED_FURNITURE_SECTION_VN}</div>`,
-    )
+    const sectionHtml =
+      language === 'vn'
+        ? PRODUCTS_FINISHED_FURNITURE_SECTION_VN
+        : PRODUCTS_FINISHED_FURNITURE_SECTION_EN;
+
+    return `<div class="ai-content">${sectionHtml}</div>`
       .replace(
         /href="\/vn\/products-solutions\/finished-furniture/g,
         `href="/${language}/products-solutions/finished-furniture`,

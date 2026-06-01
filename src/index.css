@@ -5328,13 +5328,13 @@ a.mobile-menu-utility-link {
 
 .ai-finished-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0.76rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .ai-finished-card {
   display: grid;
-  grid-template-rows: 152px minmax(0, 1fr);
+  grid-template-rows: clamp(190px, 14vw, 240px) minmax(0, 1fr);
   border: 1px solid #eadfd4;
   border-radius: 8px;
   background: #fff;
@@ -5370,22 +5370,18 @@ a.mobile-menu-utility-link {
 }
 
 .ai-finished-media-6 {
-  background-image: url('/assets/products/finished-furniture/stool-bench.jpg');
-}
-
-.ai-finished-media-7 {
   background-image: url('/assets/products/finished-furniture/rattan-bamboo.jpg');
 }
 
-.ai-finished-media-8 {
+.ai-finished-media-7 {
   background-image: url('/assets/products/finished-furniture/upholstery.jpg');
 }
 
-.ai-finished-media-9 {
+.ai-finished-media-8 {
   background-image: url('/assets/products/finished-furniture/outdoor.jpg');
 }
 
-.ai-finished-media-10 {
+.ai-finished-media-9 {
   background-image: url('/assets/products/finished-furniture/custom.jpg');
 }
 

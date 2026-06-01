@@ -209,7 +209,57 @@ const TRANSLATIONS: Partial<Record<
     'Sản phẩm': 'Products',
     'Sản phẩm & Giải pháp': 'Products & Solutions',
     'Nội thất hoàn thiện': 'Finished Furniture',
+    'Nhóm nội thất hoàn thiện sẵn sàng phát triển cho buyer quốc tế.':
+      'Finished furniture product groups ready for development for international buyers.',
+    'ANSLIFE sản xuất nội thất hoàn thiện theo mẫu duyệt, bản vẽ và tiêu chuẩn của buyer quốc tế tại Việt Nam, từ lựa chọn vật liệu đến kiểm soát chất lượng và đóng gói xuất khẩu.':
+      'ANSLIFE manufactures finished furniture in Vietnam based on approved samples, technical drawings, and international buyer standards, from material selection to quality control and export packing.',
+    'Chúng tôi kết nối sản phẩm với hệ thống nhà máy, chuỗi cung ứng vật liệu, lưu kho và xuất hàng định kỳ để buyer có thể vận hành đơn hàng ổn định, minh bạch và phù hợp từng thị trường.':
+      'We connect products with factory operations, material supply chains, warehousing, and scheduled export so buyers can manage stable, transparent orders for each target market.',
+    '9 nhóm sản phẩm nội thất hoàn thiện': '9 finished furniture product groups',
+    '10 nhóm sản phẩm nội thất hoàn thiện': '10 finished furniture product groups',
+    'Sản xuất đa dạng các dòng ghế ăn, ghế phòng khách, ghế bar, ghế cafe, ghế gỗ và ghế bọc nệm.':
+      'Dining chairs, lounge chairs, bar chairs, cafe chairs, wooden chairs, and upholstered chair programs.',
+    'Các dòng bàn ăn, bàn cafe, bàn làm việc và bàn phụ theo tiêu chuẩn chất lượng và hoàn thiện theo yêu cầu.':
+      'Dining tables, cafe tables, work tables, and side tables made to buyer quality and finishing requirements.',
+    'Tủ quần áo, tủ sideboard, tủ giày và các giải pháp lưu trữ theo thiết kế và công năng của dự án.':
+      'Wardrobes, sideboards, shoe cabinets, and storage solutions based on project design and function.',
+    'Kệ sách, kệ trang trí và kệ lưu trữ theo bản vẽ hoặc thiết kế riêng cho từng thị trường.':
+      'Book shelves, display shelves, and storage shelving made from drawings or market-specific designs.',
+    'Giường ngủ và khung giường theo các tiêu chuẩn kỹ thuật, độ bền kết cấu và yêu cầu đóng gói xuất khẩu.':
+      'Bed frames and bedroom products built to technical standards, structural durability, and export packing requirements.',
+    'Ghế đôn, ghế băng và ottoman theo yêu cầu kích thước, vật liệu bọc và quy cách hoàn thiện.':
+      'Stools, benches, and ottomans produced to required dimensions, upholstery materials, and finish specifications.',
+    'Ghế mây, bàn mây, sản phẩm kết hợp vật liệu tự nhiên và khung gỗ theo định hướng thương mại của buyer.':
+      'Rattan chairs, rattan tables, natural-material products, and mixed-material furniture with wood frames.',
+    'Sofa, ghế lounge, ghế ăn bọc nệm và các sản phẩm theo mẫu duyệt, tiêu chuẩn foam và vật liệu bọc.':
+      'Sofas, lounge chairs, upholstered dining chairs, and approved-sample products with foam and fabric standards.',
+    'Nhóm sản phẩm ngoài trời với vật liệu và hoàn thiện phù hợp điều kiện sử dụng, lưu kho và vận chuyển quốc tế.':
+      'Outdoor products with suitable materials, finishes, storage requirements, and international transport readiness.',
+    'Sản phẩm nội thất tùy chỉnh theo bản vẽ, mẫu duyệt và tiêu chuẩn riêng cho dự án khách sạn, resort, văn phòng và không gian thương mại.':
+      'Custom furniture developed from technical drawings, approved samples, and project standards for hotels, resorts, offices, and commercial spaces.',
+    'Sản phẩm theo bản vẽ kỹ thuật, mẫu duyệt và tiêu chuẩn riêng của từng buyer quốc tế.':
+      'Products developed from technical drawings, approved samples, and private standards for international buyers.',
+    'Từ mẫu duyệt, bản vẽ kỹ thuật và tiêu chuẩn riêng của buyer.':
+      'Production based on approved samples, technical drawings, and buyer-specific standards.',
+    'Chuỗi cung ứng vật liệu': 'Material supply chain',
+    'Kết nối nguồn vật liệu ổn định tại Việt Nam: gỗ tự nhiên, plywood, MDF, veneer, foam và phụ kiện.':
+      'Stable sourcing in Vietnam for solid wood, plywood, MDF, veneer, foam, and hardware.',
+    'Kiểm soát chất lượng độc lập': 'Independent quality control',
+    'QC độc lập theo mẫu duyệt, tiêu chuẩn vật liệu, kích thước, màu sắc và quy cách đóng gói.':
+      'QC against approved samples, material standards, dimensions, colors, and packing specifications.',
+    'Đóng gói & xuất khẩu': 'Packing & export',
+    'Hỗ trợ chứng từ, logistics và xuất hàng định kỳ theo kế hoạch dự án.':
+      'Support for documentation, logistics, and scheduled export according to each project plan.',
+    'Gửi yêu cầu sản phẩm cho ANSLIFE': 'Send your product request to ANSLIFE',
+    'Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu tiêu chuẩn sản phẩm. ANSLIFE sẽ xem xét và đề xuất phương án sản xuất, vật liệu, kiểm soát chất lượng và xuất hàng phù hợp.':
+      'Buyers can send drawings, physical samples, reference images, or product standard requirements. ANSLIFE will review and propose suitable production, material, quality control, and export options.',
+    'Tải bản vẽ lên': 'Upload drawings',
+    'Liên hệ ANSLIFE': 'Contact ANSLIFE',
     'Linh kiện nội thất': 'Furniture Components',
+    'Linh kiện cho ghế, bàn, tủ và các cấu phần bọc nệm.':
+      'Components for chairs, tables, cabinets, and upholstered parts.',
+    'Ván, gỗ tự nhiên, veneer, foam, vật liệu bọc và vật liệu đóng gói.':
+      'Boards, solid wood, veneer, foam, upholstery materials, and packing materials.',
     'Chân gỗ': 'Wooden Legs',
     'Bộ phận bọc nệm': 'Upholstery Parts',
     'Linh kiện mây': 'Rattan Components',
@@ -566,6 +616,8 @@ const TRANSLATIONS: Partial<Record<
     'Tủ & Lưu trữ': 'Cabinets & Storage',
     'Ghế đôn & ghế băng': 'Stools & Benches',
     'Nội thất mây tre': 'Rattan & Bamboo Furniture',
+    'Nội thất tùy chỉnh dự án khách sạn, resort, văn phòng':
+      'Custom Furniture for Hotel, Resort & Office Projects',
     'Nội thất tùy chỉnh': 'Custom Furniture',
     'Linh kiện gỗ': 'Wooden Components',
     'Khung ghế': 'Chair Frames',
