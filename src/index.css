@@ -14961,9 +14961,29 @@ a.mobile-menu-utility-link {
     no-repeat !important;
 }
 
+.ai-chair-hero.ai-table-hero h2 {
+  max-width: 38%;
+  font-size: clamp(2.7rem, 5vw, 5rem);
+}
+
+.ai-chair-hero.ai-table-hero .ai-chair-lead,
+.ai-chair-hero.ai-table-hero p:not(.ai-chair-eyebrow) {
+  max-width: min(40%, 620px);
+}
+
 .ai-storage-hero {
   background: url('/assets/products/finished-furniture/storage-cabinets-banner.png') center center / cover
     no-repeat !important;
+}
+
+.ai-chair-hero.ai-storage-hero h2 {
+  max-width: 38%;
+  font-size: clamp(2.7rem, 5vw, 5rem);
+}
+
+.ai-chair-hero.ai-storage-hero .ai-chair-lead,
+.ai-chair-hero.ai-storage-hero p:not(.ai-chair-eyebrow) {
+  max-width: min(40%, 620px);
 }
 
 .ai-chair-eyebrow {
@@ -15229,8 +15249,24 @@ a.mobile-menu-utility-link {
     background-position: 60% center;
   }
 
+  .ai-table-hero {
+    background-position: 64% center;
+  }
+
+  .ai-chair-hero.ai-table-hero h2,
+  .ai-chair-hero.ai-table-hero .ai-chair-lead,
+  .ai-chair-hero.ai-table-hero p:not(.ai-chair-eyebrow) {
+    max-width: 86%;
+  }
+
   .ai-storage-hero {
     background-position: 64% center;
+  }
+
+  .ai-chair-hero.ai-storage-hero h2,
+  .ai-chair-hero.ai-storage-hero .ai-chair-lead,
+  .ai-chair-hero.ai-storage-hero p:not(.ai-chair-eyebrow) {
+    max-width: 86%;
   }
 
   .ai-chair-hero h2,
