@@ -4744,6 +4744,194 @@ const ABOUT_WORKING_STANDARDS_SECTION_VN = `
   </section>
 `.trim();
 
+const ABOUT_PHILOSOPHY_SECTION_VN = `
+  <section id="philosophy" class="ai-section ai-operating-philosophy ai-business-philosophy">
+    <header class="ai-philosophy-hero">
+      <p class="ai-op-kicker">TRIẾT LÝ KINH DOANH</p>
+      <h2>Triết lý</h2>
+      <p class="ai-op-subtitle">Chúng tôi xây dựng niềm tin bằng hệ thống, dữ liệu và trách nhiệm.</p>
+    </header>
+
+    <article class="ai-op-core ai-philosophy-intro">
+      <div class="ai-philosophy-copy">
+        <p>ANSLIFE tin rằng một mối quan hệ kinh doanh bền vững không thể chỉ được xây dựng bằng việc hoàn thành một đơn hàng, đưa ra một mức giá cạnh tranh, hay xử lý từng vấn đề riêng lẻ.</p>
+      </div>
+      <div class="ai-philosophy-copy">
+        <p>Đối với chúng tôi, niềm tin dài hạn phải được xây dựng bằng trách nhiệm được lặp lại, dữ liệu minh bạch, cải tiến liên tục và những hành động thực tế trong vận hành hằng ngày.</p>
+      </div>
+      <div class="ai-philosophy-copy">
+        <p>ANSLIFE không đặt mục tiêu chỉ trở thành một nhà cung cấp. Chúng tôi hướng tới việc trở thành một đối tác sản xuất và chuỗi cung ứng đáng tin cậy cho khách hàng.</p>
+      </div>
+    </article>
+
+    <div class="ai-philosophy-stack">
+      <article class="ai-op-card ai-philosophy-block">
+        <span class="ai-philosophy-number">01</span>
+        <h3>Niềm tin dài hạn quan trọng hơn lợi nhuận ngắn hạn</h3>
+        <div class="ai-philosophy-copy">
+          <p>ANSLIFE hiểu rằng lợi nhuận ngắn hạn là cần thiết cho sự tồn tại của doanh nghiệp. Tuy nhiên, chúng tôi tin rằng niềm tin dài hạn mới là nền tảng của sự phát triển bền vững.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Khi làm việc với một khách hàng, chúng tôi không chỉ nhìn vào đơn hàng hiện tại. Chúng tôi xem xét cách để đơn hàng tiếp theo ổn định hơn, chu kỳ sản xuất tiếp theo hiệu quả hơn và lô hàng tiếp theo đáng tin cậy hơn.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Đây là lý do ANSLIFE tiếp tục đầu tư vào kiểm soát vật liệu, kế hoạch sản xuất, kiểm tra chất lượng, tiêu chuẩn đóng gói, theo dõi dự án và hồ sơ cải tiến.</p>
+        </div>
+      </article>
+
+      <article class="ai-op-card ai-philosophy-block">
+        <span class="ai-philosophy-number">02</span>
+        <h3>Minh bạch trong công việc và dữ liệu</h3>
+        <div class="ai-philosophy-copy">
+          <p>ANSLIFE tin rằng sự minh bạch là một trong những cách mạnh nhất để giảm hiểu nhầm và xây dựng sự tin tưởng giữa các đối tác.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Chúng tôi quản lý công việc không chỉ bằng trao đổi miệng, mà còn thông qua thư mục dự án, bảng tiến độ, báo cáo kiểm tra, hình ảnh, hồ sơ giao hàng và nhật ký lỗi.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Mỗi dự án cần có hồ sơ rõ ràng: việc gì đã hoàn thành, việc gì đang thực hiện, việc gì còn lại và rủi ro nào cần được theo dõi.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Đối với ANSLIFE, dữ liệu không chỉ dùng để báo cáo. Dữ liệu là công cụ làm việc để ra quyết định tốt hơn, kiểm soát chất lượng tốt hơn và quản lý dự án tốt hơn.</p>
+        </div>
+      </article>
+
+      <article class="ai-op-card ai-philosophy-block">
+        <span class="ai-philosophy-number">03</span>
+        <h3>Cải tiến liên tục từ các vấn đề thực tế</h3>
+        <div class="ai-philosophy-copy">
+          <p>ANSLIFE không tin rằng một hệ thống sản xuất có thể trở nên vững mạnh bằng cách né tránh vấn đề. Một hệ thống mạnh được xây dựng bằng việc ghi nhận vấn đề, hiểu vấn đề, khắc phục vấn đề và ngăn ngừa vấn đề lặp lại.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Mỗi lỗi, khiếu nại, kết quả kiểm tra và nhận xét của khách hàng đều được xem là thông tin có giá trị cho việc cải tiến.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Khi một vấn đề xảy ra, ANSLIFE không muốn chỉ đóng lại sau một lần sửa chữa. Chúng tôi muốn hiểu đó là lỗi đơn lẻ hay lỗi lặp lại, lỗi đến từ vật liệu, phương pháp sản xuất, phương pháp kiểm tra, đóng gói, logistics hay giao tiếp.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Một vấn đề chỉ thật sự được xử lý khi nó không còn lặp lại trong các đơn hàng sau.</p>
+        </div>
+      </article>
+
+      <article class="ai-op-card ai-philosophy-block">
+        <span class="ai-philosophy-number">04</span>
+        <h3>Trách nhiệm vượt ra ngoài việc sản xuất</h3>
+        <div class="ai-philosophy-copy">
+          <p>ANSLIFE hiểu rằng sản xuất không chỉ là tạo ra sản phẩm. Đó còn là việc bảo vệ chất lượng, tiến độ giao hàng, niềm tin của khách hàng và sự ổn định của toàn bộ dự án.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Trách nhiệm này bao gồm chuẩn bị vật liệu, kiểm soát sản xuất, kiểm tra chất lượng, bảo vệ khi đóng gói, chứng từ xuất hàng, phối hợp logistics và phản hồi sau khi hàng đến.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Chúng tôi tin rằng sự cố ngoài dự kiến có thể xảy ra ở bất kỳ công đoạn nào trong sản xuất hoặc vận chuyển. Vì vậy, ANSLIFE xây dựng hệ thống dự phòng và kế hoạch bảo vệ để hấp thụ rủi ro và bảo vệ dự án.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Mục tiêu của chúng tôi không chỉ là xuất hàng. Mục tiêu của chúng tôi là giúp khách hàng nhận được sản phẩm ổn định, có thể truy xuất và đáng tin cậy.</p>
+        </div>
+      </article>
+
+      <article class="ai-op-card ai-philosophy-block">
+        <span class="ai-philosophy-number">05</span>
+        <h3>Xây dựng hệ thống, không chỉ hoàn thành đơn hàng</h3>
+        <div class="ai-philosophy-copy">
+          <p>ANSLIFE tin rằng hoàn thành một đơn hàng chỉ là điểm bắt đầu. Nhiệm vụ quan trọng hơn là xây dựng một hệ thống giúp đơn hàng tiếp theo tốt hơn.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Một cải tiến đã hoàn thành không nên biến mất sau một lô hàng. Nó cần trở thành tiêu chuẩn cho các đơn hàng tiếp theo.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Đây là lý do ANSLIFE chuẩn hóa việc kiểm soát vật liệu, chuẩn bị hàng trắng, kiểm tra mộng liên kết, kiểm soát hoàn thiện sơn, bảo vệ đóng gói, bảng tiến độ dự án và hồ sơ lỗi xuyên đơn hàng.</p>
+        </div>
+        <div class="ai-philosophy-copy">
+          <p>Chúng tôi tin rằng một công ty tốt không phải là công ty không có vấn đề. Một công ty tốt là công ty có thể học từ vấn đề và trở nên đáng tin cậy hơn theo thời gian.</p>
+        </div>
+      </article>
+    </div>
+
+    <article class="ai-op-philosophy ai-philosophy-commitment">
+      <p class="ai-op-kicker">CAM KẾT CỦA CHÚNG TÔI</p>
+      <div class="ai-philosophy-copy">
+        <p>ANSLIFE cam kết xây dựng quan hệ hợp tác dài hạn dựa trên sự minh bạch, trách nhiệm và cải tiến liên tục.</p>
+      </div>
+      <div class="ai-philosophy-copy">
+        <p>Chúng tôi sẽ tiếp tục cải thiện hệ thống sản xuất, kiểm soát chuỗi cung ứng, quản lý chất lượng, theo dõi dự án và giao tiếp với khách hàng.</p>
+      </div>
+      <div class="ai-philosophy-copy">
+        <p>Đối với ANSLIFE, niềm tin không được tạo ra chỉ bằng lời nói. Niềm tin được tạo ra bằng hành động hằng ngày, dữ liệu rõ ràng, trách nhiệm được lặp lại và tinh thần sẵn sàng cải tiến sau mỗi dự án.</p>
+      </div>
+    </article>
+  </section>
+`.trim();
+
+const ABOUT_PHILOSOPHY_SECTION_EN = `
+  <section id="philosophy" class="ai-section ai-operating-philosophy ai-business-philosophy">
+    <header class="ai-philosophy-hero">
+      <p class="ai-op-kicker">BUSINESS PHILOSOPHY</p>
+      <h2>Philosophy</h2>
+      <p class="ai-op-subtitle">We build trust through systems, data, and responsibility.</p>
+    </header>
+
+    <article class="ai-op-core ai-philosophy-intro">
+      <div class="ai-philosophy-copy"><p>ANSLIFE believes that a sustainable business relationship cannot be built only by completing one order, offering one competitive price, or solving one problem at a time.</p></div>
+      <div class="ai-philosophy-copy"><p>For us, long-term trust must be built through repeated responsibility, transparent data, continuous improvement, and practical actions in daily operations.</p></div>
+      <div class="ai-philosophy-copy"><p>ANSLIFE does not aim to be only a supplier. We aim to become a reliable production and supply-chain partner for our customers.</p></div>
+    </article>
+
+    <div class="ai-philosophy-stack">
+      <article class="ai-op-card ai-philosophy-block">
+        <span class="ai-philosophy-number">01</span>
+        <h3>Long-term trust over short-term profit</h3>
+        <div class="ai-philosophy-copy"><p>ANSLIFE understands that short-term profit is important for business survival. However, we believe that long-term trust is the foundation of sustainable growth.</p></div>
+        <div class="ai-philosophy-copy"><p>When we work with a customer, we do not only consider the current order. We consider how to make the next order more stable, the next production cycle more efficient, and the next shipment more reliable.</p></div>
+        <div class="ai-philosophy-copy"><p>This is why ANSLIFE continues to invest in material control, production planning, quality inspection, packing standards, project tracking, and improvement records.</p></div>
+      </article>
+
+      <article class="ai-op-card ai-philosophy-block">
+        <span class="ai-philosophy-number">02</span>
+        <h3>Transparency in work and data</h3>
+        <div class="ai-philosophy-copy"><p>ANSLIFE believes that transparency is one of the strongest ways to reduce misunderstanding and build confidence between partners.</p></div>
+        <div class="ai-philosophy-copy"><p>We manage our work not only by verbal updates, but also through project folders, progress dashboards, inspection reports, photos, shipment records, and issue logs.</p></div>
+        <div class="ai-philosophy-copy"><p>Every project should have a clear record: what has been done, what is being done, what remains to be done, and what risks need to be monitored.</p></div>
+        <div class="ai-philosophy-copy"><p>For ANSLIFE, data is not only for reporting. Data is a working tool for better decision-making, better quality control, and better project management.</p></div>
+      </article>
+
+      <article class="ai-op-card ai-philosophy-block">
+        <span class="ai-philosophy-number">03</span>
+        <h3>Continuous improvement from real issues</h3>
+        <div class="ai-philosophy-copy"><p>ANSLIFE does not believe that a production system can become strong by avoiding problems. A strong system is built by recording problems, understanding them, correcting them, and preventing them from recurring.</p></div>
+        <div class="ai-philosophy-copy"><p>Every issue, complaint, inspection result, and customer comment is treated as valuable information for improvement.</p></div>
+        <div class="ai-philosophy-copy"><p>When an issue occurs, ANSLIFE does not want to simply close it after one correction. We want to understand whether it is an isolated issue or a repeated issue, whether it comes from material, production method, inspection method, packing, logistics, or communication.</p></div>
+        <div class="ai-philosophy-copy"><p>A problem is truly solved only when it no longer repeats in future orders.</p></div>
+      </article>
+
+      <article class="ai-op-card ai-philosophy-block">
+        <span class="ai-philosophy-number">04</span>
+        <h3>Responsibility beyond production</h3>
+        <div class="ai-philosophy-copy"><p>ANSLIFE understands that manufacturing is not only about making products. It is also about protecting quality, delivery schedules, customer confidence, and the stability of the whole project.</p></div>
+        <div class="ai-philosophy-copy"><p>This responsibility includes material preparation, production control, quality inspection, packing protection, shipment documents, logistics coordination, and after-shipment feedback.</p></div>
+        <div class="ai-philosophy-copy"><p>We believe that unexpected issues can occur at any stage of production or transportation. Therefore, ANSLIFE builds buffer systems and backup plans to absorb risk and protect the project.</p></div>
+        <div class="ai-philosophy-copy"><p>Our goal is not only to ship goods. Our goal is to help customers receive stable, traceable, and reliable products.</p></div>
+      </article>
+
+      <article class="ai-op-card ai-philosophy-block">
+        <span class="ai-philosophy-number">05</span>
+        <h3>Building systems, not only completing orders</h3>
+        <div class="ai-philosophy-copy"><p>ANSLIFE believes that completing one order is only the beginning. The more important task is to build a system that makes the next order better.</p></div>
+        <div class="ai-philosophy-copy"><p>A completed improvement should not disappear after one shipment. It should become a standard for the following orders.</p></div>
+        <div class="ai-philosophy-copy"><p>This is why ANSLIFE works to standardize material control, whitewood preparation, joint inspection, paint finishing control, packing protection, project dashboards, and cross-order issue records.</p></div>
+        <div class="ai-philosophy-copy"><p>We believe that a good company is not a company without problems. A good company is a company that can learn from problems and become more reliable over time.</p></div>
+      </article>
+    </div>
+
+    <article class="ai-op-philosophy ai-philosophy-commitment">
+      <p class="ai-op-kicker">OUR COMMITMENT</p>
+      <div class="ai-philosophy-copy"><p>ANSLIFE is committed to building long-term partnerships based on transparency, responsibility, and continuous improvement.</p></div>
+      <div class="ai-philosophy-copy"><p>We will continue to improve our production system, supply-chain control, quality management, project tracking, and communication with customers.</p></div>
+      <div class="ai-philosophy-copy"><p>For ANSLIFE, trust is not created by words alone. Trust is created by daily actions, clear data, repeated responsibility, and the willingness to improve after every project.</p></div>
+    </article>
+  </section>
+`.trim();
+
 const ABOUT_WORKING_STANDARDS_SECTION_EN = `
   <section id="working-standards" class="ai-section ai-working-standards">
     <header class="ai-working-standards-header">
@@ -4843,6 +5031,8 @@ const AI_PAGE_CONTENT: Record<string, string> = {
       <p>Ra quyết định dựa trên dữ liệu lỗi, lead time và phản hồi sau giao hàng.</p>
     </article>
   </div>
+
+  ${ABOUT_PHILOSOPHY_SECTION_VN}
 
   ${ABOUT_COMPANY_INTRO_SECTION_VN}
 
@@ -5169,93 +5359,6 @@ const AI_PAGE_CONTENT: Record<string, string> = {
         </article>
       </div>
     </div>
-  </section>
-
-  <section id="production-philosophy" class="ai-section ai-operating-philosophy">
-    <h2>Triết lý vận hành</h2>
-    <p class="ai-op-kicker">TRIẾT LÝ VẬN HÀNH ANSLIFE</p>
-    <p class="ai-op-subtitle">(Chất lượng là ưu tiên số 1 – Giá là ưu tiên số 2)</p>
-
-    <article class="ai-op-core">
-      <h3>1. Nguyên tắc cốt lõi</h3>
-      <p>Chúng tôi không cạnh tranh bằng việc trở thành đơn vị rẻ nhất.</p>
-      <p>Chúng tôi cạnh tranh bằng việc trở thành đơn vị đáng tin cậy nhất.</p>
-      <p class="ai-op-emphasis">Chất lượng là ưu tiên hàng đầu. Giá chỉ đứng sau.</p>
-    </article>
-
-    <div class="ai-op-grid">
-      <article class="ai-op-card">
-        <h3>2. “Chất lượng” tại ANSLIFE là gì</h3>
-        <p>Chất lượng không phải là lời nói.</p>
-        <p>Chất lượng là một hệ thống.</p>
-        <p>Tại ANSLIFE, chất lượng được đảm bảo thông qua:</p>
-        <ul>
-          <li>Lựa chọn nguyên liệu nghiêm ngặt (chỉ sử dụng gỗ đạt chuẩn)</li>
-          <li>Hệ thống kiểm soát chất lượng nhiều lớp</li>
-          <li>Tách biệt các công đoạn sản xuất (hàng trắng / hoàn thiện)</li>
-          <li>Kiểm tra trước sản xuất và trong quá trình sản xuất</li>
-          <li>Sản xuất dư để phòng ngừa rủi ro giao hàng</li>
-        </ul>
-        <p class="ai-op-note-mini">Chúng tôi không tập trung sửa lỗi.</p>
-        <p class="ai-op-note-mini">Chúng tôi thiết kế hệ thống để lỗi không có cơ hội xảy ra.</p>
-      </article>
-
-      <article class="ai-op-card">
-        <h3>3. Cam kết của chúng tôi</h3>
-        <p>Chúng tôi ưu tiên:</p>
-        <ol class="ai-op-priority">
-          <li>Không có lỗi nghiêm trọng</li>
-          <li>Không trễ tiến độ giao hàng</li>
-          <li>Không lặp lại lỗi</li>
-        </ol>
-        <p>Chỉ khi đảm bảo được các điều trên, chúng tôi mới xem xét đến tối ưu chi phí.</p>
-      </article>
-
-      <article class="ai-op-card">
-        <h3>4. Cách tiếp cận về giá</h3>
-        <p>Giá không phải là công cụ cạnh tranh chính của chúng tôi.</p>
-        <p>Chúng tôi duy trì mức giá:</p>
-        <ul>
-          <li>Ổn định</li>
-          <li>Hợp lý</li>
-          <li>Tương xứng với chất lượng</li>
-        </ul>
-        <p>Chúng tôi không theo đuổi lợi nhuận ngắn hạn bằng cách đánh đổi sự ổn định dài hạn.</p>
-      </article>
-
-      <article class="ai-op-card">
-        <h3>5. Hợp tác dài hạn</h3>
-        <p>Chúng tôi tin rằng một mối quan hệ bền vững được xây dựng dựa trên:</p>
-        <ul>
-          <li>Niềm tin</li>
-          <li>Sự ổn định</li>
-          <li>Tính minh bạch</li>
-        </ul>
-        <p>Mục tiêu của chúng tôi là trở thành đối tác:</p>
-        <ul>
-          <li>Luôn cung cấp chất lượng ổn định</li>
-          <li>Giảm thiểu rủi ro vận hành cho khách hàng</li>
-          <li>Đồng hành và phát triển cùng khách hàng trong dài hạn</li>
-        </ul>
-      </article>
-    </div>
-
-    <article class="ai-op-philosophy">
-      <h3>6. Triết lý của chúng tôi</h3>
-      <p>Chúng tôi không tối đa hóa lợi nhuận trên từng đơn hàng.</p>
-      <p>Chúng tôi tối đa hóa niềm tin theo thời gian.</p>
-      <p>Bởi vì:</p>
-      <div class="ai-op-formula">
-        <p>Niềm tin tạo ra sản lượng.</p>
-        <p>Sản lượng tạo ra sự ổn định.</p>
-        <p>Sự ổn định tạo ra giá trị bền vững.</p>
-      </div>
-    </article>
-
-    <p class="ai-op-signoff">
-      <strong>ANSLIFE</strong>
-      <span>Vận hành bằng hệ thống. Phát triển bằng sự bền vững.</span>
-    </p>
   </section>
 
   <section id="organization" class="ai-section ai-operating-philosophy">
@@ -7506,6 +7609,7 @@ const AI_PAGE_CONTENT: Record<string, string> = {
 };
 
 const AI_ABOUT_SECTION_CONTENT_EN: Record<string, string> = {
+  'philosophy': ABOUT_PHILOSOPHY_SECTION_EN,
   'company-intro': ABOUT_COMPANY_INTRO_SECTION_EN,
   'company-info': ABOUT_COMPANY_INFO_SECTION_EN,
   'working-standards': ABOUT_WORKING_STANDARDS_SECTION_EN,
@@ -14509,12 +14613,12 @@ export function getAIFallbackSectionHtml(
     pageSlug !== 'scholarship-community' &&
     !(
       pageSlug === 'about-anslife' &&
-      (sectionId === 'company-intro' ||
+      (sectionId === 'philosophy' ||
+        sectionId === 'company-intro' ||
         sectionId === 'company-info' ||
         sectionId === 'vision-mission' ||
         sectionId === 'core-values' ||
         sectionId === 'working-standards' ||
-        sectionId === 'production-philosophy' ||
         sectionId === 'organization' ||
         sectionId === 'team' ||
         sectionId === 'anslife-ecosystem' ||

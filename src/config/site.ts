@@ -118,6 +118,7 @@ export const TOP_MENU: TopMenuItem[] = [
     label: 'Về ANSLIFE',
     path: '/about-anslife',
     children: [
+      { label: 'Triết lý', path: '/about-anslife/philosophy' },
       { label: 'Tổng quan công ty', path: '/about-anslife/company-intro' },
       { label: 'Lịch sử phát triển', path: '/about-anslife/development-history' },
       { label: 'Tiêu chuẩn & QC', path: '/about-anslife/working-standards' },
@@ -382,6 +383,12 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
     slug: 'about-anslife',
     summary: 'Giới thiệu doanh nghiệp, tầm nhìn, sứ mệnh và hệ giá trị cốt lõi.',
     sections: [
+      {
+        id: 'philosophy',
+        title: 'Triết lý',
+        description:
+          'Quan điểm cốt lõi của ANSLIFE về chất lượng, sự ổn định, niềm tin và hợp tác dài hạn.',
+      },
       {
         id: 'company-intro',
         title: 'Tổng quan công ty',

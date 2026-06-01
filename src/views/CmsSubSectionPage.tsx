@@ -145,7 +145,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   );
   const isCustomAboutSection =
     config.slug === 'about-anslife' &&
-    (section.id === 'company-intro' ||
+    (section.id === 'philosophy' ||
+      section.id === 'company-intro' ||
       section.id === 'company-info' ||
       section.id === 'vision-mission' ||
       section.id === 'core-values');
@@ -161,7 +162,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     (config.slug === 'resources' && section.id === 'faq') ||
     isCustomAboutSection ||
     (config.slug === 'about-anslife' &&
-      (section.id === 'production-philosophy' ||
+      (section.id === 'philosophy' ||
         section.id === 'development-history' ||
         section.id === 'working-standards' ||
         section.id === 'organization' ||
@@ -178,13 +179,13 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         section.id === 'finished-furniture')) ||
     (config.slug === 'resources' && section.id === 'faq') ||
     (config.slug === 'about-anslife' &&
-      (section.id === 'company-intro' ||
+      (section.id === 'philosophy' ||
+        section.id === 'company-intro' ||
         section.id === 'company-info' ||
         section.id === 'vision-mission' ||
         section.id === 'core-values' ||
         section.id === 'development-history' ||
         section.id === 'working-standards' ||
-        section.id === 'production-philosophy' ||
         section.id === 'organization' ||
         section.id === 'team' ||
         section.id === 'anslife-ecosystem'));

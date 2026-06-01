@@ -9242,6 +9242,102 @@ a.mobile-menu-utility-link {
   line-height: 1.58;
 }
 
+.ai-business-philosophy {
+  grid-template-columns: 1fr;
+  gap: clamp(0.9rem, 1.5vw, 1.2rem);
+}
+
+.ai-philosophy-hero {
+  box-sizing: border-box;
+  display: grid;
+  align-content: center;
+  gap: 0.58rem;
+  aspect-ratio: 2171 / 724;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  background: url('/assets/about/philosophy-banner.png') center center / cover no-repeat !important;
+  padding: clamp(1rem, 3vw, 2.4rem);
+  overflow: hidden;
+}
+
+.ai-philosophy-hero h2 {
+  margin: 0;
+  color: #151515;
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 4.9rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+  max-width: 42%;
+}
+
+.ai-philosophy-hero .ai-op-kicker,
+.ai-philosophy-hero .ai-op-subtitle {
+  max-width: min(44%, 660px);
+}
+
+.ai-philosophy-intro,
+.ai-philosophy-commitment {
+  display: grid;
+  gap: 0.74rem;
+}
+
+.ai-philosophy-stack {
+  display: grid;
+  gap: 0.72rem;
+}
+
+.ai-philosophy-block {
+  display: grid;
+  gap: 0.62rem;
+}
+
+.ai-philosophy-number {
+  color: #d95f22;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.ai-philosophy-block h4 {
+  margin: -0.3rem 0 0;
+  color: #303030;
+  font-size: 0.96rem;
+  line-height: 1.42;
+  font-weight: 600;
+}
+
+.ai-philosophy-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(0.7rem, 1.3vw, 1rem);
+  border-top: 1px solid #eef0f3;
+  padding-top: 0.62rem;
+}
+
+.ai-philosophy-copy:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.ai-philosophy-copy p {
+  margin: 0;
+}
+
+.ai-philosophy-copy p:first-child {
+  color: #2b2b2b;
+  font-weight: 500;
+}
+
+.ai-philosophy-copy p:last-child {
+  color: #4d4d4d;
+}
+
+.ai-philosophy-copy p:only-child {
+  color: #313131;
+  font-weight: 400;
+}
+
 #organization.ai-operating-philosophy :is(h2, h3, p, li, strong, span) {
   color: #1f1f1f;
 }
@@ -12476,6 +12572,23 @@ a.mobile-menu-utility-link {
     grid-template-columns: 1fr;
   }
 
+  .ai-philosophy-copy {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-philosophy-hero {
+    min-height: 220px;
+    align-content: start;
+    background-position: 62% center;
+    padding: 1.2rem;
+  }
+
+  .ai-philosophy-hero h2,
+  .ai-philosophy-hero .ai-op-kicker,
+  .ai-philosophy-hero .ai-op-subtitle {
+    max-width: 88%;
+  }
+
   .ai-org-layer-grid,
   .ai-org-grid,
   .ai-org-flow-track {
@@ -13564,6 +13677,8 @@ a.mobile-menu-utility-link {
     .ai-finished-hero-copy
   ):not(.ai-chair-hero):not(
     .ai-chair-hero *
+  ):not(.ai-philosophy-hero):not(
+    .ai-philosophy-hero *
   ) {
   background: var(--bg) !important;
 }
