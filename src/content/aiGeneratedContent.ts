@@ -303,7 +303,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
             <p class="ai-finished-card-index">03</p>
             <h4>Tủ & Lưu trữ</h4>
             <p>Tủ quần áo, tủ sideboard, tủ giày và các giải pháp lưu trữ theo thiết kế và công năng của dự án.</p>
-            <a href="/vn/products-solutions/finished-furniture#cabinets-storage">Xem chi tiết <span>→</span></a>
+            <a href="/vn/products-solutions/finished-furniture/storage-cabinets">Xem chi tiết <span>→</span></a>
           </div>
         </article>
 
@@ -430,7 +430,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
             <p class="ai-finished-card-index">03</p>
             <h4>Cabinets & Storage</h4>
             <p>Wardrobes, sideboards, shoe cabinets, and storage solutions based on project design and function.</p>
-            <a href="/en/products-solutions/finished-furniture#cabinets-storage">View details <span>→</span></a>
+            <a href="/en/products-solutions/finished-furniture/storage-cabinets">View details <span>→</span></a>
           </div>
         </article>
 
@@ -821,6 +821,163 @@ const PRODUCTS_FINISHED_FURNITURE_TABLES_SECTION_EN = `
       <div>
         <h3>Send your table production request to ANSLIFE</h3>
         <p>Buyers can send drawings, physical samples, reference images, materials, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
+        <a class="ai-company-request-secondary" href="/en/contact/upload-drawing">Upload drawings</a>
+        <a class="ai-company-request-secondary" href="/en/contact/company-info">Contact ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_STORAGE_CABINETS_SECTION_VN = `
+  <section id="storage-cabinets" class="ai-section ai-chair-page ai-storage-page ai-company-overview">
+    <header class="ai-chair-hero ai-storage-hero">
+      <h2>Tủ &amp; lưu trữ</h2>
+      <p class="ai-chair-lead">ANSLIFE hỗ trợ phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng tủ và hệ lưu trữ tại Việt Nam theo bản vẽ, mẫu duyệt, vật liệu, tiêu chuẩn kỹ thuật và yêu cầu riêng của từng buyer.</p>
+      <p>Trang này tập trung vào năng lực sản xuất, nhóm sản phẩm có thể triển khai, vật liệu sử dụng, tiêu chuẩn cần kiểm soát và quy trình làm việc với buyer quốc tế.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading">
+        <p class="ai-chair-eyebrow">NHÓM TỦ &amp; LƯU TRỮ CÓ THỂ TRIỂN KHAI</p>
+        <h3>Các dòng tủ và hệ lưu trữ ANSLIFE có thể phát triển và sản xuất</h3>
+      </div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card ai-storage-type-card"><span>01</span><h4>Tủ quần áo</h4><p>Tủ dùng cho nhà ở, căn hộ, khách sạn, resort hoặc dự án thương mại. Có thể triển khai tủ cánh mở, cánh lùa, tủ module hoặc tủ theo bản vẽ riêng.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>02</span><h4>Tủ sideboard</h4><p>Tủ thấp dùng cho phòng ăn, phòng khách, khách sạn hoặc không gian trang trí. Có thể triển khai bằng gỗ tự nhiên, MDF, plywood, veneer hoặc kết hợp vật liệu.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>03</span><h4>Tủ giày</h4><p>Tủ lưu trữ giày dép cho nhà ở, căn hộ, khách sạn hoặc dự án nội thất. Có thể triển khai theo kích thước, công năng, thông gió, vật liệu và tiêu chuẩn đóng gói riêng.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>04</span><h4>Tủ đầu giường</h4><p>Tủ nhỏ dùng cạnh giường trong nhà ở, khách sạn, resort hoặc căn hộ dịch vụ. Có thể triển khai tủ ngăn kéo, tủ mở, tủ kết hợp vật liệu hoặc theo thiết kế riêng.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>05</span><h4>Tủ ngăn kéo</h4><p>Tủ lưu trữ có ngăn kéo dùng cho phòng ngủ, phòng khách, văn phòng hoặc không gian thương mại. Có thể triển khai theo số tầng, ray trượt, tay nắm, vật liệu và kích thước yêu cầu.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>06</span><h4>Tủ trang trí</h4><p>Tủ dùng cho trưng bày, trang trí, lưu trữ nhẹ hoặc không gian thương mại. Có thể triển khai theo bản vẽ, vật liệu, màu sắc, hoàn thiện bề mặt và tiêu chuẩn riêng của buyer.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>07</span><h4>Hệ lưu trữ theo thiết kế</h4><p>Hệ tủ, module lưu trữ hoặc giải pháp storage theo thiết kế riêng cho nhà ở, khách sạn, resort, văn phòng và dự án thương mại.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>08</span><h4>Tủ tùy chỉnh</h4><p>Tủ phát triển theo bản vẽ, mẫu thật, hình ảnh tham khảo, kích thước riêng, vật liệu riêng, tiêu chuẩn đóng gói riêng hoặc yêu cầu OEM / ODM của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">VẬT LIỆU</p><h3>Vật liệu có thể sử dụng</h3></div>
+      <div class="ai-chair-material-grid">
+        <article><h4>Gỗ &amp; vật liệu gỗ</h4><p>Gỗ cao su, Acacia, Oak, Ash, Pine, plywood, MDF, veneer và vật liệu gỗ theo yêu cầu.</p></article>
+        <article><h4>Phụ kiện &amp; kết cấu</h4><p>Ray trượt, bản lề, tay nắm, khóa, chân tủ, phụ kiện lắp ráp, kết cấu module và phụ kiện theo tiêu chuẩn buyer.</p></article>
+        <article><h4>Hoàn thiện &amp; đóng gói</h4><p>Sơn, veneer, laminate, vật liệu bề mặt, carton, foam bảo vệ, corner protection, pallet, nhãn mác và vật liệu đóng gói theo tiêu chuẩn xuất khẩu.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">TIÊU CHUẨN KIỂM SOÁT</p><h3>Tiêu chuẩn cần kiểm soát</h3></div>
+      <ul>
+        <li>Kích thước sản phẩm</li><li>Kết cấu và độ ổn định</li><li>Độ phẳng của bề mặt</li><li>Độ chắc chắn của thân tủ, cánh tủ, ngăn kéo</li><li>Độ chính xác của khe hở, cánh, ray trượt và bản lề</li><li>Khả năng chịu lực của kệ, đáy tủ và ngăn kéo</li><li>Độ ẩm vật liệu</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Độ đồng đều giữa các lô hàng</li><li>Phụ kiện, tay nắm, ray trượt, bản lề và chi tiết lắp ráp</li><li>Khả năng tháo lắp nếu là hàng flat-pack</li><li>Quy cách đóng gói</li><li>Nhãn mác, carton mark và hướng dẫn lắp ráp nếu có</li><li>Tình trạng hàng trước khi xuất khẩu</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">HỖ TRỢ CỦA ANSLIFE</p><h3>ANSLIFE hỗ trợ gì trong dự án tủ &amp; lưu trữ?</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>Phát triển OEM / ODM</h4><p>Hỗ trợ phát triển tủ và hệ lưu trữ từ bản vẽ, mẫu thật, hình ảnh tham khảo hoặc ý tưởng ban đầu đến mẫu sản xuất.</p></article>
+        <article><span>02</span><h4>Chuỗi cung ứng vật liệu</h4><p>Kết nối nguồn vật liệu phù hợp tại Việt Nam: gỗ, plywood, MDF, veneer, phụ kiện, ray trượt, bản lề, sơn và vật liệu đóng gói.</p></article>
+        <article><span>03</span><h4>Thẩm định năng lực nhà máy</h4><p>Đánh giá nhà máy phù hợp với từng nhóm tủ, vật liệu, phụ kiện, sản lượng, tiêu chuẩn kỹ thuật và yêu cầu giao hàng.</p></article>
+        <article><span>04</span><h4>QC độc lập</h4><p>Kiểm soát chất lượng theo mẫu duyệt, bản vẽ, checklist kiểm hàng và tiêu chuẩn của từng thị trường.</p></article>
+        <article><span>05</span><h4>Đóng gói &amp; xuất khẩu</h4><p>Hỗ trợ tiêu chuẩn đóng gói, nhãn mác, hướng dẫn lắp ráp, chứng từ, logistics và xuất hàng quốc tế theo kế hoạch của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QUY TRÌNH</p><h3>Quy trình triển khai</h3></div>
+      <ol>
+        <li>Buyer gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu sản phẩm.</li><li>ANSLIFE đánh giá quy cách sản phẩm, vật liệu, kết cấu, phụ kiện và khả năng sản xuất.</li><li>ANSLIFE đề xuất phương án vật liệu, nhà máy, mẫu và tiêu chuẩn kiểm soát.</li><li>Phát triển mẫu hoặc đối chiếu mẫu đã duyệt.</li><li>Chuẩn hóa bản vẽ, vật liệu, màu sắc, phụ kiện, checklist QC và quy cách đóng gói.</li><li>Tổ chức sản xuất theo kế hoạch.</li><li>QC độc lập theo từng giai đoạn nếu cần.</li><li>Đóng gói, kiểm tra trước xuất và xuất hàng quốc tế.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">THÔNG TIN CẦN CUNG CẤP</p><h3>Buyer cần chuẩn bị gì?</h3></div>
+      <ul>
+        <li>Bản vẽ kỹ thuật</li><li>Hình ảnh tham khảo</li><li>Mẫu thật nếu có</li><li>Kích thước sản phẩm</li><li>Vật liệu mong muốn</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Yêu cầu phụ kiện: ray trượt, bản lề, tay nắm, khóa nếu có</li><li>Yêu cầu kết cấu / tháo lắp nếu có</li><li>Số lượng dự kiến</li><li>Thị trường xuất khẩu</li><li>Tiêu chuẩn đóng gói</li><li>Mức giá mục tiêu nếu có</li><li>Kế hoạch giao hàng</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Gửi yêu cầu sản xuất tủ &amp; lưu trữ cho ANSLIFE</h3>
+        <p>Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo, vật liệu, phụ kiện, số lượng và thị trường xuất khẩu. ANSLIFE sẽ xem xét và đề xuất phương án sản xuất, vật liệu, QC, đóng gói và xuất hàng phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_STORAGE_CABINETS_SECTION_EN = `
+  <section id="storage-cabinets" class="ai-section ai-chair-page ai-storage-page ai-company-overview">
+    <header class="ai-chair-hero ai-storage-hero">
+      <h2>Cabinets &amp; Storage</h2>
+      <p class="ai-chair-lead">ANSLIFE supports the development, manufacturing, quality control, packing, and export of cabinet and storage programs in Vietnam based on drawings, approved samples, materials, technical standards, and buyer-specific requirements.</p>
+      <p>This page focuses on manufacturing capability, product groups that can be developed, usable materials, control standards, and the working process with international buyers.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">CABINET &amp; STORAGE GROUPS</p><h3>Cabinet and storage programs ANSLIFE can develop and manufacture</h3></div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card ai-storage-type-card"><span>01</span><h4>Wardrobes</h4><p>Cabinets for homes, apartments, hotels, resorts, or commercial projects, including swing-door, sliding-door, modular, and drawing-based wardrobes.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>02</span><h4>Sideboards</h4><p>Low cabinets for dining rooms, living rooms, hotels, or decorative spaces, developed in solid wood, MDF, plywood, veneer, or mixed materials.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>03</span><h4>Shoe Cabinets</h4><p>Shoe storage for homes, apartments, hotels, or interior projects, developed by dimension, function, ventilation, material, and packing requirements.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>04</span><h4>Nightstands</h4><p>Small cabinets beside beds for homes, hotels, resorts, or serviced apartments, including drawer units, open cabinets, mixed-material cabinets, or custom designs.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>05</span><h4>Drawer Cabinets</h4><p>Storage cabinets with drawers for bedrooms, living rooms, offices, or commercial spaces, developed by drawer count, slides, handles, materials, and dimensions.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>06</span><h4>Display Cabinets</h4><p>Cabinets for display, decoration, light storage, or commercial spaces, developed to drawings, materials, colors, surface finishes, and buyer standards.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>07</span><h4>Designed Storage Systems</h4><p>Cabinet systems, storage modules, or project-specific storage solutions for homes, hotels, resorts, offices, and commercial projects.</p></article>
+        <article class="ai-chair-type-card ai-storage-type-card"><span>08</span><h4>Custom Cabinets</h4><p>Cabinets developed from drawings, physical samples, reference images, custom dimensions, specific materials, packing standards, or OEM / ODM requirements.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">MATERIALS</p><h3>Materials that can be used</h3></div>
+      <div class="ai-chair-material-grid">
+        <article><h4>Wood &amp; Wood Materials</h4><p>Rubberwood, Acacia, Oak, Ash, Pine, plywood, MDF, veneer, and buyer-specified wood materials.</p></article>
+        <article><h4>Hardware &amp; Structure</h4><p>Drawer slides, hinges, handles, locks, cabinet legs, assembly hardware, modular structures, and buyer-standard hardware.</p></article>
+        <article><h4>Finishing &amp; Packing</h4><p>Paint, veneer, laminate, surface materials, cartons, protective foam, corner protection, pallets, labels, and export-standard packing materials.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QC CHECKLIST</p><h3>Standards to control</h3></div>
+      <ul>
+        <li>Product dimensions</li><li>Structure and stability</li><li>Surface flatness</li><li>Strength of cabinet body, doors, and drawers</li><li>Accuracy of gaps, doors, slides, and hinges</li><li>Load-bearing performance of shelves, cabinet bottoms, and drawers</li><li>Material moisture content</li><li>Color and surface finish</li><li>Consistency across production batches</li><li>Hardware, handles, drawer slides, hinges, and assembly details</li><li>Flat-pack capability if applicable</li><li>Packing specifications</li><li>Labels, carton marks, and assembly instructions if required</li><li>Pre-export product condition</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">ANSLIFE SUPPORT</p><h3>How ANSLIFE supports cabinet and storage projects</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>OEM / ODM Development</h4><p>Support cabinet and storage development from drawings, physical samples, reference images, or early ideas to production samples.</p></article>
+        <article><span>02</span><h4>Material Supply Chain</h4><p>Connect suitable material sources in Vietnam: wood, plywood, MDF, veneer, hardware, drawer slides, hinges, paint, and packing materials.</p></article>
+        <article><span>03</span><h4>Factory Capability Assessment</h4><p>Assess factories for each cabinet group, material type, hardware requirement, output requirement, technical standard, and delivery requirement.</p></article>
+        <article><span>04</span><h4>Independent QC</h4><p>Control quality against approved samples, drawings, inspection checklists, and target-market standards.</p></article>
+        <article><span>05</span><h4>Packing &amp; Export</h4><p>Support packing standards, labels, assembly instructions, documents, logistics, and international shipment according to buyer plans.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">WORKFLOW</p><h3>Implementation process</h3></div>
+      <ol>
+        <li>Buyer sends drawings, physical samples, reference images, or product requirements.</li><li>ANSLIFE reviews product specifications, materials, structure, hardware, and manufacturing feasibility.</li><li>ANSLIFE proposes materials, factory options, sample direction, and control standards.</li><li>Develop samples or benchmark against approved samples.</li><li>Standardize drawings, materials, colors, hardware, QC checklists, and packing specifications.</li><li>Organize production according to the project plan.</li><li>Run independent QC by stage when required.</li><li>Pack, inspect before export, and ship internationally.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">BUYER INPUT</p><h3>What buyers should prepare</h3></div>
+      <ul>
+        <li>Technical drawings</li><li>Reference images</li><li>Physical sample if available</li><li>Product dimensions</li><li>Preferred materials</li><li>Color and surface finish</li><li>Hardware requirements: drawer slides, hinges, handles, or locks if any</li><li>Structure or flat-pack requirements if any</li><li>Expected quantity</li><li>Export market</li><li>Packing standards</li><li>Target price if any</li><li>Delivery plan</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Send your cabinet and storage production request to ANSLIFE</h3>
+        <p>Buyers can send drawings, physical samples, reference images, materials, hardware, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
@@ -14219,6 +14376,25 @@ export function getAIFallbackSectionHtml(
         language === 'vn'
           ? PRODUCTS_FINISHED_FURNITURE_TABLES_SECTION_VN
           : PRODUCTS_FINISHED_FURNITURE_TABLES_SECTION_EN;
+
+      return `<div class="ai-content">${sectionHtml}</div>`
+        .replace(
+          /href="\/vn\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(
+          /href="\/en\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
+        .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
+    }
+
+    if (subSectionSlug === 'storage-cabinets' || subSectionSlug === 'cabinets-storage') {
+      const sectionHtml =
+        language === 'vn'
+          ? PRODUCTS_FINISHED_FURNITURE_STORAGE_CABINETS_SECTION_VN
+          : PRODUCTS_FINISHED_FURNITURE_STORAGE_CABINETS_SECTION_EN;
 
       return `<div class="ai-content">${sectionHtml}</div>`
         .replace(

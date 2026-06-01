@@ -54,6 +54,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'finished-furniture' &&
     detailSlug === 'tables';
+  const isFinishedFurnitureStorageCabinetsDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finished-furniture' &&
+    (detailSlug === 'storage-cabinets' || detailSlug === 'cabinets-storage');
   const isOperationsOemOdmDetail =
     config.slug === 'products-solutions' &&
     section.id === 'operations-supply-solutions' &&
@@ -128,6 +132,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language === 'vn'
       ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng bàn tại Việt Nam.'
       : 'Development, manufacturing, quality control, packing, and export capability for table programs in Vietnam.';
+  const storageCabinetsSeoTitle = language === 'vn' ? 'Tủ & lưu trữ' : 'Cabinets & Storage';
+  const storageCabinetsSeoDescription =
+    language === 'vn'
+      ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng tủ và hệ lưu trữ tại Việt Nam.'
+      : 'Development, manufacturing, quality control, packing, and export capability for cabinet and storage programs in Vietnam.';
   const fallbackHtml = getAIFallbackSectionHtml(
     config.slug,
     section.id,
@@ -188,6 +197,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     ? `${chairsSeoTitle} | ${t(config.title)}`
     : isFinishedFurnitureTablesDetail
       ? `${tablesSeoTitle} | ${t(config.title)}`
+      : isFinishedFurnitureStorageCabinetsDetail
+        ? `${storageCabinetsSeoTitle} | ${t(config.title)}`
     : isOperationsOemOdmDetail
       ? `${oemOdmSeoTitle} | ${t(config.title)}`
       : isOperationsFeasibilityDetail
@@ -209,6 +220,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     ? chairsSeoDescription
     : isFinishedFurnitureTablesDetail
       ? tablesSeoDescription
+      : isFinishedFurnitureStorageCabinetsDetail
+        ? storageCabinetsSeoDescription
     : isOperationsOemOdmDetail
       ? oemOdmSeoDescription
       : isOperationsFeasibilityDetail
