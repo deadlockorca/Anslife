@@ -46,6 +46,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   }
 
   const detailSlug = nestedPath.split('/').filter(Boolean)[0] ?? '';
+  const isFinishedFurnitureChairsDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finished-furniture' &&
+    detailSlug === 'chairs';
   const isOperationsOemOdmDetail =
     config.slug === 'products-solutions' &&
     section.id === 'operations-supply-solutions' &&
@@ -110,6 +114,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const tradeFinancingSeoDescription = t(
     'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC, chứng từ và xuất hàng.',
   );
+  const chairsSeoTitle = language === 'vn' ? 'Ghế' : 'Chairs';
+  const chairsSeoDescription =
+    language === 'vn'
+      ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng ghế tại Việt Nam.'
+      : 'Development, manufacturing, quality control, packing, and export capability for chair programs in Vietnam.';
   const fallbackHtml = getAIFallbackSectionHtml(
     config.slug,
     section.id,
@@ -166,9 +175,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     : data?.content.rendered ?? fallbackHtml;
   const shouldShowLoading = loading && !resolvedHtml;
   const shouldShowError = Boolean(error) && !resolvedHtml;
-  const seoTitle = isOperationsOemOdmDetail
-    ? `${oemOdmSeoTitle} | ${t(config.title)}`
-    : isOperationsFeasibilityDetail
+  const seoTitle = isFinishedFurnitureChairsDetail
+    ? `${chairsSeoTitle} | ${t(config.title)}`
+    : isOperationsOemOdmDetail
+      ? `${oemOdmSeoTitle} | ${t(config.title)}`
+      : isOperationsFeasibilityDetail
       ? `${feasibilitySeoTitle} | ${t(config.title)}`
       : isOperationsFactoryAssessmentDetail
         ? `${factoryAssessmentSeoTitle} | ${t(config.title)}`
@@ -183,9 +194,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 : isOperationsTradeFinancingDetail
                   ? `${tradeFinancingSeoTitle} | ${t(config.title)}`
       : `${t(section.title)} | ${t(config.title)}`;
-  const seoDescription = isOperationsOemOdmDetail
-    ? oemOdmSeoDescription
-    : isOperationsFeasibilityDetail
+  const seoDescription = isFinishedFurnitureChairsDetail
+    ? chairsSeoDescription
+    : isOperationsOemOdmDetail
+      ? oemOdmSeoDescription
+      : isOperationsFeasibilityDetail
       ? feasibilitySeoDescription
       : isOperationsFactoryAssessmentDetail
         ? factoryAssessmentSeoDescription

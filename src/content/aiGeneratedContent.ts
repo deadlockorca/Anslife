@@ -283,7 +283,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
             <p class="ai-finished-card-index">01</p>
             <h4>Ghế</h4>
             <p>Sản xuất đa dạng các dòng ghế ăn, ghế phòng khách, ghế bar, ghế cafe, ghế gỗ và ghế bọc nệm.</p>
-            <a href="/vn/products-solutions/finished-furniture#chairs">Xem chi tiết <span>→</span></a>
+            <a href="/vn/products-solutions/finished-furniture/chairs">Xem chi tiết <span>→</span></a>
           </div>
         </article>
 
@@ -410,7 +410,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
             <p class="ai-finished-card-index">01</p>
             <h4>Chairs</h4>
             <p>Dining chairs, lounge chairs, bar chairs, cafe chairs, wooden chairs, and upholstered chair programs.</p>
-            <a href="/en/products-solutions/finished-furniture#chairs">View details <span>→</span></a>
+            <a href="/en/products-solutions/finished-furniture/chairs">View details <span>→</span></a>
           </div>
         </article>
 
@@ -512,6 +512,173 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
           <a class="ai-company-request-secondary" href="/en/contact/upload-drawing">Upload drawings</a>
           <a class="ai-company-request-secondary" href="/en/contact/company-info">Contact ANSLIFE</a>
         </div>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_VN = `
+  <section id="chairs" class="ai-section ai-chair-page ai-company-overview">
+    <header class="ai-chair-hero">
+      <h2>Ghế</h2>
+      <p class="ai-chair-lead">ANSLIFE hỗ trợ phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng ghế tại Việt Nam theo bản vẽ, mẫu duyệt, vật liệu, tiêu chuẩn kỹ thuật và yêu cầu riêng của từng buyer.</p>
+      <p>Trang này tập trung vào năng lực sản xuất, nhóm ghế có thể triển khai, vật liệu sử dụng, tiêu chuẩn cần kiểm soát và quy trình làm việc với buyer quốc tế.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading">
+        <p class="ai-chair-eyebrow">NHÓM GHẾ CÓ THỂ TRIỂN KHAI</p>
+        <h3>Các dòng ghế ANSLIFE có thể phát triển và sản xuất</h3>
+      </div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Ghế ăn</h4><p>Ghế dùng cho nhà ở, nhà hàng, khách sạn và các bộ sưu tập nội thất theo yêu cầu. Có thể triển khai ghế ăn gỗ tự nhiên, ghế ăn bọc nệm, ghế ăn kết hợp vật liệu, ghế ăn theo bản vẽ hoặc mẫu duyệt.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Ghế lounge</h4><p>Ghế thư giãn, ghế tiếp khách, ghế accent cho phòng khách, khách sạn, resort và không gian thương mại. Có thể triển khai bằng gỗ, bọc nệm hoặc kết hợp nhiều vật liệu.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Ghế cafe</h4><p>Ghế dùng cho quán cafe, nhà hàng, không gian thương mại và hospitality. Có thể triển khai ghế cafe trong nhà, ngoài trời, ghế gỗ, ghế bọc nệm hoặc ghế theo tiêu chuẩn thương mại.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Ghế bar / counter</h4><p>Ghế cao dùng cho quầy bar, đảo bếp, nhà hàng, khách sạn hoặc không gian thương mại. Có thể triển khai theo chiều cao, vật liệu, kết cấu và tiêu chuẩn riêng của buyer.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Ghế gỗ</h4><p>Ghế sử dụng gỗ tự nhiên, plywood, veneer hoặc vật liệu gỗ kỹ thuật. Có thể triển khai với gỗ cao su, Acacia, Oak, Ash, Pine hoặc vật liệu theo yêu cầu.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Ghế bọc nệm</h4><p>Ghế sử dụng foam, vải, da hoặc vật liệu bọc theo mẫu duyệt. Có thể triển khai ghế ăn bọc nệm, ghế lounge bọc nệm, ghế khách sạn, ghế thương mại hoặc ghế bọc theo mẫu riêng.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Ghế ngoài trời</h4><p>Ghế dùng cho sân vườn, ban công, resort, nhà hàng ngoài trời hoặc không gian có yêu cầu về độ bền vật liệu và điều kiện sử dụng. Có thể triển khai với gỗ, kim loại, vật liệu tự nhiên hoặc vật liệu phù hợp theo dự án.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Ghế tùy chỉnh</h4><p>Ghế phát triển theo bản vẽ, mẫu thật, hình ảnh tham khảo, kích thước riêng, vật liệu riêng, tiêu chuẩn đóng gói riêng hoặc yêu cầu OEM / ODM của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">VẬT LIỆU</p><h3>Vật liệu có thể sử dụng</h3></div>
+      <div class="ai-chair-material-grid">
+        <article><h4>Gỗ &amp; vật liệu gỗ</h4><p>Gỗ cao su, Acacia, Oak, Ash, Pine, plywood, MDF, veneer và vật liệu gỗ theo yêu cầu.</p></article>
+        <article><h4>Vật liệu bọc</h4><p>Foam, vải, da PU, da thật, vải ngoài trời và vật liệu bọc theo mẫu duyệt.</p></article>
+        <article><h4>Vật liệu kết hợp</h4><p>Kim loại, mây tre hoặc vật liệu tự nhiên, phụ kiện lắp ráp, keo, sơn, vật liệu hoàn thiện và vật liệu đóng gói.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QC CHECKLIST</p><h3>Tiêu chuẩn cần kiểm soát</h3></div>
+      <ul>
+        <li>Kích thước sản phẩm</li><li>Kết cấu và độ ổn định</li><li>Khả năng chịu lực</li><li>Độ ẩm vật liệu</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Độ đồng đều giữa các lô hàng</li><li>Tiêu chuẩn foam, vải, da hoặc vật liệu bọc</li><li>Độ chắc chắn của liên kết</li><li>Phụ kiện và chi tiết lắp ráp</li><li>Quy cách đóng gói</li><li>Nhãn mác, carton mark và hướng dẫn lắp ráp nếu có</li><li>Tình trạng hàng trước khi xuất khẩu</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">ANSLIFE SUPPORT</p><h3>ANSLIFE hỗ trợ gì trong dự án ghế?</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>Phát triển OEM / ODM</h4><p>Hỗ trợ phát triển ghế từ bản vẽ, mẫu thật, hình ảnh tham khảo hoặc ý tưởng ban đầu đến mẫu sản xuất.</p></article>
+        <article><span>02</span><h4>Chuỗi cung ứng vật liệu</h4><p>Kết nối nguồn vật liệu phù hợp tại Việt Nam: gỗ, plywood, veneer, foam, vải, da, phụ kiện, sơn và vật liệu đóng gói.</p></article>
+        <article><span>03</span><h4>Thẩm định năng lực nhà máy</h4><p>Đánh giá nhà máy phù hợp với từng nhóm ghế, vật liệu, sản lượng, tiêu chuẩn kỹ thuật và yêu cầu giao hàng.</p></article>
+        <article><span>04</span><h4>QC độc lập</h4><p>Kiểm soát chất lượng theo mẫu duyệt, bản vẽ, checklist kiểm hàng và tiêu chuẩn của từng thị trường.</p></article>
+        <article><span>05</span><h4>Đóng gói &amp; xuất khẩu</h4><p>Hỗ trợ tiêu chuẩn đóng gói, nhãn mác, chứng từ, logistics và xuất hàng quốc tế theo kế hoạch của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">WORKFLOW</p><h3>Quy trình triển khai</h3></div>
+      <ol>
+        <li>Buyer gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu sản phẩm.</li><li>ANSLIFE đánh giá quy cách sản phẩm, vật liệu, kết cấu và khả năng sản xuất.</li><li>ANSLIFE đề xuất phương án vật liệu, nhà máy, mẫu và tiêu chuẩn kiểm soát.</li><li>Phát triển mẫu hoặc đối chiếu mẫu đã duyệt.</li><li>Chuẩn hóa bản vẽ, vật liệu, màu sắc, checklist QC và quy cách đóng gói.</li><li>Tổ chức sản xuất theo kế hoạch.</li><li>QC độc lập theo từng giai đoạn nếu cần.</li><li>Đóng gói, kiểm tra trước xuất và xuất hàng quốc tế.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">BUYER INPUT</p><h3>Buyer cần chuẩn bị gì?</h3></div>
+      <ul>
+        <li>Bản vẽ kỹ thuật</li><li>Hình ảnh tham khảo</li><li>Mẫu thật nếu có</li><li>Kích thước sản phẩm</li><li>Vật liệu mong muốn</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Tiêu chuẩn foam, vải, da nếu có</li><li>Số lượng dự kiến</li><li>Thị trường xuất khẩu</li><li>Tiêu chuẩn đóng gói</li><li>Mức giá mục tiêu nếu có</li><li>Kế hoạch giao hàng</li>
+      </ul>
+    </section>
+
+    <aside class="ai-chair-note">
+      <h3>Ghi chú tránh trùng danh mục</h3>
+      <p>Các sản phẩm ghế đôn, ghế băng, ottoman và các sản phẩm mây tre chuyên biệt không đưa sâu vào trang này. Các nhóm đó được trình bày ở danh mục riêng để tránh trùng lặp nội dung.</p>
+    </aside>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Gửi yêu cầu sản xuất ghế cho ANSLIFE</h3>
+        <p>Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo, vật liệu, số lượng và thị trường xuất khẩu. ANSLIFE sẽ xem xét và đề xuất phương án sản xuất, vật liệu, QC, đóng gói và xuất hàng phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_EN = `
+  <section id="chairs" class="ai-section ai-chair-page ai-company-overview">
+    <header class="ai-chair-hero">
+      <h2>Chairs</h2>
+      <p class="ai-chair-lead">ANSLIFE supports the development, manufacturing, quality control, packing, and export of chair programs in Vietnam based on drawings, approved samples, materials, technical standards, and buyer-specific requirements.</p>
+      <p>This page focuses on manufacturing capability, chair groups that can be developed, usable materials, control standards, and the working process with international buyers.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">CHAIR GROUPS</p><h3>Chair programs ANSLIFE can develop and manufacture</h3></div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Dining Chairs</h4><p>Chairs for homes, restaurants, hotels, and custom furniture collections. Programs can include solid wood dining chairs, upholstered dining chairs, mixed-material chairs, and chairs made from drawings or approved samples.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Lounge Chairs</h4><p>Relaxing chairs, guest chairs, and accent chairs for living rooms, hotels, resorts, and commercial spaces. They can be developed in wood, upholstery, or mixed materials.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Cafe Chairs</h4><p>Chairs for cafes, restaurants, commercial interiors, and hospitality spaces. Programs can include indoor, outdoor, wooden, upholstered, or commercial-standard cafe chairs.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Bar / Counter Chairs</h4><p>High chairs for bars, kitchen islands, restaurants, hotels, and commercial spaces, developed to buyer height, material, structure, and performance requirements.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Wooden Chairs</h4><p>Chairs using solid wood, plywood, veneer, or engineered wood materials, including rubberwood, Acacia, Oak, Ash, Pine, or buyer-specified materials.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Upholstered Chairs</h4><p>Chairs using foam, fabric, leather, or approved upholstery materials, including upholstered dining chairs, lounge chairs, hotel chairs, commercial chairs, or custom upholstered samples.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Outdoor Chairs</h4><p>Chairs for gardens, balconies, resorts, outdoor restaurants, and spaces requiring durable materials and suitable use conditions.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Custom Chairs</h4><p>Chairs developed from drawings, physical samples, reference images, custom dimensions, specific materials, packing standards, or OEM / ODM requirements.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">MATERIALS</p><h3>Materials that can be used</h3></div>
+      <div class="ai-chair-material-grid">
+        <article><h4>Wood &amp; Wood Materials</h4><p>Rubberwood, Acacia, Oak, Ash, Pine, plywood, MDF, veneer, and buyer-specified wood materials.</p></article>
+        <article><h4>Upholstery Materials</h4><p>Foam, fabric, PU leather, genuine leather, outdoor fabrics, and upholstery materials based on approved samples.</p></article>
+        <article><h4>Mixed Materials</h4><p>Metal, rattan, natural materials, assembly hardware, glue, paint, finishing materials, and packing materials.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QC CHECKLIST</p><h3>Standards to control</h3></div>
+      <ul>
+        <li>Product dimensions</li><li>Structure and stability</li><li>Load-bearing performance</li><li>Material moisture content</li><li>Color and surface finish</li><li>Consistency across production batches</li><li>Foam, fabric, leather, or upholstery standards</li><li>Joint strength</li><li>Hardware and assembly details</li><li>Packing specifications</li><li>Labels, carton marks, and assembly instructions if required</li><li>Pre-export product condition</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">ANSLIFE SUPPORT</p><h3>How ANSLIFE supports chair projects</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>OEM / ODM Development</h4><p>Support chair development from drawings, physical samples, reference images, or early ideas to production samples.</p></article>
+        <article><span>02</span><h4>Material Supply Chain</h4><p>Connect suitable material sources in Vietnam: wood, plywood, veneer, foam, fabric, leather, hardware, paint, and packing materials.</p></article>
+        <article><span>03</span><h4>Factory Capability Assessment</h4><p>Assess factories for each chair group, material type, output requirement, technical standard, and delivery requirement.</p></article>
+        <article><span>04</span><h4>Independent QC</h4><p>Control quality against approved samples, drawings, inspection checklists, and target-market standards.</p></article>
+        <article><span>05</span><h4>Packing &amp; Export</h4><p>Support packing standards, labels, documents, logistics, and international shipment according to buyer plans.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">WORKFLOW</p><h3>Implementation process</h3></div>
+      <ol>
+        <li>Buyer sends drawings, physical samples, reference images, or product requirements.</li><li>ANSLIFE reviews specifications, materials, structure, and manufacturing feasibility.</li><li>ANSLIFE proposes materials, factory options, sample direction, and control standards.</li><li>Develop samples or benchmark against approved samples.</li><li>Standardize drawings, materials, colors, QC checklists, and packing specifications.</li><li>Organize production according to the project plan.</li><li>Run independent QC by stage when required.</li><li>Pack, inspect before export, and ship internationally.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">BUYER INPUT</p><h3>What buyers should prepare</h3></div>
+      <ul>
+        <li>Technical drawings</li><li>Reference images</li><li>Physical sample if available</li><li>Product dimensions</li><li>Preferred materials</li><li>Color and surface finish</li><li>Foam, fabric, or leather standards if any</li><li>Expected quantity</li><li>Export market</li><li>Packing standards</li><li>Target price if any</li><li>Delivery plan</li>
+      </ul>
+    </section>
+
+    <aside class="ai-chair-note">
+      <h3>Category Note</h3>
+      <p>Stools, benches, ottomans, and specialist rattan or bamboo products are not covered deeply on this page. Those groups are presented separately to avoid duplicated content.</p>
+    </aside>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Send your chair production request to ANSLIFE</h3>
+        <p>Buyers can send drawings, physical samples, reference images, materials, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
+        <a class="ai-company-request-secondary" href="/en/contact/upload-drawing">Upload drawings</a>
+        <a class="ai-company-request-secondary" href="/en/contact/company-info">Contact ANSLIFE</a>
       </div>
     </section>
   </section>
@@ -13881,6 +14048,25 @@ export function getAIFallbackSectionHtml(
   subSectionSlug = '',
 ): string | null {
   if (pageSlug === 'products-solutions' && sectionId === 'finished-furniture') {
+    if (subSectionSlug === 'chairs') {
+      const sectionHtml =
+        language === 'vn'
+          ? PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_VN
+          : PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_EN;
+
+      return `<div class="ai-content">${sectionHtml}</div>`
+        .replace(
+          /href="\/vn\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(
+          /href="\/en\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
+        .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
+    }
+
     const sectionHtml =
       language === 'vn'
         ? PRODUCTS_FINISHED_FURNITURE_SECTION_VN
@@ -13891,7 +14077,12 @@ export function getAIFallbackSectionHtml(
         /href="\/vn\/products-solutions\/finished-furniture/g,
         `href="/${language}/products-solutions/finished-furniture`,
       )
-      .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
+      .replace(
+        /href="\/en\/products-solutions\/finished-furniture/g,
+        `href="/${language}/products-solutions/finished-furniture`,
+      )
+      .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
+      .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
   }
 
   if (pageSlug === 'products-solutions' && sectionId === 'operations-supply-solutions') {
