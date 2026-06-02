@@ -58,6 +58,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'finished-furniture' &&
     (detailSlug === 'storage-cabinets' || detailSlug === 'cabinets-storage');
+  const isFinishedFurnitureShelvesDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finished-furniture' &&
+    detailSlug === 'shelves';
   const isOperationsOemOdmDetail =
     config.slug === 'products-solutions' &&
     section.id === 'operations-supply-solutions' &&
@@ -137,6 +141,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language === 'vn'
       ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng tủ và hệ lưu trữ tại Việt Nam.'
       : 'Development, manufacturing, quality control, packing, and export capability for cabinet and storage programs in Vietnam.';
+  const shelvesSeoTitle = language === 'vn' ? 'Kệ' : 'Shelves';
+  const shelvesSeoDescription =
+    language === 'vn'
+      ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng kệ tại Việt Nam.'
+      : 'Development, manufacturing, quality control, packing, and export capability for shelf programs in Vietnam.';
   const fallbackHtml = getAIFallbackSectionHtml(
     config.slug,
     section.id,
@@ -200,6 +209,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       ? `${tablesSeoTitle} | ${t(config.title)}`
       : isFinishedFurnitureStorageCabinetsDetail
         ? `${storageCabinetsSeoTitle} | ${t(config.title)}`
+        : isFinishedFurnitureShelvesDetail
+          ? `${shelvesSeoTitle} | ${t(config.title)}`
     : isOperationsOemOdmDetail
       ? `${oemOdmSeoTitle} | ${t(config.title)}`
       : isOperationsFeasibilityDetail
@@ -223,6 +234,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       ? tablesSeoDescription
       : isFinishedFurnitureStorageCabinetsDetail
         ? storageCabinetsSeoDescription
+        : isFinishedFurnitureShelvesDetail
+          ? shelvesSeoDescription
     : isOperationsOemOdmDetail
       ? oemOdmSeoDescription
       : isOperationsFeasibilityDetail
