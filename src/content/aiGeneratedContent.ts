@@ -323,7 +323,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
             <p class="ai-finished-card-index">05</p>
             <h4>Giường</h4>
             <p>Giường ngủ và khung giường theo các tiêu chuẩn kỹ thuật, độ bền kết cấu và yêu cầu đóng gói xuất khẩu.</p>
-            <a href="/vn/products-solutions/finished-furniture#beds">Xem chi tiết <span>→</span></a>
+            <a href="/vn/products-solutions/finished-furniture/beds">Xem chi tiết <span>→</span></a>
           </div>
         </article>
 
@@ -450,7 +450,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
             <p class="ai-finished-card-index">05</p>
             <h4>Beds</h4>
             <p>Bed frames and bedroom products built to technical standards, structural durability, and export packing requirements.</p>
-            <a href="/en/products-solutions/finished-furniture#beds">View details <span>→</span></a>
+            <a href="/en/products-solutions/finished-furniture/beds">View details <span>→</span></a>
           </div>
         </article>
 
@@ -1135,6 +1135,163 @@ const PRODUCTS_FINISHED_FURNITURE_SHELVES_SECTION_EN = `
       <div>
         <h3>Send your shelf production request to ANSLIFE</h3>
         <p>Buyers can send drawings, physical samples, reference images, materials, load requirements, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
+        <a class="ai-company-request-secondary" href="/en/contact/upload-drawing">Upload drawings</a>
+        <a class="ai-company-request-secondary" href="/en/contact/company-info">Contact ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_BEDS_SECTION_VN = `
+  <section id="beds" class="ai-section ai-chair-page ai-beds-page ai-company-overview">
+    <header class="ai-chair-hero ai-beds-hero">
+      <h2>Giường</h2>
+      <p class="ai-chair-lead">ANSLIFE hỗ trợ phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng giường tại Việt Nam theo bản vẽ, mẫu duyệt, vật liệu, tiêu chuẩn kỹ thuật và yêu cầu riêng của từng buyer.</p>
+      <p>Trang này tập trung vào năng lực sản xuất, nhóm giường có thể triển khai, vật liệu sử dụng, tiêu chuẩn cần kiểm soát và quy trình làm việc với buyer quốc tế.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading">
+        <p class="ai-chair-eyebrow">NHÓM GIƯỜNG CÓ THỂ TRIỂN KHAI</p>
+        <h3>Các dòng giường ANSLIFE có thể phát triển và sản xuất</h3>
+      </div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Giường gỗ</h4><p>Giường sử dụng gỗ tự nhiên, plywood, veneer hoặc vật liệu gỗ kỹ thuật. Có thể triển khai với gỗ cao su, Acacia, Oak, Ash, Pine hoặc vật liệu theo yêu cầu của buyer.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Giường bọc nệm</h4><p>Giường sử dụng foam, vải, da hoặc vật liệu bọc theo mẫu duyệt. Có thể triển khai giường bọc toàn bộ, giường bọc đầu giường, giường khách sạn hoặc giường theo thiết kế riêng.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Khung giường</h4><p>Khung giường sản xuất theo kích thước, kết cấu, vật liệu và tiêu chuẩn lắp ráp riêng. Có thể triển khai dạng cố định, tháo lắp hoặc flat-pack theo yêu cầu xuất khẩu.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Đầu giường</h4><p>Đầu giường bằng gỗ, veneer, bọc nệm, mây tre hoặc vật liệu kết hợp. Có thể sản xuất theo bản vẽ, mẫu duyệt, kích thước riêng và tiêu chuẩn hoàn thiện bề mặt.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Giường khách sạn</h4><p>Giường phục vụ khách sạn, resort, căn hộ dịch vụ và dự án hospitality. Có thể triển khai theo tiêu chuẩn độ bền, công năng, đóng gói, thay thế và lắp đặt của từng dự án.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Giường trẻ em / giường tầng</h4><p>Giường trẻ em, giường tầng hoặc giường có yêu cầu đặc biệt về kết cấu, an toàn, độ ổn định và quy cách đóng gói. Chỉ triển khai theo tiêu chuẩn kỹ thuật rõ ràng của buyer.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Giường flat-pack</h4><p>Giường thiết kế để tháo lắp, đóng gói gọn và xuất khẩu. Có thể triển khai theo yêu cầu về phụ kiện, hướng dẫn lắp ráp, carton mark và khả năng tối ưu container.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Giường tùy chỉnh</h4><p>Giường phát triển theo bản vẽ, mẫu thật, hình ảnh tham khảo, kích thước riêng, vật liệu riêng, tiêu chuẩn đóng gói riêng hoặc yêu cầu OEM / ODM của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">VẬT LIỆU</p><h3>Vật liệu có thể sử dụng</h3></div>
+      <div class="ai-chair-material-grid">
+        <article><h4>Gỗ &amp; vật liệu gỗ</h4><p>Gỗ cao su, Acacia, Oak, Ash, Pine, plywood, MDF, veneer và vật liệu gỗ theo yêu cầu.</p></article>
+        <article><h4>Vật liệu bọc &amp; hoàn thiện</h4><p>Foam, vải, da PU, da thật, vải ngoài trời nếu cần, sơn, veneer, lớp phủ hoàn thiện và vật liệu bọc theo mẫu duyệt.</p></article>
+        <article><h4>Phụ kiện &amp; vật liệu đóng gói</h4><p>Kim loại, phụ kiện lắp ráp, vít, bas liên kết, ray hoặc cơ cấu nâng nếu có, carton, foam bảo vệ, corner protection, pallet, nhãn mác, carton mark và vật liệu đóng gói theo tiêu chuẩn xuất khẩu.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">TIÊU CHUẨN KIỂM SOÁT</p><h3>Tiêu chuẩn cần kiểm soát</h3></div>
+      <ul>
+        <li>Kích thước tổng thể</li><li>Kích thước khung giường, đầu giường và chân giường</li><li>Kết cấu và độ ổn định</li><li>Khả năng chịu lực</li><li>Độ chắc chắn của liên kết</li><li>Độ chính xác khi lắp ráp</li><li>Độ an toàn khi sử dụng</li><li>Độ ẩm vật liệu</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Độ đồng đều giữa các lô hàng</li><li>Tiêu chuẩn foam, vải, da hoặc vật liệu bọc nếu có</li><li>Phụ kiện, vít, bas liên kết và chi tiết lắp ráp</li><li>Khả năng tháo lắp nếu là hàng flat-pack</li><li>Quy cách đóng gói</li><li>Nhãn mác, carton mark và hướng dẫn lắp ráp nếu có</li><li>Tình trạng hàng trước khi xuất khẩu</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">HỖ TRỢ CỦA ANSLIFE</p><h3>ANSLIFE hỗ trợ gì trong dự án giường?</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>Phát triển OEM / ODM</h4><p>Hỗ trợ phát triển giường từ bản vẽ, mẫu thật, hình ảnh tham khảo hoặc ý tưởng ban đầu đến mẫu sản xuất.</p></article>
+        <article><span>02</span><h4>Chuỗi cung ứng vật liệu</h4><p>Kết nối nguồn vật liệu phù hợp tại Việt Nam: gỗ, plywood, MDF, veneer, foam, vải, da, phụ kiện, sơn và vật liệu đóng gói.</p></article>
+        <article><span>03</span><h4>Thẩm định năng lực nhà máy</h4><p>Đánh giá nhà máy phù hợp với từng nhóm giường, vật liệu, sản lượng, tiêu chuẩn kỹ thuật và yêu cầu giao hàng.</p></article>
+        <article><span>04</span><h4>QC độc lập</h4><p>Kiểm soát chất lượng theo mẫu duyệt, bản vẽ, checklist kiểm hàng và tiêu chuẩn của từng thị trường.</p></article>
+        <article><span>05</span><h4>Đóng gói &amp; xuất khẩu</h4><p>Hỗ trợ tiêu chuẩn đóng gói, nhãn mác, chứng từ, logistics và xuất hàng quốc tế theo kế hoạch của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QUY TRÌNH</p><h3>Quy trình triển khai</h3></div>
+      <ol>
+        <li>Buyer gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu sản phẩm.</li><li>ANSLIFE đánh giá quy cách sản phẩm, vật liệu, kết cấu, phụ kiện và khả năng sản xuất.</li><li>ANSLIFE đề xuất phương án vật liệu, nhà máy, mẫu và tiêu chuẩn kiểm soát.</li><li>Phát triển mẫu hoặc đối chiếu mẫu đã duyệt.</li><li>Chuẩn hóa bản vẽ, vật liệu, màu sắc, phụ kiện, checklist QC và quy cách đóng gói.</li><li>Tổ chức sản xuất theo kế hoạch.</li><li>QC độc lập theo từng giai đoạn nếu cần.</li><li>Đóng gói, kiểm tra trước xuất và xuất hàng quốc tế.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">THÔNG TIN CẦN CUNG CẤP</p><h3>Buyer cần chuẩn bị gì?</h3></div>
+      <ul>
+        <li>Bản vẽ kỹ thuật</li><li>Hình ảnh tham khảo</li><li>Mẫu thật nếu có</li><li>Kích thước tổng thể</li><li>Kích thước nệm tương ứng nếu có</li><li>Kết cấu và công năng sử dụng</li><li>Vật liệu mong muốn</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Yêu cầu bọc nệm nếu có</li><li>Yêu cầu phụ kiện, vít, bas liên kết hoặc cơ cấu nâng nếu có</li><li>Yêu cầu tháo lắp hoặc flat-pack nếu có</li><li>Số lượng dự kiến</li><li>Thị trường xuất khẩu</li><li>Tiêu chuẩn đóng gói</li><li>Mức giá mục tiêu nếu có</li><li>Kế hoạch giao hàng</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Gửi yêu cầu sản xuất giường cho ANSLIFE</h3>
+        <p>Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo, vật liệu, phụ kiện, số lượng và thị trường xuất khẩu. ANSLIFE sẽ xem xét và đề xuất phương án sản xuất, vật liệu, QC, đóng gói và xuất hàng phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_BEDS_SECTION_EN = `
+  <section id="beds" class="ai-section ai-chair-page ai-beds-page ai-company-overview">
+    <header class="ai-chair-hero ai-beds-hero">
+      <h2>Beds</h2>
+      <p class="ai-chair-lead">ANSLIFE supports the development, manufacturing, quality control, packing, and export of bed programs in Vietnam based on drawings, approved samples, materials, technical standards, and buyer-specific requirements.</p>
+      <p>This page focuses on manufacturing capability, bed groups that can be developed, usable materials, control standards, and the working process with international buyers.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">BED GROUPS</p><h3>Bed programs ANSLIFE can develop and manufacture</h3></div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Wooden Beds</h4><p>Beds using solid wood, plywood, veneer, or engineered wood materials, including rubberwood, Acacia, Oak, Ash, Pine, or buyer-specified materials.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Upholstered Beds</h4><p>Beds using foam, fabric, leather, or approved upholstery materials, including fully upholstered beds, upholstered headboards, hotel beds, or custom designs.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Bed Frames</h4><p>Bed frames manufactured by size, structure, material, and assembly standard, including fixed, knock-down, or flat-pack structures for export.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Headboards</h4><p>Headboards in wood, veneer, upholstery, rattan, or mixed materials, produced from drawings, approved samples, custom dimensions, and surface finishing standards.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Hotel Beds</h4><p>Beds for hotels, resorts, serviced apartments, and hospitality projects, developed to project standards for durability, function, packing, replacement, and installation.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Kids Beds / Bunk Beds</h4><p>Kids beds, bunk beds, or beds with special requirements for structure, safety, stability, and packing. These are developed only with clear buyer technical standards.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Flat-Pack Beds</h4><p>Beds designed for knock-down assembly, compact packing, and export, including hardware, assembly instructions, carton marks, and container optimization requirements.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Custom Beds</h4><p>Beds developed from drawings, physical samples, reference images, custom dimensions, specific materials, packing standards, or OEM / ODM requirements.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">MATERIALS</p><h3>Materials that can be used</h3></div>
+      <div class="ai-chair-material-grid">
+        <article><h4>Wood &amp; Wood Materials</h4><p>Rubberwood, Acacia, Oak, Ash, Pine, plywood, MDF, veneer, and buyer-specified wood materials.</p></article>
+        <article><h4>Upholstery &amp; Finishing</h4><p>Foam, fabric, PU leather, genuine leather, outdoor fabrics when needed, paint, veneer, finishing coatings, and approved upholstery materials.</p></article>
+        <article><h4>Hardware &amp; Packing Materials</h4><p>Metal, assembly hardware, screws, brackets, rails or lift mechanisms if required, cartons, protective foam, corner protection, pallets, labels, carton marks, and export-standard packing materials.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QC CHECKLIST</p><h3>Standards to control</h3></div>
+      <ul>
+        <li>Overall dimensions</li><li>Bed frame, headboard, and leg dimensions</li><li>Structure and stability</li><li>Load-bearing performance</li><li>Joint strength</li><li>Assembly accuracy</li><li>User safety</li><li>Material moisture content</li><li>Color and surface finish</li><li>Consistency across production batches</li><li>Foam, fabric, leather, or upholstery standards if applicable</li><li>Hardware, screws, brackets, and assembly details</li><li>Flat-pack capability if applicable</li><li>Packing specifications</li><li>Labels, carton marks, and assembly instructions if required</li><li>Pre-export product condition</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">ANSLIFE SUPPORT</p><h3>How ANSLIFE supports bed projects</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>OEM / ODM Development</h4><p>Support bed development from drawings, physical samples, reference images, or early ideas to production samples.</p></article>
+        <article><span>02</span><h4>Material Supply Chain</h4><p>Connect suitable material sources in Vietnam: wood, plywood, MDF, veneer, foam, fabric, leather, hardware, paint, and packing materials.</p></article>
+        <article><span>03</span><h4>Factory Capability Assessment</h4><p>Assess factories for each bed group, material type, output requirement, technical standard, and delivery requirement.</p></article>
+        <article><span>04</span><h4>Independent QC</h4><p>Control quality against approved samples, drawings, inspection checklists, and target-market standards.</p></article>
+        <article><span>05</span><h4>Packing &amp; Export</h4><p>Support packing standards, labels, documents, logistics, and international shipment according to buyer plans.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">WORKFLOW</p><h3>Implementation process</h3></div>
+      <ol>
+        <li>Buyer sends drawings, physical samples, reference images, or product requirements.</li><li>ANSLIFE reviews product specifications, materials, structure, hardware, and manufacturing feasibility.</li><li>ANSLIFE proposes materials, factory options, sample direction, and control standards.</li><li>Develop samples or benchmark against approved samples.</li><li>Standardize drawings, materials, colors, hardware, QC checklists, and packing specifications.</li><li>Organize production according to the project plan.</li><li>Run independent QC by stage when required.</li><li>Pack, inspect before export, and ship internationally.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">BUYER INPUT</p><h3>What buyers should prepare</h3></div>
+      <ul>
+        <li>Technical drawings</li><li>Reference images</li><li>Physical sample if available</li><li>Overall dimensions</li><li>Corresponding mattress size if any</li><li>Structure and usage function</li><li>Preferred materials</li><li>Color and surface finish</li><li>Upholstery requirements if any</li><li>Hardware, screws, brackets, or lift mechanism requirements if any</li><li>Knock-down or flat-pack requirements if any</li><li>Expected quantity</li><li>Export market</li><li>Packing standards</li><li>Target price if any</li><li>Delivery plan</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Send your bed production request to ANSLIFE</h3>
+        <p>Buyers can send drawings, physical samples, reference images, materials, hardware, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
@@ -14675,6 +14832,25 @@ export function getAIFallbackSectionHtml(
         language === 'vn'
           ? PRODUCTS_FINISHED_FURNITURE_SHELVES_SECTION_VN
           : PRODUCTS_FINISHED_FURNITURE_SHELVES_SECTION_EN;
+
+      return `<div class="ai-content">${sectionHtml}</div>`
+        .replace(
+          /href="\/vn\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(
+          /href="\/en\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
+        .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
+    }
+
+    if (subSectionSlug === 'beds') {
+      const sectionHtml =
+        language === 'vn'
+          ? PRODUCTS_FINISHED_FURNITURE_BEDS_SECTION_VN
+          : PRODUCTS_FINISHED_FURNITURE_BEDS_SECTION_EN;
 
       return `<div class="ai-content">${sectionHtml}</div>`
         .replace(

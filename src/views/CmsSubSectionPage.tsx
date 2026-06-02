@@ -62,6 +62,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'finished-furniture' &&
     detailSlug === 'shelves';
+  const isFinishedFurnitureBedsDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finished-furniture' &&
+    detailSlug === 'beds';
   const isOperationsOemOdmDetail =
     config.slug === 'products-solutions' &&
     section.id === 'operations-supply-solutions' &&
@@ -146,6 +150,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language === 'vn'
       ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng kệ tại Việt Nam.'
       : 'Development, manufacturing, quality control, packing, and export capability for shelf programs in Vietnam.';
+  const bedsSeoTitle = language === 'vn' ? 'Giường' : 'Beds';
+  const bedsSeoDescription =
+    language === 'vn'
+      ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng giường tại Việt Nam.'
+      : 'Development, manufacturing, quality control, packing, and export capability for bed programs in Vietnam.';
   const fallbackHtml = getAIFallbackSectionHtml(
     config.slug,
     section.id,
@@ -211,6 +220,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         ? `${storageCabinetsSeoTitle} | ${t(config.title)}`
         : isFinishedFurnitureShelvesDetail
           ? `${shelvesSeoTitle} | ${t(config.title)}`
+          : isFinishedFurnitureBedsDetail
+            ? `${bedsSeoTitle} | ${t(config.title)}`
     : isOperationsOemOdmDetail
       ? `${oemOdmSeoTitle} | ${t(config.title)}`
       : isOperationsFeasibilityDetail
@@ -236,6 +247,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         ? storageCabinetsSeoDescription
         : isFinishedFurnitureShelvesDetail
           ? shelvesSeoDescription
+          : isFinishedFurnitureBedsDetail
+            ? bedsSeoDescription
     : isOperationsOemOdmDetail
       ? oemOdmSeoDescription
       : isOperationsFeasibilityDetail
