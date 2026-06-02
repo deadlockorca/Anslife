@@ -95,40 +95,6 @@ export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
   {
     label: 'Giải pháp vận hành & cung ứng',
     path: '/products-solutions/operations-supply-solutions',
-    children: [
-      {
-        label: 'Phát triển sản phẩm OEM / ODM',
-        path: '/products-solutions/operations-supply-solutions/oem-odm-product-development',
-      },
-      {
-        label: 'Đánh giá khả thi dự án & chuỗi cung ứng',
-        path: '/products-solutions/operations-supply-solutions/project-supply-chain-feasibility-assessment',
-      },
-      {
-        label: 'Thẩm định năng lực nhà máy',
-        path: '/products-solutions/operations-supply-solutions/factory-capability-assessment',
-      },
-      {
-        label: 'Vận hành & quản lý dự án xuất khẩu',
-        path: '/products-solutions/operations-supply-solutions/export-project-operation-management',
-      },
-      {
-        label: 'QC độc lập trong dự án',
-        path: '/products-solutions/operations-supply-solutions/independent-project-qc-service',
-      },
-      {
-        label: 'Điều phối logistics & xuất nhập khẩu dự án',
-        path: '/products-solutions/operations-supply-solutions/project-logistics-import-export-coordination',
-      },
-      {
-        label: 'Lưu kho tại Việt Nam',
-        path: '/products-solutions/operations-supply-solutions/vietnam-storage-solution',
-      },
-      {
-        label: 'Tài trợ thương mại',
-        path: '/products-solutions/operations-supply-solutions/trade-financing',
-      },
-    ],
   },
 ];
 
