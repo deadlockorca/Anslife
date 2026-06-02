@@ -13726,6 +13726,13 @@ a.mobile-menu-utility-link {
 }
 
 .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  .ai-rattan-hero {
+  background: url('/assets/products/finished-furniture/rattan-bamboo-banner.png') center center / cover
+    no-repeat !important;
+  border: 0 !important;
+}
+
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
   .html-panel:has(.ai-finished-page),
 .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
   .ai-section.ai-finished-page {
@@ -15145,6 +15152,21 @@ a.mobile-menu-utility-link {
   max-width: min(40%, 620px);
 }
 
+.ai-rattan-hero {
+  background: url('/assets/products/finished-furniture/rattan-bamboo-banner.png') center center /
+    cover no-repeat !important;
+}
+
+.ai-chair-hero.ai-rattan-hero h2 {
+  max-width: 38%;
+  font-size: clamp(2.45rem, 4.7vw, 4.8rem);
+}
+
+.ai-chair-hero.ai-rattan-hero .ai-chair-lead,
+.ai-chair-hero.ai-rattan-hero p:not(.ai-chair-eyebrow) {
+  max-width: min(40%, 620px);
+}
+
 .ai-chair-eyebrow {
   margin: 0;
   color: #d95f22 !important;
@@ -15430,6 +15452,10 @@ a.mobile-menu-utility-link {
     background-position: 67% center;
   }
 
+  .ai-rattan-hero {
+    background-position: 68% center;
+  }
+
   .ai-chair-hero.ai-storage-hero h2,
   .ai-chair-hero.ai-storage-hero .ai-chair-lead,
   .ai-chair-hero.ai-storage-hero p:not(.ai-chair-eyebrow),
@@ -15438,7 +15464,10 @@ a.mobile-menu-utility-link {
   .ai-chair-hero.ai-shelves-hero p:not(.ai-chair-eyebrow),
   .ai-chair-hero.ai-beds-hero h2,
   .ai-chair-hero.ai-beds-hero .ai-chair-lead,
-  .ai-chair-hero.ai-beds-hero p:not(.ai-chair-eyebrow) {
+  .ai-chair-hero.ai-beds-hero p:not(.ai-chair-eyebrow),
+  .ai-chair-hero.ai-rattan-hero h2,
+  .ai-chair-hero.ai-rattan-hero .ai-chair-lead,
+  .ai-chair-hero.ai-rattan-hero p:not(.ai-chair-eyebrow) {
     max-width: 86%;
   }
 

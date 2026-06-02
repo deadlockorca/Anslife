@@ -66,6 +66,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'finished-furniture' &&
     detailSlug === 'beds';
+  const isFinishedFurnitureRattanBambooDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finished-furniture' &&
+    detailSlug === 'rattan-bamboo-furniture';
   const isOperationsOemOdmDetail =
     config.slug === 'products-solutions' &&
     section.id === 'operations-supply-solutions' &&
@@ -155,6 +159,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language === 'vn'
       ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các dòng giường tại Việt Nam.'
       : 'Development, manufacturing, quality control, packing, and export capability for bed programs in Vietnam.';
+  const rattanBambooSeoTitle =
+    language === 'vn' ? 'Nội thất mây tre' : 'Rattan & Bamboo Furniture';
+  const rattanBambooSeoDescription =
+    language === 'vn'
+      ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các sản phẩm nội thất mây tre tại Việt Nam.'
+      : 'Development, manufacturing, quality control, packing, and export capability for rattan and bamboo furniture products in Vietnam.';
   const fallbackHtml = getAIFallbackSectionHtml(
     config.slug,
     section.id,
@@ -222,6 +232,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
           ? `${shelvesSeoTitle} | ${t(config.title)}`
           : isFinishedFurnitureBedsDetail
             ? `${bedsSeoTitle} | ${t(config.title)}`
+            : isFinishedFurnitureRattanBambooDetail
+              ? `${rattanBambooSeoTitle} | ${t(config.title)}`
     : isOperationsOemOdmDetail
       ? `${oemOdmSeoTitle} | ${t(config.title)}`
       : isOperationsFeasibilityDetail
@@ -249,6 +261,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
           ? shelvesSeoDescription
           : isFinishedFurnitureBedsDetail
             ? bedsSeoDescription
+            : isFinishedFurnitureRattanBambooDetail
+              ? rattanBambooSeoDescription
     : isOperationsOemOdmDetail
       ? oemOdmSeoDescription
       : isOperationsFeasibilityDetail

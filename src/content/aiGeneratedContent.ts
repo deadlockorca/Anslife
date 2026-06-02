@@ -333,7 +333,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
             <p class="ai-finished-card-index">06</p>
             <h4>Nội thất mây tre</h4>
             <p>Ghế mây, bàn mây, sản phẩm kết hợp vật liệu tự nhiên và khung gỗ theo định hướng thương mại của buyer.</p>
-            <a href="/vn/products-solutions/finished-furniture#rattan-bamboo-furniture">Xem chi tiết <span>→</span></a>
+            <a href="/vn/products-solutions/finished-furniture/rattan-bamboo-furniture">Xem chi tiết <span>→</span></a>
           </div>
         </article>
 
@@ -460,7 +460,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
             <p class="ai-finished-card-index">06</p>
             <h4>Rattan & Bamboo Furniture</h4>
             <p>Rattan chairs, rattan tables, natural-material products, and mixed-material furniture with wood frames.</p>
-            <a href="/en/products-solutions/finished-furniture#rattan-bamboo-furniture">View details <span>→</span></a>
+            <a href="/en/products-solutions/finished-furniture/rattan-bamboo-furniture">View details <span>→</span></a>
           </div>
         </article>
 
@@ -1292,6 +1292,163 @@ const PRODUCTS_FINISHED_FURNITURE_BEDS_SECTION_EN = `
       <div>
         <h3>Send your bed production request to ANSLIFE</h3>
         <p>Buyers can send drawings, physical samples, reference images, materials, hardware, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
+        <a class="ai-company-request-secondary" href="/en/contact/upload-drawing">Upload drawings</a>
+        <a class="ai-company-request-secondary" href="/en/contact/company-info">Contact ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_RATTAN_BAMBOO_SECTION_VN = `
+  <section id="rattan-bamboo-furniture" class="ai-section ai-chair-page ai-rattan-page ai-company-overview">
+    <header class="ai-chair-hero ai-rattan-hero">
+      <h2>Nội thất mây tre</h2>
+      <p class="ai-chair-lead">ANSLIFE hỗ trợ phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các sản phẩm nội thất mây tre tại Việt Nam theo bản vẽ, mẫu duyệt, vật liệu, tiêu chuẩn kỹ thuật và yêu cầu riêng của từng buyer.</p>
+      <p>Các sản phẩm có thể sử dụng mây, tre, song, vật liệu tự nhiên hoặc kết hợp với gỗ, kim loại, foam, vải và vật liệu bọc để phù hợp với công năng, phong cách thiết kế và thị trường xuất khẩu.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading">
+        <p class="ai-chair-eyebrow">NHÓM SẢN PHẨM MÂY TRE</p>
+        <h3>Các dòng nội thất mây tre ANSLIFE có thể phát triển và sản xuất</h3>
+      </div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Ghế mây tre</h4><p>Ghế sử dụng mây, tre, song hoặc vật liệu tự nhiên, có thể kết hợp với khung gỗ, khung kim loại, foam hoặc vải bọc theo yêu cầu của buyer.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Bàn mây tre</h4><p>Bàn sử dụng mây tre hoặc vật liệu tự nhiên, có thể kết hợp với mặt gỗ, kính, kim loại hoặc vật liệu hoàn thiện khác theo thiết kế riêng.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Tủ &amp; kệ mây tre</h4><p>Tủ, kệ và sản phẩm lưu trữ có chi tiết mây tre, đan thủ công hoặc vật liệu tự nhiên kết hợp với khung gỗ, plywood, MDF hoặc kim loại.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Sản phẩm đan thủ công</h4><p>Các sản phẩm có chi tiết đan từ mây, tre, song hoặc vật liệu tự nhiên, phù hợp với nhóm hàng trang trí, nội thất nhẹ hoặc sản phẩm theo bộ sưu tập riêng.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Nội thất resort &amp; hospitality</h4><p>Sản phẩm mây tre dùng cho resort, khách sạn, cafe, nhà hàng, villa hoặc không gian thương mại có yêu cầu thẩm mỹ tự nhiên và cảm giác thủ công.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Nội thất kết hợp vật liệu</h4><p>Sản phẩm kết hợp mây tre với gỗ, kim loại, foam, vải, da hoặc vật liệu hoàn thiện khác để đáp ứng yêu cầu về kết cấu, độ bền và phong cách thiết kế.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Phụ kiện &amp; chi tiết mây tre</h4><p>Chi tiết mây tre dùng cho ghế, tủ, kệ, cánh tủ, mặt ghế, tựa lưng, panel trang trí hoặc cấu kiện phục vụ lắp ráp sản phẩm.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Sản phẩm mây tre tùy chỉnh</h4><p>Sản phẩm phát triển theo bản vẽ, mẫu thật, hình ảnh tham khảo, vật liệu riêng, tiêu chuẩn đóng gói riêng hoặc yêu cầu OEM / ODM của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">VẬT LIỆU</p><h3>Vật liệu có thể sử dụng</h3></div>
+      <div class="ai-chair-material-grid">
+        <article><h4>Vật liệu tự nhiên</h4><p>Mây, tre, song, cói, lục bình hoặc vật liệu tự nhiên khác theo yêu cầu của từng dự án.</p></article>
+        <article><h4>Vật liệu kết hợp</h4><p>Gỗ tự nhiên, plywood, MDF, veneer, kim loại, foam, vải, da, phụ kiện lắp ráp, keo, sơn và vật liệu hoàn thiện.</p></article>
+        <article><h4>Vật liệu đóng gói</h4><p>Carton, foam bảo vệ, corner protection, túi chống ẩm, pallet, nhãn mác, carton mark và vật liệu đóng gói theo tiêu chuẩn xuất khẩu.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">TIÊU CHUẨN KIỂM SOÁT</p><h3>Tiêu chuẩn cần kiểm soát</h3></div>
+      <ul>
+        <li>Kích thước sản phẩm</li><li>Kết cấu và độ ổn định</li><li>Độ chắc chắn của khung</li><li>Độ căng và độ đều của phần đan</li><li>Độ bền của liên kết giữa vật liệu tự nhiên và khung sản phẩm</li><li>Độ ẩm vật liệu</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Độ đồng đều giữa các lô hàng</li><li>Tình trạng nứt, gãy, xước hoặc biến dạng vật liệu</li><li>Tiêu chuẩn xử lý bề mặt nếu có</li><li>Khả năng chịu lực theo công năng sử dụng</li><li>Phụ kiện và chi tiết lắp ráp</li><li>Quy cách đóng gói</li><li>Kiểm soát chống ẩm trong đóng gói và vận chuyển</li><li>Nhãn mác, carton mark và hướng dẫn lắp ráp nếu có</li><li>Tình trạng hàng trước khi xuất khẩu</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">HỖ TRỢ CỦA ANSLIFE</p><h3>ANSLIFE hỗ trợ gì trong dự án nội thất mây tre?</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>Phát triển OEM / ODM</h4><p>Hỗ trợ phát triển sản phẩm mây tre từ bản vẽ, mẫu thật, hình ảnh tham khảo hoặc ý tưởng ban đầu đến mẫu sản xuất.</p></article>
+        <article><span>02</span><h4>Chuỗi cung ứng vật liệu</h4><p>Kết nối nguồn mây, tre, song, vật liệu tự nhiên, gỗ, khung, phụ kiện, vật liệu bọc và vật liệu đóng gói phù hợp tại Việt Nam.</p></article>
+        <article><span>03</span><h4>Thẩm định năng lực nhà máy</h4><p>Đánh giá nhà máy hoặc xưởng phù hợp với từng nhóm sản phẩm mây tre, kỹ thuật đan, vật liệu, sản lượng, tiêu chuẩn kỹ thuật và yêu cầu giao hàng.</p></article>
+        <article><span>04</span><h4>QC độc lập</h4><p>Kiểm soát chất lượng theo mẫu duyệt, bản vẽ, checklist kiểm hàng, tiêu chuẩn vật liệu tự nhiên và tiêu chuẩn của từng thị trường.</p></article>
+        <article><span>05</span><h4>Đóng gói &amp; xuất khẩu</h4><p>Hỗ trợ tiêu chuẩn đóng gói, chống ẩm, nhãn mác, chứng từ, logistics và xuất hàng quốc tế theo kế hoạch của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QUY TRÌNH</p><h3>Quy trình triển khai</h3></div>
+      <ol>
+        <li>Buyer gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu sản phẩm.</li><li>ANSLIFE đánh giá quy cách sản phẩm, vật liệu, kỹ thuật đan, kết cấu và khả năng sản xuất.</li><li>ANSLIFE đề xuất phương án vật liệu, nhà máy, mẫu và tiêu chuẩn kiểm soát.</li><li>Phát triển mẫu hoặc đối chiếu mẫu đã duyệt.</li><li>Chuẩn hóa vật liệu, màu sắc, kỹ thuật đan, checklist QC và quy cách đóng gói.</li><li>Tổ chức sản xuất theo kế hoạch.</li><li>QC độc lập theo từng giai đoạn nếu cần.</li><li>Đóng gói, kiểm tra chống ẩm, kiểm tra trước xuất và xuất hàng quốc tế.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">THÔNG TIN CẦN CUNG CẤP</p><h3>Buyer cần chuẩn bị gì?</h3></div>
+      <ul>
+        <li>Bản vẽ kỹ thuật</li><li>Hình ảnh tham khảo</li><li>Mẫu thật nếu có</li><li>Kích thước sản phẩm</li><li>Vật liệu mong muốn</li><li>Kiểu đan hoặc mẫu đan nếu có</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Yêu cầu khung gỗ, khung kim loại hoặc vật liệu kết hợp nếu có</li><li>Yêu cầu foam, vải, da hoặc vật liệu bọc nếu có</li><li>Số lượng dự kiến</li><li>Thị trường xuất khẩu</li><li>Tiêu chuẩn đóng gói và chống ẩm</li><li>Mức giá mục tiêu nếu có</li><li>Kế hoạch giao hàng</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Gửi yêu cầu sản xuất nội thất mây tre cho ANSLIFE</h3>
+        <p>Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo, vật liệu, kiểu đan, số lượng và thị trường xuất khẩu. ANSLIFE sẽ xem xét và đề xuất phương án sản xuất, vật liệu, QC, đóng gói và xuất hàng phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_RATTAN_BAMBOO_SECTION_EN = `
+  <section id="rattan-bamboo-furniture" class="ai-section ai-chair-page ai-rattan-page ai-company-overview">
+    <header class="ai-chair-hero ai-rattan-hero">
+      <h2>Rattan &amp; Bamboo Furniture</h2>
+      <p class="ai-chair-lead">ANSLIFE supports the development, manufacturing, quality control, packing, and export of rattan and bamboo furniture products in Vietnam based on drawings, approved samples, materials, technical standards, and buyer-specific requirements.</p>
+      <p>Products can use rattan, bamboo, cane, natural materials, or combinations with wood, metal, foam, fabric, and upholstery materials to match function, design style, and export-market requirements.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">RATTAN &amp; BAMBOO PRODUCT GROUPS</p><h3>Rattan and bamboo furniture ANSLIFE can develop and manufacture</h3></div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Rattan &amp; Bamboo Chairs</h4><p>Chairs using rattan, bamboo, cane, or natural materials, combined with wood frames, metal frames, foam, or fabric upholstery according to buyer requirements.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Rattan &amp; Bamboo Tables</h4><p>Tables using rattan, bamboo, or natural materials, combined with wood tops, glass, metal, or other finishing materials based on custom designs.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Rattan Cabinets &amp; Shelves</h4><p>Cabinets, shelves, and storage products with rattan details, handwoven parts, or natural materials combined with wood, plywood, MDF, or metal frames.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Handwoven Products</h4><p>Products with woven details from rattan, bamboo, cane, or natural materials, suitable for decor, light furniture, or custom collection programs.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Resort &amp; Hospitality Furniture</h4><p>Rattan and bamboo products for resorts, hotels, cafes, restaurants, villas, or commercial spaces requiring a natural aesthetic and handcrafted feeling.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Mixed-Material Furniture</h4><p>Products combining rattan and bamboo with wood, metal, foam, fabric, leather, or other finishing materials to meet structure, durability, and design-style requirements.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Rattan Details &amp; Components</h4><p>Rattan details for chairs, cabinets, shelves, cabinet doors, seats, backrests, decorative panels, or assembly components.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Custom Rattan Products</h4><p>Products developed from drawings, physical samples, reference images, specific materials, packing standards, or OEM / ODM requirements.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">MATERIALS</p><h3>Materials that can be used</h3></div>
+      <div class="ai-chair-material-grid">
+        <article><h4>Natural Materials</h4><p>Rattan, bamboo, cane, sedge, water hyacinth, or other natural materials according to each project requirement.</p></article>
+        <article><h4>Mixed Materials</h4><p>Solid wood, plywood, MDF, veneer, metal, foam, fabric, leather, assembly hardware, glue, paint, and finishing materials.</p></article>
+        <article><h4>Packing Materials</h4><p>Cartons, protective foam, corner protection, moisture-control bags, pallets, labels, carton marks, and export-standard packing materials.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QC CHECKLIST</p><h3>Standards to control</h3></div>
+      <ul>
+        <li>Product dimensions</li><li>Structure and stability</li><li>Frame strength</li><li>Tension and consistency of woven parts</li><li>Bonding strength between natural materials and product frames</li><li>Material moisture content</li><li>Color and surface finish</li><li>Consistency across production batches</li><li>Cracking, breaking, scratching, or material deformation</li><li>Surface treatment standards if applicable</li><li>Load-bearing performance by function</li><li>Hardware and assembly details</li><li>Packing specifications</li><li>Moisture control during packing and transportation</li><li>Labels, carton marks, and assembly instructions if required</li><li>Pre-export product condition</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">ANSLIFE SUPPORT</p><h3>How ANSLIFE supports rattan and bamboo furniture projects</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>OEM / ODM Development</h4><p>Support rattan and bamboo product development from drawings, physical samples, reference images, or early ideas to production samples.</p></article>
+        <article><span>02</span><h4>Material Supply Chain</h4><p>Connect suitable sources for rattan, bamboo, cane, natural materials, wood, frames, hardware, upholstery materials, and packing materials in Vietnam.</p></article>
+        <article><span>03</span><h4>Factory Capability Assessment</h4><p>Assess factories or workshops for each rattan product group, weaving technique, material type, output requirement, technical standard, and delivery requirement.</p></article>
+        <article><span>04</span><h4>Independent QC</h4><p>Control quality against approved samples, drawings, inspection checklists, natural-material standards, and target-market standards.</p></article>
+        <article><span>05</span><h4>Packing &amp; Export</h4><p>Support packing standards, moisture protection, labels, documents, logistics, and international shipment according to buyer plans.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">WORKFLOW</p><h3>Implementation process</h3></div>
+      <ol>
+        <li>Buyer sends drawings, physical samples, reference images, or product requirements.</li><li>ANSLIFE reviews product specifications, materials, weaving techniques, structure, and manufacturing feasibility.</li><li>ANSLIFE proposes materials, factory options, sample direction, and control standards.</li><li>Develop samples or benchmark against approved samples.</li><li>Standardize materials, colors, weaving techniques, QC checklists, and packing specifications.</li><li>Organize production according to the project plan.</li><li>Run independent QC by stage when required.</li><li>Pack, check moisture protection, inspect before export, and ship internationally.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">BUYER INPUT</p><h3>What buyers should prepare</h3></div>
+      <ul>
+        <li>Technical drawings</li><li>Reference images</li><li>Physical sample if available</li><li>Product dimensions</li><li>Preferred materials</li><li>Weaving style or weaving sample if any</li><li>Color and surface finish</li><li>Wood frame, metal frame, or mixed-material requirements if any</li><li>Foam, fabric, leather, or upholstery requirements if any</li><li>Expected quantity</li><li>Export market</li><li>Packing and moisture-control standards</li><li>Target price if any</li><li>Delivery plan</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Send your rattan and bamboo furniture request to ANSLIFE</h3>
+        <p>Buyers can send drawings, physical samples, reference images, materials, weaving styles, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
@@ -14851,6 +15008,25 @@ export function getAIFallbackSectionHtml(
         language === 'vn'
           ? PRODUCTS_FINISHED_FURNITURE_BEDS_SECTION_VN
           : PRODUCTS_FINISHED_FURNITURE_BEDS_SECTION_EN;
+
+      return `<div class="ai-content">${sectionHtml}</div>`
+        .replace(
+          /href="\/vn\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(
+          /href="\/en\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
+        .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
+    }
+
+    if (subSectionSlug === 'rattan-bamboo-furniture') {
+      const sectionHtml =
+        language === 'vn'
+          ? PRODUCTS_FINISHED_FURNITURE_RATTAN_BAMBOO_SECTION_VN
+          : PRODUCTS_FINISHED_FURNITURE_RATTAN_BAMBOO_SECTION_EN;
 
       return `<div class="ai-content">${sectionHtml}</div>`
         .replace(
