@@ -74,6 +74,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'finished-furniture' &&
     (detailSlug === 'upholstered-furniture' || detailSlug === 'upholstery');
+  const isFinishedFurnitureOutdoorDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finished-furniture' &&
+    detailSlug === 'outdoor-furniture';
   const isFinishedFurnitureCustomProjectDetail =
     config.slug === 'products-solutions' &&
     section.id === 'finished-furniture' &&
@@ -180,6 +184,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language === 'vn'
       ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các sản phẩm nội thất bọc nệm tại Việt Nam.'
       : 'Development, manufacturing, quality control, packing, and export capability for upholstered furniture products in Vietnam.';
+  const outdoorSeoTitle = language === 'vn' ? 'Nội thất ngoài trời' : 'Outdoor Furniture';
+  const outdoorSeoDescription =
+    language === 'vn'
+      ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các sản phẩm nội thất ngoài trời tại Việt Nam.'
+      : 'Development, manufacturing, quality control, packing, and export capability for outdoor furniture products in Vietnam.';
   const customProjectSeoTitle =
     language === 'vn'
       ? 'Nội thất tùy chỉnh cho dự án khách sạn, nhà hàng, văn phòng và resort'
@@ -259,6 +268,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               ? `${rattanBambooSeoTitle} | ${t(config.title)}`
               : isFinishedFurnitureUpholsteredDetail
                 ? `${upholsteredSeoTitle} | ${t(config.title)}`
+                : isFinishedFurnitureOutdoorDetail
+                  ? `${outdoorSeoTitle} | ${t(config.title)}`
                 : isFinishedFurnitureCustomProjectDetail
                   ? `${customProjectSeoTitle} | ${t(config.title)}`
     : isOperationsOemOdmDetail
@@ -292,6 +303,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               ? rattanBambooSeoDescription
               : isFinishedFurnitureUpholsteredDetail
                 ? upholsteredSeoDescription
+                : isFinishedFurnitureOutdoorDetail
+                  ? outdoorSeoDescription
                 : isFinishedFurnitureCustomProjectDetail
                   ? customProjectSeoDescription
     : isOperationsOemOdmDetail

@@ -13747,6 +13747,13 @@ a.mobile-menu-utility-link {
 }
 
 .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  .ai-outdoor-hero {
+  background: url('/assets/products/finished-furniture/outdoor-banner.png') center center / cover
+    no-repeat !important;
+  border: 0 !important;
+}
+
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
   .html-panel:has(.ai-finished-page),
 .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
   .ai-section.ai-finished-page {
@@ -15200,6 +15207,25 @@ a.mobile-menu-utility-link {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.ai-outdoor-hero {
+  background: url('/assets/products/finished-furniture/outdoor-banner.png') center center / cover
+    no-repeat !important;
+}
+
+.ai-chair-hero.ai-outdoor-hero h2 {
+  max-width: 38%;
+  font-size: clamp(2.45rem, 4.7vw, 4.8rem);
+}
+
+.ai-chair-hero.ai-outdoor-hero .ai-chair-lead,
+.ai-chair-hero.ai-outdoor-hero p:not(.ai-chair-eyebrow) {
+  max-width: min(40%, 620px);
+}
+
+.ai-outdoor-material-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .ai-custom-project-hero {
   background: url('/assets/products/finished-furniture/custom-project-banner.png') center center /
     cover no-repeat !important;
@@ -15529,6 +15555,10 @@ a.mobile-menu-utility-link {
     background-position: 70% center;
   }
 
+  .ai-outdoor-hero {
+    background-position: 68% center;
+  }
+
   .ai-chair-hero.ai-storage-hero h2,
   .ai-chair-hero.ai-storage-hero .ai-chair-lead,
   .ai-chair-hero.ai-storage-hero p:not(.ai-chair-eyebrow),
@@ -15544,6 +15574,9 @@ a.mobile-menu-utility-link {
   .ai-chair-hero.ai-upholstered-hero h2,
   .ai-chair-hero.ai-upholstered-hero .ai-chair-lead,
   .ai-chair-hero.ai-upholstered-hero p:not(.ai-chair-eyebrow),
+  .ai-chair-hero.ai-outdoor-hero h2,
+  .ai-chair-hero.ai-outdoor-hero .ai-chair-lead,
+  .ai-chair-hero.ai-outdoor-hero p:not(.ai-chair-eyebrow),
   .ai-chair-hero.ai-custom-project-hero h2,
   .ai-chair-hero.ai-custom-project-hero .ai-chair-lead,
   .ai-chair-hero.ai-custom-project-hero p:not(.ai-chair-eyebrow) {
@@ -15551,6 +15584,7 @@ a.mobile-menu-utility-link {
   }
 
   .ai-upholstered-material-grid,
+  .ai-outdoor-material-grid,
   .ai-custom-project-material-grid,
   .ai-custom-project-support-grid,
   .ai-custom-project-process {

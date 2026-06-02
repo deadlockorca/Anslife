@@ -353,7 +353,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
             <p class="ai-finished-card-index">08</p>
             <h4>Nội thất ngoài trời</h4>
             <p>Nhóm sản phẩm ngoài trời với vật liệu và hoàn thiện phù hợp điều kiện sử dụng, lưu kho và vận chuyển quốc tế.</p>
-            <a href="/vn/products-solutions/finished-furniture#outdoor-furniture">Xem chi tiết <span>→</span></a>
+            <a href="/vn/products-solutions/finished-furniture/outdoor-furniture">Xem chi tiết <span>→</span></a>
           </div>
         </article>
 
@@ -480,7 +480,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
             <p class="ai-finished-card-index">08</p>
             <h4>Outdoor Furniture</h4>
             <p>Outdoor products with suitable materials, finishes, storage requirements, and international transport readiness.</p>
-            <a href="/en/products-solutions/finished-furniture#outdoor-furniture">View details <span>→</span></a>
+            <a href="/en/products-solutions/finished-furniture/outdoor-furniture">View details <span>→</span></a>
           </div>
         </article>
 
@@ -1608,6 +1608,165 @@ const PRODUCTS_FINISHED_FURNITURE_UPHOLSTERED_SECTION_EN = `
       <div>
         <h3>Send your upholstered furniture request to ANSLIFE</h3>
         <p>Buyers can send drawings, physical samples, reference images, upholstery materials, foam, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
+        <a class="ai-company-request-secondary" href="/en/contact/upload-drawing">Upload drawings</a>
+        <a class="ai-company-request-secondary" href="/en/contact/company-info">Contact ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_OUTDOOR_SECTION_VN = `
+  <section id="outdoor-furniture" class="ai-section ai-chair-page ai-outdoor-page ai-company-overview">
+    <header class="ai-chair-hero ai-outdoor-hero">
+      <h2>Nội thất ngoài trời</h2>
+      <p class="ai-chair-lead">ANSLIFE hỗ trợ phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các sản phẩm nội thất ngoài trời tại Việt Nam theo bản vẽ, mẫu duyệt, vật liệu, tiêu chuẩn kỹ thuật và yêu cầu riêng của từng buyer.</p>
+      <p>Các sản phẩm ngoài trời cần được xem xét kỹ về vật liệu, kết cấu, độ ổn định, khả năng chịu điều kiện sử dụng, hoàn thiện bề mặt, đóng gói và vận chuyển quốc tế.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading">
+        <p class="ai-chair-eyebrow">NHÓM SẢN PHẨM NGOÀI TRỜI</p>
+        <h3>Các dòng nội thất ngoài trời ANSLIFE có thể phát triển và sản xuất</h3>
+      </div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Ghế ngoài trời</h4><p>Ghế sử dụng cho sân vườn, ban công, resort, nhà hàng ngoài trời hoặc khu vực hospitality. Có thể triển khai theo bản vẽ, mẫu duyệt, vật liệu và tiêu chuẩn riêng của buyer.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Bàn ngoài trời</h4><p>Bàn dùng cho sân vườn, ban công, cafe ngoài trời, nhà hàng, resort và không gian thương mại. Có thể triển khai với gỗ, kim loại, vật liệu tự nhiên hoặc vật liệu kết hợp.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Bench ngoài trời</h4><p>Ghế băng sử dụng cho sân vườn, resort, công viên, khu nghỉ dưỡng, hành lang ngoài trời hoặc không gian công cộng. Có thể triển khai theo yêu cầu về kết cấu, độ bền và quy cách đóng gói.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Sofa ngoài trời</h4><p>Sofa sử dụng cho resort, villa, lounge ngoài trời, hồ bơi hoặc khu vực nghỉ dưỡng. Có thể triển khai với khung gỗ, khung kim loại, foam, vải ngoài trời và vật liệu phù hợp theo dự án.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Nội thất resort ngoài trời</h4><p>Sản phẩm dùng cho resort, villa, bungalow, khu nghỉ dưỡng, cafe ngoài trời và nhà hàng ngoài trời, tập trung vào tính thẩm mỹ, độ bền và khả năng vận hành trong không gian thương mại.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Nội thất ban công &amp; sân vườn</h4><p>Sản phẩm kích thước nhỏ hoặc trung bình cho ban công, sân vườn, patio và không gian ngoài trời dân dụng. Có thể triển khai theo bộ sản phẩm hoặc thiết kế riêng.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Sản phẩm ngoài trời kết hợp vật liệu</h4><p>Sản phẩm kết hợp gỗ, kim loại, mây tre, vật liệu tự nhiên, foam, vải ngoài trời hoặc vật liệu hoàn thiện phù hợp với điều kiện sử dụng.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Nội thất ngoài trời tùy chỉnh</h4><p>Sản phẩm phát triển theo bản vẽ, mẫu thật, hình ảnh tham khảo, kích thước riêng, vật liệu riêng, tiêu chuẩn đóng gói riêng hoặc yêu cầu OEM / ODM của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">VẬT LIỆU</p><h3>Vật liệu có thể sử dụng</h3></div>
+      <div class="ai-chair-material-grid ai-outdoor-material-grid">
+        <article><h4>Gỗ &amp; vật liệu gỗ</h4><p>Gỗ tự nhiên, gỗ cao su, Acacia, teak nếu có yêu cầu, plywood, veneer hoặc vật liệu gỗ theo tiêu chuẩn riêng của buyer.</p></article>
+        <article><h4>Kim loại &amp; vật liệu kết hợp</h4><p>Khung kim loại, chân kim loại, phụ kiện lắp ráp, vít, bas liên kết, vật liệu tự nhiên, mây tre hoặc vật liệu kết hợp theo yêu cầu thiết kế.</p></article>
+        <article><h4>Foam, vải &amp; vật liệu bọc ngoài trời</h4><p>Foam, vải ngoài trời, vật liệu bọc chống ẩm, vật liệu bọc có độ bền cao, đệm rời hoặc vật liệu bọc theo mẫu duyệt.</p></article>
+        <article><h4>Vật liệu hoàn thiện &amp; đóng gói</h4><p>Sơn, dầu, lớp phủ hoàn thiện, vật liệu bảo vệ bề mặt, carton, foam bảo vệ, túi chống ẩm, corner protection, pallet, nhãn mác và vật liệu đóng gói theo tiêu chuẩn xuất khẩu.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">TIÊU CHUẨN KIỂM SOÁT</p><h3>Tiêu chuẩn cần kiểm soát</h3></div>
+      <ul>
+        <li>Kích thước sản phẩm</li><li>Kết cấu và độ ổn định</li><li>Khả năng chịu lực</li><li>Độ chắc chắn của khung và liên kết</li><li>Độ ẩm vật liệu</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Khả năng phù hợp với điều kiện sử dụng ngoài trời</li><li>Độ bền của vật liệu bọc nếu có</li><li>Độ đồng đều giữa các lô hàng</li><li>Phụ kiện, vít, bas liên kết và chi tiết lắp ráp</li><li>Khả năng tháo lắp nếu là hàng flat-pack</li><li>Khả năng thoát nước hoặc hạn chế giữ nước nếu thiết kế yêu cầu</li><li>Quy cách đóng gói</li><li>Kiểm soát chống ẩm trong đóng gói và vận chuyển</li><li>Nhãn mác, carton mark và hướng dẫn lắp ráp nếu có</li><li>Tình trạng hàng trước khi xuất khẩu</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">HỖ TRỢ CỦA ANSLIFE</p><h3>ANSLIFE hỗ trợ gì trong dự án nội thất ngoài trời?</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>Phát triển OEM / ODM</h4><p>Hỗ trợ phát triển sản phẩm nội thất ngoài trời từ bản vẽ, mẫu thật, hình ảnh tham khảo hoặc ý tưởng ban đầu đến mẫu sản xuất.</p></article>
+        <article><span>02</span><h4>Chuỗi cung ứng vật liệu</h4><p>Kết nối nguồn vật liệu phù hợp tại Việt Nam, bao gồm gỗ, kim loại, mây tre, foam, vải ngoài trời, phụ kiện, sơn và vật liệu đóng gói.</p></article>
+        <article><span>03</span><h4>Thẩm định năng lực nhà máy</h4><p>Đánh giá nhà máy phù hợp với từng nhóm sản phẩm ngoài trời, vật liệu, sản lượng, tiêu chuẩn kỹ thuật và yêu cầu giao hàng.</p></article>
+        <article><span>04</span><h4>QC độc lập</h4><p>Kiểm soát chất lượng theo mẫu duyệt, bản vẽ, checklist kiểm hàng, vật liệu, kết cấu, hoàn thiện bề mặt, đóng gói và tiêu chuẩn của từng thị trường.</p></article>
+        <article><span>05</span><h4>Đóng gói &amp; xuất khẩu</h4><p>Hỗ trợ tiêu chuẩn đóng gói, chống ẩm, nhãn mác, chứng từ, logistics và xuất hàng quốc tế theo kế hoạch của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QUY TRÌNH</p><h3>Quy trình triển khai</h3></div>
+      <ol>
+        <li>Buyer gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu sản phẩm.</li><li>ANSLIFE đánh giá quy cách sản phẩm, vật liệu, kết cấu, điều kiện sử dụng ngoài trời và khả năng sản xuất.</li><li>ANSLIFE đề xuất phương án vật liệu, nhà máy, mẫu và tiêu chuẩn kiểm soát.</li><li>Phát triển mẫu hoặc đối chiếu mẫu đã duyệt.</li><li>Chuẩn hóa vật liệu, màu sắc, hoàn thiện bề mặt, checklist QC và quy cách đóng gói.</li><li>Tổ chức sản xuất theo kế hoạch.</li><li>QC độc lập theo từng giai đoạn nếu cần.</li><li>Đóng gói, kiểm tra chống ẩm, kiểm tra trước xuất và xuất hàng quốc tế.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">THÔNG TIN CẦN CUNG CẤP</p><h3>Buyer cần chuẩn bị gì?</h3></div>
+      <ul>
+        <li>Bản vẽ kỹ thuật</li><li>Hình ảnh tham khảo</li><li>Mẫu thật nếu có</li><li>Kích thước sản phẩm</li><li>Điều kiện sử dụng dự kiến</li><li>Vật liệu mong muốn</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Yêu cầu khung gỗ, khung kim loại hoặc vật liệu kết hợp nếu có</li><li>Yêu cầu foam, vải ngoài trời hoặc đệm rời nếu có</li><li>Yêu cầu tháo lắp hoặc flat-pack nếu có</li><li>Số lượng dự kiến</li><li>Thị trường xuất khẩu</li><li>Tiêu chuẩn đóng gói và chống ẩm</li><li>Mức giá mục tiêu nếu có</li><li>Kế hoạch giao hàng</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Gửi yêu cầu sản xuất nội thất ngoài trời cho ANSLIFE</h3>
+        <p>Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo, vật liệu, điều kiện sử dụng, số lượng và thị trường xuất khẩu. ANSLIFE sẽ xem xét và đề xuất phương án sản xuất, vật liệu, QC, đóng gói và xuất hàng phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_OUTDOOR_SECTION_EN = `
+  <section id="outdoor-furniture" class="ai-section ai-chair-page ai-outdoor-page ai-company-overview">
+    <header class="ai-chair-hero ai-outdoor-hero">
+      <h2>Outdoor Furniture</h2>
+      <p class="ai-chair-lead">ANSLIFE supports the development, manufacturing, quality control, packing, and export of outdoor furniture products in Vietnam based on drawings, approved samples, materials, technical standards, and buyer-specific requirements.</p>
+      <p>Outdoor products need careful consideration of materials, structure, stability, suitability for use conditions, surface finishing, packing, and international transportation.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">OUTDOOR PRODUCT GROUPS</p><h3>Outdoor furniture ANSLIFE can develop and manufacture</h3></div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Outdoor Chairs</h4><p>Chairs for gardens, balconies, resorts, outdoor restaurants, or hospitality areas, developed according to drawings, approved samples, materials, and buyer standards.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Outdoor Tables</h4><p>Tables for gardens, balconies, outdoor cafes, restaurants, resorts, and commercial spaces, using wood, metal, natural materials, or mixed materials.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Outdoor Benches</h4><p>Benches for gardens, resorts, parks, leisure spaces, outdoor corridors, or public areas, developed for structure, durability, and packing requirements.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Outdoor Sofas</h4><p>Sofas for resorts, villas, outdoor lounges, poolsides, or leisure areas, using wood frames, metal frames, foam, outdoor fabrics, and project-suitable materials.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Outdoor Resort Furniture</h4><p>Products for resorts, villas, bungalows, leisure areas, outdoor cafes, and outdoor restaurants, focused on aesthetics, durability, and commercial-space operation.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Balcony &amp; Garden Furniture</h4><p>Small or medium-size products for balconies, gardens, patios, and residential outdoor spaces, developed as sets or custom designs.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Mixed-Material Outdoor Products</h4><p>Products combining wood, metal, rattan, natural materials, foam, outdoor fabrics, or finishing materials suitable for outdoor conditions.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Custom Outdoor Furniture</h4><p>Products developed from drawings, physical samples, reference images, custom dimensions, specific materials, packing standards, or OEM / ODM requirements.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">MATERIALS</p><h3>Materials that can be used</h3></div>
+      <div class="ai-chair-material-grid ai-outdoor-material-grid">
+        <article><h4>Wood &amp; Wood Materials</h4><p>Solid wood, rubberwood, Acacia, teak if required, plywood, veneer, or wood materials according to buyer standards.</p></article>
+        <article><h4>Metal &amp; Mixed Materials</h4><p>Metal frames, metal legs, assembly hardware, screws, brackets, natural materials, rattan, or mixed materials according to design requirements.</p></article>
+        <article><h4>Foam, Outdoor Fabric &amp; Upholstery</h4><p>Foam, outdoor fabrics, moisture-resistant upholstery, high-durability upholstery, loose cushions, or approved-sample upholstery materials.</p></article>
+        <article><h4>Finishing &amp; Packing Materials</h4><p>Paint, oil, finishing coatings, surface protection materials, cartons, protective foam, moisture-control bags, corner protection, pallets, labels, and export-standard packing materials.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QC CHECKLIST</p><h3>Standards to control</h3></div>
+      <ul>
+        <li>Product dimensions</li><li>Structure and stability</li><li>Load-bearing performance</li><li>Frame and joint strength</li><li>Material moisture content</li><li>Color and surface finish</li><li>Suitability for outdoor use conditions</li><li>Durability of upholstery materials if applicable</li><li>Consistency across production batches</li><li>Hardware, screws, brackets, and assembly details</li><li>Flat-pack capability if applicable</li><li>Water drainage or reduced water retention when required by design</li><li>Packing specifications</li><li>Moisture control during packing and transportation</li><li>Labels, carton marks, and assembly instructions if required</li><li>Pre-export product condition</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">ANSLIFE SUPPORT</p><h3>How ANSLIFE supports outdoor furniture projects</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>OEM / ODM Development</h4><p>Support outdoor furniture development from drawings, physical samples, reference images, or early ideas to production samples.</p></article>
+        <article><span>02</span><h4>Material Supply Chain</h4><p>Connect suitable material sources in Vietnam, including wood, metal, rattan, foam, outdoor fabrics, hardware, paint, and packing materials.</p></article>
+        <article><span>03</span><h4>Factory Capability Assessment</h4><p>Assess factories for each outdoor product group, material type, output requirement, technical standard, and delivery requirement.</p></article>
+        <article><span>04</span><h4>Independent QC</h4><p>Control quality against approved samples, drawings, inspection checklists, materials, structure, surface finish, packing, and target-market standards.</p></article>
+        <article><span>05</span><h4>Packing &amp; Export</h4><p>Support packing standards, moisture protection, labels, documents, logistics, and international shipment according to buyer plans.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">WORKFLOW</p><h3>Implementation process</h3></div>
+      <ol>
+        <li>Buyer sends drawings, physical samples, reference images, or product requirements.</li><li>ANSLIFE reviews product specifications, materials, structure, outdoor use conditions, and manufacturing feasibility.</li><li>ANSLIFE proposes materials, factory options, sample direction, and control standards.</li><li>Develop samples or benchmark against approved samples.</li><li>Standardize materials, colors, surface finishes, QC checklists, and packing specifications.</li><li>Organize production according to the project plan.</li><li>Run independent QC by stage when required.</li><li>Pack, check moisture protection, inspect before export, and ship internationally.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">BUYER INPUT</p><h3>What buyers should prepare</h3></div>
+      <ul>
+        <li>Technical drawings</li><li>Reference images</li><li>Physical sample if available</li><li>Product dimensions</li><li>Expected use conditions</li><li>Preferred materials</li><li>Color and surface finish</li><li>Wood frame, metal frame, or mixed-material requirements if any</li><li>Foam, outdoor fabric, or loose cushion requirements if any</li><li>Knock-down or flat-pack requirements if any</li><li>Expected quantity</li><li>Export market</li><li>Packing and moisture-control standards</li><li>Target price if any</li><li>Delivery plan</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Send your outdoor furniture request to ANSLIFE</h3>
+        <p>Buyers can send drawings, physical samples, reference images, materials, use conditions, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
@@ -15382,6 +15541,25 @@ export function getAIFallbackSectionHtml(
         language === 'vn'
           ? PRODUCTS_FINISHED_FURNITURE_UPHOLSTERED_SECTION_VN
           : PRODUCTS_FINISHED_FURNITURE_UPHOLSTERED_SECTION_EN;
+
+      return `<div class="ai-content">${sectionHtml}</div>`
+        .replace(
+          /href="\/vn\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(
+          /href="\/en\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
+        .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
+    }
+
+    if (subSectionSlug === 'outdoor-furniture') {
+      const sectionHtml =
+        language === 'vn'
+          ? PRODUCTS_FINISHED_FURNITURE_OUTDOOR_SECTION_VN
+          : PRODUCTS_FINISHED_FURNITURE_OUTDOOR_SECTION_EN;
 
       return `<div class="ai-content">${sectionHtml}</div>`
         .replace(
