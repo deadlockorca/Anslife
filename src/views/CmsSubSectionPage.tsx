@@ -203,6 +203,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language,
     detailSlug,
   );
+  const shouldRenderBlankScholarshipPage =
+    config.slug === 'about-anslife' && section.id === 'scholarship-community';
   const isCustomAboutSection =
     config.slug === 'about-anslife' &&
     (section.id === 'philosophy' ||
@@ -249,11 +251,14 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         section.id === 'organization' ||
         section.id === 'team' ||
         section.id === 'anslife-ecosystem'));
-  const resolvedHtml = shouldForceTemplateHtml
-    ? fallbackHtml ?? data?.content.rendered
-    : data?.content.rendered ?? fallbackHtml;
-  const shouldShowLoading = loading && !resolvedHtml;
-  const shouldShowError = Boolean(error) && !resolvedHtml;
+  const resolvedHtml = shouldRenderBlankScholarshipPage
+    ? ''
+    : shouldForceTemplateHtml
+      ? fallbackHtml ?? data?.content.rendered
+      : data?.content.rendered ?? fallbackHtml;
+  const shouldShowLoading = !shouldRenderBlankScholarshipPage && loading && !resolvedHtml;
+  const shouldShowError =
+    !shouldRenderBlankScholarshipPage && Boolean(error) && !resolvedHtml;
   const seoTitle = isFinishedFurnitureChairsDetail
     ? `${chairsSeoTitle} | ${t(config.title)}`
     : isFinishedFurnitureTablesDetail
@@ -332,7 +337,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         <section className="page-hero">
           <p className="kicker">{t(config.title)}</p>
           <h1>{t(section.title)}</h1>
-          <p>{t(section.description)}</p>
+          {section.description && <p>{t(section.description)}</p>}
         </section>
       )}
 
@@ -344,7 +349,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
           html={resolvedHtml}
         />
       )}
-      {!loading && !shouldShowError && !resolvedHtml && (
+      {!shouldRenderBlankScholarshipPage && !loading && !shouldShowError && !resolvedHtml && (
         <article className="html-content html-panel">
           <p>{t(section.description)}</p>
         </article>

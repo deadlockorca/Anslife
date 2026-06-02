@@ -23,7 +23,10 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
   const loadPage = useCallback(() => getPageBySlug(config.slug), [config.slug]);
   const { data, loading, error } = useAsyncResource(loadPage);
   const fallbackHtml = getAIFallbackPageHtml(config.slug, language);
-  const resolvedHtml = data?.content.rendered ?? fallbackHtml;
+  const shouldForceTemplatePage = config.slug === 'scholarship-community';
+  const resolvedHtml = shouldForceTemplatePage
+    ? fallbackHtml
+    : data?.content.rendered ?? fallbackHtml;
   const sectionListForNavigation = useMemo(
     () =>
       config.slug === 'about-anslife'
@@ -57,8 +60,8 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
       return html.replace(sectionPattern, '');
     }, htmlWithoutBanner);
   }, [config.sections, config.slug, resolvedHtml]);
-  const shouldShowLoading = loading && !resolvedHtml;
-  const shouldShowError = Boolean(error) && !resolvedHtml;
+  const shouldShowLoading = !shouldForceTemplatePage && loading && !resolvedHtml;
+  const shouldShowError = !shouldForceTemplatePage && Boolean(error) && !resolvedHtml;
 
   return (
     <>
@@ -66,7 +69,7 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
       <section className="page-hero">
         {!shouldHideHeroKicker && <p className="kicker">{t('TRANG WEB ANSLIFE V1')}</p>}
         <h1>{t(config.title)}</h1>
-        {!shouldHideAboutHeroSummary && <p>{t(config.summary)}</p>}
+        {!shouldHideAboutHeroSummary && config.summary && <p>{t(config.summary)}</p>}
       </section>
 
       {shouldShowLoading && <LoadingBlock />}

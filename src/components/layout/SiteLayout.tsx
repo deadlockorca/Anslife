@@ -98,7 +98,7 @@ const HEADER_UTILITY_LINKS = [
   { label: 'Tin tức', path: '/news' },
   { label: 'Dự án', path: '/projects' },
   { label: 'Mạng lưới', path: '/global-network' },
-  { label: 'Tuyển dụng', path: '/scholarship-community/join-anslife' },
+  { label: 'Tuyển dụng', path: '/about-anslife/scholarship-community' },
 ] as const;
 type FooterContactIcon = 'location' | 'phone' | 'mail' | 'website';
 
@@ -141,10 +141,6 @@ function getMobileMenuIcon(path: string): MobileMenuIcon {
     return 'home';
   }
 
-  if (path.startsWith('/about-anslife')) {
-    return 'building';
-  }
-
   if (path.startsWith('/products-solutions') || path.startsWith('/products')) {
     return 'box';
   }
@@ -165,8 +161,15 @@ function getMobileMenuIcon(path: string): MobileMenuIcon {
     return 'shield';
   }
 
-  if (path.startsWith('/scholarship-community')) {
+  if (
+    path.startsWith('/scholarship-community') ||
+    path.startsWith('/about-anslife/scholarship-community')
+  ) {
     return 'community';
+  }
+
+  if (path.startsWith('/about-anslife')) {
+    return 'building';
   }
 
   if (path === '/resources/faq') {

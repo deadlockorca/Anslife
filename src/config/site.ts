@@ -65,7 +65,7 @@ export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
     path: '/products-solutions/finished-furniture',
   },
   {
-    label: 'Linh kiện nội thất',
+    label: 'Cấu kiện nội thất',
     path: '/products-solutions/furniture-components',
     children: [
       { label: 'Khung ghế', path: '/products-solutions/furniture-components/chair-frames' },
@@ -77,7 +77,7 @@ export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
         path: '/products-solutions/furniture-components/upholstery-parts',
       },
       {
-        label: 'Linh kiện mây',
+        label: 'Cấu kiện mây tre',
         path: '/products-solutions/furniture-components/rattan-components',
       },
     ],
@@ -86,26 +86,49 @@ export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
     label: 'Cung ứng vật liệu',
     path: '/products-solutions/materials-supply',
     children: [
-      { label: 'Ván ép & ván công nghiệp', path: '/products-solutions/materials-supply/boards' },
       {
-        label: 'Gỗ tự nhiên / gỗ xẻ',
-        path: '/products-solutions/materials-supply/solid-wood-lumber',
-      },
-      { label: 'Veneer', path: '/products-solutions/materials-supply/veneer' },
-      { label: 'Foam / Mút / Xốp', path: '/products-solutions/materials-supply/foam' },
-      {
-        label: 'Vải / da / vật liệu bọc',
-        path: '/products-solutions/materials-supply/upholstery-materials',
-      },
-      {
-        label: 'Vật liệu đóng gói',
-        path: '/products-solutions/materials-supply/packing-materials',
+        label: 'Tổng quan dịch vụ cung ứng vật liệu',
+        path: '/products-solutions/materials-supply',
       },
     ],
   },
   {
     label: 'Giải pháp vận hành & cung ứng',
     path: '/products-solutions/operations-supply-solutions',
+    children: [
+      {
+        label: 'Phát triển sản phẩm OEM / ODM',
+        path: '/products-solutions/operations-supply-solutions/oem-odm-product-development',
+      },
+      {
+        label: 'Đánh giá khả thi dự án & chuỗi cung ứng',
+        path: '/products-solutions/operations-supply-solutions/project-supply-chain-feasibility-assessment',
+      },
+      {
+        label: 'Thẩm định năng lực nhà máy',
+        path: '/products-solutions/operations-supply-solutions/factory-capability-assessment',
+      },
+      {
+        label: 'Vận hành & quản lý dự án xuất khẩu',
+        path: '/products-solutions/operations-supply-solutions/export-project-operation-management',
+      },
+      {
+        label: 'QC độc lập trong dự án',
+        path: '/products-solutions/operations-supply-solutions/independent-project-qc-service',
+      },
+      {
+        label: 'Điều phối logistics & xuất nhập khẩu dự án',
+        path: '/products-solutions/operations-supply-solutions/project-logistics-import-export-coordination',
+      },
+      {
+        label: 'Lưu kho tại Việt Nam',
+        path: '/products-solutions/operations-supply-solutions/vietnam-storage-solution',
+      },
+      {
+        label: 'Tài trợ thương mại',
+        path: '/products-solutions/operations-supply-solutions/trade-financing',
+      },
+    ],
   },
 ];
 
@@ -121,8 +144,8 @@ export const TOP_MENU: TopMenuItem[] = [
       { label: 'Triết lý', path: '/about-anslife/philosophy' },
       { label: 'Tổng quan công ty', path: '/about-anslife/company-intro' },
       { label: 'Lịch sử phát triển', path: '/about-anslife/development-history' },
-      { label: 'Tiêu chuẩn & QC', path: '/about-anslife/working-standards' },
-      { label: 'Thông tin công ty', path: '/about-anslife/company-info' },
+      { label: 'Phụng sự xã hội', path: '/about-anslife/scholarship-community' },
+      { label: 'Thông tin liên hệ', path: '/about-anslife/company-info' },
     ],
   },
   {
@@ -239,26 +262,24 @@ export const TOP_MENU: TopMenuItem[] = [
     ],
   },
   {
-    label: 'Trung tâm cung ứng Việt Nam',
+    label: 'Supply Hub Việt Nam',
     path: '/vietnam-supply-hub',
     children: [
-      { label: 'Tổng quan', path: '/vietnam-supply-hub/overview' },
-      { label: 'Giải pháp lưu kho tại Việt Nam', path: '/vietnam-supply-hub/storage-solution' },
       {
-        label: 'Tồn kho đệm tại Việt Nam',
-        path: '/vietnam-supply-hub/inventory-buffer-vietnam',
+        label: 'Tổng quan mô hình Supply Hub',
+        path: '/vietnam-supply-hub/overview',
       },
       {
-        label: 'Điều phối xuất hàng hằng tuần',
-        path: '/vietnam-supply-hub/weekly-shipment-arrangement',
+        label: 'Lưu kho & tồn kho đệm tại Việt Nam',
+        path: '/vietnam-supply-hub/storage-solution',
       },
       { label: 'Gom hàng LCL / FCL', path: '/vietnam-supply-hub/lcl-fcl-consolidation' },
       {
-        label: 'Hỗ trợ cung ứng Nhật Bản & Singapore',
-        path: '/vietnam-supply-hub/japan-singapore-supply-support',
+        label: 'Điều phối xuất hàng định kỳ',
+        path: '/vietnam-supply-hub/weekly-shipment-arrangement',
       },
       {
-        label: 'Lưu kho vật liệu & linh kiện',
+        label: 'Lưu kho vật liệu & cấu kiện',
         path: '/vietnam-supply-hub/material-component-storage',
       },
       {
@@ -274,7 +295,7 @@ export const TOP_MENU: TopMenuItem[] = [
             path: '/vietnam-supply-hub/partner-standard-room/approved-product-samples',
           },
           {
-            label: 'Mẫu linh kiện',
+            label: 'Mẫu cấu kiện',
             path: '/vietnam-supply-hub/partner-standard-room/component-samples',
           },
           {
@@ -305,6 +326,7 @@ export const TOP_MENU: TopMenuItem[] = [
     label: 'Chất lượng & Tiêu chuẩn',
     path: '/quality-control',
     children: [
+      { label: 'Tổng quan hệ thống chất lượng', path: '/quality-control' },
       { label: 'Quy trình kiểm soát chất lượng', path: '/quality-control/qc-process' },
       { label: 'Kiểm tra vật liệu', path: '/quality-control/material-inspection' },
       { label: 'Kiểm tra trong sản xuất', path: '/quality-control/in-process-inspection' },
@@ -320,25 +342,10 @@ export const TOP_MENU: TopMenuItem[] = [
     label: 'Tài nguyên',
     path: '/resources',
     children: [
-      { label: 'Thư viện vật liệu', path: '/resources/material-library' },
       { label: 'Ghi chú sản xuất', path: '/resources/manufacturing-notes' },
       { label: 'Kiến thức xuất khẩu', path: '/resources/export-knowledge' },
-      { label: 'Case study', path: '/resources/case-studies' },
+      { label: 'Case Study', path: '/resources/case-studies' },
       { label: 'Cập nhật công ty', path: '/resources/company-updates' },
-      { label: 'FAQ', path: '/resources/faq' },
-    ],
-  },
-  {
-    label: 'Phụng sự xã hội',
-    path: '/scholarship-community',
-    children: [
-      { label: 'Quỹ học bổng', path: '/scholarship-community/scholarship-program' },
-      { label: 'Hoạt động cộng đồng', path: '/scholarship-community/community-activities' },
-      {
-        label: 'Phát triển nguồn nhân lực',
-        path: '/scholarship-community/workforce-development',
-      },
-      { label: 'Tham gia cùng ANSLIFE', path: '/scholarship-community/join-anslife' },
     ],
   },
   {
@@ -412,6 +419,11 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
         id: 'development-history',
         title: 'Lịch sử phát triển',
         description: 'Các giai đoạn phát triển của ANSLIFE từ thiết kế, sản xuất đến hệ sinh thái xuất khẩu.',
+      },
+      {
+        id: 'scholarship-community',
+        title: 'Phụng sự xã hội',
+        description: '',
       },
       {
         id: 'working-standards',
@@ -991,37 +1003,11 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
     ],
   },
   scholarship: {
-    path: '/scholarship-community',
-    title: 'Quỹ học bổng & cộng đồng',
+    path: '/about-anslife/scholarship-community',
+    title: 'Phụng sự xã hội',
     slug: 'scholarship-community',
-    summary: 'Chương trình học bổng và các hoạt động cộng đồng của ANSLIFE.',
-    sections: [
-      {
-        id: 'fund-overview',
-        title: 'Giới thiệu quỹ',
-        description: 'Mục tiêu, cơ chế vận hành và phạm vi hỗ trợ của quỹ.',
-      },
-      {
-        id: 'scholarship-program',
-        title: 'Chương trình học bổng',
-        description: 'Mục tiêu chương trình, điều kiện xét và câu chuyện học bổng.',
-      },
-      {
-        id: 'community-activities',
-        title: 'Hoạt động cộng đồng',
-        description: 'Dự án từ thiện và chương trình xã hội theo từng giai đoạn.',
-      },
-      {
-        id: 'workforce-development',
-        title: 'Phát triển nguồn nhân lực',
-        description: 'Chương trình đào tạo, hướng nghiệp và nâng cao năng lực con người.',
-      },
-      {
-        id: 'join-anslife',
-        title: 'Tham gia cùng ANSLIFE',
-        description: 'Cách thức đồng hành cùng quỹ và các chương trình.',
-      },
-    ],
+    summary: '',
+    sections: [],
   },
 };
 
