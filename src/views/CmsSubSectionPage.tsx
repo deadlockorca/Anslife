@@ -70,6 +70,15 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'finished-furniture' &&
     detailSlug === 'rattan-bamboo-furniture';
+  const isFinishedFurnitureUpholsteredDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finished-furniture' &&
+    (detailSlug === 'upholstered-furniture' || detailSlug === 'upholstery');
+  const isFinishedFurnitureCustomProjectDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finished-furniture' &&
+    (detailSlug === 'custom-project-furniture' ||
+      detailSlug === 'hotel-resort-office-custom-furniture');
   const isOperationsOemOdmDetail =
     config.slug === 'products-solutions' &&
     section.id === 'operations-supply-solutions' &&
@@ -165,6 +174,20 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language === 'vn'
       ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các sản phẩm nội thất mây tre tại Việt Nam.'
       : 'Development, manufacturing, quality control, packing, and export capability for rattan and bamboo furniture products in Vietnam.';
+  const upholsteredSeoTitle =
+    language === 'vn' ? 'Nội thất bọc nệm' : 'Upholstered Furniture';
+  const upholsteredSeoDescription =
+    language === 'vn'
+      ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các sản phẩm nội thất bọc nệm tại Việt Nam.'
+      : 'Development, manufacturing, quality control, packing, and export capability for upholstered furniture products in Vietnam.';
+  const customProjectSeoTitle =
+    language === 'vn'
+      ? 'Nội thất tùy chỉnh cho dự án khách sạn, nhà hàng, văn phòng và resort'
+      : 'Custom Furniture for Hotel, Restaurant, Office and Resort Projects';
+  const customProjectSeoDescription =
+    language === 'vn'
+      ? 'Năng lực phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu nội thất tùy chỉnh cho các dự án khách sạn, nhà hàng, văn phòng và resort tại Việt Nam.'
+      : 'Development, manufacturing, quality control, packing, and export capability for custom furniture projects in hotels, restaurants, offices, and resorts in Vietnam.';
   const fallbackHtml = getAIFallbackSectionHtml(
     config.slug,
     section.id,
@@ -234,6 +257,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             ? `${bedsSeoTitle} | ${t(config.title)}`
             : isFinishedFurnitureRattanBambooDetail
               ? `${rattanBambooSeoTitle} | ${t(config.title)}`
+              : isFinishedFurnitureUpholsteredDetail
+                ? `${upholsteredSeoTitle} | ${t(config.title)}`
+                : isFinishedFurnitureCustomProjectDetail
+                  ? `${customProjectSeoTitle} | ${t(config.title)}`
     : isOperationsOemOdmDetail
       ? `${oemOdmSeoTitle} | ${t(config.title)}`
       : isOperationsFeasibilityDetail
@@ -263,6 +290,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             ? bedsSeoDescription
             : isFinishedFurnitureRattanBambooDetail
               ? rattanBambooSeoDescription
+              : isFinishedFurnitureUpholsteredDetail
+                ? upholsteredSeoDescription
+                : isFinishedFurnitureCustomProjectDetail
+                  ? customProjectSeoDescription
     : isOperationsOemOdmDetail
       ? oemOdmSeoDescription
       : isOperationsFeasibilityDetail

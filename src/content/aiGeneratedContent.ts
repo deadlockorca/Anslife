@@ -343,7 +343,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
             <p class="ai-finished-card-index">07</p>
             <h4>Nội thất bọc nệm</h4>
             <p>Sofa, ghế lounge, ghế ăn bọc nệm và các sản phẩm theo mẫu duyệt, tiêu chuẩn foam và vật liệu bọc.</p>
-            <a href="/vn/products-solutions/finished-furniture#upholstery">Xem chi tiết <span>→</span></a>
+            <a href="/vn/products-solutions/finished-furniture/upholstered-furniture">Xem chi tiết <span>→</span></a>
           </div>
         </article>
 
@@ -363,7 +363,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
             <p class="ai-finished-card-index">09</p>
             <h4>Nội thất tùy chỉnh dự án khách sạn, resort, văn phòng</h4>
             <p>Sản phẩm nội thất tùy chỉnh theo bản vẽ, mẫu duyệt và tiêu chuẩn riêng cho dự án khách sạn, resort, văn phòng và không gian thương mại.</p>
-            <a href="/vn/products-solutions/finished-furniture#hotel-resort-office-custom-furniture">Xem chi tiết <span>→</span></a>
+            <a href="/vn/products-solutions/finished-furniture/custom-project-furniture">Xem chi tiết <span>→</span></a>
           </div>
         </article>
       </div>
@@ -470,7 +470,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
             <p class="ai-finished-card-index">07</p>
             <h4>Upholstery</h4>
             <p>Sofas, lounge chairs, upholstered dining chairs, and approved-sample products with foam and fabric standards.</p>
-            <a href="/en/products-solutions/finished-furniture#upholstery">View details <span>→</span></a>
+            <a href="/en/products-solutions/finished-furniture/upholstered-furniture">View details <span>→</span></a>
           </div>
         </article>
 
@@ -490,7 +490,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
             <p class="ai-finished-card-index">09</p>
             <h4>Custom Furniture for Hotel, Resort & Office Projects</h4>
             <p>Custom furniture developed from technical drawings, approved samples, and project standards for hotels, resorts, offices, and commercial spaces.</p>
-            <a href="/en/products-solutions/finished-furniture#hotel-resort-office-custom-furniture">View details <span>→</span></a>
+            <a href="/en/products-solutions/finished-furniture/custom-project-furniture">View details <span>→</span></a>
           </div>
         </article>
       </div>
@@ -1449,6 +1449,342 @@ const PRODUCTS_FINISHED_FURNITURE_RATTAN_BAMBOO_SECTION_EN = `
       <div>
         <h3>Send your rattan and bamboo furniture request to ANSLIFE</h3>
         <p>Buyers can send drawings, physical samples, reference images, materials, weaving styles, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
+        <a class="ai-company-request-secondary" href="/en/contact/upload-drawing">Upload drawings</a>
+        <a class="ai-company-request-secondary" href="/en/contact/company-info">Contact ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_UPHOLSTERED_SECTION_VN = `
+  <section id="upholstered-furniture" class="ai-section ai-chair-page ai-upholstered-page ai-company-overview">
+    <header class="ai-chair-hero ai-upholstered-hero">
+      <h2>Nội thất bọc nệm</h2>
+      <p class="ai-chair-lead">ANSLIFE hỗ trợ phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các sản phẩm nội thất bọc nệm tại Việt Nam theo bản vẽ, mẫu duyệt, vật liệu, tiêu chuẩn kỹ thuật và yêu cầu riêng của từng buyer.</p>
+      <p>Các sản phẩm có thể sử dụng foam, vải, da, vật liệu bọc, khung gỗ, khung kim loại hoặc vật liệu kết hợp để phù hợp với công năng, độ thoải mái, thẩm mỹ, tiêu chuẩn đóng gói và thị trường xuất khẩu.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading">
+        <p class="ai-chair-eyebrow">NHÓM SẢN PHẨM BỌC NỆM</p>
+        <h3>Các dòng nội thất bọc nệm ANSLIFE có thể phát triển và sản xuất</h3>
+      </div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Ghế bọc nệm</h4><p>Ghế có sử dụng foam, vải, da hoặc vật liệu bọc theo mẫu duyệt. Có thể triển khai ghế ăn bọc nệm, ghế lounge bọc nệm, ghế khách sạn, ghế thương mại hoặc ghế theo thiết kế riêng.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Sofa</h4><p>Sofa dùng cho nhà ở, khách sạn, căn hộ dịch vụ, resort, văn phòng hoặc không gian thương mại. Có thể triển khai sofa đơn, sofa đôi, sofa dài, sofa module hoặc sofa theo bản vẽ riêng.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Ghế lounge bọc nệm</h4><p>Ghế thư giãn, ghế accent, ghế tiếp khách hoặc ghế dùng trong không gian hospitality có yêu cầu về form dáng, độ êm, vật liệu bọc và độ ổn định kết cấu.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Bench bọc nệm</h4><p>Bench bọc nệm dùng cho phòng ngủ, hành lang, khách sạn, resort, nhà hàng hoặc không gian thương mại. Có thể kết hợp khung gỗ, khung kim loại, foam và vải / da theo yêu cầu.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Ottoman</h4><p>Ottoman dùng cho phòng khách, phòng ngủ, khách sạn hoặc không gian nghỉ dưỡng. Có thể triển khai ottoman tròn, vuông, chữ nhật, có chân, không chân hoặc theo thiết kế riêng.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Đầu giường bọc nệm</h4><p>Đầu giường bọc nệm dùng cho giường ngủ, khách sạn, căn hộ dịch vụ hoặc dự án hospitality. Có thể triển khai theo kích thước, độ dày foam, loại vải / da, đường may và tiêu chuẩn lắp đặt riêng.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Sản phẩm bọc nệm cho khách sạn / resort</h4><p>Các sản phẩm bọc nệm phục vụ khách sạn, resort, căn hộ dịch vụ, nhà hàng hoặc không gian thương mại theo tiêu chuẩn dự án.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Sản phẩm bọc nệm tùy chỉnh</h4><p>Sản phẩm phát triển theo bản vẽ, mẫu thật, hình ảnh tham khảo, form dáng riêng, vật liệu bọc riêng, tiêu chuẩn đóng gói riêng hoặc yêu cầu OEM / ODM của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">VẬT LIỆU</p><h3>Vật liệu có thể sử dụng</h3></div>
+      <div class="ai-chair-material-grid ai-upholstered-material-grid">
+        <article><h4>Foam &amp; vật liệu đệm</h4><p>Foam các tỷ trọng khác nhau, foam định hình, foam nhiều lớp, bông, fiber, vật liệu tạo độ êm và vật liệu đệm theo tiêu chuẩn của buyer.</p></article>
+        <article><h4>Vải &amp; vật liệu bọc</h4><p>Vải nội thất, vải ngoài trời nếu cần, da PU, da thật, vật liệu bọc chống mài mòn, vật liệu bọc theo mẫu duyệt hoặc tiêu chuẩn riêng của từng thị trường.</p></article>
+        <article><h4>Khung &amp; kết cấu</h4><p>Khung gỗ, plywood, MDF, kim loại, lò xo, dây đai, phụ kiện liên kết, chân gỗ, chân kim loại và các chi tiết kết cấu theo yêu cầu sản phẩm.</p></article>
+        <article><h4>Vật liệu đóng gói</h4><p>Carton, foam bảo vệ, túi chống bụi, túi chống ẩm, corner protection, pallet, nhãn mác, carton mark và vật liệu đóng gói theo tiêu chuẩn xuất khẩu.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">TIÊU CHUẨN KIỂM SOÁT</p><h3>Tiêu chuẩn cần kiểm soát</h3></div>
+      <ul>
+        <li>Kích thước sản phẩm</li><li>Form dáng và tỷ lệ tổng thể</li><li>Kết cấu khung và độ ổn định</li><li>Độ chắc chắn của liên kết</li><li>Độ êm và độ đàn hồi của foam</li><li>Tỷ trọng và chất lượng foam</li><li>Độ căng và độ phẳng của lớp bọc</li><li>Đường may, mép gấp và chi tiết hoàn thiện</li><li>Màu sắc, vân vải, vân da và độ đồng đều vật liệu bọc</li><li>Độ sạch bề mặt và tình trạng vải / da</li><li>Độ ẩm vật liệu nếu có thành phần gỗ</li><li>Phụ kiện, chân sản phẩm và chi tiết lắp ráp</li><li>Độ đồng đều giữa các lô hàng</li><li>Quy cách đóng gói</li><li>Kiểm soát chống bẩn, chống ẩm và chống va đập khi vận chuyển</li><li>Nhãn mác, carton mark và hướng dẫn lắp ráp nếu có</li><li>Tình trạng hàng trước khi xuất khẩu</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">HỖ TRỢ CỦA ANSLIFE</p><h3>ANSLIFE hỗ trợ gì trong dự án nội thất bọc nệm?</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>Phát triển OEM / ODM</h4><p>Hỗ trợ phát triển sản phẩm bọc nệm từ bản vẽ, mẫu thật, hình ảnh tham khảo hoặc ý tưởng ban đầu đến mẫu sản xuất.</p></article>
+        <article><span>02</span><h4>Chuỗi cung ứng vật liệu</h4><p>Kết nối nguồn foam, vải, da, khung gỗ, plywood, kim loại, phụ kiện, chân sản phẩm và vật liệu đóng gói phù hợp tại Việt Nam.</p></article>
+        <article><span>03</span><h4>Thẩm định năng lực nhà máy</h4><p>Đánh giá nhà máy phù hợp với từng nhóm sản phẩm bọc nệm, kỹ thuật may bọc, foam, khung, sản lượng, tiêu chuẩn kỹ thuật và yêu cầu giao hàng.</p></article>
+        <article><span>04</span><h4>QC độc lập</h4><p>Kiểm soát chất lượng theo mẫu duyệt, bản vẽ, checklist kiểm hàng, tiêu chuẩn foam, vật liệu bọc, đường may, form dáng và tiêu chuẩn của từng thị trường.</p></article>
+        <article><span>05</span><h4>Đóng gói &amp; xuất khẩu</h4><p>Hỗ trợ tiêu chuẩn đóng gói, chống bẩn, chống ẩm, nhãn mác, chứng từ, logistics và xuất hàng quốc tế theo kế hoạch của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QUY TRÌNH</p><h3>Quy trình triển khai</h3></div>
+      <ol>
+        <li>Buyer gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu sản phẩm.</li><li>ANSLIFE đánh giá quy cách sản phẩm, form dáng, vật liệu bọc, foam, khung và khả năng sản xuất.</li><li>ANSLIFE đề xuất phương án vật liệu, nhà máy, mẫu và tiêu chuẩn kiểm soát.</li><li>Phát triển mẫu hoặc đối chiếu mẫu đã duyệt.</li><li>Chuẩn hóa foam, vật liệu bọc, màu sắc, đường may, checklist QC và quy cách đóng gói.</li><li>Tổ chức sản xuất theo kế hoạch.</li><li>QC độc lập theo từng giai đoạn nếu cần.</li><li>Đóng gói, kiểm tra chống bẩn / chống ẩm, kiểm tra trước xuất và xuất hàng quốc tế.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">THÔNG TIN CẦN CUNG CẤP</p><h3>Buyer cần chuẩn bị gì?</h3></div>
+      <ul>
+        <li>Bản vẽ kỹ thuật</li><li>Hình ảnh tham khảo</li><li>Mẫu thật nếu có</li><li>Kích thước sản phẩm</li><li>Form dáng mong muốn</li><li>Vật liệu bọc mong muốn</li><li>Mẫu vải / mẫu da / mã màu nếu có</li><li>Tiêu chuẩn foam hoặc độ êm mong muốn nếu có</li><li>Yêu cầu khung gỗ, khung kim loại hoặc vật liệu kết hợp nếu có</li><li>Yêu cầu đường may, chi tiết hoàn thiện hoặc phụ kiện nếu có</li><li>Số lượng dự kiến</li><li>Thị trường xuất khẩu</li><li>Tiêu chuẩn đóng gói</li><li>Mức giá mục tiêu nếu có</li><li>Kế hoạch giao hàng</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Gửi yêu cầu sản xuất nội thất bọc nệm cho ANSLIFE</h3>
+        <p>Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo, vật liệu bọc, foam, số lượng và thị trường xuất khẩu. ANSLIFE sẽ xem xét và đề xuất phương án sản xuất, vật liệu, QC, đóng gói và xuất hàng phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_UPHOLSTERED_SECTION_EN = `
+  <section id="upholstered-furniture" class="ai-section ai-chair-page ai-upholstered-page ai-company-overview">
+    <header class="ai-chair-hero ai-upholstered-hero">
+      <h2>Upholstered Furniture</h2>
+      <p class="ai-chair-lead">ANSLIFE supports the development, manufacturing, quality control, packing, and export of upholstered furniture products in Vietnam based on drawings, approved samples, materials, technical standards, and buyer-specific requirements.</p>
+      <p>Products can use foam, fabric, leather, upholstery materials, wood frames, metal frames, or mixed materials to match function, comfort, aesthetics, packing standards, and export-market requirements.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">UPHOLSTERED PRODUCT GROUPS</p><h3>Upholstered furniture ANSLIFE can develop and manufacture</h3></div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Upholstered Chairs</h4><p>Chairs using foam, fabric, leather, or approved upholstery materials, including upholstered dining chairs, lounge chairs, hotel chairs, commercial chairs, or custom designs.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Sofas</h4><p>Sofas for homes, hotels, serviced apartments, resorts, offices, or commercial spaces, including single sofas, two-seaters, long sofas, modular sofas, or drawing-based designs.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Upholstered Lounge Chairs</h4><p>Lounge chairs, accent chairs, guest chairs, or hospitality chairs requiring controlled shape, comfort, upholstery materials, and structural stability.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Upholstered Benches</h4><p>Benches for bedrooms, corridors, hotels, resorts, restaurants, or commercial spaces, combining wood frames, metal frames, foam, and fabric or leather.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Ottomans</h4><p>Ottomans for living rooms, bedrooms, hotels, or resort spaces, including round, square, rectangular, legged, legless, or custom designs.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Upholstered Headboards</h4><p>Headboards for beds, hotels, serviced apartments, or hospitality projects, developed by size, foam thickness, fabric or leather type, stitching, and installation standard.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Hotel / Resort Upholstery</h4><p>Upholstered products for hotels, resorts, serviced apartments, restaurants, or commercial spaces according to project standards.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Custom Upholstered Products</h4><p>Products developed from drawings, physical samples, reference images, custom forms, specific upholstery materials, packing standards, or OEM / ODM requirements.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">MATERIALS</p><h3>Materials that can be used</h3></div>
+      <div class="ai-chair-material-grid ai-upholstered-material-grid">
+        <article><h4>Foam &amp; Cushioning</h4><p>Foam in different densities, shaped foam, multi-layer foam, batting, fiber, comfort materials, and cushioning materials according to buyer standards.</p></article>
+        <article><h4>Fabric &amp; Upholstery Materials</h4><p>Interior fabrics, outdoor fabrics when needed, PU leather, genuine leather, abrasion-resistant upholstery, approved-sample upholstery, or market-specific materials.</p></article>
+        <article><h4>Frames &amp; Structure</h4><p>Wood frames, plywood, MDF, metal, springs, webbing, connection hardware, wooden legs, metal legs, and structural details based on product requirements.</p></article>
+        <article><h4>Packing Materials</h4><p>Cartons, protective foam, dust bags, moisture-control bags, corner protection, pallets, labels, carton marks, and export-standard packing materials.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QC CHECKLIST</p><h3>Standards to control</h3></div>
+      <ul>
+        <li>Product dimensions</li><li>Overall form and proportion</li><li>Frame structure and stability</li><li>Joint strength</li><li>Foam comfort and resilience</li><li>Foam density and quality</li><li>Tension and flatness of upholstery</li><li>Stitching, folded edges, and finishing details</li><li>Color, fabric grain, leather grain, and upholstery consistency</li><li>Surface cleanliness and fabric / leather condition</li><li>Material moisture content if wood is included</li><li>Hardware, legs, and assembly details</li><li>Consistency across production batches</li><li>Packing specifications</li><li>Protection against dirt, moisture, and impact during transport</li><li>Labels, carton marks, and assembly instructions if required</li><li>Pre-export product condition</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">ANSLIFE SUPPORT</p><h3>How ANSLIFE supports upholstered furniture projects</h3></div>
+      <div class="ai-chair-support-grid">
+        <article><span>01</span><h4>OEM / ODM Development</h4><p>Support upholstered product development from drawings, physical samples, reference images, or early ideas to production samples.</p></article>
+        <article><span>02</span><h4>Material Supply Chain</h4><p>Connect suitable foam, fabric, leather, wood frames, plywood, metal, hardware, legs, and packing materials in Vietnam.</p></article>
+        <article><span>03</span><h4>Factory Capability Assessment</h4><p>Assess factories for each upholstered product group, sewing and upholstery technique, foam, frames, output requirement, technical standard, and delivery requirement.</p></article>
+        <article><span>04</span><h4>Independent QC</h4><p>Control quality against approved samples, drawings, inspection checklists, foam standards, upholstery materials, stitching, form, and target-market standards.</p></article>
+        <article><span>05</span><h4>Packing &amp; Export</h4><p>Support packing standards, dirt and moisture protection, labels, documents, logistics, and international shipment according to buyer plans.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">WORKFLOW</p><h3>Implementation process</h3></div>
+      <ol>
+        <li>Buyer sends drawings, physical samples, reference images, or product requirements.</li><li>ANSLIFE reviews product specifications, form, upholstery materials, foam, frame, and manufacturing feasibility.</li><li>ANSLIFE proposes materials, factory options, sample direction, and control standards.</li><li>Develop samples or benchmark against approved samples.</li><li>Standardize foam, upholstery materials, colors, stitching, QC checklists, and packing specifications.</li><li>Organize production according to the project plan.</li><li>Run independent QC by stage when required.</li><li>Pack, check dirt and moisture protection, inspect before export, and ship internationally.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">BUYER INPUT</p><h3>What buyers should prepare</h3></div>
+      <ul>
+        <li>Technical drawings</li><li>Reference images</li><li>Physical sample if available</li><li>Product dimensions</li><li>Target form</li><li>Preferred upholstery materials</li><li>Fabric sample / leather sample / color code if available</li><li>Foam standard or target comfort level if any</li><li>Wood frame, metal frame, or mixed-material requirements if any</li><li>Stitching, finishing detail, or hardware requirements if any</li><li>Expected quantity</li><li>Export market</li><li>Packing standards</li><li>Target price if any</li><li>Delivery plan</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Send your upholstered furniture request to ANSLIFE</h3>
+        <p>Buyers can send drawings, physical samples, reference images, upholstery materials, foam, quantities, and export markets. ANSLIFE will review and propose suitable manufacturing, material, QC, packing, and export options.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
+        <a class="ai-company-request-secondary" href="/en/contact/upload-drawing">Upload drawings</a>
+        <a class="ai-company-request-secondary" href="/en/contact/company-info">Contact ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_CUSTOM_PROJECT_SECTION_VN = `
+  <section id="custom-project-furniture" class="ai-section ai-chair-page ai-custom-project-page ai-company-overview">
+    <header class="ai-chair-hero ai-custom-project-hero">
+      <h2>Nội thất tùy chỉnh cho dự án khách sạn, nhà hàng, văn phòng và resort</h2>
+      <p class="ai-chair-lead">ANSLIFE hỗ trợ phát triển, sản xuất, kiểm soát chất lượng, đóng gói và xuất khẩu các sản phẩm nội thất tùy chỉnh tại Việt Nam cho dự án khách sạn, nhà hàng, văn phòng, resort và các không gian thương mại.</p>
+      <p>Các sản phẩm được triển khai theo bản vẽ, mẫu duyệt, vật liệu, tiêu chuẩn kỹ thuật, công năng sử dụng, yêu cầu đóng gói và kế hoạch giao hàng của từng dự án.</p>
+      <p>Trang này tập trung vào năng lực tổ chức sản xuất theo dự án, không phải danh mục sản phẩm có sẵn.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading">
+        <p class="ai-chair-eyebrow">NHÓM DỰ ÁN</p>
+        <h3>Các nhóm dự án nội thất tùy chỉnh ANSLIFE có thể triển khai</h3>
+      </div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Nội thất khách sạn</h4><p>Sản phẩm nội thất cho phòng khách sạn, khu vực sảnh, lounge, nhà hàng trong khách sạn, căn hộ dịch vụ và các khu vực chức năng. Có thể triển khai theo bản vẽ, tiêu chuẩn vật liệu, độ bền, công năng và tiến độ của từng dự án.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Nội thất resort</h4><p>Sản phẩm nội thất cho resort, villa, bungalow, khu nghỉ dưỡng, không gian ngoài trời và khu vực dịch vụ. Có thể triển khai với gỗ, mây tre, vật liệu bọc, vật liệu tự nhiên hoặc vật liệu kết hợp theo phong cách dự án.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Nội thất nhà hàng</h4><p>Sản phẩm nội thất cho nhà hàng, cafe, bar, khu vực dining, khu vực chờ và không gian thương mại. Có thể triển khai ghế, bàn, bench, quầy, tủ, kệ và sản phẩm theo bản vẽ riêng.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Nội thất văn phòng</h4><p>Sản phẩm nội thất cho văn phòng, phòng họp, khu làm việc, khu tiếp khách, pantry, khu lưu trữ và không gian làm việc linh hoạt. Có thể triển khai bàn, tủ, kệ, module lưu trữ và sản phẩm theo tiêu chuẩn dự án.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Nội thất không gian thương mại</h4><p>Sản phẩm cho showroom, cửa hàng, khu trưng bày, khu dịch vụ, retail space và các không gian có yêu cầu nhận diện thương hiệu hoặc công năng đặc thù.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Nội thất theo bản vẽ thiết kế</h4><p>Sản phẩm được phát triển theo bản vẽ kiến trúc, bản vẽ nội thất, bản vẽ kỹ thuật, mẫu thật hoặc hình ảnh tham khảo do buyer hoặc đơn vị thiết kế cung cấp.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Nội thất theo bộ sưu tập riêng</h4><p>Sản phẩm được phát triển theo concept, phong cách, bộ sưu tập hoặc tiêu chuẩn thương hiệu riêng của buyer, khách sạn, chuỗi nhà hàng, văn phòng hoặc resort.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Nội thất tùy chỉnh OEM / ODM</h4><p>Sản phẩm phát triển từ ý tưởng, bản vẽ, mẫu thật, vật liệu, công năng và tiêu chuẩn riêng, kết nối với hệ thống sản xuất, QC, đóng gói và xuất khẩu của ANSLIFE.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">NHÓM SẢN PHẨM</p><h3>Nhóm sản phẩm có thể triển khai</h3></div>
+      <ul>
+        <li>Ghế</li><li>Bàn</li><li>Tủ &amp; lưu trữ</li><li>Kệ</li><li>Giường</li><li>Bench</li><li>Ottoman</li><li>Sofa</li><li>Quầy / counter</li><li>Panel trang trí</li><li>Sản phẩm mây tre</li><li>Sản phẩm bọc nệm</li><li>Cấu kiện nội thất</li><li>Sản phẩm theo bản vẽ riêng</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">VẬT LIỆU</p><h3>Vật liệu có thể sử dụng</h3></div>
+      <div class="ai-chair-material-grid ai-custom-project-material-grid">
+        <article><h4>Gỗ &amp; vật liệu gỗ</h4><p>Gỗ cao su, Acacia, Oak, Ash, Pine, plywood, MDF, veneer và vật liệu gỗ theo yêu cầu.</p></article>
+        <article><h4>Vật liệu bọc &amp; hoàn thiện</h4><p>Foam, vải, da PU, da thật, vải ngoài trời nếu cần, sơn, veneer, lớp phủ hoàn thiện và vật liệu bọc theo mẫu duyệt.</p></article>
+        <article><h4>Vật liệu kết hợp</h4><p>Kim loại, kính, đá, mây tre, vật liệu tự nhiên, phụ kiện lắp ráp, bản lề, ray trượt, tay nắm, chân sản phẩm và các chi tiết hoàn thiện.</p></article>
+        <article><h4>Vật liệu đóng gói</h4><p>Carton, foam bảo vệ, túi chống bụi, túi chống ẩm, corner protection, pallet, nhãn mác, carton mark và vật liệu đóng gói theo tiêu chuẩn xuất khẩu.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">TIÊU CHUẨN KIỂM SOÁT</p><h3>Tiêu chuẩn cần kiểm soát</h3></div>
+      <ul>
+        <li>Đúng bản vẽ và kích thước</li><li>Đúng công năng sử dụng</li><li>Đúng vật liệu đã duyệt</li><li>Đúng màu sắc và hoàn thiện bề mặt</li><li>Đúng mẫu đã duyệt</li><li>Kết cấu và độ ổn định</li><li>Độ bền trong điều kiện sử dụng thương mại</li><li>Khả năng chịu lực theo từng nhóm sản phẩm</li><li>Độ ẩm vật liệu</li><li>Độ đồng đều giữa các sản phẩm trong cùng dự án</li><li>Độ đồng nhất giữa các lô hàng</li><li>Phụ kiện, chi tiết lắp ráp và khả năng thay thế</li><li>Tiêu chuẩn đóng gói theo từng khu vực giao hàng</li><li>Nhãn mác, carton mark và hướng dẫn lắp đặt nếu có</li><li>Tình trạng hàng trước khi xuất khẩu</li><li>Khả năng giao hàng theo tiến độ dự án</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">HỖ TRỢ CỦA ANSLIFE</p><h3>ANSLIFE hỗ trợ gì trong dự án nội thất tùy chỉnh?</h3></div>
+      <div class="ai-chair-support-grid ai-custom-project-support-grid">
+        <article><span>01</span><h4>Phân tích bản vẽ &amp; yêu cầu dự án</h4><p>ANSLIFE tiếp nhận và phân tích bản vẽ, mẫu, vật liệu, công năng, tiêu chuẩn kỹ thuật, số lượng và tiến độ của từng dự án.</p></article>
+        <article><span>02</span><h4>Phát triển mẫu / mock-up</h4><p>ANSLIFE hỗ trợ phát triển mẫu, mẫu vật liệu, mẫu màu, cấu kiện thử hoặc sản phẩm mẫu trước khi sản xuất hàng loạt.</p></article>
+        <article><span>03</span><h4>Chuỗi cung ứng vật liệu</h4><p>ANSLIFE kết nối nguồn vật liệu phù hợp tại Việt Nam, bao gồm gỗ, plywood, MDF, veneer, foam, vải, da, kim loại, phụ kiện, sơn và vật liệu đóng gói.</p></article>
+        <article><span>04</span><h4>Thẩm định năng lực nhà máy</h4><p>ANSLIFE đánh giá nhà máy phù hợp với từng nhóm sản phẩm, vật liệu, sản lượng, tiêu chuẩn kỹ thuật và tiến độ của dự án.</p></article>
+        <article><span>05</span><h4>QC độc lập trong dự án</h4><p>ANSLIFE kiểm soát chất lượng theo bản vẽ, mẫu duyệt, checklist kiểm hàng, vật liệu, màu sắc, hoàn thiện bề mặt, đóng gói và tiêu chuẩn của từng thị trường.</p></article>
+        <article><span>06</span><h4>Đóng gói, logistics &amp; xuất hàng</h4><p>ANSLIFE hỗ trợ tiêu chuẩn đóng gói, phân loại hàng theo khu vực dự án, nhãn mác, chứng từ, logistics và xuất hàng quốc tế theo kế hoạch của buyer.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QUY TRÌNH</p><h3>Quy trình triển khai</h3></div>
+      <ol class="ai-custom-project-process">
+        <li>Buyer gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu dự án.</li><li>ANSLIFE phân tích quy cách sản phẩm, vật liệu, công năng, sản lượng và tiến độ.</li><li>ANSLIFE đề xuất phương án vật liệu, nhà máy, mẫu, QC và đóng gói.</li><li>Phát triển mẫu, mock-up hoặc đối chiếu mẫu đã duyệt nếu cần.</li><li>Chuẩn hóa bản vẽ, vật liệu, màu sắc, phụ kiện, checklist QC và tiêu chuẩn đóng gói.</li><li>Tổ chức sản xuất theo kế hoạch dự án.</li><li>QC độc lập theo từng giai đoạn nếu cần.</li><li>Phân loại, đóng gói, kiểm tra trước xuất và xuất hàng theo kế hoạch dự án.</li><li>Lưu dữ liệu sản phẩm, mẫu chuẩn và tiêu chuẩn cho các đơn hàng hoặc giai đoạn tiếp theo.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">THÔNG TIN CẦN CUNG CẤP</p><h3>Buyer cần chuẩn bị gì?</h3></div>
+      <ul>
+        <li>Bản vẽ thiết kế</li><li>Bản vẽ kỹ thuật nếu có</li><li>Hình ảnh tham khảo</li><li>Mẫu thật nếu có</li><li>Danh sách sản phẩm trong dự án</li><li>Kích thước từng sản phẩm</li><li>Vật liệu mong muốn</li><li>Màu sắc và hoàn thiện bề mặt</li><li>Tiêu chuẩn phụ kiện nếu có</li><li>Tiêu chuẩn bọc nệm nếu có</li><li>Tiêu chuẩn mây tre hoặc vật liệu tự nhiên nếu có</li><li>Số lượng từng mã sản phẩm</li><li>Tiến độ giao hàng mong muốn</li><li>Thị trường xuất khẩu</li><li>Điều kiện đóng gói</li><li>Mức giá mục tiêu nếu có</li><li>Kế hoạch giao hàng theo từng giai đoạn nếu có</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Gửi yêu cầu dự án nội thất tùy chỉnh cho ANSLIFE</h3>
+        <p>Buyer có thể gửi bản vẽ, danh sách sản phẩm, mẫu thật, hình ảnh tham khảo, vật liệu, số lượng, tiến độ và thị trường xuất khẩu. ANSLIFE sẽ xem xét và đề xuất phương án phát triển mẫu, sản xuất, QC, đóng gói và xuất hàng phù hợp.</p>
+      </div>
+      <div class="ai-company-request-actions">
+        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
+        <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHED_FURNITURE_CUSTOM_PROJECT_SECTION_EN = `
+  <section id="custom-project-furniture" class="ai-section ai-chair-page ai-custom-project-page ai-company-overview">
+    <header class="ai-chair-hero ai-custom-project-hero">
+      <h2>Custom Furniture for Hotel, Restaurant, Office and Resort Projects</h2>
+      <p class="ai-chair-lead">ANSLIFE supports the development, manufacturing, quality control, packing, and export of custom furniture products in Vietnam for hotel, restaurant, office, resort, and commercial-space projects.</p>
+      <p>Products are developed according to drawings, approved samples, materials, technical standards, usage functions, packing requirements, and delivery plans for each project.</p>
+      <p>This page focuses on project-based production capability, not ready-made product catalogues.</p>
+    </header>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">PROJECT GROUPS</p><h3>Custom project groups ANSLIFE can support</h3></div>
+      <div class="ai-chair-type-grid">
+        <article class="ai-chair-type-card"><span>01</span><h4>Hotel Furniture</h4><p>Furniture for hotel rooms, lobbies, lounges, hotel restaurants, serviced apartments, and functional areas, developed to drawings, material standards, durability requirements, function, and project schedules.</p></article>
+        <article class="ai-chair-type-card"><span>02</span><h4>Resort Furniture</h4><p>Furniture for resorts, villas, bungalows, leisure spaces, outdoor areas, and service zones, using wood, rattan, upholstery, natural materials, or mixed materials according to project style.</p></article>
+        <article class="ai-chair-type-card"><span>03</span><h4>Restaurant Furniture</h4><p>Furniture for restaurants, cafes, bars, dining areas, waiting areas, and commercial spaces, including chairs, tables, benches, counters, cabinets, shelves, and drawing-based products.</p></article>
+        <article class="ai-chair-type-card"><span>04</span><h4>Office Furniture</h4><p>Furniture for offices, meeting rooms, work areas, reception spaces, pantries, storage areas, and flexible workplaces, including desks, cabinets, shelves, storage modules, and project-standard products.</p></article>
+        <article class="ai-chair-type-card"><span>05</span><h4>Commercial-Space Furniture</h4><p>Products for showrooms, stores, display areas, service areas, retail spaces, and spaces with brand-identity or special-function requirements.</p></article>
+        <article class="ai-chair-type-card"><span>06</span><h4>Design-Drawing Furniture</h4><p>Products developed from architectural drawings, interior drawings, technical drawings, physical samples, or reference images provided by buyers or design teams.</p></article>
+        <article class="ai-chair-type-card"><span>07</span><h4>Private-Collection Furniture</h4><p>Products developed according to concepts, styles, collections, or brand standards for buyers, hotels, restaurant chains, offices, or resorts.</p></article>
+        <article class="ai-chair-type-card"><span>08</span><h4>Custom OEM / ODM Furniture</h4><p>Products developed from ideas, drawings, physical samples, materials, functions, and custom standards, connected to ANSLIFE manufacturing, QC, packing, and export systems.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">PRODUCT GROUPS</p><h3>Product groups that can be developed</h3></div>
+      <ul>
+        <li>Chairs</li><li>Tables</li><li>Cabinets &amp; storage</li><li>Shelves</li><li>Beds</li><li>Benches</li><li>Ottomans</li><li>Sofas</li><li>Counters</li><li>Decorative panels</li><li>Rattan and bamboo products</li><li>Upholstered products</li><li>Interior components</li><li>Drawing-based products</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">MATERIALS</p><h3>Materials that can be used</h3></div>
+      <div class="ai-chair-material-grid ai-custom-project-material-grid">
+        <article><h4>Wood &amp; Wood Materials</h4><p>Rubberwood, Acacia, Oak, Ash, Pine, plywood, MDF, veneer, and buyer-specified wood materials.</p></article>
+        <article><h4>Upholstery &amp; Finishing</h4><p>Foam, fabric, PU leather, genuine leather, outdoor fabrics when needed, paint, veneer, finishing coatings, and approved upholstery materials.</p></article>
+        <article><h4>Mixed Materials</h4><p>Metal, glass, stone, rattan, natural materials, assembly hardware, hinges, drawer slides, handles, product legs, and finishing details.</p></article>
+        <article><h4>Packing Materials</h4><p>Cartons, protective foam, dust bags, moisture-control bags, corner protection, pallets, labels, carton marks, and export-standard packing materials.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-checks">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">QC CHECKLIST</p><h3>Standards to control</h3></div>
+      <ul>
+        <li>Correct drawings and dimensions</li><li>Correct usage function</li><li>Approved materials</li><li>Correct color and surface finish</li><li>Approved sample matching</li><li>Structure and stability</li><li>Durability under commercial use conditions</li><li>Load-bearing performance by product group</li><li>Material moisture content</li><li>Consistency among products in the same project</li><li>Consistency across shipments</li><li>Hardware, assembly details, and replaceability</li><li>Packing standards by delivery area</li><li>Labels, carton marks, and installation instructions if required</li><li>Pre-export product condition</li><li>Ability to deliver according to project schedule</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-section">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">ANSLIFE SUPPORT</p><h3>How ANSLIFE supports custom furniture projects</h3></div>
+      <div class="ai-chair-support-grid ai-custom-project-support-grid">
+        <article><span>01</span><h4>Drawing &amp; Requirement Analysis</h4><p>ANSLIFE receives and analyzes drawings, samples, materials, functions, technical standards, quantities, and schedules for each project.</p></article>
+        <article><span>02</span><h4>Sample / Mock-Up Development</h4><p>ANSLIFE supports sample development, material samples, color samples, trial components, or product samples before mass production.</p></article>
+        <article><span>03</span><h4>Material Supply Chain</h4><p>ANSLIFE connects suitable material sources in Vietnam, including wood, plywood, MDF, veneer, foam, fabric, leather, metal, hardware, paint, and packing materials.</p></article>
+        <article><span>04</span><h4>Factory Capability Assessment</h4><p>ANSLIFE assesses factories for product groups, materials, output, technical standards, and project schedules.</p></article>
+        <article><span>05</span><h4>Independent Project QC</h4><p>ANSLIFE controls quality according to drawings, approved samples, inspection checklists, materials, colors, surface finishes, packing, and target-market standards.</p></article>
+        <article><span>06</span><h4>Packing, Logistics &amp; Export</h4><p>ANSLIFE supports packing standards, area-based product sorting, labels, documents, logistics, and international shipment according to buyer plans.</p></article>
+      </div>
+    </section>
+
+    <section class="ai-chair-section ai-chair-process">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">WORKFLOW</p><h3>Implementation process</h3></div>
+      <ol class="ai-custom-project-process">
+        <li>Buyer sends drawings, physical samples, reference images, or project requirements.</li><li>ANSLIFE analyzes product specifications, materials, functions, quantities, and schedule.</li><li>ANSLIFE proposes materials, factory options, samples, QC, and packing standards.</li><li>Develop samples, mock-ups, or benchmark against approved samples if needed.</li><li>Standardize drawings, materials, colors, hardware, QC checklists, and packing standards.</li><li>Organize production according to the project plan.</li><li>Run independent QC by stage when required.</li><li>Sort, pack, inspect before export, and ship according to the project plan.</li><li>Store product data, approved samples, and standards for future orders or later project stages.</li>
+      </ol>
+    </section>
+
+    <section class="ai-chair-section ai-chair-buyer">
+      <div class="ai-chair-section-heading"><p class="ai-chair-eyebrow">BUYER INPUT</p><h3>What buyers should prepare</h3></div>
+      <ul>
+        <li>Design drawings</li><li>Technical drawings if available</li><li>Reference images</li><li>Physical samples if available</li><li>Project product list</li><li>Dimensions for each product</li><li>Preferred materials</li><li>Color and surface finish</li><li>Hardware standards if any</li><li>Upholstery standards if any</li><li>Rattan, bamboo, or natural-material standards if any</li><li>Quantity for each SKU</li><li>Target delivery schedule</li><li>Export market</li><li>Packing conditions</li><li>Target price if any</li><li>Phased delivery plan if any</li>
+      </ul>
+    </section>
+
+    <section class="ai-chair-cta ai-company-request-panel">
+      <div>
+        <h3>Send your custom furniture project request to ANSLIFE</h3>
+        <p>Buyers can send drawings, product lists, physical samples, reference images, materials, quantities, schedules, and export markets. ANSLIFE will review and propose suitable sample development, manufacturing, QC, packing, and export options.</p>
       </div>
       <div class="ai-company-request-actions">
         <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
@@ -15027,6 +15363,47 @@ export function getAIFallbackSectionHtml(
         language === 'vn'
           ? PRODUCTS_FINISHED_FURNITURE_RATTAN_BAMBOO_SECTION_VN
           : PRODUCTS_FINISHED_FURNITURE_RATTAN_BAMBOO_SECTION_EN;
+
+      return `<div class="ai-content">${sectionHtml}</div>`
+        .replace(
+          /href="\/vn\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(
+          /href="\/en\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
+        .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
+    }
+
+    if (subSectionSlug === 'upholstered-furniture' || subSectionSlug === 'upholstery') {
+      const sectionHtml =
+        language === 'vn'
+          ? PRODUCTS_FINISHED_FURNITURE_UPHOLSTERED_SECTION_VN
+          : PRODUCTS_FINISHED_FURNITURE_UPHOLSTERED_SECTION_EN;
+
+      return `<div class="ai-content">${sectionHtml}</div>`
+        .replace(
+          /href="\/vn\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(
+          /href="\/en\/products-solutions\/finished-furniture/g,
+          `href="/${language}/products-solutions/finished-furniture`,
+        )
+        .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
+        .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
+    }
+
+    if (
+      subSectionSlug === 'custom-project-furniture' ||
+      subSectionSlug === 'hotel-resort-office-custom-furniture'
+    ) {
+      const sectionHtml =
+        language === 'vn'
+          ? PRODUCTS_FINISHED_FURNITURE_CUSTOM_PROJECT_SECTION_VN
+          : PRODUCTS_FINISHED_FURNITURE_CUSTOM_PROJECT_SECTION_EN;
 
       return `<div class="ai-content">${sectionHtml}</div>`
         .replace(

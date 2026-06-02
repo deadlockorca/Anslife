@@ -13733,6 +13733,20 @@ a.mobile-menu-utility-link {
 }
 
 .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  .ai-upholstered-hero {
+  background: url('/assets/products/finished-furniture/upholstered-banner.png') center center / cover
+    no-repeat !important;
+  border: 0 !important;
+}
+
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  .ai-custom-project-hero {
+  background: url('/assets/products/finished-furniture/custom-project-banner.png') center center /
+    cover no-repeat !important;
+  border: 0 !important;
+}
+
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
   .html-panel:has(.ai-finished-page),
 .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
   .ai-section.ai-finished-page {
@@ -15167,6 +15181,57 @@ a.mobile-menu-utility-link {
   max-width: min(40%, 620px);
 }
 
+.ai-upholstered-hero {
+  background: url('/assets/products/finished-furniture/upholstered-banner.png') center center / cover
+    no-repeat !important;
+}
+
+.ai-chair-hero.ai-upholstered-hero h2 {
+  max-width: 38%;
+  font-size: clamp(2.45rem, 4.7vw, 4.8rem);
+}
+
+.ai-chair-hero.ai-upholstered-hero .ai-chair-lead,
+.ai-chair-hero.ai-upholstered-hero p:not(.ai-chair-eyebrow) {
+  max-width: min(40%, 620px);
+}
+
+.ai-upholstered-material-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ai-custom-project-hero {
+  background: url('/assets/products/finished-furniture/custom-project-banner.png') center center /
+    cover no-repeat !important;
+}
+
+.ai-chair-hero.ai-custom-project-hero {
+  min-height: clamp(420px, 48vw, 620px);
+}
+
+.ai-chair-hero.ai-custom-project-hero h2 {
+  max-width: 40%;
+  font-size: clamp(2rem, 3.4vw, 3.7rem);
+  line-height: 0.98;
+}
+
+.ai-chair-hero.ai-custom-project-hero .ai-chair-lead,
+.ai-chair-hero.ai-custom-project-hero p:not(.ai-chair-eyebrow) {
+  max-width: min(40%, 620px);
+}
+
+.ai-custom-project-material-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ai-custom-project-support-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ai-custom-project-process {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .ai-chair-eyebrow {
   margin: 0;
   color: #d95f22 !important;
@@ -15456,6 +15521,14 @@ a.mobile-menu-utility-link {
     background-position: 68% center;
   }
 
+  .ai-upholstered-hero {
+    background-position: 68% center;
+  }
+
+  .ai-custom-project-hero {
+    background-position: 70% center;
+  }
+
   .ai-chair-hero.ai-storage-hero h2,
   .ai-chair-hero.ai-storage-hero .ai-chair-lead,
   .ai-chair-hero.ai-storage-hero p:not(.ai-chair-eyebrow),
@@ -15467,8 +15540,21 @@ a.mobile-menu-utility-link {
   .ai-chair-hero.ai-beds-hero p:not(.ai-chair-eyebrow),
   .ai-chair-hero.ai-rattan-hero h2,
   .ai-chair-hero.ai-rattan-hero .ai-chair-lead,
-  .ai-chair-hero.ai-rattan-hero p:not(.ai-chair-eyebrow) {
+  .ai-chair-hero.ai-rattan-hero p:not(.ai-chair-eyebrow),
+  .ai-chair-hero.ai-upholstered-hero h2,
+  .ai-chair-hero.ai-upholstered-hero .ai-chair-lead,
+  .ai-chair-hero.ai-upholstered-hero p:not(.ai-chair-eyebrow),
+  .ai-chair-hero.ai-custom-project-hero h2,
+  .ai-chair-hero.ai-custom-project-hero .ai-chair-lead,
+  .ai-chair-hero.ai-custom-project-hero p:not(.ai-chair-eyebrow) {
     max-width: 86%;
+  }
+
+  .ai-upholstered-material-grid,
+  .ai-custom-project-material-grid,
+  .ai-custom-project-support-grid,
+  .ai-custom-project-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .ai-chair-hero h2,
