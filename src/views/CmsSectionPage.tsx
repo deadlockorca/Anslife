@@ -23,20 +23,23 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
   const loadPage = useCallback(() => getPageBySlug(config.slug), [config.slug]);
   const { data, loading, error } = useAsyncResource(loadPage);
   const fallbackHtml = getAIFallbackPageHtml(config.slug, language);
-  const shouldForceTemplatePage = config.slug === 'scholarship-community';
-  const resolvedHtml = shouldForceTemplatePage
-    ? fallbackHtml
+  const shouldRenderBlankPage =
+    config.slug === 'scholarship-community' || config.slug === 'quality-control';
+  const resolvedHtml = shouldRenderBlankPage
+    ? ''
     : data?.content.rendered ?? fallbackHtml;
   const sectionListForNavigation = useMemo(
     () =>
-      config.slug === 'about-anslife'
+      config.slug === 'quality-control'
+        ? []
+        : config.slug === 'about-anslife'
         ? config.sections.filter((section) => !hiddenAboutSectionIds.has(section.id))
         : config.sections,
     [config.sections, config.slug, hiddenAboutSectionIds],
   );
   const shouldHideHeroKicker =
     config.slug === 'about-anslife' || config.slug === 'global-network';
-  const shouldHideAboutHeroSummary = config.slug === 'about-anslife';
+  const shouldHideAboutHeroSummary = config.slug === 'about-anslife' || shouldRenderBlankPage;
   const displayHtml = useMemo(() => {
     if (!resolvedHtml) {
       return resolvedHtml;
@@ -60,8 +63,8 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
       return html.replace(sectionPattern, '');
     }, htmlWithoutBanner);
   }, [config.sections, config.slug, resolvedHtml]);
-  const shouldShowLoading = !shouldForceTemplatePage && loading && !resolvedHtml;
-  const shouldShowError = !shouldForceTemplatePage && Boolean(error) && !resolvedHtml;
+  const shouldShowLoading = !shouldRenderBlankPage && loading && !resolvedHtml;
+  const shouldShowError = !shouldRenderBlankPage && Boolean(error) && !resolvedHtml;
 
   return (
     <>

@@ -205,6 +205,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   );
   const shouldRenderBlankScholarshipPage =
     config.slug === 'about-anslife' && section.id === 'scholarship-community';
+  const shouldRenderBlankQualityInProcessPage =
+    config.slug === 'quality-control' && section.id === 'in-process-inspection';
+  const shouldRenderBlankSubSectionPage =
+    shouldRenderBlankScholarshipPage || shouldRenderBlankQualityInProcessPage;
   const isCustomAboutSection =
     config.slug === 'about-anslife' &&
     (section.id === 'philosophy' ||
@@ -251,14 +255,14 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         section.id === 'organization' ||
         section.id === 'team' ||
         section.id === 'anslife-ecosystem'));
-  const resolvedHtml = shouldRenderBlankScholarshipPage
+  const resolvedHtml = shouldRenderBlankSubSectionPage
     ? ''
     : shouldForceTemplateHtml
       ? fallbackHtml ?? data?.content.rendered
       : data?.content.rendered ?? fallbackHtml;
-  const shouldShowLoading = !shouldRenderBlankScholarshipPage && loading && !resolvedHtml;
+  const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
-    !shouldRenderBlankScholarshipPage && Boolean(error) && !resolvedHtml;
+    !shouldRenderBlankSubSectionPage && Boolean(error) && !resolvedHtml;
   const seoTitle = isFinishedFurnitureChairsDetail
     ? `${chairsSeoTitle} | ${t(config.title)}`
     : isFinishedFurnitureTablesDetail
@@ -349,7 +353,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
           html={resolvedHtml}
         />
       )}
-      {!shouldRenderBlankScholarshipPage && !loading && !shouldShowError && !resolvedHtml && (
+      {!shouldRenderBlankSubSectionPage && !loading && !shouldShowError && !resolvedHtml && (
         <article className="html-content html-panel">
           <p>{t(section.description)}</p>
         </article>
