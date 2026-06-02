@@ -131,6 +131,7 @@ type MobileMenuIcon =
   | 'factory'
   | 'pin'
   | 'shield'
+  | 'community'
   | 'document'
   | 'question'
   | 'send';
@@ -162,6 +163,10 @@ function getMobileMenuIcon(path: string): MobileMenuIcon {
 
   if (path.startsWith('/quality-control')) {
     return 'shield';
+  }
+
+  if (path.startsWith('/scholarship-community')) {
+    return 'community';
   }
 
   if (path === '/resources/faq') {
@@ -225,6 +230,13 @@ function renderMobileMenuIcon(icon: MobileMenuIcon): ReactNode {
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M12 3.5 19 6v5.4c0 4.3-2.8 7.2-7 9.1-4.2-1.9-7-4.8-7-9.1V6l7-2.5Z" />
           <path d="m8.8 12 2.1 2.1 4.5-4.6" />
+        </svg>
+      );
+    case 'community':
+      return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 20.2s-6.8-4.1-8.6-8.4c-1-2.5.1-5.2 2.7-6 1.8-.6 3.6.1 4.7 1.7 1.1-1.6 2.9-2.3 4.7-1.7 2.6.8 3.7 3.5 2.7 6-1.8 4.3-8.2 8.4-8.2 8.4Z" />
+          <path d="M7.2 13.2h9.6M12 9.3v7.5" />
         </svg>
       );
     case 'document':

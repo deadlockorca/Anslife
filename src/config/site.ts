@@ -329,6 +329,19 @@ export const TOP_MENU: TopMenuItem[] = [
     ],
   },
   {
+    label: 'Phụng sự xã hội',
+    path: '/scholarship-community',
+    children: [
+      { label: 'Quỹ học bổng', path: '/scholarship-community/scholarship-program' },
+      { label: 'Hoạt động cộng đồng', path: '/scholarship-community/community-activities' },
+      {
+        label: 'Phát triển nguồn nhân lực',
+        path: '/scholarship-community/workforce-development',
+      },
+      { label: 'Tham gia cùng ANSLIFE', path: '/scholarship-community/join-anslife' },
+    ],
+  },
+  {
     label: 'Câu hỏi thường gặp',
     path: '/resources/faq',
   },

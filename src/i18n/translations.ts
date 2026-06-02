@@ -17,6 +17,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Chất lượng & Tiêu chuẩn': 'Quality & Standards',
     'Tài nguyên': 'Resources',
     'Câu hỏi thường gặp': 'Frequently Asked Questions',
+    'Phụng sự xã hội': 'Social Contribution',
     'Liên hệ / Gửi yêu cầu': 'Contact / Send Inquiry',
   },
   jp: {
@@ -30,6 +31,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Chất lượng & Tiêu chuẩn': '品質・基準',
     'Tài nguyên': 'リソース',
     'Câu hỏi thường gặp': 'よくある質問',
+    'Phụng sự xã hội': '社会貢献',
     'Liên hệ / Gửi yêu cầu': 'お問い合わせ / 依頼送信',
   },
   kr: {
@@ -43,6 +45,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Chất lượng & Tiêu chuẩn': '품질 및 표준',
     'Tài nguyên': '리소스',
     'Câu hỏi thường gặp': '자주 묻는 질문',
+    'Phụng sự xã hội': '사회공헌',
     'Liên hệ / Gửi yêu cầu': '문의 / 요청 보내기',
   },
   sv: {
@@ -56,6 +59,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Chất lượng & Tiêu chuẩn': 'Kvalitet & Standarder',
     'Tài nguyên': 'Resurser',
     'Câu hỏi thường gặp': 'Vanliga frågor',
+    'Phụng sự xã hội': 'Socialt bidrag',
     'Liên hệ / Gửi yêu cầu': 'Kontakt / Skicka förfrågan',
   },
   fr: {
@@ -69,6 +73,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Chất lượng & Tiêu chuẩn': 'Qualité & Standards',
     'Tài nguyên': 'Ressources',
     'Câu hỏi thường gặp': 'Questions fréquentes',
+    'Phụng sự xã hội': 'Contribution sociale',
     'Liên hệ / Gửi yêu cầu': 'Contact / Envoyer une demande',
   },
   ru: {
@@ -82,6 +87,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Chất lượng & Tiêu chuẩn': 'Качество и стандарты',
     'Tài nguyên': 'Ресурсы',
     'Câu hỏi thường gặp': 'Часто задаваемые вопросы',
+    'Phụng sự xã hội': 'Социальный вклад',
     'Liên hệ / Gửi yêu cầu': 'Контакты / Отправить запрос',
   },
   es: {
@@ -95,6 +101,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Chất lượng & Tiêu chuẩn': 'Calidad y Estándares',
     'Tài nguyên': 'Recursos',
     'Câu hỏi thường gặp': 'Preguntas Frecuentes',
+    'Phụng sự xã hội': 'Contribución social',
     'Liên hệ / Gửi yêu cầu': 'Contacto / Enviar solicitud',
   },
   zh: {
@@ -108,6 +115,7 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Chất lượng & Tiêu chuẩn': '质量与标准',
     'Tài nguyên': '资源',
     'Câu hỏi thường gặp': '常见问题',
+    'Phụng sự xã hội': '社会贡献',
     'Liên hệ / Gửi yêu cầu': '联系 / 提交需求',
   },
 };
