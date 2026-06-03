@@ -16481,16 +16481,6 @@ a.mobile-menu-utility-link {
   font-size: 0.82rem !important;
 }
 
-.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
-  .html-panel:has(.ai-component-detail-page),
-.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
-  .ai-section.ai-component-detail-page {
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
 .ai-component-detail-page {
   --component-detail-paper: #f7f1e7;
   --component-detail-ink: #202020;
