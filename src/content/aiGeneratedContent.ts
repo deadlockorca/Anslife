@@ -544,7 +544,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
             <li>Khung ghế lounge</li>
             <li>Tay ghế, lưng ghế, chân ghế</li>
           </ul>
-          <a class="ai-components-card-action" href="#component-chair-frames">Xem chi tiết <span aria-hidden="true">→</span></a>
+          <a class="ai-components-card-action" href="/vn/products-solutions/furniture-components/chair-frames-components">Xem chi tiết <span aria-hidden="true">→</span></a>
         </article>
 
         <article id="component-table-tops" class="ai-components-card">
@@ -640,6 +640,21 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
         <a class="ai-components-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↓</span>Tải mẫu yêu cầu cấu kiện</a>
       </div>
     </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
+  <section id="chair-frames-components" class="ai-section ai-components-page ai-component-detail-page">
+    <header class="ai-component-detail-banner">
+      <img class="ai-component-detail-banner-image" src="/assets/products/furniture-components/chair-detail-banner.png" alt="" loading="eager" decoding="async" aria-hidden="true">
+      <div class="ai-component-detail-banner-copy">
+        <h2>Khung ghế &<br>bộ phận ghế</h2>
+        <p class="ai-component-detail-banner-subtitle">Chair Frames & Chair Components</p>
+        <p>Sản xuất khung ghế, tay ghế, lưng ghế, chân ghế và các bộ phận ghế theo bản vẽ, mẫu duyệt và tiêu chuẩn kỹ thuật của buyer.</p>
+        <p>ANSLIFE hỗ trợ phát triển, sản xuất và cung ứng khung ghế và các bộ phận ghế rời tại Việt Nam theo bản vẽ, mẫu thật, thông số kỹ thuật hoặc tiêu chuẩn riêng của buyer.</p>
+        <p>Các cấu kiện có thể được cung cấp ở dạng thô, đã chà nhám, đã hoàn thiện bề mặt, hoặc ở dạng bán thành phẩm để phục vụ lắp ráp, bọc nệm, hoàn thiện và xuất khẩu.</p>
+      </div>
+    </header>
   </section>
 `.trim();
 
@@ -15446,11 +15461,33 @@ export function getAIFallbackSectionHtml(
   language: LanguageCode = 'vn',
   subSectionSlug = '',
 ): string | null {
+  if (
+    pageSlug === 'products-solutions' &&
+    sectionId === 'furniture-components' &&
+    (subSectionSlug === 'chair-frames-components' ||
+      subSectionSlug === 'component-chair-frames')
+  ) {
+    return translateAiHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN}</div>`,
+    )
+      .replace(
+        /href="\/vn\/products-solutions/g,
+        `href="/${language}/products-solutions`,
+      )
+      .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
+      .replace(/href="\/vn"/g, `href="/${language}"`);
+  }
+
   if (pageSlug === 'products-solutions' && sectionId === 'furniture-components') {
     return translateAiHtml(
       language,
       `<div class="ai-content">${PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN}</div>`,
     )
+      .replace(
+        /href="\/vn\/products-solutions\/furniture-components/g,
+        `href="/${language}/products-solutions/furniture-components`,
+      )
       .replace(
         /href="\/vn\/contact\/request-quotation"/g,
         `href="/${language}/contact/request-quotation"`,
