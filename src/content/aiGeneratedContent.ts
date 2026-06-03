@@ -517,6 +517,132 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
   </section>
 `.trim();
 
+const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
+  <section id="furniture-components" class="ai-section ai-components-page">
+    <header class="ai-components-hero">
+      <img class="ai-components-hero-image" src="/assets/products/furniture-components/banner_ket_cau.png" alt="" loading="eager" decoding="async" aria-hidden="true">
+      <div class="ai-components-hero-copy">
+        <p class="ai-components-eyebrow">FURNITURE COMPONENTS</p>
+        <h2>Cấu kiện<br>nội thất</h2>
+        <p>ANSLIFE hỗ trợ phát triển, sản xuất và cung ứng các cấu kiện nội thất theo bản vẽ, mẫu duyệt và tiêu chuẩn kỹ thuật của từng buyer. Trang này trình bày các nhóm cấu kiện chính theo dạng tổng quan, gọn và dễ theo dõi.</p>
+      </div>
+    </header>
+
+    <section class="ai-components-catalog">
+      <h3>Nhóm cấu kiện chính</h3>
+      <div class="ai-components-grid">
+        <article id="component-chair-frames" class="ai-components-card">
+          <figure class="ai-components-sketch ai-components-sketch-image" aria-hidden="true">
+            <img src="/assets/products/furniture-components/icon-chair.png" alt="" loading="lazy" decoding="async">
+          </figure>
+          <div class="ai-components-card-heading">
+            <span>01</span>
+            <h4>Khung ghế & bộ phận ghế</h4>
+          </div>
+          <ul>
+            <li>Khung ghế ăn</li>
+            <li>Khung ghế lounge</li>
+            <li>Tay ghế, lưng ghế, chân ghế</li>
+          </ul>
+          <a class="ai-components-card-action" href="#component-chair-frames">Xem chi tiết <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article id="component-table-tops" class="ai-components-card">
+          <figure class="ai-components-sketch ai-components-sketch-image" aria-hidden="true">
+            <img src="/assets/products/furniture-components/icon-table.png" alt="" loading="lazy" decoding="async">
+          </figure>
+          <div class="ai-components-card-heading">
+            <span>02</span>
+            <h4>Mặt bàn & chân bàn</h4>
+          </div>
+          <ul>
+            <li>Mặt bàn gỗ</li>
+            <li>Mặt bàn veneer / plywood / MDF</li>
+            <li>Chân bàn theo bản vẽ</li>
+          </ul>
+          <a class="ai-components-card-action" href="#component-table-tops">Xem chi tiết <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article id="component-cabinet-parts" class="ai-components-card">
+          <figure class="ai-components-sketch ai-components-sketch-image" aria-hidden="true">
+            <img src="/assets/products/furniture-components/icon-cabinet.png" alt="" loading="lazy" decoding="async">
+          </figure>
+          <div class="ai-components-card-heading">
+            <span>03</span>
+            <h4>Bộ phận tủ & lưu trữ</h4>
+          </div>
+          <ul>
+            <li>Cánh tủ</li>
+            <li>Ngăn kéo</li>
+            <li>Hông tủ, đáy tủ, chi tiết lắp ráp</li>
+          </ul>
+          <a class="ai-components-card-action" href="#component-cabinet-parts">Xem chi tiết <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article id="component-bed-parts" class="ai-components-card">
+          <figure class="ai-components-sketch ai-components-sketch-image" aria-hidden="true">
+            <img src="/assets/products/furniture-components/icon-bed.png" alt="" loading="lazy" decoding="async">
+          </figure>
+          <div class="ai-components-card-heading">
+            <span>04</span>
+            <h4>Bộ phận giường</h4>
+          </div>
+          <ul>
+            <li>Khung giường</li>
+            <li>Đầu giường</li>
+            <li>Nan giường, chân giường</li>
+          </ul>
+          <a class="ai-components-card-action" href="#component-bed-parts">Xem chi tiết <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article id="component-upholstery-parts" class="ai-components-card">
+          <figure class="ai-components-sketch ai-components-sketch-image" aria-hidden="true">
+            <img src="/assets/products/furniture-components/icon-upholstery.png" alt="" loading="lazy" decoding="async">
+          </figure>
+          <div class="ai-components-card-heading">
+            <span>05</span>
+            <h4>Bộ phận bọc nệm</h4>
+          </div>
+          <ul>
+            <li>Khung sofa</li>
+            <li>Seat cushion / back cushion</li>
+            <li>Foam cắt theo khuôn</li>
+          </ul>
+          <a class="ai-components-card-action" href="#component-upholstery-parts">Xem chi tiết <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article id="component-custom-parts" class="ai-components-card">
+          <figure class="ai-components-sketch ai-components-sketch-image" aria-hidden="true">
+            <img src="/assets/products/furniture-components/icon-custom.png" alt="" loading="lazy" decoding="async">
+          </figure>
+          <div class="ai-components-card-heading">
+            <span>06</span>
+            <h4>Cấu kiện tùy chỉnh theo bản vẽ</h4>
+          </div>
+          <ul>
+            <li>Theo bản vẽ kỹ thuật</li>
+            <li>Theo mẫu thật</li>
+            <li>Theo tiêu chuẩn riêng của buyer</li>
+          </ul>
+          <a class="ai-components-card-action" href="#component-custom-parts">Xem chi tiết <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-components-cta">
+      <div class="ai-components-cta-icon" aria-hidden="true"><span></span></div>
+      <div>
+        <h3>Gửi bản vẽ hoặc yêu cầu cấu kiện cho ANSLIFE</h3>
+        <p>Đội ngũ kỹ thuật & kinh doanh của chúng tôi sẽ phản hồi nhanh chóng để tư vấn giải pháp và báo giá phù hợp.</p>
+      </div>
+      <div class="ai-components-actions">
+        <a class="ai-components-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu ngay</a>
+        <a class="ai-components-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↓</span>Tải mẫu yêu cầu cấu kiện</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
 const PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_VN = `
   <section id="chairs" class="ai-section ai-chair-page ai-company-overview">
     <header class="ai-chair-hero">
@@ -15320,6 +15446,21 @@ export function getAIFallbackSectionHtml(
   language: LanguageCode = 'vn',
   subSectionSlug = '',
 ): string | null {
+  if (pageSlug === 'products-solutions' && sectionId === 'furniture-components') {
+    return translateAiHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN}</div>`,
+    )
+      .replace(
+        /href="\/vn\/contact\/request-quotation"/g,
+        `href="/${language}/contact/request-quotation"`,
+      )
+      .replace(
+        /href="\/vn\/contact\/upload-drawing"/g,
+        `href="/${language}/contact/upload-drawing"`,
+      );
+  }
+
   if (pageSlug === 'products-solutions' && sectionId === 'finished-furniture') {
     if (subSectionSlug === 'chairs') {
       const sectionHtml =

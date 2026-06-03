@@ -67,20 +67,6 @@ export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
   {
     label: 'Cấu kiện nội thất',
     path: '/products-solutions/furniture-components',
-    children: [
-      { label: 'Khung ghế', path: '/products-solutions/furniture-components/chair-frames' },
-      { label: 'Mặt bàn', path: '/products-solutions/furniture-components/table-tops' },
-      { label: 'Chân gỗ', path: '/products-solutions/furniture-components/wooden-legs' },
-      { label: 'Bộ phận tủ', path: '/products-solutions/furniture-components/cabinet-parts' },
-      {
-        label: 'Bộ phận bọc nệm',
-        path: '/products-solutions/furniture-components/upholstery-parts',
-      },
-      {
-        label: 'Cấu kiện mây tre',
-        path: '/products-solutions/furniture-components/rattan-components',
-      },
-    ],
   },
   {
     label: 'Cung ứng vật liệu',
@@ -347,8 +333,8 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
       },
       {
         id: 'furniture-components',
-        title: 'Linh kiện nội thất',
-        description: 'Linh kiện cho ghế, bàn, tủ và các cấu phần bọc nệm.',
+        title: 'Cấu kiện nội thất',
+        description: 'Cấu kiện cho ghế, bàn, tủ và các cấu phần bọc nệm.',
       },
       {
         id: 'materials-supply',
