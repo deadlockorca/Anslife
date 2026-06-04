@@ -1202,6 +1202,180 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         </figure>
       </div>
     </section>
+
+    <section class="ai-component-detail-buyer-packaging" aria-labelledby="chair-component-buyer-title">
+      <article class="ai-component-detail-spec-panel ai-component-detail-buyer-panel">
+        <h3 id="chair-component-buyer-title">Buyer cần gửi gì?</h3>
+        <ul class="ai-component-detail-buyer-list">
+          <li>
+            <span class="ai-component-detail-buyer-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M12 8.5h12l5 5V31a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2v-20a2 2 0 0 1 2-2Z" />
+                <path d="M24 8.5V15h5" />
+                <path d="M15 20h10" />
+                <path d="M15 25h10" />
+                <path d="M15 30h7" />
+              </svg>
+            </span>
+            <span>Bản vẽ kỹ thuật</span>
+          </li>
+          <li>
+            <span class="ai-component-detail-buyer-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M12.5 27a7.5 7.5 0 1 1 15 0" />
+                <circle cx="20" cy="16.5" r="3.5" />
+                <path d="M8.5 29.5h23" />
+                <path d="M27.5 23.5 31 27" />
+              </svg>
+            </span>
+            <span>Mẫu thật nếu có</span>
+          </li>
+          <li>
+            <span class="ai-component-detail-buyer-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <rect x="9.5" y="11" width="21" height="18" rx="2.5" />
+                <path d="m12.5 24 4.5-4.5 4.5 4.5 3.5-3.5 3 3" />
+                <circle cx="16" cy="17" r="1.8" />
+              </svg>
+            </span>
+            <span>Ảnh tham khảo</span>
+          </li>
+          <li>
+            <span class="ai-component-detail-buyer-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M9.5 15h21" />
+                <path d="M9.5 25h21" />
+                <path d="M13 11.5v17" />
+                <path d="M27 11.5v17" />
+                <path d="M18 20h4" />
+              </svg>
+            </span>
+            <span>Kích thước từng chi tiết</span>
+          </li>
+          <li>
+            <span class="ai-component-detail-buyer-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M14.5 29.5a7.5 7.5 0 1 1 11 0Z" />
+                <path d="M20 11.5v12" />
+                <path d="M16 19.5 20 15l4 4.5" />
+              </svg>
+            </span>
+            <span>Vật liệu yêu cầu</span>
+          </li>
+          <li>
+            <span class="ai-component-detail-buyer-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M13 27.5 20 12l7 15.5" />
+                <path d="M16.5 20.5h7" />
+                <path d="M10 30.5h20" />
+              </svg>
+            </span>
+            <span>Tiêu chuẩn liên kết / mộng / khoan</span>
+          </li>
+          <li>
+            <span class="ai-component-detail-buyer-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M13 12.5h14l3 3V27a2 2 0 0 1-2 2H13a2 2 0 0 1-2-2v-12.5a2 2 0 0 1 2-2Z" />
+                <path d="M27 12.5V18h3" />
+                <path d="M15.5 24a4.5 4.5 0 0 0 9 0" />
+              </svg>
+            </span>
+            <span>Trạng thái hoàn thiện mong muốn</span>
+          </li>
+          <li>
+            <span class="ai-component-detail-buyer-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M12 28V14.5" />
+                <path d="M20 28V10.5" />
+                <path d="M28 28V18.5" />
+                <path d="M9 28h22" />
+              </svg>
+            </span>
+            <span>Sản lượng dự kiến</span>
+          </li>
+          <li>
+            <span class="ai-component-detail-buyer-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M10.5 14 20 9l9.5 5v12L20 31l-9.5-5V14Z" />
+                <path d="M10.5 14 20 19l9.5-5" />
+                <path d="M20 19v12" />
+              </svg>
+            </span>
+            <span>Yêu cầu đóng gói</span>
+          </li>
+          <li>
+            <span class="ai-component-detail-buyer-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="10.5" />
+                <path d="M9.5 20h21" />
+                <path d="M20 9.5c3 3.2 4.5 6.7 4.5 10.5S23 27.3 20 30.5c-3-3.2-4.5-6.7-4.5-10.5S17 12.7 20 9.5Z" />
+              </svg>
+            </span>
+            <span>Thị trường xuất khẩu</span>
+          </li>
+        </ul>
+      </article>
+
+      <article class="ai-component-detail-spec-panel ai-component-detail-packaging-panel">
+        <h3>Đóng gói cấu kiện theo bộ</h3>
+        <div class="ai-component-detail-packaging-layout">
+          <figure class="ai-component-detail-packaging-main">
+            <img
+              class="ai-component-detail-packaging-main-image"
+              src="/assets/products/furniture-components/chair-detail/packaging-bundle-main.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+
+          <div class="ai-component-detail-packaging-side">
+            <figure class="ai-component-detail-packaging-card">
+              <figcaption>Đóng gói theo mã chi tiết</figcaption>
+              <img
+                class="ai-component-detail-packaging-card-image ai-component-detail-packaging-card-image-detail"
+                src="/assets/products/furniture-components/chair-detail/packaging-detail-code.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              >
+            </figure>
+            <figure class="ai-component-detail-packaging-card ai-component-detail-packaging-card-tall">
+              <figcaption>Đóng gói carton / poliet</figcaption>
+              <img
+                class="ai-component-detail-packaging-card-image ai-component-detail-packaging-card-image-carton"
+                src="/assets/products/furniture-components/chair-detail/packaging-carton-poliet.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              >
+            </figure>
+            <figure class="ai-component-detail-packaging-card">
+              <figcaption>Bảo vệ chống trầy xước, ẩm</figcaption>
+              <img
+                class="ai-component-detail-packaging-card-image ai-component-detail-packaging-card-image-protect"
+                src="/assets/products/furniture-components/chair-detail/packaging-protection.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              >
+            </figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="ai-components-cta">
+      <div class="ai-components-cta-icon" aria-hidden="true"><span></span></div>
+      <div>
+        <h3>Gửi bản vẽ hoặc yêu cầu cấu kiện cho ANSLIFE</h3>
+        <p>Đội ngũ kỹ thuật & kinh doanh của chúng tôi sẽ phản hồi nhanh chóng để tư vấn giải pháp và báo giá phù hợp.</p>
+      </div>
+      <div class="ai-components-actions">
+        <a class="ai-components-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu ngay</a>
+        <a class="ai-components-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↓</span>Tải mẫu yêu cầu cấu kiện</a>
+      </div>
+    </section>
   </section>
 `.trim();
 
