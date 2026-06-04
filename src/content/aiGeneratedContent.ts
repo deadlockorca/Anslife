@@ -655,6 +655,155 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <p>Các cấu kiện có thể được cung cấp ở dạng thô, đã chà nhám, đã hoàn thiện bề mặt, hoặc ở dạng bán thành phẩm để phục vụ lắp ráp, bọc nệm, hoàn thiện và xuất khẩu.</p>
       </div>
     </header>
+
+    <section class="ai-component-detail-joints" aria-labelledby="chair-joints-title">
+      <div class="ai-component-detail-joints-intro">
+        <h3 id="chair-joints-title">Chi tiết mộng &amp;<br>liên kết phổ biến</h3>
+      </div>
+
+      <div class="ai-component-detail-joints-items">
+        <figure class="ai-component-detail-joint-item">
+          <img
+            class="ai-component-detail-joint-figure-image"
+            src="/assets/products/furniture-components/chair-detail/joint-mortise-cropped.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Mộng âm dương</figcaption>
+        </figure>
+
+        <figure class="ai-component-detail-joint-item">
+          <img
+            class="ai-component-detail-joint-figure-image"
+            src="/assets/products/furniture-components/chair-detail/joint-tenon-cropped.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Mộng chốt</figcaption>
+        </figure>
+
+        <figure class="ai-component-detail-joint-item">
+          <img
+            class="ai-component-detail-joint-figure-image"
+            src="/assets/products/furniture-components/chair-detail/joint-leg-cropped.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Liên kết chân ghế</figcaption>
+        </figure>
+
+        <figure class="ai-component-detail-joint-item">
+          <img
+            class="ai-component-detail-joint-figure-image"
+            src="/assets/products/furniture-components/chair-detail/joint-arm-cropped.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Liên kết tay ghế</figcaption>
+        </figure>
+
+        <figure class="ai-component-detail-joint-item">
+          <img
+            class="ai-component-detail-joint-figure-image"
+            src="/assets/products/furniture-components/chair-detail/joint-back-cropped.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Liên kết lưng ghế</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="ai-component-detail-groups" aria-labelledby="chair-component-groups-title">
+      <div class="ai-component-detail-groups-heading">
+        <h3 id="chair-component-groups-title">Các nhóm cấu kiện chính</h3>
+      </div>
+
+      <div class="ai-component-detail-groups-grid">
+        <article class="ai-component-detail-group-card">
+          <span class="ai-component-detail-group-index">01</span>
+          <img
+            class="ai-component-detail-group-visual-image ai-component-detail-group-visual-image-dining"
+            src="/assets/products/furniture-components/chair-detail/group-dining-chair.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Khung ghế ăn</h4>
+          <p>Khung ghế gỗ hoặc kết hợp vật liệu, sản xuất theo kích thước, kết cấu, độ ổn định và tiêu chuẩn lắp ráp của buyer.</p>
+        </article>
+
+        <article class="ai-component-detail-group-card">
+          <span class="ai-component-detail-group-index">02</span>
+          <img
+            class="ai-component-detail-group-visual-image ai-component-detail-group-visual-image-lounge"
+            src="/assets/products/furniture-components/chair-detail/group-lounge-chair.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Khung ghế lounge</h4>
+          <p>Khung ghế thư giãn, ghế accent, ghế khách sạn hoặc resort, có thể sản xuất theo bản vẽ hoặc mẫu thật.</p>
+        </article>
+
+        <article class="ai-component-detail-group-card">
+          <span class="ai-component-detail-group-index">03</span>
+          <img
+            class="ai-component-detail-group-visual-image ai-component-detail-group-visual-image-upholstered"
+            src="/assets/products/furniture-components/chair-detail/group-upholstered-chair.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Khung ghế bọc nệm</h4>
+          <p>Khung ghế phục vụ bọc foam, vải, da hoặc vật liệu bọc, cần kiểm soát form dáng, điểm chịu lực và độ ổn định.</p>
+        </article>
+
+        <article class="ai-component-detail-group-card">
+          <span class="ai-component-detail-group-index">04</span>
+          <img
+            class="ai-component-detail-group-visual-image ai-component-detail-group-visual-image-arm"
+            src="/assets/products/furniture-components/chair-detail/group-chair-arm.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Tay ghế</h4>
+          <p>Tay ghế gỗ, tay ghế uốn cong, tay ghế CNC, tay ghế theo mẫu riêng hoặc chi tiết lắp ráp theo bộ.</p>
+        </article>
+
+        <article class="ai-component-detail-group-card">
+          <span class="ai-component-detail-group-index">05</span>
+          <img
+            class="ai-component-detail-group-visual-image ai-component-detail-group-visual-image-back"
+            src="/assets/products/furniture-components/chair-detail/group-chair-back.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Lưng ghế</h4>
+          <p>Lưng ghế gỗ, lưng ghế plywood, lưng ghế veneer, lưng ghế cong, lưng ghế máy kết hợp hoặc lưng ghế theo thiết kế riêng.</p>
+        </article>
+
+        <article class="ai-component-detail-group-card">
+          <span class="ai-component-detail-group-index">06</span>
+          <img
+            class="ai-component-detail-group-visual-image ai-component-detail-group-visual-image-legs"
+            src="/assets/products/furniture-components/chair-detail/group-chair-legs.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Chân ghế &amp; thanh liên kết</h4>
+          <p>Chân trước, chân sau, thanh giằng, thanh ngang, chi tiết liên kết, chi tiết tiện, CNC hoặc gia công theo bản vẽ.</p>
+        </article>
+      </div>
+    </section>
   </section>
 `.trim();
 
