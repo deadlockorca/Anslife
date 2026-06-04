@@ -523,7 +523,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
       <img class="ai-components-hero-image" src="/assets/products/furniture-components/banner_ket_cau.png" alt="" loading="eager" decoding="async" aria-hidden="true">
       <div class="ai-components-hero-copy">
         <p class="ai-components-eyebrow">FURNITURE COMPONENTS</p>
-        <h2>Cấu kiện<br>nội thất</h2>
+        <h2>Cấu kiện nội thất</h2>
         <p>ANSLIFE hỗ trợ phát triển, sản xuất và cung ứng các cấu kiện nội thất theo bản vẽ, mẫu duyệt và tiêu chuẩn kỹ thuật của từng buyer. Trang này trình bày các nhóm cấu kiện chính theo dạng tổng quan, gọn và dễ theo dõi.</p>
       </div>
     </header>
@@ -648,7 +648,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
     <header class="ai-component-detail-banner">
       <img class="ai-component-detail-banner-image" src="/assets/products/furniture-components/chair-detail-banner.png" alt="" loading="eager" decoding="async" aria-hidden="true">
       <div class="ai-component-detail-banner-copy">
-        <h2>Khung ghế &<br>bộ phận ghế</h2>
+        <h2>Khung ghế &amp; bộ phận ghế</h2>
         <p class="ai-component-detail-banner-subtitle">Chair Frames & Chair Components</p>
         <p>Sản xuất khung ghế, tay ghế, lưng ghế, chân ghế và các bộ phận ghế theo bản vẽ, mẫu duyệt và tiêu chuẩn kỹ thuật của buyer.</p>
         <p>ANSLIFE hỗ trợ phát triển, sản xuất và cung ứng khung ghế và các bộ phận ghế rời tại Việt Nam theo bản vẽ, mẫu thật, thông số kỹ thuật hoặc tiêu chuẩn riêng của buyer.</p>
@@ -658,7 +658,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
 
     <section class="ai-component-detail-joints" aria-labelledby="chair-joints-title">
       <div class="ai-component-detail-joints-intro">
-        <h3 id="chair-joints-title">Chi tiết mộng &amp;<br>liên kết phổ biến</h3>
+        <h3 id="chair-joints-title">Chi tiết mộng &amp; liên kết phổ biến</h3>
       </div>
 
       <div class="ai-component-detail-joints-items">
@@ -1187,7 +1187,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
             loading="lazy"
             decoding="async"
           >
-          <figcaption>QC<br>(kiểm tra)</figcaption>
+          <figcaption>QC (kiểm tra)</figcaption>
         </figure>
         <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-detail-process-step">

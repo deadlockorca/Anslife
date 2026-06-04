@@ -1,4 +1,5 @@
 import type { LanguageCode } from './language';
+import { FURNITURE_COMPONENTS_TEMPLATE_TRANSLATIONS } from './furnitureComponentsTemplateTranslations';
 
 export const AUTO_TRANSLATIONS: Partial<
   Record<Exclude<LanguageCode, 'vn'>, Record<string, string>>
@@ -6046,3 +6047,13 @@ export const AUTO_TRANSLATIONS: Partial<
     "Yếu tố ảnh hưởng tiến độ": "진행에 영향을 미치는 요소",
   },
 };
+
+for (const language of Object.keys(FURNITURE_COMPONENTS_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(FURNITURE_COMPONENTS_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
