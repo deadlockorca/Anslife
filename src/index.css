@@ -16712,6 +16712,20 @@ a.mobile-menu-utility-link {
   transform-origin: center;
 }
 
+.ai-component-table-product-image-styled-legs {
+  width: min(100%, 152px);
+  height: 142px;
+  transform: scale(1.06);
+  transform-origin: center;
+}
+
+.ai-component-table-product-image-base-details {
+  width: min(100%, 172px);
+  height: 132px;
+  transform: scale(1.08);
+  transform-origin: center;
+}
+
 .ai-component-table-product-visual::before,
 .ai-component-table-product-visual::after {
   content: '';
@@ -16872,6 +16886,401 @@ a.mobile-menu-utility-link {
   font-size: clamp(0.78rem, 0.82vw, 0.88rem);
   font-weight: 600;
   line-height: 1.62;
+}
+
+.ai-component-table-specs {
+  display: grid;
+  grid-template-columns: minmax(0, 1.03fr) minmax(0, 1.08fr) minmax(260px, 0.72fr);
+  gap: clamp(0.75rem, 1vw, 1rem);
+  align-items: stretch;
+}
+
+.ai-component-table-specs .ai-component-detail-spec-panel {
+  padding: clamp(1rem, 1.35vw, 1.35rem);
+  border-radius: 12px;
+}
+
+.ai-component-table-specs .ai-component-detail-spec-panel h3 {
+  font-size: clamp(1.18rem, 1.42vw, 1.46rem);
+}
+
+.ai-component-table-specs .ai-component-detail-spec-panel > p {
+  font-size: clamp(0.78rem, 0.84vw, 0.9rem);
+  line-height: 1.62;
+}
+
+.ai-component-table-specs .ai-component-detail-material-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.92rem 0.72rem;
+}
+
+.ai-component-table-specs .ai-component-detail-material-card {
+  grid-template-rows: 58px auto;
+  gap: 0.45rem;
+}
+
+.ai-component-table-specs .ai-component-detail-material-image {
+  width: 58px;
+  height: 58px;
+}
+
+.ai-component-table-specs .ai-component-detail-material-card figcaption {
+  font-size: 0.78rem;
+  line-height: 1.22;
+}
+
+.ai-component-table-specs .ai-component-detail-check-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.05rem 1.3rem;
+}
+
+.ai-component-table-specs .ai-component-detail-check-list li {
+  padding-left: 2rem;
+  font-size: clamp(0.78rem, 0.82vw, 0.88rem);
+  line-height: 1.45;
+}
+
+.ai-component-table-state-list {
+  display: grid;
+  gap: 0.82rem;
+  margin: 0;
+  padding-left: 1.05rem;
+}
+
+.ai-component-table-state-list li {
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.82rem, 0.88vw, 0.94rem);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.ai-component-table-process {
+  gap: 0.9rem;
+  padding: clamp(1rem, 1.4vw, 1.3rem);
+  border: 1px solid rgba(32, 32, 32, 0.14);
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.74), transparent 18rem),
+    rgba(255, 255, 255, 0.34);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.38);
+}
+
+.ai-component-table-process .ai-component-detail-process-heading h3 {
+  font-size: clamp(1.35rem, 1.75vw, 1.72rem);
+}
+
+.ai-component-table-process .ai-component-detail-process-flow {
+  justify-content: space-between;
+}
+
+.ai-component-table-process .ai-component-detail-process-step {
+  width: 132px;
+}
+
+.ai-component-table-process .ai-component-detail-process-image {
+  width: 126px;
+  height: 92px;
+}
+
+.ai-component-table-process-assembly-image {
+  object-fit: contain;
+  transform: scale(1.04);
+  transform-origin: center;
+}
+
+.ai-component-table-process-placeholder {
+  position: relative;
+  background:
+    radial-gradient(circle at 50% 88%, rgba(32, 32, 32, 0.12), transparent 34%),
+    rgba(255, 255, 255, 0.16);
+}
+
+.ai-component-table-process-placeholder::before,
+.ai-component-table-process-placeholder::after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-color: currentColor;
+}
+
+.ai-component-table-process-placeholder::before {
+  left: 28px;
+  top: 26px;
+  width: 70px;
+  height: 26px;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  background:
+    repeating-linear-gradient(168deg, rgba(70, 56, 42, 0.12) 0 2px, transparent 2px 8px),
+    rgba(255, 255, 255, 0.18);
+  transform: skewY(-8deg);
+}
+
+.ai-component-table-process-placeholder::after {
+  left: 38px;
+  top: 52px;
+  width: 50px;
+  height: 34px;
+  border-left: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  background:
+    linear-gradient(currentColor 0 0) center 10px / 58px 3px no-repeat,
+    linear-gradient(currentColor 0 0) center 24px / 52px 3px no-repeat;
+  opacity: 0.72;
+}
+
+.ai-component-table-info-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1vw, 1rem);
+  align-items: stretch;
+}
+
+.ai-component-table-info-panel {
+  padding: clamp(1.05rem, 1.45vw, 1.45rem);
+  border-radius: 12px;
+}
+
+.ai-component-table-info-panel h3 {
+  margin: 0;
+  color: var(--component-detail-ink) !important;
+  font-family: var(--font-body);
+  font-size: clamp(1.22rem, 1.5vw, 1.52rem);
+  font-weight: 900;
+  line-height: 1.14;
+}
+
+.ai-component-table-icon-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.78rem 1.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-component-table-support-list {
+  align-items: start;
+}
+
+.ai-component-table-icon-list li {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 0.66rem;
+  align-items: center;
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.82rem, 0.88vw, 0.94rem);
+  font-weight: 650;
+  line-height: 1.42;
+}
+
+.ai-component-table-info-icon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid rgba(35, 31, 26, 0.18);
+  border-radius: 8px;
+  color: rgba(35, 31, 26, 0.72);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.22)),
+    rgba(244, 237, 225, 0.28);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.64),
+    0 4px 10px rgba(35, 31, 26, 0.06);
+}
+
+.ai-component-table-info-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.05;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ai-component-table-packaging {
+  display: grid;
+  gap: 0.9rem;
+  padding: clamp(1rem, 1.35vw, 1.3rem);
+  border: 1px solid rgba(32, 32, 32, 0.14);
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.72), transparent 18rem),
+    rgba(255, 255, 255, 0.34);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.38);
+}
+
+.ai-component-table-packaging h3 {
+  margin: 0;
+  color: var(--component-detail-ink) !important;
+  font-family: var(--font-body);
+  font-size: clamp(1.35rem, 1.75vw, 1.72rem);
+  font-weight: 900;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.ai-component-table-packaging-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1vw, 1rem);
+}
+
+.ai-component-table-packaging-card {
+  display: grid;
+  grid-template-rows: 122px auto;
+  gap: 0.65rem;
+  justify-items: center;
+  margin: 0;
+  min-height: 174px;
+  border-right: 1px solid rgba(32, 32, 32, 0.08);
+  text-align: center;
+}
+
+.ai-component-table-packaging-card:last-child {
+  border-right: 0;
+}
+
+.ai-component-table-packaging-card figcaption {
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.84rem, 0.88vw, 0.96rem);
+  font-weight: 700;
+  line-height: 1.36;
+}
+
+.ai-component-table-packaging-visual {
+  position: relative;
+  display: block;
+  width: min(100%, 178px);
+  height: 118px;
+  color: rgba(32, 32, 32, 0.78);
+}
+
+.ai-component-table-packaging-image {
+  width: min(100%, 196px);
+  height: 122px;
+  max-width: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: transparent;
+  object-fit: contain;
+  object-position: center;
+}
+
+.ai-component-table-packaging-image-protect,
+.ai-component-table-packaging-image-pallet {
+  width: min(100%, 204px);
+}
+
+.ai-component-table-packaging-image-label {
+  width: min(100%, 200px);
+}
+
+.ai-component-table-packaging-visual::before,
+.ai-component-table-packaging-visual::after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-color: currentColor;
+}
+
+.ai-component-table-packaging-visual-bundle::before,
+.ai-component-table-packaging-visual-label::before {
+  left: 18px;
+  top: 22px;
+  width: 136px;
+  height: 58px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  background:
+    linear-gradient(90deg, transparent 0 32%, rgba(32, 32, 32, 0.2) 32% 34%, transparent 34% 66%, rgba(32, 32, 32, 0.2) 66% 68%, transparent 68%),
+    repeating-linear-gradient(168deg, rgba(70, 56, 42, 0.13) 0 2px, transparent 2px 8px),
+    rgba(255, 255, 255, 0.18);
+  transform: skewY(-8deg);
+}
+
+.ai-component-table-packaging-visual-bundle::after,
+.ai-component-table-packaging-visual-label::after {
+  left: 23px;
+  top: 74px;
+  width: 136px;
+  height: 20px;
+  border: 2px solid currentColor;
+  border-top: 0;
+  transform: skewY(-8deg);
+  opacity: 0.72;
+}
+
+.ai-component-table-packaging-visual-protect::before {
+  left: 28px;
+  top: 36px;
+  width: 116px;
+  height: 38px;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  background:
+    repeating-linear-gradient(90deg, rgba(32, 32, 32, 0.12) 0 4px, transparent 4px 12px),
+    rgba(255, 255, 255, 0.18);
+  transform: skewY(-8deg);
+}
+
+.ai-component-table-packaging-visual-protect::after {
+  left: 24px;
+  top: 28px;
+  width: 124px;
+  height: 58px;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  transform: skewY(-8deg);
+  opacity: 0.58;
+}
+
+.ai-component-table-packaging-visual-pallet::before {
+  left: 22px;
+  top: 28px;
+  width: 130px;
+  height: 48px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  background:
+    linear-gradient(90deg, transparent 0 30%, rgba(32, 32, 32, 0.18) 30% 32%, transparent 32% 64%, rgba(32, 32, 32, 0.18) 64% 66%, transparent 66%),
+    repeating-linear-gradient(168deg, rgba(70, 56, 42, 0.12) 0 2px, transparent 2px 8px),
+    rgba(255, 255, 255, 0.18);
+  transform: skewY(-8deg);
+}
+
+.ai-component-table-packaging-visual-pallet::after {
+  left: 19px;
+  top: 78px;
+  width: 138px;
+  height: 18px;
+  border-top: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
+  background:
+    linear-gradient(90deg, currentColor 0 12px, transparent 12px 34px, currentColor 34px 46px, transparent 46px 78px, currentColor 78px 90px, transparent 90px 120px, currentColor 120px);
+  opacity: 0.68;
+}
+
+.ai-component-table-packaging-visual-label::before {
+  width: 132px;
+  height: 62px;
+}
+
+.ai-component-table-packaging-visual-label::after {
+  left: 100px;
+  top: 44px;
+  width: 38px;
+  height: 28px;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  background:
+    linear-gradient(currentColor 0 0) 8px 8px / 22px 2px no-repeat,
+    linear-gradient(currentColor 0 0) 8px 15px / 16px 2px no-repeat,
+    rgba(255, 255, 255, 0.32);
+  transform: skewY(-8deg);
+  opacity: 0.88;
 }
 
 .ai-component-detail-banner-copy {
@@ -18224,6 +18633,30 @@ a.mobile-menu-utility-link {
     transform: scale(0.92);
   }
 
+  .ai-component-table-specs {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-component-table-specs .ai-component-detail-material-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .ai-component-table-process .ai-component-detail-process-flow {
+    justify-content: flex-start;
+  }
+
+  .ai-component-table-info-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-component-table-packaging-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-component-table-packaging-card {
+    border-right: 0;
+  }
+
   .ai-component-detail-joints {
     grid-template-columns: 1fr;
     gap: 0.9rem;
@@ -18453,6 +18886,31 @@ a.mobile-menu-utility-link {
   .ai-component-table-product-card p {
     font-size: 0.82rem;
     line-height: 1.52;
+  }
+
+  .ai-component-table-specs .ai-component-detail-material-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ai-component-table-specs .ai-component-detail-check-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-component-table-process {
+    padding: 1rem;
+  }
+
+  .ai-component-table-process .ai-component-detail-process-step {
+    width: 126px;
+  }
+
+  .ai-component-table-icon-list {
+    grid-template-columns: 1fr;
+    gap: 0.78rem;
+  }
+
+  .ai-component-table-packaging h3 {
+    text-align: left;
   }
 
   .ai-component-detail-banner-copy h2 {
@@ -18760,6 +19218,14 @@ a.mobile-menu-utility-link {
 
   .ai-component-table-product-card {
     grid-template-rows: 124px auto 1fr;
+  }
+
+  .ai-component-table-specs .ai-component-detail-material-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-component-table-packaging-grid {
+    grid-template-columns: 1fr;
   }
 
   .ai-component-detail-joints-items {

@@ -1449,17 +1449,336 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
 
         <article class="ai-component-table-product-card">
           <span class="ai-component-table-product-index">05</span>
-          <span class="ai-component-table-product-visual ai-component-table-product-visual-leg-set" aria-hidden="true"></span>
+          <img
+            class="ai-component-table-product-visual ai-component-table-product-image ai-component-table-product-image-styled-legs"
+            src="/assets/products/furniture-components/table-detail/product-styled-table-legs.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
           <h4>Chân bàn kiểu</h4>
           <p>Chân bàn 4 chân, 3 chân, chân chữ X, chân sao, chân chữ A hoặc theo thiết kế riêng.</p>
         </article>
 
         <article class="ai-component-table-product-card">
           <span class="ai-component-table-product-index">06</span>
-          <span class="ai-component-table-product-visual ai-component-table-product-visual-plates" aria-hidden="true"></span>
+          <img
+            class="ai-component-table-product-visual ai-component-table-product-image ai-component-table-product-image-base-details"
+            src="/assets/products/furniture-components/table-detail/product-base-connection-details.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
           <h4>Đế chân &amp; chi tiết liên kết</h4>
           <p>Đế tròn, đế vuông, đế chữ nhật, bát sắt, thanh giằng, ốc liên kết và chi tiết phụ trợ.</p>
         </article>
+      </div>
+    </section>
+
+    <section class="ai-component-table-specs" aria-label="Vật liệu, tiêu chuẩn và trạng thái hoàn thiện">
+      <article class="ai-component-detail-spec-panel ai-component-detail-materials-panel">
+        <h3>Vật liệu có thể sử dụng</h3>
+        <p>ANSLIFE có thể làm việc với nhiều nhóm vật liệu như gỗ tự nhiên, plywood, veneer, mây tre kết hợp, phụ kiện liên kết và vật liệu hoàn thiện theo yêu cầu của từng dự án.</p>
+
+        <div class="ai-component-detail-material-grid">
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-rubberwood"
+              src="/assets/products/furniture-components/chair-detail/material-rubberwood.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Gỗ cao su</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-acacia"
+              src="/assets/products/furniture-components/chair-detail/material-acacia.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Acacia</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-oak"
+              src="/assets/products/furniture-components/chair-detail/material-oak.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Oak</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-ash"
+              src="/assets/products/furniture-components/chair-detail/material-ash.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Ash</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-beech"
+              src="/assets/products/furniture-components/chair-detail/material-beech.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Beech</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-pine"
+              src="/assets/products/furniture-components/chair-detail/material-pine.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Pine</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-plywood"
+              src="/assets/products/furniture-components/chair-detail/material-plywood.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Plywood</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-veneer"
+              src="/assets/products/furniture-components/chair-detail/material-veneer.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Veneer</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-rattan"
+              src="/assets/products/furniture-components/chair-detail/material-rattan.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Mây / mặt đan mây</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-metal"
+              src="/assets/products/furniture-components/chair-detail/material-metal.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Kim loại kết hợp</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="ai-component-detail-spec-panel ai-component-table-checks-panel">
+        <h3>Tiêu chuẩn cần kiểm soát</h3>
+
+        <ul class="ai-component-detail-check-list">
+          <li>Kích thước từng chi tiết</li>
+          <li>Bề mặt chà nhám</li>
+          <li>Độ phẳng mặt bàn</li>
+          <li>Màu sắc và hoàn thiện nếu có</li>
+          <li>Độ vuông góc và cân bằng</li>
+          <li>Độ đồng đều giữa các lô hàng</li>
+          <li>Độ ổn định của khung / chân</li>
+          <li>Phân loại chi tiết theo mã sản phẩm</li>
+          <li>Khả năng chịu lực</li>
+          <li>Đóng gói chống cong vênh, trầy xước và ẩm</li>
+          <li>Độ chắc của mộng / liên kết</li>
+          <li>Độ ẩm vật liệu</li>
+        </ul>
+      </article>
+
+      <article class="ai-component-detail-spec-panel ai-component-table-finish-panel">
+        <h3>Các trạng thái hoàn thiện có thể cung cấp</h3>
+
+        <ul class="ai-component-table-state-list">
+          <li>Cấu kiện thô</li>
+          <li>Cấu kiện đã chà nhám</li>
+          <li>Cấu kiện đã tạo mộng / khoan</li>
+          <li>Cấu kiện đã lắp thử</li>
+          <li>Cấu kiện đã sơn / hoàn thiện</li>
+          <li>Cấu kiện bán thành phẩm</li>
+          <li>Cấu kiện đóng gói theo bộ</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-component-detail-process ai-component-table-process" aria-labelledby="table-component-process-title">
+      <div class="ai-component-detail-process-heading">
+        <h3 id="table-component-process-title">Quy trình sản xuất &amp; kiểm soát</h3>
+      </div>
+
+      <div class="ai-component-detail-process-flow">
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-detail-process-image-drawing"
+            src="/assets/products/furniture-components/chair-detail/process-drawing.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Bản vẽ &amp; yêu cầu</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-detail-process-image-cutting"
+            src="/assets/products/furniture-components/chair-detail/process-cutting.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Cắt phôi</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-detail-process-image-tenon-machining"
+            src="/assets/products/furniture-components/chair-detail/process-tenon-machining.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Gia công mộng &amp; khoan</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-detail-process-image-sanding"
+            src="/assets/products/furniture-components/chair-detail/process-sanding.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Chà nhám</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-table-process-assembly-image"
+            src="/assets/products/furniture-components/table-detail/process-assembly-test.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Lắp thử</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-detail-process-image-qc"
+            src="/assets/products/furniture-components/chair-detail/process-qc.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>QC (kiểm tra)</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-detail-process-image-packaging"
+            src="/assets/products/furniture-components/chair-detail/process-packaging.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Đóng gói</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="ai-component-table-info-panels" aria-label="Hỗ trợ của ANSLIFE và thông tin buyer cần gửi">
+      <article class="ai-component-detail-spec-panel ai-component-table-info-panel">
+        <h3>ANSLIFE hỗ trợ gì?</h3>
+        <ul class="ai-component-table-icon-list ai-component-table-support-list">
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12 8.5h13l5 5V31a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2V10.5a2 2 0 0 1 2-2Z" /><path d="M25 8.5V15h5" /><path d="M15 20h8" /><path d="M15 25h6" /><circle cx="27" cy="27" r="4" /><path d="m30 30 3 3" /></svg></span><span>Phân tích bản vẽ cấu kiện</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="m20 8 12 6-12 6-12-6 12-6Z" /><path d="m8 20 12 6 12-6" /><path d="m8 26 12 6 12-6" /></svg></span><span>Đề xuất vật liệu phù hợp</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10.5 14 20 9l9.5 5v12L20 31l-9.5-5V14Z" /><path d="M10.5 14 20 19l9.5-5" /><path d="M20 19v12" /></svg></span><span>Sản xuất mẫu cấu kiện</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M11 14h18" /><path d="M14 14v16" /><path d="M26 14v16" /><path d="M9 30h22" /><path d="M17 21h6" /><path d="M29 11l3 3" /><path d="M32 11l-3 3" /></svg></span><span>Kiểm tra độ lắp ráp</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M14 26.5a6 6 0 0 1 12 0c0 3.4-2.7 6-6 6s-6-2.6-6-6Z" /><path d="M20 9.5c3.2 3.5 6 7.4 6 10.2" /><path d="M10 10h20" /><path d="M12 15h16" /><path d="M14 20h8" /></svg></span><span>Kiểm soát độ ẩm và kích thước</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10 30V16l6 4v-4l6 4v-9h8v19H10Z" /><path d="M14 25h3" /><path d="M21 25h3" /><path d="M27 15h3" /></svg></span><span>Tổ chức sản xuất theo lô</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10 12h20v16H10z" /><path d="M14 16v8" /><path d="M18 16v8" /><path d="M24 16v8" /><path d="M28 16v8" /><path d="M13 31h14" /></svg></span><span>Đóng gói theo mã chi tiết</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M8 15h17v13H8z" /><path d="M25 19h5l4 4v5h-9" /><circle cx="14" cy="30" r="2.5" /><circle cx="29" cy="30" r="2.5" /><path d="M12 20h8" /></svg></span><span>Xuất hàng hoặc cấp phát cho nhà máy lắp ráp</span></li>
+        </ul>
+      </article>
+
+      <article class="ai-component-detail-spec-panel ai-component-table-info-panel">
+        <h3>Buyer cần gửi gì?</h3>
+        <ul class="ai-component-table-icon-list ai-component-table-buyer-list">
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12 8.5h13l5 5V31a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2V10.5a2 2 0 0 1 2-2Z" /><path d="M25 8.5V15h5" /><path d="M15 20h10" /><path d="M15 25h10" /><path d="M15 30h7" /></svg></span><span>Bản vẽ kỹ thuật</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12.5 27a7.5 7.5 0 1 1 15 0" /><circle cx="20" cy="16.5" r="3.5" /><path d="M8.5 29.5h23" /><path d="M27.5 23.5 31 27" /></svg></span><span>Mẫu thật nếu có</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="9.5" y="11" width="21" height="18" rx="2.5" /><path d="m12.5 24 4.5-4.5 4.5 4.5 3.5-3.5 3 3" /><circle cx="16" cy="17" r="1.8" /></svg></span><span>Ảnh tham khảo</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M9.5 15h21" /><path d="M9.5 25h21" /><path d="M13 11.5v17" /><path d="M27 11.5v17" /><path d="M18 20h4" /></svg></span><span>Kích thước từng chi tiết</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M14.5 29.5a7.5 7.5 0 1 1 11 0Z" /><path d="M20 11.5v12" /><path d="M16 19.5 20 15l4 4.5" /></svg></span><span>Vật liệu yêu cầu</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M13 27.5 20 12l7 15.5" /><path d="M16.5 20.5h7" /><path d="M10 30.5h20" /></svg></span><span>Tiêu chuẩn liên kết / mộng / khoan</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M13 12.5h14l3 3V27a2 2 0 0 1-2 2H13a2 2 0 0 1-2-2V14.5a2 2 0 0 1 2-2Z" /><path d="M27 12.5V18h3" /><path d="M15.5 24a4.5 4.5 0 0 0 9 0" /></svg></span><span>Trạng thái hoàn thiện mong muốn</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12 28V14.5" /><path d="M20 28V10.5" /><path d="M28 28V18.5" /><path d="M9 28h22" /></svg></span><span>Sản lượng dự kiến</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10.5 14 20 9l9.5 5v12L20 31l-9.5-5V14Z" /><path d="M10.5 14 20 19l9.5-5" /><path d="M20 19v12" /></svg></span><span>Yêu cầu đóng gói</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="10.5" /><path d="M9.5 20h21" /><path d="M20 9.5c3 3.2 4.5 6.7 4.5 10.5S23 27.3 20 30.5c-3-3.2-4.5-6.7-4.5-10.5S17 12.7 20 9.5Z" /></svg></span><span>Thị trường xuất khẩu</span></li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-component-table-packaging" aria-labelledby="table-packaging-title">
+      <h3 id="table-packaging-title">Đóng gói mặt bàn &amp; chân bàn theo bộ</h3>
+
+      <div class="ai-component-table-packaging-grid">
+        <figure class="ai-component-table-packaging-card">
+          <img
+            class="ai-component-table-packaging-visual ai-component-table-packaging-image ai-component-table-packaging-image-bundle"
+            src="/assets/products/furniture-components/table-detail/packaging-bundle-by-code.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Đóng gói theo bộ chi tiết<br>&amp; mã sản phẩm</figcaption>
+        </figure>
+        <figure class="ai-component-table-packaging-card">
+          <img
+            class="ai-component-table-packaging-visual ai-component-table-packaging-image ai-component-table-packaging-image-protect"
+            src="/assets/products/furniture-components/table-detail/packaging-protection.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Bảo vệ chống trầy xước,<br>ẩm và va đập</figcaption>
+        </figure>
+        <figure class="ai-component-table-packaging-card">
+          <img
+            class="ai-component-table-packaging-visual ai-component-table-packaging-image ai-component-table-packaging-image-pallet"
+            src="/assets/products/furniture-components/table-detail/packaging-carton-pallet.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Đóng gói carton<br>hoặc pallet</figcaption>
+        </figure>
+        <figure class="ai-component-table-packaging-card">
+          <img
+            class="ai-component-table-packaging-visual ai-component-table-packaging-image ai-component-table-packaging-image-label"
+            src="/assets/products/furniture-components/table-detail/packaging-label-instructions.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Dán nhãn mã hàng<br>&amp; hướng dẫn lắp ráp</figcaption>
+        </figure>
       </div>
     </section>
 
