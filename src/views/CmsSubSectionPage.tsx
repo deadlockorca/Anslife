@@ -115,6 +115,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'operations-supply-solutions' &&
     detailSlug === 'trade-financing';
+  const isFurnitureComponentsTableTopsLegsDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'furniture-components' &&
+    (detailSlug === 'table-tops-legs' || detailSlug === 'component-table-tops');
   const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
   const oemOdmSeoDescription = t(
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.',
@@ -147,6 +151,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const tradeFinancingSeoDescription = t(
     'Tài trợ thương mại có kiểm soát cho buyer và nhà máy gia công, gắn với đơn hàng, vật liệu, sản xuất, QC, chứng từ và xuất hàng.',
   );
+  const tableTopsLegsSeoTitle = language === 'vn' ? 'Mặt bàn & chân bàn' : 'Table Tops & Table Legs';
+  const tableTopsLegsSeoDescription =
+    language === 'vn'
+      ? 'Sơ đồ cấu kiện mặt bàn, chân bàn, chi tiết liên kết và các kiểu mộng phổ biến.'
+      : 'Diagram of table top, table leg, connection details, and common joints.';
   const chairsSeoTitle = language === 'vn' ? 'Ghế' : 'Chairs';
   const chairsSeoDescription =
     language === 'vn'
@@ -299,6 +308,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 ? `${vietnamStorageSeoTitle} | ${t(config.title)}`
                 : isOperationsTradeFinancingDetail
                   ? `${tradeFinancingSeoTitle} | ${t(config.title)}`
+                  : isFurnitureComponentsTableTopsLegsDetail
+                    ? `${tableTopsLegsSeoTitle} | ${t(config.title)}`
       : `${t(section.title)} | ${t(config.title)}`;
   const seoDescription = isFinishedFurnitureChairsDetail
     ? chairsSeoDescription
@@ -332,8 +343,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               ? logisticsCoordinationSeoDescription
               : isOperationsVietnamStorageDetail
                 ? vietnamStorageSeoDescription
-                : isOperationsTradeFinancingDetail
-                  ? tradeFinancingSeoDescription
+              : isOperationsTradeFinancingDetail
+                ? tradeFinancingSeoDescription
+                : isFurnitureComponentsTableTopsLegsDetail
+                  ? tableTopsLegsSeoDescription
       : t(section.description);
 
   return (

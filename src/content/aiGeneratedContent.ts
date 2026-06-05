@@ -560,7 +560,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
             <li>Mặt bàn veneer / plywood / MDF</li>
             <li>Chân bàn theo bản vẽ</li>
           </ul>
-          <a class="ai-components-card-action" href="#component-table-tops">Xem chi tiết <span aria-hidden="true">→</span></a>
+          <a class="ai-components-card-action" href="/vn/products-solutions/furniture-components/table-tops-legs">Xem chi tiết <span aria-hidden="true">→</span></a>
         </article>
 
         <article id="component-cabinet-parts" class="ai-components-card">
@@ -1369,6 +1369,104 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
       <div class="ai-components-cta-icon" aria-hidden="true"><span></span></div>
       <div>
         <h3>Gửi bản vẽ hoặc yêu cầu cấu kiện cho ANSLIFE</h3>
+        <p>Đội ngũ kỹ thuật & kinh doanh của chúng tôi sẽ phản hồi nhanh chóng để tư vấn giải pháp và báo giá phù hợp.</p>
+      </div>
+      <div class="ai-components-actions">
+        <a class="ai-components-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu ngay</a>
+        <a class="ai-components-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↓</span>Tải mẫu yêu cầu cấu kiện</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
+  <section id="table-tops-legs" class="ai-section ai-components-page ai-component-detail-page ai-component-table-detail-page">
+    <header class="ai-component-table-detail-banner" aria-label="Mặt bàn và chân bàn">
+      <img class="ai-component-table-detail-banner-image" src="/assets/products/furniture-components/table-tops-legs-banner.png" alt="Sơ đồ cấu kiện mặt bàn, chân bàn và các chi tiết liên kết phổ biến" loading="eager" decoding="async">
+      <div class="ai-component-table-detail-banner-copy">
+        <h2>Mặt bàn &amp; chân bàn</h2>
+        <p>Sản xuất mặt bàn và chân bàn theo bản vẽ, mẫu duyệt và tiêu chuẩn kỹ thuật của buyer.</p>
+        <p>ANSLIFE hỗ trợ phát triển, sản xuất và cung ứng mặt bàn và chân bàn tại Việt Nam theo bản vẽ, mẫu thật, thông số kỹ thuật hoặc tiêu chuẩn riêng của buyer.</p>
+        <p>Sản phẩm có thể được cung cấp ở dạng thô, đã chà nhám, đã hoàn thiện bề mặt, hoặc ở dạng bán thành phẩm để phục vụ lắp ráp, hoàn thiện và xuất khẩu.</p>
+      </div>
+    </header>
+
+    <section class="ai-component-table-product-groups" aria-labelledby="table-product-groups-title">
+      <h3 id="table-product-groups-title">Các nhóm sản phẩm chính</h3>
+
+      <div class="ai-component-table-product-grid">
+        <article class="ai-component-table-product-card">
+          <span class="ai-component-table-product-index">01</span>
+          <img
+            class="ai-component-table-product-visual ai-component-table-product-image ai-component-table-product-image-natural-wood"
+            src="/assets/products/furniture-components/table-detail/product-natural-wood-table-top.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Mặt bàn gỗ tự nhiên</h4>
+          <p>Mặt bàn tròn, vuông, chữ nhật, oval hoặc custom theo thiết kế, độ dày, kiểu cạnh và tiêu chuẩn của buyer.</p>
+        </article>
+
+        <article class="ai-component-table-product-card">
+          <span class="ai-component-table-product-index">02</span>
+          <img
+            class="ai-component-table-product-visual ai-component-table-product-image ai-component-table-product-image-veneer"
+            src="/assets/products/furniture-components/table-detail/product-veneer-table-top.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Mặt bàn veneer</h4>
+          <p>Mặt bàn veneer, plywood phủ veneer, edge band veneer, đảm bảo thẩm mỹ và độ ổn định.</p>
+        </article>
+
+        <article class="ai-component-table-product-card">
+          <span class="ai-component-table-product-index">03</span>
+          <img
+            class="ai-component-table-product-visual ai-component-table-product-image ai-component-table-product-image-plywood-mdf"
+            src="/assets/products/furniture-components/table-detail/product-plywood-mdf-table-top.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Mặt bàn plywood / MDF</h4>
+          <p>Mặt bàn ply hoặc MDF, phủ veneer, laminate hoặc sơn, phù hợp cho nhiều dòng sản phẩm.</p>
+        </article>
+
+        <article class="ai-component-table-product-card">
+          <span class="ai-component-table-product-index">04</span>
+          <img
+            class="ai-component-table-product-visual ai-component-table-product-image ai-component-table-product-image-pedestal"
+            src="/assets/products/furniture-components/table-detail/product-pedestal-table-leg.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Chân bàn trụ</h4>
+          <p>Chân trụ gỗ, trụ tiện, trụ đa giác, trụ kết hợp đế, đảm bảo độ ổn định và khả năng chịu lực.</p>
+        </article>
+
+        <article class="ai-component-table-product-card">
+          <span class="ai-component-table-product-index">05</span>
+          <span class="ai-component-table-product-visual ai-component-table-product-visual-leg-set" aria-hidden="true"></span>
+          <h4>Chân bàn kiểu</h4>
+          <p>Chân bàn 4 chân, 3 chân, chân chữ X, chân sao, chân chữ A hoặc theo thiết kế riêng.</p>
+        </article>
+
+        <article class="ai-component-table-product-card">
+          <span class="ai-component-table-product-index">06</span>
+          <span class="ai-component-table-product-visual ai-component-table-product-visual-plates" aria-hidden="true"></span>
+          <h4>Đế chân &amp; chi tiết liên kết</h4>
+          <p>Đế tròn, đế vuông, đế chữ nhật, bát sắt, thanh giằng, ốc liên kết và chi tiết phụ trợ.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-components-cta">
+      <div class="ai-components-cta-icon" aria-hidden="true"><span></span></div>
+      <div>
+        <h3>Gửi bản vẽ hoặc yêu cầu mặt bàn &amp; chân bàn cho ANSLIFE</h3>
         <p>Đội ngũ kỹ thuật & kinh doanh của chúng tôi sẽ phản hồi nhanh chóng để tư vấn giải pháp và báo giá phù hợp.</p>
       </div>
       <div class="ai-components-actions">
@@ -16191,6 +16289,23 @@ export function getAIFallbackSectionHtml(
     return translateAiHtml(
       language,
       `<div class="ai-content">${PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN}</div>`,
+    )
+      .replace(
+        /href="\/vn\/products-solutions/g,
+        `href="/${language}/products-solutions`,
+      )
+      .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
+      .replace(/href="\/vn"/g, `href="/${language}"`);
+  }
+
+  if (
+    pageSlug === 'products-solutions' &&
+    sectionId === 'furniture-components' &&
+    (subSectionSlug === 'table-tops-legs' || subSectionSlug === 'component-table-tops')
+  ) {
+    return translateAiHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN}</div>`,
     )
       .replace(
         /href="\/vn\/products-solutions/g,
