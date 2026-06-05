@@ -576,7 +576,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
             <li>Ngăn kéo</li>
             <li>Hông tủ, đáy tủ, chi tiết lắp ráp</li>
           </ul>
-          <a class="ai-components-card-action" href="#component-cabinet-parts">Xem chi tiết <span aria-hidden="true">→</span></a>
+          <a class="ai-components-card-action" href="/vn/products-solutions/furniture-components/cabinet-storage-parts">Xem chi tiết <span aria-hidden="true">→</span></a>
         </article>
 
         <article id="component-bed-parts" class="ai-components-card">
@@ -1792,6 +1792,305 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
         <a class="ai-components-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu ngay</a>
         <a class="ai-components-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↓</span>Tải mẫu yêu cầu cấu kiện</a>
       </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
+  <section id="cabinet-storage-parts" class="ai-section ai-components-page ai-component-detail-page ai-component-table-detail-page ai-component-cabinet-detail-page">
+    <header class="ai-component-table-detail-banner ai-component-cabinet-detail-banner" aria-label="Bộ phận tủ và lưu trữ">
+      <img class="ai-component-table-detail-banner-image ai-component-cabinet-detail-banner-image" src="/assets/products/furniture-components/cabinet-storage-parts-banner.png" alt="Sơ đồ cấu kiện tủ, ngăn kéo, ray trượt, bản lề và các chi tiết liên kết tiêu biểu" loading="eager" decoding="async">
+      <div class="ai-component-table-detail-banner-copy ai-component-cabinet-detail-banner-copy">
+        <h2>Bộ phận tủ &amp; lưu trữ</h2>
+        <p>Sản xuất cánh tủ, ngăn kéo, hông tủ, đáy tủ và chi tiết lắp ráp theo bản vẽ, mẫu duyệt và tiêu chuẩn kỹ thuật của buyer.</p>
+        <p>ANSLIFE hỗ trợ phát triển, sản xuất và cung ứng các bộ phận tủ và hệ lưu trữ tại Việt Nam theo bản vẽ, mẫu thật, thông số kỹ thuật hoặc tiêu chuẩn riêng của buyer.</p>
+        <p>Sản phẩm có thể được cung cấp ở dạng thô, đã chà nhám, đã khoan / tạo liên kết, đã hoàn thiện bề mặt hoặc bán thành phẩm để phục vụ lắp ráp, hoàn thiện và xuất khẩu.</p>
+      </div>
+    </header>
+
+    <section class="ai-component-table-product-groups ai-component-cabinet-product-groups" aria-labelledby="cabinet-product-groups-title">
+      <h3 id="cabinet-product-groups-title">Các nhóm cấu kiện chính</h3>
+
+      <div class="ai-component-table-product-grid ai-component-cabinet-product-grid">
+        <article class="ai-component-table-product-card ai-component-cabinet-product-card">
+          <span class="ai-component-table-product-index">01</span>
+          <img
+            class="ai-component-table-product-visual ai-component-cabinet-product-visual ai-component-cabinet-product-image ai-component-cabinet-product-image-panels"
+            src="/assets/products/furniture-components/cabinet-detail/product-structural-panels.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Vách tủ &amp; tấm kết cấu</h4>
+          <p>Vách bên, tấm nắp, tấm đáy, vách ngăn và các bộ phận tạo kết cấu chính cho hệ tủ.</p>
+        </article>
+
+        <article class="ai-component-table-product-card ai-component-cabinet-product-card">
+          <span class="ai-component-table-product-index">02</span>
+          <img
+            class="ai-component-table-product-visual ai-component-cabinet-product-visual ai-component-cabinet-product-image ai-component-cabinet-product-image-fronts"
+            src="/assets/products/furniture-components/cabinet-detail/product-doors-drawer-fronts.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Cánh tủ &amp; mặt trước ngăn kéo</h4>
+          <p>Cửa tủ, mặt trước ngăn kéo, tấm cánh kiểu khung, tấm phẳng hoặc thiết kế riêng theo yêu cầu.</p>
+        </article>
+
+        <article class="ai-component-table-product-card ai-component-cabinet-product-card">
+          <span class="ai-component-table-product-index">03</span>
+          <img
+            class="ai-component-table-product-visual ai-component-cabinet-product-visual ai-component-cabinet-product-image ai-component-cabinet-product-image-shelves"
+            src="/assets/products/furniture-components/cabinet-detail/product-internal-shelves.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Kệ &amp; bộ phận lưu trữ bên trong</h4>
+          <p>Kệ, kệ điều chỉnh, vách chia, khay, bộ chia ngăn và các chi tiết phục vụ lưu trữ.</p>
+        </article>
+
+        <article class="ai-component-table-product-card ai-component-cabinet-product-card">
+          <span class="ai-component-table-product-index">04</span>
+          <img
+            class="ai-component-table-product-visual ai-component-cabinet-product-visual ai-component-cabinet-product-image ai-component-cabinet-product-image-drawers"
+            src="/assets/products/furniture-components/cabinet-detail/product-drawer-box-parts.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Ngăn kéo &amp; bộ phận hộp kéo</h4>
+          <p>Hộp ngăn kéo, thành ngăn kéo, đáy ngăn kéo, vị trí lắp ray trượt và các chi tiết liên quan.</p>
+        </article>
+
+        <article class="ai-component-table-product-card ai-component-cabinet-product-card">
+          <span class="ai-component-table-product-index">05</span>
+          <img
+            class="ai-component-table-product-visual ai-component-cabinet-product-visual ai-component-cabinet-product-image ai-component-cabinet-product-image-frames"
+            src="/assets/products/furniture-components/cabinet-detail/product-support-frames.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Khung đỡ &amp; chi tiết liên kết</h4>
+          <p>Thanh giằng, khung đỡ, nẹp đỡ, ray, thanh chống và các cấu kiện gia cường kết cấu.</p>
+        </article>
+
+        <article class="ai-component-table-product-card ai-component-cabinet-product-card">
+          <span class="ai-component-table-product-index">06</span>
+          <img
+            class="ai-component-table-product-visual ai-component-cabinet-product-visual ai-component-cabinet-product-image ai-component-cabinet-product-image-flatpack"
+            src="/assets/products/furniture-components/cabinet-detail/product-knock-down-set.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Bộ cấu kiện tháo lắp</h4>
+          <p>Cấu kiện tháo lắp, cấu kiện đóng gói phẳng, chi tiết khoan sẵn và bộ linh kiện phục vụ lắp ráp.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-component-table-specs ai-component-cabinet-specs" aria-label="Vật liệu, tiêu chuẩn và trạng thái hoàn thiện">
+      <article class="ai-component-detail-spec-panel ai-component-detail-materials-panel ai-component-cabinet-materials-panel">
+        <h3>Vật liệu có thể sử dụng</h3>
+        <p>ANSLIFE có thể làm việc với nhiều nhóm vật liệu khác nhau nhằm đáp ứng yêu cầu kỹ thuật, chi phí, thị trường xuất khẩu và mục tiêu sản xuất của từng dự án.</p>
+
+        <div class="ai-component-detail-material-grid ai-component-cabinet-material-grid">
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-rubberwood"
+              src="/assets/products/furniture-components/chair-detail/material-rubberwood.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Gỗ cao su</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-acacia"
+              src="/assets/products/furniture-components/chair-detail/material-acacia.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Acacia</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-oak"
+              src="/assets/products/furniture-components/chair-detail/material-oak.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Oak</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-ash"
+              src="/assets/products/furniture-components/chair-detail/material-ash.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Ash</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-pine"
+              src="/assets/products/furniture-components/chair-detail/material-pine.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Pine</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-plywood"
+              src="/assets/products/furniture-components/chair-detail/material-plywood.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Plywood</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-mdf"
+              src="/assets/products/furniture-components/cabinet-detail/material-mdf.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>MDF</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-veneer"
+              src="/assets/products/furniture-components/chair-detail/material-veneer.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Veneer</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-particle"
+              src="/assets/products/furniture-components/cabinet-detail/material-particle-board.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Particle board</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-laminated"
+              src="/assets/products/furniture-components/cabinet-detail/material-laminated-board.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Laminated board</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-hpl"
+              src="/assets/products/furniture-components/cabinet-detail/material-hpl-melamine-surfaces.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>HPL / Melamine surfaces</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-metal"
+              src="/assets/products/furniture-components/chair-detail/material-metal.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Kim loại kết hợp<br>(nếu yêu cầu)</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-hardware"
+              src="/assets/products/furniture-components/cabinet-detail/material-hardware-connectors.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Hardware &amp; connectors</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-edge"
+              src="/assets/products/furniture-components/cabinet-detail/material-edge-banding.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Edge banding materials</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-finish"
+              src="/assets/products/furniture-components/cabinet-detail/material-surface-finishing.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Surface finishing materials</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="ai-component-detail-spec-panel ai-component-table-checks-panel ai-component-cabinet-checks-panel">
+        <h3>Tiêu chuẩn cần kiểm soát</h3>
+
+        <ul class="ai-component-detail-check-list">
+          <li>Kích thước panel</li>
+          <li>Khe hở lắp ráp</li>
+          <li>Độ dày vật liệu</li>
+          <li>Độ thẳng hàng giữa các panel</li>
+          <li>Độ vuông góc</li>
+          <li>Chất lượng dán cạnh</li>
+          <li>Độ phẳng</li>
+          <li>Độ đồng đều bề mặt hoàn thiện</li>
+          <li>Độ cong vênh</li>
+          <li>Tính đồng đều giữa các lô</li>
+          <li>Độ ẩm vật liệu</li>
+          <li>Bảo vệ trong đóng gói</li>
+          <li>Sai số lỗ khoan</li>
+          <li>Độ ổn định sau lắp ráp</li>
+          <li>Khoảng cách liên kết</li>
+          <li>Vị trí cam lock / connector</li>
+          <li>Sai số bộ phận ngăn kéo</li>
+        </ul>
+      </article>
+
+      <article class="ai-component-detail-spec-panel ai-component-table-finish-panel ai-component-cabinet-finish-panel">
+        <h3>Trạng thái hoàn thiện có thể cung cấp</h3>
+
+        <ul class="ai-component-table-state-list">
+          <li>Cấu kiện thô</li>
+          <li>Cấu kiện đã chà nhám</li>
+          <li>Cấu kiện đã xử lý cạnh</li>
+          <li>Cấu kiện đã khoan</li>
+          <li>Cấu kiện gia công CNC</li>
+          <li>Cấu kiện đã lắp phụ kiện</li>
+          <li>Cụm cấu kiện đã lắp thử</li>
+          <li>Cấu kiện đã hoàn thiện</li>
+          <li>Bộ cấu kiện đóng gói theo bộ</li>
+          <li>Cấu kiện sẵn sàng đóng gói phẳng</li>
+        </ul>
+      </article>
     </section>
   </section>
 `.trim();
@@ -16625,6 +16924,24 @@ export function getAIFallbackSectionHtml(
     return translateAiHtml(
       language,
       `<div class="ai-content">${PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN}</div>`,
+    )
+      .replace(
+        /href="\/vn\/products-solutions/g,
+        `href="/${language}/products-solutions`,
+      )
+      .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
+      .replace(/href="\/vn"/g, `href="/${language}"`);
+  }
+
+  if (
+    pageSlug === 'products-solutions' &&
+    sectionId === 'furniture-components' &&
+    (subSectionSlug === 'cabinet-storage-parts' ||
+      subSectionSlug === 'component-cabinet-parts')
+  ) {
+    return translateAiHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN}</div>`,
     )
       .replace(
         /href="\/vn\/products-solutions/g,

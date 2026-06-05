@@ -1,4 +1,5 @@
 import type { LanguageCode } from './language';
+import { CABINET_STORAGE_PARTS_TEMPLATE_TRANSLATIONS } from './cabinetStoragePartsTemplateTranslations';
 import { FURNITURE_COMPONENTS_TEMPLATE_TRANSLATIONS } from './furnitureComponentsTemplateTranslations';
 import { TABLE_TOPS_LEGS_TEMPLATE_TRANSLATIONS } from './tableTopsLegsTemplateTranslations';
 
@@ -6066,5 +6067,15 @@ for (const language of Object.keys(TABLE_TOPS_LEGS_TEMPLATE_TRANSLATIONS) as Exc
   AUTO_TRANSLATIONS[language] = {
     ...(AUTO_TRANSLATIONS[language] ?? {}),
     ...(TABLE_TOPS_LEGS_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
+
+for (const language of Object.keys(CABINET_STORAGE_PARTS_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(CABINET_STORAGE_PARTS_TEMPLATE_TRANSLATIONS[language] ?? {}),
   };
 }

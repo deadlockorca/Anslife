@@ -16607,6 +16607,304 @@ a.mobile-menu-utility-link {
   top: clamp(15.3rem, 18.9vw, 20.2rem);
 }
 
+.ai-component-cabinet-detail-banner {
+  aspect-ratio: 2005 / 784;
+}
+
+.ai-component-cabinet-detail-banner-image {
+  object-position: center center;
+}
+
+.ai-component-cabinet-detail-banner-copy > * {
+  width: min(25%, 350px);
+}
+
+.ai-component-cabinet-product-card {
+  grid-template-rows: 118px auto auto;
+  gap: 0.48rem;
+  min-height: 282px;
+  padding: 0.82rem 0.78rem 0.9rem;
+}
+
+.ai-component-cabinet-product-card h4 {
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(1rem, 1.02vw, 1.14rem);
+  font-weight: 900;
+  line-height: 1.24;
+}
+
+.ai-component-cabinet-product-card p {
+  color: var(--component-detail-muted) !important;
+  font-size: clamp(0.78rem, 0.82vw, 0.9rem);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.ai-component-cabinet-product-visual {
+  width: min(100%, 150px);
+  height: 112px;
+  transform: scale(0.9);
+  transform-origin: center;
+}
+
+.ai-component-cabinet-product-image {
+  width: min(100%, 170px);
+  height: 112px;
+  max-width: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+.ai-component-cabinet-product-image-panels {
+  width: min(100%, 146px);
+  height: 116px;
+}
+
+.ai-component-cabinet-product-image-fronts,
+.ai-component-cabinet-product-image-shelves {
+  width: min(100%, 158px);
+  height: 116px;
+}
+
+.ai-component-cabinet-product-image-drawers,
+.ai-component-cabinet-product-image-frames,
+.ai-component-cabinet-product-image-flatpack {
+  width: min(100%, 172px);
+  height: 116px;
+}
+
+.ai-component-cabinet-specs {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.08fr) minmax(260px, 0.72fr);
+}
+
+.ai-component-cabinet-specs .ai-component-detail-spec-panel {
+  min-height: 0;
+}
+
+.ai-component-cabinet-specs .ai-component-detail-material-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.8rem 0.62rem;
+}
+
+.ai-component-cabinet-specs .ai-component-detail-material-card {
+  grid-template-rows: 96px auto;
+  gap: 0.38rem;
+  align-items: center;
+}
+
+.ai-component-cabinet-specs .ai-component-detail-material-image {
+  width: 54px;
+  height: 54px;
+}
+
+.ai-component-cabinet-material-image {
+  width: 96px !important;
+  height: 96px !important;
+  border-radius: 8px;
+  object-fit: contain;
+  object-position: center;
+  transform: scale(1.02);
+  transform-origin: center;
+}
+
+.ai-component-cabinet-material-image-particle,
+.ai-component-cabinet-material-image-hpl,
+.ai-component-cabinet-material-image-edge {
+  transform: scale(1.06);
+}
+
+.ai-component-cabinet-material-image-hardware {
+  transform: scale(1.05);
+}
+
+.ai-component-cabinet-material-image-finish {
+  transform: scale(1.08);
+}
+
+.ai-component-cabinet-specs .ai-component-detail-material-card figcaption {
+  font-size: clamp(0.68rem, 0.72vw, 0.78rem);
+  line-height: 1.18;
+}
+
+.ai-component-cabinet-specs .ai-component-detail-check-list {
+  gap: 0.78rem 1.1rem;
+}
+
+.ai-component-cabinet-specs .ai-component-detail-check-list li {
+  font-size: clamp(0.74rem, 0.78vw, 0.84rem);
+  line-height: 1.36;
+}
+
+.ai-component-cabinet-specs .ai-component-table-state-list {
+  gap: 0.62rem;
+}
+
+.ai-component-cabinet-specs .ai-component-table-state-list li {
+  font-size: clamp(0.76rem, 0.82vw, 0.9rem);
+  line-height: 1.36;
+}
+
+.ai-component-cabinet-product-visual::before,
+.ai-component-cabinet-product-visual::after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-color: currentColor;
+}
+
+.ai-component-cabinet-visual-panels::before {
+  left: 16px;
+  top: 26px;
+  width: 102px;
+  height: 72px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  background:
+    linear-gradient(90deg, currentColor 0 2px, transparent 2px 27px, currentColor 27px 29px, transparent 29px 56px, currentColor 56px 58px, transparent 58px 84px, currentColor 84px 86px, transparent 86px),
+    repeating-linear-gradient(92deg, rgba(70, 56, 42, 0.13) 0 2px, transparent 2px 9px),
+    rgba(255, 255, 255, 0.18);
+  transform: skewY(-13deg);
+}
+
+.ai-component-cabinet-visual-panels::after {
+  left: 38px;
+  top: 18px;
+  width: 102px;
+  height: 76px;
+  border: 2px solid currentColor;
+  background: repeating-linear-gradient(92deg, rgba(70, 56, 42, 0.12) 0 2px, transparent 2px 9px);
+  transform: skewY(-13deg);
+  opacity: 0.5;
+}
+
+.ai-component-cabinet-visual-fronts::before,
+.ai-component-cabinet-visual-fronts::after {
+  top: 24px;
+  width: 46px;
+  height: 82px;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  background:
+    linear-gradient(currentColor 0 0) 50% 50% / 28px 2px no-repeat,
+    linear-gradient(90deg, transparent 0 44%, currentColor 44% 48%, transparent 48%),
+    repeating-linear-gradient(96deg, rgba(70, 56, 42, 0.12) 0 2px, transparent 2px 8px),
+    rgba(255, 255, 255, 0.16);
+}
+
+.ai-component-cabinet-visual-fronts::before {
+  left: 25px;
+  transform: perspective(120px) rotateY(12deg);
+}
+
+.ai-component-cabinet-visual-fronts::after {
+  right: 22px;
+  width: 58px;
+  transform: perspective(120px) rotateY(-10deg);
+}
+
+.ai-component-cabinet-visual-shelves::before {
+  left: 28px;
+  top: 24px;
+  width: 98px;
+  height: 72px;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  background:
+    linear-gradient(currentColor 0 0) center 24px / 104px 2px no-repeat,
+    linear-gradient(currentColor 0 0) center 48px / 104px 2px no-repeat,
+    repeating-linear-gradient(168deg, rgba(70, 56, 42, 0.12) 0 2px, transparent 2px 8px);
+  transform: skewY(-12deg);
+}
+
+.ai-component-cabinet-visual-shelves::after {
+  left: 39px;
+  top: 40px;
+  width: 70px;
+  height: 44px;
+  border: 2px solid currentColor;
+  opacity: 0.42;
+  transform: skewY(-12deg);
+}
+
+.ai-component-cabinet-visual-drawers::before {
+  left: 24px;
+  top: 26px;
+  width: 96px;
+  height: 62px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  background:
+    linear-gradient(currentColor 0 0) center 28px / 66px 2px no-repeat,
+    repeating-linear-gradient(168deg, rgba(70, 56, 42, 0.12) 0 2px, transparent 2px 8px),
+    rgba(255, 255, 255, 0.16);
+  transform: skewY(-9deg);
+}
+
+.ai-component-cabinet-visual-drawers::after {
+  left: 35px;
+  top: 82px;
+  width: 96px;
+  height: 24px;
+  border: 2px solid currentColor;
+  border-top: 0;
+  transform: skewY(-9deg);
+  opacity: 0.68;
+}
+
+.ai-component-cabinet-visual-frames::before {
+  left: 30px;
+  top: 36px;
+  width: 92px;
+  height: 58px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  transform: skewY(-12deg);
+}
+
+.ai-component-cabinet-visual-frames::after {
+  left: 38px;
+  top: 32px;
+  width: 78px;
+  height: 70px;
+  border-left: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  background:
+    linear-gradient(currentColor 0 0) center 14px / 92px 3px no-repeat,
+    linear-gradient(currentColor 0 0) center 52px / 92px 3px no-repeat;
+  transform: skewY(-12deg);
+  opacity: 0.78;
+}
+
+.ai-component-cabinet-visual-flatpack::before {
+  left: 18px;
+  top: 25px;
+  width: 120px;
+  height: 72px;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  background:
+    linear-gradient(90deg, currentColor 0 2px, transparent 2px 28px, currentColor 28px 30px, transparent 30px 62px, currentColor 62px 64px, transparent 64px),
+    linear-gradient(currentColor 0 0) center 32px / 126px 2px no-repeat,
+    repeating-linear-gradient(168deg, rgba(70, 56, 42, 0.12) 0 2px, transparent 2px 8px);
+  transform: skewY(-10deg);
+}
+
+.ai-component-cabinet-visual-flatpack::after {
+  left: 32px;
+  top: 92px;
+  width: 96px;
+  height: 18px;
+  border-top: 3px solid currentColor;
+  background:
+    linear-gradient(currentColor 0 0) 8px center / 12px 3px no-repeat,
+    linear-gradient(currentColor 0 0) 42px center / 12px 3px no-repeat,
+    linear-gradient(currentColor 0 0) 78px center / 12px 3px no-repeat;
+  opacity: 0.72;
+}
+
 .ai-component-table-product-groups {
   display: grid;
   gap: clamp(0.85rem, 1.5vw, 1.1rem);
@@ -18597,6 +18895,10 @@ a.mobile-menu-utility-link {
     width: min(29%, 300px);
   }
 
+  .ai-component-cabinet-detail-banner-copy > * {
+    width: min(31%, 320px);
+  }
+
   .ai-component-table-detail-banner-copy h2 {
     top: 1.35rem;
     font-size: clamp(1.55rem, 2.65vw, 2.12rem);
@@ -18628,9 +18930,24 @@ a.mobile-menu-utility-link {
     min-height: 314px;
   }
 
+  .ai-component-cabinet-product-card {
+    grid-template-rows: 112px auto auto;
+    min-height: 0;
+  }
+
   .ai-component-table-product-visual {
     height: 120px;
     transform: scale(0.92);
+  }
+
+  .ai-component-cabinet-product-visual {
+    height: 108px;
+    transform: scale(0.86);
+  }
+
+  .ai-component-cabinet-product-image {
+    height: 108px;
+    transform: none;
   }
 
   .ai-component-table-specs {
@@ -18638,6 +18955,10 @@ a.mobile-menu-utility-link {
   }
 
   .ai-component-table-specs .ai-component-detail-material-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .ai-component-cabinet-specs .ai-component-detail-material-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
@@ -18828,6 +19149,10 @@ a.mobile-menu-utility-link {
     object-position: 58% center;
   }
 
+  .ai-component-cabinet-detail-banner-image {
+    object-position: 62% center;
+  }
+
   .ai-component-table-detail-banner-copy {
     display: contents !important;
   }
@@ -18873,10 +19198,25 @@ a.mobile-menu-utility-link {
     padding: 0.82rem;
   }
 
+  .ai-component-cabinet-product-card {
+    grid-template-rows: 104px auto auto;
+    padding: 0.78rem;
+  }
+
   .ai-component-table-product-visual {
     height: 112px;
     transform: scale(0.84);
     transform-origin: center;
+  }
+
+  .ai-component-cabinet-product-visual {
+    height: 100px;
+    transform: scale(0.78);
+  }
+
+  .ai-component-cabinet-product-image {
+    height: 100px;
+    transform: none;
   }
 
   .ai-component-table-product-card h4 {
@@ -18889,6 +19229,10 @@ a.mobile-menu-utility-link {
   }
 
   .ai-component-table-specs .ai-component-detail-material-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ai-component-cabinet-specs .ai-component-detail-material-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
@@ -19220,7 +19564,20 @@ a.mobile-menu-utility-link {
     grid-template-rows: 124px auto 1fr;
   }
 
+  .ai-component-cabinet-product-card {
+    grid-template-rows: 104px auto auto;
+  }
+
+  .ai-component-cabinet-product-image {
+    height: 100px;
+    transform: none;
+  }
+
   .ai-component-table-specs .ai-component-detail-material-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-component-cabinet-specs .ai-component-detail-material-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
