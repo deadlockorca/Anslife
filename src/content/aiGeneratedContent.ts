@@ -646,10 +646,10 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
 const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
   <section id="component-upholstery-parts" class="ai-section ai-components-page ai-component-detail-page ai-component-upholstery-detail-page">
     <header class="ai-component-table-detail-banner ai-component-upholstery-detail-banner">
-      <img class="ai-component-table-detail-banner-image ai-component-upholstery-detail-banner-image" src="/assets/products/furniture-components/upholstery-detail/upholstery-parts-banner.png" alt="Sơ đồ cấu tạo bộ phận bọc nệm sofa" loading="eager" decoding="async">
+      <img class="ai-component-table-detail-banner-image ai-component-upholstery-detail-banner-image" src="/assets/products/furniture-components/upholstery-detail/upholstery-parts-banner.png?v=faf5f2" alt="Sơ đồ cấu tạo bộ phận bọc nệm sofa" loading="eager" decoding="async">
       <div class="ai-component-upholstery-detail-copy">
         <h2>Bộ phận<br>bọc nệm</h2>
-        <p class="ai-component-upholstery-detail-subtitle">Upholstery Components</p>
+        <p class="ai-component-upholstery-detail-subtitle">Cấu kiện bọc nệm</p>
         <span class="ai-component-upholstery-detail-rule" aria-hidden="true"></span>
         <p class="ai-component-upholstery-detail-lead">Sản xuất khung bọc nệm, foam cắt theo khuôn, seat cushion, back cushion và các chi tiết phục vụ sản phẩm bọc nệm theo bản vẽ, mẫu duyệt và tiêu chuẩn kỹ thuật của buyer.</p>
         <p class="ai-component-upholstery-detail-note ai-component-upholstery-detail-note-first"><span class="ai-component-upholstery-detail-check" aria-hidden="true"></span>ANSLIFE hỗ trợ phát triển, sản xuất và cung ứng các bộ phận bọc nệm tại Việt Nam theo bản vẽ kỹ thuật, mẫu thật, thông số vật liệu hoặc tiêu chuẩn riêng của buyer.</p>
@@ -718,7 +718,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
             <figcaption>MDF</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <span class="ai-component-upholstery-material-placeholder ai-upholstery-material-foam" aria-hidden="true"></span>
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/foam-density.png" alt="" loading="lazy" decoding="async">
             <figcaption>Foam<br>nhiều tỷ trọng</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
@@ -726,23 +726,23 @@ const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
             <figcaption>Fiber / bông</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <span class="ai-component-upholstery-material-placeholder ai-upholstery-material-fabric" aria-hidden="true"></span>
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/interior-fabric.png" alt="" loading="lazy" decoding="async">
             <figcaption>Vải nội thất</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <span class="ai-component-upholstery-material-placeholder ai-upholstery-material-outdoor" aria-hidden="true"></span>
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/outdoor-fabric.png" alt="" loading="lazy" decoding="async">
             <figcaption>Vải ngoài trời</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <span class="ai-component-upholstery-material-placeholder ai-upholstery-material-pu" aria-hidden="true"></span>
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/pu-leather.png" alt="" loading="lazy" decoding="async">
             <figcaption>Da PU</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <span class="ai-component-upholstery-material-placeholder ai-upholstery-material-leather" aria-hidden="true"></span>
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/genuine-leather.png" alt="" loading="lazy" decoding="async">
             <figcaption>Da thật</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <span class="ai-component-upholstery-material-placeholder ai-upholstery-material-webbing" aria-hidden="true"></span>
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/webbing-springs.png" alt="" loading="lazy" decoding="async">
             <figcaption>Dây đai / lò xo</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
@@ -750,7 +750,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
             <figcaption>Chân gỗ /<br>chân kim loại</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <span class="ai-component-upholstery-material-placeholder ai-upholstery-material-sewing" aria-hidden="true"></span>
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/sewing-accessories.png" alt="" loading="lazy" decoding="async">
             <figcaption>Keo, ghim, chỉ may<br>&amp; phụ kiện</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">

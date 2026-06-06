@@ -1,5 +1,6 @@
 import type { LanguageCode } from './language';
 import { AUTO_TRANSLATIONS } from './autoTranslations';
+import { NAV_MENU_TRANSLATIONS } from './navMenuTranslations';
 
 const VIETNAMESE = 'vn';
 
@@ -20,6 +21,13 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Câu hỏi thường gặp': 'Frequently Asked Questions',
     'Phụng sự xã hội': 'Social Contribution',
     'Liên hệ / Gửi yêu cầu': 'Contact / Send Inquiry',
+    'Yêu cầu chung': 'General Inquiry',
+    'Yêu cầu báo giá': 'Request Quotation',
+    'Tải bản vẽ / ảnh tham chiếu': 'Upload Drawing / Reference Image',
+    'Yêu cầu OEM / ODM': 'OEM / ODM Request',
+    'Yêu cầu Supply Hub': 'Supply Hub Inquiry',
+    'Yêu cầu thăm nhà máy': 'Factory Visit Request',
+    'Thông tin liên hệ': 'Contact Information',
   },
   jp: {
     'Trang chủ': 'ホーム',
@@ -35,6 +43,13 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Câu hỏi thường gặp': 'よくある質問',
     'Phụng sự xã hội': '社会貢献',
     'Liên hệ / Gửi yêu cầu': 'お問い合わせ / 依頼送信',
+    'Yêu cầu chung': '一般お問い合わせ',
+    'Yêu cầu báo giá': '見積依頼',
+    'Tải bản vẽ / ảnh tham chiếu': '図面 / 参考画像アップロード',
+    'Yêu cầu OEM / ODM': 'OEM / ODM依頼',
+    'Yêu cầu Supply Hub': '供給ハブお問い合わせ',
+    'Yêu cầu thăm nhà máy': '工場訪問依頼',
+    'Thông tin liên hệ': '連絡先情報',
   },
   kr: {
     'Trang chủ': '홈',
@@ -50,6 +65,13 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Câu hỏi thường gặp': '자주 묻는 질문',
     'Phụng sự xã hội': '사회공헌',
     'Liên hệ / Gửi yêu cầu': '문의 / 요청 보내기',
+    'Yêu cầu chung': '일반 문의',
+    'Yêu cầu báo giá': '견적 요청',
+    'Tải bản vẽ / ảnh tham chiếu': '도면 / 참고 이미지 업로드',
+    'Yêu cầu OEM / ODM': 'OEM / ODM 요청',
+    'Yêu cầu Supply Hub': '공급 허브 문의',
+    'Yêu cầu thăm nhà máy': '공장 방문 요청',
+    'Thông tin liên hệ': '연락처 정보',
   },
   sv: {
     'Trang chủ': 'Hem',
@@ -65,6 +87,13 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Câu hỏi thường gặp': 'Vanliga frågor',
     'Phụng sự xã hội': 'Socialt bidrag',
     'Liên hệ / Gửi yêu cầu': 'Kontakt / Skicka förfrågan',
+    'Yêu cầu chung': 'Allmän förfrågan',
+    'Yêu cầu báo giá': 'Offertförfrågan',
+    'Tải bản vẽ / ảnh tham chiếu': 'Ladda upp ritning / referensbild',
+    'Yêu cầu OEM / ODM': 'OEM / ODM-förfrågan',
+    'Yêu cầu Supply Hub': 'Supply Hub-förfrågan',
+    'Yêu cầu thăm nhà máy': 'Fabriksbesöksförfrågan',
+    'Thông tin liên hệ': 'Kontaktinformation',
   },
   fr: {
     'Trang chủ': 'Accueil',
@@ -80,6 +109,13 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Câu hỏi thường gặp': 'Questions fréquentes',
     'Phụng sự xã hội': 'Contribution sociale',
     'Liên hệ / Gửi yêu cầu': 'Contact / Envoyer une demande',
+    'Yêu cầu chung': 'Demande générale',
+    'Yêu cầu báo giá': 'Demande de devis',
+    'Tải bản vẽ / ảnh tham chiếu': 'Téléverser un plan / une image de référence',
+    'Yêu cầu OEM / ODM': 'Demande OEM / ODM',
+    'Yêu cầu Supply Hub': 'Demande Supply Hub',
+    'Yêu cầu thăm nhà máy': 'Demande de visite d’usine',
+    'Thông tin liên hệ': 'Informations de contact',
   },
   ru: {
     'Trang chủ': 'Главная',
@@ -95,6 +131,13 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Câu hỏi thường gặp': 'Часто задаваемые вопросы',
     'Phụng sự xã hội': 'Социальный вклад',
     'Liên hệ / Gửi yêu cầu': 'Контакты / Отправить запрос',
+    'Yêu cầu chung': 'Общий запрос',
+    'Yêu cầu báo giá': 'Запрос предложения',
+    'Tải bản vẽ / ảnh tham chiếu': 'Загрузить чертеж / референсное изображение',
+    'Yêu cầu OEM / ODM': 'Запрос OEM / ODM',
+    'Yêu cầu Supply Hub': 'Запрос Supply Hub',
+    'Yêu cầu thăm nhà máy': 'Запрос на посещение фабрики',
+    'Thông tin liên hệ': 'Контактная информация',
   },
   es: {
     'Trang chủ': 'Inicio',
@@ -110,6 +153,13 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Câu hỏi thường gặp': 'Preguntas Frecuentes',
     'Phụng sự xã hội': 'Contribución social',
     'Liên hệ / Gửi yêu cầu': 'Contacto / Enviar solicitud',
+    'Yêu cầu chung': 'Consulta general',
+    'Yêu cầu báo giá': 'Solicitud de cotización',
+    'Tải bản vẽ / ảnh tham chiếu': 'Subir plano / imagen de referencia',
+    'Yêu cầu OEM / ODM': 'Solicitud OEM / ODM',
+    'Yêu cầu Supply Hub': 'Consulta Supply Hub',
+    'Yêu cầu thăm nhà máy': 'Solicitud de visita a fábrica',
+    'Thông tin liên hệ': 'Información de contacto',
   },
   zh: {
     'Trang chủ': '首页',
@@ -125,6 +175,13 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
     'Câu hỏi thường gặp': '常见问题',
     'Phụng sự xã hội': '社会贡献',
     'Liên hệ / Gửi yêu cầu': '联系 / 提交需求',
+    'Yêu cầu chung': '一般咨询',
+    'Yêu cầu báo giá': '报价请求',
+    'Tải bản vẽ / ảnh tham chiếu': '上传图纸 / 参考图片',
+    'Yêu cầu OEM / ODM': 'OEM / ODM需求',
+    'Yêu cầu Supply Hub': 'Supply Hub咨询',
+    'Yêu cầu thăm nhà máy': '工厂参观请求',
+    'Thông tin liên hệ': '联系信息',
   },
 };
 
@@ -2840,6 +2897,7 @@ export function translateText(language: LanguageCode, text: string): string {
 
   return (
     PRIMARY_NAV_TRANSLATIONS[language]?.[text] ??
+    NAV_MENU_TRANSLATIONS[language]?.[text] ??
     TRANSLATIONS[language]?.[text] ??
     AUTO_TRANSLATIONS[language]?.[text] ??
     TRANSLATIONS.en?.[text] ??

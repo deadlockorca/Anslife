@@ -2,6 +2,7 @@ import type { LanguageCode } from './language';
 import { CABINET_STORAGE_PARTS_TEMPLATE_TRANSLATIONS } from './cabinetStoragePartsTemplateTranslations';
 import { FURNITURE_COMPONENTS_TEMPLATE_TRANSLATIONS } from './furnitureComponentsTemplateTranslations';
 import { TABLE_TOPS_LEGS_TEMPLATE_TRANSLATIONS } from './tableTopsLegsTemplateTranslations';
+import { UPHOLSTERY_PARTS_TEMPLATE_TRANSLATIONS } from './upholsteryPartsTemplateTranslations';
 
 export const AUTO_TRANSLATIONS: Partial<
   Record<Exclude<LanguageCode, 'vn'>, Record<string, string>>
@@ -6077,5 +6078,15 @@ for (const language of Object.keys(CABINET_STORAGE_PARTS_TEMPLATE_TRANSLATIONS) 
   AUTO_TRANSLATIONS[language] = {
     ...(AUTO_TRANSLATIONS[language] ?? {}),
     ...(CABINET_STORAGE_PARTS_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
+
+for (const language of Object.keys(UPHOLSTERY_PARTS_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(UPHOLSTERY_PARTS_TEMPLATE_TRANSLATIONS[language] ?? {}),
   };
 }
