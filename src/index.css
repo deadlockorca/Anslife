@@ -16586,6 +16586,1852 @@ a.mobile-menu-utility-link {
   object-fit: contain;
 }
 
+.ai-component-upholstery-detail-page {
+  gap: 0;
+}
+
+.ai-component-upholstery-detail-banner {
+  aspect-ratio: 2007 / 784;
+  min-height: 0;
+  border: 0;
+  background: #fdfcfa;
+  isolation: isolate;
+}
+
+.ai-component-upholstery-detail-banner-image {
+  height: 100% !important;
+  max-width: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.ai-component-upholstery-detail-copy {
+  display: contents !important;
+  color: #070707;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content .ai-component-upholstery-detail-copy,
+.html-content .ai-content .ai-component-upholstery-detail-copy :is(h2, p, span) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.ai-component-upholstery-detail-copy > * {
+  position: absolute;
+  left: 2.55%;
+  z-index: 2;
+  width: min(26.6%, 535px);
+  color: #070707 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.ai-component-upholstery-detail-copy h2 {
+  top: 6.4%;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 3.55rem;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.ai-component-upholstery-detail-subtitle {
+  top: 32.1%;
+  margin: 0;
+  font-size: 1.36rem;
+  font-weight: 700;
+  line-height: 1.16;
+}
+
+.ai-component-upholstery-detail-rule {
+  top: 37.8%;
+  display: block;
+  width: 72px;
+  height: 3px;
+  background: #070707 !important;
+}
+
+.ai-component-upholstery-detail-lead {
+  top: 43.4%;
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 750;
+  line-height: 1.58;
+}
+
+.ai-component-upholstery-detail-note {
+  margin: 0;
+  padding-left: 4.1rem;
+  font-size: 0.8rem;
+  font-weight: 750;
+  line-height: 1.55;
+}
+
+.ai-component-upholstery-detail-note-first {
+  top: 61.8%;
+}
+
+.ai-component-upholstery-detail-note-second {
+  top: 77.5%;
+}
+
+.ai-component-upholstery-detail-check {
+  position: absolute;
+  left: 0.12rem;
+  top: 0.08rem;
+  width: 2.45rem;
+  height: 2.45rem;
+  border: 2px solid rgba(85, 36, 39, 0.92) !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+}
+
+.ai-component-upholstery-detail-check::after {
+  content: '';
+  position: absolute;
+  left: 0.65rem;
+  top: 0.55rem;
+  width: 1rem;
+  height: 0.55rem;
+  border-left: 4px solid #070707;
+  border-bottom: 4px solid #070707;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 1120px) {
+  .ai-component-upholstery-detail-copy h2 {
+    font-size: 2.7rem;
+  }
+
+  .ai-component-upholstery-detail-subtitle {
+    font-size: 1.04rem;
+  }
+
+  .ai-component-upholstery-detail-lead {
+    font-size: 0.66rem;
+  }
+
+  .ai-component-upholstery-detail-note {
+    padding-left: 3.05rem;
+    font-size: 0.6rem;
+  }
+
+  .ai-component-upholstery-detail-check {
+    width: 1.95rem;
+    height: 1.95rem;
+  }
+
+  .ai-component-upholstery-detail-check::after {
+    left: 0.5rem;
+    top: 0.43rem;
+    width: 0.76rem;
+    height: 0.42rem;
+    border-left-width: 3px;
+    border-bottom-width: 3px;
+  }
+}
+
+.ai-component-upholstery-groups {
+  display: grid;
+  gap: clamp(0.82rem, 1.1vw, 1.05rem);
+  padding-top: clamp(1rem, 1.4vw, 1.25rem);
+  padding-bottom: clamp(0.85rem, 1.25vw, 1.15rem);
+}
+
+.ai-component-upholstery-groups h3 {
+  margin: 0;
+  color: var(--component-detail-ink) !important;
+  font-family: var(--font-body);
+  font-size: clamp(1.35rem, 1.7vw, 1.75rem);
+  font-weight: 900;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.ai-component-upholstery-groups-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.58rem, 0.82vw, 0.85rem);
+}
+
+.ai-component-upholstery-group-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: 156px auto 1fr;
+  gap: 0.62rem;
+  min-height: 322px;
+  margin: 0;
+  padding: 0.95rem 0.86rem 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(118, 96, 72, 0.24);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.72), transparent 10.5rem),
+    #faf5ef;
+  box-shadow: none;
+}
+
+.ai-component-upholstery-group-index {
+  position: absolute;
+  top: 0.82rem;
+  left: 0.82rem;
+  z-index: 2;
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff !important;
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+  background: #0c0f12;
+  font-family: var(--font-body);
+}
+
+.html-content .ai-content .ai-component-upholstery-group-index {
+  color: #fff !important;
+}
+
+.ai-component-upholstery-group-visual {
+  position: relative;
+  display: block;
+  align-self: center;
+  justify-self: center;
+  width: min(100%, 158px);
+  height: 132px;
+  color: rgba(32, 32, 32, 0.86);
+}
+
+.ai-component-upholstery-group-image {
+  display: block;
+  align-self: center;
+  justify-self: center;
+  width: min(100%, 168px);
+  height: 136px !important;
+  max-width: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  object-position: center;
+}
+
+.ai-component-upholstery-group-image-chair-frame {
+  width: min(100%, 126px);
+  height: 140px !important;
+}
+
+.ai-component-upholstery-group-image-set {
+  width: min(100%, 176px);
+}
+
+.ai-component-upholstery-group-visual::before,
+.ai-component-upholstery-group-visual::after,
+.ai-component-upholstery-group-visual span,
+.ai-component-upholstery-group-visual span::before,
+.ai-component-upholstery-group-visual span::after {
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  border-color: currentColor;
+}
+
+.ai-component-upholstery-group-card h4 {
+  margin: 0;
+  color: var(--component-detail-ink) !important;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.02vw, 1.16rem);
+  font-weight: 900;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.ai-component-upholstery-group-card p {
+  margin: 0;
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.72rem, 0.75vw, 0.82rem);
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.ai-component-upholstery-visual-sofa-frame::before {
+  left: 16px;
+  top: 48px;
+  width: 126px;
+  height: 58px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  background:
+    linear-gradient(90deg, currentColor 0 2px, transparent 2px 24px, currentColor 24px 26px, transparent 26px 54px, currentColor 54px 56px, transparent 56px),
+    linear-gradient(currentColor 0 0) 10px 26px / 106px 2px no-repeat;
+  transform: skewY(-9deg);
+}
+
+.ai-component-upholstery-visual-sofa-frame::after {
+  left: 26px;
+  top: 26px;
+  width: 122px;
+  height: 36px;
+  border: 2px solid currentColor;
+  transform: skewY(-9deg);
+  opacity: 0.72;
+}
+
+.ai-component-upholstery-visual-sofa-frame span {
+  left: 18px;
+  top: 92px;
+  width: 122px;
+  height: 26px;
+  border-left: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: skewY(-9deg);
+}
+
+.ai-component-upholstery-visual-chair-frame::before {
+  left: 62px;
+  top: 18px;
+  width: 50px;
+  height: 82px;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  transform: skewY(-8deg);
+}
+
+.ai-component-upholstery-visual-chair-frame::after {
+  left: 42px;
+  top: 82px;
+  width: 86px;
+  height: 28px;
+  border: 2px solid currentColor;
+  transform: skewX(-16deg);
+}
+
+.ai-component-upholstery-visual-chair-frame span {
+  left: 48px;
+  top: 104px;
+  width: 84px;
+  height: 32px;
+  border-left: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: skewX(-8deg);
+}
+
+.ai-component-upholstery-visual-seat::before {
+  left: 22px;
+  top: 50px;
+  width: 118px;
+  height: 56px;
+  border: 2px solid currentColor;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle, currentColor 0 2px, transparent 3px) 24px 18px / 36px 28px,
+    repeating-linear-gradient(168deg, rgba(32, 32, 32, 0.14) 0 1px, transparent 1px 8px);
+  transform: skewY(-8deg);
+}
+
+.ai-component-upholstery-visual-seat::after {
+  left: 34px;
+  top: 95px;
+  width: 106px;
+  height: 20px;
+  border: 2px solid currentColor;
+  border-top: 0;
+  border-radius: 0 0 9px 9px;
+  transform: skewY(-8deg);
+  opacity: 0.7;
+}
+
+.ai-component-upholstery-visual-back::before {
+  left: 28px;
+  top: 28px;
+  width: 112px;
+  height: 56px;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  background: repeating-linear-gradient(168deg, rgba(32, 32, 32, 0.14) 0 1px, transparent 1px 8px);
+  transform: skewY(-13deg);
+}
+
+.ai-component-upholstery-visual-back::after {
+  left: 38px;
+  top: 76px;
+  width: 104px;
+  height: 50px;
+  border: 2px solid currentColor;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle, currentColor 0 2px, transparent 3px) 28px 15px / 40px 24px,
+    repeating-linear-gradient(168deg, rgba(32, 32, 32, 0.12) 0 1px, transparent 1px 8px);
+  transform: skewY(-10deg);
+}
+
+.ai-component-upholstery-visual-arms::before,
+.ai-component-upholstery-visual-arms::after {
+  top: 46px;
+  width: 48px;
+  height: 78px;
+  border: 2px solid currentColor;
+  border-radius: 7px;
+  background: repeating-linear-gradient(96deg, rgba(32, 32, 32, 0.13) 0 1px, transparent 1px 7px);
+}
+
+.ai-component-upholstery-visual-arms::before {
+  left: 16px;
+  transform: skewY(-9deg);
+}
+
+.ai-component-upholstery-visual-arms::after {
+  right: 16px;
+  transform: skewY(8deg);
+}
+
+.ai-component-upholstery-visual-arms span {
+  left: 52px;
+  top: 68px;
+  width: 66px;
+  height: 34px;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+}
+
+.ai-component-upholstery-visual-set {
+  background:
+    linear-gradient(currentColor 0 0) 18px 96px / 126px 2px no-repeat,
+    radial-gradient(circle, currentColor 42%, transparent 44%) 136px 96px / 12px 12px no-repeat;
+}
+
+.ai-component-upholstery-visual-set::before {
+  left: 48px;
+  top: 42px;
+  width: 78px;
+  height: 46px;
+  border: 2px solid currentColor;
+  border-radius: 9px;
+  transform: skewY(-8deg);
+}
+
+.ai-component-upholstery-visual-set::after {
+  left: 18px;
+  top: 68px;
+  width: 132px;
+  height: 38px;
+  border: 2px solid currentColor;
+  border-radius: 7px;
+  transform: skewY(-7deg);
+  opacity: 0.75;
+}
+
+.ai-component-upholstery-visual-set span::before {
+  left: 16px;
+  top: 24px;
+  width: 32px;
+  height: 52px;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  transform: skewY(-8deg);
+}
+
+.ai-component-upholstery-visual-set span::after {
+  left: 122px;
+  top: 28px;
+  width: 34px;
+  height: 50px;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  transform: skewY(8deg);
+}
+
+@media (max-width: 1180px) {
+  .ai-component-upholstery-groups-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .ai-component-upholstery-groups-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-component-upholstery-group-card {
+    min-height: 0;
+  }
+}
+
+.ai-component-upholstery-specs {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1.03fr) minmax(0, 0.96fr);
+  gap: clamp(0.68rem, 0.95vw, 0.95rem);
+  align-items: stretch;
+  padding-top: clamp(0.9rem, 1.25vw, 1.15rem);
+  border-top: 1px solid rgba(118, 96, 72, 0.14);
+}
+
+.ai-component-upholstery-spec-panel {
+  display: grid;
+  align-content: start;
+  gap: 0.78rem;
+  min-height: 312px;
+  margin: 0;
+  padding: clamp(0.95rem, 1.15vw, 1.18rem);
+  border: 1px solid rgba(118, 96, 72, 0.24);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 22% 8%, rgba(255, 255, 255, 0.74), transparent 13rem),
+    #faf5ef;
+  box-shadow: none;
+}
+
+.ai-component-upholstery-spec-panel h3 {
+  margin: 0;
+  color: var(--component-detail-ink) !important;
+  font-family: var(--font-body);
+  font-size: clamp(1.12rem, 1.36vw, 1.42rem);
+  font-weight: 900;
+  line-height: 1.16;
+}
+
+.ai-component-upholstery-spec-panel > p {
+  margin: 0;
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.66rem, 0.72vw, 0.8rem);
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.ai-component-upholstery-material-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.64rem 0.52rem;
+}
+
+.ai-component-upholstery-material-card {
+  display: grid;
+  grid-template-rows: 50px auto;
+  justify-items: center;
+  align-content: start;
+  gap: 0.3rem;
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.ai-component-upholstery-material-card figcaption {
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.58rem, 0.62vw, 0.68rem);
+  font-weight: 750;
+  line-height: 1.18;
+}
+
+.ai-component-upholstery-material-image,
+.ai-component-upholstery-material-placeholder {
+  display: block;
+  width: 50px;
+  height: 50px !important;
+  max-width: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  object-position: center;
+}
+
+.ai-component-upholstery-material-placeholder {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(32, 32, 32, 0.22) !important;
+  border-radius: 7px !important;
+  background:
+    radial-gradient(circle at 28% 22%, rgba(255, 255, 255, 0.85), transparent 22px),
+    rgba(255, 255, 255, 0.22) !important;
+  color: rgba(32, 32, 32, 0.78);
+}
+
+.ai-component-upholstery-material-placeholder::before,
+.ai-component-upholstery-material-placeholder::after {
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  border-color: currentColor;
+}
+
+.ai-upholstery-material-foam::before {
+  left: 9px;
+  top: 15px;
+  width: 32px;
+  height: 22px;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  transform: skewY(-10deg);
+}
+
+.ai-upholstery-material-foam::after {
+  left: 13px;
+  top: 11px;
+  width: 28px;
+  height: 15px;
+  border: 2px solid currentColor;
+  border-radius: 7px;
+  opacity: 0.6;
+}
+
+.ai-upholstery-material-fiber {
+  border-radius: 999px !important;
+}
+
+.ai-upholstery-material-fiber::before {
+  inset: 10px 8px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, currentColor 0 1px, transparent 2px) 0 0 / 10px 9px,
+    radial-gradient(circle, currentColor 0 1px, transparent 2px) 5px 4px / 10px 9px;
+  opacity: 0.45;
+}
+
+.ai-upholstery-material-fabric::before,
+.ai-upholstery-material-outdoor::before,
+.ai-upholstery-material-pu::before,
+.ai-upholstery-material-leather::before {
+  inset: 11px 7px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  background: repeating-linear-gradient(96deg, rgba(32, 32, 32, 0.14) 0 1px, transparent 1px 6px);
+}
+
+.ai-upholstery-material-outdoor::after {
+  left: 8px;
+  top: 25px;
+  width: 34px;
+  height: 8px;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.ai-upholstery-material-pu::after,
+.ai-upholstery-material-leather::after {
+  left: 12px;
+  top: 14px;
+  width: 26px;
+  height: 24px;
+  background:
+    linear-gradient(45deg, transparent 45%, currentColor 47% 50%, transparent 52%),
+    linear-gradient(-45deg, transparent 45%, currentColor 47% 50%, transparent 52%);
+  opacity: 0.3;
+}
+
+.ai-upholstery-material-webbing::before {
+  left: 7px;
+  top: 18px;
+  width: 36px;
+  height: 6px;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  transform: rotate(-15deg);
+  box-shadow: 0 13px 0 -1px rgba(32, 32, 32, 0.72);
+}
+
+.ai-upholstery-material-webbing::after {
+  left: 16px;
+  top: 8px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.ai-upholstery-material-sewing::before {
+  left: 12px;
+  top: 13px;
+  width: 24px;
+  height: 22px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.ai-upholstery-material-sewing::after {
+  left: 8px;
+  top: 30px;
+  width: 36px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(-22deg);
+}
+
+.ai-upholstery-material-packaging::before {
+  left: 12px;
+  top: 12px;
+  width: 26px;
+  height: 28px;
+  border: 2px solid currentColor;
+  background:
+    linear-gradient(45deg, transparent 45%, currentColor 47% 50%, transparent 52%) right top / 13px 13px no-repeat;
+}
+
+.ai-upholstery-material-packaging::after {
+  left: 17px;
+  top: 25px;
+  width: 16px;
+  height: 2px;
+  background: currentColor;
+  box-shadow: 0 6px 0 currentColor;
+}
+
+.ai-component-upholstery-check-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1.05rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-component-upholstery-check-list li {
+  position: relative;
+  margin: 0;
+  padding-left: 1.65rem;
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.62rem, 0.68vw, 0.76rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.ai-component-upholstery-check-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  width: 1rem;
+  height: 1rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.72);
+  border-radius: 50%;
+}
+
+.ai-component-upholstery-check-list li::after {
+  content: '';
+  position: absolute;
+  left: 0.28rem;
+  top: 0.31rem;
+  width: 0.5rem;
+  height: 0.27rem;
+  border-left: 2px solid rgba(32, 32, 32, 0.86);
+  border-bottom: 2px solid rgba(32, 32, 32, 0.86);
+  transform: rotate(-45deg);
+}
+
+.ai-component-upholstery-state-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.78rem 1.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-component-upholstery-state-list li {
+  position: relative;
+  min-height: 34px;
+  margin: 0;
+  padding-left: 2.45rem;
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.7rem, 0.76vw, 0.84rem);
+  font-weight: 750;
+  line-height: 1.28;
+}
+
+.ai-component-upholstery-state-list li::before,
+.ai-component-upholstery-state-list li::after {
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  border-color: rgba(32, 32, 32, 0.7);
+}
+
+.ai-component-upholstery-state-list li[class^='ai-upholstery-state-']::before {
+  left: 0;
+  top: 0.08rem;
+  width: 1.65rem;
+  height: 1.45rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.64);
+  background:
+    linear-gradient(30deg, transparent 46%, rgba(32, 32, 32, 0.36) 48% 52%, transparent 54%),
+    rgba(255, 255, 255, 0.22);
+  transform: skewY(-13deg);
+}
+
+.ai-component-upholstery-state-list li[class^='ai-upholstery-state-']::after {
+  left: 0.38rem;
+  top: -0.08rem;
+  width: 1.38rem;
+  height: 0.76rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.56);
+  transform: skewX(-24deg);
+  opacity: 0.72;
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-frame-raw::before,
+.ai-component-upholstery-state-list .ai-upholstery-state-frame-sanded::before,
+.ai-component-upholstery-state-list .ai-upholstery-state-frame-tested::before,
+.ai-component-upholstery-state-list .ai-upholstery-state-webbing::before {
+  left: 0;
+  top: 0.48rem;
+  width: 1.9rem;
+  height: 1rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.66);
+  background: none;
+  transform: skewY(-10deg);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-frame-raw::after,
+.ai-component-upholstery-state-list .ai-upholstery-state-frame-sanded::after,
+.ai-component-upholstery-state-list .ai-upholstery-state-frame-tested::after,
+.ai-component-upholstery-state-list .ai-upholstery-state-webbing::after {
+  left: 0.22rem;
+  top: 0.18rem;
+  width: 1.68rem;
+  height: 0.62rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.56);
+  transform: skewX(-24deg);
+  opacity: 0.72;
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-frame-sanded::before {
+  background: repeating-linear-gradient(0deg, rgba(32, 32, 32, 0.22) 0 1px, transparent 1px 4px);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-frame-tested::before {
+  box-shadow: inset 0 0 0 5px rgba(32, 32, 32, 0.08);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-webbing::before {
+  background:
+    linear-gradient(22deg, transparent 45%, rgba(32, 32, 32, 0.72) 47% 51%, transparent 53%),
+    linear-gradient(-22deg, transparent 45%, rgba(32, 32, 32, 0.72) 47% 51%, transparent 53%);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-seat-cushion::before,
+.ai-component-upholstery-state-list .ai-upholstery-state-back-cushion::before,
+.ai-component-upholstery-state-list .ai-upholstery-state-upholstered::before {
+  left: 0;
+  top: 0.28rem;
+  width: 1.86rem;
+  height: 1.22rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.66);
+  border-radius: 0.38rem;
+  background:
+    radial-gradient(circle, rgba(32, 32, 32, 0.72) 0 1px, transparent 2px) 0.28rem 0.22rem / 0.68rem 0.52rem,
+    rgba(255, 255, 255, 0.18);
+  transform: skewY(-8deg);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-seat-cushion::after,
+.ai-component-upholstery-state-list .ai-upholstery-state-back-cushion::after,
+.ai-component-upholstery-state-list .ai-upholstery-state-upholstered::after {
+  left: 0.18rem;
+  top: 1.12rem;
+  width: 1.66rem;
+  height: 0.42rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.5);
+  border-top: 0;
+  border-radius: 0 0 0.3rem 0.3rem;
+  transform: skewY(-8deg);
+  opacity: 0.78;
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-back-cushion::before {
+  top: 0.08rem;
+  height: 1.55rem;
+  border-radius: 0.5rem;
+  transform: skewY(-12deg);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-back-cushion::after {
+  top: 1.28rem;
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-cover::before {
+  left: 0.12rem;
+  top: 0.12rem;
+  width: 1.45rem;
+  height: 1.55rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.64);
+  border-radius: 0.18rem;
+  background:
+    linear-gradient(45deg, transparent 46%, rgba(32, 32, 32, 0.44) 48% 52%, transparent 54%),
+    repeating-linear-gradient(90deg, rgba(32, 32, 32, 0.16) 0 1px, transparent 1px 5px);
+  transform: skewY(-6deg);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-cover::after {
+  left: 1.36rem;
+  top: 0.26rem;
+  width: 0.45rem;
+  height: 1.24rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.44);
+  transform: skewY(14deg);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-ready::before {
+  left: 0.08rem;
+  top: 0.26rem;
+  width: 1.72rem;
+  height: 1.2rem;
+  border: 1.7px dashed rgba(32, 32, 32, 0.7);
+  border-radius: 0.25rem;
+  background: none;
+  transform: skewY(-8deg);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-ready::after {
+  left: 0.42rem;
+  top: 0.62rem;
+  width: 1rem;
+  height: 0.24rem;
+  border: 0;
+  border-top: 2px solid rgba(32, 32, 32, 0.68);
+  border-bottom: 2px solid rgba(32, 32, 32, 0.68);
+  transform: none;
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-foam-cut::before,
+.ai-component-upholstery-state-list .ai-upholstery-state-foam-layer::before {
+  left: 0.04rem;
+  top: 0.42rem;
+  width: 1.88rem;
+  height: 1rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.66);
+  border-radius: 0.32rem;
+  background: rgba(255, 255, 255, 0.16);
+  transform: skewY(-9deg);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-foam-cut::after {
+  left: 0.34rem;
+  top: 0.1rem;
+  width: 1.36rem;
+  height: 0.58rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.48);
+  border-radius: 0.28rem;
+  transform: skewX(-24deg);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-foam-layer::before {
+  background:
+    linear-gradient(rgba(32, 32, 32, 0.58) 0 1px, transparent 1px 5px),
+    rgba(255, 255, 255, 0.16);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-foam-layer::after {
+  left: 0.2rem;
+  top: 0.12rem;
+  width: 1.62rem;
+  height: 0.56rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.48);
+  border-radius: 0.2rem;
+  transform: skewX(-24deg);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-flatpack::before {
+  left: 0.02rem;
+  top: 0.42rem;
+  width: 1.92rem;
+  height: 1.02rem;
+  border: 1.7px solid rgba(32, 32, 32, 0.66);
+  background:
+    linear-gradient(90deg, rgba(32, 32, 32, 0.56) 0 1px, transparent 1px 0.56rem, rgba(32, 32, 32, 0.56) 0.56rem 0.66rem, transparent 0.66rem),
+    linear-gradient(rgba(32, 32, 32, 0.56) 0 1px, transparent 1px 0.52rem, rgba(32, 32, 32, 0.56) 0.52rem 0.62rem, transparent 0.62rem);
+  transform: skewY(-8deg);
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-flatpack::after {
+  left: 0.28rem;
+  top: 1.22rem;
+  width: 1.46rem;
+  height: 0.22rem;
+  border: 0;
+  border-top: 2px solid rgba(32, 32, 32, 0.64);
+  transform: skewY(-8deg);
+}
+
+@media (max-width: 1180px) {
+  .ai-component-upholstery-specs {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .ai-component-upholstery-material-grid,
+  .ai-component-upholstery-check-list,
+  .ai-component-upholstery-state-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ai-component-upholstery-process {
+  display: grid;
+  gap: clamp(0.42rem, 0.75vw, 0.7rem);
+  padding-top: clamp(0.85rem, 1.2vw, 1.1rem);
+}
+
+.ai-component-upholstery-process h3 {
+  margin: 0;
+  color: var(--component-detail-ink) !important;
+  font-family: var(--font-body);
+  font-size: clamp(1.28rem, 1.55vw, 1.66rem);
+  font-weight: 900;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.ai-component-upholstery-process-flow {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  column-gap: clamp(0.45rem, 0.72vw, 0.72rem);
+  align-items: start;
+  position: relative;
+  min-height: 152px;
+  padding: clamp(0.7rem, 0.95vw, 0.9rem) clamp(0.75rem, 1vw, 1rem) clamp(0.85rem, 1vw, 1rem);
+  border: 1px solid rgba(118, 96, 72, 0.24);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 50% 8%, rgba(255, 255, 255, 0.72), transparent 16rem),
+    #faf5ef;
+}
+
+.ai-component-upholstery-process-step {
+  position: relative;
+  display: grid;
+  grid-template-rows: 78px auto;
+  justify-items: center;
+  gap: 0.36rem;
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.ai-component-upholstery-process-index {
+  position: absolute;
+  top: -0.65rem;
+  left: 50%;
+  z-index: 2;
+  display: grid;
+  width: 1.25rem;
+  height: 1.25rem;
+  place-items: center;
+  border: 1.6px solid rgba(32, 32, 32, 0.7);
+  border-radius: 50%;
+  color: var(--component-detail-ink) !important;
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1;
+  background: #faf5ef;
+  transform: translateX(-50%);
+}
+
+.ai-component-upholstery-process-image,
+.ai-component-upholstery-process-placeholder {
+  display: block;
+  align-self: end;
+  justify-self: center;
+  width: min(100%, 88px);
+  height: 74px !important;
+  max-width: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.ai-component-upholstery-process-image-frame {
+  width: min(100%, 104px);
+}
+
+.ai-component-upholstery-process-image-upholster {
+  width: min(100%, 98px);
+}
+
+.ai-component-upholstery-process-image-foam {
+  width: min(100%, 90px);
+}
+
+.ai-component-upholstery-process-image-sewing {
+  width: min(100%, 82px);
+}
+
+.ai-component-upholstery-process-image-export {
+  width: min(100%, 100px);
+}
+
+.ai-component-upholstery-process-placeholder {
+  position: relative;
+  overflow: visible;
+  color: rgba(32, 32, 32, 0.78);
+}
+
+.ai-component-upholstery-process-placeholder::before,
+.ai-component-upholstery-process-placeholder::after,
+.ai-component-upholstery-process-placeholder span {
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  border-color: currentColor;
+}
+
+.ai-component-upholstery-process-foam::before {
+  left: 19px;
+  top: 27px;
+  width: 54px;
+  height: 30px;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  background:
+    linear-gradient(rgba(32, 32, 32, 0.28) 0 1px, transparent 1px 8px),
+    rgba(255, 255, 255, 0.18);
+  transform: skewY(-9deg);
+}
+
+.ai-component-upholstery-process-foam::after {
+  left: 26px;
+  top: 18px;
+  width: 46px;
+  height: 21px;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  transform: skewX(-22deg);
+  opacity: 0.72;
+}
+
+.ai-component-upholstery-process-sewing::before {
+  left: 30px;
+  top: 15px;
+  width: 34px;
+  height: 42px;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  background:
+    linear-gradient(currentColor 0 0) 50% 11px / 18px 2px no-repeat,
+    linear-gradient(currentColor 0 0) 50% 22px / 18px 2px no-repeat,
+    rgba(255, 255, 255, 0.12);
+}
+
+.ai-component-upholstery-process-sewing::after {
+  left: 20px;
+  top: 53px;
+  width: 54px;
+  height: 13px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transform: rotate(-4deg);
+}
+
+.ai-component-upholstery-process-export::before {
+  left: 14px;
+  top: 28px;
+  width: 48px;
+  height: 26px;
+  border: 2px solid currentColor;
+  background:
+    linear-gradient(currentColor 0 0) 9px 8px / 30px 2px no-repeat,
+    rgba(255, 255, 255, 0.12);
+}
+
+.ai-component-upholstery-process-export::after {
+  left: 58px;
+  top: 36px;
+  width: 24px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-left: 0;
+  border-radius: 0 4px 4px 0;
+  background:
+    radial-gradient(circle, currentColor 0 3px, transparent 4px) -40px 15px / 86px 9px no-repeat;
+}
+
+.ai-component-upholstery-process-step figcaption {
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.62rem, 0.68vw, 0.76rem);
+  font-weight: 800;
+  line-height: 1.22;
+}
+
+.ai-component-upholstery-process-arrow {
+  position: absolute;
+  top: clamp(3.42rem, 4.05vw, 4.25rem);
+  width: clamp(16px, 1.35vw, 24px);
+  height: 1px;
+  pointer-events: none;
+}
+
+.ai-component-upholstery-process-arrow::before,
+.ai-component-upholstery-process-arrow::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background: rgba(32, 32, 32, 0.86);
+}
+
+.ai-component-upholstery-process-arrow::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.ai-component-upholstery-process-arrow::after {
+  right: 0;
+  top: -4px;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid rgba(32, 32, 32, 0.86);
+  border-right: 2px solid rgba(32, 32, 32, 0.86);
+  background: transparent;
+  transform: rotate(45deg);
+}
+
+.ai-component-upholstery-process-arrow:nth-of-type(1) {
+  left: calc((100% - 2rem) / 9 * 1 - 0.25rem);
+}
+
+.ai-component-upholstery-process-arrow:nth-of-type(2) {
+  left: calc((100% - 2rem) / 9 * 2 - 0.25rem);
+}
+
+.ai-component-upholstery-process-arrow:nth-of-type(3) {
+  left: calc((100% - 2rem) / 9 * 3 - 0.25rem);
+}
+
+.ai-component-upholstery-process-arrow:nth-of-type(4) {
+  left: calc((100% - 2rem) / 9 * 4 - 0.25rem);
+}
+
+.ai-component-upholstery-process-arrow:nth-of-type(5) {
+  left: calc((100% - 2rem) / 9 * 5 - 0.25rem);
+}
+
+.ai-component-upholstery-process-arrow:nth-of-type(6) {
+  left: calc((100% - 2rem) / 9 * 6 - 0.25rem);
+}
+
+.ai-component-upholstery-process-arrow:nth-of-type(7) {
+  left: calc((100% - 2rem) / 9 * 7 - 0.25rem);
+}
+
+.ai-component-upholstery-process-arrow:nth-of-type(8) {
+  left: calc((100% - 2rem) / 9 * 8 - 0.25rem);
+}
+
+@media (max-width: 1180px) {
+  .ai-component-upholstery-process-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 1.25rem;
+  }
+
+  .ai-component-upholstery-process-arrow {
+    display: none;
+  }
+}
+
+.ai-component-upholstery-info-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, 1.04fr) minmax(0, 0.96fr);
+  gap: clamp(0.68rem, 0.95vw, 0.95rem);
+  padding-top: clamp(0.9rem, 1.25vw, 1.15rem);
+}
+
+.ai-component-upholstery-info-panel {
+  display: grid;
+  align-content: start;
+  gap: 0.82rem;
+  min-height: 238px;
+  margin: 0;
+  padding: clamp(0.92rem, 1.1vw, 1.12rem);
+  border: 1px solid rgba(118, 96, 72, 0.24);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 22% 8%, rgba(255, 255, 255, 0.74), transparent 13rem),
+    #faf5ef;
+}
+
+.ai-component-upholstery-info-panel h3 {
+  margin: 0;
+  color: var(--component-detail-ink) !important;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.24vw, 1.28rem);
+  font-weight: 900;
+  line-height: 1.16;
+}
+
+.ai-component-upholstery-icon-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.62rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-component-upholstery-icon-list li {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 0.45rem;
+  align-items: start;
+  min-width: 0;
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.58rem, 0.64vw, 0.72rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ai-component-upholstery-info-icon {
+  position: relative;
+  display: block;
+  width: 19px;
+  height: 19px;
+  border: 1.5px solid rgba(32, 32, 32, 0.68);
+  border-radius: 4px;
+  color: rgba(32, 32, 32, 0.78);
+}
+
+.ai-component-upholstery-info-icon::before,
+.ai-component-upholstery-info-icon::after {
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  border-color: currentColor;
+}
+
+.ai-upholstery-info-icon-document::before {
+  left: 4px;
+  top: 4px;
+  width: 9px;
+  height: 1.5px;
+  background: currentColor;
+  box-shadow: 0 4px 0 currentColor, 0 8px 0 currentColor;
+}
+
+.ai-upholstery-info-icon-document::after {
+  right: 1px;
+  top: 1px;
+  width: 5px;
+  height: 5px;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+}
+
+.ai-upholstery-info-icon-foam::before,
+.ai-upholstery-info-icon-cushion::before,
+.ai-upholstery-info-icon-comfort::before {
+  left: 3px;
+  top: 6px;
+  width: 13px;
+  height: 8px;
+  border: 1.5px solid currentColor;
+  border-radius: 4px;
+}
+
+.ai-upholstery-info-icon-layers::before {
+  left: 3px;
+  top: 5px;
+  width: 12px;
+  height: 8px;
+  border: 1.5px solid currentColor;
+  transform: skewX(-18deg);
+  box-shadow: 2px 3px 0 -1px #faf5ef, 2px 3px 0 0 currentColor;
+}
+
+.ai-upholstery-info-icon-stitch::before {
+  left: 4px;
+  top: 3px;
+  width: 10px;
+  height: 13px;
+  border-left: 1.5px dashed currentColor;
+  border-right: 1.5px dashed currentColor;
+}
+
+.ai-upholstery-info-icon-material::before,
+.ai-upholstery-info-icon-swatch::before {
+  left: 4px;
+  top: 4px;
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid currentColor;
+  background: repeating-linear-gradient(96deg, rgba(32, 32, 32, 0.18) 0 1px, transparent 1px 4px);
+}
+
+.ai-upholstery-info-icon-batch::before,
+.ai-upholstery-info-icon-pack::before,
+.ai-upholstery-info-icon-quantity::before {
+  left: 3px;
+  top: 3px;
+  width: 7px;
+  height: 7px;
+  border: 1.5px solid currentColor;
+  box-shadow: 6px 0 0 -1px #faf5ef, 6px 0 0 0 currentColor, 3px 7px 0 -1px #faf5ef, 3px 7px 0 0 currentColor;
+}
+
+.ai-upholstery-info-icon-sample::before,
+.ai-upholstery-info-icon-frame::before {
+  left: 3px;
+  top: 7px;
+  width: 13px;
+  height: 8px;
+  border: 1.5px solid currentColor;
+  transform: skewY(-10deg);
+}
+
+.ai-upholstery-info-icon-qc::before {
+  left: 4px;
+  top: 4px;
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+}
+
+.ai-upholstery-info-icon-qc::after {
+  left: 7px;
+  top: 8px;
+  width: 7px;
+  height: 4px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+}
+
+.ai-upholstery-info-icon-export::before {
+  left: 2px;
+  top: 7px;
+  width: 11px;
+  height: 7px;
+  border: 1.5px solid currentColor;
+}
+
+.ai-upholstery-info-icon-export::after {
+  left: 12px;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border: 1.5px solid currentColor;
+  border-left: 0;
+  box-shadow: -8px 6px 0 -2px currentColor, 3px 6px 0 -2px currentColor;
+}
+
+.ai-upholstery-info-icon-image::before {
+  left: 3px;
+  top: 4px;
+  width: 13px;
+  height: 11px;
+  border: 1.5px solid currentColor;
+}
+
+.ai-upholstery-info-icon-image::after {
+  left: 5px;
+  top: 10px;
+  width: 9px;
+  height: 5px;
+  background: linear-gradient(135deg, transparent 0 45%, currentColor 47% 53%, transparent 55%);
+}
+
+.ai-upholstery-info-icon-joint::before {
+  left: 3px;
+  top: 7px;
+  width: 13px;
+  height: 4px;
+  border-top: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-18deg);
+}
+
+.ai-upholstery-info-icon-measure::before {
+  left: 4px;
+  top: 4px;
+  width: 11px;
+  height: 11px;
+  border-left: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+}
+
+.ai-upholstery-info-icon-finish::before {
+  left: 5px;
+  top: 3px;
+  width: 8px;
+  height: 12px;
+  border: 1.5px solid currentColor;
+  border-radius: 5px 5px 3px 3px;
+}
+
+.ai-component-upholstery-state-list li[class^='ai-upholstery-state-']::before {
+  left: 0;
+  top: 0.08rem;
+  width: 1.86rem;
+  height: 1.86rem;
+  border: 1px solid rgba(118, 96, 72, 0.28);
+  border-radius: 7px;
+  background:
+    radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.9), transparent 1rem),
+    rgba(255, 255, 255, 0.28);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  transform: none;
+  opacity: 1;
+}
+
+.ai-component-upholstery-state-list li[class^='ai-upholstery-state-']::after {
+  left: 0.34rem;
+  top: 0.42rem;
+  width: 1.18rem;
+  height: 1.18rem;
+  border: 0;
+  background: rgba(32, 32, 32, 0.78);
+  opacity: 1;
+  transform: none;
+  -webkit-mask: var(--upholstery-state-icon) center / contain no-repeat;
+  mask: var(--upholstery-state-icon) center / contain no-repeat;
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-frame-raw {
+  --upholstery-state-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 9h14v8H5z'/%3E%3Cpath d='M8 9V6h8v3M7 17v3M17 17v3M9 13h6'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-seat-cushion {
+  --upholstery-state-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 9.5c0-1.4 1-2.5 2.4-2.5h9.2c1.4 0 2.4 1.1 2.4 2.5V14c0 1.7-1.3 3-3 3H8c-1.7 0-3-1.3-3-3z'/%3E%3Cpath d='M8 12h8M9 9.5h.1M15 9.5h.1'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-frame-sanded {
+  --upholstery-state-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 10h13v7H5zM7 17v3M16 17v3'/%3E%3Cpath d='M7 12h10M7 14h8M19 5l-3 3M20 8h-2M16 4v2'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-back-cushion {
+  --upholstery-state-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 5h10c1.1 0 2 .9 2 2v9.5c0 1.4-1.1 2.5-2.5 2.5h-9C6.1 19 5 17.9 5 16.5V7c0-1.1.9-2 2-2z'/%3E%3Cpath d='M8 12h8M9.5 8.5h.1M14.5 8.5h.1'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-frame-tested {
+  --upholstery-state-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 10h10.5v7H4.5zM7 17v3M14 17v3'/%3E%3Cpath d='m15.5 7.5 2 2 4-4'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-cover {
+  --upholstery-state-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 4h10l2 4-2 2v10H7V10L5 8z'/%3E%3Cpath d='M9 4c0 1.5 1.2 2.5 3 2.5S15 5.5 15 4M9 14h6M9 17h6'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-webbing {
+  --upholstery-state-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 9h15v8h-15zM7 17v3M17 17v3'/%3E%3Cpath d='m6 10 12 6M18 10 6 16M9 9v8M15 9v8'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-ready {
+  --upholstery-state-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 10h10v7H5zM7 17v3M15 17v3'/%3E%3Cpath d='M14 6h5v5M13.5 11.5 19 6'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-foam-cut {
+  --upholstery-state-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 13.5h10.8c1.6 0 2.7 1 2.7 2.4S16.9 18 15.3 18H7c-1.9 0-3.5-1.6-3.5-3.5z'/%3E%3Cpath d='m14 5 5 5M19 5l-5 5M6.5 13.5 15 6'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-upholstered {
+  --upholstery-state-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12c0-1.4 1.1-2.5 2.5-2.5h9c1.4 0 2.5 1.1 2.5 2.5v3c0 1.7-1.3 3-3 3H8c-1.7 0-3-1.3-3-3z'/%3E%3Cpath d='M8 9.5V7h8v2.5M9 13.5h.1M15 13.5h.1M8 18v2M16 18v2'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-foam-layer {
+  --upholstery-state-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m12 4 8 4-8 4-8-4zM4 12l8 4 8-4M4 16l8 4 8-4'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-state-list .ai-upholstery-state-flatpack {
+  --upholstery-state-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 7 8-4 8 4-8 4zM4 7v10l8 4 8-4V7'/%3E%3Cpath d='M12 11v10M8 5l8 4'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-info-icon {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(118, 96, 72, 0.28);
+  border-radius: 6px;
+  color: rgba(32, 32, 32, 0.78);
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.9), transparent 0.86rem),
+    rgba(255, 255, 255, 0.28);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.46);
+}
+
+.ai-component-upholstery-info-icon::before {
+  inset: auto;
+  width: 14px;
+  height: 14px;
+  border: 0;
+  background: currentColor;
+  box-shadow: none;
+  transform: none;
+  opacity: 1;
+  -webkit-mask: var(--upholstery-info-icon) center / contain no-repeat;
+  mask: var(--upholstery-info-icon) center / contain no-repeat;
+}
+
+.ai-component-upholstery-info-icon::after {
+  display: none;
+}
+
+.ai-upholstery-info-icon-document {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 3h7l5 5v13H7z'/%3E%3Cpath d='M14 3v5h5M10 12h6M10 16h6M10 8h1'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-foam {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 11c0-1.7 1.3-3 3-3h8c1.7 0 3 1.3 3 3v4c0 1.7-1.3 3-3 3H8c-1.7 0-3-1.3-3-3z'/%3E%3Cpath d='M8 14h8M9 11h.1M15 11h.1M12 8V5'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-layers {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m12 4 8 4-8 4-8-4zM4 12l8 4 8-4M4 16l8 4 8-4'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-stitch {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 4 7 15'/%3E%3Cpath d='M15 4h3v3M7 15l-3 6 6-3M8 8l2 2M12 6l2 2M6 12l2 2M15 13l2 2M12 16l2 2'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-material,
+.ai-upholstery-info-icon-swatch {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 4h12v16H6z'/%3E%3Cpath d='M9 4v16M12 4v16M15 4v16M6 9h12M6 15h12'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-batch {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 13h7v7H4zM13 13h7v7h-7zM8.5 4h7v7h-7z'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-sample {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 10h12v7H6zM8 17v3M16 17v3M8 10V7h8v3'/%3E%3Cpath d='m18 5 2-2M20 7h2M16 3V1'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-pack {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 7 8-4 8 4-8 4zM4 7v10l8 4 8-4V7'/%3E%3Cpath d='M12 11v10'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-qc {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3 5 6v5c0 4.2 2.8 8 7 10 4.2-2 7-5.8 7-10V6z'/%3E%3Cpath d='m8.5 12 2.2 2.2L15.8 9'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-export {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 8h11v9H3zM14 11h4l3 3v3h-7z'/%3E%3Cpath d='M7 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4M17 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-frame {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 10h14v8H5zM8 10V7h8v3M7 18v2M17 18v2M9 14h6'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-comfort,
+.ai-upholstery-info-icon-cushion {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 11c0-1.7 1.3-3 3-3h8c1.7 0 3 1.3 3 3v4c0 1.7-1.3 3-3 3H8c-1.7 0-3-1.3-3-3z'/%3E%3Cpath d='M8 13h8M9 10h.1M15 10h.1M8 18v2M16 18v2'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-image {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 5h14v14H5z'/%3E%3Cpath d='m7 16 4-4 3 3 2-2 2 3M9 9h.1'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-joint {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m8 7-5 5 5 5M16 7l5 5-5 5M10 12h4M12 9v6'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-measure {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 17 17 4l3 3L7 20z'/%3E%3Cpath d='m8 17-2-2M11 14l-2-2M14 11l-2-2M17 8l-2-2'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-finish {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 15c3-1 5-3 6-6l2-5 2 5c1 3 3 5 6 6-3 1-5 3-6 6l-2 5-2-5c-1-3-3-5-6-6z'/%3E%3C/svg%3E");
+}
+
+.ai-upholstery-info-icon-quantity {
+  --upholstery-info-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 19V9M12 19V5M19 19v-7M4 19h17'/%3E%3C/svg%3E");
+}
+
+.ai-component-upholstery-packaging-panel {
+  overflow: hidden;
+}
+
+.ai-component-upholstery-packaging-diagram {
+  position: relative;
+  min-height: 176px;
+  margin: 0;
+}
+
+.ai-component-upholstery-packaging-image {
+  position: absolute;
+  left: 17%;
+  top: 12px;
+  z-index: 1;
+  width: 64%;
+  height: 158px;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+}
+
+.ai-component-upholstery-packaging-sketch {
+  position: absolute;
+  left: 18%;
+  top: 24px;
+  width: 54%;
+  height: 128px;
+  color: rgba(32, 32, 32, 0.82);
+}
+
+.ai-component-upholstery-packaging-sketch span,
+.ai-component-upholstery-packaging-sketch span::before,
+.ai-component-upholstery-packaging-sketch span::after {
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  border-color: currentColor;
+}
+
+.ai-upholstery-pack-base {
+  left: 12px;
+  bottom: 15px;
+  width: 112px;
+  height: 42px;
+  border: 2px solid currentColor;
+  transform: skewY(-10deg);
+  background:
+    linear-gradient(90deg, currentColor 0 2px, transparent 2px 30px, currentColor 30px 32px, transparent 32px),
+    rgba(255, 255, 255, 0.16);
+}
+
+.ai-upholstery-pack-cushion {
+  left: 56px;
+  top: 14px;
+  width: 98px;
+  height: 34px;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  transform: skewY(-10deg);
+  background: repeating-linear-gradient(168deg, rgba(32, 32, 32, 0.14) 0 1px, transparent 1px 7px);
+}
+
+.ai-upholstery-pack-cover {
+  left: 34px;
+  top: 0;
+  width: 84px;
+  height: 20px;
+  border: 2px solid currentColor;
+  transform: skewX(-22deg);
+  opacity: 0.76;
+}
+
+.ai-upholstery-pack-hardware {
+  right: 16px;
+  top: 58px;
+  width: 42px;
+  height: 26px;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  background:
+    radial-gradient(circle, currentColor 0 2px, transparent 3px) 8px 8px / 14px 12px,
+    rgba(255, 255, 255, 0.15);
+}
+
+.ai-upholstery-pack-carton {
+  right: 24px;
+  bottom: 12px;
+  width: 58px;
+  height: 42px;
+  border: 2px solid currentColor;
+  background:
+    linear-gradient(90deg, transparent 47%, currentColor 49% 51%, transparent 53%),
+    linear-gradient(transparent 47%, currentColor 49% 51%, transparent 53%);
+  transform: skewY(-8deg);
+}
+
+.ai-upholstery-pack-label {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.54rem, 0.58vw, 0.66rem);
+  font-weight: 800;
+  line-height: 1.18;
+  white-space: nowrap;
+}
+
+.ai-upholstery-pack-label::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  background: rgba(32, 32, 32, 0.62);
+}
+
+.ai-upholstery-pack-label-cover {
+  left: 0;
+  top: 18px;
+}
+
+.ai-upholstery-pack-label-cover::after {
+  left: 100%;
+  top: 0.55rem;
+  width: 42px;
+}
+
+.ai-upholstery-pack-label-frame {
+  left: 0;
+  top: 74px;
+}
+
+.ai-upholstery-pack-label-frame::after {
+  left: 100%;
+  top: 0.55rem;
+  width: 38px;
+}
+
+.ai-upholstery-pack-label-cushion {
+  right: 0;
+  top: 14px;
+}
+
+.ai-upholstery-pack-label-cushion::after,
+.ai-upholstery-pack-label-hardware::after,
+.ai-upholstery-pack-label-part::after,
+.ai-upholstery-pack-label-carton::after {
+  right: 100%;
+  top: 0.55rem;
+  width: 38px;
+}
+
+.ai-upholstery-pack-label-hardware {
+  right: 0;
+  top: 62px;
+}
+
+.ai-upholstery-pack-label-part {
+  right: 0;
+  top: 106px;
+}
+
+.ai-upholstery-pack-label-carton {
+  right: 0;
+  bottom: 4px;
+}
+
+@media (max-width: 1180px) {
+  .ai-component-upholstery-info-panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .ai-component-upholstery-icon-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy > * {
   left: clamp(1.2rem, 2.1vw, 2.4rem);
   width: min(28%, 455px);
