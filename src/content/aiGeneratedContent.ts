@@ -7023,12 +7023,13 @@ const PRODUCTS_TRADE_FINANCING_SECTION_VN = `
       <div class="ai-oem-odm-support-grid">
         <article><h3>1. Hỗ trợ buyer trong kế hoạch đơn hàng</h3><p>ANSLIFE có thể hỗ trợ buyer xây dựng phương án tài trợ thương mại phù hợp với giá trị đơn hàng, lịch sản xuất, lịch kiểm hàng, chứng từ và kế hoạch xuất hàng.</p></article>
         <article><h3>2. Hỗ trợ nhà máy gia công</h3><p>ANSLIFE có thể hỗ trợ nhà máy gia công trong việc chuẩn bị vật liệu, triển khai sản xuất và duy trì tiến độ đối với các đơn hàng đã được xác nhận.</p></article>
-        <article><h3>3. Gắn với đơn hàng thực tế</h3><p>Tài trợ thương mại chỉ được xem xét trên cơ sở đơn hàng, dự án hoặc kế hoạch sản xuất cụ thể, không tách rời khỏi hoạt động sản xuất và xuất khẩu thực tế.</p></article>
-        <article><h3>4. Gắn với vật liệu và sản xuất</h3><p>Việc hỗ trợ tài trợ có thể liên quan đến chuẩn bị vật liệu, linh kiện, cấu kiện, sản xuất, hoàn thiện, đóng gói và các chi phí trực tiếp phục vụ đơn hàng.</p></article>
-        <article><h3>5. Gắn với QC độc lập</h3><p>Hoạt động tài trợ thương mại được liên kết với cơ chế kiểm soát chất lượng, checklist kiểm hàng, báo cáo QC và tình trạng thực tế của hàng hóa trong dự án.</p></article>
-        <article><h3>6. Gắn với chứng từ và xuất hàng</h3><p>ANSLIFE có thể xem xét tài trợ thương mại trong mối liên hệ với chứng từ xuất khẩu, điều kiện thanh toán, điều kiện thương mại, lịch đóng hàng và kế hoạch xuất hàng.</p></article>
-        <article><h3>7. Kiểm soát rủi ro theo từng dự án</h3><p>Mỗi phương án tài trợ thương mại được xem xét dựa trên buyer, nhà máy, sản phẩm, giá trị đơn hàng, tiến độ, tiêu chuẩn chất lượng và mức độ rủi ro của dự án.</p></article>
-        <article><h3>8. Hỗ trợ hợp tác dài hạn</h3><p>Với các buyer và nhà máy có hợp tác ổn định, tài trợ thương mại có thể trở thành một phần của mô hình vận hành chuỗi cung ứng dài hạn.</p></article>
+        <article><h3>3. Thiết bị, máy móc và chuyển giao công nghệ</h3><p>ANSLIFE có thể xem xét hỗ trợ các nhu cầu liên quan đến thiết bị máy móc, máy CNC, máy vận hành và nhân sự chuyển giao công nghệ khi các hạng mục này phục vụ trực tiếp cho đơn hàng hoặc kế hoạch sản xuất đã được xác nhận.</p></article>
+        <article><h3>4. Gắn với đơn hàng thực tế</h3><p>Tài trợ thương mại chỉ được xem xét trên cơ sở đơn hàng, dự án hoặc kế hoạch sản xuất cụ thể, không tách rời khỏi hoạt động sản xuất và xuất khẩu thực tế.</p></article>
+        <article><h3>5. Gắn với vật liệu và sản xuất</h3><p>Việc hỗ trợ tài trợ có thể liên quan đến chuẩn bị vật liệu, linh kiện, cấu kiện, sản xuất, hoàn thiện, đóng gói và các chi phí trực tiếp phục vụ đơn hàng.</p></article>
+        <article><h3>6. Gắn với QC độc lập</h3><p>Hoạt động tài trợ thương mại được liên kết với cơ chế kiểm soát chất lượng, checklist kiểm hàng, báo cáo QC và tình trạng thực tế của hàng hóa trong dự án.</p></article>
+        <article><h3>7. Gắn với chứng từ và xuất hàng</h3><p>ANSLIFE có thể xem xét tài trợ thương mại trong mối liên hệ với chứng từ xuất khẩu, điều kiện thanh toán, điều kiện thương mại, lịch đóng hàng và kế hoạch xuất hàng.</p></article>
+        <article><h3>8. Kiểm soát rủi ro theo từng dự án</h3><p>Mỗi phương án tài trợ thương mại được xem xét dựa trên buyer, nhà máy, sản phẩm, giá trị đơn hàng, tiến độ, tiêu chuẩn chất lượng và mức độ rủi ro của dự án.</p></article>
+        <article><h3>9. Hỗ trợ hợp tác dài hạn</h3><p>Với các buyer và nhà máy có hợp tác ổn định, tài trợ thương mại có thể trở thành một phần của mô hình vận hành chuỗi cung ứng dài hạn.</p></article>
       </div>
     </section>
 
@@ -7110,12 +7111,13 @@ const PRODUCTS_TRADE_FINANCING_SECTION_EN = `
       <div class="ai-oem-odm-support-grid">
         <article><h3>1. Buyer order-planning support</h3><p>ANSLIFE can support buyers in shaping a financing approach aligned with order value, production schedule, inspection schedule, documentation, and shipment plan.</p></article>
         <article><h3>2. Contract factory support</h3><p>ANSLIFE may support contract factories in material readiness, production execution, and timeline stability for confirmed orders.</p></article>
-        <article><h3>3. Linked to actual orders</h3><p>Trade financing is considered only on the basis of specific orders, projects, or production plans, and is not separated from real production and export operations.</p></article>
-        <article><h3>4. Linked to materials and production</h3><p>Support scope can be linked to material/components preparation, production, finishing, packing, and direct order-serving costs.</p></article>
-        <article><h3>5. Linked to independent QC</h3><p>Trade financing execution is connected to quality-control checkpoints, inspection checklists, QC reports, and actual goods status in the project.</p></article>
-        <article><h3>6. Linked to documentation and shipment</h3><p>ANSLIFE may consider financing in relation to export documentation, payment terms, trade terms, loading schedule, and shipment plan.</p></article>
-        <article><h3>7. Project-by-project risk control</h3><p>Each financing setup is reviewed based on buyer, factory, product, order value, schedule, quality standards, and overall project risk level.</p></article>
-        <article><h3>8. Long-term cooperation support</h3><p>For stable buyer-factory relationships, trade financing can become part of a long-term supply chain operating model.</p></article>
+        <article><h3>3. Equipment, machinery and technology transfer</h3><p>ANSLIFE may review support needs related to machinery and equipment, CNC machines, operating machines, and technology-transfer personnel when these items directly serve confirmed orders or production plans.</p></article>
+        <article><h3>4. Linked to actual orders</h3><p>Trade financing is considered only on the basis of specific orders, projects, or production plans, and is not separated from real production and export operations.</p></article>
+        <article><h3>5. Linked to materials and production</h3><p>Support scope can be linked to material/components preparation, production, finishing, packing, and direct order-serving costs.</p></article>
+        <article><h3>6. Linked to independent QC</h3><p>Trade financing execution is connected to quality-control checkpoints, inspection checklists, QC reports, and actual goods status in the project.</p></article>
+        <article><h3>7. Linked to documentation and shipment</h3><p>ANSLIFE may consider financing in relation to export documentation, payment terms, trade terms, loading schedule, and shipment plan.</p></article>
+        <article><h3>8. Project-by-project risk control</h3><p>Each financing setup is reviewed based on buyer, factory, product, order value, schedule, quality standards, and overall project risk level.</p></article>
+        <article><h3>9. Long-term cooperation support</h3><p>For stable buyer-factory relationships, trade financing can become part of a long-term supply chain operating model.</p></article>
       </div>
     </section>
 
