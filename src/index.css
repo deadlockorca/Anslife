@@ -16486,13 +16486,28 @@ a.mobile-menu-utility-link {
   --component-detail-ink: #202020;
   --component-detail-muted: #3f3c37;
   --component-detail-line: rgba(32, 32, 32, 0.14);
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
   color: var(--component-detail-ink);
   font-family: var(--font-body);
+}
+
+.html-content .ai-content:has(.ai-component-detail-page),
+.html-content .html-panel:has(.ai-component-detail-page) {
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
 }
 
 .ai-component-detail-page,
 .ai-component-detail-page * {
   box-sizing: border-box;
+}
+
+.ai-component-detail-page > * {
+  max-width: 100%;
+  min-width: 0;
 }
 
 .ai-component-detail-banner {
@@ -16745,6 +16760,122 @@ a.mobile-menu-utility-link {
 .ai-component-cabinet-specs .ai-component-table-state-list li {
   font-size: clamp(0.76rem, 0.82vw, 0.9rem);
   line-height: 1.36;
+}
+
+.ai-component-cabinet-process .ai-component-detail-process-flow {
+  justify-content: space-between;
+  gap: 0.28rem;
+}
+
+.ai-component-cabinet-process .ai-component-detail-process-step {
+  grid-template-rows: 88px auto;
+  width: clamp(88px, 7.2vw, 112px);
+  max-width: 112px;
+  flex-basis: 92px;
+  gap: 0.56rem;
+}
+
+.ai-component-cabinet-process .ai-component-detail-process-image,
+.ai-component-cabinet-process .ai-component-detail-process-thumb {
+  width: min(100%, 108px);
+  height: 82px;
+}
+
+.ai-component-cabinet-process .ai-component-detail-process-step figcaption {
+  font-size: clamp(0.75rem, 0.8vw, 0.88rem);
+  line-height: 1.22;
+}
+
+.ai-component-cabinet-process .ai-component-detail-process-arrow {
+  width: clamp(18px, 1.6vw, 24px);
+  height: 82px;
+  flex-basis: 24px;
+}
+
+.ai-component-cabinet-process .ai-component-detail-process-arrow::before,
+.ai-component-cabinet-process .ai-component-detail-process-arrow::after {
+  top: 40px;
+}
+
+.ai-component-cabinet-process-thumb {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background:
+    radial-gradient(circle at 50% 44%, rgba(255, 255, 255, 0.76), transparent 42px),
+    rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  color: rgba(35, 35, 35, 0.78);
+}
+
+.ai-component-cabinet-process-thumb::before,
+.ai-component-cabinet-process-thumb::after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-color: currentColor;
+  box-sizing: border-box;
+}
+
+.ai-component-cabinet-process-thumb-cnc::before {
+  left: 20px;
+  top: 34px;
+  width: 68px;
+  height: 30px;
+  border: 2px solid currentColor;
+  transform: skewY(-12deg);
+}
+
+.ai-component-cabinet-process-thumb-cnc::after {
+  left: 47px;
+  top: 10px;
+  width: 18px;
+  height: 42px;
+  border: 2px solid currentColor;
+  border-radius: 8px 8px 3px 3px;
+  background:
+    linear-gradient(currentColor, currentColor) 50% 100% / 9px 16px no-repeat;
+}
+
+.ai-component-cabinet-process-thumb-drilling::before {
+  left: 47px;
+  top: 8px;
+  width: 16px;
+  height: 45px;
+  border: 2px solid currentColor;
+  border-radius: 8px 8px 3px 3px;
+  background:
+    linear-gradient(currentColor, currentColor) 50% 100% / 7px 17px no-repeat;
+}
+
+.ai-component-cabinet-process-thumb-drilling::after {
+  left: 30px;
+  top: 57px;
+  width: 50px;
+  height: 12px;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: skewY(-12deg);
+}
+
+.ai-component-cabinet-process-thumb-edge::before {
+  left: 22px;
+  top: 24px;
+  width: 62px;
+  height: 36px;
+  border: 2px solid currentColor;
+  transform: skewY(-12deg);
+}
+
+.ai-component-cabinet-process-thumb-edge::after {
+  left: 30px;
+  top: 18px;
+  width: 66px;
+  height: 12px;
+  border-top: 4px solid currentColor;
+  border-radius: 50%;
+  transform: rotate(-18deg);
 }
 
 .ai-component-cabinet-product-visual::before,
@@ -17272,11 +17403,13 @@ a.mobile-menu-utility-link {
 }
 
 .ai-component-table-process .ai-component-detail-process-step {
-  width: 132px;
+  width: clamp(104px, 9vw, 132px);
+  max-width: 132px;
+  flex-basis: 110px;
 }
 
 .ai-component-table-process .ai-component-detail-process-image {
-  width: 126px;
+  width: min(100%, 126px);
   height: 92px;
 }
 
@@ -17396,6 +17529,63 @@ a.mobile-menu-utility-link {
   stroke-width: 2.05;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.ai-component-cabinet-info-panels {
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.38fr);
+}
+
+.ai-component-cabinet-buyer-panel {
+  min-width: 0;
+}
+
+.ai-component-cabinet-buyer-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(172px, 0.82fr);
+  gap: clamp(0.8rem, 1.25vw, 1.15rem);
+  align-items: center;
+  min-width: 0;
+}
+
+.ai-component-cabinet-buyer-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.66rem 1rem;
+}
+
+.ai-component-cabinet-buyer-list li {
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 0.58rem;
+}
+
+.ai-component-cabinet-buyer-visual {
+  position: relative;
+  display: block;
+  width: min(100%, 246px);
+  aspect-ratio: 1;
+  margin: 0;
+  background: transparent;
+}
+
+.ai-component-cabinet-buyer-visual::before,
+.ai-component-cabinet-buyer-visual::after {
+  content: none;
+  display: none;
+}
+
+.ai-component-cabinet-buyer-visual-cabinet {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: url('/assets/products/furniture-components/cabinet-detail/buyer-visual-cabinet.png') center / contain no-repeat;
+}
+
+.ai-component-cabinet-buyer-visual-cabinet::before,
+.ai-component-cabinet-buyer-visual-cabinet::after,
+.ai-component-cabinet-buyer-visual-panel,
+.ai-component-cabinet-buyer-visual-panel::before,
+.ai-component-cabinet-buyer-visual-panel::after {
+  content: none;
+  display: none;
 }
 
 .ai-component-table-packaging {
@@ -17579,6 +17769,263 @@ a.mobile-menu-utility-link {
     rgba(255, 255, 255, 0.32);
   transform: skewY(-8deg);
   opacity: 0.88;
+}
+
+.ai-component-cabinet-packaging {
+  gap: 0.72rem;
+  padding: clamp(0.85rem, 1.15vw, 1.05rem) clamp(0.9rem, 1.25vw, 1.2rem);
+  border-radius: 10px;
+}
+
+.ai-component-cabinet-packaging h3 {
+  font-size: clamp(1.08rem, 1.5vw, 1.36rem);
+}
+
+.ai-component-cabinet-packaging-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  align-items: stretch;
+}
+
+.ai-component-cabinet-packaging-card {
+  display: grid;
+  grid-template-rows: 112px auto;
+  gap: 0.42rem;
+  justify-items: center;
+  margin: 0;
+  min-width: 0;
+  padding: 0 clamp(0.5rem, 0.8vw, 0.75rem);
+  border-right: 1px solid rgba(32, 32, 32, 0.08);
+  text-align: center;
+}
+
+.ai-component-cabinet-packaging-card:last-child {
+  border-right: 0;
+}
+
+.ai-component-cabinet-packaging-card figcaption {
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.76rem, 0.82vw, 0.9rem);
+  font-weight: 800;
+  line-height: 1.28;
+}
+
+.ai-component-cabinet-packaging-media {
+  position: relative;
+  display: block;
+  width: min(100%, 168px);
+  height: 108px;
+  color: rgba(32, 32, 32, 0.62);
+  border-radius: 7px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.ai-component-cabinet-packaging-media::before,
+.ai-component-cabinet-packaging-media::after {
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  border-color: currentColor;
+}
+
+.ai-component-cabinet-packaging-media-panels::before {
+  left: 13%;
+  top: 35%;
+  width: 74%;
+  height: 24%;
+  border: 2px solid currentColor;
+  background:
+    repeating-linear-gradient(168deg, rgba(32, 32, 32, 0.1) 0 2px, transparent 2px 8px),
+    rgba(255, 255, 255, 0.2);
+  transform: skewY(-11deg);
+}
+
+.ai-component-cabinet-packaging-media-panels::after {
+  left: 18%;
+  top: 25%;
+  width: 68%;
+  height: 22%;
+  border: 2px solid currentColor;
+  background: rgba(255, 255, 255, 0.16);
+  transform: skewY(-11deg);
+  opacity: 0.72;
+}
+
+.ai-component-cabinet-packaging-media-drawer::before {
+  left: 20%;
+  top: 24%;
+  width: 58%;
+  height: 44%;
+  border: 2px solid currentColor;
+  background:
+    linear-gradient(90deg, transparent 0 31%, rgba(32, 32, 32, 0.18) 31% 34%, transparent 34% 66%, rgba(32, 32, 32, 0.18) 66% 69%, transparent 69%),
+    rgba(255, 255, 255, 0.18);
+  transform: skewY(-8deg);
+}
+
+.ai-component-cabinet-packaging-media-drawer::after {
+  left: 28%;
+  top: 38%;
+  width: 42%;
+  height: 14%;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  opacity: 0.62;
+  transform: skewY(-8deg);
+}
+
+.ai-component-cabinet-packaging-media-hardware {
+  background:
+    radial-gradient(circle at 42% 48%, currentColor 0 4px, transparent 4.5px),
+    radial-gradient(circle at 62% 43%, currentColor 0 3px, transparent 3.5px),
+    radial-gradient(circle at 58% 63%, currentColor 0 3px, transparent 3.5px);
+}
+
+.ai-component-cabinet-packaging-media-hardware::before,
+.ai-component-cabinet-packaging-media-hardware::after {
+  top: 28%;
+  width: 34%;
+  height: 42%;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.16);
+  transform: rotate(-13deg);
+}
+
+.ai-component-cabinet-packaging-media-hardware::before {
+  left: 20%;
+}
+
+.ai-component-cabinet-packaging-media-hardware::after {
+  right: 20%;
+  transform: rotate(11deg);
+}
+
+.ai-component-cabinet-packaging-media-label::before {
+  left: 14%;
+  top: 30%;
+  width: 72%;
+  height: 42%;
+  border: 2px solid currentColor;
+  background:
+    linear-gradient(currentColor 0 0) 56% 42% / 34% 2px no-repeat,
+    linear-gradient(currentColor 0 0) 56% 55% / 24% 2px no-repeat,
+    rgba(255, 255, 255, 0.18);
+  transform: skewY(-9deg);
+}
+
+.ai-component-cabinet-packaging-media-label::after {
+  left: 21%;
+  top: 38%;
+  width: 24%;
+  height: 22%;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  transform: skewY(-9deg);
+  opacity: 0.72;
+}
+
+.ai-component-cabinet-packaging-media-carton::before {
+  left: 22%;
+  top: 23%;
+  width: 58%;
+  height: 50%;
+  border: 2px solid currentColor;
+  background:
+    linear-gradient(90deg, transparent 0 50%, rgba(32, 32, 32, 0.18) 50% 53%, transparent 53%),
+    linear-gradient(180deg, transparent 0 48%, rgba(32, 32, 32, 0.18) 48% 51%, transparent 51%),
+    rgba(255, 255, 255, 0.16);
+  transform: skewY(-7deg);
+}
+
+.ai-component-cabinet-packaging-media-carton::after {
+  left: 30%;
+  top: 19%;
+  width: 42%;
+  height: 14%;
+  border-top: 2px solid currentColor;
+  transform: skewY(-7deg);
+  opacity: 0.68;
+}
+
+.ai-component-cabinet-packaging-media-pallet::before {
+  left: 14%;
+  top: 22%;
+  width: 72%;
+  height: 42%;
+  border: 2px solid currentColor;
+  background:
+    linear-gradient(90deg, transparent 0 30%, rgba(32, 32, 32, 0.18) 30% 33%, transparent 33% 64%, rgba(32, 32, 32, 0.18) 64% 67%, transparent 67%),
+    linear-gradient(180deg, transparent 0 48%, rgba(32, 32, 32, 0.14) 48% 51%, transparent 51%),
+    rgba(255, 255, 255, 0.16);
+  transform: skewY(-8deg);
+}
+
+.ai-component-cabinet-packaging-media-pallet::after {
+  left: 12%;
+  top: 68%;
+  width: 76%;
+  height: 14%;
+  border-top: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
+  background:
+    linear-gradient(90deg, currentColor 0 10%, transparent 10% 32%, currentColor 32% 42%, transparent 42% 66%, currentColor 66% 76%, transparent 76% 100%);
+  opacity: 0.68;
+}
+
+.ai-component-cabinet-packaging-media-panels,
+.ai-component-cabinet-packaging-media-drawer,
+.ai-component-cabinet-packaging-media-hardware,
+.ai-component-cabinet-packaging-media-label,
+.ai-component-cabinet-packaging-media-carton,
+.ai-component-cabinet-packaging-media-pallet {
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.ai-component-cabinet-packaging-media-panels::before,
+.ai-component-cabinet-packaging-media-panels::after,
+.ai-component-cabinet-packaging-media-drawer::before,
+.ai-component-cabinet-packaging-media-drawer::after,
+.ai-component-cabinet-packaging-media-hardware::before,
+.ai-component-cabinet-packaging-media-hardware::after,
+.ai-component-cabinet-packaging-media-label::before,
+.ai-component-cabinet-packaging-media-label::after,
+.ai-component-cabinet-packaging-media-carton::before,
+.ai-component-cabinet-packaging-media-carton::after,
+.ai-component-cabinet-packaging-media-pallet::before,
+.ai-component-cabinet-packaging-media-pallet::after {
+  content: none;
+}
+
+.ai-component-cabinet-packaging-media-panels {
+  background-image: url('/assets/products/furniture-components/cabinet-detail/packaging-panels-edge-protection.png');
+}
+
+.ai-component-cabinet-packaging-media-drawer {
+  background-image: url('/assets/products/furniture-components/cabinet-detail/packaging-drawer-bundled-set.png');
+}
+
+.ai-component-cabinet-packaging-media-hardware {
+  background-image: url('/assets/products/furniture-components/cabinet-detail/packaging-hardware-bagged-labeled.png');
+}
+
+.ai-component-cabinet-packaging-media-label {
+  background-image: url('/assets/products/furniture-components/cabinet-detail/packaging-part-code-label.png');
+}
+
+.ai-component-cabinet-packaging-media-carton {
+  background-image: url('/assets/products/furniture-components/cabinet-detail/packaging-carton-protection.png');
+}
+
+.ai-component-cabinet-packaging-media-pallet {
+  background-image: url('/assets/products/furniture-components/cabinet-detail/packaging-pallet-export-ready.png');
 }
 
 .ai-component-detail-banner-copy {
@@ -18488,6 +18935,9 @@ a.mobile-menu-utility-link {
 .ai-component-detail-process {
   display: grid;
   gap: 1rem;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
 }
 
 .ai-component-detail-process-heading h3 {
@@ -18506,6 +18956,9 @@ a.mobile-menu-utility-link {
   justify-content: center;
   gap: 0.45rem;
   flex-wrap: nowrap;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .ai-component-detail-process-step {
@@ -18513,10 +18966,12 @@ a.mobile-menu-utility-link {
   grid-template-rows: 112px auto;
   justify-items: center;
   gap: 0.8rem;
-  width: 144px;
+  width: clamp(104px, 10vw, 144px);
+  max-width: 144px;
   margin: 0;
   text-align: center;
-  flex: 0 0 auto;
+  flex: 1 1 118px;
+  min-width: 0;
 }
 
 .ai-component-detail-process-thumb {
@@ -18535,7 +18990,7 @@ a.mobile-menu-utility-link {
 
 .ai-component-detail-process-image {
   display: block;
-  width: 132px;
+  width: min(100%, 132px);
   height: 96px;
   object-fit: contain;
   object-position: center;
@@ -18550,9 +19005,10 @@ a.mobile-menu-utility-link {
 
 .ai-component-detail-process-arrow {
   position: relative;
-  width: 34px;
+  width: clamp(18px, 2vw, 34px);
   height: 96px;
-  flex: 0 0 auto;
+  flex: 0 1 34px;
+  min-width: 18px;
 }
 
 .ai-component-detail-process-arrow::before,
@@ -18966,15 +19422,37 @@ a.mobile-menu-utility-link {
     justify-content: flex-start;
   }
 
+  .ai-component-cabinet-process .ai-component-detail-process-flow {
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+  }
+
+  .ai-component-cabinet-process .ai-component-detail-process-step {
+    width: 112px;
+  }
+
   .ai-component-table-info-panels {
     grid-template-columns: 1fr;
+  }
+
+  .ai-component-cabinet-buyer-content {
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 0.52fr);
   }
 
   .ai-component-table-packaging-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .ai-component-cabinet-packaging-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem 0;
+  }
+
   .ai-component-table-packaging-card {
+    border-right: 0;
+  }
+
+  .ai-component-cabinet-packaging-card {
     border-right: 0;
   }
 
@@ -19072,6 +19550,19 @@ a.mobile-menu-utility-link {
 
   .ai-components-catalog {
     padding: 1rem;
+  }
+
+  .ai-component-cabinet-packaging-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.95rem 0;
+  }
+
+  .ai-component-cabinet-packaging-card {
+    grid-template-rows: 88px auto;
+  }
+
+  .ai-component-cabinet-packaging-media {
+    height: 86px;
   }
 
   .ai-components-catalog h3 {
@@ -19544,6 +20035,15 @@ a.mobile-menu-utility-link {
     font-size: 0.82rem;
   }
 
+  .ai-component-cabinet-buyer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-component-cabinet-buyer-visual {
+    justify-self: center;
+    width: min(100%, 280px);
+  }
+
   .ai-component-detail-process-arrow {
     width: 28px;
     height: 84px;
@@ -19582,6 +20082,18 @@ a.mobile-menu-utility-link {
   }
 
   .ai-component-table-packaging-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-component-cabinet-packaging-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-component-cabinet-packaging-card {
+    grid-template-rows: 92px auto;
+  }
+
+  .ai-component-cabinet-buyer-list {
     grid-template-columns: 1fr;
   }
 
