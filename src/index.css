@@ -16564,6 +16564,359 @@ a.mobile-menu-utility-link {
   object-position: center center;
 }
 
+.ai-component-bed-detail-banner {
+  aspect-ratio: 2005 / 784;
+  min-height: 0;
+  background: #f7f1e9;
+}
+
+.ai-component-bed-detail-banner .ai-component-bed-detail-banner-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100% !important;
+  max-width: none !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.html-content .ai-content .ai-component-bed-detail-banner .ai-component-bed-detail-banner-image {
+  height: 100% !important;
+  object-fit: contain;
+}
+
+.ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy > * {
+  left: clamp(1.2rem, 2.1vw, 2.4rem);
+  width: min(28%, 455px);
+}
+
+.ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy h2 {
+  top: clamp(1.1rem, 2.3vw, 2rem);
+  font-size: clamp(2rem, 2.6vw, 3.2rem);
+  letter-spacing: 0;
+  line-height: 1.02;
+}
+
+.ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-eyebrow {
+  top: clamp(5.65rem, 7.25vw, 7.75rem);
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.96rem, 1.18vw, 1.45rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-rule {
+  top: clamp(7.45rem, 9.35vw, 9.9rem);
+  display: block;
+  left: clamp(1.2rem, 2.1vw, 2.4rem);
+  width: clamp(42px, 4vw, 58px);
+  height: 2px;
+  background: var(--component-detail-ink) !important;
+}
+
+.ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-text {
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.68rem, 0.78vw, 0.9rem);
+  font-weight: 700;
+  line-height: 1.64;
+}
+
+.ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-text-primary {
+  top: clamp(8.95rem, 11.55vw, 12.35rem);
+}
+
+.ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-text-secondary {
+  top: clamp(14.4rem, 17.7vw, 19rem);
+}
+
+.ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-text-tertiary {
+  top: clamp(19.8rem, 24vw, 25.85rem);
+}
+
+.ai-component-bed-product-card {
+  grid-template-rows: 148px auto 1fr;
+  min-height: 344px;
+  padding: 0.9rem 0.82rem 1rem;
+}
+
+.ai-component-bed-product-card .ai-component-table-product-index {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 30px;
+  border-color: rgba(255, 255, 255, 0.28);
+  border-radius: 6px;
+  color: #fff !important;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 900;
+  line-height: 1;
+  background: #202326;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.34),
+    0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.html-content .ai-content .ai-component-bed-product-card .ai-component-table-product-index {
+  color: #fff !important;
+}
+
+.ai-component-bed-product-visual {
+  width: min(100%, 176px);
+  height: 132px;
+  opacity: 0.72;
+  transform: translateY(2px);
+}
+
+.ai-component-table-product-visual.ai-component-bed-product-image {
+  width: min(100%, 190px);
+  height: 132px;
+  max-width: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  object-position: center;
+  opacity: 1;
+  transform: none;
+}
+
+.ai-component-table-product-visual.ai-component-bed-product-image-frame,
+.ai-component-table-product-visual.ai-component-bed-product-image-headboard,
+.ai-component-table-product-visual.ai-component-bed-product-image-rails,
+.ai-component-table-product-visual.ai-component-bed-product-image-flatpack {
+  width: min(100%, 198px);
+}
+
+.ai-component-table-product-visual.ai-component-bed-product-image-slats,
+.ai-component-table-product-visual.ai-component-bed-product-image-legs {
+  width: min(100%, 172px);
+}
+
+.ai-component-bed-specs {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.04fr) minmax(260px, 0.7fr);
+}
+
+.ai-component-bed-specs .ai-component-detail-spec-panel {
+  min-height: 0;
+}
+
+.ai-component-bed-specs .ai-component-detail-material-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.72rem 0.58rem;
+}
+
+.ai-component-bed-specs .ai-component-detail-material-card {
+  grid-template-rows: 58px auto;
+  gap: 0.36rem;
+  align-items: center;
+}
+
+.ai-component-bed-specs .ai-component-detail-material-image,
+.ai-component-bed-specs .ai-component-cabinet-material-image {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 7px;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+.ai-component-bed-specs .ai-component-cabinet-material-image-hardware,
+.ai-component-bed-specs .ai-component-cabinet-material-image-finish {
+  width: 66px !important;
+  height: 52px !important;
+}
+
+.ai-component-bed-material-placeholder {
+  display: block;
+  border: 1px solid rgba(32, 32, 32, 0.2);
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.ai-component-bed-specs .ai-component-detail-material-card figcaption {
+  font-size: clamp(0.66rem, 0.68vw, 0.76rem);
+  line-height: 1.16;
+}
+
+.ai-component-bed-specs .ai-component-detail-check-list {
+  gap: 0.72rem 1rem;
+}
+
+.ai-component-bed-specs .ai-component-detail-check-list li {
+  font-size: clamp(0.72rem, 0.76vw, 0.82rem);
+  line-height: 1.36;
+}
+
+.ai-component-bed-specs .ai-component-table-state-list {
+  gap: 0.58rem;
+}
+
+.ai-component-bed-specs .ai-component-table-state-list li {
+  font-size: clamp(0.74rem, 0.8vw, 0.88rem);
+  line-height: 1.34;
+}
+
+.ai-component-bed-product-visual::before,
+.ai-component-bed-product-visual::after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-color: currentColor;
+}
+
+.ai-component-bed-product-visual-frame::before {
+  left: 18px;
+  top: 48px;
+  width: 132px;
+  height: 48px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  background:
+    linear-gradient(24deg, transparent 47%, currentColor 48% 50%, transparent 51%),
+    linear-gradient(156deg, transparent 47%, currentColor 48% 50%, transparent 51%);
+  transform: skewY(-10deg);
+}
+
+.ai-component-bed-product-visual-frame::after {
+  left: 34px;
+  top: 82px;
+  width: 104px;
+  height: 28px;
+  border: 2px solid currentColor;
+  border-top: 0;
+  transform: skewY(-10deg);
+  opacity: 0.68;
+}
+
+.ai-component-bed-product-visual-headboard::before {
+  left: 38px;
+  top: 26px;
+  width: 96px;
+  height: 82px;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  background:
+    repeating-linear-gradient(172deg, rgba(32, 32, 32, 0.16) 0 1px, transparent 1px 7px),
+    rgba(255, 255, 255, 0.24);
+  transform: skewY(-8deg);
+}
+
+.ai-component-bed-product-visual-headboard::after {
+  left: 44px;
+  top: 103px;
+  width: 96px;
+  height: 16px;
+  border-left: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: skewY(-8deg);
+  opacity: 0.72;
+}
+
+.ai-component-bed-product-visual-rails {
+  background:
+    linear-gradient(176deg, transparent 43%, currentColor 44% 48%, transparent 49%) 28px 32px / 124px 22px no-repeat,
+    linear-gradient(176deg, transparent 43%, currentColor 44% 48%, transparent 49%) 20px 70px / 132px 22px no-repeat,
+    linear-gradient(176deg, transparent 43%, currentColor 44% 48%, transparent 49%) 38px 92px / 104px 18px no-repeat;
+}
+
+.ai-component-bed-product-visual-rails::before,
+.ai-component-bed-product-visual-rails::after {
+  width: 24px;
+  height: 22px;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  transform: skewY(-10deg);
+}
+
+.ai-component-bed-product-visual-rails::before {
+  left: 18px;
+  top: 68px;
+}
+
+.ai-component-bed-product-visual-rails::after {
+  right: 24px;
+  top: 28px;
+}
+
+.ai-component-bed-product-visual-slats {
+  background:
+    linear-gradient(174deg, transparent 43%, currentColor 44% 48%, transparent 49%) 20px 26px / 138px 16px no-repeat,
+    linear-gradient(174deg, transparent 43%, currentColor 44% 48%, transparent 49%) 26px 46px / 132px 16px no-repeat,
+    linear-gradient(174deg, transparent 43%, currentColor 44% 48%, transparent 49%) 32px 66px / 126px 16px no-repeat,
+    linear-gradient(174deg, transparent 43%, currentColor 44% 48%, transparent 49%) 38px 86px / 120px 16px no-repeat,
+    linear-gradient(174deg, transparent 43%, currentColor 44% 48%, transparent 49%) 44px 106px / 112px 16px no-repeat;
+}
+
+.ai-component-bed-product-visual-slats::before {
+  left: 18px;
+  top: 28px;
+  width: 138px;
+  height: 88px;
+  border-top: 1px solid rgba(32, 32, 32, 0.28);
+  transform: skewY(-8deg);
+}
+
+.ai-component-bed-product-visual-legs {
+  background:
+    linear-gradient(currentColor 0 0) 72px 72px / 14px 36px no-repeat,
+    linear-gradient(currentColor 0 0) 104px 60px / 12px 48px no-repeat,
+    radial-gradient(circle, currentColor 45%, transparent 47%) 124px 82px / 18px 18px no-repeat,
+    radial-gradient(circle, currentColor 45%, transparent 47%) 42px 82px / 16px 16px no-repeat,
+    radial-gradient(circle, currentColor 45%, transparent 47%) 138px 48px / 14px 14px no-repeat;
+}
+
+.ai-component-bed-product-visual-legs::before {
+  left: 28px;
+  top: 36px;
+  width: 36px;
+  height: 72px;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  background:
+    repeating-linear-gradient(96deg, rgba(32, 32, 32, 0.16) 0 1px, transparent 1px 7px),
+    rgba(255, 255, 255, 0.2);
+}
+
+.ai-component-bed-product-visual-legs::after {
+  left: 86px;
+  top: 22px;
+  width: 16px;
+  height: 86px;
+  border: 2px solid currentColor;
+  border-radius: 10px;
+}
+
+.ai-component-bed-product-visual-flatpack {
+  background:
+    linear-gradient(174deg, transparent 43%, currentColor 44% 48%, transparent 49%) 36px 42px / 112px 16px no-repeat,
+    linear-gradient(174deg, transparent 43%, currentColor 44% 48%, transparent 49%) 42px 58px / 104px 14px no-repeat,
+    linear-gradient(174deg, transparent 43%, currentColor 44% 48%, transparent 49%) 48px 74px / 96px 14px no-repeat,
+    linear-gradient(174deg, transparent 43%, currentColor 44% 48%, transparent 49%) 54px 90px / 88px 14px no-repeat,
+    radial-gradient(circle, currentColor 44%, transparent 47%) 28px 82px / 12px 12px no-repeat,
+    radial-gradient(circle, currentColor 44%, transparent 47%) 146px 82px / 12px 12px no-repeat;
+}
+
+.ai-component-bed-product-visual-flatpack::before {
+  left: 22px;
+  top: 32px;
+  width: 132px;
+  height: 76px;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  transform: skewY(-8deg);
+}
+
+.ai-component-bed-product-visual-flatpack::after {
+  left: 32px;
+  top: 22px;
+  width: 114px;
+  height: 24px;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  transform: skewY(-8deg);
+}
+
 .ai-component-table-detail-banner-copy {
   display: contents !important;
   color: var(--component-detail-ink);
@@ -17383,6 +17736,39 @@ a.mobile-menu-utility-link {
   line-height: 1.45;
 }
 
+.ai-component-bed-specs .ai-component-detail-material-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.72rem 0.58rem;
+}
+
+.ai-component-bed-specs .ai-component-detail-material-card {
+  grid-template-rows: 58px auto;
+  gap: 0.36rem;
+}
+
+.ai-component-bed-specs .ai-component-detail-material-card figcaption {
+  font-size: clamp(0.66rem, 0.68vw, 0.76rem);
+  line-height: 1.16;
+}
+
+.ai-component-bed-specs .ai-component-detail-check-list {
+  gap: 0.72rem 1rem;
+}
+
+.ai-component-bed-specs .ai-component-detail-check-list li {
+  font-size: clamp(0.72rem, 0.76vw, 0.82rem);
+  line-height: 1.36;
+}
+
+.ai-component-bed-specs .ai-component-table-state-list {
+  gap: 0.58rem;
+}
+
+.ai-component-bed-specs .ai-component-table-state-list li {
+  font-size: clamp(0.74rem, 0.8vw, 0.88rem);
+  line-height: 1.34;
+}
+
 .ai-component-table-process {
   gap: 0.9rem;
   padding: clamp(1rem, 1.4vw, 1.3rem);
@@ -17460,6 +17846,60 @@ a.mobile-menu-utility-link {
   opacity: 0.72;
 }
 
+.ai-component-bed-process {
+  padding: clamp(0.9rem, 1.15vw, 1.15rem);
+}
+
+.ai-component-bed-process .ai-component-detail-process-heading h3 {
+  font-size: clamp(1.22rem, 1.55vw, 1.5rem);
+}
+
+.ai-component-bed-process .ai-component-detail-process-flow {
+  justify-content: space-between;
+  gap: 0.18rem;
+}
+
+.ai-component-bed-process .ai-component-detail-process-step {
+  grid-template-rows: 78px auto;
+  width: clamp(74px, 6.4vw, 98px);
+  max-width: 98px;
+  flex: 0 1 88px;
+  gap: 0.46rem;
+}
+
+.ai-component-bed-process .ai-component-detail-process-image {
+  width: min(100%, 86px);
+  height: 72px;
+}
+
+.ai-component-bed-process .ai-component-detail-process-step figcaption {
+  font-size: clamp(0.66rem, 0.72vw, 0.78rem);
+  line-height: 1.18;
+}
+
+.ai-component-bed-process .ai-component-detail-process-arrow {
+  width: clamp(14px, 1.2vw, 20px);
+  height: 72px;
+  flex: 0 1 20px;
+  min-width: 14px;
+}
+
+.ai-component-bed-process .ai-component-detail-process-arrow::before,
+.ai-component-bed-process .ai-component-detail-process-arrow::after {
+  top: 35px;
+}
+
+.ai-component-bed-process .ai-component-detail-process-arrow::before {
+  left: 2px;
+  width: 14px;
+}
+
+.ai-component-bed-process .ai-component-detail-process-arrow::after {
+  right: 4px;
+  width: 8px;
+  height: 8px;
+}
+
 .ai-component-table-info-panels {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -17529,6 +17969,103 @@ a.mobile-menu-utility-link {
   stroke-width: 2.05;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.ai-component-bed-info-panels {
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.48fr);
+}
+
+.ai-component-bed-info-panels .ai-component-table-info-panel {
+  min-height: 0;
+}
+
+.ai-component-bed-support-list {
+  gap: 0.68rem 1.1rem;
+}
+
+.ai-component-bed-support-list li,
+.ai-component-bed-buyer-list li {
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 0.54rem;
+  font-size: clamp(0.72rem, 0.78vw, 0.84rem);
+  line-height: 1.34;
+}
+
+.ai-component-bed-buyer-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(240px, 0.84fr);
+  gap: clamp(0.8rem, 1.25vw, 1.2rem);
+  align-items: center;
+  min-width: 0;
+}
+
+.ai-component-bed-buyer-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.58rem 0.94rem;
+}
+
+.ai-component-bed-buyer-visual-panel {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.ai-component-bed-buyer-visual {
+  position: relative;
+  display: block;
+  width: min(100%, 410px);
+  aspect-ratio: 410 / 230;
+  margin: 0;
+  justify-self: center;
+}
+
+.ai-component-bed-buyer-visual-placeholder {
+  position: absolute;
+  inset: 0;
+  display: block;
+  border: 1px solid rgba(32, 32, 32, 0.16);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.ai-component-bed-buyer-visual-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  object-position: center;
+}
+
+.ai-component-bed-buyer-tags {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.58rem;
+}
+
+.ai-component-bed-buyer-tags span {
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.66rem, 0.7vw, 0.78rem);
+  font-weight: 800;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.ai-component-bed-buyer-tags .ai-component-table-info-icon {
+  width: 42px;
+  height: 42px;
+}
+
+.ai-component-bed-buyer-tags .ai-component-table-info-icon svg {
+  width: 27px;
+  height: 27px;
 }
 
 .ai-component-cabinet-info-panels {
@@ -18026,6 +18563,64 @@ a.mobile-menu-utility-link {
 
 .ai-component-cabinet-packaging-media-pallet {
   background-image: url('/assets/products/furniture-components/cabinet-detail/packaging-pallet-export-ready.png');
+}
+
+.ai-component-bed-packaging {
+  padding: clamp(0.9rem, 1.15vw, 1.15rem);
+}
+
+.ai-component-bed-packaging h3 {
+  font-size: clamp(1.22rem, 1.55vw, 1.5rem);
+}
+
+.ai-component-bed-packaging-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0;
+  align-items: stretch;
+}
+
+.ai-component-bed-packaging-card {
+  display: grid;
+  grid-template-rows: 84px auto;
+  gap: 0.46rem;
+  justify-items: center;
+  margin: 0;
+  min-height: 128px;
+  padding: 0 0.62rem;
+  border-right: 1px solid rgba(32, 32, 32, 0.1);
+  text-align: center;
+}
+
+.ai-component-bed-packaging-card:last-child {
+  border-right: 0;
+}
+
+.ai-component-bed-packaging-media {
+  display: block;
+  width: min(100%, 118px);
+  height: 78px;
+  border: 1px solid rgba(32, 32, 32, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.ai-component-bed-packaging-image {
+  display: block;
+  width: min(100%, 124px);
+  height: 78px;
+  max-width: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  object-position: center;
+}
+
+.ai-component-bed-packaging-card figcaption {
+  color: var(--component-detail-ink) !important;
+  font-size: clamp(0.66rem, 0.72vw, 0.8rem);
+  font-weight: 750;
+  line-height: 1.22;
 }
 
 .ai-component-detail-banner-copy {
@@ -19377,6 +19972,43 @@ a.mobile-menu-utility-link {
     top: 14.8rem;
   }
 
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy > * {
+    left: 1.1rem;
+    width: min(36%, 340px);
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy h2 {
+    top: 1.15rem;
+    font-size: clamp(1.55rem, 2.25vw, 2rem);
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-eyebrow {
+    top: clamp(4.2rem, 6vw, 5.25rem);
+    font-size: clamp(0.9rem, 1.36vw, 1.1rem);
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-rule {
+    top: clamp(5.85rem, 7.75vw, 6.85rem);
+    left: 1.1rem;
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-text {
+    font-size: clamp(0.64rem, 0.92vw, 0.74rem);
+    line-height: 1.42;
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-text-primary {
+    top: clamp(6.95rem, 9.15vw, 8.05rem);
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-text-secondary {
+    top: clamp(11.9rem, 15.3vw, 13.05rem);
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-text-tertiary {
+    top: clamp(16.95rem, 21.5vw, 18.35rem);
+  }
+
   .ai-component-table-product-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -19431,8 +20063,32 @@ a.mobile-menu-utility-link {
     width: 112px;
   }
 
+  .ai-component-bed-process .ai-component-detail-process-flow {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem 0.65rem;
+  }
+
+  .ai-component-bed-process .ai-component-detail-process-step {
+    width: 100%;
+    max-width: none;
+    justify-items: center;
+  }
+
+  .ai-component-bed-process .ai-component-detail-process-arrow {
+    display: none;
+  }
+
   .ai-component-table-info-panels {
     grid-template-columns: 1fr;
+  }
+
+  .ai-component-bed-info-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-component-bed-buyer-content {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.58fr);
   }
 
   .ai-component-cabinet-buyer-content {
@@ -19441,6 +20097,15 @@ a.mobile-menu-utility-link {
 
   .ai-component-table-packaging-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-component-bed-packaging-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem 0;
+  }
+
+  .ai-component-bed-packaging-card {
+    border-right: 0;
   }
 
   .ai-component-cabinet-packaging-grid {
@@ -19675,6 +20340,47 @@ a.mobile-menu-utility-link {
     top: 16rem;
   }
 
+  .ai-component-bed-detail-banner {
+    min-height: 0;
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy > * {
+    left: 0.95rem;
+    width: min(calc(100% - 1.9rem), 20rem);
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy h2 {
+    top: 0.95rem;
+    font-size: 2rem;
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-eyebrow {
+    top: 4.3rem;
+    font-size: 0.96rem;
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-rule {
+    top: 5.95rem;
+    left: 0.95rem;
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-text {
+    font-size: 0.78rem;
+    line-height: 1.42;
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-text-primary {
+    top: 7rem;
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-text-secondary {
+    top: 13.85rem;
+  }
+
+  .ai-component-table-detail-banner-copy.ai-component-bed-detail-banner-copy .ai-component-bed-detail-banner-text-tertiary {
+    top: 21.7rem;
+  }
+
   .ai-component-table-product-groups h3 {
     text-align: left;
   }
@@ -19739,9 +20445,36 @@ a.mobile-menu-utility-link {
     width: 126px;
   }
 
+  .ai-component-bed-process .ai-component-detail-process-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-component-bed-process .ai-component-detail-process-step {
+    grid-template-rows: 82px auto;
+  }
+
+  .ai-component-bed-process .ai-component-detail-process-image {
+    width: min(100%, 92px);
+    height: 76px;
+  }
+
   .ai-component-table-icon-list {
     grid-template-columns: 1fr;
     gap: 0.78rem;
+  }
+
+  .ai-component-bed-support-list,
+  .ai-component-bed-buyer-list,
+  .ai-component-bed-buyer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-component-bed-buyer-visual {
+    width: min(100%, 360px);
+  }
+
+  .ai-component-bed-packaging-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .ai-component-table-packaging h3 {
@@ -20095,6 +20828,10 @@ a.mobile-menu-utility-link {
 
   .ai-component-cabinet-buyer-list {
     grid-template-columns: 1fr;
+  }
+
+  .ai-component-bed-buyer-tags {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .ai-component-detail-joints-items {

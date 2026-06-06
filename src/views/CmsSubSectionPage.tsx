@@ -119,6 +119,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'furniture-components' &&
     (detailSlug === 'table-tops-legs' || detailSlug === 'component-table-tops');
+  const isFurnitureComponentsBedPartsDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'furniture-components' &&
+    (detailSlug === 'bed-parts' || detailSlug === 'component-bed-parts');
   const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
   const oemOdmSeoDescription = t(
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.',
@@ -156,6 +160,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language === 'vn'
       ? 'Sơ đồ cấu kiện mặt bàn, chân bàn, chi tiết liên kết và các kiểu mộng phổ biến.'
       : 'Diagram of table top, table leg, connection details, and common joints.';
+  const bedPartsSeoTitle = language === 'vn' ? 'Bộ phận giường' : 'Bed Parts';
+  const bedPartsSeoDescription =
+    language === 'vn'
+      ? 'Sơ đồ cấu kiện giường, đầu giường, ray bên, nan giường, chân giường và các chi tiết liên kết tiêu biểu.'
+      : 'Diagram of bed components, headboard, side rails, slats, legs, and typical connection details.';
   const chairsSeoTitle = language === 'vn' ? 'Ghế' : 'Chairs';
   const chairsSeoDescription =
     language === 'vn'
@@ -310,6 +319,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                   ? `${tradeFinancingSeoTitle} | ${t(config.title)}`
                   : isFurnitureComponentsTableTopsLegsDetail
                     ? `${tableTopsLegsSeoTitle} | ${t(config.title)}`
+                    : isFurnitureComponentsBedPartsDetail
+                      ? `${bedPartsSeoTitle} | ${t(config.title)}`
       : `${t(section.title)} | ${t(config.title)}`;
   const seoDescription = isFinishedFurnitureChairsDetail
     ? chairsSeoDescription
@@ -344,10 +355,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               : isOperationsVietnamStorageDetail
                 ? vietnamStorageSeoDescription
               : isOperationsTradeFinancingDetail
-                ? tradeFinancingSeoDescription
-                : isFurnitureComponentsTableTopsLegsDetail
-                  ? tableTopsLegsSeoDescription
-      : t(section.description);
+                  ? tradeFinancingSeoDescription
+                  : isFurnitureComponentsTableTopsLegsDetail
+                    ? tableTopsLegsSeoDescription
+                    : isFurnitureComponentsBedPartsDetail
+                      ? bedPartsSeoDescription
+                    : t(section.description);
 
   return (
     <>

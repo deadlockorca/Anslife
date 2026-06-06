@@ -592,7 +592,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
             <li>Đầu giường</li>
             <li>Nan giường, chân giường</li>
           </ul>
-          <a class="ai-components-card-action" href="#component-bed-parts">Xem chi tiết <span aria-hidden="true">→</span></a>
+          <a class="ai-components-card-action" href="/vn/products-solutions/furniture-components/bed-parts">Xem chi tiết <span aria-hidden="true">→</span></a>
         </article>
 
         <article id="component-upholstery-parts" class="ai-components-card">
@@ -2265,6 +2265,576 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
       <div class="ai-components-cta-icon" aria-hidden="true"><span></span></div>
       <div>
         <h3>Gửi bản vẽ hoặc yêu cầu cấu kiện tủ &amp; lưu trữ cho ANSLIFE</h3>
+        <p>Đội ngũ kỹ thuật & kinh doanh của chúng tôi sẽ phản hồi nhanh chóng để tư vấn giải pháp và báo giá phù hợp.</p>
+      </div>
+      <div class="ai-components-actions">
+        <a class="ai-components-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu ngay</a>
+        <a class="ai-components-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↓</span>Tải mẫu yêu cầu cấu kiện</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
+  <section id="bed-parts" class="ai-section ai-components-page ai-component-detail-page ai-component-table-detail-page ai-component-bed-detail-page">
+    <header class="ai-component-table-detail-banner ai-component-bed-detail-banner" aria-label="Bộ phận giường">
+      <img
+        class="ai-component-table-detail-banner-image ai-component-bed-detail-banner-image"
+        src="/assets/products/furniture-components/bed-detail/bed-parts-banner.png"
+        alt="Sơ đồ cấu kiện giường, đầu giường, ray bên, nan giường, chân giường và các chi tiết liên kết tiêu biểu"
+        loading="eager"
+        decoding="async"
+      >
+      <div class="ai-component-table-detail-banner-copy ai-component-bed-detail-banner-copy">
+        <h2>Bộ phận giường</h2>
+        <p class="ai-component-bed-detail-banner-eyebrow">Bed Components</p>
+        <span class="ai-component-bed-detail-banner-rule" aria-hidden="true"></span>
+        <p class="ai-component-bed-detail-banner-text ai-component-bed-detail-banner-text-primary">Sản xuất khung giường, đầu giường, thanh giường, nan giường, chân giường và các chi tiết liên kết theo bản vẽ, mẫu duyệt và tiêu chuẩn kỹ thuật của buyer.</p>
+        <p class="ai-component-bed-detail-banner-text ai-component-bed-detail-banner-text-secondary">ANSLIFE hỗ trợ phát triển, sản xuất và cung ứng các bộ phận giường tại Việt Nam theo bản vẽ kỹ thuật, mẫu thật, thông số vật liệu hoặc tiêu chuẩn riêng của buyer.</p>
+        <p class="ai-component-bed-detail-banner-text ai-component-bed-detail-banner-text-tertiary">Các cấu kiện có thể được cung cấp ở dạng rời, bán thành phẩm, đã gia công cạnh, đã khoan lỗ, đã tạo liên kết, đã hoàn thiện bề mặt hoặc đóng gói theo bộ để phục vụ lắp ráp, sản xuất tiếp theo hoặc xuất khẩu.</p>
+      </div>
+    </header>
+
+    <section class="ai-component-table-product-groups ai-component-bed-product-groups" aria-labelledby="bed-product-groups-title">
+      <h3 id="bed-product-groups-title">Các nhóm cấu kiện chính</h3>
+
+      <div class="ai-component-table-product-grid ai-component-bed-product-grid">
+        <article class="ai-component-table-product-card ai-component-bed-product-card">
+          <span class="ai-component-table-product-index">01</span>
+          <img
+            class="ai-component-table-product-visual ai-component-bed-product-visual ai-component-bed-product-image ai-component-bed-product-image-frame"
+            src="/assets/products/furniture-components/bed-detail/product-bed-frame.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Khung giường</h4>
+          <p>Khung giường gỗ, khung giường kết hợp vật liệu, khung cố định hoặc khung tháo lắp theo bản vẽ, kích thước và tiêu chuẩn lắp ráp của buyer.</p>
+        </article>
+
+        <article class="ai-component-table-product-card ai-component-bed-product-card">
+          <span class="ai-component-table-product-index">02</span>
+          <img
+            class="ai-component-table-product-visual ai-component-bed-product-visual ai-component-bed-product-image ai-component-bed-product-image-headboard"
+            src="/assets/products/furniture-components/bed-detail/product-headboard.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Đầu giường</h4>
+          <p>Đầu giường gỗ, đầu giường veneer, đầu giường bọc nệm, đầu giường mây tre kết hợp hoặc đầu giường theo thiết kế riêng.</p>
+        </article>
+
+        <article class="ai-component-table-product-card ai-component-bed-product-card">
+          <span class="ai-component-table-product-index">03</span>
+          <img
+            class="ai-component-table-product-visual ai-component-bed-product-visual ai-component-bed-product-image ai-component-bed-product-image-rails"
+            src="/assets/products/furniture-components/bed-detail/product-bed-rails.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Thanh giường &amp; ray bên</h4>
+          <p>Thanh giường, ray bên, thanh đỡ nệm và các chi tiết liên kết hai bên khung giường theo tiêu chuẩn kỹ thuật của từng dự án.</p>
+        </article>
+
+        <article class="ai-component-table-product-card ai-component-bed-product-card">
+          <span class="ai-component-table-product-index">04</span>
+          <img
+            class="ai-component-table-product-visual ai-component-bed-product-visual ai-component-bed-product-image ai-component-bed-product-image-slats"
+            src="/assets/products/furniture-components/bed-detail/product-bed-slats.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Nan giường &amp; hệ đỡ nệm</h4>
+          <p>Nan giường, thanh đỡ nệm, vạt giường, hệ đỡ nệm tháo lắp hoặc cấu kiện hỗ trợ chịu lực theo yêu cầu của buyer.</p>
+        </article>
+
+        <article class="ai-component-table-product-card ai-component-bed-product-card">
+          <span class="ai-component-table-product-index">05</span>
+          <img
+            class="ai-component-table-product-visual ai-component-bed-product-visual ai-component-bed-product-image ai-component-bed-product-image-legs"
+            src="/assets/products/furniture-components/bed-detail/product-bed-legs-hardware.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Chân giường &amp; chi tiết liên kết</h4>
+          <p>Chân giường, chân giữa, bas liên kết, vít, chốt, insert ren và các chi tiết phục vụ lắp ráp, ổn định và chịu lực.</p>
+        </article>
+
+        <article class="ai-component-table-product-card ai-component-bed-product-card">
+          <span class="ai-component-table-product-index">06</span>
+          <img
+            class="ai-component-table-product-visual ai-component-bed-product-visual ai-component-bed-product-image ai-component-bed-product-image-flatpack"
+            src="/assets/products/furniture-components/bed-detail/product-flatpack-bed-set.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <h4>Bộ cấu kiện giường flat-pack</h4>
+          <p>Bộ cấu kiện giường được tách rời, đánh mã chi tiết và đóng gói theo bộ để tối ưu vận chuyển, lưu kho, lắp ráp và xuất khẩu.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-component-table-specs ai-component-bed-specs" aria-label="Vật liệu, tiêu chuẩn và trạng thái hoàn thiện">
+      <article class="ai-component-detail-spec-panel ai-component-detail-materials-panel ai-component-bed-materials-panel">
+        <h3>Vật liệu có thể sử dụng</h3>
+        <p>ANSLIFE có thể làm việc với nhiều nhóm vật liệu như gỗ tự nhiên, plywood, MDF, veneer, vật liệu bọc, mây tre kết hợp, phụ kiện liên kết và vật liệu hoàn thiện theo yêu cầu của từng dự án.</p>
+
+        <div class="ai-component-detail-material-grid ai-component-bed-material-grid">
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-rubberwood"
+              src="/assets/products/furniture-components/chair-detail/material-rubberwood.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Gỗ cao su</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-acacia"
+              src="/assets/products/furniture-components/chair-detail/material-acacia.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Acacia</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-oak"
+              src="/assets/products/furniture-components/chair-detail/material-oak.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Oak</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-ash"
+              src="/assets/products/furniture-components/chair-detail/material-ash.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Ash</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-beech"
+              src="/assets/products/furniture-components/chair-detail/material-beech.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Beech</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-pine"
+              src="/assets/products/furniture-components/chair-detail/material-pine.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Pine</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-plywood"
+              src="/assets/products/furniture-components/chair-detail/material-plywood.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Plywood</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-mdf"
+              src="/assets/products/furniture-components/cabinet-detail/material-mdf.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>MDF</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-veneer"
+              src="/assets/products/furniture-components/chair-detail/material-veneer.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Veneer</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-hpl"
+              src="/assets/products/furniture-components/cabinet-detail/material-hpl-melamine-surfaces.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Ván phủ<br>bề mặt</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <span class="ai-component-detail-material-image ai-component-bed-material-placeholder" aria-hidden="true"></span>
+            <figcaption>Foam / vải / da<br>(nếu bọc nệm)</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-rattan"
+              src="/assets/products/furniture-components/chair-detail/material-rattan.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Mây / mặt<br>đan mây</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-detail-material-image-metal"
+              src="/assets/products/furniture-components/chair-detail/material-metal.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Kim loại kết hợp<br>(nếu yêu cầu)</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-hardware"
+              src="/assets/products/furniture-components/cabinet-detail/material-hardware-connectors.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Vít / bas / insert ren /<br>chốt gỗ / phụ kiện lắp ráp</figcaption>
+          </figure>
+          <figure class="ai-component-detail-material-card">
+            <img
+              class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-finish"
+              src="/assets/products/furniture-components/cabinet-detail/material-surface-finishing.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Sơn, stain, lacquer,<br>dầu hoàn thiện</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="ai-component-detail-spec-panel ai-component-table-checks-panel ai-component-bed-checks-panel">
+        <h3>Tiêu chuẩn cần kiểm soát</h3>
+
+        <ul class="ai-component-detail-check-list">
+          <li>Kích thước từng chi tiết</li>
+          <li>Kích thước phù hợp với nệm</li>
+          <li>Độ dày và độ ổn định của khung</li>
+          <li>Khả năng chịu lực</li>
+          <li>Độ chắc của liên kết</li>
+          <li>Độ chính xác khi lắp ráp</li>
+          <li>Độ phẳng và độ cân bằng sau lắp ráp</li>
+          <li>Vị trí lỗ khoan / insert / bas liên kết</li>
+          <li>Độ chắc của nan giường / hệ đỡ nệm</li>
+          <li>Độ ẩm vật liệu</li>
+          <li>Màu sắc và hoàn thiện bề mặt</li>
+          <li>Tiêu chuẩn bọc nệm nếu có đầu giường bọc nệm</li>
+          <li>Độ đồng đều giữa các chi tiết</li>
+          <li>Độ đồng đều giữa các lô hàng</li>
+          <li>Phân loại chi tiết theo mã sản phẩm</li>
+          <li>Quy cách đóng gói chống trầy, chống cong vênh và chống ẩm</li>
+        </ul>
+      </article>
+
+      <article class="ai-component-detail-spec-panel ai-component-table-finish-panel ai-component-bed-finish-panel">
+        <h3>Trạng thái hoàn thiện có thể cung cấp</h3>
+
+        <ul class="ai-component-table-state-list">
+          <li>Cấu kiện thô</li>
+          <li>Cấu kiện đã cắt theo kích thước</li>
+          <li>Cấu kiện đã chà nhám</li>
+          <li>Cấu kiện đã gia công cạnh</li>
+          <li>Cấu kiện đã khoan lỗ</li>
+          <li>Cấu kiện đã gắn insert / phụ kiện liên kết</li>
+          <li>Cấu kiện đã bọc nệm nếu là đầu giường bọc nệm</li>
+          <li>Cấu kiện đã sơn / stain / lacquer / oil finish</li>
+          <li>Cấu kiện đã lắp thử</li>
+          <li>Cấu kiện đóng gói theo bộ</li>
+          <li>Cấu kiện flat-pack sẵn sàng lắp ráp</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-component-detail-process ai-component-table-process ai-component-bed-process" aria-labelledby="bed-component-process-title">
+      <div class="ai-component-detail-process-heading">
+        <h3 id="bed-component-process-title">Quy trình triển khai</h3>
+      </div>
+
+      <div class="ai-component-detail-process-flow">
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-detail-process-image-drawing"
+            src="/assets/products/furniture-components/chair-detail/process-drawing.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Bản vẽ</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-bed-process-image"
+            src="/assets/products/furniture-components/bed-detail/process-detail-separation.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Tách chi tiết</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-bed-process-image"
+            src="/assets/products/furniture-components/bed-detail/process-blank-cutting.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Cắt phôi</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-bed-process-image"
+            src="/assets/products/furniture-components/bed-detail/process-edge-machining.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Gia công cạnh</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-detail-process-image-drilling"
+            src="/assets/products/furniture-components/cabinet-detail/process-drilling-connection.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Khoan / tạo liên kết</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-detail-process-image-sanding"
+            src="/assets/products/furniture-components/chair-detail/process-sanding.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Chà nhám</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-bed-process-image"
+            src="/assets/products/furniture-components/bed-detail/process-finishing.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Hoàn thiện</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-bed-process-image"
+            src="/assets/products/furniture-components/bed-detail/process-trial-assembly.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Lắp thử</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-detail-process-image-qc"
+            src="/assets/products/furniture-components/chair-detail/process-qc.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>QC<br>(kiểm tra)</figcaption>
+        </figure>
+        <span class="ai-component-detail-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-detail-process-step">
+          <img
+            class="ai-component-detail-process-image ai-component-detail-process-image-packaging"
+            src="/assets/products/furniture-components/chair-detail/process-packaging.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Đóng gói<br>theo bộ</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="ai-component-table-info-panels ai-component-bed-info-panels" aria-label="Hỗ trợ của ANSLIFE và thông tin buyer cần gửi">
+      <article class="ai-component-detail-spec-panel ai-component-table-info-panel ai-component-bed-support-panel">
+        <h3>ANSLIFE hỗ trợ gì?</h3>
+        <ul class="ai-component-table-icon-list ai-component-table-support-list ai-component-bed-support-list">
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12 8.5h13l5 5V31a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2V10.5a2 2 0 0 1 2-2Z" /><path d="M25 8.5V15h5" /><path d="M15 20h8" /><path d="M15 25h6" /><circle cx="27" cy="27" r="4" /><path d="m30 30 3 3" /></svg></span><span>Phân tích bản vẽ giường và cấu kiện liên quan</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="m20 8 12 6-12 6-12-6 12-6Z" /><path d="m8 20 12 6 12-6" /><path d="m8 26 12 6 12-6" /></svg></span><span>Tách chi tiết theo mã sản phẩm</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12 28V14l8-4 8 4v14" /><path d="M12 19h16" /><path d="M16 23h8" /><path d="m29 11 3 3" /><path d="m32 11-3 3" /></svg></span><span>Đề xuất vật liệu và phụ kiện phù hợp</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10.5 14 20 9l9.5 5v12L20 31l-9.5-5V14Z" /><path d="M10.5 14 20 19l9.5-5" /><path d="M20 19v12" /></svg></span><span>Sản xuất mẫu cấu kiện</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M11 28h18" /><path d="M14 28V17h12v11" /><path d="M14 20h12" /><path d="M17 24h6" /><circle cx="30" cy="14" r="2.5" /></svg></span><span>Kiểm tra lắp thử</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M9.5 15h21" /><path d="M9.5 25h21" /><path d="M13 11.5v17" /><path d="M27 11.5v17" /><path d="M18 20h4" /></svg></span><span>Kiểm soát kích thước, lỗ khoan và liên kết</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12 29h16" /><path d="M14 24h12" /><path d="M16 19h8" /><path d="M18 14h4" /><circle cx="30" cy="14" r="2.5" /></svg></span><span>Kiểm soát khả năng chịu lực và độ ổn định</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12 16h16" /><path d="M12 22h16" /><path d="M12 28h12" /><path d="M29 10v10" /><path d="M26 17l3 3 3-3" /></svg></span><span>Kiểm soát màu sắc, độ ẩm và hoàn thiện bề mặt</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10 30V16l6 4v-4l6 4v-9h8v19H10Z" /><path d="M14 25h3" /><path d="M21 25h3" /><path d="M27 15h3" /></svg></span><span>Tổ chức sản xuất theo lô</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10.5 14 20 9l9.5 5v12L20 31l-9.5-5V14Z" /><path d="M10.5 14 20 19l9.5-5" /><path d="M20 19v12" /><path d="M14 25h12" /></svg></span><span>Đóng gói theo bộ cấu kiện</span></li>
+          <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M8 15h17v13H8z" /><path d="M25 19h5l4 4v5h-9" /><circle cx="14" cy="30" r="2.5" /><circle cx="29" cy="30" r="2.5" /><path d="M12 20h8" /></svg></span><span>Xuất hàng hoặc cấp phát cho nhà máy lắp ráp</span></li>
+        </ul>
+      </article>
+
+      <article class="ai-component-detail-spec-panel ai-component-table-info-panel ai-component-bed-buyer-panel">
+        <h3>Buyer cần gửi gì?</h3>
+        <div class="ai-component-bed-buyer-content">
+          <ul class="ai-component-table-icon-list ai-component-bed-buyer-list">
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12 8.5h13l5 5V31a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2V10.5a2 2 0 0 1 2-2Z" /><path d="M25 8.5V15h5" /><path d="M15 20h10" /><path d="M15 25h10" /><path d="M15 30h7" /></svg></span><span>Bản vẽ kỹ thuật</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M11 28h18" /><path d="M14 28V17h12v11" /><path d="M14 20h12" /><path d="M17 24h6" /></svg></span><span>Bản vẽ lắp ráp nếu có</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10.5 14 20 9l9.5 5v12L20 31l-9.5-5V14Z" /><path d="M10.5 14 20 19l9.5-5" /><path d="M20 19v12" /></svg></span><span>Danh sách chi tiết / BOM nếu có</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12.5 27a7.5 7.5 0 1 1 15 0" /><circle cx="20" cy="16.5" r="3.5" /><path d="M8.5 29.5h23" /><path d="M27.5 23.5 31 27" /></svg></span><span>Mẫu thật nếu có</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="9.5" y="11" width="21" height="18" rx="2.5" /><path d="m12.5 24 4.5-4.5 4.5 4.5 3.5-3.5 3 3" /><circle cx="16" cy="17" r="1.8" /></svg></span><span>Ảnh tham khảo</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M9.5 15h21" /><path d="M9.5 25h21" /><path d="M13 11.5v17" /><path d="M27 11.5v17" /><path d="M18 20h4" /></svg></span><span>Kích thước giường</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M11 24h18" /><path d="M14 18h12" /><path d="M16 14h8" /><path d="M20 14v14" /></svg></span><span>Kích thước nệm tương ứng</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10 12h20v16H10z" /><path d="M14 16v8" /><path d="M18 16v8" /><path d="M24 16v8" /><path d="M28 16v8" /></svg></span><span>Kích thước từng chi tiết</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M14.5 29.5a7.5 7.5 0 1 1 11 0Z" /><path d="M20 11.5v12" /><path d="M16 19.5 20 15l4 4.5" /></svg></span><span>Vật liệu yêu cầu</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12 15h16" /><path d="M12 22h16" /><path d="M12 29h12" /><circle cx="30" cy="13" r="2.5" /></svg></span><span>Màu sắc và hoàn thiện bề mặt</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M13 12h14v6H13z" /><path d="M16 18v12" /><path d="M24 18v12" /><path d="M12 30h16" /><circle cx="30" cy="15" r="2.5" /></svg></span><span>Yêu cầu phụ kiện: bas, vít, insert ren, chốt, chân giữa</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12 28V16l8-5 8 5v12" /><path d="M15 22h10" /><path d="M17 26h6" /></svg></span><span>Yêu cầu đầu giường bọc nệm nếu có</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="11" y="10" width="18" height="20" rx="2" /><circle cx="16" cy="16" r="2" /><circle cx="24" cy="16" r="2" /><circle cx="16" cy="24" r="2" /><circle cx="24" cy="24" r="2" /></svg></span><span>Tiêu chuẩn khoan lỗ / liên kết / flat-pack nếu có</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M13 12.5h14l3 3V27a2 2 0 0 1-2 2H13a2 2 0 0 1-2-2V14.5a2 2 0 0 1 2-2Z" /><path d="M27 12.5V18h3" /><path d="M15.5 24a4.5 4.5 0 0 0 9 0" /></svg></span><span>Trạng thái hoàn thiện mong muốn</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M12 28V14.5" /><path d="M20 28V10.5" /><path d="M28 28V18.5" /><path d="M9 28h22" /></svg></span><span>Sản lượng dự kiến</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10.5 14 20 9l9.5 5v12L20 31l-9.5-5V14Z" /><path d="M10.5 14 20 19l9.5-5" /><path d="M20 19v12" /></svg></span><span>Yêu cầu đóng gói</span></li>
+            <li><span class="ai-component-table-info-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="10.5" /><path d="M9.5 20h21" /><path d="M20 9.5c3 3.2 4.5 6.7 4.5 10.5S23 27.3 20 30.5c-3-3.2-4.5-6.7-4.5-10.5S17 12.7 20 9.5Z" /></svg></span><span>Thị trường xuất khẩu</span></li>
+          </ul>
+
+          <div class="ai-component-bed-buyer-visual-panel" aria-hidden="true">
+            <figure class="ai-component-bed-buyer-visual">
+              <img
+                class="ai-component-bed-buyer-visual-image"
+                src="/assets/products/furniture-components/bed-detail/buyer-visual-bed-dimensions.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              >
+            </figure>
+            <div class="ai-component-bed-buyer-tags">
+              <span><i class="ai-component-table-info-icon"><svg viewBox="0 0 40 40"><path d="M10 30 30 10" /><path d="M12 12h16v16H12z" /><path d="M8 30h24" /></svg></i>Kích thước</span>
+              <span><i class="ai-component-table-info-icon"><svg viewBox="0 0 40 40"><path d="M11 23h12" /><circle cx="27" cy="20" r="4" /><path d="m30 23 4 4" /><path d="M10 19h8" /></svg></i>Liên kết</span>
+              <span><i class="ai-component-table-info-icon"><svg viewBox="0 0 40 40"><path d="m20 8 12 6-12 6-12-6 12-6Z" /><path d="m8 20 12 6 12-6" /><path d="m8 26 12 6 12-6" /></svg></i>Vật liệu</span>
+              <span><i class="ai-component-table-info-icon"><svg viewBox="0 0 40 40"><path d="M23 10a5 5 0 0 1 0 10l-8 8" /><path d="M15 28h12" /><path d="M12 32h16" /></svg></i>Hoàn thiện</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="ai-component-table-packaging ai-component-bed-packaging" aria-labelledby="bed-packaging-title">
+      <h3 id="bed-packaging-title">Đóng gói cấu kiện theo bộ</h3>
+
+      <div class="ai-component-bed-packaging-grid">
+        <figure class="ai-component-bed-packaging-card">
+          <img
+            class="ai-component-bed-packaging-image"
+            src="/assets/products/furniture-components/bed-detail/packaging-protected-headboard.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Đầu giường được bọc<br>chống trầy</figcaption>
+        </figure>
+        <figure class="ai-component-bed-packaging-card">
+          <img
+            class="ai-component-bed-packaging-image"
+            src="/assets/products/furniture-components/bed-detail/packaging-paired-side-rails.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Ray bên đóng theo cặp</figcaption>
+        </figure>
+        <figure class="ai-component-bed-packaging-card">
+          <img
+            class="ai-component-bed-packaging-image"
+            src="/assets/products/furniture-components/bed-detail/packaging-slat-bundle.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Nan giường bó theo bộ</figcaption>
+        </figure>
+        <figure class="ai-component-bed-packaging-card">
+          <img
+            class="ai-component-bed-packaging-image"
+            src="/assets/products/furniture-components/bed-detail/packaging-hardware-bags.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Phụ kiện đóng trong<br>túi riêng</figcaption>
+        </figure>
+        <figure class="ai-component-bed-packaging-card">
+          <img
+            class="ai-component-bed-packaging-image"
+            src="/assets/products/furniture-components/bed-detail/packaging-part-code-label.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Mã chi tiết trên<br>từng gói</figcaption>
+        </figure>
+        <figure class="ai-component-bed-packaging-card">
+          <img
+            class="ai-component-bed-packaging-image"
+            src="/assets/products/furniture-components/bed-detail/packaging-carton-pallet.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Carton / pallet</figcaption>
+        </figure>
+        <figure class="ai-component-bed-packaging-card">
+          <img
+            class="ai-component-bed-packaging-image"
+            src="/assets/products/furniture-components/bed-detail/packaging-moisture-scratch-protection.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Vật liệu chống ẩm<br>&amp; chống trầy</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="ai-components-cta">
+      <div class="ai-components-cta-icon" aria-hidden="true"><span></span></div>
+      <div>
+        <h3>Gửi bản vẽ hoặc yêu cầu cấu kiện giường cho ANSLIFE</h3>
         <p>Đội ngũ kỹ thuật & kinh doanh của chúng tôi sẽ phản hồi nhanh chóng để tư vấn giải pháp và báo giá phù hợp.</p>
       </div>
       <div class="ai-components-actions">
@@ -17122,6 +17692,23 @@ export function getAIFallbackSectionHtml(
     return translateAiHtml(
       language,
       `<div class="ai-content">${PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN}</div>`,
+    )
+      .replace(
+        /href="\/vn\/products-solutions/g,
+        `href="/${language}/products-solutions`,
+      )
+      .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
+      .replace(/href="\/vn"/g, `href="/${language}"`);
+  }
+
+  if (
+    pageSlug === 'products-solutions' &&
+    sectionId === 'furniture-components' &&
+    (subSectionSlug === 'bed-parts' || subSectionSlug === 'component-bed-parts')
+  ) {
+    return translateAiHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN}</div>`,
     )
       .replace(
         /href="\/vn\/products-solutions/g,
