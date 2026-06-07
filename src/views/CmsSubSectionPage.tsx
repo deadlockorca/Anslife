@@ -127,6 +127,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'furniture-components' &&
     (detailSlug === 'component-upholstery-parts' || detailSlug === 'upholstery-parts');
+  const isFurnitureComponentsCustomPartsDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'furniture-components' &&
+    (detailSlug === 'component-custom-parts' || detailSlug === 'custom-drawing-components');
   const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
   const oemOdmSeoDescription = t(
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.',
@@ -174,6 +178,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language === 'vn'
       ? 'Sơ đồ cấu tạo bộ phận bọc nệm sofa, khung, foam, cushion, tay ghế, chân và chi tiết liên kết tiêu biểu.'
       : 'Diagram of upholstery parts, sofa frame, foam, cushions, arms, legs, and typical connection details.';
+  const customPartsSeoTitle =
+    language === 'vn' ? 'Cấu kiện tùy chỉnh theo bản vẽ' : 'Custom Drawing Components';
+  const customPartsSeoDescription =
+    language === 'vn'
+      ? 'Cấu kiện nội thất tùy chỉnh theo bản vẽ kỹ thuật, mẫu thật, mã chi tiết, yêu cầu gia công và tiêu chuẩn riêng của buyer.'
+      : 'Custom furniture components based on technical drawings, physical samples, part codes, machining requirements, and buyer-specific standards.';
   const chairsSeoTitle = language === 'vn' ? 'Ghế' : 'Chairs';
   const chairsSeoDescription =
     language === 'vn'
@@ -332,6 +342,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                       ? `${bedPartsSeoTitle} | ${t(config.title)}`
                       : isFurnitureComponentsUpholsteryPartsDetail
                         ? `${upholsteryPartsSeoTitle} | ${t(config.title)}`
+                        : isFurnitureComponentsCustomPartsDetail
+                          ? `${customPartsSeoTitle} | ${t(config.title)}`
       : `${t(section.title)} | ${t(config.title)}`;
   const seoDescription = isFinishedFurnitureChairsDetail
     ? chairsSeoDescription
@@ -373,6 +385,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                       ? bedPartsSeoDescription
                     : isFurnitureComponentsUpholsteryPartsDetail
                       ? upholsteryPartsSeoDescription
+                    : isFurnitureComponentsCustomPartsDetail
+                      ? customPartsSeoDescription
                     : t(section.description);
 
   return (

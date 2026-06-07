@@ -69,6 +69,18 @@ export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
     path: '/products-solutions/furniture-components',
   },
   {
+    label: 'Hoàn thiện bề mặt',
+    path: '/products-solutions/finishing',
+    children: [
+      { label: 'Hoàn thiện tự nhiên', path: '/products-solutions/finishing/natural-finish' },
+      { label: 'Stain', path: '/products-solutions/finishing/stain' },
+      { label: 'Lacquer', path: '/products-solutions/finishing/lacquer' },
+      { label: 'Hoàn thiện dầu', path: '/products-solutions/finishing/oil-finish' },
+      { label: 'Hoàn thiện sơn màu', path: '/products-solutions/finishing/painted-finish' },
+      { label: 'Hoàn thiện mờ', path: '/products-solutions/finishing/matte-finish' },
+    ],
+  },
+  {
     label: 'Cung ứng vật liệu',
     path: '/products-solutions/materials-supply',
     children: [
@@ -154,18 +166,6 @@ export const TOP_MENU: TopMenuItem[] = [
           { label: 'Vải', path: '/materials/upholstery-materials/fabric' },
           { label: 'Da / PU', path: '/materials/upholstery-materials/leather-pu' },
           { label: 'Vật liệu đệm', path: '/materials/upholstery-materials/cushion-materials' },
-        ],
-      },
-      {
-        label: 'Hoàn thiện bề mặt',
-        path: '/materials/finishing',
-        children: [
-          { label: 'Hoàn thiện tự nhiên', path: '/materials/finishing/natural-finish' },
-          { label: 'Stain', path: '/materials/finishing/stain' },
-          { label: 'Lacquer', path: '/materials/finishing/lacquer' },
-          { label: 'Hoàn thiện dầu', path: '/materials/finishing/oil-finish' },
-          { label: 'Hoàn thiện sơn màu', path: '/materials/finishing/painted-finish' },
-          { label: 'Hoàn thiện mờ', path: '/materials/finishing/matte-finish' },
         ],
       },
       {
@@ -337,6 +337,11 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
         description: 'Cấu kiện cho ghế, bàn, tủ và các cấu phần bọc nệm.',
       },
       {
+        id: 'finishing',
+        title: 'Hoàn thiện bề mặt',
+        description: 'Natural finish, stain, lacquer, oil, painted và matte finish.',
+      },
+      {
         id: 'materials-supply',
         title: 'Cung ứng vật liệu',
         description: 'Ván, gỗ tự nhiên, veneer, foam, vật liệu bọc và vật liệu đóng gói.',
@@ -394,7 +399,7 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
     path: '/materials',
     title: 'Nguyên liệu',
     slug: 'materials',
-    summary: 'Thư viện vật liệu theo nhóm gỗ, vật liệu tự nhiên, bọc nệm, hoàn thiện và đóng gói.',
+    summary: 'Thư viện vật liệu theo nhóm gỗ, vật liệu tự nhiên, bọc nệm và đóng gói.',
     sections: [
       {
         id: 'solid-wood',
@@ -415,11 +420,6 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
         id: 'upholstery-materials',
         title: 'Vật liệu bọc nệm',
         description: 'Foam, fabric, leather / PU và vật liệu đệm.',
-      },
-      {
-        id: 'finishing',
-        title: 'Hoàn thiện bề mặt',
-        description: 'Natural finish, stain, lacquer, oil, painted và matte finish.',
       },
       {
         id: 'packing-materials',

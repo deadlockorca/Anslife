@@ -624,7 +624,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
             <li>Theo mẫu thật</li>
             <li>Theo tiêu chuẩn riêng của buyer</li>
           </ul>
-          <a class="ai-components-card-action" href="#component-custom-parts">Xem chi tiết <span aria-hidden="true">→</span></a>
+          <a class="ai-components-card-action" href="/vn/products-solutions/furniture-components/component-custom-parts">Xem chi tiết <span aria-hidden="true">→</span></a>
         </article>
       </div>
     </section>
@@ -638,6 +638,263 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
       <div class="ai-components-actions">
         <a class="ai-components-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu ngay</a>
         <a class="ai-components-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↓</span>Tải mẫu yêu cầu cấu kiện</a>
+      </div>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
+  <section id="component-custom-parts" class="ai-section ai-components-page ai-component-detail-page ai-component-custom-drawing-page">
+    <header class="ai-component-custom-drawing-banner" aria-label="Cấu kiện tùy chỉnh theo bản vẽ">
+      <img
+        class="ai-component-custom-drawing-banner-image"
+        src="/assets/products/furniture-components/custom-drawing-components-banner.png"
+        alt="Sơ đồ cấu kiện tùy chỉnh theo bản vẽ, chi tiết khoan định vị, rãnh lắp ráp, mộng gỗ, cạnh bo, insert ren và mã chi tiết"
+        loading="eager"
+        decoding="async"
+      >
+      <div class="ai-component-custom-drawing-copy">
+        <h2>Cấu kiện tùy chỉnh<br>theo bản vẽ</h2>
+        <p class="ai-component-custom-drawing-subtitle">Custom Furniture Components by Drawing</p>
+        <span class="ai-component-custom-drawing-rule" aria-hidden="true"></span>
+        <p class="ai-component-custom-drawing-lead">Sản xuất cấu kiện nội thất tùy chỉnh theo bản vẽ kỹ thuật, mẫu thật, tiêu chuẩn vật liệu và yêu cầu riêng của từng buyer.</p>
+        <p class="ai-component-custom-drawing-note ai-component-custom-drawing-note-first"><span class="ai-component-custom-drawing-check" aria-hidden="true"></span>ANSLIFE hỗ trợ phát triển, sản xuất và cung ứng các cấu kiện nội thất tùy chỉnh tại Việt Nam theo bản vẽ kỹ thuật, mẫu thật, hình ảnh tham khảo, thông số vật liệu hoặc tiêu chuẩn riêng của buyer.</p>
+        <p class="ai-component-custom-drawing-note ai-component-custom-drawing-note-second"><span class="ai-component-custom-drawing-check" aria-hidden="true"></span>Dịch vụ này phù hợp với các cấu kiện không nằm trong nhóm sản phẩm tiêu chuẩn, các chi tiết đặc thù của dự án, cấu kiện theo bộ sưu tập riêng hoặc các bộ phận cần sản xuất theo yêu cầu kỹ thuật riêng.</p>
+      </div>
+    </header>
+
+    <section class="ai-component-custom-groups" aria-labelledby="custom-groups-title">
+      <h3 id="custom-groups-title">Các nhóm cấu kiện tùy chỉnh</h3>
+      <div class="ai-component-custom-groups-grid">
+        <article class="ai-component-custom-group-card">
+          <span class="ai-component-custom-group-index">01</span>
+          <figure class="ai-component-custom-group-media">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/group-technical-drawing.png" alt="Cấu kiện theo bản vẽ kỹ thuật" loading="lazy" decoding="async">
+          </figure>
+          <h4>Cấu kiện theo<br>bản vẽ kỹ thuật</h4>
+          <p>Chi tiết nội thất được sản xuất theo bản vẽ 2D, 3D, CAD, kích thước, vật liệu, dung sai và tiêu chuẩn kỹ thuật của buyer.</p>
+        </article>
+        <article class="ai-component-custom-group-card">
+          <span class="ai-component-custom-group-index">02</span>
+          <figure class="ai-component-custom-group-media">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/group-physical-sample.png" alt="Cấu kiện theo mẫu thật" loading="lazy" decoding="async">
+          </figure>
+          <h4>Cấu kiện theo<br>mẫu thật</h4>
+          <p>Cấu kiện được phát triển dựa trên mẫu thật, mẫu tham chiếu hoặc sản phẩm hiện có cần tái sản xuất, tối ưu hoặc điều chỉnh.</p>
+        </article>
+        <article class="ai-component-custom-group-card">
+          <span class="ai-component-custom-group-index">03</span>
+          <figure class="ai-component-custom-group-media">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/group-private-collection.png" alt="Cấu kiện theo bộ sưu tập riêng" loading="lazy" decoding="async">
+          </figure>
+          <h4>Cấu kiện theo<br>bộ sưu tập riêng</h4>
+          <p>Các bộ phận nội thất phục vụ bộ sưu tập riêng của buyer, brand, khách sạn, resort, nhà hàng hoặc dự án thương mại.</p>
+        </article>
+        <article class="ai-component-custom-group-card">
+          <span class="ai-component-custom-group-index">04</span>
+          <figure class="ai-component-custom-group-media">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/group-mixed-materials.png" alt="Cấu kiện kết hợp nhiều vật liệu" loading="lazy" decoding="async">
+          </figure>
+          <h4>Cấu kiện kết hợp<br>nhiều vật liệu</h4>
+          <p>Cấu kiện kết hợp gỗ, plywood, MDF, veneer, kim loại, mây tre, foam, vải, da hoặc vật liệu đặc thù theo yêu cầu thiết kế.</p>
+        </article>
+        <article class="ai-component-custom-group-card">
+          <span class="ai-component-custom-group-index">05</span>
+          <figure class="ai-component-custom-group-media">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/group-flat-pack.png" alt="Cấu kiện phục vụ lắp ráp flat-pack" loading="lazy" decoding="async">
+          </figure>
+          <h4>Cấu kiện phục vụ<br>lắp ráp / flat-pack</h4>
+          <p>Chi tiết được thiết kế để tháo lắp, đóng gói gọn, lắp ráp nhanh, tối ưu container và phù hợp với tiêu chuẩn xuất khẩu.</p>
+        </article>
+        <article class="ai-component-custom-group-card">
+          <span class="ai-component-custom-group-index">06</span>
+          <figure class="ai-component-custom-group-media">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/group-project-specific.png" alt="Cấu kiện đặc thù theo dự án" loading="lazy" decoding="async">
+          </figure>
+          <h4>Cấu kiện đặc thù<br>theo dự án</h4>
+          <p>Các chi tiết không tiêu chuẩn, cấu kiện kỹ thuật, bộ phận thay thế, chi tiết trang trí hoặc cấu kiện riêng theo yêu cầu của từng dự án.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-component-custom-specs" aria-label="Vật liệu, tiêu chuẩn và trạng thái hoàn thiện">
+      <article class="ai-component-custom-spec-panel ai-component-custom-materials-panel">
+        <h3>Vật liệu có thể sử dụng</h3>
+        <p>ANSLIFE có thể làm việc với nhiều nhóm vật liệu khác nhau để sản xuất cấu kiện tùy chỉnh, bao gồm gỗ tự nhiên, gỗ kỹ thuật, veneer, mây tre, vật liệu bọc, kim loại, phụ kiện liên kết và vật liệu hoàn thiện theo yêu cầu của từng dự án.</p>
+
+        <div class="ai-component-custom-material-grid">
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/chair-detail/material-rubberwood.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Gỗ cao su</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/chair-detail/material-acacia.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Acacia</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/chair-detail/material-oak.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Oak</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/chair-detail/material-ash.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Ash</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/chair-detail/material-beech.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Beech</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/chair-detail/material-pine.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Pine</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/chair-detail/material-plywood.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Plywood</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/cabinet-detail/material-mdf.png" alt="" loading="lazy" decoding="async">
+            <figcaption>MDF</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/chair-detail/material-veneer.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Veneer</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/cabinet-detail/material-hpl-melamine-surfaces.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Ván phủ<br>bề mặt</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/chair-detail/material-rattan.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Mây / tre /<br>mặt đan mây</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <span class="ai-component-custom-material-empty" aria-hidden="true"></span>
+            <figcaption>Foam</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <span class="ai-component-custom-material-empty" aria-hidden="true"></span>
+            <figcaption>Vải / da /<br>vật liệu bọc</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/chair-detail/material-metal.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Kim loại<br>kết hợp</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <span class="ai-component-custom-material-empty" aria-hidden="true"></span>
+            <figcaption>Kính<br>(nếu có yêu cầu)</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/cabinet-detail/material-hardware-connectors.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Phụ kiện<br>liên kết</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <img src="/assets/products/furniture-components/cabinet-detail/material-surface-finishing.png" alt="" loading="lazy" decoding="async">
+            <figcaption>Sơn, stain, lacquer,<br>dầu hoàn thiện</figcaption>
+          </figure>
+          <figure class="ai-component-custom-material-card">
+            <span class="ai-component-custom-material-empty" aria-hidden="true"></span>
+            <figcaption>Vật liệu<br>đóng gói</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="ai-component-custom-spec-panel ai-component-custom-checks-panel">
+        <h3>Tiêu chuẩn cần kiểm soát</h3>
+        <ul class="ai-component-custom-check-list">
+          <li>Kích thước từng chi tiết</li>
+          <li>Dung sai kỹ thuật nếu có</li>
+          <li>Đúng bản vẽ / mẫu duyệt</li>
+          <li>Đúng vật liệu yêu cầu</li>
+          <li>Độ chính xác khi gia công</li>
+          <li>Độ chính xác khi lắp ráp</li>
+          <li>Vị trí lỗ khoan / rãnh / mộng / liên kết</li>
+          <li>Độ phẳng / độ vuông góc / độ cân bằng</li>
+          <li>Độ ẩm vật liệu</li>
+          <li>Màu sắc và hoàn thiện bề mặt</li>
+          <li>Khả năng chịu lực nếu có yêu cầu</li>
+          <li>Khả năng tháo lắp nếu là hàng flat-pack</li>
+          <li>Độ đồng đều giữa các sản phẩm</li>
+          <li>Độ đồng đều giữa các lô hàng</li>
+          <li>Phân loại chi tiết theo mã sản phẩm</li>
+          <li>Quy cách đóng gói theo bộ hoặc theo mã chi tiết</li>
+        </ul>
+      </article>
+
+      <article class="ai-component-custom-spec-panel ai-component-custom-finish-panel">
+        <h3>Trạng thái hoàn thiện có thể cung cấp</h3>
+        <ul class="ai-component-custom-state-list">
+          <li>Cấu kiện thô</li>
+          <li>Cấu kiện đã cắt theo kích thước</li>
+          <li>Cấu kiện đã chà nhám</li>
+          <li>Cấu kiện đã gia công cạnh</li>
+          <li>Cấu kiện đã khoan lỗ</li>
+          <li>Cấu kiện đã tạo mộng / rãnh / liên kết</li>
+          <li>Cấu kiện đã phủ veneer / phủ bề mặt</li>
+          <li>Cấu kiện đã gắn phụ kiện nếu cần</li>
+          <li>Cấu kiện đã sơn / stain / lacquer / oil finish</li>
+          <li>Cấu kiện đã lắp thử</li>
+          <li>Cấu kiện bán thành phẩm</li>
+          <li>Cấu kiện hoàn thiện theo yêu cầu</li>
+          <li>Cấu kiện đóng gói theo bộ</li>
+          <li>Cấu kiện flat-pack sẵn sàng lắp ráp</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="ai-component-custom-process" aria-labelledby="custom-process-title">
+      <h3 id="custom-process-title">Quy trình phát triển &amp; sản xuất</h3>
+      <div class="ai-component-custom-process-flow">
+        <figure class="ai-component-custom-process-step">
+          <img class="ai-component-custom-process-image-large" src="/assets/products/furniture-components/chair-detail/process-drawing.png" alt="" loading="lazy" decoding="async">
+          <figcaption>Bản vẽ</figcaption>
+        </figure>
+        <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-custom-process-step">
+          <span class="ai-component-custom-process-empty" aria-hidden="true"></span>
+          <figcaption>Phân tích cấu kiện</figcaption>
+        </figure>
+        <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-custom-process-step">
+          <span class="ai-component-custom-process-empty" aria-hidden="true"></span>
+          <figcaption>Đề xuất vật liệu<br>&amp; phương án gia công</figcaption>
+        </figure>
+        <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-custom-process-step">
+          <span class="ai-component-custom-process-empty" aria-hidden="true"></span>
+          <figcaption>Làm mẫu</figcaption>
+        </figure>
+        <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-custom-process-step">
+          <span class="ai-component-custom-process-empty" aria-hidden="true"></span>
+          <figcaption>Lắp thử</figcaption>
+        </figure>
+        <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-custom-process-step">
+          <img class="ai-component-custom-process-image-large" src="/assets/products/furniture-components/chair-detail/process-qc.png" alt="" loading="lazy" decoding="async">
+          <figcaption>QC</figcaption>
+        </figure>
+        <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-custom-process-step">
+          <span class="ai-component-custom-process-empty" aria-hidden="true"></span>
+          <figcaption>Sản xuất theo lô</figcaption>
+        </figure>
+        <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
+        <figure class="ai-component-custom-process-step">
+          <span class="ai-component-custom-process-empty" aria-hidden="true"></span>
+          <figcaption>Đóng gói theo mã</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="ai-components-cta">
+      <div class="ai-components-cta-icon" aria-hidden="true"><span></span></div>
+      <div>
+        <h3>Gửi bản vẽ hoặc yêu cầu cấu kiện tùy chỉnh cho ANSLIFE</h3>
+        <p>Đội ngũ kỹ thuật & kinh doanh của chúng tôi sẽ kiểm tra bản vẽ, tư vấn vật liệu, phương án gia công và báo giá phù hợp.</p>
+      </div>
+      <div class="ai-components-actions">
+        <a class="ai-components-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu ngay</a>
+        <a class="ai-components-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↓</span>Tải bản vẽ lên</a>
       </div>
     </section>
   </section>
@@ -18019,6 +18276,24 @@ export function getAIFallbackSectionHtml(
     return translateAiHtml(
       language,
       `<div class="ai-content">${PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN}</div>`,
+    )
+      .replace(
+        /href="\/vn\/products-solutions/g,
+        `href="/${language}/products-solutions`,
+      )
+      .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
+      .replace(/href="\/vn"/g, `href="/${language}"`);
+  }
+
+  if (
+    pageSlug === 'products-solutions' &&
+    sectionId === 'furniture-components' &&
+    (subSectionSlug === 'component-custom-parts' ||
+      subSectionSlug === 'custom-drawing-components')
+  ) {
+    return translateAiHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN}</div>`,
     )
       .replace(
         /href="\/vn\/products-solutions/g,
