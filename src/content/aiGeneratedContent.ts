@@ -850,22 +850,22 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <span class="ai-component-custom-process-empty" aria-hidden="true"></span>
+          <img src="/assets/products/furniture-components/custom-drawing-detail/process-analysis.png" alt="" loading="lazy" decoding="async">
           <figcaption>Phân tích cấu kiện</figcaption>
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <span class="ai-component-custom-process-empty" aria-hidden="true"></span>
+          <img src="/assets/products/furniture-components/custom-drawing-detail/process-material-plan.png" alt="" loading="lazy" decoding="async">
           <figcaption>Đề xuất vật liệu<br>&amp; phương án gia công</figcaption>
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <span class="ai-component-custom-process-empty" aria-hidden="true"></span>
+          <img src="/assets/products/furniture-components/custom-drawing-detail/process-sample.png" alt="" loading="lazy" decoding="async">
           <figcaption>Làm mẫu</figcaption>
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <span class="ai-component-custom-process-empty" aria-hidden="true"></span>
+          <img src="/assets/products/furniture-components/custom-drawing-detail/process-trial-assembly.png" alt="" loading="lazy" decoding="async">
           <figcaption>Lắp thử</figcaption>
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
@@ -875,15 +875,88 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <span class="ai-component-custom-process-empty" aria-hidden="true"></span>
+          <img src="/assets/products/furniture-components/custom-drawing-detail/process-batch-production.png" alt="" loading="lazy" decoding="async">
           <figcaption>Sản xuất theo lô</figcaption>
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <span class="ai-component-custom-process-empty" aria-hidden="true"></span>
+          <img src="/assets/products/furniture-components/custom-drawing-detail/process-code-packing.png" alt="" loading="lazy" decoding="async">
           <figcaption>Đóng gói theo mã</figcaption>
         </figure>
       </div>
+    </section>
+
+    <section class="ai-component-custom-support" aria-label="Hỗ trợ, yêu cầu đầu vào và đóng gói">
+      <article class="ai-component-custom-support-panel ai-component-custom-support-panel-wide">
+        <h3>ANSLIFE hỗ trợ gì?</h3>
+        <ul class="ai-component-custom-support-list">
+          <li>Phân tích bản vẽ kỹ thuật</li>
+          <li>Đọc và tách cấu kiện theo mã chi tiết</li>
+          <li>Đề xuất vật liệu phù hợp</li>
+          <li>Đề xuất phương án gia công</li>
+          <li>Sản xuất mẫu cấu kiện</li>
+          <li>Kiểm tra lắp thử</li>
+          <li>Kiểm soát kích thước, lỗ khoan, rãnh, mộng và liên kết</li>
+          <li>Kiểm soát vật liệu, màu sắc và hoàn thiện</li>
+          <li>Tổ chức sản xuất theo lô</li>
+          <li>Đóng gói theo mã chi tiết hoặc theo bộ</li>
+          <li>Xuất hàng hoặc cấp phát cho nhà máy lắp ráp</li>
+        </ul>
+      </article>
+
+      <article class="ai-component-custom-support-panel ai-component-custom-support-panel-wide">
+        <h3>Buyer cần gửi gì?</h3>
+        <ul class="ai-component-custom-support-list">
+          <li>Bản vẽ kỹ thuật 2D / 3D / CAD</li>
+          <li>Danh sách chi tiết / BOM nếu có</li>
+          <li>Mẫu thật nếu có</li>
+          <li>Hình ảnh tham khảo</li>
+          <li>Kích thước từng chi tiết</li>
+          <li>Kích thước seat cushion / back cushion</li>
+          <li>Thông số foam nếu có</li>
+          <li>Mẫu vải / mẫu da / mã màu</li>
+          <li>Yêu cầu đường may</li>
+          <li>Yêu cầu độ êm / độ đàn hồi</li>
+          <li>Yêu cầu khung gỗ / khung kim loại nếu có</li>
+          <li>Dung sai kỹ thuật nếu có</li>
+          <li>Yêu cầu phụ kiện nếu có</li>
+          <li>Trạng thái hoàn thiện mong muốn</li>
+          <li>Số lượng từng mã chi tiết</li>
+          <li>Yêu cầu đóng gói</li>
+          <li>Thị trường xuất khẩu</li>
+          <li>Kế hoạch giao hàng</li>
+        </ul>
+      </article>
+
+      <article class="ai-component-custom-support-panel ai-component-custom-packaging-panel">
+        <h3>Đóng gói cấu kiện theo mã chi tiết</h3>
+        <div class="ai-component-custom-packaging-grid">
+          <figure class="ai-component-custom-packaging-card">
+            <span class="ai-component-custom-packaging-empty" aria-hidden="true"></span>
+            <figcaption>Đánh mã<br>mỗi chi tiết</figcaption>
+          </figure>
+          <figure class="ai-component-custom-packaging-card">
+            <span class="ai-component-custom-packaging-empty" aria-hidden="true"></span>
+            <figcaption>Phân loại theo<br>BOM / mã chi tiết</figcaption>
+          </figure>
+          <figure class="ai-component-custom-packaging-card">
+            <span class="ai-component-custom-packaging-empty" aria-hidden="true"></span>
+            <figcaption>Phụ kiện đóng<br>túi riêng</figcaption>
+          </figure>
+          <figure class="ai-component-custom-packaging-card">
+            <span class="ai-component-custom-packaging-empty" aria-hidden="true"></span>
+            <figcaption>Bọc chống trầy<br>&amp; chống ẩm</figcaption>
+          </figure>
+          <figure class="ai-component-custom-packaging-card">
+            <span class="ai-component-custom-packaging-empty" aria-hidden="true"></span>
+            <figcaption>Carton theo bộ<br>hoặc theo mã</figcaption>
+          </figure>
+          <figure class="ai-component-custom-packaging-card">
+            <span class="ai-component-custom-packaging-empty" aria-hidden="true"></span>
+            <figcaption>Pallet hóa<br>sẵn sàng xuất khẩu</figcaption>
+          </figure>
+        </div>
+      </article>
     </section>
 
     <section class="ai-components-cta">
