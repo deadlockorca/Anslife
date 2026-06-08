@@ -16891,7 +16891,7 @@ a.mobile-menu-utility-link {
 
 .ai-component-custom-material-card {
   display: grid;
-  grid-template-rows: 58px auto;
+  grid-template-rows: 74px auto;
   justify-items: center;
   align-items: center;
   gap: 0.36rem;
@@ -16902,8 +16902,8 @@ a.mobile-menu-utility-link {
 .ai-component-custom-material-card img,
 .ai-component-custom-material-empty {
   display: block;
-  width: 52px !important;
-  height: 52px !important;
+  width: 56px !important;
+  height: 56px !important;
   max-width: none !important;
   border-radius: 7px;
   object-fit: contain;
@@ -16912,6 +16912,11 @@ a.mobile-menu-utility-link {
 
 .ai-component-custom-material-card img {
   mix-blend-mode: multiply;
+}
+
+.ai-component-custom-material-card .ai-component-custom-material-image-large {
+  width: 68px !important;
+  height: 68px !important;
 }
 
 .ai-component-custom-material-empty {
@@ -17150,7 +17155,7 @@ a.mobile-menu-utility-link {
 
 .ai-component-custom-packaging-card {
   display: grid;
-  grid-template-rows: 74px auto;
+  grid-template-rows: 89px auto;
   justify-items: center;
   align-items: end;
   gap: 0.34rem;
@@ -17161,8 +17166,8 @@ a.mobile-menu-utility-link {
 .ai-component-custom-packaging-card img,
 .ai-component-custom-packaging-empty {
   display: block;
-  width: min(100%, 82px);
-  height: 74px;
+  width: min(100%, 98px);
+  height: 89px;
   max-width: none !important;
   object-fit: contain;
   object-position: center;
@@ -17272,6 +17277,11 @@ a.mobile-menu-utility-link {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .ai-component-custom-material-card .ai-component-custom-material-image-large {
+    width: 68px !important;
+    height: 68px !important;
+  }
+
   .ai-component-custom-check-list {
     grid-template-columns: 1fr;
   }
@@ -17286,13 +17296,13 @@ a.mobile-menu-utility-link {
   }
 
   .ai-component-custom-packaging-card {
-    grid-template-rows: 92px auto;
+    grid-template-rows: 110px auto;
   }
 
   .ai-component-custom-packaging-card img,
   .ai-component-custom-packaging-empty {
-    width: min(100%, 112px);
-    height: 92px;
+    width: min(100%, 134px);
+    height: 110px;
   }
 }
 

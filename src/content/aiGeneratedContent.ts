@@ -768,11 +768,11 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
             <figcaption>Mây / tre /<br>mặt đan mây</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <span class="ai-component-custom-material-empty" aria-hidden="true"></span>
+            <img class="ai-component-custom-material-image-large" src="/assets/products/furniture-components/custom-drawing-detail/material-upholstery.png" alt="" loading="lazy" decoding="async">
             <figcaption>Foam</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <span class="ai-component-custom-material-empty" aria-hidden="true"></span>
+            <img class="ai-component-custom-material-image-large" src="/assets/products/furniture-components/custom-drawing-detail/material-foam.png" alt="" loading="lazy" decoding="async">
             <figcaption>Vải / da /<br>vật liệu bọc</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
@@ -780,7 +780,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
             <figcaption>Kim loại<br>kết hợp</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <span class="ai-component-custom-material-empty" aria-hidden="true"></span>
+            <img class="ai-component-custom-material-image-large" src="/assets/products/furniture-components/custom-drawing-detail/material-glass.png" alt="" loading="lazy" decoding="async">
             <figcaption>Kính<br>(nếu có yêu cầu)</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
@@ -792,7 +792,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
             <figcaption>Sơn, stain, lacquer,<br>dầu hoàn thiện</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <span class="ai-component-custom-material-empty" aria-hidden="true"></span>
+            <img class="ai-component-custom-material-image-large" src="/assets/products/furniture-components/custom-drawing-detail/material-packaging.png" alt="" loading="lazy" decoding="async">
             <figcaption>Vật liệu<br>đóng gói</figcaption>
           </figure>
         </div>
@@ -932,27 +932,27 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
         <h3>Đóng gói cấu kiện theo mã chi tiết</h3>
         <div class="ai-component-custom-packaging-grid">
           <figure class="ai-component-custom-packaging-card">
-            <span class="ai-component-custom-packaging-empty" aria-hidden="true"></span>
+            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-coded-detail.png" alt="" loading="lazy" decoding="async">
             <figcaption>Đánh mã<br>mỗi chi tiết</figcaption>
           </figure>
           <figure class="ai-component-custom-packaging-card">
-            <span class="ai-component-custom-packaging-empty" aria-hidden="true"></span>
+            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-bom-sorting.png" alt="" loading="lazy" decoding="async">
             <figcaption>Phân loại theo<br>BOM / mã chi tiết</figcaption>
           </figure>
           <figure class="ai-component-custom-packaging-card">
-            <span class="ai-component-custom-packaging-empty" aria-hidden="true"></span>
+            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-hardware-bag.png" alt="" loading="lazy" decoding="async">
             <figcaption>Phụ kiện đóng<br>túi riêng</figcaption>
           </figure>
           <figure class="ai-component-custom-packaging-card">
-            <span class="ai-component-custom-packaging-empty" aria-hidden="true"></span>
+            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-scratch-moisture-protection.png" alt="" loading="lazy" decoding="async">
             <figcaption>Bọc chống trầy<br>&amp; chống ẩm</figcaption>
           </figure>
           <figure class="ai-component-custom-packaging-card">
-            <span class="ai-component-custom-packaging-empty" aria-hidden="true"></span>
+            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-carton-by-code.png" alt="" loading="lazy" decoding="async">
             <figcaption>Carton theo bộ<br>hoặc theo mã</figcaption>
           </figure>
           <figure class="ai-component-custom-packaging-card">
-            <span class="ai-component-custom-packaging-empty" aria-hidden="true"></span>
+            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-export-pallet.png" alt="" loading="lazy" decoding="async">
             <figcaption>Pallet hóa<br>sẵn sàng xuất khẩu</figcaption>
           </figure>
         </div>
@@ -18076,7 +18076,7 @@ function translateAiHtml(language: LanguageCode, html: string): string {
   const localizedTextNodes = html.replace(/>([^<>]+)</g, (fullMatch, textNode: string) => {
     const leadingWhitespace = textNode.match(/^\s*/)?.[0] ?? '';
     const trailingWhitespace = textNode.match(/\s*$/)?.[0] ?? '';
-    const coreText = textNode.trim();
+    const coreText = textNode.trim().replace(/\s+/g, ' ');
 
     if (!coreText) {
       return fullMatch;
