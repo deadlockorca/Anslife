@@ -131,6 +131,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'furniture-components' &&
     (detailSlug === 'component-custom-parts' || detailSlug === 'custom-drawing-components');
+  const isFinishingNaturalDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finishing' &&
+    detailSlug === 'natural-finish';
+  const isProductsFinishingDetail =
+    config.slug === 'products-solutions' && section.id === 'finishing' && Boolean(detailSlug);
   const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
   const oemOdmSeoDescription = t(
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.',
@@ -184,6 +190,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language === 'vn'
       ? 'Cấu kiện nội thất tùy chỉnh theo bản vẽ kỹ thuật, mẫu thật, mã chi tiết, yêu cầu gia công và tiêu chuẩn riêng của buyer.'
       : 'Custom furniture components based on technical drawings, physical samples, part codes, machining requirements, and buyer-specific standards.';
+  const naturalFinishSeoTitle = language === 'vn' ? 'Hoàn thiện tự nhiên' : 'Natural Finish';
+  const naturalFinishSeoDescription =
+    language === 'vn'
+      ? 'Giải pháp hoàn thiện tự nhiên giữ lại vân gỗ, màu gỗ và cảm giác bề mặt thật theo mẫu duyệt của buyer.'
+      : 'Natural finish solution that preserves wood grain, natural color, and touch-and-feel according to buyer-approved samples.';
   const chairsSeoTitle = language === 'vn' ? 'Ghế' : 'Chairs';
   const chairsSeoDescription =
     language === 'vn'
@@ -263,6 +274,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       (section.id === 'operations-supply-solutions' ||
         section.id === 'finished-furniture' ||
         section.id === 'furniture-components')) ||
+    isProductsFinishingDetail ||
     (config.slug === 'resources' && section.id === 'faq') ||
     isCustomAboutSection ||
     (config.slug === 'about-anslife' &&
@@ -282,6 +294,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       (section.id === 'operations-supply-solutions' ||
         section.id === 'finished-furniture' ||
         section.id === 'furniture-components')) ||
+    isFinishingNaturalDetail ||
     (config.slug === 'resources' && section.id === 'faq') ||
     (config.slug === 'about-anslife' &&
       (section.id === 'philosophy' ||
@@ -340,10 +353,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                     ? `${tableTopsLegsSeoTitle} | ${t(config.title)}`
                     : isFurnitureComponentsBedPartsDetail
                       ? `${bedPartsSeoTitle} | ${t(config.title)}`
-                      : isFurnitureComponentsUpholsteryPartsDetail
-                        ? `${upholsteryPartsSeoTitle} | ${t(config.title)}`
-                        : isFurnitureComponentsCustomPartsDetail
-                          ? `${customPartsSeoTitle} | ${t(config.title)}`
+                    : isFurnitureComponentsUpholsteryPartsDetail
+                      ? `${upholsteryPartsSeoTitle} | ${t(config.title)}`
+                      : isFurnitureComponentsCustomPartsDetail
+                        ? `${customPartsSeoTitle} | ${t(config.title)}`
+                        : isFinishingNaturalDetail
+                          ? `${naturalFinishSeoTitle} | ${t(config.title)}`
       : `${t(section.title)} | ${t(config.title)}`;
   const seoDescription = isFinishedFurnitureChairsDetail
     ? chairsSeoDescription
@@ -387,6 +402,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                       ? upholsteryPartsSeoDescription
                     : isFurnitureComponentsCustomPartsDetail
                       ? customPartsSeoDescription
+                    : isFinishingNaturalDetail
+                      ? naturalFinishSeoDescription
                     : t(section.description);
 
   return (

@@ -2,6 +2,7 @@ import type { LanguageCode } from './language';
 import { CABINET_STORAGE_PARTS_TEMPLATE_TRANSLATIONS } from './cabinetStoragePartsTemplateTranslations';
 import { CUSTOM_DRAWING_COMPONENTS_TEMPLATE_TRANSLATIONS } from './customDrawingComponentsTemplateTranslations';
 import { FURNITURE_COMPONENTS_TEMPLATE_TRANSLATIONS } from './furnitureComponentsTemplateTranslations';
+import { NATURAL_FINISH_TEMPLATE_TRANSLATIONS } from './naturalFinishTemplateTranslations';
 import { TABLE_TOPS_LEGS_TEMPLATE_TRANSLATIONS } from './tableTopsLegsTemplateTranslations';
 import { UPHOLSTERY_PARTS_TEMPLATE_TRANSLATIONS } from './upholsteryPartsTemplateTranslations';
 
@@ -6099,5 +6100,15 @@ for (const language of Object.keys(CUSTOM_DRAWING_COMPONENTS_TEMPLATE_TRANSLATIO
   AUTO_TRANSLATIONS[language] = {
     ...(AUTO_TRANSLATIONS[language] ?? {}),
     ...(CUSTOM_DRAWING_COMPONENTS_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
+
+for (const language of Object.keys(NATURAL_FINISH_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(NATURAL_FINISH_TEMPLATE_TRANSLATIONS[language] ?? {}),
   };
 }

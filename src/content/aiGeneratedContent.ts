@@ -263,6 +263,252 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
   </section>
 `.trim();
 
+const PRODUCTS_FINISHING_NATURAL_FINISH_SECTION_VN = `
+  <section id="natural-finish" class="ai-section ai-finishing-natural-page">
+    <header class="ai-finishing-natural-banner" aria-label="Hoàn thiện tự nhiên">
+      <img
+        class="ai-finishing-natural-banner-image"
+        src="/assets/products/finishing/natural-finish/natural-finish-banner.webp"
+        alt="Mẫu hoàn thiện gỗ tự nhiên, bảng QC và dầu hoàn thiện tự nhiên"
+        loading="eager"
+        decoding="async"
+      >
+      <div class="ai-finishing-natural-copy">
+        <h2>Hoàn thiện tự nhiên</h2>
+        <p class="ai-finishing-natural-lead">ANSLIFE phát triển các giải pháp hoàn thiện tự nhiên cho sản phẩm nội thất, veneer, plywood và các vật liệu liên quan với triết lý tôn vinh vẻ đẹp thật của gỗ và kiểm soát chặt chẽ chất lượng bề mặt.</p>
+        <p class="ai-finishing-natural-text">Mọi tiêu chuẩn màu sắc, vân gỗ và cảm giác bề mặt đều được thiết lập theo mẫu duyệt của buyer và duy trì ổn định trong sản xuất hàng loạt.</p>
+      </div>
+    </header>
+
+    <section class="ai-finishing-natural-flow" aria-labelledby="natural-finish-flow-title">
+      <h3 id="natural-finish-flow-title">Từ mẫu duyệt đến sản xuất</h3>
+      <div class="ai-finishing-natural-flow-grid">
+        <article class="ai-finishing-natural-flow-card">
+          <span class="ai-finishing-natural-flow-index">1</span>
+          <figure class="ai-finishing-natural-flow-visual" aria-label="Sample Evaluation">
+            <img src="/assets/products/finishing/natural-finish/flow/06-approved-sample-validation.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Sample Evaluation</h4>
+          <p>đánh giá mẫu màu, vân gỗ và yêu cầu hoàn thiện.</p>
+        </article>
+        <article class="ai-finishing-natural-flow-card">
+          <span class="ai-finishing-natural-flow-index">2</span>
+          <figure class="ai-finishing-natural-flow-visual" aria-label="Material Surface Check">
+            <img src="/assets/products/finishing/natural-finish/flow/02-latest-material-surface-check.png" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Material Surface Check</h4>
+          <p>kiểm tra bề mặt vật liệu và cấu trúc gỗ.</p>
+        </article>
+        <article class="ai-finishing-natural-flow-card">
+          <span class="ai-finishing-natural-flow-index">3</span>
+          <figure class="ai-finishing-natural-flow-visual" aria-label="Color and Texture Development">
+            <img src="/assets/products/finishing/natural-finish/flow/04-oil-natural-finish-application.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Color &amp; Texture Development</h4>
+          <p>phát triển màu, độ mở vân và cảm giác bề mặt.</p>
+        </article>
+        <article class="ai-finishing-natural-flow-card">
+          <span class="ai-finishing-natural-flow-index">4</span>
+          <figure class="ai-finishing-natural-flow-visual" aria-label="Oil Natural Finish Application">
+            <img src="/assets/products/finishing/natural-finish/flow/03-color-texture-development.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Oil / Natural Finish Application</h4>
+          <p>thi công oil finish hoặc lớp hoàn thiện tự nhiên.</p>
+        </article>
+        <article class="ai-finishing-natural-flow-card">
+          <span class="ai-finishing-natural-flow-index">5</span>
+          <figure class="ai-finishing-natural-flow-visual" aria-label="Surface Optimization">
+            <img src="/assets/products/finishing/natural-finish/flow/02-material-surface-check.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Surface Optimization</h4>
+          <p>điều chỉnh độ mờ, độ mịn, cảm giác chạm và hiệu ứng.</p>
+        </article>
+        <article class="ai-finishing-natural-flow-card">
+          <span class="ai-finishing-natural-flow-index">6</span>
+          <figure class="ai-finishing-natural-flow-visual" aria-label="Approved Sample Validation">
+            <img src="/assets/products/finishing/natural-finish/flow/01-sample-evaluation.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Approved Sample Validation</h4>
+          <p>đối chiếu mẫu duyệt, xác nhận trước sản xuất.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-finishing-natural-control" aria-labelledby="natural-finish-control-title">
+      <h3 id="natural-finish-control-title">Điểm kiểm soát chất lượng</h3>
+      <div class="ai-finishing-natural-control-grid">
+        <article class="ai-finishing-natural-control-card">
+          <figure class="ai-finishing-natural-control-visual" aria-label="Độ đồng đều màu sắc">
+            <img src="/assets/products/finishing/natural-finish/quality-control/06-gloss-reflection-control.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Độ đồng đều màu sắc</h4>
+          <p>Kiểm soát sai lệch màu giữa các tấm và giữa các lô hàng.</p>
+        </article>
+        <article class="ai-finishing-natural-control-card">
+          <figure class="ai-finishing-natural-control-visual" aria-label="Kiểm soát texture và vân gỗ">
+            <img src="/assets/products/finishing/natural-finish/quality-control/05-buyer-sample-match.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Kiểm soát texture &amp; vân gỗ</h4>
+          <p>Duy trì độ mở vân, hướng vân và sự tự nhiên của bề mặt.</p>
+        </article>
+        <article class="ai-finishing-natural-control-card">
+          <figure class="ai-finishing-natural-control-visual" aria-label="Cảm giác chạm bề mặt">
+            <img src="/assets/products/finishing/natural-finish/quality-control/04-batch-consistency.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Cảm giác chạm bề mặt</h4>
+          <p>Đảm bảo bề mặt mịn, êm tay và đồng nhất theo tiêu chuẩn.</p>
+        </article>
+        <article class="ai-finishing-natural-control-card">
+          <figure class="ai-finishing-natural-control-visual" aria-label="Độ ổn định giữa các lô hàng">
+            <img src="/assets/products/finishing/natural-finish/quality-control/03-surface-touch-feel.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Độ ổn định giữa các lô hàng</h4>
+          <p>Duy trì độ ổn định màu, texture và hiệu ứng trong mỗi lô sản xuất.</p>
+        </article>
+        <article class="ai-finishing-natural-control-card">
+          <figure class="ai-finishing-natural-control-visual" aria-label="Đối chiếu với mẫu duyệt buyer">
+            <img src="/assets/products/finishing/natural-finish/quality-control/02-texture-grain-control.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Đối chiếu với mẫu duyệt buyer</h4>
+          <p>So khớp chặt chẽ với mẫu duyệt trước khi xuất hàng loạt.</p>
+        </article>
+        <article class="ai-finishing-natural-control-card">
+          <figure class="ai-finishing-natural-control-visual" aria-label="Kiểm soát độ mờ phản chiếu">
+            <img src="/assets/products/finishing/natural-finish/quality-control/01-color-consistency.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Kiểm soát độ mờ / phản chiếu</h4>
+          <p>Giữ mức độ mờ, độ bóng và phản chiếu theo tiêu chuẩn yêu cầu.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-finishing-natural-groups" aria-labelledby="natural-finish-groups-title">
+      <h3 id="natural-finish-groups-title">Các nhóm hoàn thiện chính</h3>
+      <div class="ai-finishing-natural-groups-grid">
+        <article class="ai-finishing-natural-group-card">
+          <figure class="ai-finishing-natural-group-visual" aria-label="Natural Wood Look">
+            <img src="/assets/products/finishing/natural-finish/groups/05-color-tone-control.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <div>
+            <h4>Natural Wood Look</h4>
+            <p>Giữ vẻ đẹp tự nhiên của gỗ với màu sắc và vân gỗ nguyên bản.</p>
+          </div>
+        </article>
+        <article class="ai-finishing-natural-group-card">
+          <figure class="ai-finishing-natural-group-visual" aria-label="Oil Finish">
+            <img class="ai-finishing-natural-group-image-scale-150" src="/assets/products/finishing/natural-finish/groups/04-matte-natural-finish.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <div>
+            <h4>Oil Finish</h4>
+            <p>Hoàn thiện tự nhiên bằng dầu, tăng độ sâu màu và độ bền.</p>
+          </div>
+        </article>
+        <article class="ai-finishing-natural-group-card">
+          <figure class="ai-finishing-natural-group-visual" aria-label="Open Grain Texture">
+            <img class="ai-finishing-natural-group-image-scale-150" src="/assets/products/finishing/natural-finish/groups/03-open-grain-texture.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <div>
+            <h4>Open Grain Texture</h4>
+            <p>Tôn vinh cấu trúc vân gỗ với độ mở vân tự nhiên.</p>
+          </div>
+        </article>
+        <article class="ai-finishing-natural-group-card">
+          <figure class="ai-finishing-natural-group-visual" aria-label="Matte Natural Finish">
+            <img src="/assets/products/finishing/natural-finish/groups/02-oil-finish.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <div>
+            <h4>Matte Natural Finish</h4>
+            <p>Bề mặt siêu mờ, giảm phản chiếu, mang lại cảm giác tinh tế.</p>
+          </div>
+        </article>
+        <article class="ai-finishing-natural-group-card">
+          <figure class="ai-finishing-natural-group-visual" aria-label="Color Tone Control">
+            <img class="ai-finishing-natural-group-image-scale-120" src="/assets/products/finishing/natural-finish/groups/01-natural-wood-look.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <div>
+            <h4>Color Tone Control</h4>
+            <p>Phát triển tone màu theo yêu cầu, nhất quán với mẫu duyệt.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-finishing-natural-applications" aria-labelledby="natural-finish-applications-title">
+      <h3 id="natural-finish-applications-title">Ứng dụng</h3>
+      <div class="ai-finishing-natural-applications-grid">
+        <article class="ai-finishing-natural-application-card">
+          <figure class="ai-finishing-natural-application-visual" aria-label="Gỗ tự nhiên">
+            <img src="/assets/products/finishing/natural-finish/applications/06-furniture-components.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Gỗ tự nhiên</h4>
+        </article>
+        <article class="ai-finishing-natural-application-card">
+          <figure class="ai-finishing-natural-application-visual" aria-label="Veneer">
+            <img src="/assets/products/finishing/natural-finish/applications/05-cabinet-components.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Veneer</h4>
+        </article>
+        <article class="ai-finishing-natural-application-card">
+          <figure class="ai-finishing-natural-application-visual" aria-label="Plywood">
+            <img src="/assets/products/finishing/natural-finish/applications/04-interior-panel.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Plywood</h4>
+        </article>
+        <article class="ai-finishing-natural-application-card">
+          <figure class="ai-finishing-natural-application-visual" aria-label="Panel nội thất">
+            <img src="/assets/products/finishing/natural-finish/applications/03-plywood.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Panel nội thất</h4>
+        </article>
+        <article class="ai-finishing-natural-application-card">
+          <figure class="ai-finishing-natural-application-visual" aria-label="Cabinet Components">
+            <img src="/assets/products/finishing/natural-finish/applications/02-veneer.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Cabinet Components</h4>
+        </article>
+        <article class="ai-finishing-natural-application-card">
+          <figure class="ai-finishing-natural-application-visual" aria-label="Furniture Components">
+            <img src="/assets/products/finishing/natural-finish/applications/01-solid-wood.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Furniture Components</h4>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-finishing-natural-summary-request" aria-label="Tóm tắt kiểm soát chất lượng và gửi mẫu">
+      <article class="ai-finishing-natural-summary-card">
+        <div class="ai-finishing-natural-summary-copy">
+          <h3>Tóm tắt kiểm soát chất lượng ANSLIFE</h3>
+          <ul class="ai-finishing-natural-summary-list">
+            <li><span aria-hidden="true"></span>Kiểm soát toàn bộ quy trình từ mẫu đến sản xuất.</li>
+            <li><span aria-hidden="true"></span>Phát triển màu &amp; vân gỗ theo mẫu duyệt của buyer.</li>
+            <li><span aria-hidden="true"></span>Đảm bảo sự ổn định trong từng lô hàng.</li>
+            <li><span aria-hidden="true"></span>Kiểm tra 100% các chỉ tiêu chất lượng bề mặt.</li>
+            <li><span aria-hidden="true"></span>Cam kết đồng hành dài hạn cùng đối tác.</li>
+          </ul>
+        </div>
+        <figure class="ai-finishing-natural-summary-visual" aria-label="Minh họa kiểm soát chất lượng bề mặt">
+          <img src="/assets/products/finishing/natural-finish/summary-request/quality-summary.webp" alt="" loading="lazy" decoding="async">
+        </figure>
+      </article>
+
+      <article class="ai-finishing-natural-request-card">
+        <div class="ai-finishing-natural-request-copy">
+          <h3>Gửi mẫu màu / mẫu gỗ cho ANSLIFE</h3>
+          <p>Buyer có thể gửi mẫu màu, mẫu gỗ, hình ảnh tham khảo hoặc tiêu chuẩn hoàn thiện để ANSLIFE đánh giá và đề xuất phương án phù hợp.</p>
+          <div class="ai-finishing-natural-request-actions">
+            <a class="ai-finishing-natural-request-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu</a>
+            <a class="ai-finishing-natural-request-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↑</span>Tải mẫu lên</a>
+          </div>
+        </div>
+        <figure class="ai-finishing-natural-request-visual" aria-label="Minh họa gửi mẫu màu hoặc mẫu gỗ">
+          <img src="/assets/products/finishing/natural-finish/summary-request/request-sample-leaves.webp" alt="" loading="lazy" decoding="async">
+        </figure>
+      </article>
+    </section>
+  </section>
+`.trim();
+
 const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
   <section id="finished-furniture" class="ai-section ai-finished-page ai-company-overview">
     <header class="ai-finished-hero">
@@ -18270,6 +18516,19 @@ export function getAIFallbackSectionHtml(
   language: LanguageCode = 'vn',
   subSectionSlug = '',
 ): string | null {
+  if (
+    pageSlug === 'products-solutions' &&
+    sectionId === 'finishing' &&
+    subSectionSlug === 'natural-finish'
+  ) {
+    return translateAiHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_FINISHING_NATURAL_FINISH_SECTION_VN}</div>`,
+    )
+      .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
+      .replace(/href="\/vn"/g, `href="/${language}"`);
+  }
+
   if (
     pageSlug === 'products-solutions' &&
     sectionId === 'furniture-components' &&
