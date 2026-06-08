@@ -520,7 +520,7 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
 const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
   <section id="furniture-components" class="ai-section ai-components-page">
     <header class="ai-components-hero">
-      <img class="ai-components-hero-image" src="/assets/products/furniture-components/banner_ket_cau.png" alt="" loading="eager" decoding="async" aria-hidden="true">
+      <img class="ai-components-hero-image" src="/assets/products/furniture-components/banner_ket_cau.webp" alt="" loading="eager" decoding="async" aria-hidden="true">
       <div class="ai-components-hero-copy">
         <p class="ai-components-eyebrow">FURNITURE COMPONENTS</p>
         <h2>Cấu kiện nội thất</h2>
@@ -533,7 +533,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
       <div class="ai-components-grid">
         <article id="component-chair-frames" class="ai-components-card">
           <figure class="ai-components-sketch ai-components-sketch-image" aria-hidden="true">
-            <img src="/assets/products/furniture-components/icon-chair.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/icon-chair.webp" alt="" loading="lazy" decoding="async">
           </figure>
           <div class="ai-components-card-heading">
             <span>01</span>
@@ -549,7 +549,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
 
         <article id="component-table-tops" class="ai-components-card">
           <figure class="ai-components-sketch ai-components-sketch-image" aria-hidden="true">
-            <img src="/assets/products/furniture-components/icon-table.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/icon-table.webp" alt="" loading="lazy" decoding="async">
           </figure>
           <div class="ai-components-card-heading">
             <span>02</span>
@@ -565,7 +565,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
 
         <article id="component-cabinet-parts" class="ai-components-card">
           <figure class="ai-components-sketch ai-components-sketch-image" aria-hidden="true">
-            <img src="/assets/products/furniture-components/icon-cabinet.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/icon-cabinet.webp" alt="" loading="lazy" decoding="async">
           </figure>
           <div class="ai-components-card-heading">
             <span>03</span>
@@ -581,7 +581,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
 
         <article id="component-bed-parts" class="ai-components-card">
           <figure class="ai-components-sketch ai-components-sketch-image" aria-hidden="true">
-            <img src="/assets/products/furniture-components/icon-bed.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/icon-bed.webp" alt="" loading="lazy" decoding="async">
           </figure>
           <div class="ai-components-card-heading">
             <span>04</span>
@@ -597,7 +597,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
 
         <article id="component-upholstery-parts" class="ai-components-card">
           <figure class="ai-components-sketch ai-components-sketch-image" aria-hidden="true">
-            <img src="/assets/products/furniture-components/icon-upholstery.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/icon-upholstery.webp" alt="" loading="lazy" decoding="async">
           </figure>
           <div class="ai-components-card-heading">
             <span>05</span>
@@ -613,7 +613,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
 
         <article id="component-custom-parts" class="ai-components-card">
           <figure class="ai-components-sketch ai-components-sketch-image" aria-hidden="true">
-            <img src="/assets/products/furniture-components/icon-custom.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/icon-custom.webp" alt="" loading="lazy" decoding="async">
           </figure>
           <div class="ai-components-card-heading">
             <span>06</span>
@@ -648,7 +648,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
     <header class="ai-component-custom-drawing-banner" aria-label="Cấu kiện tùy chỉnh theo bản vẽ">
       <img
         class="ai-component-custom-drawing-banner-image"
-        src="/assets/products/furniture-components/custom-drawing-components-banner.png"
+        src="/assets/products/furniture-components/custom-drawing-components-banner.webp"
         alt="Sơ đồ cấu kiện tùy chỉnh theo bản vẽ, chi tiết khoan định vị, rãnh lắp ráp, mộng gỗ, cạnh bo, insert ren và mã chi tiết"
         loading="eager"
         decoding="async"
@@ -669,7 +669,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
         <article class="ai-component-custom-group-card">
           <span class="ai-component-custom-group-index">01</span>
           <figure class="ai-component-custom-group-media">
-            <img src="/assets/products/furniture-components/custom-drawing-detail/group-technical-drawing.png" alt="Cấu kiện theo bản vẽ kỹ thuật" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/group-technical-drawing.webp" alt="Cấu kiện theo bản vẽ kỹ thuật" loading="lazy" decoding="async">
           </figure>
           <h4>Cấu kiện theo<br>bản vẽ kỹ thuật</h4>
           <p>Chi tiết nội thất được sản xuất theo bản vẽ 2D, 3D, CAD, kích thước, vật liệu, dung sai và tiêu chuẩn kỹ thuật của buyer.</p>
@@ -677,7 +677,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
         <article class="ai-component-custom-group-card">
           <span class="ai-component-custom-group-index">02</span>
           <figure class="ai-component-custom-group-media">
-            <img src="/assets/products/furniture-components/custom-drawing-detail/group-physical-sample.png" alt="Cấu kiện theo mẫu thật" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/group-physical-sample.webp" alt="Cấu kiện theo mẫu thật" loading="lazy" decoding="async">
           </figure>
           <h4>Cấu kiện theo<br>mẫu thật</h4>
           <p>Cấu kiện được phát triển dựa trên mẫu thật, mẫu tham chiếu hoặc sản phẩm hiện có cần tái sản xuất, tối ưu hoặc điều chỉnh.</p>
@@ -685,7 +685,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
         <article class="ai-component-custom-group-card">
           <span class="ai-component-custom-group-index">03</span>
           <figure class="ai-component-custom-group-media">
-            <img src="/assets/products/furniture-components/custom-drawing-detail/group-private-collection.png" alt="Cấu kiện theo bộ sưu tập riêng" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/group-private-collection.webp" alt="Cấu kiện theo bộ sưu tập riêng" loading="lazy" decoding="async">
           </figure>
           <h4>Cấu kiện theo<br>bộ sưu tập riêng</h4>
           <p>Các bộ phận nội thất phục vụ bộ sưu tập riêng của buyer, brand, khách sạn, resort, nhà hàng hoặc dự án thương mại.</p>
@@ -693,7 +693,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
         <article class="ai-component-custom-group-card">
           <span class="ai-component-custom-group-index">04</span>
           <figure class="ai-component-custom-group-media">
-            <img src="/assets/products/furniture-components/custom-drawing-detail/group-mixed-materials.png" alt="Cấu kiện kết hợp nhiều vật liệu" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/group-mixed-materials.webp" alt="Cấu kiện kết hợp nhiều vật liệu" loading="lazy" decoding="async">
           </figure>
           <h4>Cấu kiện kết hợp<br>nhiều vật liệu</h4>
           <p>Cấu kiện kết hợp gỗ, plywood, MDF, veneer, kim loại, mây tre, foam, vải, da hoặc vật liệu đặc thù theo yêu cầu thiết kế.</p>
@@ -701,7 +701,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
         <article class="ai-component-custom-group-card">
           <span class="ai-component-custom-group-index">05</span>
           <figure class="ai-component-custom-group-media">
-            <img src="/assets/products/furniture-components/custom-drawing-detail/group-flat-pack.png" alt="Cấu kiện phục vụ lắp ráp flat-pack" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/group-flat-pack.webp" alt="Cấu kiện phục vụ lắp ráp flat-pack" loading="lazy" decoding="async">
           </figure>
           <h4>Cấu kiện phục vụ<br>lắp ráp / flat-pack</h4>
           <p>Chi tiết được thiết kế để tháo lắp, đóng gói gọn, lắp ráp nhanh, tối ưu container và phù hợp với tiêu chuẩn xuất khẩu.</p>
@@ -709,7 +709,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
         <article class="ai-component-custom-group-card">
           <span class="ai-component-custom-group-index">06</span>
           <figure class="ai-component-custom-group-media">
-            <img src="/assets/products/furniture-components/custom-drawing-detail/group-project-specific.png" alt="Cấu kiện đặc thù theo dự án" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/group-project-specific.webp" alt="Cấu kiện đặc thù theo dự án" loading="lazy" decoding="async">
           </figure>
           <h4>Cấu kiện đặc thù<br>theo dự án</h4>
           <p>Các chi tiết không tiêu chuẩn, cấu kiện kỹ thuật, bộ phận thay thế, chi tiết trang trí hoặc cấu kiện riêng theo yêu cầu của từng dự án.</p>
@@ -724,75 +724,75 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
 
         <div class="ai-component-custom-material-grid">
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/chair-detail/material-rubberwood.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/chair-detail/material-rubberwood.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Gỗ cao su</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/chair-detail/material-acacia.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/chair-detail/material-acacia.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Acacia</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/chair-detail/material-oak.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/chair-detail/material-oak.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Oak</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/chair-detail/material-ash.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/chair-detail/material-ash.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Ash</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/chair-detail/material-beech.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/chair-detail/material-beech.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Beech</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/chair-detail/material-pine.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/chair-detail/material-pine.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Pine</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/chair-detail/material-plywood.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/chair-detail/material-plywood.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Plywood</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/cabinet-detail/material-mdf.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/cabinet-detail/material-mdf.webp" alt="" loading="lazy" decoding="async">
             <figcaption>MDF</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/chair-detail/material-veneer.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/chair-detail/material-veneer.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Veneer</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/cabinet-detail/material-hpl-melamine-surfaces.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/cabinet-detail/material-hpl-melamine-surfaces.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Ván phủ<br>bề mặt</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/chair-detail/material-rattan.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/chair-detail/material-rattan.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Mây / tre /<br>mặt đan mây</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img class="ai-component-custom-material-image-large" src="/assets/products/furniture-components/custom-drawing-detail/material-upholstery.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-custom-material-image-large" src="/assets/products/furniture-components/custom-drawing-detail/material-upholstery.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Foam</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img class="ai-component-custom-material-image-large" src="/assets/products/furniture-components/custom-drawing-detail/material-foam.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-custom-material-image-large" src="/assets/products/furniture-components/custom-drawing-detail/material-foam.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Vải / da /<br>vật liệu bọc</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/chair-detail/material-metal.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/chair-detail/material-metal.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Kim loại<br>kết hợp</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img class="ai-component-custom-material-image-large" src="/assets/products/furniture-components/custom-drawing-detail/material-glass.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-custom-material-image-large" src="/assets/products/furniture-components/custom-drawing-detail/material-glass.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Kính<br>(nếu có yêu cầu)</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/cabinet-detail/material-hardware-connectors.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/cabinet-detail/material-hardware-connectors.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Phụ kiện<br>liên kết</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img src="/assets/products/furniture-components/cabinet-detail/material-surface-finishing.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/cabinet-detail/material-surface-finishing.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Sơn, stain, lacquer,<br>dầu hoàn thiện</figcaption>
           </figure>
           <figure class="ai-component-custom-material-card">
-            <img class="ai-component-custom-material-image-large" src="/assets/products/furniture-components/custom-drawing-detail/material-packaging.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-custom-material-image-large" src="/assets/products/furniture-components/custom-drawing-detail/material-packaging.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Vật liệu<br>đóng gói</figcaption>
           </figure>
         </div>
@@ -845,42 +845,42 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
       <h3 id="custom-process-title">Quy trình phát triển &amp; sản xuất</h3>
       <div class="ai-component-custom-process-flow">
         <figure class="ai-component-custom-process-step">
-          <img class="ai-component-custom-process-image-large" src="/assets/products/furniture-components/chair-detail/process-drawing.png" alt="" loading="lazy" decoding="async">
+          <img class="ai-component-custom-process-image-large" src="/assets/products/furniture-components/chair-detail/process-drawing.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Bản vẽ</figcaption>
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <img src="/assets/products/furniture-components/custom-drawing-detail/process-analysis.png" alt="" loading="lazy" decoding="async">
+          <img src="/assets/products/furniture-components/custom-drawing-detail/process-analysis.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Phân tích cấu kiện</figcaption>
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <img src="/assets/products/furniture-components/custom-drawing-detail/process-material-plan.png" alt="" loading="lazy" decoding="async">
+          <img src="/assets/products/furniture-components/custom-drawing-detail/process-material-plan.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Đề xuất vật liệu<br>&amp; phương án gia công</figcaption>
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <img src="/assets/products/furniture-components/custom-drawing-detail/process-sample.png" alt="" loading="lazy" decoding="async">
+          <img src="/assets/products/furniture-components/custom-drawing-detail/process-sample.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Làm mẫu</figcaption>
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <img src="/assets/products/furniture-components/custom-drawing-detail/process-trial-assembly.png" alt="" loading="lazy" decoding="async">
+          <img src="/assets/products/furniture-components/custom-drawing-detail/process-trial-assembly.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Lắp thử</figcaption>
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <img class="ai-component-custom-process-image-large" src="/assets/products/furniture-components/chair-detail/process-qc.png" alt="" loading="lazy" decoding="async">
+          <img class="ai-component-custom-process-image-large" src="/assets/products/furniture-components/chair-detail/process-qc.webp" alt="" loading="lazy" decoding="async">
           <figcaption>QC</figcaption>
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <img src="/assets/products/furniture-components/custom-drawing-detail/process-batch-production.png" alt="" loading="lazy" decoding="async">
+          <img src="/assets/products/furniture-components/custom-drawing-detail/process-batch-production.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Sản xuất theo lô</figcaption>
         </figure>
         <span class="ai-component-custom-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-custom-process-step">
-          <img src="/assets/products/furniture-components/custom-drawing-detail/process-code-packing.png" alt="" loading="lazy" decoding="async">
+          <img src="/assets/products/furniture-components/custom-drawing-detail/process-code-packing.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Đóng gói theo mã</figcaption>
         </figure>
       </div>
@@ -932,27 +932,27 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
         <h3>Đóng gói cấu kiện theo mã chi tiết</h3>
         <div class="ai-component-custom-packaging-grid">
           <figure class="ai-component-custom-packaging-card">
-            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-coded-detail.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-coded-detail.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Đánh mã<br>mỗi chi tiết</figcaption>
           </figure>
           <figure class="ai-component-custom-packaging-card">
-            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-bom-sorting.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-bom-sorting.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Phân loại theo<br>BOM / mã chi tiết</figcaption>
           </figure>
           <figure class="ai-component-custom-packaging-card">
-            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-hardware-bag.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-hardware-bag.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Phụ kiện đóng<br>túi riêng</figcaption>
           </figure>
           <figure class="ai-component-custom-packaging-card">
-            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-scratch-moisture-protection.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-scratch-moisture-protection.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Bọc chống trầy<br>&amp; chống ẩm</figcaption>
           </figure>
           <figure class="ai-component-custom-packaging-card">
-            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-carton-by-code.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-carton-by-code.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Carton theo bộ<br>hoặc theo mã</figcaption>
           </figure>
           <figure class="ai-component-custom-packaging-card">
-            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-export-pallet.png" alt="" loading="lazy" decoding="async">
+            <img src="/assets/products/furniture-components/custom-drawing-detail/packaging-export-pallet.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Pallet hóa<br>sẵn sàng xuất khẩu</figcaption>
           </figure>
         </div>
@@ -976,7 +976,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
 const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
   <section id="component-upholstery-parts" class="ai-section ai-components-page ai-component-detail-page ai-component-upholstery-detail-page">
     <header class="ai-component-table-detail-banner ai-component-upholstery-detail-banner">
-      <img class="ai-component-table-detail-banner-image ai-component-upholstery-detail-banner-image" src="/assets/products/furniture-components/upholstery-detail/upholstery-parts-banner.png?v=faf5f2" alt="Sơ đồ cấu tạo bộ phận bọc nệm sofa" loading="eager" decoding="async">
+      <img class="ai-component-table-detail-banner-image ai-component-upholstery-detail-banner-image" src="/assets/products/furniture-components/upholstery-detail/upholstery-parts-banner.webp?v=faf5f2" alt="Sơ đồ cấu tạo bộ phận bọc nệm sofa" loading="eager" decoding="async">
       <div class="ai-component-upholstery-detail-copy">
         <h2>Bộ phận<br>bọc nệm</h2>
         <p class="ai-component-upholstery-detail-subtitle">Cấu kiện bọc nệm</p>
@@ -992,37 +992,37 @@ const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
       <div class="ai-component-upholstery-groups-grid">
         <article class="ai-component-upholstery-group-card">
           <span class="ai-component-upholstery-group-index">01</span>
-          <img class="ai-component-upholstery-group-image ai-component-upholstery-group-image-sofa-frame" src="/assets/products/furniture-components/upholstery-detail/groups/sofa-frame.png" alt="Khung sofa" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-group-image ai-component-upholstery-group-image-sofa-frame" src="/assets/products/furniture-components/upholstery-detail/groups/sofa-frame.webp" alt="Khung sofa" loading="lazy" decoding="async">
           <h4>Khung sofa</h4>
           <p>Khung sofa gỗ, plywood, kết hợp vật liệu hoặc khung sofa theo bản vẽ, phục vụ bọc foam, vải, da và hoàn thiện thành phẩm.</p>
         </article>
         <article class="ai-component-upholstery-group-card">
           <span class="ai-component-upholstery-group-index">02</span>
-          <img class="ai-component-upholstery-group-image ai-component-upholstery-group-image-chair-frame" src="/assets/products/furniture-components/upholstery-detail/groups/upholstered-chair-frame.png" alt="Khung ghế bọc nệm" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-group-image ai-component-upholstery-group-image-chair-frame" src="/assets/products/furniture-components/upholstery-detail/groups/upholstered-chair-frame.webp" alt="Khung ghế bọc nệm" loading="lazy" decoding="async">
           <h4>Khung ghế bọc nệm</h4>
           <p>Khung ghế ăn bọc nệm, ghế lounge, ghế khách sạn hoặc ghế thương mại theo form dáng và kết cấu riêng.</p>
         </article>
         <article class="ai-component-upholstery-group-card">
           <span class="ai-component-upholstery-group-index">03</span>
-          <img class="ai-component-upholstery-group-image ai-component-upholstery-group-image-seat" src="/assets/products/furniture-components/upholstery-detail/groups/seat-cushion.png" alt="Seat cushion" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-group-image ai-component-upholstery-group-image-seat" src="/assets/products/furniture-components/upholstery-detail/groups/seat-cushion.webp" alt="Seat cushion" loading="lazy" decoding="async">
           <h4>Seat cushion</h4>
           <p>Đệm ngồi, seat cushion, foam nhiều lớp hoặc cushion theo kích thước, độ dày, tỷ trọng và form dáng của từng sản phẩm.</p>
         </article>
         <article class="ai-component-upholstery-group-card">
           <span class="ai-component-upholstery-group-index">04</span>
-          <img class="ai-component-upholstery-group-image ai-component-upholstery-group-image-back" src="/assets/products/furniture-components/upholstery-detail/groups/back-cushion.png" alt="Back cushion" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-group-image ai-component-upholstery-group-image-back" src="/assets/products/furniture-components/upholstery-detail/groups/back-cushion.webp" alt="Back cushion" loading="lazy" decoding="async">
           <h4>Back cushion</h4>
           <p>Đệm tựa lưng, back cushion, gối tựa, foam hoặc fiber theo kích thước, độ mềm, form dáng và tiêu chuẩn của buyer.</p>
         </article>
         <article class="ai-component-upholstery-group-card">
           <span class="ai-component-upholstery-group-index">05</span>
-          <img class="ai-component-upholstery-group-image ai-component-upholstery-group-image-arms" src="/assets/products/furniture-components/upholstery-detail/groups/arms-back-panels.png" alt="Tay ghế, lưng ghế và chi tiết bọc" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-group-image ai-component-upholstery-group-image-arms" src="/assets/products/furniture-components/upholstery-detail/groups/arms-back-panels.webp" alt="Tay ghế, lưng ghế và chi tiết bọc" loading="lazy" decoding="async">
           <h4>Tay ghế, lưng ghế<br>&amp; chi tiết bọc</h4>
           <p>Tay ghế, lưng ghế, panel bọc nệm, chi tiết bo cong, chi tiết may bọc hoặc các bộ phận phục vụ hoàn thiện sản phẩm.</p>
         </article>
         <article class="ai-component-upholstery-group-card">
           <span class="ai-component-upholstery-group-index">06</span>
-          <img class="ai-component-upholstery-group-image ai-component-upholstery-group-image-set" src="/assets/products/furniture-components/upholstery-detail/groups/upholstery-component-set.png" alt="Bộ cấu kiện bọc nệm theo bản vẽ" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-group-image ai-component-upholstery-group-image-set" src="/assets/products/furniture-components/upholstery-detail/groups/upholstery-component-set.webp" alt="Bộ cấu kiện bọc nệm theo bản vẽ" loading="lazy" decoding="async">
           <h4>Bộ cấu kiện bọc nệm<br>theo bản vẽ</h4>
           <p>Bộ cấu kiện được sản xuất theo bản vẽ, mẫu thật, vật liệu, tiêu chuẩn may bọc và yêu cầu OEM / ODM của buyer.</p>
         </article>
@@ -1036,19 +1036,19 @@ const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
 
         <div class="ai-component-upholstery-material-grid">
           <figure class="ai-component-upholstery-material-card">
-            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/chair-detail/material-rubberwood.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/chair-detail/material-rubberwood.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Gỗ tự nhiên</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/chair-detail/material-plywood.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/chair-detail/material-plywood.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Plywood</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/cabinet-detail/material-mdf.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/cabinet-detail/material-mdf.webp" alt="" loading="lazy" decoding="async">
             <figcaption>MDF</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/foam-density.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/foam-density.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Foam<br>nhiều tỷ trọng</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
@@ -1056,35 +1056,35 @@ const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
             <figcaption>Fiber / bông</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/interior-fabric.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/interior-fabric.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Vải nội thất</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/outdoor-fabric.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/outdoor-fabric.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Vải ngoài trời</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/pu-leather.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/pu-leather.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Da PU</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/genuine-leather.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/genuine-leather.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Da thật</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/webbing-springs.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/webbing-springs.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Dây đai / lò xo</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/chair-detail/material-metal.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/chair-detail/material-metal.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Chân gỗ /<br>chân kim loại</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/sewing-accessories.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/upholstery-detail/materials/sewing-accessories.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Keo, ghim, chỉ may<br>&amp; phụ kiện</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
-            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/cabinet-detail/material-surface-finishing.png" alt="" loading="lazy" decoding="async">
+            <img class="ai-component-upholstery-material-image" src="/assets/products/furniture-components/cabinet-detail/material-surface-finishing.webp" alt="" loading="lazy" decoding="async">
             <figcaption>Sơn, stain, lacquer,<br>dầu hoàn thiện</figcaption>
           </figure>
           <figure class="ai-component-upholstery-material-card">
@@ -1142,55 +1142,55 @@ const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
       <div class="ai-component-upholstery-process-flow">
         <figure class="ai-component-upholstery-process-step">
           <span class="ai-component-upholstery-process-index">1</span>
-          <img class="ai-component-upholstery-process-image" src="/assets/products/furniture-components/chair-detail/process-drawing.png" alt="" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-process-image" src="/assets/products/furniture-components/chair-detail/process-drawing.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Bản vẽ</figcaption>
         </figure>
         <span class="ai-component-upholstery-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-upholstery-process-step">
           <span class="ai-component-upholstery-process-index">2</span>
-          <img class="ai-component-upholstery-process-image" src="/assets/products/furniture-components/bed-detail/process-detail-separation.png" alt="" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-process-image" src="/assets/products/furniture-components/bed-detail/process-detail-separation.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Tách chi tiết</figcaption>
         </figure>
         <span class="ai-component-upholstery-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-upholstery-process-step">
           <span class="ai-component-upholstery-process-index">3</span>
-          <img class="ai-component-upholstery-process-image ai-component-upholstery-process-image-frame" src="/assets/products/furniture-components/upholstery-detail/groups/sofa-frame.png" alt="" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-process-image ai-component-upholstery-process-image-frame" src="/assets/products/furniture-components/upholstery-detail/groups/sofa-frame.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Làm khung</figcaption>
         </figure>
         <span class="ai-component-upholstery-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-upholstery-process-step">
           <span class="ai-component-upholstery-process-index">4</span>
-          <img class="ai-component-upholstery-process-image ai-component-upholstery-process-image-foam" src="/assets/products/furniture-components/upholstery-detail/process/foam-cutting.png" alt="" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-process-image ai-component-upholstery-process-image-foam" src="/assets/products/furniture-components/upholstery-detail/process/foam-cutting.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Cắt foam<br>&amp; xử lý</figcaption>
         </figure>
         <span class="ai-component-upholstery-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-upholstery-process-step">
           <span class="ai-component-upholstery-process-index">5</span>
-          <img class="ai-component-upholstery-process-image ai-component-upholstery-process-image-sewing" src="/assets/products/furniture-components/upholstery-detail/process/sewing-cover.png" alt="" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-process-image ai-component-upholstery-process-image-sewing" src="/assets/products/furniture-components/upholstery-detail/process/sewing-cover.webp" alt="" loading="lazy" decoding="async">
           <figcaption>May vỏ bọc<br>&amp; chi tiết</figcaption>
         </figure>
         <span class="ai-component-upholstery-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-upholstery-process-step">
           <span class="ai-component-upholstery-process-index">6</span>
-          <img class="ai-component-upholstery-process-image ai-component-upholstery-process-image-upholster" src="/assets/products/furniture-components/upholstery-detail/groups/back-cushion.png" alt="" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-process-image ai-component-upholstery-process-image-upholster" src="/assets/products/furniture-components/upholstery-detail/groups/back-cushion.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Bọc thử<br>&amp; kiểm tra form</figcaption>
         </figure>
         <span class="ai-component-upholstery-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-upholstery-process-step">
           <span class="ai-component-upholstery-process-index">7</span>
-          <img class="ai-component-upholstery-process-image" src="/assets/products/furniture-components/chair-detail/process-qc.png" alt="" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-process-image" src="/assets/products/furniture-components/chair-detail/process-qc.webp" alt="" loading="lazy" decoding="async">
           <figcaption>QC (kiểm tra)<br>&amp; độ êm</figcaption>
         </figure>
         <span class="ai-component-upholstery-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-upholstery-process-step">
           <span class="ai-component-upholstery-process-index">8</span>
-          <img class="ai-component-upholstery-process-image" src="/assets/products/furniture-components/chair-detail/process-packaging.png" alt="" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-process-image" src="/assets/products/furniture-components/chair-detail/process-packaging.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Đóng gói<br>theo bộ</figcaption>
         </figure>
         <span class="ai-component-upholstery-process-arrow" aria-hidden="true"></span>
         <figure class="ai-component-upholstery-process-step">
           <span class="ai-component-upholstery-process-index">9</span>
-          <img class="ai-component-upholstery-process-image ai-component-upholstery-process-image-export" src="/assets/products/furniture-components/upholstery-detail/process/export-truck.png" alt="" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-process-image ai-component-upholstery-process-image-export" src="/assets/products/furniture-components/upholstery-detail/process/export-truck.webp" alt="" loading="lazy" decoding="async">
           <figcaption>Xuất hàng /<br>cấp phát</figcaption>
         </figure>
       </div>
@@ -1236,7 +1236,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
       <article class="ai-component-upholstery-info-panel ai-component-upholstery-packaging-panel">
         <h3>Đóng gói cấu kiện theo bộ</h3>
         <figure class="ai-component-upholstery-packaging-diagram">
-          <img class="ai-component-upholstery-packaging-image" src="/assets/products/furniture-components/upholstery-detail/packaging/component-set-packaging-clean.png" alt="" loading="lazy" decoding="async">
+          <img class="ai-component-upholstery-packaging-image" src="/assets/products/furniture-components/upholstery-detail/packaging/component-set-packaging-clean.webp" alt="" loading="lazy" decoding="async">
           <figcaption>
             <span class="ai-upholstery-pack-label ai-upholstery-pack-label-cover">Vỏ bọc may sẵn<br>(riêng)</span>
             <span class="ai-upholstery-pack-label ai-upholstery-pack-label-frame">Khung (riêng)</span>
@@ -1266,7 +1266,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
 const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
   <section id="chair-frames-components" class="ai-section ai-components-page ai-component-detail-page">
     <header class="ai-component-detail-banner">
-      <img class="ai-component-detail-banner-image" src="/assets/products/furniture-components/chair-detail-banner.png" alt="" loading="eager" decoding="async" aria-hidden="true">
+      <img class="ai-component-detail-banner-image" src="/assets/products/furniture-components/chair-detail-banner.webp" alt="" loading="eager" decoding="async" aria-hidden="true">
       <div class="ai-component-detail-banner-copy">
         <h2>Khung ghế &amp; bộ phận ghế</h2>
         <p class="ai-component-detail-banner-subtitle">Chair Frames & Chair Components</p>
@@ -1285,7 +1285,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <figure class="ai-component-detail-joint-item">
           <img
             class="ai-component-detail-joint-figure-image"
-            src="/assets/products/furniture-components/chair-detail/joint-mortise-cropped.png"
+            src="/assets/products/furniture-components/chair-detail/joint-mortise-cropped.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1296,7 +1296,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <figure class="ai-component-detail-joint-item">
           <img
             class="ai-component-detail-joint-figure-image"
-            src="/assets/products/furniture-components/chair-detail/joint-tenon-cropped.png"
+            src="/assets/products/furniture-components/chair-detail/joint-tenon-cropped.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1307,7 +1307,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <figure class="ai-component-detail-joint-item">
           <img
             class="ai-component-detail-joint-figure-image"
-            src="/assets/products/furniture-components/chair-detail/joint-leg-cropped.png"
+            src="/assets/products/furniture-components/chair-detail/joint-leg-cropped.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1318,7 +1318,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <figure class="ai-component-detail-joint-item">
           <img
             class="ai-component-detail-joint-figure-image"
-            src="/assets/products/furniture-components/chair-detail/joint-arm-cropped.png"
+            src="/assets/products/furniture-components/chair-detail/joint-arm-cropped.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1329,7 +1329,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <figure class="ai-component-detail-joint-item">
           <img
             class="ai-component-detail-joint-figure-image"
-            src="/assets/products/furniture-components/chair-detail/joint-back-cropped.png"
+            src="/assets/products/furniture-components/chair-detail/joint-back-cropped.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1349,7 +1349,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <span class="ai-component-detail-group-index">01</span>
           <img
             class="ai-component-detail-group-visual-image ai-component-detail-group-visual-image-dining"
-            src="/assets/products/furniture-components/chair-detail/group-dining-chair.png"
+            src="/assets/products/furniture-components/chair-detail/group-dining-chair.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1362,7 +1362,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <span class="ai-component-detail-group-index">02</span>
           <img
             class="ai-component-detail-group-visual-image ai-component-detail-group-visual-image-lounge"
-            src="/assets/products/furniture-components/chair-detail/group-lounge-chair.png"
+            src="/assets/products/furniture-components/chair-detail/group-lounge-chair.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1375,7 +1375,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <span class="ai-component-detail-group-index">03</span>
           <img
             class="ai-component-detail-group-visual-image ai-component-detail-group-visual-image-upholstered"
-            src="/assets/products/furniture-components/chair-detail/group-upholstered-chair.png"
+            src="/assets/products/furniture-components/chair-detail/group-upholstered-chair.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1388,7 +1388,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <span class="ai-component-detail-group-index">04</span>
           <img
             class="ai-component-detail-group-visual-image ai-component-detail-group-visual-image-arm"
-            src="/assets/products/furniture-components/chair-detail/group-chair-arm.png"
+            src="/assets/products/furniture-components/chair-detail/group-chair-arm.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1401,7 +1401,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <span class="ai-component-detail-group-index">05</span>
           <img
             class="ai-component-detail-group-visual-image ai-component-detail-group-visual-image-back"
-            src="/assets/products/furniture-components/chair-detail/group-chair-back.png"
+            src="/assets/products/furniture-components/chair-detail/group-chair-back.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1414,7 +1414,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <span class="ai-component-detail-group-index">06</span>
           <img
             class="ai-component-detail-group-visual-image ai-component-detail-group-visual-image-legs"
-            src="/assets/products/furniture-components/chair-detail/group-chair-legs.png"
+            src="/assets/products/furniture-components/chair-detail/group-chair-legs.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1434,7 +1434,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-rubberwood"
-              src="/assets/products/furniture-components/chair-detail/material-rubberwood.png"
+              src="/assets/products/furniture-components/chair-detail/material-rubberwood.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1444,7 +1444,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-acacia"
-              src="/assets/products/furniture-components/chair-detail/material-acacia.png"
+              src="/assets/products/furniture-components/chair-detail/material-acacia.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1454,7 +1454,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-oak"
-              src="/assets/products/furniture-components/chair-detail/material-oak.png"
+              src="/assets/products/furniture-components/chair-detail/material-oak.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1464,7 +1464,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-ash"
-              src="/assets/products/furniture-components/chair-detail/material-ash.png"
+              src="/assets/products/furniture-components/chair-detail/material-ash.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1474,7 +1474,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-beech"
-              src="/assets/products/furniture-components/chair-detail/material-beech.png"
+              src="/assets/products/furniture-components/chair-detail/material-beech.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1484,7 +1484,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-pine"
-              src="/assets/products/furniture-components/chair-detail/material-pine.png"
+              src="/assets/products/furniture-components/chair-detail/material-pine.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1494,7 +1494,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-plywood"
-              src="/assets/products/furniture-components/chair-detail/material-plywood.png"
+              src="/assets/products/furniture-components/chair-detail/material-plywood.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1504,7 +1504,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-veneer"
-              src="/assets/products/furniture-components/chair-detail/material-veneer.png"
+              src="/assets/products/furniture-components/chair-detail/material-veneer.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1514,7 +1514,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-rattan"
-              src="/assets/products/furniture-components/chair-detail/material-rattan.png"
+              src="/assets/products/furniture-components/chair-detail/material-rattan.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1524,7 +1524,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-metal"
-              src="/assets/products/furniture-components/chair-detail/material-metal.png"
+              src="/assets/products/furniture-components/chair-detail/material-metal.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1562,7 +1562,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-finish-card">
             <img
               class="ai-component-detail-finish-image ai-component-detail-finish-image-raw"
-              src="/assets/products/furniture-components/chair-detail/finish-raw.png"
+              src="/assets/products/furniture-components/chair-detail/finish-raw.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1572,7 +1572,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-finish-card">
             <img
               class="ai-component-detail-finish-image ai-component-detail-finish-image-sanded"
-              src="/assets/products/furniture-components/chair-detail/finish-sanded.png"
+              src="/assets/products/furniture-components/chair-detail/finish-sanded.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1582,7 +1582,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-finish-card">
             <img
               class="ai-component-detail-finish-image ai-component-detail-finish-image-drilled"
-              src="/assets/products/furniture-components/chair-detail/finish-drilled.png"
+              src="/assets/products/furniture-components/chair-detail/finish-drilled.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1592,7 +1592,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-finish-card">
             <img
               class="ai-component-detail-finish-image ai-component-detail-finish-image-assembly-ready"
-              src="/assets/products/furniture-components/chair-detail/finish-assembly-ready.png"
+              src="/assets/products/furniture-components/chair-detail/finish-assembly-ready.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1602,7 +1602,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-finish-card">
             <img
               class="ai-component-detail-finish-image ai-component-detail-finish-image-finished"
-              src="/assets/products/furniture-components/chair-detail/finish-finished.png"
+              src="/assets/products/furniture-components/chair-detail/finish-finished.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1612,7 +1612,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-finish-card">
             <img
               class="ai-component-detail-finish-image ai-component-detail-finish-image-upholstery-ready"
-              src="/assets/products/furniture-components/chair-detail/finish-upholstery-ready.png"
+              src="/assets/products/furniture-components/chair-detail/finish-upholstery-ready.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1622,7 +1622,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-finish-card">
             <img
               class="ai-component-detail-finish-image ai-component-detail-finish-image-packed-set"
-              src="/assets/products/furniture-components/chair-detail/finish-packed-set.png"
+              src="/assets/products/furniture-components/chair-detail/finish-packed-set.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1747,7 +1747,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-drawing"
-            src="/assets/products/furniture-components/chair-detail/process-drawing.png"
+            src="/assets/products/furniture-components/chair-detail/process-drawing.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1758,7 +1758,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-cutting"
-            src="/assets/products/furniture-components/chair-detail/process-cutting.png"
+            src="/assets/products/furniture-components/chair-detail/process-cutting.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1769,7 +1769,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-tenon-machining"
-            src="/assets/products/furniture-components/chair-detail/process-tenon-machining.png"
+            src="/assets/products/furniture-components/chair-detail/process-tenon-machining.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1780,7 +1780,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-sanding"
-            src="/assets/products/furniture-components/chair-detail/process-sanding.png"
+            src="/assets/products/furniture-components/chair-detail/process-sanding.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1791,7 +1791,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-assembly-test"
-            src="/assets/products/furniture-components/chair-detail/process-assembly-test.png"
+            src="/assets/products/furniture-components/chair-detail/process-assembly-test.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1802,7 +1802,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-qc"
-            src="/assets/products/furniture-components/chair-detail/process-qc.png"
+            src="/assets/products/furniture-components/chair-detail/process-qc.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1813,7 +1813,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-packaging"
-            src="/assets/products/furniture-components/chair-detail/process-packaging.png"
+            src="/assets/products/furniture-components/chair-detail/process-packaging.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -1942,7 +1942,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
           <figure class="ai-component-detail-packaging-main">
             <img
               class="ai-component-detail-packaging-main-image"
-              src="/assets/products/furniture-components/chair-detail/packaging-bundle-main.png"
+              src="/assets/products/furniture-components/chair-detail/packaging-bundle-main.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -1954,7 +1954,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
               <figcaption>Đóng gói theo mã chi tiết</figcaption>
               <img
                 class="ai-component-detail-packaging-card-image ai-component-detail-packaging-card-image-detail"
-                src="/assets/products/furniture-components/chair-detail/packaging-detail-code.png"
+                src="/assets/products/furniture-components/chair-detail/packaging-detail-code.webp"
                 alt=""
                 loading="lazy"
                 decoding="async"
@@ -1964,7 +1964,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
               <figcaption>Đóng gói carton / poliet</figcaption>
               <img
                 class="ai-component-detail-packaging-card-image ai-component-detail-packaging-card-image-carton"
-                src="/assets/products/furniture-components/chair-detail/packaging-carton-poliet.png"
+                src="/assets/products/furniture-components/chair-detail/packaging-carton-poliet.webp"
                 alt=""
                 loading="lazy"
                 decoding="async"
@@ -1974,7 +1974,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
               <figcaption>Bảo vệ chống trầy xước, ẩm</figcaption>
               <img
                 class="ai-component-detail-packaging-card-image ai-component-detail-packaging-card-image-protect"
-                src="/assets/products/furniture-components/chair-detail/packaging-protection.png"
+                src="/assets/products/furniture-components/chair-detail/packaging-protection.webp"
                 alt=""
                 loading="lazy"
                 decoding="async"
@@ -2002,7 +2002,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
 const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
   <section id="table-tops-legs" class="ai-section ai-components-page ai-component-detail-page ai-component-table-detail-page">
     <header class="ai-component-table-detail-banner" aria-label="Mặt bàn và chân bàn">
-      <img class="ai-component-table-detail-banner-image" src="/assets/products/furniture-components/table-tops-legs-banner.png" alt="Sơ đồ cấu kiện mặt bàn, chân bàn và các chi tiết liên kết phổ biến" loading="eager" decoding="async">
+      <img class="ai-component-table-detail-banner-image" src="/assets/products/furniture-components/table-tops-legs-banner.webp" alt="Sơ đồ cấu kiện mặt bàn, chân bàn và các chi tiết liên kết phổ biến" loading="eager" decoding="async">
       <div class="ai-component-table-detail-banner-copy">
         <h2>Mặt bàn &amp; chân bàn</h2>
         <p>Sản xuất mặt bàn và chân bàn theo bản vẽ, mẫu duyệt và tiêu chuẩn kỹ thuật của buyer.</p>
@@ -2019,7 +2019,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <span class="ai-component-table-product-index">01</span>
           <img
             class="ai-component-table-product-visual ai-component-table-product-image ai-component-table-product-image-natural-wood"
-            src="/assets/products/furniture-components/table-detail/product-natural-wood-table-top.png"
+            src="/assets/products/furniture-components/table-detail/product-natural-wood-table-top.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2032,7 +2032,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <span class="ai-component-table-product-index">02</span>
           <img
             class="ai-component-table-product-visual ai-component-table-product-image ai-component-table-product-image-veneer"
-            src="/assets/products/furniture-components/table-detail/product-veneer-table-top.png"
+            src="/assets/products/furniture-components/table-detail/product-veneer-table-top.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2045,7 +2045,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <span class="ai-component-table-product-index">03</span>
           <img
             class="ai-component-table-product-visual ai-component-table-product-image ai-component-table-product-image-plywood-mdf"
-            src="/assets/products/furniture-components/table-detail/product-plywood-mdf-table-top.png"
+            src="/assets/products/furniture-components/table-detail/product-plywood-mdf-table-top.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2058,7 +2058,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <span class="ai-component-table-product-index">04</span>
           <img
             class="ai-component-table-product-visual ai-component-table-product-image ai-component-table-product-image-pedestal"
-            src="/assets/products/furniture-components/table-detail/product-pedestal-table-leg.png"
+            src="/assets/products/furniture-components/table-detail/product-pedestal-table-leg.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2071,7 +2071,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <span class="ai-component-table-product-index">05</span>
           <img
             class="ai-component-table-product-visual ai-component-table-product-image ai-component-table-product-image-styled-legs"
-            src="/assets/products/furniture-components/table-detail/product-styled-table-legs.png"
+            src="/assets/products/furniture-components/table-detail/product-styled-table-legs.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2084,7 +2084,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <span class="ai-component-table-product-index">06</span>
           <img
             class="ai-component-table-product-visual ai-component-table-product-image ai-component-table-product-image-base-details"
-            src="/assets/products/furniture-components/table-detail/product-base-connection-details.png"
+            src="/assets/products/furniture-components/table-detail/product-base-connection-details.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2104,7 +2104,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-rubberwood"
-              src="/assets/products/furniture-components/chair-detail/material-rubberwood.png"
+              src="/assets/products/furniture-components/chair-detail/material-rubberwood.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2114,7 +2114,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-acacia"
-              src="/assets/products/furniture-components/chair-detail/material-acacia.png"
+              src="/assets/products/furniture-components/chair-detail/material-acacia.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2124,7 +2124,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-oak"
-              src="/assets/products/furniture-components/chair-detail/material-oak.png"
+              src="/assets/products/furniture-components/chair-detail/material-oak.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2134,7 +2134,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-ash"
-              src="/assets/products/furniture-components/chair-detail/material-ash.png"
+              src="/assets/products/furniture-components/chair-detail/material-ash.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2144,7 +2144,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-beech"
-              src="/assets/products/furniture-components/chair-detail/material-beech.png"
+              src="/assets/products/furniture-components/chair-detail/material-beech.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2154,7 +2154,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-pine"
-              src="/assets/products/furniture-components/chair-detail/material-pine.png"
+              src="/assets/products/furniture-components/chair-detail/material-pine.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2164,7 +2164,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-plywood"
-              src="/assets/products/furniture-components/chair-detail/material-plywood.png"
+              src="/assets/products/furniture-components/chair-detail/material-plywood.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2174,7 +2174,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-veneer"
-              src="/assets/products/furniture-components/chair-detail/material-veneer.png"
+              src="/assets/products/furniture-components/chair-detail/material-veneer.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2184,7 +2184,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-rattan"
-              src="/assets/products/furniture-components/chair-detail/material-rattan.png"
+              src="/assets/products/furniture-components/chair-detail/material-rattan.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2194,7 +2194,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-metal"
-              src="/assets/products/furniture-components/chair-detail/material-metal.png"
+              src="/assets/products/furniture-components/chair-detail/material-metal.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2247,7 +2247,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-drawing"
-            src="/assets/products/furniture-components/chair-detail/process-drawing.png"
+            src="/assets/products/furniture-components/chair-detail/process-drawing.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2258,7 +2258,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-cutting"
-            src="/assets/products/furniture-components/chair-detail/process-cutting.png"
+            src="/assets/products/furniture-components/chair-detail/process-cutting.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2269,7 +2269,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-tenon-machining"
-            src="/assets/products/furniture-components/chair-detail/process-tenon-machining.png"
+            src="/assets/products/furniture-components/chair-detail/process-tenon-machining.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2280,7 +2280,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-sanding"
-            src="/assets/products/furniture-components/chair-detail/process-sanding.png"
+            src="/assets/products/furniture-components/chair-detail/process-sanding.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2291,7 +2291,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-table-process-assembly-image"
-            src="/assets/products/furniture-components/table-detail/process-assembly-test.png"
+            src="/assets/products/furniture-components/table-detail/process-assembly-test.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2302,7 +2302,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-qc"
-            src="/assets/products/furniture-components/chair-detail/process-qc.png"
+            src="/assets/products/furniture-components/chair-detail/process-qc.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2313,7 +2313,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-packaging"
-            src="/assets/products/furniture-components/chair-detail/process-packaging.png"
+            src="/assets/products/furniture-components/chair-detail/process-packaging.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2362,7 +2362,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
         <figure class="ai-component-table-packaging-card">
           <img
             class="ai-component-table-packaging-visual ai-component-table-packaging-image ai-component-table-packaging-image-bundle"
-            src="/assets/products/furniture-components/table-detail/packaging-bundle-by-code.png"
+            src="/assets/products/furniture-components/table-detail/packaging-bundle-by-code.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2372,7 +2372,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
         <figure class="ai-component-table-packaging-card">
           <img
             class="ai-component-table-packaging-visual ai-component-table-packaging-image ai-component-table-packaging-image-protect"
-            src="/assets/products/furniture-components/table-detail/packaging-protection.png"
+            src="/assets/products/furniture-components/table-detail/packaging-protection.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2382,7 +2382,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
         <figure class="ai-component-table-packaging-card">
           <img
             class="ai-component-table-packaging-visual ai-component-table-packaging-image ai-component-table-packaging-image-pallet"
-            src="/assets/products/furniture-components/table-detail/packaging-carton-pallet.png"
+            src="/assets/products/furniture-components/table-detail/packaging-carton-pallet.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2392,7 +2392,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
         <figure class="ai-component-table-packaging-card">
           <img
             class="ai-component-table-packaging-visual ai-component-table-packaging-image ai-component-table-packaging-image-label"
-            src="/assets/products/furniture-components/table-detail/packaging-label-instructions.png"
+            src="/assets/products/furniture-components/table-detail/packaging-label-instructions.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2419,7 +2419,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
 const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
   <section id="cabinet-storage-parts" class="ai-section ai-components-page ai-component-detail-page ai-component-table-detail-page ai-component-cabinet-detail-page">
     <header class="ai-component-table-detail-banner ai-component-cabinet-detail-banner" aria-label="Bộ phận tủ và lưu trữ">
-      <img class="ai-component-table-detail-banner-image ai-component-cabinet-detail-banner-image" src="/assets/products/furniture-components/cabinet-storage-parts-banner.png" alt="Sơ đồ cấu kiện tủ, ngăn kéo, ray trượt, bản lề và các chi tiết liên kết tiêu biểu" loading="eager" decoding="async">
+      <img class="ai-component-table-detail-banner-image ai-component-cabinet-detail-banner-image" src="/assets/products/furniture-components/cabinet-storage-parts-banner.webp" alt="Sơ đồ cấu kiện tủ, ngăn kéo, ray trượt, bản lề và các chi tiết liên kết tiêu biểu" loading="eager" decoding="async">
       <div class="ai-component-table-detail-banner-copy ai-component-cabinet-detail-banner-copy">
         <h2>Bộ phận tủ &amp; lưu trữ</h2>
         <p>Sản xuất cánh tủ, ngăn kéo, hông tủ, đáy tủ và chi tiết lắp ráp theo bản vẽ, mẫu duyệt và tiêu chuẩn kỹ thuật của buyer.</p>
@@ -2436,7 +2436,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <span class="ai-component-table-product-index">01</span>
           <img
             class="ai-component-table-product-visual ai-component-cabinet-product-visual ai-component-cabinet-product-image ai-component-cabinet-product-image-panels"
-            src="/assets/products/furniture-components/cabinet-detail/product-structural-panels.png"
+            src="/assets/products/furniture-components/cabinet-detail/product-structural-panels.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2449,7 +2449,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <span class="ai-component-table-product-index">02</span>
           <img
             class="ai-component-table-product-visual ai-component-cabinet-product-visual ai-component-cabinet-product-image ai-component-cabinet-product-image-fronts"
-            src="/assets/products/furniture-components/cabinet-detail/product-doors-drawer-fronts.png"
+            src="/assets/products/furniture-components/cabinet-detail/product-doors-drawer-fronts.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2462,7 +2462,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <span class="ai-component-table-product-index">03</span>
           <img
             class="ai-component-table-product-visual ai-component-cabinet-product-visual ai-component-cabinet-product-image ai-component-cabinet-product-image-shelves"
-            src="/assets/products/furniture-components/cabinet-detail/product-internal-shelves.png"
+            src="/assets/products/furniture-components/cabinet-detail/product-internal-shelves.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2475,7 +2475,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <span class="ai-component-table-product-index">04</span>
           <img
             class="ai-component-table-product-visual ai-component-cabinet-product-visual ai-component-cabinet-product-image ai-component-cabinet-product-image-drawers"
-            src="/assets/products/furniture-components/cabinet-detail/product-drawer-box-parts.png"
+            src="/assets/products/furniture-components/cabinet-detail/product-drawer-box-parts.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2488,7 +2488,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <span class="ai-component-table-product-index">05</span>
           <img
             class="ai-component-table-product-visual ai-component-cabinet-product-visual ai-component-cabinet-product-image ai-component-cabinet-product-image-frames"
-            src="/assets/products/furniture-components/cabinet-detail/product-support-frames.png"
+            src="/assets/products/furniture-components/cabinet-detail/product-support-frames.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2501,7 +2501,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <span class="ai-component-table-product-index">06</span>
           <img
             class="ai-component-table-product-visual ai-component-cabinet-product-visual ai-component-cabinet-product-image ai-component-cabinet-product-image-flatpack"
-            src="/assets/products/furniture-components/cabinet-detail/product-knock-down-set.png"
+            src="/assets/products/furniture-components/cabinet-detail/product-knock-down-set.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2521,7 +2521,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-rubberwood"
-              src="/assets/products/furniture-components/chair-detail/material-rubberwood.png"
+              src="/assets/products/furniture-components/chair-detail/material-rubberwood.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2531,7 +2531,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-acacia"
-              src="/assets/products/furniture-components/chair-detail/material-acacia.png"
+              src="/assets/products/furniture-components/chair-detail/material-acacia.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2541,7 +2541,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-oak"
-              src="/assets/products/furniture-components/chair-detail/material-oak.png"
+              src="/assets/products/furniture-components/chair-detail/material-oak.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2551,7 +2551,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-ash"
-              src="/assets/products/furniture-components/chair-detail/material-ash.png"
+              src="/assets/products/furniture-components/chair-detail/material-ash.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2561,7 +2561,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-pine"
-              src="/assets/products/furniture-components/chair-detail/material-pine.png"
+              src="/assets/products/furniture-components/chair-detail/material-pine.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2571,7 +2571,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-plywood"
-              src="/assets/products/furniture-components/chair-detail/material-plywood.png"
+              src="/assets/products/furniture-components/chair-detail/material-plywood.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2581,7 +2581,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-mdf"
-              src="/assets/products/furniture-components/cabinet-detail/material-mdf.png"
+              src="/assets/products/furniture-components/cabinet-detail/material-mdf.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2591,7 +2591,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-veneer"
-              src="/assets/products/furniture-components/chair-detail/material-veneer.png"
+              src="/assets/products/furniture-components/chair-detail/material-veneer.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2601,7 +2601,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-particle"
-              src="/assets/products/furniture-components/cabinet-detail/material-particle-board.png"
+              src="/assets/products/furniture-components/cabinet-detail/material-particle-board.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2611,7 +2611,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-laminated"
-              src="/assets/products/furniture-components/cabinet-detail/material-laminated-board.png"
+              src="/assets/products/furniture-components/cabinet-detail/material-laminated-board.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2621,7 +2621,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-hpl"
-              src="/assets/products/furniture-components/cabinet-detail/material-hpl-melamine-surfaces.png"
+              src="/assets/products/furniture-components/cabinet-detail/material-hpl-melamine-surfaces.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2631,7 +2631,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-metal"
-              src="/assets/products/furniture-components/chair-detail/material-metal.png"
+              src="/assets/products/furniture-components/chair-detail/material-metal.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2641,7 +2641,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-hardware"
-              src="/assets/products/furniture-components/cabinet-detail/material-hardware-connectors.png"
+              src="/assets/products/furniture-components/cabinet-detail/material-hardware-connectors.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2651,7 +2651,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-edge"
-              src="/assets/products/furniture-components/cabinet-detail/material-edge-banding.png"
+              src="/assets/products/furniture-components/cabinet-detail/material-edge-banding.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2661,7 +2661,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-finish"
-              src="/assets/products/furniture-components/cabinet-detail/material-surface-finishing.png"
+              src="/assets/products/furniture-components/cabinet-detail/material-surface-finishing.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -2722,7 +2722,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-drawing"
-            src="/assets/products/furniture-components/chair-detail/process-drawing.png"
+            src="/assets/products/furniture-components/chair-detail/process-drawing.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2733,7 +2733,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-cutting"
-            src="/assets/products/furniture-components/chair-detail/process-cutting.png"
+            src="/assets/products/furniture-components/chair-detail/process-cutting.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2744,7 +2744,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-cnc"
-            src="/assets/products/furniture-components/cabinet-detail/process-cnc-machining.png"
+            src="/assets/products/furniture-components/cabinet-detail/process-cnc-machining.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2755,7 +2755,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-drilling"
-            src="/assets/products/furniture-components/cabinet-detail/process-drilling-connection.png"
+            src="/assets/products/furniture-components/cabinet-detail/process-drilling-connection.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2766,7 +2766,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-edge"
-            src="/assets/products/furniture-components/cabinet-detail/process-edge-processing.png"
+            src="/assets/products/furniture-components/cabinet-detail/process-edge-processing.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2777,7 +2777,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-sanding"
-            src="/assets/products/furniture-components/chair-detail/process-sanding.png"
+            src="/assets/products/furniture-components/chair-detail/process-sanding.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2788,7 +2788,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-qc"
-            src="/assets/products/furniture-components/chair-detail/process-qc.png"
+            src="/assets/products/furniture-components/chair-detail/process-qc.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2799,7 +2799,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-packaging"
-            src="/assets/products/furniture-components/chair-detail/process-packaging.png"
+            src="/assets/products/furniture-components/chair-detail/process-packaging.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2900,7 +2900,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
     <header class="ai-component-table-detail-banner ai-component-bed-detail-banner" aria-label="Bộ phận giường">
       <img
         class="ai-component-table-detail-banner-image ai-component-bed-detail-banner-image"
-        src="/assets/products/furniture-components/bed-detail/bed-parts-banner.png"
+        src="/assets/products/furniture-components/bed-detail/bed-parts-banner.webp"
         alt="Sơ đồ cấu kiện giường, đầu giường, ray bên, nan giường, chân giường và các chi tiết liên kết tiêu biểu"
         loading="eager"
         decoding="async"
@@ -2923,7 +2923,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <span class="ai-component-table-product-index">01</span>
           <img
             class="ai-component-table-product-visual ai-component-bed-product-visual ai-component-bed-product-image ai-component-bed-product-image-frame"
-            src="/assets/products/furniture-components/bed-detail/product-bed-frame.png"
+            src="/assets/products/furniture-components/bed-detail/product-bed-frame.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2936,7 +2936,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <span class="ai-component-table-product-index">02</span>
           <img
             class="ai-component-table-product-visual ai-component-bed-product-visual ai-component-bed-product-image ai-component-bed-product-image-headboard"
-            src="/assets/products/furniture-components/bed-detail/product-headboard.png"
+            src="/assets/products/furniture-components/bed-detail/product-headboard.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2949,7 +2949,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <span class="ai-component-table-product-index">03</span>
           <img
             class="ai-component-table-product-visual ai-component-bed-product-visual ai-component-bed-product-image ai-component-bed-product-image-rails"
-            src="/assets/products/furniture-components/bed-detail/product-bed-rails.png"
+            src="/assets/products/furniture-components/bed-detail/product-bed-rails.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2962,7 +2962,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <span class="ai-component-table-product-index">04</span>
           <img
             class="ai-component-table-product-visual ai-component-bed-product-visual ai-component-bed-product-image ai-component-bed-product-image-slats"
-            src="/assets/products/furniture-components/bed-detail/product-bed-slats.png"
+            src="/assets/products/furniture-components/bed-detail/product-bed-slats.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2975,7 +2975,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <span class="ai-component-table-product-index">05</span>
           <img
             class="ai-component-table-product-visual ai-component-bed-product-visual ai-component-bed-product-image ai-component-bed-product-image-legs"
-            src="/assets/products/furniture-components/bed-detail/product-bed-legs-hardware.png"
+            src="/assets/products/furniture-components/bed-detail/product-bed-legs-hardware.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -2988,7 +2988,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <span class="ai-component-table-product-index">06</span>
           <img
             class="ai-component-table-product-visual ai-component-bed-product-visual ai-component-bed-product-image ai-component-bed-product-image-flatpack"
-            src="/assets/products/furniture-components/bed-detail/product-flatpack-bed-set.png"
+            src="/assets/products/furniture-components/bed-detail/product-flatpack-bed-set.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3008,7 +3008,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-rubberwood"
-              src="/assets/products/furniture-components/chair-detail/material-rubberwood.png"
+              src="/assets/products/furniture-components/chair-detail/material-rubberwood.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3018,7 +3018,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-acacia"
-              src="/assets/products/furniture-components/chair-detail/material-acacia.png"
+              src="/assets/products/furniture-components/chair-detail/material-acacia.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3028,7 +3028,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-oak"
-              src="/assets/products/furniture-components/chair-detail/material-oak.png"
+              src="/assets/products/furniture-components/chair-detail/material-oak.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3038,7 +3038,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-ash"
-              src="/assets/products/furniture-components/chair-detail/material-ash.png"
+              src="/assets/products/furniture-components/chair-detail/material-ash.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3048,7 +3048,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-beech"
-              src="/assets/products/furniture-components/chair-detail/material-beech.png"
+              src="/assets/products/furniture-components/chair-detail/material-beech.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3058,7 +3058,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-pine"
-              src="/assets/products/furniture-components/chair-detail/material-pine.png"
+              src="/assets/products/furniture-components/chair-detail/material-pine.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3068,7 +3068,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-plywood"
-              src="/assets/products/furniture-components/chair-detail/material-plywood.png"
+              src="/assets/products/furniture-components/chair-detail/material-plywood.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3078,7 +3078,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-mdf"
-              src="/assets/products/furniture-components/cabinet-detail/material-mdf.png"
+              src="/assets/products/furniture-components/cabinet-detail/material-mdf.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3088,7 +3088,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-veneer"
-              src="/assets/products/furniture-components/chair-detail/material-veneer.png"
+              src="/assets/products/furniture-components/chair-detail/material-veneer.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3098,7 +3098,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-hpl"
-              src="/assets/products/furniture-components/cabinet-detail/material-hpl-melamine-surfaces.png"
+              src="/assets/products/furniture-components/cabinet-detail/material-hpl-melamine-surfaces.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3112,7 +3112,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-rattan"
-              src="/assets/products/furniture-components/chair-detail/material-rattan.png"
+              src="/assets/products/furniture-components/chair-detail/material-rattan.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3122,7 +3122,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-detail-material-image-metal"
-              src="/assets/products/furniture-components/chair-detail/material-metal.png"
+              src="/assets/products/furniture-components/chair-detail/material-metal.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3132,7 +3132,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-hardware"
-              src="/assets/products/furniture-components/cabinet-detail/material-hardware-connectors.png"
+              src="/assets/products/furniture-components/cabinet-detail/material-hardware-connectors.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3142,7 +3142,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
           <figure class="ai-component-detail-material-card">
             <img
               class="ai-component-detail-material-image ai-component-cabinet-material-image ai-component-cabinet-material-image-finish"
-              src="/assets/products/furniture-components/cabinet-detail/material-surface-finishing.png"
+              src="/assets/products/furniture-components/cabinet-detail/material-surface-finishing.webp"
               alt=""
               loading="lazy"
               decoding="async"
@@ -3203,7 +3203,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-drawing"
-            src="/assets/products/furniture-components/chair-detail/process-drawing.png"
+            src="/assets/products/furniture-components/chair-detail/process-drawing.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3214,7 +3214,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-bed-process-image"
-            src="/assets/products/furniture-components/bed-detail/process-detail-separation.png"
+            src="/assets/products/furniture-components/bed-detail/process-detail-separation.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3225,7 +3225,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-bed-process-image"
-            src="/assets/products/furniture-components/bed-detail/process-blank-cutting.png"
+            src="/assets/products/furniture-components/bed-detail/process-blank-cutting.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3236,7 +3236,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-bed-process-image"
-            src="/assets/products/furniture-components/bed-detail/process-edge-machining.png"
+            src="/assets/products/furniture-components/bed-detail/process-edge-machining.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3247,7 +3247,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-drilling"
-            src="/assets/products/furniture-components/cabinet-detail/process-drilling-connection.png"
+            src="/assets/products/furniture-components/cabinet-detail/process-drilling-connection.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3258,7 +3258,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-sanding"
-            src="/assets/products/furniture-components/chair-detail/process-sanding.png"
+            src="/assets/products/furniture-components/chair-detail/process-sanding.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3269,7 +3269,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-bed-process-image"
-            src="/assets/products/furniture-components/bed-detail/process-finishing.png"
+            src="/assets/products/furniture-components/bed-detail/process-finishing.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3280,7 +3280,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-bed-process-image"
-            src="/assets/products/furniture-components/bed-detail/process-trial-assembly.png"
+            src="/assets/products/furniture-components/bed-detail/process-trial-assembly.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3291,7 +3291,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-qc"
-            src="/assets/products/furniture-components/chair-detail/process-qc.png"
+            src="/assets/products/furniture-components/chair-detail/process-qc.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3302,7 +3302,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-detail-process-step">
           <img
             class="ai-component-detail-process-image ai-component-detail-process-image-packaging"
-            src="/assets/products/furniture-components/chair-detail/process-packaging.png"
+            src="/assets/products/furniture-components/chair-detail/process-packaging.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3357,7 +3357,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
             <figure class="ai-component-bed-buyer-visual">
               <img
                 class="ai-component-bed-buyer-visual-image"
-                src="/assets/products/furniture-components/bed-detail/buyer-visual-bed-dimensions.png"
+                src="/assets/products/furniture-components/bed-detail/buyer-visual-bed-dimensions.webp"
                 alt=""
                 loading="lazy"
                 decoding="async"
@@ -3381,7 +3381,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-bed-packaging-card">
           <img
             class="ai-component-bed-packaging-image"
-            src="/assets/products/furniture-components/bed-detail/packaging-protected-headboard.png"
+            src="/assets/products/furniture-components/bed-detail/packaging-protected-headboard.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3391,7 +3391,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-bed-packaging-card">
           <img
             class="ai-component-bed-packaging-image"
-            src="/assets/products/furniture-components/bed-detail/packaging-paired-side-rails.png"
+            src="/assets/products/furniture-components/bed-detail/packaging-paired-side-rails.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3401,7 +3401,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-bed-packaging-card">
           <img
             class="ai-component-bed-packaging-image"
-            src="/assets/products/furniture-components/bed-detail/packaging-slat-bundle.png"
+            src="/assets/products/furniture-components/bed-detail/packaging-slat-bundle.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3411,7 +3411,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-bed-packaging-card">
           <img
             class="ai-component-bed-packaging-image"
-            src="/assets/products/furniture-components/bed-detail/packaging-hardware-bags.png"
+            src="/assets/products/furniture-components/bed-detail/packaging-hardware-bags.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3421,7 +3421,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-bed-packaging-card">
           <img
             class="ai-component-bed-packaging-image"
-            src="/assets/products/furniture-components/bed-detail/packaging-part-code-label.png"
+            src="/assets/products/furniture-components/bed-detail/packaging-part-code-label.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3431,7 +3431,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-bed-packaging-card">
           <img
             class="ai-component-bed-packaging-image"
-            src="/assets/products/furniture-components/bed-detail/packaging-carton-pallet.png"
+            src="/assets/products/furniture-components/bed-detail/packaging-carton-pallet.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -3441,7 +3441,7 @@ const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
         <figure class="ai-component-bed-packaging-card">
           <img
             class="ai-component-bed-packaging-image"
-            src="/assets/products/furniture-components/bed-detail/packaging-moisture-scratch-protection.png"
+            src="/assets/products/furniture-components/bed-detail/packaging-moisture-scratch-protection.webp"
             alt=""
             loading="lazy"
             decoding="async"

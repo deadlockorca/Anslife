@@ -15627,7 +15627,7 @@ a.mobile-menu-utility-link {
 
 .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
   .ai-components-hero {
-  background: url('/assets/products/furniture-components/banner_ket_cau.png') center center / cover
+  background: url('/assets/products/furniture-components/banner_ket_cau.webp') center center / cover
     no-repeat !important;
   border: 0 !important;
 }
@@ -15700,7 +15700,7 @@ a.mobile-menu-utility-link {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background: url('/assets/products/furniture-components/banner_ket_cau.png') center center / cover
+  background: url('/assets/products/furniture-components/banner_ket_cau.webp') center center / cover
     no-repeat;
   box-shadow: none;
   isolation: isolate;
@@ -16520,7 +16520,7 @@ a.mobile-menu-utility-link {
   overflow: hidden;
   border: 1px solid var(--component-detail-line);
   border-radius: 0;
-  background: url('/assets/products/furniture-components/chair-detail-banner.png') center center / cover
+  background: url('/assets/products/furniture-components/chair-detail-banner.webp') center center / cover
     no-repeat;
   isolation: isolate;
 }
