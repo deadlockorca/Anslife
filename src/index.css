@@ -17445,6 +17445,639 @@ a.mobile-menu-utility-link {
   }
 }
 
+.ai-finishing-stain-page {
+  gap: clamp(1rem, 2vw, 1.4rem);
+}
+
+.html-content:has(.ai-finishing-stain-page),
+.html-panel:has(.ai-finishing-stain-page),
+.ai-content:has(.ai-finishing-stain-page),
+.ai-finishing-stain-page {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-stain-banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100% !important;
+  aspect-ratio: 2007 / 783;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 0;
+  background:
+    url('/assets/products/finishing/stain/stain-banner.png')
+    center center / contain no-repeat #f7f3ec !important;
+  box-shadow: none !important;
+  isolation: isolate;
+}
+
+.ai-finishing-stain-banner-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100% !important;
+  max-width: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  object-position: center center;
+  opacity: 1;
+}
+
+.ai-finishing-stain-copy {
+  position: absolute;
+  top: clamp(0.95rem, 2vw, 2.15rem);
+  left: clamp(1.05rem, 3vw, 3.5rem);
+  z-index: 2;
+  width: min(35%, 520px);
+  color: #070707;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content .ai-finishing-stain-copy,
+.html-content .ai-content .ai-finishing-stain-copy :is(h2, h3, p, span),
+.ai-finishing-stain-copy :is(h2, h3, p, span) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-stain-copy h2 {
+  margin: 0;
+  color: #2b2b2b !important;
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 5.4vw, 6.6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.ai-finishing-stain-subtitle {
+  margin: clamp(0.55rem, 0.75vw, 0.9rem) 0 0;
+  color: #111 !important;
+  font-size: clamp(0.82rem, 1.15vw, 1.45rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.ai-finishing-stain-rule {
+  display: block;
+  width: clamp(34px, 3.6vw, 58px);
+  height: 3px;
+  margin: clamp(0.48rem, 0.7vw, 0.78rem) 0 clamp(0.78rem, 1vw, 1.1rem);
+  background: #f06a2a !important;
+}
+
+.ai-finishing-stain-lead {
+  margin: 0;
+  color: #111 !important;
+  font-size: clamp(0.78rem, 1vw, 1.18rem);
+  font-weight: 700;
+  line-height: 1.58;
+}
+
+.ai-finishing-stain-text {
+  margin: clamp(0.7rem, 0.9vw, 1rem) 0 0;
+  color: #111 !important;
+  font-size: clamp(0.78rem, 1vw, 1.18rem);
+  font-weight: 700;
+  line-height: 1.58;
+}
+
+.ai-finishing-stain-info {
+  display: grid;
+  grid-template-columns: clamp(32px, 2.9vw, 46px) minmax(0, 1fr);
+  gap: clamp(0.62rem, 0.8vw, 0.95rem);
+  align-items: start;
+  margin-top: clamp(0.82rem, 1vw, 1.2rem);
+  padding: clamp(0.72rem, 0.95vw, 1.05rem) clamp(0.75rem, 1vw, 1.15rem);
+  border: 1px solid rgba(40, 40, 40, 0.32) !important;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+}
+
+.html-content .ai-content .ai-finishing-stain-info {
+  border: 1px solid rgba(40, 40, 40, 0.32) !important;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+}
+
+.ai-finishing-stain-info-icon {
+  display: inline-grid;
+  width: clamp(30px, 2.7vw, 42px);
+  height: clamp(30px, 2.7vw, 42px);
+  place-items: center;
+  border-radius: 999px !important;
+  color: #fff !important;
+  font-family: Georgia, serif;
+  font-size: clamp(1.1rem, 1.5vw, 1.55rem);
+  font-weight: 900;
+  line-height: 1;
+  background: #5d5d5d !important;
+}
+
+.ai-finishing-stain-info h3 {
+  margin: 0;
+  color: #111 !important;
+  font-family: var(--font-body);
+  font-size: clamp(0.84rem, 1vw, 1.15rem);
+  font-weight: 900;
+  line-height: 1.22;
+}
+
+.ai-finishing-stain-info p {
+  margin: clamp(0.34rem, 0.45vw, 0.5rem) 0 0;
+  color: #111 !important;
+  font-size: clamp(0.72rem, 0.87vw, 1rem);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.ai-finishing-stain-flow,
+.ai-finishing-stain-control,
+.ai-finishing-stain-applications {
+  display: grid;
+  gap: clamp(0.65rem, 1vw, 0.9rem);
+  padding: clamp(0.7rem, 1vw, 1rem);
+  border: 1px solid rgba(37, 37, 37, 0.14);
+  background: rgba(255, 252, 246, 0.9);
+}
+
+.ai-finishing-stain-tones {
+  display: grid;
+  gap: clamp(0.75rem, 1vw, 1rem);
+  padding: 0 clamp(0.4rem, 0.8vw, 0.8rem) clamp(0.6rem, 0.9vw, 0.9rem);
+  border: 0;
+  background: transparent;
+}
+
+.ai-finishing-stain-flow h3,
+.ai-finishing-stain-control h3,
+.ai-finishing-stain-applications h3 {
+  margin: 0;
+  color: #111 !important;
+  font-size: clamp(1rem, 1.35vw, 1.35rem);
+  font-weight: 900;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ai-finishing-stain-section-heading {
+  display: grid;
+  grid-template-columns: minmax(34px, 0.16fr) auto minmax(34px, 0.16fr);
+  gap: clamp(0.75rem, 1vw, 1.2rem);
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-finishing-stain-section-heading span {
+  display: block;
+  width: clamp(36px, 4vw, 72px);
+  height: 1px;
+  background: #f06a2a !important;
+}
+
+.ai-finishing-stain-section-heading h3 {
+  margin: 0;
+  color: #111 !important;
+  font-size: clamp(0.95rem, 1.25vw, 1.28rem);
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ai-finishing-stain-flow-grid,
+.ai-finishing-stain-control-grid,
+.ai-finishing-stain-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.55rem, 0.85vw, 0.8rem);
+}
+
+.ai-finishing-stain-tones-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.62rem, 0.95vw, 0.9rem);
+}
+
+.ai-finishing-stain-flow-card,
+.ai-finishing-stain-control-grid article,
+.ai-finishing-stain-applications-grid article {
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+  min-height: 100%;
+  padding: 0.72rem 0.65rem 0.85rem;
+  border: 1px solid rgba(37, 37, 37, 0.14);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.ai-finishing-stain-tones-grid article {
+  display: grid;
+  grid-template-rows: clamp(86px, 7.6vw, 118px) auto 1fr;
+  gap: clamp(0.45rem, 0.7vw, 0.65rem);
+  align-content: start;
+  justify-items: center;
+  min-height: clamp(192px, 15.5vw, 238px);
+  padding: clamp(0.58rem, 0.75vw, 0.78rem) clamp(0.58rem, 0.75vw, 0.78rem)
+    clamp(0.72rem, 0.9vw, 0.92rem);
+  border: 1px solid rgba(37, 37, 37, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 252, 246, 0.55);
+}
+
+.ai-finishing-stain-tone-visual {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  place-items: center;
+  overflow: hidden;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.ai-finishing-stain-tone-visual::after {
+  content: '';
+  width: 54%;
+  height: 48%;
+  border: 1px solid rgba(37, 37, 37, 0.24);
+  border-radius: 4px;
+  background:
+    repeating-linear-gradient(100deg, rgba(37, 37, 37, 0.11) 0 1px, transparent 1px 8px),
+    rgba(255, 255, 255, 0.28);
+  transform: skewY(-9deg) rotate(-6deg);
+}
+
+.ai-finishing-stain-tone-visual:has(img)::after {
+  content: none;
+}
+
+.ai-finishing-stain-tone-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.ai-finishing-stain-flow-card {
+  position: relative;
+}
+
+.ai-finishing-stain-flow-card:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  top: 0.95rem;
+  right: -0.85rem;
+  z-index: 2;
+  color: rgba(32, 32, 32, 0.58);
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.ai-finishing-stain-flow-index {
+  display: inline-grid;
+  width: 1.65rem;
+  height: 1.65rem;
+  place-items: center;
+  border: 1px solid rgba(37, 37, 37, 0.18);
+  border-radius: 999px;
+  color: #111 !important;
+  font-size: 0.78rem;
+  font-weight: 900;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.ai-finishing-stain-swatch {
+  display: block;
+  width: 100%;
+  min-height: clamp(60px, 5.6vw, 88px);
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(37, 37, 37, 0.16);
+  border-radius: 7px;
+  background-color: #c8a174;
+  background-image:
+    repeating-linear-gradient(92deg, rgba(255, 255, 255, 0.18) 0 2px, transparent 2px 12px),
+    repeating-linear-gradient(8deg, rgba(28, 18, 10, 0.13) 0 1px, transparent 1px 9px);
+}
+
+.ai-finishing-stain-swatch-raw {
+  background-color: #d9bd91;
+}
+
+.ai-finishing-stain-swatch-target {
+  background-color: #a86a32;
+}
+
+.ai-finishing-stain-swatch-formula {
+  background-color: #6f472a;
+}
+
+.ai-finishing-stain-swatch-apply {
+  background-color: #4b3528;
+}
+
+.ai-finishing-stain-swatch-topcoat {
+  background-color: #8a7157;
+}
+
+.ai-finishing-stain-swatch-approved {
+  background-color: #2f2b25;
+}
+
+.ai-finishing-stain-flow-card h4,
+.ai-finishing-stain-control-grid h4,
+.ai-finishing-stain-tones-grid h4 {
+  margin: 0;
+  color: #111 !important;
+  font-size: clamp(0.86rem, 0.96vw, 1rem);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.ai-finishing-stain-tones-grid h4 {
+  text-align: center;
+}
+
+.ai-finishing-stain-flow-card p,
+.ai-finishing-stain-control-grid p,
+.ai-finishing-stain-tones-grid p,
+.ai-finishing-stain-request-card p {
+  margin: 0;
+  color: #27231f !important;
+  font-size: clamp(0.72rem, 0.78vw, 0.88rem);
+  font-weight: 600;
+  line-height: 1.42;
+}
+
+.ai-finishing-stain-tones-grid p {
+  text-align: center;
+}
+
+.ai-finishing-stain-control-chip,
+.ai-finishing-stain-tone-strip {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid rgba(37, 37, 37, 0.16);
+  border-radius: 7px;
+  background-image:
+    repeating-linear-gradient(96deg, rgba(255, 255, 255, 0.16) 0 2px, transparent 2px 10px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18), transparent);
+}
+
+.ai-finishing-stain-chip-color,
+.ai-finishing-stain-tone-oak {
+  background-color: #b68148;
+}
+
+.ai-finishing-stain-chip-absorb,
+.ai-finishing-stain-tone-light {
+  background-color: #d9c29f;
+}
+
+.ai-finishing-stain-chip-grain,
+.ai-finishing-stain-tone-walnut {
+  background-color: #6d3f22;
+}
+
+.ai-finishing-stain-chip-edge,
+.ai-finishing-stain-tone-grey {
+  background-color: #6f6a60;
+}
+
+.ai-finishing-stain-chip-batch,
+.ai-finishing-stain-tone-black {
+  background-color: #2d2c28;
+}
+
+.ai-finishing-stain-chip-topcoat {
+  background-color: #9b8568;
+}
+
+.ai-finishing-stain-applications-grid article {
+  min-height: 72px;
+  place-items: center;
+  color: #111 !important;
+  font-size: clamp(0.84rem, 0.95vw, 0.98rem);
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.ai-finishing-stain-summary-request {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+  gap: clamp(0.8rem, 1.2vw, 1rem);
+}
+
+.ai-finishing-stain-summary-card,
+.ai-finishing-stain-request-card {
+  display: grid;
+  align-content: center;
+  min-height: clamp(180px, 15vw, 240px);
+  padding: clamp(1rem, 1.35vw, 1.35rem);
+  border: 1px solid rgba(37, 37, 37, 0.16);
+  border-radius: 10px;
+  background: rgba(255, 252, 246, 0.9);
+}
+
+.ai-finishing-stain-request-card {
+  border-color: rgba(126, 75, 34, 0.56);
+}
+
+.ai-finishing-stain-summary-card h3,
+.ai-finishing-stain-request-card h3 {
+  margin: 0;
+  color: #111 !important;
+  font-size: clamp(1rem, 1.22vw, 1.25rem);
+  font-weight: 900;
+  line-height: 1.22;
+  text-transform: uppercase;
+}
+
+.ai-finishing-stain-summary-card ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: clamp(0.7rem, 0.95vw, 0.9rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-finishing-stain-summary-card li {
+  display: grid;
+  grid-template-columns: 1.2rem minmax(0, 1fr);
+  gap: 0.52rem;
+  align-items: start;
+  color: #24211d !important;
+  font-size: clamp(0.78rem, 0.84vw, 0.94rem);
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.ai-finishing-stain-summary-card li span {
+  display: inline-grid;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.12rem;
+  place-items: center;
+  border: 1.5px solid #202020;
+  border-radius: 999px;
+}
+
+.ai-finishing-stain-summary-card li span::after {
+  content: '';
+  width: 42%;
+  height: 24%;
+  border-bottom: 1.8px solid #202020;
+  border-left: 1.8px solid #202020;
+  transform: translateY(-8%) rotate(-45deg);
+}
+
+.ai-finishing-stain-request-card p {
+  margin-top: clamp(0.62rem, 0.85vw, 0.82rem);
+  font-size: clamp(0.78rem, 0.85vw, 0.94rem);
+  line-height: 1.52;
+}
+
+.ai-finishing-stain-request-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: clamp(0.9rem, 1.1vw, 1.2rem);
+}
+
+.ai-finishing-stain-request-primary,
+.ai-finishing-stain-request-secondary {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.48rem;
+  padding: 0.68rem 1.15rem;
+  border: 1px solid rgba(37, 37, 37, 0.28);
+  border-radius: 6px;
+  color: #1b1713 !important;
+  font-size: clamp(0.82rem, 0.86vw, 0.94rem);
+  font-weight: 900;
+  line-height: 1.1;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.ai-finishing-stain-request-primary {
+  border-color: #8b552c;
+  color: #7e4b22 !important;
+}
+
+@media (max-width: 1100px) {
+  .ai-finishing-stain-copy {
+    width: min(38%, 420px);
+  }
+
+  .ai-finishing-stain-copy h2 {
+    font-size: clamp(2.25rem, 5vw, 4.6rem);
+  }
+
+  .ai-finishing-stain-info {
+    padding: 0.68rem 0.72rem;
+  }
+
+  .ai-finishing-stain-flow-grid,
+  .ai-finishing-stain-control-grid,
+  .ai-finishing-stain-applications-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ai-finishing-stain-flow-card:not(:last-child)::after {
+    display: none;
+  }
+
+  .ai-finishing-stain-tones-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ai-finishing-stain-summary-request {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .ai-finishing-stain-banner {
+    display: grid;
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+
+  .ai-finishing-stain-banner-image {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 2007 / 783;
+    height: auto !important;
+  }
+
+  .ai-finishing-stain-copy {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    padding: clamp(1.1rem, 5vw, 1.75rem);
+  }
+
+  .ai-finishing-stain-copy h2 {
+    font-size: clamp(2.3rem, 9vw, 3.2rem);
+  }
+
+  .ai-finishing-stain-subtitle {
+    font-size: clamp(0.9rem, 4vw, 1.16rem);
+  }
+
+  .ai-finishing-stain-lead,
+  .ai-finishing-stain-text {
+    font-size: clamp(0.82rem, 3.5vw, 0.98rem);
+  }
+
+  .ai-finishing-stain-info {
+    grid-template-columns: 34px minmax(0, 1fr);
+  }
+
+  .ai-finishing-stain-flow-grid,
+  .ai-finishing-stain-control-grid,
+  .ai-finishing-stain-applications-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-finishing-stain-summary-request {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-finishing-stain-tones-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .ai-component-custom-groups {
   display: grid;
   gap: 0.8rem;

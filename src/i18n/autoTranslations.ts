@@ -3,6 +3,7 @@ import { CABINET_STORAGE_PARTS_TEMPLATE_TRANSLATIONS } from './cabinetStoragePar
 import { CUSTOM_DRAWING_COMPONENTS_TEMPLATE_TRANSLATIONS } from './customDrawingComponentsTemplateTranslations';
 import { FURNITURE_COMPONENTS_TEMPLATE_TRANSLATIONS } from './furnitureComponentsTemplateTranslations';
 import { NATURAL_FINISH_TEMPLATE_TRANSLATIONS } from './naturalFinishTemplateTranslations';
+import { STAIN_TEMPLATE_TRANSLATIONS } from './stainTemplateTranslations';
 import { TABLE_TOPS_LEGS_TEMPLATE_TRANSLATIONS } from './tableTopsLegsTemplateTranslations';
 import { UPHOLSTERY_PARTS_TEMPLATE_TRANSLATIONS } from './upholsteryPartsTemplateTranslations';
 
@@ -6110,5 +6111,15 @@ for (const language of Object.keys(NATURAL_FINISH_TEMPLATE_TRANSLATIONS) as Excl
   AUTO_TRANSLATIONS[language] = {
     ...(AUTO_TRANSLATIONS[language] ?? {}),
     ...(NATURAL_FINISH_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
+
+for (const language of Object.keys(STAIN_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(STAIN_TEMPLATE_TRANSLATIONS[language] ?? {}),
   };
 }

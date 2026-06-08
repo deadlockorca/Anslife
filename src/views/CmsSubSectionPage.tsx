@@ -135,6 +135,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'finishing' &&
     detailSlug === 'natural-finish';
+  const isFinishingStainDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finishing' &&
+    detailSlug === 'stain';
   const isProductsFinishingDetail =
     config.slug === 'products-solutions' && section.id === 'finishing' && Boolean(detailSlug);
   const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
@@ -195,6 +199,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language === 'vn'
       ? 'Giải pháp hoàn thiện tự nhiên giữ lại vân gỗ, màu gỗ và cảm giác bề mặt thật theo mẫu duyệt của buyer.'
       : 'Natural finish solution that preserves wood grain, natural color, and touch-and-feel according to buyer-approved samples.';
+  const stainSeoTitle = language === 'vn' ? 'Stain' : 'Stain';
+  const stainSeoDescription =
+    language === 'vn'
+      ? 'Giải pháp stain kiểm soát tone màu, độ thấm màu, chiều sâu vân gỗ và độ ổn định giữa các lô sản xuất.'
+      : 'Stain solution controlling color tone, absorption, wood grain depth, and batch-to-batch stability.';
   const chairsSeoTitle = language === 'vn' ? 'Ghế' : 'Chairs';
   const chairsSeoDescription =
     language === 'vn'
@@ -295,6 +304,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         section.id === 'finished-furniture' ||
         section.id === 'furniture-components')) ||
     isFinishingNaturalDetail ||
+    isFinishingStainDetail ||
     (config.slug === 'resources' && section.id === 'faq') ||
     (config.slug === 'about-anslife' &&
       (section.id === 'philosophy' ||
@@ -359,6 +369,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                         ? `${customPartsSeoTitle} | ${t(config.title)}`
                         : isFinishingNaturalDetail
                           ? `${naturalFinishSeoTitle} | ${t(config.title)}`
+                          : isFinishingStainDetail
+                            ? `${stainSeoTitle} | ${t(config.title)}`
       : `${t(section.title)} | ${t(config.title)}`;
   const seoDescription = isFinishedFurnitureChairsDetail
     ? chairsSeoDescription
@@ -404,6 +416,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                       ? customPartsSeoDescription
                     : isFinishingNaturalDetail
                       ? naturalFinishSeoDescription
+                      : isFinishingStainDetail
+                        ? stainSeoDescription
                     : t(section.description);
 
   return (

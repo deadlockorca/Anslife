@@ -509,6 +509,86 @@ const PRODUCTS_FINISHING_NATURAL_FINISH_SECTION_VN = `
   </section>
 `.trim();
 
+const PRODUCTS_FINISHING_STAIN_SECTION_VN = `
+  <section id="stain" class="ai-section ai-finishing-stain-page">
+    <header class="ai-finishing-stain-banner" aria-label="Stain">
+      <img
+        class="ai-finishing-stain-banner-image"
+        src="/assets/products/finishing/stain/stain-banner.png"
+        alt="Bảng mẫu màu stain gỗ, lon wood stain và cọ hoàn thiện"
+        loading="eager"
+        decoding="async"
+      >
+      <div class="ai-finishing-stain-copy">
+        <h2>STAIN</h2>
+        <p class="ai-finishing-stain-subtitle">Wood Stain Development &amp; Grain Enhancement</p>
+        <span class="ai-finishing-stain-rule" aria-hidden="true"></span>
+        <p class="ai-finishing-stain-lead">ANSLIFE hỗ trợ phát triển màu stain, giúp tôn vinh vẻ đẹp của vân gỗ tự nhiên và đáp ứng tiêu chuẩn mẫu duyệt của buyer.</p>
+        <p class="ai-finishing-stain-text">Chúng tôi đảm bảo tính đồng đều màu sắc, khả năng giữ vân gỗ và độ ổn định giữa các lô sản xuất, mang lại giá trị thẩm mỹ cao và hiệu quả sản xuất tối ưu.</p>
+        <div class="ai-finishing-stain-info">
+          <span class="ai-finishing-stain-info-icon" aria-hidden="true">i</span>
+          <div>
+            <h3>STAIN LÀ GÌ?</h3>
+            <p>Stain là phương pháp xử lý bề mặt gỗ giúp thay đổi màu sắc trong khi vẫn giữ nguyên vẻ đẹp vân gỗ và kết cấu tự nhiên của gỗ.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="ai-finishing-stain-tones" aria-labelledby="stain-tones-title">
+      <div class="ai-finishing-stain-section-heading">
+        <span aria-hidden="true"></span>
+        <h3 id="stain-tones-title">CÁC NHÓM STAIN CHÍNH</h3>
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="ai-finishing-stain-tones-grid">
+        <article>
+          <figure class="ai-finishing-stain-tone-visual" aria-label="Natural Wood Tone">
+            <img src="/assets/products/finishing/stain/groups/01-natural-wood-tone.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>1. Natural Wood Tone</h4>
+          <p>Giữ màu gỗ tự nhiên, tôn vinh vẻ đẹp vốn có của vân gỗ.</p>
+        </article>
+        <article>
+          <figure class="ai-finishing-stain-tone-visual" aria-label="Light Tone Development">
+            <img src="/assets/products/finishing/stain/groups/02-light-tone-development.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>2. Light Tone Development</h4>
+          <p>Phát triển các tông màu sáng, hiện đại và tinh tế, giữ rõ vân gỗ.</p>
+        </article>
+        <article>
+          <figure class="ai-finishing-stain-tone-visual" aria-label="Dark Tone Development">
+            <img src="/assets/products/finishing/stain/groups/03-dark-tone-development.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>3. Dark Tone Development</h4>
+          <p>Phát triển các tông màu trầm, sang trọng và sâu vân gỗ.</p>
+        </article>
+        <article>
+          <figure class="ai-finishing-stain-tone-visual" aria-label="Custom Color Development">
+            <img src="/assets/products/finishing/stain/groups/04-custom-color-development.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>4. Custom Color Development</h4>
+          <p>Phát triển màu stain theo yêu cầu riêng, đáp ứng mẫu duyệt của buyer.</p>
+        </article>
+        <article>
+          <figure class="ai-finishing-stain-tone-visual" aria-label="Open Grain Stain">
+            <img src="/assets/products/finishing/stain/groups/05-open-grain-stain.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>5. Open Grain Stain</h4>
+          <p>Thiết kế cho hiệu ứng lỗ mở, giúp vân gỗ nổi bật và tự nhiên hơn.</p>
+        </article>
+        <article>
+          <figure class="ai-finishing-stain-tone-visual" aria-label="Multi-Step Color Matching">
+            <img src="/assets/products/finishing/stain/groups/06-multi-step-color-matching.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>6. Multi-Step Color Matching</h4>
+          <p>Phối hợp nhiều bước xử lý để đạt màu chuẩn xác và hiệu ứng theo yêu cầu.</p>
+        </article>
+      </div>
+    </section>
+  </section>
+`.trim();
+
 const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
   <section id="finished-furniture" class="ai-section ai-finished-page ai-company-overview">
     <header class="ai-finished-hero">
@@ -18524,6 +18604,19 @@ export function getAIFallbackSectionHtml(
     return translateAiHtml(
       language,
       `<div class="ai-content">${PRODUCTS_FINISHING_NATURAL_FINISH_SECTION_VN}</div>`,
+    )
+      .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
+      .replace(/href="\/vn"/g, `href="/${language}"`);
+  }
+
+  if (
+    pageSlug === 'products-solutions' &&
+    sectionId === 'finishing' &&
+    subSectionSlug === 'stain'
+  ) {
+    return translateAiHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_FINISHING_STAIN_SECTION_VN}</div>`,
     )
       .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
       .replace(/href="\/vn"/g, `href="/${language}"`);
