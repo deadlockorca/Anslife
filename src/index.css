@@ -17446,7 +17446,14 @@ a.mobile-menu-utility-link {
 }
 
 .ai-finishing-stain-page {
+  --stain-wood-cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2 18 15.6l-7.2.7-3.2 6.2Z' fill='%238b552c' stroke='%23321d10' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2,
+    auto;
   gap: clamp(1rem, 2vw, 1.4rem);
+  cursor: var(--stain-wood-cursor);
+}
+
+.ai-finishing-stain-page * {
+  cursor: var(--stain-wood-cursor);
 }
 
 .html-content:has(.ai-finishing-stain-page),
@@ -17625,6 +17632,30 @@ a.mobile-menu-utility-link {
   background: transparent;
 }
 
+.ai-finishing-stain-effects {
+  display: grid;
+  gap: clamp(0.75rem, 1vw, 1rem);
+  padding: 0 clamp(0.4rem, 0.8vw, 0.8rem) clamp(0.6rem, 0.9vw, 0.9rem);
+  border: 0;
+  background: transparent;
+}
+
+.ai-finishing-stain-process {
+  display: grid;
+  gap: clamp(0.62rem, 0.85vw, 0.82rem);
+  padding: clamp(0.7rem, 0.95vw, 0.9rem) clamp(0.55rem, 0.8vw, 0.8rem)
+    clamp(0.72rem, 0.95vw, 0.95rem);
+  border: 1px solid rgba(37, 37, 37, 0.2);
+  border-radius: 9px;
+  background: rgba(255, 252, 246, 0.42);
+}
+
+.ai-finishing-stain-summary-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.82fr) minmax(0, 1.1fr);
+  gap: clamp(0.8rem, 1.2vw, 1.1rem);
+}
+
 .ai-finishing-stain-flow h3,
 .ai-finishing-stain-control h3,
 .ai-finishing-stain-applications h3 {
@@ -17662,6 +17693,16 @@ a.mobile-menu-utility-link {
   text-transform: uppercase;
 }
 
+.ai-finishing-stain-process > h3 {
+  margin: 0;
+  color: #111 !important;
+  font-size: clamp(0.95rem, 1.25vw, 1.28rem);
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .ai-finishing-stain-flow-grid,
 .ai-finishing-stain-control-grid,
 .ai-finishing-stain-applications-grid {
@@ -17674,6 +17715,17 @@ a.mobile-menu-utility-link {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: clamp(0.62rem, 0.95vw, 0.9rem);
+}
+
+.ai-finishing-stain-effects-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: clamp(0.5rem, 0.7vw, 0.72rem);
+}
+
+.ai-finishing-stain-process-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .ai-finishing-stain-flow-card,
@@ -17701,6 +17753,73 @@ a.mobile-menu-utility-link {
   border: 1px solid rgba(37, 37, 37, 0.2);
   border-radius: 8px;
   background: rgba(255, 252, 246, 0.55);
+}
+
+.ai-finishing-stain-effects-grid article {
+  display: grid;
+  grid-template-rows: clamp(68px, 5.3vw, 88px) auto;
+  gap: clamp(0.38rem, 0.55vw, 0.52rem);
+  align-content: start;
+  justify-items: center;
+  min-height: clamp(122px, 9.5vw, 154px);
+  padding: clamp(0.42rem, 0.58vw, 0.58rem);
+  border: 1px solid rgba(37, 37, 37, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 252, 246, 0.55);
+}
+
+.ai-finishing-stain-process-grid article {
+  position: relative;
+  display: grid;
+  grid-template-rows: 32px clamp(72px, 6.4vw, 104px) auto 1fr;
+  gap: clamp(0.34rem, 0.52vw, 0.48rem);
+  align-content: start;
+  justify-items: center;
+  min-height: clamp(188px, 14vw, 228px);
+  padding: 0 clamp(0.55rem, 0.8vw, 0.82rem);
+  border-left: 1px solid rgba(37, 37, 37, 0.12);
+}
+
+.ai-finishing-stain-process-grid article:first-child {
+  border-left: 0;
+}
+
+.ai-finishing-stain-process-grid article:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: calc(50% + 18px);
+  right: calc(-50% + 18px);
+  height: 1px;
+  background: rgba(37, 37, 37, 0.28);
+}
+
+.ai-finishing-stain-process-grid article:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid rgba(37, 37, 37, 0.42);
+  border-right: 1px solid rgba(37, 37, 37, 0.42);
+  transform: rotate(45deg);
+}
+
+.ai-finishing-stain-process-index {
+  position: relative;
+  z-index: 1;
+  display: inline-grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid rgba(37, 37, 37, 0.35);
+  border-radius: 999px !important;
+  color: #111 !important;
+  font-size: clamp(0.82rem, 0.92vw, 1rem);
+  font-weight: 900;
+  line-height: 1;
+  background: #fffaf0 !important;
 }
 
 .ai-finishing-stain-tone-visual {
@@ -17738,6 +17857,331 @@ a.mobile-menu-utility-link {
   max-width: none !important;
   object-fit: contain;
   object-position: center center;
+  transform: scale(1.3);
+  transform-origin: center center;
+}
+
+.ai-finishing-stain-effect-visual {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(37, 37, 37, 0.14);
+  border-radius: 6px;
+  background-color: #b98b58;
+  background-image:
+    repeating-linear-gradient(96deg, rgba(255, 255, 255, 0.2) 0 2px, transparent 2px 11px),
+    repeating-linear-gradient(8deg, rgba(28, 18, 10, 0.12) 0 1px, transparent 1px 9px);
+}
+
+.ai-finishing-stain-effect-light {
+  background-color: #d6b98a;
+}
+
+.ai-finishing-stain-effect-walnut {
+  background-color: #62422d;
+}
+
+.ai-finishing-stain-effect-deep {
+  background-color: #4b3a2f;
+  background-image:
+    repeating-linear-gradient(96deg, rgba(0, 0, 0, 0.22) 0 3px, transparent 3px 12px),
+    repeating-linear-gradient(8deg, rgba(255, 255, 255, 0.13) 0 1px, transparent 1px 9px);
+}
+
+.ai-finishing-stain-effect-open {
+  background-color: #f1eee8;
+  background-image:
+    repeating-linear-gradient(100deg, rgba(38, 38, 38, 0.2) 0 2px, transparent 2px 14px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.45), transparent);
+}
+
+.ai-finishing-stain-effect-brushed {
+  background-color: #8b887f;
+  background-image:
+    repeating-linear-gradient(118deg, rgba(255, 255, 255, 0.2) 0 1px, transparent 1px 5px),
+    repeating-linear-gradient(118deg, rgba(20, 20, 20, 0.12) 0 2px, transparent 2px 11px);
+}
+
+.ai-finishing-stain-effect-weathered {
+  background-color: #9d988d;
+  background-image:
+    repeating-linear-gradient(96deg, rgba(255, 255, 255, 0.18) 0 2px, transparent 2px 12px),
+    linear-gradient(180deg, rgba(35, 35, 35, 0.15), transparent 45%, rgba(35, 35, 35, 0.13));
+}
+
+.ai-finishing-stain-effect-custom {
+  background-color: #8c4c2d;
+}
+
+.ai-finishing-stain-effect-visual:has(img) {
+  border: 0;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.ai-finishing-stain-effect-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: center center;
+  transform: scale(1.3);
+  transform-origin: center center;
+}
+
+.ai-finishing-stain-process-visual {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  place-items: center;
+  overflow: hidden;
+  border: 1px dashed rgba(37, 37, 37, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(126, 75, 34, 0.09), rgba(255, 255, 255, 0.08)),
+    repeating-linear-gradient(96deg, rgba(32, 32, 32, 0.06) 0 1px, transparent 1px 10px);
+}
+
+.ai-finishing-stain-process-visual::after {
+  content: '';
+  width: 48%;
+  height: 44%;
+  border: 1px solid rgba(37, 37, 37, 0.24);
+  border-radius: 4px;
+  background:
+    repeating-linear-gradient(100deg, rgba(37, 37, 37, 0.11) 0 1px, transparent 1px 8px),
+    rgba(255, 255, 255, 0.24);
+  transform: skewY(-9deg) rotate(-6deg);
+}
+
+.ai-finishing-stain-process-visual:has(img) {
+  border: 0;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.ai-finishing-stain-process-visual:has(img)::after {
+  content: none;
+}
+
+.ai-finishing-stain-process-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: center center;
+  transform: scale(1.3);
+  transform-origin: center center;
+}
+
+.ai-finishing-stain-process-grid h4 {
+  margin: 0;
+  color: #111 !important;
+  font-size: clamp(0.78rem, 0.88vw, 0.98rem);
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.ai-finishing-stain-process-grid p {
+  margin: 0;
+  color: #27231f !important;
+  font-size: clamp(0.68rem, 0.76vw, 0.86rem);
+  font-weight: 600;
+  line-height: 1.36;
+  text-align: center;
+}
+
+.ai-finishing-stain-key-control,
+.ai-finishing-stain-use-panel,
+.ai-finishing-stain-sample-panel {
+  min-height: clamp(190px, 14.5vw, 238px);
+  padding: clamp(1rem, 1.15vw, 1.25rem);
+  border: 1px solid rgba(37, 37, 37, 0.2);
+  border-radius: 9px;
+  background: rgba(255, 252, 246, 0.48);
+}
+
+.ai-finishing-stain-key-control {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(100px, 0.38fr);
+  gap: clamp(0.65rem, 1vw, 0.9rem);
+  align-items: center;
+}
+
+.ai-finishing-stain-use-panel,
+.ai-finishing-stain-sample-panel {
+  display: grid;
+  align-content: start;
+}
+
+.ai-finishing-stain-sample-panel {
+  border-color: rgba(240, 106, 42, 0.72);
+}
+
+.ai-finishing-stain-key-control h3,
+.ai-finishing-stain-use-panel h3,
+.ai-finishing-stain-sample-panel h3 {
+  margin: 0;
+  color: #111 !important;
+  font-size: clamp(0.96rem, 1.18vw, 1.24rem);
+  font-weight: 900;
+  line-height: 1.18;
+  text-transform: uppercase;
+}
+
+.ai-finishing-stain-key-control ul {
+  display: grid;
+  gap: clamp(0.28rem, 0.42vw, 0.42rem);
+  margin: clamp(0.62rem, 0.86vw, 0.82rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-finishing-stain-key-control li {
+  display: grid;
+  grid-template-columns: 1.12rem minmax(0, 1fr);
+  gap: 0.45rem;
+  align-items: center;
+  color: #24211d !important;
+  font-size: clamp(0.76rem, 0.84vw, 0.94rem);
+  font-weight: 650;
+  line-height: 1.34;
+}
+
+.ai-finishing-stain-key-control li span {
+  display: inline-grid;
+  width: 1rem;
+  height: 1rem;
+  place-items: center;
+  border: 1.4px solid #202020;
+  border-radius: 999px !important;
+}
+
+.ai-finishing-stain-key-control li span::after {
+  content: '';
+  width: 42%;
+  height: 24%;
+  border-bottom: 1.7px solid #202020;
+  border-left: 1.7px solid #202020;
+  transform: translateY(-8%) rotate(-45deg);
+}
+
+.ai-finishing-stain-key-visual {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  place-items: center;
+  border: 1px dashed rgba(37, 37, 37, 0.2);
+  border-radius: 7px;
+  background: transparent;
+}
+
+.ai-finishing-stain-key-visual:has(img) {
+  border: 0;
+  background: transparent !important;
+}
+
+.ai-finishing-stain-key-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.ai-finishing-stain-use-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.45rem, 0.62vw, 0.6rem);
+  margin-top: clamp(0.62rem, 0.86vw, 0.82rem);
+}
+
+.ai-finishing-stain-use-grid figure {
+  display: grid;
+  grid-template-rows: clamp(42px, 4vw, 62px) auto;
+  gap: 0.28rem;
+  min-height: clamp(72px, 6.4vw, 96px);
+  margin: 0;
+  padding: 0.36rem;
+  border: 1px solid rgba(37, 37, 37, 0.16);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.ai-finishing-stain-use-visual {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.ai-finishing-stain-use-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.ai-finishing-stain-use-grid figcaption {
+  color: #111 !important;
+  font-size: clamp(0.62rem, 0.72vw, 0.78rem);
+  font-weight: 800;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.ai-finishing-stain-sample-panel p {
+  margin: clamp(0.72rem, 0.9vw, 0.95rem) 0 0;
+  color: #27231f !important;
+  font-size: clamp(0.78rem, 0.86vw, 0.96rem);
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.ai-finishing-stain-sample-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.65rem, 0.9vw, 0.9rem);
+  margin-top: auto;
+  padding-top: clamp(1rem, 1.3vw, 1.25rem);
+}
+
+.ai-finishing-stain-sample-primary,
+.ai-finishing-stain-sample-secondary {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(37, 37, 37, 0.32);
+  border-radius: 6px;
+  color: #1b1713 !important;
+  font-size: clamp(0.82rem, 0.9vw, 0.98rem);
+  font-weight: 900;
+  line-height: 1.1;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.ai-finishing-stain-sample-primary {
+  border-color: #f06a2a;
+  color: #f05c1f !important;
 }
 
 .ai-finishing-stain-flow-card {
@@ -17817,6 +18261,15 @@ a.mobile-menu-utility-link {
 }
 
 .ai-finishing-stain-tones-grid h4 {
+  text-align: center;
+}
+
+.ai-finishing-stain-effects-grid h4 {
+  margin: 0;
+  color: #111 !important;
+  font-size: clamp(0.72rem, 0.78vw, 0.86rem);
+  font-weight: 900;
+  line-height: 1.18;
   text-align: center;
 }
 
@@ -18018,6 +18471,32 @@ a.mobile-menu-utility-link {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .ai-finishing-stain-effects-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .ai-finishing-stain-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.8rem 0;
+  }
+
+  .ai-finishing-stain-process-grid article {
+    border-left: 0;
+  }
+
+  .ai-finishing-stain-process-grid article::before,
+  .ai-finishing-stain-process-grid article::after {
+    display: none;
+  }
+
+  .ai-finishing-stain-summary-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-finishing-stain-key-control {
+    grid-template-columns: minmax(0, 1fr) minmax(120px, 0.26fr);
+  }
+
   .ai-finishing-stain-summary-request {
     grid-template-columns: 1fr;
   }
@@ -18075,6 +18554,1582 @@ a.mobile-menu-utility-link {
 
   .ai-finishing-stain-tones-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-finishing-stain-effects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-finishing-stain-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-finishing-stain-key-control {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-finishing-stain-key-visual {
+    min-height: 120px;
+    aspect-ratio: auto;
+  }
+
+  .ai-finishing-stain-use-grid,
+  .ai-finishing-stain-sample-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-finishing-stain-use-grid,
+  .ai-finishing-stain-sample-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+.html-content.html-panel:has(.ai-finishing-lacquer-banner-page),
+.html-content .ai-content:has(.ai-finishing-lacquer-banner-page),
+.html-content .ai-content .ai-finishing-lacquer-banner-page {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-lacquer-banner-page {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100% !important;
+  aspect-ratio: 2006 / 784;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 0;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  isolation: isolate;
+}
+
+.ai-finishing-lacquer-banner-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100% !important;
+  max-width: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: contain;
+  object-position: center center;
+  box-shadow: none !important;
+}
+
+.ai-finishing-lacquer-copy {
+  position: absolute;
+  top: clamp(0.95rem, 2vw, 2.15rem);
+  left: clamp(1.05rem, 3vw, 3.5rem);
+  z-index: 2;
+  width: min(42%, 760px);
+  color: #070707;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content .ai-finishing-lacquer-copy,
+.html-content .ai-content .ai-finishing-lacquer-copy :is(h2, h3, p, span),
+.ai-finishing-lacquer-copy :is(h2, h3, p, span) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-lacquer-copy h2 {
+  margin: 0;
+  color: #2b2b2b !important;
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 5.4vw, 6.6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.ai-finishing-lacquer-subtitle {
+  margin: clamp(0.55rem, 0.75vw, 0.9rem) 0 0;
+  color: #111 !important;
+  font-size: clamp(0.82rem, 1.15vw, 1.45rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.ai-finishing-lacquer-rule {
+  display: block;
+  width: clamp(34px, 3.6vw, 58px);
+  height: 3px;
+  margin: clamp(0.48rem, 0.7vw, 0.78rem) 0 clamp(0.78rem, 1vw, 1.1rem);
+  background: #f06a2a !important;
+}
+
+.ai-finishing-lacquer-lead,
+.ai-finishing-lacquer-text {
+  color: #111 !important;
+  font-size: clamp(0.78rem, 1vw, 1.18rem);
+  font-weight: 700;
+  line-height: 1.58;
+}
+
+.ai-finishing-lacquer-lead {
+  margin: 0;
+}
+
+.ai-finishing-lacquer-text {
+  margin: clamp(0.7rem, 0.9vw, 1rem) 0 0;
+}
+
+.ai-finishing-lacquer-info {
+  display: grid;
+  grid-template-columns: clamp(32px, 2.9vw, 46px) minmax(0, 1fr);
+  gap: clamp(0.62rem, 0.8vw, 0.95rem);
+  align-items: start;
+  margin-top: clamp(0.82rem, 1vw, 1.2rem);
+  padding: clamp(0.72rem, 0.95vw, 1.05rem) clamp(0.75rem, 1vw, 1.15rem);
+  border: 1px solid rgba(40, 40, 40, 0.32) !important;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+}
+
+.html-content .ai-content .ai-finishing-lacquer-info {
+  border: 1px solid rgba(40, 40, 40, 0.32) !important;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+}
+
+.ai-finishing-lacquer-info-icon {
+  display: inline-grid;
+  width: clamp(30px, 2.7vw, 42px);
+  height: clamp(30px, 2.7vw, 42px);
+  place-items: center;
+  border-radius: 999px !important;
+  color: #fff !important;
+  font-family: Georgia, serif;
+  font-size: clamp(1.1rem, 1.5vw, 1.55rem);
+  font-weight: 900;
+  line-height: 1;
+  background: #5d5d5d !important;
+}
+
+.ai-finishing-lacquer-info h3 {
+  margin: 0;
+  color: #111 !important;
+  font-family: var(--font-body);
+  font-size: clamp(0.84rem, 1vw, 1.15rem);
+  font-weight: 900;
+  line-height: 1.22;
+}
+
+.ai-finishing-lacquer-info p {
+  margin: clamp(0.34rem, 0.45vw, 0.5rem) 0 0;
+  color: #111 !important;
+  font-size: clamp(0.72rem, 0.87vw, 1rem);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.ai-finishing-lacquer-groups {
+  display: grid;
+  gap: 0.9rem;
+  padding: 0.35rem 0.1rem 0;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-lacquer-effects {
+  display: grid;
+  gap: 0.8rem;
+  padding: 0.65rem 0.1rem 0;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-lacquer-process {
+  display: grid;
+  gap: 0.78rem;
+  padding: 0.75rem 0.1rem 0;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-lacquer-section-heading {
+  display: grid;
+  grid-template-columns: minmax(52px, 0.12fr) auto minmax(52px, 0.12fr);
+  gap: 0.9rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-finishing-lacquer-section-heading span {
+  display: block;
+  height: 2px;
+  background: #f36f2b !important;
+}
+
+.ai-finishing-lacquer-section-heading h3 {
+  margin: 0;
+  color: #171717 !important;
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.ai-finishing-lacquer-groups-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.55rem, 0.85vw, 0.85rem);
+}
+
+.ai-finishing-lacquer-effects-grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: clamp(0.42rem, 0.62vw, 0.62rem);
+}
+
+.ai-finishing-lacquer-process-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid rgba(54, 51, 46, 0.22);
+  border-radius: 10px;
+  background: rgba(255, 252, 246, 0.14);
+}
+
+.ai-finishing-lacquer-groups-grid article {
+  display: grid;
+  grid-template-rows: clamp(92px, 7.4vw, 124px) auto auto 1fr;
+  align-content: start;
+  min-height: clamp(236px, 17.8vw, 278px);
+  padding: clamp(0.62rem, 0.78vw, 0.82rem);
+  border: 1px solid rgba(54, 51, 46, 0.22);
+  border-radius: 9px;
+  background: rgba(255, 252, 246, 0.18);
+}
+
+.ai-finishing-lacquer-effects-grid article {
+  display: grid;
+  grid-template-rows: clamp(62px, 5vw, 84px) auto;
+  align-content: start;
+  justify-items: center;
+  min-height: clamp(116px, 9vw, 142px);
+  padding: clamp(0.34rem, 0.5vw, 0.48rem);
+  border: 1px solid rgba(54, 51, 46, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 252, 246, 0.18);
+}
+
+.ai-finishing-lacquer-process-grid article {
+  position: relative;
+  display: grid;
+  grid-template-rows: 30px clamp(72px, 6.6vw, 106px) auto auto 1fr;
+  align-content: start;
+  justify-items: center;
+  min-height: clamp(230px, 17vw, 268px);
+  padding: 0.42rem clamp(0.52rem, 0.72vw, 0.72rem) 0.75rem;
+  border-left: 1px solid rgba(54, 51, 46, 0.14);
+  background: transparent;
+}
+
+.ai-finishing-lacquer-process-grid article:first-child {
+  border-left: 0;
+}
+
+.ai-finishing-lacquer-process-grid article:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  top: 21px;
+  left: calc(50% + 20px);
+  right: calc(-50% + 20px);
+  z-index: 0;
+  border-top: 1px dashed rgba(54, 51, 46, 0.38);
+}
+
+.ai-finishing-lacquer-process-grid article:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 17px;
+  right: -5px;
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid rgba(54, 51, 46, 0.46);
+  border-right: 1.5px solid rgba(54, 51, 46, 0.46);
+  transform: rotate(45deg);
+}
+
+.ai-finishing-lacquer-group-media {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0.58rem;
+  place-items: center;
+  overflow: hidden;
+  border: 1px dashed rgba(54, 51, 46, 0.22);
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.34), rgba(221, 213, 198, 0.16)),
+    rgba(255, 255, 255, 0.18);
+}
+
+.ai-finishing-lacquer-group-media::after {
+  content: '';
+  width: 46%;
+  height: 36%;
+  border: 1px solid rgba(54, 51, 46, 0.18);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.22);
+  transform: skewY(-7deg) rotate(-5deg);
+}
+
+.ai-finishing-lacquer-group-media:has(img),
+.ai-finishing-lacquer-effect-media:has(img),
+.ai-finishing-lacquer-process-media:has(img) {
+  border: 0;
+  background: transparent !important;
+}
+
+.ai-finishing-lacquer-group-media:has(img)::after,
+.ai-finishing-lacquer-effect-media:has(img)::after,
+.ai-finishing-lacquer-process-media:has(img)::after {
+  display: none;
+}
+
+.ai-finishing-lacquer-group-media img,
+.ai-finishing-lacquer-effect-media img,
+.ai-finishing-lacquer-process-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.ai-finishing-lacquer-effect-media {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0.4rem;
+  place-items: center;
+  overflow: hidden;
+  border: 1px dashed rgba(54, 51, 46, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.36), rgba(221, 213, 198, 0.16)),
+    rgba(255, 255, 255, 0.18);
+}
+
+.ai-finishing-lacquer-process-media {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0.42rem;
+  place-items: center;
+  overflow: hidden;
+  border: 1px dashed rgba(54, 51, 46, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.36), rgba(221, 213, 198, 0.16)),
+    rgba(255, 255, 255, 0.18);
+}
+
+.ai-finishing-lacquer-process-media::after {
+  content: '';
+  width: 54%;
+  height: 42%;
+  border: 1px solid rgba(54, 51, 46, 0.18);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewY(-7deg) rotate(-5deg);
+}
+
+.ai-finishing-lacquer-process-index {
+  position: relative;
+  z-index: 2;
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 1.4px solid rgba(54, 51, 46, 0.58);
+  border-radius: 999px;
+  color: #111 !important;
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1;
+  background: #fffaf0 !important;
+}
+
+.ai-finishing-lacquer-effect-media::after {
+  content: '';
+  width: 58%;
+  height: 44%;
+  border: 1px solid rgba(54, 51, 46, 0.18);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ai-finishing-lacquer-groups-grid h4 {
+  margin: 0;
+  color: #111 !important;
+  font-size: 0.88rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.18;
+}
+
+.ai-finishing-lacquer-effects-grid h4 {
+  margin: 0;
+  color: #111 !important;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.ai-finishing-lacquer-process-grid h4 {
+  margin: 0;
+  color: #111 !important;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.ai-finishing-lacquer-group-subtitle {
+  margin: 0.18rem 0 0 !important;
+  color: #242424 !important;
+  font-size: 0.76rem !important;
+  font-weight: 760 !important;
+  line-height: 1.18 !important;
+}
+
+.ai-finishing-lacquer-process-subtitle {
+  margin: 0.18rem 0 0 !important;
+  color: #242424 !important;
+  font-size: 0.73rem !important;
+  font-weight: 780 !important;
+  line-height: 1.16 !important;
+  text-align: center;
+}
+
+.ai-finishing-lacquer-groups-grid article > p:not(.ai-finishing-lacquer-group-subtitle) {
+  margin: 0.58rem 0 0;
+  color: #333 !important;
+  font-size: 0.72rem;
+  font-weight: 620;
+  line-height: 1.42;
+}
+
+.ai-finishing-lacquer-process-grid article > p:not(.ai-finishing-lacquer-process-subtitle) {
+  margin: 0.46rem 0 0;
+  color: #333 !important;
+  font-size: 0.66rem;
+  font-weight: 620;
+  line-height: 1.38;
+  text-align: center;
+}
+
+.ai-finishing-lacquer-summary-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1.08fr) minmax(0, 1.18fr);
+  gap: 0.75rem;
+  padding: 0.82rem 0.1rem 0;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-lacquer-key-control,
+.ai-finishing-lacquer-use-panel,
+.ai-finishing-lacquer-sample-panel {
+  min-height: 220px;
+  padding: 0.95rem;
+  border: 1px solid rgba(54, 51, 46, 0.22);
+  border-radius: 9px;
+  background: rgba(255, 252, 246, 0.18);
+}
+
+.ai-finishing-lacquer-key-control {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(108px, 0.34fr);
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.ai-finishing-lacquer-use-panel,
+.ai-finishing-lacquer-sample-panel {
+  display: grid;
+  align-content: start;
+}
+
+.ai-finishing-lacquer-sample-panel {
+  border-color: rgba(240, 106, 42, 0.76);
+}
+
+.ai-finishing-lacquer-key-control h3,
+.ai-finishing-lacquer-use-panel h3,
+.ai-finishing-lacquer-sample-panel h3 {
+  margin: 0;
+  color: #111 !important;
+  font-size: 0.98rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.18;
+  text-transform: uppercase;
+}
+
+.ai-finishing-lacquer-key-control ul {
+  display: grid;
+  gap: 0.28rem;
+  margin: 0.65rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-finishing-lacquer-key-control li {
+  display: grid;
+  grid-template-columns: 1rem minmax(0, 1fr);
+  gap: 0.42rem;
+  align-items: start;
+  color: #24211d !important;
+  font-size: 0.72rem;
+  font-weight: 650;
+  line-height: 1.28;
+}
+
+.ai-finishing-lacquer-key-control li span {
+  display: inline-grid;
+  width: 0.86rem;
+  height: 0.86rem;
+  margin-top: 0.08rem;
+  place-items: center;
+  border: 1.35px solid #202020;
+  border-radius: 999px !important;
+}
+
+.ai-finishing-lacquer-key-control li span::after {
+  content: '';
+  width: 42%;
+  height: 24%;
+  border-bottom: 1.65px solid #202020;
+  border-left: 1.65px solid #202020;
+  transform: translateY(-8%) rotate(-45deg);
+}
+
+.ai-finishing-lacquer-key-visual {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  place-items: center;
+  border: 1px dashed rgba(54, 51, 46, 0.2);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.ai-finishing-lacquer-key-visual:has(img) {
+  border: 0;
+  background: transparent !important;
+}
+
+.ai-finishing-lacquer-key-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: center center;
+  transform: scale(1.5);
+}
+
+.ai-finishing-lacquer-use-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.68rem;
+}
+
+.ai-finishing-lacquer-use-grid figure {
+  display: grid;
+  grid-template-rows: 54px auto;
+  gap: 0.3rem;
+  min-height: 86px;
+  margin: 0;
+  padding: 0.36rem;
+  border: 1px solid rgba(54, 51, 46, 0.18);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.ai-finishing-lacquer-use-visual {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px dashed rgba(54, 51, 46, 0.18);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.ai-finishing-lacquer-use-visual:has(img) {
+  border: 0;
+  background: transparent !important;
+}
+
+.ai-finishing-lacquer-use-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.ai-finishing-lacquer-use-grid figcaption {
+  color: #111 !important;
+  font-size: 0.66rem;
+  font-weight: 800;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.ai-finishing-lacquer-sample-panel p {
+  margin: 0.78rem 0 0;
+  color: #27231f !important;
+  font-size: 0.78rem;
+  font-weight: 650;
+  line-height: 1.48;
+}
+
+.ai-finishing-lacquer-sample-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 1.1rem;
+}
+
+.ai-finishing-lacquer-sample-primary,
+.ai-finishing-lacquer-sample-secondary {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.48rem;
+  padding: 0.68rem 0.92rem;
+  border: 1px solid rgba(37, 37, 37, 0.3);
+  border-radius: 6px;
+  color: #1b1713 !important;
+  font-size: 0.84rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.ai-finishing-lacquer-sample-primary {
+  border-color: #f06a2a;
+  color: #f05c1f !important;
+}
+
+@media (max-width: 1100px) {
+  .ai-finishing-lacquer-groups-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ai-finishing-lacquer-effects-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .ai-finishing-lacquer-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem 0;
+    border: 0;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .ai-finishing-lacquer-process-grid article {
+    border: 1px solid rgba(54, 51, 46, 0.18);
+    border-radius: 9px;
+    background: rgba(255, 252, 246, 0.14);
+  }
+
+  .ai-finishing-lacquer-process-grid article::before,
+  .ai-finishing-lacquer-process-grid article::after {
+    display: none;
+  }
+
+  .ai-finishing-lacquer-summary-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-finishing-lacquer-key-control {
+    grid-template-columns: minmax(0, 1fr) minmax(120px, 0.24fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .ai-finishing-lacquer-banner-page {
+    display: grid;
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+
+  .ai-finishing-lacquer-banner-image {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 2006 / 784;
+    height: auto !important;
+  }
+
+  .ai-finishing-lacquer-copy {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    padding: clamp(1.1rem, 5vw, 1.75rem);
+  }
+
+  .ai-finishing-lacquer-copy h2 {
+    font-size: clamp(2.3rem, 9vw, 3.2rem);
+  }
+
+  .ai-finishing-lacquer-subtitle {
+    font-size: clamp(0.9rem, 4vw, 1.16rem);
+  }
+
+  .ai-finishing-lacquer-lead,
+  .ai-finishing-lacquer-text {
+    font-size: clamp(0.82rem, 3.5vw, 0.98rem);
+  }
+
+  .ai-finishing-lacquer-info {
+    grid-template-columns: 34px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ai-finishing-lacquer-section-heading {
+    grid-template-columns: minmax(24px, 0.12fr) auto minmax(24px, 0.12fr);
+    gap: 0.6rem;
+  }
+
+  .ai-finishing-lacquer-section-heading h3 {
+    font-size: 0.92rem;
+  }
+
+  .ai-finishing-lacquer-groups-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-finishing-lacquer-effects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-finishing-lacquer-effects-grid h4 {
+    font-size: 0.76rem;
+  }
+
+  .ai-finishing-lacquer-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-finishing-lacquer-key-control {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-finishing-lacquer-key-visual {
+    min-height: 120px;
+    aspect-ratio: auto;
+  }
+
+  .ai-finishing-lacquer-use-grid,
+  .ai-finishing-lacquer-sample-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-finishing-lacquer-use-grid,
+  .ai-finishing-lacquer-sample-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+.html-content.html-panel:has(.ai-finishing-oil-banner-page),
+.html-content .ai-content:has(.ai-finishing-oil-banner-page),
+.html-content .ai-content .ai-finishing-oil-banner-page {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-oil-banner-page {
+  display: block;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.ai-finishing-oil-banner-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2006 / 784;
+  min-height: 260px;
+  margin: 0;
+  border: 1px dashed rgba(54, 51, 46, 0.28);
+  border-radius: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(221, 213, 198, 0.12)),
+    rgba(255, 252, 246, 0.1);
+  box-shadow: none !important;
+}
+
+.ai-finishing-oil-banner-image {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-width: 100% !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-oil-groups {
+  display: grid;
+  gap: 0.9rem;
+  padding: 0.82rem 0.1rem 0;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-oil-effects {
+  display: grid;
+  gap: 0.8rem;
+  padding: 0.65rem 0.1rem 0;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-oil-process {
+  display: grid;
+  gap: 0.78rem;
+  padding: 0.75rem 0.1rem 0;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-oil-section-heading {
+  display: grid;
+  grid-template-columns: minmax(52px, 0.12fr) auto minmax(52px, 0.12fr);
+  gap: 0.9rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-finishing-oil-section-heading span {
+  display: block;
+  height: 2px;
+  background: #f36f2b !important;
+}
+
+.ai-finishing-oil-section-heading h3 {
+  margin: 0;
+  color: #171717 !important;
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.ai-finishing-oil-groups-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.78rem;
+}
+
+.ai-finishing-oil-effects-grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 0.58rem;
+}
+
+.ai-finishing-oil-process-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid rgba(54, 51, 46, 0.22);
+  border-radius: 10px;
+  background: rgba(255, 252, 246, 0.14);
+}
+
+.ai-finishing-oil-groups-grid article {
+  display: grid;
+  grid-template-rows: 112px auto 1fr;
+  align-content: start;
+  min-height: 252px;
+  padding: 0.76rem;
+  border: 1px solid rgba(54, 51, 46, 0.22);
+  border-radius: 9px;
+  background: rgba(255, 252, 246, 0.18);
+}
+
+.ai-finishing-oil-effects-grid article {
+  display: grid;
+  grid-template-rows: 74px auto;
+  align-content: start;
+  justify-items: center;
+  min-height: 132px;
+  padding: 0.42rem;
+  border: 1px solid rgba(54, 51, 46, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 252, 246, 0.18);
+}
+
+.ai-finishing-oil-process-grid article {
+  position: relative;
+  display: grid;
+  grid-template-rows: 30px 92px auto 1fr;
+  align-content: start;
+  justify-items: center;
+  min-height: 252px;
+  padding: 0.42rem 0.62rem 0.72rem;
+  border-left: 1px solid rgba(54, 51, 46, 0.14);
+  background: transparent;
+}
+
+.ai-finishing-oil-process-grid article:first-child {
+  border-left: 0;
+}
+
+.ai-finishing-oil-process-grid article:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  top: 21px;
+  left: calc(50% + 20px);
+  right: calc(-50% + 20px);
+  z-index: 0;
+  border-top: 1px dashed rgba(54, 51, 46, 0.38);
+}
+
+.ai-finishing-oil-process-grid article:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 17px;
+  right: -5px;
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid rgba(54, 51, 46, 0.46);
+  border-right: 1.5px solid rgba(54, 51, 46, 0.46);
+  transform: rotate(45deg);
+}
+
+.ai-finishing-oil-group-media {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0.58rem;
+  place-items: center;
+  overflow: hidden;
+  border: 1px dashed rgba(54, 51, 46, 0.22);
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.34), rgba(221, 213, 198, 0.16)),
+    rgba(255, 255, 255, 0.18);
+}
+
+.ai-finishing-oil-group-media::after {
+  content: '';
+  width: 44%;
+  height: 38%;
+  border: 1px solid rgba(54, 51, 46, 0.18);
+  border-radius: 999px 999px 999px 18px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(12deg);
+}
+
+.ai-finishing-oil-group-media:has(img),
+.ai-finishing-oil-effect-media:has(img),
+.ai-finishing-oil-process-media:has(img) {
+  border: 0;
+  background: transparent !important;
+}
+
+.ai-finishing-oil-group-media:has(img)::after,
+.ai-finishing-oil-effect-media:has(img)::after,
+.ai-finishing-oil-process-media:has(img)::after {
+  display: none;
+}
+
+.ai-finishing-oil-group-media img,
+.ai-finishing-oil-effect-media img,
+.ai-finishing-oil-process-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.ai-finishing-oil-effect-media {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0.4rem;
+  place-items: center;
+  overflow: hidden;
+  border: 1px dashed rgba(54, 51, 46, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.36), rgba(221, 213, 198, 0.16)),
+    rgba(255, 255, 255, 0.18);
+}
+
+.ai-finishing-oil-effect-media::after {
+  content: '';
+  width: 62%;
+  height: 40%;
+  border: 1px solid rgba(54, 51, 46, 0.18);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewY(-5deg);
+}
+
+.ai-finishing-oil-process-media {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0.42rem;
+  place-items: center;
+  overflow: hidden;
+  border: 1px dashed rgba(54, 51, 46, 0.2);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.36), rgba(221, 213, 198, 0.16)),
+    rgba(255, 255, 255, 0.18);
+}
+
+.ai-finishing-oil-process-media::after {
+  content: '';
+  width: 54%;
+  height: 42%;
+  border: 1px solid rgba(54, 51, 46, 0.18);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewY(-7deg) rotate(-5deg);
+}
+
+.ai-finishing-oil-process-index {
+  position: relative;
+  z-index: 2;
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 1.4px solid rgba(54, 51, 46, 0.58);
+  border-radius: 999px;
+  color: #111 !important;
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1;
+  background: #fffaf0 !important;
+}
+
+.ai-finishing-oil-groups-grid h4 {
+  margin: 0;
+  color: #111 !important;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.18;
+}
+
+.ai-finishing-oil-effects-grid h4 {
+  margin: 0;
+  color: #111 !important;
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.ai-finishing-oil-process-grid h4 {
+  margin: 0;
+  color: #111 !important;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.ai-finishing-oil-groups-grid p {
+  margin: 0.58rem 0 0;
+  color: #333 !important;
+  font-size: 0.72rem;
+  font-weight: 620;
+  line-height: 1.42;
+}
+
+.ai-finishing-oil-process-grid p {
+  margin: 0.46rem 0 0;
+  color: #333 !important;
+  font-size: 0.66rem;
+  font-weight: 620;
+  line-height: 1.38;
+  text-align: center;
+}
+
+.ai-finishing-oil-summary-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1.08fr) minmax(0, 1.18fr);
+  gap: 0.75rem;
+  padding: 0.82rem 0.1rem 0;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ai-finishing-oil-key-control,
+.ai-finishing-oil-use-panel,
+.ai-finishing-oil-sample-panel {
+  min-height: 220px;
+  padding: 0.95rem;
+  border: 1px solid rgba(54, 51, 46, 0.22);
+  border-radius: 9px;
+  background: rgba(255, 252, 246, 0.18);
+}
+
+.ai-finishing-oil-key-control {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(108px, 0.34fr);
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.ai-finishing-oil-use-panel,
+.ai-finishing-oil-sample-panel {
+  display: grid;
+  align-content: start;
+}
+
+.ai-finishing-oil-sample-panel {
+  border-color: rgba(240, 106, 42, 0.76);
+}
+
+.ai-finishing-oil-key-control h3,
+.ai-finishing-oil-use-panel h3,
+.ai-finishing-oil-sample-panel h3 {
+  margin: 0;
+  color: #111 !important;
+  font-size: 0.98rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.18;
+  text-transform: uppercase;
+}
+
+.ai-finishing-oil-key-control ul {
+  display: grid;
+  gap: 0.28rem;
+  margin: 0.65rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-finishing-oil-key-control li {
+  display: grid;
+  grid-template-columns: 1rem minmax(0, 1fr);
+  gap: 0.42rem;
+  align-items: start;
+  color: #24211d !important;
+  font-size: 0.72rem;
+  font-weight: 650;
+  line-height: 1.28;
+}
+
+.ai-finishing-oil-key-control li span {
+  display: inline-grid;
+  width: 0.86rem;
+  height: 0.86rem;
+  margin-top: 0.08rem;
+  place-items: center;
+  border: 1.35px solid #202020;
+  border-radius: 999px !important;
+}
+
+.ai-finishing-oil-key-control li span::after {
+  content: '';
+  width: 42%;
+  height: 24%;
+  border-bottom: 1.65px solid #202020;
+  border-left: 1.65px solid #202020;
+  transform: translateY(-8%) rotate(-45deg);
+}
+
+.ai-finishing-oil-key-visual {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  place-items: center;
+  border: 1px dashed rgba(54, 51, 46, 0.2);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.ai-finishing-oil-key-visual::after {
+  content: '';
+  width: 58%;
+  height: 58%;
+  border: 2px solid rgba(54, 51, 46, 0.18);
+  border-radius: 999px;
+  box-shadow: 28px 28px 0 -24px rgba(54, 51, 46, 0.24);
+}
+
+.ai-finishing-oil-key-visual:has(img) {
+  border: 0;
+  background: transparent !important;
+}
+
+.ai-finishing-oil-key-visual:has(img)::after {
+  display: none;
+}
+
+.ai-finishing-oil-key-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.ai-finishing-oil-use-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.68rem;
+}
+
+.ai-finishing-oil-use-grid figure {
+  display: grid;
+  grid-template-rows: 54px auto;
+  gap: 0.3rem;
+  min-height: 86px;
+  margin: 0;
+  padding: 0.36rem;
+  border: 1px solid rgba(54, 51, 46, 0.18);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.ai-finishing-oil-use-visual {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px dashed rgba(54, 51, 46, 0.18);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.ai-finishing-oil-use-visual:has(img) {
+  border: 0;
+  background: transparent !important;
+}
+
+.ai-finishing-oil-use-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.ai-finishing-oil-use-grid figcaption {
+  color: #111 !important;
+  font-size: 0.66rem;
+  font-weight: 800;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.ai-finishing-oil-sample-panel p {
+  margin: 0.78rem 0 0;
+  color: #27231f !important;
+  font-size: 0.78rem;
+  font-weight: 650;
+  line-height: 1.48;
+}
+
+.ai-finishing-oil-sample-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 1.1rem;
+}
+
+.ai-finishing-oil-sample-primary,
+.ai-finishing-oil-sample-secondary {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.48rem;
+  padding: 0.68rem 0.92rem;
+  border: 1px solid rgba(37, 37, 37, 0.3);
+  border-radius: 6px;
+  color: #1b1713 !important;
+  font-size: 0.84rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.ai-finishing-oil-sample-primary {
+  border-color: #f06a2a;
+  color: #f05c1f !important;
+}
+
+.ai-finishing-lacquer-section-heading h3,
+.ai-finishing-oil-section-heading h3 {
+  color: #111 !important;
+  font-size: clamp(0.95rem, 1.25vw, 1.28rem);
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.ai-finishing-lacquer-groups-grid h4,
+.ai-finishing-oil-groups-grid h4 {
+  color: #111 !important;
+  font-size: clamp(0.86rem, 0.96vw, 1rem);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.ai-finishing-lacquer-group-subtitle {
+  color: #24211d !important;
+  font-size: clamp(0.72rem, 0.78vw, 0.86rem) !important;
+  font-weight: 650 !important;
+  line-height: 1.28 !important;
+}
+
+.ai-finishing-lacquer-groups-grid article > p:not(.ai-finishing-lacquer-group-subtitle),
+.ai-finishing-oil-groups-grid p {
+  color: #27231f !important;
+  font-size: clamp(0.72rem, 0.78vw, 0.88rem);
+  font-weight: 600;
+  line-height: 1.42;
+}
+
+.ai-finishing-lacquer-effects-grid h4,
+.ai-finishing-oil-effects-grid h4 {
+  color: #111 !important;
+  font-size: clamp(0.72rem, 0.78vw, 0.86rem);
+  font-weight: 900;
+  line-height: 1.18;
+}
+
+.ai-finishing-lacquer-process-index,
+.ai-finishing-oil-process-index {
+  font-size: clamp(0.82rem, 0.92vw, 1rem);
+}
+
+.ai-finishing-lacquer-process-grid h4,
+.ai-finishing-oil-process-grid h4 {
+  color: #111 !important;
+  font-size: clamp(0.78rem, 0.88vw, 0.98rem);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.ai-finishing-lacquer-process-subtitle {
+  color: #24211d !important;
+  font-size: clamp(0.68rem, 0.76vw, 0.86rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.28 !important;
+}
+
+.ai-finishing-lacquer-process-grid article > p:not(.ai-finishing-lacquer-process-subtitle),
+.ai-finishing-oil-process-grid p {
+  color: #27231f !important;
+  font-size: clamp(0.68rem, 0.76vw, 0.86rem);
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+.ai-finishing-lacquer-key-control h3,
+.ai-finishing-lacquer-use-panel h3,
+.ai-finishing-lacquer-sample-panel h3,
+.ai-finishing-oil-key-control h3,
+.ai-finishing-oil-use-panel h3,
+.ai-finishing-oil-sample-panel h3 {
+  color: #111 !important;
+  font-size: clamp(0.96rem, 1.18vw, 1.24rem);
+  font-weight: 900;
+  line-height: 1.18;
+  text-transform: uppercase;
+}
+
+.ai-finishing-lacquer-key-control li,
+.ai-finishing-oil-key-control li {
+  color: #24211d !important;
+  font-size: clamp(0.76rem, 0.84vw, 0.94rem);
+  font-weight: 650;
+  line-height: 1.34;
+}
+
+.ai-finishing-lacquer-use-grid figcaption,
+.ai-finishing-oil-use-grid figcaption {
+  color: #111 !important;
+  font-size: clamp(0.62rem, 0.72vw, 0.78rem);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.ai-finishing-lacquer-sample-panel p,
+.ai-finishing-oil-sample-panel p {
+  color: #27231f !important;
+  font-size: clamp(0.78rem, 0.86vw, 0.96rem);
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.ai-finishing-lacquer-sample-primary,
+.ai-finishing-lacquer-sample-secondary,
+.ai-finishing-oil-sample-primary,
+.ai-finishing-oil-sample-secondary {
+  font-size: clamp(0.82rem, 0.9vw, 0.98rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+@media (max-width: 1100px) {
+  .ai-finishing-oil-groups-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ai-finishing-oil-effects-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .ai-finishing-oil-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem 0;
+    border: 0;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .ai-finishing-oil-process-grid article {
+    border: 1px solid rgba(54, 51, 46, 0.18);
+    border-radius: 9px;
+    background: rgba(255, 252, 246, 0.14);
+  }
+
+  .ai-finishing-oil-process-grid article::before,
+  .ai-finishing-oil-process-grid article::after {
+    display: none;
+  }
+
+  .ai-finishing-oil-summary-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-finishing-oil-key-control {
+    grid-template-columns: minmax(0, 1fr) minmax(120px, 0.24fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .ai-finishing-oil-banner-frame {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ai-finishing-oil-section-heading {
+    grid-template-columns: minmax(24px, 0.12fr) auto minmax(24px, 0.12fr);
+    gap: 0.6rem;
+  }
+
+  .ai-finishing-oil-section-heading h3 {
+    font-size: 0.92rem;
+  }
+
+  .ai-finishing-oil-groups-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-finishing-oil-effects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-finishing-oil-effects-grid h4 {
+    font-size: 0.76rem;
+  }
+
+  .ai-finishing-oil-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-finishing-oil-key-control {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-finishing-oil-key-visual {
+    min-height: 120px;
+    aspect-ratio: auto;
+  }
+
+  .ai-finishing-oil-use-grid,
+  .ai-finishing-oil-sample-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-finishing-oil-use-grid,
+  .ai-finishing-oil-sample-actions {
+    grid-template-columns: 1fr;
   }
 }
 

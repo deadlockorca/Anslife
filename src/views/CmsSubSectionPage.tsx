@@ -139,6 +139,14 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'finishing' &&
     detailSlug === 'stain';
+  const isFinishingLacquerDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finishing' &&
+    detailSlug === 'lacquer';
+  const isFinishingOilFinishDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finishing' &&
+    detailSlug === 'oil-finish';
   const isProductsFinishingDetail =
     config.slug === 'products-solutions' && section.id === 'finishing' && Boolean(detailSlug);
   const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
@@ -305,6 +313,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         section.id === 'furniture-components')) ||
     isFinishingNaturalDetail ||
     isFinishingStainDetail ||
+    isFinishingLacquerDetail ||
+    isFinishingOilFinishDetail ||
     (config.slug === 'resources' && section.id === 'faq') ||
     (config.slug === 'about-anslife' &&
       (section.id === 'philosophy' ||
