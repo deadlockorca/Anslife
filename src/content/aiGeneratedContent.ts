@@ -1,4 +1,8 @@
 import type { LanguageCode } from '../i18n/language';
+import { FINISHING_OVERVIEW_TEMPLATE_TRANSLATIONS } from '../i18n/finishingOverviewTemplateTranslations';
+import { MATTE_FINISH_TEMPLATE_TRANSLATIONS } from '../i18n/matteFinishTemplateTranslations';
+import { OIL_FINISH_TEMPLATE_TRANSLATIONS } from '../i18n/oilFinishTemplateTranslations';
+import { PAINTED_FINISH_TEMPLATE_TRANSLATIONS } from '../i18n/paintedFinishTemplateTranslations';
 import { translateText } from '../i18n/translations';
 
 const ABOUT_COMPANY_INTRO_SECTION_VN = `
@@ -260,6 +264,677 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
         <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải tài liệu / bản vẽ lên</a>
       </div>
     </div>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHING_OVERVIEW_SECTION_VN = `
+  <section id="finishing-overview" class="ai-section ai-finishing-overview-page">
+    <header class="ai-finishing-overview-hero">
+      <div class="ai-finishing-overview-copy">
+        <h2>Hoàn thiện bề mặt</h2>
+        <p>ANSLIFE cung cấp giải pháp hoàn thiện bề mặt toàn diện cho gỗ, giúp nâng cao thẩm mỹ, bảo vệ sản phẩm và đáp ứng yêu cầu đa dạng của thị trường.</p>
+      </div>
+      <figure class="ai-finishing-overview-visual" aria-label="Khu vực ảnh banner hoàn thiện bề mặt">
+        <img
+          src="/assets/products/finishing/overview/finishing-overview-banner.png"
+          alt="Bảng mẫu hoàn thiện bề mặt gỗ, lacquer, natural oil và dụng cụ sơn"
+          loading="eager"
+          decoding="async"
+        >
+      </figure>
+    </header>
+
+    <div class="ai-finishing-overview-grid">
+      <article class="ai-finishing-overview-card">
+        <figure class="ai-finishing-overview-card-media ai-finishing-overview-card-natural" aria-label="Hoàn thiện tự nhiên">
+          <img src="/assets/products/finishing/overview/01-natural-finish.webp" alt="" loading="lazy" decoding="async">
+        </figure>
+        <div class="ai-finishing-overview-card-copy">
+          <h3>1. Hoàn thiện tự nhiên</h3>
+          <p>Giữ vẻ đẹp vốn có của gỗ với lớp bảo vệ trong suốt.</p>
+          <a href="/vn/products-solutions/finishing/natural-finish">Xem chi tiết</a>
+        </div>
+      </article>
+      <article class="ai-finishing-overview-card">
+        <figure class="ai-finishing-overview-card-media ai-finishing-overview-card-stain" aria-label="Stain">
+          <img src="/assets/products/finishing/overview/02-stain.webp" alt="" loading="lazy" decoding="async">
+        </figure>
+        <div class="ai-finishing-overview-card-copy">
+          <h3>2. Stain</h3>
+          <p>Tạo màu và tôn vân gỗ, mang lại chiều sâu tự nhiên.</p>
+          <a href="/vn/products-solutions/finishing/stain">Xem chi tiết</a>
+        </div>
+      </article>
+      <article class="ai-finishing-overview-card">
+        <figure class="ai-finishing-overview-card-media ai-finishing-overview-card-lacquer" aria-label="Lacquer">
+          <img src="/assets/products/finishing/overview/03-lacquer.webp" alt="" loading="lazy" decoding="async">
+        </figure>
+        <div class="ai-finishing-overview-card-copy">
+          <h3>3. Lacquer</h3>
+          <p>Lớp phủ bền chắc, bề mặt nhẵn mịn và sang trọng.</p>
+          <a href="/vn/products-solutions/finishing/lacquer">Xem chi tiết</a>
+        </div>
+      </article>
+      <article class="ai-finishing-overview-card">
+        <figure class="ai-finishing-overview-card-media ai-finishing-overview-card-oil" aria-label="Hoàn thiện dầu">
+          <img src="/assets/products/finishing/overview/04-oil-finish.webp" alt="" loading="lazy" decoding="async">
+        </figure>
+        <div class="ai-finishing-overview-card-copy">
+          <h3>4. Hoàn thiện dầu</h3>
+          <p>Thấm sâu bảo vệ và nuôi dưỡng gỗ, tôn vinh vẻ đẹp tự nhiên.</p>
+          <a href="/vn/products-solutions/finishing/oil-finish">Xem chi tiết</a>
+        </div>
+      </article>
+      <article class="ai-finishing-overview-card">
+        <figure class="ai-finishing-overview-card-media ai-finishing-overview-card-painted" aria-label="Hoàn thiện sơn màu">
+          <img src="/assets/products/finishing/overview/05-painted-finish.webp" alt="" loading="lazy" decoding="async">
+        </figure>
+        <div class="ai-finishing-overview-card-copy">
+          <h3>5. Hoàn thiện sơn màu</h3>
+          <p>Tạo màu sắc đa dạng, đồng đều và bền màu.</p>
+          <a href="/vn/products-solutions/finishing/painted-finish">Xem chi tiết</a>
+        </div>
+      </article>
+      <article class="ai-finishing-overview-card">
+        <figure class="ai-finishing-overview-card-media ai-finishing-overview-card-matte" aria-label="Hoàn thiện mờ">
+          <img src="/assets/products/finishing/overview/06-matte-finish.webp" alt="" loading="lazy" decoding="async">
+        </figure>
+        <div class="ai-finishing-overview-card-copy">
+          <h3>6. Hoàn thiện mờ</h3>
+          <p>Bề mặt mờ tinh tế, chống chói, mang lại cảm giác hiện đại.</p>
+          <a href="/vn/products-solutions/finishing/matte-finish">Xem chi tiết</a>
+        </div>
+      </article>
+    </div>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHING_PAINTED_FINISH_SECTION_VN = `
+  <section id="painted-finish" class="ai-section ai-finishing-painted-page">
+    <header class="ai-finishing-painted-hero" aria-label="Hoàn thiện sơn màu">
+      <img
+        class="ai-finishing-painted-hero-image"
+        src="/assets/products/finishing/painted-finish/painted-finish-banner.png"
+        alt="Bảng mẫu màu sơn, thùng sơn, cây lăn và dụng cụ hoàn thiện sơn màu"
+        loading="eager"
+        decoding="async"
+      >
+      <div class="ai-finishing-painted-copy">
+        <p class="ai-finishing-painted-eyebrow">Phát triển sơn màu &amp; kiểm soát hoàn thiện</p>
+        <h2>Hoàn thiện sơn màu</h2>
+        <p>ANSLIFE hỗ trợ phát triển và kiểm soát các giải pháp hoàn thiện sơn màu cho sản phẩm nội thất, cấu kiện gỗ, veneer, plywood, MDF và các vật liệu liên quan.</p>
+        <p>Giải pháp sơn màu được phát triển nhằm tạo bề mặt phủ màu đồng nhất, đáp ứng yêu cầu màu sắc theo mẫu duyệt của buyer, đồng thời kiểm soát độ phủ, độ bóng / độ mờ, cảm giác bề mặt và tính ổn định trong sản xuất hàng loạt.</p>
+      </div>
+    </header>
+
+    <section class="ai-finishing-painted-groups" aria-labelledby="painted-finish-groups-title">
+      <div class="ai-finishing-painted-section-heading">
+        <span aria-hidden="true"></span>
+        <h3 id="painted-finish-groups-title">Các nhóm hoàn thiện sơn màu chính</h3>
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="ai-finishing-painted-group-grid">
+        <article class="ai-finishing-painted-group-card">
+          <figure class="ai-finishing-painted-group-visual" aria-label="Ảnh sơn màu phẳng">
+            <img src="/assets/products/finishing/painted-finish/groups/01-solid-color-finish.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>1. Sơn màu phẳng</h4>
+          <p class="ai-finishing-painted-group-subtitle">Sơn màu phẳng</p>
+          <p>Tạo bề mặt màu đồng nhất, che phủ tốt và tối ưu hóa đảm bảo màu sắc ổn định trên toàn bộ sản phẩm.</p>
+        </article>
+        <article class="ai-finishing-painted-group-card">
+          <figure class="ai-finishing-painted-group-visual" aria-label="Ảnh sơn màu theo mẫu buyer">
+            <img src="/assets/products/finishing/painted-finish/groups/02-custom-buyer-color.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>2. Sơn màu theo mẫu buyer</h4>
+          <p class="ai-finishing-painted-group-subtitle">Sơn màu theo mẫu buyer</p>
+          <p>Phát triển màu sơn theo mẫu màu, mã màu khách hàng cung cấp, đảm bảo chính xác theo tiêu chuẩn riêng do buyer cung cấp.</p>
+        </article>
+        <article class="ai-finishing-painted-group-card">
+          <figure class="ai-finishing-painted-group-visual" aria-label="Ảnh sơn màu phủ cao">
+            <img src="/assets/products/finishing/painted-finish/groups/03-high-coverage-coating.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>3. Sơn màu phủ cao</h4>
+          <p class="ai-finishing-painted-group-subtitle">Sơn màu hoàn toàn phủ</p>
+          <p>Tạo bề mặt ít phản chiếu ánh sáng, mang lại cảm giác mịn màng, che lấp tốt các vết khuyết điểm gỗ tự nhiên.</p>
+        </article>
+        <article class="ai-finishing-painted-group-card">
+          <figure class="ai-finishing-painted-group-visual" aria-label="Ảnh sơn màu bán bóng">
+            <img src="/assets/products/finishing/painted-finish/groups/04-semi-gloss-color-finish.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>4. Sơn màu bán bóng</h4>
+          <p class="ai-finishing-painted-group-subtitle">Sơn màu bán bóng</p>
+          <p>Cân bằng giữa độ phủ màu và cảm giác bề mặt, phù hợp với các sản phẩm cần màu sắc rõ nhưng không quá bóng.</p>
+        </article>
+        <article class="ai-finishing-painted-group-card">
+          <figure class="ai-finishing-painted-group-visual" aria-label="Ảnh sơn màu bóng cao">
+            <img src="/assets/products/finishing/painted-finish/groups/05-high-gloss-color-finish.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>5. Sơn màu bóng cao</h4>
+          <p class="ai-finishing-painted-group-subtitle">Sơn màu bóng cao</p>
+          <p>Tạo bề mặt có độ phản chiếu cao, giúp màu sắc sống động và cao cấp cho nhiều dòng sản phẩm.</p>
+        </article>
+        <article class="ai-finishing-painted-group-card">
+          <figure class="ai-finishing-painted-group-visual" aria-label="Ảnh sơn phủ độ che cao">
+            <img src="/assets/products/finishing/painted-finish/groups/06-high-coverage-finish.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>6. Sơn phủ độ che cao</h4>
+          <p class="ai-finishing-painted-group-subtitle">Sơn phủ độ che cao</p>
+          <p>Tập trung kiểm soát khả năng che phủ bề mặt, giúp màu đều, ổn định và hạn chế hiện tượng lộ vân.</p>
+        </article>
+        <article class="ai-finishing-painted-group-card">
+          <figure class="ai-finishing-painted-group-visual" aria-label="Ảnh hoàn thiện bề mặt mịn">
+            <img src="/assets/products/finishing/painted-finish/groups/07-fine-surface-finish.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>7. Hoàn thiện bề mặt mịn</h4>
+          <p class="ai-finishing-painted-group-subtitle">Hoàn thiện bề mặt mịn</p>
+          <p>Tạo bề mặt sơn mịn, đều, sạch và phù hợp với các sản phẩm yêu cầu tính thẩm mỹ cao.</p>
+        </article>
+        <article class="ai-finishing-painted-group-card">
+          <figure class="ai-finishing-painted-group-visual" aria-label="Ảnh đối chiếu và duyệt màu">
+            <img src="/assets/products/finishing/painted-finish/groups/08-color-matching-approval.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>8. Đối chiếu và duyệt màu</h4>
+          <p class="ai-finishing-painted-group-subtitle">Đối chiếu và duyệt màu</p>
+          <p>Kiểm soát màu sơn theo yêu cầu, đối chiếu với mẫu và đảm bảo màu bề mặt đạt tiêu chuẩn sản xuất.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-finishing-painted-effects" aria-labelledby="painted-finish-effects-title">
+      <div class="ai-finishing-painted-section-heading">
+        <span aria-hidden="true"></span>
+        <h3 id="painted-finish-effects-title">Các hiệu ứng sơn màu có thể thực hiện</h3>
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="ai-finishing-painted-effect-grid">
+        <article class="ai-finishing-painted-effect-card">
+          <figure class="ai-finishing-painted-effect-visual" aria-label="Ảnh sơn màu phẳng">
+            <img src="/assets/products/finishing/painted-finish/effects/01-solid-color-finish.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Sơn màu phẳng</h4>
+        </article>
+        <article class="ai-finishing-painted-effect-card">
+          <figure class="ai-finishing-painted-effect-visual" aria-label="Ảnh màu theo mẫu buyer">
+            <img src="/assets/products/finishing/painted-finish/effects/02-custom-buyer-color.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Màu theo mẫu buyer</h4>
+        </article>
+        <article class="ai-finishing-painted-effect-card">
+          <figure class="ai-finishing-painted-effect-visual" aria-label="Ảnh bề mặt màu mờ">
+            <img src="/assets/products/finishing/painted-finish/effects/03-matte-color-surface.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Bề mặt màu mờ</h4>
+        </article>
+        <article class="ai-finishing-painted-effect-card">
+          <figure class="ai-finishing-painted-effect-visual" aria-label="Ảnh bề mặt bán bóng">
+            <img src="/assets/products/finishing/painted-finish/effects/04-semi-gloss-surface.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Bề mặt bán bóng</h4>
+        </article>
+        <article class="ai-finishing-painted-effect-card">
+          <figure class="ai-finishing-painted-effect-visual" aria-label="Ảnh bề mặt bóng cao">
+            <img src="/assets/products/finishing/painted-finish/effects/05-high-gloss-surface.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Bề mặt bóng cao</h4>
+        </article>
+        <article class="ai-finishing-painted-effect-card">
+          <figure class="ai-finishing-painted-effect-visual" aria-label="Ảnh bề mặt hoàn thiện mịn">
+            <img src="/assets/products/finishing/painted-finish/effects/06-smooth-surface-finish.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Bề mặt hoàn thiện mịn</h4>
+        </article>
+        <article class="ai-finishing-painted-effect-card">
+          <figure class="ai-finishing-painted-effect-visual" aria-label="Ảnh sơn màu cảm giác mềm">
+            <img src="/assets/products/finishing/painted-finish/effects/07-soft-touch-color-finish.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Sơn màu cảm giác mềm</h4>
+        </article>
+        <article class="ai-finishing-painted-effect-card">
+          <figure class="ai-finishing-painted-effect-visual" aria-label="Ảnh hoàn thiện phủ kín">
+            <img src="/assets/products/finishing/painted-finish/effects/08-full-coverage-finish.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Hoàn thiện phủ kín</h4>
+        </article>
+        <article class="ai-finishing-painted-effect-card">
+          <figure class="ai-finishing-painted-effect-visual" aria-label="Ảnh bảng màu trung tính">
+            <img src="/assets/products/finishing/painted-finish/effects/09-neutral-color-palette.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Bảng màu trung tính</h4>
+        </article>
+        <article class="ai-finishing-painted-effect-card">
+          <figure class="ai-finishing-painted-effect-visual" aria-label="Ảnh sơn màu cao cấp">
+            <img src="/assets/products/finishing/painted-finish/effects/10-premium-color-coating.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>Sơn màu cao cấp</h4>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-finishing-painted-process" aria-labelledby="painted-finish-process-title">
+      <div class="ai-finishing-painted-section-heading">
+        <span aria-hidden="true"></span>
+        <h3 id="painted-finish-process-title">Quy trình phát triển hoàn thiện sơn màu</h3>
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="ai-finishing-painted-process-track">
+        <article class="ai-finishing-painted-process-step">
+          <span class="ai-finishing-painted-process-index">1</span>
+          <figure class="ai-finishing-painted-process-visual" aria-label="Ảnh chuẩn bị bề mặt">
+            <img src="/assets/products/finishing/painted-finish/process/01-surface-preparation.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>1. Chuẩn bị bề mặt</h4>
+          <p class="ai-finishing-painted-process-subtitle">Chuẩn bị bề mặt</p>
+          <p>Làm sạch, chà nhám và xử lý bề mặt vật liệu trước khi thi công sơn màu.</p>
+        </article>
+        <article class="ai-finishing-painted-process-step">
+          <span class="ai-finishing-painted-process-index">2</span>
+          <figure class="ai-finishing-painted-process-visual" aria-label="Ảnh đánh giá vật liệu và mẫu màu">
+            <img src="/assets/products/finishing/painted-finish/process/02-material-sample-evaluation.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>2. Đánh giá vật liệu và mẫu màu</h4>
+          <p class="ai-finishing-painted-process-subtitle">Đánh giá vật liệu và mẫu màu</p>
+          <p>Kiểm tra vật liệu nền, độ ổn định, độ phẳng bề mặt và đối chiếu mẫu màu hoặc yêu cầu hoàn thiện từ buyer.</p>
+        </article>
+        <article class="ai-finishing-painted-process-step">
+          <span class="ai-finishing-painted-process-index">3</span>
+          <figure class="ai-finishing-painted-process-visual" aria-label="Ảnh phát triển màu sơn">
+            <img src="/assets/products/finishing/painted-finish/process/03-color-development.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>3. Phát triển màu sơn</h4>
+          <p class="ai-finishing-painted-process-subtitle">Phát triển màu sơn</p>
+          <p>Pha và thử màu sơn dựa trên tone màu, độ phủ, độ sáng, độ đậm và tiêu chuẩn màu duyệt.</p>
+        </article>
+        <article class="ai-finishing-painted-process-step">
+          <span class="ai-finishing-painted-process-index">4</span>
+          <figure class="ai-finishing-painted-process-visual" aria-label="Ảnh chuẩn bị lớp lót và lớp nền">
+            <img src="/assets/products/finishing/painted-finish/process/04-primer-base-preparation.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>4. Chuẩn bị lớp lót / lớp nền</h4>
+          <p class="ai-finishing-painted-process-subtitle">Chuẩn bị lớp lót / lớp nền</p>
+          <p>Thi công hoặc điều chỉnh lớp lót, lớp nền nhằm tăng độ bám dính, độ phủ và độ ổn định màu.</p>
+        </article>
+        <article class="ai-finishing-painted-process-step">
+          <span class="ai-finishing-painted-process-index">5</span>
+          <figure class="ai-finishing-painted-process-visual" aria-label="Ảnh thi công lớp sơn màu">
+            <img src="/assets/products/finishing/painted-finish/process/05-color-coating-application.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>5. Thi công lớp sơn màu</h4>
+          <p class="ai-finishing-painted-process-subtitle">Thi công lớp sơn màu</p>
+          <p>Áp dụng lớp sơn màu trên vật liệu theo các điểm kiểm tra độ đều màu, độ phủ, độ mịn và hiệu ứng bề mặt.</p>
+        </article>
+        <article class="ai-finishing-painted-process-step">
+          <span class="ai-finishing-painted-process-index">6</span>
+          <figure class="ai-finishing-painted-process-visual" aria-label="Ảnh tối ưu bề mặt">
+            <img src="/assets/products/finishing/painted-finish/process/06-surface-optimization.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>6. Tối ưu bề mặt</h4>
+          <p class="ai-finishing-painted-process-subtitle">Tối ưu bề mặt</p>
+          <p>Điều chỉnh độ bóng / độ mờ, độ mịn, độ dày lớp phủ, cảm giác chạm và độ đồng đều bề mặt.</p>
+        </article>
+        <article class="ai-finishing-painted-process-step">
+          <span class="ai-finishing-painted-process-index">7</span>
+          <figure class="ai-finishing-painted-process-visual" aria-label="Ảnh đối chiếu mẫu duyệt">
+            <img src="/assets/products/finishing/painted-finish/process/07-approved-sample-validation.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+          <h4>7. Đối chiếu mẫu duyệt</h4>
+          <p class="ai-finishing-painted-process-subtitle">Đối chiếu mẫu duyệt</p>
+          <p>Kiểm tra và xác nhận màu sơn, độ phủ và hiệu ứng bề mặt theo mẫu duyệt của buyer trước khi sản xuất hàng loạt.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-finishing-painted-summary" aria-label="Điểm kiểm soát, ứng dụng và gửi mẫu hoàn thiện sơn màu">
+      <article class="ai-finishing-painted-control-panel">
+        <h3>Điểm kiểm soát quan trọng</h3>
+        <div class="ai-finishing-painted-control-body">
+          <ul>
+            <li>Độ chính xác màu so với mẫu duyệt</li>
+            <li>Độ đồng đều màu sắc trên toàn bộ bề mặt</li>
+            <li>Độ che phủ của lớp sơn màu</li>
+            <li>Độ bám dính giữa lớp sơn và vật liệu nền</li>
+            <li>Kiểm soát độ bóng / độ mờ</li>
+            <li>Độ mịn và cảm giác chạm bề mặt</li>
+            <li>Hạn chế lỗi bề mặt như sọc, bọt, cam da, loang màu</li>
+            <li>Độ ổn định giữa các lô sản xuất</li>
+            <li>Khả năng tái lập màu trong sản xuất hàng loạt</li>
+          </ul>
+          <figure class="ai-finishing-painted-control-visual" aria-label="Ảnh kiểm soát màu sơn">
+            <img src="/assets/products/finishing/oil-finish/summary/key-control.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </article>
+
+      <article class="ai-finishing-painted-applications">
+        <h3>Ứng dụng</h3>
+        <div class="ai-finishing-painted-application-grid">
+          <figure class="ai-finishing-painted-application-card" aria-label="Ảnh MDF">
+            <span><img src="/assets/products/finishing/painted-finish/applications/01-mdf.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>MDF</figcaption>
+          </figure>
+          <figure class="ai-finishing-painted-application-card" aria-label="Ảnh Plywood">
+            <span><img src="/assets/products/finishing/painted-finish/applications/02-plywood.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Plywood</figcaption>
+          </figure>
+          <figure class="ai-finishing-painted-application-card" aria-label="Ảnh MDF phủ veneer">
+            <span><img src="/assets/products/finishing/painted-finish/applications/03-mdf-veneer.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>MDF phủ veneer</figcaption>
+          </figure>
+          <figure class="ai-finishing-painted-application-card" aria-label="Ảnh cấu kiện tủ">
+            <span><img src="/assets/products/finishing/painted-finish/applications/04-cabinet-components.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Cấu kiện tủ</figcaption>
+          </figure>
+          <figure class="ai-finishing-painted-application-card" aria-label="Ảnh cấu kiện nội thất">
+            <span><img src="/assets/products/finishing/painted-finish/applications/05-furniture-components.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Cấu kiện nội thất</figcaption>
+          </figure>
+          <figure class="ai-finishing-painted-application-card" aria-label="Ảnh panel nội thất">
+            <span><img src="/assets/products/finishing/painted-finish/applications/06-interior-panels.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Panel nội thất</figcaption>
+          </figure>
+          <figure class="ai-finishing-painted-application-card" aria-label="Ảnh panel trang trí">
+            <span><img src="/assets/products/finishing/painted-finish/applications/07-decorative-panels.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Panel trang trí</figcaption>
+          </figure>
+          <figure class="ai-finishing-painted-application-card" aria-label="Ảnh cấu kiện cửa">
+            <span><img src="/assets/products/finishing/painted-finish/applications/08-door-components.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Cấu kiện cửa</figcaption>
+          </figure>
+          <figure class="ai-finishing-painted-application-card" aria-label="Ảnh mặt bàn">
+            <span><img src="/assets/products/finishing/painted-finish/applications/09-table-tops.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Mặt bàn</figcaption>
+          </figure>
+          <figure class="ai-finishing-painted-application-card" aria-label="Ảnh cấu kiện gỗ theo yêu cầu">
+            <span><img src="/assets/products/finishing/painted-finish/applications/10-custom-wood-components.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Cấu kiện gỗ theo yêu cầu</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <aside class="ai-finishing-painted-sample-panel">
+        <h3>Gửi mẫu màu / mẫu bề mặt cho ANSLIFE</h3>
+        <p>Buyer có thể gửi mẫu màu, mã màu, mẫu bề mặt, hình ảnh tham khảo hoặc tiêu chuẩn hoàn thiện để ANSLIFE đánh giá, phát triển phương án sơn màu và đề xuất giải pháp phù hợp cho sản xuất.</p>
+        <div class="ai-finishing-painted-sample-actions">
+          <a class="ai-finishing-painted-sample-primary" href="/vn/contact/request-quotation">
+            <span aria-hidden="true">↗</span>
+            Gửi yêu cầu
+          </a>
+          <a class="ai-finishing-painted-sample-secondary" href="/vn/contact/upload-drawing">
+            <span aria-hidden="true">↑</span>
+            Tải mẫu lên
+          </a>
+        </div>
+      </aside>
+    </section>
+  </section>
+`.trim();
+
+const PRODUCTS_FINISHING_MATTE_FINISH_SECTION_VN = `
+  <section id="matte-finish" class="ai-section ai-finishing-matte-page">
+    <figure class="ai-finishing-matte-banner" aria-label="Hoàn thiện mờ">
+      <img
+        class="ai-finishing-matte-banner-image"
+        src="/assets/products/finishing/matte-finish/matte-finish-banner.webp"
+        alt="Bảng mẫu hoàn thiện mờ và súng phun sơn"
+        loading="eager"
+        decoding="async"
+      >
+      <figcaption class="ai-finishing-matte-banner-copy">
+        <h1>Hoàn thiện mờ</h1>
+        <p>ANSLIFE hỗ trợ phát triển và kiểm soát các giải pháp hoàn thiện mờ cho sản phẩm nội thất, cấu kiện gỗ, veneer, plywood, MDF và các vật liệu liên quan.</p>
+        <p>Giải pháp hoàn thiện mờ được phát triển nhằm giảm độ phản chiếu ánh sáng, tạo cảm giác bề mặt tự nhiên, hiện đại và tinh tế. Mỗi phương án hoàn thiện được kiểm soát theo mẫu duyệt của buyer về độ mờ, màu sắc, cảm giác chạm, độ đồng đều và tính ổn định trong sản xuất hàng loạt.</p>
+      </figcaption>
+    </figure>
+
+    <section class="ai-finishing-matte-groups" aria-labelledby="matte-finish-groups-title">
+      <div class="ai-finishing-matte-section-heading">
+        <span aria-hidden="true"></span>
+        <h3 id="matte-finish-groups-title">CÁC NHÓM HOÀN THIỆN MỜ CHÍNH</h3>
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="ai-finishing-matte-group-grid">
+        <article class="ai-finishing-matte-group-card">
+          <figure class="ai-finishing-matte-group-visual" aria-label="Ảnh hoàn thiện mờ tự nhiên"><img src="/assets/products/finishing/matte-finish/groups/01-natural-matte-finish.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>1. Hoàn thiện mờ tự nhiên</h4>
+          <p class="ai-finishing-matte-group-subtitle">Bề mặt mờ tự nhiên</p>
+          <p>Giữ cảm giác gần với vật liệu thật, giảm độ bóng và làm nổi bật vẻ tự nhiên của bề mặt gỗ hoặc veneer.</p>
+        </article>
+        <article class="ai-finishing-matte-group-card">
+          <figure class="ai-finishing-matte-group-visual" aria-label="Ảnh hoàn thiện siêu mờ"><img src="/assets/products/finishing/matte-finish/groups/02-ultra-matte-finish.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>2. Hoàn thiện siêu mờ</h4>
+          <p class="ai-finishing-matte-group-subtitle">Độ phản chiếu rất thấp</p>
+          <p>Tạo bề mặt có độ phản chiếu rất thấp, phù hợp với các thiết kế cao cấp, tối giản.</p>
+        </article>
+        <article class="ai-finishing-matte-group-card">
+          <figure class="ai-finishing-matte-group-visual" aria-label="Ảnh lacquer hoàn thiện mờ"><img src="/assets/products/finishing/matte-finish/groups/03-matte-lacquer-finish.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>3. Lacquer hoàn thiện mờ</h4>
+          <p class="ai-finishing-matte-group-subtitle">Lớp phủ bảo vệ mờ</p>
+          <p>Sử dụng lớp phủ lacquer mờ nhằm bảo vệ bề mặt nhưng vẫn giữ cảm giác nhẹ, sạch và không quá bóng.</p>
+        </article>
+        <article class="ai-finishing-matte-group-card">
+          <figure class="ai-finishing-matte-group-visual" aria-label="Ảnh sơn màu hoàn thiện mờ"><img src="/assets/products/finishing/matte-finish/groups/04-matte-color-finish.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>4. Sơn màu hoàn thiện mờ</h4>
+          <p class="ai-finishing-matte-group-subtitle">Bề mặt màu mờ</p>
+          <p>Tạo bề mặt sơn màu đồng nhất với độ mờ được kiểm soát, phù hợp với các sản phẩm cần màu sắc riêng.</p>
+        </article>
+        <article class="ai-finishing-matte-group-card">
+          <figure class="ai-finishing-matte-group-visual" aria-label="Ảnh hoàn thiện mờ giữ texture"><img src="/assets/products/finishing/matte-finish/groups/05-open-grain-matte-finish.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>5. Hoàn thiện mờ giữ texture</h4>
+          <p class="ai-finishing-matte-group-subtitle">Giữ texture vật liệu</p>
+          <p>Kết hợp hiệu ứng mờ với texture tự nhiên của vật liệu.</p>
+        </article>
+        <article class="ai-finishing-matte-group-card">
+          <figure class="ai-finishing-matte-group-visual" aria-label="Ảnh hoàn thiện mờ cảm giác mềm"><img src="/assets/products/finishing/matte-finish/groups/06-soft-touch-matte-finish.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>6. Hoàn thiện mờ cảm giác mềm</h4>
+          <p class="ai-finishing-matte-group-subtitle">Cảm giác chạm mềm</p>
+          <p>Tạo bề mặt mờ có cảm giác chạm mềm, mịn và cao cấp.</p>
+        </article>
+        <article class="ai-finishing-matte-group-card">
+          <figure class="ai-finishing-matte-group-visual" aria-label="Ảnh bề mặt giảm chói"><img src="/assets/products/finishing/matte-finish/groups/07-anti-glare-surface-finish.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>7. Bề mặt giảm chói</h4>
+          <p class="ai-finishing-matte-group-subtitle">Kiểm soát ánh sáng phản chiếu</p>
+          <p>Kiểm soát độ phản chiếu ánh sáng để bề mặt ít bị lóa.</p>
+        </article>
+        <article class="ai-finishing-matte-group-card">
+          <figure class="ai-finishing-matte-group-visual" aria-label="Ảnh hoàn thiện mờ theo mẫu buyer"><img src="/assets/products/finishing/matte-finish/groups/08-custom-buyer-matte-finish.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>8. Hoàn thiện mờ theo mẫu buyer</h4>
+          <p class="ai-finishing-matte-group-subtitle">Theo mẫu duyệt của buyer</p>
+          <p>Phát triển độ mờ, cảm giác bề mặt, màu sắc và hiệu ứng hoàn thiện theo mẫu duyệt hoặc tiêu chuẩn riêng của buyer.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-finishing-matte-effects" aria-labelledby="matte-finish-effects-title">
+      <div class="ai-finishing-matte-section-heading">
+        <span aria-hidden="true"></span>
+        <h3 id="matte-finish-effects-title">CÁC HIỆU ỨNG HOÀN THIỆN MỜ CÓ THỂ THỰC HIỆN</h3>
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="ai-finishing-matte-effect-grid">
+        <article class="ai-finishing-matte-effect-card">
+          <figure class="ai-finishing-matte-effect-visual" aria-label="Ảnh bề mặt mờ tự nhiên"><img src="/assets/products/finishing/matte-finish/effects/01-natural-matte-surface.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>Bề mặt mờ tự nhiên</h4>
+        </article>
+        <article class="ai-finishing-matte-effect-card">
+          <figure class="ai-finishing-matte-effect-visual" aria-label="Ảnh hoàn thiện siêu mờ"><img src="/assets/products/finishing/matte-finish/effects/02-ultra-matte-finish.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>Hoàn thiện siêu mờ</h4>
+        </article>
+        <article class="ai-finishing-matte-effect-card">
+          <figure class="ai-finishing-matte-effect-visual" aria-label="Ảnh bề mặt giảm phản chiếu"><img src="/assets/products/finishing/matte-finish/effects/03-low-reflection-surface.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>Bề mặt giảm phản chiếu</h4>
+        </article>
+        <article class="ai-finishing-matte-effect-card">
+          <figure class="ai-finishing-matte-effect-visual" aria-label="Ảnh mờ cảm giác mềm"><img src="/assets/products/finishing/matte-finish/effects/04-soft-touch-matte.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>Mờ cảm giác mềm</h4>
+        </article>
+        <article class="ai-finishing-matte-effect-card">
+          <figure class="ai-finishing-matte-effect-visual" aria-label="Ảnh vân gỗ mờ"><img src="/assets/products/finishing/matte-finish/effects/05-matte-wood-grain.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>Vân gỗ mờ</h4>
+        </article>
+        <article class="ai-finishing-matte-effect-card">
+          <figure class="ai-finishing-matte-effect-visual" aria-label="Ảnh bề mặt màu mờ"><img src="/assets/products/finishing/matte-finish/effects/06-matte-color-surface.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>Bề mặt màu mờ</h4>
+        </article>
+        <article class="ai-finishing-matte-effect-card">
+          <figure class="ai-finishing-matte-effect-visual" aria-label="Ảnh mờ lỗ mở"><img src="/assets/products/finishing/matte-finish/effects/07-open-grain-matte.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>Mờ lỗ mở</h4>
+        </article>
+        <article class="ai-finishing-matte-effect-card">
+          <figure class="ai-finishing-matte-effect-visual" aria-label="Ảnh mờ mịn"><img src="/assets/products/finishing/matte-finish/effects/08-smooth-matte-finish.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>Mờ mịn</h4>
+        </article>
+        <article class="ai-finishing-matte-effect-card">
+          <figure class="ai-finishing-matte-effect-visual" aria-label="Ảnh giảm chói"><img src="/assets/products/finishing/matte-finish/effects/09-anti-glare-finish.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>Giảm chói</h4>
+        </article>
+        <article class="ai-finishing-matte-effect-card">
+          <figure class="ai-finishing-matte-effect-visual" aria-label="Ảnh mờ theo mẫu buyer"><img src="/assets/products/finishing/matte-finish/effects/10-custom-buyer-matte.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>Mờ theo mẫu buyer</h4>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-finishing-matte-process" aria-labelledby="matte-finish-process-title">
+      <div class="ai-finishing-matte-section-heading">
+        <span aria-hidden="true"></span>
+        <h3 id="matte-finish-process-title">QUY TRÌNH PHÁT TRIỂN HOÀN THIỆN MỜ</h3>
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="ai-finishing-matte-process-track">
+        <article class="ai-finishing-matte-process-step">
+          <span class="ai-finishing-matte-process-index">1</span>
+          <figure class="ai-finishing-matte-process-visual" aria-label="Ảnh chuẩn bị bề mặt"><img src="/assets/products/finishing/matte-finish/process/01-surface-preparation.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>1. Chuẩn bị bề mặt</h4>
+          <p class="ai-finishing-matte-process-subtitle">Làm sạch và xử lý nền</p>
+          <p>Làm sạch, chà nhám và xử lý bề mặt vật liệu trước khi hoàn thiện mờ.</p>
+        </article>
+        <article class="ai-finishing-matte-process-step">
+          <span class="ai-finishing-matte-process-index">2</span>
+          <figure class="ai-finishing-matte-process-visual" aria-label="Ảnh đánh giá vật liệu và yêu cầu hoàn thiện"><img src="/assets/products/finishing/matte-finish/process/02-material-finish-evaluation.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>2. Đánh giá vật liệu và yêu cầu hoàn thiện</h4>
+          <p class="ai-finishing-matte-process-subtitle">Kiểm tra bề mặt đầu vào</p>
+          <p>Kiểm tra loại vật liệu, lớp nền, màu sắc, texture và yêu cầu độ mờ từ buyer.</p>
+        </article>
+        <article class="ai-finishing-matte-process-step">
+          <span class="ai-finishing-matte-process-index">3</span>
+          <figure class="ai-finishing-matte-process-visual" aria-label="Ảnh phát triển phương án hoàn thiện mờ"><img src="/assets/products/finishing/matte-finish/process/03-matte-finish-development.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>3. Phát triển phương án hoàn thiện mờ</h4>
+          <p class="ai-finishing-matte-process-subtitle">Chọn hệ hoàn thiện phù hợp</p>
+          <p>Lựa chọn hệ hoàn thiện phù hợp theo yêu cầu về độ mờ, độ phủ, cảm giác chạm và hiệu ứng bề mặt.</p>
+        </article>
+        <article class="ai-finishing-matte-process-step">
+          <span class="ai-finishing-matte-process-index">4</span>
+          <figure class="ai-finishing-matte-process-visual" aria-label="Ảnh thi công mẫu thử"><img src="/assets/products/finishing/matte-finish/process/04-trial-application.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>4. Thi công mẫu thử</h4>
+          <p class="ai-finishing-matte-process-subtitle">Áp dụng trên mẫu vật liệu</p>
+          <p>Áp dụng phương án hoàn thiện mờ trên vật liệu thực tế để kiểm tra khả năng lên màu, độ phản chiếu, độ mịn và cảm giác bề mặt.</p>
+        </article>
+        <article class="ai-finishing-matte-process-step">
+          <span class="ai-finishing-matte-process-index">5</span>
+          <figure class="ai-finishing-matte-process-visual" aria-label="Ảnh điều chỉnh độ mờ và độ bóng"><img src="/assets/products/finishing/matte-finish/process/05-gloss-level-adjustment.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>5. Điều chỉnh độ mờ / độ bóng</h4>
+          <p class="ai-finishing-matte-process-subtitle">Tinh chỉnh mức phản chiếu</p>
+          <p>Tinh chỉnh mức độ phản chiếu, độ mờ, độ sâu màu và cảm giác bề mặt để đạt mẫu duyệt.</p>
+        </article>
+        <article class="ai-finishing-matte-process-step">
+          <span class="ai-finishing-matte-process-index">6</span>
+          <figure class="ai-finishing-matte-process-visual" aria-label="Ảnh tối ưu bề mặt"><img src="/assets/products/finishing/matte-finish/process/06-surface-optimization.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>6. Tối ưu bề mặt</h4>
+          <p class="ai-finishing-matte-process-subtitle">Kiểm soát độ đồng đều</p>
+          <p>Kiểm soát độ mịn, độ đồng đều, texture, cảm giác chạm và hiệu ứng hoàn thiện trên toàn bộ bề mặt.</p>
+        </article>
+        <article class="ai-finishing-matte-process-step">
+          <span class="ai-finishing-matte-process-index">7</span>
+          <figure class="ai-finishing-matte-process-visual" aria-label="Ảnh đối chiếu mẫu duyệt"><img src="/assets/products/finishing/matte-finish/process/07-approved-sample-validation.webp" alt="" loading="lazy" decoding="async"></figure>
+          <h4>7. Đối chiếu mẫu duyệt</h4>
+          <p class="ai-finishing-matte-process-subtitle">Xác nhận trước sản xuất</p>
+          <p>Kiểm tra và xác nhận mẫu hoàn thiện mờ theo mẫu duyệt của buyer trước khi đưa vào sản xuất hàng loạt.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ai-finishing-matte-summary" aria-label="Điểm kiểm soát, ứng dụng và gửi mẫu hoàn thiện mờ">
+      <article class="ai-finishing-matte-control-panel">
+        <h3>Điểm kiểm soát quan trọng</h3>
+        <div class="ai-finishing-matte-control-body">
+          <ul>
+            <li>Mức độ mờ / độ phản chiếu của bề mặt</li>
+            <li>Độ đồng đều màu sắc và hiệu ứng hoàn thiện</li>
+            <li>Cảm giác chạm sau hoàn thiện</li>
+            <li>Độ mịn và độ sạch của bề mặt</li>
+            <li>Khả năng giữ texture hoặc vân gỗ tự nhiên</li>
+            <li>Sai lệch so với mẫu duyệt buyer</li>
+            <li>Độ ổn định giữa các lô sản xuất</li>
+            <li>Khả năng tái lập độ mờ trong sản xuất hàng loạt</li>
+            <li>Hạn chế lỗi bề mặt như bóng loang, chỗ mờ chỗ bóng, bụi, sọc hoặc vệt phun</li>
+          </ul>
+          <figure class="ai-finishing-matte-control-visual" aria-label="Ảnh kiểm soát hoàn thiện mờ">
+            <img src="/assets/products/finishing/oil-finish/summary/key-control.webp" alt="" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </article>
+
+      <article class="ai-finishing-matte-applications">
+        <h3>Ứng dụng</h3>
+        <div class="ai-finishing-matte-application-grid">
+          <figure class="ai-finishing-matte-application-card" aria-label="Ảnh gỗ tự nhiên">
+            <span><img src="/assets/products/finishing/matte-finish/applications/01-natural-wood.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Gỗ tự nhiên</figcaption>
+          </figure>
+          <figure class="ai-finishing-matte-application-card" aria-label="Ảnh veneer">
+            <span><img src="/assets/products/finishing/matte-finish/applications/02-veneer.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Veneer</figcaption>
+          </figure>
+          <figure class="ai-finishing-matte-application-card" aria-label="Ảnh plywood">
+            <span><img src="/assets/products/finishing/matte-finish/applications/03-plywood.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Plywood</figcaption>
+          </figure>
+          <figure class="ai-finishing-matte-application-card" aria-label="Ảnh MDF phủ veneer">
+            <span><img src="/assets/products/finishing/matte-finish/applications/04-mdf-veneer.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>MDF phủ veneer</figcaption>
+          </figure>
+          <figure class="ai-finishing-matte-application-card" aria-label="Ảnh MDF sơn màu">
+            <span><img src="/assets/products/finishing/matte-finish/applications/05-painted-mdf.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>MDF sơn màu</figcaption>
+          </figure>
+          <figure class="ai-finishing-matte-application-card" aria-label="Ảnh cấu kiện tủ">
+            <span><img src="/assets/products/finishing/matte-finish/applications/06-cabinet-components.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Cấu kiện tủ</figcaption>
+          </figure>
+          <figure class="ai-finishing-matte-application-card" aria-label="Ảnh cấu kiện nội thất">
+            <span><img src="/assets/products/finishing/matte-finish/applications/07-furniture-components.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Cấu kiện nội thất</figcaption>
+          </figure>
+          <figure class="ai-finishing-matte-application-card" aria-label="Ảnh panel nội thất">
+            <span><img src="/assets/products/finishing/matte-finish/applications/08-interior-panels.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Panel nội thất</figcaption>
+          </figure>
+          <figure class="ai-finishing-matte-application-card" aria-label="Ảnh mặt bàn">
+            <span><img src="/assets/products/finishing/matte-finish/applications/09-table-tops.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Mặt bàn</figcaption>
+          </figure>
+          <figure class="ai-finishing-matte-application-card" aria-label="Ảnh bề mặt gỗ trang trí">
+            <span><img src="/assets/products/finishing/matte-finish/applications/10-decorative-wood-surfaces.webp" alt="" loading="lazy" decoding="async"></span>
+            <figcaption>Bề mặt gỗ trang trí</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <aside class="ai-finishing-matte-sample-panel">
+        <h3>Gửi mẫu mờ / mẫu bề mặt cho ANSLIFE</h3>
+        <p>Buyer có thể gửi mẫu bề mặt, mẫu màu, hình ảnh tham khảo hoặc tiêu chuẩn độ mờ để ANSLIFE đánh giá, phát triển phương án hoàn thiện mờ và đề xuất giải pháp phù hợp cho sản xuất.</p>
+        <div class="ai-finishing-matte-sample-actions">
+          <a class="ai-finishing-matte-sample-primary" href="/vn/contact/request-quotation">
+            <span aria-hidden="true">↗</span>
+            Gửi yêu cầu
+          </a>
+          <a class="ai-finishing-matte-sample-secondary" href="/vn/contact/upload-drawing">
+            <span aria-hidden="true">↑</span>
+            Tải mẫu lên
+          </a>
+        </div>
+      </aside>
+    </section>
   </section>
 `.trim();
 
@@ -1060,7 +1735,7 @@ const PRODUCTS_FINISHING_LACQUER_SECTION_VN = `
 `.trim();
 
 const PRODUCTS_FINISHING_OIL_FINISH_SECTION_VN = `
-  <section id="oil-finish" class="ai-finishing-oil-banner-page" aria-label="Oil Finish">
+  <section id="oil-finish" class="ai-finishing-oil-banner-page" aria-label="Hoàn thiện dầu">
     <img
       class="ai-finishing-oil-banner-image"
       src="/assets/products/finishing/oil-finish/oil-finish-banner.webp"
@@ -1068,6 +1743,11 @@ const PRODUCTS_FINISHING_OIL_FINISH_SECTION_VN = `
       loading="eager"
       decoding="async"
     >
+    <div class="ai-finishing-oil-banner-copy">
+      <h1>Hoàn thiện dầu</h1>
+      <p>ANSLIFE hỗ trợ phát triển và kiểm soát các giải pháp hoàn thiện dầu cho sản phẩm nội thất, cấu kiện gỗ, veneer, plywood và các vật liệu liên quan.</p>
+      <p>Giải pháp hoàn thiện dầu được phát triển nhằm giữ vẻ đẹp tự nhiên của vật liệu, làm nổi bật vân gỗ, tăng cảm giác chạm và tạo bề mặt gần với gỗ thật. Mỗi phương án hoàn thiện được kiểm soát theo mẫu duyệt, tone màu, độ thấm, cảm giác bề mặt và khả năng ổn định trong sản xuất.</p>
+    </div>
   </section>
 
   <section class="ai-finishing-oil-groups" aria-labelledby="oil-finish-groups-title">
@@ -1078,45 +1758,45 @@ const PRODUCTS_FINISHING_OIL_FINISH_SECTION_VN = `
     </div>
     <div class="ai-finishing-oil-groups-grid">
       <article>
-        <figure class="ai-finishing-oil-group-media" aria-label="Natural Oil Finish">
+        <figure class="ai-finishing-oil-group-media" aria-label="Hoàn thiện dầu tự nhiên">
           <img src="/assets/products/finishing/oil-finish/groups/01-natural-oil-finish.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>1. Natural Oil Finish /<br>Hoàn thiện dầu tự nhiên</h4>
+        <h4>1. Hoàn thiện dầu tự nhiên</h4>
         <p>Giữ vẻ đẹp nguyên bản của vật liệu, làm nổi bật vân gỗ và tạo cảm giác bề mặt tự nhiên.</p>
       </article>
       <article>
-        <figure class="ai-finishing-oil-group-media" aria-label="Clear Oil Finish">
+        <figure class="ai-finishing-oil-group-media" aria-label="Hoàn thiện dầu trong">
           <img src="/assets/products/finishing/oil-finish/groups/02-clear-oil-finish.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>2. Clear Oil Finish /<br>Hoàn thiện dầu trong</h4>
+        <h4>2. Hoàn thiện dầu trong</h4>
         <p>Tăng chiều sâu và độ ấm của bề mặt nhưng vẫn giữ màu sắc gần với vật liệu gốc.</p>
       </article>
       <article>
-        <figure class="ai-finishing-oil-group-media" aria-label="Tinted Oil Finish">
+        <figure class="ai-finishing-oil-group-media" aria-label="Hoàn thiện dầu có màu">
           <img src="/assets/products/finishing/oil-finish/groups/03-tinted-oil-finish.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>3. Tinted Oil Finish /<br>Hoàn thiện dầu có màu</h4>
+        <h4>3. Hoàn thiện dầu có màu</h4>
         <p>Kết hợp hiệu ứng dầu với tone màu nhẹ nhằm điều chỉnh màu sắc theo mẫu duyệt của buyer.</p>
       </article>
       <article>
-        <figure class="ai-finishing-oil-group-media" aria-label="Matte Oil Finish">
+        <figure class="ai-finishing-oil-group-media" aria-label="Hoàn thiện dầu mờ">
           <img src="/assets/products/finishing/oil-finish/groups/04-matte-oil-finish.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>4. Matte Oil Finish /<br>Hoàn thiện dầu mờ</h4>
+        <h4>4. Hoàn thiện dầu mờ</h4>
         <p>Tạo bề mặt ít phản chiếu ánh sáng, giữ cảm giác mộc và phù hợp với phong cách nội thất tự nhiên.</p>
       </article>
       <article>
-        <figure class="ai-finishing-oil-group-media" aria-label="Open Grain Oil Finish">
+        <figure class="ai-finishing-oil-group-media" aria-label="Hoàn thiện dầu giữ texture">
           <img src="/assets/products/finishing/oil-finish/groups/05-open-grain-oil-finish.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>5. Open Grain Oil Finish /<br>Hoàn thiện dầu giữ texture</h4>
+        <h4>5. Hoàn thiện dầu giữ texture</h4>
         <p>Giữ lại texture, lỗ mạch gỗ và cảm giác bề mặt thật của vật liệu trong quá trình hoàn thiện.</p>
       </article>
       <article>
-        <figure class="ai-finishing-oil-group-media" aria-label="Custom Buyer Oil Finish">
+        <figure class="ai-finishing-oil-group-media" aria-label="Hoàn thiện dầu theo mẫu buyer">
           <img src="/assets/products/finishing/oil-finish/groups/06-custom-buyer-oil-finish.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>6. Custom Buyer Oil Finish /<br>Hoàn thiện dầu theo mẫu buyer</h4>
+        <h4>6. Hoàn thiện dầu theo mẫu buyer</h4>
         <p>Phát triển phương án hoàn thiện dầu theo mẫu gỗ, mẫu màu, hình ảnh tham khảo hoặc tiêu chuẩn riêng của buyer.</p>
       </article>
     </div>
@@ -1130,64 +1810,64 @@ const PRODUCTS_FINISHING_OIL_FINISH_SECTION_VN = `
     </div>
     <div class="ai-finishing-oil-effects-grid">
       <article>
-        <figure class="ai-finishing-oil-effect-media" aria-label="Natural Wood Look">
+        <figure class="ai-finishing-oil-effect-media" aria-label="Vẻ gỗ tự nhiên">
           <img src="/assets/products/finishing/oil-finish/effects/01-natural-wood-look.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>Natural<br>Wood Look</h4>
+        <h4>Vẻ gỗ tự nhiên</h4>
       </article>
       <article>
-        <figure class="ai-finishing-oil-effect-media" aria-label="Raw Wood Feel">
+        <figure class="ai-finishing-oil-effect-media" aria-label="Cảm giác gỗ mộc">
           <img src="/assets/products/finishing/oil-finish/effects/02-raw-wood-feel.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>Raw<br>Wood Feel</h4>
+        <h4>Cảm giác gỗ mộc</h4>
       </article>
       <article>
-        <figure class="ai-finishing-oil-effect-media" aria-label="Warm Tone Effect">
+        <figure class="ai-finishing-oil-effect-media" aria-label="Hiệu ứng tone ấm">
           <img src="/assets/products/finishing/oil-finish/effects/03-warm-tone-effect.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>Warm Tone<br>Effect</h4>
+        <h4>Hiệu ứng tone ấm</h4>
       </article>
       <article>
-        <figure class="ai-finishing-oil-effect-media" aria-label="Deep Grain Enhancement">
+        <figure class="ai-finishing-oil-effect-media" aria-label="Làm nổi bật vân gỗ sâu">
           <img src="/assets/products/finishing/oil-finish/effects/04-deep-grain-enhancement.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>Deep Grain<br>Enhancement</h4>
+        <h4>Làm nổi bật vân gỗ sâu</h4>
       </article>
       <article>
-        <figure class="ai-finishing-oil-effect-media" aria-label="Open Grain Texture">
+        <figure class="ai-finishing-oil-effect-media" aria-label="Bề mặt lỗ mạch mở">
           <img src="/assets/products/finishing/oil-finish/effects/05-open-grain-texture.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>Open Grain<br>Texture</h4>
+        <h4>Bề mặt lỗ mạch mở</h4>
       </article>
       <article>
-        <figure class="ai-finishing-oil-effect-media" aria-label="Ultra Matte Oil Finish">
+        <figure class="ai-finishing-oil-effect-media" aria-label="Hoàn thiện dầu siêu mờ">
           <img src="/assets/products/finishing/oil-finish/effects/06-ultra-matte-oil-finish.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>Ultra Matte<br>Oil Finish</h4>
+        <h4>Hoàn thiện dầu siêu mờ</h4>
       </article>
       <article>
-        <figure class="ai-finishing-oil-effect-media" aria-label="Soft Touch Surface">
+        <figure class="ai-finishing-oil-effect-media" aria-label="Bề mặt cảm giác mềm">
           <img src="/assets/products/finishing/oil-finish/effects/07-soft-touch-surface.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>Soft Touch<br>Surface</h4>
+        <h4>Bề mặt cảm giác mềm</h4>
       </article>
       <article>
-        <figure class="ai-finishing-oil-effect-media" aria-label="Brushed Wood Effect">
+        <figure class="ai-finishing-oil-effect-media" aria-label="Hiệu ứng gỗ chải">
           <img src="/assets/products/finishing/oil-finish/effects/08-brushed-wood-effect.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>Brushed<br>Wood Effect</h4>
+        <h4>Hiệu ứng gỗ chải</h4>
       </article>
       <article>
-        <figure class="ai-finishing-oil-effect-media" aria-label="Hand-Rubbed Oil Effect">
+        <figure class="ai-finishing-oil-effect-media" aria-label="Hiệu ứng dầu lau tay">
           <img src="/assets/products/finishing/oil-finish/effects/09-hand-rubbed-oil-effect.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>Hand-Rubbed<br>Oil Effect</h4>
+        <h4>Hiệu ứng dầu lau tay</h4>
       </article>
       <article>
-        <figure class="ai-finishing-oil-effect-media" aria-label="Custom Buyer Finish">
+        <figure class="ai-finishing-oil-effect-media" aria-label="Hoàn thiện theo mẫu buyer">
           <img src="/assets/products/finishing/oil-finish/effects/10-custom-buyer-finish.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>Custom Buyer<br>Finish</h4>
+        <h4>Hoàn thiện theo mẫu buyer</h4>
       </article>
     </div>
   </section>
@@ -1201,50 +1881,50 @@ const PRODUCTS_FINISHING_OIL_FINISH_SECTION_VN = `
     <div class="ai-finishing-oil-process-grid">
       <article>
         <span class="ai-finishing-oil-process-index">1</span>
-        <figure class="ai-finishing-oil-process-media" aria-label="Surface Preparation">
+        <figure class="ai-finishing-oil-process-media" aria-label="Chuẩn bị bề mặt">
           <img src="/assets/products/finishing/oil-finish/process/01-surface-preparation.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>1. Surface Preparation /<br>Chuẩn bị bề mặt</h4>
+        <h4>1. Chuẩn bị bề mặt</h4>
         <p>Làm sạch, chà nhám và xử lý bề mặt vật liệu trước khi hoàn thiện dầu.</p>
       </article>
       <article>
         <span class="ai-finishing-oil-process-index">2</span>
-        <figure class="ai-finishing-oil-process-media" aria-label="Material and Sample Evaluation">
+        <figure class="ai-finishing-oil-process-media" aria-label="Đánh giá vật liệu và mẫu hoàn thiện">
           <img src="/assets/products/finishing/oil-finish/process/02-material-sample-evaluation.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>2. Material &amp; Sample Evaluation /<br>Đánh giá vật liệu và mẫu hoàn thiện</h4>
+        <h4>2. Đánh giá vật liệu và mẫu hoàn thiện</h4>
         <p>Kiểm tra loại gỗ, veneer hoặc plywood, đồng thời phân tích mẫu màu, mẫu bề mặt hoặc yêu cầu hoàn thiện từ buyer.</p>
       </article>
       <article>
         <span class="ai-finishing-oil-process-index">3</span>
-        <figure class="ai-finishing-oil-process-media" aria-label="Oil Finish Development">
+        <figure class="ai-finishing-oil-process-media" aria-label="Phát triển phương án hoàn thiện dầu">
           <img src="/assets/products/finishing/oil-finish/process/03-oil-finish-development.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>3. Oil Finish Development /<br>Phát triển phương án hoàn thiện dầu</h4>
+        <h4>3. Phát triển phương án hoàn thiện dầu</h4>
         <p>Lựa chọn và điều chỉnh phương án dầu theo yêu cầu về tone màu, độ thấm, cảm giác chạm và hiệu ứng bề mặt.</p>
       </article>
       <article>
         <span class="ai-finishing-oil-process-index">4</span>
-        <figure class="ai-finishing-oil-process-media" aria-label="Trial Application">
+        <figure class="ai-finishing-oil-process-media" aria-label="Thi công mẫu thử">
           <img src="/assets/products/finishing/oil-finish/process/04-trial-application.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>4. Trial Application /<br>Thi công mẫu thử</h4>
+        <h4>4. Thi công mẫu thử</h4>
         <p>Áp dụng dầu hoàn thiện trên vật liệu thực tế để kiểm tra độ thấm, khả năng lên màu, độ đều và cảm giác bề mặt.</p>
       </article>
       <article>
         <span class="ai-finishing-oil-process-index">5</span>
-        <figure class="ai-finishing-oil-process-media" aria-label="Surface Optimization">
+        <figure class="ai-finishing-oil-process-media" aria-label="Tối ưu bề mặt">
           <img src="/assets/products/finishing/oil-finish/process/05-surface-optimization.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>5. Surface Optimization /<br>Tối ưu bề mặt</h4>
+        <h4>5. Tối ưu bề mặt</h4>
         <p>Tinh chỉnh độ mịn, độ mờ, độ thấm, cảm giác chạm và hiệu ứng vân gỗ để đạt yêu cầu mẫu duyệt.</p>
       </article>
       <article>
         <span class="ai-finishing-oil-process-index">6</span>
-        <figure class="ai-finishing-oil-process-media" aria-label="Approved Sample Validation">
+        <figure class="ai-finishing-oil-process-media" aria-label="Đối chiếu mẫu duyệt">
           <img src="/assets/products/finishing/oil-finish/process/06-approved-sample-validation.webp" alt="" loading="lazy" decoding="async">
         </figure>
-        <h4>6. Approved Sample Validation /<br>Đối chiếu mẫu duyệt</h4>
+        <h4>6. Đối chiếu mẫu duyệt</h4>
         <p>Kiểm tra và xác nhận mẫu hoàn thiện dầu theo mẫu duyệt của buyer trước khi đưa vào sản xuất hàng loạt.</p>
       </article>
     </div>
@@ -1297,29 +1977,29 @@ const PRODUCTS_FINISHING_OIL_FINISH_SECTION_VN = `
           </span>
           <figcaption>MDF phủ veneer</figcaption>
         </figure>
-        <figure aria-label="Table tops">
+        <figure aria-label="Mặt bàn">
           <span class="ai-finishing-oil-use-visual">
             <img src="/assets/products/finishing/oil-finish/applications/05-table-tops.webp" alt="" loading="lazy" decoding="async">
           </span>
-          <figcaption>Table tops</figcaption>
+          <figcaption>Mặt bàn</figcaption>
         </figure>
-        <figure aria-label="Cabinet components">
+        <figure aria-label="Cấu kiện tủ">
           <span class="ai-finishing-oil-use-visual">
             <img src="/assets/products/finishing/oil-finish/applications/06-cabinet-components.webp" alt="" loading="lazy" decoding="async">
           </span>
-          <figcaption>Cabinet<br>components</figcaption>
+          <figcaption>Cấu kiện tủ</figcaption>
         </figure>
-        <figure aria-label="Furniture components">
+        <figure aria-label="Cấu kiện nội thất">
           <span class="ai-finishing-oil-use-visual">
             <img src="/assets/products/finishing/oil-finish/applications/07-furniture-components.webp" alt="" loading="lazy" decoding="async">
           </span>
-          <figcaption>Furniture<br>components</figcaption>
+          <figcaption>Cấu kiện nội thất</figcaption>
         </figure>
-        <figure aria-label="Interior panels">
+        <figure aria-label="Panel nội thất">
           <span class="ai-finishing-oil-use-visual">
             <img src="/assets/products/finishing/oil-finish/applications/08-interior-panels.png" alt="" loading="lazy" decoding="async">
           </span>
-          <figcaption>Interior<br>panels</figcaption>
+          <figcaption>Panel nội thất</figcaption>
         </figure>
       </div>
     </article>
@@ -19164,6 +19844,209 @@ function translateAiHtml(language: LanguageCode, html: string): string {
   );
 }
 
+function translateFinishingOverviewHtml(language: LanguageCode, html: string): string {
+  if (language === 'vn') {
+    return html;
+  }
+
+  const templateTranslations =
+    FINISHING_OVERVIEW_TEMPLATE_TRANSLATIONS[language as Exclude<LanguageCode, 'vn'>] ?? {};
+  const translateOverviewText = (text: string) =>
+    templateTranslations[text] ?? translateText(language, text);
+
+  const localizedTextNodes = html.replace(/>([^<>]+)</g, (fullMatch, textNode: string) => {
+    const leadingWhitespace = textNode.match(/^\s*/)?.[0] ?? '';
+    const trailingWhitespace = textNode.match(/\s*$/)?.[0] ?? '';
+    const coreText = textNode.trim().replace(/\s+/g, ' ');
+
+    if (!coreText) {
+      return fullMatch;
+    }
+
+    return `>${leadingWhitespace}${translateOverviewText(coreText)}${trailingWhitespace}<`;
+  });
+
+  return localizedTextNodes.replace(
+    /(alt|title|aria-label|placeholder)="([^"]+)"/g,
+    (_fullMatch, attr: string, value: string) => `${attr}="${translateOverviewText(value)}"`,
+  );
+}
+
+function translateOilFinishHtml(language: LanguageCode, html: string): string {
+  if (language === 'vn') {
+    return html;
+  }
+
+  const templateTranslations =
+    OIL_FINISH_TEMPLATE_TRANSLATIONS[language as Exclude<LanguageCode, 'vn'>] ?? {};
+  const translateOilText = (text: string) => templateTranslations[text] ?? translateText(language, text);
+
+  const localizedTextNodes = html.replace(/>([^<>]+)</g, (fullMatch, textNode: string) => {
+    const leadingWhitespace = textNode.match(/^\s*/)?.[0] ?? '';
+    const trailingWhitespace = textNode.match(/\s*$/)?.[0] ?? '';
+    const coreText = textNode.trim().replace(/\s+/g, ' ');
+
+    if (!coreText) {
+      return fullMatch;
+    }
+
+    return `>${leadingWhitespace}${translateOilText(coreText)}${trailingWhitespace}<`;
+  });
+
+  return localizedTextNodes.replace(
+    /(alt|title|aria-label|placeholder)="([^"]+)"/g,
+    (_fullMatch, attr: string, value: string) => `${attr}="${translateOilText(value)}"`,
+  );
+}
+
+function translatePaintedFinishHtml(language: LanguageCode, html: string): string {
+  if (language === 'vn') {
+    return html;
+  }
+
+  const templateTranslations =
+    PAINTED_FINISH_TEMPLATE_TRANSLATIONS[language as Exclude<LanguageCode, 'vn'>] ?? {};
+  const imagePrefixByLanguage: Partial<Record<Exclude<LanguageCode, 'vn'>, string>> = {
+    en: 'Image of',
+    jp: '画像:',
+    kr: '이미지:',
+    sv: 'Bild av',
+    fr: 'Image de',
+    ru: 'Изображение:',
+    es: 'Imagen de',
+    zh: '图片：',
+  };
+  const normalizeCandidate = (text: string) => {
+    if (!text) {
+      return text;
+    }
+
+    return `${text.charAt(0).toUpperCase()}${text.slice(1)}`;
+  };
+  const translatePaintedText = (text: string): string => {
+    const numberedMatch = text.match(/^(\d+\.)\s+(.+)$/);
+
+    if (numberedMatch) {
+      return `${numberedMatch[1]} ${
+        templateTranslations[numberedMatch[2]] ??
+        templateTranslations[normalizeCandidate(numberedMatch[2])] ??
+        translateText(language, numberedMatch[2])
+      }`;
+    }
+
+    if (text.startsWith('Ảnh ')) {
+      const imageSubject = text.slice(4);
+      const translatedSubject =
+        templateTranslations[imageSubject] ??
+        templateTranslations[normalizeCandidate(imageSubject)] ??
+        translateText(language, imageSubject);
+      const imagePrefix =
+        imagePrefixByLanguage[language as Exclude<LanguageCode, 'vn'>] ?? 'Image of';
+
+      return language === 'zh' || language === 'jp' || language === 'kr' || language === 'ru'
+        ? `${imagePrefix}${translatedSubject}`
+        : `${imagePrefix} ${translatedSubject}`;
+    }
+
+    return (
+      templateTranslations[text] ??
+      templateTranslations[normalizeCandidate(text)] ??
+      translateText(language, text)
+    );
+  };
+
+  const localizedTextNodes = html.replace(/>([^<>]+)</g, (fullMatch, textNode: string) => {
+    const leadingWhitespace = textNode.match(/^\s*/)?.[0] ?? '';
+    const trailingWhitespace = textNode.match(/\s*$/)?.[0] ?? '';
+    const coreText = textNode.trim().replace(/\s+/g, ' ');
+
+    if (!coreText) {
+      return fullMatch;
+    }
+
+    return `>${leadingWhitespace}${translatePaintedText(coreText)}${trailingWhitespace}<`;
+  });
+
+  return localizedTextNodes.replace(
+    /(alt|title|aria-label|placeholder)="([^"]+)"/g,
+    (_fullMatch, attr: string, value: string) => `${attr}="${translatePaintedText(value)}"`,
+  );
+}
+
+function translateMatteFinishHtml(language: LanguageCode, html: string): string {
+  if (language === 'vn') {
+    return html;
+  }
+
+  const templateTranslations =
+    MATTE_FINISH_TEMPLATE_TRANSLATIONS[language as Exclude<LanguageCode, 'vn'>] ?? {};
+  const imagePrefixByLanguage: Partial<Record<Exclude<LanguageCode, 'vn'>, string>> = {
+    en: 'Image of',
+    jp: '画像:',
+    kr: '이미지:',
+    sv: 'Bild av',
+    fr: 'Image de',
+    ru: 'Изображение:',
+    es: 'Imagen de',
+    zh: '图片：',
+  };
+  const normalizeCandidate = (text: string) => {
+    if (!text) {
+      return text;
+    }
+
+    return `${text.charAt(0).toUpperCase()}${text.slice(1)}`;
+  };
+  const translateMatteText = (text: string): string => {
+    const numberedMatch = text.match(/^(\d+\.)\s+(.+)$/);
+
+    if (numberedMatch) {
+      return `${numberedMatch[1]} ${
+        templateTranslations[numberedMatch[2]] ??
+        templateTranslations[normalizeCandidate(numberedMatch[2])] ??
+        translateText(language, numberedMatch[2])
+      }`;
+    }
+
+    if (text.startsWith('Ảnh ')) {
+      const imageSubject = text.slice(4);
+      const translatedSubject =
+        templateTranslations[imageSubject] ??
+        templateTranslations[normalizeCandidate(imageSubject)] ??
+        translateText(language, imageSubject);
+      const imagePrefix =
+        imagePrefixByLanguage[language as Exclude<LanguageCode, 'vn'>] ?? 'Image of';
+
+      return language === 'zh' || language === 'jp' || language === 'kr' || language === 'ru'
+        ? `${imagePrefix}${translatedSubject}`
+        : `${imagePrefix} ${translatedSubject}`;
+    }
+
+    return (
+      templateTranslations[text] ??
+      templateTranslations[normalizeCandidate(text)] ??
+      translateText(language, text)
+    );
+  };
+
+  const localizedTextNodes = html.replace(/>([^<>]+)</g, (fullMatch, textNode: string) => {
+    const leadingWhitespace = textNode.match(/^\s*/)?.[0] ?? '';
+    const trailingWhitespace = textNode.match(/\s*$/)?.[0] ?? '';
+    const coreText = textNode.trim().replace(/\s+/g, ' ');
+
+    if (!coreText) {
+      return fullMatch;
+    }
+
+    return `>${leadingWhitespace}${translateMatteText(coreText)}${trailingWhitespace}<`;
+  });
+
+  return localizedTextNodes.replace(
+    /(alt|title|aria-label|placeholder)="([^"]+)"/g,
+    (_fullMatch, attr: string, value: string) => `${attr}="${translateMatteText(value)}"`,
+  );
+}
+
 export function getAIFallbackPageHtml(slug: string, language: LanguageCode = 'vn'): string | null {
   const pageHtml = AI_PAGE_CONTENT[slug];
   if (!pageHtml) {
@@ -19350,6 +20233,22 @@ export function getAIFallbackSectionHtml(
   if (
     pageSlug === 'products-solutions' &&
     sectionId === 'finishing' &&
+    !subSectionSlug
+  ) {
+    return translateFinishingOverviewHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_FINISHING_OVERVIEW_SECTION_VN}</div>`,
+    )
+      .replace(
+        /href="\/vn\/products-solutions\/finishing/g,
+        `href="/${language}/products-solutions/finishing`,
+      )
+      .replace(/href="\/vn"/g, `href="/${language}"`);
+  }
+
+  if (
+    pageSlug === 'products-solutions' &&
+    sectionId === 'finishing' &&
     subSectionSlug === 'natural-finish'
   ) {
     return translateAiHtml(
@@ -19395,12 +20294,34 @@ export function getAIFallbackSectionHtml(
     sectionId === 'finishing' &&
     subSectionSlug === 'oil-finish'
   ) {
-    return translateAiHtml(
+    return translateOilFinishHtml(
       language,
       `<div class="ai-content">${PRODUCTS_FINISHING_OIL_FINISH_SECTION_VN}</div>`,
     )
       .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
       .replace(/href="\/vn"/g, `href="/${language}"`);
+  }
+
+  if (
+    pageSlug === 'products-solutions' &&
+    sectionId === 'finishing' &&
+    subSectionSlug === 'painted-finish'
+  ) {
+    return translatePaintedFinishHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_FINISHING_PAINTED_FINISH_SECTION_VN}</div>`,
+    ).replace(/href="\/vn"/g, `href="/${language}"`);
+  }
+
+  if (
+    pageSlug === 'products-solutions' &&
+    sectionId === 'finishing' &&
+    subSectionSlug === 'matte-finish'
+  ) {
+    return translateMatteFinishHtml(
+      language,
+      `<div class="ai-content">${PRODUCTS_FINISHING_MATTE_FINISH_SECTION_VN}</div>`,
+    ).replace(/href="\/vn"/g, `href="/${language}"`);
   }
 
   if (

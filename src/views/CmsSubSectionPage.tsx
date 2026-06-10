@@ -147,6 +147,16 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'products-solutions' &&
     section.id === 'finishing' &&
     detailSlug === 'oil-finish';
+  const isFinishingPaintedDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finishing' &&
+    detailSlug === 'painted-finish';
+  const isFinishingMatteDetail =
+    config.slug === 'products-solutions' &&
+    section.id === 'finishing' &&
+    detailSlug === 'matte-finish';
+  const isProductsFinishingLanding =
+    config.slug === 'products-solutions' && section.id === 'finishing' && !detailSlug;
   const isProductsFinishingDetail =
     config.slug === 'products-solutions' && section.id === 'finishing' && Boolean(detailSlug);
   const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
@@ -212,6 +222,16 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language === 'vn'
       ? 'Giải pháp stain kiểm soát tone màu, độ thấm màu, chiều sâu vân gỗ và độ ổn định giữa các lô sản xuất.'
       : 'Stain solution controlling color tone, absorption, wood grain depth, and batch-to-batch stability.';
+  const paintedFinishSeoTitle = language === 'vn' ? 'Hoàn thiện sơn màu' : 'Painted Finish';
+  const paintedFinishSeoDescription =
+    language === 'vn'
+      ? 'Khung giải pháp hoàn thiện sơn màu kiểm soát màu sắc, độ phủ, độ đồng đều và độ bền bề mặt.'
+      : 'Painted finish framework controlling color, coverage, consistency, and surface durability.';
+  const matteFinishSeoTitle = language === 'vn' ? 'Hoàn thiện mờ' : 'Matte Finish';
+  const matteFinishSeoDescription =
+    language === 'vn'
+      ? 'Khung giải pháp hoàn thiện mờ kiểm soát độ mờ, độ mịn, phản xạ ánh sáng và cảm giác chạm.'
+      : 'Matte finish framework controlling sheen level, smoothness, light reflection, and touch feel.';
   const chairsSeoTitle = language === 'vn' ? 'Ghế' : 'Chairs';
   const chairsSeoDescription =
     language === 'vn'
@@ -273,7 +293,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldRenderBlankQualityInProcessPage =
     config.slug === 'quality-control' && section.id === 'in-process-inspection';
   const shouldRenderBlankSubSectionPage =
-    shouldRenderBlankScholarshipPage || shouldRenderBlankQualityInProcessPage;
+    shouldRenderBlankScholarshipPage ||
+    shouldRenderBlankQualityInProcessPage;
   const isCustomAboutSection =
     config.slug === 'about-anslife' &&
     (section.id === 'philosophy' ||
@@ -290,7 +311,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     (config.slug === 'products-solutions' &&
       (section.id === 'operations-supply-solutions' ||
         section.id === 'finished-furniture' ||
-        section.id === 'furniture-components')) ||
+        section.id === 'furniture-components' ||
+        section.id === 'finishing')) ||
     isProductsFinishingDetail ||
     (config.slug === 'resources' && section.id === 'faq') ||
     isCustomAboutSection ||
@@ -315,6 +337,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isFinishingStainDetail ||
     isFinishingLacquerDetail ||
     isFinishingOilFinishDetail ||
+    isFinishingPaintedDetail ||
+    isFinishingMatteDetail ||
+    isProductsFinishingLanding ||
     (config.slug === 'resources' && section.id === 'faq') ||
     (config.slug === 'about-anslife' &&
       (section.id === 'philosophy' ||
@@ -381,6 +406,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                           ? `${naturalFinishSeoTitle} | ${t(config.title)}`
                           : isFinishingStainDetail
                             ? `${stainSeoTitle} | ${t(config.title)}`
+                          : isFinishingPaintedDetail
+                            ? `${paintedFinishSeoTitle} | ${t(config.title)}`
+                          : isFinishingMatteDetail
+                            ? `${matteFinishSeoTitle} | ${t(config.title)}`
       : `${t(section.title)} | ${t(config.title)}`;
   const seoDescription = isFinishedFurnitureChairsDetail
     ? chairsSeoDescription
@@ -428,6 +457,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                       ? naturalFinishSeoDescription
                       : isFinishingStainDetail
                         ? stainSeoDescription
+                      : isFinishingPaintedDetail
+                        ? paintedFinishSeoDescription
+                      : isFinishingMatteDetail
+                        ? matteFinishSeoDescription
                     : t(section.description);
 
   return (

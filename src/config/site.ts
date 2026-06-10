@@ -71,14 +71,6 @@ export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
   {
     label: 'Hoàn thiện bề mặt',
     path: '/products-solutions/finishing',
-    children: [
-      { label: 'Hoàn thiện tự nhiên', path: '/products-solutions/finishing/natural-finish' },
-      { label: 'Stain', path: '/products-solutions/finishing/stain' },
-      { label: 'Lacquer', path: '/products-solutions/finishing/lacquer' },
-      { label: 'Hoàn thiện dầu', path: '/products-solutions/finishing/oil-finish' },
-      { label: 'Hoàn thiện sơn màu', path: '/products-solutions/finishing/painted-finish' },
-      { label: 'Hoàn thiện mờ', path: '/products-solutions/finishing/matte-finish' },
-    ],
   },
   {
     label: 'Cung ứng vật liệu',
