@@ -290,6 +290,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   );
   const isSupplyHubOverviewPage =
     config.slug === 'vietnam-supply-hub' && section.id === 'overview' && !detailSlug;
+  const isSupplyHubStorageSolutionPage =
+    config.slug === 'vietnam-supply-hub' && section.id === 'storage-solution' && !detailSlug;
   const shouldRenderBlankScholarshipPage =
     config.slug === 'about-anslife' && section.id === 'scholarship-community';
   const shouldRenderBlankQualityInProcessPage =
@@ -297,7 +299,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldRenderBlankSubSectionPage =
     shouldRenderBlankScholarshipPage ||
     shouldRenderBlankQualityInProcessPage ||
-    isSupplyHubOverviewPage;
+    isSupplyHubOverviewPage ||
+    isSupplyHubStorageSolutionPage;
   const isCustomAboutSection =
     config.slug === 'about-anslife' &&
     (section.id === 'philosophy' ||
@@ -319,6 +322,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isProductsFinishingDetail ||
     (config.slug === 'resources' && section.id === 'faq') ||
     isSupplyHubOverviewPage ||
+    isSupplyHubStorageSolutionPage ||
     isCustomAboutSection ||
     (config.slug === 'about-anslife' &&
       (section.id === 'philosophy' ||
@@ -362,6 +366,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       ? fallbackHtml ?? data?.content.rendered
       : data?.content.rendered ?? fallbackHtml;
   const shouldShowSupplyHubOverviewBanner = isSupplyHubOverviewPage;
+  const shouldShowSupplyHubStorageSolutionBanner = isSupplyHubStorageSolutionPage;
   const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
     !shouldRenderBlankSubSectionPage && Boolean(error) && !resolvedHtml;
@@ -464,9 +469,142 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                         ? stainSeoDescription
                       : isFinishingPaintedDetail
                         ? paintedFinishSeoDescription
-                      : isFinishingMatteDetail
-                        ? matteFinishSeoDescription
+                    : isFinishingMatteDetail
+                      ? matteFinishSeoDescription
                     : t(section.description);
+  const supplyHubStorageSupportCards = [
+    {
+      number: '1',
+      title: 'Lưu kho thành phẩm',
+      body: 'Lưu trữ hàng hóa đã hoàn thiện và sẵn sàng xuất khẩu theo kế hoạch giao hàng của buyer.',
+      listTitle: 'Phù hợp với:',
+      items: [
+        'Đơn hàng xuất định kỳ',
+        'Chương trình tồn kho đệm',
+        'Dự án nhiều đợt giao hàng',
+        'Hàng chờ gom container',
+      ],
+    },
+    {
+      number: '2',
+      title: 'Lưu kho cấu kiện & bán thành phẩm',
+      body: 'Lưu trữ các cấu kiện nội thất, linh kiện hoặc bán thành phẩm phục vụ lắp ráp và sản xuất theo từng giai đoạn.',
+      listTitle: 'Bao gồm:',
+      items: [
+        'Khung ghế',
+        'Mặt bàn',
+        'Chân gỗ',
+        'Bộ phận tủ',
+        'Bộ phận bọc nệm',
+        'Cấu kiện theo bản vẽ riêng',
+      ],
+    },
+    {
+      number: '3',
+      title: 'Lưu kho vật liệu',
+      body: 'Hỗ trợ lưu trữ vật liệu phục vụ sản xuất hoặc dự án dài hạn.',
+      listTitle: 'Bao gồm:',
+      items: ['Gỗ tự nhiên', 'Plywood', 'MDF', 'Veneer', 'Foam', 'Vải', 'Da', 'Vật liệu đóng gói'],
+    },
+    {
+      number: '4',
+      title: 'Tồn kho đệm (Buffer Inventory)',
+      body: 'Duy trì lượng tồn kho dự phòng tại Việt Nam để đáp ứng nhanh các nhu cầu phát sinh hoặc đơn hàng bổ sung.',
+      listTitle: 'Lợi ích:',
+      items: [
+        'Rút ngắn thời gian giao hàng',
+        'Giảm rủi ro đứt gãy chuỗi cung ứng',
+        'Hạn chế thiếu hàng trong mùa cao điểm',
+        'Tăng khả năng phản ứng với nhu cầu thị trường',
+      ],
+    },
+  ];
+  const supplyHubStorageModelCards = [
+    {
+      number: '1.',
+      title: 'Tồn kho theo đơn hàng',
+      body: 'Hàng hóa được lưu kho phục vụ cho các đơn hàng đã xác nhận hoặc kế hoạch giao hàng cụ thể.',
+    },
+    {
+      number: '2.',
+      title: 'Tồn kho đệm theo chương trình',
+      body: 'Buyer duy trì lượng hàng dự phòng tại Việt Nam để xuất theo nhu cầu thực tế.',
+    },
+    {
+      number: '3.',
+      title: 'Tồn kho vật liệu',
+      body: 'Vật liệu được lưu trữ tập trung để cấp phát cho nhiều nhà máy hoặc nhiều dự án khác nhau.',
+    },
+    {
+      number: '4.',
+      title: 'Tồn kho dự án',
+      body: 'Lưu kho hàng hóa, vật liệu hoặc cấu kiện phục vụ các dự án khách sạn, resort, nhà hàng hoặc chuỗi bán lẻ.',
+    },
+  ];
+  const supplyHubStorageOperationCards = [
+    {
+      title: 'Quản lý tồn kho',
+      body: 'ANSLIFE hỗ trợ theo dõi và quản lý tồn kho theo từng buyer, từng dự án hoặc từng mã sản phẩm.',
+      listTitle: 'Có thể quản lý:',
+      items: [
+        'Mã sản phẩm',
+        'Số lượng tồn kho',
+        'Lô sản xuất',
+        'Ngày nhập kho',
+        'Ngày xuất kho',
+        'Trạng thái hàng hóa',
+        'Kế hoạch xuất hàng',
+      ],
+    },
+    {
+      title: 'Kết nối với chuỗi cung ứng',
+      body: 'Giải pháp lưu kho của ANSLIFE có thể kết nối trực tiếp với các dịch vụ khác trong hệ sinh thái cung ứng:',
+      items: [
+        'Gom hàng LCL / FCL',
+        'Điều phối xuất hàng định kỳ',
+        'Hỗ trợ chứng từ xuất khẩu',
+        'Quản lý vật liệu và cấu kiện',
+        'QC độc lập',
+        'Vận hành dự án xuất khẩu',
+      ],
+    },
+  ];
+  const supplyHubStorageBuyerBenefits = [
+    {
+      number: '1.',
+      title: 'Giảm áp lực tồn kho tại thị trường đích',
+      body: 'Không cần duy trì lượng lớn hàng hóa tại Nhật Bản, Singapore, Mỹ hoặc Châu Âu.',
+    },
+    {
+      number: '2.',
+      title: 'Tăng tính linh hoạt',
+      body: 'Có thể xuất hàng theo nhu cầu thực tế thay vì nhập toàn bộ một lần.',
+    },
+    {
+      number: '3.',
+      title: 'Rút ngắn thời gian phản hồi',
+      body: 'Hàng hóa luôn sẵn sàng tại Việt Nam để điều phối và xuất khẩu.',
+    },
+    {
+      number: '4.',
+      title: 'Giảm rủi ro chuỗi cung ứng',
+      body: 'Duy trì nguồn cung ổn định trong các giai đoạn cao điểm hoặc biến động thị trường.',
+    },
+    {
+      number: '5.',
+      title: 'Tối ưu chi phí vận hành',
+      body: 'Giảm chi phí lưu kho tại thị trường tiêu thụ và tăng hiệu quả sử dụng vốn.',
+    },
+  ];
+  const supplyHubStorageProcessSteps = [
+    'Đánh giá nhu cầu tồn kho',
+    'Xây dựng kế hoạch lưu kho',
+    'Nhập kho & phân loại',
+    'Theo dõi tồn kho',
+    'Nhận yêu cầu xuất hàng',
+    'Điều phối logistics',
+    'Xuất khẩu & giao hàng',
+  ];
 
   return (
     <>
@@ -538,6 +676,101 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
           </figcaption>
         </figure>
       )}
+      {shouldShowSupplyHubStorageSolutionBanner && (
+        <figure className="supply-hub-storage-solution-banner">
+          <img
+            src="/assets/supply-hub/storage-solution-banner.png"
+            alt={t('Sơ đồ giải pháp lưu kho và tồn kho đệm của ANSLIFE')}
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+      )}
+      {isSupplyHubStorageSolutionPage && (
+        <section className="supply-hub-storage-content" aria-labelledby="storage-support-title">
+          <section className="supply-hub-storage-support">
+            <h2 id="storage-support-title">{t('ANSLIFE hỗ trợ những gì?')}</h2>
+            <div className="supply-hub-storage-support-grid">
+              {supplyHubStorageSupportCards.map((card) => (
+                <article key={card.number} className="supply-hub-storage-support-card">
+                  <span className="supply-hub-storage-support-number">{card.number}</span>
+                  <div className="supply-hub-storage-image-slot" aria-hidden="true" />
+                  <div className="supply-hub-storage-support-copy">
+                    <h3>{t(card.title)}</h3>
+                    <p>{t(card.body)}</p>
+                    <strong>{t(card.listTitle)}</strong>
+                    <ul className={card.items.length > 6 ? 'is-split' : undefined}>
+                      {card.items.map((item) => (
+                        <li key={item}>{t(item)}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-storage-models" aria-labelledby="storage-models-title">
+            <h2 id="storage-models-title">{t('Các mô hình lưu kho')}</h2>
+            <div className="supply-hub-storage-model-grid">
+              {supplyHubStorageModelCards.map((card) => (
+                <article key={card.title} className="supply-hub-storage-model-card">
+                  <div className="supply-hub-storage-model-image-slot" aria-hidden="true" />
+                  <div className="supply-hub-storage-model-copy">
+                    <h3>
+                      <span>{card.number}</span> {t(card.title)}
+                    </h3>
+                    <p>{t(card.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-storage-operations" aria-label={t('Quản lý tồn kho và kết nối chuỗi cung ứng')}>
+            {supplyHubStorageOperationCards.map((card) => (
+              <article key={card.title} className="supply-hub-storage-operation-card">
+                <div className="supply-hub-storage-operation-image-slot" aria-hidden="true" />
+                <div className="supply-hub-storage-operation-copy">
+                  <h2>{t(card.title)}</h2>
+                  <p>{t(card.body)}</p>
+                  {card.listTitle && <strong>{t(card.listTitle)}</strong>}
+                  <ul>
+                    {card.items.map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </section>
+          <section className="supply-hub-storage-buyer-benefits" aria-labelledby="storage-buyer-benefits-title">
+            <h2 id="storage-buyer-benefits-title">{t('Lợi ích đối với Buyer')}</h2>
+            <div className="supply-hub-storage-buyer-benefit-grid">
+              {supplyHubStorageBuyerBenefits.map((benefit) => (
+                <article key={benefit.title} className="supply-hub-storage-buyer-benefit-card">
+                  <div className="supply-hub-storage-buyer-benefit-image-slot" aria-hidden="true" />
+                  <div className="supply-hub-storage-buyer-benefit-copy">
+                    <h3>
+                      <span>{benefit.number}</span> {t(benefit.title)}
+                    </h3>
+                    <p>{t(benefit.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-storage-process" aria-labelledby="storage-process-title">
+            <h2 id="storage-process-title">{t('Quy trình triển khai')}</h2>
+            <ol className="supply-hub-storage-process-list">
+              {supplyHubStorageProcessSteps.map((step, index) => (
+                <li key={step} className="supply-hub-storage-process-step">
+                  <span>{index + 1}</span>
+                  <strong>{t(step)}</strong>
+                </li>
+              ))}
+            </ol>
+          </section>
+        </section>
+      )}
       {isSupplyHubOverviewPage && (
         <section className="supply-hub-overview-content">
           <div className="supply-hub-overview-main-grid">
@@ -546,7 +779,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 <h2>{t('Vietnam Supply Hub là gì?')}</h2>
                 <div className="supply-hub-overview-definition">
                   <article>
-                    <i className="supply-hub-overview-feature-icon supply-hub-overview-feature-icon-network" />
+                    <img
+                      src="/assets/supply-hub/definition-icons/coordination.webp"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <div>
                       <h3>{t('Một đầu mối điều phối tại Việt Nam')}</h3>
                       <p>
@@ -557,7 +795,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                     </div>
                   </article>
                   <article>
-                    <i className="supply-hub-overview-feature-icon supply-hub-overview-feature-icon-warehouse" />
+                    <img
+                      src="/assets/supply-hub/definition-icons/storage-export.webp"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <div>
                       <h3>{t('Hỗ trợ lưu kho, gom hàng và điều phối xuất hàng')}</h3>
                       <p>
@@ -568,7 +811,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                     </div>
                   </article>
                   <article>
-                    <i className="supply-hub-overview-feature-icon supply-hub-overview-feature-icon-shield" />
+                    <img
+                      src="/assets/supply-hub/definition-icons/supply-control.webp"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <div>
                       <h3>{t('Giúp buyer dễ kiểm soát chuỗi cung ứng')}</h3>
                       <p>
@@ -585,15 +833,30 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 <h2>{t('Lợi ích cho buyer')}</h2>
                 <div className="supply-hub-overview-benefits">
                   {[
-                    ['contact', 'Một đầu mối làm việc'],
-                    ['box', 'Tối ưu tồn kho'],
-                    ['forklift', 'Gom hàng linh hoạt'],
-                    ['progress', 'Kiểm soát tiến độ và chất lượng'],
-                    ['document', 'Hỗ trợ chứng từ xuất khẩu'],
-                    ['calendar', 'Phù hợp với lịch xuất hàng định kỳ'],
-                  ].map(([icon, item], index) => (
+                    ['Một đầu mối làm việc', '/assets/supply-hub/benefit-icons/single-contact.webp'],
+                    ['Tối ưu tồn kho', '/assets/supply-hub/benefit-icons/inventory-optimization.webp'],
+                    ['Gom hàng linh hoạt', '/assets/supply-hub/benefit-icons/flexible-consolidation.webp'],
+                    [
+                      'Kiểm soát tiến độ và chất lượng',
+                      '/assets/supply-hub/benefit-icons/progress-quality.webp',
+                    ],
+                    [
+                      'Hỗ trợ chứng từ xuất khẩu',
+                      '/assets/supply-hub/benefit-icons/export-documents.webp',
+                    ],
+                    [
+                      'Phù hợp với lịch xuất hàng định kỳ',
+                      '/assets/supply-hub/benefit-icons/scheduled-shipment.webp',
+                    ],
+                  ].map(([item, image], index) => (
                     <article key={item}>
-                      <i className={`supply-hub-overview-image-slot supply-hub-overview-image-slot-${icon}`} />
+                      <img
+                        className="supply-hub-overview-benefit-image"
+                        src={image}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
                       <span>{String(index + 1).padStart(2, '0')}</span>
                       <p>{t(item)}</p>
                     </article>
@@ -611,35 +874,47 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                       '01',
                       'Central Coordination',
                       'Đầu mối điều phối tập trung giữa buyer, nhà cung cấp, kho, đơn vị vận chuyển và logistics.',
+                      '/assets/supply-hub/role-icons/central-coordination.webp',
                     ],
                     [
                       '02',
                       'Inventory Buffer Support',
                       'Hỗ trợ lưu giữ hàng hóa, vật liệu hoặc các mặt hàng có khối lượng giao hàng nhất định theo kế hoạch buyer.',
+                      '/assets/supply-hub/role-icons/inventory-buffer.webp',
                     ],
                     [
                       '03',
                       'Consolidation Management',
                       'Gom hàng từ nhiều nguồn cung hoặc nhiều nhóm sản phẩm để tối ưu container và chi phí vận hành.',
+                      '/assets/supply-hub/role-icons/consolidation-management.webp',
                     ],
                     [
                       '04',
                       'Export Coordination',
                       'Theo dõi kế hoạch xuất hàng, phối hợp đóng gói, lịch giao và các bước liên quan đến vận chuyển.',
+                      '/assets/supply-hub/role-icons/export-coordination.webp',
                     ],
                     [
                       '05',
                       'Documentation Support',
                       'Hỗ trợ chuẩn bị và kiểm tra chứng từ xuất khẩu theo yêu cầu buyer hoặc đơn vị logistics.',
+                      '/assets/supply-hub/role-icons/documentation-support.webp',
                     ],
                     [
                       '06',
                       'Partner Sample Room',
                       'Lưu giữ, đối chiếu và quản lý mẫu chuẩn phục vụ phát triển sản phẩm và kiểm tra chất lượng.',
+                      '/assets/supply-hub/role-icons/partner-sample-room.webp',
                     ],
-                  ].map(([number, title, description]) => (
+                  ].map(([number, title, description, image]) => (
                     <article key={number}>
-                      <i className="supply-hub-overview-image-slot" />
+                      <img
+                        className="supply-hub-overview-card-image"
+                        src={image}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
                       <span>{number}</span>
                       <h3>{t(title)}</h3>
                       <p>{t(description)}</p>
@@ -655,22 +930,32 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                     [
                       'International Buyers',
                       'Buyer quốc tế cần nguồn cung ổn định và có đầu mối điều phối tại Việt Nam.',
+                      '/assets/supply-hub/audience-icons/international-buyers.webp',
                     ],
                     [
                       'Importers & Distributors',
                       'Nhà nhập khẩu, phân phối cần gom nhiều nhóm hàng và xuất hàng định kỳ.',
+                      '/assets/supply-hub/audience-icons/importers-distributors.webp',
                     ],
                     [
                       'Furniture Brands',
                       'Thương hiệu nội thất cần lưu mẫu, lưu hàng, quản lý vật liệu và phát triển sản phẩm.',
+                      '/assets/supply-hub/audience-icons/furniture-brands.webp',
                     ],
                     [
                       'OEM / ODM Customers',
                       'Khách hàng cần sản xuất, lưu kho, gom hàng và xuất hàng theo kế hoạch riêng.',
+                      '/assets/supply-hub/audience-icons/oem-odm-customers.webp',
                     ],
-                  ].map(([title, description]) => (
+                  ].map(([title, description, image]) => (
                     <article key={title}>
-                      <i className="supply-hub-overview-image-slot" />
+                      <img
+                        className="supply-hub-overview-card-image"
+                        src={image}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
                       <h3>{t(title)}</h3>
                       <p>{t(description)}</p>
                     </article>
@@ -679,6 +964,34 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </section>
             </div>
           </div>
+          <section className="supply-hub-overview-cta">
+            <figure className="supply-hub-overview-cta-image">
+              <img
+                src="/assets/supply-hub/cta-loading.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <div className="supply-hub-overview-cta-copy">
+              <h2>{t('Gửi yêu cầu Supply Hub cho ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi thông tin về sản phẩm, lịch xuất hàng, nhu cầu lưu kho, nhóm vật liệu, các kho, chứng từ hoặc yêu cầu vận hành để ANSLIFE đánh giá và đề xuất mô hình Supply Hub phù hợp tại Việt Nam.',
+                )}
+              </p>
+            </div>
+            <div className="supply-hub-overview-cta-actions">
+              <a href="/contact/supply-hub-inquiry">
+                <span>{t('Gửi yêu cầu')}</span>
+                <b aria-hidden="true">→</b>
+              </a>
+              <a href="/contact/supply-hub-inquiry">
+                <span>{t('Tải tài liệu lên')}</span>
+                <b aria-hidden="true">⇧</b>
+              </a>
+            </div>
+          </section>
         </section>
       )}
       {resolvedHtml && (
