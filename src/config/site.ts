@@ -73,16 +73,6 @@ export const PRODUCTS_AND_SOLUTIONS_MENU: MenuChildItem[] = [
     path: '/products-solutions/finishing',
   },
   {
-    label: 'Cung ứng vật liệu',
-    path: '/products-solutions/materials-supply',
-    children: [
-      {
-        label: 'Tổng quan dịch vụ cung ứng vật liệu',
-        path: '/products-solutions/materials-supply',
-      },
-    ],
-  },
-  {
     label: 'Giải pháp vận hành & cung ứng',
     path: '/products-solutions/operations-supply-solutions',
   },

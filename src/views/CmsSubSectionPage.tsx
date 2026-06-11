@@ -288,13 +288,16 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     language,
     detailSlug,
   );
+  const isSupplyHubOverviewPage =
+    config.slug === 'vietnam-supply-hub' && section.id === 'overview' && !detailSlug;
   const shouldRenderBlankScholarshipPage =
     config.slug === 'about-anslife' && section.id === 'scholarship-community';
   const shouldRenderBlankQualityInProcessPage =
     config.slug === 'quality-control' && section.id === 'in-process-inspection';
   const shouldRenderBlankSubSectionPage =
     shouldRenderBlankScholarshipPage ||
-    shouldRenderBlankQualityInProcessPage;
+    shouldRenderBlankQualityInProcessPage ||
+    isSupplyHubOverviewPage;
   const isCustomAboutSection =
     config.slug === 'about-anslife' &&
     (section.id === 'philosophy' ||
@@ -315,6 +318,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         section.id === 'finishing')) ||
     isProductsFinishingDetail ||
     (config.slug === 'resources' && section.id === 'faq') ||
+    isSupplyHubOverviewPage ||
     isCustomAboutSection ||
     (config.slug === 'about-anslife' &&
       (section.id === 'philosophy' ||
@@ -357,6 +361,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     : shouldForceTemplateHtml
       ? fallbackHtml ?? data?.content.rendered
       : data?.content.rendered ?? fallbackHtml;
+  const shouldShowSupplyHubOverviewBanner = isSupplyHubOverviewPage;
   const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
     !shouldRenderBlankSubSectionPage && Boolean(error) && !resolvedHtml;
@@ -476,6 +481,206 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
 
       {shouldShowLoading && <LoadingBlock />}
       {shouldShowError && <ErrorBlock message={error as string} />}
+      {shouldShowSupplyHubOverviewBanner && (
+        <figure className="supply-hub-overview-banner">
+          <img
+            src="/assets/supply-hub/overview-banner.png"
+            alt={t('Sơ đồ Vietnam Supply Hub')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="supply-hub-overview-banner-copy">
+            <span>{t('Tổng quan mô hình')}</span>
+            <strong>{t('Supply Hub')}</strong>
+            <p>
+              {t(
+                'ANSLIFE hỗ trợ buyer quốc tế quản lý nguồn cung tại Việt Nam thông qua một đầu mối điều phối tập trung, bao gồm lưu kho, tồn kho đệm, gom hàng, điều phối xuất hàng, chứng từ và phòng mẫu chuẩn đối tác.',
+              )}
+            </p>
+            <div className="supply-hub-overview-feature-strip" aria-label={t('Các năng lực chính')}>
+              <article>
+                <img
+                  src="/assets/supply-hub/banner-icons/coordination.webp"
+                  alt=""
+                  loading="eager"
+                  decoding="async"
+                />
+                <span>{t('Một đầu mối điều phối')}</span>
+              </article>
+              <article>
+                <img
+                  src="/assets/supply-hub/banner-icons/buffer-storage.webp"
+                  alt=""
+                  loading="eager"
+                  decoding="async"
+                />
+                <span>{t('Lưu kho & tồn kho đệm')}</span>
+              </article>
+              <article>
+                <img
+                  src="/assets/supply-hub/banner-icons/consolidation.webp"
+                  alt=""
+                  loading="eager"
+                  decoding="async"
+                />
+                <span>{t('Gom hàng LCL / FCL')}</span>
+              </article>
+              <article>
+                <img
+                  src="/assets/supply-hub/banner-icons/scheduled-shipment.webp"
+                  alt=""
+                  loading="eager"
+                  decoding="async"
+                />
+                <span>{t('Xuất hàng định kỳ')}</span>
+              </article>
+            </div>
+          </figcaption>
+        </figure>
+      )}
+      {isSupplyHubOverviewPage && (
+        <section className="supply-hub-overview-content">
+          <div className="supply-hub-overview-main-grid">
+            <div className="supply-hub-overview-left">
+              <section className="supply-hub-overview-block">
+                <h2>{t('Vietnam Supply Hub là gì?')}</h2>
+                <div className="supply-hub-overview-definition">
+                  <article>
+                    <i className="supply-hub-overview-feature-icon supply-hub-overview-feature-icon-network" />
+                    <div>
+                      <h3>{t('Một đầu mối điều phối tại Việt Nam')}</h3>
+                      <p>
+                        {t(
+                          'ANSLIFE là đầu mối phối hợp giữa buyer, nhà cung cấp, kho, đơn vị vận chuyển và các bên liên quan.',
+                        )}
+                      </p>
+                    </div>
+                  </article>
+                  <article>
+                    <i className="supply-hub-overview-feature-icon supply-hub-overview-feature-icon-warehouse" />
+                    <div>
+                      <h3>{t('Hỗ trợ lưu kho, gom hàng và điều phối xuất hàng')}</h3>
+                      <p>
+                        {t(
+                          'Giúp buyer chủ động hơn về tồn kho, kế hoạch giao hàng và lịch xuất hàng linh hoạt.',
+                        )}
+                      </p>
+                    </div>
+                  </article>
+                  <article>
+                    <i className="supply-hub-overview-feature-icon supply-hub-overview-feature-icon-shield" />
+                    <div>
+                      <h3>{t('Giúp buyer dễ kiểm soát chuỗi cung ứng')}</h3>
+                      <p>
+                        {t(
+                          'Tối ưu lợi ích quản lý, giảm rủi ro và đảm bảo tiến độ chất lượng hàng hóa từ Việt Nam.',
+                        )}
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <section className="supply-hub-overview-block">
+                <h2>{t('Lợi ích cho buyer')}</h2>
+                <div className="supply-hub-overview-benefits">
+                  {[
+                    ['contact', 'Một đầu mối làm việc'],
+                    ['box', 'Tối ưu tồn kho'],
+                    ['forklift', 'Gom hàng linh hoạt'],
+                    ['progress', 'Kiểm soát tiến độ và chất lượng'],
+                    ['document', 'Hỗ trợ chứng từ xuất khẩu'],
+                    ['calendar', 'Phù hợp với lịch xuất hàng định kỳ'],
+                  ].map(([icon, item], index) => (
+                    <article key={item}>
+                      <i className={`supply-hub-overview-image-slot supply-hub-overview-image-slot-${icon}`} />
+                      <span>{String(index + 1).padStart(2, '0')}</span>
+                      <p>{t(item)}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            </div>
+
+            <div className="supply-hub-overview-right">
+              <section className="supply-hub-overview-block">
+                <h2>{t('Vai trò của ANSLIFE trong Supply Hub')}</h2>
+                <div className="supply-hub-overview-role-grid">
+                  {[
+                    [
+                      '01',
+                      'Central Coordination',
+                      'Đầu mối điều phối tập trung giữa buyer, nhà cung cấp, kho, đơn vị vận chuyển và logistics.',
+                    ],
+                    [
+                      '02',
+                      'Inventory Buffer Support',
+                      'Hỗ trợ lưu giữ hàng hóa, vật liệu hoặc các mặt hàng có khối lượng giao hàng nhất định theo kế hoạch buyer.',
+                    ],
+                    [
+                      '03',
+                      'Consolidation Management',
+                      'Gom hàng từ nhiều nguồn cung hoặc nhiều nhóm sản phẩm để tối ưu container và chi phí vận hành.',
+                    ],
+                    [
+                      '04',
+                      'Export Coordination',
+                      'Theo dõi kế hoạch xuất hàng, phối hợp đóng gói, lịch giao và các bước liên quan đến vận chuyển.',
+                    ],
+                    [
+                      '05',
+                      'Documentation Support',
+                      'Hỗ trợ chuẩn bị và kiểm tra chứng từ xuất khẩu theo yêu cầu buyer hoặc đơn vị logistics.',
+                    ],
+                    [
+                      '06',
+                      'Partner Sample Room',
+                      'Lưu giữ, đối chiếu và quản lý mẫu chuẩn phục vụ phát triển sản phẩm và kiểm tra chất lượng.',
+                    ],
+                  ].map(([number, title, description]) => (
+                    <article key={number}>
+                      <i className="supply-hub-overview-image-slot" />
+                      <span>{number}</span>
+                      <h3>{t(title)}</h3>
+                      <p>{t(description)}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <section className="supply-hub-overview-block">
+                <h2>{t('Phù hợp với ai?')}</h2>
+                <div className="supply-hub-overview-audience-grid">
+                  {[
+                    [
+                      'International Buyers',
+                      'Buyer quốc tế cần nguồn cung ổn định và có đầu mối điều phối tại Việt Nam.',
+                    ],
+                    [
+                      'Importers & Distributors',
+                      'Nhà nhập khẩu, phân phối cần gom nhiều nhóm hàng và xuất hàng định kỳ.',
+                    ],
+                    [
+                      'Furniture Brands',
+                      'Thương hiệu nội thất cần lưu mẫu, lưu hàng, quản lý vật liệu và phát triển sản phẩm.',
+                    ],
+                    [
+                      'OEM / ODM Customers',
+                      'Khách hàng cần sản xuất, lưu kho, gom hàng và xuất hàng theo kế hoạch riêng.',
+                    ],
+                  ].map(([title, description]) => (
+                    <article key={title}>
+                      <i className="supply-hub-overview-image-slot" />
+                      <h3>{t(title)}</h3>
+                      <p>{t(description)}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      )}
       {resolvedHtml && (
         <HtmlContent
           className={`html-content html-panel ${isCustomAboutSection ? 'company-intro-page-panel' : ''}`}
