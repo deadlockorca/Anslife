@@ -3555,6 +3555,41 @@ a.mobile-menu-utility-link {
   object-position: center;
 }
 
+.supply-hub-storage-solution-banner-copy {
+  position: absolute;
+  left: clamp(1.25rem, 5vw, 4.8rem);
+  top: 43%;
+  z-index: 1;
+  width: min(40%, 620px);
+  transform: translateY(-50%);
+  color: #20242a;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.78);
+  background: transparent !important;
+}
+
+.supply-hub-storage-solution-banner-copy h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-heading);
+  font-size: clamp(2.35rem, 4.75vw, 5.2rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-storage-solution-banner-copy p {
+  max-width: 62ch;
+  margin: clamp(0.72rem, 1.05vw, 1rem) 0 0;
+  color: #30363e;
+  font-family: var(--font-ui);
+  font-size: clamp(0.78rem, 0.86vw, 0.98rem);
+  line-height: 1.46;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
 .supply-hub-storage-content {
   padding: clamp(0.85rem, 1.8vw, 1.45rem) clamp(1rem, 2.4vw, 2rem) clamp(1.5rem, 3vw, 2.8rem);
   background: var(--bg) !important;
@@ -3615,17 +3650,15 @@ a.mobile-menu-utility-link {
   background: transparent !important;
 }
 
-.supply-hub-storage-image-slot {
+.supply-hub-storage-support-image {
+  display: block;
   align-self: start;
   width: 100%;
   margin-top: clamp(2rem, 2.8vw, 2.72rem);
   aspect-ratio: 1.08 / 1;
-  border: 1px dashed rgba(35, 38, 40, 0.3);
-  border-radius: 5px;
-  background:
-    linear-gradient(135deg, transparent 48%, rgba(35, 38, 40, 0.16) 49%, rgba(35, 38, 40, 0.16) 51%, transparent 52%),
-    linear-gradient(45deg, transparent 48%, rgba(35, 38, 40, 0.12) 49%, rgba(35, 38, 40, 0.12) 51%, transparent 52%),
-    rgba(246, 241, 232, 0.18) !important;
+  object-fit: contain;
+  object-position: center;
+  background: transparent !important;
 }
 
 .supply-hub-storage-support-copy {
@@ -3719,16 +3752,14 @@ a.mobile-menu-utility-link {
   background: rgba(246, 241, 232, 0.1) !important;
 }
 
-.supply-hub-storage-model-image-slot {
+.supply-hub-storage-model-image {
+  display: block;
   align-self: center;
   width: 100%;
   aspect-ratio: 1.08 / 1;
-  border: 1px dashed rgba(35, 38, 40, 0.3);
-  border-radius: 5px;
-  background:
-    linear-gradient(135deg, transparent 48%, rgba(35, 38, 40, 0.14) 49%, rgba(35, 38, 40, 0.14) 51%, transparent 52%),
-    linear-gradient(45deg, transparent 48%, rgba(35, 38, 40, 0.1) 49%, rgba(35, 38, 40, 0.1) 51%, transparent 52%),
-    rgba(246, 241, 232, 0.16) !important;
+  object-fit: contain;
+  object-position: center;
+  background: transparent !important;
 }
 
 .supply-hub-storage-model-copy {
@@ -3781,16 +3812,14 @@ a.mobile-menu-utility-link {
   background: rgba(246, 241, 232, 0.1) !important;
 }
 
-.supply-hub-storage-operation-image-slot {
+.supply-hub-storage-operation-image {
+  display: block;
   align-self: center;
   width: 100%;
   aspect-ratio: 1.25 / 1;
-  border: 1px dashed rgba(35, 38, 40, 0.3);
-  border-radius: 5px;
-  background:
-    linear-gradient(135deg, transparent 48%, rgba(35, 38, 40, 0.14) 49%, rgba(35, 38, 40, 0.14) 51%, transparent 52%),
-    linear-gradient(45deg, transparent 48%, rgba(35, 38, 40, 0.1) 49%, rgba(35, 38, 40, 0.1) 51%, transparent 52%),
-    rgba(246, 241, 232, 0.16) !important;
+  object-fit: contain;
+  object-position: center;
+  background: transparent !important;
 }
 
 .supply-hub-storage-operation-copy {
@@ -3885,17 +3914,15 @@ a.mobile-menu-utility-link {
   border-left: 1px solid rgba(35, 38, 40, 0.18);
 }
 
-.supply-hub-storage-buyer-benefit-image-slot {
+.supply-hub-storage-buyer-benefit-image {
+  display: block;
   align-self: start;
   width: 100%;
   margin-top: 0.08rem;
   aspect-ratio: 1;
-  border: 1px dashed rgba(35, 38, 40, 0.3);
-  border-radius: 5px;
-  background:
-    linear-gradient(135deg, transparent 48%, rgba(35, 38, 40, 0.14) 49%, rgba(35, 38, 40, 0.14) 51%, transparent 52%),
-    linear-gradient(45deg, transparent 48%, rgba(35, 38, 40, 0.1) 49%, rgba(35, 38, 40, 0.1) 51%, transparent 52%),
-    rgba(246, 241, 232, 0.16) !important;
+  object-fit: contain;
+  object-position: center;
+  background: transparent !important;
 }
 
 .supply-hub-storage-buyer-benefit-copy {
@@ -4006,6 +4033,85 @@ a.mobile-menu-utility-link {
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-storage-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 0.3fr);
+  gap: clamp(1rem, 2vw, 1.6rem);
+  align-items: center;
+  margin-top: clamp(0.7rem, 1.35vw, 1.05rem);
+  padding: clamp(0.82rem, 1.25vw, 1.08rem);
+  border: 1px solid rgba(35, 38, 40, 0.26);
+  border-radius: 7px;
+  background: rgba(246, 241, 232, 0.12) !important;
+}
+
+.supply-hub-storage-cta-copy {
+  min-width: 0;
+  background: transparent !important;
+}
+
+.supply-hub-storage-cta-copy h2 {
+  margin: 0;
+  color: #22272d;
+  font-family: var(--font-ui);
+  font-size: clamp(1.18rem, 1.72vw, 1.66rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.supply-hub-storage-cta-copy p {
+  max-width: 84ch;
+  margin: 0.46rem 0 0;
+  color: #343a42;
+  font-family: var(--font-ui);
+  font-size: clamp(0.78rem, 0.9vw, 0.95rem);
+  line-height: 1.48;
+  letter-spacing: 0;
+}
+
+.supply-hub-storage-cta-actions {
+  display: grid;
+  gap: 0.62rem;
+  background: transparent !important;
+}
+
+.supply-hub-storage-cta-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  min-height: 46px;
+  padding: 0.62rem 0.82rem 0.62rem 1rem;
+  border: 1px solid rgba(35, 38, 40, 0.34);
+  border-radius: 6px;
+  color: #252a30;
+  font-family: var(--font-ui);
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-decoration: none;
+  background: rgba(246, 241, 232, 0.18) !important;
+}
+
+.supply-hub-storage-cta-actions a:hover {
+  border-color: rgba(35, 38, 40, 0.52);
+  background: rgba(246, 241, 232, 0.3) !important;
+}
+
+.supply-hub-storage-cta-actions b {
+  display: inline-grid;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  place-items: center;
+  color: #252a30;
+  font-size: 1.12rem;
+  line-height: 1;
   background: transparent !important;
 }
 
@@ -4622,7 +4728,27 @@ a.mobile-menu-utility-link {
 
   .supply-hub-storage-solution-banner > img {
     aspect-ratio: 4 / 3;
+    opacity: 0.56;
     object-position: 70% center;
+  }
+
+  .supply-hub-storage-solution-banner-copy {
+    left: 1.05rem;
+    right: 1.05rem;
+    top: 0.95rem;
+    width: auto;
+    transform: none;
+  }
+
+  .supply-hub-storage-solution-banner-copy h1 {
+    max-width: 11ch;
+    font-size: clamp(2rem, 10.5vw, 3.35rem);
+  }
+
+  .supply-hub-storage-solution-banner-copy p {
+    max-width: 37ch;
+    font-size: 0.82rem;
+    line-height: 1.36;
   }
 
   .supply-hub-storage-content {
@@ -4656,6 +4782,14 @@ a.mobile-menu-utility-link {
   .supply-hub-storage-process-list {
     grid-template-columns: repeat(7, minmax(155px, 1fr));
     min-width: 1085px;
+  }
+
+  .supply-hub-storage-cta {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-storage-cta-actions {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .supply-hub-storage-support-card {

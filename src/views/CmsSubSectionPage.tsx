@@ -476,6 +476,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     {
       number: '1',
       title: 'Lưu kho thành phẩm',
+      image: '/assets/supply-hub/storage-support/finished-goods.webp',
       body: 'Lưu trữ hàng hóa đã hoàn thiện và sẵn sàng xuất khẩu theo kế hoạch giao hàng của buyer.',
       listTitle: 'Phù hợp với:',
       items: [
@@ -488,6 +489,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     {
       number: '2',
       title: 'Lưu kho cấu kiện & bán thành phẩm',
+      image: '/assets/supply-hub/storage-support/components-semi-finished.webp',
       body: 'Lưu trữ các cấu kiện nội thất, linh kiện hoặc bán thành phẩm phục vụ lắp ráp và sản xuất theo từng giai đoạn.',
       listTitle: 'Bao gồm:',
       items: [
@@ -502,6 +504,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     {
       number: '3',
       title: 'Lưu kho vật liệu',
+      image: '/assets/supply-hub/storage-support/materials.webp',
       body: 'Hỗ trợ lưu trữ vật liệu phục vụ sản xuất hoặc dự án dài hạn.',
       listTitle: 'Bao gồm:',
       items: ['Gỗ tự nhiên', 'Plywood', 'MDF', 'Veneer', 'Foam', 'Vải', 'Da', 'Vật liệu đóng gói'],
@@ -509,6 +512,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     {
       number: '4',
       title: 'Tồn kho đệm (Buffer Inventory)',
+      image: '/assets/supply-hub/storage-support/buffer-inventory.webp',
       body: 'Duy trì lượng tồn kho dự phòng tại Việt Nam để đáp ứng nhanh các nhu cầu phát sinh hoặc đơn hàng bổ sung.',
       listTitle: 'Lợi ích:',
       items: [
@@ -523,27 +527,32 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     {
       number: '1.',
       title: 'Tồn kho theo đơn hàng',
+      image: '/assets/supply-hub/storage-models/order-inventory.webp',
       body: 'Hàng hóa được lưu kho phục vụ cho các đơn hàng đã xác nhận hoặc kế hoạch giao hàng cụ thể.',
     },
     {
       number: '2.',
       title: 'Tồn kho đệm theo chương trình',
+      image: '/assets/supply-hub/storage-models/program-buffer.webp',
       body: 'Buyer duy trì lượng hàng dự phòng tại Việt Nam để xuất theo nhu cầu thực tế.',
     },
     {
       number: '3.',
       title: 'Tồn kho vật liệu',
+      image: '/assets/supply-hub/storage-models/material-inventory.webp',
       body: 'Vật liệu được lưu trữ tập trung để cấp phát cho nhiều nhà máy hoặc nhiều dự án khác nhau.',
     },
     {
       number: '4.',
       title: 'Tồn kho dự án',
+      image: '/assets/supply-hub/storage-models/project-inventory.webp',
       body: 'Lưu kho hàng hóa, vật liệu hoặc cấu kiện phục vụ các dự án khách sạn, resort, nhà hàng hoặc chuỗi bán lẻ.',
     },
   ];
   const supplyHubStorageOperationCards = [
     {
       title: 'Quản lý tồn kho',
+      image: '/assets/supply-hub/storage-operations/inventory-management.webp',
       body: 'ANSLIFE hỗ trợ theo dõi và quản lý tồn kho theo từng buyer, từng dự án hoặc từng mã sản phẩm.',
       listTitle: 'Có thể quản lý:',
       items: [
@@ -558,6 +567,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     },
     {
       title: 'Kết nối với chuỗi cung ứng',
+      image: '/assets/supply-hub/storage-operations/supply-chain-connection.webp',
       body: 'Giải pháp lưu kho của ANSLIFE có thể kết nối trực tiếp với các dịch vụ khác trong hệ sinh thái cung ứng:',
       items: [
         'Gom hàng LCL / FCL',
@@ -573,26 +583,31 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     {
       number: '1.',
       title: 'Giảm áp lực tồn kho tại thị trường đích',
+      image: '/assets/supply-hub/storage-buyer-benefits/reduce-destination-inventory.webp',
       body: 'Không cần duy trì lượng lớn hàng hóa tại Nhật Bản, Singapore, Mỹ hoặc Châu Âu.',
     },
     {
       number: '2.',
       title: 'Tăng tính linh hoạt',
+      image: '/assets/supply-hub/storage-buyer-benefits/flexibility.webp',
       body: 'Có thể xuất hàng theo nhu cầu thực tế thay vì nhập toàn bộ một lần.',
     },
     {
       number: '3.',
       title: 'Rút ngắn thời gian phản hồi',
+      image: '/assets/supply-hub/storage-buyer-benefits/response-time.webp',
       body: 'Hàng hóa luôn sẵn sàng tại Việt Nam để điều phối và xuất khẩu.',
     },
     {
       number: '4.',
       title: 'Giảm rủi ro chuỗi cung ứng',
+      image: '/assets/supply-hub/storage-buyer-benefits/supply-risk.webp',
       body: 'Duy trì nguồn cung ổn định trong các giai đoạn cao điểm hoặc biến động thị trường.',
     },
     {
       number: '5.',
       title: 'Tối ưu chi phí vận hành',
+      image: '/assets/supply-hub/storage-buyer-benefits/operating-cost.webp',
       body: 'Giảm chi phí lưu kho tại thị trường tiêu thụ và tăng hiệu quả sử dụng vốn.',
     },
   ];
@@ -684,6 +699,19 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             loading="eager"
             decoding="async"
           />
+          <figcaption className="supply-hub-storage-solution-banner-copy">
+            <h1>{t('Lưu kho & Tồn kho tại Việt Nam')}</h1>
+            <p>
+              {t(
+                'ANSLIFE cung cấp giải pháp lưu kho và quản lý tồn kho tại Việt Nam nhằm hỗ trợ buyer quốc tế duy trì nguồn cung ổn định, rút ngắn thời gian giao hàng và giảm áp lực tồn kho tại thị trường đích.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Hàng hóa có thể được lưu trữ dưới dạng thành phẩm, cấu kiện, linh kiện, vật liệu hoặc hàng dự án theo kế hoạch cung ứng của từng đối tác. Giải pháp này đặc biệt phù hợp với các buyer cần xuất hàng định kỳ, duy trì tồn kho đệm hoặc vận hành nhiều nhà cung cấp tại Việt Nam.',
+              )}
+            </p>
+          </figcaption>
         </figure>
       )}
       {isSupplyHubStorageSolutionPage && (
@@ -694,7 +722,13 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               {supplyHubStorageSupportCards.map((card) => (
                 <article key={card.number} className="supply-hub-storage-support-card">
                   <span className="supply-hub-storage-support-number">{card.number}</span>
-                  <div className="supply-hub-storage-image-slot" aria-hidden="true" />
+                  <img
+                    className="supply-hub-storage-support-image"
+                    src={card.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <div className="supply-hub-storage-support-copy">
                     <h3>{t(card.title)}</h3>
                     <p>{t(card.body)}</p>
@@ -714,7 +748,13 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <div className="supply-hub-storage-model-grid">
               {supplyHubStorageModelCards.map((card) => (
                 <article key={card.title} className="supply-hub-storage-model-card">
-                  <div className="supply-hub-storage-model-image-slot" aria-hidden="true" />
+                  <img
+                    className="supply-hub-storage-model-image"
+                    src={card.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <div className="supply-hub-storage-model-copy">
                     <h3>
                       <span>{card.number}</span> {t(card.title)}
@@ -728,7 +768,13 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
           <section className="supply-hub-storage-operations" aria-label={t('Quản lý tồn kho và kết nối chuỗi cung ứng')}>
             {supplyHubStorageOperationCards.map((card) => (
               <article key={card.title} className="supply-hub-storage-operation-card">
-                <div className="supply-hub-storage-operation-image-slot" aria-hidden="true" />
+                <img
+                  className="supply-hub-storage-operation-image"
+                  src={card.image}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div className="supply-hub-storage-operation-copy">
                   <h2>{t(card.title)}</h2>
                   <p>{t(card.body)}</p>
@@ -747,7 +793,13 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <div className="supply-hub-storage-buyer-benefit-grid">
               {supplyHubStorageBuyerBenefits.map((benefit) => (
                 <article key={benefit.title} className="supply-hub-storage-buyer-benefit-card">
-                  <div className="supply-hub-storage-buyer-benefit-image-slot" aria-hidden="true" />
+                  <img
+                    className="supply-hub-storage-buyer-benefit-image"
+                    src={benefit.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <div className="supply-hub-storage-buyer-benefit-copy">
                     <h3>
                       <span>{benefit.number}</span> {t(benefit.title)}
@@ -768,6 +820,26 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 </li>
               ))}
             </ol>
+          </section>
+          <section className="supply-hub-storage-cta" aria-labelledby="storage-cta-title">
+            <div className="supply-hub-storage-cta-copy">
+              <h2 id="storage-cta-title">{t('Cần thiết lập mô hình lưu kho tại Việt Nam?')}</h2>
+              <p>
+                {t(
+                  'Gửi kế hoạch tồn kho, nhóm hàng, tần suất xuất hàng hoặc yêu cầu vận hành để ANSLIFE đề xuất phương án lưu kho phù hợp với chuỗi cung ứng của bạn.',
+                )}
+              </p>
+            </div>
+            <div className="supply-hub-storage-cta-actions">
+              <a href="/contact/supply-hub-inquiry">
+                <span>{t('Gửi yêu cầu Supply Hub')}</span>
+                <b aria-hidden="true">→</b>
+              </a>
+              <a href="/contact/upload-drawing">
+                <span>{t('Tải tài liệu lên')}</span>
+                <b aria-hidden="true">↥</b>
+              </a>
+            </div>
           </section>
         </section>
       )}
