@@ -3547,12 +3547,540 @@ a.mobile-menu-utility-link {
   background: #f4efe6;
 }
 
+.supply-hub-lcl-fcl-consolidation-banner {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4efe6;
+}
+
 .supply-hub-storage-solution-banner > img {
   display: block;
   width: 100%;
   aspect-ratio: 2006 / 784;
   object-fit: cover;
   object-position: center;
+}
+
+.supply-hub-lcl-fcl-consolidation-banner > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2007 / 784;
+  object-fit: cover;
+  object-position: center;
+}
+
+.supply-hub-lcl-fcl-consolidation-banner-copy {
+  position: absolute;
+  left: clamp(1.15rem, 5vw, 4.6rem);
+  top: 50%;
+  z-index: 1;
+  width: min(34vw, 540px);
+  max-width: calc(50% - clamp(2rem, 5vw, 4.6rem));
+  transform: translateY(-50%);
+  color: #20242a;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.78);
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-consolidation-banner-copy h1 {
+  max-width: 13ch;
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 4.4vw, 4.85rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-consolidation-banner-copy span {
+  display: block;
+  margin-top: clamp(0.7rem, 1.1vw, 1rem);
+  color: #242930;
+  font-size: clamp(0.86rem, 0.98vw, 1.08rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-consolidation-banner-copy p {
+  max-width: 54ch;
+  margin: clamp(0.48rem, 0.72vw, 0.68rem) 0 0;
+  color: #30363e;
+  font-size: clamp(0.76rem, 0.82vw, 0.94rem);
+  line-height: 1.42;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-content {
+  padding: clamp(0.85rem, 1.8vw, 1.45rem) clamp(0.3rem, 0.8vw, 0.7rem) clamp(1rem, 2vw, 1.6rem);
+  background: var(--bg) !important;
+}
+
+.supply-hub-lcl-fcl-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.7rem, 1vw, 1rem);
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-card {
+  min-width: 0;
+  padding: clamp(0.74rem, 1vw, 0.95rem) clamp(0.82rem, 1.15vw, 1.08rem) clamp(0.78rem, 1.1vw, 1rem);
+  border: 1px solid rgba(33, 36, 40, 0.24);
+  border-radius: 16px;
+  background: rgba(246, 241, 232, 0.24) !important;
+}
+
+.supply-hub-lcl-fcl-card h2 {
+  margin: 0 0 clamp(0.55rem, 0.8vw, 0.75rem);
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(1.22rem, 1.62vw, 1.72rem);
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-card h2 span {
+  font-size: 0.74em;
+  font-weight: 700;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-card-body {
+  display: grid;
+  grid-template-columns: minmax(165px, 0.92fr) minmax(0, 1.62fr);
+  gap: clamp(0.72rem, 1vw, 1rem);
+  align-items: stretch;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-image,
+.supply-hub-lcl-fcl-image-placeholder {
+  display: block;
+  width: 100%;
+  min-height: clamp(175px, 14vw, 230px);
+  border: 1px dashed rgba(35, 38, 40, 0.22);
+  border-radius: 10px;
+  object-fit: contain;
+  object-position: center;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-column {
+  min-width: 0;
+  padding: 0 clamp(0.6rem, 0.8vw, 0.86rem);
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-column + .supply-hub-lcl-fcl-column {
+  border-left: 1px solid rgba(33, 36, 40, 0.16);
+}
+
+.supply-hub-lcl-fcl-column h3 {
+  margin: 0 0 0.38rem;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.88rem, 1vw, 1.05rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-column ul {
+  margin: 0;
+  padding-left: 1rem;
+  color: #252a30;
+  font-family: var(--font-ui);
+  font-size: clamp(0.7rem, 0.76vw, 0.82rem);
+  line-height: 1.38;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-column li {
+  margin: 0 0 0.22rem;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-operation-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.85fr) minmax(0, 0.82fr) minmax(0, 1.02fr) minmax(0, 0.82fr);
+  gap: clamp(0.55rem, 0.8vw, 0.82rem);
+  margin-top: clamp(0.7rem, 1vw, 1rem);
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-operation-card {
+  min-width: 0;
+  min-height: clamp(250px, 20vw, 315px);
+  padding: clamp(0.72rem, 0.95vw, 0.95rem);
+  border: 1px solid rgba(33, 36, 40, 0.24);
+  border-radius: 16px;
+  background: rgba(246, 241, 232, 0.24) !important;
+}
+
+.supply-hub-lcl-fcl-operation-card h2 {
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(1rem, 1.28vw, 1.34rem);
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-operation-card h2 span {
+  font-weight: 800;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-operation-lead,
+.supply-hub-lcl-fcl-operation-footer {
+  margin: 0.45rem 0 0;
+  color: #30363e;
+  font-family: var(--font-ui);
+  font-size: clamp(0.72rem, 0.8vw, 0.84rem);
+  line-height: 1.42;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-operation-card--multi-factory {
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(190px, 0.92fr);
+  grid-template-areas:
+    'title image'
+    'lead image'
+    'categories image'
+    'footer image';
+  column-gap: clamp(0.72rem, 1vw, 1rem);
+  align-content: start;
+}
+
+.supply-hub-lcl-fcl-operation-card--multi-factory h2 {
+  grid-area: title;
+}
+
+.supply-hub-lcl-fcl-operation-card--multi-factory .supply-hub-lcl-fcl-operation-lead {
+  grid-area: lead;
+}
+
+.supply-hub-lcl-fcl-operation-card--multi-factory .supply-hub-lcl-fcl-category-grid {
+  grid-area: categories;
+}
+
+.supply-hub-lcl-fcl-operation-card--multi-factory .supply-hub-lcl-fcl-large-image,
+.supply-hub-lcl-fcl-operation-card--multi-factory .supply-hub-lcl-fcl-large-image-placeholder {
+  grid-area: image;
+  align-self: stretch;
+  min-height: 100%;
+}
+
+.supply-hub-lcl-fcl-operation-card--multi-factory .supply-hub-lcl-fcl-operation-footer {
+  grid-area: footer;
+}
+
+.supply-hub-lcl-fcl-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 0.62rem;
+  border-top: 1px solid rgba(33, 36, 40, 0.14);
+  border-left: 1px solid rgba(33, 36, 40, 0.14);
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-category-item {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 0.32rem;
+  min-height: 72px;
+  padding: 0.46rem 0.35rem;
+  border-right: 1px solid rgba(33, 36, 40, 0.14);
+  border-bottom: 1px solid rgba(33, 36, 40, 0.14);
+  color: #252a30;
+  font-family: var(--font-ui);
+  font-size: clamp(0.65rem, 0.7vw, 0.76rem);
+  font-weight: 650;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-small-image,
+.supply-hub-lcl-fcl-small-image-placeholder {
+  display: block;
+  width: clamp(36px, 3.4vw, 50px);
+  aspect-ratio: 1.1 / 1;
+  border-radius: 8px;
+  object-fit: contain;
+  object-position: center;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-small-image-placeholder {
+  border: 1px dashed rgba(35, 38, 40, 0.2);
+}
+
+.supply-hub-lcl-fcl-large-image,
+.supply-hub-lcl-fcl-large-image-placeholder {
+  display: block;
+  width: 100%;
+  min-height: clamp(130px, 12vw, 190px);
+  border-radius: 12px;
+  object-fit: contain;
+  object-position: center;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-large-image-placeholder {
+  border: 1px dashed rgba(35, 38, 40, 0.2);
+}
+
+.supply-hub-lcl-fcl-operation-card--pre-export {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  align-content: start;
+}
+
+.supply-hub-lcl-fcl-checklist {
+  display: grid;
+  gap: 0.42rem;
+  margin: 0.72rem 0 0;
+  padding: 0;
+  list-style: none;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-checklist li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.42rem;
+  align-items: start;
+  color: #252a30;
+  font-family: var(--font-ui);
+  font-size: clamp(0.68rem, 0.74vw, 0.8rem);
+  line-height: 1.3;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-checklist li span {
+  display: grid;
+  width: 18px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(33, 36, 40, 0.36);
+  border-radius: 4px;
+  color: #252a30;
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-operation-card--pre-export .supply-hub-lcl-fcl-large-image,
+.supply-hub-lcl-fcl-operation-card--pre-export .supply-hub-lcl-fcl-large-image-placeholder {
+  justify-self: end;
+  width: min(64%, 190px);
+  min-height: clamp(74px, 7.4vw, 108px);
+  margin-top: 0.72rem;
+}
+
+.supply-hub-lcl-fcl-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.78rem;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-feature-item {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 0.36rem;
+  min-height: 88px;
+  padding: 0.52rem 0.36rem;
+  border: 1px solid rgba(33, 36, 40, 0.18);
+  border-radius: 10px;
+  color: #252a30;
+  font-family: var(--font-ui);
+  font-size: clamp(0.65rem, 0.7vw, 0.76rem);
+  font-weight: 700;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0;
+  background: rgba(246, 241, 232, 0.12) !important;
+}
+
+.supply-hub-lcl-fcl-feature-image,
+.supply-hub-lcl-fcl-feature-image-placeholder {
+  display: block;
+  width: clamp(32px, 2.7vw, 42px);
+  aspect-ratio: 1;
+  border-radius: 8px;
+  object-fit: contain;
+  object-position: center;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-feature-image-placeholder {
+  border: 1px dashed rgba(35, 38, 40, 0.2);
+}
+
+.supply-hub-lcl-fcl-buyer-list {
+  display: grid;
+  margin: 0.78rem 0 0;
+  padding: 0;
+  list-style: none;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-buyer-list li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.54rem;
+  align-items: center;
+  min-height: 33px;
+  padding: 0.22rem 0;
+  border-bottom: 1px dashed rgba(33, 36, 40, 0.2);
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-buyer-list li span {
+  display: grid;
+  width: 24px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(33, 36, 40, 0.28);
+  border-radius: 50%;
+  color: #252a30;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-buyer-list p {
+  margin: 0;
+  color: #252a30;
+  font-family: var(--font-ui);
+  font-size: clamp(0.68rem, 0.76vw, 0.82rem);
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-cta {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr) minmax(260px, 0.42fr);
+  gap: clamp(1rem, 1.8vw, 1.8rem);
+  align-items: center;
+  margin-top: clamp(0.7rem, 1vw, 1rem);
+  padding: clamp(0.7rem, 1vw, 0.95rem) clamp(0.9rem, 1.35vw, 1.3rem);
+  border: 1px solid rgba(33, 36, 40, 0.24);
+  border-radius: 16px;
+  background: rgba(246, 241, 232, 0.24) !important;
+}
+
+.supply-hub-lcl-fcl-cta-image,
+.supply-hub-lcl-fcl-cta-image-placeholder {
+  display: block;
+  width: 100%;
+  min-height: clamp(72px, 6.6vw, 105px);
+  border-radius: 12px;
+  object-fit: contain;
+  object-position: center;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-cta-image-placeholder {
+  border: 1px dashed rgba(35, 38, 40, 0.2);
+}
+
+.supply-hub-lcl-fcl-cta-copy {
+  min-width: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-cta-copy h2 {
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(1.35rem, 2vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-cta-copy p {
+  max-width: 78ch;
+  margin: 0.42rem 0 0;
+  color: #30363e;
+  font-family: var(--font-ui);
+  font-size: clamp(0.82rem, 0.98vw, 1rem);
+  line-height: 1.48;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-cta-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.7rem, 1vw, 1rem);
+  background: transparent !important;
+}
+
+.supply-hub-lcl-fcl-cta-actions a {
+  display: flex;
+  min-height: clamp(54px, 4.8vw, 70px);
+  align-items: center;
+  justify-content: center;
+  padding: 0.72rem 1rem;
+  border-radius: 10px;
+  font-family: var(--font-ui);
+  font-size: clamp(0.96rem, 1.24vw, 1.28rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.supply-hub-lcl-fcl-cta-primary {
+  border: 1px solid #f47e30;
+  color: #ffffff;
+  background: #f47e30 !important;
+}
+
+.supply-hub-lcl-fcl-cta-secondary {
+  border: 1px solid #f47e30;
+  color: #f47e30;
+  background: transparent !important;
 }
 
 .supply-hub-storage-solution-banner-copy {
@@ -4730,6 +5258,237 @@ a.mobile-menu-utility-link {
     aspect-ratio: 4 / 3;
     opacity: 0.56;
     object-position: 70% center;
+  }
+
+  .supply-hub-lcl-fcl-consolidation-banner > img {
+    aspect-ratio: 2007 / 784;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .supply-hub-lcl-fcl-consolidation-banner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-width: 0;
+    align-self: start;
+    aspect-ratio: auto;
+    overflow: hidden;
+  }
+
+  .supply-hub-lcl-fcl-consolidation-banner > img {
+    order: 2;
+  }
+
+  .supply-hub-lcl-fcl-consolidation-banner-copy {
+    position: static;
+    order: 1;
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    padding: 1.05rem 1.05rem 1.15rem;
+    transform: none;
+    overflow-wrap: anywhere;
+  }
+
+  .supply-hub-lcl-fcl-consolidation-banner-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(2rem, 10.2vw, 3.25rem);
+    overflow-wrap: normal;
+  }
+
+  .supply-hub-lcl-fcl-consolidation-banner-copy span {
+    margin-top: 0.65rem;
+    font-size: 0.92rem;
+  }
+
+  .supply-hub-lcl-fcl-consolidation-banner-copy p {
+    max-width: 100%;
+    font-size: 0.82rem;
+    line-height: 1.42;
+  }
+
+  .supply-hub-lcl-fcl-content {
+    padding: 0.85rem 0 1.3rem;
+  }
+
+  .supply-hub-lcl-fcl-grid,
+  .supply-hub-lcl-fcl-operation-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.78rem;
+  }
+
+  .supply-hub-lcl-fcl-card,
+  .supply-hub-lcl-fcl-operation-card,
+  .supply-hub-lcl-fcl-cta {
+    border-radius: 14px;
+  }
+
+  .supply-hub-lcl-fcl-card {
+    padding: 0.86rem;
+  }
+
+  .supply-hub-lcl-fcl-card h2 {
+    margin-bottom: 0.72rem;
+    font-size: 1.22rem;
+    text-align: left;
+  }
+
+  .supply-hub-lcl-fcl-card h2 span {
+    display: block;
+    margin-top: 0.1rem;
+    font-size: 0.76rem;
+  }
+
+  .supply-hub-lcl-fcl-card-body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.76rem;
+  }
+
+  .supply-hub-lcl-fcl-image,
+  .supply-hub-lcl-fcl-image-placeholder {
+    min-height: 120px;
+  }
+
+  .supply-hub-lcl-fcl-columns {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.64rem;
+  }
+
+  .supply-hub-lcl-fcl-column {
+    padding: 0.68rem 0.72rem;
+    border: 1px solid rgba(33, 36, 40, 0.14);
+    border-radius: 10px;
+  }
+
+  .supply-hub-lcl-fcl-column + .supply-hub-lcl-fcl-column {
+    border-left: 1px solid rgba(33, 36, 40, 0.14);
+  }
+
+  .supply-hub-lcl-fcl-column h3 {
+    font-size: 0.96rem;
+  }
+
+  .supply-hub-lcl-fcl-column ul {
+    font-size: 0.8rem;
+    line-height: 1.42;
+  }
+
+  .supply-hub-lcl-fcl-operation-grid {
+    margin-top: 0.78rem;
+  }
+
+  .supply-hub-lcl-fcl-operation-card {
+    min-height: 0;
+    padding: 0.86rem;
+  }
+
+  .supply-hub-lcl-fcl-operation-card h2 {
+    font-size: 1.08rem;
+  }
+
+  .supply-hub-lcl-fcl-operation-lead,
+  .supply-hub-lcl-fcl-operation-footer {
+    font-size: 0.8rem;
+    line-height: 1.44;
+  }
+
+  .supply-hub-lcl-fcl-operation-card--multi-factory {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'title'
+      'lead'
+      'categories'
+      'image'
+      'footer';
+    row-gap: 0;
+  }
+
+  .supply-hub-lcl-fcl-operation-card--multi-factory .supply-hub-lcl-fcl-large-image,
+  .supply-hub-lcl-fcl-operation-card--multi-factory .supply-hub-lcl-fcl-large-image-placeholder {
+    min-height: 120px;
+    margin-top: 0.72rem;
+  }
+
+  .supply-hub-lcl-fcl-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .supply-hub-lcl-fcl-category-item {
+    min-height: 68px;
+    font-size: 0.74rem;
+  }
+
+  .supply-hub-lcl-fcl-small-image,
+  .supply-hub-lcl-fcl-small-image-placeholder {
+    width: 44px;
+  }
+
+  .supply-hub-lcl-fcl-checklist {
+    gap: 0.48rem;
+  }
+
+  .supply-hub-lcl-fcl-checklist li {
+    font-size: 0.8rem;
+  }
+
+  .supply-hub-lcl-fcl-operation-card--pre-export .supply-hub-lcl-fcl-large-image,
+  .supply-hub-lcl-fcl-operation-card--pre-export .supply-hub-lcl-fcl-large-image-placeholder {
+    justify-self: stretch;
+    width: 100%;
+    min-height: 92px;
+  }
+
+  .supply-hub-lcl-fcl-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .supply-hub-lcl-fcl-feature-item {
+    min-height: 86px;
+    font-size: 0.74rem;
+  }
+
+  .supply-hub-lcl-fcl-buyer-list li {
+    min-height: 36px;
+    padding: 0.28rem 0;
+  }
+
+  .supply-hub-lcl-fcl-buyer-list p {
+    font-size: 0.8rem;
+  }
+
+  .supply-hub-lcl-fcl-cta {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.8rem;
+    margin-top: 0.78rem;
+    padding: 0.9rem;
+  }
+
+  .supply-hub-lcl-fcl-cta-image,
+  .supply-hub-lcl-fcl-cta-image-placeholder {
+    min-height: 86px;
+  }
+
+  .supply-hub-lcl-fcl-cta-copy h2 {
+    font-size: 1.24rem;
+  }
+
+  .supply-hub-lcl-fcl-cta-copy p {
+    font-size: 0.82rem;
+    line-height: 1.44;
+  }
+
+  .supply-hub-lcl-fcl-cta-actions {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.58rem;
+  }
+
+  .supply-hub-lcl-fcl-cta-actions a {
+    min-height: 48px;
+    font-size: 0.98rem;
   }
 
   .supply-hub-storage-solution-banner-copy {
@@ -15051,6 +15810,10 @@ a.mobile-menu-utility-link {
     .supply-hub-overview-banner *
   ):not(.supply-hub-storage-solution-banner):not(
     .supply-hub-storage-solution-banner *
+  ):not(.supply-hub-lcl-fcl-consolidation-banner):not(
+    .supply-hub-lcl-fcl-consolidation-banner *
+  ):not(.supply-hub-lcl-fcl-content):not(
+    .supply-hub-lcl-fcl-content *
   ):not(.supply-hub-storage-content):not(
     .supply-hub-storage-content *
   ):not(.supply-hub-overview-content):not(

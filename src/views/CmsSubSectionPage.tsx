@@ -292,6 +292,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'vietnam-supply-hub' && section.id === 'overview' && !detailSlug;
   const isSupplyHubStorageSolutionPage =
     config.slug === 'vietnam-supply-hub' && section.id === 'storage-solution' && !detailSlug;
+  const isSupplyHubLclFclConsolidationPage =
+    config.slug === 'vietnam-supply-hub' &&
+    section.id === 'lcl-fcl-consolidation' &&
+    !detailSlug;
   const shouldRenderBlankScholarshipPage =
     config.slug === 'about-anslife' && section.id === 'scholarship-community';
   const shouldRenderBlankQualityInProcessPage =
@@ -300,7 +304,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     shouldRenderBlankScholarshipPage ||
     shouldRenderBlankQualityInProcessPage ||
     isSupplyHubOverviewPage ||
-    isSupplyHubStorageSolutionPage;
+    isSupplyHubStorageSolutionPage ||
+    isSupplyHubLclFclConsolidationPage;
   const isCustomAboutSection =
     config.slug === 'about-anslife' &&
     (section.id === 'philosophy' ||
@@ -323,6 +328,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     (config.slug === 'resources' && section.id === 'faq') ||
     isSupplyHubOverviewPage ||
     isSupplyHubStorageSolutionPage ||
+    isSupplyHubLclFclConsolidationPage ||
     isCustomAboutSection ||
     (config.slug === 'about-anslife' &&
       (section.id === 'philosophy' ||
@@ -367,6 +373,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       : data?.content.rendered ?? fallbackHtml;
   const shouldShowSupplyHubOverviewBanner = isSupplyHubOverviewPage;
   const shouldShowSupplyHubStorageSolutionBanner = isSupplyHubStorageSolutionPage;
+  const shouldShowSupplyHubLclFclConsolidationBanner = isSupplyHubLclFclConsolidationPage;
   const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
     !shouldRenderBlankSubSectionPage && Boolean(error) && !resolvedHtml;
@@ -620,6 +627,145 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     'Điều phối logistics',
     'Xuất khẩu & giao hàng',
   ];
+  const supplyHubLclFclComparisonCards = [
+    {
+      title: 'Hàng LCL',
+      subtitle: 'Less than Container Load',
+      image: '/assets/supply-hub/lcl-fcl-consolidation/lcl-load.webp',
+      columns: [
+        {
+          title: 'Khi nào phù hợp',
+          items: [
+            'Chưa đủ số lượng để đóng nguyên container',
+            'Hàng từ nhiều nhà máy khác nhau',
+            'Đơn hàng nhỏ hoặc nhiều SKU',
+            'Cần giao hàng linh hoạt theo từng đợt',
+          ],
+        },
+        {
+          title: 'ANSLIFE hỗ trợ',
+          items: [
+            'Tiếp nhận hàng từ nhiều nhà cung cấp',
+            'Kiểm tra số lượng và tình trạng đóng gói',
+            'Gom hàng tại kho Việt Nam',
+            'Điều phối lịch xuất hàng',
+            'Chuẩn bị chứng từ liên quan',
+            'Hỗ trợ phối hợp với đơn vị vận chuyển',
+          ],
+        },
+        {
+          title: 'Lợi ích',
+          items: [
+            'Không cần chờ đủ container',
+            'Giảm áp lực tồn kho tại điểm đến',
+            'Tối ưu dòng tiền',
+            'Linh hoạt cho các đơn hàng nhỏ hoặc thử nghiệm thị trường',
+          ],
+        },
+      ],
+    },
+    {
+      title: 'Hàng FCL',
+      subtitle: 'Full Container Load',
+      image: '/assets/supply-hub/lcl-fcl-consolidation/fcl-load.webp',
+      columns: [
+        {
+          title: 'Khi nào phù hợp',
+          items: [
+            'Đơn hàng đủ tải container',
+            'Dự án có sản lượng lớn',
+            'Yêu cầu tối ưu chi phí vận chuyển',
+            'Cần kiểm soát tốt việc đóng hàng',
+          ],
+        },
+        {
+          title: 'ANSLIFE hỗ trợ',
+          items: [
+            'Lập kế hoạch đóng container',
+            'Điều phối hàng từ nhiều nhà máy',
+            'Kiểm tra đóng gói trước khi xuất hàng',
+            'Giám sát quá trình đóng container',
+            'Chuẩn bị chứng từ xuất khẩu',
+            'Điều phối lịch tàu và lịch giao hàng',
+          ],
+        },
+        {
+          title: 'Lợi ích',
+          items: [
+            'Chi phí vận chuyển tối ưu hơn',
+            'Giảm rủi ro hư hỏng trong quá trình vận chuyển',
+            'Chủ động lịch giao hàng',
+            'Kiểm soát tốt chất lượng và số lượng hàng hóa',
+          ],
+        },
+      ],
+    },
+  ];
+  const supplyHubLclFclOperationBlocks = [
+    {
+      number: '2.',
+      title: 'Gom hàng từ nhiều nhà máy',
+      description:
+        'Một dự án xuất khẩu thường không được sản xuất bởi một nhà máy duy nhất. ANSLIFE có thể hỗ trợ gom hàng từ nhiều nguồn khác nhau như:',
+      variant: 'multi-factory',
+      image: '/assets/supply-hub/lcl-fcl-consolidation/multi-factory-flow.webp',
+      categories: [
+        ['Nội thất hoàn thiện', '/assets/supply-hub/lcl-fcl-consolidation/category-finished-furniture.webp'],
+        ['Cấu kiện nội thất', '/assets/supply-hub/lcl-fcl-consolidation/category-furniture-components.webp'],
+        ['Vật liệu sản xuất', '/assets/supply-hub/lcl-fcl-consolidation/category-production-materials.webp'],
+        ['Sản phẩm OEM / ODM', '/assets/supply-hub/lcl-fcl-consolidation/category-oem-odm.webp'],
+        ['Hàng mẫu', '/assets/supply-hub/lcl-fcl-consolidation/category-samples.webp'],
+        ['Linh kiện và phụ kiện', '/assets/supply-hub/lcl-fcl-consolidation/category-hardware-accessories.webp'],
+      ],
+      footer:
+        'Sau khi tập kết tại kho, hàng hóa sẽ được kiểm tra, phân loại và tổ chức xuất khẩu theo kế hoạch của buyer.',
+    },
+    {
+      number: '3.',
+      title: 'Kiểm soát trước khi xuất hàng',
+      description: 'Trước khi hàng được xuất đi, ANSLIFE có thể hỗ trợ:',
+      variant: 'pre-export',
+      checklist: [
+        'Kiểm tra số lượng',
+        'Đối chiếu packing list',
+        'Kiểm tra tình trạng đóng gói',
+        'Kiểm tra nhãn mác',
+        'Đối chiếu mẫu duyệt nếu cần',
+        'Chụp ảnh và lập báo cáo trước khi xuất hàng',
+      ],
+    },
+    {
+      number: '4.',
+      title: 'Tích hợp với Supply Hub Việt Nam',
+      description:
+        'Dịch vụ gom hàng LCL / FCL được tích hợp cùng mô hình Supply Hub của ANSLIFE, cho phép:',
+      variant: 'supply-hub',
+      features: [
+        ['Lưu kho tạm thời', '/assets/supply-hub/lcl-fcl-consolidation/feature-temporary-storage.webp'],
+        ['Tồn kho đệm tại Việt Nam', '/assets/supply-hub/lcl-fcl-consolidation/feature-buffer-inventory.webp'],
+        ['Gom hàng từ nhiều nguồn', '/assets/supply-hub/lcl-fcl-consolidation/feature-multi-source.webp'],
+        ['Điều phối xuất hàng định kỳ', '/assets/supply-hub/lcl-fcl-consolidation/feature-scheduled-export.webp'],
+        ['Quản lý chứng từ xuất khẩu', '/assets/supply-hub/lcl-fcl-consolidation/feature-export-documents.webp'],
+        [
+          'Hỗ trợ buyer tại nhiều thị trường khác nhau',
+          '/assets/supply-hub/lcl-fcl-consolidation/feature-multi-market.webp',
+        ],
+      ],
+    },
+    {
+      number: '5.',
+      title: 'Buyer cần cung cấp',
+      variant: 'buyer-input',
+      steps: [
+        'Danh sách sản phẩm',
+        'Danh sách nhà cung cấp hoặc nhà máy',
+        'Số lượng dự kiến',
+        'Kế hoạch giao hàng',
+        'Thị trường xuất khẩu',
+        'Yêu cầu đóng gói và ghi nhãn (nếu có)',
+      ],
+    },
+  ];
 
   return (
     <>
@@ -713,6 +859,169 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             </p>
           </figcaption>
         </figure>
+      )}
+      {shouldShowSupplyHubLclFclConsolidationBanner && (
+        <figure className="supply-hub-lcl-fcl-consolidation-banner">
+          <img
+            src="/assets/supply-hub/lcl-fcl-consolidation-banner.png"
+            alt={t('Sơ đồ gom hàng LCL / FCL từ nhà máy qua kho ANSLIFE đến xuất khẩu')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="supply-hub-lcl-fcl-consolidation-banner-copy">
+            <h1>{t('Gom hàng LCL / FCL')}</h1>
+            <span>{t('Tổng quan')}</span>
+            <p>
+              {t(
+                'ANSLIFE hỗ trợ gom hàng từ nhiều nhà máy, nhiều nhà cung cấp hoặc nhiều nhóm sản phẩm khác nhau tại Việt Nam trước khi xuất khẩu.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Giải pháp này giúp buyer giảm chi phí logistics, tối ưu kế hoạch giao hàng, đơn giản hóa quản lý chứng từ và hạn chế việc phải làm việc với nhiều đơn vị vận chuyển khác nhau.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE có thể tiếp nhận hàng từ các nhà máy đối tác, kiểm tra tình trạng hàng hóa, tổ chức lưu kho tạm thời, gom hàng theo kế hoạch và điều phối xuất khẩu theo hình thức LCL hoặc FCL.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isSupplyHubLclFclConsolidationPage && (
+        <section className="supply-hub-lcl-fcl-content" aria-label={t('So sánh LCL và FCL')}>
+          <div className="supply-hub-lcl-fcl-grid">
+            {supplyHubLclFclComparisonCards.map((card) => (
+              <article key={card.title} className="supply-hub-lcl-fcl-card">
+                <h2>
+                  {t(card.title)} <span>({t(card.subtitle)})</span>
+                </h2>
+                <div className="supply-hub-lcl-fcl-card-body">
+                  <img
+                    className="supply-hub-lcl-fcl-image"
+                    src={card.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="supply-hub-lcl-fcl-columns">
+                    {card.columns.map((column) => (
+                      <section key={column.title} className="supply-hub-lcl-fcl-column">
+                        <h3>{t(column.title)}</h3>
+                        <ul>
+                          {column.items.map((item) => (
+                            <li key={item}>{t(item)}</li>
+                          ))}
+                        </ul>
+                      </section>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="supply-hub-lcl-fcl-operation-grid">
+            {supplyHubLclFclOperationBlocks.map((block) => (
+              <article
+                key={block.title}
+                className={`supply-hub-lcl-fcl-operation-card supply-hub-lcl-fcl-operation-card--${block.variant}`}
+              >
+                <h2>
+                  <span>{block.number}</span> {t(block.title)}
+                </h2>
+                {block.description && <p className="supply-hub-lcl-fcl-operation-lead">{t(block.description)}</p>}
+                {block.categories && (
+                  <div className="supply-hub-lcl-fcl-category-grid">
+                    {block.categories.map(([category, image]) => (
+                      <div key={category} className="supply-hub-lcl-fcl-category-item">
+                        <img
+                          className="supply-hub-lcl-fcl-small-image"
+                          src={image}
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <span>{t(category)}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {block.checklist && (
+                  <ul className="supply-hub-lcl-fcl-checklist">
+                    {block.checklist.map((item) => (
+                      <li key={item}>
+                        <span aria-hidden="true">✓</span>
+                        {t(item)}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {block.features && (
+                  <div className="supply-hub-lcl-fcl-feature-grid">
+                    {block.features.map(([feature, image]) => (
+                      <div key={feature} className="supply-hub-lcl-fcl-feature-item">
+                        <img
+                          className="supply-hub-lcl-fcl-feature-image"
+                          src={image}
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <span>{t(feature)}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {block.steps && (
+                  <ol className="supply-hub-lcl-fcl-buyer-list">
+                    {block.steps.map((step, index) => (
+                      <li key={step}>
+                        <span>{index + 1}</span>
+                        <p>{t(step)}</p>
+                      </li>
+                    ))}
+                  </ol>
+                )}
+                {block.image && block.variant !== 'supply-hub' && block.variant !== 'buyer-input' && (
+                  <img
+                    className="supply-hub-lcl-fcl-large-image"
+                    src={block.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                )}
+                {block.footer && <p className="supply-hub-lcl-fcl-operation-footer">{t(block.footer)}</p>}
+              </article>
+            ))}
+          </div>
+          <section className="supply-hub-lcl-fcl-cta" aria-labelledby="lcl-fcl-cta-title">
+            <img
+              className="supply-hub-lcl-fcl-cta-image"
+              src="/assets/supply-hub/lcl-fcl-consolidation/cta-handshake.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="supply-hub-lcl-fcl-cta-copy">
+              <h2 id="lcl-fcl-cta-title">{t('Cần gom hàng từ nhiều nhà máy tại Việt Nam?')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ tiếp nhận, lưu kho, kiểm tra, gom hàng và điều phối xuất khẩu theo hình thức LCL hoặc FCL phù hợp với kế hoạch cung ứng của từng buyer.',
+                )}
+              </p>
+            </div>
+            <div className="supply-hub-lcl-fcl-cta-actions">
+              <a className="supply-hub-lcl-fcl-cta-primary" href="/contact/supply-hub-inquiry">
+                {t('Gửi yêu cầu')}
+              </a>
+              <a className="supply-hub-lcl-fcl-cta-secondary" href="/contact">
+                {t('Liên hệ ANSLIFE')}
+              </a>
+            </div>
+          </section>
+        </section>
       )}
       {isSupplyHubStorageSolutionPage && (
         <section className="supply-hub-storage-content" aria-labelledby="storage-support-title">
