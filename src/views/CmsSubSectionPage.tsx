@@ -296,6 +296,18 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'vietnam-supply-hub' &&
     section.id === 'lcl-fcl-consolidation' &&
     !detailSlug;
+  const isSupplyHubWeeklyShipmentArrangementPage =
+    config.slug === 'vietnam-supply-hub' &&
+    section.id === 'weekly-shipment-arrangement' &&
+    !detailSlug;
+  const isSupplyHubMaterialComponentStoragePage =
+    config.slug === 'vietnam-supply-hub' &&
+    section.id === 'material-component-storage' &&
+    !detailSlug;
+  const isSupplyHubExportDocumentationSupportPage =
+    config.slug === 'vietnam-supply-hub' &&
+    section.id === 'export-documentation-support' &&
+    !detailSlug;
   const shouldRenderBlankScholarshipPage =
     config.slug === 'about-anslife' && section.id === 'scholarship-community';
   const shouldRenderBlankQualityInProcessPage =
@@ -305,7 +317,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     shouldRenderBlankQualityInProcessPage ||
     isSupplyHubOverviewPage ||
     isSupplyHubStorageSolutionPage ||
-    isSupplyHubLclFclConsolidationPage;
+    isSupplyHubLclFclConsolidationPage ||
+    isSupplyHubWeeklyShipmentArrangementPage ||
+    isSupplyHubMaterialComponentStoragePage ||
+    isSupplyHubExportDocumentationSupportPage;
   const isCustomAboutSection =
     config.slug === 'about-anslife' &&
     (section.id === 'philosophy' ||
@@ -329,6 +344,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isSupplyHubOverviewPage ||
     isSupplyHubStorageSolutionPage ||
     isSupplyHubLclFclConsolidationPage ||
+    isSupplyHubWeeklyShipmentArrangementPage ||
+    isSupplyHubMaterialComponentStoragePage ||
+    isSupplyHubExportDocumentationSupportPage ||
     isCustomAboutSection ||
     (config.slug === 'about-anslife' &&
       (section.id === 'philosophy' ||
@@ -374,6 +392,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldShowSupplyHubOverviewBanner = isSupplyHubOverviewPage;
   const shouldShowSupplyHubStorageSolutionBanner = isSupplyHubStorageSolutionPage;
   const shouldShowSupplyHubLclFclConsolidationBanner = isSupplyHubLclFclConsolidationPage;
+  const shouldShowSupplyHubWeeklyShipmentArrangementBanner = isSupplyHubWeeklyShipmentArrangementPage;
+  const shouldShowSupplyHubMaterialComponentStorageBanner = isSupplyHubMaterialComponentStoragePage;
+  const shouldShowSupplyHubExportDocumentationSupportBanner = isSupplyHubExportDocumentationSupportPage;
   const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
     !shouldRenderBlankSubSectionPage && Boolean(error) && !resolvedHtml;
@@ -766,6 +787,517 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       ],
     },
   ];
+  const supplyHubWeeklyShipmentGoals = [
+    'Duy trì nguồn hàng ổn định',
+    'Đồng bộ sản xuất và giao hàng',
+    'Giảm tồn kho tại thị trường đích',
+    'Giảm rủi ro thiếu hàng hoặc giao hàng gián đoạn',
+    'Hỗ trợ lập kế hoạch bán hàng dài hạn',
+    'Tối ưu chi phí logistics và vận hành',
+  ];
+  const supplyHubWeeklyShipmentModels = [
+    {
+      title: 'Xuất hàng hằng tuần',
+      label: 'TUẦN',
+      items: [
+        'Chuỗi bán lẻ',
+        'Nhà phân phối',
+        'Dự án có nhu cầu bổ sung liên tục',
+        'Thị trường yêu cầu tốc độ cung ứng cao',
+      ],
+    },
+    {
+      title: 'Xuất hàng hai tuần một lần',
+      label: '2 TUẦN',
+      items: [
+        'Buyer có kế hoạch nhập hàng ổn định',
+        'Đơn hàng trung bình',
+        'Nhiều SKU nhưng sản lượng không quá lớn',
+      ],
+    },
+    {
+      title: 'Xuất hàng hằng tháng',
+      label: 'THÁNG',
+      items: [
+        'Dự án quy mô lớn',
+        'Hàng nguyên container',
+        'Buyer có hệ thống kho riêng',
+      ],
+    },
+    {
+      title: 'Xuất hàng theo kế hoạch riêng',
+      label: '',
+      items: [
+        'Mùa vụ kinh doanh',
+        'Kế hoạch bán hàng',
+        'Dự án khách sạn, resort hoặc chuỗi cửa hàng',
+        'Tiến độ triển khai công trình',
+      ],
+    },
+  ];
+  const supplyHubWeeklyShipmentSupportBlocks = [
+    {
+      title: 'Lập kế hoạch cung ứng',
+      items: [
+        'Xây dựng lịch giao hàng',
+        'Dự báo nhu cầu',
+        'Điều phối sản lượng giữa các nhà máy',
+        'Theo dõi tiến độ sản xuất',
+      ],
+    },
+    {
+      title: 'Điều phối hàng hóa',
+      items: [
+        'Gom hàng từ nhiều nhà máy',
+        'Quản lý tồn kho đệm',
+        'Kiểm soát số lượng xuất hàng',
+        'Điều phối LCL hoặc FCL',
+      ],
+    },
+    {
+      title: 'Điều phối logistics',
+      items: [
+        'Đặt lịch xuất hàng',
+        'Điều phối vận tải nội địa',
+        'Phối hợp đơn vị logistics',
+        'Theo dõi lịch tàu và lịch giao hàng',
+      ],
+    },
+    {
+      title: 'Quản lý chứng từ',
+      items: [
+        'Packing List',
+        'Commercial Invoice',
+        'Shipping Documents',
+        'Chứng từ theo yêu cầu của buyer',
+      ],
+    },
+  ];
+  const supplyHubWeeklyShipmentBufferBenefits = [
+    'Rút ngắn thời gian giao hàng',
+    'Chủ động xử lý các đơn hàng phát sinh',
+    'Giảm áp lực sản xuất gấp',
+    'Hạn chế rủi ro gián đoạn chuỗi cung ứng',
+  ];
+  const supplyHubWeeklyShipmentPreExportChecks = [
+    'Đối chiếu đơn hàng',
+    'Kiểm tra số lượng',
+    'Kiểm tra đóng gói',
+    'Kiểm tra nhãn mác',
+    'Đối chiếu mẫu duyệt',
+    'Lập báo cáo kiểm tra',
+  ];
+  const supplyHubWeeklyShipmentAudiences = [
+    {
+      title: 'Nhà nhập khẩu nội thất',
+      description: 'Duy trì nguồn hàng ổn định cho hệ thống phân phối.',
+    },
+    {
+      title: 'Chuỗi bán lẻ',
+      description: 'Bổ sung hàng hóa theo chu kỳ bán hàng.',
+    },
+    {
+      title: 'Khách sạn, resort và dự án',
+      description: 'Điều phối nhiều đợt giao hàng theo tiến độ triển khai.',
+    },
+    {
+      title: 'Nhà phân phối vật liệu và cấu kiện',
+      description: 'Duy trì tồn kho tối ưu và kế hoạch nhập hàng đều đặn.',
+    },
+  ];
+  const supplyHubWeeklyShipmentProcessSteps = [
+    'Kế hoạch nhu cầu',
+    'Xây dựng lịch xuất hàng',
+    'Điều phối sản xuất',
+    'Lưu kho & tồn kho đệm',
+    'Gom hàng',
+    'QC & đối chiếu',
+    'Xuất hàng định kỳ',
+    'Theo dõi giao hàng',
+  ];
+  const supplyHubWeeklyShipmentBuyerInputs = [
+    'Danh mục sản phẩm',
+    'Sản lượng dự kiến',
+    'Chu kỳ giao hàng mong muốn',
+    'Thị trường xuất khẩu',
+    'Kế hoạch bán hàng hoặc triển khai dự án',
+    'Yêu cầu đặc biệt về đóng gói hoặc logistics',
+  ];
+  const weeklyShipmentAssetBase = '/assets/supply-hub/weekly-shipment-arrangement';
+  const supplyHubWeeklyShipmentGoalImages = [
+    'goal-01.webp',
+    'goal-02.webp',
+    'goal-03.webp',
+    'goal-04.webp',
+    'goal-05.webp',
+    'goal-06.webp',
+  ].map((file) => `${weeklyShipmentAssetBase}/${file}`);
+  const supplyHubWeeklyShipmentModelImages = [
+    'model-01.webp',
+    'model-02.webp',
+    'model-03.webp',
+    'model-04.webp',
+  ].map((file) => `${weeklyShipmentAssetBase}/${file}`);
+  const supplyHubWeeklyShipmentSupportImages = [
+    'support-01.webp',
+    'support-02.webp',
+    'support-03.webp',
+    'support-04.webp',
+  ].map((file) => `${weeklyShipmentAssetBase}/${file}`);
+  const supplyHubWeeklyShipmentBufferImages = [
+    'buffer-01.webp',
+    'buffer-02.webp',
+    'buffer-03.webp',
+    'buffer-04.webp',
+  ].map((file) => `${weeklyShipmentAssetBase}/${file}`);
+  const supplyHubWeeklyShipmentCheckImages = [
+    'check-01.webp',
+    'check-02.webp',
+    'check-03.webp',
+    'check-04.webp',
+    'check-05.webp',
+    'check-06.webp',
+  ].map((file) => `${weeklyShipmentAssetBase}/${file}`);
+  const supplyHubWeeklyShipmentAudienceImages = [
+    'audience-01.webp',
+    'audience-02.webp',
+    'audience-03.webp',
+    'audience-04.webp',
+  ].map((file) => `${weeklyShipmentAssetBase}/${file}`);
+  const supplyHubWeeklyShipmentProcessImages = [
+    'process-01.webp',
+    'process-02.webp',
+    'process-03.webp',
+    'process-04.webp',
+    'process-05.webp',
+    'process-06.webp',
+    'process-07.webp',
+    'process-08.webp',
+  ].map((file) => `${weeklyShipmentAssetBase}/${file}`);
+  const supplyHubMaterialStorageGroups = [
+    {
+      title: 'Vật liệu sản xuất',
+      items: [
+        'Gỗ tự nhiên',
+        'Gỗ kỹ thuật (Plywood, MDF, Particle Board)',
+        'Veneer',
+        'Mây, tre và vật liệu tự nhiên',
+        'Foam, mút và vật liệu đệm',
+        'Vải, da và vật liệu bọc',
+        'Vật liệu hoàn thiện bề mặt',
+        'Vật liệu đóng gói',
+      ],
+    },
+    {
+      title: 'Cấu kiện nội thất',
+      items: [
+        'Khung ghế',
+        'Tay ghế',
+        'Lưng ghế',
+        'Chân ghế',
+        'Mặt bàn',
+        'Chân bàn',
+        'Bộ phận tủ',
+        'Bộ phận giường',
+        'Cấu kiện bọc nệm',
+        'Cấu kiện sản xuất theo bản vẽ',
+      ],
+    },
+    {
+      title: 'Bán thành phẩm',
+      items: [
+        'Chi tiết đã gia công',
+        'Chi tiết đã hoàn thiện bề mặt',
+        'Chi tiết chờ lắp ráp',
+        'Bộ linh kiện đồng bộ sản phẩm',
+        'Hàng dự phòng cho các đơn hàng lặp lại',
+      ],
+    },
+  ];
+  const supplyHubMaterialStorageGoals = [
+    {
+      title: 'Duy trì nguồn cung ổn định',
+      body: 'Đảm bảo vật liệu, cấu kiện luôn sẵn sàng cho sản xuất và cung ứng dài hạn.',
+    },
+    {
+      title: 'Hỗ trợ sản xuất theo kế hoạch',
+      body: 'Cung cấp vật liệu, cấu kiện đúng thời điểm theo kế hoạch sản xuất.',
+    },
+    {
+      title: 'Rút ngắn thời gian triển khai đơn hàng',
+      body: 'Có sẵn vật liệu và cấu kiện để giảm thời gian chờ đợi, tăng tốc độ thực hiện đơn hàng.',
+    },
+    {
+      title: 'Hỗ trợ nhiều nhà máy trong cùng một dự án',
+      body: 'Điều phối linh hoạt giữa nhiều nhà máy để đảm bảo tiến độ chung.',
+    },
+  ];
+  const supplyHubMaterialProjectInventoryGroups = [
+    {
+      label: 'Buyer',
+      items: [
+        'Tách riêng vật liệu và cấu kiện của từng buyer',
+        'Theo dõi lịch sử nhập và xuất kho',
+        'Hỗ trợ các chương trình cung ứng dài hạn',
+      ],
+    },
+    {
+      label: 'Dự án',
+      items: [
+        'Quản lý vật liệu theo từng dự án',
+        'Theo dõi mục tiêu thực hiện',
+        'Hỗ trợ triển khai theo nhiều giai đoạn',
+      ],
+    },
+    {
+      label: 'Mã sản phẩm',
+      items: [
+        'Theo dõi theo SKU',
+        'Theo dõi theo mã cấu kiện',
+        'Theo dõi theo mã vật liệu',
+      ],
+    },
+  ];
+  const supplyHubMaterialProductionDispatch = [
+    'Cấp phát cho nhà máy sản xuất',
+    'Cấp phát cho đơn vị lắp ráp',
+    'Cấp phát cho đơn vị hoàn thiện bề mặt',
+    'Điều phối giữa nhiều nhà máy trong cùng một dự án',
+    'Chuẩn bị cho hoạt động xuất khẩu',
+  ];
+  const supplyHubMaterialSupplyHubIntegration = [
+    'Quản lý tồn kho tập trung',
+    'Điều phối sản xuất linh hoạt',
+    'Gom hàng từ nhiều nguồn',
+    'Hỗ trợ xuất hàng định kỳ',
+    'Hỗ trợ triển khai các chương trình cung ứng dài hạn',
+  ];
+  const supplyHubMaterialTraceabilityControls = [
+    'Quản lý mã vật liệu',
+    'Quản lý mã cấu kiện',
+    'Kiểm tra số lượng nhập xuất',
+    'Đối chiếu chứng từ kho',
+    'Truy xuất theo lô hàng',
+    'Truy xuất theo dự án hoặc buyer',
+  ];
+  const supplyHubMaterialAudiences = [
+    {
+      title: 'Buyer quốc tế',
+      body: 'Các thương hiệu, nhà bán lẻ, nhà nhập khẩu cần quản lý nguồn vật liệu và cấu kiện tại Việt Nam.',
+    },
+    {
+      title: 'Nhà máy sản xuất',
+      body: 'Nhà máy nội thất, đơn vị lắp ráp cần nguồn vật liệu và cấu kiện ổn định, linh hoạt theo kế hoạch.',
+    },
+    {
+      title: 'Dự án khách sạn, resort và chuỗi bán lẻ',
+      body: 'Các dự án cần nhiều cấu kiện, vật liệu cho nhiều hạng mục và giai đoạn khác nhau.',
+    },
+    {
+      title: 'Chương trình OEM / ODM',
+      body: 'Doanh nghiệp triển khai sản phẩm theo đơn hàng riêng, cần lưu kho và điều phối linh hoạt.',
+    },
+  ];
+  const supplyHubMaterialOperationSteps = [
+    'Tiếp nhận vật liệu / cấu kiện',
+    'Kiểm tra & ghi nhận',
+    'Lưu kho theo buyer hoặc dự án',
+    'Theo dõi tồn kho',
+    'Cấp phát theo kế hoạch sản xuất',
+    'Gom hàng hoặc chuẩn bị xuất khẩu',
+    'Báo cáo & truy xuất',
+  ];
+  const materialStorageAssetBase = '/assets/supply-hub/material-component-storage';
+  const supplyHubMaterialStorageItemImages = [
+    'item-01.webp',
+    'item-02.webp',
+    'item-03.webp',
+  ].map((file) => `${materialStorageAssetBase}/${file}`);
+  const supplyHubMaterialStorageGoalImages = [
+    'goal-01.webp',
+    'goal-02.webp',
+    'goal-03.webp',
+    'goal-04.webp',
+  ].map((file) => `${materialStorageAssetBase}/${file}`);
+  const supplyHubMaterialProjectImages = [
+    'project-01.webp',
+    'project-02.webp',
+    'project-03.webp',
+  ].map((file) => `${materialStorageAssetBase}/${file}`);
+  const supplyHubMaterialDispatchImages = [
+    'dispatch-01.webp',
+    'dispatch-02.webp',
+    'dispatch-03.webp',
+    'dispatch-04.webp',
+    'dispatch-05.webp',
+  ].map((file) => `${materialStorageAssetBase}/${file}`);
+  const supplyHubMaterialSupplyHubImages = [
+    'supply-hub-01.webp',
+    'supply-hub-02.webp',
+    'supply-hub-03.webp',
+    'supply-hub-04.webp',
+    'supply-hub-05.webp',
+  ].map((file) => `${materialStorageAssetBase}/${file}`);
+  const supplyHubMaterialAudienceImages = [
+    'audience-01.webp',
+    'audience-02.webp',
+    'audience-03.webp',
+    'audience-04.webp',
+  ].map((file) => `${materialStorageAssetBase}/${file}`);
+  const supplyHubMaterialOperationImages = [
+    'operation-01.webp',
+    'operation-02.webp',
+    'operation-03.webp',
+    'operation-04.webp',
+    'operation-05.webp',
+    'operation-06.webp',
+    'operation-07.webp',
+  ].map((file) => `${materialStorageAssetBase}/${file}`);
+  const supplyHubExportCommercialDocuments = [
+    {
+      title: 'COMMERCIAL INVOICE',
+      lead: 'Hỗ trợ đối chiếu:',
+      items: [
+        'Thông tin buyer',
+        'Thông tin nhà cung cấp',
+        'Danh mục sản phẩm',
+        'Số lượng',
+        'Đơn giá',
+        'Điều kiện thương mại',
+      ],
+    },
+    {
+      title: 'PACKING LIST',
+      lead: 'Hỗ trợ kiểm tra:',
+      items: [
+        'Quy cách đóng gói',
+        'Số kiện',
+        'Trọng lượng',
+        'Kích thước',
+        'Mã sản phẩm',
+        'Thông tin container nếu có',
+      ],
+    },
+    {
+      title: 'SHIPPING DOCUMENTS',
+      lead: 'Hỗ trợ phối hợp và kiểm tra:',
+      items: [
+        'Thông tin lô hàng',
+        'Kế hoạch giao hàng',
+        'Thông tin người nhận',
+        'Thông tin cảng đi và cảng đến',
+        'Điều kiện giao nhận',
+      ],
+    },
+  ];
+  const supplyHubExportMultiFactorySupport = [
+    'Tổng hợp dữ liệu từ nhiều nhà máy',
+    'Chuẩn hóa thông tin sản phẩm',
+    'Đồng bộ quy cách đóng gói',
+    'Đối chiếu số lượng giữa các đơn vị',
+    'Hỗ trợ chuẩn bị hồ sơ chung cho dự án',
+  ];
+  const supplyHubExportDocumentChecks = [
+    'Đối chiếu thông tin sản phẩm',
+    'Đối chiếu số lượng thực tế',
+    'Kiểm tra mã sản phẩm',
+    'Kiểm tra quy cách đóng gói',
+    'Đối chiếu packing list với hàng hóa thực tế nếu cần',
+    'Đối chiếu thông tin theo yêu cầu buyer',
+  ];
+  const supplyHubExportQcConnections = [
+    {
+      title: 'Hồ sơ sản phẩm',
+      items: ['Mẫu duyệt', 'Bản vẽ kỹ thuật', 'Mã sản phẩm', 'Tiêu chuẩn đóng gói'],
+    },
+    {
+      title: 'Hồ sơ QC',
+      items: ['Báo cáo kiểm tra', 'Checklist QC', 'Hình ảnh kiểm tra', 'Biên bản xác nhận'],
+    },
+    {
+      title: 'Hồ sơ Supply Hub',
+      items: ['Thông tin lưu kho', 'Thông tin gom hàng', 'Thông tin xuất hàng định kỳ', 'Thông tin container & lô hàng'],
+    },
+  ];
+  const supplyHubExportBuyerRequirements = [
+    'Mẫu biểu riêng',
+    'Quy cách trình bày riêng',
+    'Mã hàng riêng',
+    'Quy trình xác nhận nội bộ của buyer',
+    'Hồ sơ cho các chương trình OEM / ODM',
+    'Hồ sơ cho các dự án khách sạn, resort hoặc chuỗi bán lẻ',
+  ];
+  const supplyHubExportRepeatOrderRecords = [
+    'Lưu trữ hồ sơ đơn hàng',
+    'Lưu trữ packing standard',
+    'Lưu trữ mẫu nhãn',
+    'Lưu trữ mã sản phẩm',
+    'Lưu trữ tài liệu QC',
+    'Lưu trữ tiêu chuẩn buyer',
+  ];
+  const supplyHubExportAudiences = [
+    {
+      title: 'Buyer quốc tế',
+      body: 'Muốn đơn giản hóa việc quản lý nhiều nhà máy và nhiều lô hàng tại Việt Nam.',
+    },
+    {
+      title: 'Nhà máy sản xuất',
+      body: 'Cần hỗ trợ chuẩn hóa thông tin và phối hợp hồ sơ xuất khẩu.',
+    },
+    {
+      title: 'Dự án nhiều nhà cung cấp',
+      body: 'Cần tổng hợp chứng từ và điều phối hồ sơ tập trung.',
+    },
+    {
+      title: 'Chương trình OEM / ODM',
+      body: 'Cần quản lý hồ sơ kỹ thuật, hồ sơ QC và chứng từ thương mại trong thời gian dài.',
+    },
+  ];
+  const supplyHubExportSupportProcessSteps = [
+    'Nhận kế hoạch xuất hàng',
+    'Thu thập dữ liệu từ nhà máy',
+    'Đối chiếu sản phẩm & số lượng',
+    'Kiểm tra chứng từ',
+    'Chuẩn hóa hồ sơ',
+    'Phối hợp logistics',
+    'Xuất hàng',
+    'Lưu trữ & truy xuất hồ sơ',
+  ];
+  const supplyHubExportBuyerInputs = [
+    'Danh mục sản phẩm',
+    'Sản lượng dự kiến',
+    'Chu kỳ giao hàng mong muốn',
+    'Thị trường xuất khẩu',
+    'Kế hoạch bán hàng hoặc triển khai dự án',
+    'Yêu cầu đặc biệt về đóng gói hoặc logistics',
+  ];
+  const exportDocumentationAssetBase = '/assets/supply-hub/export-documentation-support';
+  const supplyHubExportCommercialImages = [
+    'commercial-01.webp',
+    'commercial-02.webp',
+    'commercial-03.webp',
+  ].map((file) => `${exportDocumentationAssetBase}/${file}`);
+  const supplyHubExportQcImages = [
+    'qc-01.webp',
+    'qc-02.webp',
+    'qc-03.webp',
+  ].map((file) => `${exportDocumentationAssetBase}/${file}`);
+  const supplyHubExportAudienceImages = [
+    'audience-01.webp',
+    'audience-02.webp',
+    'audience-03.webp',
+    'audience-04.webp',
+  ].map((file) => `${exportDocumentationAssetBase}/${file}`);
+  const supplyHubExportProcessImages = [
+    'process-01.webp',
+    'process-02.webp',
+    'process-03.webp',
+    'process-04.webp',
+    'process-05.webp',
+    'process-06.webp',
+    'process-07.webp',
+    'process-08.webp',
+  ].map((file) => `${exportDocumentationAssetBase}/${file}`);
 
   return (
     <>
@@ -860,6 +1392,480 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
           </figcaption>
         </figure>
       )}
+      {shouldShowSupplyHubMaterialComponentStorageBanner && (
+        <figure className="supply-hub-material-component-storage-banner">
+          <img
+            src="/assets/supply-hub/material-component-storage-banner.png"
+            alt={t('Sơ đồ lưu kho vật liệu và linh kiện qua kho ANSLIFE')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="supply-hub-material-component-storage-banner-copy">
+            <h1>{t('Lưu kho vật liệu & cấu kiện')}</h1>
+            <span>{t('Tổng quan')}</span>
+            <p>
+              {t(
+                'ANSLIFE hỗ trợ lưu kho và quản lý vật liệu, cấu kiện và bán thành phẩm tại Việt Nam nhằm phục vụ hoạt động sản xuất, lắp ráp, hoàn thiện và xuất khẩu theo kế hoạch của buyer.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Giải pháp này giúp doanh nghiệp duy trì nguồn cung ổn định, giảm áp lực tồn kho tại nhà máy, tăng khả năng đáp ứng đơn hàng và hỗ trợ triển khai các dự án dài hạn với nhiều nhà cung cấp khác nhau.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isSupplyHubMaterialComponentStoragePage && (
+        <section className="supply-hub-material-storage-content" aria-labelledby="material-storage-items-title">
+          <section className="supply-hub-material-storage-panel supply-hub-material-storage-items">
+            <h2 id="material-storage-items-title">
+              <span>1.</span> {t('Những gì có thể được lưu kho')}
+            </h2>
+            <div className="supply-hub-material-storage-item-grid">
+              {supplyHubMaterialStorageGroups.map((group, index) => (
+                <article key={group.title} className="supply-hub-material-storage-item-card">
+                  <img
+                    className="supply-hub-material-storage-image-placeholder"
+                    src={supplyHubMaterialStorageItemImages[index]}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="supply-hub-material-storage-item-copy">
+                    <h3>{t(group.title)}</h3>
+                    <ul>
+                      {group.items.map((item) => (
+                        <li key={item}>{t(item)}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-material-storage-panel supply-hub-material-storage-goals" aria-labelledby="material-storage-goals-title">
+            <h2 id="material-storage-goals-title">
+              <span>2.</span> {t('Mục tiêu của giải pháp')}
+            </h2>
+            <div className="supply-hub-material-storage-goal-grid">
+              {supplyHubMaterialStorageGoals.map((goal, index) => (
+                <article key={goal.title} className="supply-hub-material-storage-goal-card">
+                  <img
+                    className="supply-hub-material-storage-goal-image-placeholder"
+                    src={supplyHubMaterialStorageGoalImages[index]}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>{t(goal.title)}</h3>
+                  <p>{t(goal.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-material-storage-panel supply-hub-material-storage-projects" aria-labelledby="material-storage-projects-title">
+            <h2 id="material-storage-projects-title">
+              <span>3.</span> {t('Quản lý tồn kho theo dự án')}
+            </h2>
+            <div className="supply-hub-material-storage-project-list">
+              {supplyHubMaterialProjectInventoryGroups.map((group, index) => (
+                <article key={group.label} className="supply-hub-material-storage-project-row">
+                  <img
+                    className="supply-hub-material-storage-small-image-placeholder"
+                    src={supplyHubMaterialProjectImages[index]}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <strong>{t(group.label)}</strong>
+                  <ul>
+                    {group.items.map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-material-storage-panel supply-hub-material-storage-dispatch" aria-labelledby="material-storage-dispatch-title">
+            <h2 id="material-storage-dispatch-title">
+              <span>4.</span> {t('Điều phối cấp phát cho sản xuất')}
+            </h2>
+            <div className="supply-hub-material-storage-icon-list">
+              {supplyHubMaterialProductionDispatch.map((item, index) => (
+                <article key={item} className="supply-hub-material-storage-icon-row">
+                  <img
+                    className="supply-hub-material-storage-small-image-placeholder"
+                    src={supplyHubMaterialDispatchImages[index]}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span>{t(item)}</span>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-material-storage-panel supply-hub-material-storage-supply-hub" aria-labelledby="material-storage-supply-hub-title">
+            <h2 id="material-storage-supply-hub-title">
+              <span>5.</span> {t('Kết hợp với Supply Hub Việt Nam')}
+            </h2>
+            <div className="supply-hub-material-storage-icon-list">
+              {supplyHubMaterialSupplyHubIntegration.map((item, index) => (
+                <article key={item} className="supply-hub-material-storage-icon-row">
+                  <img
+                    className="supply-hub-material-storage-small-image-placeholder"
+                    src={supplyHubMaterialSupplyHubImages[index]}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span>{t(item)}</span>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-material-storage-panel supply-hub-material-storage-traceability" aria-labelledby="material-storage-traceability-title">
+            <div className="supply-hub-material-storage-traceability-copy">
+              <h2 id="material-storage-traceability-title">
+                <span>6.</span> {t('Kiểm soát và truy xuất')}
+              </h2>
+              <ul>
+                {supplyHubMaterialTraceabilityControls.map((item) => (
+                  <li key={item}>{t(item)}</li>
+                ))}
+              </ul>
+            </div>
+            <img
+              className="supply-hub-material-storage-traceability-image-placeholder"
+              src={`${materialStorageAssetBase}/traceability-01.webp`}
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </section>
+          <section className="supply-hub-material-storage-panel supply-hub-material-storage-audiences" aria-labelledby="material-storage-audiences-title">
+            <h2 id="material-storage-audiences-title">
+              <span>7.</span> {t('Đối tượng phù hợp')}
+            </h2>
+            <div className="supply-hub-material-storage-audience-grid">
+              {supplyHubMaterialAudiences.map((audience, index) => (
+                <article key={audience.title} className="supply-hub-material-storage-audience-card">
+                  <img
+                    className="supply-hub-material-storage-audience-image-placeholder"
+                    src={supplyHubMaterialAudienceImages[index]}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>{t(audience.title)}</h3>
+                  <p>{t(audience.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-material-storage-panel supply-hub-material-storage-operation" aria-labelledby="material-storage-operation-title">
+            <h2 id="material-storage-operation-title">
+              <span>8.</span> {t('Quy trình vận hành')}
+            </h2>
+            <div className="supply-hub-material-storage-operation-steps">
+              {supplyHubMaterialOperationSteps.map((step, index) => (
+                <article key={step} className="supply-hub-material-storage-operation-step">
+                  <span className="supply-hub-material-storage-operation-number">{index + 1}</span>
+                  <p>{t(step)}</p>
+                  <img
+                    className="supply-hub-material-storage-operation-image-placeholder"
+                    src={supplyHubMaterialOperationImages[index]}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-material-storage-cta" aria-labelledby="material-storage-cta-title">
+            <img
+              className="supply-hub-material-storage-cta-image-placeholder"
+              src={`${materialStorageAssetBase}/cta-01.webp`}
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="supply-hub-material-storage-cta-copy">
+              <h2 id="material-storage-cta-title">{t('Cần lưu kho vật liệu hoặc cấu kiện tại Việt Nam?')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ tiếp nhận, quản lý, lưu kho và điều phối vật liệu, cấu kiện và bán thành phẩm nhằm phục vụ sản xuất, lắp ráp và xuất khẩu theo kế hoạch của từng buyer hoặc dự án.',
+                )}
+              </p>
+            </div>
+            <div className="supply-hub-material-storage-cta-actions">
+              <a className="supply-hub-material-storage-cta-primary" href="/contact/supply-hub-inquiry">
+                {t('Gửi yêu cầu')}
+              </a>
+              <a className="supply-hub-material-storage-cta-secondary" href="/contact">
+                {t('Trao đổi với ANSLIFE')}
+              </a>
+            </div>
+            <img
+              className="supply-hub-material-storage-cta-image-placeholder"
+              src={`${materialStorageAssetBase}/cta-02.webp`}
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </section>
+        </section>
+      )}
+      {shouldShowSupplyHubExportDocumentationSupportBanner && (
+        <figure className="supply-hub-export-documentation-support-banner">
+          <img
+            src="/assets/supply-hub/export-documentation-support-banner.png"
+            alt={t('Sơ đồ hỗ trợ chứng từ xuất khẩu của ANSLIFE')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="supply-hub-export-documentation-support-banner-copy">
+            <h1>{t('Hỗ trợ chứng từ xuất khẩu')}</h1>
+            <span>{t('Tổng quan')}</span>
+            <p>
+              {t(
+                'ANSLIFE hỗ trợ phối hợp, chuẩn bị, kiểm tra và quản lý các chứng từ liên quan đến hoạt động xuất khẩu nhằm giúp quá trình giao nhận hàng hóa diễn ra thuận lợi, đúng kế hoạch và phù hợp với yêu cầu của buyer, đơn vị logistics và cơ quan liên quan.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Giải pháp này đặc biệt hữu ích đối với các dự án có nhiều nhà máy tham gia sản xuất, nhiều đợt giao hàng hoặc yêu cầu tiêu chuẩn chứng từ riêng theo từng thị trường.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isSupplyHubExportDocumentationSupportPage && (
+        <section className="supply-hub-export-doc-content" aria-labelledby="export-doc-role-title">
+          <section className="supply-hub-export-doc-panel supply-hub-export-doc-role">
+            <img
+              className="supply-hub-export-doc-role-image-placeholder"
+              src={`${exportDocumentationAssetBase}/role-01.webp`}
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="supply-hub-export-doc-role-copy">
+              <h2 id="export-doc-role-title">{t('Vai trò của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE không thay thế vai trò của đơn vị khai báo hải quan hoặc hãng vận chuyển, mà đóng vai trò điều phối và hỗ trợ quản lý chứng từ trong toàn bộ chuỗi cung ứng.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Chúng tôi giúp buyer và nhà máy giảm rủi ro sai sót, thiếu hụt thông tin hoặc chậm trễ trong quá trình chuẩn bị hồ sơ xuất khẩu.',
+                )}
+              </p>
+            </div>
+          </section>
+          <section className="supply-hub-export-doc-panel supply-hub-export-doc-commercial" aria-labelledby="export-doc-commercial-title">
+            <h2 id="export-doc-commercial-title">{t('Hỗ trợ chuẩn bị chứng từ thương mại')}</h2>
+            <div className="supply-hub-export-doc-commercial-grid">
+              {supplyHubExportCommercialDocuments.map((document, index) => (
+                <article key={document.title} className="supply-hub-export-doc-commercial-card">
+                  <img
+                    className="supply-hub-export-doc-commercial-image-placeholder"
+                    src={supplyHubExportCommercialImages[index]}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="supply-hub-export-doc-commercial-copy">
+                    <h3>{t(document.title)}</h3>
+                    <p>{t(document.lead)}</p>
+                    <ul>
+                      {document.items.map((item) => (
+                        <li key={item}>{t(item)}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-export-doc-panel supply-hub-export-doc-multi-factory" aria-labelledby="export-doc-multi-factory-title">
+            <h2 id="export-doc-multi-factory-title">{t('Hỗ trợ dự án có nhiều nhà máy')}</h2>
+            <div className="supply-hub-export-doc-multi-factory-body">
+              <img
+                className="supply-hub-export-doc-multi-factory-image-placeholder"
+                src={`${exportDocumentationAssetBase}/multi-factory-01.webp`}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <ul>
+                {supplyHubExportMultiFactorySupport.map((item) => (
+                  <li key={item}>{t(item)}</li>
+                ))}
+              </ul>
+            </div>
+          </section>
+          <section className="supply-hub-export-doc-panel supply-hub-export-doc-checks" aria-labelledby="export-doc-checks-title">
+            <h2 id="export-doc-checks-title">{t('Kiểm tra chứng từ trước khi xuất hàng')}</h2>
+            <div className="supply-hub-export-doc-checks-body">
+              <img
+                className="supply-hub-export-doc-checks-image-placeholder"
+                src={`${exportDocumentationAssetBase}/checks-01.webp`}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <ul>
+                {supplyHubExportDocumentChecks.map((item) => (
+                  <li key={item}>{t(item)}</li>
+                ))}
+              </ul>
+            </div>
+          </section>
+          <section className="supply-hub-export-doc-panel supply-hub-export-doc-qc" aria-labelledby="export-doc-qc-title">
+            <h2 id="export-doc-qc-title">{t('Kết nối với QC và Supply Hub')}</h2>
+            <div className="supply-hub-export-doc-qc-grid">
+              {supplyHubExportQcConnections.map((group, index) => (
+                <article key={group.title} className="supply-hub-export-doc-qc-card">
+                  <img
+                    className="supply-hub-export-doc-qc-image-placeholder"
+                    src={supplyHubExportQcImages[index]}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>{t(group.title)}</h3>
+                  <ul>
+                    {group.items.map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-export-doc-panel supply-hub-export-doc-buyer-requirements" aria-labelledby="export-doc-buyer-requirements-title">
+            <h2 id="export-doc-buyer-requirements-title">{t('Hỗ trợ theo yêu cầu riêng của buyer')}</h2>
+            <div className="supply-hub-export-doc-buyer-body">
+              <img
+                className="supply-hub-export-doc-buyer-image-placeholder"
+                src={`${exportDocumentationAssetBase}/buyer-requirements-01.webp`}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <ul>
+                {supplyHubExportBuyerRequirements.map((item) => (
+                  <li key={item}>{t(item)}</li>
+                ))}
+              </ul>
+            </div>
+          </section>
+          <section className="supply-hub-export-doc-panel supply-hub-export-doc-repeat-orders" aria-labelledby="export-doc-repeat-orders-title">
+            <h2 id="export-doc-repeat-orders-title">{t('Quản lý hồ sơ cho đơn hàng lặp lại')}</h2>
+            <div className="supply-hub-export-doc-repeat-body">
+              <img
+                className="supply-hub-export-doc-repeat-image-placeholder"
+                src={`${exportDocumentationAssetBase}/repeat-01.webp`}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <ul>
+                {supplyHubExportRepeatOrderRecords.map((item) => (
+                  <li key={item}>{t(item)}</li>
+                ))}
+              </ul>
+            </div>
+          </section>
+          <section className="supply-hub-export-doc-panel supply-hub-export-doc-audiences" aria-labelledby="export-doc-audiences-title">
+            <h2 id="export-doc-audiences-title">{t('Đối tượng phù hợp')}</h2>
+            <div className="supply-hub-export-doc-audience-list">
+              {supplyHubExportAudiences.map((audience, index) => (
+                <article key={audience.title} className="supply-hub-export-doc-audience-row">
+                  <img
+                    className="supply-hub-export-doc-audience-image-placeholder"
+                    src={supplyHubExportAudienceImages[index]}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>{t(audience.title)}</h3>
+                    <p>{t(audience.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-export-doc-panel supply-hub-export-doc-process" aria-labelledby="export-doc-process-title">
+            <h2 id="export-doc-process-title">{t('Quy trình hỗ trợ')}</h2>
+            <div className="supply-hub-export-doc-process-steps">
+              {supplyHubExportSupportProcessSteps.map((step, index) => (
+                <article key={step} className="supply-hub-export-doc-process-step">
+                  <span className="supply-hub-export-doc-process-number">{index + 1}</span>
+                  <img
+                    className="supply-hub-export-doc-process-image-placeholder"
+                    src={supplyHubExportProcessImages[index]}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <p>{t(step)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-export-doc-panel supply-hub-export-doc-buyer-inputs" aria-labelledby="export-doc-buyer-inputs-title">
+            <h2 id="export-doc-buyer-inputs-title">{t('Buyer cần cung cấp')}</h2>
+            <div className="supply-hub-export-doc-buyer-inputs-body">
+              <img
+                className="supply-hub-export-doc-buyer-inputs-image-placeholder"
+                src={`${exportDocumentationAssetBase}/buyer-inputs-01.webp`}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <ul>
+                {supplyHubExportBuyerInputs.map((input) => (
+                  <li key={input}>{t(input)}</li>
+                ))}
+              </ul>
+            </div>
+          </section>
+          <section className="supply-hub-export-doc-cta" aria-labelledby="export-doc-cta-title">
+            <div className="supply-hub-export-doc-cta-copy">
+              <h2 id="export-doc-cta-title">{t('Cần hỗ trợ quản lý chứng từ xuất khẩu?')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ phối hợp, kiểm tra và quản lý hồ sơ xuất khẩu nhằm giúp buyer và nhà máy giảm rủi ro sai sót, đồng thời nâng cao khả năng kiểm soát chuỗi cung ứng tại Việt Nam.',
+                )}
+              </p>
+              <div className="supply-hub-export-doc-cta-actions">
+                <a className="supply-hub-export-doc-cta-primary" href="/contact/supply-hub-inquiry">
+                  {t('Gửi yêu cầu')}
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a className="supply-hub-export-doc-cta-secondary" href="/contact">
+                  {t('Trao đổi với ANSLIFE')}
+                  <span aria-hidden="true">☏</span>
+                </a>
+              </div>
+            </div>
+            <img
+              className="supply-hub-export-doc-cta-image-placeholder"
+              src={`${exportDocumentationAssetBase}/cta-01.webp`}
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </section>
+        </section>
+      )}
       {shouldShowSupplyHubLclFclConsolidationBanner && (
         <figure className="supply-hub-lcl-fcl-consolidation-banner">
           <img
@@ -888,6 +1894,239 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             </p>
           </figcaption>
         </figure>
+      )}
+      {shouldShowSupplyHubWeeklyShipmentArrangementBanner && (
+        <figure className="supply-hub-weekly-shipment-arrangement-banner">
+          <img
+            src="/assets/supply-hub/weekly-shipment-arrangement-banner.png"
+            alt={t('Sơ đồ điều phối xuất hàng định kỳ từ nhiều nhà máy qua kho ANSLIFE')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="supply-hub-weekly-shipment-arrangement-banner-copy">
+            <h1>{t('Điều phối xuất hàng định kỳ')}</h1>
+            <span>{t('Tổng quan')}</span>
+            <ul>
+              <li>
+                {t(
+                  'ANSLIFE hỗ trợ xây dựng và vận hành kế hoạch xuất hàng định kỳ cho buyer quốc tế thông qua mạng lưới nhà máy, kho trung chuyển và Supply Hub tại Việt Nam.',
+                )}
+              </li>
+              <li>
+                {t(
+                  'Thay vì tổ chức từng lô hàng riêng lẻ, ANSLIFE giúp buyer thiết lập lịch xuất hàng ổn định theo tuần, hai tuần, tháng hoặc theo kế hoạch cung ứng riêng của từng dự án.',
+                )}
+              </li>
+              <li>
+                {t(
+                  'Giải pháp này giúp duy trì nguồn cung liên tục, giảm áp lực tồn kho tại điểm đến và tăng khả năng kiểm soát toàn bộ chuỗi cung ứng.',
+                )}
+              </li>
+            </ul>
+          </figcaption>
+        </figure>
+      )}
+      {isSupplyHubWeeklyShipmentArrangementPage && (
+        <section className="supply-hub-weekly-shipment-content">
+          <section className="supply-hub-weekly-goals" aria-labelledby="weekly-goals-title">
+            <h2 id="weekly-goals-title">
+              <span>1.</span> {t('Mục tiêu của điều phối xuất hàng định kỳ')}
+            </h2>
+            <div className="supply-hub-weekly-goal-grid">
+              {supplyHubWeeklyShipmentGoals.map((goal, index) => (
+                <article key={goal} className="supply-hub-weekly-goal-item">
+                  <img
+                    className="supply-hub-weekly-image-placeholder"
+                    src={supplyHubWeeklyShipmentGoalImages[index]}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <p>{t(goal)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="supply-hub-weekly-models" aria-labelledby="weekly-models-title">
+            <h2 id="weekly-models-title">
+              <span>2.</span> {t('Các mô hình xuất hàng định kỳ')}
+            </h2>
+            <div className="supply-hub-weekly-model-grid">
+              {supplyHubWeeklyShipmentModels.map((model, index) => (
+                <article key={model.title} className="supply-hub-weekly-model-card">
+                  <div className="supply-hub-weekly-model-image-placeholder" aria-hidden="true">
+                    <img
+                      src={supplyHubWeeklyShipmentModelImages[index]}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div className="supply-hub-weekly-model-copy">
+                    <h3>{t(model.title)}</h3>
+                    <p>{t('Phù hợp với:')}</p>
+                    <ul>
+                      {model.items.map((item) => (
+                        <li key={item}>{t(item)}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <div className="supply-hub-weekly-detail-grid">
+            <section className="supply-hub-weekly-support" aria-labelledby="weekly-support-title">
+              <h2 id="weekly-support-title">
+                <span>3.</span> {t('ANSLIFE hỗ trợ những gì')}
+              </h2>
+              <div className="supply-hub-weekly-support-grid">
+                {supplyHubWeeklyShipmentSupportBlocks.map((block, index) => (
+                  <article key={block.title} className="supply-hub-weekly-support-card">
+                    <img
+                      className="supply-hub-weekly-support-image-placeholder"
+                      src={supplyHubWeeklyShipmentSupportImages[index]}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <h3>{t(block.title)}</h3>
+                    <ul>
+                      {block.items.map((item) => (
+                        <li key={item}>{t(item)}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+            </section>
+            <div className="supply-hub-weekly-middle-stack">
+              <section className="supply-hub-weekly-buffer" aria-labelledby="weekly-buffer-title">
+                <h2 id="weekly-buffer-title">
+                  <span>4.</span> {t('Kết hợp với tồn kho đệm tại Việt Nam')}
+                </h2>
+                <p>
+                  {t(
+                    'Tồn kho đệm giúp duy trì lượng hàng sẵn có tại Việt Nam, sẵn sàng đáp ứng các lô xuất hàng theo lịch. ANSLIFE quản lý tồn kho hiệu quả để đảm bảo nguồn hàng luôn sẵn sàng theo kế hoạch.',
+                  )}
+                </p>
+                <div className="supply-hub-weekly-buffer-grid">
+                  {supplyHubWeeklyShipmentBufferBenefits.map((benefit, index) => (
+                    <article key={benefit} className="supply-hub-weekly-buffer-item">
+                      <img
+                        className="supply-hub-weekly-small-image-placeholder"
+                        src={supplyHubWeeklyShipmentBufferImages[index]}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <span>{t(benefit)}</span>
+                    </article>
+                  ))}
+                </div>
+              </section>
+              <section className="supply-hub-weekly-pre-export" aria-labelledby="weekly-pre-export-title">
+                <h2 id="weekly-pre-export-title">
+                  <span>5.</span> {t('Kiểm soát trước khi xuất hàng')}
+                </h2>
+                <div className="supply-hub-weekly-check-grid">
+                  {supplyHubWeeklyShipmentPreExportChecks.map((check, index) => (
+                    <article key={check} className="supply-hub-weekly-check-item">
+                      <img
+                        className="supply-hub-weekly-check-image-placeholder"
+                        src={supplyHubWeeklyShipmentCheckImages[index]}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <span>{t(check)}</span>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            </div>
+            <section className="supply-hub-weekly-audiences" aria-labelledby="weekly-audiences-title">
+              <h2 id="weekly-audiences-title">
+                <span>6.</span> {t('Các đối tượng phù hợp')}
+              </h2>
+              <div className="supply-hub-weekly-audience-grid">
+                {supplyHubWeeklyShipmentAudiences.map((audience, index) => (
+                  <article key={audience.title} className="supply-hub-weekly-audience-card">
+                    <img
+                      className="supply-hub-weekly-audience-image-placeholder"
+                      src={supplyHubWeeklyShipmentAudienceImages[index]}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div>
+                      <h3>{t(audience.title)}</h3>
+                      <p>{t(audience.description)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          </div>
+          <div className="supply-hub-weekly-closing-grid">
+            <section className="supply-hub-weekly-process" aria-labelledby="weekly-process-title">
+              <h2 id="weekly-process-title">
+                <span>7.</span> {t('Quy trình triển khai')}
+              </h2>
+              <div className="supply-hub-weekly-process-steps">
+                {supplyHubWeeklyShipmentProcessSteps.map((step, index) => (
+                  <article key={step} className="supply-hub-weekly-process-step">
+                    <img
+                      className="supply-hub-weekly-process-image-placeholder"
+                      src={supplyHubWeeklyShipmentProcessImages[index]}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span>{t(step)}</span>
+                  </article>
+                ))}
+              </div>
+            </section>
+            <section className="supply-hub-weekly-buyer-inputs" aria-labelledby="weekly-buyer-inputs-title">
+              <h2 id="weekly-buyer-inputs-title">
+                <span>8.</span> {t('Buyer cần cung cấp')}
+              </h2>
+              <ul>
+                {supplyHubWeeklyShipmentBuyerInputs.map((input) => (
+                  <li key={input}>{t(input)}</li>
+                ))}
+              </ul>
+            </section>
+            <section className="supply-hub-weekly-cta" aria-labelledby="weekly-cta-title">
+              <div className="supply-hub-weekly-cta-copy">
+                <h2 id="weekly-cta-title">{t('Thiết lập kế hoạch xuất hàng định kỳ tại Việt Nam')}</h2>
+                <p>
+                  {t(
+                    'ANSLIFE hỗ trợ xây dựng mô hình cung ứng ổn định thông qua tồn kho đệm, gom hàng, điều phối logistics và xuất hàng theo lịch trình phù hợp với từng buyer.',
+                  )}
+                </p>
+              </div>
+              <img
+                className="supply-hub-weekly-cta-image-placeholder"
+                src={`${weeklyShipmentAssetBase}/cta.webp`}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="supply-hub-weekly-cta-actions">
+                <a className="supply-hub-weekly-cta-primary" href="/contact/supply-hub-inquiry">
+                  <span aria-hidden="true">↗</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a className="supply-hub-weekly-cta-secondary" href="/contact">
+                  <span aria-hidden="true">☏</span>
+                  {t('Trao đổi với ANSLIFE')}
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
       )}
       {isSupplyHubLclFclConsolidationPage && (
         <section className="supply-hub-lcl-fcl-content" aria-label={t('So sánh LCL và FCL')}>
