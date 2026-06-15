@@ -308,6 +308,14 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'vietnam-supply-hub' &&
     section.id === 'export-documentation-support' &&
     !detailSlug;
+  const isSupplyHubApprovedProductSamplesPage =
+    config.slug === 'vietnam-supply-hub' &&
+    section.id === 'partner-standard-room' &&
+    detailSlug === 'approved-product-samples';
+  const isSupplyHubComponentSamplesPage =
+    config.slug === 'vietnam-supply-hub' &&
+    section.id === 'partner-standard-room' &&
+    detailSlug === 'component-samples';
   const shouldRenderBlankScholarshipPage =
     config.slug === 'about-anslife' && section.id === 'scholarship-community';
   const shouldRenderBlankQualityInProcessPage =
@@ -320,7 +328,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isSupplyHubLclFclConsolidationPage ||
     isSupplyHubWeeklyShipmentArrangementPage ||
     isSupplyHubMaterialComponentStoragePage ||
-    isSupplyHubExportDocumentationSupportPage;
+    isSupplyHubExportDocumentationSupportPage ||
+    isSupplyHubApprovedProductSamplesPage ||
+    isSupplyHubComponentSamplesPage;
   const isCustomAboutSection =
     config.slug === 'about-anslife' &&
     (section.id === 'philosophy' ||
@@ -347,6 +357,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isSupplyHubWeeklyShipmentArrangementPage ||
     isSupplyHubMaterialComponentStoragePage ||
     isSupplyHubExportDocumentationSupportPage ||
+    isSupplyHubApprovedProductSamplesPage ||
+    isSupplyHubComponentSamplesPage ||
     isCustomAboutSection ||
     (config.slug === 'about-anslife' &&
       (section.id === 'philosophy' ||
@@ -395,6 +407,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldShowSupplyHubWeeklyShipmentArrangementBanner = isSupplyHubWeeklyShipmentArrangementPage;
   const shouldShowSupplyHubMaterialComponentStorageBanner = isSupplyHubMaterialComponentStoragePage;
   const shouldShowSupplyHubExportDocumentationSupportBanner = isSupplyHubExportDocumentationSupportPage;
+  const shouldShowSupplyHubApprovedProductSamplesBanner = isSupplyHubApprovedProductSamplesPage;
+  const shouldShowSupplyHubComponentSamplesBanner = isSupplyHubComponentSamplesPage;
+  const shouldRenderSectionHero = !shouldHideSectionHero && !isSupplyHubComponentSamplesPage;
   const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
     !shouldRenderBlankSubSectionPage && Boolean(error) && !resolvedHtml;
@@ -1302,7 +1317,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   return (
     <>
       <Seo title={seoTitle} description={seoDescription} />
-      {!shouldHideSectionHero && (
+      {shouldRenderSectionHero && (
         <section className="page-hero">
           <p className="kicker">{t(config.title)}</p>
           <h1>{t(section.title)}</h1>
@@ -1415,6 +1430,864 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             </p>
           </figcaption>
         </figure>
+      )}
+      {shouldShowSupplyHubApprovedProductSamplesBanner && (
+        <figure className="supply-hub-partner-approved-product-samples-banner">
+          <img
+            src="/assets/supply-hub/partner-standard-room/approved-product-samples-banner.png"
+            alt={t('Banner mẫu sản phẩm đã duyệt trong phòng mẫu chuẩn đối tác')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="supply-hub-partner-approved-product-samples-banner-copy">
+            <h1>{t('Mẫu sản phẩm đã duyệt')}</h1>
+            <span>{t('Tổng quan')}</span>
+            <p>
+              {t(
+                'Mẫu sản phẩm đã duyệt được lưu trữ, quản lý và đối chiếu như tiêu chuẩn chính thức trong hệ thống Phòng mẫu chuẩn đối tác của ANSLIFE.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Nó đảm bảo tính nhất quán trong sản xuất, kiểm tra chất lượng, hoàn thiện bề mặt, đóng gói và xuất khẩu cho toàn bộ dự án.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowSupplyHubComponentSamplesBanner && (
+        <figure className="supply-hub-partner-component-samples-banner">
+          <img
+            src="/assets/supply-hub/partner-standard-room/component-samples-banner.png"
+            alt={t('Banner mẫu cấu kiện trong phòng mẫu chuẩn đối tác')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="supply-hub-partner-component-samples-banner-copy">
+            <h1>{t('Mẫu cấu kiện')}</h1>
+            <span>{t('Tổng quan')}</span>
+            <p>
+              {t(
+                'Mẫu cấu kiện là các bộ phận tiêu chuẩn được lưu trữ, quản lý và đối chiếu để đảm bảo tính đồng nhất, khả năng lắp ráp và chất lượng ổn định xuyên suốt toàn bộ chuỗi cung ứng - từ vật liệu, gia công, lắp ráp, QC đến xuất hàng.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isSupplyHubComponentSamplesPage && (
+        <section className="supply-hub-component-samples-content" aria-labelledby="component-samples-role-title">
+          <section className="supply-hub-component-samples-panel supply-hub-component-samples-role">
+            <h2 id="component-samples-role-title">
+              <span>1.</span> {t('Vai trò của mẫu cấu kiện')}
+            </h2>
+            <ul className="supply-hub-component-samples-role-list">
+              {[
+                'Tính đồng nhất giữa các nhà máy',
+                'Tính chính xác của từng bộ phận sản phẩm',
+                'Khả năng lắp ráp và liên kết đúng thiết kế',
+                'Tính ổn định giữa các lô hàng',
+                'Khả năng kiểm soát chất lượng từ giai đoạn đầu của sản xuất',
+              ].map((item) => (
+                <li key={item}>
+                  <span className="supply-hub-component-samples-small-slot" aria-hidden="true" />
+                  <span>{t(item)}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="supply-hub-component-samples-panel supply-hub-component-samples-types">
+            <h2>
+              <span>2.</span> {t('Các loại mẫu cấu kiện được lưu trữ')}
+            </h2>
+            <div className="supply-hub-component-samples-type-grid">
+              {[
+                {
+                  title: 'Cấu kiện gỗ',
+                  image: '/assets/supply-hub/partner-standard-room/component-samples/type-wood-components.webp',
+                  items: [
+                    'Chân ghế',
+                    'Tay ghế',
+                    'Lưng ghế',
+                    'Mặt ghế',
+                    'Thanh giằng',
+                    'Chân bàn',
+                    'Mặt bàn',
+                    'Bộ phận tủ',
+                    'Bộ phận giường',
+                    'Chi tiết CNC',
+                    'Chi tiết tiện',
+                  ],
+                },
+                {
+                  title: 'Cấu kiện bọc nệm',
+                  image: '/assets/supply-hub/partner-standard-room/component-samples/type-upholstery-components.webp',
+                  items: [
+                    'Khung ghế',
+                    'Khung sofa',
+                    'Seat cushion',
+                    'Back cushion',
+                    'Tay ghế bọc',
+                    'Bộ phận foam theo khuôn',
+                  ],
+                },
+                {
+                  title: 'Cấu kiện mây tre',
+                  image: '/assets/supply-hub/partner-standard-room/component-samples/type-rattan-components.webp',
+                  items: [
+                    'Mặt đan mây',
+                    'Lưng ghế mây',
+                    'Cánh tủ mây',
+                    'Panel mây',
+                    'Chi tiết mây tre theo thiết kế',
+                  ],
+                },
+                {
+                  title: 'Cấu kiện kim loại và vật liệu kết hợp',
+                  image: '/assets/supply-hub/partner-standard-room/component-samples/type-metal-mixed-components.webp',
+                  items: [
+                    'Khung kim loại',
+                    'Chân kim loại',
+                    'Chi tiết liên kết',
+                    'Bộ phận kết hợp gỗ và kim loại',
+                  ],
+                },
+              ].map((group) => (
+                <article key={group.title} className="supply-hub-component-samples-type-card">
+                  <img
+                    className="supply-hub-component-samples-image-slot"
+                    src={group.image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <h3>{t(group.title)}</h3>
+                  <ul>
+                    {group.items.map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-component-samples-panel supply-hub-component-samples-records">
+            <h2>
+              <span>3.</span> {t('Những gì được lưu giữ cùng mẫu')}
+            </h2>
+            <div className="supply-hub-component-samples-record-grid">
+              {[
+                {
+                  title: 'Hồ sơ kỹ thuật',
+                  image: '/assets/supply-hub/partner-standard-room/component-samples/record-technical.webp',
+                  items: [
+                    'Bản vẽ kỹ thuật',
+                    'Thông số kích thước',
+                    'Tolerances',
+                    'Mã cấu kiện',
+                    'Quy cách gia công',
+                  ],
+                },
+                {
+                  title: 'Hồ sơ vật liệu',
+                  image: '/assets/supply-hub/partner-standard-room/component-samples/record-material.webp',
+                  items: [
+                    'Chủng loại vật liệu',
+                    'Tiêu chuẩn vật liệu',
+                    'Yêu cầu độ ẩm',
+                    'Yêu cầu hoàn thiện',
+                  ],
+                },
+                {
+                  title: 'Hồ sơ QC',
+                  image: '/assets/supply-hub/partner-standard-room/component-samples/record-qc.webp',
+                  items: [
+                    'Checklist QC',
+                    'Điểm kiểm tra quan trọng',
+                    'Tiêu chuẩn chấp nhận',
+                    'Hình ảnh tham chiếu',
+                  ],
+                },
+              ].map((group) => (
+                <article key={group.title} className="supply-hub-component-samples-record-card">
+                  <img
+                    className="supply-hub-component-samples-image-slot"
+                    src={group.image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <h3>{t(group.title)}</h3>
+                  <ul>
+                    {group.items.map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-component-samples-panel supply-hub-component-samples-usage">
+            <h2>
+              <span>4.</span> {t('Mẫu cấu kiện được sử dụng như thế nào?')}
+            </h2>
+            <div className="supply-hub-component-samples-usage-grid">
+              {[
+                [
+                  'Trong phát triển sản phẩm',
+                  'Đối chiếu khả năng gia công và lắp ráp trước khi sản xuất hàng loạt.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/usage-product-development.webp',
+                ],
+                [
+                  'Trong sản xuất',
+                  'Đối chiếu kích thước, kết cấu, mộng và liên kết, hình dáng, gia công bề mặt.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/usage-production.webp',
+                ],
+                [
+                  'Trong lắp ráp',
+                  'Đối chiếu khả năng lắp ghép, độ chính xác liên kết, độ ổn định kết cấu.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/usage-assembly.webp',
+                ],
+                [
+                  'Trong QC',
+                  'Đối chiếu ngoại quan, kích thước, chất lượng gia công, chất lượng hoàn thiện bề mặt.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/usage-qc.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title} className="supply-hub-component-samples-usage-card">
+                  <img
+                    className="supply-hub-component-samples-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <h3>{t(title)}</h3>
+                  <p>{t(text)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-component-samples-panel supply-hub-component-samples-key-groups">
+            <h2>
+              <span>5.</span> {t('Các nhóm cấu kiện quan trọng cần lưu mẫu')}
+            </h2>
+            <div className="supply-hub-component-samples-key-grid">
+              {[
+                {
+                  title: 'Liên kết và mộng gỗ',
+                  image: '/assets/supply-hub/partner-standard-room/component-samples/key-joints.webp',
+                  items: [
+                    'Mortise & Tenon',
+                    'Dowel Joint',
+                    'Corner Block',
+                    'Finger Joint',
+                    'Chi tiết liên kết đặc biệt',
+                  ],
+                  note: 'Ảnh hưởng trực tiếp đến độ bền và khả năng lắp ráp.',
+                },
+                {
+                  title: 'Cấu kiện hoàn thiện bề mặt',
+                  image: '/assets/supply-hub/partner-standard-room/component-samples/key-finish-components.webp',
+                  items: [
+                    'Đối chiếu màu sắc',
+                    'Vân gỗ',
+                    'Độ bóng',
+                    'Độ mờ',
+                    'Chất lượng bề mặt',
+                  ],
+                },
+                {
+                  title: 'Cấu kiện đã gia công CNC',
+                  image: '/assets/supply-hub/partner-standard-room/component-samples/key-cnc-components.webp',
+                  items: [
+                    'Đảm bảo độ chính xác hình học',
+                    'Tính đồng nhất giữa các lô sản xuất',
+                    'Tính tương thích khi lắp ráp',
+                  ],
+                },
+              ].map((group) => (
+                <article key={group.title} className="supply-hub-component-samples-key-card">
+                  <img
+                    className="supply-hub-component-samples-image-slot"
+                    src={group.image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>{t(group.title)}</h3>
+                    <ul>
+                      {group.items.map((item) => (
+                        <li key={item}>{t(item)}</li>
+                      ))}
+                    </ul>
+                    {group.note && <p>{t(group.note)}</p>}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-component-samples-panel supply-hub-component-samples-management">
+            <h2>
+              <span>6.</span> {t('Quản lý theo buyer và dự án')}
+            </h2>
+            <div className="supply-hub-component-samples-management-grid">
+              {[
+                {
+                  title: 'Theo buyer',
+                  image: '/assets/supply-hub/partner-standard-room/component-samples/management-buyer.webp',
+                  items: ['Bộ mẫu cấu kiện riêng', 'Quy cách riêng', 'Tiêu chuẩn riêng'],
+                },
+                {
+                  title: 'Theo dự án',
+                  image: '/assets/supply-hub/partner-standard-room/component-samples/management-project.webp',
+                  items: [
+                    'Cấu kiện riêng của từng chương trình sản xuất',
+                    'Bộ linh kiện riêng cho từng sản phẩm',
+                    'Hồ sơ kỹ thuật riêng',
+                  ],
+                },
+              ].map((group) => (
+                <article key={group.title} className="supply-hub-component-samples-management-card">
+                  <img
+                    className="supply-hub-component-samples-image-slot"
+                    src={group.image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <h3>{t(group.title)}</h3>
+                  <ul>
+                    {group.items.map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-component-samples-panel supply-hub-component-samples-supply-hub">
+            <h2>
+              <span>7.</span> {t('Kết nối với hệ thống Supply Hub')}
+            </h2>
+            <div className="supply-hub-component-samples-flow">
+              {[
+                [
+                  'Kho vật liệu',
+                  'Đối chiếu vật liệu đầu vào.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/flow-material-warehouse.webp',
+                ],
+                [
+                  'Kho cấu kiện',
+                  'Đối chiếu hàng sản xuất thực tế.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/flow-component-warehouse.webp',
+                ],
+                [
+                  'Hồ sơ sản phẩm',
+                  'Đối chiếu với mẫu thành phẩm đã duyệt.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/flow-product-records.webp',
+                ],
+                [
+                  'Hồ sơ QC',
+                  'Đối chiếu tiêu chuẩn kiểm tra.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/flow-qc-records.webp',
+                ],
+                [
+                  'Hồ sơ sản xuất',
+                  'Đối chiếu bản vẽ và quy trình gia công.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/flow-production-records.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title}>
+                  <img
+                    className="supply-hub-component-samples-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <h3>{t(title)}</h3>
+                  <p>{t(text)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-component-samples-panel supply-hub-component-samples-benefits">
+            <h2>
+              <span>8.</span> {t('Lợi ích đối với buyer')}
+            </h2>
+            <div className="supply-hub-component-samples-benefit-grid">
+              {[
+                [
+                  'Kiểm soát chất lượng từ gốc',
+                  'Chuẩn hóa từ cấu kiện, giảm rủi ro sai lệch ở các công đoạn sau.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/benefit-source-quality.webp',
+                ],
+                [
+                  'Duy trì tính đồng nhất',
+                  'Đảm bảo chất lượng ổn định trong nhiều nhà máy và nhiều lô hàng.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/benefit-consistency.webp',
+                ],
+                [
+                  'Giảm thời gian xử lý lỗi',
+                  'Dễ dàng xác định nguyên nhân và đưa ra giải pháp nhanh chóng, chính xác.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/benefit-faster-fixes.webp',
+                ],
+                [
+                  'Hỗ trợ chương trình cung ứng dài hạn',
+                  'Tạo nền tảng tin cậy và hiệu quả cho hợp tác lâu dài.',
+                  '/assets/supply-hub/partner-standard-room/component-samples/benefit-long-term-supply.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title} className="supply-hub-component-samples-benefit-card">
+                  <img
+                    className="supply-hub-component-samples-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>{t(title)}</h3>
+                    <p>{t(text)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-component-samples-panel supply-hub-component-samples-process">
+            <h2>
+              <span>9.</span> {t('Quy trình quản lý mẫu cấu kiện')}
+            </h2>
+            <ol className="supply-hub-component-samples-process-list">
+              {[
+                [
+                  'Buyer phê duyệt cấu kiện',
+                  '/assets/supply-hub/partner-standard-room/component-samples/process-approval.webp',
+                ],
+                [
+                  'Tiếp nhận & ghi nhận mẫu',
+                  '/assets/supply-hub/partner-standard-room/component-samples/process-receive-record.webp',
+                ],
+                [
+                  'Lưu trữ tại Phòng mẫu chuẩn đối tác',
+                  '/assets/supply-hub/partner-standard-room/component-samples/process-standard-room.webp',
+                ],
+                [
+                  'Liên kết với bản vẽ kỹ thuật',
+                  '/assets/supply-hub/partner-standard-room/component-samples/process-technical-drawing.webp',
+                ],
+                [
+                  'Liên kết với tiêu chuẩn QC',
+                  '/assets/supply-hub/partner-standard-room/component-samples/process-qc-standard.webp',
+                ],
+                [
+                  'Đối chiếu trong sản xuất',
+                  '/assets/supply-hub/partner-standard-room/component-samples/process-production-check.webp',
+                ],
+                [
+                  'Đối chiếu trong lắp ráp',
+                  '/assets/supply-hub/partner-standard-room/component-samples/process-assembly-check.webp',
+                ],
+                [
+                  'Đối chiếu trước khi xuất hàng',
+                  '/assets/supply-hub/partner-standard-room/component-samples/process-pre-export-check.webp',
+                ],
+              ].map(([label, image]) => (
+                <li key={label}>
+                  <img
+                    className="supply-hub-component-samples-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <span>{t(label)}</span>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section className="supply-hub-component-samples-panel supply-hub-component-samples-cta">
+            <div className="supply-hub-component-samples-cta-media" aria-hidden="true">
+              <img
+                className="supply-hub-component-samples-image-slot"
+                src="/assets/supply-hub/partner-standard-room/component-samples/cta-standard-components.webp"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+            <div className="supply-hub-component-samples-cta-copy">
+              <h2>{t('Duy trì tiêu chuẩn cấu kiện xuyên suốt toàn bộ dự án')}</h2>
+            </div>
+            <div className="supply-hub-component-samples-cta-media" aria-hidden="true">
+              <img
+                className="supply-hub-component-samples-image-slot"
+                src="/assets/supply-hub/partner-standard-room/component-samples/cta-component-records.webp"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+            <div className="supply-hub-component-samples-cta-note">
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ lưu trữ, quản lý và đối chiếu mẫu cấu kiện nhằm đảm bảo tính nhất quán giữa vật liệu, gia công, lắp ráp, QC và sản xuất hàng loạt.',
+                )}
+              </p>
+            </div>
+            <div className="supply-hub-component-samples-cta-actions">
+              <a href="/contact/supply-hub-inquiry">
+                <span>{t('Gửi yêu cầu')}</span>
+                <b aria-hidden="true">→</b>
+              </a>
+              <a href="/contact">
+                <span>{t('Trao đổi với ANSLIFE')}</span>
+                <b aria-hidden="true">☰</b>
+              </a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isSupplyHubApprovedProductSamplesPage && (
+        <section className="supply-hub-approved-samples-content" aria-labelledby="approved-samples-role-title">
+          <section className="supply-hub-approved-samples-panel supply-hub-approved-samples-role">
+            <h2 id="approved-samples-role-title">
+              <span>1.</span> {t('Vai trò của mẫu sản phẩm đã duyệt')}
+            </h2>
+            <p>{t('Mẫu đã duyệt là tiêu chuẩn tham chiếu chính thức cho toàn bộ dự án.')}</p>
+            <ul className="supply-hub-approved-samples-check-list">
+              {[
+                'Đối chiếu trong sản xuất',
+                'Đối chiếu trong kiểm tra chất lượng',
+                'Đối chiếu trong đánh giá nhà máy',
+                'Đối chiếu trong hoàn thiện bề mặt',
+                'Đối chiếu trong đóng gói',
+                'Đối chiếu trong các đơn hàng lặp lại',
+              ].map((item) => (
+                <li key={item}>
+                  <span className="supply-hub-approved-samples-small-slot" aria-hidden="true" />
+                  <span>{t(item)}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="supply-hub-approved-samples-panel supply-hub-approved-samples-stored">
+            <h2>
+              <span>2.</span> {t('Những gì được lưu giữ cùng mẫu')}
+            </h2>
+            <div className="supply-hub-approved-samples-stored-grid">
+              {[
+                {
+                  title: 'Sản phẩm mẫu',
+                  image: '/assets/supply-hub/partner-standard-room/approved-product-samples/stored-product-sample.webp',
+                  items: [
+                    'Mẫu hoàn chỉnh',
+                    'Mẫu prototype',
+                    'Mẫu PP (Pre-Production Sample)',
+                    'Mẫu Golden Sample',
+                    'Mẫu chuẩn đang áp dụng cho dự án',
+                  ],
+                },
+                {
+                  title: 'Hồ sơ kỹ thuật liên quan',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/approved-product-samples/stored-technical-records.webp',
+                  items: [
+                    'Bản vẽ kỹ thuật',
+                    'Thông số kích thước',
+                    'Mã sản phẩm',
+                    'Danh mục vật liệu',
+                    'Danh mục cấu kiện',
+                    'Quy cách lắp ráp',
+                  ],
+                },
+                {
+                  title: 'Hồ sơ hoàn thiện bề mặt',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/approved-product-samples/stored-finish-records.webp',
+                  items: [
+                    'Mẫu màu đã duyệt',
+                    'Bảng màu tham chiếu',
+                    'Tiêu chuẩn độ bóng',
+                    'Tiêu chuẩn hoàn thiện bề mặt',
+                    'Hồ sơ stain và top coat',
+                  ],
+                },
+                {
+                  title: 'Hồ sơ QC',
+                  image: '/assets/supply-hub/partner-standard-room/approved-product-samples/stored-qc-records.webp',
+                  items: [
+                    'Checklist QC',
+                    'Tiêu chuẩn chấp nhận',
+                    'Tiêu chuẩn ngoại quan',
+                    'Tiêu chuẩn đóng gói',
+                    'Hình ảnh tham chiếu',
+                  ],
+                },
+              ].map((group) => (
+                <article key={group.title} className="supply-hub-approved-samples-stored-card">
+                  <img
+                    className="supply-hub-approved-samples-image-slot"
+                    src={group.image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <h3>{t(group.title)}</h3>
+                  <ul>
+                    {group.items.map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-approved-samples-panel supply-hub-approved-samples-usage">
+            <h2>
+              <span>3.</span> {t('Mẫu được sử dụng như thế nào?')}
+            </h2>
+            <div className="supply-hub-approved-samples-usage-list">
+              {[
+                [
+                  'Trước khi sản xuất',
+                  'Nhà máy đối chiếu kích thước, kết cấu, vật liệu, hoàn thiện và quy cách lắp ráp trước khi triển khai sản xuất hàng loạt.',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/usage-before-production.webp',
+                ],
+                [
+                  'Trong quá trình sản xuất',
+                  'Đối chiếu kích thước, màu sắc, hoàn thiện bề mặt, kết cấu sản phẩm và các chi tiết quan trọng.',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/usage-during-production.webp',
+                ],
+                [
+                  'Trong quá trình QC',
+                  'So sánh ngoại quan, đánh giá sai lệch, kiểm tra độ đồng đều giữa các lô hàng và xác nhận chất lượng trước khi xuất hàng.',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/usage-qc.webp',
+                ],
+                [
+                  'Trong các đơn hàng lặp lại',
+                  'Duy trì tính nhất quán giữa các năm, giảm thời gian phát triển lại sản phẩm và hạn chế sai khác giữa các đợt sản xuất.',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/usage-repeat-orders.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title} className="supply-hub-approved-samples-usage-row">
+                  <img
+                    className="supply-hub-approved-samples-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>{t(title)}</h3>
+                    <p>{t(text)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-approved-samples-panel supply-hub-approved-samples-buyer">
+            <h2>
+              <span>4.</span> {t('Quản lý theo buyer')}
+            </h2>
+            <div className="supply-hub-approved-samples-buyer-body">
+              <img
+                className="supply-hub-approved-samples-image-slot"
+                src="/assets/supply-hub/partner-standard-room/approved-product-samples/buyer-management.webp"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+              <div>
+                <p>{t('Mỗi buyer sẽ có:')}</p>
+                <ul>
+                  {[
+                    'Bộ mẫu riêng',
+                    'Tiêu chuẩn riêng',
+                    'Hệ vật liệu riêng',
+                    'Bảng màu riêng',
+                    'Tiêu chuẩn đóng gói riêng',
+                  ].map((item) => (
+                    <li key={item}>{t(item)}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section className="supply-hub-approved-samples-panel supply-hub-approved-samples-supply-hub">
+            <h2>
+              <span>5.</span> {t('Kết nối với Supply Hub Việt Nam')}
+            </h2>
+            <div className="supply-hub-approved-samples-flow">
+              {[
+                [
+                  'Kho vật liệu',
+                  'Đối chiếu vật liệu sử dụng trong sản xuất.',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/supply-hub-material-warehouse.webp',
+                ],
+                [
+                  'Kho cấu kiện',
+                  'Đối chiếu các bộ phận và bán thành phẩm.',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/supply-hub-component-warehouse.webp',
+                ],
+                [
+                  'Hồ sơ QC',
+                  'Đối chiếu tiêu chuẩn chất lượng.',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/supply-hub-qc-records.webp',
+                ],
+                [
+                  'Hồ sơ xuất khẩu',
+                  'Đối chiếu quy cách đóng gói và ghi nhãn.',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/supply-hub-export-records.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title}>
+                  <img
+                    className="supply-hub-approved-samples-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <h3>{t(title)}</h3>
+                  <p>{t(text)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-approved-samples-panel supply-hub-approved-samples-benefits">
+            <h2>
+              <span>6.</span> {t('Lợi ích đối với buyer')}
+            </h2>
+            <div className="supply-hub-approved-samples-benefit-grid">
+              {[
+                [
+                  'Duy trì tính nhất quán',
+                  'Giữ tiêu chuẩn ổn định cho tất cả các lô hàng và nhiều năm.',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/benefit-consistency.webp',
+                ],
+                [
+                  'Giảm rủi ro sai lệch',
+                  'Hạn chế sai khác về chất lượng, màu sắc, hoàn thiện và đóng gói.',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/benefit-risk-reduction.webp',
+                ],
+                [
+                  'Tăng tốc triển khai đơn hàng',
+                  'Rút ngắn thời gian phê duyệt và chuẩn bị sản xuất.',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/benefit-order-speed.webp',
+                ],
+                [
+                  'Hỗ trợ nhiều nhà máy',
+                  'Dễ dàng nhân rộng sản xuất tại nhiều nhà máy khác nhau.',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/benefit-multi-factory.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title} className="supply-hub-approved-samples-benefit-card">
+                  <img
+                    className="supply-hub-approved-samples-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <h3>{t(title)}</h3>
+                  <p>{t(text)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-approved-samples-panel supply-hub-approved-samples-process">
+            <h2>
+              <span>7.</span> {t('Quy trình quản lý mẫu')}
+            </h2>
+            <ol className="supply-hub-approved-samples-process-list">
+              {[
+                [
+                  'Buyer phê duyệt mẫu',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/process-approval.webp',
+                ],
+                [
+                  'Tiếp nhận & ghi nhận mẫu',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/process-receive-record.webp',
+                ],
+                [
+                  'Lưu trữ tại Phòng mẫu chuẩn đối tác',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/process-standard-room.webp',
+                ],
+                [
+                  'Liên kết với hồ sơ kỹ thuật',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/process-technical-link.webp',
+                ],
+                [
+                  'Liên kết với hồ sơ QC',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/process-qc-link.webp',
+                ],
+                [
+                  'Đối chiếu trong sản xuất',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/process-production-check.webp',
+                ],
+                [
+                  'Đối chiếu trước khi xuất hàng',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/process-pre-export-check.webp',
+                ],
+                [
+                  'Duy trì cho các đơn hàng tiếp theo',
+                  '/assets/supply-hub/partner-standard-room/approved-product-samples/process-repeat-orders.webp',
+                ],
+              ].map(([label, image], index) => (
+                <li key={label}>
+                  <img
+                    className="supply-hub-approved-samples-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <span>
+                    {index + 1}. {t(label)}
+                  </span>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section className="supply-hub-approved-samples-panel supply-hub-approved-samples-cta">
+            <div className="supply-hub-approved-samples-cta-copy">
+              <h2>{t('Duy trì tiêu chuẩn sản phẩm xuyên suốt nhiều đơn hàng')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ lưu trữ, quản lý và đối chiếu mẫu sản phẩm đã duyệt nhằm đảm bảo tính nhất quán giữa sản xuất, QC, đóng gói và xuất khẩu.',
+                )}
+              </p>
+              <div className="supply-hub-approved-samples-cta-actions">
+                <a href="/contact/supply-hub-inquiry">
+                  <span>{t('Gửi yêu cầu')}</span>
+                  <b aria-hidden="true">→</b>
+                </a>
+                <a href="/contact">
+                  <span>{t('Trao đổi với ANSLIFE')}</span>
+                  <b aria-hidden="true">☰</b>
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
       )}
       {isSupplyHubMaterialComponentStoragePage && (
         <section className="supply-hub-material-storage-content" aria-labelledby="material-storage-items-title">

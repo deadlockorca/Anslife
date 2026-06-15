@@ -543,7 +543,7 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
       {
         id: 'partner-standard-room',
         title: 'Phòng mẫu chuẩn đối tác',
-        description: 'Mẫu duyệt, bản vẽ, finishing board, packing standard và checklist QC.',
+        description: '',
       },
       {
         id: 'vietnam-supply-hub-japanese-buyers',
