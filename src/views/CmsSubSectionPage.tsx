@@ -316,6 +316,22 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'vietnam-supply-hub' &&
     section.id === 'partner-standard-room' &&
     detailSlug === 'component-samples';
+  const isSupplyHubTechnicalDrawingsPage =
+    config.slug === 'vietnam-supply-hub' &&
+    section.id === 'partner-standard-room' &&
+    detailSlug === 'technical-drawings';
+  const isSupplyHubMaterialReferencesPage =
+    config.slug === 'vietnam-supply-hub' &&
+    section.id === 'partner-standard-room' &&
+    detailSlug === 'material-references';
+  const isSupplyHubPackingStandardsPage =
+    config.slug === 'vietnam-supply-hub' &&
+    section.id === 'partner-standard-room' &&
+    detailSlug === 'packing-standards';
+  const isSupplyHubQcChecklistPage =
+    config.slug === 'vietnam-supply-hub' &&
+    section.id === 'partner-standard-room' &&
+    (detailSlug === 'qc-checklists' || detailSlug === 'qc-checklist');
   const shouldRenderBlankScholarshipPage =
     config.slug === 'about-anslife' && section.id === 'scholarship-community';
   const shouldRenderBlankQualityInProcessPage =
@@ -330,7 +346,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isSupplyHubMaterialComponentStoragePage ||
     isSupplyHubExportDocumentationSupportPage ||
     isSupplyHubApprovedProductSamplesPage ||
-    isSupplyHubComponentSamplesPage;
+    isSupplyHubComponentSamplesPage ||
+    isSupplyHubTechnicalDrawingsPage ||
+    isSupplyHubMaterialReferencesPage ||
+    isSupplyHubPackingStandardsPage ||
+    isSupplyHubQcChecklistPage;
   const isCustomAboutSection =
     config.slug === 'about-anslife' &&
     (section.id === 'philosophy' ||
@@ -359,6 +379,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isSupplyHubExportDocumentationSupportPage ||
     isSupplyHubApprovedProductSamplesPage ||
     isSupplyHubComponentSamplesPage ||
+    isSupplyHubTechnicalDrawingsPage ||
+    isSupplyHubMaterialReferencesPage ||
+    isSupplyHubPackingStandardsPage ||
+    isSupplyHubQcChecklistPage ||
     isCustomAboutSection ||
     (config.slug === 'about-anslife' &&
       (section.id === 'philosophy' ||
@@ -409,6 +433,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldShowSupplyHubExportDocumentationSupportBanner = isSupplyHubExportDocumentationSupportPage;
   const shouldShowSupplyHubApprovedProductSamplesBanner = isSupplyHubApprovedProductSamplesPage;
   const shouldShowSupplyHubComponentSamplesBanner = isSupplyHubComponentSamplesPage;
+  const shouldShowSupplyHubTechnicalDrawingsBanner = isSupplyHubTechnicalDrawingsPage;
+  const shouldShowSupplyHubMaterialReferencesBanner = isSupplyHubMaterialReferencesPage;
+  const shouldShowSupplyHubPackingStandardsBanner = isSupplyHubPackingStandardsPage;
+  const shouldShowSupplyHubQcChecklistBanner = isSupplyHubQcChecklistPage;
   const shouldRenderSectionHero = !shouldHideSectionHero && !isSupplyHubComponentSamplesPage;
   const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
@@ -1473,6 +1501,1305 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             </p>
           </figcaption>
         </figure>
+      )}
+      {shouldShowSupplyHubTechnicalDrawingsBanner && (
+        <figure className="supply-hub-partner-technical-drawings-banner">
+          <img
+            src="/assets/supply-hub/partner-standard-room/technical-drawings-banner.png"
+            alt={t('Banner bản vẽ kỹ thuật trong phòng mẫu chuẩn đối tác')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="supply-hub-partner-technical-drawings-banner-copy">
+            <h1>{t('Bản vẽ kỹ thuật')}</h1>
+            <p>
+              {t(
+                'ANSLIFE quản lý và lưu trữ bản vẽ kỹ thuật của sản phẩm, cấu kiện và vật liệu theo từng buyer, từng dự án và từng phiên bản được phê duyệt nhằm đảm bảo sự thống nhất trong sản xuất, kiểm soát chất lượng và triển khai đơn hàng.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowSupplyHubMaterialReferencesBanner && (
+        <figure className="supply-hub-partner-material-references-banner">
+          <img
+            src="/assets/supply-hub/partner-standard-room/material-references-banner.png"
+            alt={t('Banner mẫu vật liệu tham chiếu trong phòng mẫu chuẩn đối tác')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="supply-hub-partner-material-references-banner-copy">
+            <h1>{t('Tài liệu vật liệu')}</h1>
+            <p>
+              {t(
+                'ANSLIFE quản lý và lưu trữ hồ sơ vật liệu của từng buyer, từng dự án và từng dòng sản phẩm nhằm đảm bảo sự thống nhất trong quá trình phát triển sản phẩm, sản xuất, kiểm soát chất lượng và xuất khẩu.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowSupplyHubPackingStandardsBanner && (
+        <figure className="supply-hub-partner-packing-standards-banner">
+          <img
+            src="/assets/supply-hub/partner-standard-room/packing-standards-banner.png"
+            alt={t('Banner tiêu chuẩn đóng gói trong phòng mẫu chuẩn đối tác')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="supply-hub-partner-packing-standards-banner-copy">
+            <h1>{t('Tiêu chuẩn đóng gói')}</h1>
+            <p>
+              {t(
+                'ANSLIFE quản lý và lưu trữ các tiêu chuẩn đóng gói đã được phê duyệt nhằm đảm bảo sản phẩm được bảo vệ phù hợp trong quá trình lưu kho, vận chuyển nội địa, xuất khẩu và giao hàng quốc tế.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Tiêu chuẩn đóng gói là một phần quan trọng của hệ thống quản lý chất lượng, giúp giảm thiểu hư hỏng, duy trì chất lượng sản phẩm và đảm bảo tính nhất quán giữa các lô hàng.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowSupplyHubQcChecklistBanner && (
+        <figure className="supply-hub-partner-qc-checklist-banner">
+          <img
+            src="/assets/supply-hub/partner-standard-room/qc-checklist-banner.png"
+            alt={t('Banner checklist QC trong phòng mẫu chuẩn đối tác')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="supply-hub-partner-qc-checklist-banner-copy">
+            <h1>{t('Checklist QC')}</h1>
+            <p>
+              {t(
+                'ANSLIFE quản lý và lưu trữ hệ thống Checklist QC theo từng buyer, từng dự án và từng nhóm sản phẩm nhằm đảm bảo hoạt động kiểm tra chất lượng được thực hiện nhất quán trong toàn bộ chuỗi cung ứng.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Checklist QC là tài liệu tham chiếu chính thức được sử dụng trong quá trình kiểm tra vật liệu, sản xuất, hoàn thiện, đóng gói và xuất hàng.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isSupplyHubQcChecklistPage && (
+        <section
+          className="supply-hub-qc-checklist-content"
+          aria-labelledby="qc-checklist-groups-title"
+        >
+          <section className="supply-hub-qc-checklist-panel supply-hub-qc-checklist-groups">
+            <h2 id="qc-checklist-groups-title">{t('CÁC NHÓM CHECKLIST QC ĐƯỢC QUẢN LÝ')}</h2>
+            <div className="supply-hub-qc-checklist-group-grid">
+              {[
+                {
+                  title: 'CHECKLIST KIỂM TRA VẬT LIỆU',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/qc-checklists/group-material-check.webp',
+                  intro: 'Áp dụng cho:',
+                  applies: [
+                    'Gỗ tự nhiên',
+                    'Gỗ kỹ thuật',
+                    'Veneer',
+                    'Foam',
+                    'Vải',
+                    'Da',
+                    'Mây tre',
+                    'Vật liệu đóng gói',
+                  ],
+                  checkTitle: 'Các nội dung kiểm tra:',
+                  checks: [
+                    'Chủng loại vật liệu',
+                    'Quy cách kỹ thuật',
+                    'Độ ẩm',
+                    'Màu sắc',
+                    'Bề mặt',
+                    'Độ dày',
+                    'Tiêu chuẩn kỹ thuật được phê duyệt',
+                  ],
+                },
+                {
+                  title: 'CHECKLIST KIỂM TRA TRONG SẢN XUẤT',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/qc-checklists/group-production-check.webp',
+                  intro: 'Áp dụng trong quá trình gia công và lắp ráp.',
+                  checkTitle: 'Các nội dung kiểm tra:',
+                  checks: [
+                    'Kích thước chi tiết',
+                    'Mộng và liên kết',
+                    'Độ chính xác gia công',
+                    'Độ vuông góc',
+                    'Độ ổn định kết cấu',
+                    'Lắp ráp thử',
+                    'Sai lệch cho phép',
+                  ],
+                },
+                {
+                  title: 'CHECKLIST KIỂM TRA HOÀN THIỆN BỀ MẶT',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/qc-checklists/group-surface-finish-check.webp',
+                  intro:
+                    'Áp dụng cho các công đoạn stain, sealer, base coat, top coat và hoàn thiện cuối.',
+                  checkTitle: 'Các nội dung kiểm tra:',
+                  checks: [
+                    'Màu sắc',
+                    'Độ đồng đều màu',
+                    'Độ bóng / độ mờ',
+                    'Bề mặt hoàn thiện',
+                    'Vết trầy xước',
+                    'Chảy sơn',
+                    'Bụi sơn',
+                    'Lỗi hoàn thiện khác',
+                  ],
+                },
+                {
+                  title: 'CHECKLIST KIỂM TRA SẢN PHẨM HOÀN THIỆN',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/qc-checklists/group-finished-product-check.webp',
+                  intro: 'Áp dụng trước khi đóng gói.',
+                  checkTitle: 'Các nội dung kiểm tra:',
+                  checks: [
+                    'Kích thước tổng thể',
+                    'Chức năng sử dụng',
+                    'Độ ổn định',
+                    'Kết cấu',
+                    'Hoàn thiện bề mặt',
+                    'Phụ kiện',
+                    'Nhãn mác',
+                    'Đối chiếu mẫu duyệt',
+                  ],
+                },
+                {
+                  title: 'CHECKLIST KIỂM TRA ĐÓNG GÓI',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/qc-checklists/group-packing-check.webp',
+                  intro: 'Áp dụng trước khi xuất hàng.',
+                  checkTitle: 'Các nội dung kiểm tra:',
+                  checks: [
+                    'Quy cách đóng gói',
+                    'Vật liệu bảo vệ',
+                    'Carton mark',
+                    'Barcode',
+                    'Trọng lượng kiện',
+                    'Chống ẩm',
+                    'Chống va đập',
+                    'Hình thức kiện hàng',
+                  ],
+                },
+                {
+                  title: 'CHECKLIST KIỂM TRA TRƯỚC XUẤT HÀNG',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/qc-checklists/group-pre-shipment-check.webp',
+                  intro: 'Áp dụng cho Final Inspection.',
+                  checkTitle: 'Các nội dung kiểm tra:',
+                  checks: [
+                    'Số lượng',
+                    'Chất lượng',
+                    'Quy cách đóng gói',
+                    'Nhãn mác',
+                    'Tình trạng container',
+                    'Chứng từ liên quan',
+                    'Mức độ phù hợp với đơn hàng',
+                  ],
+                },
+              ].map((group, index) => (
+                <article key={group.title}>
+                  <h3>
+                    <span>{index + 1}</span>
+                    {t(group.title)}
+                  </h3>
+                  <img
+                    className="supply-hub-qc-checklist-image-slot"
+                    src={group.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="supply-hub-qc-checklist-card-copy">
+                    <p>{t(group.intro)}</p>
+                    {group.applies && (
+                      <ul>
+                        {group.applies.map((item) => (
+                          <li key={item}>{t(item)}</li>
+                        ))}
+                      </ul>
+                    )}
+                    <p className="supply-hub-qc-checklist-card-label">{t(group.checkTitle)}</p>
+                    <ul>
+                      {group.checks.map((item) => (
+                        <li key={item}>{t(item)}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-qc-checklist-reference-grid">
+            <article className="supply-hub-qc-checklist-panel supply-hub-qc-checklist-reference-card">
+              <h2>{t('LIÊN KẾT VỚI BỘ TIÊU CHUẨN ĐỐI TÁC')}</h2>
+              <p>{t('Mỗi checklist được xây dựng dựa trên:')}</p>
+              <ul className="supply-hub-qc-checklist-icon-list">
+                {[
+                  'Bản vẽ kỹ thuật',
+                  'Mẫu sản phẩm đã duyệt',
+                  'Bảng màu / hoàn thiện',
+                  'Tài liệu vật liệu',
+                  'Tiêu chuẩn đóng gói',
+                  'Yêu cầu riêng của buyer',
+                ].map((item) => (
+                  <li key={item}>{t(item)}</li>
+                ))}
+              </ul>
+              <p>
+                {t(
+                  'Điều này giúp tất cả các hoạt động kiểm tra đều tham chiếu cùng một bộ tiêu chuẩn thống nhất.',
+                )}
+              </p>
+            </article>
+
+            <article className="supply-hub-qc-checklist-panel supply-hub-qc-checklist-reference-card supply-hub-qc-checklist-reference-card--with-image">
+              <h2>{t('LIÊN KẾT VỚI HỆ THỐNG QC ĐỘC LẬP')}</h2>
+              <p>{t('Checklist QC được sử dụng trong các hoạt động:')}</p>
+              <div className="supply-hub-qc-checklist-reference-layout">
+                <ul className="supply-hub-qc-checklist-icon-list">
+                  {[
+                    'Inline Inspection',
+                    'Pre-Assembly Inspection',
+                    'Pre-Finishing Inspection',
+                    'Final Inspection',
+                    'Container Loading Inspection',
+                    'Independent QC Services',
+                  ].map((item) => (
+                    <li key={item}>{t(item)}</li>
+                  ))}
+                </ul>
+                <img
+                  className="supply-hub-qc-checklist-reference-image"
+                  src="/assets/supply-hub/partner-standard-room/qc-checklists/reference-independent-qc.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </article>
+
+            <article className="supply-hub-qc-checklist-panel supply-hub-qc-checklist-reference-card supply-hub-qc-checklist-reference-card--with-image">
+              <h2>{t('THÔNG TIN ĐƯỢC QUẢN LÝ')}</h2>
+              <p>{t('Mỗi checklist có thể bao gồm:')}</p>
+              <div className="supply-hub-qc-checklist-reference-layout">
+                <ul>
+                  {[
+                    'Mã checklist',
+                    'Buyer',
+                    'Dự án',
+                    'Sản phẩm áp dụng',
+                    'Phiên bản',
+                    'Ngày hiệu lực',
+                    'Người phê duyệt',
+                    'Tiêu chuẩn chấp nhận',
+                    'Lịch sử cập nhật',
+                  ].map((item) => (
+                    <li key={item}>{t(item)}</li>
+                  ))}
+                </ul>
+                <img
+                  className="supply-hub-qc-checklist-reference-image"
+                  src="/assets/supply-hub/partner-standard-room/qc-checklists/reference-managed-info.webp"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </article>
+          </section>
+
+          <section className="supply-hub-qc-checklist-panel supply-hub-qc-checklist-value">
+            <h2>{t('GIÁ TRỊ MANG LẠI')}</h2>
+            <div className="supply-hub-qc-checklist-value-grid">
+              {[
+                {
+                  title: 'ĐỒNG NHẤT TIÊU CHUẨN CHẤT LƯỢNG',
+                  text: 'Đảm bảo mọi nhà máy, QC và đối tác cùng sử dụng một tiêu chuẩn đánh giá.',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/qc-checklists/value-quality-standard.webp',
+                },
+                {
+                  title: 'GIẢM RỦI RO SẢN XUẤT',
+                  text: 'Phát hiện lỗi sớm trước khi sản phẩm chuyển sang công đoạn tiếp theo.',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/qc-checklists/value-production-risk.webp',
+                },
+                {
+                  title: 'HỖ TRỢ TRUY XUẤT VÀ CẢI TIẾN',
+                  text: 'Dễ dàng đối chiếu nguyên nhân lỗi và cải thiện quy trình trong các đơn hàng tiếp theo.',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/qc-checklists/value-traceability-improvement.webp',
+                },
+                {
+                  title: 'HỖ TRỢ BUYER KIỂM SOÁT CHẤT LƯỢNG TỪ XA',
+                  text: 'Buyer có thể yên tâm rằng sản phẩm được kiểm tra theo đúng checklist đã được phê duyệt.',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/qc-checklists/value-remote-quality-control.webp',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <img
+                    className="supply-hub-qc-checklist-value-image"
+                    src={item.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.text)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-qc-checklist-panel supply-hub-qc-checklist-system">
+            <img
+              className="supply-hub-qc-checklist-system-art supply-hub-qc-checklist-system-art--left"
+              src="/assets/supply-hub/partner-standard-room/qc-checklists/system-qc-checklist.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="supply-hub-qc-checklist-system-copy">
+              <h2>{t('HỆ THỐNG CHECKLIST QC CỦA ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE duy trì hệ thống Checklist QC theo từng buyer, từng dự án và từng nhóm sản phẩm nhằm đảm bảo chất lượng được kiểm soát nhất quán từ vật liệu đầu vào đến khi sản phẩm được xuất hàng.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Checklist không chỉ là tài liệu kiểm tra, mà còn là công cụ kết nối giữa bản vẽ kỹ thuật, vật liệu, hoàn thiện bề mặt, đóng gói và tiêu chuẩn chất lượng của từng đối tác.',
+                )}
+              </p>
+            </div>
+            <img
+              className="supply-hub-qc-checklist-system-art supply-hub-qc-checklist-system-art--right"
+              src="/assets/supply-hub/partner-standard-room/qc-checklists/system-qc-laptop.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </section>
+
+          <section className="supply-hub-qc-checklist-panel supply-hub-qc-checklist-cta">
+            <div className="supply-hub-qc-checklist-cta-copy">
+              <h2>{t('GỬI TIÊU CHUẨN QC CHO ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi checklist riêng, tiêu chuẩn kiểm tra hoặc yêu cầu chất lượng để ANSLIFE lưu trữ, đối chiếu và triển khai trong hệ thống quản lý chất lượng của dự án.',
+                )}
+              </p>
+            </div>
+            <div className="supply-hub-qc-checklist-cta-actions">
+              <a href="/vn/contact/upload-drawing">
+                <span className="supply-hub-qc-checklist-action-icon supply-hub-qc-checklist-action-icon--document" aria-hidden="true" />
+                {t('Gửi tiêu chuẩn kiểm tra')}
+              </a>
+              <a href="/vn/contact">
+                <span className="supply-hub-qc-checklist-action-icon supply-hub-qc-checklist-action-icon--phone" aria-hidden="true" />
+                {t('Liên hệ ANSLIFE')}
+              </a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isSupplyHubPackingStandardsPage && (
+        <section
+          className="supply-hub-packing-standards-content"
+          aria-labelledby="packing-standards-managed-title"
+        >
+          <section className="supply-hub-packing-standards-panel supply-hub-packing-standards-managed">
+            <h2 id="packing-standards-managed-title">{t('CÁC NỘI DUNG ĐƯỢC QUẢN LÝ')}</h2>
+            <div className="supply-hub-packing-standards-managed-grid">
+              {[
+                {
+                  title: 'QUY CÁCH ĐÓNG GÓI SẢN PHẨM',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/packing-standards/managed-packing-spec.webp',
+                  items: [
+                    'Kích thước thùng carton',
+                    'Số lượng sản phẩm trên mỗi kiện',
+                    'Trọng lượng mỗi kiện',
+                    'Phương án đóng gói theo bộ hoặc theo chi tiết',
+                    'Quy cách pallet nếu có',
+                  ],
+                },
+                {
+                  title: 'VẬT LIỆU BẢO VỆ SẢN PHẨM',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/packing-standards/managed-protective-materials.webp',
+                  items: [
+                    'Foam bảo vệ',
+                    'Giấy tổ ong',
+                    'Corner protector',
+                    'Túi PE',
+                    'Túi chống ẩm',
+                    'Màng co',
+                    'Vật liệu chống trầy xước',
+                    'Pallet và vật liệu cố định hàng hóa',
+                  ],
+                },
+                {
+                  title: 'TIÊU CHUẨN ĐÓNG GÓI XUẤT KHẨU',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/packing-standards/managed-export-packing.webp',
+                  items: [
+                    'Container loading requirements',
+                    'Chống ẩm',
+                    'Chống va đập',
+                    'Chống biến dạng',
+                    'Tiêu chuẩn pallet',
+                    'Tiêu chuẩn dán nhãn',
+                    'Tiêu chuẩn thị trường nhập khẩu',
+                  ],
+                },
+                {
+                  title: 'TIÊU CHUẨN DÁN NHÃN',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/packing-standards/managed-labeling-standard.webp',
+                  items: [
+                    'Product Code',
+                    'Buyer Item Number',
+                    'Carton Mark',
+                    'PO Number',
+                    'Barcode',
+                    'Country of Origin',
+                    'Shipping Mark',
+                    'Hướng dẫn xử lý hàng hóa',
+                  ],
+                },
+                {
+                  title: 'TIÊU CHUẨN LẮP RÁP ĐI KÈM',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/packing-standards/managed-assembly-standard.webp',
+                  items: [
+                    'Hướng dẫn lắp ráp',
+                    'Danh mục linh kiện',
+                    'Sơ đồ lắp ráp',
+                    'Danh sách phụ kiện đi kèm',
+                  ],
+                },
+              ].map((group, index) => (
+                <article key={group.title}>
+                  <h3>
+                    <span>{index + 1}.</span> {t(group.title)}
+                  </h3>
+                  <img
+                    className="supply-hub-packing-standards-image-slot"
+                    src={group.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <ul>
+                    {group.items.map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-packing-standards-reference-grid">
+            <article className="supply-hub-packing-standards-panel supply-hub-packing-standards-reference-card">
+              <h2>{t('LIÊN KẾT VỚI SẢN XUẤT')}</h2>
+              <p>
+                {t(
+                  'Tiêu chuẩn đóng gói được áp dụng ngay từ giai đoạn phát triển sản phẩm nhằm đảm bảo sản phẩm phù hợp với yêu cầu vận chuyển và tối ưu hóa chi phí logistics.',
+                )}
+              </p>
+              <p className="supply-hub-packing-standards-list-label">{t('Ứng dụng cho:')}</p>
+              <ul className="supply-hub-packing-standards-check-list supply-hub-packing-standards-check-list--split">
+                {[
+                  'Nội thất hoàn thiện',
+                  'Cấu kiện nội thất',
+                  'Nội thất bọc nệm',
+                  'Nội thất ngoài trời',
+                  'Dự án khách sạn, nhà hàng và resort',
+                  'Linh kiện và vật liệu',
+                ].map((item) => (
+                  <li key={item}>{t(item)}</li>
+                ))}
+              </ul>
+            </article>
+
+            <article className="supply-hub-packing-standards-panel supply-hub-packing-standards-reference-card">
+              <h2>{t('LIÊN KẾT VỚI QC')}</h2>
+              <p>
+                {t(
+                  'Tiêu chuẩn đóng gói là một phần của quy trình kiểm tra cuối trước khi xuất hàng.',
+                )}
+              </p>
+              <p className="supply-hub-packing-standards-list-label">
+                {t('Các hạng mục kiểm tra bao gồm:')}
+              </p>
+              <ul className="supply-hub-packing-standards-check-list supply-hub-packing-standards-check-list--split">
+                {[
+                  'Quy cách đóng gói',
+                  'Vật liệu bảo vệ',
+                  'Tình trạng thùng carton',
+                  'Thông tin nhãn mác',
+                  'Trọng lượng kiện hàng',
+                  'Khả năng bảo vệ sản phẩm',
+                  'Chống ẩm',
+                  'Chống va đập',
+                  'Độ ổn định khi xếp pallet hoặc container',
+                ].map((item) => (
+                  <li key={item}>{t(item)}</li>
+                ))}
+              </ul>
+            </article>
+
+            <article className="supply-hub-packing-standards-panel supply-hub-packing-standards-reference-card">
+              <h2>{t('LƯU TRỮ MẪU ĐÓNG GÓI')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE duy trì hệ thống lưu trữ hồ sơ đóng gói theo từng buyer và từng dự án.',
+                )}
+              </p>
+              <p className="supply-hub-packing-standards-list-label">{t('Bao gồm:')}</p>
+              <ul className="supply-hub-packing-standards-check-list supply-hub-packing-standards-check-list--split">
+                {[
+                  'Bản vẽ đóng gói',
+                  'Hình ảnh đóng gói đã duyệt',
+                  'Carton Mark chuẩn',
+                  'Mẫu nhãn',
+                  'Tiêu chuẩn vật liệu đóng gói',
+                  'Hướng dẫn đóng gói',
+                  'Báo cáo kiểm tra đóng gói',
+                ].map((item) => (
+                  <li key={item}>{t(item)}</li>
+                ))}
+              </ul>
+            </article>
+          </section>
+
+          <section className="supply-hub-packing-standards-panel supply-hub-packing-standards-document-strip">
+            <div className="supply-hub-packing-standards-document-grid">
+              {[
+                [
+                  'BẢN VẼ ĐÓNG GÓI',
+                  '/assets/supply-hub/partner-standard-room/packing-standards/document-packing-drawing.webp',
+                ],
+                [
+                  'LOADING PLAN',
+                  '/assets/supply-hub/partner-standard-room/packing-standards/document-loading-plan.webp',
+                ],
+                [
+                  'CARTON MARK',
+                  '/assets/supply-hub/partner-standard-room/packing-standards/document-carton-mark.webp',
+                ],
+                [
+                  'PALLET STACKING',
+                  '/assets/supply-hub/partner-standard-room/packing-standards/document-pallet-stacking.webp',
+                ],
+                [
+                  'PROTECTIVE MATERIALS',
+                  '/assets/supply-hub/partner-standard-room/packing-standards/document-protective-materials.webp',
+                ],
+                [
+                  'ASSEMBLY GUIDE',
+                  '/assets/supply-hub/partner-standard-room/packing-standards/document-assembly-guide.webp',
+                ],
+              ].map(([item, image]) => (
+                <article key={item}>
+                  <h2>{t(item)}</h2>
+                  <img
+                    className="supply-hub-packing-standards-document-image"
+                    src={image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-packing-standards-panel supply-hub-packing-standards-value">
+            <h2>{t('GIÁ TRỊ MANG LẠI')}</h2>
+            <div className="supply-hub-packing-standards-value-grid">
+              {[
+                {
+                  title: 'GIẢM HƯ HỎNG TRONG VẬN CHUYỂN',
+                  text: 'Bảo vệ sản phẩm trong suốt quá trình lưu kho, vận chuyển và giao nhận quốc tế.',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/packing-standards/value-damage-reduction.webp',
+                },
+                {
+                  title: 'ĐỒNG NHẤT GIỮA CÁC LÔ HÀNG',
+                  text: 'Duy trì cùng một tiêu chuẩn đóng gói cho tất cả các đơn hàng đã được phê duyệt.',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/packing-standards/value-consistency.webp',
+                },
+                {
+                  title: 'HỖ TRỢ LOGISTICS HIỆU QUẢ',
+                  text: 'Tối ưu hóa việc xếp pallet, xếp container và vận chuyển quốc tế.',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/packing-standards/value-logistics-efficiency.webp',
+                },
+                {
+                  title: 'HỖ TRỢ QC VÀ TRUY XUẤT',
+                  text: 'Tạo cơ sở đối chiếu rõ ràng cho hoạt động kiểm tra và truy xuất thông tin khi cần thiết.',
+                  image:
+                    '/assets/supply-hub/partner-standard-room/packing-standards/value-qc-traceability.webp',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <img
+                    className="supply-hub-packing-standards-value-image"
+                    src={item.image}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.text)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-packing-standards-panel supply-hub-packing-standards-cta">
+            <img
+              className="supply-hub-packing-standards-cta-art supply-hub-packing-standards-cta-art--left"
+              src="/assets/supply-hub/partner-standard-room/packing-standards/cta-packed-pallet.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="supply-hub-packing-standards-cta-copy">
+              <h2>{t('GỬI TIÊU CHUẨN ĐÓNG GÓI CHO ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ đóng gói, carton mark, hướng dẫn đóng gói hoặc tiêu chuẩn logistics để ANSLIFE lưu trữ, đối chiếu và áp dụng trong quá trình sản xuất và xuất khẩu.',
+                )}
+              </p>
+              <div className="supply-hub-packing-standards-cta-actions">
+                <a className="is-primary" href="/vn/contact/upload-drawing">
+                  <span className="supply-hub-packing-standards-action-icon supply-hub-packing-standards-action-icon--upload" aria-hidden="true" />
+                  {t('Tải tiêu chuẩn đóng gói lên')}
+                </a>
+                <a href="/vn/contact/upload-drawing">
+                  <span className="supply-hub-packing-standards-action-icon supply-hub-packing-standards-action-icon--request" aria-hidden="true" />
+                  {t('Gửi yêu cầu kỹ thuật')}
+                </a>
+                <a href="/vn/contact">
+                  <span className="supply-hub-packing-standards-action-icon supply-hub-packing-standards-action-icon--phone" aria-hidden="true" />
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+            <img
+              className="supply-hub-packing-standards-cta-art supply-hub-packing-standards-cta-art--right"
+              src="/assets/supply-hub/partner-standard-room/packing-standards/cta-open-carton.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </section>
+        </section>
+      )}
+      {isSupplyHubMaterialReferencesPage && (
+        <section
+          className="supply-hub-material-references-content"
+          aria-labelledby="material-references-role-title"
+        >
+          <section className="supply-hub-material-references-panel supply-hub-material-references-role">
+            <h2 id="material-references-role-title">{t('VAI TRÒ CỦA TÀI LIỆU VẬT LIỆU')}</h2>
+            <div className="supply-hub-material-references-role-layout">
+              <img
+                className="supply-hub-material-references-image-slot"
+                src="/assets/supply-hub/partner-standard-room/material-references/role-material-record.webp"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+              <p>
+                {t(
+                  'Tài liệu vật liệu là cơ sở tham chiếu chính thức giúp các bên liên quan sử dụng đúng loại vật liệu đã được phê duyệt, đồng thời duy trì tính nhất quán giữa mẫu phát triển, sản xuất hàng loạt và các lô hàng xuất khẩu.',
+                )}
+              </p>
+            </div>
+          </section>
+
+          <section className="supply-hub-material-references-panel supply-hub-material-references-groups">
+            <h2>{t('CÁC NHÓM TÀI LIỆU ĐƯỢC QUẢN LÝ')}</h2>
+            <div className="supply-hub-material-references-group-grid">
+              {[
+                [
+                  'GỖ TỰ NHIÊN',
+                  'Lưu trữ thông tin về chủng loại gỗ, quy cách, nguồn gốc, độ ẩm, màu sắc tự nhiên và các yêu cầu kỹ thuật liên quan.',
+                  '/assets/supply-hub/partner-standard-room/material-references/group-natural-wood.webp',
+                ],
+                [
+                  'GỖ KỸ THUẬT',
+                  'Bao gồm plywood, MDF, particle board, veneer panel và các vật liệu kỹ thuật khác được sử dụng trong sản xuất.',
+                  '/assets/supply-hub/partner-standard-room/material-references/group-engineered-wood.webp',
+                ],
+                [
+                  'VENEER',
+                  'Thông tin về chủng loại veneer, màu sắc, vân gỗ, độ dày, phương pháp ghép và yêu cầu sử dụng.',
+                  '/assets/supply-hub/partner-standard-room/material-references/group-veneer.webp',
+                ],
+                [
+                  'VẬT LIỆU BỌC',
+                  'Bao gồm vải, da, PU, foam, vật liệu đệm và các tài liệu kỹ thuật liên quan đến từng dự án.',
+                  '/assets/supply-hub/partner-standard-room/material-references/group-upholstery.webp',
+                ],
+                [
+                  'VẬT LIỆU TỰ NHIÊN',
+                  'Mây, tre, mặt đan mây và các vật liệu tự nhiên khác được sử dụng trong sản phẩm nội thất.',
+                  '/assets/supply-hub/partner-standard-room/material-references/group-natural-material.webp',
+                ],
+                [
+                  'VẬT LIỆU ĐÓNG GÓI',
+                  'Carton, foam bảo vệ, giấy tổ ong, pallet, vật liệu chống ẩm và các tiêu chuẩn đóng gói xuất khẩu.',
+                  '/assets/supply-hub/partner-standard-room/material-references/group-packing-material.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title}>
+                  <img
+                    className="supply-hub-material-references-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <h3>{t(title)}</h3>
+                  <p>{t(text)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-material-references-panel supply-hub-material-references-stored">
+            <h2>{t('THÔNG TIN ĐƯỢC LƯU TRỮ CHO MỖI VẬT LIỆU')}</h2>
+            <div className="supply-hub-material-references-stored-images">
+              <img
+                className="supply-hub-material-references-image-slot"
+                src="/assets/supply-hub/partner-standard-room/material-references/stored-material-record.webp"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+              <img
+                className="supply-hub-material-references-image-slot"
+                src="/assets/supply-hub/partner-standard-room/material-references/stored-material-swatches.webp"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+          </section>
+
+          <section className="supply-hub-material-references-panel supply-hub-material-references-production">
+            <h2>{t('LIÊN KẾT VỚI SẢN XUẤT')}</h2>
+            <p>
+              {t(
+                'Tài liệu vật liệu được sử dụng trong quá trình lựa chọn nguồn cung, phát triển sản phẩm, sản xuất mẫu và sản xuất hàng loạt nhằm đảm bảo sử dụng đúng vật liệu đã được phê duyệt.',
+              )}
+            </p>
+            <h3>{t('Ứng dụng cho:')}</h3>
+            <ul>
+              {[
+                'Nội thất hoàn thiện',
+                'Cấu kiện nội thất',
+                'Nội thất bọc nệm',
+                'Nội thất mây tre',
+                'Nội thất ngoài trời',
+                'Dự án khách sạn, nhà hàng và resort',
+              ].map((item) => (
+                <li key={item}>{t(item)}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="supply-hub-material-references-panel supply-hub-material-references-qc">
+            <h2>{t('LIÊN KẾT VỚI QC')}</h2>
+            <p>
+              {t(
+                'Các tài liệu vật liệu được sử dụng làm cơ sở tham chiếu trong quá trình kiểm tra chất lượng.',
+              )}
+            </p>
+            <p>{t('Nội dung kiểm tra có thể bao gồm:')}</p>
+            <ul>
+              {[
+                'Chủng loại vật liệu',
+                'Quy cách kỹ thuật',
+                'Độ ẩm vật liệu',
+                'Màu sắc và vân vật liệu',
+                'Độ dày và kích thước',
+                'Tiêu chuẩn an toàn và môi trường',
+                'Sự phù hợp với mẫu đã duyệt',
+              ].map((item) => (
+                <li key={item}>{t(item)}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="supply-hub-material-references-panel supply-hub-material-references-storage">
+            <h2>{t('LƯU MẪU VẬT LIỆU TẠI VIỆT NAM')}</h2>
+            <div className="supply-hub-material-references-storage-layout">
+              <img
+                className="supply-hub-material-references-image-slot"
+                src="/assets/supply-hub/partner-standard-room/material-references/storage-material-shelf.webp"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+              <div className="supply-hub-material-references-storage-copy">
+                <p>
+                  {t(
+                    'ANSLIFE duy trì hệ thống lưu trữ mẫu vật liệu thực tế nhằm hỗ trợ đối chiếu trong sản xuất, kiểm tra chất lượng và triển khai các đơn hàng lặp lại.',
+                  )}
+                </p>
+                <h3>{t('Bao gồm:')}</h3>
+                <ul>
+                  {[
+                    'Mẫu gỗ tự nhiên',
+                    'Mẫu veneer',
+                    'Mẫu plywood',
+                    'Mẫu MDF',
+                    'Mẫu vải và da',
+                    'Mẫu foam',
+                    'Mẫu mây tre',
+                    'Mẫu vật liệu đóng gói',
+                  ].map((item) => (
+                    <li key={item}>{t(item)}</li>
+                  ))}
+                </ul>
+              </div>
+              <img
+                className="supply-hub-material-references-image-slot"
+                src="/assets/supply-hub/partner-standard-room/material-references/storage-approved-materials.webp"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+          </section>
+
+          <section className="supply-hub-material-references-panel supply-hub-material-references-value">
+            <h2>{t('GIÁ TRỊ MANG LẠI')}</h2>
+            <div className="supply-hub-material-references-value-layout">
+              <div className="supply-hub-material-references-value-grid">
+                {[
+                  [
+                    'ĐỒNG NHẤT VẬT LIỆU GIỮA CÁC LÔ HÀNG',
+                    'Duy trì sự nhất quán về vật liệu trong toàn bộ vòng đời sản phẩm.',
+                    '/assets/supply-hub/partner-standard-room/material-references/value-consistency.webp',
+                  ],
+                  [
+                    'GIẢM SAI LỆCH TRONG SẢN XUẤT',
+                    'Đảm bảo các nhà máy và nhà cung cấp cùng sử dụng đúng tiêu chuẩn đã được phê duyệt.',
+                    '/assets/supply-hub/partner-standard-room/material-references/value-reduce-error.webp',
+                  ],
+                  [
+                    'HỖ TRỢ KIỂM SOÁT CHẤT LƯỢNG',
+                    'Tạo cơ sở kỹ thuật rõ ràng cho hoạt động kiểm tra và đánh giá chất lượng vật liệu.',
+                    '/assets/supply-hub/partner-standard-room/material-references/value-qc-control.webp',
+                  ],
+                  [
+                    'HỖ TRỢ PHÁT TRIỂN SẢN PHẨM MỚI',
+                    'Rút ngắn thời gian phát triển mẫu và lựa chọn vật liệu phù hợp cho các dự án mới.',
+                    '/assets/supply-hub/partner-standard-room/material-references/value-new-development.webp',
+                  ],
+                ].map(([title, text, image]) => (
+                  <article key={title}>
+                    <img
+                      className="supply-hub-material-references-image-slot"
+                      src={image}
+                      alt=""
+                      loading="eager"
+                      decoding="async"
+                    />
+                    <div>
+                      <h3>{t(title)}</h3>
+                      <p>{t(text)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+              <img
+                className="supply-hub-material-references-image-slot"
+                src="/assets/supply-hub/partner-standard-room/material-references/value-material-records.webp"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+          </section>
+        </section>
+      )}
+      {isSupplyHubTechnicalDrawingsPage && (
+        <section
+          className="supply-hub-technical-drawings-content"
+          aria-labelledby="technical-drawings-role-title"
+        >
+          <section className="supply-hub-technical-drawings-panel supply-hub-technical-drawings-role">
+            <h2 id="technical-drawings-role-title">
+              <span>1.</span> {t('Vai trò của bản vẽ kỹ thuật')}
+            </h2>
+            <div className="supply-hub-technical-drawings-role-layout">
+              <img
+                className="supply-hub-technical-drawings-image-slot"
+                src="/assets/supply-hub/partner-standard-room/technical-drawings/role-technical-drawing.webp"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+              <p>
+                {t(
+                  'Bản vẽ kỹ thuật là tài liệu tham chiếu chính thức trong suốt quá trình phát triển sản phẩm, sản xuất, kiểm tra chất lượng, đóng gói và xuất khẩu.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Việc quản lý đúng phiên bản giúp giảm sai lệch giữa các nhà máy, hạn chế lỗi sản xuất và đảm bảo tính đồng nhất trên mọi lô hàng.',
+                )}
+              </p>
+            </div>
+          </section>
+
+          <section className="supply-hub-technical-drawings-panel supply-hub-technical-drawings-types">
+            <h2>
+              <span>2.</span> {t('Các loại bản vẽ được quản lý')}
+            </h2>
+            <div className="supply-hub-technical-drawings-type-grid">
+              {[
+                [
+                  'Bản vẽ sản phẩm hoàn chỉnh',
+                  'Thể hiện đầy đủ kích thước, vật liệu, hoàn thiện và ghi chú.',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/type-product-drawing.webp',
+                ],
+                [
+                  'Bản vẽ cấu kiện',
+                  'Chi tiết từng cấu kiện, kích thước, lỗ khoan, bo cạnh, vật liệu.',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/type-component-drawing.webp',
+                ],
+                [
+                  'Bản vẽ lắp ráp',
+                  'Hướng dẫn lắp ráp, vị trí liên kết, phụ kiện và thứ tự lắp.',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/type-assembly-drawing.webp',
+                ],
+                [
+                  'Bản vẽ đóng gói',
+                  'Kích thước đóng gói, định hướng xếp, vật liệu đóng gói, nhãn.',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/type-packing-drawing.webp',
+                ],
+                [
+                  'Bản vẽ QC tham chiếu',
+                  'Điểm kiểm tra, dung sai, tiêu chuẩn QC và phương pháp đo.',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/type-qc-reference-drawing.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title} className="supply-hub-technical-drawings-type-card">
+                  <h3>{t(title)}</h3>
+                  <img
+                    className="supply-hub-technical-drawings-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <p>{t(text)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-technical-drawings-panel supply-hub-technical-drawings-version">
+            <h2>
+              <span>3.</span> {t('Quản lý phiên bản bản vẽ')}
+            </h2>
+            <div className="supply-hub-technical-drawings-version-layout">
+              <ul>
+                {[
+                  'Mã sản phẩm',
+                  'Mã bản vẽ',
+                  'Phiên bản',
+                  'Ngày cập nhật',
+                  'Người phê duyệt',
+                  'Tình trạng hiệu lực',
+                  'Lịch sử thay đổi',
+                ].map((item) => (
+                  <li key={item}>{t(item)}</li>
+                ))}
+              </ul>
+              <div className="supply-hub-technical-drawings-version-board" aria-hidden="true">
+                <div className="supply-hub-technical-drawings-version-table">
+                  <span>{t('VER.')}</span>
+                  <span>{t('DATE')}</span>
+                  <span>{t('DESCRIPTION')}</span>
+                  <span>BY</span>
+                  {[
+                    ['V1.0', '05/02/2024', 'First issue', 'KT'],
+                    ['V1.1', '20/03/2024', 'Update dimension', 'KT'],
+                    ['V1.2', '18/04/2024', 'Material change', 'KT'],
+                    ['V2.0', '02/05/2024', 'Structural update', 'KT'],
+                    ['V2.1', '15/05/2024', 'Final approved', 'QC'],
+                  ].flatMap((row) => row.map((cell, index) => <span key={`${row[0]}-${cell}-${index}`}>{cell}</span>))}
+                </div>
+                <div className="supply-hub-technical-drawings-revision">
+                  <strong>{t('REVISION CLOUD')}</strong>
+                  <span>{t('Cập nhật kích thước')}</span>
+                </div>
+                <div className="supply-hub-technical-drawings-approved">
+                  <strong>APPROVED</strong>
+                  <span>QC MANAGER</span>
+                  <span>15 MAY 2024</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="supply-hub-technical-drawings-panel supply-hub-technical-drawings-production">
+            <h2>
+              <span>4.</span> {t('Liên kết với sản xuất và QC')}
+            </h2>
+            <ul>
+              {[
+                'Kiểm tra kích thước',
+                'Kiểm tra kết cấu',
+                'Kiểm tra lắp ráp',
+                'Kiểm tra vật liệu',
+                'Kiểm tra hoàn thiện bề mặt',
+                'Kiểm tra đóng gói',
+              ].map((item) => (
+                <li key={item}>{t(item)}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="supply-hub-technical-drawings-panel supply-hub-technical-drawings-standard-room">
+            <h2>
+              <span>5.</span> {t('Liên kết với phòng mẫu chuẩn')}
+            </h2>
+            <p>
+              {t(
+                'Bản vẽ kỹ thuật được lưu trữ cùng các tài liệu tham chiếu để hình thành hệ thống chuẩn thống nhất cho từng buyer.',
+              )}
+            </p>
+            <div className="supply-hub-technical-drawings-reference-flow">
+              {[
+                [
+                  'Mẫu sản phẩm đã duyệt',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/reference-approved-product.webp',
+                ],
+                [
+                  'Mẫu cấu kiện',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/reference-component-sample.webp',
+                ],
+                [
+                  'Bảng màu',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/reference-color-board.webp',
+                ],
+                [
+                  'Tiêu chuẩn vật liệu',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/reference-material-standard.webp',
+                ],
+                [
+                  'Checklist QC',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/reference-qc-checklist.webp',
+                ],
+              ].map(([item, image]) => (
+                <article key={item}>
+                  <img
+                    className="supply-hub-technical-drawings-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <strong>{t(item)}</strong>
+                </article>
+              ))}
+            </div>
+            <div className="supply-hub-technical-drawings-reference-caption">
+              {t('HỆ THỐNG THAM CHIẾU CHUẨN - MỖI BUYER')}
+            </div>
+          </section>
+
+          <section className="supply-hub-technical-drawings-panel supply-hub-technical-drawings-documents">
+            <h2>
+              <span>6.</span> {t('Những tài liệu buyer có thể cung cấp')}
+            </h2>
+            <div className="supply-hub-technical-drawings-document-grid">
+              {[
+                ['Bản vẽ PDF', '/assets/supply-hub/partner-standard-room/technical-drawings/document-pdf.webp'],
+                ['Bản vẽ CAD', '/assets/supply-hub/partner-standard-room/technical-drawings/document-cad.webp'],
+                ['Bản vẽ 2D', '/assets/supply-hub/partner-standard-room/technical-drawings/document-2d.webp'],
+                ['Bản vẽ 3D', '/assets/supply-hub/partner-standard-room/technical-drawings/document-3d.webp'],
+                ['Bản vẽ lắp ráp', '/assets/supply-hub/partner-standard-room/technical-drawings/document-assembly.webp'],
+                ['Bản vẽ đóng gói', '/assets/supply-hub/partner-standard-room/technical-drawings/document-packing.webp'],
+                [
+                  'Bảng thông số kỹ thuật',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/document-spec-sheet.webp',
+                ],
+                ['Danh mục vật liệu (BOM)', '/assets/supply-hub/partner-standard-room/technical-drawings/document-bom.webp'],
+                [
+                  'Tiêu chuẩn kiểm tra riêng',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/document-inspection-standard.webp',
+                ],
+              ].map(([item, image]) => (
+                <article key={item}>
+                  <img
+                    className="supply-hub-technical-drawings-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <strong>{t(item)}</strong>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-technical-drawings-panel supply-hub-technical-drawings-value">
+            <h2>
+              <span>7.</span> {t('Giá trị mang lại')}
+            </h2>
+            <div className="supply-hub-technical-drawings-value-layout">
+              <div className="supply-hub-technical-drawings-value-grid">
+                {[
+                  [
+                    'Đồng nhất sản xuất',
+                    'Đảm bảo mọi nhà máy sản xuất đúng tiêu chuẩn, giảm sai lệch giữa các nhà cung cấp.',
+                    '/assets/supply-hub/partner-standard-room/technical-drawings/value-consistency.webp',
+                  ],
+                  [
+                    'Giảm lỗi sản xuất',
+                    'Quản lý đúng phiên bản, kiểm soát thay đổi, hạn chế lỗi và làm lại.',
+                    '/assets/supply-hub/partner-standard-room/technical-drawings/value-error-reduction.webp',
+                  ],
+                  [
+                    'Hỗ trợ kiểm soát chất lượng',
+                    'Tài liệu rõ ràng giúp QC kiểm tra chính xác và đảm bảo chất lượng.',
+                    '/assets/supply-hub/partner-standard-room/technical-drawings/value-quality-control.webp',
+                  ],
+                  [
+                    'Hỗ trợ phát triển lâu dài',
+                    'Dữ liệu kỹ thuật được lưu trữ khoa học, giúp cải tiến sản phẩm và phát triển bền vững.',
+                    '/assets/supply-hub/partner-standard-room/technical-drawings/value-long-term-development.webp',
+                  ],
+                ].map(([title, text, image]) => (
+                  <article key={title}>
+                    <h3>{t(title)}</h3>
+                    <img
+                      className="supply-hub-technical-drawings-image-slot"
+                      src={image}
+                      alt=""
+                      loading="eager"
+                      decoding="async"
+                    />
+                    <p>{t(text)}</p>
+                  </article>
+                ))}
+              </div>
+              <img
+                className="supply-hub-technical-drawings-value-visual supply-hub-technical-drawings-image-slot"
+                src="/assets/supply-hub/partner-standard-room/technical-drawings/value-technical-documents.webp"
+                alt=""
+                loading="eager"
+                decoding="async"
+                aria-hidden="true"
+              />
+            </div>
+          </section>
+
+          <section className="supply-hub-technical-drawings-panel supply-hub-technical-drawings-process">
+            <h2>
+              <span>8.</span> {t('Quy trình quản lý tài liệu kỹ thuật')}
+            </h2>
+            <div className="supply-hub-technical-drawings-process-flow">
+              {[
+                [
+                  'Buyer cung cấp bản vẽ',
+                  'Buyer gửi bản vẽ, tài liệu kỹ thuật và yêu cầu.',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/process-buyer-submit.webp',
+                ],
+                [
+                  'Tiếp nhận & ghi nhận',
+                  'Tiếp nhận tài liệu, kiểm tra sơ bộ và ghi nhận thông tin.',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/process-receive-record.webp',
+                ],
+                [
+                  'Lưu trữ theo buyer / dự án',
+                  'Lưu trữ theo cấu trúc buyer - dự án - sản phẩm trong hệ thống.',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/process-store-project.webp',
+                ],
+                [
+                  'Kiểm soát phiên bản',
+                  'Quản lý phiên bản, phê duyệt và lịch sử thay đổi.',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/process-version-control.webp',
+                ],
+                [
+                  'Liên kết với sản xuất & QC',
+                  'Chia sẻ cho nhà máy, phòng QC để sản xuất và kiểm tra.',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/process-production-qc.webp',
+                ],
+                [
+                  'Đối chiếu trong triển khai đơn hàng',
+                  'Đối chiếu tài liệu trong từng đơn hàng, đảm bảo đúng bản vẽ phê duyệt.',
+                  '/assets/supply-hub/partner-standard-room/technical-drawings/process-order-check.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title}>
+                  <h3>{t(title)}</h3>
+                  <img
+                    className="supply-hub-technical-drawings-image-slot"
+                    src={image}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <p>{t(text)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="supply-hub-technical-drawings-panel supply-hub-technical-drawings-cta">
+            <div>
+              <h2>{t('Gửi tài liệu kỹ thuật cho ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ kỹ thuật, tài liệu sản phẩm, mẫu tham chiếu hoặc yêu cầu kỹ thuật để ANSLIFE lưu trữ, đối chiếu và triển khai trong hệ thống quản lý dự án và chuỗi cung ứng.',
+                )}
+              </p>
+            </div>
+            <div className="supply-hub-technical-drawings-cta-actions">
+              <a href="/contact/upload-drawing">
+                <b aria-hidden="true">↥</b>
+                <span>{t('Tải bản vẽ lên')}</span>
+              </a>
+              <a href="/contact/supply-hub-inquiry">
+                <b aria-hidden="true">✈</b>
+                <span>{t('Gửi yêu cầu kỹ thuật')}</span>
+              </a>
+              <a href="/contact">
+                <b aria-hidden="true">☎</b>
+                <span>{t('Liên hệ ANSLIFE')}</span>
+              </a>
+            </div>
+          </section>
+        </section>
       )}
       {isSupplyHubComponentSamplesPage && (
         <section className="supply-hub-component-samples-content" aria-labelledby="component-samples-role-title">

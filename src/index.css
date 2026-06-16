@@ -3579,7 +3579,43 @@ a.mobile-menu-utility-link {
   background: #f4efe6;
 }
 
-.supply-hub-partner-component-samples-banner::after {
+.supply-hub-partner-technical-drawings-banner {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4efe6;
+}
+
+.supply-hub-partner-material-references-banner {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4efe6;
+}
+
+.supply-hub-partner-packing-standards-banner {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4efe6;
+}
+
+.supply-hub-partner-qc-checklist-banner {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4efe6;
+}
+
+.supply-hub-partner-component-samples-banner::after,
+.supply-hub-partner-technical-drawings-banner::after,
+.supply-hub-partner-material-references-banner::after,
+.supply-hub-partner-packing-standards-banner::after,
+.supply-hub-partner-qc-checklist-banner::after {
   position: absolute;
   inset: 0 auto 0 0;
   z-index: 1;
@@ -3650,6 +3686,38 @@ a.mobile-menu-utility-link {
   object-position: center;
 }
 
+.supply-hub-partner-technical-drawings-banner > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2006 / 784;
+  object-fit: cover;
+  object-position: center;
+}
+
+.supply-hub-partner-material-references-banner > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2006 / 784;
+  object-fit: cover;
+  object-position: center;
+}
+
+.supply-hub-partner-packing-standards-banner > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2006 / 784;
+  object-fit: cover;
+  object-position: center;
+}
+
+.supply-hub-partner-qc-checklist-banner > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2006 / 784;
+  object-fit: cover;
+  object-position: center;
+}
+
 .supply-hub-partner-component-samples-banner-copy {
   position: absolute;
   left: clamp(1.25rem, 5vw, 4.8rem);
@@ -3696,6 +3764,2482 @@ a.mobile-menu-utility-link {
   line-height: 1.46;
   letter-spacing: 0;
   background: transparent !important;
+}
+
+.supply-hub-partner-technical-drawings-banner-copy {
+  position: absolute;
+  left: clamp(1.25rem, 5vw, 4.8rem);
+  top: 44%;
+  z-index: 2;
+  width: min(36%, 590px);
+  transform: translateY(-50%);
+  color: #20242a;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.78);
+  background: transparent !important;
+}
+
+.supply-hub-partner-technical-drawings-banner-copy h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4.35vw, 4.85rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-partner-technical-drawings-banner-copy p {
+  max-width: 54ch;
+  margin: clamp(0.72rem, 1.05vw, 1rem) 0 0;
+  color: #30363e;
+  font-family: var(--font-ui);
+  font-size: clamp(0.76rem, 0.84vw, 0.96rem);
+  line-height: 1.45;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-partner-material-references-banner-copy {
+  position: absolute;
+  left: clamp(1.25rem, 5vw, 4.8rem);
+  top: 44%;
+  z-index: 2;
+  width: min(36%, 590px);
+  transform: translateY(-50%);
+  color: #20242a;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.78);
+  background: transparent !important;
+}
+
+.supply-hub-partner-material-references-banner-copy h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4.35vw, 4.85rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-partner-material-references-banner-copy p {
+  max-width: 54ch;
+  margin: clamp(0.72rem, 1.05vw, 1rem) 0 0;
+  color: #30363e;
+  font-family: var(--font-ui);
+  font-size: clamp(0.76rem, 0.84vw, 0.96rem);
+  line-height: 1.45;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-partner-packing-standards-banner-copy {
+  position: absolute;
+  left: clamp(1.25rem, 5vw, 4.8rem);
+  top: 44%;
+  z-index: 2;
+  width: min(38%, 620px);
+  transform: translateY(-50%);
+  color: #20242a;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.78);
+  background: transparent !important;
+}
+
+.supply-hub-partner-packing-standards-banner-copy h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-heading);
+  font-size: clamp(2.05rem, 4vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-partner-packing-standards-banner-copy p {
+  max-width: 58ch;
+  margin: clamp(0.56rem, 0.85vw, 0.82rem) 0 0;
+  color: #30363e;
+  font-family: var(--font-ui);
+  font-size: clamp(0.72rem, 0.8vw, 0.92rem);
+  line-height: 1.4;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-partner-qc-checklist-banner-copy {
+  position: absolute;
+  left: clamp(1.25rem, 5vw, 4.8rem);
+  top: 44%;
+  z-index: 2;
+  width: min(38%, 620px);
+  transform: translateY(-50%);
+  color: #20242a;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.78);
+  background: transparent !important;
+}
+
+.supply-hub-partner-qc-checklist-banner-copy h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-heading);
+  font-size: clamp(2.05rem, 4vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-partner-qc-checklist-banner-copy p {
+  max-width: 58ch;
+  margin: clamp(0.56rem, 0.85vw, 0.82rem) 0 0;
+  color: #30363e;
+  font-family: var(--font-ui);
+  font-size: clamp(0.72rem, 0.8vw, 0.92rem);
+  line-height: 1.4;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-content {
+  padding: clamp(0.82rem, 1.5vw, 1.25rem) clamp(0.7rem, 1.35vw, 1.2rem) clamp(1rem, 2vw, 1.7rem);
+  color: #2a2e33;
+  font-family: var(--font-ui);
+  background: #f4efe6;
+}
+
+.supply-hub-qc-checklist-panel {
+  min-width: 0;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-panel h2 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: clamp(0.9rem, 1.35vw, 1.4rem);
+  align-items: center;
+  margin: 0 0 clamp(0.78rem, 1.05vw, 1rem);
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(1rem, 1.2vw, 1.35rem);
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-panel h2::before,
+.supply-hub-qc-checklist-panel h2::after {
+  height: 1px;
+  content: '';
+  background: rgba(37, 39, 42, 0.32);
+}
+
+.supply-hub-qc-checklist-group-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.42rem, 0.62vw, 0.68rem);
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-group-grid article {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100%;
+  padding: clamp(0.66rem, 0.86vw, 0.88rem);
+  border: 1px solid rgba(37, 39, 42, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.5) !important;
+}
+
+.supply-hub-qc-checklist-group-grid h3 {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(0.48rem, 0.6vw, 0.65rem);
+  align-items: start;
+  min-height: 3.4em;
+  margin: 0 0 clamp(0.56rem, 0.72vw, 0.78rem);
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.7rem, 0.78vw, 0.9rem);
+  font-weight: 900;
+  line-height: 1.22;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-group-grid h3 span {
+  display: grid;
+  width: clamp(1.42rem, 1.6vw, 1.8rem);
+  height: clamp(1.42rem, 1.6vw, 1.8rem);
+  place-items: center;
+  color: #fffaf0;
+  font-size: clamp(0.78rem, 0.88vw, 1rem);
+  font-weight: 900;
+  line-height: 1;
+  border-radius: 999px;
+  background: #5d564c !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.supply-hub-qc-checklist-image-slot {
+  display: block;
+  width: min(100%, 10.8rem);
+  aspect-ratio: 1.25 / 1;
+  margin: 0 auto clamp(0.62rem, 0.86vw, 0.9rem);
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-card-copy {
+  display: grid;
+  gap: clamp(0.42rem, 0.58vw, 0.58rem);
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-card-copy p {
+  margin: 0;
+  color: #30363e;
+  font-size: clamp(0.66rem, 0.74vw, 0.82rem);
+  font-weight: 500;
+  line-height: 1.42;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-card-copy .supply-hub-qc-checklist-card-label {
+  margin-top: clamp(0.22rem, 0.35vw, 0.35rem);
+  color: #20242a;
+  font-weight: 850;
+}
+
+.supply-hub-qc-checklist-card-copy ul {
+  display: grid;
+  gap: 0.32rem;
+  padding-left: 0.92rem;
+  margin: 0;
+  color: #30363e;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-card-copy li {
+  color: #30363e;
+  font-size: clamp(0.64rem, 0.72vw, 0.8rem);
+  line-height: 1.34;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-reference-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.72rem, 1.05vw, 1rem);
+  margin-top: clamp(0.78rem, 1.1vw, 1rem);
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-reference-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100%;
+  padding: clamp(0.9rem, 1.25vw, 1.25rem);
+  border: 1px solid rgba(37, 39, 42, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.5) !important;
+}
+
+.supply-hub-qc-checklist-reference-card h2 {
+  display: block;
+  margin: 0 0 clamp(0.8rem, 1vw, 1rem);
+  font-size: clamp(0.9rem, 1vw, 1.12rem);
+  line-height: 1.25;
+  text-align: left;
+  letter-spacing: 0.01em;
+}
+
+.supply-hub-qc-checklist-reference-card h2::before,
+.supply-hub-qc-checklist-reference-card h2::after {
+  content: none;
+}
+
+.supply-hub-qc-checklist-reference-card p {
+  margin: 0 0 clamp(0.6rem, 0.85vw, 0.82rem);
+  color: #30363e;
+  font-size: clamp(0.74rem, 0.82vw, 0.9rem);
+  line-height: 1.48;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-reference-card > p:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.supply-hub-qc-checklist-reference-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(8rem, 0.72fr);
+  gap: clamp(0.75rem, 1.1vw, 1rem);
+  align-items: end;
+  min-width: 0;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-reference-card ul {
+  display: grid;
+  gap: clamp(0.42rem, 0.6vw, 0.6rem);
+  padding-left: 1rem;
+  margin: 0;
+  color: #30363e;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-reference-card li {
+  color: #30363e;
+  font-size: clamp(0.72rem, 0.8vw, 0.88rem);
+  line-height: 1.38;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-icon-list {
+  padding-left: 0 !important;
+  list-style: none;
+}
+
+.supply-hub-qc-checklist-icon-list li {
+  position: relative;
+  min-width: 0;
+  padding-left: 1.8rem;
+}
+
+.supply-hub-qc-checklist-icon-list li::before {
+  position: absolute;
+  top: -0.02rem;
+  left: 0;
+  display: grid;
+  width: 1.12rem;
+  height: 1.12rem;
+  place-items: center;
+  color: #5a5147;
+  font-size: 0.74rem;
+  font-weight: 900;
+  line-height: 1;
+  content: '✓';
+  border: 1px solid rgba(37, 39, 42, 0.38);
+  border-radius: 4px;
+  background: rgba(255, 252, 245, 0.45);
+}
+
+.supply-hub-qc-checklist-reference-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-value {
+  margin-top: clamp(0.78rem, 1.1vw, 1rem);
+  padding: clamp(0.9rem, 1.25vw, 1.25rem);
+  border: 1px solid rgba(37, 39, 42, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.48) !important;
+}
+
+.supply-hub-qc-checklist-value h2 {
+  margin-bottom: clamp(0.9rem, 1.2vw, 1.2rem);
+}
+
+.supply-hub-qc-checklist-value-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-value-grid article {
+  display: grid;
+  grid-template-columns: clamp(5.2rem, 6.6vw, 7.5rem) minmax(0, 1fr);
+  gap: clamp(0.9rem, 1.25vw, 1.35rem);
+  align-items: start;
+  min-width: 0;
+  padding: 0 clamp(0.95rem, 1.45vw, 1.55rem);
+  border-left: 1px solid rgba(37, 39, 42, 0.18);
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-value-grid article:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.supply-hub-qc-checklist-value-grid article:last-child {
+  padding-right: 0;
+}
+
+.supply-hub-qc-checklist-value-grid h3 {
+  margin: 0 0 clamp(0.42rem, 0.58vw, 0.58rem);
+  color: #20242a;
+  font-size: clamp(0.86rem, 0.96vw, 1.08rem);
+  font-weight: 900;
+  line-height: 1.26;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-value-grid p {
+  margin: 0;
+  color: #30363e;
+  font-size: clamp(0.72rem, 0.8vw, 0.88rem);
+  line-height: 1.5;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-value-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 0.92;
+  margin-top: 0.05rem;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-system {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.52fr) minmax(0, 1.25fr) minmax(12rem, 0.72fr);
+  gap: clamp(1rem, 1.75vw, 2.1rem);
+  align-items: center;
+  margin-top: clamp(0.78rem, 1.1vw, 1rem);
+  padding: clamp(0.9rem, 1.35vw, 1.35rem) clamp(1rem, 1.55vw, 1.55rem);
+  border: 1px solid rgba(37, 39, 42, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.5) !important;
+}
+
+.supply-hub-qc-checklist-system-art {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-system-art--right {
+  aspect-ratio: 1.5 / 1;
+}
+
+.supply-hub-qc-checklist-system-copy {
+  min-width: 0;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-system-copy h2 {
+  display: block;
+  margin: 0 0 clamp(0.7rem, 0.95vw, 0.95rem);
+  color: #20242a;
+  font-size: clamp(1.2rem, 1.55vw, 1.85rem);
+  line-height: 1.18;
+  text-align: left;
+  letter-spacing: 0;
+}
+
+.supply-hub-qc-checklist-system-copy h2::before,
+.supply-hub-qc-checklist-system-copy h2::after {
+  content: none;
+}
+
+.supply-hub-qc-checklist-system-copy p {
+  max-width: 72ch;
+  margin: 0 0 clamp(0.7rem, 0.95vw, 0.95rem);
+  color: #30363e;
+  font-size: clamp(0.78rem, 0.88vw, 1rem);
+  line-height: 1.56;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-system-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.supply-hub-qc-checklist-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(24rem, 1fr);
+  gap: clamp(1rem, 1.65vw, 1.8rem);
+  align-items: center;
+  margin-top: clamp(0.78rem, 1.1vw, 1rem);
+  padding: clamp(0.9rem, 1.3vw, 1.3rem) clamp(1rem, 1.6vw, 1.65rem);
+  border: 1px solid rgba(37, 39, 42, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.5) !important;
+}
+
+.supply-hub-qc-checklist-cta-copy {
+  min-width: 0;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-cta-copy h2 {
+  display: block;
+  margin: 0 0 clamp(0.5rem, 0.72vw, 0.72rem);
+  color: #20242a;
+  font-size: clamp(1.25rem, 1.65vw, 1.95rem);
+  line-height: 1.16;
+  text-align: left;
+  letter-spacing: 0;
+}
+
+.supply-hub-qc-checklist-cta-copy h2::before,
+.supply-hub-qc-checklist-cta-copy h2::after {
+  content: none;
+}
+
+.supply-hub-qc-checklist-cta-copy p {
+  max-width: 74ch;
+  margin: 0;
+  color: #30363e;
+  font-size: clamp(0.78rem, 0.88vw, 1rem);
+  line-height: 1.48;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-cta-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.78rem, 1.05vw, 1rem);
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-cta-actions a {
+  display: inline-flex;
+  min-height: clamp(3.2rem, 3.7vw, 4.05rem);
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.7rem clamp(0.82rem, 1vw, 1.05rem);
+  color: #20242a;
+  font-size: clamp(0.78rem, 0.88vw, 0.98rem);
+  font-weight: 850;
+  line-height: 1.22;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgba(37, 39, 42, 0.32);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.46);
+}
+
+.supply-hub-qc-checklist-action-icon {
+  position: relative;
+  flex: 0 0 auto;
+  width: 1.65rem;
+  height: 1.65rem;
+  color: currentColor;
+  background: transparent !important;
+}
+
+.supply-hub-qc-checklist-action-icon--document {
+  border: 0.14rem solid currentColor;
+  border-radius: 0.16rem;
+}
+
+.supply-hub-qc-checklist-action-icon--document::before {
+  position: absolute;
+  top: 0.34rem;
+  right: 0.28rem;
+  left: 0.28rem;
+  height: 0.12rem;
+  content: '';
+  background: currentColor;
+  box-shadow: 0 0.36rem 0 currentColor, 0 0.72rem 0 currentColor;
+}
+
+.supply-hub-qc-checklist-action-icon--document::after {
+  position: absolute;
+  right: -0.28rem;
+  bottom: -0.22rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  content: '';
+  border: 0.14rem solid currentColor;
+  border-radius: 999px;
+}
+
+.supply-hub-qc-checklist-action-icon--phone::before {
+  position: absolute;
+  inset: 0.24rem 0.42rem;
+  content: '';
+  border: 0.16rem solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: 0 0 0 0.7rem;
+  transform: rotate(-42deg);
+}
+
+@media (max-width: 1280px) {
+  .supply-hub-qc-checklist-group-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .supply-hub-qc-checklist-reference-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-qc-checklist-value-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0;
+  }
+
+  .supply-hub-qc-checklist-value-grid article:nth-child(odd) {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .supply-hub-qc-checklist-value-grid article:nth-child(even) {
+    padding-right: 0;
+  }
+
+  .supply-hub-qc-checklist-system,
+  .supply-hub-qc-checklist-cta {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-qc-checklist-system-art {
+    max-width: 18rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .supply-hub-qc-checklist-content {
+    padding: 0.8rem 0.72rem 1.15rem;
+  }
+
+  .supply-hub-qc-checklist-panel h2 {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .supply-hub-qc-checklist-panel h2::before,
+  .supply-hub-qc-checklist-panel h2::after {
+    content: none;
+  }
+
+  .supply-hub-qc-checklist-group-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-qc-checklist-group-grid article {
+    display: grid;
+    grid-template-columns: minmax(6.6rem, 0.34fr) minmax(0, 1fr);
+    gap: 0.52rem 0.85rem;
+  }
+
+  .supply-hub-qc-checklist-group-grid h3 {
+    grid-column: 1 / -1;
+    min-height: 0;
+  }
+
+  .supply-hub-qc-checklist-image-slot {
+    width: 100%;
+    margin: 0;
+  }
+
+  .supply-hub-qc-checklist-reference-card {
+    padding: 0.9rem;
+  }
+
+  .supply-hub-qc-checklist-reference-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-qc-checklist-reference-image {
+    max-width: 12rem;
+  }
+
+  .supply-hub-qc-checklist-value-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-qc-checklist-value-grid article,
+  .supply-hub-qc-checklist-value-grid article:nth-child(even) {
+    grid-template-columns: 5.8rem minmax(0, 1fr);
+    padding: 0.8rem 0 0;
+    border-top: 1px solid rgba(37, 39, 42, 0.16);
+    border-left: 0;
+  }
+
+  .supply-hub-qc-checklist-value-grid article:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .supply-hub-qc-checklist-system,
+  .supply-hub-qc-checklist-cta {
+    padding: 0.9rem;
+  }
+
+  .supply-hub-qc-checklist-cta-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.supply-hub-packing-standards-content {
+  padding: clamp(0.82rem, 1.5vw, 1.25rem) clamp(0.7rem, 1.35vw, 1.2rem) clamp(1rem, 2vw, 1.7rem);
+  color: #2a2e33;
+  font-family: var(--font-ui);
+  background: #f4efe6;
+}
+
+.supply-hub-packing-standards-panel {
+  min-width: 0;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-panel h2 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: clamp(0.9rem, 1.35vw, 1.4rem);
+  align-items: center;
+  margin: 0 0 clamp(0.78rem, 1.05vw, 1rem);
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(1rem, 1.2vw, 1.35rem);
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-panel h2::before,
+.supply-hub-packing-standards-panel h2::after {
+  height: 1px;
+  content: '';
+  background: rgba(37, 39, 42, 0.32);
+}
+
+.supply-hub-packing-standards-managed-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.52rem, 0.78vw, 0.82rem);
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-managed-grid article {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100%;
+  padding: clamp(0.72rem, 0.95vw, 0.95rem);
+  border: 1px solid rgba(37, 39, 42, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.5) !important;
+}
+
+.supply-hub-packing-standards-managed-grid h3 {
+  min-height: 3.1em;
+  margin: 0 0 clamp(0.58rem, 0.78vw, 0.82rem);
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.78rem, 0.88vw, 1rem);
+  font-weight: 900;
+  line-height: 1.26;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-managed-grid h3 span {
+  margin-right: 0.18rem;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-image-slot {
+  display: block;
+  width: min(100%, 10.5rem);
+  aspect-ratio: 1.22 / 1;
+  margin: 0 auto clamp(0.62rem, 0.86vw, 0.9rem);
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-managed-grid ul {
+  display: grid;
+  gap: 0.42rem;
+  padding-left: 1rem;
+  margin: 0;
+  color: #30363e;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-managed-grid li {
+  color: #30363e;
+  font-size: clamp(0.68rem, 0.78vw, 0.86rem);
+  line-height: 1.42;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-reference-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.72rem, 1.05vw, 1rem);
+  margin-top: clamp(0.78rem, 1.1vw, 1rem);
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-reference-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100%;
+  padding: clamp(0.95rem, 1.35vw, 1.35rem);
+  border: 1px solid rgba(37, 39, 42, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.5) !important;
+}
+
+.supply-hub-packing-standards-reference-card h2 {
+  display: block;
+  margin: 0 0 clamp(0.78rem, 1vw, 1rem);
+  font-size: clamp(0.92rem, 1vw, 1.15rem);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.supply-hub-packing-standards-reference-card h2::before,
+.supply-hub-packing-standards-reference-card h2::after {
+  content: none;
+}
+
+.supply-hub-packing-standards-reference-card p {
+  margin: 0 0 clamp(0.72rem, 1vw, 0.95rem);
+  color: #30363e;
+  font-size: clamp(0.76rem, 0.84vw, 0.92rem);
+  line-height: 1.58;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-list-label {
+  margin-bottom: clamp(0.42rem, 0.62vw, 0.62rem) !important;
+  color: #20242a !important;
+  font-weight: 800;
+}
+
+.supply-hub-packing-standards-check-list {
+  display: grid;
+  gap: clamp(0.44rem, 0.68vw, 0.68rem);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-check-list--split {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(0.9rem, 1.3vw, 1.45rem);
+}
+
+.supply-hub-packing-standards-check-list li {
+  position: relative;
+  min-width: 0;
+  padding-left: 1.55rem;
+  color: #30363e;
+  font-size: clamp(0.74rem, 0.82vw, 0.9rem);
+  line-height: 1.42;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-check-list li::before {
+  position: absolute;
+  top: 0.04rem;
+  left: 0;
+  display: grid;
+  width: 1rem;
+  height: 1rem;
+  place-items: center;
+  color: #30363e;
+  font-size: 0.76rem;
+  font-weight: 900;
+  line-height: 1;
+  content: '✓';
+  border: 1px solid rgba(37, 39, 42, 0.45);
+  border-radius: 3px;
+  background: rgba(255, 252, 245, 0.5);
+}
+
+.supply-hub-packing-standards-document-strip {
+  margin-top: clamp(0.78rem, 1.1vw, 1rem);
+  overflow: hidden;
+  border: 1px solid rgba(37, 39, 42, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.45) !important;
+}
+
+.supply-hub-packing-standards-document-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  min-width: 0;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-document-grid article {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
+  min-height: clamp(9.2rem, 13vw, 15rem);
+  padding: clamp(0.68rem, 0.9vw, 0.95rem);
+  border-left: 1px solid rgba(37, 39, 42, 0.16);
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-document-grid article:first-child {
+  border-left: 0;
+}
+
+.supply-hub-packing-standards-document-grid h2 {
+  display: block;
+  margin: 0 0 clamp(0.55rem, 0.78vw, 0.85rem);
+  color: #20242a;
+  font-size: clamp(0.7rem, 0.78vw, 0.9rem);
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.supply-hub-packing-standards-document-grid h2::before,
+.supply-hub-packing-standards-document-grid h2::after {
+  content: none;
+}
+
+.supply-hub-packing-standards-document-image {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  aspect-ratio: 1.15 / 1;
+  margin: auto;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-value {
+  margin-top: clamp(0.78rem, 1.1vw, 1rem);
+  padding: clamp(0.9rem, 1.25vw, 1.25rem);
+  border: 1px solid rgba(37, 39, 42, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.48) !important;
+}
+
+.supply-hub-packing-standards-value h2 {
+  margin-bottom: clamp(0.9rem, 1.2vw, 1.2rem);
+}
+
+.supply-hub-packing-standards-value-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-value-grid article {
+  display: grid;
+  grid-template-columns: clamp(5.2rem, 6.6vw, 7.5rem) minmax(0, 1fr);
+  gap: clamp(0.9rem, 1.25vw, 1.35rem);
+  align-items: start;
+  min-width: 0;
+  padding: 0 clamp(0.95rem, 1.45vw, 1.55rem);
+  border-left: 1px solid rgba(37, 39, 42, 0.18);
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-value-grid article:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.supply-hub-packing-standards-value-grid article:last-child {
+  padding-right: 0;
+}
+
+.supply-hub-packing-standards-value-grid h3 {
+  margin: 0 0 clamp(0.42rem, 0.58vw, 0.58rem);
+  color: #20242a;
+  font-size: clamp(0.9rem, 0.98vw, 1.12rem);
+  font-weight: 900;
+  line-height: 1.26;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-value-grid p {
+  margin: 0;
+  color: #30363e;
+  font-size: clamp(0.72rem, 0.8vw, 0.88rem);
+  line-height: 1.5;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-value-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 0.92;
+  margin-top: 0.05rem;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-cta {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.9fr) minmax(20rem, 1.45fr) minmax(10rem, 0.82fr);
+  gap: clamp(1rem, 1.8vw, 2.2rem);
+  align-items: center;
+  margin-top: clamp(0.78rem, 1.1vw, 1rem);
+  padding: clamp(0.85rem, 1.25vw, 1.25rem) clamp(1rem, 1.6vw, 1.65rem);
+  border: 1px solid rgba(37, 39, 42, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.5) !important;
+}
+
+.supply-hub-packing-standards-cta-art {
+  display: block;
+  width: 100%;
+  min-height: clamp(7rem, 10vw, 11.5rem);
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-cta-copy {
+  min-width: 0;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-cta-copy h2 {
+  display: block;
+  margin: 0 0 clamp(0.45rem, 0.7vw, 0.7rem);
+  font-size: clamp(1.35rem, 1.75vw, 2.05rem);
+  text-align: left;
+  letter-spacing: 0;
+}
+
+.supply-hub-packing-standards-cta-copy h2::before,
+.supply-hub-packing-standards-cta-copy h2::after {
+  content: none;
+}
+
+.supply-hub-packing-standards-cta-copy p {
+  max-width: 58rem;
+  margin: 0 0 clamp(0.8rem, 1.05vw, 1.1rem);
+  color: #30363e;
+  font-size: clamp(0.78rem, 0.9vw, 1rem);
+  line-height: 1.48;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-cta-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1.1vw, 1rem);
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-cta-actions a {
+  display: inline-flex;
+  min-height: clamp(3.2rem, 3.7vw, 4.05rem);
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.7rem clamp(0.82rem, 1vw, 1.05rem);
+  color: #20242a;
+  font-size: clamp(0.78rem, 0.88vw, 0.98rem);
+  font-weight: 800;
+  line-height: 1.22;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgba(37, 39, 42, 0.32);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.46);
+}
+
+.supply-hub-packing-standards-cta-actions a.is-primary {
+  color: #fffaf0;
+  border-color: rgba(53, 42, 32, 0.9);
+  background: #4a3a2c;
+}
+
+.supply-hub-packing-standards-action-icon {
+  position: relative;
+  flex: 0 0 auto;
+  width: 1.65rem;
+  height: 1.65rem;
+  color: currentColor;
+  background: transparent !important;
+}
+
+.supply-hub-packing-standards-action-icon--upload::before {
+  position: absolute;
+  right: 0.08rem;
+  bottom: 0.04rem;
+  left: 0.08rem;
+  height: 0.52rem;
+  content: '';
+  border: 0.14rem solid currentColor;
+  border-top: 0;
+}
+
+.supply-hub-packing-standards-action-icon--upload::after {
+  position: absolute;
+  top: 0.12rem;
+  left: 50%;
+  width: 0.72rem;
+  height: 0.72rem;
+  content: '';
+  border-top: 0.16rem solid currentColor;
+  border-left: 0.16rem solid currentColor;
+  transform: translateX(-50%) rotate(45deg);
+  box-shadow: -0.38rem 0.38rem 0 -0.29rem currentColor;
+}
+
+.supply-hub-packing-standards-action-icon--request {
+  border: 0.14rem solid currentColor;
+  border-radius: 0.16rem;
+}
+
+.supply-hub-packing-standards-action-icon--request::before {
+  position: absolute;
+  top: 0.34rem;
+  right: 0.28rem;
+  left: 0.28rem;
+  height: 0.12rem;
+  content: '';
+  background: currentColor;
+  box-shadow: 0 0.36rem 0 currentColor, 0 0.72rem 0 currentColor;
+}
+
+.supply-hub-packing-standards-action-icon--request::after {
+  position: absolute;
+  right: -0.28rem;
+  bottom: -0.22rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  content: '';
+  border: 0.14rem solid currentColor;
+  border-radius: 999px;
+}
+
+.supply-hub-packing-standards-action-icon--phone::before {
+  position: absolute;
+  inset: 0.24rem 0.42rem;
+  content: '';
+  border: 0.16rem solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: 0 0 0 0.7rem;
+  transform: rotate(-42deg);
+}
+
+@media (max-width: 1180px) {
+  .supply-hub-packing-standards-managed-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .supply-hub-packing-standards-reference-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-packing-standards-document-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .supply-hub-packing-standards-document-grid article:nth-child(3n + 1) {
+    border-left: 0;
+  }
+
+  .supply-hub-packing-standards-document-grid article:nth-child(n + 4) {
+    border-top: 1px solid rgba(37, 39, 42, 0.16);
+  }
+
+  .supply-hub-packing-standards-value-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0;
+  }
+
+  .supply-hub-packing-standards-value-grid article:nth-child(odd) {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .supply-hub-packing-standards-value-grid article:nth-child(even) {
+    padding-right: 0;
+  }
+
+  .supply-hub-packing-standards-cta {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-packing-standards-cta-art {
+    min-height: 8rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .supply-hub-packing-standards-content {
+    padding: 0.8rem 0.72rem 1.15rem;
+  }
+
+  .supply-hub-packing-standards-panel h2 {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .supply-hub-packing-standards-panel h2::before,
+  .supply-hub-packing-standards-panel h2::after {
+    content: none;
+  }
+
+  .supply-hub-packing-standards-managed-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-packing-standards-managed-grid article {
+    display: grid;
+    grid-template-columns: minmax(6.5rem, 0.35fr) minmax(0, 1fr);
+    gap: 0.5rem 0.85rem;
+  }
+
+  .supply-hub-packing-standards-managed-grid h3 {
+    grid-column: 1 / -1;
+    min-height: 0;
+  }
+
+  .supply-hub-packing-standards-image-slot {
+    width: 100%;
+    margin: 0;
+  }
+
+  .supply-hub-packing-standards-reference-card {
+    padding: 0.9rem;
+  }
+
+  .supply-hub-packing-standards-reference-card h2 {
+    text-align: left;
+  }
+
+  .supply-hub-packing-standards-check-list--split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-packing-standards-document-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-packing-standards-document-grid article,
+  .supply-hub-packing-standards-document-grid article:nth-child(3n + 1) {
+    min-height: 11rem;
+    border-left: 0;
+    border-top: 1px solid rgba(37, 39, 42, 0.16);
+  }
+
+  .supply-hub-packing-standards-document-grid article:first-child {
+    border-top: 0;
+  }
+
+  .supply-hub-packing-standards-value-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-packing-standards-value-grid article,
+  .supply-hub-packing-standards-value-grid article:nth-child(even) {
+    grid-template-columns: 5.8rem minmax(0, 1fr);
+    padding: 0.8rem 0 0;
+    border-top: 1px solid rgba(37, 39, 42, 0.16);
+    border-left: 0;
+  }
+
+  .supply-hub-packing-standards-value-grid article:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .supply-hub-packing-standards-cta {
+    padding: 0.9rem;
+  }
+
+  .supply-hub-packing-standards-cta-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.supply-hub-material-references-content {
+  display: grid;
+  grid-template-columns: repeat(24, minmax(0, 1fr));
+  gap: clamp(0.7rem, 1vw, 1rem);
+  padding: clamp(0.82rem, 1.5vw, 1.25rem) clamp(0.7rem, 1.35vw, 1.2rem) clamp(1rem, 2vw, 1.7rem);
+  color: #2a2e33;
+  font-family: var(--font-ui);
+  background: #f4efe6;
+}
+
+.supply-hub-material-references-panel {
+  min-width: 0;
+  padding: clamp(0.9rem, 1.15vw, 1.16rem);
+  border: 1px solid rgba(37, 39, 42, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 252, 245, 0.5) !important;
+}
+
+.supply-hub-material-references-panel h2 {
+  margin: 0 0 clamp(0.75rem, 1vw, 1rem);
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid rgba(37, 39, 42, 0.24);
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.95rem, 1.05vw, 1.18rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-panel h3 {
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.82rem, 0.9vw, 1rem);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-panel p {
+  margin: 0;
+  color: #30363e;
+  font-size: clamp(0.72rem, 0.82vw, 0.9rem);
+  line-height: 1.55;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-role {
+  grid-column: span 6;
+}
+
+.supply-hub-material-references-groups {
+  grid-column: span 18;
+}
+
+.supply-hub-material-references-stored {
+  grid-column: span 11;
+}
+
+.supply-hub-material-references-production {
+  grid-column: span 8;
+}
+
+.supply-hub-material-references-qc {
+  grid-column: span 5;
+}
+
+.supply-hub-material-references-storage {
+  grid-column: 1 / -1;
+}
+
+.supply-hub-material-references-value {
+  grid-column: 1 / -1;
+}
+
+.supply-hub-material-references-role-layout {
+  display: grid;
+  grid-template-columns: minmax(3.8rem, 0.42fr) minmax(0, 1fr);
+  gap: clamp(0.72rem, 1vw, 1rem);
+  align-items: start;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-image-slot {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.08 / 0.78;
+  object-fit: contain;
+  object-position: center;
+  border: 1px solid rgba(42, 45, 49, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.52), rgba(247, 241, 231, 0.16)),
+    repeating-linear-gradient(
+      -35deg,
+      rgba(38, 42, 46, 0.052) 0 7px,
+      rgba(255, 255, 255, 0.34) 7px 16px
+    );
+}
+
+.supply-hub-material-references-role-layout .supply-hub-material-references-image-slot {
+  width: clamp(3.7rem, 4.8vw, 5.1rem);
+  aspect-ratio: 1 / 1;
+}
+
+.supply-hub-material-references-group-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-group-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.48rem, 0.65vw, 0.65rem);
+  min-width: 0;
+  min-height: 100%;
+  padding: 0 clamp(0.58rem, 0.85vw, 0.92rem);
+  border-left: 1px solid rgba(37, 39, 42, 0.2);
+  background: transparent !important;
+}
+
+.supply-hub-material-references-group-grid article:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.supply-hub-material-references-group-grid article:last-child {
+  padding-right: 0;
+}
+
+.supply-hub-material-references-group-grid .supply-hub-material-references-image-slot {
+  width: min(100%, 7.4rem);
+  margin-inline: auto;
+}
+
+.supply-hub-material-references-stored-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.78rem, 1vw, 1rem);
+  background: transparent !important;
+}
+
+.supply-hub-material-references-stored-images .supply-hub-material-references-image-slot {
+  min-height: clamp(15rem, 20vw, 21rem);
+  aspect-ratio: 1.12 / 1;
+  border: 0;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-production p,
+.supply-hub-material-references-qc p {
+  font-size: clamp(0.76rem, 0.86vw, 0.95rem);
+  line-height: 1.58;
+}
+
+.supply-hub-material-references-production h3 {
+  margin: clamp(0.75rem, 1vw, 1rem) 0 0.5rem;
+  font-size: clamp(0.76rem, 0.86vw, 0.95rem);
+  font-weight: 900;
+}
+
+.supply-hub-material-references-production ul,
+.supply-hub-material-references-qc ul {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-production li,
+.supply-hub-material-references-qc li {
+  position: relative;
+  padding-left: 1.45rem;
+  color: #30363e;
+  font-size: clamp(0.72rem, 0.82vw, 0.9rem);
+  line-height: 1.42;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-production li::before,
+.supply-hub-material-references-qc li::before {
+  position: absolute;
+  left: 0;
+  top: 0.06rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  border: 1px solid rgba(43, 48, 54, 0.42);
+  border-radius: 3px;
+  content: '';
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.supply-hub-material-references-production li::after,
+.supply-hub-material-references-qc li::after {
+  position: absolute;
+  left: 0.24rem;
+  top: 0.1rem;
+  width: 0.42rem;
+  height: 0.66rem;
+  border-right: 2px solid #5f6a55;
+  border-bottom: 2px solid #5f6a55;
+  content: '';
+  transform: rotate(42deg);
+}
+
+.supply-hub-material-references-qc p + p {
+  margin-top: 0.75rem;
+}
+
+.supply-hub-material-references-qc ul {
+  margin-top: 0.8rem;
+}
+
+.supply-hub-material-references-storage-layout {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.88fr) minmax(18rem, 0.9fr) minmax(22rem, 1.25fr);
+  gap: clamp(1rem, 1.55vw, 1.6rem);
+  align-items: center;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-storage-layout > .supply-hub-material-references-image-slot {
+  min-height: clamp(12rem, 17vw, 18rem);
+  aspect-ratio: 1.45 / 1;
+  border: 0;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-storage-layout > .supply-hub-material-references-image-slot:last-child {
+  min-height: clamp(13rem, 18vw, 19rem);
+  aspect-ratio: 1.7 / 1;
+  border: 0;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-storage-copy {
+  min-width: 0;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-storage-copy p {
+  font-size: clamp(0.78rem, 0.9vw, 1rem);
+  line-height: 1.58;
+}
+
+.supply-hub-material-references-storage-copy h3 {
+  margin: clamp(0.78rem, 1vw, 1rem) 0 0.55rem;
+  font-size: clamp(0.78rem, 0.9vw, 1rem);
+  font-weight: 900;
+}
+
+.supply-hub-material-references-storage-copy ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem clamp(0.75rem, 1vw, 1rem);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-storage-copy li {
+  position: relative;
+  padding-left: 1.45rem;
+  color: #30363e;
+  font-size: clamp(0.72rem, 0.82vw, 0.9rem);
+  line-height: 1.42;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-storage-copy li::before {
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  border: 1px solid rgba(43, 48, 54, 0.42);
+  border-radius: 3px;
+  content: '';
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.supply-hub-material-references-storage-copy li::after {
+  position: absolute;
+  left: 0.24rem;
+  top: 0.09rem;
+  width: 0.42rem;
+  height: 0.66rem;
+  border-right: 2px solid #5f6a55;
+  border-bottom: 2px solid #5f6a55;
+  content: '';
+  transform: rotate(42deg);
+}
+
+.supply-hub-material-references-value-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(16rem, 0.55fr);
+  gap: clamp(1rem, 1.35vw, 1.4rem);
+  align-items: center;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-value-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-value-grid article {
+  display: grid;
+  grid-template-columns: minmax(5.2rem, 0.46fr) minmax(0, 1fr);
+  gap: clamp(1rem, 1.35vw, 1.45rem);
+  min-width: 0;
+  min-height: 100%;
+  padding: 0 clamp(0.68rem, 1vw, 1rem);
+  border-left: 1px solid rgba(37, 39, 42, 0.18);
+  background: transparent !important;
+}
+
+.supply-hub-material-references-value-grid article:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.supply-hub-material-references-value-grid .supply-hub-material-references-image-slot {
+  width: clamp(4.2rem, 5.15vw, 5.6rem);
+  aspect-ratio: 1 / 1;
+  border: 0;
+  background: transparent !important;
+}
+
+.supply-hub-material-references-value-grid article:nth-child(4) .supply-hub-material-references-image-slot {
+  width: clamp(5.46rem, 6.7vw, 7.28rem);
+}
+
+.supply-hub-material-references-value-grid h3 {
+  margin-bottom: clamp(0.48rem, 0.7vw, 0.72rem);
+  font-size: clamp(0.74rem, 0.82vw, 0.92rem);
+  line-height: 1.28;
+}
+
+.supply-hub-material-references-value-grid p {
+  font-size: clamp(0.66rem, 0.76vw, 0.84rem);
+  line-height: 1.46;
+}
+
+.supply-hub-material-references-value-layout > .supply-hub-material-references-image-slot {
+  min-height: clamp(9rem, 12.5vw, 13rem);
+  aspect-ratio: 1.55 / 1;
+  border: 0;
+  background: transparent !important;
+}
+
+@media (max-width: 1180px) {
+  .supply-hub-material-references-content {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .supply-hub-material-references-role {
+    grid-column: span 4;
+  }
+
+  .supply-hub-material-references-groups {
+    grid-column: span 8;
+  }
+
+  .supply-hub-material-references-stored {
+    grid-column: span 12;
+  }
+
+  .supply-hub-material-references-production,
+  .supply-hub-material-references-qc {
+    grid-column: span 6;
+  }
+
+  .supply-hub-material-references-storage {
+    grid-column: 1 / -1;
+  }
+
+  .supply-hub-material-references-value {
+    grid-column: 1 / -1;
+  }
+
+  .supply-hub-material-references-storage-layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  }
+
+  .supply-hub-material-references-storage-layout > .supply-hub-material-references-image-slot:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .supply-hub-material-references-value-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-material-references-value-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0;
+  }
+
+  .supply-hub-material-references-value-grid article:nth-child(odd) {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .supply-hub-material-references-group-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem 0;
+  }
+
+  .supply-hub-material-references-group-grid article:nth-child(3n + 1) {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .supply-hub-material-references-content {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0.8rem 0.72rem 1.15rem;
+  }
+
+  .supply-hub-material-references-role,
+  .supply-hub-material-references-groups,
+  .supply-hub-material-references-stored,
+  .supply-hub-material-references-production,
+  .supply-hub-material-references-qc,
+  .supply-hub-material-references-storage,
+  .supply-hub-material-references-value {
+    grid-column: 1 / -1;
+  }
+
+  .supply-hub-material-references-role-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-material-references-stored-images {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-material-references-storage-layout,
+  .supply-hub-material-references-value-layout,
+  .supply-hub-material-references-value-grid,
+  .supply-hub-material-references-storage-copy ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-material-references-value-grid article {
+    padding: 0.75rem 0;
+    border-left: 0;
+    border-top: 1px solid rgba(37, 39, 42, 0.16);
+  }
+
+  .supply-hub-material-references-value-grid article:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .supply-hub-material-references-stored-images .supply-hub-material-references-image-slot {
+    min-height: 14rem;
+  }
+
+  .supply-hub-material-references-group-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .supply-hub-material-references-group-grid article {
+    display: grid;
+    grid-template-columns: 5.3rem minmax(0, 1fr);
+    gap: 0.35rem 0.75rem;
+    padding: 0.75rem 0;
+    border-left: 0;
+    border-top: 1px solid rgba(37, 39, 42, 0.16);
+  }
+
+  .supply-hub-material-references-group-grid article:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .supply-hub-material-references-group-grid .supply-hub-material-references-image-slot {
+    grid-row: span 2;
+    width: 5.3rem;
+    margin: 0;
+  }
+}
+
+.supply-hub-technical-drawings-content {
+  display: grid;
+  grid-template-columns: repeat(24, minmax(0, 1fr));
+  gap: clamp(0.6rem, 0.85vw, 0.9rem);
+  padding: clamp(0.82rem, 1.5vw, 1.25rem) clamp(0.7rem, 1.35vw, 1.2rem) clamp(1rem, 2vw, 1.7rem);
+  color: #2a2e33;
+  font-family: var(--font-ui);
+  background: #f4efe6;
+}
+
+.supply-hub-technical-drawings-panel {
+  min-width: 0;
+  padding: clamp(0.8rem, 1vw, 1rem);
+  border: 1px solid rgba(37, 39, 42, 0.34);
+  background: rgba(255, 252, 245, 0.56);
+}
+
+.supply-hub-technical-drawings-panel h2 {
+  margin: 0 0 clamp(0.7rem, 1vw, 0.95rem);
+  color: #20242a;
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.2vw, 1.42rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.supply-hub-technical-drawings-panel h2 span {
+  margin-right: 0.22rem;
+}
+
+.supply-hub-technical-drawings-panel h3 {
+  margin: 0;
+  color: #262b31;
+  font-size: clamp(0.76rem, 0.82vw, 0.92rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.supply-hub-technical-drawings-panel p {
+  margin: 0;
+  color: #3c4148;
+  font-size: clamp(0.76rem, 0.86vw, 0.95rem);
+  line-height: 1.58;
+  letter-spacing: 0;
+}
+
+.supply-hub-technical-drawings-panel ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.supply-hub-technical-drawings-role {
+  grid-column: span 5;
+}
+
+.supply-hub-technical-drawings-types {
+  grid-column: span 11;
+}
+
+.supply-hub-technical-drawings-version {
+  grid-column: span 8;
+}
+
+.supply-hub-technical-drawings-production {
+  grid-column: span 5;
+}
+
+.supply-hub-technical-drawings-standard-room {
+  grid-column: span 10;
+}
+
+.supply-hub-technical-drawings-documents {
+  grid-column: span 9;
+}
+
+.supply-hub-technical-drawings-value {
+  grid-column: 1 / -1;
+}
+
+.supply-hub-technical-drawings-process {
+  grid-column: span 16;
+}
+
+.supply-hub-technical-drawings-cta {
+  grid-column: span 8;
+}
+
+.supply-hub-technical-drawings-role-layout {
+  display: block;
+}
+
+.supply-hub-technical-drawings-role-layout p + p {
+  margin-top: 0.75rem;
+}
+
+.supply-hub-technical-drawings-role-layout .supply-hub-technical-drawings-image-slot {
+  float: left;
+  width: clamp(4.4rem, 5.8vw, 6rem);
+  margin: 0 clamp(0.72rem, 1vw, 1rem) 0.48rem 0;
+}
+
+.supply-hub-technical-drawings-image-slot {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 0.78;
+  object-fit: contain;
+  object-position: center;
+  border: 1px solid rgba(42, 45, 49, 0.2);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(247, 241, 231, 0.16)),
+    repeating-linear-gradient(
+      -35deg,
+      rgba(38, 42, 46, 0.055) 0 7px,
+      rgba(255, 255, 255, 0.34) 7px 16px
+    );
+}
+
+.supply-hub-technical-drawings-type-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.45rem, 0.65vw, 0.7rem);
+}
+
+.supply-hub-technical-drawings-type-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.62rem;
+  min-width: 0;
+  min-height: 100%;
+  padding: clamp(0.58rem, 0.72vw, 0.72rem);
+  border: 1px solid rgba(37, 39, 42, 0.24);
+  background: rgba(255, 254, 249, 0.42);
+}
+
+.supply-hub-technical-drawings-type-card .supply-hub-technical-drawings-image-slot {
+  width: min(100%, 6.2rem);
+  margin-inline: auto;
+  aspect-ratio: 1 / 0.72;
+}
+
+.supply-hub-technical-drawings-type-card p {
+  font-size: clamp(0.68rem, 0.72vw, 0.8rem);
+  line-height: 1.42;
+}
+
+.supply-hub-technical-drawings-version-layout {
+  display: grid;
+  grid-template-columns: minmax(96px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(0.65rem, 0.85vw, 0.9rem);
+  align-items: start;
+}
+
+.supply-hub-technical-drawings-version li,
+.supply-hub-technical-drawings-production li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: #33383f;
+  font-size: clamp(0.76rem, 0.84vw, 0.92rem);
+  line-height: 1.42;
+}
+
+.supply-hub-technical-drawings-version li + li,
+.supply-hub-technical-drawings-production li + li {
+  margin-top: 0.48rem;
+}
+
+.supply-hub-technical-drawings-version li::before,
+.supply-hub-technical-drawings-production li::before {
+  position: absolute;
+  left: 0;
+  top: 0.08rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 1px solid rgba(43, 48, 54, 0.42);
+  border-radius: 2px;
+  content: '';
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.supply-hub-technical-drawings-version li::after,
+.supply-hub-technical-drawings-production li::after {
+  position: absolute;
+  left: 0.2rem;
+  top: 0.11rem;
+  width: 0.42rem;
+  height: 0.68rem;
+  border-right: 2px solid #5f6a55;
+  border-bottom: 2px solid #5f6a55;
+  content: '';
+  transform: rotate(42deg);
+}
+
+.supply-hub-technical-drawings-version-board {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.supply-hub-technical-drawings-version-table {
+  display: grid;
+  grid-template-columns: 0.78fr 1.05fr 1.8fr 0.6fr;
+  overflow: hidden;
+  border: 1px solid rgba(37, 39, 42, 0.28);
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.supply-hub-technical-drawings-version-table span {
+  min-width: 0;
+  padding: 0.25rem 0.32rem;
+  border-right: 1px solid rgba(37, 39, 42, 0.18);
+  border-bottom: 1px solid rgba(37, 39, 42, 0.18);
+  color: #30343a;
+  font-size: clamp(0.56rem, 0.58vw, 0.68rem);
+  line-height: 1.2;
+}
+
+.supply-hub-technical-drawings-version-table span:nth-child(-n + 4) {
+  font-weight: 800;
+  text-align: center;
+}
+
+.supply-hub-technical-drawings-revision,
+.supply-hub-technical-drawings-approved {
+  padding: 0.48rem 0.62rem;
+  border: 1px solid rgba(37, 39, 42, 0.24);
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.supply-hub-technical-drawings-revision {
+  border-radius: 22px;
+  border-color: rgba(213, 91, 53, 0.46);
+}
+
+.supply-hub-technical-drawings-revision strong,
+.supply-hub-technical-drawings-approved strong,
+.supply-hub-technical-drawings-revision span,
+.supply-hub-technical-drawings-approved span {
+  display: block;
+  color: #30343a;
+  font-size: clamp(0.58rem, 0.64vw, 0.76rem);
+  line-height: 1.35;
+}
+
+.supply-hub-technical-drawings-approved {
+  width: min(100%, 9.5rem);
+  justify-self: end;
+  text-align: center;
+}
+
+.supply-hub-technical-drawings-production ul {
+  display: grid;
+  gap: clamp(0.52rem, 0.78vw, 0.8rem);
+}
+
+.supply-hub-technical-drawings-production li {
+  padding-left: 1.7rem;
+}
+
+.supply-hub-technical-drawings-production li::before {
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+}
+
+.supply-hub-technical-drawings-production li::after {
+  left: 0.27rem;
+  top: 0.08rem;
+}
+
+.supply-hub-technical-drawings-standard-room > p {
+  max-width: 55ch;
+  margin-bottom: clamp(0.72rem, 1vw, 1rem);
+  font-size: clamp(0.78rem, 0.9vw, 1rem);
+  line-height: 1.48;
+}
+
+.supply-hub-technical-drawings-reference-flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.52rem, 0.8vw, 0.82rem);
+  align-items: start;
+  background: transparent !important;
+}
+
+.supply-hub-technical-drawings-reference-flow article {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  text-align: center;
+  background: transparent !important;
+}
+
+.supply-hub-technical-drawings-reference-flow article:not(:last-child)::after {
+  position: absolute;
+  right: calc(clamp(0.52rem, 0.8vw, 0.82rem) * -0.72);
+  top: clamp(1.85rem, 2.6vw, 2.75rem);
+  color: #20242a;
+  content: '→';
+  font-size: clamp(1rem, 1.18vw, 1.25rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.supply-hub-technical-drawings-reference-flow .supply-hub-technical-drawings-image-slot {
+  width: clamp(3.4rem, 4.8vw, 5.3rem);
+}
+
+.supply-hub-technical-drawings-reference-flow strong,
+.supply-hub-technical-drawings-document-grid strong {
+  color: #262b31;
+  font-size: clamp(0.7rem, 0.78vw, 0.88rem);
+  line-height: 1.28;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.supply-hub-technical-drawings-reference-caption {
+  position: relative;
+  margin-top: clamp(0.72rem, 1vw, 1rem);
+  padding-top: 0.48rem;
+  color: #20242a;
+  font-size: clamp(0.72rem, 0.86vw, 0.98rem);
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.04em;
+  background: transparent !important;
+}
+
+.supply-hub-technical-drawings-reference-caption::before {
+  position: absolute;
+  top: 0;
+  left: 9%;
+  right: 9%;
+  height: 1px;
+  content: '';
+  background: rgba(37, 39, 42, 0.38);
+}
+
+.supply-hub-technical-drawings-document-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.48rem, 0.72vw, 0.78rem);
+  background: transparent !important;
+}
+
+.supply-hub-technical-drawings-document-grid article {
+  display: grid;
+  grid-template-columns: minmax(2.5rem, 0.4fr) minmax(0, 1fr);
+  gap: clamp(0.5rem, 0.7vw, 0.72rem);
+  align-items: center;
+  min-width: 0;
+  padding: clamp(0.52rem, 0.72vw, 0.72rem);
+  border: 1px solid rgba(37, 39, 42, 0.24);
+  background: rgba(255, 254, 249, 0.42) !important;
+}
+
+.supply-hub-technical-drawings-document-grid .supply-hub-technical-drawings-image-slot {
+  width: clamp(2.4rem, 3.1vw, 3.3rem);
+}
+
+.supply-hub-technical-drawings-value-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(18rem, 0.75fr);
+  gap: clamp(0.72rem, 1.05vw, 1.05rem);
+  align-items: stretch;
+  background: transparent !important;
+}
+
+.supply-hub-technical-drawings-value-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.52rem, 0.78vw, 0.82rem);
+  background: transparent !important;
+}
+
+.supply-hub-technical-drawings-value-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-width: 0;
+  min-height: 100%;
+  padding: clamp(0.62rem, 0.82vw, 0.85rem);
+  border: 1px solid rgba(37, 39, 42, 0.24);
+  background: rgba(255, 254, 249, 0.42) !important;
+}
+
+.supply-hub-technical-drawings-value-grid h3 {
+  min-height: 2.45em;
+  text-align: center;
+}
+
+.supply-hub-technical-drawings-value-grid .supply-hub-technical-drawings-image-slot {
+  width: min(100%, 5.1rem);
+  margin-inline: auto;
+  aspect-ratio: 1 / 0.9;
+}
+
+.supply-hub-technical-drawings-value-grid p {
+  font-size: clamp(0.68rem, 0.76vw, 0.84rem);
+  line-height: 1.42;
+}
+
+.supply-hub-technical-drawings-value-visual {
+  width: 100%;
+  min-height: clamp(10.5rem, 14vw, 15rem);
+  aspect-ratio: 1.58 / 1;
+}
+
+.supply-hub-technical-drawings-process-flow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.5rem, 0.78vw, 0.82rem);
+  background: transparent !important;
+}
+
+.supply-hub-technical-drawings-process-flow article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.52rem;
+  min-width: 0;
+  min-height: 100%;
+  padding: clamp(0.58rem, 0.78vw, 0.8rem);
+  border: 1px solid rgba(37, 39, 42, 0.24);
+  background: rgba(255, 254, 249, 0.42) !important;
+}
+
+.supply-hub-technical-drawings-process-flow article:not(:last-child)::after {
+  position: absolute;
+  right: calc(clamp(0.5rem, 0.78vw, 0.82rem) * -0.72);
+  top: 45%;
+  z-index: 1;
+  color: #20242a;
+  content: '→';
+  font-size: clamp(1rem, 1.18vw, 1.22rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.supply-hub-technical-drawings-process-flow h3 {
+  min-height: 2.45em;
+}
+
+.supply-hub-technical-drawings-process-flow .supply-hub-technical-drawings-image-slot {
+  width: min(100%, 5.6rem);
+  margin-inline: auto;
+  aspect-ratio: 1 / 0.72;
+}
+
+.supply-hub-technical-drawings-process-flow p {
+  font-size: clamp(0.66rem, 0.72vw, 0.8rem);
+  line-height: 1.38;
+}
+
+.supply-hub-technical-drawings-cta {
+  display: grid;
+  align-content: center;
+  gap: clamp(0.9rem, 1.3vw, 1.25rem);
+}
+
+.supply-hub-technical-drawings-cta h2 {
+  margin-bottom: clamp(0.45rem, 0.72vw, 0.7rem);
+  font-size: clamp(1.35rem, 2.1vw, 2.35rem);
+  line-height: 1.08;
+}
+
+.supply-hub-technical-drawings-cta p {
+  max-width: 68ch;
+  font-size: clamp(0.82rem, 0.96vw, 1.04rem);
+  line-height: 1.48;
+}
+
+.supply-hub-technical-drawings-cta-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.62rem, 0.9vw, 0.92rem);
+  background: transparent !important;
+}
+
+.supply-hub-technical-drawings-cta-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.52rem;
+  min-height: clamp(2.7rem, 3.4vw, 3.45rem);
+  padding: 0.58rem clamp(0.72rem, 1vw, 1rem);
+  border: 1px solid #d95f1d;
+  border-radius: 8px;
+  color: #d95f1d;
+  font-size: clamp(0.78rem, 0.9vw, 1rem);
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0;
+  background: rgba(255, 252, 246, 0.28) !important;
+}
+
+.supply-hub-technical-drawings-cta-actions b,
+.supply-hub-technical-drawings-cta-actions span {
+  color: inherit;
+  background: transparent !important;
+}
+
+.supply-hub-technical-drawings-cta-actions b {
+  flex: 0 0 auto;
+  font-size: 1.15em;
+  line-height: 1;
+}
+
+@media (max-width: 1180px) {
+  .supply-hub-technical-drawings-content {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .supply-hub-technical-drawings-role,
+  .supply-hub-technical-drawings-version,
+  .supply-hub-technical-drawings-production {
+    grid-column: span 4;
+  }
+
+  .supply-hub-technical-drawings-types {
+    grid-column: span 4;
+  }
+
+  .supply-hub-technical-drawings-standard-room {
+    grid-column: span 7;
+  }
+
+  .supply-hub-technical-drawings-documents {
+    grid-column: span 5;
+  }
+
+  .supply-hub-technical-drawings-value {
+    grid-column: 1 / -1;
+  }
+
+  .supply-hub-technical-drawings-process,
+  .supply-hub-technical-drawings-cta {
+    grid-column: 1 / -1;
+  }
+
+  .supply-hub-technical-drawings-type-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .supply-hub-technical-drawings-role,
+  .supply-hub-technical-drawings-types,
+  .supply-hub-technical-drawings-version,
+  .supply-hub-technical-drawings-production,
+  .supply-hub-technical-drawings-standard-room,
+  .supply-hub-technical-drawings-documents {
+    grid-column: span 6;
+  }
+
+  .supply-hub-technical-drawings-type-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .supply-hub-technical-drawings-reference-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .supply-hub-technical-drawings-reference-flow article::after {
+    content: none !important;
+  }
+
+  .supply-hub-technical-drawings-document-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .supply-hub-technical-drawings-value-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-technical-drawings-value-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .supply-hub-technical-drawings-value-visual {
+    min-height: 13rem;
+  }
+
+  .supply-hub-technical-drawings-process-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .supply-hub-technical-drawings-process-flow article:nth-child(3)::after {
+    content: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .supply-hub-technical-drawings-content {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0.8rem 0.72rem 1.15rem;
+  }
+
+  .supply-hub-technical-drawings-role,
+  .supply-hub-technical-drawings-types,
+  .supply-hub-technical-drawings-version,
+  .supply-hub-technical-drawings-production,
+  .supply-hub-technical-drawings-standard-room,
+  .supply-hub-technical-drawings-documents,
+  .supply-hub-technical-drawings-value,
+  .supply-hub-technical-drawings-process,
+  .supply-hub-technical-drawings-cta {
+    grid-column: 1 / -1;
+    order: initial;
+  }
+
+  .supply-hub-technical-drawings-version-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-technical-drawings-role-layout .supply-hub-technical-drawings-image-slot {
+    width: 5.8rem;
+  }
+
+  .supply-hub-technical-drawings-type-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-technical-drawings-reference-flow,
+  .supply-hub-technical-drawings-document-grid,
+  .supply-hub-technical-drawings-value-grid,
+  .supply-hub-technical-drawings-process-flow,
+  .supply-hub-technical-drawings-cta-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-technical-drawings-process-flow article::after {
+    content: none !important;
+  }
 }
 
 .supply-hub-component-samples-content {
@@ -8603,6 +11147,30 @@ img.supply-hub-weekly-cta-image-placeholder {
     object-position: 72% center;
   }
 
+  .supply-hub-partner-technical-drawings-banner > img {
+    aspect-ratio: 2006 / 784;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .supply-hub-partner-material-references-banner > img {
+    aspect-ratio: 2006 / 784;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .supply-hub-partner-packing-standards-banner > img {
+    aspect-ratio: 2006 / 784;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .supply-hub-partner-qc-checklist-banner > img {
+    aspect-ratio: 2006 / 784;
+    object-fit: contain;
+    object-position: center;
+  }
+
   .supply-hub-partner-approved-product-samples-banner-copy {
     left: 1.05rem;
     right: 1.05rem;
@@ -8651,6 +11219,86 @@ img.supply-hub-weekly-cta-image-placeholder {
     margin-top: 0.46rem;
     font-size: 0.76rem;
     line-height: 1.34;
+  }
+
+  .supply-hub-partner-technical-drawings-banner-copy {
+    left: 1.05rem;
+    right: 1.05rem;
+    top: 0.9rem;
+    width: min(68vw, 19rem);
+    transform: none;
+  }
+
+  .supply-hub-partner-technical-drawings-banner-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(1.75rem, 8.6vw, 2.85rem);
+  }
+
+  .supply-hub-partner-technical-drawings-banner-copy p {
+    max-width: 39ch;
+    margin-top: 0.46rem;
+    font-size: 0.72rem;
+    line-height: 1.32;
+  }
+
+  .supply-hub-partner-material-references-banner-copy {
+    left: 1.05rem;
+    right: 1.05rem;
+    top: 0.9rem;
+    width: min(68vw, 19rem);
+    transform: none;
+  }
+
+  .supply-hub-partner-material-references-banner-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(1.75rem, 8.6vw, 2.85rem);
+  }
+
+  .supply-hub-partner-material-references-banner-copy p {
+    max-width: 39ch;
+    margin-top: 0.46rem;
+    font-size: 0.72rem;
+    line-height: 1.32;
+  }
+
+  .supply-hub-partner-packing-standards-banner-copy {
+    left: 1.05rem;
+    right: 1.05rem;
+    top: 0.9rem;
+    width: min(72vw, 20rem);
+    transform: none;
+  }
+
+  .supply-hub-partner-packing-standards-banner-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(1.65rem, 8.1vw, 2.65rem);
+  }
+
+  .supply-hub-partner-packing-standards-banner-copy p {
+    max-width: 40ch;
+    margin-top: 0.38rem;
+    font-size: 0.68rem;
+    line-height: 1.26;
+  }
+
+  .supply-hub-partner-qc-checklist-banner-copy {
+    left: 1.05rem;
+    right: 1.05rem;
+    top: 0.9rem;
+    width: min(72vw, 20rem);
+    transform: none;
+  }
+
+  .supply-hub-partner-qc-checklist-banner-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(1.65rem, 8.1vw, 2.65rem);
+  }
+
+  .supply-hub-partner-qc-checklist-banner-copy p {
+    max-width: 40ch;
+    margin-top: 0.38rem;
+    font-size: 0.68rem;
+    line-height: 1.26;
   }
 
   .supply-hub-export-documentation-support-banner-copy {
@@ -19427,6 +22075,14 @@ img.supply-hub-weekly-cta-image-placeholder {
     .supply-hub-partner-approved-product-samples-banner *
   ):not(.supply-hub-partner-component-samples-banner):not(
     .supply-hub-partner-component-samples-banner *
+  ):not(.supply-hub-partner-technical-drawings-banner):not(
+    .supply-hub-partner-technical-drawings-banner *
+  ):not(.supply-hub-partner-material-references-banner):not(
+    .supply-hub-partner-material-references-banner *
+  ):not(.supply-hub-partner-packing-standards-banner):not(
+    .supply-hub-partner-packing-standards-banner *
+  ):not(.supply-hub-partner-qc-checklist-banner):not(
+    .supply-hub-partner-qc-checklist-banner *
   ):not(.supply-hub-lcl-fcl-consolidation-banner):not(
     .supply-hub-lcl-fcl-consolidation-banner *
   ):not(.supply-hub-weekly-shipment-arrangement-banner):not(
@@ -19445,6 +22101,14 @@ img.supply-hub-weekly-cta-image-placeholder {
     .supply-hub-approved-samples-content *
   ):not(.supply-hub-component-samples-content):not(
     .supply-hub-component-samples-content *
+  ):not(.supply-hub-technical-drawings-content):not(
+    .supply-hub-technical-drawings-content *
+  ):not(.supply-hub-material-references-content):not(
+    .supply-hub-material-references-content *
+  ):not(.supply-hub-packing-standards-content):not(
+    .supply-hub-packing-standards-content *
+  ):not(.supply-hub-qc-checklist-content):not(
+    .supply-hub-qc-checklist-content *
   ):not(.supply-hub-overview-content):not(
     .supply-hub-overview-content *
   ):not(.supply-hub-overview-cta):not(
