@@ -260,7 +260,7 @@ export const TOP_MENU: TopMenuItem[] = [
     label: 'Chất lượng & Tiêu chuẩn',
     path: '/quality-control',
     children: [
-      { label: 'Tổng quan hệ thống chất lượng', path: '/quality-control' },
+      { label: 'Tổng quan hệ thống chất lượng', path: '/quality-control/overview' },
       { label: 'Quy trình kiểm soát chất lượng', path: '/quality-control/qc-process' },
       { label: 'Kiểm tra vật liệu', path: '/quality-control/material-inspection' },
       { label: 'Kiểm tra trong sản xuất', path: '/quality-control/in-process-inspection' },
@@ -740,6 +740,11 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
     slug: 'quality-control',
     summary: 'Quy trình QC, kiểm soát mẫu, đóng gói và tiêu chuẩn buyer.',
     sections: [
+      {
+        id: 'overview',
+        title: 'Tổng quan hệ thống chất lượng',
+        description: 'Tổng quan hệ thống kiểm soát chất lượng của ANSLIFE.',
+      },
       {
         id: 'qc-process',
         title: 'Quy trình kiểm soát chất lượng',
