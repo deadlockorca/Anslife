@@ -342,9 +342,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'about-anslife' && section.id === 'scholarship-community';
   const shouldRenderBlankQualityInProcessPage =
     config.slug === 'quality-control' && section.id === 'in-process-inspection';
+  const isQualityControlFinalInspectionPage =
+    config.slug === 'quality-control' && section.id === 'final-inspection' && !detailSlug;
   const shouldRenderBlankSubSectionPage =
     shouldRenderBlankScholarshipPage ||
     shouldRenderBlankQualityInProcessPage ||
+    isQualityControlFinalInspectionPage ||
     isSupplyHubOverviewPage ||
     isSupplyHubStorageSolutionPage ||
     isSupplyHubLclFclConsolidationPage ||
@@ -449,6 +452,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldShowQualityControlOverviewBanner = isQualityControlOverviewPage;
   const shouldShowQualityControlQcProcessBanner = isQualityControlQcProcessPage;
   const shouldShowQualityControlMaterialInspectionBanner = isQualityControlMaterialInspectionPage;
+  const shouldShowQualityControlInProcessInspectionBanner = shouldRenderBlankQualityInProcessPage;
+  const shouldShowQualityControlFinalInspectionBanner = isQualityControlFinalInspectionPage;
   const shouldRenderSectionHero = !shouldHideSectionHero && !isSupplyHubComponentSamplesPage;
   const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
@@ -2253,6 +2258,656 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </a>
               <a href="/vn/contact/upload-drawing">
                 {t('Tải tài liệu kỹ thuật')}
+              </a>
+              <a href="/vn/contact">
+                {t('Liên hệ ANSLIFE')}
+              </a>
+            </div>
+          </section>
+        </section>
+      )}
+      {shouldShowQualityControlInProcessInspectionBanner && (
+        <figure className="quality-control-in-process-inspection-banner">
+          <img
+            src="/assets/quality-control-in-process-inspection-banner.png"
+            alt={t('Banner kiểm tra trong sản xuất')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="quality-control-in-process-inspection-banner-copy">
+            <h1>{t('Kiểm tra trong sản xuất')}</h1>
+            <span>
+              {t(
+                'Kiểm soát chất lượng tại từng công đoạn nhằm phát hiện sớm sai lệch trước khi chuyển sang bước tiếp theo.',
+              )}
+            </span>
+            <p>
+              {t(
+                'ANSLIFE triển khai hoạt động kiểm tra trong quá trình sản xuất nhằm đảm bảo các công đoạn gia công, lắp ráp và hoàn thiện được thực hiện đúng theo bản vẽ, mẫu duyệt và tiêu chuẩn chất lượng của dự án.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Việc kiểm tra được thực hiện xuyên suốt quá trình sản xuất để giảm thiểu lỗi, hạn chế sửa chữa và nâng cao tính đồng nhất của sản phẩm.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldRenderBlankQualityInProcessPage && (
+        <section
+          className="quality-control-in-process-inspection-content"
+          aria-labelledby="quality-control-in-process-location-title"
+        >
+          <section className="quality-control-in-process-inspection-panel quality-control-in-process-inspection-location">
+            <h2 id="quality-control-in-process-location-title">{t('KIỂM TRA ĐƯỢC THỰC HIỆN Ở ĐÂU?')}</h2>
+            <div className="quality-control-in-process-inspection-location-flow">
+              {[
+                ['Vật liệu', '/assets/quality-control/in-process-inspection/flow-material.webp'],
+                ['Cắt & chuẩn bị phôi', '/assets/quality-control/in-process-inspection/flow-cut-prep.webp'],
+                ['Gia công chi tiết', '/assets/quality-control/in-process-inspection/flow-detail-machining.webp'],
+                ['Lắp ráp', '/assets/quality-control/in-process-inspection/flow-assembly.webp'],
+                ['Chà nhám', '/assets/quality-control/in-process-inspection/flow-sanding.webp'],
+                ['Hoàn thiện bề mặt', '/assets/quality-control/in-process-inspection/flow-surface-finish.webp'],
+                ['Thành phẩm', '/assets/quality-control/in-process-inspection/flow-finished-product.webp'],
+              ].map(([step, image]) => (
+                <div key={step}>
+                  <img
+                    className="quality-control-in-process-inspection-flow-image"
+                    src={image}
+                    alt={t(step)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <p>{t(step)}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-in-process-inspection-panel quality-control-in-process-inspection-stages">
+            <h2>{t('CÁC CÔNG ĐOẠN KIỂM TRA CHÍNH')}</h2>
+            <div className="quality-control-in-process-inspection-stage-grid">
+              {[
+                {
+                  title: 'Kiểm tra cắt & chuẩn bị phôi',
+                  image: '/assets/quality-control/in-process-inspection/stage-cut-prep.webp',
+                  text: 'Xác nhận vật liệu được cắt đúng kích thước và đúng quy cách trước khi chuyển sang gia công.',
+                  checks: ['Kích thước phôi', 'Chủng loại vật liệu', 'Hướng vân gỗ', 'Mã chi tiết', 'Dung sai gia công'],
+                },
+                {
+                  title: 'Kiểm tra gia công chi tiết',
+                  image: '/assets/quality-control/in-process-inspection/stage-detail-machining.webp',
+                  text: 'Kiểm tra độ chính xác của các chi tiết sau khi gia công nhằm đảm bảo khả năng lắp ráp và độ ổn định của sản phẩm.',
+                  checks: ['Kích thước chi tiết', 'Mộng gỗ', 'Lỗ khoan', 'Rãnh', 'Góc gia công', 'Bề mặt gia công'],
+                },
+                {
+                  title: 'Kiểm tra cấu kiện',
+                  image: '/assets/quality-control/in-process-inspection/stage-component-check.webp',
+                  text: 'Kiểm tra các bộ phận trước khi chuyển sang công đoạn lắp ráp hoặc hoàn thiện.',
+                  examples: ['Khung ghế', 'Chân bàn', 'Tay ghế', 'Lưng ghế', 'Bộ phận tủ', 'Cấu kiện bọc nệm'],
+                  checks: ['Kích thước', 'Độ vuông góc', 'Độ cân bằng', 'Độ chắc chắn của liên kết'],
+                },
+                {
+                  title: 'Kiểm tra lắp ráp',
+                  image: '/assets/quality-control/in-process-inspection/stage-assembly.webp',
+                  text: 'Đánh giá khả năng lắp ráp và độ ổn định của sản phẩm trước khi hoàn thiện bề mặt.',
+                  checks: ['Khớp nối', 'Độ cân bằng', 'Độ ổn định kết cấu', 'Khe hở', 'Sai lệch lắp ráp'],
+                },
+                {
+                  title: 'Kiểm tra chà nhám & xử lý bề mặt',
+                  image: '/assets/quality-control/in-process-inspection/stage-sanding.webp',
+                  text: 'Đảm bảo bề mặt đáp ứng yêu cầu trước khi chuyển sang công đoạn sơn hoặc hoàn thiện.',
+                  checks: ['Độ nhẵn', 'Vết xước', 'Cạnh sắc', 'Keo thừa', 'Lỗi bề mặt'],
+                },
+                {
+                  title: 'Kiểm tra hoàn thiện bề mặt',
+                  image: '/assets/quality-control/in-process-inspection/stage-surface-finish.webp',
+                  text: 'Kiểm tra màu sắc, độ bóng, độ đồng đều và chất lượng bề mặt trong quá trình hoàn thiện.',
+                  checks: ['Stain', 'Màu sắc', 'Độ bóng', 'Độ mờ', 'Bề mặt sơn', 'Lỗi hoàn thiện'],
+                },
+              ].map((stage, index) => (
+                <article key={stage.title}>
+                  <div className="quality-control-in-process-inspection-stage-head">
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <h3>{t(stage.title)}</h3>
+                  </div>
+                  <img
+                    className="quality-control-in-process-inspection-stage-image"
+                    src={stage.image}
+                    alt={t(stage.title)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <p>{t(stage.text)}</p>
+                  {stage.examples ? (
+                    <div className="quality-control-in-process-inspection-stage-examples">
+                      <strong>{t('Ví dụ:')}</strong>
+                      <ul>
+                        {stage.examples.map((example) => (
+                          <li key={example}>{t(example)}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                  <ul className="quality-control-in-process-inspection-checks">
+                    {stage.checks.map((check) => (
+                      <li key={check}>{t(check)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-in-process-inspection-lower">
+            <section className="quality-control-in-process-inspection-panel quality-control-in-process-inspection-controlled">
+              <h2>{t('NHỮNG NỘI DUNG ĐƯỢC KIỂM SOÁT XUYÊN SUỐT')}</h2>
+              <div className="quality-control-in-process-inspection-controlled-grid">
+                {[
+                  [
+                    'Kích thước',
+                    'Đúng theo bản vẽ kỹ thuật và dung sai cho phép.',
+                    '/assets/quality-control/in-process-inspection/controlled-dimension.webp',
+                  ],
+                  [
+                    'Kết cấu',
+                    'Đảm bảo khả năng chịu lực và độ ổn định.',
+                    '/assets/quality-control/in-process-inspection/controlled-structure.webp',
+                  ],
+                  [
+                    'Liên kết',
+                    'Kiểm soát mộng, chốt, vít và các điểm kết nối.',
+                    '/assets/quality-control/in-process-inspection/controlled-connection.webp',
+                  ],
+                  [
+                    'Ngoại quan',
+                    'Kiểm soát bề mặt và tính đồng nhất.',
+                    '/assets/quality-control/in-process-inspection/controlled-appearance.webp',
+                  ],
+                  [
+                    'Mẫu duyệt',
+                    'Đối chiếu liên tục với mẫu đã được phê duyệt.',
+                    '/assets/quality-control/in-process-inspection/controlled-approved-sample.webp',
+                  ],
+                  [
+                    'Truy xuất',
+                    'Lưu thông tin kiểm tra phục vụ quản lý chất lượng.',
+                    '/assets/quality-control/in-process-inspection/controlled-traceability.webp',
+                  ],
+                ].map(([title, text, image]) => (
+                  <article key={title}>
+                    <img
+                      className="quality-control-in-process-inspection-small-image"
+                      src={image}
+                      alt={t(title)}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <h3>{t(title)}</h3>
+                    <p>{t(text)}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+            <section className="quality-control-in-process-inspection-panel quality-control-in-process-inspection-methods">
+              <h2>{t('PHƯƠNG PHÁP KIỂM TRA')}</h2>
+              <div className="quality-control-in-process-inspection-method-grid">
+                {[
+                  [
+                    'Kiểm tra theo công đoạn',
+                    'Thực hiện kiểm tra tại các điểm kiểm soát quan trọng trong quy trình sản xuất.',
+                    '/assets/quality-control/in-process-inspection/method-by-stage.webp',
+                  ],
+                  [
+                    'Kiểm tra theo mẫu',
+                    'Đối chiếu trực tiếp với mẫu sản phẩm đã được phê duyệt.',
+                    '/assets/quality-control/in-process-inspection/method-by-sample.webp',
+                  ],
+                  [
+                    'Kiểm tra theo lô',
+                    'Thực hiện đánh giá theo từng lô sản xuất hoặc từng giai đoạn của dự án.',
+                    '/assets/quality-control/in-process-inspection/method-by-lot.webp',
+                  ],
+                  [
+                    'Kiểm tra theo yêu cầu buyer',
+                    'Áp dụng các tiêu chuẩn và checklist riêng theo từng khách hàng hoặc thị trường.',
+                    '/assets/quality-control/in-process-inspection/method-by-buyer.webp',
+                  ],
+                ].map(([title, text, image]) => (
+                  <article key={title}>
+                    <img
+                      className="quality-control-in-process-inspection-small-image"
+                      src={image}
+                      alt={t(title)}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <h3>{t(title)}</h3>
+                    <p>{t(text)}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+            <section className="quality-control-in-process-inspection-panel quality-control-in-process-inspection-benefits">
+              <h2>{t('LỢI ÍCH CỦA KIỂM TRA TRONG SẢN XUẤT')}</h2>
+              <div className="quality-control-in-process-inspection-benefit-flow">
+                {[
+                  ['Phát hiện sớm lỗi', '/assets/quality-control/in-process-inspection/benefit-detect-early.webp'],
+                  ['Giảm sửa chữa', '/assets/quality-control/in-process-inspection/benefit-reduce-rework.webp'],
+                  ['Ổn định chất lượng', '/assets/quality-control/in-process-inspection/benefit-stable-quality.webp'],
+                  ['Giảm rủi ro giao hàng', '/assets/quality-control/in-process-inspection/benefit-delivery-risk.webp'],
+                  [
+                    'Nâng cao tính đồng nhất giữa các lô hàng',
+                    '/assets/quality-control/in-process-inspection/benefit-consistency.webp',
+                  ],
+                ].map(([item, image]) => (
+                  <div key={item}>
+                    <img
+                      className="quality-control-in-process-inspection-small-image"
+                      src={image}
+                      alt={t(item)}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <p>{t(item)}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+            <section className="quality-control-in-process-inspection-panel quality-control-in-process-inspection-system">
+              <h2>{t('LIÊN KẾT VỚI HỆ THỐNG CHẤT LƯỢNG')}</h2>
+              <div className="quality-control-in-process-inspection-system-flow">
+                {[
+                  ['Kiểm tra vật liệu', '/assets/quality-control/in-process-inspection/system-material-inspection.webp'],
+                  ['Kiểm tra trong sản xuất', '/assets/quality-control/in-process-inspection/system-in-process.webp'],
+                  ['Kiểm tra cuối', '/assets/quality-control/in-process-inspection/system-final-inspection.webp'],
+                  ['Báo cáo chất lượng', '/assets/quality-control/in-process-inspection/system-quality-report.webp'],
+                ].map(([item, image]) => (
+                  <div key={item}>
+                    <img
+                      className="quality-control-in-process-inspection-small-image"
+                      src={image}
+                      alt={t(item)}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <p>{t(item)}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+            <section className="quality-control-in-process-inspection-panel quality-control-in-process-inspection-cta">
+              <img
+                className="quality-control-in-process-inspection-cta-image"
+                src="/assets/quality-control/in-process-inspection/cta-in-process-qc.webp"
+                alt={t('Trao đổi về yêu cầu kiểm tra trong sản xuất')}
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="quality-control-in-process-inspection-cta-copy">
+                <h2>{t('TRAO ĐỔI VỀ YÊU CẦU KIỂM TRA TRONG SẢN XUẤT')}</h2>
+                <p>
+                  {t(
+                    'Buyer có thể gửi bản vẽ kỹ thuật, checklist QC hoặc tiêu chuẩn sản xuất để ANSLIFE đánh giá và đề xuất phương án kiểm tra phù hợp.',
+                  )}
+                </p>
+              </div>
+              <div className="quality-control-in-process-inspection-cta-actions">
+                <a className="is-primary" href="/vn/contact/upload-drawing">
+                  {t('Gửi yêu cầu QC')}
+                </a>
+                <a href="/vn/contact/upload-drawing">{t('Tải tài liệu kỹ thuật')}</a>
+                <a href="/vn/contact">{t('Liên hệ ANSLIFE')}</a>
+              </div>
+            </section>
+          </section>
+        </section>
+      )}
+      {shouldShowQualityControlFinalInspectionBanner && (
+        <figure className="quality-control-final-inspection-banner">
+          <img
+            src="/assets/quality-control-final-inspection-banner.png"
+            alt={t('Banner kiểm tra cuối')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="quality-control-final-inspection-banner-copy">
+            <h1>{t('Kiểm tra cuối')}</h1>
+            <span>
+              {t(
+                'Xác nhận sản phẩm đáp ứng yêu cầu kỹ thuật, mẫu duyệt và tiêu chuẩn chất lượng trước khi giao hàng.',
+              )}
+            </span>
+            <p>
+              {t(
+                'Kiểm tra cuối là bước đánh giá tổng thể sản phẩm sau khi hoàn thành sản xuất và hoàn thiện bề mặt. Hoạt động này giúp xác nhận sản phẩm phù hợp với yêu cầu của dự án trước khi đóng gói hoặc xuất khẩu.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE thực hiện kiểm tra cuối dựa trên bản vẽ, mẫu duyệt, tiêu chuẩn chất lượng và các yêu cầu riêng của buyer.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isQualityControlFinalInspectionPage && (
+        <section
+          className="quality-control-final-inspection-content"
+          aria-labelledby="quality-control-final-inspection-goals-title"
+        >
+          <section className="quality-control-final-inspection-panel quality-control-final-inspection-goals">
+            <h2 id="quality-control-final-inspection-goals-title">
+              <span>1</span>
+              {t('Mục tiêu của kiểm tra cuối')}
+            </h2>
+            <div className="quality-control-final-inspection-goal-grid">
+              {[
+                [
+                  'Đúng sản phẩm',
+                  'Đúng mẫu duyệt và đúng yêu cầu kỹ thuật.',
+                  '/assets/quality-control/final-inspection/goal-correct-product.webp',
+                ],
+                [
+                  'Đúng chất lượng',
+                  'Đảm bảo sản phẩm đạt tiêu chuẩn trước khi giao hàng.',
+                  '/assets/quality-control/final-inspection/goal-correct-quality.webp',
+                ],
+                [
+                  'Đúng số lượng',
+                  'Xác nhận số lượng sản phẩm theo kế hoạch giao hàng.',
+                  '/assets/quality-control/final-inspection/goal-correct-quantity.webp',
+                ],
+                [
+                  'Đúng trạng thái giao hàng',
+                  'Đảm bảo sản phẩm sẵn sàng cho đóng gói và xuất khẩu.',
+                  '/assets/quality-control/final-inspection/goal-shipping-ready.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title}>
+                  <img
+                    className="quality-control-final-inspection-goal-image"
+                    src={image}
+                    alt={t(title)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>{t(title)}</h3>
+                    <p>{t(text)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-final-inspection-panel quality-control-final-inspection-checks">
+            <h2>
+              <span>2</span>
+              {t('Những gì được kiểm tra?')}
+            </h2>
+            <div className="quality-control-final-inspection-check-grid">
+              {[
+                {
+                  title: 'Kích thước sản phẩm',
+                  text: 'Đối chiếu với bản vẽ kỹ thuật và dung sai cho phép.',
+                  image: '/assets/quality-control/final-inspection/check-dimensions.webp',
+                  checks: ['Chiều dài', 'Chiều rộng', 'Chiều cao', 'Khoảng cách lắp ráp', 'Dung sai kích thước'],
+                },
+                {
+                  title: 'Kết cấu & độ ổn định',
+                  text: 'Đánh giá khả năng sử dụng và độ ổn định của sản phẩm.',
+                  image: '/assets/quality-control/final-inspection/check-structure.webp',
+                  checks: ['Độ cân bằng', 'Độ vững chắc', 'Liên kết', 'Khả năng chịu tải cơ bản', 'Hiện tượng rung lắc'],
+                },
+                {
+                  title: 'Ngoại quan sản phẩm',
+                  text: 'Đánh giá tổng thể về hình thức và độ hoàn thiện.',
+                  image: '/assets/quality-control/final-inspection/check-appearance.webp',
+                  checks: ['Trầy xước', 'Nứt', 'Móp méo', 'Lỗi bề mặt', 'Sai lệch ngoại quan'],
+                },
+                {
+                  title: 'Sơn & hoàn thiện bề mặt',
+                  text: 'Đối chiếu với mẫu màu và tiêu chuẩn hoàn thiện đã được phê duyệt.',
+                  image: '/assets/quality-control/final-inspection/check-finish.webp',
+                  checks: ['Màu sắc', 'Độ bóng', 'Độ mờ', 'Độ đồng đều màu', 'Bề mặt hoàn thiện'],
+                },
+                {
+                  title: 'Chức năng sử dụng',
+                  text: 'Đảm bảo sản phẩm hoạt động đúng mục đích thiết kế.',
+                  image: '/assets/quality-control/final-inspection/check-function.webp',
+                  checks: ['Ngăn kéo đóng mở', 'Cửa tủ', 'Bản lề', 'Ray trượt', 'Cơ cấu chuyển động', 'Các bộ phận điều chỉnh'],
+                },
+                {
+                  title: 'Phụ kiện & linh kiện',
+                  text: 'Xác nhận đầy đủ các bộ phận theo BOM hoặc yêu cầu đơn hàng.',
+                  image: '/assets/quality-control/final-inspection/check-accessories.webp',
+                  checks: ['Phụ kiện đi kèm', 'Bộ vít', 'Chân tăng chỉnh', 'Khóa', 'Tay nắm', 'Hướng dẫn lắp ráp (nếu có)'],
+                },
+              ].map((item, index) => (
+                <article key={item.title}>
+                  <div className="quality-control-final-inspection-check-copy">
+                    <h3>
+                      <span>{String(index + 1).padStart(2, '0')}.</span>
+                      {t(item.title)}
+                    </h3>
+                    <p>{t(item.text)}</p>
+                    <ul>
+                      {item.checks.map((check) => (
+                        <li key={check}>{t(check)}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <img
+                    className="quality-control-final-inspection-check-image"
+                    src={item.image}
+                    alt={t(item.title)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-final-inspection-pair">
+            <section className="quality-control-final-inspection-panel quality-control-final-inspection-approved">
+              <h2>
+                <span>3</span>
+                {t('Kiểm tra theo mẫu duyệt')}
+              </h2>
+              <div className="quality-control-final-inspection-approved-layout">
+                <div className="quality-control-final-inspection-approved-copy">
+                  <h3>{t('Đối chiếu với mẫu chuẩn')}</h3>
+                  <p>
+                    {t(
+                      'Sản phẩm được so sánh với mẫu đã được buyer phê duyệt nhằm đảm bảo tính đồng nhất giữa sản phẩm sản xuất hàng loạt và mẫu tham chiếu.',
+                    )}
+                  </p>
+                </div>
+                <div className="quality-control-final-inspection-approved-flow">
+                  {[
+                    ['Mẫu sản phẩm', '/assets/quality-control/final-inspection/approved-product-sample.webp'],
+                    ['Bản vẽ kỹ thuật', '/assets/quality-control/final-inspection/approved-technical-drawing.webp'],
+                    ['Bảng màu', '/assets/quality-control/final-inspection/approved-color-board.webp'],
+                    ['Mẫu vật liệu', '/assets/quality-control/final-inspection/approved-material-sample.webp'],
+                    ['Tiêu chuẩn đóng gói', '/assets/quality-control/final-inspection/approved-packing-standard.webp'],
+                  ].map(([item, image]) => (
+                    <div key={item}>
+                      <img
+                        className="quality-control-final-inspection-small-image"
+                        src={image}
+                        alt={t(item)}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <p>{t(item)}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+            <section className="quality-control-final-inspection-panel quality-control-final-inspection-methods">
+              <h2>
+                <span>4</span>
+                {t('Phương pháp kiểm tra')}
+              </h2>
+              <div className="quality-control-final-inspection-method-grid">
+                {[
+                  [
+                    'Kiểm tra 100%',
+                    'Áp dụng cho các hạng mục quan trọng hoặc theo yêu cầu dự án.',
+                    '/assets/quality-control/final-inspection/method-100-percent.webp',
+                  ],
+                  [
+                    'Kiểm tra theo lô',
+                    'Đánh giá theo từng lô sản xuất trước khi đóng gói.',
+                    '/assets/quality-control/final-inspection/method-by-lot.webp',
+                  ],
+                  [
+                    'Kiểm tra theo tiêu chuẩn buyer',
+                    'Áp dụng checklist và phương pháp đánh giá riêng của từng khách hàng.',
+                    '/assets/quality-control/final-inspection/method-buyer-standard.webp',
+                  ],
+                ].map(([title, text, image]) => (
+                  <article key={title}>
+                    <img
+                      className="quality-control-final-inspection-small-image"
+                      src={image}
+                      alt={t(title)}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div>
+                      <h3>{t(title)}</h3>
+                      <p>{t(text)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          </section>
+          <section className="quality-control-final-inspection-panel quality-control-final-inspection-results">
+            <h2>
+              <span>5</span>
+              {t('Kết quả kiểm tra')}
+            </h2>
+            <div className="quality-control-final-inspection-result-flow">
+              {[
+                {
+                  label: 'A',
+                  steps: [
+                    ['Kiểm tra cuối', '/assets/quality-control/final-inspection/result-final-check-pass.webp'],
+                    ['Đạt yêu cầu', '/assets/quality-control/final-inspection/result-pass.webp'],
+                    ['Đóng gói', '/assets/quality-control/final-inspection/result-packing-pass.webp'],
+                    ['Xuất hàng', '/assets/quality-control/final-inspection/result-export-pass.webp'],
+                  ],
+                },
+                {
+                  label: 'B',
+                  steps: [
+                    ['Kiểm tra cuối', '/assets/quality-control/final-inspection/result-final-check-issue.webp'],
+                    ['Phát hiện sai lệch', '/assets/quality-control/final-inspection/result-issue.webp'],
+                    ['Khắc phục', '/assets/quality-control/final-inspection/result-fix.webp'],
+                    ['Kiểm tra lại', '/assets/quality-control/final-inspection/result-recheck.webp'],
+                    ['Đóng gói', '/assets/quality-control/final-inspection/result-packing-recheck.webp'],
+                  ],
+                },
+              ].map((row) => (
+                <article key={row.label}>
+                  <span className="quality-control-final-inspection-result-label">{row.label}</span>
+                  <ol>
+                    {row.steps.map(([step, image]) => (
+                      <li key={step}>
+                        <img
+                          className="quality-control-final-inspection-result-image"
+                          src={image}
+                          alt={t(step)}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <span>{t(step)}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-final-inspection-panel quality-control-final-inspection-records">
+            <h2>
+              <span>6</span>
+              {t('Hồ sơ kiểm tra cuối')}
+            </h2>
+            <div className="quality-control-final-inspection-record-grid">
+              {[
+                ['Báo cáo kiểm tra', '/assets/quality-control/final-inspection/record-report.webp'],
+                ['Hình ảnh kiểm tra', '/assets/quality-control/final-inspection/record-photos.webp'],
+                ['Checklist QC', '/assets/quality-control/final-inspection/record-qc-checklist.webp'],
+                ['Kết quả đối chiếu mẫu duyệt', '/assets/quality-control/final-inspection/record-approved-comparison.webp'],
+                ['Biên bản xử lý sai lệch (nếu có)', '/assets/quality-control/final-inspection/record-deviation.webp'],
+              ].map(([item, image]) => (
+                <article key={item}>
+                  <img
+                    className="quality-control-final-inspection-record-image"
+                    src={image}
+                    alt={t(item)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>{t(item)}</h3>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-final-inspection-panel quality-control-final-inspection-role">
+            <h2>
+              <span>7</span>
+              {t('Vai trò trong hệ thống chất lượng')}
+            </h2>
+            <div className="quality-control-final-inspection-role-flow">
+              {[
+                ['Kiểm tra vật liệu', '/assets/quality-control/final-inspection/role-material-inspection.webp'],
+                ['Kiểm tra trong sản xuất', '/assets/quality-control/final-inspection/role-in-process.webp'],
+                ['Kiểm tra cuối', '/assets/quality-control/final-inspection/role-final-inspection.webp'],
+                ['Đóng gói', '/assets/quality-control/final-inspection/role-packing.webp'],
+                ['Xuất hàng', '/assets/quality-control/final-inspection/role-export.webp'],
+              ].map(([item, image]) => (
+                <article
+                  className={item === 'Kiểm tra cuối' ? 'is-active' : undefined}
+                  key={item}
+                >
+                  <img
+                    className="quality-control-final-inspection-role-image"
+                    src={image}
+                    alt={t(item)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>{t(item)}</h3>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-final-inspection-panel quality-control-final-inspection-cta">
+            <img
+              className="quality-control-final-inspection-cta-image"
+              src="/assets/quality-control/final-inspection/cta-final-inspection.webp"
+              alt={t('Trao đổi về yêu cầu kiểm tra cuối của dự án')}
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="quality-control-final-inspection-cta-copy">
+              <h2>{t('Trao đổi về yêu cầu kiểm tra cuối của dự án')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi checklist QC, tiêu chuẩn kiểm tra hoặc yêu cầu đánh giá riêng để ANSLIFE xây dựng phương án kiểm tra phù hợp trước khi giao hàng.',
+                )}
+              </p>
+            </div>
+            <div className="quality-control-final-inspection-cta-actions">
+              <a className="is-primary" href="/vn/contact">
+                {t('Gửi yêu cầu QC')}
+              </a>
+              <a href="/vn/contact">
+                {t('Tải checklist QC')}
               </a>
               <a href="/vn/contact">
                 {t('Liên hệ ANSLIFE')}
