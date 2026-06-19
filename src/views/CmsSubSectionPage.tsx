@@ -344,10 +344,16 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'quality-control' && section.id === 'in-process-inspection';
   const isQualityControlFinalInspectionPage =
     config.slug === 'quality-control' && section.id === 'final-inspection' && !detailSlug;
+  const isQualityControlApprovedSampleControlPage =
+    config.slug === 'quality-control' && section.id === 'approved-sample-control' && !detailSlug;
+  const isQualityControlMoistureControlPage =
+    config.slug === 'quality-control' && section.id === 'moisture-control' && !detailSlug;
   const shouldRenderBlankSubSectionPage =
     shouldRenderBlankScholarshipPage ||
     shouldRenderBlankQualityInProcessPage ||
     isQualityControlFinalInspectionPage ||
+    isQualityControlApprovedSampleControlPage ||
+    isQualityControlMoistureControlPage ||
     isSupplyHubOverviewPage ||
     isSupplyHubStorageSolutionPage ||
     isSupplyHubLclFclConsolidationPage ||
@@ -454,6 +460,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldShowQualityControlMaterialInspectionBanner = isQualityControlMaterialInspectionPage;
   const shouldShowQualityControlInProcessInspectionBanner = shouldRenderBlankQualityInProcessPage;
   const shouldShowQualityControlFinalInspectionBanner = isQualityControlFinalInspectionPage;
+  const shouldShowQualityControlApprovedSampleControlBanner = isQualityControlApprovedSampleControlPage;
+  const shouldShowQualityControlMoistureControlBanner = isQualityControlMoistureControlPage;
   const shouldRenderSectionHero = !shouldHideSectionHero && !isSupplyHubComponentSamplesPage;
   const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
@@ -2589,6 +2597,726 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             </p>
           </figcaption>
         </figure>
+      )}
+      {shouldShowQualityControlApprovedSampleControlBanner && (
+        <figure className="quality-control-approved-sample-control-banner">
+          <img
+            src="/assets/quality-control-approved-sample-control-banner.png"
+            alt={t('Banner kiểm soát mẫu duyệt')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="quality-control-approved-sample-control-banner-copy">
+            <h1>{t('Kiểm soát mẫu duyệt')}</h1>
+            <span>{t('Đảm bảo sản xuất luôn bám sát mẫu đã được phê duyệt.')}</span>
+            <p>
+              {t(
+                'ANSLIFE triển khai hệ thống kiểm soát mẫu duyệt nhằm đảm bảo mọi hoạt động sản xuất, hoàn thiện, kiểm tra và giao hàng đều được đối chiếu với tiêu chuẩn đã được buyer xác nhận. Mẫu duyệt đóng vai trò là cơ sở tham chiếu quan trọng để duy trì tính đồng nhất giữa mẫu phát triển, sản xuất hàng loạt và các đơn hàng lặp lại.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowQualityControlMoistureControlBanner && (
+        <figure className="quality-control-moisture-control-banner">
+          <img
+            src="/assets/quality-control-moisture-control-banner.png"
+            alt={t('Banner kiểm soát độ ẩm')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="quality-control-moisture-control-banner-copy">
+            <h1>{t('Kiểm soát độ ẩm')}</h1>
+            <span>
+              {t(
+                'Kiểm soát độ ẩm vật liệu nhằm nâng cao độ ổn định của sản phẩm trong quá trình sản xuất, lưu kho và sử dụng.',
+              )}
+            </span>
+            <p>
+              {t(
+                'Độ ẩm vật liệu là một trong những yếu tố ảnh hưởng trực tiếp đến độ ổn định, khả năng lắp ráp, chất lượng hoàn thiện và tuổi thọ của sản phẩm nội thất.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE triển khai hoạt động kiểm soát độ ẩm nhằm giảm thiểu các rủi ro như cong vênh, nứt, co ngót, biến dạng và sai lệch kích thước trong quá trình sản xuất và xuất khẩu.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isQualityControlMoistureControlPage && (
+        <section
+          className="quality-control-moisture-control-content"
+          aria-labelledby="quality-control-moisture-control-importance-title"
+        >
+          <section className="quality-control-moisture-control-panel quality-control-moisture-control-importance">
+            <h2 id="quality-control-moisture-control-importance-title">
+              <span>1</span>
+              {t('VÌ SAO ĐỘ ẨM QUAN TRỌNG?')}
+            </h2>
+            <div className="quality-control-moisture-control-importance-flow">
+              {[
+                ['Độ ẩm không ổn định', '/assets/quality-control/moisture-control/importance-unstable-moisture.webp'],
+                ['Co ngót hoặc giãn nở', '/assets/quality-control/moisture-control/importance-shrink-expand.webp'],
+                ['Sai lệch kích thước', '/assets/quality-control/moisture-control/importance-size-deviation.webp'],
+                ['Cong vênh / nứt', '/assets/quality-control/moisture-control/importance-warp-crack.webp'],
+                ['Ảnh hưởng lắp ráp', '/assets/quality-control/moisture-control/importance-assembly.webp'],
+                [
+                  'Ảnh hưởng hoàn thiện bề mặt',
+                  '/assets/quality-control/moisture-control/importance-surface-finish.webp',
+                ],
+                [
+                  'Khiếu nại chất lượng',
+                  '/assets/quality-control/moisture-control/importance-quality-complaint.webp',
+                ],
+              ].map(([item, image]) => (
+                <article key={item}>
+                  <img
+                    className="quality-control-moisture-control-importance-image"
+                    src={image}
+                    alt={t(item)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>{t(item)}</h3>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-moisture-control-panel quality-control-moisture-control-effects">
+            <h2>
+              <span>2</span>
+              {t('ĐỘ ẨM ẢNH HƯỞNG TỚI NHỮNG GÌ?')}
+            </h2>
+            <div className="quality-control-moisture-control-effect-grid">
+              {[
+                {
+                  title: 'Kích thước',
+                  text: 'Ảnh hưởng đến độ chính xác của chi tiết và sản phẩm hoàn thiện.',
+                  image: '/assets/quality-control/moisture-control/effect-dimensions.webp',
+                },
+                {
+                  title: 'Kết cấu',
+                  text: 'Ảnh hưởng đến độ ổn định và khả năng chịu lực của sản phẩm.',
+                  image: '/assets/quality-control/moisture-control/effect-structure.webp',
+                },
+                {
+                  title: 'Mộng & liên kết',
+                  text: 'Có thể làm lỏng hoặc siết các điểm liên kết.',
+                  image: '/assets/quality-control/moisture-control/effect-joints.webp',
+                },
+                {
+                  title: 'Hoàn thiện bề mặt',
+                  text: 'Có thể ảnh hưởng đến độ bám, độ ổn định và tính bóng đều của lớp hoàn thiện.',
+                  image: '/assets/quality-control/moisture-control/effect-surface-finish.webp',
+                },
+                {
+                  title: 'Đóng gói',
+                  text: 'Độ ẩm cao có thể ảnh hưởng đến tình trạng sản phẩm trong quá trình lưu kho và vận chuyển.',
+                  image: '/assets/quality-control/moisture-control/effect-packing.webp',
+                },
+                {
+                  title: 'Trải nghiệm sử dụng',
+                  text: 'Ảnh hưởng đến độ ổn định của sản phẩm sau khi giao đến khách hàng cuối cùng.',
+                  image: '/assets/quality-control/moisture-control/effect-user-experience.webp',
+                },
+              ].map((item, index) => (
+                <article key={item.title}>
+                  <img
+                    className="quality-control-moisture-control-effect-image"
+                    src={item.image}
+                    alt={t(item.title)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>
+                    <span>{index + 1}.</span>
+                    {t(item.title)}
+                  </h3>
+                  <p>{t(item.text)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-moisture-control-panel quality-control-moisture-control-points">
+            <h2>
+              <span>3</span>
+              {t('ĐỘ ẨM ĐƯỢC KIỂM SOÁT Ở ĐÂU?')}
+            </h2>
+            <div className="quality-control-moisture-control-point-flow">
+              {[
+                {
+                  title: 'Vật liệu đầu vào',
+                  text: 'Kiểm tra tình trạng vật liệu trước khi đưa vào sản xuất.',
+                  checks: ['Độ ẩm vật liệu', 'Điều kiện lưu kho', 'Sự đồng đều giữa các lô'],
+                  image: '/assets/quality-control/moisture-control/point-input-material.webp',
+                },
+                {
+                  title: 'Lưu kho vật liệu',
+                  text: 'Theo dõi và quản lý điều kiện lưu kho nhằm hạn chế biến động độ ẩm.',
+                  checks: ['Điều kiện kho', 'Thời gian lưu kho', 'Tình trạng vật liệu'],
+                  image: '/assets/quality-control/moisture-control/point-material-storage.webp',
+                },
+                {
+                  title: 'Gia công',
+                  text: 'Đảm bảo vật liệu phù hợp với yêu cầu của từng công đoạn gia công và lắp ráp.',
+                  checks: ['Chi tiết gia công', 'Cấu kiện', 'Khung sản phẩm'],
+                  image: '/assets/quality-control/moisture-control/point-machining.webp',
+                },
+                {
+                  title: 'Lắp ráp',
+                  text: 'Đảm bảo vật liệu ở trạng thái phù hợp trước khi thực hiện stain, sơn hoặc hoàn thiện.',
+                  checks: ['Bề mặt vật liệu', 'Độ ổn định vật liệu', 'Điều kiện trước hoàn thiện'],
+                  image: '/assets/quality-control/moisture-control/point-assembly.webp',
+                },
+                {
+                  title: 'Hoàn thiện bề mặt',
+                  text: 'Xác nhận sản phẩm ổn định trước khi lưu kho hoặc vận chuyển.',
+                  checks: [],
+                  image: '/assets/quality-control/moisture-control/point-surface-finish.webp',
+                },
+                {
+                  title: 'Đóng gói',
+                  text: '',
+                  checks: [],
+                  image: '/assets/quality-control/moisture-control/point-packing.webp',
+                },
+                {
+                  title: 'Xuất hàng',
+                  text: '',
+                  checks: [],
+                  image: '/assets/quality-control/moisture-control/point-export.webp',
+                },
+              ].map((item, index) => (
+                <article key={item.title}>
+                  <span className="quality-control-moisture-control-point-number">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <img
+                    className="quality-control-moisture-control-point-image"
+                    src={item.image}
+                    alt={t(item.title)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>{t(item.title)}</h3>
+                  {item.text && <p>{t(item.text)}</p>}
+                  {item.checks.length > 0 && (
+                    <ul>
+                      {item.checks.map((check) => (
+                        <li key={check}>{t(check)}</li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-moisture-control-panel quality-control-moisture-control-materials">
+            <h2>
+              <span>4</span>
+              {t('CÁC NHÓM VẬT LIỆU ĐƯỢC KIỂM SOÁT')}
+            </h2>
+            <div className="quality-control-moisture-control-material-grid">
+              {[
+                [
+                  'Gỗ tự nhiên',
+                  'Theo dõi và kiểm soát độ ẩm nhằm duy trì độ ổn định của vật liệu.',
+                  '/assets/quality-control/moisture-control/material-solid-wood.webp',
+                ],
+                [
+                  'Veneer',
+                  'Kiểm soát tình trạng vật liệu trước khi ghép và hoàn thiện.',
+                  '/assets/quality-control/moisture-control/material-veneer.webp',
+                ],
+                [
+                  'Plywood',
+                  'Theo dõi tính ổn định và khả năng sử dụng trong sản xuất.',
+                  '/assets/quality-control/moisture-control/material-plywood.webp',
+                ],
+                [
+                  'MDF',
+                  'Đánh giá tình trạng vật liệu trước khi gia công và hoàn thiện.',
+                  '/assets/quality-control/moisture-control/material-mdf.webp',
+                ],
+                [
+                  'Mây tre & vật liệu tự nhiên',
+                  'Kiểm soát điều kiện lưu kho và khả năng sử dụng trong sản xuất.',
+                  '/assets/quality-control/moisture-control/material-rattan-natural.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title}>
+                  <img
+                    className="quality-control-moisture-control-material-image"
+                    src={image}
+                    alt={t(title)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>{t(title)}</h3>
+                    <p>{t(text)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-moisture-control-panel quality-control-moisture-control-methods">
+            <h2>
+              <span>5</span>
+              {t('CÔNG CỤ VÀ PHƯƠNG PHÁP KIỂM SOÁT')}
+            </h2>
+            <div className="quality-control-moisture-control-method-grid">
+              {[
+                [
+                  'Đo kiểm định kỳ',
+                  'Theo dõi độ ẩm tại các giai đoạn quan trọng của sản xuất.',
+                  '/assets/quality-control/moisture-control/method-periodic-measurement.webp',
+                ],
+                [
+                  'Theo dõi lưu kho',
+                  'Quản lý điều kiện lưu kho vật liệu và sản phẩm.',
+                  '/assets/quality-control/moisture-control/method-storage-monitoring.webp',
+                ],
+                [
+                  'Đối chiếu hồ sơ',
+                  'Lưu thông tin phục vụ truy xuất và đánh giá chất lượng.',
+                  '/assets/quality-control/moisture-control/method-record-comparison.webp',
+                ],
+                [
+                  'Kết hợp với QC',
+                  'Kết quả kiểm tra độ ẩm được tích hợp vào hệ thống kiểm soát chất lượng tổng thể.',
+                  '/assets/quality-control/moisture-control/method-qc-integration.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title}>
+                  <img
+                    className="quality-control-moisture-control-method-image"
+                    src={image}
+                    alt={t(title)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>{t(title)}</h3>
+                    <p>{t(text)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-moisture-control-panel quality-control-moisture-control-system">
+            <h2>
+              <span>6</span>
+              {t('LIÊN KẾT VỚI HỆ THỐNG CHẤT LƯỢNG')}
+            </h2>
+            <div className="quality-control-moisture-control-system-flow">
+              {[
+                ['Kiểm tra vật liệu', '/assets/quality-control/moisture-control/system-material-inspection.webp'],
+                ['Kiểm soát độ ẩm', '/assets/quality-control/moisture-control/system-moisture-control.webp'],
+                ['Kiểm tra trong sản xuất', '/assets/quality-control/moisture-control/system-in-process.webp'],
+                ['Hoàn thiện bề mặt', '/assets/quality-control/moisture-control/system-surface-finish.webp'],
+                ['Kiểm tra cuối', '/assets/quality-control/moisture-control/system-final-inspection.webp'],
+                ['Đóng gói & xuất hàng', '/assets/quality-control/moisture-control/system-packing-export.webp'],
+              ].map(([item, image]) => (
+                <article key={item}>
+                  <img
+                    className="quality-control-moisture-control-system-image"
+                    src={image}
+                    alt={t(item)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>{t(item)}</h3>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-moisture-control-panel quality-control-moisture-control-risks">
+            <h2>
+              <span>7</span>
+              {t('NHỮNG RỦI RO CẦN HẠN CHẾ')}
+            </h2>
+            <div className="quality-control-moisture-control-risk-grid">
+              {[
+                ['Cong vênh', '/assets/quality-control/moisture-control/risk-warping.webp'],
+                ['Nứt', '/assets/quality-control/moisture-control/risk-cracking.webp'],
+                ['Co ngót', '/assets/quality-control/moisture-control/risk-shrinkage.webp'],
+                ['Biến dạng', '/assets/quality-control/moisture-control/risk-deformation.webp'],
+                ['Lệch kích thước', '/assets/quality-control/moisture-control/risk-size-deviation.webp'],
+                ['Ảnh hưởng hoàn thiện', '/assets/quality-control/moisture-control/risk-finish-impact.webp'],
+                ['Ảnh hưởng lắp ráp', '/assets/quality-control/moisture-control/risk-assembly-impact.webp'],
+                ['Khiếu nại chất lượng', '/assets/quality-control/moisture-control/risk-quality-complaint.webp'],
+              ].map(([item, image]) => (
+                <article key={item}>
+                  <img
+                    className="quality-control-moisture-control-risk-image"
+                    src={image}
+                    alt={t(item)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>{t(item)}</h3>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-moisture-control-panel quality-control-moisture-control-cta">
+            <img
+              className="quality-control-moisture-control-cta-image"
+              src="/assets/quality-control/moisture-control/cta-moisture-control.webp"
+              alt={t('Trao đổi về yêu cầu kiểm soát độ ẩm của dự án')}
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="quality-control-moisture-control-cta-copy">
+              <h2>{t('Trao đổi về yêu cầu kiểm soát độ ẩm của dự án')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi yêu cầu kỹ thuật, tiêu chuẩn chất lượng hoặc điều kiện sử dụng của sản phẩm để ANSLIFE đánh giá và đề xuất phương án kiểm soát phù hợp.',
+                )}
+              </p>
+            </div>
+            <div className="quality-control-moisture-control-cta-actions">
+              <a className="is-primary" href="/vn/contact">
+                {t('Gửi yêu cầu')}
+              </a>
+              <a href="/vn/contact">{t('Tải tài liệu kỹ thuật')}</a>
+              <a href="/vn/contact">{t('Liên hệ ANSLIFE')}</a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isQualityControlApprovedSampleControlPage && (
+        <section
+          className="quality-control-approved-sample-control-content"
+          aria-labelledby="quality-control-approved-sample-control-definition-title"
+        >
+          <section className="quality-control-approved-sample-control-panel quality-control-approved-sample-control-definition">
+            <h2 id="quality-control-approved-sample-control-definition-title">
+              <span>1</span>
+              {t('Mẫu duyệt là gì?')}
+            </h2>
+            <div className="quality-control-approved-sample-control-equation">
+              {[
+                [
+                  'Bản vẽ kỹ thuật',
+                  '/assets/quality-control/approved-sample-control/definition-technical-drawing.webp',
+                ],
+                [
+                  'Mẫu sản phẩm',
+                  '/assets/quality-control/approved-sample-control/definition-product-sample.webp',
+                ],
+                [
+                  'Mẫu vật liệu',
+                  '/assets/quality-control/approved-sample-control/definition-material-sample.webp',
+                ],
+                ['Mẫu màu', '/assets/quality-control/approved-sample-control/definition-color-sample.webp'],
+                [
+                  'Tiêu chuẩn đóng gói',
+                  '/assets/quality-control/approved-sample-control/definition-packing-standard.webp',
+                ],
+              ].map(([item, image]) => (
+                <div className="quality-control-approved-sample-control-equation-item" key={item}>
+                  <img
+                    className="quality-control-approved-sample-control-image"
+                    src={image}
+                    alt={t(item)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <p>{t(item)}</p>
+                </div>
+              ))}
+              <span className="quality-control-approved-sample-control-equation-sign">=</span>
+              <div className="quality-control-approved-sample-control-equation-result">
+                <img
+                  className="quality-control-approved-sample-control-image"
+                  src="/assets/quality-control/approved-sample-control/definition-approved-project.webp"
+                  alt={t('Mẫu duyệt dự án')}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <p>{t('Mẫu duyệt dự án')}</p>
+              </div>
+            </div>
+          </section>
+          <section className="quality-control-approved-sample-control-panel quality-control-approved-sample-control-types">
+            <h2>
+              <span>2</span>
+              {t('Những loại mẫu nào được kiểm soát?')}
+            </h2>
+            <div className="quality-control-approved-sample-control-type-grid">
+              {[
+                {
+                  title: 'Mẫu sản phẩm',
+                  text: 'Mẫu hoàn chỉnh đã được buyer phê duyệt trước khi triển khai sản xuất.',
+                  example: 'Ghế, Bàn, Tủ, Giường, Nội thất dự án',
+                  image: '/assets/quality-control/approved-sample-control/type-product-sample.webp',
+                },
+                {
+                  title: 'Mẫu vật liệu',
+                  text: 'Các vật liệu được sử dụng trong sản phẩm đã được xác nhận bởi buyer.',
+                  example: 'Gỗ, Veneer, Foam, Vải, Da, Mây tre',
+                  image: '/assets/quality-control/approved-sample-control/type-material-sample.webp',
+                },
+                {
+                  title: 'Mẫu màu & hoàn thiện',
+                  text: 'Các tiêu chuẩn màu sắc và hoàn thiện bề mặt đã được duyệt.',
+                  example: 'Stain, Lacquer, Oil finish, Matte finish, Gloss finish',
+                  image: '/assets/quality-control/approved-sample-control/type-color-finish.webp',
+                },
+                {
+                  title: 'Mẫu cấu kiện',
+                  text: 'Các bộ phận và cấu kiện được xác nhận trước khi sản xuất hàng loạt.',
+                  example: 'Khung ghế, Chân bàn, Tay ghế, Bộ phận tủ, Bộ phận giường',
+                  image: '/assets/quality-control/approved-sample-control/type-component-sample.webp',
+                },
+                {
+                  title: 'Mẫu đóng gói',
+                  text: 'Tiêu chuẩn đóng gói được sử dụng cho từng sản phẩm hoặc dự án.',
+                  example: 'Carton, Foam bảo vệ, Pallet, Nhãn mác',
+                  image: '/assets/quality-control/approved-sample-control/type-packing-sample.webp',
+                },
+                {
+                  title: 'Tài liệu kỹ thuật',
+                  text: 'Các tài liệu được sử dụng làm cơ sở đối chiếu trong toàn bộ dự án.',
+                  example: 'Bản vẽ kỹ thuật, BOM, Checklist QC, Tiêu chuẩn buyer',
+                  image: '/assets/quality-control/approved-sample-control/type-technical-document.webp',
+                },
+              ].map((item, index) => (
+                <article key={item.title}>
+                  <img
+                    className="quality-control-approved-sample-control-card-image"
+                    src={item.image}
+                    alt={t(item.title)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>
+                      <span>{String(index + 1).padStart(2, '0')}.</span>
+                      {t(item.title)}
+                    </h3>
+                    <p>{t(item.text)}</p>
+                    <b>{t('Ví dụ:')}</b>
+                    <small>{t(item.example)}</small>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-approved-sample-control-panel quality-control-approved-sample-control-process">
+            <h2>
+              <span>3</span>
+              {t('Quy trình kiểm soát mẫu duyệt')}
+            </h2>
+            <div className="quality-control-approved-sample-control-process-grid">
+              {[
+                {
+                  title: 'Xác nhận mẫu',
+                  text: 'Mẫu được xác nhận giữa buyer, ANSLIFE và các bên liên quan trước khi triển khai sản xuất.',
+                  image: '/assets/quality-control/approved-sample-control/process-confirm-sample.webp',
+                },
+                {
+                  title: 'Lưu mẫu chuẩn',
+                  text: 'Mẫu được lưu giữ và quản lý như tiêu chuẩn tham chiếu của dự án.',
+                  image: '/assets/quality-control/approved-sample-control/process-store-standard.webp',
+                },
+                {
+                  title: 'Triển khai sản xuất',
+                  text: 'Sản xuất được triển khai theo kế hoạch đã thống nhất và mẫu đã được phê duyệt.',
+                  image: '/assets/quality-control/approved-sample-control/process-production.webp',
+                },
+                {
+                  title: 'Đối chiếu trong sản xuất',
+                  text: 'Các công đoạn sản xuất được đối chiếu liên tục với mẫu chuẩn nhằm giảm thiểu sai lệch.',
+                  image: '/assets/quality-control/approved-sample-control/process-production-comparison.webp',
+                },
+                {
+                  title: 'Đối chiếu khi kiểm tra cuối',
+                  text: 'Thành phẩm được so sánh với mẫu đã duyệt trước khi giao hàng.',
+                  image: '/assets/quality-control/approved-sample-control/process-final-inspection.webp',
+                },
+                {
+                  title: 'Lưu trữ cho đơn hàng lặp lại',
+                  text: 'Mẫu chuẩn được duy trì để phục vụ các đợt sản xuất tiếp theo.',
+                  image: '/assets/quality-control/approved-sample-control/process-repeat-order-storage.webp',
+                },
+              ].map((item, index) => (
+                <article key={item.title}>
+                  <span className="quality-control-approved-sample-control-process-number">
+                    {index + 1}
+                  </span>
+                  <img
+                    className="quality-control-approved-sample-control-process-image"
+                    src={item.image}
+                    alt={t(item.title)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.text)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-approved-sample-control-panel quality-control-approved-sample-control-storage">
+            <h2>
+              <span>4</span>
+              {t('Hệ thống lưu trữ mẫu của ANSLIFE')}
+            </h2>
+            <div className="quality-control-approved-sample-control-storage-grid">
+              {[
+                [
+                  'Mẫu vật lý',
+                  'Lưu giữ sản phẩm hoặc chi tiết mẫu thực tế.',
+                  '/assets/quality-control/approved-sample-control/storage-physical-sample.webp',
+                ],
+                [
+                  'Hồ sơ kỹ thuật',
+                  'Lưu bản vẽ, BOM và tài liệu liên quan.',
+                  '/assets/quality-control/approved-sample-control/storage-technical-record.webp',
+                ],
+                [
+                  'Bảng màu & hoàn thiện',
+                  'Lưu tiêu chuẩn màu sắc và hoàn thiện đã được phê duyệt.',
+                  '/assets/quality-control/approved-sample-control/storage-color-finish.webp',
+                ],
+                [
+                  'Hồ sơ chất lượng',
+                  'Lưu checklist QC và tiêu chuẩn kiểm tra của dự án.',
+                  '/assets/quality-control/approved-sample-control/storage-quality-record.webp',
+                ],
+              ].map(([title, text, image]) => (
+                <article key={title}>
+                  <img
+                    className="quality-control-approved-sample-control-storage-image"
+                    src={image}
+                    alt={t(title)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>{t(title)}</h3>
+                    <p>{t(text)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-approved-sample-control-panel quality-control-approved-sample-control-risks">
+            <h2>
+              <span>5</span>
+              {t('Rủi ro khi không kiểm soát mẫu duyệt')}
+            </h2>
+            <div className="quality-control-approved-sample-control-risk-flow">
+              {[
+                ['Sai vật liệu', '/assets/quality-control/approved-sample-control/risk-wrong-material.webp'],
+                ['Sai màu sắc', '/assets/quality-control/approved-sample-control/risk-wrong-color.webp'],
+                ['Sai kết cấu', '/assets/quality-control/approved-sample-control/risk-wrong-structure.webp'],
+                ['Sai đóng gói', '/assets/quality-control/approved-sample-control/risk-wrong-packing.webp'],
+                [
+                  'Khiếu nại chất lượng',
+                  '/assets/quality-control/approved-sample-control/risk-quality-complaint.webp',
+                ],
+                ['Chậm giao hàng', '/assets/quality-control/approved-sample-control/risk-late-delivery.webp'],
+              ].map(([item, image]) => (
+                <article key={item}>
+                  <h3>{t(item)}</h3>
+                  <img
+                    className="quality-control-approved-sample-control-risk-image"
+                    src={image}
+                    alt={t(item)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-approved-sample-control-panel quality-control-approved-sample-control-role">
+            <h2>
+              <span>6</span>
+              {t('Vai trò trong hệ thống chất lượng')}
+            </h2>
+            <div className="quality-control-approved-sample-control-role-flow">
+              {[
+                ['Mẫu duyệt', '/assets/quality-control/approved-sample-control/role-approved-sample.webp'],
+                [
+                  'Kiểm tra vật liệu',
+                  '/assets/quality-control/approved-sample-control/role-material-inspection.webp',
+                ],
+                [
+                  'Kiểm tra trong sản xuất',
+                  '/assets/quality-control/approved-sample-control/role-in-process.webp',
+                ],
+                ['Kiểm tra cuối', '/assets/quality-control/approved-sample-control/role-final-inspection.webp'],
+                ['Đóng gói', '/assets/quality-control/approved-sample-control/role-packing.webp'],
+                ['Xuất hàng', '/assets/quality-control/approved-sample-control/role-export.webp'],
+              ].map(([item, image]) => (
+                <article key={item}>
+                  <h3>{t(item)}</h3>
+                  <img
+                    className="quality-control-approved-sample-control-role-image"
+                    src={image}
+                    alt={t(item)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-approved-sample-control-panel quality-control-approved-sample-control-standard-room">
+            <div className="quality-control-approved-sample-control-standard-room-copy">
+              <h2>
+                <span>7</span>
+                {t('Liên kết với Phòng mẫu chuẩn đối tác')}
+              </h2>
+              <p>
+                {t(
+                  'ANSLIFE có thể lưu trữ và quản lý mẫu chuẩn của từng buyer trong hệ thống Phòng mẫu chuẩn đối tác, bao gồm mẫu sản phẩm, mẫu vật liệu, bảng màu, bản vẽ kỹ thuật, tiêu chuẩn đóng gói và checklist QC. Điều này giúp duy trì tính nhất quán giữa các dự án, các nhà máy và các đợt sản xuất kéo dài nhiều năm.',
+                )}
+              </p>
+            </div>
+            <img
+              className="quality-control-approved-sample-control-standard-room-image"
+              src="/assets/quality-control/approved-sample-control/standard-room.webp"
+              alt={t('Liên kết với Phòng mẫu chuẩn đối tác')}
+              loading="lazy"
+              decoding="async"
+            />
+          </section>
+          <section className="quality-control-approved-sample-control-panel quality-control-approved-sample-control-cta">
+            <img
+              className="quality-control-approved-sample-control-cta-image"
+              src="/assets/quality-control/approved-sample-control/cta-approved-sample.webp"
+              alt={t('Trao đổi về mẫu duyệt của dự án')}
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="quality-control-approved-sample-control-cta-copy">
+              <h2>
+                <span>8</span>
+                {t('Trao đổi về mẫu duyệt của dự án')}
+              </h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi mẫu sản phẩm, mẫu vật liệu, bảng màu, bản vẽ kỹ thuật hoặc tiêu chuẩn đóng gói để ANSLIFE xây dựng phương án quản lý và kiểm soát phù hợp.',
+                )}
+              </p>
+            </div>
+            <div className="quality-control-approved-sample-control-cta-actions">
+              <a className="is-primary" href="/vn/contact">
+                {t('Gửi mẫu duyệt')}
+              </a>
+              <a href="/vn/contact">{t('Tải tài liệu kỹ thuật')}</a>
+              <a href="/vn/contact">{t('Liên hệ ANSLIFE')}</a>
+            </div>
+          </section>
+        </section>
       )}
       {isQualityControlFinalInspectionPage && (
         <section

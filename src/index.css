@@ -3651,6 +3651,22 @@ a.mobile-menu-utility-link {
   background: #f4efe6;
 }
 
+.quality-control-approved-sample-control-banner {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4efe6;
+}
+
+.quality-control-moisture-control-banner {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4efe6;
+}
+
 .supply-hub-partner-component-samples-banner::after,
 .supply-hub-partner-technical-drawings-banner::after,
 .supply-hub-partner-material-references-banner::after,
@@ -3660,7 +3676,9 @@ a.mobile-menu-utility-link {
 .quality-control-qc-process-banner::after,
 .quality-control-material-inspection-banner::after,
 .quality-control-in-process-inspection-banner::after,
-.quality-control-final-inspection-banner::after {
+.quality-control-final-inspection-banner::after,
+.quality-control-approved-sample-control-banner::after,
+.quality-control-moisture-control-banner::after {
   position: absolute;
   inset: 0 auto 0 0;
   z-index: 1;
@@ -3803,6 +3821,22 @@ a.mobile-menu-utility-link {
   object-position: center;
 }
 
+.quality-control-approved-sample-control-banner > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2006 / 784;
+  object-fit: cover;
+  object-position: center;
+}
+
+.quality-control-moisture-control-banner > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2006 / 784;
+  object-fit: cover;
+  object-position: center;
+}
+
 .quality-control-final-inspection-banner-copy {
   position: absolute;
   left: clamp(1.25rem, 5vw, 4.8rem);
@@ -3850,6 +3884,1281 @@ a.mobile-menu-utility-link {
   line-height: 1.32;
   letter-spacing: 0;
   background: transparent !important;
+}
+
+.quality-control-approved-sample-control-banner-copy {
+  position: absolute;
+  left: clamp(1.25rem, 5vw, 4.8rem);
+  top: 44%;
+  z-index: 2;
+  width: min(40%, 640px);
+  transform: translateY(-50%);
+  color: #20242a;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.78);
+  background: transparent !important;
+}
+
+.quality-control-approved-sample-control-banner-copy h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 3.55vw, 4.15rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.quality-control-approved-sample-control-banner-copy span {
+  display: block;
+  max-width: 46ch;
+  margin-top: clamp(0.62rem, 0.9vw, 0.88rem);
+  color: #242930;
+  font-size: clamp(0.76rem, 0.86vw, 0.98rem);
+  font-weight: 850;
+  line-height: 1.28;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.quality-control-approved-sample-control-banner-copy p {
+  max-width: 62ch;
+  margin: clamp(0.46rem, 0.7vw, 0.66rem) 0 0;
+  color: #30363e;
+  font-family: var(--font-ui);
+  font-size: clamp(0.64rem, 0.72vw, 0.84rem);
+  line-height: 1.32;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.quality-control-moisture-control-banner-copy {
+  position: absolute;
+  left: clamp(1.25rem, 5vw, 4.8rem);
+  top: 44%;
+  z-index: 2;
+  width: min(40%, 650px);
+  transform: translateY(-50%);
+  color: #20242a;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.78);
+  background: transparent !important;
+}
+
+.quality-control-moisture-control-banner-copy h1 {
+  max-width: 11ch;
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 3.45vw, 4.05rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.quality-control-moisture-control-banner-copy span {
+  display: block;
+  max-width: 49ch;
+  margin-top: clamp(0.58rem, 0.86vw, 0.82rem);
+  color: #242930;
+  font-size: clamp(0.72rem, 0.82vw, 0.96rem);
+  font-weight: 850;
+  line-height: 1.24;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.quality-control-moisture-control-banner-copy p {
+  max-width: 62ch;
+  margin: clamp(0.4rem, 0.64vw, 0.58rem) 0 0;
+  color: #30363e;
+  font-family: var(--font-ui);
+  font-size: clamp(0.58rem, 0.68vw, 0.82rem);
+  line-height: 1.28;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.quality-control-moisture-control-content {
+  width: min(1880px, calc(100% - clamp(1rem, 2.6vw, 3rem)));
+  margin: clamp(1.2rem, 2.4vw, 2.5rem) auto clamp(2.8rem, 5vw, 5rem);
+  color: #24272b;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(56, 50, 42, 0.26);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 247, 0.94), rgba(247, 241, 231, 0.9)),
+    #f8f2e8;
+  box-shadow: 0 16px 34px rgba(41, 35, 28, 0.08);
+}
+
+.quality-control-moisture-control-panel + .quality-control-moisture-control-panel {
+  margin-top: clamp(0.95rem, 1.6vw, 1.5rem);
+}
+
+.quality-control-moisture-control-panel h2 {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.55rem, 0.95vw, 0.8rem);
+  margin: 0;
+  padding: clamp(0.66rem, 1vw, 0.86rem) clamp(0.9rem, 1.35vw, 1.18rem) 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(1.12rem, 1.62vw, 1.78rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-panel h2 > span {
+  display: grid;
+  width: clamp(1.72rem, 2vw, 2.15rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 999px;
+  background: #56514b;
+  color: #fff9ee;
+  font-family: var(--font-heading);
+  font-size: clamp(0.92rem, 1.08vw, 1.18rem);
+  line-height: 1;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-moisture-control-importance-flow {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: clamp(1.28rem, 1.9vw, 1.75rem);
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.9rem, 1.35vw, 1.18rem) clamp(0.92rem, 1.35vw, 1.15rem);
+}
+
+.quality-control-moisture-control-importance-flow article {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-width: 0;
+  min-height: clamp(8.8rem, 10.4vw, 11.4rem);
+  padding: clamp(0.58rem, 0.86vw, 0.74rem);
+  border: 1px solid rgba(91, 82, 70, 0.22);
+  border-radius: 7px;
+  text-align: center;
+  background: rgba(255, 252, 246, 0.42);
+}
+
+.quality-control-moisture-control-importance-flow article:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: calc(clamp(0.78rem, 1.15vw, 1rem) * -1);
+  width: clamp(0.62rem, 0.9vw, 0.84rem);
+  height: 0.12rem;
+  background: rgba(69, 63, 54, 0.72);
+  content: '';
+  transform: translate(50%, -50%);
+}
+
+.quality-control-moisture-control-importance-flow article:not(:last-child)::before {
+  position: absolute;
+  top: 50%;
+  right: calc(clamp(0.42rem, 0.64vw, 0.56rem) * -1);
+  width: 0.46rem;
+  height: 0.46rem;
+  border-top: 0.12rem solid rgba(69, 63, 54, 0.72);
+  border-right: 0.12rem solid rgba(69, 63, 54, 0.72);
+  content: '';
+  transform: translate(50%, -50%) rotate(45deg);
+}
+
+.quality-control-moisture-control-importance-image {
+  display: block;
+  width: min(100%, clamp(6.8rem, 8vw, 9rem));
+  aspect-ratio: 1.35 / 1;
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-moisture-control-importance-flow h3 {
+  margin: clamp(0.44rem, 0.68vw, 0.58rem) 0 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.84rem, 0.94vw, 1.08rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-effect-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.7rem, 1.08vw, 0.95rem);
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.9rem, 1.35vw, 1.18rem) clamp(0.92rem, 1.35vw, 1.15rem);
+}
+
+.quality-control-moisture-control-effect-grid article {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  min-width: 0;
+  min-height: clamp(14rem, 16.8vw, 18.4rem);
+  padding: clamp(0.58rem, 0.86vw, 0.74rem);
+  border: 1px solid rgba(91, 82, 70, 0.22);
+  border-radius: 7px;
+  text-align: center;
+  background: rgba(255, 252, 246, 0.42);
+}
+
+.quality-control-moisture-control-effect-image {
+  display: block;
+  width: min(100%, clamp(7.2rem, 9.2vw, 10.4rem));
+  aspect-ratio: 1.36 / 1;
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-moisture-control-effect-grid h3 {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.35rem;
+  margin: clamp(0.5rem, 0.78vw, 0.68rem) 0 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.92rem, 1.02vw, 1.16rem);
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: left;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-effect-grid h3 span {
+  white-space: nowrap;
+}
+
+.quality-control-moisture-control-effect-grid p {
+  margin: clamp(0.34rem, 0.52vw, 0.46rem) 0 0;
+  color: #30343a;
+  font-size: clamp(0.7rem, 0.78vw, 0.86rem);
+  line-height: 1.34;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-point-flow {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.78rem, 1.15vw, 1rem) clamp(0.85rem, 1.2vw, 1.05rem);
+}
+
+.quality-control-moisture-control-point-flow article {
+  position: relative;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  min-width: 0;
+  min-height: clamp(18rem, 21vw, 23.8rem);
+  padding: clamp(0.55rem, 0.82vw, 0.72rem) clamp(0.62rem, 0.9vw, 0.82rem) 0;
+  border-left: 1px solid rgba(91, 82, 70, 0.2);
+  text-align: center;
+}
+
+.quality-control-moisture-control-point-flow article:first-child {
+  border-left: 0;
+}
+
+.quality-control-moisture-control-point-flow article:not(:last-child)::after {
+  position: absolute;
+  top: clamp(1.08rem, 1.55vw, 1.45rem);
+  right: -0.52rem;
+  z-index: 2;
+  width: clamp(0.72rem, 1vw, 0.95rem);
+  height: 0.12rem;
+  background: rgba(69, 63, 54, 0.72);
+  content: '';
+}
+
+.quality-control-moisture-control-point-flow article:not(:last-child)::before {
+  position: absolute;
+  top: calc(clamp(1.08rem, 1.55vw, 1.45rem) - 0.17rem);
+  right: -0.58rem;
+  z-index: 3;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-top: 0.12rem solid rgba(69, 63, 54, 0.72);
+  border-right: 0.12rem solid rgba(69, 63, 54, 0.72);
+  content: '';
+  transform: rotate(45deg);
+}
+
+.quality-control-moisture-control-point-number {
+  display: grid;
+  width: clamp(1.58rem, 1.85vw, 2rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 999px;
+  background: #56514b;
+  color: #fff9ee;
+  font-family: var(--font-heading);
+  font-size: clamp(0.74rem, 0.88vw, 0.98rem);
+  line-height: 1;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-moisture-control-point-image {
+  display: block;
+  width: min(100%, clamp(6.8rem, 8vw, 9rem));
+  aspect-ratio: 1.42 / 1;
+  margin-top: clamp(0.4rem, 0.62vw, 0.54rem);
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-moisture-control-point-flow h3 {
+  margin: clamp(0.42rem, 0.64vw, 0.54rem) 0 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.88rem, 0.98vw, 1.12rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-point-flow p {
+  margin: clamp(0.34rem, 0.52vw, 0.46rem) 0 0;
+  color: #30343a;
+  font-size: clamp(0.66rem, 0.74vw, 0.82rem);
+  line-height: 1.32;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-point-flow ul {
+  display: grid;
+  gap: 0.24rem;
+  width: 100%;
+  margin: clamp(0.46rem, 0.68vw, 0.58rem) 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.quality-control-moisture-control-point-flow li {
+  position: relative;
+  padding-left: 1rem;
+  color: #30343a;
+  font-size: clamp(0.64rem, 0.72vw, 0.8rem);
+  line-height: 1.28;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-point-flow li::before {
+  position: absolute;
+  left: 0;
+  top: 0.16rem;
+  width: 0.58rem;
+  height: 0.58rem;
+  content: '';
+  border: 1px solid rgba(77, 69, 59, 0.62);
+  border-radius: 2px;
+  background:
+    linear-gradient(135deg, transparent 43%, rgba(77, 69, 59, 0.76) 44% 56%, transparent 57%);
+}
+
+.quality-control-moisture-control-material-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.7rem, 1.08vw, 0.95rem);
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.9rem, 1.35vw, 1.18rem) clamp(0.92rem, 1.35vw, 1.15rem);
+}
+
+.quality-control-moisture-control-material-grid article {
+  display: grid;
+  grid-template-columns: minmax(5rem, 0.42fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(0.58rem, 0.86vw, 0.76rem);
+  min-width: 0;
+  min-height: clamp(8.2rem, 9.8vw, 10.8rem);
+  padding: clamp(0.58rem, 0.86vw, 0.74rem);
+  border: 1px solid rgba(91, 82, 70, 0.22);
+  border-radius: 7px;
+  background: rgba(255, 252, 246, 0.42);
+}
+
+.quality-control-moisture-control-material-image {
+  display: block;
+  width: min(100%, clamp(5.8rem, 7.2vw, 8.2rem));
+  aspect-ratio: 1.15 / 1;
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-moisture-control-material-grid h3 {
+  margin: 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.98rem, 1.08vw, 1.26rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-material-grid p {
+  margin: clamp(0.34rem, 0.52vw, 0.46rem) 0 0;
+  color: #30343a;
+  font-size: clamp(0.68rem, 0.76vw, 0.84rem);
+  line-height: 1.32;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-method-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.7rem, 1.08vw, 0.95rem);
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.9rem, 1.35vw, 1.18rem) clamp(0.92rem, 1.35vw, 1.15rem);
+}
+
+.quality-control-moisture-control-method-grid article {
+  display: grid;
+  grid-template-columns: minmax(5.6rem, 0.34fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(0.62rem, 0.95vw, 0.86rem);
+  min-width: 0;
+  min-height: clamp(8.4rem, 9.8vw, 10.8rem);
+  padding: clamp(0.58rem, 0.86vw, 0.74rem);
+  border: 1px solid rgba(91, 82, 70, 0.22);
+  border-radius: 7px;
+  background: rgba(255, 252, 246, 0.42);
+}
+
+.quality-control-moisture-control-method-image {
+  display: block;
+  width: min(100%, clamp(6rem, 7.2vw, 8.4rem));
+  aspect-ratio: 0.85 / 1;
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-moisture-control-method-grid h3 {
+  margin: 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.98rem, 1.08vw, 1.26rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-method-grid p {
+  margin: clamp(0.34rem, 0.52vw, 0.46rem) 0 0;
+  color: #30343a;
+  font-size: clamp(0.68rem, 0.76vw, 0.84rem);
+  line-height: 1.32;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-system-flow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(1.35rem, 2vw, 1.9rem);
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.9rem, 1.35vw, 1.18rem) clamp(0.92rem, 1.35vw, 1.15rem);
+}
+
+.quality-control-moisture-control-system-flow article {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-width: 0;
+  min-height: clamp(8.6rem, 10.2vw, 11.2rem);
+  padding: clamp(0.58rem, 0.86vw, 0.74rem);
+  text-align: center;
+}
+
+.quality-control-moisture-control-system-flow article:not(:last-child)::after {
+  position: absolute;
+  top: 45%;
+  right: calc(clamp(0.82rem, 1.25vw, 1.12rem) * -1);
+  width: clamp(0.68rem, 1vw, 0.94rem);
+  height: 0.12rem;
+  background: rgba(69, 63, 54, 0.72);
+  content: '';
+  transform: translate(50%, -50%);
+}
+
+.quality-control-moisture-control-system-flow article:not(:last-child)::before {
+  position: absolute;
+  top: 45%;
+  right: calc(clamp(0.44rem, 0.7vw, 0.62rem) * -1);
+  width: 0.46rem;
+  height: 0.46rem;
+  border-top: 0.12rem solid rgba(69, 63, 54, 0.72);
+  border-right: 0.12rem solid rgba(69, 63, 54, 0.72);
+  content: '';
+  transform: translate(50%, -50%) rotate(45deg);
+}
+
+.quality-control-moisture-control-system-image {
+  display: block;
+  width: min(100%, clamp(6rem, 7.4vw, 8.5rem));
+  aspect-ratio: 1.18 / 1;
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-moisture-control-system-flow h3 {
+  margin: clamp(0.42rem, 0.64vw, 0.54rem) 0 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.86rem, 0.98vw, 1.12rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-risk-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.78rem, 1.15vw, 1rem) clamp(0.85rem, 1.2vw, 1.05rem);
+}
+
+.quality-control-moisture-control-risk-grid article {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-width: 0;
+  min-height: clamp(7.4rem, 8.6vw, 9.4rem);
+  padding: 0 clamp(0.56rem, 0.82vw, 0.72rem);
+  border-left: 1px solid rgba(91, 82, 70, 0.2);
+  text-align: center;
+}
+
+.quality-control-moisture-control-risk-grid article:first-child {
+  border-left: 0;
+}
+
+.quality-control-moisture-control-risk-image {
+  display: block;
+  width: min(100%, clamp(5.8rem, 6.8vw, 7.8rem));
+  aspect-ratio: 1.28 / 1;
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-moisture-control-risk-grid h3 {
+  margin: clamp(0.42rem, 0.64vw, 0.54rem) 0 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.86rem, 0.96vw, 1.08rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-cta {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.22fr) minmax(18rem, 1fr) auto;
+  align-items: center;
+  gap: clamp(1rem, 1.7vw, 1.55rem);
+  min-height: clamp(7.2rem, 8.8vw, 9.4rem);
+  padding: clamp(0.72rem, 1.05vw, 0.95rem) clamp(0.9rem, 1.45vw, 1.25rem);
+}
+
+.quality-control-moisture-control-cta-image {
+  display: block;
+  width: min(100%, 18rem);
+  aspect-ratio: 2.45 / 1;
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-moisture-control-cta-copy {
+  min-width: 0;
+}
+
+.quality-control-moisture-control-cta-copy h2 {
+  margin: 0;
+  padding: 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(1.28rem, 1.92vw, 2.34rem);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-cta-copy p {
+  max-width: 72ch;
+  margin: clamp(0.42rem, 0.68vw, 0.58rem) 0 0;
+  color: #30343a;
+  font-size: clamp(0.74rem, 0.84vw, 0.96rem);
+  line-height: 1.38;
+  letter-spacing: 0;
+}
+
+.quality-control-moisture-control-cta-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(10.5rem, 1fr));
+  gap: clamp(0.72rem, 1vw, 0.92rem);
+  min-width: min(48vw, 45rem);
+}
+
+.quality-control-moisture-control-cta-actions a {
+  display: grid;
+  place-items: center;
+  min-height: clamp(3.45rem, 4.2vw, 4.45rem);
+  padding: 0 clamp(0.72rem, 1vw, 0.95rem);
+  border: 1px solid rgba(91, 82, 70, 0.28);
+  border-radius: 7px;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.92rem, 1.02vw, 1.14rem);
+  font-weight: 400;
+  line-height: 1.12;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0;
+  background: rgba(255, 252, 246, 0.42);
+}
+
+.quality-control-moisture-control-cta-actions a.is-primary {
+  border-color: rgba(213, 91, 43, 0.76);
+  color: #c95424;
+  background: rgba(255, 247, 238, 0.58);
+}
+
+.quality-control-approved-sample-control-content {
+  width: min(1880px, calc(100% - clamp(1rem, 2.6vw, 3rem)));
+  margin: clamp(1.2rem, 2.4vw, 2.5rem) auto clamp(2.8rem, 5vw, 5rem);
+  color: #24272b;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(56, 50, 42, 0.26);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 247, 0.94), rgba(247, 241, 231, 0.9)),
+    #f8f2e8;
+  box-shadow: 0 16px 34px rgba(41, 35, 28, 0.08);
+}
+
+.quality-control-approved-sample-control-panel + .quality-control-approved-sample-control-panel {
+  margin-top: clamp(0.95rem, 1.6vw, 1.5rem);
+}
+
+.quality-control-approved-sample-control-panel h2 {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.55rem, 0.95vw, 0.8rem);
+  margin: 0;
+  padding: clamp(0.66rem, 1vw, 0.86rem) clamp(0.9rem, 1.35vw, 1.18rem) 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(1.12rem, 1.62vw, 1.78rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-panel h2 > span {
+  display: grid;
+  width: clamp(1.72rem, 2vw, 2.15rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 999px;
+  background: #56514b;
+  color: #fff9ee;
+  font-family: var(--font-heading);
+  font-size: clamp(0.92rem, 1.08vw, 1.18rem);
+  line-height: 1;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-approved-sample-control-equation {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) auto minmax(0, 1.18fr);
+  align-items: center;
+  gap: clamp(0.72rem, 1.2vw, 1.1rem);
+  padding: clamp(0.78rem, 1.12vw, 1rem) clamp(0.9rem, 1.35vw, 1.18rem) clamp(0.92rem, 1.35vw, 1.15rem);
+}
+
+.quality-control-approved-sample-control-equation-item,
+.quality-control-approved-sample-control-equation-result {
+  display: grid;
+  grid-template-columns: minmax(4.6rem, 0.44fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(0.58rem, 0.86vw, 0.78rem);
+  min-width: 0;
+  min-height: clamp(5.1rem, 6vw, 6.5rem);
+  padding: clamp(0.56rem, 0.82vw, 0.7rem);
+  border: 1px solid rgba(91, 82, 70, 0.22);
+  border-radius: 7px;
+  background: rgba(255, 252, 246, 0.42);
+}
+
+.quality-control-approved-sample-control-equation-result {
+  grid-template-columns: minmax(5.4rem, 0.48fr) minmax(0, 1fr);
+}
+
+.quality-control-approved-sample-control-equation-sign {
+  display: grid;
+  place-items: center;
+  color: #38332d;
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 2.8vw, 3.15rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.quality-control-approved-sample-control-image,
+.quality-control-approved-sample-control-card-image {
+  display: block;
+  width: min(100%, 5.8rem);
+  aspect-ratio: 1.38 / 1;
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-approved-sample-control-equation p {
+  margin: 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.86rem, 0.98vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-type-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.78rem, 1.15vw, 1rem) clamp(0.85rem, 1.2vw, 1.05rem);
+}
+
+.quality-control-approved-sample-control-type-grid article {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: clamp(0.52rem, 0.78vw, 0.68rem);
+  min-width: 0;
+  min-height: clamp(13.8rem, 16.4vw, 18rem);
+  padding: 0 clamp(0.58rem, 0.86vw, 0.78rem);
+  border-left: 1px solid rgba(91, 82, 70, 0.2);
+}
+
+.quality-control-approved-sample-control-type-grid article:first-child {
+  border-left: 0;
+}
+
+.quality-control-approved-sample-control-card-image {
+  width: min(100%, clamp(7.2rem, 9.2vw, 10.4rem));
+  aspect-ratio: 1.55 / 1;
+}
+
+.quality-control-approved-sample-control-type-grid article > div {
+  width: 100%;
+  min-width: 0;
+}
+
+.quality-control-approved-sample-control-type-grid h3 {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  width: 100%;
+  gap: 0.36rem;
+  margin: 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.92rem, 1.02vw, 1.12rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-type-grid h3 span {
+  white-space: nowrap;
+}
+
+.quality-control-approved-sample-control-type-grid p {
+  margin: 0;
+  color: #30343a;
+  font-size: clamp(0.7rem, 0.78vw, 0.86rem);
+  line-height: 1.34;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-type-grid b {
+  display: block;
+  margin-top: clamp(0.54rem, 0.8vw, 0.7rem);
+  width: 100%;
+  padding-top: clamp(0.42rem, 0.62vw, 0.54rem);
+  border-top: 1px dashed rgba(91, 82, 70, 0.36);
+  color: #494137;
+  font-size: clamp(0.68rem, 0.76vw, 0.82rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-type-grid small {
+  display: block;
+  width: 100%;
+  margin-top: 0.18rem;
+  color: #30343a;
+  font-size: clamp(0.68rem, 0.74vw, 0.82rem);
+  line-height: 1.28;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-process-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(1.6rem, 2.4vw, 2.25rem);
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.9rem, 1.35vw, 1.18rem) clamp(0.92rem, 1.35vw, 1.15rem);
+}
+
+.quality-control-approved-sample-control-process-grid article {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  min-width: 0;
+  min-height: clamp(11rem, 13.2vw, 14.5rem);
+  padding: clamp(0.58rem, 0.86vw, 0.74rem);
+  border: 1px solid rgba(91, 82, 70, 0.22);
+  border-radius: 7px;
+  text-align: center;
+  background: rgba(255, 252, 246, 0.42);
+}
+
+.quality-control-approved-sample-control-process-grid article:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: calc(clamp(0.96rem, 1.5vw, 1.35rem) * -1);
+  width: clamp(0.72rem, 1.1vw, 1rem);
+  height: 0.12rem;
+  background: rgba(69, 63, 54, 0.72);
+  content: '';
+  transform: translate(50%, -50%);
+}
+
+.quality-control-approved-sample-control-process-grid article:not(:last-child)::before {
+  position: absolute;
+  top: 50%;
+  right: calc(clamp(0.54rem, 0.86vw, 0.75rem) * -1);
+  width: 0.46rem;
+  height: 0.46rem;
+  border-top: 0.12rem solid rgba(69, 63, 54, 0.72);
+  border-right: 0.12rem solid rgba(69, 63, 54, 0.72);
+  content: '';
+  transform: translate(50%, -50%) rotate(45deg);
+}
+
+.quality-control-approved-sample-control-process-number {
+  position: absolute;
+  top: clamp(0.38rem, 0.62vw, 0.55rem);
+  left: clamp(0.44rem, 0.7vw, 0.62rem);
+  display: grid;
+  width: clamp(1.45rem, 1.72vw, 1.82rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 999px;
+  background: #56514b;
+  color: #fff9ee;
+  font-family: var(--font-heading);
+  font-size: clamp(0.8rem, 0.96vw, 1.04rem);
+  line-height: 1;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-approved-sample-control-process-image {
+  display: block;
+  width: min(100%, clamp(7.2rem, 9vw, 10rem));
+  aspect-ratio: 1.65 / 1;
+  margin-top: clamp(0.1rem, 0.3vw, 0.24rem);
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-approved-sample-control-process-grid h3 {
+  margin: clamp(0.44rem, 0.68vw, 0.58rem) 0 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.9rem, 1vw, 1.12rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-process-grid p {
+  margin: clamp(0.32rem, 0.5vw, 0.42rem) 0 0;
+  color: #30343a;
+  font-size: clamp(0.68rem, 0.76vw, 0.84rem);
+  line-height: 1.28;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-storage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.7rem, 1.08vw, 0.95rem);
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.9rem, 1.35vw, 1.18rem) clamp(0.92rem, 1.35vw, 1.15rem);
+}
+
+.quality-control-approved-sample-control-storage-grid article {
+  display: grid;
+  grid-template-columns: minmax(5.4rem, 0.36fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(0.62rem, 0.95vw, 0.86rem);
+  min-width: 0;
+  min-height: clamp(6.6rem, 7.6vw, 8.3rem);
+  padding: clamp(0.58rem, 0.86vw, 0.74rem);
+  border: 1px solid rgba(91, 82, 70, 0.22);
+  border-radius: 7px;
+  background: rgba(255, 252, 246, 0.42);
+}
+
+.quality-control-approved-sample-control-storage-image {
+  display: block;
+  width: min(100%, 6.4rem);
+  aspect-ratio: 1.18 / 1;
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-approved-sample-control-storage-grid h3 {
+  margin: 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.92rem, 1.02vw, 1.14rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-storage-grid p {
+  margin: clamp(0.3rem, 0.48vw, 0.42rem) 0 0;
+  color: #30343a;
+  font-size: clamp(0.7rem, 0.78vw, 0.86rem);
+  line-height: 1.32;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-risk-flow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(1.35rem, 2vw, 1.9rem);
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.9rem, 1.35vw, 1.18rem) clamp(0.92rem, 1.35vw, 1.15rem);
+}
+
+.quality-control-approved-sample-control-risk-flow article {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-width: 0;
+  min-height: clamp(8.6rem, 10.4vw, 11.4rem);
+  padding: clamp(0.58rem, 0.86vw, 0.74rem);
+  border: 1px solid rgba(91, 82, 70, 0.22);
+  border-radius: 7px;
+  text-align: center;
+  background: rgba(255, 252, 246, 0.42);
+}
+
+.quality-control-approved-sample-control-risk-flow article:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: calc(clamp(0.82rem, 1.25vw, 1.12rem) * -1);
+  width: clamp(0.68rem, 1vw, 0.94rem);
+  height: 0.12rem;
+  background: rgba(69, 63, 54, 0.72);
+  content: '';
+  transform: translate(50%, -50%);
+}
+
+.quality-control-approved-sample-control-risk-flow article:not(:last-child)::before {
+  position: absolute;
+  top: 50%;
+  right: calc(clamp(0.44rem, 0.7vw, 0.62rem) * -1);
+  width: 0.46rem;
+  height: 0.46rem;
+  border-top: 0.12rem solid rgba(69, 63, 54, 0.72);
+  border-right: 0.12rem solid rgba(69, 63, 54, 0.72);
+  content: '';
+  transform: translate(50%, -50%) rotate(45deg);
+}
+
+.quality-control-approved-sample-control-risk-flow h3 {
+  margin: 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.12vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-risk-image {
+  display: block;
+  width: min(100%, clamp(7rem, 8.5vw, 9.6rem));
+  aspect-ratio: 1.45 / 1;
+  margin-top: clamp(0.5rem, 0.78vw, 0.68rem);
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-approved-sample-control-role-flow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(1.35rem, 2vw, 1.9rem);
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.9rem, 1.35vw, 1.18rem) clamp(0.92rem, 1.35vw, 1.15rem);
+}
+
+.quality-control-approved-sample-control-role-flow article {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-width: 0;
+  min-height: clamp(9rem, 10.8vw, 11.8rem);
+  padding: clamp(0.58rem, 0.86vw, 0.74rem);
+  border: 1px solid rgba(91, 82, 70, 0.22);
+  border-radius: 7px;
+  text-align: center;
+  background: rgba(255, 252, 246, 0.42);
+}
+
+.quality-control-approved-sample-control-role-flow article:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: calc(clamp(0.82rem, 1.25vw, 1.12rem) * -1);
+  width: clamp(0.68rem, 1vw, 0.94rem);
+  height: 0.12rem;
+  background: rgba(69, 63, 54, 0.72);
+  content: '';
+  transform: translate(50%, -50%);
+}
+
+.quality-control-approved-sample-control-role-flow article:not(:last-child)::before {
+  position: absolute;
+  top: 50%;
+  right: calc(clamp(0.44rem, 0.7vw, 0.62rem) * -1);
+  width: 0.46rem;
+  height: 0.46rem;
+  border-top: 0.12rem solid rgba(69, 63, 54, 0.72);
+  border-right: 0.12rem solid rgba(69, 63, 54, 0.72);
+  content: '';
+  transform: translate(50%, -50%) rotate(45deg);
+}
+
+.quality-control-approved-sample-control-role-flow h3 {
+  margin: 0;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.94rem, 1.08vw, 1.26rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-role-image {
+  display: block;
+  width: min(100%, clamp(7rem, 8.5vw, 9.6rem));
+  aspect-ratio: 1.45 / 1;
+  margin-top: clamp(0.5rem, 0.78vw, 0.68rem);
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-approved-sample-control-standard-room {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.36fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1rem, 1.8vw, 1.6rem);
+  min-height: clamp(10.4rem, 12.6vw, 14rem);
+  padding: clamp(0.74rem, 1.08vw, 0.95rem) clamp(0.9rem, 1.35vw, 1.18rem);
+}
+
+.quality-control-approved-sample-control-standard-room-copy {
+  min-width: 0;
+}
+
+.quality-control-approved-sample-control-standard-room-copy h2 {
+  padding: 0;
+}
+
+.quality-control-approved-sample-control-standard-room-copy p {
+  max-width: 76ch;
+  margin: clamp(0.52rem, 0.78vw, 0.68rem) 0 0;
+  color: #30343a;
+  font-size: clamp(0.74rem, 0.84vw, 0.96rem);
+  line-height: 1.42;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-standard-room-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2.9 / 1;
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 6px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+.quality-control-approved-sample-control-cta {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.22fr) minmax(18rem, 1fr) auto;
+  align-items: center;
+  gap: clamp(1rem, 1.7vw, 1.55rem);
+  min-height: clamp(7.2rem, 8.8vw, 9.4rem);
+  padding: clamp(0.72rem, 1.05vw, 0.95rem) clamp(0.9rem, 1.45vw, 1.25rem);
+}
+
+.quality-control-approved-sample-control-cta-image {
+  display: block;
+  width: min(100%, 18rem);
+  aspect-ratio: 2.45 / 1;
+  border: 1px dashed rgba(83, 75, 64, 0.22);
+  border-radius: 5px;
+  background:
+    linear-gradient(145deg, transparent 47%, rgba(99, 89, 76, 0.1) 48% 52%, transparent 53%),
+    repeating-linear-gradient(135deg, rgba(92, 82, 68, 0.055) 0 8px, transparent 8px 16px),
+    rgba(255, 255, 255, 0.22);
+}
+
+img.quality-control-moisture-control-importance-image,
+img.quality-control-moisture-control-effect-image,
+img.quality-control-moisture-control-point-image,
+img.quality-control-moisture-control-material-image,
+img.quality-control-moisture-control-method-image,
+img.quality-control-moisture-control-system-image,
+img.quality-control-moisture-control-risk-image,
+img.quality-control-moisture-control-cta-image,
+img.quality-control-approved-sample-control-image,
+img.quality-control-approved-sample-control-card-image,
+img.quality-control-approved-sample-control-process-image,
+img.quality-control-approved-sample-control-storage-image,
+img.quality-control-approved-sample-control-risk-image,
+img.quality-control-approved-sample-control-role-image,
+img.quality-control-approved-sample-control-standard-room-image,
+img.quality-control-approved-sample-control-cta-image {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  object-fit: contain;
+  object-position: center;
+}
+
+.quality-control-approved-sample-control-cta-copy {
+  min-width: 0;
+}
+
+.quality-control-approved-sample-control-cta-copy h2 {
+  padding: 0;
+}
+
+.quality-control-approved-sample-control-cta-copy p {
+  max-width: 72ch;
+  margin: clamp(0.42rem, 0.68vw, 0.58rem) 0 0;
+  color: #30343a;
+  font-size: clamp(0.74rem, 0.84vw, 0.96rem);
+  line-height: 1.38;
+  letter-spacing: 0;
+}
+
+.quality-control-approved-sample-control-cta-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(10.5rem, 1fr));
+  gap: clamp(0.72rem, 1vw, 0.92rem);
+  min-width: min(48vw, 45rem);
+}
+
+.quality-control-approved-sample-control-cta-actions a {
+  display: grid;
+  place-items: center;
+  min-height: clamp(3.45rem, 4.2vw, 4.45rem);
+  padding: 0 clamp(0.72rem, 1vw, 0.95rem);
+  border: 1px solid rgba(91, 82, 70, 0.28);
+  border-radius: 7px;
+  color: #25282c;
+  font-family: var(--font-heading);
+  font-size: clamp(0.92rem, 1.02vw, 1.14rem);
+  font-weight: 400;
+  line-height: 1.12;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0;
+  background: rgba(255, 252, 246, 0.42);
+}
+
+.quality-control-approved-sample-control-cta-actions a.is-primary {
+  border-color: rgba(213, 91, 43, 0.76);
+  color: #c95424;
+  background: rgba(255, 247, 238, 0.58);
 }
 
 .quality-control-final-inspection-content {
@@ -6025,6 +7334,127 @@ img.quality-control-final-inspection-cta-image {
 }
 
 @media (max-width: 1380px) {
+  .quality-control-moisture-control-importance-flow {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .quality-control-moisture-control-importance-flow article::before,
+  .quality-control-moisture-control-importance-flow article::after {
+    content: none !important;
+  }
+
+  .quality-control-moisture-control-effect-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .quality-control-moisture-control-point-flow {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem 0;
+  }
+
+  .quality-control-moisture-control-point-flow article:nth-child(4n + 1) {
+    border-left: 0;
+  }
+
+  .quality-control-moisture-control-point-flow article:nth-child(n + 5) {
+    padding-top: 0.95rem;
+    border-top: 1px solid rgba(91, 82, 70, 0.2);
+  }
+
+  .quality-control-moisture-control-point-flow article::before,
+  .quality-control-moisture-control-point-flow article::after {
+    content: none !important;
+  }
+
+  .quality-control-moisture-control-material-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .quality-control-moisture-control-method-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quality-control-moisture-control-system-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .quality-control-moisture-control-system-flow article::before,
+  .quality-control-moisture-control-system-flow article::after {
+    content: none !important;
+  }
+
+  .quality-control-moisture-control-risk-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem 0;
+  }
+
+  .quality-control-moisture-control-risk-grid article:nth-child(4n + 1) {
+    border-left: 0;
+  }
+
+  .quality-control-moisture-control-risk-grid article:nth-child(n + 5) {
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(91, 82, 70, 0.2);
+  }
+
+  .quality-control-approved-sample-control-equation {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .quality-control-approved-sample-control-equation-sign {
+    display: none;
+  }
+
+  .quality-control-approved-sample-control-type-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem 0;
+  }
+
+  .quality-control-approved-sample-control-type-grid article:nth-child(3n + 1) {
+    border-left: 0;
+  }
+
+  .quality-control-approved-sample-control-type-grid article:nth-child(n + 4) {
+    padding-top: 0.95rem;
+    border-top: 1px solid rgba(91, 82, 70, 0.2);
+  }
+
+  .quality-control-approved-sample-control-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .quality-control-approved-sample-control-process-grid article::before,
+  .quality-control-approved-sample-control-process-grid article::after {
+    content: none !important;
+  }
+
+  .quality-control-approved-sample-control-storage-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quality-control-approved-sample-control-risk-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .quality-control-approved-sample-control-risk-flow article::before,
+  .quality-control-approved-sample-control-risk-flow article::after {
+    content: none !important;
+  }
+
+  .quality-control-approved-sample-control-role-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .quality-control-approved-sample-control-role-flow article::before,
+  .quality-control-approved-sample-control-role-flow article::after {
+    content: none !important;
+  }
+
   .quality-control-final-inspection-pair {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -6150,6 +7580,115 @@ img.quality-control-final-inspection-cta-image {
 }
 
 @media (max-width: 980px) {
+  .quality-control-moisture-control-importance-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quality-control-moisture-control-effect-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quality-control-moisture-control-risk-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quality-control-moisture-control-risk-grid article,
+  .quality-control-moisture-control-risk-grid article:nth-child(4n + 1) {
+    border-left: 1px solid rgba(91, 82, 70, 0.2);
+  }
+
+  .quality-control-moisture-control-risk-grid article:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .quality-control-moisture-control-risk-grid article:nth-child(n + 3) {
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(91, 82, 70, 0.2);
+  }
+
+  .quality-control-moisture-control-cta {
+    grid-template-columns: minmax(12rem, 0.24fr) minmax(0, 1fr);
+  }
+
+  .quality-control-moisture-control-cta-actions {
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+
+  .quality-control-moisture-control-point-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quality-control-moisture-control-point-flow article,
+  .quality-control-moisture-control-point-flow article:nth-child(4n + 1) {
+    border-left: 1px solid rgba(91, 82, 70, 0.2);
+  }
+
+  .quality-control-moisture-control-point-flow article:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .quality-control-moisture-control-point-flow article:nth-child(n + 3) {
+    padding-top: 0.95rem;
+    border-top: 1px solid rgba(91, 82, 70, 0.2);
+  }
+
+  .quality-control-moisture-control-material-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quality-control-approved-sample-control-equation {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-approved-sample-control-equation-item,
+  .quality-control-approved-sample-control-equation-result {
+    grid-template-columns: clamp(4.6rem, 16vw, 6rem) minmax(0, 1fr);
+  }
+
+  .quality-control-approved-sample-control-type-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quality-control-approved-sample-control-type-grid article,
+  .quality-control-approved-sample-control-type-grid article:nth-child(3n + 1) {
+    border-left: 1px solid rgba(91, 82, 70, 0.2);
+  }
+
+  .quality-control-approved-sample-control-type-grid article:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .quality-control-approved-sample-control-type-grid article:nth-child(n + 3) {
+    padding-top: 0.95rem;
+    border-top: 1px solid rgba(91, 82, 70, 0.2);
+  }
+
+  .quality-control-approved-sample-control-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quality-control-approved-sample-control-risk-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quality-control-approved-sample-control-role-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quality-control-approved-sample-control-standard-room {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-approved-sample-control-cta {
+    grid-template-columns: minmax(12rem, 0.24fr) minmax(0, 1fr);
+  }
+
+  .quality-control-approved-sample-control-cta-actions {
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+
   .quality-control-final-inspection-approved-layout {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -6372,6 +7911,124 @@ img.quality-control-final-inspection-cta-image {
 }
 
 @media (max-width: 640px) {
+  .quality-control-moisture-control-content {
+    width: min(var(--layout-max-width), calc(100% - 1.35rem));
+    margin-top: 1rem;
+  }
+
+  .quality-control-moisture-control-panel h2 {
+    padding: 0.85rem 0.88rem 0;
+    font-size: clamp(1.08rem, 6vw, 1.55rem);
+  }
+
+  .quality-control-moisture-control-importance-flow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-moisture-control-effect-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-moisture-control-point-flow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-moisture-control-point-flow article,
+  .quality-control-moisture-control-point-flow article:nth-child(odd),
+  .quality-control-moisture-control-point-flow article:nth-child(4n + 1) {
+    border-left: 0;
+  }
+
+  .quality-control-moisture-control-point-flow article + article {
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(91, 82, 70, 0.2);
+  }
+
+  .quality-control-moisture-control-material-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-moisture-control-method-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-moisture-control-system-flow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-moisture-control-risk-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .quality-control-moisture-control-risk-grid article,
+  .quality-control-moisture-control-risk-grid article:nth-child(odd),
+  .quality-control-moisture-control-risk-grid article:nth-child(4n + 1) {
+    border-left: 0;
+  }
+
+  .quality-control-moisture-control-risk-grid article + article {
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(91, 82, 70, 0.2);
+  }
+
+  .quality-control-moisture-control-cta {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-moisture-control-cta-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-approved-sample-control-content {
+    width: min(var(--layout-max-width), calc(100% - 1.35rem));
+    margin-top: 1rem;
+  }
+
+  .quality-control-approved-sample-control-panel h2 {
+    padding: 0.85rem 0.88rem 0;
+    font-size: clamp(1.08rem, 6vw, 1.55rem);
+  }
+
+  .quality-control-approved-sample-control-type-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-approved-sample-control-type-grid article,
+  .quality-control-approved-sample-control-type-grid article:nth-child(odd),
+  .quality-control-approved-sample-control-type-grid article:nth-child(3n + 1) {
+    border-left: 0;
+  }
+
+  .quality-control-approved-sample-control-type-grid article + article {
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(91, 82, 70, 0.2);
+  }
+
+  .quality-control-approved-sample-control-process-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-approved-sample-control-storage-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-approved-sample-control-risk-flow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-approved-sample-control-role-flow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-approved-sample-control-cta {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quality-control-approved-sample-control-cta-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .quality-control-final-inspection-approved-flow {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.8rem 0;
@@ -15049,6 +16706,18 @@ img.supply-hub-weekly-cta-image-placeholder {
     object-position: center;
   }
 
+  .quality-control-approved-sample-control-banner > img {
+    aspect-ratio: 2006 / 784;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .quality-control-moisture-control-banner > img {
+    aspect-ratio: 2006 / 784;
+    object-fit: contain;
+    object-position: center;
+  }
+
   .quality-control-final-inspection-banner-copy {
     left: 1.05rem;
     right: 1.05rem;
@@ -15074,6 +16743,60 @@ img.supply-hub-weekly-cta-image-placeholder {
     margin-top: 0.26rem;
     font-size: 0.52rem;
     line-height: 1.14;
+  }
+
+  .quality-control-approved-sample-control-banner-copy {
+    left: 1.05rem;
+    right: 1.05rem;
+    top: 0.82rem;
+    width: min(74vw, 20.5rem);
+    transform: none;
+  }
+
+  .quality-control-approved-sample-control-banner-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(1.32rem, 6.45vw, 2.2rem);
+  }
+
+  .quality-control-approved-sample-control-banner-copy span {
+    max-width: 34ch;
+    margin-top: 0.36rem;
+    font-size: 0.62rem;
+    line-height: 1.16;
+  }
+
+  .quality-control-approved-sample-control-banner-copy p {
+    max-width: 39ch;
+    margin-top: 0.26rem;
+    font-size: 0.5rem;
+    line-height: 1.12;
+  }
+
+  .quality-control-moisture-control-banner-copy {
+    left: 1.05rem;
+    right: 1.05rem;
+    top: 0.82rem;
+    width: min(76vw, 21rem);
+    transform: none;
+  }
+
+  .quality-control-moisture-control-banner-copy h1 {
+    max-width: 11ch;
+    font-size: clamp(1.25rem, 6.1vw, 2.06rem);
+  }
+
+  .quality-control-moisture-control-banner-copy span {
+    max-width: 36ch;
+    margin-top: 0.32rem;
+    font-size: 0.56rem;
+    line-height: 1.12;
+  }
+
+  .quality-control-moisture-control-banner-copy p {
+    max-width: 41ch;
+    margin-top: 0.22rem;
+    font-size: 0.46rem;
+    line-height: 1.08;
   }
 
   .quality-control-in-process-inspection-banner-copy {
@@ -26106,6 +27829,14 @@ img.supply-hub-weekly-cta-image-placeholder {
     .quality-control-in-process-inspection-banner *
   ):not(.quality-control-final-inspection-banner):not(
     .quality-control-final-inspection-banner *
+  ):not(.quality-control-approved-sample-control-banner):not(
+    .quality-control-approved-sample-control-banner *
+  ):not(.quality-control-moisture-control-banner):not(
+    .quality-control-moisture-control-banner *
+  ):not(.quality-control-moisture-control-content):not(
+    .quality-control-moisture-control-content *
+  ):not(.quality-control-approved-sample-control-content):not(
+    .quality-control-approved-sample-control-content *
   ):not(.quality-control-overview-content):not(
     .quality-control-overview-content *
   ):not(.quality-control-qc-process-content):not(
