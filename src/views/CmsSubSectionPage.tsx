@@ -348,12 +348,18 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'quality-control' && section.id === 'approved-sample-control' && !detailSlug;
   const isQualityControlMoistureControlPage =
     config.slug === 'quality-control' && section.id === 'moisture-control' && !detailSlug;
+  const isQualityControlPackingStandardPage =
+    config.slug === 'quality-control' && section.id === 'packing-standard' && !detailSlug;
+  const isQualityControlInspectionReportPage =
+    config.slug === 'quality-control' && section.id === 'inspection-report' && !detailSlug;
   const shouldRenderBlankSubSectionPage =
     shouldRenderBlankScholarshipPage ||
     shouldRenderBlankQualityInProcessPage ||
     isQualityControlFinalInspectionPage ||
     isQualityControlApprovedSampleControlPage ||
     isQualityControlMoistureControlPage ||
+    isQualityControlPackingStandardPage ||
+    isQualityControlInspectionReportPage ||
     isSupplyHubOverviewPage ||
     isSupplyHubStorageSolutionPage ||
     isSupplyHubLclFclConsolidationPage ||
@@ -462,6 +468,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldShowQualityControlFinalInspectionBanner = isQualityControlFinalInspectionPage;
   const shouldShowQualityControlApprovedSampleControlBanner = isQualityControlApprovedSampleControlPage;
   const shouldShowQualityControlMoistureControlBanner = isQualityControlMoistureControlPage;
+  const shouldShowQualityControlPackingStandardBanner = isQualityControlPackingStandardPage;
+  const shouldShowQualityControlInspectionReportBanner = isQualityControlInspectionReportPage;
   const shouldRenderSectionHero = !shouldHideSectionHero && !isSupplyHubComponentSamplesPage;
   const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
@@ -2644,6 +2652,834 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             </p>
           </figcaption>
         </figure>
+      )}
+      {shouldShowQualityControlPackingStandardBanner && (
+        <figure className="quality-control-packing-standard-banner">
+          <img
+            src="/assets/quality-control-packing-standard-banner.png"
+            alt={t('Banner chuẩn đóng gói')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="quality-control-packing-standard-banner-copy">
+            <h1>{t('Chuẩn đóng gói')}</h1>
+            <p>
+              {t(
+                'ANSLIFE triển khai các tiêu chuẩn đóng gói nhằm giảm thiểu rủi ro trong quá trình lưu kho, bốc xếp, vận chuyển nội địa và vận chuyển quốc tế. Quy cách đóng gói được xây dựng dựa trên đặc tính sản phẩm, yêu cầu của buyer, điều kiện vận chuyển và tiêu chuẩn của từng thị trường.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isQualityControlPackingStandardPage && (
+        <section
+          className="quality-control-packing-standard-content"
+          aria-labelledby="quality-control-packing-standard-goals-title"
+        >
+          <section className="quality-control-packing-standard-panel quality-control-packing-standard-goals">
+            <h2 id="quality-control-packing-standard-goals-title">
+              {`1. ${t('Mục tiêu của đóng gói')}`}
+            </h2>
+            <div className="quality-control-packing-standard-goal-grid">
+              {[
+                {
+                  number: '1',
+                  title: 'Bảo vệ sản phẩm',
+                  body: 'Giảm thiểu trầy xước, va đập, biến dạng và hư hỏng trong quá trình vận chuyển.',
+                  image: '/assets/quality-control/packing-standard/goals/product-protection.webp',
+                },
+                {
+                  number: '2',
+                  title: 'Duy trì chất lượng',
+                  body: 'Giữ nguyên trạng thái sản phẩm từ khi xuất xưởng đến khi nhận hàng.',
+                  image: '/assets/quality-control/packing-standard/goals/quality-maintenance.webp',
+                },
+                {
+                  number: '3',
+                  title: 'Tối ưu vận chuyển',
+                  body: 'Hỗ trợ lưu kho, xếp dỡ và vận chuyển hiệu quả.',
+                  image: '/assets/quality-control/packing-standard/goals/transport-optimization.webp',
+                },
+                {
+                  number: '4',
+                  title: 'Hỗ trợ truy xuất',
+                  body: 'Đảm bảo nhận diện và quản lý sản phẩm theo từng đơn hàng.',
+                  image: '/assets/quality-control/packing-standard/goals/traceability-support.webp',
+                },
+              ].map((item) => (
+                <article key={item.number}>
+                  <div className="quality-control-packing-standard-goal-image-slot" aria-hidden="true">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
+                  <h3>
+                    <span>{item.number}.</span>
+                    {t(item.title)}
+                  </h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-packing-standard-panel quality-control-packing-standard-controls">
+            <h2>{`2. ${t('Những gì được kiểm soát trong đóng gói?')}`}</h2>
+            <div className="quality-control-packing-standard-control-grid">
+              {[
+                {
+                  number: '01',
+                  title: 'Bảo vệ bề mặt',
+                  body: 'Bảo vệ các khu vực dễ trầy xước hoặc hư hỏng trong quá trình vận chuyển.',
+                  items: ['Mặt bàn', 'Tay ghế', 'Cạnh sản phẩm', 'Bề mặt hoàn thiện'],
+                  image: '/assets/quality-control/packing-standard/controls/surface-protection.webp',
+                },
+                {
+                  number: '02',
+                  title: 'Bảo vệ kết cấu',
+                  body: 'Giảm thiểu tác động từ rung lắc, va đập hoặc chồng xếp.',
+                  items: ['Khung ghế', 'Chân bàn', 'Bộ phận tủ', 'Chi tiết lắp ráp'],
+                  image: '/assets/quality-control/packing-standard/controls/structural-protection.webp',
+                },
+                {
+                  number: '03',
+                  title: 'Kiểm soát phụ kiện',
+                  body: 'Đảm bảo đầy đủ phụ kiện và linh kiện đi kèm.',
+                  items: ['Bộ vít', 'Khóa', 'Tay nắm', 'Chân tăng chỉnh', 'Hướng dẫn lắp ráp'],
+                  image: '/assets/quality-control/packing-standard/controls/accessories.webp',
+                },
+                {
+                  number: '04',
+                  title: 'Kiểm soát nhãn mác',
+                  body: 'Đảm bảo nhận diện chính xác sản phẩm và đơn hàng.',
+                  items: ['Mã hàng', 'Mã carton', 'Nhãn buyer', 'Nhãn vận chuyển'],
+                  image: '/assets/quality-control/packing-standard/controls/labels.webp',
+                },
+                {
+                  number: '05',
+                  title: 'Kiểm soát pallet',
+                  body: '',
+                  items: [],
+                  image: '/assets/quality-control/packing-standard/controls/pallet.webp',
+                },
+                {
+                  number: '06',
+                  title: 'Kiểm soát container',
+                  body: 'Đảm bảo hàng hóa được xếp phù hợp và điều kiện vận chuyển quốc tế.',
+                  items: [],
+                  image: '/assets/quality-control/packing-standard/controls/container.webp',
+                },
+              ].map((item) => (
+                <article key={item.number}>
+                  <h3>
+                    <span>{item.number}.</span>
+                    {t(item.title)}
+                  </h3>
+                  <div className="quality-control-packing-standard-control-layout">
+                    <div className="quality-control-packing-standard-control-image-slot" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <div className="quality-control-packing-standard-control-copy">
+                      {item.body && <p>{t(item.body)}</p>}
+                      {item.items.length > 0 && (
+                        <ul>
+                          {item.items.map((child) => (
+                            <li key={child}>{t(child)}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-packing-standard-panel quality-control-packing-standard-materials">
+            <h2>{`3. ${t('Các vật liệu đóng gói được sử dụng')}`}</h2>
+            <div className="quality-control-packing-standard-material-grid">
+              {[
+                {
+                  title: 'Carton',
+                  body: 'Bảo vệ sản phẩm trong quá trình lưu kho và vận chuyển.',
+                  image: '/assets/quality-control/packing-standard/materials/carton.webp',
+                },
+                {
+                  title: 'Foam bảo vệ',
+                  body: 'Giảm thiểu va đập và rung động.',
+                  image: '/assets/quality-control/packing-standard/materials/foam.webp',
+                },
+                {
+                  title: 'Corner Protection',
+                  body: 'Bảo vệ cạnh và góc sản phẩm.',
+                  image: '/assets/quality-control/packing-standard/materials/corner-protection.webp',
+                },
+                {
+                  title: 'Túi bảo vệ',
+                  body: 'Giảm trầy xước và bụi bẩn.',
+                  image: '/assets/quality-control/packing-standard/materials/protective-bag.webp',
+                },
+                {
+                  title: 'Pallet',
+                  body: 'Hỗ trợ lưu kho và bốc xếp.',
+                  image: '/assets/quality-control/packing-standard/materials/pallet.webp',
+                },
+                {
+                  title: 'Vật liệu chống ẩm',
+                  body: 'Hỗ trợ bảo vệ sản phẩm trong quá trình vận chuyển quốc tế.',
+                  image: '/assets/quality-control/packing-standard/materials/moisture-protection.webp',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="quality-control-packing-standard-material-image-slot" aria-hidden="true">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
+                  <div className="quality-control-packing-standard-material-copy">
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-packing-standard-panel quality-control-packing-standard-types">
+            <h2>{`4. ${t('Các hình thức đóng gói')}`}</h2>
+            <div className="quality-control-packing-standard-type-grid">
+              {[
+                {
+                  title: 'Knock-down (KD)',
+                  body: 'Sản phẩm được tháo rời để tối ưu vận chuyển và lưu kho.',
+                  image: '/assets/quality-control/packing-standard/types/knock-down.webp',
+                },
+                {
+                  title: 'Semi Knock-down (SKD)',
+                  body: 'Một phần sản phẩm được tháo rời, các phần được lắp ráp sẵn.',
+                  image: '/assets/quality-control/packing-standard/types/semi-knock-down.webp',
+                },
+                {
+                  title: 'Fully Assembled',
+                  body: 'Sản phẩm hoàn thiện và được giao ở trạng thái lắp ráp hoàn chỉnh.',
+                  image: '/assets/quality-control/packing-standard/types/fully-assembled.webp',
+                },
+                {
+                  title: 'Component Packaging',
+                  body: 'Đóng gói cấu kiện hoặc bán thành phẩm theo bộ.',
+                  image: '/assets/quality-control/packing-standard/types/component-packaging.webp',
+                },
+                {
+                  title: 'Project Packaging',
+                  body: 'Đóng gói theo yêu cầu riêng của dự án hoặc buyer.',
+                  image: '/assets/quality-control/packing-standard/types/project-packaging.webp',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <h3>{t(item.title)}</h3>
+                  <div className="quality-control-packing-standard-type-layout">
+                    <div className="quality-control-packing-standard-type-image-slot" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-packing-standard-panel quality-control-packing-standard-process">
+            <h2>{`5. ${t('Quy trình kiểm tra đóng gói')}`}</h2>
+            <div className="quality-control-packing-standard-process-flow">
+              {[
+                {
+                  title: 'Hoàn thiện sản phẩm',
+                  image: '/assets/quality-control/packing-standard/process/finished-product.webp',
+                },
+                {
+                  title: 'Kiểm tra thành phẩm',
+                  image: '/assets/quality-control/packing-standard/process/finished-inspection.webp',
+                },
+                {
+                  title: 'Đóng gói',
+                  image: '/assets/quality-control/packing-standard/process/packing.webp',
+                },
+                {
+                  title: 'Kiểm tra carton & nhãn',
+                  image: '/assets/quality-control/packing-standard/process/carton-label-inspection.webp',
+                },
+                {
+                  title: 'Kiểm tra pallet',
+                  image: '/assets/quality-control/packing-standard/process/pallet-inspection.webp',
+                },
+                {
+                  title: 'Kiểm tra container',
+                  image: '/assets/quality-control/packing-standard/process/container-inspection.webp',
+                },
+                {
+                  title: 'Xuất hàng',
+                  image: '/assets/quality-control/packing-standard/process/shipment.webp',
+                },
+              ].map((item, index) => (
+                <div className="quality-control-packing-standard-process-step-wrap" key={item.title}>
+                  <article>
+                    <h3>
+                      <span>{index + 1}.</span>
+                      {t(item.title)}
+                    </h3>
+                    <div className="quality-control-packing-standard-process-image-slot" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </div>
+                  </article>
+                  {index < 6 && (
+                    <span className="quality-control-packing-standard-process-arrow" aria-hidden="true">
+                      →
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-packing-standard-bottom-row">
+            <section className="quality-control-packing-standard-panel quality-control-packing-standard-buyer">
+              <h2>{`6. ${t('Tiêu chuẩn đóng gói theo buyer')}`}</h2>
+              <div className="quality-control-packing-standard-buyer-layout">
+                <div>
+                  <p>{t('Mỗi buyer có thể có tiêu chuẩn đóng gói riêng về:')}</p>
+                  <ul>
+                    {[
+                      'Quy cách carton',
+                      'Vị trí nhãn',
+                      'Cấu trúc pallet',
+                      'Bộ phụ kiện',
+                      'Hướng dẫn lắp ráp',
+                      'Yêu cầu bảo vệ bề mặt',
+                      'Tiêu chuẩn vận chuyển',
+                    ].map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                  <p>
+                    {t(
+                      'ANSLIFE hỗ trợ lưu trữ và quản lý các tiêu chuẩn này trong hệ thống hồ sơ dự án và Phòng mẫu chuẩn đối tác.',
+                    )}
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section className="quality-control-packing-standard-panel quality-control-packing-standard-role">
+              <h2>{`7. ${t('Vai trò trong hệ thống chất lượng')}`}</h2>
+              <div className="quality-control-packing-standard-role-flow">
+                {[
+                  {
+                    title: 'Kiểm tra vật liệu',
+                    image: '/assets/quality-control/packing-standard/role/material-inspection.webp',
+                  },
+                  {
+                    title: 'Kiểm tra trong sản xuất',
+                    image: '/assets/quality-control/packing-standard/role/production-inspection.webp',
+                  },
+                  {
+                    title: 'Kiểm tra cuối',
+                    image: '/assets/quality-control/packing-standard/role/final-inspection.webp',
+                  },
+                  {
+                    title: 'Chuẩn đóng gói',
+                    image: '/assets/quality-control/packing-standard/role/packing-standard.webp',
+                  },
+                  {
+                    title: 'Xuất hàng',
+                    image: '/assets/quality-control/packing-standard/role/shipment.webp',
+                  },
+                  {
+                    title: 'Giao nhận',
+                    image: '/assets/quality-control/packing-standard/role/handover.webp',
+                  },
+                ].map((item, index) => (
+                  <div className="quality-control-packing-standard-role-step-wrap" key={item.title}>
+                    <article className={item.title === 'Chuẩn đóng gói' ? 'is-active' : undefined}>
+                      <div className="quality-control-packing-standard-role-image-slot" aria-hidden="true">
+                        <img src={item.image} alt="" loading="lazy" decoding="async" />
+                      </div>
+                      <h3>{t(item.title)}</h3>
+                    </article>
+                    {index < 5 && (
+                      <span className="quality-control-packing-standard-role-arrow" aria-hidden="true">
+                        →
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+          </section>
+          <section className="quality-control-packing-standard-final-row">
+            <section className="quality-control-packing-standard-panel quality-control-packing-standard-risks">
+              <h2>{`8. ${t('Các rủi ro cần hạn chế')}`}</h2>
+              <div className="quality-control-packing-standard-risk-flow">
+                {[
+                  {
+                    title: 'Trầy xước',
+                    image: '/assets/quality-control/packing-standard/risks/scratches.webp',
+                  },
+                  {
+                    title: 'Va đập',
+                    image: '/assets/quality-control/packing-standard/risks/impact.webp',
+                  },
+                  {
+                    title: 'Thiếu phụ kiện',
+                    image: '/assets/quality-control/packing-standard/risks/missing-accessories.webp',
+                  },
+                  {
+                    title: 'Sai nhãn',
+                    image: '/assets/quality-control/packing-standard/risks/wrong-label.webp',
+                  },
+                  {
+                    title: 'Hư hỏng trong vận chuyển',
+                    image: '/assets/quality-control/packing-standard/risks/transport-damage.webp',
+                  },
+                  {
+                    title: 'Khiếu nại khách hàng',
+                    image: '/assets/quality-control/packing-standard/risks/customer-complaint.webp',
+                  },
+                ].map((item, index) => (
+                  <div className="quality-control-packing-standard-risk-step-wrap" key={item.title}>
+                    <article>
+                      <div className="quality-control-packing-standard-risk-image-slot" aria-hidden="true">
+                        <img src={item.image} alt="" loading="lazy" decoding="async" />
+                      </div>
+                      <h3>{t(item.title)}</h3>
+                    </article>
+                    {index < 5 && (
+                      <span className="quality-control-packing-standard-risk-arrow" aria-hidden="true">
+                        →
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+            <section className="quality-control-packing-standard-panel quality-control-packing-standard-supply-hub">
+              <h2>{`9. ${t('Liên kết với Supply Hub Việt Nam')}`}</h2>
+              <div className="quality-control-packing-standard-supply-hub-copy">
+                <p>
+                  {t(
+                    'Chuẩn đóng gói không chỉ phục vụ xuất khẩu trực tiếp mà còn hỗ trợ hoạt động lưu kho, gom hàng, tồn kho đệm và điều phối xuất hàng trong mô hình Supply Hub Việt Nam của ANSLIFE.',
+                  )}
+                </p>
+              </div>
+            </section>
+          </section>
+          <section className="quality-control-packing-standard-panel quality-control-packing-standard-cta">
+            <div className="quality-control-packing-standard-cta-image-slot" aria-hidden="true">
+              <img
+                src="/assets/quality-control/packing-standard/cta/project-packing-standard.webp"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="quality-control-packing-standard-cta-copy">
+              <h2>{t('Trao đổi về tiêu chuẩn đóng gói của dự án')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi tiêu chuẩn đóng gói, quy cách carton, yêu cầu pallet hoặc hướng dẫn vận chuyển để ANSLIFE đánh giá và đề xuất phương án phù hợp.',
+                )}
+              </p>
+              <div className="quality-control-packing-standard-cta-actions">
+                <a className="is-primary" href="/vn/contact/upload-drawing">
+                  <span className="quality-control-packing-standard-cta-icon quality-control-packing-standard-cta-icon--upload" aria-hidden="true" />
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact/upload-drawing">
+                  <span className="quality-control-packing-standard-cta-icon quality-control-packing-standard-cta-icon--document" aria-hidden="true" />
+                  {t('Tải tiêu chuẩn đóng gói')}
+                </a>
+                <a href="/vn/contact">
+                  <span className="quality-control-packing-standard-cta-icon quality-control-packing-standard-cta-icon--phone" aria-hidden="true" />
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
+      {shouldShowQualityControlInspectionReportBanner && (
+        <figure className="quality-control-inspection-report-banner">
+          <img
+            src="/assets/quality-control-inspection-report-banner.png"
+            alt={t('Banner báo cáo kiểm tra')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="quality-control-inspection-report-banner-copy">
+            <h1>{t('Báo cáo kiểm tra')}</h1>
+            <p>
+              {t(
+                'ANSLIFE ghi nhận kết quả kiểm tra bằng hồ sơ rõ ràng, hình ảnh thực tế và nhận xét kiểm soát chất lượng để buyer theo dõi tình trạng sản phẩm trước khi xuất hàng.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isQualityControlInspectionReportPage && (
+        <section
+          className="quality-control-inspection-report-content"
+          aria-labelledby="quality-control-inspection-report-stages-title"
+        >
+          <section className="quality-control-inspection-report-panel quality-control-inspection-report-stages">
+            <h2 id="quality-control-inspection-report-stages-title">
+              {`1. ${t('Báo cáo được thực hiện ở những giai đoạn nào?')}`}
+            </h2>
+            <div className="quality-control-inspection-report-stage-flow">
+              {[
+                {
+                  title: 'Kiểm tra vật liệu',
+                  image: '/assets/quality-control/inspection-report/stages/material-inspection.webp',
+                },
+                {
+                  title: 'Kiểm tra trong sản xuất',
+                  image: '/assets/quality-control/inspection-report/stages/production-inspection.webp',
+                },
+                {
+                  title: 'Kiểm tra hoàn thiện bề mặt',
+                  image: '/assets/quality-control/inspection-report/stages/surface-finish-inspection.webp',
+                },
+                {
+                  title: 'Kiểm tra cuối',
+                  image: '/assets/quality-control/inspection-report/stages/final-inspection.webp',
+                },
+                {
+                  title: 'Kiểm tra đóng gói',
+                  image: '/assets/quality-control/inspection-report/stages/packing-inspection.webp',
+                },
+                {
+                  title: 'Xuất hàng',
+                  image: '/assets/quality-control/inspection-report/stages/shipment.webp',
+                },
+                {
+                  title: 'Báo cáo chất lượng',
+                  image: '/assets/quality-control/inspection-report/stages/quality-report.webp',
+                },
+              ].map((item, index) => (
+                <div className="quality-control-inspection-report-stage-step-wrap" key={item.title}>
+                  <article>
+                    <div className="quality-control-inspection-report-stage-image-slot" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <h3>{t(item.title)}</h3>
+                  </article>
+                  {index < 6 && (
+                    <span className="quality-control-inspection-report-stage-arrow" aria-hidden="true">
+                      →
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-inspection-report-panel quality-control-inspection-report-contents">
+            <h2>{`2. ${t('Nội dung của một báo cáo kiểm tra')}`}</h2>
+            <div className="quality-control-inspection-report-content-grid">
+              {[
+                {
+                  number: '01',
+                  title: 'Thông tin dự án',
+                  image: '/assets/quality-control/inspection-report/contents/project-information.webp',
+                  bullets: [
+                    'Ghi nhận các thông tin cơ bản của dự án và lô hàng được kiểm tra.',
+                    'Bao gồm: Tên dự án, Buyer, Nhà máy, Mã sản phẩm, Ngày kiểm tra, Người thực hiện.',
+                  ],
+                },
+                {
+                  number: '02',
+                  title: 'Kết quả kiểm tra',
+                  image: '/assets/quality-control/inspection-report/contents/inspection-results.webp',
+                  bullets: [
+                    'Tổng hợp các nội dung đã được đánh giá trong quá trình kiểm tra.',
+                    'Bao gồm: Kích thước, Kết cấu, Hoàn thiện, Chức năng, Đóng gói, Số lượng.',
+                  ],
+                },
+                {
+                  number: '03',
+                  title: 'Hình ảnh kiểm tra',
+                  image: '/assets/quality-control/inspection-report/contents/inspection-photos.webp',
+                  bullets: [
+                    'Lưu trữ hình ảnh thực tế tại thời điểm kiểm tra nhằm hỗ trợ đối chiếu và truy xuất.',
+                    'Bao gồm: Hình sản phẩm, Hình lỗi nếu có, Hình đóng gói, Hình container, Hình kiểm tra thực tế.',
+                  ],
+                },
+                {
+                  number: '04',
+                  title: 'Sai lệch và ghi chú',
+                  image: '/assets/quality-control/inspection-report/contents/deviations-notes.webp',
+                  bullets: [
+                    'Ghi nhận các điểm chưa phù hợp hoặc các nội dung cần theo dõi.',
+                    'Bao gồm: Mô tả sai lệch, Mức độ ảnh hưởng, Đề xuất xử lý, Tình trạng khắc phục.',
+                  ],
+                },
+                {
+                  number: '05',
+                  title: 'Kết luận kiểm tra',
+                  image: '/assets/quality-control/inspection-report/contents/inspection-conclusion.webp',
+                  bullets: [
+                    'Đưa ra đánh giá tổng thể về tình trạng của lô hàng hoặc sản phẩm được kiểm tra.',
+                    'Ví dụ: Đạt yêu cầu, Đạt có điều kiện, Cần khắc phục, Không đạt.',
+                  ],
+                },
+                {
+                  number: '06',
+                  title: 'Hồ sơ lưu trữ',
+                  image: '/assets/quality-control/inspection-report/contents/archived-records.webp',
+                  bullets: [
+                    'Lưu trữ kết quả kiểm tra nhằm phục vụ truy xuất và các đơn hàng lặp lại.',
+                  ],
+                },
+              ].map((item) => (
+                <article key={item.number}>
+                  <h3>
+                    <span>{item.number}.</span>
+                    {t(item.title)}
+                  </h3>
+                  <div className="quality-control-inspection-report-content-image-slot" aria-hidden="true">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
+                  <ul>
+                    {item.bullets.map((bullet) => (
+                      <li key={bullet}>{t(bullet)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-inspection-report-panel quality-control-inspection-report-types">
+            <h2>{`3. ${t('Các loại báo cáo ANSLIFE có thể cung cấp')}`}</h2>
+            <div className="quality-control-inspection-report-type-grid">
+              {[
+                {
+                  title: 'Báo cáo kiểm tra vật liệu',
+                  body: 'Ghi nhận kết quả đánh giá vật liệu trước sản xuất.',
+                  image: '/assets/quality-control/inspection-report/types/material-inspection-report.webp',
+                },
+                {
+                  title: 'Báo cáo kiểm tra trong sản xuất',
+                  body: 'Ghi nhận kết quả kiểm tra tại các công đoạn sản xuất.',
+                  image: '/assets/quality-control/inspection-report/types/in-process-inspection-report.webp',
+                },
+                {
+                  title: 'Báo cáo hoàn thiện bề mặt',
+                  body: 'Đánh giá màu sắc, độ bóng, độ đồng đều và chất lượng bề mặt.',
+                  image: '/assets/quality-control/inspection-report/types/surface-finish-report.webp',
+                },
+                {
+                  title: 'Báo cáo kiểm tra cuối',
+                  body: 'Đánh giá thành phẩm trước khi đóng gói hoặc xuất hàng.',
+                  image: '/assets/quality-control/inspection-report/types/final-inspection-report.webp',
+                },
+                {
+                  title: 'Báo cáo đóng gói',
+                  body: 'Xác nhận tình trạng đóng gói, nhãn mác và chuẩn bị xuất hàng.',
+                  image: '/assets/quality-control/inspection-report/types/packing-report.webp',
+                },
+                {
+                  title: 'Báo cáo QC độc lập',
+                  body: 'Báo cáo được thực hiện bởi hoạt động kiểm tra độc lập theo yêu cầu của dự án hoặc buyer.',
+                  image: '/assets/quality-control/inspection-report/types/independent-qc-report.webp',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <h3>{t(item.title)}</h3>
+                  <div className="quality-control-inspection-report-type-image-slot" aria-hidden="true">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-inspection-report-panel quality-control-inspection-report-structure">
+            <h2>{`4. ${t('Cấu trúc một báo cáo điển hình')}`}</h2>
+            <div className="quality-control-inspection-report-structure-flow">
+              {[
+                {
+                  title: 'Thông tin dự án',
+                  image: '/assets/quality-control/inspection-report/structure/project-information.webp',
+                },
+                {
+                  title: 'Phạm vi kiểm tra',
+                  image: '/assets/quality-control/inspection-report/structure/inspection-scope.webp',
+                },
+                {
+                  title: 'Kết quả kiểm tra',
+                  image: '/assets/quality-control/inspection-report/structure/inspection-results.webp',
+                },
+                {
+                  title: 'Hình ảnh minh chứng',
+                  image: '/assets/quality-control/inspection-report/structure/evidence-photos.webp',
+                },
+                {
+                  title: 'Sai lệch & hành động khắc phục',
+                  image: '/assets/quality-control/inspection-report/structure/deviation-corrective-action.webp',
+                },
+                {
+                  title: 'Kết luận',
+                  image: '/assets/quality-control/inspection-report/structure/conclusion.webp',
+                },
+                {
+                  title: 'Lưu hồ sơ',
+                  image: '/assets/quality-control/inspection-report/structure/record-archive.webp',
+                },
+              ].map((item, index) => (
+                <div className="quality-control-inspection-report-structure-step-wrap" key={item.title}>
+                  <article>
+                    <div className="quality-control-inspection-report-structure-image-slot" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <h3>{t(item.title)}</h3>
+                  </article>
+                  {index < 6 && (
+                    <span className="quality-control-inspection-report-structure-arrow" aria-hidden="true">
+                      →
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-inspection-report-panel quality-control-inspection-report-support">
+            <h2>{`5. ${t('Báo cáo hỗ trợ điều gì?')}`}</h2>
+            <div className="quality-control-inspection-report-support-grid">
+              {[
+                {
+                  title: 'Minh bạch',
+                  body: 'Buyer có thể theo dõi kết quả kiểm tra một cách rõ ràng.',
+                  image: '/assets/quality-control/inspection-report/support/transparency.webp',
+                },
+                {
+                  title: 'Truy xuất',
+                  body: 'Dễ dàng đối chiếu giữa các lô hàng và các đợt sản xuất.',
+                  image: '/assets/quality-control/inspection-report/support/traceability.webp',
+                },
+                {
+                  title: 'Kiểm soát rủi ro',
+                  body: 'Phát hiện và xử lý các sai lệch trước khi giao hàng.',
+                  image: '/assets/quality-control/inspection-report/support/risk-control.webp',
+                },
+                {
+                  title: 'Duy trì tiêu chuẩn',
+                  body: 'Hỗ trợ quản lý chất lượng cho các đơn hàng lặp lại.',
+                  image: '/assets/quality-control/inspection-report/support/maintain-standards.webp',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="quality-control-inspection-report-support-image-slot" aria-hidden="true">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
+                  <div className="quality-control-inspection-report-support-copy">
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-inspection-report-panel quality-control-inspection-report-system">
+            <h2>{`6. ${t('Liên kết với hệ thống chất lượng')}`}</h2>
+            <div className="quality-control-inspection-report-system-flow">
+              {[
+                {
+                  title: 'Kiểm tra vật liệu',
+                  image: '/assets/quality-control/inspection-report/system/material-inspection.webp',
+                },
+                {
+                  title: 'Kiểm tra trong sản xuất',
+                  image: '/assets/quality-control/inspection-report/system/production-inspection.webp',
+                },
+                {
+                  title: 'Kiểm tra cuối',
+                  image: '/assets/quality-control/inspection-report/system/final-inspection.webp',
+                },
+                {
+                  title: 'Chuẩn đóng gói',
+                  image: '/assets/quality-control/inspection-report/system/packing-standard.webp',
+                },
+                {
+                  title: 'Báo cáo kiểm tra',
+                  image: '/assets/quality-control/inspection-report/system/inspection-report.webp',
+                },
+                {
+                  title: 'Lưu hồ sơ chất lượng',
+                  image: '/assets/quality-control/inspection-report/system/quality-record-archive.webp',
+                },
+              ].map((item, index) => (
+                <div className="quality-control-inspection-report-system-step-wrap" key={item.title}>
+                  <article>
+                    <div className="quality-control-inspection-report-system-image-slot" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <h3>{t(item.title)}</h3>
+                  </article>
+                  {index < 5 && (
+                    <span className="quality-control-inspection-report-system-arrow" aria-hidden="true">
+                      →
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-inspection-report-panel quality-control-inspection-report-standard-room">
+            <div className="quality-control-inspection-report-standard-room-copy">
+              <h2>{`7. ${t('Liên kết với Phòng mẫu chuẩn đối tác')}`}</h2>
+              <p>
+                {t(
+                  'Các báo cáo kiểm tra được lưu cùng với mẫu duyệt, bản vẽ kỹ thuật, bảng màu, tiêu chuẩn đóng gói và checklist QC nhằm hỗ trợ truy xuất và duy trì tính nhất quán cho các dự án dài hạn.',
+                )}
+              </p>
+            </div>
+            <div className="quality-control-inspection-report-standard-room-image-slot" aria-hidden="true">
+              <img
+                src="/assets/quality-control/inspection-report/standard-room/partner-standard-room.webp"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </section>
+          <section className="quality-control-inspection-report-panel quality-control-inspection-report-cta">
+            <div className="quality-control-inspection-report-cta-image-slot quality-control-inspection-report-cta-image-slot--left" aria-hidden="true">
+              <img
+                src="/assets/quality-control/inspection-report/cta/report-requirements-left.webp"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="quality-control-inspection-report-cta-copy">
+              <h2>{t('Trao đổi về yêu cầu báo cáo chất lượng của dự án')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi yêu cầu về biểu mẫu báo cáo, checklist QC hoặc tiêu chuẩn đánh giá để ANSLIFE xây dựng hệ thống báo cáo phù hợp với từng dự án.',
+                )}
+              </p>
+              <div className="quality-control-inspection-report-cta-actions">
+                <a className="is-primary" href="/vn/contact/upload-drawing">
+                  <span className="quality-control-inspection-report-cta-icon quality-control-inspection-report-cta-icon--upload" aria-hidden="true" />
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact/upload-drawing">
+                  <span className="quality-control-inspection-report-cta-icon quality-control-inspection-report-cta-icon--document" aria-hidden="true" />
+                  {t('Tải tài liệu kỹ thuật')}
+                </a>
+                <a href="/vn/contact">
+                  <span className="quality-control-inspection-report-cta-icon quality-control-inspection-report-cta-icon--phone" aria-hidden="true" />
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+            <div className="quality-control-inspection-report-cta-image-slot quality-control-inspection-report-cta-image-slot--right" aria-hidden="true">
+              <img
+                src="/assets/quality-control/inspection-report/cta/report-requirements-right.webp"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </section>
+        </section>
       )}
       {isQualityControlMoistureControlPage && (
         <section

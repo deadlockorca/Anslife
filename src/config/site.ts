@@ -778,7 +778,7 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
       {
         id: 'packing-standard',
         title: 'Chuẩn đóng gói',
-        description: 'Chuẩn đóng gói theo hàng xuất khẩu.',
+        description: '',
       },
       {
         id: 'inspection-report',

@@ -740,7 +740,201 @@ const TRANSLATIONS: Partial<Record<
     'Nhãn & mã vạch': 'Labeling & Barcode',
     'Container hỗn hợp': 'Mixed Container',
     'Chuẩn bị xuất hàng': 'Shipment Preparation',
+    'Banner chuẩn đóng gói': 'Packing standard banner',
     'Chuẩn đóng gói': 'Packing Standard',
+    'ANSLIFE triển khai các tiêu chuẩn đóng gói nhằm giảm thiểu rủi ro trong quá trình lưu kho, bốc xếp, vận chuyển nội địa và vận chuyển quốc tế. Quy cách đóng gói được xây dựng dựa trên đặc tính sản phẩm, yêu cầu của buyer, điều kiện vận chuyển và tiêu chuẩn của từng thị trường.':
+      'ANSLIFE implements packing standards to reduce risks during storage, handling, domestic transportation, and international shipping. Packing specifications are developed based on product characteristics, buyer requirements, transport conditions, and each market standard.',
+    'Mục tiêu của đóng gói': 'Packing Objectives',
+    'Bảo vệ sản phẩm': 'Product Protection',
+    'Giảm thiểu trầy xước, va đập, biến dạng và hư hỏng trong quá trình vận chuyển.':
+      'Reduce scratches, impact, deformation, and damage during transportation.',
+    'Duy trì chất lượng': 'Maintain Quality',
+    'Giữ nguyên trạng thái sản phẩm từ khi xuất xưởng đến khi nhận hàng.':
+      'Keep products in their original condition from factory dispatch to receipt.',
+    'Tối ưu vận chuyển': 'Optimize Transportation',
+    'Hỗ trợ lưu kho, xếp dỡ và vận chuyển hiệu quả.':
+      'Support efficient storage, handling, and transportation.',
+    'Hỗ trợ truy xuất': 'Traceability Support',
+    'Đảm bảo nhận diện và quản lý sản phẩm theo từng đơn hàng.':
+      'Ensure product identification and management by each order.',
+    'Những gì được kiểm soát trong đóng gói?': 'What Is Controlled in Packing?',
+    'Bảo vệ bề mặt': 'Surface Protection',
+    'Bảo vệ các khu vực dễ trầy xước hoặc hư hỏng trong quá trình vận chuyển.':
+      'Protect areas that are easy to scratch or damage during transportation.',
+    'Tay ghế': 'Chair arm',
+    'Cạnh sản phẩm': 'Product edge',
+    'Bề mặt hoàn thiện': 'Finished surface',
+    'Bảo vệ kết cấu': 'Structure Protection',
+    'Giảm thiểu tác động từ rung lắc, va đập hoặc chồng xếp.':
+      'Reduce impact from vibration, collision, or stacking.',
+    'Chân bàn': 'Table leg',
+    'Chi tiết lắp ráp': 'Assembly detail',
+    'Kiểm soát phụ kiện': 'Accessory Control',
+    'Đảm bảo đầy đủ phụ kiện và linh kiện đi kèm.':
+      'Ensure all accessories and included components are complete.',
+    'Bộ vít': 'Screw set',
+    Khóa: 'Lock',
+    'Chân tăng chỉnh': 'Adjustable foot',
+    'Hướng dẫn lắp ráp': 'Assembly instruction',
+    'Kiểm soát nhãn mác': 'Label Control',
+    'Đảm bảo nhận diện chính xác sản phẩm và đơn hàng.':
+      'Ensure accurate identification of the product and order.',
+    'Mã hàng': 'Item code',
+    'Mã carton': 'Carton code',
+    'Nhãn buyer': 'Buyer label',
+    'Nhãn vận chuyển': 'Shipping label',
+    'Kiểm soát pallet': 'Pallet Control',
+    'Kiểm soát container': 'Container Control',
+    'Đảm bảo hàng hóa được xếp phù hợp và điều kiện vận chuyển quốc tế.':
+      'Ensure goods are loaded properly for international shipping conditions.',
+    'Các vật liệu đóng gói được sử dụng': 'Packing Materials Used',
+    Carton: 'Carton',
+    'Bảo vệ sản phẩm trong quá trình lưu kho và vận chuyển.':
+      'Protect products during storage and transportation.',
+    'Giảm thiểu va đập và rung động.': 'Reduce impact and vibration.',
+    'Corner Protection': 'Corner Protection',
+    'Bảo vệ cạnh và góc sản phẩm.': 'Protect product edges and corners.',
+    'Túi bảo vệ': 'Protective Bag',
+    'Giảm trầy xước và bụi bẩn.': 'Reduce scratches and dust.',
+    Pallet: 'Pallet',
+    'Hỗ trợ lưu kho và bốc xếp.': 'Support storage and handling.',
+    'Vật liệu chống ẩm': 'Moisture Control Material',
+    'Hỗ trợ bảo vệ sản phẩm trong quá trình vận chuyển quốc tế.':
+      'Help protect products during international transportation.',
+    'Các hình thức đóng gói': 'Packing Formats',
+    'Knock-down (KD)': 'Knock-down (KD)',
+    'Sản phẩm được tháo rời để tối ưu vận chuyển và lưu kho.':
+      'Products are disassembled to optimize transportation and storage.',
+    'Semi Knock-down (SKD)': 'Semi Knock-down (SKD)',
+    'Một phần sản phẩm được tháo rời, các phần được lắp ráp sẵn.':
+      'Part of the product is disassembled while other parts remain pre-assembled.',
+    'Fully Assembled': 'Fully Assembled',
+    'Sản phẩm hoàn thiện và được giao ở trạng thái lắp ráp hoàn chỉnh.':
+      'Finished products are delivered in a fully assembled condition.',
+    'Component Packaging': 'Component Packaging',
+    'Đóng gói cấu kiện hoặc bán thành phẩm theo bộ.':
+      'Pack components or semi-finished parts by set.',
+    'Project Packaging': 'Project Packaging',
+    'Đóng gói theo yêu cầu riêng của dự án hoặc buyer.':
+      'Pack according to specific project or buyer requirements.',
+    'Quy trình kiểm tra đóng gói': 'Packing Inspection Process',
+    'Hoàn thiện sản phẩm': 'Product completion',
+    'Kiểm tra thành phẩm': 'Finished goods inspection',
+    'Kiểm tra carton & nhãn': 'Carton & label inspection',
+    'Kiểm tra container': 'Container inspection',
+    'Xuất hàng': 'Shipment',
+    'Tiêu chuẩn đóng gói theo buyer': 'Packing Standards by Buyer',
+    'Mỗi buyer có thể có tiêu chuẩn đóng gói riêng về:':
+      'Each buyer may have specific packing standards for:',
+    'Quy cách carton': 'Carton specification',
+    'Vị trí nhãn': 'Label position',
+    'Cấu trúc pallet': 'Pallet structure',
+    'Bộ phụ kiện': 'Accessory set',
+    'Yêu cầu bảo vệ bề mặt': 'Surface protection requirement',
+    'Tiêu chuẩn vận chuyển': 'Transportation standard',
+    'ANSLIFE hỗ trợ lưu trữ và quản lý các tiêu chuẩn này trong hệ thống hồ sơ dự án và Phòng mẫu chuẩn đối tác.':
+      'ANSLIFE supports storing and managing these standards in the project record system and partner standard room.',
+    'Vai trò trong hệ thống chất lượng': 'Role in the Quality System',
+    'Giao nhận': 'Handover',
+    'Các rủi ro cần hạn chế': 'Risks to Reduce',
+    'Trầy xước': 'Scratches',
+    'Va đập': 'Impact',
+    'Thiếu phụ kiện': 'Missing accessories',
+    'Sai nhãn': 'Wrong label',
+    'Hư hỏng trong vận chuyển': 'Damage during transportation',
+    'Khiếu nại khách hàng': 'Customer complaint',
+    'Liên kết với Supply Hub Việt Nam': 'Connection with Vietnam Supply Hub',
+    'Chuẩn đóng gói không chỉ phục vụ xuất khẩu trực tiếp mà còn hỗ trợ hoạt động lưu kho, gom hàng, tồn kho đệm và điều phối xuất hàng trong mô hình Supply Hub Việt Nam của ANSLIFE.':
+      'Packing standards support not only direct export but also storage, consolidation, buffer inventory, and shipment coordination within ANSLIFE’s Vietnam Supply Hub model.',
+    'Trao đổi về tiêu chuẩn đóng gói của dự án': 'Discuss Project Packing Standards',
+    'Buyer có thể gửi tiêu chuẩn đóng gói, quy cách carton, yêu cầu pallet hoặc hướng dẫn vận chuyển để ANSLIFE đánh giá và đề xuất phương án phù hợp.':
+      'Buyers can send packing standards, carton specifications, pallet requirements, or shipping instructions so ANSLIFE can review and propose a suitable solution.',
+    'Tải tiêu chuẩn đóng gói': 'Upload packing standard',
+    'Banner báo cáo kiểm tra': 'Inspection report banner',
+    'ANSLIFE ghi nhận kết quả kiểm tra bằng hồ sơ rõ ràng, hình ảnh thực tế và nhận xét kiểm soát chất lượng để buyer theo dõi tình trạng sản phẩm trước khi xuất hàng.':
+      'ANSLIFE records inspection results with clear documentation, actual photos, and quality-control comments so buyers can track product status before shipment.',
+    'Báo cáo được thực hiện ở những giai đoạn nào?':
+      'At Which Stages Is the Report Prepared?',
+    'Kiểm tra hoàn thiện bề mặt': 'Surface finish inspection',
+    'Kiểm tra đóng gói': 'Packing inspection',
+    'Báo cáo chất lượng': 'Quality report',
+    'Nội dung của một báo cáo kiểm tra': 'Contents of an Inspection Report',
+    'Thông tin dự án': 'Project information',
+    'Ghi nhận các thông tin cơ bản của dự án và lô hàng được kiểm tra.':
+      'Record the basic information of the project and inspected lot.',
+    'Bao gồm: Tên dự án, Buyer, Nhà máy, Mã sản phẩm, Ngày kiểm tra, Người thực hiện.':
+      'Includes: project name, buyer, factory, product code, inspection date, and inspector.',
+    'Kết quả kiểm tra': 'Inspection results',
+    'Tổng hợp các nội dung đã được đánh giá trong quá trình kiểm tra.':
+      'Summarize the items evaluated during inspection.',
+    'Bao gồm: Kích thước, Kết cấu, Hoàn thiện, Chức năng, Đóng gói, Số lượng.':
+      'Includes: dimensions, structure, finish, function, packing, and quantity.',
+    'Hình ảnh kiểm tra': 'Inspection photos',
+    'Lưu trữ hình ảnh thực tế tại thời điểm kiểm tra nhằm hỗ trợ đối chiếu và truy xuất.':
+      'Store actual photos at the time of inspection to support comparison and traceability.',
+    'Bao gồm: Hình sản phẩm, Hình lỗi nếu có, Hình đóng gói, Hình container, Hình kiểm tra thực tế.':
+      'Includes: product photos, defect photos if any, packing photos, container photos, and actual inspection photos.',
+    'Sai lệch và ghi chú': 'Deviations and notes',
+    'Ghi nhận các điểm chưa phù hợp hoặc các nội dung cần theo dõi.':
+      'Record nonconformities or items that need follow-up.',
+    'Bao gồm: Mô tả sai lệch, Mức độ ảnh hưởng, Đề xuất xử lý, Tình trạng khắc phục.':
+      'Includes: deviation description, impact level, proposed action, and correction status.',
+    'Kết luận kiểm tra': 'Inspection conclusion',
+    'Đưa ra đánh giá tổng thể về tình trạng của lô hàng hoặc sản phẩm được kiểm tra.':
+      'Provide an overall assessment of the inspected lot or product condition.',
+    'Ví dụ: Đạt yêu cầu, Đạt có điều kiện, Cần khắc phục, Không đạt.':
+      'Examples: passed, conditionally passed, needs correction, failed.',
+    'Hồ sơ lưu trữ': 'Archived records',
+    'Lưu trữ kết quả kiểm tra nhằm phục vụ truy xuất và các đơn hàng lặp lại.':
+      'Archive inspection results for traceability and repeat orders.',
+    'Các loại báo cáo ANSLIFE có thể cung cấp':
+      'Types of Reports ANSLIFE Can Provide',
+    'Báo cáo kiểm tra vật liệu': 'Material inspection report',
+    'Ghi nhận kết quả đánh giá vật liệu trước sản xuất.':
+      'Record material evaluation results before production.',
+    'Báo cáo kiểm tra trong sản xuất': 'In-process inspection report',
+    'Ghi nhận kết quả kiểm tra tại các công đoạn sản xuất.':
+      'Record inspection results at production stages.',
+    'Báo cáo hoàn thiện bề mặt': 'Surface finish report',
+    'Đánh giá màu sắc, độ bóng, độ đồng đều và chất lượng bề mặt.':
+      'Evaluate color, gloss, consistency, and surface quality.',
+    'Báo cáo kiểm tra cuối': 'Final inspection report',
+    'Đánh giá thành phẩm trước khi đóng gói hoặc xuất hàng.':
+      'Evaluate finished goods before packing or shipment.',
+    'Báo cáo đóng gói': 'Packing report',
+    'Xác nhận tình trạng đóng gói, nhãn mác và chuẩn bị xuất hàng.':
+      'Confirm packing condition, labels, and shipment preparation.',
+    'Báo cáo QC độc lập': 'Independent QC report',
+    'Báo cáo được thực hiện bởi hoạt động kiểm tra độc lập theo yêu cầu của dự án hoặc buyer.':
+      'Report prepared through independent inspection according to project or buyer requirements.',
+    'Cấu trúc một báo cáo điển hình': 'Typical Report Structure',
+    'Phạm vi kiểm tra': 'Inspection scope',
+    'Hình ảnh minh chứng': 'Evidence photos',
+    'Sai lệch & hành động khắc phục': 'Deviation & corrective action',
+    'Kết luận': 'Conclusion',
+    'Lưu hồ sơ': 'Record archive',
+    'Báo cáo hỗ trợ điều gì?': 'What Does the Report Support?',
+    'Minh bạch': 'Transparency',
+    'Buyer có thể theo dõi kết quả kiểm tra một cách rõ ràng.':
+      'Buyers can clearly follow inspection results.',
+    'Truy xuất': 'Traceability',
+    'Dễ dàng đối chiếu giữa các lô hàng và các đợt sản xuất.':
+      'Easily compare between lots and production runs.',
+    'Kiểm soát rủi ro': 'Risk control',
+    'Phát hiện và xử lý các sai lệch trước khi giao hàng.':
+      'Detect and handle deviations before shipment.',
+    'Duy trì tiêu chuẩn': 'Maintain standards',
+    'Hỗ trợ quản lý chất lượng cho các đơn hàng lặp lại.':
+      'Support quality management for repeat orders.',
+    'Liên kết với hệ thống chất lượng': 'Connected to the Quality System',
+    'Lưu hồ sơ chất lượng': 'Quality record archive',
+    'Liên kết với Phòng mẫu chuẩn đối tác': 'Connected to the Partner Standard Room',
+    'Các báo cáo kiểm tra được lưu cùng với mẫu duyệt, bản vẽ kỹ thuật, bảng màu, tiêu chuẩn đóng gói và checklist QC nhằm hỗ trợ truy xuất và duy trì tính nhất quán cho các dự án dài hạn.':
+      'Inspection reports are stored together with approved samples, technical drawings, color boards, packing standards, and QC checklists to support traceability and maintain consistency for long-term projects.',
+    'Trao đổi về yêu cầu báo cáo chất lượng của dự án':
+      'Discuss Project Quality Report Requirements',
+    'Buyer có thể gửi yêu cầu về biểu mẫu báo cáo, checklist QC hoặc tiêu chuẩn đánh giá để ANSLIFE xây dựng hệ thống báo cáo phù hợp với từng dự án.':
+      'Buyers can send requirements for report templates, QC checklists, or evaluation standards so ANSLIFE can build a reporting system suitable for each project.',
     'Gỗ tự nhiên': 'Solid Wood',
     'Gỗ cao su': 'Rubber Wood',
     Ash: 'Ash',
