@@ -937,6 +937,214 @@ const TRANSLATIONS: Partial<Record<
       'Buyers can send requirements for report templates, QC checklists, or evaluation standards so ANSLIFE can build a reporting system suitable for each project.',
     'Gỗ tự nhiên': 'Solid Wood',
     'Gỗ cao su': 'Rubber Wood',
+    'Gỗ Ash': 'Ash Wood',
+    'Ash Wood': 'Ash Wood',
+    'Banner gỗ cao su': 'Rubber wood banner',
+    'Banner gỗ Ash': 'Ash wood banner',
+    'Banner gỗ Oak': 'Oak wood banner',
+    'Loại gỗ cứng được sử dụng rộng rãi trong nội thất xuất khẩu nhờ vân gỗ đẹp, khả năng gia công tốt và tính linh hoạt trong hoàn thiện bề mặt.':
+      'A hardwood widely used in export furniture thanks to its attractive grain, good machinability, and flexible surface finishing capability.',
+    'Gỗ Ash là một trong những loại gỗ tự nhiên phổ biến trong ngành nội thất cao cấp và nội thất xuất khẩu. Với màu sắc sáng, vân gỗ rõ nét và khả năng hoàn thiện linh hoạt, Ash được sử dụng rộng rãi trong các dòng sản phẩm theo phong cách Bắc Âu, hiện đại và đương đại.':
+      'Ash is one of the common natural woods used in high-end furniture and export furniture. With its light color, distinct grain, and flexible finishing capability, ash is widely used in Scandinavian, modern, and contemporary product lines.',
+    'Ash phù hợp cho cả sản phẩm hoàn thiện, cấu kiện nội thất và các chương trình OEM / ODM yêu cầu tính thẩm mỹ cao cùng khả năng sản xuất ổn định.':
+      'Ash is suitable for finished products, furniture components, and OEM / ODM programs that require high aesthetics and stable production capability.',
+    'Tổng quan vật liệu': 'Material Overview',
+    'Nhóm vật liệu': 'Material group',
+    'Từ trắng kem đến vàng nhạt hoặc nâu nhạt.':
+      'From creamy white to pale yellow or light brown.',
+    'Vân gỗ rõ ràng, thẳng hoặc dạng sóng nhẹ, tạo cảm giác tự nhiên và hiện đại.':
+      'Clear grain, straight or gently wavy, creating a natural and modern feel.',
+    'Gia công tốt, phù hợp với cắt, tiện, CNC, uốn cong và nhiều phương pháp sản xuất nội thất.':
+      'Machines well and suits cutting, turning, CNC, bending, and many furniture production methods.',
+    'Đặc điểm nổi bật': 'Key Characteristics',
+    'Vân gỗ đẹp và rõ nét': 'Beautiful, Distinct Grain',
+    'Mang lại giá trị thẩm mỹ cao và dễ nhận diện trong các dòng nội thất hiện đại.':
+      'Provides strong aesthetic value and clear recognition in modern furniture lines.',
+    'Dễ kết hợp với nhiều phong cách thiết kế và phương án hoàn thiện.':
+      'Easy to combine with many design styles and finishing options.',
+    'Khả năng hoàn thiện linh hoạt': 'Flexible Finishing Capability',
+    'Phù hợp với stain, lacquer, oil finish và nhiều hệ hoàn thiện khác.':
+      'Suitable for stain, lacquer, oil finish, and many other finishing systems.',
+    'Gia công tốt': 'Good Machining',
+    'Thích hợp cho các chi tiết phức tạp, cấu kiện cong và sản phẩm yêu cầu độ chính xác cao.':
+      'Suitable for complex details, curved components, and products requiring high precision.',
+    'Tính ứng dụng cao': 'High Application Value',
+    'Được sử dụng rộng rãi trong nội thất gia đình, khách sạn và dự án thương mại.':
+      'Widely used in residential furniture, hotel furniture, and commercial projects.',
+    'Phù hợp với nhiều thị trường': 'Suitable for Many Markets',
+    'Là loại gỗ quen thuộc trong các chương trình nội thất xuất khẩu sang Mỹ, Châu Âu và Nhật Bản.':
+      'A familiar wood species in furniture export programs for the United States, Europe, and Japan.',
+    'Ứng dụng trong nội thất': 'Interior Applications',
+    'Ghế ăn, ghế lounge, ghế bọc nệm và các dòng ghế thiết kế.':
+      'Dining chairs, lounge chairs, upholstered chairs, and designed chair lines.',
+    'Bàn ăn, bàn làm việc, bàn cà phê và bàn phụ.':
+      'Dining tables, work desks, coffee tables, and side tables.',
+    'Tủ đầu giường, tủ trang trí và các hệ lưu trữ cao cấp.':
+      'Bedside cabinets, display cabinets, and premium storage systems.',
+    'Khung giường và các bộ phận kết cấu.':
+      'Bed frames and structural parts.',
+    'Tay ghế, chân bàn, khung ghế và các chi tiết gia công theo bản vẽ.':
+      'Armrests, table legs, chair frames, and details machined to drawings.',
+    'Khách sạn, resort, nhà hàng, văn phòng và các không gian thương mại.':
+      'Hotels, resorts, restaurants, offices, and commercial spaces.',
+    'Khả năng hoàn thiện bề mặt': 'Surface Finishing Capability',
+    'Giữ lại màu sắc tự nhiên và vẻ đẹp nguyên bản của vật liệu.':
+      'Preserves the natural color and original beauty of the material.',
+    'Stain Finish': 'Stain Finish',
+    'Tạo chiều sâu cho vân gỗ và phát triển màu sắc theo yêu cầu thiết kế.':
+      'Adds depth to the wood grain and develops color according to design requirements.',
+    'Oil Finish': 'Oil Finish',
+    'Mang lại cảm giác tự nhiên và gần gũi với vật liệu.':
+      'Creates a natural feel that stays close to the material.',
+    'Tạo bề mặt hiện đại và tinh tế.': 'Creates a modern and refined surface.',
+    'Hoàn thiện màu theo bảng màu hoặc mẫu duyệt của buyer.':
+      'Finished to the buyer color board or approved sample.',
+    'Những yếu tố cần kiểm soát': 'Control Factors',
+    'Kiểm soát độ ổn định trước sản xuất và hoàn thiện.':
+      'Control stability before production and finishing.',
+    'Đồng đều màu sắc': 'Color consistency',
+    'Đảm bảo tính nhất quán giữa các lô vật liệu.':
+      'Ensure consistency between material batches.',
+    'Vân gỗ': 'Wood grain',
+    'Lựa chọn và sắp xếp phù hợp với yêu cầu thẩm mỹ của sản phẩm.':
+      'Select and arrange grain to match the product aesthetic requirements.',
+    'Kiểm soát màu sắc, độ bóng và chất lượng hoàn thiện.':
+      'Control color, gloss, and finishing quality.',
+    'Đóng gói & vận chuyển': 'Packing & Transportation',
+    'Bảo vệ sản phẩm trong quá trình lưu kho và xuất khẩu.':
+      'Protect products during storage and export.',
+    'Ash trong hệ thống cung ứng của ANSLIFE':
+      'Ash in ANSLIFE’s Supply System',
+    'ANSLIFE hỗ trợ phát triển sản phẩm, lựa chọn vật liệu, đánh giá khả năng sản xuất và tổ chức chuỗi cung ứng cho các dự án sử dụng gỗ Ash tại Việt Nam.':
+      'ANSLIFE supports product development, material selection, production feasibility assessment, and supply chain organization for projects using ash wood in Vietnam.',
+    'Tùy theo yêu cầu của buyer, Ash có thể được sử dụng cho sản phẩm hoàn thiện, cấu kiện nội thất, chương trình OEM / ODM hoặc các dự án nội thất thương mại và xuất khẩu.':
+      'Depending on buyer requirements, ash can be used for finished products, furniture components, OEM / ODM programs, or commercial and export furniture projects.',
+    'Ash phù hợp với những phong cách nào?':
+      'Which Styles Is Ash Suitable For?',
+    Scandinavian: 'Scandinavian',
+    'Tận dụng màu sáng và vân gỗ tự nhiên.':
+      'Makes use of light color and natural wood grain.',
+    Modern: 'Modern',
+    'Kết hợp với các đường nét đơn giản và hoàn thiện mờ.':
+      'Pairs with simple lines and matte finishing.',
+    Contemporary: 'Contemporary',
+    'Linh hoạt với nhiều phương án màu sắc và vật liệu kết hợp.':
+      'Flexible across many color options and combined materials.',
+    Hospitality: 'Hospitality',
+    'Phù hợp với các dự án khách sạn, resort và không gian thương mại.':
+      'Suitable for hotel, resort, and commercial space projects.',
+    'Liên kết nội dung liên quan': 'Related Content Links',
+    'Khám phá các sản phẩm sử dụng gỗ Ash.':
+      'Explore products using ash wood.',
+    'Các cấu kiện và bộ phận được sản xuất từ Ash.':
+      'Components and parts manufactured from ash.',
+    'Các phương án hoàn thiện phù hợp với Ash.':
+      'Finishing options suitable for ash.',
+    'Các hoạt động kiểm soát vật liệu trong sản xuất.':
+      'Material control activities in production.',
+    'Trao đổi về vật liệu Ash cho dự án của bạn':
+      'Discuss Ash Materials for Your Project',
+    'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu kỹ thuật để ANSLIFE đánh giá khả năng ứng dụng gỗ Ash và đề xuất phương án phù hợp.':
+      'Buyers can send drawings, product samples, or technical requirements so ANSLIFE can evaluate ash wood application feasibility and propose a suitable solution.',
+    '1. Tổng quan vật liệu': '1. Material Overview',
+    'Tên thương mại': 'Trade name',
+    Rubberwood: 'Rubberwood',
+    'Nguồn gốc': 'Origin',
+    'Cây cao su sau chu kỳ khai thác mủ.':
+      'Rubber trees after the latex harvesting cycle.',
+    'Màu sắc tự nhiên': 'Natural color',
+    'Từ trắng kem đến vàng nhạt.': 'From creamy white to pale yellow.',
+    'Đặc điểm vân gỗ': 'Wood grain characteristics',
+    'Vân tương đối đều, nhẹ và dễ hoàn thiện.':
+      'Relatively even, subtle grain that is easy to finish.',
+    'Khả năng gia công': 'Machining capability',
+    'Gia công tốt bằng các phương pháp cắt, tiện, CNC, khoan và lắp ráp.':
+      'Machines well with cutting, turning, CNC, drilling, and assembly methods.',
+    '2. Đặc điểm nổi bật': '2. Key Characteristics',
+    'Nguồn cung ổn định': 'Stable supply',
+    'Nguồn cung dồi dào từ diện tích cao su lớn, đảm bảo tính ổn định và lịch sản xuất.':
+      'Abundant supply from large rubber-growing areas, supporting stable production flow.',
+    'Dễ gia công': 'Easy to machine',
+    'Gia công tốt, ít gây mẻ, phù hợp với nhiều phương pháp cắt, tiện, CNC, khoan và lắp ráp.':
+      'Machines well with low chipping risk, suitable for cutting, turning, CNC, drilling, and assembly.',
+    'Hoàn thiện linh hoạt': 'Flexible finishing',
+    'Dễ chấp nhận nhiều hệ thống hoàn thiện: stain, sơn PU, sơn NC, sơn màu và các hiệu ứng khác.':
+      'Accepts many finishing systems such as stain, PU coating, NC coating, color coating, and other effects.',
+    'Màu sắc sáng': 'Light color',
+    'Màu sáng tự nhiên giúp sản phẩm dễ phối màu, tạo cảm giác hiện đại và tinh tế.':
+      'Its naturally light color makes products easy to color-match and creates a modern, refined feel.',
+    'Thích hợp sản xuất hàng loạt': 'Suitable for mass production',
+    'Tính chất ổn định, đồng nhất, phù hợp cho sản xuất quy mô lớn và kiểm soát chất lượng.':
+      'Stable and consistent properties make it suitable for large-scale production and quality control.',
+    'Giá trị kinh tế tốt': 'Good economic value',
+    'Chi phí hợp lý, tối ưu hiệu quả đầu tư cho các dự án xuất khẩu và OEM/ODM.':
+      'Reasonable cost helps optimize investment efficiency for export and OEM/ODM projects.',
+    '3. Ứng dụng trong nội thất': '3. Interior Applications',
+    'Ghế ăn, ghế cafe, ghế bar và ghế làm việc với thiết kế đa dạng.':
+      'Dining chairs, cafe chairs, bar chairs, and working chairs in diverse designs.',
+    'Bàn ăn, bàn cafe, bàn làm việc, bàn trà và các loại bàn khác.':
+      'Dining tables, cafe tables, work desks, tea tables, and other table types.',
+    'Tủ quần áo, tủ kệ, tủ bếp, kệ trang trí và giải pháp lưu trữ khác.':
+      'Wardrobes, cabinets, kitchen cabinets, display shelves, and other storage solutions.',
+    'Giường đôi, giường trẻ em, giường tầng và các thiết kế theo yêu cầu.':
+      'Double beds, children’s beds, bunk beds, and made-to-order designs.',
+    'Khung ghế, chân bàn, thanh giường, khung tủ và các cấu kiện lắp ráp khác.':
+      'Chair frames, table legs, bed rails, cabinet frames, and other assembled components.',
+    'Sản phẩm cho dự án khách sạn, resort, căn hộ, văn phòng và không gian công cộng.':
+      'Products for hotel, resort, apartment, office, and public-space projects.',
+    '4. Khả năng hoàn thiện bề mặt': '4. Surface Finishing Capability',
+    Stain: 'Stain',
+    'Tôn vân gỗ tự nhiên, màu sắc ấm áp và sang trọng.':
+      'Highlights natural wood grain with warm and elegant color.',
+    'Natural Finish': 'Natural Finish',
+    'Giữ màu gỗ tự nhiên, trong trẻo, tinh tế và hiện đại.':
+      'Preserves the natural wood color for a clean, refined, modern look.',
+    Lacquer: 'Lacquer',
+    'Bề mặt mịn, bền màu, dễ vệ sinh và bảo trì.':
+      'Smooth, color-stable surface that is easy to clean and maintain.',
+    'Matte Finish': 'Matte Finish',
+    'Hiệu ứng mờ cao cấp, chống bám vân tay, cảm giác tự nhiên.':
+      'Premium matte effect with fingerprint resistance and a natural feel.',
+    'Color Finish': 'Color Finish',
+    'Sơn màu đa dạng, đáp ứng yêu cầu thiết kế riêng.':
+      'Diverse color coating options for custom design requirements.',
+    '5. Những yếu tố cần kiểm soát': '5. Control Factors',
+    'Độ ẩm vật liệu': 'Material moisture',
+    'Kiểm soát độ ẩm phù hợp để hạn chế cong vênh, nứt nẻ và đảm bảo độ ổn định.':
+      'Control suitable moisture levels to limit warping, cracking, and ensure stability.',
+    'Màu sắc': 'Color',
+    'Đồng nhất màu gỗ giữa các lô và giữa các chi tiết trong cùng một sản phẩm.':
+      'Keep wood color consistent between batches and between parts within the same product.',
+    'Chất lượng ghép thanh': 'Laminated board quality',
+    'Đảm bảo keo ghép đạt tiêu chuẩn, mối ghép chắc chắn và thẩm mỹ cao.':
+      'Ensure glue quality meets standards, with strong joints and high visual quality.',
+    'Bám dính tốt, bề mặt mịn, màu sắc đồng đều và đạt yêu cầu kỹ thuật.':
+      'Good adhesion, smooth surface, consistent color, and technical compliance.',
+    'Bảo vệ sản phẩm trong quá trình vận chuyển, đảm bảo đến nơi trong tình trạng tốt nhất.':
+      'Protect products during transport and ensure they arrive in the best possible condition.',
+    '6. Gỗ cao su trong hệ thống cung ứng của ANSLIFE':
+      '6. Rubber Wood in ANSLIFE’s Supply System',
+    'ANSLIFE hỗ trợ khách hàng phát triển sản phẩm, lựa chọn vật liệu phù hợp, đánh giá tính khả thi sản xuất và tổ chức chuỗi cung ứng cho các dự án sử dụng gỗ cao su tại Việt Nam.':
+      'ANSLIFE supports customers in product development, material selection, production feasibility assessment, and supply chain organization for projects using rubber wood in Vietnam.',
+    'Gỗ cao su có thể được ứng dụng cho sản phẩm hoàn thiện, cấu kiện nội thất, chương trình OEM/ODM và các dự án xuất khẩu đến Mỹ, Châu Âu, Nhật Bản và nhiều thị trường khác.':
+      'Rubber wood can be used for finished products, furniture components, OEM/ODM programs, and export projects to the United States, Europe, Japan, and many other markets.',
+    'Tư vấn & phát triển SP': 'Consulting & Product Development',
+    'Đánh giá tính khả thi': 'Feasibility Assessment',
+    'Sản xuất & kiểm soát chất lượng': 'Manufacturing & Quality Control',
+    'Quản lý chuỗi cung ứng': 'Supply Chain Management',
+    '7. Liên kết với các nội dung liên quan': '7. Related Content Links',
+    'Khám phá các dòng sản phẩm nội thất do ANSLIFE sản xuất.':
+      'Explore furniture product lines manufactured by ANSLIFE.',
+    'Tìm hiểu các cấu kiện và linh kiện nội thất.':
+      'Learn about furniture components and parts.',
+    'Các hệ thống sơn và hoàn thiện phù hợp cho gỗ cao su.':
+      'Paint and finishing systems suitable for rubber wood.',
+    'Giải pháp kiểm soát độ ẩm trong sản xuất và lưu kho.':
+      'Moisture control solutions for production and storage.',
+    '8. Trao đổi về vật liệu gỗ cao su cho dự án của bạn':
+      '8. Discuss Rubber Wood Materials for Your Project',
+    'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu kỹ thuật để ANSLIFE đánh giá khả năng ứng dụng gỗ cao su và đề xuất phương án phù hợp.':
+      'Buyers can send drawings, product samples, or technical requirements so ANSLIFE can evaluate rubber wood application feasibility and propose a suitable solution.',
     Ash: 'Ash',
     Oak: 'Oak',
     Beech: 'Beech',

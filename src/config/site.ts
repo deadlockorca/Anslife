@@ -386,7 +386,7 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
       {
         id: 'solid-wood',
         title: 'Gỗ tự nhiên',
-        description: 'Rubber wood, Ash, Oak, Beech, Acacia và Pine.',
+        description: '',
       },
       {
         id: 'engineered-wood',
