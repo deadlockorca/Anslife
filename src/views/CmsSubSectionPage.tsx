@@ -358,6 +358,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'resources' && section.id === 'export-knowledge' && !detailSlug;
   const isResourcesCaseStudiesPage =
     config.slug === 'resources' && section.id === 'case-studies' && !detailSlug;
+  const isResourcesCompanyUpdatesPage =
+    config.slug === 'resources' && section.id === 'company-updates' && !detailSlug;
   const shouldRenderBlankSubSectionPage =
     shouldRenderBlankScholarshipPage ||
     shouldRenderBlankQualityInProcessPage ||
@@ -369,6 +371,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isResourcesManufacturingNotesPage ||
     isResourcesExportKnowledgePage ||
     isResourcesCaseStudiesPage ||
+    isResourcesCompanyUpdatesPage ||
     isSupplyHubOverviewPage ||
     isSupplyHubStorageSolutionPage ||
     isSupplyHubLclFclConsolidationPage ||
@@ -407,6 +410,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isResourcesManufacturingNotesPage ||
     isResourcesExportKnowledgePage ||
     isResourcesCaseStudiesPage ||
+    isResourcesCompanyUpdatesPage ||
     isSupplyHubOverviewPage ||
     isSupplyHubStorageSolutionPage ||
     isSupplyHubLclFclConsolidationPage ||
@@ -485,6 +489,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldShowResourcesManufacturingNotesBanner = isResourcesManufacturingNotesPage;
   const shouldShowResourcesExportKnowledgeBanner = isResourcesExportKnowledgePage;
   const shouldShowResourcesCaseStudiesBanner = isResourcesCaseStudiesPage;
+  const shouldShowResourcesCompanyUpdatesBanner = isResourcesCompanyUpdatesPage;
   const shouldRenderSectionHero = !shouldHideSectionHero && !isSupplyHubComponentSamplesPage;
   const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
@@ -1487,6 +1492,302 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
           </figcaption>
         </figure>
       )}
+      {shouldShowResourcesCompanyUpdatesBanner && (
+        <figure className="resources-company-updates-banner">
+          <img
+            src="/assets/resources-company-updates-banner.png"
+            alt={t('Banner cập nhật công ty')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="resources-company-updates-banner-copy">
+            <h1>{t('Cập nhật công ty')}</h1>
+            <p>{t('Những hoạt động, dự án và cột mốc mới nhất của ANSLIFE.')}</p>
+            <p>
+              {t(
+                'Trang Cập nhật công ty chia sẻ những thông tin mới nhất về hoạt động của ANSLIFE, bao gồm phát triển năng lực sản xuất, hợp tác đối tác, triển khai dự án, tham gia triển lãm, hoạt động cộng đồng và các cột mốc quan trọng trong quá trình phát triển.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Đây là nơi giúp buyer, đối tác và cộng đồng theo dõi hành trình phát triển của ANSLIFE tại Việt Nam và trên thị trường quốc tế.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isResourcesCompanyUpdatesPage && (
+        <section className="resources-company-updates-content">
+          <section className="resources-company-updates-categories">
+            <div className="resources-company-updates-category-grid">
+              {[
+                {
+                  number: '01',
+                  title: 'Tin tức công ty',
+                  imageSrc: '/assets/resources/company-updates/categories/company-news.webp',
+                },
+                {
+                  number: '02',
+                  title: 'Dự án & hợp tác',
+                  imageSrc:
+                    '/assets/resources/company-updates/categories/projects-partnerships.webp',
+                },
+                {
+                  number: '03',
+                  title: 'Nhà máy & sản xuất',
+                  imageSrc: '/assets/resources/company-updates/categories/factory-production.webp',
+                },
+                {
+                  number: '04',
+                  title: 'Triển lãm & sự kiện',
+                  imageSrc: '/assets/resources/company-updates/categories/exhibitions-events.webp',
+                },
+                {
+                  number: '05',
+                  title: 'Chất lượng & chứng nhận',
+                  imageSrc:
+                    '/assets/resources/company-updates/categories/quality-certifications.webp',
+                },
+                {
+                  number: '06',
+                  title: 'Hoạt động cộng đồng',
+                  imageSrc: '/assets/resources/company-updates/categories/community.webp',
+                },
+              ].map((item) => (
+                <article key={item.number}>
+                  <div className="resources-company-updates-category-icon" aria-hidden="true">
+                    <img src={item.imageSrc} alt="" loading="lazy" decoding="async" />
+                  </div>
+                  <h2>
+                    <span>{item.number}</span>
+                    {t(item.title)}
+                  </h2>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resources-company-updates-featured">
+            <h2>{t('Các cập nhật nổi bật')}</h2>
+            <div className="resources-company-updates-featured-grid">
+              {[
+                {
+                  tag: 'Năng lực',
+                  title: 'ANSLIFE mở rộng mạng lưới nhà máy đối tác',
+                  body: 'Tăng cường năng lực sản xuất và khả năng đáp ứng cho các dự án nội thất xuất khẩu quy mô lớn.',
+                  date: '20/05/2025',
+                  imageSrc: '/assets/resources/company-updates/featured/capability.webp',
+                },
+                {
+                  tag: 'Supply Hub',
+                  title: 'Khởi động chương trình Supply Hub Việt Nam',
+                  body: 'Mô hình hỗ trợ lưu kho, tồn kho đệm và điều phối xuất hàng linh hoạt cho buyer quốc tế.',
+                  date: '10/05/2025',
+                  imageSrc: '/assets/resources/company-updates/featured/supply-hub.webp',
+                },
+                {
+                  tag: 'Chất lượng',
+                  title: 'Phát triển hệ thống quản lý mẫu duyệt',
+                  body: 'Tối ưu hóa việc lưu trữ, đối chiếu và quản lý mẫu duyệt nhằm nâng cao khả năng kiểm soát chất lượng.',
+                  date: '02/05/2025',
+                  imageSrc: '/assets/resources/company-updates/featured/quality.webp',
+                },
+                {
+                  tag: 'Sự kiện',
+                  title: 'Tham gia VIFA Expo 2025',
+                  body: 'Giới thiệu năng lực sản xuất, giải pháp cung ứng và mô hình Supply Hub Việt Nam đến khách hàng quốc tế.',
+                  date: '08/03/2025',
+                  imageSrc: '/assets/resources/company-updates/featured/event.webp',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="resources-company-updates-featured-image-slot">
+                    <img src={item.imageSrc} alt="" loading="lazy" decoding="async" />
+                    <span>{t(item.tag)}</span>
+                  </div>
+                  <div className="resources-company-updates-featured-copy">
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                    <time dateTime={item.date.split('/').reverse().join('-')}>{item.date}</time>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resources-company-updates-timeline">
+            <h2>{t('Dòng thời gian phát triển')}</h2>
+            <div className="resources-company-updates-timeline-track">
+              {[
+                {
+                  year: '2024',
+                  items: [
+                    {
+                      text: 'Mở rộng mạng lưới nhà máy hợp tác',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2024-factory-network.webp',
+                    },
+                    {
+                      text: 'Hoàn thiện vai trò vận hành dự án xuất khẩu',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2024-export-operations.webp',
+                    },
+                    {
+                      text: 'Củng cố chuỗi cung ứng vật liệu nội thất',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2024-material-supply-chain.webp',
+                    },
+                  ],
+                },
+                {
+                  year: '2025',
+                  items: [
+                    {
+                      text: 'Chuyển trụ sở chính về Thành phố Hồ Chí Minh',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2025-hcm-head-office.webp',
+                    },
+                    {
+                      text: 'Mở thêm chi nhánh hoạt động tại Đồng Nai',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2025-dong-nai-branch.webp',
+                    },
+                    {
+                      text: 'Khởi động Supply Hub Việt Nam',
+                      imageSrc: '/assets/resources/company-updates/timeline/2025-supply-hub.webp',
+                    },
+                    {
+                      text: 'Mở rộng hệ thống nhà máy vệ tinh',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2025-satellite-factories.webp',
+                    },
+                  ],
+                },
+                {
+                  year: '2026',
+                  items: [
+                    {
+                      text: 'Xây dựng khu vực kiểm định chất lượng độc lập',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2026-independent-quality-testing.webp',
+                    },
+                    {
+                      text: 'Nâng cấp hệ thống QC & truy xuất',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2026-qc-traceability.webp',
+                    },
+                    {
+                      text: 'Mở rộng năng lực lưu kho và kho đệm',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2026-warehousing-buffer-stock.webp',
+                    },
+                    {
+                      text: 'Kiểm định tiêu chuẩn cơ học cho nội thất',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2026-mechanical-standards.webp',
+                    },
+                  ],
+                },
+                {
+                  year: '2027',
+                  items: [
+                    {
+                      text: 'Triển khai hệ thống quản lý số',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2027-digital-management.webp',
+                    },
+                    {
+                      text: 'Tăng gấp đôi năng lực sản xuất',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2027-production-capacity.webp',
+                    },
+                    {
+                      text: 'Mở rộng hợp tác toàn cầu',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2027-global-partnerships.webp',
+                    },
+                    {
+                      text: 'Phát triển chương trình bền vững',
+                      imageSrc:
+                        '/assets/resources/company-updates/timeline/2027-sustainability.webp',
+                    },
+                  ],
+                },
+              ].map((group) => (
+                <article className="resources-company-updates-timeline-year" key={group.year}>
+                  <h3>{group.year}</h3>
+                  <ul>
+                    {group.items.map((item) => (
+                      <li key={item.text}>
+                        <span className="resources-company-updates-timeline-icon" aria-hidden="true">
+                          <img src={item.imageSrc} alt="" loading="lazy" decoding="async" />
+                        </span>
+                        <span>{t(item.text)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resources-company-updates-follow">
+            <h2>{t('Theo dõi ANSLIFE')}</h2>
+            <div className="resources-company-updates-follow-grid">
+              {[
+                {
+                  title: 'Buyer & đối tác',
+                  body: 'Cập nhật năng lực mới nhất, dự án và các giải pháp cung ứng từ ANSLIFE.',
+                  imageSrc: '/assets/resources/company-updates/follow/buyers-partners.webp',
+                },
+                {
+                  title: 'Nhà máy đối tác',
+                  body: 'Theo dõi các chương trình hợp tác, kế hoạch sản xuất và phát triển chuỗi cung ứng.',
+                  imageSrc: '/assets/resources/company-updates/follow/partner-factories.webp',
+                },
+                {
+                  title: 'Cộng đồng',
+                  body: 'Theo dõi các hoạt động xã hội, đào tạo nghề và chương trình phát triển nguồn nhân lực.',
+                  imageSrc: '/assets/resources/company-updates/follow/community.webp',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="resources-company-updates-follow-image-slot">
+                    <img src={item.imageSrc} alt="" loading="lazy" decoding="async" />
+                  </div>
+                  <div className="resources-company-updates-follow-copy">
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                    <span aria-hidden="true">→</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resources-company-updates-cta">
+            <div className="resources-company-updates-cta-image-slot">
+              <img
+                src="/assets/resources/company-updates/cta/latest-updates.webp"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="resources-company-updates-cta-copy">
+              <h2>{t('Theo dõi những cập nhật mới nhất từ ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'Khám phá các hoạt động, dự án, sự kiện và cột mốc phát triển mới nhất của ANSLIFE.',
+                )}
+              </p>
+              <div className="resources-company-updates-cta-actions">
+                <a href="/vn/resources/company-updates">{t('Xem tất cả cập nhật')} →</a>
+                <a href="/vn/contact">{t('Đăng ký nhận tin')} →</a>
+                <a href="/vn/contact">{t('Liên hệ ANSLIFE')} →</a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
       {isResourcesCaseStudiesPage && (
         <section className="resources-case-studies-content">
           <section className="resources-case-studies-groups">
@@ -1680,7 +1981,6 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                   <div className="resources-case-studies-featured-copy">
                     <h3>{t(item.title)}</h3>
                     <p>{t(item.body)}</p>
-                    <a href="/vn/resources/case-studies">{t('Xem chi tiết')} →</a>
                   </div>
                 </article>
               ))}

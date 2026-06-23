@@ -1335,6 +1335,75 @@ const TRANSLATIONS: Partial<Record<
     'Case study': 'Case Studies',
     'Case Study': 'Case Studies',
     'Cập nhật công ty': 'Company Updates',
+    'Banner cập nhật công ty': 'Company updates banner',
+    'Những hoạt động, dự án và cột mốc mới nhất của ANSLIFE.':
+      'The latest activities, projects, and milestones from ANSLIFE.',
+    'Trang Cập nhật công ty chia sẻ những thông tin mới nhất về hoạt động của ANSLIFE, bao gồm phát triển năng lực sản xuất, hợp tác đối tác, triển khai dự án, tham gia triển lãm, hoạt động cộng đồng và các cột mốc quan trọng trong quá trình phát triển.':
+      'The Company Updates page shares the latest information about ANSLIFE activities, including production capability development, partner collaboration, project implementation, exhibition participation, community activities, and important milestones in the development journey.',
+    'Đây là nơi giúp buyer, đối tác và cộng đồng theo dõi hành trình phát triển của ANSLIFE tại Việt Nam và trên thị trường quốc tế.':
+      'This is where buyers, partners, and the community can follow ANSLIFE’s development journey in Vietnam and international markets.',
+    'Tin tức công ty': 'Company News',
+    'Dự án & hợp tác': 'Projects & Partnerships',
+    'Nhà máy & sản xuất': 'Factory & Production',
+    'Triển lãm & sự kiện': 'Exhibitions & Events',
+    'Chất lượng & chứng nhận': 'Quality & Certifications',
+    'Các cập nhật nổi bật': 'Featured Updates',
+    'Năng lực': 'Capability',
+    'Supply Hub': 'Supply Hub',
+    'Chất lượng': 'Quality',
+    'Sự kiện': 'Event',
+    'ANSLIFE mở rộng mạng lưới nhà máy đối tác':
+      'ANSLIFE expands its partner factory network',
+    'Tăng cường năng lực sản xuất và khả năng đáp ứng cho các dự án nội thất xuất khẩu quy mô lớn.':
+      'Strengthening production capacity and responsiveness for large-scale export furniture projects.',
+    'Khởi động chương trình Supply Hub Việt Nam':
+      'Launch of the Vietnam Supply Hub program',
+    'Mô hình hỗ trợ lưu kho, tồn kho đệm và điều phối xuất hàng linh hoạt cho buyer quốc tế.':
+      'A model supporting warehousing, buffer stock, and flexible shipment coordination for international buyers.',
+    'Phát triển hệ thống quản lý mẫu duyệt':
+      'Developing an approved sample management system',
+    'Tối ưu hóa việc lưu trữ, đối chiếu và quản lý mẫu duyệt nhằm nâng cao khả năng kiểm soát chất lượng.':
+      'Optimizing storage, comparison, and management of approved samples to improve quality control capability.',
+    'Tham gia VIFA Expo 2025': 'Participating in VIFA Expo 2025',
+    'Giới thiệu năng lực sản xuất, giải pháp cung ứng và mô hình Supply Hub Việt Nam đến khách hàng quốc tế.':
+      'Introducing production capability, supply solutions, and the Vietnam Supply Hub model to international customers.',
+    'Dòng thời gian phát triển': 'Development Timeline',
+    'Mở rộng mạng lưới nhà máy hợp tác': 'Expanded the partner factory network',
+    'Hoàn thiện vai trò vận hành dự án xuất khẩu':
+      'Strengthened export project operation capabilities',
+    'Củng cố chuỗi cung ứng vật liệu nội thất':
+      'Reinforced the furniture material supply chain',
+    'Chuyển trụ sở chính về Thành phố Hồ Chí Minh':
+      'Moved head office operations to Ho Chi Minh City',
+    'Mở thêm chi nhánh hoạt động tại Đồng Nai':
+      'Opened an additional operating branch in Dong Nai',
+    'Mở rộng hệ thống nhà máy vệ tinh': 'Expanded the satellite factory system',
+    'Xây dựng khu vực kiểm định chất lượng độc lập':
+      'Built an independent quality testing area',
+    'Nâng cấp hệ thống QC & truy xuất': 'Upgraded QC and traceability systems',
+    'Mở rộng năng lực lưu kho và kho đệm':
+      'Expanded warehousing and buffer stock capacity',
+    'Kiểm định tiêu chuẩn cơ học cho nội thất':
+      'Tested mechanical standards for furniture',
+    'Triển khai hệ thống quản lý số': 'Implemented a digital management system',
+    'Tăng gấp đôi năng lực sản xuất': 'Doubled production capacity',
+    'Mở rộng hợp tác toàn cầu': 'Expanded global partnerships',
+    'Phát triển chương trình bền vững': 'Developed sustainability programs',
+    'Buyer & đối tác': 'Buyers & Partners',
+    'Cập nhật năng lực mới nhất, dự án và các giải pháp cung ứng từ ANSLIFE.':
+      'Stay updated on ANSLIFE’s latest capabilities, projects, and supply solutions.',
+    'Nhà máy đối tác': 'Partner Factories',
+    'Theo dõi các chương trình hợp tác, kế hoạch sản xuất và phát triển chuỗi cung ứng.':
+      'Follow cooperation programs, production plans, and supply chain development.',
+    'Cộng đồng': 'Community',
+    'Theo dõi các hoạt động xã hội, đào tạo nghề và chương trình phát triển nguồn nhân lực.':
+      'Follow social activities, vocational training, and workforce development programs.',
+    'Theo dõi những cập nhật mới nhất từ ANSLIFE':
+      'Follow the latest updates from ANSLIFE',
+    'Khám phá các hoạt động, dự án, sự kiện và cột mốc phát triển mới nhất của ANSLIFE.':
+      'Explore ANSLIFE’s latest activities, projects, events, and development milestones.',
+    'Xem tất cả cập nhật': 'View all updates',
+    'Đăng ký nhận tin': 'Subscribe for updates',
     FAQ: 'FAQ',
     'Câu hỏi thường gặp': 'Frequently Asked Questions',
     'Liên hệ / Gửi yêu cầu': 'Contact / Send Inquiry',
@@ -2125,6 +2194,11 @@ const TRANSLATIONS: Partial<Record<
     'Giới thiệu quỹ': '基金紹介',
     'Chương trình học bổng': '奨学金プログラム',
     'Hoạt động cộng đồng': 'コミュニティ活動',
+    'Tin tức công ty': '会社ニュース',
+    'Dự án & hợp tác': 'プロジェクト・協業',
+    'Nhà máy & sản xuất': '工場・生産',
+    'Triển lãm & sự kiện': '展示会・イベント',
+    'Chất lượng & chứng nhận': '品質・認証',
     'Tham gia cùng ANSLIFE': 'ANSLIFEに参加',
     'Tin doanh nghiệp': '企業ニュース',
     'Tin nhà máy': '工場ニュース',
@@ -2789,6 +2863,11 @@ const TRANSLATIONS: Partial<Record<
     'Giới thiệu quỹ': '재단 소개',
     'Chương trình học bổng': '장학 프로그램',
     'Hoạt động cộng đồng': '커뮤니티 활동',
+    'Tin tức công ty': '회사 소식',
+    'Dự án & hợp tác': '프로젝트 및 협력',
+    'Nhà máy & sản xuất': '공장 및 생산',
+    'Triển lãm & sự kiện': '전시회 및 이벤트',
+    'Chất lượng & chứng nhận': '품질 및 인증',
     'Tham gia cùng ANSLIFE': 'ANSLIFE와 함께하기',
     'Tin doanh nghiệp': '기업 뉴스',
     'Tin nhà máy': '공장 뉴스',
@@ -3346,6 +3425,12 @@ const TRANSLATIONS: Partial<Record<
   },
   zh: {
     'Foam / Mút / Xốp': '泡棉 / 海绵',
+    'Tin tức công ty': '公司新闻',
+    'Dự án & hợp tác': '项目与合作',
+    'Nhà máy & sản xuất': '工厂与生产',
+    'Triển lãm & sự kiện': '展会与活动',
+    'Chất lượng & chứng nhận': '质量与认证',
+    'Hoạt động cộng đồng': '社区活动',
     'Giải pháp vận hành & cung ứng': '运营与供应解决方案',
     'Phát triển sản phẩm OEM / ODM': 'OEM / ODM 产品开发',
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.':
