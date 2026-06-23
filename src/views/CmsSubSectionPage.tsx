@@ -352,6 +352,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'quality-control' && section.id === 'packing-standard' && !detailSlug;
   const isQualityControlInspectionReportPage =
     config.slug === 'quality-control' && section.id === 'inspection-report' && !detailSlug;
+  const isResourcesManufacturingNotesPage =
+    config.slug === 'resources' && section.id === 'manufacturing-notes' && !detailSlug;
+  const isResourcesExportKnowledgePage =
+    config.slug === 'resources' && section.id === 'export-knowledge' && !detailSlug;
+  const isResourcesCaseStudiesPage =
+    config.slug === 'resources' && section.id === 'case-studies' && !detailSlug;
   const shouldRenderBlankSubSectionPage =
     shouldRenderBlankScholarshipPage ||
     shouldRenderBlankQualityInProcessPage ||
@@ -360,6 +366,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isQualityControlMoistureControlPage ||
     isQualityControlPackingStandardPage ||
     isQualityControlInspectionReportPage ||
+    isResourcesManufacturingNotesPage ||
+    isResourcesExportKnowledgePage ||
+    isResourcesCaseStudiesPage ||
     isSupplyHubOverviewPage ||
     isSupplyHubStorageSolutionPage ||
     isSupplyHubLclFclConsolidationPage ||
@@ -395,6 +404,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
         section.id === 'finishing')) ||
     isProductsFinishingDetail ||
     (config.slug === 'resources' && section.id === 'faq') ||
+    isResourcesManufacturingNotesPage ||
+    isResourcesExportKnowledgePage ||
+    isResourcesCaseStudiesPage ||
     isSupplyHubOverviewPage ||
     isSupplyHubStorageSolutionPage ||
     isSupplyHubLclFclConsolidationPage ||
@@ -470,6 +482,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldShowQualityControlMoistureControlBanner = isQualityControlMoistureControlPage;
   const shouldShowQualityControlPackingStandardBanner = isQualityControlPackingStandardPage;
   const shouldShowQualityControlInspectionReportBanner = isQualityControlInspectionReportPage;
+  const shouldShowResourcesManufacturingNotesBanner = isResourcesManufacturingNotesPage;
+  const shouldShowResourcesExportKnowledgeBanner = isResourcesExportKnowledgePage;
+  const shouldShowResourcesCaseStudiesBanner = isResourcesCaseStudiesPage;
   const shouldRenderSectionHero = !shouldHideSectionHero && !isSupplyHubComponentSamplesPage;
   const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
@@ -1388,6 +1403,941 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
 
       {shouldShowLoading && <LoadingBlock />}
       {shouldShowError && <ErrorBlock message={error as string} />}
+      {shouldShowResourcesManufacturingNotesBanner && (
+        <figure className="resources-manufacturing-notes-banner">
+          <img
+            src="/assets/resources-manufacturing-notes-banner.png"
+            alt={t('Banner ghi chú sản xuất')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="resources-manufacturing-notes-banner-copy">
+            <h1>{t('Ghi chú sản xuất')}</h1>
+            <p>
+              {t(
+                'Kinh nghiệm thực tế từ vật liệu, sản xuất, hoàn thiện và kiểm soát chất lượng trong ngành nội thất xuất khẩu.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Ghi chú sản xuất là thư viện tổng hợp các quan sát, kinh nghiệm và bài học thực tế từ quá trình phát triển sản phẩm, sản xuất, hoàn thiện bề mặt, kiểm soát chất lượng và xuất khẩu.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Nội dung được xây dựng nhằm hỗ trợ buyer, đối tác và đội ngũ sản xuất hiểu rõ hơn về các yếu tố ảnh hưởng đến chất lượng, tiến độ và tính ổn định của sản phẩm nội thất.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowResourcesExportKnowledgeBanner && (
+        <figure className="resources-export-knowledge-banner">
+          <img
+            src="/assets/resources-export-knowledge-banner.png"
+            alt={t('Banner kiến thức xuất khẩu')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="resources-export-knowledge-banner-copy">
+            <h1>{t('Kiến thức xuất khẩu')}</h1>
+            <p>
+              {t(
+                'Thông tin và kinh nghiệm thực tế về sản xuất, logistics và xuất khẩu nội thất từ Việt Nam.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Thư viện Kiến thức xuất khẩu được xây dựng nhằm chia sẻ các thông tin hữu ích liên quan đến sản xuất, chuỗi cung ứng, logistics, kiểm soát chất lượng và hoạt động xuất khẩu nội thất từ Việt Nam.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Nội dung được tổng hợp từ kinh nghiệm thực tế của ANSLIFE trong quá trình làm việc với buyer, nhà máy và các dự án xuất khẩu quốc tế.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowResourcesCaseStudiesBanner && (
+        <figure className="resources-case-studies-banner">
+          <img
+            src="/assets/resources-case-studies-banner.png"
+            alt={t('Banner case study')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="resources-case-studies-banner-copy">
+            <h1>{t('Case Study')}</h1>
+            <p>
+              {t(
+                'Những dự án, sản phẩm và giải pháp đã được triển khai trong thực tế.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Case Study là thư viện tổng hợp các dự án, sản phẩm và hoạt động vận hành thực tế mà ANSLIFE đã tham gia hoặc hỗ trợ triển khai.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Mỗi Case Study tập trung vào bài toán của khách hàng, cách tiếp cận, giải pháp thực hiện và kết quả đạt được nhằm giúp buyer và đối tác hiểu rõ hơn về năng lực triển khai của ANSLIFE.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isResourcesCaseStudiesPage && (
+        <section className="resources-case-studies-content">
+          <section className="resources-case-studies-groups">
+            <h2>{t('Các nhóm Case Study')}</h2>
+            <div className="resources-case-studies-group-grid">
+              {[
+                {
+                  number: '01',
+                  title: 'Phát triển sản phẩm OEM / ODM',
+                  imageSrc: '/assets/resources/case-studies/group-oem-odm.webp',
+                  body: 'Các dự án phát triển sản phẩm từ ý tưởng, bản vẽ hoặc mẫu tham chiếu đến sản xuất hàng loạt.',
+                  items: [
+                    'Phát triển bộ sưu tập ghế cho thị trường Nhật Bản',
+                    'Chuyển đổi thiết kế từ concept sang sản xuất',
+                    'Tối ưu cấu kiện để giảm chi phí sản xuất',
+                  ],
+                },
+                {
+                  number: '02',
+                  title: 'Dự án nội thất hoàn thiện',
+                  imageSrc: '/assets/resources/case-studies/group-finished-furniture.webp',
+                  body: 'Các dự án sản xuất và cung ứng nội thất hoàn thiện cho buyer quốc tế.',
+                  items: [
+                    'Ghế xuất khẩu cho thị trường Mỹ',
+                    'Bộ bàn ăn cho thị trường EU',
+                    'Nội thất phòng ngủ cho chuỗi bán lẻ',
+                  ],
+                },
+                {
+                  number: '03',
+                  title: 'Dự án khách sạn, resort và nhà hàng',
+                  imageSrc: '/assets/resources/case-studies/group-hospitality.webp',
+                  body: 'Các dự án nội thất tùy chỉnh theo yêu cầu riêng của công trình.',
+                  items: [
+                    'Resort ven biển',
+                    'Khách sạn boutique',
+                    'Chuỗi nhà hàng quốc tế',
+                    'Văn phòng và không gian làm việc',
+                  ],
+                },
+                {
+                  number: '04',
+                  title: 'Giải pháp chuỗi cung ứng',
+                  imageSrc: '/assets/resources/case-studies/group-supply-chain.webp',
+                  body: 'Các dự án liên quan đến điều phối nhà máy, vật liệu, logistics và xuất khẩu.',
+                  items: [
+                    'Quản lý nhiều nhà máy cho một dự án',
+                    'Gom hàng từ nhiều nguồn cung',
+                    'Tổ chức xuất hàng định kỳ',
+                  ],
+                },
+                {
+                  number: '05',
+                  title: 'Supply Hub Việt Nam',
+                  imageSrc: '/assets/resources/case-studies/group-supply-hub.webp',
+                  body: 'Các mô hình lưu kho, tồn kho đệm và điều phối cung ứng tại Việt Nam.',
+                  items: [
+                    'Kho đệm cho buyer Nhật Bản',
+                    'Gom hàng LCL từ nhiều nhà máy',
+                    'Quản lý vật liệu cho dự án dài hạn',
+                  ],
+                },
+                {
+                  number: '06',
+                  title: 'Chất lượng & QC',
+                  imageSrc: '/assets/resources/case-studies/group-quality-qc.webp',
+                  body: 'Các tình huống kiểm soát chất lượng và giải quyết rủi ro trong dự án.',
+                  items: [
+                    'Khắc phục sai lệch màu sắc',
+                    'Kiểm soát chất lượng đa nhà máy',
+                    'QC độc lập trước xuất hàng',
+                    'Chuẩn hóa mẫu duyệt cho đơn hàng lặp lại',
+                  ],
+                },
+              ].map((item) => (
+                <article key={item.number}>
+                  <div className="resources-case-studies-group-image-slot">
+                    <img src={item.imageSrc} alt={t(item.title)} loading="lazy" decoding="async" />
+                  </div>
+                  <h3>
+                    <span>{item.number}</span>
+                    {t(item.title)}
+                  </h3>
+                  <p>{t(item.body)}</p>
+                  <ul>
+                    {item.items.map((note) => (
+                      <li key={note}>{t(note)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resources-case-studies-structure">
+            <h2>{t('Cấu trúc một Case Study')}</h2>
+            <div className="resources-case-studies-structure-flow">
+              {[
+                {
+                  number: '01',
+                  title: 'Bối cảnh',
+                  imageSrc: '/assets/resources/case-studies/structure-context.webp',
+                  body: 'Khách hàng đang gặp vấn đề gì?',
+                },
+                {
+                  number: '02',
+                  title: 'Mục tiêu',
+                  imageSrc: '/assets/resources/case-studies/structure-objective.webp',
+                  body: 'Kết quả mong muốn là gì?',
+                },
+                {
+                  number: '03',
+                  title: 'Thách thức',
+                  imageSrc: '/assets/resources/case-studies/structure-challenge.webp',
+                  body: 'Những khó khăn hoặc rủi ro chính.',
+                },
+                {
+                  number: '04',
+                  title: 'Giải pháp',
+                  imageSrc: '/assets/resources/case-studies/structure-solution.webp',
+                  body: 'ANSLIFE đã triển khai những gì.',
+                },
+                {
+                  number: '05',
+                  title: 'Kết quả',
+                  imageSrc: '/assets/resources/case-studies/structure-result.webp',
+                  body: 'Những thay đổi hoặc kết quả đạt được.',
+                },
+                {
+                  number: '06',
+                  title: 'Bài học kinh nghiệm',
+                  imageSrc: '/assets/resources/case-studies/structure-lessons.webp',
+                  body: 'Những ghi nhận có giá trị cho các dự án tương tự.',
+                },
+              ].map((item, index) => (
+                <div className="resources-case-studies-structure-step-wrap" key={item.number}>
+                  <article>
+                    <div className="resources-case-studies-structure-head">
+                      <div className="resources-case-studies-structure-icon">
+                        <img src={item.imageSrc} alt={t(item.title)} loading="lazy" decoding="async" />
+                      </div>
+                      <h3>
+                        <span>{item.number}</span>
+                        {t(item.title)}
+                      </h3>
+                    </div>
+                    <p>{t(item.body)}</p>
+                  </article>
+                  {index < 5 && (
+                    <span className="resources-case-studies-structure-arrow" aria-hidden="true">
+                      →
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className="resources-case-studies-featured">
+            <h2>{t('Case Study nổi bật')}</h2>
+            <div className="resources-case-studies-featured-grid">
+              {[
+                {
+                  label: 'OEM / ODM',
+                  title: 'Phát triển bộ sưu tập ghế cho thị trường Nhật Bản',
+                  imageSrc: '/assets/resources/case-studies/featured-chair-japan.webp',
+                  body: 'Từ bản vẽ đến sản xuất hàng loạt với tiêu chuẩn hoàn thiện và QC riêng.',
+                },
+                {
+                  label: 'Supply Chain',
+                  title: 'Tối ưu chuỗi cung ứng cho dự án đa nhà máy',
+                  imageSrc: '/assets/resources/case-studies/featured-multi-factory-supply-chain.webp',
+                  body: 'Điều phối vật liệu, cấu kiện và giao hàng từ nhiều nguồn cung.',
+                },
+                {
+                  label: 'Supply Hub',
+                  title: 'Xây dựng tồn kho đệm tại Việt Nam',
+                  imageSrc: '/assets/resources/case-studies/featured-buffer-inventory-vietnam.webp',
+                  body: 'Giảm thời gian giao hàng và tăng khả năng đáp ứng cho buyer.',
+                },
+                {
+                  label: 'Quality Control',
+                  title: 'Chuẩn hóa mẫu duyệt cho đơn hàng dài hạn',
+                  imageSrc: '/assets/resources/case-studies/featured-approved-sample-long-term.webp',
+                  body: 'Duy trì tính nhất quán giữa các lô hàng trong nhiều năm.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="resources-case-studies-featured-image-slot">
+                    <img src={item.imageSrc} alt={t(item.title)} loading="lazy" decoding="async" />
+                    <span>{t(item.label)}</span>
+                  </div>
+                  <div className="resources-case-studies-featured-copy">
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                    <a href="/vn/resources/case-studies">{t('Xem chi tiết')} →</a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resources-case-studies-value">
+            <h2>{t('Giá trị từ Case Study')}</h2>
+            <div className="resources-case-studies-value-grid">
+              {[
+                {
+                  title: 'Thực tế',
+                  imageSrc: '/assets/resources/case-studies/value-practical.webp',
+                  body: 'Dựa trên các dự án đã triển khai.',
+                },
+                {
+                  title: 'Minh bạch',
+                  imageSrc: '/assets/resources/case-studies/value-transparent.webp',
+                  body: 'Cho thấy cách ANSLIFE xử lý vấn đề.',
+                },
+                {
+                  title: 'Kinh nghiệm',
+                  imageSrc: '/assets/resources/case-studies/value-experience.webp',
+                  body: 'Chia sẻ bài học từ thực tiễn.',
+                },
+                {
+                  title: 'Tham khảo',
+                  imageSrc: '/assets/resources/case-studies/value-reference.webp',
+                  body: 'Giúp buyer hình dung phương án triển khai cho dự án của mình.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="resources-case-studies-value-icon">
+                    <img src={item.imageSrc} alt={t(item.title)} loading="lazy" decoding="async" />
+                  </div>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resources-case-studies-cta">
+            <div className="resources-case-studies-cta-image-slot">
+              <img
+                src="/assets/resources/case-studies/cta-real-projects.webp"
+                alt={t('Tìm hiểu các dự án thực tế cùng ANSLIFE')}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="resources-case-studies-cta-copy">
+              <h2>{t('Tìm hiểu các dự án thực tế cùng ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'Khám phá các dự án, giải pháp và bài học thực tiễn từ hoạt động sản xuất, chuỗi cung ứng và xuất khẩu nội thất tại Việt Nam.',
+                )}
+              </p>
+              <div className="resources-case-studies-cta-actions">
+                <a className="is-primary" href="/vn/resources/case-studies">
+                  {t('Xem Case Study mới nhất')} →
+                </a>
+                <a href="/vn/contact">{t('Gửi yêu cầu dự án')} →</a>
+                <a href="/vn/contact">{t('Liên hệ ANSLIFE')} →</a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
+      {isResourcesExportKnowledgePage && (
+        <section className="resources-export-knowledge-content">
+          <section className="resources-export-knowledge-categories">
+            <h2>{t('Các chuyên mục chính')}</h2>
+            <div className="resources-export-knowledge-category-grid">
+              {[
+                {
+                  number: '01',
+                  title: 'Bắt đầu sản xuất tại Việt Nam',
+                  imageSrc: '/assets/resources/export-knowledge/category-start-production.webp',
+                  body: 'Những thông tin cơ bản dành cho buyer hoặc doanh nghiệp đang tìm hiểu khả năng sản xuất tại Việt Nam.',
+                  items: [
+                    'Làm thế nào để bắt đầu tìm nhà máy tại Việt Nam',
+                    'OEM và ODM khác nhau như thế nào',
+                    'Những thông tin cần chuẩn bị trước khi gửi RFQ',
+                    'Các yếu tố ảnh hưởng đến giá thành sản phẩm',
+                  ],
+                },
+                {
+                  number: '02',
+                  title: 'Chuỗi cung ứng & sản xuất',
+                  imageSrc: '/assets/resources/export-knowledge/category-supply-chain.webp',
+                  body: 'Các chủ đề liên quan đến năng lực sản xuất, vật liệu, nhà máy và tổ chức chuỗi cung ứng.',
+                  items: [
+                    'Đánh giá năng lực nhà máy như thế nào',
+                    'Khi nào nên sử dụng nhiều nhà máy cho một dự án',
+                    'Các rủi ro phổ biến trong chuỗi cung ứng nội thất',
+                    'Tối ưu hóa sản lượng và kế hoạch giao hàng',
+                  ],
+                },
+                {
+                  number: '03',
+                  title: 'Chất lượng & QC',
+                  imageSrc: '/assets/resources/export-knowledge/category-quality-qc.webp',
+                  body: 'Kiến thức liên quan đến kiểm soát chất lượng trong sản xuất và xuất khẩu.',
+                  items: [
+                    'Kiểm tra trong sản xuất là gì',
+                    'Kiểm tra cuối là gì',
+                    'Vai trò của mẫu duyệt',
+                    'Những lỗi phổ biến trong sản xuất nội thất',
+                  ],
+                },
+                {
+                  number: '04',
+                  title: 'Logistics & xuất khẩu',
+                  imageSrc: '/assets/resources/export-knowledge/category-logistics-export.webp',
+                  body: 'Thông tin về vận chuyển, container, chứng từ và điều phối xuất khẩu.',
+                  items: [
+                    'LCL và FCL khác nhau như thế nào',
+                    'Những lưu ý khi xuất khẩu nội thất',
+                    'Chuẩn bị chứng từ xuất khẩu',
+                    'Cách tối ưu chi phí logistics',
+                  ],
+                },
+                {
+                  number: '05',
+                  title: 'Vật liệu & hoàn thiện',
+                  imageSrc: '/assets/resources/export-knowledge/category-materials-finishing.webp',
+                  body: 'Kiến thức về vật liệu, hoàn thiện bề mặt và các yếu tố ảnh hưởng đến chất lượng sản phẩm.',
+                  items: [
+                    'Các loại gỗ phổ biến trong nội thất xuất khẩu',
+                    'Stain và sơn màu khác nhau như thế nào',
+                    'Kiểm soát độ ẩm vật liệu',
+                    'Hoàn thiện bề mặt cho từng thị trường',
+                  ],
+                },
+                {
+                  number: '06',
+                  title: 'Buyer Guides',
+                  imageSrc: '/assets/resources/export-knowledge/category-buyer-guides.webp',
+                  body: 'Các hướng dẫn dành cho buyer đang tìm kiếm đối tác sản xuất tại Việt Nam.',
+                  items: [
+                    'Checklist làm việc với nhà máy',
+                    'Cách đánh giá nhà cung cấp',
+                    'Những câu hỏi cần làm rõ trước khi đặt hàng',
+                    'Quản lý dự án sản xuất từ xa',
+                  ],
+                },
+              ].map((item) => (
+                <article key={item.number}>
+                  <div className="resources-export-knowledge-category-head">
+                    <div className="resources-export-knowledge-category-icon">
+                      <img src={item.imageSrc} alt={t(item.title)} loading="lazy" decoding="async" />
+                    </div>
+                    <h3>
+                      <span>{item.number}</span>
+                      {t(item.title)}
+                    </h3>
+                  </div>
+                  <p>{t(item.body)}</p>
+                  <ul>
+                    {item.items.map((note) => (
+                      <li key={note}>{t(note)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resources-export-knowledge-featured">
+            <h2>{t('Chủ đề nổi bật')}</h2>
+            <div className="resources-export-knowledge-featured-grid">
+              {[
+                {
+                  title: 'OEM vs ODM: Lựa chọn nào phù hợp?',
+                  imageSrc: '/assets/resources/export-knowledge/featured-oem-odm.webp',
+                  body: 'So sánh chi tiết giữa OEM và ODM để giúp bạn chọn mô hình phù hợp cho dự án của mình.',
+                },
+                {
+                  title: 'Những lỗi thường gặp khi phát triển sản phẩm mới',
+                  imageSrc: '/assets/resources/export-knowledge/featured-product-development-mistakes.webp',
+                  body: 'Các lỗi phổ biến có thể gây sai lệch khi phát triển sản phẩm nội thất và cách hạn chế.',
+                },
+                {
+                  title: 'Đánh giá năng lực nhà máy trước khi đặt hàng',
+                  imageSrc: '/assets/resources/export-knowledge/featured-factory-capability.webp',
+                  body: 'Các yếu tố quan trọng cần xem xét để lựa chọn nhà máy phù hợp và đảm bảo chất lượng.',
+                },
+                {
+                  title: 'Vai trò của QC độc lập trong dự án xuất khẩu',
+                  imageSrc: '/assets/resources/export-knowledge/featured-independent-qc.webp',
+                  body: 'Tại sao QC độc lập giúp giảm rủi ro và nâng cao chất lượng sản phẩm trước khi giao hàng.',
+                },
+                {
+                  title: 'Lưu kho và tồn kho đệm tại Việt Nam',
+                  imageSrc: '/assets/resources/export-knowledge/featured-buffer-inventory.webp',
+                  body: 'Lợi ích của việc lưu kho, gom hàng và tồn kho đệm trong chuỗi cung ứng quốc tế.',
+                },
+                {
+                  title: 'Cách xây dựng chuỗi cung ứng ổn định tại Việt Nam',
+                  imageSrc: '/assets/resources/export-knowledge/featured-stable-supply-chain.webp',
+                  body: 'Chiến lược giúp duy trì chuỗi cung ứng ổn định, linh hoạt và hiệu quả cho dự án dài hạn.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="resources-export-knowledge-featured-image-slot">
+                    <img src={item.imageSrc} alt={t(item.title)} loading="lazy" decoding="async" />
+                  </div>
+                  <div className="resources-export-knowledge-featured-copy">
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resources-export-knowledge-audience">
+            <h2>{t('Đối tượng phù hợp')}</h2>
+            <div className="resources-export-knowledge-audience-grid">
+              {[
+                {
+                  title: 'Buyer quốc tế',
+                  imageSrc: '/assets/resources/export-knowledge/audience-international-buyers.webp',
+                  body: 'Tìm hiểu thị trường sản xuất tại Việt Nam, quy trình, chi phí và các lưu ý quan trọng khi triển khai dự án.',
+                },
+                {
+                  title: 'Nhà nhập khẩu',
+                  imageSrc: '/assets/resources/export-knowledge/audience-importers.webp',
+                  body: 'Nâng cao hiểu biết về chuỗi cung ứng, logistics, chất lượng và các quy định xuất khẩu.',
+                },
+                {
+                  title: 'Nhà máy',
+                  imageSrc: '/assets/resources/export-knowledge/audience-factories.webp',
+                  body: 'Tiếp cận các yêu cầu phổ biến của buyer quốc tế và nâng cao năng lực sản xuất, quản trị và chất lượng.',
+                },
+                {
+                  title: 'Đội ngũ mua hàng',
+                  imageSrc: '/assets/resources/export-knowledge/audience-purchasing-teams.webp',
+                  body: 'Hỗ trợ đánh giá nhà cung cấp, quản lý dự án, kiểm soát chất lượng và tối ưu hiệu quả mua hàng.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="resources-export-knowledge-audience-icon">
+                    <img src={item.imageSrc} alt={t(item.title)} loading="lazy" decoding="async" />
+                  </div>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resources-export-knowledge-cta">
+            <div className="resources-export-knowledge-cta-image-slot">
+              <img
+                src="/assets/resources/export-knowledge/cta-library.webp"
+                alt={t('Khám phá thư viện kiến thức xuất khẩu của ANSLIFE')}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="resources-export-knowledge-cta-copy">
+              <h2>{t('Khám phá thư viện kiến thức xuất khẩu của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'Tìm hiểu thêm về sản xuất, chuỗi cung ứng, chất lượng, logistics và các hoạt động xuất khẩu nội thất từ Việt Nam.',
+                )}
+              </p>
+            </div>
+            <div className="resources-export-knowledge-cta-actions">
+              <a className="is-primary" href="/vn/resources/export-knowledge">
+                <span className="resources-export-knowledge-cta-icon resources-export-knowledge-cta-icon--book" aria-hidden="true" />
+                {t('Xem bài viết mới nhất')}
+              </a>
+              <a href="/vn/search">
+                <span className="resources-export-knowledge-cta-icon resources-export-knowledge-cta-icon--search" aria-hidden="true" />
+                {t('Tìm kiếm chủ đề')}
+              </a>
+              <a href="/vn/contact">
+                <span className="resources-export-knowledge-cta-icon resources-export-knowledge-cta-icon--headset" aria-hidden="true" />
+                {t('Liên hệ ANSLIFE')}
+              </a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isResourcesManufacturingNotesPage && (
+        <section className="resources-manufacturing-notes-content">
+          <section className="resources-manufacturing-notes-categories">
+            <h2>{t('Các chuyên mục ghi chú')}</h2>
+            <div className="resources-manufacturing-notes-category-grid">
+              {[
+                {
+                  number: '01',
+                  title: 'Vật liệu & nguyên liệu',
+                  imageSrc: '/assets/resources/manufacturing-notes/category-materials.webp',
+                  body: 'Các ghi chú liên quan đến gỗ tự nhiên, gỗ kỹ thuật, veneer, vật liệu bọc nệm, mây tre và các vật liệu sử dụng trong sản xuất nội thất.',
+                  items: [
+                    'Sự khác biệt giữa Oak và Ash trong sản xuất ghế',
+                    'Những lưu ý khi sử dụng veneer tự nhiên',
+                    'Độ ẩm vật liệu ảnh hưởng như thế nào đến sản phẩm',
+                    'Khi nào nên sử dụng plywood thay cho gỗ tự nhiên',
+                  ],
+                },
+                {
+                  number: '02',
+                  title: 'Cấu kiện & kết cấu sản phẩm',
+                  imageSrc: '/assets/resources/manufacturing-notes/category-components.webp',
+                  body: 'Các ghi chú liên quan đến cấu kiện, mộng gỗ, liên kết và kết cấu sản phẩm.',
+                  items: [
+                    'Các loại mộng gỗ phổ biến trong nội thất xuất khẩu',
+                    'Khung ghế chịu lực được thiết kế như thế nào',
+                    'Những lỗi thường gặp trong lắp ráp cấu kiện',
+                    'Vai trò của dung sai trong sản xuất hàng loạt',
+                  ],
+                },
+                {
+                  number: '03',
+                  title: 'Sơn & hoàn thiện bề mặt',
+                  imageSrc: '/assets/resources/manufacturing-notes/category-finishing.webp',
+                  body: 'Kinh nghiệm về stain, màu sắc, hoàn thiện bề mặt và kiểm soát chất lượng hoàn thiện.',
+                  items: [
+                    'Stain và sơn màu khác nhau như thế nào',
+                    'Tại sao cùng một màu nhưng hai lô hàng có thể khác nhau',
+                    'Các yếu tố ảnh hưởng đến độ bóng của sản phẩm',
+                    'Kiểm soát màu sắc trong sản xuất hàng loạt',
+                  ],
+                },
+                {
+                  number: '04',
+                  title: 'Kiểm soát chất lượng',
+                  imageSrc: '/assets/resources/manufacturing-notes/category-quality.webp',
+                  body: 'Các ghi chú liên quan đến hoạt động QC và hệ thống chất lượng.',
+                  items: [
+                    'Các lỗi thường gặp khi kiểm tra cuối',
+                    'Tại sao cần kiểm tra trong sản xuất',
+                    'Vai trò của mẫu duyệt trong dự án nội thất',
+                    'Những điểm buyer thường quan tâm khi đánh giá chất lượng',
+                  ],
+                },
+                {
+                  number: '05',
+                  title: 'Đóng gói & logistics',
+                  imageSrc: '/assets/resources/manufacturing-notes/category-packing-logistics.webp',
+                  body: 'Những kinh nghiệm liên quan đến đóng gói, lưu kho và vận chuyển quốc tế.',
+                  items: [
+                    'Knock-down và Fully Assembled nên chọn phương án nào',
+                    'Những nguyên nhân phổ biến gây hư hỏng trong vận chuyển',
+                    'Lựa chọn vật liệu đóng gói phù hợp cho nội thất xuất khẩu',
+                    'Lưu ý khi xếp container sản phẩm nội thất',
+                  ],
+                },
+                {
+                  number: '06',
+                  title: 'Phát triển sản phẩm OEM / ODM',
+                  imageSrc: '/assets/resources/manufacturing-notes/category-oem-odm.webp',
+                  body: 'Những kinh nghiệm từ quá trình phát triển sản phẩm và triển khai dự án mới.',
+                  items: [
+                    'Từ bản vẽ đến sản xuất hàng loạt',
+                    'Những câu hỏi cần làm rõ trước khi phát triển mẫu',
+                    'Các yếu tố ảnh hưởng đến chi phí sản xuất',
+                    'Khi nào nên lựa chọn OEM và khi nào nên lựa chọn ODM',
+                  ],
+                },
+              ].map((item) => (
+                <article key={item.number}>
+                  <div className="resources-manufacturing-notes-category-image-slot">
+                    <img src={item.imageSrc} alt={t(item.title)} loading="lazy" decoding="async" />
+                  </div>
+                  <h3>
+                    <span>{item.number}</span>
+                    {t(item.title)}
+                  </h3>
+                  <p>{t(item.body)}</p>
+                  <ul>
+                    {item.items.map((note) => (
+                      <li key={note}>{t(note)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resources-manufacturing-notes-featured">
+            <h2>{t('Các chủ đề nổi bật')}</h2>
+            <div className="resources-manufacturing-notes-featured-grid">
+              {[
+                {
+                  title: 'Độ ẩm vật liệu và rủi ro cong vênh',
+                  category: 'Vật liệu & nguyên liệu',
+                  imageSrc: '/assets/resources/manufacturing-notes/featured-moisture-warping.webp',
+                  body: 'Hiểu rõ độ ẩm vật liệu và cách kiểm soát giúp giảm thiểu cong vênh, nứt và biến dạng trong sản xuất.',
+                },
+                {
+                  title: 'Các hệ hoàn thiện bề mặt phổ biến trong nội thất xuất khẩu',
+                  category: 'Sơn & hoàn thiện bề mặt',
+                  imageSrc: '/assets/resources/manufacturing-notes/featured-surface-finishing.webp',
+                  body: 'Tổng hợp các hệ hoàn thiện phổ biến, ưu điểm, ứng dụng và lưu ý khi sản xuất hàng loạt.',
+                },
+                {
+                  title: 'Những lỗi thường gặp trong đóng gói nội thất',
+                  category: 'Đóng gói & logistics',
+                  imageSrc: '/assets/resources/manufacturing-notes/featured-packing-issues.webp',
+                  body: 'Những điểm cần được kiểm soát trong đóng gói và vận chuyển để cải thiện trạng thái giao hàng.',
+                },
+                {
+                  title: 'Kiểm soát màu sắc giữa các lô hàng',
+                  category: 'Sơn & hoàn thiện bề mặt',
+                  imageSrc: '/assets/resources/manufacturing-notes/featured-color-control.webp',
+                  body: 'Vì sao màu sắc giữa các lô hàng có thể khác nhau và cách kiểm soát hiệu quả.',
+                },
+                {
+                  title: 'Vai trò của mẫu duyệt trong sản xuất hàng loạt',
+                  category: 'Kiểm soát chất lượng',
+                  imageSrc: '/assets/resources/manufacturing-notes/featured-approved-sample.webp',
+                  body: 'Mẫu duyệt là cơ sở quan trọng để duy trì tính đồng nhất và hạn chế rủi ro.',
+                },
+                {
+                  title: 'Tối ưu hóa cấu kiện cho sản xuất và vận chuyển',
+                  category: 'Cấu kiện & kết cấu sản phẩm',
+                  imageSrc: '/assets/resources/manufacturing-notes/featured-component-optimization.webp',
+                  body: 'Thiết kế cấu kiện hợp lý giúp tối ưu chi phí, thời gian sản xuất và vận chuyển.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="resources-manufacturing-notes-featured-image-slot">
+                    <img src={item.imageSrc} alt={t(item.title)} loading="lazy" decoding="async" />
+                  </div>
+                  <div className="resources-manufacturing-notes-featured-copy">
+                    <h3>{t(item.title)}</h3>
+                    <span>{t(item.category)}</span>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="resources-manufacturing-notes-info-row">
+            <section className="resources-manufacturing-notes-audience">
+              <h2>{t('Đối tượng phù hợp')}</h2>
+              <div className="resources-manufacturing-notes-audience-grid">
+                {[
+                {
+                  title: 'Buyer',
+                  imageSrc: '/assets/resources/manufacturing-notes/audience-buyer.webp',
+                  body: 'Hiểu rõ hơn về vật liệu, sản xuất và kiểm soát chất lượng.',
+                },
+                {
+                  title: 'Nhà thiết kế',
+                  imageSrc: '/assets/resources/manufacturing-notes/audience-designer.webp',
+                  body: 'Hiểu các yếu tố ảnh hưởng đến khả năng sản xuất.',
+                },
+                {
+                  title: 'Nhà máy',
+                  imageSrc: '/assets/resources/manufacturing-notes/audience-factory.webp',
+                  body: 'Chia sẻ kinh nghiệm và bài học thực tế.',
+                },
+                {
+                  title: 'Đội ngũ phát triển sản phẩm',
+                  imageSrc: '/assets/resources/manufacturing-notes/audience-product-team.webp',
+                  body: 'Hỗ trợ quá trình phát triển và tối ưu sản phẩm.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="resources-manufacturing-notes-audience-icon">
+                    <img src={item.imageSrc} alt={t(item.title)} loading="lazy" decoding="async" />
+                  </div>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+            <section className="resources-manufacturing-notes-importance">
+              <h2>{t('Vì sao ghi chú sản xuất quan trọng?')}</h2>
+              <div className="resources-manufacturing-notes-importance-flow">
+                {[
+                  {
+                    title: 'Chia sẻ kinh nghiệm thực tế',
+                    imageSrc: '/assets/resources/manufacturing-notes/importance-experience.webp',
+                  },
+                  {
+                    title: 'Giảm rủi ro trong sản xuất và xuất khẩu',
+                    imageSrc: '/assets/resources/manufacturing-notes/importance-risk.webp',
+                  },
+                  {
+                    title: 'Nâng cao hiểu biết về vật liệu và quy trình',
+                    imageSrc: '/assets/resources/manufacturing-notes/importance-material-process.webp',
+                  },
+                  {
+                    title: 'Tối ưu chất lượng, tiến độ và chi phí',
+                    imageSrc: '/assets/resources/manufacturing-notes/importance-quality-cost.webp',
+                  },
+                  {
+                    title: 'Hỗ trợ quyết định và phát triển sản phẩm',
+                    imageSrc: '/assets/resources/manufacturing-notes/importance-decision-product.webp',
+                  },
+                ].map((item, index) => (
+                  <div className="resources-manufacturing-notes-importance-step-wrap" key={item.title}>
+                    <article>
+                      <div className="resources-manufacturing-notes-importance-icon">
+                        <img src={item.imageSrc} alt={t(item.title)} loading="lazy" decoding="async" />
+                      </div>
+                      <h3>{t(item.title)}</h3>
+                    </article>
+                    {index < 4 && (
+                      <span className="resources-manufacturing-notes-importance-arrow" aria-hidden="true">
+                        →
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+          </section>
+          <section className="resources-manufacturing-notes-knowledge-row">
+            <section className="resources-manufacturing-notes-library">
+              <h2>{t('Thư viện kiến thức liên tục cập nhật')}</h2>
+              <p>
+                {t(
+                  'Các ghi chú được cập nhật thường xuyên từ thực tế sản xuất tại các nhà máy và dự án của ANSLIFE.',
+                )}
+              </p>
+              <div className="resources-manufacturing-notes-library-layout">
+                <ul>
+                  {[
+                    'Quan sát thực tế từ sản xuất',
+                    'Bài học từ lỗi và cải tiến',
+                    'Kinh nghiệm từ nhiều thị trường',
+                    'Giải pháp tối ưu trong thực tế',
+                  ].map((item) => (
+                    <li key={item}>{t(item)}</li>
+                  ))}
+                </ul>
+                <div className="resources-manufacturing-notes-library-image-slot">
+                  <img
+                    src="/assets/resources/manufacturing-notes/library-updated.webp"
+                    alt={t('Thư viện kiến thức liên tục cập nhật')}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </section>
+            <section className="resources-manufacturing-notes-supply-quality">
+              <h2>{t('Góp phần xây dựng chuỗi cung ứng chất lượng')}</h2>
+              <p>
+                {t(
+                  'Chia sẻ kiến thức giúp nâng cao năng lực của toàn bộ chuỗi cung ứng, đối tác và cộng đồng sản xuất nội thất tại Việt Nam.',
+                )}
+              </p>
+              <div className="resources-manufacturing-notes-supply-flow">
+                {[
+                  {
+                    title: 'Chia sẻ kiến thức',
+                    imageSrc: '/assets/resources/manufacturing-notes/supply-sharing.webp',
+                  },
+                  {
+                    title: 'Nâng cao năng lực',
+                    imageSrc: '/assets/resources/manufacturing-notes/supply-capability.webp',
+                  },
+                  {
+                    title: 'Chuỗi cung ứng ổn định',
+                    imageSrc: '/assets/resources/manufacturing-notes/supply-stable.webp',
+                  },
+                  {
+                    title: 'Sản phẩm chất lượng',
+                    imageSrc: '/assets/resources/manufacturing-notes/supply-quality-product.webp',
+                  },
+                  {
+                    title: 'Khách hàng hài lòng',
+                    imageSrc: '/assets/resources/manufacturing-notes/supply-happy-customer.webp',
+                  },
+                ].map((item, index) => (
+                  <div className="resources-manufacturing-notes-supply-step-wrap" key={item.title}>
+                    <article>
+                      <div className="resources-manufacturing-notes-supply-icon">
+                        <img src={item.imageSrc} alt={t(item.title)} loading="lazy" decoding="async" />
+                      </div>
+                      <h3>{t(item.title)}</h3>
+                    </article>
+                    {index < 4 && (
+                      <span className="resources-manufacturing-notes-supply-arrow" aria-hidden="true">
+                        →
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+            <section className="resources-manufacturing-notes-standard-room">
+              <h2>{t('Liên kết với Phòng mẫu chuẩn đối tác')}</h2>
+              <p>
+                {t(
+                  'Các ghi chú giúp duy trì và đối chiếu tiêu chuẩn với mẫu duyệt, bản vẽ, bảng màu và checklist QC của từng buyer.',
+                )}
+              </p>
+              <div className="resources-manufacturing-notes-standard-room-layout">
+                <ul>
+                  {[
+                    'Mẫu duyệt',
+                    'Bản vẽ kỹ thuật',
+                    'Bảng màu & hoàn thiện',
+                    'Checklist QC',
+                    'Tiêu chuẩn đóng gói',
+                    'Báo cáo kiểm tra',
+                  ].map((item) => (
+                    <li key={item}>{t(item)}</li>
+                  ))}
+                </ul>
+                <div className="resources-manufacturing-notes-standard-room-image-slot">
+                  <img
+                    src="/assets/resources/manufacturing-notes/standard-room.webp"
+                    alt={t('Liên kết với Phòng mẫu chuẩn đối tác')}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </section>
+          </section>
+          <section className="resources-manufacturing-notes-cta">
+            <div className="resources-manufacturing-notes-cta-image-slot">
+              <img
+                src="/assets/resources/manufacturing-notes/cta-library.webp"
+                alt={t('Khám phá thư viện ghi chú sản xuất của ANSLIFE')}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="resources-manufacturing-notes-cta-copy">
+              <h2>{t('Khám phá thư viện ghi chú sản xuất của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'Các ghi chú được cập nhật từ thực tế sản xuất, phát triển sản phẩm, kiểm soát chất lượng và xuất khẩu nhằm hỗ trợ buyer và đối tác hiểu rõ hơn về ngành nội thất tại Việt Nam.',
+                )}
+              </p>
+            </div>
+            <div className="resources-manufacturing-notes-cta-actions">
+              <a className="is-primary" href="/vn/resources/manufacturing-notes">
+                <span className="resources-manufacturing-notes-cta-icon resources-manufacturing-notes-cta-icon--book" aria-hidden="true" />
+                {t('Xem ghi chú mới nhất')}
+              </a>
+              <a href="/vn/search">
+                <span className="resources-manufacturing-notes-cta-icon resources-manufacturing-notes-cta-icon--search" aria-hidden="true" />
+                {t('Tìm kiếm chủ đề')}
+              </a>
+              <a href="/vn/contact">
+                <span className="resources-manufacturing-notes-cta-icon resources-manufacturing-notes-cta-icon--phone" aria-hidden="true" />
+                {t('Liên hệ ANSLIFE')}
+              </a>
+            </div>
+          </section>
+        </section>
+      )}
       {shouldShowSupplyHubOverviewBanner && (
         <figure className="supply-hub-overview-banner">
           <img

@@ -821,7 +821,7 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
       {
         id: 'manufacturing-notes',
         title: 'Ghi chú sản xuất',
-        description: 'Ghi chú kỹ thuật và thực hành sản xuất.',
+        description: '',
       },
       {
         id: 'export-knowledge',

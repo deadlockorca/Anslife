@@ -989,6 +989,349 @@ const TRANSLATIONS: Partial<Record<
     'Tài nguyên': 'Resources',
     'Thư viện vật liệu': 'Material Library',
     'Ghi chú sản xuất': 'Manufacturing Notes',
+    'Nội dung hỗ trợ buyer trong quá trình xuất khẩu.':
+      'Content that supports buyers during the export process.',
+    'Banner kiến thức xuất khẩu': 'Export knowledge banner',
+    'Thông tin và kinh nghiệm thực tế về sản xuất, logistics và xuất khẩu nội thất từ Việt Nam.':
+      'Practical information and experience about furniture production, logistics, and export from Vietnam.',
+    'Thư viện Kiến thức xuất khẩu được xây dựng nhằm chia sẻ các thông tin hữu ích liên quan đến sản xuất, chuỗi cung ứng, logistics, kiểm soát chất lượng và hoạt động xuất khẩu nội thất từ Việt Nam.':
+      'The Export Knowledge library is built to share useful information related to production, supply chains, logistics, quality control, and furniture export operations from Vietnam.',
+    'Nội dung được tổng hợp từ kinh nghiệm thực tế của ANSLIFE trong quá trình làm việc với buyer, nhà máy và các dự án xuất khẩu quốc tế.':
+      'The content is compiled from ANSLIFE’s practical experience working with buyers, factories, and international export projects.',
+    'Banner case study': 'Case study banner',
+    'Các tình huống triển khai theo sản phẩm và dự án.':
+      'Implementation cases by product and project.',
+    'Những dự án, sản phẩm và giải pháp đã được triển khai trong thực tế.':
+      'Projects, products, and solutions that have been implemented in practice.',
+    'Case Study là thư viện tổng hợp các dự án, sản phẩm và hoạt động vận hành thực tế mà ANSLIFE đã tham gia hoặc hỗ trợ triển khai.':
+      'Case Study is a library of real projects, products, and operational activities that ANSLIFE has participated in or supported.',
+    'Mỗi Case Study tập trung vào bài toán của khách hàng, cách tiếp cận, giải pháp thực hiện và kết quả đạt được nhằm giúp buyer và đối tác hiểu rõ hơn về năng lực triển khai của ANSLIFE.':
+      'Each Case Study focuses on the customer problem, approach, implemented solution, and results achieved to help buyers and partners better understand ANSLIFE’s execution capability.',
+    'Các nhóm Case Study': 'Case Study Groups',
+    'Các dự án phát triển sản phẩm từ ý tưởng, bản vẽ hoặc mẫu tham chiếu đến sản xuất hàng loạt.':
+      'Product development projects from ideas, drawings, or reference samples through mass production.',
+    'Phát triển bộ sưu tập ghế cho thị trường Nhật Bản':
+      'Developing a chair collection for the Japanese market',
+    'Chuyển đổi thiết kế từ concept sang sản xuất':
+      'Converting designs from concept to production',
+    'Tối ưu cấu kiện để giảm chi phí sản xuất':
+      'Optimizing components to reduce production cost',
+    'Dự án nội thất hoàn thiện': 'Finished Furniture Projects',
+    'Các dự án sản xuất và cung ứng nội thất hoàn thiện cho buyer quốc tế.':
+      'Finished furniture production and supply projects for international buyers.',
+    'Ghế xuất khẩu cho thị trường Mỹ': 'Export chairs for the US market',
+    'Bộ bàn ăn cho thị trường EU': 'Dining sets for the EU market',
+    'Nội thất phòng ngủ cho chuỗi bán lẻ':
+      'Bedroom furniture for retail chains',
+    'Dự án khách sạn, resort và nhà hàng':
+      'Hotel, Resort, and Restaurant Projects',
+    'Các dự án nội thất tùy chỉnh theo yêu cầu riêng của công trình.':
+      'Custom furniture projects based on each property’s specific requirements.',
+    'Resort ven biển': 'Beachfront resorts',
+    'Khách sạn boutique': 'Boutique hotels',
+    'Chuỗi nhà hàng quốc tế': 'International restaurant chains',
+    'Văn phòng và không gian làm việc': 'Offices and workspaces',
+    'Giải pháp chuỗi cung ứng': 'Supply Chain Solutions',
+    'Các dự án liên quan đến điều phối nhà máy, vật liệu, logistics và xuất khẩu.':
+      'Projects related to factory coordination, materials, logistics, and export.',
+    'Quản lý nhiều nhà máy cho một dự án':
+      'Managing multiple factories for one project',
+    'Gom hàng từ nhiều nguồn cung': 'Consolidating goods from multiple sources',
+    'Tổ chức xuất hàng định kỳ': 'Arranging recurring shipments',
+    'Các mô hình lưu kho, tồn kho đệm và điều phối cung ứng tại Việt Nam.':
+      'Warehousing, buffer inventory, and supply coordination models in Vietnam.',
+    'Kho đệm cho buyer Nhật Bản': 'Buffer storage for Japanese buyers',
+    'Gom hàng LCL từ nhiều nhà máy':
+      'LCL consolidation from multiple factories',
+    'Quản lý vật liệu cho dự án dài hạn':
+      'Material management for long-term projects',
+    'Các tình huống kiểm soát chất lượng và giải quyết rủi ro trong dự án.':
+      'Quality control and project risk resolution scenarios.',
+    'Khắc phục sai lệch màu sắc': 'Correcting color deviations',
+    'Kiểm soát chất lượng đa nhà máy': 'Multi-factory quality control',
+    'QC độc lập trước xuất hàng': 'Independent QC before shipment',
+    'Chuẩn hóa mẫu duyệt cho đơn hàng lặp lại':
+      'Standardizing approved samples for repeat orders',
+    'Cấu trúc một Case Study': 'Case Study Structure',
+    'Bối cảnh': 'Context',
+    'Khách hàng đang gặp vấn đề gì?':
+      'What problem is the customer facing?',
+    'Mục tiêu': 'Objective',
+    'Kết quả mong muốn là gì?': 'What is the desired outcome?',
+    'Thách thức': 'Challenge',
+    'Những khó khăn hoặc rủi ro chính.':
+      'Key difficulties or risks.',
+    'Giải pháp': 'Solution',
+    'ANSLIFE đã triển khai những gì.': 'What ANSLIFE implemented.',
+    'Những thay đổi hoặc kết quả đạt được.':
+      'Changes or results achieved.',
+    'Bài học kinh nghiệm': 'Lessons Learned',
+    'Những ghi nhận có giá trị cho các dự án tương tự.':
+      'Valuable notes for similar projects.',
+    'Case Study nổi bật': 'Featured Case Studies',
+    'Supply Chain': 'Supply Chain',
+    'Quality Control': 'Quality Control',
+    'Tối ưu chuỗi cung ứng cho dự án đa nhà máy':
+      'Optimizing the supply chain for a multi-factory project',
+    'Điều phối vật liệu, cấu kiện và giao hàng từ nhiều nguồn cung.':
+      'Coordinating materials, components, and delivery from multiple sources.',
+    'Xây dựng tồn kho đệm tại Việt Nam':
+      'Building buffer inventory in Vietnam',
+    'Giảm thời gian giao hàng và tăng khả năng đáp ứng cho buyer.':
+      'Reducing lead time and improving responsiveness for buyers.',
+    'Chuẩn hóa mẫu duyệt cho đơn hàng dài hạn':
+      'Standardizing approved samples for long-term orders',
+    'Duy trì tính nhất quán giữa các lô hàng trong nhiều năm.':
+      'Maintaining consistency across production batches for many years.',
+    'Giá trị từ Case Study': 'Value from Case Studies',
+    'Thực tế': 'Practical',
+    'Dựa trên các dự án đã triển khai.':
+      'Based on projects that have already been implemented.',
+    'Cho thấy cách ANSLIFE xử lý vấn đề.':
+      'Shows how ANSLIFE handles problems.',
+    'Kinh nghiệm': 'Experience',
+    'Chia sẻ bài học từ thực tiễn.':
+      'Shares lessons from real practice.',
+    'Tham khảo': 'Reference',
+    'Giúp buyer hình dung phương án triển khai cho dự án của mình.':
+      'Helps buyers envision an implementation approach for their own project.',
+    'Tìm hiểu các dự án thực tế cùng ANSLIFE':
+      'Explore real projects with ANSLIFE',
+    'Khám phá các dự án, giải pháp và bài học thực tiễn từ hoạt động sản xuất, chuỗi cung ứng và xuất khẩu nội thất tại Việt Nam.':
+      'Explore projects, solutions, and practical lessons from furniture production, supply chain, and export operations in Vietnam.',
+    'Xem Case Study mới nhất': 'View latest case studies',
+    'Gửi yêu cầu dự án': 'Send project inquiry',
+    'Các chuyên mục chính': 'Main Categories',
+    'Bắt đầu sản xuất tại Việt Nam': 'Starting Production in Vietnam',
+    'Những thông tin cơ bản dành cho buyer hoặc doanh nghiệp đang tìm hiểu khả năng sản xuất tại Việt Nam.':
+      'Basic information for buyers or businesses exploring production capability in Vietnam.',
+    'Làm thế nào để bắt đầu tìm nhà máy tại Việt Nam':
+      'How to start finding a factory in Vietnam',
+    'OEM và ODM khác nhau như thế nào': 'How OEM and ODM differ',
+    'Những thông tin cần chuẩn bị trước khi gửi RFQ':
+      'Information to prepare before sending an RFQ',
+    'Các yếu tố ảnh hưởng đến giá thành sản phẩm':
+      'Factors that affect product cost',
+    'Chuỗi cung ứng & sản xuất': 'Supply Chain & Production',
+    'Các chủ đề liên quan đến năng lực sản xuất, vật liệu, nhà máy và tổ chức chuỗi cung ứng.':
+      'Topics related to production capability, materials, factories, and supply chain organization.',
+    'Đánh giá năng lực nhà máy như thế nào':
+      'How to evaluate factory capability',
+    'Khi nào nên sử dụng nhiều nhà máy cho một dự án':
+      'When to use multiple factories for one project',
+    'Các rủi ro phổ biến trong chuỗi cung ứng nội thất':
+      'Common risks in the furniture supply chain',
+    'Tối ưu hóa sản lượng và kế hoạch giao hàng':
+      'Optimizing output and delivery planning',
+    'Chất lượng & QC': 'Quality & QC',
+    'Kiến thức liên quan đến kiểm soát chất lượng trong sản xuất và xuất khẩu.':
+      'Knowledge related to quality control in production and export.',
+    'Kiểm tra trong sản xuất là gì': 'What is in-process inspection?',
+    'Kiểm tra cuối là gì': 'What is final inspection?',
+    'Những lỗi phổ biến trong sản xuất nội thất':
+      'Common issues in furniture production',
+    'Logistics & xuất khẩu': 'Logistics & Export',
+    'Thông tin về vận chuyển, container, chứng từ và điều phối xuất khẩu.':
+      'Information about shipping, containers, documents, and export coordination.',
+    'LCL và FCL khác nhau như thế nào': 'How LCL and FCL differ',
+    'Những lưu ý khi xuất khẩu nội thất': 'Notes when exporting furniture',
+    'Chuẩn bị chứng từ xuất khẩu': 'Preparing export documents',
+    'Cách tối ưu chi phí logistics': 'How to optimize logistics costs',
+    'Vật liệu & hoàn thiện': 'Materials & Finishing',
+    'Kiến thức về vật liệu, hoàn thiện bề mặt và các yếu tố ảnh hưởng đến chất lượng sản phẩm.':
+      'Knowledge about materials, surface finishing, and factors that affect product quality.',
+    'Các loại gỗ phổ biến trong nội thất xuất khẩu':
+      'Common wood species in export furniture',
+    'Kiểm soát độ ẩm vật liệu': 'Controlling material moisture',
+    'Hoàn thiện bề mặt cho từng thị trường':
+      'Surface finishing for each market',
+    'Buyer Guides': 'Buyer Guides',
+    'Các hướng dẫn dành cho buyer đang tìm kiếm đối tác sản xuất tại Việt Nam.':
+      'Guides for buyers looking for manufacturing partners in Vietnam.',
+    'Checklist làm việc với nhà máy': 'Factory collaboration checklist',
+    'Cách đánh giá nhà cung cấp': 'How to evaluate suppliers',
+    'Những câu hỏi cần làm rõ trước khi đặt hàng':
+      'Questions to clarify before placing an order',
+    'Quản lý dự án sản xuất từ xa': 'Managing production projects remotely',
+    'Chủ đề nổi bật': 'Featured Topics',
+    'OEM vs ODM: Lựa chọn nào phù hợp?': 'OEM vs ODM: Which Option Fits?',
+    'So sánh chi tiết giữa OEM và ODM để giúp bạn chọn mô hình phù hợp cho dự án của mình.':
+      'A detailed comparison between OEM and ODM to help you choose the right model for your project.',
+    'Những lỗi thường gặp khi phát triển sản phẩm mới':
+      'Common Mistakes When Developing New Products',
+    'Các lỗi phổ biến có thể gây sai lệch khi phát triển sản phẩm nội thất và cách hạn chế.':
+      'Common issues that can cause deviations during furniture product development and how to reduce them.',
+    'Đánh giá năng lực nhà máy trước khi đặt hàng':
+      'Evaluating Factory Capability Before Ordering',
+    'Các yếu tố quan trọng cần xem xét để lựa chọn nhà máy phù hợp và đảm bảo chất lượng.':
+      'Important factors to review when choosing the right factory and ensuring quality.',
+    'Vai trò của QC độc lập trong dự án xuất khẩu':
+      'The Role of Independent QC in Export Projects',
+    'Tại sao QC độc lập giúp giảm rủi ro và nâng cao chất lượng sản phẩm trước khi giao hàng.':
+      'Why independent QC helps reduce risk and improve product quality before shipment.',
+    'Lưu kho và tồn kho đệm tại Việt Nam':
+      'Warehousing and Buffer Inventory in Vietnam',
+    'Lợi ích của việc lưu kho, gom hàng và tồn kho đệm trong chuỗi cung ứng quốc tế.':
+      'The benefits of warehousing, consolidation, and buffer inventory in international supply chains.',
+    'Cách xây dựng chuỗi cung ứng ổn định tại Việt Nam':
+      'How to Build a Stable Supply Chain in Vietnam',
+    'Chiến lược giúp duy trì chuỗi cung ứng ổn định, linh hoạt và hiệu quả cho dự án dài hạn.':
+      'Strategies to maintain a stable, flexible, and efficient supply chain for long-term projects.',
+    'Buyer quốc tế': 'International Buyers',
+    'Tìm hiểu thị trường sản xuất tại Việt Nam, quy trình, chi phí và các lưu ý quan trọng khi triển khai dự án.':
+      'Understand Vietnam’s manufacturing market, process, costs, and key notes when launching projects.',
+    'Nhà nhập khẩu': 'Importers',
+    'Nâng cao hiểu biết về chuỗi cung ứng, logistics, chất lượng và các quy định xuất khẩu.':
+      'Improve understanding of supply chains, logistics, quality, and export regulations.',
+    'Tiếp cận các yêu cầu phổ biến của buyer quốc tế và nâng cao năng lực sản xuất, quản trị và chất lượng.':
+      'Access common requirements from international buyers and improve production, management, and quality capability.',
+    'Đội ngũ mua hàng': 'Purchasing Teams',
+    'Hỗ trợ đánh giá nhà cung cấp, quản lý dự án, kiểm soát chất lượng và tối ưu hiệu quả mua hàng.':
+      'Support supplier evaluation, project management, quality control, and purchasing efficiency optimization.',
+    'Khám phá thư viện kiến thức xuất khẩu của ANSLIFE':
+      'Explore ANSLIFE’s Export Knowledge Library',
+    'Tìm hiểu thêm về sản xuất, chuỗi cung ứng, chất lượng, logistics và các hoạt động xuất khẩu nội thất từ Việt Nam.':
+      'Learn more about production, supply chains, quality, logistics, and furniture export operations from Vietnam.',
+    'Xem bài viết mới nhất': 'View latest articles',
+    'Kinh nghiệm thực tế từ vật liệu, sản xuất, hoàn thiện và kiểm soát chất lượng trong ngành nội thất xuất khẩu.':
+      'Practical experience from materials, production, finishing, and quality control in export furniture.',
+    'Ghi chú sản xuất là thư viện tổng hợp các quan sát, kinh nghiệm và bài học thực tế từ quá trình phát triển sản phẩm, sản xuất, hoàn thiện bề mặt, kiểm soát chất lượng và xuất khẩu.':
+      'Manufacturing Notes is a library of observations, experience, and practical lessons from product development, production, surface finishing, quality control, and export.',
+    'Nội dung được xây dựng nhằm hỗ trợ buyer, đối tác và đội ngũ sản xuất hiểu rõ hơn về các yếu tố ảnh hưởng đến chất lượng, tiến độ và tính ổn định của sản phẩm nội thất.':
+      'The content is built to help buyers, partners, and production teams better understand the factors that affect furniture quality, schedule, and stability.',
+    'Banner ghi chú sản xuất': 'Manufacturing notes banner',
+    'Các chuyên mục ghi chú': 'Note Categories',
+    'Vật liệu & nguyên liệu': 'Materials & Raw Materials',
+    'Các ghi chú liên quan đến gỗ tự nhiên, gỗ kỹ thuật, veneer, vật liệu bọc nệm, mây tre và các vật liệu sử dụng trong sản xuất nội thất.':
+      'Notes related to solid wood, engineered wood, veneer, upholstery materials, rattan, bamboo, and materials used in furniture production.',
+    'Sự khác biệt giữa Oak và Ash trong sản xuất ghế':
+      'The difference between Oak and Ash in chair production',
+    'Những lưu ý khi sử dụng veneer tự nhiên': 'Key notes when using natural veneer',
+    'Độ ẩm vật liệu ảnh hưởng như thế nào đến sản phẩm':
+      'How material moisture affects the product',
+    'Khi nào nên sử dụng plywood thay cho gỗ tự nhiên':
+      'When to use plywood instead of solid wood',
+    'Cấu kiện & kết cấu sản phẩm': 'Components & Product Structure',
+    'Các ghi chú liên quan đến cấu kiện, mộng gỗ, liên kết và kết cấu sản phẩm.':
+      'Notes related to components, wood joints, connections, and product structure.',
+    'Các loại mộng gỗ phổ biến trong nội thất xuất khẩu':
+      'Common wood joints in export furniture',
+    'Khung ghế chịu lực được thiết kế như thế nào':
+      'How load-bearing chair frames are designed',
+    'Những lỗi thường gặp trong lắp ráp cấu kiện':
+      'Common issues in component assembly',
+    'Vai trò của dung sai trong sản xuất hàng loạt':
+      'The role of tolerance in mass production',
+    'Sơn & hoàn thiện bề mặt': 'Paint & Surface Finishing',
+    'Kinh nghiệm về stain, màu sắc, hoàn thiện bề mặt và kiểm soát chất lượng hoàn thiện.':
+      'Experience with stain, color, surface finishing, and finish quality control.',
+    'Stain và sơn màu khác nhau như thế nào': 'How stain and colored paint differ',
+    'Tại sao cùng một màu nhưng hai lô hàng có thể khác nhau':
+      'Why two batches can differ even with the same color',
+    'Các yếu tố ảnh hưởng đến độ bóng của sản phẩm':
+      'Factors that affect product gloss',
+    'Kiểm soát màu sắc trong sản xuất hàng loạt':
+      'Color control in mass production',
+    'Các ghi chú liên quan đến hoạt động QC và hệ thống chất lượng.':
+      'Notes related to QC activities and the quality system.',
+    'Các lỗi thường gặp khi kiểm tra cuối': 'Common issues during final inspection',
+    'Tại sao cần kiểm tra trong sản xuất': 'Why in-process inspection is needed',
+    'Vai trò của mẫu duyệt trong dự án nội thất':
+      'The role of approved samples in furniture projects',
+    'Những điểm buyer thường quan tâm khi đánh giá chất lượng':
+      'Quality points buyers usually care about',
+    'Đóng gói & logistics': 'Packing & Logistics',
+    'Những kinh nghiệm liên quan đến đóng gói, lưu kho và vận chuyển quốc tế.':
+      'Experience related to packing, warehousing, and international transportation.',
+    'Knock-down và Fully Assembled nên chọn phương án nào':
+      'Choosing between Knock-down and Fully Assembled',
+    'Những nguyên nhân phổ biến gây hư hỏng trong vận chuyển':
+      'Common causes of damage during transportation',
+    'Lựa chọn vật liệu đóng gói phù hợp cho nội thất xuất khẩu':
+      'Selecting suitable packing materials for export furniture',
+    'Lưu ý khi xếp container sản phẩm nội thất':
+      'Notes when loading furniture products into containers',
+    'Những kinh nghiệm từ quá trình phát triển sản phẩm và triển khai dự án mới.':
+      'Experience from product development and new project implementation.',
+    'Từ bản vẽ đến sản xuất hàng loạt': 'From drawing to mass production',
+    'Những câu hỏi cần làm rõ trước khi phát triển mẫu':
+      'Questions to clarify before sample development',
+    'Các yếu tố ảnh hưởng đến chi phí sản xuất':
+      'Factors that affect production cost',
+    'Khi nào nên lựa chọn OEM và khi nào nên lựa chọn ODM':
+      'When to choose OEM and when to choose ODM',
+    'Các chủ đề nổi bật': 'Featured Topics',
+    'Độ ẩm vật liệu và rủi ro cong vênh':
+      'Material Moisture and Warping Risk',
+    'Hiểu rõ độ ẩm vật liệu và cách kiểm soát giúp giảm thiểu cong vênh, nứt và biến dạng trong sản xuất.':
+      'Understanding material moisture and how to control it helps reduce warping, cracking, and deformation in production.',
+    'Các hệ hoàn thiện bề mặt phổ biến trong nội thất xuất khẩu':
+      'Common Surface Finishing Systems in Export Furniture',
+    'Tổng hợp các hệ hoàn thiện phổ biến, ưu điểm, ứng dụng và lưu ý khi sản xuất hàng loạt.':
+      'A summary of common finishing systems, their advantages, applications, and notes for mass production.',
+    'Những lỗi thường gặp trong đóng gói nội thất':
+      'Common Issues in Furniture Packing',
+    'Những điểm cần được kiểm soát trong đóng gói và vận chuyển để cải thiện trạng thái giao hàng.':
+      'Key points to control in packing and transportation to improve delivery condition.',
+    'Kiểm soát màu sắc giữa các lô hàng': 'Color Control Between Production Batches',
+    'Vì sao màu sắc giữa các lô hàng có thể khác nhau và cách kiểm soát hiệu quả.':
+      'Why color can vary between batches and how to control it effectively.',
+    'Vai trò của mẫu duyệt trong sản xuất hàng loạt':
+      'The Role of Approved Samples in Mass Production',
+    'Mẫu duyệt là cơ sở quan trọng để duy trì tính đồng nhất và hạn chế rủi ro.':
+      'Approved samples are an important basis for maintaining consistency and reducing risk.',
+    'Tối ưu hóa cấu kiện cho sản xuất và vận chuyển':
+      'Optimizing Components for Production and Transportation',
+    'Thiết kế cấu kiện hợp lý giúp tối ưu chi phí, thời gian sản xuất và vận chuyển.':
+      'Well-designed components help optimize cost, production time, and transportation.',
+    'Đối tượng phù hợp': 'Suitable Audiences',
+    Buyer: 'Buyer',
+    'Hiểu rõ hơn về vật liệu, sản xuất và kiểm soát chất lượng.':
+      'Better understand materials, production, and quality control.',
+    'Nhà thiết kế': 'Designer',
+    'Hiểu các yếu tố ảnh hưởng đến khả năng sản xuất.':
+      'Understand the factors that affect manufacturability.',
+    'Chia sẻ kinh nghiệm và bài học thực tế.':
+      'Share practical experience and lessons learned.',
+    'Đội ngũ phát triển sản phẩm': 'Product Development Team',
+    'Hỗ trợ quá trình phát triển và tối ưu sản phẩm.':
+      'Support product development and optimization.',
+    'Vì sao ghi chú sản xuất quan trọng?': 'Why Are Manufacturing Notes Important?',
+    'Chia sẻ kinh nghiệm thực tế': 'Share practical experience',
+    'Giảm rủi ro trong sản xuất và xuất khẩu':
+      'Reduce risks in production and export',
+    'Nâng cao hiểu biết về vật liệu và quy trình':
+      'Improve understanding of materials and processes',
+    'Tối ưu chất lượng, tiến độ và chi phí':
+      'Optimize quality, schedule, and cost',
+    'Hỗ trợ quyết định và phát triển sản phẩm':
+      'Support decisions and product development',
+    'Thư viện kiến thức liên tục cập nhật':
+      'Continuously Updated Knowledge Library',
+    'Các ghi chú được cập nhật thường xuyên từ thực tế sản xuất tại các nhà máy và dự án của ANSLIFE.':
+      'Notes are updated regularly from real production at ANSLIFE factories and projects.',
+    'Quan sát thực tế từ sản xuất': 'Real observations from production',
+    'Bài học từ lỗi và cải tiến': 'Lessons from defects and improvements',
+    'Kinh nghiệm từ nhiều thị trường': 'Experience from multiple markets',
+    'Giải pháp tối ưu trong thực tế': 'Practical optimization solutions',
+    'Góp phần xây dựng chuỗi cung ứng chất lượng':
+      'Contributing to a Quality Supply Chain',
+    'Chia sẻ kiến thức giúp nâng cao năng lực của toàn bộ chuỗi cung ứng, đối tác và cộng đồng sản xuất nội thất tại Việt Nam.':
+      'Knowledge sharing helps improve the capability of the whole supply chain, partners, and furniture manufacturing community in Vietnam.',
+    'Chia sẻ kiến thức': 'Share knowledge',
+    'Nâng cao năng lực': 'Improve capability',
+    'Chuỗi cung ứng ổn định': 'Stable supply chain',
+    'Sản phẩm chất lượng': 'Quality products',
+    'Khách hàng hài lòng': 'Satisfied customers',
+    'Các ghi chú giúp duy trì và đối chiếu tiêu chuẩn với mẫu duyệt, bản vẽ, bảng màu và checklist QC của từng buyer.':
+      'Notes help maintain and compare standards with each buyer’s approved samples, drawings, color boards, and QC checklists.',
+    'Bảng màu & hoàn thiện': 'Color & Finish Boards',
+    'Khám phá thư viện ghi chú sản xuất của ANSLIFE':
+      'Explore ANSLIFE’s Manufacturing Notes Library',
+    'Các ghi chú được cập nhật từ thực tế sản xuất, phát triển sản phẩm, kiểm soát chất lượng và xuất khẩu nhằm hỗ trợ buyer và đối tác hiểu rõ hơn về ngành nội thất tại Việt Nam.':
+      'Notes are updated from real production, product development, quality control, and export experience to help buyers and partners better understand the furniture industry in Vietnam.',
+    'Xem ghi chú mới nhất': 'View latest notes',
+    'Tìm kiếm chủ đề': 'Search topics',
     'Case study': 'Case Studies',
     'Case Study': 'Case Studies',
     'Cập nhật công ty': 'Company Updates',
