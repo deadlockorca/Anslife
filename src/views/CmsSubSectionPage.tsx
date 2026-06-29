@@ -165,6 +165,44 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'materials' && section.id === 'solid-wood' && detailSlug === 'ash';
   const isMaterialsOakPage =
     config.slug === 'materials' && section.id === 'solid-wood' && detailSlug === 'oak';
+  const isMaterialsBeechPage =
+    config.slug === 'materials' && section.id === 'solid-wood' && detailSlug === 'beech';
+  const isMaterialsAcaciaPage =
+    config.slug === 'materials' && section.id === 'solid-wood' && detailSlug === 'acacia';
+  const isMaterialsPinePage =
+    config.slug === 'materials' && section.id === 'solid-wood' && detailSlug === 'pine';
+  const isMaterialsPlywoodPage =
+    config.slug === 'materials' && section.id === 'engineered-wood' && detailSlug === 'plywood';
+  const isMaterialsMdfPage =
+    config.slug === 'materials' && section.id === 'engineered-wood' && detailSlug === 'mdf';
+  const isMaterialsParticleBoardPage =
+    config.slug === 'materials' && section.id === 'engineered-wood' && detailSlug === 'particle-board';
+  const isMaterialsLaminatedBoardPage =
+    config.slug === 'materials' && section.id === 'engineered-wood' && detailSlug === 'laminated-board';
+  const isMaterialsRattanPage =
+    config.slug === 'materials' && section.id === 'natural-materials' && detailSlug === 'rattan';
+  const isMaterialsBambooPage =
+    config.slug === 'materials' && section.id === 'natural-materials' && detailSlug === 'bamboo';
+  const isMaterialsCaneWebbingPage =
+    config.slug === 'materials' && section.id === 'natural-materials' && detailSlug === 'cane-webbing';
+  const isMaterialsFoamPage =
+    config.slug === 'materials' && section.id === 'upholstery-materials' && detailSlug === 'foam';
+  const isMaterialsFabricPage =
+    config.slug === 'materials' && section.id === 'upholstery-materials' && detailSlug === 'fabric';
+  const isMaterialsLeatherPuPage =
+    config.slug === 'materials' && section.id === 'upholstery-materials' && detailSlug === 'leather-pu';
+  const isMaterialsCushionMaterialsPage =
+    config.slug === 'materials' && section.id === 'upholstery-materials' && detailSlug === 'cushion-materials';
+  const isMaterialsCartonPage =
+    config.slug === 'materials' && section.id === 'packing-materials' && detailSlug === 'carton';
+  const isMaterialsFoamProtectionPage =
+    config.slug === 'materials' && section.id === 'packing-materials' && detailSlug === 'foam-protection';
+  const isMaterialsEdgeProtectionPage =
+    config.slug === 'materials' && section.id === 'packing-materials' && detailSlug === 'edge-protection';
+  const isMaterialsPalletPage =
+    config.slug === 'materials' && section.id === 'packing-materials' && detailSlug === 'pallet';
+  const isMaterialsExportPackingPage =
+    config.slug === 'materials' && section.id === 'packing-materials' && detailSlug === 'export-packing';
   const oemOdmSeoTitle = t('Phát triển sản phẩm OEM / ODM');
   const oemOdmSeoDescription = t(
     'Từ bản vẽ, mẫu thật hoặc ý tưởng sản phẩm đến phát triển mẫu và sản xuất hàng loạt tại Việt Nam.',
@@ -366,6 +404,18 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'resources' && section.id === 'case-studies' && !detailSlug;
   const isResourcesCompanyUpdatesPage =
     config.slug === 'resources' && section.id === 'company-updates' && !detailSlug;
+  const isManufacturingFactoryOverviewPage =
+    config.slug === 'manufacturing' && section.id === 'factory-overview' && !detailSlug;
+  const isManufacturingMachineryEquipmentPage =
+    config.slug === 'manufacturing' && section.id === 'machinery-equipment' && !detailSlug;
+  const isManufacturingFinishingCapabilityPage =
+    config.slug === 'manufacturing' && section.id === 'finishing-capability' && !detailSlug;
+  const isManufacturingAssemblyLinePage =
+    config.slug === 'manufacturing' && section.id === 'assembly-line' && !detailSlug;
+  const isManufacturingPackingAreaPage =
+    config.slug === 'manufacturing' && section.id === 'packing-area' && !detailSlug;
+  const isManufacturingContainerLoadingPage =
+    config.slug === 'manufacturing' && section.id === 'container-loading' && !detailSlug;
   const shouldRenderBlankSubSectionPage =
     shouldRenderBlankScholarshipPage ||
     shouldRenderBlankQualityInProcessPage ||
@@ -378,9 +428,34 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isResourcesExportKnowledgePage ||
     isResourcesCaseStudiesPage ||
     isResourcesCompanyUpdatesPage ||
+    isManufacturingFactoryOverviewPage ||
+    isManufacturingMachineryEquipmentPage ||
+    isManufacturingFinishingCapabilityPage ||
+    isManufacturingAssemblyLinePage ||
+    isManufacturingPackingAreaPage ||
+    isManufacturingContainerLoadingPage ||
     isMaterialsRubberWoodPage ||
     isMaterialsAshPage ||
     isMaterialsOakPage ||
+    isMaterialsBeechPage ||
+    isMaterialsAcaciaPage ||
+    isMaterialsPinePage ||
+    isMaterialsPlywoodPage ||
+    isMaterialsMdfPage ||
+    isMaterialsParticleBoardPage ||
+    isMaterialsLaminatedBoardPage ||
+    isMaterialsRattanPage ||
+    isMaterialsBambooPage ||
+    isMaterialsCaneWebbingPage ||
+    isMaterialsFoamPage ||
+    isMaterialsFabricPage ||
+    isMaterialsLeatherPuPage ||
+    isMaterialsCushionMaterialsPage ||
+    isMaterialsCartonPage ||
+    isMaterialsFoamProtectionPage ||
+    isMaterialsEdgeProtectionPage ||
+    isMaterialsPalletPage ||
+    isMaterialsExportPackingPage ||
     isSupplyHubOverviewPage ||
     isSupplyHubStorageSolutionPage ||
     isSupplyHubLclFclConsolidationPage ||
@@ -420,9 +495,34 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isResourcesExportKnowledgePage ||
     isResourcesCaseStudiesPage ||
     isResourcesCompanyUpdatesPage ||
+    isManufacturingFactoryOverviewPage ||
+    isManufacturingMachineryEquipmentPage ||
+    isManufacturingFinishingCapabilityPage ||
+    isManufacturingAssemblyLinePage ||
+    isManufacturingPackingAreaPage ||
+    isManufacturingContainerLoadingPage ||
     isMaterialsRubberWoodPage ||
     isMaterialsAshPage ||
     isMaterialsOakPage ||
+    isMaterialsBeechPage ||
+    isMaterialsAcaciaPage ||
+    isMaterialsPinePage ||
+    isMaterialsPlywoodPage ||
+    isMaterialsMdfPage ||
+    isMaterialsParticleBoardPage ||
+    isMaterialsLaminatedBoardPage ||
+    isMaterialsRattanPage ||
+    isMaterialsBambooPage ||
+    isMaterialsCaneWebbingPage ||
+    isMaterialsFoamPage ||
+    isMaterialsFabricPage ||
+    isMaterialsLeatherPuPage ||
+    isMaterialsCushionMaterialsPage ||
+    isMaterialsCartonPage ||
+    isMaterialsFoamProtectionPage ||
+    isMaterialsEdgeProtectionPage ||
+    isMaterialsPalletPage ||
+    isMaterialsExportPackingPage ||
     isSupplyHubOverviewPage ||
     isSupplyHubStorageSolutionPage ||
     isSupplyHubLclFclConsolidationPage ||
@@ -502,9 +602,34 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldShowResourcesExportKnowledgeBanner = isResourcesExportKnowledgePage;
   const shouldShowResourcesCaseStudiesBanner = isResourcesCaseStudiesPage;
   const shouldShowResourcesCompanyUpdatesBanner = isResourcesCompanyUpdatesPage;
+  const shouldShowManufacturingFactoryOverviewBanner = isManufacturingFactoryOverviewPage;
+  const shouldShowManufacturingMachineryEquipmentBanner = isManufacturingMachineryEquipmentPage;
+  const shouldShowManufacturingFinishingCapabilityBanner = isManufacturingFinishingCapabilityPage;
+  const shouldShowManufacturingAssemblyLineBanner = isManufacturingAssemblyLinePage;
+  const shouldShowManufacturingPackingAreaBanner = isManufacturingPackingAreaPage;
+  const shouldShowManufacturingContainerLoadingBanner = isManufacturingContainerLoadingPage;
   const shouldShowMaterialsRubberWoodBanner = isMaterialsRubberWoodPage;
   const shouldShowMaterialsAshBanner = isMaterialsAshPage;
   const shouldShowMaterialsOakBanner = isMaterialsOakPage;
+  const shouldShowMaterialsBeechBanner = isMaterialsBeechPage;
+  const shouldShowMaterialsAcaciaBanner = isMaterialsAcaciaPage;
+  const shouldShowMaterialsPineBanner = isMaterialsPinePage;
+  const shouldShowMaterialsPlywoodBanner = isMaterialsPlywoodPage;
+  const shouldShowMaterialsMdfBanner = isMaterialsMdfPage;
+  const shouldShowMaterialsParticleBoardBanner = isMaterialsParticleBoardPage;
+  const shouldShowMaterialsLaminatedBoardBanner = isMaterialsLaminatedBoardPage;
+  const shouldShowMaterialsRattanBanner = isMaterialsRattanPage;
+  const shouldShowMaterialsBambooBanner = isMaterialsBambooPage;
+  const shouldShowMaterialsCaneWebbingBanner = isMaterialsCaneWebbingPage;
+  const shouldShowMaterialsFoamBanner = isMaterialsFoamPage;
+  const shouldShowMaterialsFabricBanner = isMaterialsFabricPage;
+  const shouldShowMaterialsLeatherPuBanner = isMaterialsLeatherPuPage;
+  const shouldShowMaterialsCushionMaterialsBanner = isMaterialsCushionMaterialsPage;
+  const shouldShowMaterialsCartonBanner = isMaterialsCartonPage;
+  const shouldShowMaterialsFoamProtectionBanner = isMaterialsFoamProtectionPage;
+  const shouldShowMaterialsEdgeProtectionBanner = isMaterialsEdgeProtectionPage;
+  const shouldShowMaterialsPalletBanner = isMaterialsPalletPage;
+  const shouldShowMaterialsExportPackingBanner = isMaterialsExportPackingPage;
   const shouldRenderSectionHero = !shouldHideSectionHero && !isSupplyHubComponentSamplesPage;
   const shouldShowLoading = !shouldRenderBlankSubSectionPage && loading && !resolvedHtml;
   const shouldShowError =
@@ -1423,6 +1548,1260 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
 
       {shouldShowLoading && <LoadingBlock />}
       {shouldShowError && <ErrorBlock message={error as string} />}
+      {shouldShowManufacturingFactoryOverviewBanner && (
+        <figure className="manufacturing-factory-overview-banner">
+          <img
+            src="/assets/manufacturing/factory-overview-banner.webp"
+            alt={t('Banner tổng quan nhà máy')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="manufacturing-factory-overview-banner-copy">
+            <h1>{t('Tổng quan nhà máy')}</h1>
+            <p>
+              {t(
+                'Hệ thống sản xuất được tổ chức nhằm đáp ứng các yêu cầu về chất lượng, năng lực và tiến độ cho các dự án nội thất xuất khẩu.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE vận hành hệ thống sản xuất gồm nhà máy trực tiếp và các đối tác sản xuất được quản lý theo quy trình thống nhất. Mỗi dự án được kiểm soát từ lựa chọn vật liệu, tổ chức sản xuất, kiểm tra chất lượng đến đóng gói và xuất khẩu nhằm đảm bảo tính đồng nhất giữa mẫu duyệt và sản xuất hàng loạt.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowManufacturingMachineryEquipmentBanner && (
+        <figure className="manufacturing-machinery-equipment-banner">
+          <img
+            src="/assets/manufacturing/machinery-equipment-banner.webp"
+            alt={t('Banner máy móc và thiết bị')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="manufacturing-machinery-equipment-banner-copy">
+            <h1>{t('Máy móc & Thiết bị')}</h1>
+            <p>
+              {t(
+                'Hệ thống thiết bị được đầu tư nhằm đáp ứng yêu cầu về độ chính xác, năng suất và chất lượng trong sản xuất nội thất xuất khẩu.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE vận hành hệ thống máy móc và thiết bị phục vụ toàn bộ quá trình sản xuất, từ gia công vật liệu, hoàn thiện bề mặt, lắp ráp đến đóng gói. Việc đầu tư công nghệ phù hợp giúp đảm bảo độ chính xác của sản phẩm, ổn định chất lượng và đáp ứng tiến độ của các dự án xuất khẩu.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowManufacturingFinishingCapabilityBanner && (
+        <figure className="manufacturing-finishing-capability-banner">
+          <img
+            src="/assets/manufacturing/finishing-capability-banner.webp"
+            alt={t('Banner năng lực hoàn thiện')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="manufacturing-finishing-capability-banner-copy">
+            <h1>{t('Năng lực hoàn thiện')}</h1>
+            <p>
+              {t(
+                'Hệ thống hoàn thiện bề mặt được kiểm soát nhằm đảm bảo tính thẩm mỹ, độ bền và sự đồng nhất của sản phẩm trước khi xuất khẩu.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Hoàn thiện là công đoạn tạo nên giá trị cuối cùng của sản phẩm nội thất. Từ xử lý bề mặt, phối màu, sơn hoàn thiện đến lắp ráp và kiểm tra ngoại quan, mọi quy trình đều được thực hiện theo tiêu chuẩn kỹ thuật và mẫu đã được buyer phê duyệt.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE cung cấp nhiều giải pháp hoàn thiện phù hợp với từng loại vật liệu, phong cách thiết kế và yêu cầu của từng thị trường xuất khẩu.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowManufacturingAssemblyLineBanner && (
+        <figure className="manufacturing-assembly-line-banner">
+          <img
+            src="/assets/manufacturing/assembly-line-banner.webp"
+            alt={t('Banner dây chuyền lắp ráp')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="manufacturing-assembly-line-banner-copy">
+            <h1>{t('Dây chuyền lắp ráp')}</h1>
+            <p>
+              {t(
+                'Quy trình lắp ráp được tổ chức nhằm đảm bảo độ chính xác, tính đồng nhất và chất lượng của sản phẩm trước khi kiểm tra cuối và đóng gói.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Dây chuyền lắp ráp là công đoạn kết nối toàn bộ linh kiện và bán thành phẩm thành sản phẩm hoàn chỉnh. Mọi chi tiết được kiểm tra về kích thước, kết cấu, khả năng vận hành và ngoại quan trước khi chuyển sang kiểm tra chất lượng cuối cùng.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE xây dựng quy trình lắp ráp theo từng nhóm sản phẩm nhằm đảm bảo hiệu quả sản xuất, tính ổn định và khả năng đáp ứng các yêu cầu kỹ thuật của buyer.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowManufacturingPackingAreaBanner && (
+        <figure className="manufacturing-packing-area-banner">
+          <img
+            src="/assets/manufacturing/packing-area-banner.webp"
+            alt={t('Banner khu vực đóng gói')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="manufacturing-packing-area-banner-copy">
+            <h1>{t('Khu vực đóng gói')}</h1>
+            <p>
+              {t(
+                'Khu vực hoàn thiện cuối cùng trước khi sản phẩm được lưu kho, xếp pallet và xuất khẩu.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Khu vực đóng gói là công đoạn cuối trong quy trình sản xuất, nơi sản phẩm được kiểm tra ngoại quan, bảo vệ bằng các vật liệu đóng gói phù hợp và chuẩn bị cho quá trình lưu kho hoặc vận chuyển quốc tế.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE tổ chức khu vực đóng gói theo quy trình tiêu chuẩn nhằm đảm bảo mỗi sản phẩm được bảo vệ đúng quy cách, đúng tiêu chuẩn của buyer trước khi xuất xưởng.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowManufacturingContainerLoadingBanner && (
+        <figure className="manufacturing-container-loading-banner">
+          <img
+            src="/assets/manufacturing/container-loading-banner.webp"
+            alt={t('Banner xếp container')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="manufacturing-container-loading-banner-copy">
+            <h1>{t('Xếp container')}</h1>
+            <p>
+              {t(
+                'Quy trình lập kế hoạch và xếp hàng nhằm đảm bảo an toàn sản phẩm, tối ưu không gian container và nâng cao hiệu quả vận chuyển quốc tế.',
+              )}
+            </p>
+            <p>{t('Xếp container là bước cuối cùng trước khi hàng hóa được vận chuyển đến khách hàng.')}</p>
+            <p>
+              {t(
+                'Mỗi lô hàng được lập phương án xếp phù hợp với kích thước sản phẩm, quy cách đóng gói và phương thức vận chuyển nhằm đảm bảo an toàn, tối ưu thể tích và hạn chế rủi ro trong suốt hành trình quốc tế.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE kiểm soát toàn bộ quá trình từ chuẩn bị pallet, sắp xếp kiện hàng, cố định container đến kiểm tra trước khi niêm phong và xuất xưởng.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isManufacturingContainerLoadingPage && (
+        <section className="manufacturing-container-loading-content">
+          <section className="manufacturing-container-loading-goals">
+            <h2>{t('Mục tiêu của quy trình xếp container')}</h2>
+            <div className="manufacturing-container-loading-goal-grid">
+              {[
+                ['✓', 'Bảo vệ hàng hóa', 'Hạn chế va đập, dịch chuyển và hư hỏng trong quá trình vận chuyển.'],
+                ['□', 'Tối ưu không gian', 'Sắp xếp kiện hàng hợp lý để tận dụng tối đa dung tích container.'],
+                ['⚖', 'Phân bổ tải trọng', 'Đảm bảo trọng lượng được phân bổ đồng đều nhằm tăng độ ổn định khi vận chuyển.'],
+                ['▱', 'Thuận tiện dỡ hàng', 'Sắp xếp theo thứ tự giao nhận và yêu cầu của khách hàng.'],
+                ['☑', 'Đáp ứng tiêu chuẩn Buyer', 'Tuân thủ quy cách xếp hàng và hướng dẫn logistics của từng dự án.'],
+                ['▥', 'Giảm chi phí vận chuyển', 'Tối ưu hệ số lấp đầy container và hạn chế phát sinh chi phí logistics.'],
+              ].map(([icon, title, description]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <h3>{t(title)}</h3>
+                  <p>{t(description)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-container-loading-middle-row">
+            <div className="manufacturing-container-loading-process">
+              <h2>{t('Quy trình xếp container')}</h2>
+              <div className="manufacturing-container-loading-process-flow">
+                {[
+                  ['☑', 'Kiểm tra kiện hàng'],
+                  ['▤', 'Kiểm tra pallet'],
+                  ['⌗', 'Lập sơ đồ xếp container'],
+                  ['▥', 'Đưa hàng vào container'],
+                  ['▱', 'Cố định kiện hàng'],
+                  ['✓', 'Kiểm tra an toàn'],
+                  ['◇', 'Niêm phong container'],
+                  ['▱', 'Xuất hàng'],
+                ].map(([icon, title], index) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <small>{index + 1}</small>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-container-loading-controls">
+              <h2>{t('Những yếu tố được kiểm soát')}</h2>
+              <div className="manufacturing-container-loading-control-grid">
+                {[
+                  ['☑', 'Kiểm tra kiện hàng', 'Xác nhận số lượng, mã hàng và tình trạng đóng gói trước khi xếp.'],
+                  ['▤', 'Kiểm tra pallet', 'Đảm bảo pallet ổn định, đúng tải trọng và phù hợp với phương án xếp hàng.'],
+                  ['⚖', 'Phân bổ tải trọng', 'Bố trí trọng lượng hợp lý nhằm đảm bảo cân bằng container trong quá trình vận chuyển.'],
+                  ['✓', 'Cố định hàng hóa', 'Sử dụng dây đai, thanh chèn và vật liệu bảo vệ để hạn chế dịch chuyển.'],
+                  ['□', 'Kiểm tra khoảng trống', 'Hạn chế khoảng trống lớn giúp giảm rung lắc và va chạm giữa các kiện hàng.'],
+                  ['☑', 'Kiểm tra trước niêm phong', 'Đánh giá toàn bộ container trước khi đóng cửa và bàn giao cho đơn vị vận chuyển.'],
+                ].map(([icon, title, description]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-container-loading-types">
+            <h2>{t('Các loại hình xếp hàng')}</h2>
+            <div className="manufacturing-container-loading-type-grid">
+              {[
+                ['Nội thất nguyên chiếc', 'Xếp theo kích thước và khả năng chịu tải của từng sản phẩm.'],
+                ['Knock-down (KD)', 'Tối ưu thể tích bằng cách xếp theo từng kiện và bộ sản phẩm.'],
+                ['Linh kiện nội thất', 'Gom pallet theo mã hàng hoặc từng dự án.'],
+                ['Hàng hỗn hợp (Mixed Container)', 'Kết hợp nhiều nhóm sản phẩm trong cùng container theo kế hoạch giao hàng.'],
+                ['LCL', 'Chuẩn bị kiện hàng phù hợp với vận chuyển ghép container.'],
+                ['FCL', 'Triển khai phương án xếp tối ưu cho container nguyên.'],
+              ].map(([title, description]) => (
+                <article key={title}>
+                  <div className="manufacturing-container-loading-image-slot" aria-hidden="true" />
+                  <h3>{t(title)}</h3>
+                  <p>{t(description)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-container-loading-bottom-row">
+            <div className="manufacturing-container-loading-capability">
+              <h2>{t('Năng lực xếp container của ANSLIFE')}</h2>
+              <div className="manufacturing-container-loading-capability-grid">
+                {[
+                  ['□', 'Lập sơ đồ xếp hàng', 'Xây dựng phương án xếp container theo kích thước và tải trọng thực tế.'],
+                  ['✓', 'Kiểm soát an toàn', 'Đảm bảo hàng hóa được cố định chắc chắn trong suốt quá trình vận chuyển.'],
+                  ['◎', 'Phối hợp Logistics', 'Kết nối với đơn vị vận chuyển và lịch xuất hàng để đảm bảo tiến độ.'],
+                  ['⌂', 'Hỗ trợ Supply Hub', 'Thực hiện gom hàng từ nhiều nhà máy và tổ chức xếp container tại Vietnam Supply Hub.'],
+                ].map(([icon, title, description]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-container-loading-supply">
+              <h2>{t('Xếp container trong chuỗi cung ứng của ANSLIFE')}</h2>
+              <div className="manufacturing-container-loading-supply-flow">
+                {[
+                  ['⌂', 'Sản xuất'],
+                  ['✓', 'QC cuối'],
+                  ['□', 'Đóng gói'],
+                  ['▤', 'Pallet hóa'],
+                  ['▥', 'Xếp container'],
+                  ['◎', 'Xuất khẩu'],
+                  ['○', 'Giao hàng'],
+                ].map(([icon, title]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-container-loading-cta">
+            <div className="manufacturing-container-loading-cta-copy">
+              <h2>{t('Cần lập phương án xếp container cho đơn hàng xuất khẩu?')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi quy cách sản phẩm, kích thước kiện hàng, tiêu chuẩn pallet hoặc lịch xuất hàng để ANSLIFE đánh giá và đề xuất phương án xếp container phù hợp.',
+                )}
+              </p>
+            </div>
+            <div className="manufacturing-container-loading-cta-actions">
+              <a href="/contact">{t('Trao đổi dự án')} <span aria-hidden="true">→</span></a>
+              <a href="/manufacturing/packing-area">{t('Khu vực đóng gói')} <span aria-hidden="true">→</span></a>
+              <a href="/vietnam-supply-hub/lcl-fcl-consolidation">{t('LCL / FCL Consolidation')} <span aria-hidden="true">→</span></a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isManufacturingPackingAreaPage && (
+        <section className="manufacturing-packing-area-content">
+          <section className="manufacturing-packing-area-stages">
+            <h2>{t('Các công đoạn trong khu vực đóng gói')}</h2>
+            <div className="manufacturing-packing-area-stage-grid">
+              {[
+                [
+                  '1',
+                  '◎',
+                  'Kiểm tra ngoại quan',
+                  'Kiểm tra tình trạng sản phẩm sau lắp ráp và trước khi đóng gói.',
+                ],
+                [
+                  '2',
+                  '✧',
+                  'Vệ sinh sản phẩm',
+                  'Làm sạch bụi, dấu bẩn và kiểm tra bề mặt hoàn thiện.',
+                ],
+                [
+                  '3',
+                  '✓',
+                  'Bảo vệ sản phẩm',
+                  'Sử dụng túi PE, foam bảo vệ, bảo vệ cạnh và các vật liệu phù hợp để giảm rủi ro hư hỏng.',
+                ],
+                [
+                  '4',
+                  '□',
+                  'Đóng thùng',
+                  'Đóng gói theo đúng quy cách, kích thước và hướng dẫn của từng dự án.',
+                ],
+                [
+                  '5',
+                  '☑',
+                  'Ghi nhãn',
+                  'Dán nhãn sản phẩm, mã hàng, ký hiệu vận chuyển và các thông tin theo yêu cầu của buyer.',
+                ],
+                [
+                  '6',
+                  '▱',
+                  'Chuyển sang khu vực xuất hàng',
+                  'Kiện hàng được chuyển đến khu vực pallet hoặc chờ xếp container.',
+                ],
+              ].map(([number, icon, title, description]) => (
+                <article key={number}>
+                  <div className="manufacturing-packing-area-stage-head">
+                    <span>{number}</span>
+                    <b aria-hidden="true">{icon}</b>
+                  </div>
+                  <h3>{t(title)}</h3>
+                  <p>{t(description)}</p>
+                  <div className="manufacturing-packing-area-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-packing-area-system-row">
+            <div className="manufacturing-packing-area-materials">
+              <h2>{t('Hệ thống vật liệu đóng gói')}</h2>
+              <div className="manufacturing-packing-area-material-grid">
+                {[
+                  [
+                    'Túi PE',
+                    'Bảo vệ bề mặt khỏi bụi và hơi ẩm.',
+                  ],
+                  [
+                    'Foam bảo vệ',
+                    'Giảm va đập và chống rung.',
+                  ],
+                  [
+                    'Bảo vệ cạnh',
+                    'Bảo vệ các góc và cạnh dễ hư hỏng.',
+                  ],
+                  [
+                    'Thùng carton',
+                    'Bao bì chính của sản phẩm.',
+                  ],
+                  [
+                    'Đai kiện',
+                    'Giữ kiện hàng ổn định trong quá trình vận chuyển.',
+                  ],
+                  [
+                    'Pallet',
+                    'Chuẩn bị cho lưu kho và xếp container.',
+                  ],
+                ].map(([title, description]) => (
+                  <article key={title}>
+                    <div className="manufacturing-packing-area-material-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-packing-area-process">
+              <h2>{t('Quy trình đóng gói')}</h2>
+              <div className="manufacturing-packing-area-process-flow">
+                {[
+                  ['▱', 'Sản phẩm hoàn thiện'],
+                  ['◎', 'Kiểm tra ngoại quan'],
+                  ['✧', 'Làm sạch sản phẩm'],
+                  ['✓', 'Lắp vật liệu bảo vệ'],
+                  ['□', 'Đóng thùng carton'],
+                  ['☑', 'Dán nhãn'],
+                  ['▤', 'Đặt lên pallet'],
+                  ['▱', 'Chờ xuất hàng'],
+                ].map(([icon, title], index) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <small>{index + 1}</small>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-packing-area-controls">
+            <h2>{t('Những yếu tố được kiểm soát')}</h2>
+            <div className="manufacturing-packing-area-control-grid">
+              {[
+                ['▱', 'Quy cách đóng gói', 'Đảm bảo đúng theo tiêu chuẩn của từng buyer hoặc từng thị trường.'],
+                ['□', 'Vật liệu đóng gói', 'Kiểm tra chất lượng và tình trạng của tất cả vật liệu trước khi sử dụng.'],
+                ['☑', 'Nhãn sản phẩm', 'Kiểm tra mã hàng, số lượng, ký hiệu và thông tin vận chuyển.'],
+                ['✓', 'Độ an toàn', 'Đảm bảo sản phẩm được cố định chắc chắn trong thùng.'],
+                ['▤', 'Pallet hóa', 'Kiểm tra cách sắp xếp kiện hàng trên pallet trước khi lưu kho.'],
+                ['☑', 'Kiểm tra cuối', 'Xác nhận kiện hàng đạt yêu cầu trước khi chuyển sang khu vực xuất hàng.'],
+              ].map(([icon, title, description]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <h3>{t(title)}</h3>
+                  <p>{t(description)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-packing-area-capability">
+            <h2>{t('Năng lực đóng gói của ANSLIFE')}</h2>
+            <div className="manufacturing-packing-area-capability-grid">
+              {[
+                [
+                  '☑',
+                  'Đóng gói theo tiêu chuẩn Buyer',
+                  'Thực hiện theo quy cách, hướng dẫn và tiêu chuẩn riêng của từng khách hàng.',
+                ],
+                [
+                  '◇',
+                  'Đóng gói OEM / ODM',
+                  'Hỗ trợ in logo, mã sản phẩm, hướng dẫn lắp ráp và nhận diện thương hiệu.',
+                ],
+                [
+                  '□',
+                  'Đóng gói Knock-down (KD)',
+                  'Tối ưu thể tích vận chuyển và giảm chi phí logistics.',
+                ],
+                [
+                  '◎',
+                  'Đóng gói cho dự án xuất khẩu',
+                  'Triển khai đồng bộ cho các đơn hàng thương mại, khách sạn, văn phòng và chuỗi bán lẻ.',
+                ],
+              ].map(([icon, title, description]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <div>
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </div>
+                  <div className="manufacturing-packing-area-capability-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-packing-area-role">
+            <div className="manufacturing-packing-area-role-slot" aria-hidden="true" />
+            <div className="manufacturing-packing-area-role-copy">
+              <h2>{t('Vai trò của khu vực đóng gói')}</h2>
+              <p>
+                {t(
+                  'Khu vực đóng gói là bước xác nhận cuối cùng trước khi sản phẩm rời nhà máy. Tại đây, mỗi sản phẩm đều được kiểm tra, bảo vệ và đóng gói theo quy trình thống nhất nhằm đảm bảo chất lượng trong quá trình lưu kho, vận chuyển và giao hàng quốc tế.',
+                )}
+              </p>
+            </div>
+            <div className="manufacturing-packing-area-role-grid">
+              {[
+                ['✓', 'Bảo vệ tối ưu sản phẩm'],
+                ['◎', 'Giảm thiểu rủi ro hư hỏng'],
+                ['▥', 'Quy trình chuẩn hóa và kiểm soát'],
+                ['◎', 'Sẵn sàng cho xuất khẩu'],
+              ].map(([icon, title]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <h3>{t(title)}</h3>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-packing-area-cta">
+            <div className="manufacturing-packing-area-cta-copy">
+              <h2>{t('Cần xây dựng tiêu chuẩn đóng gói cho đơn hàng xuất khẩu?')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ sản phẩm, yêu cầu đóng gói, tiêu chuẩn carton, pallet hoặc quy cách logistics để ANSLIFE đánh giá và đề xuất phương án đóng gói phù hợp.',
+                )}
+              </p>
+            </div>
+            <div className="manufacturing-packing-area-cta-actions">
+              <a href="/contact">{t('Trao đổi dự án')} <span aria-hidden="true">→</span></a>
+              <a href="/quality-control/packing-standard">{t('Tiêu chuẩn đóng gói')} <span aria-hidden="true">→</span></a>
+              <a href="/manufacturing/container-loading">{t('Xếp container')} <span aria-hidden="true">→</span></a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isManufacturingAssemblyLinePage && (
+        <section className="manufacturing-assembly-line-content">
+          <section className="manufacturing-assembly-line-stages">
+            <h2>{t('Các công đoạn lắp ráp')}</h2>
+            <div className="manufacturing-assembly-line-stage-grid">
+              {[
+                [
+                  '01',
+                  '□',
+                  'Chuẩn bị linh kiện',
+                  'Kiểm tra và phân loại các linh kiện trước khi đưa vào dây chuyền lắp ráp.',
+                ],
+                [
+                  '02',
+                  '▥',
+                  'Lắp ráp kết cấu',
+                  'Lắp ráp khung, mặt bàn, chân, cánh tủ và các bộ phận chính theo bản vẽ kỹ thuật.',
+                ],
+                [
+                  '03',
+                  '⌁',
+                  'Lắp phụ kiện',
+                  'Lắp đặt bản lề, ray trượt, tay nắm, vít liên kết và các phụ kiện chức năng.',
+                ],
+                [
+                  '04',
+                  '◎',
+                  'Cân chỉnh sản phẩm',
+                  'Điều chỉnh kích thước, khe hở, độ cân bằng và khả năng vận hành của sản phẩm.',
+                ],
+                [
+                  '05',
+                  '☑',
+                  'Kiểm tra vận hành',
+                  'Đánh giá khả năng đóng mở, liên kết và độ ổn định trước khi chuyển sang QC.',
+                ],
+                [
+                  '06',
+                  '✧',
+                  'Hoàn thiện trước QC',
+                  'Làm sạch sản phẩm và kiểm tra ngoại quan trước khi kiểm tra chất lượng cuối cùng.',
+                ],
+              ].map(([number, icon, title, description]) => (
+                <article key={number}>
+                  <div className="manufacturing-assembly-line-stage-head">
+                    <span>{number}</span>
+                    <b aria-hidden="true">{icon}</b>
+                  </div>
+                  <h3>{t(title)}</h3>
+                  <p>{t(description)}</p>
+                  <div className="manufacturing-assembly-line-image-slot" aria-hidden="true" />
+                  <i aria-hidden="true">›</i>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-assembly-line-products">
+            <h2>{t('Dây chuyền lắp ráp theo nhóm sản phẩm')}</h2>
+            <div className="manufacturing-assembly-line-product-grid">
+              {[
+                ['♧', 'Ghế', 'Lắp khung, mặt ngồi, tựa lưng, tay vịn và chân ghế.'],
+                ['▱', 'Bàn', 'Lắp mặt bàn, chân bàn và hệ liên kết.'],
+                ['▥', 'Tủ & Kệ', 'Lắp thân tủ, cánh, ray trượt, bản lề và phụ kiện.'],
+                ['▭', 'Nội thất bọc nệm', 'Lắp khung, foam, vật liệu bọc và phụ kiện hoàn thiện.'],
+                ['◌', 'Nội thất mây tre', 'Lắp khung, chi tiết đan và các bộ phận hoàn thiện.'],
+                ['◇', 'OEM / ODM', 'Triển khai quy trình lắp ráp theo yêu cầu riêng của từng dự án.'],
+              ].map(([icon, title, description]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <h3>{t(title)}</h3>
+                  <p>{t(description)}</p>
+                  <div className="manufacturing-assembly-line-product-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-assembly-line-middle-row">
+            <div className="manufacturing-assembly-line-control">
+              <h2>{t('Kiểm soát trong quá trình lắp ráp')}</h2>
+              <div className="manufacturing-assembly-line-control-flow">
+                {[
+                  ['◎', 'Linh kiện'],
+                  ['☑', 'Kiểm tra đầu vào'],
+                  ['▥', 'Lắp ráp kết cấu'],
+                  ['⌁', 'Lắp phụ kiện'],
+                  ['⊕', 'Cân chỉnh'],
+                  ['☑', 'Kiểm tra vận hành'],
+                  ['◉', 'Kiểm tra ngoại quan'],
+                  ['✓', 'Chuyển sang QC cuối'],
+                ].map(([icon, title]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-assembly-line-applications">
+              <h2>{t('Ứng dụng')}</h2>
+              <div className="manufacturing-assembly-line-application-grid">
+                {[
+                  ['▭', 'Nội thất hoàn thiện'],
+                  ['□', 'Nội thất Knock-down (KD)'],
+                  ['▱', 'Nội thất bọc nệm'],
+                  ['◌', 'Nội thất mây tre'],
+                  ['◇', 'OEM / ODM'],
+                  ['▦', 'Dự án khách sạn và thương mại'],
+                ].map(([icon, title]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-assembly-line-bottom-row">
+            <div className="manufacturing-assembly-line-role">
+              <div>
+                <h2>{t('Vai trò của dây chuyền lắp ráp trong hệ thống sản xuất')}</h2>
+                <p>
+                  {t(
+                    'Dây chuyền lắp ráp là bước chuyển từ các linh kiện riêng lẻ thành sản phẩm hoàn chỉnh. Mọi sản phẩm đều được kiểm tra về kết cấu, chức năng và ngoại quan trước khi chuyển sang kiểm tra chất lượng cuối cùng và đóng gói.',
+                  )}
+                </p>
+                <p>
+                  {t(
+                    'Quy trình lắp ráp được xây dựng phù hợp với từng nhóm sản phẩm nhằm đảm bảo tính đồng nhất, hiệu quả sản xuất và đáp ứng yêu cầu kỹ thuật của từng buyer.',
+                  )}
+                </p>
+              </div>
+              <div className="manufacturing-assembly-line-wide-slot" aria-hidden="true" />
+            </div>
+
+            <div className="manufacturing-assembly-line-related">
+              <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+              <div className="manufacturing-assembly-line-related-grid">
+                {[
+                  [
+                    '⌂',
+                    'Tổng quan nhà máy',
+                    'Giới thiệu hệ thống tổ chức sản xuất của ANSLIFE.',
+                    '/manufacturing/factory-overview',
+                  ],
+                  [
+                    '⚙',
+                    'Máy móc & Thiết bị',
+                    'Các công nghệ và thiết bị phục vụ sản xuất.',
+                    '/manufacturing/machinery-equipment',
+                  ],
+                  [
+                    '◒',
+                    'Năng lực hoàn thiện',
+                    'Quy trình xử lý bề mặt và hoàn thiện sản phẩm.',
+                    '/manufacturing/finishing-capability',
+                  ],
+                  [
+                    '✓',
+                    'Kiểm tra cuối',
+                    'Quy trình kiểm tra trước khi đóng gói và xuất khẩu.',
+                    '/quality-control/final-inspection',
+                  ],
+                ].map(([icon, title, description, href]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                    <a href={href} aria-label={t(title)}>
+                      <b aria-hidden="true">›</b>
+                    </a>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-assembly-line-cta">
+            <div className="manufacturing-assembly-line-cta-copy">
+              <h2>{t('Cần tổ chức quy trình lắp ráp cho dự án nội thất?')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu sản phẩm, danh sách linh kiện hoặc tiêu chuẩn kỹ thuật để ANSLIFE đánh giá phương án lắp ráp, kiểm soát chất lượng và tổ chức sản xuất phù hợp.',
+                )}
+              </p>
+            </div>
+            <div className="manufacturing-assembly-line-cta-actions">
+              <a href="/contact">{t('Trao đổi dự án')} <span aria-hidden="true">→</span></a>
+              <a href="/manufacturing/factory-overview">{t('Xem tổng quan nhà máy')} <span aria-hidden="true">→</span></a>
+              <a href="/quality-control/final-inspection">{t('Kiểm tra cuối')} <span aria-hidden="true">→</span></a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isManufacturingFinishingCapabilityPage && (
+        <section className="manufacturing-finishing-capability-content">
+          <section className="manufacturing-finishing-capability-capacity">
+            <h2>{t('Năng lực hoàn thiện của ANSLIFE')}</h2>
+            <div className="manufacturing-finishing-capability-capacity-grid">
+              {[
+                [
+                  '♧',
+                  'Hoàn thiện gỗ tự nhiên',
+                  'Giữ nguyên vẻ đẹp của vân gỗ hoặc xử lý màu sắc theo yêu cầu của từng bộ sưu tập.',
+                ],
+                [
+                  '▤',
+                  'Hoàn thiện gỗ kỹ thuật',
+                  'Áp dụng các giải pháp sơn và vật liệu phủ bề mặt nhằm tạo tính đồng nhất và độ bền cho sản phẩm.',
+                ],
+                [
+                  '▱',
+                  'Hoàn thiện nội thất bọc nệm',
+                  'Kiểm soát độ căng của vật liệu bọc, đường may và hình dáng tổng thể của sản phẩm.',
+                ],
+                [
+                  '▦',
+                  'Hoàn thiện mây tre',
+                  'Xử lý bề mặt và hoàn thiện màu sắc nhằm bảo vệ vật liệu tự nhiên và tăng giá trị thẩm mỹ.',
+                ],
+                [
+                  '▰',
+                  'Hoàn thiện kim loại',
+                  'Kết hợp các giải pháp sơn hoặc xử lý bề mặt phù hợp với yêu cầu thiết kế và môi trường sử dụng.',
+                ],
+                [
+                  '◉',
+                  'Hoàn thiện theo yêu cầu',
+                  'Phát triển màu sắc, bề mặt và hiệu ứng hoàn thiện theo mẫu hoặc tiêu chuẩn riêng của buyer.',
+                ],
+              ].map(([icon, title, description]) => (
+                <article key={title}>
+                  <div className="manufacturing-finishing-capability-image-slot" aria-hidden="true" />
+                  <div className="manufacturing-finishing-capability-capacity-copy">
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-finishing-capability-surface">
+            <h2>{t('Các hệ hoàn thiện bề mặt')}</h2>
+            <div className="manufacturing-finishing-capability-surface-grid">
+              {[
+                ['Natural Finish', 'Giữ nguyên màu sắc và vẻ đẹp tự nhiên của vật liệu.'],
+                ['Stain Finish', 'Điều chỉnh màu sắc nhưng vẫn giữ được vân gỗ tự nhiên.'],
+                ['Lacquer Finish', 'Tạo lớp phủ bảo vệ với độ bền và tính thẩm mỹ cao.'],
+                ['Oil Finish', 'Làm nổi bật kết cấu tự nhiên và tạo cảm giác chân thực khi sử dụng.'],
+                ['Matte Finish', 'Bề mặt mờ hiện đại, hạn chế phản xạ ánh sáng.'],
+                ['Custom Color Finish', 'Hoàn thiện theo bảng màu, mẫu chuẩn hoặc yêu cầu riêng của buyer.'],
+              ].map(([title, description]) => (
+                <article key={title}>
+                  <div className="manufacturing-finishing-capability-surface-slot" aria-hidden="true" />
+                  <div>
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-finishing-capability-middle-row">
+            <div className="manufacturing-finishing-capability-process">
+              <h2>{t('Quy trình hoàn thiện')}</h2>
+              <div className="manufacturing-finishing-capability-process-flow">
+                {[
+                  ['◒', 'Chà nhám'],
+                  ['◉', 'Làm sạch bề mặt'],
+                  ['▣', 'Xử lý nền'],
+                  ['◐', 'Sơn hoặc hoàn thiện'],
+                  ['▥', 'Sấy khô'],
+                  ['◎', 'Kiểm tra màu sắc'],
+                  ['⌕', 'Kiểm tra ngoại quan'],
+                ].map(([icon, title], index) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <small>{index + 1}</small>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-finishing-capability-control">
+              <h2>{t('Những yếu tố được kiểm soát')}</h2>
+              <div className="manufacturing-finishing-capability-control-grid">
+                {[
+                  ['◌', 'Màu sắc', 'Đảm bảo đồng với mẫu duyệt và đồng đều giữa các lô sản xuất.'],
+                  ['▦', 'Độ đồng đều', 'Kiểm soát sự nhất quán trên toàn bộ bề mặt sản phẩm.'],
+                  ['✧', 'Chất lượng bề mặt', 'Kiểm tra độ mịn, độ phủ và ngoại quan sau hoàn thiện.'],
+                  ['✓', 'Liên kết lớp phủ', 'Đảm bảo lớp hoàn thiện bám chắc vào bề mặt vật liệu.'],
+                  ['◉', 'Kiểm tra ánh sáng', 'Đánh giá màu sắc và ngoại quan dưới điều kiện ánh sáng tiêu chuẩn.'],
+                  ['☑', 'Kiểm tra cuối', 'Đánh giá tổng thể trước khi chuyển sang công đoạn đóng gói.'],
+                ].map(([icon, title, description]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-finishing-capability-applications">
+            <h2>{t('Ứng dụng')}</h2>
+            <div className="manufacturing-finishing-capability-application-grid">
+              {[
+                ['⌂', 'Nội thất gia đình'],
+                ['▱', 'Nội thất khách sạn'],
+                ['▔', 'Nội thất nhà hàng'],
+                ['▱', 'Nội thất văn phòng'],
+                ['▰', 'OEM / ODM'],
+                ['◎', 'Dự án xuất khẩu'],
+              ].map(([icon, title]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <h3>{t(title)}</h3>
+                  <div className="manufacturing-finishing-capability-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-finishing-capability-bottom-row">
+            <div className="manufacturing-finishing-capability-quality">
+              <h2>{t('Hoàn thiện trong hệ thống chất lượng của ANSLIFE')}</h2>
+              <div className="manufacturing-finishing-capability-quality-layout">
+                <div>
+                  <p>
+                    {t(
+                      'Tất cả các công đoạn hoàn thiện đều được đối chiếu với mẫu đã được phê duyệt và kiểm tra theo tiêu chuẩn chất lượng của từng dự án.',
+                    )}
+                  </p>
+                  <p>
+                    {t(
+                      'Quá trình kiểm tra bao gồm màu sắc, ngoại quan, độ đồng đều và các yêu cầu kỹ thuật riêng của buyer trước khi sản phẩm được chuyển sang lắp ráp và đóng gói.',
+                    )}
+                  </p>
+                </div>
+                <div className="manufacturing-finishing-capability-wide-slot" aria-hidden="true" />
+              </div>
+            </div>
+
+            <div className="manufacturing-finishing-capability-value">
+              <h2>{t('Vai trò của hoàn thiện trong chuỗi giá trị')}</h2>
+              <div className="manufacturing-finishing-capability-value-flow">
+                {[
+                  ['◇', 'Tăng giá trị thẩm mỹ'],
+                  ['◎', 'Nâng cao trải nghiệm người dùng'],
+                  ['✓', 'Bảo vệ bề mặt sản phẩm'],
+                  ['⌛', 'Tăng tuổi thọ sản phẩm'],
+                  ['☆', 'Tạo lợi thế cạnh tranh'],
+                ].map(([icon, title]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-finishing-capability-cta">
+            <div className="manufacturing-finishing-capability-cta-copy">
+              <h2>{t('Cần phát triển mẫu hoàn thiện cho dự án xuất khẩu?')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ lựa chọn hệ hoàn thiện, phối màu và kiểm soát mẫu chuẩn nhằm đảm bảo sản phẩm đạt yêu cầu thẩm mỹ, kỹ thuật và tiêu chuẩn của buyer.',
+                )}
+              </p>
+            </div>
+            <div className="manufacturing-finishing-capability-cta-actions">
+              <a href="/contact">{t('Trao đổi dự án')} <span aria-hidden="true">→</span></a>
+              <a href="/manufacturing/machinery-equipment">{t('Máy móc & Thiết bị')} <span aria-hidden="true">→</span></a>
+              <a href="/quality-control/approved-sample-control">{t('Kiểm soát mẫu duyệt')} <span aria-hidden="true">→</span></a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isManufacturingMachineryEquipmentPage && (
+        <section className="manufacturing-machinery-equipment-content">
+          <section className="manufacturing-machinery-equipment-system">
+            <h2>{t('Hệ thống thiết bị sản xuất')}</h2>
+            <div className="manufacturing-machinery-equipment-system-grid">
+              {[
+                [
+                  '⚙',
+                  '1. Gia công gỗ',
+                  'Máy cắt, máy cưa, máy bào, máy soi và các thiết bị gia công gỗ phục vụ sản xuất linh kiện và nội thất hoàn thiện.',
+                ],
+                [
+                  'CNC',
+                  '2. Gia công CNC',
+                  'Máy CNC phục vụ cắt, khoan, phay và gia công các chi tiết có độ chính xác cao theo bản vẽ kỹ thuật.',
+                ],
+                [
+                  '◌',
+                  '3. Chà nhám',
+                  'Hệ thống chà nhám giúp tạo bề mặt đồng đều trước khi hoàn thiện sơn hoặc lắp ráp.',
+                ],
+                [
+                  '▣',
+                  '4. Sơn hoàn thiện',
+                  'Thiết bị phun sơn, buồng sơn và hệ thống sấy phục vụ nhiều phương pháp hoàn thiện bề mặt theo yêu cầu của từng dự án.',
+                ],
+                [
+                  '▱',
+                  '5. Bọc nệm',
+                  'Thiết bị cắt foam, may và bọc nệm phục vụ các sản phẩm sofa, ghế và nội thất bọc nệm.',
+                ],
+                [
+                  '⚒',
+                  '6. Lắp ráp',
+                  'Khu vực và thiết bị hỗ trợ lắp ráp, kiểm tra kích thước và hoàn thiện sản phẩm trước khi kiểm tra chất lượng.',
+                ],
+                [
+                  '◇',
+                  '7. Đóng gói',
+                  'Thiết bị đóng gói, quấn màng, đai kiện và chuẩn bị pallet phục vụ xuất khẩu.',
+                ],
+                [
+                  '✓',
+                  '8. Thiết bị kiểm tra',
+                  'Thiết bị đo lường và kiểm tra hỗ trợ kiểm soát chất lượng trong quá trình sản xuất và trước khi xuất hàng.',
+                ],
+              ].map(([, title, description]) => (
+                <article key={title}>
+                  <div className="manufacturing-machinery-equipment-image-slot" aria-hidden="true" />
+                  <div className="manufacturing-machinery-equipment-system-copy">
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-machinery-equipment-middle-row">
+            <div className="manufacturing-machinery-equipment-technology">
+              <h2>{t('Công nghệ gia công')}</h2>
+              <div className="manufacturing-machinery-equipment-technology-grid">
+                {[
+                  ['▥', 'Gia công CNC', 'Gia công chính xác theo bản vẽ kỹ thuật.'],
+                  ['⌐', 'Khoan & Phay', 'Đảm bảo độ chính xác của các mối liên kết và chi tiết sản phẩm.'],
+                  ['◒', 'Chà nhám', 'Tạo bề mặt đồng đều trước khi hoàn thiện.'],
+                  ['▣', 'Phun sơn', 'Đáp ứng nhiều hệ sơn và yêu cầu hoàn thiện khác nhau.'],
+                  ['▱', 'Bọc nệm', 'Gia công các sản phẩm bọc với độ chính xác và tính thẩm mỹ cao.'],
+                  ['◇', 'Đóng gói', 'Chuẩn bị sản phẩm theo tiêu chuẩn xuất khẩu quốc tế.'],
+                ].map(([icon, title, description]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-machinery-equipment-capability">
+              <h2>{t('Năng lực hỗ trợ sản xuất')}</h2>
+              <div className="manufacturing-machinery-equipment-capability-grid">
+                {[
+                  ['▤', 'Gia công đa vật liệu', 'Gỗ tự nhiên, gỗ kỹ thuật, mây tre, kim loại và vật liệu bọc.'],
+                  ['▱', 'Sản xuất OEM / ODM', 'Triển khai sản xuất theo bản vẽ và tiêu chuẩn riêng của buyer.'],
+                  ['◎', 'Dự án xuất khẩu', 'Đáp ứng các đơn hàng thương mại và dự án nội thất quy mô lớn.'],
+                  ['✓', 'Kiểm soát chất lượng', 'Thiết bị sản xuất kết hợp với quy trình QC nhằm đảm bảo chất lượng ổn định.'],
+                ].map(([icon, title, description]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-machinery-equipment-bottom-row">
+            <div className="manufacturing-machinery-equipment-role">
+              <h2>{t('Vai trò của thiết bị trong quy trình sản xuất')}</h2>
+              <div className="manufacturing-machinery-equipment-role-flow">
+                {[
+                  ['▨', 'Nguyên liệu'],
+                  ['⚙', 'Gia công'],
+                  ['◒', 'Chà nhám'],
+                  ['▣', 'Hoàn thiện'],
+                  ['⌂', 'Lắp ráp'],
+                  ['✓', 'QC'],
+                  ['◇', 'Đóng gói'],
+                ].map(([icon, title]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-machinery-equipment-investment">
+              <h2>{t('Định hướng đầu tư')}</h2>
+              <div className="manufacturing-machinery-equipment-investment-grid">
+                {[
+                  ['◎', 'Nâng cao độ chính xác', 'Đầu tư thiết bị phù hợp nhằm đảm bảo độ ổn định của sản phẩm.'],
+                  ['▥', 'Tăng hiệu quả sản xuất', 'Cải thiện năng suất và tối ưu quy trình sản xuất.'],
+                  ['♧', 'Phát triển bền vững', 'Ưu tiên công nghệ giúp sử dụng vật liệu hiệu quả và giảm lãng phí trong sản xuất.'],
+                ].map(([icon, title, description]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-machinery-equipment-cta">
+            <div className="manufacturing-machinery-equipment-cta-copy">
+              <h2>{t('Cần đánh giá năng lực thiết bị cho dự án của bạn?')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ lựa chọn phương án sản xuất phù hợp với yêu cầu kỹ thuật, tiêu chuẩn hoàn thiện và tiến độ giao hàng của từng dự án nội thất xuất khẩu.',
+                )}
+              </p>
+            </div>
+            <div className="manufacturing-machinery-equipment-cta-actions">
+              <a href="/contact">{t('Trao đổi dự án')} <span aria-hidden="true">→</span></a>
+              <a href="/manufacturing/factory-overview">{t('Xem tổng quan nhà máy')} <span aria-hidden="true">→</span></a>
+              <a href="/quality-control/qc-process">{t('Quy trình QC')} <span aria-hidden="true">→</span></a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isManufacturingFactoryOverviewPage && (
+        <section className="manufacturing-factory-overview-content">
+          <section className="manufacturing-factory-overview-top-row">
+            <div className="manufacturing-factory-overview-system">
+              <h2>{t('Hệ thống sản xuất của ANSLIFE')}</h2>
+              <div className="manufacturing-factory-overview-system-flow">
+                {[
+                  ['◎', 'Khách hàng'],
+                  ['▱', 'Phát triển sản phẩm'],
+                  ['▥', 'Lựa chọn nhà máy phù hợp'],
+                  ['⌂', 'Tổ chức sản xuất'],
+                  ['⚙', 'QC độc lập'],
+                  ['♢', 'Đóng gói'],
+                  ['▔', 'Xuất khẩu'],
+                ].map(([icon, title]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-factory-overview-capability">
+              <h2>{t('Năng lực sản xuất')}</h2>
+              <div className="manufacturing-factory-overview-capability-grid">
+                {[
+                  ['▱', 'Nội thất hoàn thiện', 'Sản xuất ghế, bàn, tủ, giường, kệ và các dòng nội thất hoàn thiện theo yêu cầu của khách hàng.'],
+                  ['▧', 'Linh kiện nội thất', 'Gia công khung ghế, mặt bàn, chân gỗ, chi tiết tủ, cấu kiện bọc nệm và linh kiện mây tre.'],
+                  ['⚙', 'Gia công vật liệu', 'Gia công gỗ tự nhiên, gỗ kỹ thuật, vật liệu bọc và các chi tiết hoàn thiện.'],
+                  ['✎', 'OEM / ODM', 'Phát triển và sản xuất sản phẩm theo bản vẽ, mẫu hoặc yêu cầu kỹ thuật của buyer.'],
+                  ['⌂', 'Dự án xuất khẩu', 'Kết nối sản xuất với lưu kho, gom hàng và điều phối xuất khẩu theo từng dự án.'],
+                ].map(([icon, title, body]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-factory-overview-production">
+            <h2>{t('Hệ thống sản xuất')}</h2>
+            <div className="manufacturing-factory-overview-production-grid">
+              {[
+                ['1', 'Chuẩn bị vật liệu', 'Kiểm tra nguyên liệu đầu vào, độ ẩm và tiêu chuẩn vật liệu trước khi đưa vào sản xuất.'],
+                ['2', 'Gia công', 'Gia công gỗ, kim loại, mây tre và các cấu kiện theo bản vẽ kỹ thuật.'],
+                ['3', 'Hoàn thiện', 'Chà nhám, sơn hoàn thiện, bọc nệm, lắp ráp và xử lý bề mặt.'],
+                ['4', 'Kiểm tra chất lượng', 'Kiểm soát chất lượng tại từng công đoạn và kiểm tra cuối trước khi đóng gói.'],
+                ['5', 'Đóng gói & Xuất khẩu', 'Đóng gói theo tiêu chuẩn buyer, lưu kho và điều phối xuất khẩu.'],
+              ].map(([number, title, body]) => (
+                <article key={title}>
+                  <div className="manufacturing-factory-overview-image-slot" aria-hidden="true" />
+                  <div className="manufacturing-factory-overview-production-copy">
+                    <span>{number}</span>
+                    <div>
+                      <h3>{t(title)}</h3>
+                      <p>{t(body)}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-factory-overview-middle-row">
+            <div className="manufacturing-factory-overview-products">
+              <h2>{t('Các nhóm sản phẩm sản xuất')}</h2>
+              <div className="manufacturing-factory-overview-product-grid">
+                {[
+                  'Nội thất hoàn thiện',
+                  'Nội thất bọc nệm',
+                  'Nội thất mây tre',
+                  'Nội thất ngoài trời',
+                  'Linh kiện nội thất',
+                  'OEM / ODM',
+                  'Hospitality Furniture',
+                  'Commercial Furniture',
+                ].map((title) => (
+                  <article key={title}>
+                    <div className="manufacturing-factory-overview-image-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-factory-overview-control">
+              <h2>{t('Hệ thống kiểm soát')}</h2>
+              <div className="manufacturing-factory-overview-control-grid">
+                {[
+                  ['☑', 'Kiểm soát vật liệu', 'Kiểm tra nguyên liệu theo tiêu chuẩn kỹ thuật trước khi sản xuất.'],
+                  ['⚙', 'Kiểm soát sản xuất', 'Theo dõi từng công đoạn nhằm đảm bảo đúng quy trình và bản vẽ.'],
+                  ['♢', 'Kiểm soát chất lượng', 'QC độc lập trong suốt quá trình sản xuất và trước khi xuất hàng.'],
+                  ['▣', 'Kiểm soát tiến độ', 'Theo dõi kế hoạch sản xuất và tiến độ giao hàng của từng dự án.'],
+                ].map(([icon, title, body]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-factory-overview-operations">
+              <h2>{t('Năng lực vận hành của ANSLIFE')}</h2>
+              <div className="manufacturing-factory-overview-operation-flow">
+                {[
+                  ['◎', 'Quản lý dự án'],
+                  ['⌂', 'Quản lý sản xuất'],
+                  ['♢', 'Quản lý chất lượng'],
+                  ['▧', 'Quản lý đóng gói'],
+                  ['▤', 'Quản lý logistics'],
+                ].map(([icon, title]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-factory-overview-bottom-row">
+            <div className="manufacturing-factory-overview-supply-chain">
+              <h2>{t('Đóng gói trong hệ thống supply chain của ANSLIFE')}</h2>
+              <div className="manufacturing-factory-overview-supply-flow">
+                {[
+                  ['✎', 'Thiết kế sản phẩm'],
+                  ['⌂', 'Sản xuất'],
+                  ['♢', 'QC'],
+                  ['▧', 'Đóng gói'],
+                  ['⌘', 'Lưu kho'],
+                  ['▥', 'Gom hàng'],
+                  ['▤', 'Xếp container'],
+                  ['▔', 'Xuất khẩu'],
+                ].map(([icon, title]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+              <p>{t('Kiểm soát đồng bộ - Thông tin xuyên suốt - Chất lượng nhất quán - Giao hàng đúng hẹn')}</p>
+            </div>
+
+            <div className="manufacturing-factory-overview-related">
+              <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+              <div className="manufacturing-factory-overview-related-grid">
+                {[
+                  ['Quy trình sản xuất', 'Tìm hiểu các công đoạn từ chuẩn bị vật liệu đến đóng gói.'],
+                  ['Máy móc & Thiết bị', 'Hệ thống thiết bị phục vụ gia công và sản xuất.'],
+                  ['Chất lượng & Tiêu chuẩn', 'Quy trình kiểm soát chất lượng trong toàn bộ hệ thống sản xuất.'],
+                  ['Vietnam Supply Hub', 'Giải pháp lưu kho, gom hàng và điều phối xuất khẩu.'],
+                ].map(([title, body]) => (
+                  <article key={title}>
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                    <span aria-hidden="true">›</span>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-factory-overview-cta">
+            <div className="manufacturing-factory-overview-cta-copy">
+              <h2>{t('Trao đổi về năng lực sản xuất cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu sản phẩm, tiêu chuẩn chất lượng hoặc kế hoạch đơn hàng để ANSLIFE đánh giá năng lực sản xuất và đề xuất phương án vận hành phù hợp.',
+                )}
+              </p>
+            </div>
+            <div className="manufacturing-factory-overview-cta-actions">
+              <a href="/vn/contact">
+                <span aria-hidden="true">✈</span>
+                {t('Gửi yêu cầu')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">⇧</span>
+                {t('Tải bản vẽ lên')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">☎</span>
+                {t('Liên hệ ANSLIFE')}
+              </a>
+            </div>
+          </section>
+        </section>
+      )}
       {shouldShowMaterialsRubberWoodBanner && (
         <figure className="materials-rubber-wood-banner">
           <img
@@ -1489,6 +2868,6533 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             </p>
           </figcaption>
         </figure>
+      )}
+      {shouldShowMaterialsBeechBanner && (
+        <figure className="materials-beech-banner">
+          <img
+            src="/assets/materials/solid-wood/beech-banner.webp"
+            alt={t('Banner gỗ Beech')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-beech-banner-copy">
+            <h1>{t('Gỗ Beech')}</h1>
+            <p>
+              {t(
+                'Loại gỗ được đánh giá cao nhờ kết cấu đồng đều, khả năng gia công chính xác và đặc biệt phù hợp cho các sản phẩm ghế và cấu kiện uốn cong.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Gỗ Beech là một trong những loại gỗ tự nhiên được sử dụng phổ biến trong ngành nội thất Châu Âu và Nhật Bản. Với cấu trúc gỗ đồng đều, độ cứng tốt và khả năng uốn cong bằng hơi nước (Steam Bending), Beech trở thành vật liệu lý tưởng cho nhiều dòng ghế, cấu kiện nội thất và sản phẩm yêu cầu độ chính xác cao.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Trong ngành nội thất xuất khẩu, Beech thường được sử dụng cho ghế ăn, ghế cafe, ghế nhà hàng, ghế khách sạn và các sản phẩm có chi tiết cong hoặc yêu cầu sản xuất hàng loạt với độ ổn định cao.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsAcaciaBanner && (
+        <figure className="materials-acacia-banner">
+          <img
+            src="/assets/materials/solid-wood/acacia-banner.webp"
+            alt={t('Banner gỗ Acacia')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-acacia-banner-copy">
+            <h1>{t('Gỗ Acacia')}</h1>
+            <p>
+              {t(
+                'Loại gỗ tự nhiên nổi bật với vân gỗ mạnh mẽ, màu sắc phong phú và khả năng ứng dụng linh hoạt cho nội thất trong nhà và ngoài trời.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Gỗ Acacia là một trong những loại gỗ được sử dụng rộng rãi trong ngành nội thất nhờ vẻ đẹp tự nhiên, độ bền tốt và tính thẩm mỹ cao. Với màu sắc đa dạng cùng hệ vân gỗ đặc trưng, Acacia thường được lựa chọn cho các sản phẩm mang phong cách tự nhiên, hiện đại và hospitality.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Trong ngành nội thất xuất khẩu, Acacia được sử dụng cho các bộ sưu tập nội thất gia đình, nội thất ngoài trời, nhà hàng, resort và các dự án yêu cầu sự cân bằng giữa tính thẩm mỹ, độ bền và hiệu quả chi phí.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsPineBanner && (
+        <figure className="materials-pine-banner">
+          <img
+            src="/assets/materials/solid-wood/pine-banner.webp"
+            alt={t('Banner gỗ Pine')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-pine-banner-copy">
+            <h1>{t('Gỗ Pine')}</h1>
+            <p>
+              {t(
+                'Loại gỗ tự nhiên nhẹ, dễ gia công và được sử dụng rộng rãi trong nội thất, DIY furniture và các chương trình sản xuất quy mô lớn.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Gỗ Pine là một trong những loại gỗ mềm được sử dụng phổ biến trên thị trường nội thất quốc tế. Với trọng lượng nhẹ, khả năng gia công tốt và màu sắc sáng tự nhiên, Pine được ứng dụng trong nhiều dòng sản phẩm từ nội thất gia đình, nội thất trẻ em đến các chương trình bán lẻ và thương mại điện tử.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Trong ngành nội thất xuất khẩu, Pine thường được lựa chọn cho các sản phẩm yêu cầu tối ưu chi phí, dễ vận chuyển và phù hợp với các thiết kế mang phong cách Scandinavian, Country hoặc Casual Living.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsPlywoodBanner && (
+        <figure className="materials-plywood-banner">
+          <img
+            src="/assets/materials/engineered-wood/plywood-banner.webp"
+            alt={t('Banner ván Plywood')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-plywood-banner-copy">
+            <h1>{t('Plywood')}</h1>
+            <p>
+              {t(
+                'Vật liệu gỗ kỹ thuật có độ ổn định cao, kết cấu nhiều lớp và được ứng dụng rộng rãi trong sản xuất nội thất hiện đại.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Plywood là vật liệu gỗ kỹ thuật được tạo thành từ nhiều lớp veneer gỗ tự nhiên ép chéo theo hướng vân khác nhau dưới áp suất và nhiệt độ cao. Cấu trúc này giúp tăng độ ổn định, hạn chế cong vênh và mang lại khả năng chịu lực tốt hơn so với nhiều loại vật liệu tấm khác.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Trong ngành nội thất xuất khẩu, Plywood được sử dụng rộng rãi cho nội thất hoàn thiện, cấu kiện nội thất, tủ, bàn, giường và các dự án thương mại nhờ khả năng gia công linh hoạt và tính ổn định trong sản xuất hàng loạt.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsMdfBanner && (
+        <figure className="materials-mdf-banner">
+          <img
+            src="/assets/materials/engineered-wood/mdf-banner.webp"
+            alt={t('Banner ván MDF')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-mdf-banner-copy">
+            <h1>{t('MDF')}</h1>
+            <p>
+              {t(
+                'Vật liệu gỗ kỹ thuật có bề mặt mịn, ổn định và là lựa chọn lý tưởng cho các sản phẩm yêu cầu sơn phủ hoặc hoàn thiện bề mặt chất lượng cao.',
+              )}
+            </p>
+            <p>
+              {t(
+                'MDF là vật liệu gỗ kỹ thuật được sản xuất từ sợi gỗ nghiền mịn kết hợp với keo và phụ gia, sau đó ép dưới áp suất và nhiệt độ cao để tạo thành tấm có mật độ trung bình. Với bề mặt phẳng, cấu trúc đồng nhất và khả năng gia công tốt, MDF được sử dụng rộng rãi trong ngành nội thất hiện đại.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Tại ANSLIFE, MDF được ứng dụng cho các dòng nội thất hoàn thiện, nội thất màu sơn, tủ, kệ, panel trang trí và các dự án OEM / ODM yêu cầu chất lượng bề mặt ổn định.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsParticleBoardBanner && (
+        <figure className="materials-particle-board-banner">
+          <img
+            src="/assets/materials/engineered-wood/particle-board-banner.webp"
+            alt={t('Banner ván Particle Board')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-particle-board-banner-copy">
+            <h1>{t('Ván dăm')}</h1>
+            <p>
+              {t(
+                'Vật liệu gỗ kỹ thuật tối ưu chi phí, phù hợp cho nội thất dạng tấm và các chương trình sản xuất quy mô lớn.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Ván dăm (Particle Board) là vật liệu gỗ kỹ thuật được sản xuất từ dăm gỗ kết hợp với keo chuyên dụng, sau đó ép dưới áp suất và nhiệt độ cao để tạo thành tấm vật liệu có cấu trúc đồng đều.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Nhờ hiệu quả về chi phí, khả năng gia công tốt và tương thích với nhiều loại vật liệu phủ bề mặt, Particle Board được sử dụng rộng rãi trong các sản phẩm nội thất dạng tấm, nội thất lắp ráp (Ready-to-Assemble) và các chương trình bán lẻ quy mô lớn trên thị trường quốc tế.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsLaminatedBoardBanner && (
+        <figure className="materials-laminated-board-banner">
+          <img
+            src="/assets/materials/engineered-wood/laminated-board-banner.webp"
+            alt={t('Banner laminated board')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-laminated-board-banner-copy">
+            <h1>{t('Ván phủ bề mặt')}</h1>
+            <p>
+              {t(
+                'Giải pháp hoàn thiện bề mặt giúp nâng cao tính thẩm mỹ, độ bền và khả năng ứng dụng của các vật liệu gỗ kỹ thuật.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Vật liệu phủ bề mặt đóng vai trò quan trọng trong sản xuất nội thất hiện đại. Tùy theo yêu cầu về thẩm mỹ, độ bền, khả năng chống trầy xước hoặc điều kiện sử dụng, mỗi dự án sẽ lựa chọn phương án hoàn thiện phù hợp.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE hỗ trợ lựa chọn, kiểm tra và triển khai nhiều hệ vật liệu phủ bề mặt nhằm đáp ứng yêu cầu của buyer và tiêu chuẩn của từng thị trường xuất khẩu.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsRattanBanner && (
+        <figure className="materials-rattan-banner">
+          <img
+            src="/assets/materials/natural-materials/rattan-banner.webp"
+            alt={t('Banner vật liệu mây')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-rattan-banner-copy">
+            <h1>{t('Mây')}</h1>
+            <p>
+              {t(
+                'Vật liệu tự nhiên mang đến sự linh hoạt, vẻ đẹp thủ công và giá trị bền vững trong thiết kế nội thất.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Mây là một trong những vật liệu tự nhiên đặc trưng của Đông Nam Á và được sử dụng rộng rãi trong ngành nội thất nhờ trọng lượng nhẹ, độ dẻo cao và khả năng tạo hình linh hoạt.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Tại ANSLIFE, mây được ứng dụng trong các sản phẩm nội thất hoàn thiện, cấu kiện trang trí và các dự án khách sạn, resort, nhà hàng theo phong cách tự nhiên, nhiệt đới và đương đại.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsBambooBanner && (
+        <figure className="materials-bamboo-banner">
+          <img
+            src="/assets/materials/natural-materials/bamboo-banner.webp"
+            alt={t('Banner vật liệu tre')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-bamboo-banner-copy">
+            <h1>{t('Tre')}</h1>
+            <p>
+              {t(
+                'Vật liệu tự nhiên phát triển nhanh, bền vững và có khả năng ứng dụng linh hoạt trong nội thất hiện đại.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Tre là một trong những vật liệu tự nhiên có tốc độ tái sinh nhanh và được sử dụng rộng rãi trong ngành nội thất nhờ khả năng gia công linh hoạt, độ bền tốt và giá trị phát triển bền vững.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Với đặc tính nhẹ, chắc và mang vẻ đẹp tự nhiên, tre được ứng dụng trong nhiều dòng sản phẩm nội thất, vật liệu trang trí và các dự án theo định hướng thiết kế xanh. Tại ANSLIFE, tre được kết hợp cùng gỗ, kim loại và các vật liệu tự nhiên khác để phát triển các giải pháp nội thất phục vụ thị trường xuất khẩu.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsCaneWebbingBanner && (
+        <figure className="materials-cane-webbing-banner">
+          <img
+            src="/assets/materials/natural-materials/cane-webbing-banner.webp"
+            alt={t('Banner vật liệu cane webbing')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-cane-webbing-banner-copy">
+            <h1>{t('Mặt đan mây')}</h1>
+            <p>
+              {t(
+                'Giải pháp bề mặt tự nhiên mang lại sự thông thoáng, tính thẩm mỹ và giá trị thủ công cho nội thất.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Mặt đan mây là vật liệu được tạo thành từ các sợi mây tự nhiên đan theo nhiều kiểu khác nhau để hình thành bề mặt sử dụng cho ghế, cánh tủ, vách trang trí và các chi tiết nội thất.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Với vẻ đẹp tự nhiên, khả năng thông thoáng và giá trị thủ công, mặt đan mây được ứng dụng rộng rãi trong các bộ sưu tập nội thất Scandinavian, Japandi, Tropical và Contemporary.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsFoamBanner && (
+        <figure className="materials-foam-banner">
+          <img
+            src="/assets/materials/upholstery-materials/foam-banner.webp"
+            alt={t('Banner vật liệu Foam')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-foam-banner-copy">
+            <h1>{t('Foam')}</h1>
+            <p>
+              {t(
+                'Vật liệu đệm quyết định sự êm ái, khả năng nâng đỡ và độ bền của các sản phẩm nội thất bọc nệm.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Foam là vật liệu đệm được sử dụng phổ biến trong ngành nội thất bọc nệm nhờ khả năng đàn hồi, phân bố lực và tạo sự thoải mái khi sử dụng.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Tại ANSLIFE, foam được lựa chọn theo yêu cầu của từng sản phẩm, tiêu chuẩn của buyer và mục đích sử dụng, nhằm đảm bảo sự cân bằng giữa cảm giác ngồi, độ bền và hiệu quả sản xuất.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsFabricBanner && (
+        <figure className="materials-fabric-banner">
+          <img
+            src="/assets/materials/upholstery-materials/fabric-banner.webp"
+            alt={t('Banner vật liệu Fabric')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-fabric-banner-copy">
+            <h1>{t('Vải')}</h1>
+            <p>
+              {t(
+                'Giải pháp vật liệu bọc mang đến sự thoải mái, tính thẩm mỹ và độ bền cho các sản phẩm nội thất.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Vải bọc là lớp hoàn thiện trực tiếp tạo nên cảm nhận về màu sắc, kết cấu và trải nghiệm sử dụng của sản phẩm nội thất.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE hỗ trợ lựa chọn nhiều dòng vải bọc phù hợp với yêu cầu thiết kế, tiêu chuẩn kỹ thuật và mục đích sử dụng của từng dự án, từ nội thất gia đình đến khách sạn, nhà hàng, văn phòng và các chương trình OEM / ODM.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsLeatherPuBanner && (
+        <figure className="materials-leather-pu-banner">
+          <img
+            src="/assets/materials/upholstery-materials/leather-pu-banner.webp"
+            alt={t('Banner vật liệu Leather / PU')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-leather-pu-banner-copy">
+            <h1>{t('Da / PU')}</h1>
+            <p>
+              {t(
+                'Giải pháp vật liệu bọc mang đến vẻ đẹp sang trọng, độ bền cao và khả năng bảo trì thuận tiện cho các sản phẩm nội thất.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Da và PU là những vật liệu bọc được sử dụng phổ biến trong các dòng nội thất cao cấp, nội thất thương mại và các dự án khách sạn, văn phòng.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Mỗi loại vật liệu mang những đặc tính riêng về ngoại quan, cảm giác sử dụng và khả năng bảo trì.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE hỗ trợ lựa chọn vật liệu bọc phù hợp với yêu cầu thiết kế, tiêu chuẩn kỹ thuật và ngân sách của từng dự án, đảm bảo sự đồng nhất giữa mẫu duyệt và sản xuất hàng loạt.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsCushionMaterialsBanner && (
+        <figure className="materials-cushion-materials-banner">
+          <img
+            src="/assets/materials/upholstery-materials/cushion-materials-banner.webp"
+            alt={t('Banner vật liệu đệm')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-cushion-materials-banner-copy">
+            <h1>{t('Vật liệu đệm')}</h1>
+            <p>
+              {t(
+                'Các vật liệu bổ trợ giúp tạo độ mềm, độ phồng và nâng cao trải nghiệm sử dụng cho sản phẩm nội thất bọc nệm.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Vật liệu đệm là lớp vật liệu kết hợp cùng foam nhằm tạo nên sự êm ái, độ đầy và hình dáng của sản phẩm nội thất. Tùy theo mục đích sử dụng và yêu cầu của buyer, mỗi sản phẩm sẽ sử dụng một hoặc nhiều loại vật liệu đệm khác nhau.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE lựa chọn vật liệu đệm phù hợp với từng dòng sản phẩm, đảm bảo sự cân bằng giữa cảm giác sử dụng, độ bền, khả năng phục hồi và hiệu quả sản xuất.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isMaterialsCushionMaterialsPage && (
+        <section className="materials-cushion-materials-content">
+          <section className="materials-cushion-materials-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-cushion-materials-overview-panel">
+              {[
+                {
+                  icon: '▱',
+                  title: 'Tên thương mại',
+                  body: 'Cushion Filling Materials',
+                },
+                {
+                  icon: '✺',
+                  title: 'Nhóm vật liệu',
+                  body: 'Vật liệu bọc nệm',
+                },
+                {
+                  icon: '▧',
+                  title: 'Chức năng',
+                  body: 'Tạo độ mềm\nTạo độ phồng\nHoàn thiện hình dáng\nTăng sự thoải mái',
+                },
+                {
+                  icon: '▰',
+                  title: 'Đặc điểm',
+                  body: 'Nhẹ\nĐàn hồi\nDễ kết hợp\nĐa dạng vật liệu',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    {item.body.includes('\n') ? (
+                      <ul>
+                        {item.body.split('\n').map((line) => (
+                          <li key={line}>{t(line)}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p>{t(item.body)}</p>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-cushion-materials-types">
+            <h2>{t('Các loại vật liệu đệm phổ biến')}</h2>
+            <div className="materials-cushion-materials-type-grid">
+              {[
+                {
+                  title: 'Polyester Fiber',
+                  body: 'Loại vật liệu phổ biến nhất dùng để tạo độ mềm và độ đầy cho gối, đệm tựa và tay ghế.',
+                },
+                {
+                  title: 'Silicon Fiber',
+                  body: 'Mang lại độ phồng và khả năng phục hồi tốt hơn so với sợi polyester thông thường.',
+                },
+                {
+                  title: 'Feather & Down',
+                  body: 'Lông vũ và lông tơ tự nhiên tạo cảm giác mềm mại, thường sử dụng cho các dòng nội thất cao cấp.',
+                },
+                {
+                  title: 'Foam Chip',
+                  body: 'Các mảnh foam nghiền được sử dụng cho gối trang trí hoặc đệm phụ nhằm tận dụng hiệu quả vật liệu.',
+                },
+                {
+                  title: 'EPS Beads',
+                  body: 'Hạt xốp EPS tạo cảm giác linh hoạt và trọng lượng nhẹ cho một số dòng sản phẩm đặc biệt như Bean Bag.',
+                },
+                {
+                  title: 'Recycled Fiber',
+                  body: 'Sợi tái chế phục vụ các dự án ưu tiên vật liệu thân thiện với môi trường và phát triển bền vững.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-cushion-materials-type-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-cushion-materials-application-structure-row">
+            <div className="materials-cushion-materials-applications">
+              <h2>{t('Ứng dụng trong nội thất')}</h2>
+              <div className="materials-cushion-materials-application-grid">
+                {[
+                  {
+                    title: 'Sofa',
+                    items: ['Gối tựa', 'Đệm lưng', 'Đệm tay'],
+                  },
+                  {
+                    title: 'Ghế bọc nệm',
+                    items: ['Đệm ngồi', 'Đệm tựa'],
+                  },
+                  {
+                    title: 'Giường',
+                    items: ['Đầu giường bọc nệm', 'Đệm trang trí'],
+                  },
+                  {
+                    title: 'Ottoman',
+                    items: ['Đệm ngồi', 'Gối rời'],
+                  },
+                  {
+                    title: 'Nội thất khách sạn',
+                    items: ['Hospitality Cushion', 'Hotel Pillow', 'Lounge Cushion'],
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-cushion-materials-application-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <ul>
+                      {item.items.map((entry) => (
+                        <li key={entry}>{t(entry)}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-cushion-materials-structure">
+              <h2>{t('Cấu trúc một bộ đệm tiêu chuẩn')}</h2>
+              <div className="materials-cushion-materials-structure-grid">
+                {[
+                  {
+                    title: 'Cấu trúc tiêu chuẩn',
+                    layers: ['Vải / Da / PU', 'Polyester Fiber', 'PU Foam', 'Khung gỗ hoặc kết cấu sản phẩm'],
+                  },
+                  {
+                    title: 'Cấu trúc cao cấp',
+                    layers: ['Vải', 'Lông vũ', 'Silicon Fiber', 'HR Foam', 'Khung sản phẩm'],
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <h3>{t(item.title)}</h3>
+                    <div className="materials-cushion-materials-layer-stack" aria-hidden="true">
+                      {item.layers.map((layer) => (
+                        <span key={layer} />
+                      ))}
+                    </div>
+                    <ul>
+                      {item.layers.map((layer) => (
+                        <li key={layer}>{t(layer)}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-cushion-materials-criteria-control-row">
+            <div className="materials-cushion-materials-criteria">
+              <h2>{t('Các tiêu chí lựa chọn')}</h2>
+              <div className="materials-cushion-materials-criteria-grid">
+                {[
+                  ['◌', 'Màu sắc', 'Đồng bộ với bộ sưu tập và mẫu duyệt.'],
+                  ['▧', 'Kết cấu', 'Lựa chọn theo phong cách thiết kế và trải nghiệm sử dụng.'],
+                  ['▱', 'Khả năng chống mài mòn', 'Đáp ứng yêu cầu của từng môi trường sử dụng.'],
+                  ['◡', 'Dễ vệ sinh', 'Phù hợp với khách sạn, nhà hàng, văn phòng và không gian công cộng.'],
+                  ['☼', 'Độ bền màu', 'Duy trì tính ổn định trong quá trình sử dụng.'],
+                  ['☑', 'Tiêu chuẩn kỹ thuật', 'Lựa chọn theo yêu cầu riêng của buyer hoặc từng thị trường.'],
+                ].map(([icon, title, body]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-cushion-materials-control">
+              <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+              <div className="materials-cushion-materials-control-grid">
+                {[
+                  ['▦', 'Khối lượng vật liệu', 'Đảm bảo đúng định lượng theo thiết kế.'],
+                  ['♧', 'Hình dáng sản phẩm', 'Đảm bảo độ đầy và ngoại quan sau khi hoàn thiện.'],
+                  ['▣', 'Độ đồng đều', 'Kiểm soát sự phân bố vật liệu trong từng bộ đệm.'],
+                  ['☼', 'Kiểm tra cuối', 'Đánh giá cảm giác sử dụng và tính nhất quán trước khi đóng gói.'],
+                  ['↻', 'Khả năng phục hồi', 'Đánh giá độ đàn hồi sau quá trình nén và sử dụng.'],
+                ].map(([icon, title, body]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <div>
+                      <h3>{t(title)}</h3>
+                      <p>{t(body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-cushion-materials-supply-combo-row">
+            <div className="materials-cushion-materials-supply">
+              <div>
+                <h2>{t('Vật liệu đệm trong hệ thống cung ứng của ANSLIFE')}</h2>
+                <p>
+                  {t(
+                    'ANSLIFE lựa chọn và kết hợp các loại vật liệu đệm phù hợp với foam, vật liệu bọc và kết cấu sản phẩm nhằm đáp ứng yêu cầu về sự thoải mái, độ bền và tiêu chuẩn chất lượng của từng dự án.',
+                  )}
+                </p>
+                <p>
+                  {t(
+                    'Mọi vật liệu đệm đều được kiểm soát theo mẫu duyệt và quy trình sản xuất để đảm bảo tính đồng nhất giữa phát triển sản phẩm và sản xuất hàng loạt.',
+                  )}
+                </p>
+              </div>
+              <div className="materials-cushion-materials-supply-image-slot" aria-hidden="true" />
+            </div>
+
+            <div className="materials-cushion-materials-combinations">
+              <h2>{t('Kết hợp với các vật liệu khác')}</h2>
+              <div className="materials-cushion-materials-combo-map">
+                <div className="materials-cushion-materials-combo-center">
+                  <strong>{t('Vật liệu đệm')}</strong>
+                  <span>{t('Cushion Filling Materials')}</span>
+                </div>
+                {['Foam', 'Da / PU', 'Khung ghế', 'Lò xo', 'Vải'].map((item) => (
+                  <article key={item}>
+                    <div className="materials-cushion-materials-combo-thumb-slot" aria-hidden="true" />
+                    <h3>{t(item)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-cushion-materials-related">
+            <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+            <div className="materials-cushion-materials-related-grid">
+              {[
+                {
+                  title: 'Foam',
+                  body: 'Giải pháp tạo kết cấu và khả năng nâng đỡ cho sản phẩm bọc nệm.',
+                },
+                {
+                  title: 'Vải',
+                  body: 'Các dòng vải bọc cho sofa, ghế và giường.',
+                },
+                {
+                  title: 'Da / PU',
+                  body: 'Giải pháp bề mặt sang trọng và dễ bảo trì.',
+                },
+                {
+                  title: 'Nội thất bọc nệm',
+                  body: 'Khám phá các dòng sofa, ghế và giường sử dụng hệ đệm của ANSLIFE.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-cushion-materials-related-image-slot" aria-hidden="true" />
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                  <span aria-hidden="true">›</span>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-cushion-materials-cta">
+            <div className="materials-cushion-materials-cta-media" aria-hidden="true" />
+            <div className="materials-cushion-materials-cta-copy">
+              <h2>{t('Trao đổi về hệ vật liệu đệm cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi yêu cầu về độ mềm, độ phồng, cấu trúc đệm hoặc tiêu chuẩn kỹ thuật để ANSLIFE tư vấn giải pháp vật liệu phù hợp với từng sản phẩm và thị trường xuất khẩu.',
+                )}
+              </p>
+            </div>
+            <div className="materials-cushion-materials-cta-actions">
+              <a href="/vn/contact">
+                <span aria-hidden="true">✈</span>
+                {t('Gửi yêu cầu')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">⇧</span>
+                {t('Tải bản vẽ lên')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">☎</span>
+                {t('Liên hệ ANSLIFE')}
+              </a>
+            </div>
+          </section>
+        </section>
+      )}
+      {shouldShowMaterialsCartonBanner && (
+        <figure className="materials-carton-banner">
+          <img
+            src="/assets/materials/packing-materials/carton-banner.webp"
+            alt={t('Banner thùng carton')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-carton-banner-copy">
+            <h1>{t('Thùng carton')}</h1>
+            <p>
+              {t(
+                'Giải pháp đóng gói giúp bảo vệ sản phẩm trong quá trình lưu kho, vận chuyển và xuất khẩu quốc tế.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Thùng carton là lớp bảo vệ đầu tiên của sản phẩm trong chuỗi cung ứng. Việc lựa chọn đúng loại carton, kết cấu thùng và phương pháp đóng gói giúp giảm rủi ro hư hỏng, tối ưu chi phí logistics và đảm bảo sản phẩm đến tay khách hàng trong tình trạng tốt nhất.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE thiết kế giải pháp đóng gói phù hợp với từng sản phẩm, phương thức vận chuyển và tiêu chuẩn riêng của từng buyer.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsFoamProtectionBanner && (
+        <figure className="materials-foam-protection-banner">
+          <img
+            src="/assets/materials/packing-materials/foam-protection-banner.webp"
+            alt={t('Banner foam bảo vệ')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-foam-protection-banner-copy">
+            <h1>{t('Foam')}</h1>
+            <p>
+              {t(
+                'Vật liệu đệm quyết định sự êm ái, khả năng nâng đỡ và tuổi thọ của các sản phẩm nội thất bọc nệm.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Foam là vật liệu đệm cốt lõi trong các sản phẩm nội thất bọc nệm. Việc lựa chọn đúng loại foam sẽ ảnh hưởng trực tiếp đến cảm giác ngồi, khả năng nâng đỡ, độ đàn hồi và độ bền của sản phẩm.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE lựa chọn và kiểm soát vật liệu foam theo yêu cầu của từng dự án, đảm bảo sự đồng nhất giữa mẫu duyệt và sản xuất hàng loạt, đáp ứng tiêu chuẩn của các thị trường xuất khẩu.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsEdgeProtectionBanner && (
+        <figure className="materials-edge-protection-banner">
+          <img
+            src="/assets/materials/packing-materials/edge-protection-banner.webp"
+            alt={t('Banner bảo vệ cạnh')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-edge-protection-banner-copy">
+            <h1>{t('Bảo vệ cạnh')}</h1>
+            <p>
+              {t(
+                'Giải pháp bảo vệ các góc và cạnh sản phẩm nhằm giảm thiểu hư hỏng trong quá trình lưu kho, bốc xếp và vận chuyển quốc tế.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Các cạnh và góc là những vị trí dễ bị va đập nhất trong quá trình đóng gói và vận chuyển. Việc lựa chọn đúng giải pháp bảo vệ giúp hạn chế hư hỏng ngoại quan, giảm tỷ lệ khiếu nại và đảm bảo sản phẩm đến tay khách hàng trong tình trạng tốt nhất.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE thiết kế phương án bảo vệ cạnh phù hợp với từng dòng sản phẩm, phương thức đóng gói và yêu cầu riêng của buyer.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsPalletBanner && (
+        <figure className="materials-pallet-banner">
+          <img
+            src="/assets/materials/packing-materials/pallet-banner.webp"
+            alt={t('Banner pallet')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-pallet-banner-copy">
+            <h1>{t('Pallet')}</h1>
+            <p>
+              {t(
+                'Giải pháp lưu kho, nâng hạ và vận chuyển giúp bảo vệ sản phẩm và tối ưu hiệu quả logistics trong chuỗi cung ứng xuất khẩu.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Pallet là nền tảng của hệ thống đóng gói và logistics, giúp sản phẩm được lưu kho, nâng hạ, gom hàng và vận chuyển một cách an toàn và hiệu quả.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE lựa chọn phương án pallet phù hợp với từng loại sản phẩm, quy cách đóng gói và phương thức vận chuyển nhằm giảm rủi ro hư hỏng, tối ưu không gian container và đáp ứng yêu cầu của từng thị trường xuất khẩu.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowMaterialsExportPackingBanner && (
+        <figure className="materials-export-packing-banner">
+          <img
+            src="/assets/materials/packing-materials/export-packing-banner.webp"
+            alt={t('Banner đóng gói xuất khẩu')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="materials-export-packing-banner-copy">
+            <h1>{t('Đóng gói xuất khẩu')}</h1>
+            <p>
+              {t(
+                'Giải pháp đóng gói được thiết kế nhằm bảo vệ sản phẩm trong toàn bộ chuỗi logistics quốc tế, từ nhà máy đến kho của khách hàng.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Đóng gói xuất khẩu không chỉ là việc đưa sản phẩm vào thùng carton mà là một hệ thống bảo vệ tổng thể. Mỗi phương án đóng gói được xây dựng dựa trên đặc điểm sản phẩm, phương thức vận chuyển, yêu cầu của buyer và điều kiện của thị trường nhập khẩu.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE phát triển giải pháp đóng gói phù hợp cho từng dự án nhằm giảm thiểu hư hỏng, tối ưu chi phí logistics và đảm bảo sản phẩm đến tay khách hàng trong tình trạng tốt nhất.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isMaterialsExportPackingPage && (
+        <section className="materials-export-packing-content">
+          <section className="materials-export-packing-goals">
+            <h2>{t('Mục tiêu của hệ thống đóng gói')}</h2>
+            <div className="materials-export-packing-goal-grid">
+              {[
+                ['♢', 'Bảo vệ sản phẩm', 'Giảm rủi ro va đập, rung động, trầy xước và biến dạng trong quá trình vận chuyển.'],
+                ['✧', 'Đảm bảo chất lượng', 'Duy trì tình trạng sản phẩm từ nhà máy đến điểm giao hàng.'],
+                ['▥', 'Tối ưu logistics', 'Giảm thể tích đóng gói, tối ưu không gian container và chi phí vận chuyển.'],
+                ['▤', 'Thuận tiện bốc xếp', 'Thiết kế phù hợp với xe nâng, pallet và hệ thống kho.'],
+                ['☑', 'Đáp ứng tiêu chuẩn buyer', 'Triển khai theo hướng dẫn đóng gói hoặc tiêu chuẩn riêng của từng khách hàng.'],
+                ['◎', 'Phù hợp xuất khẩu quốc tế', 'Đáp ứng yêu cầu vận chuyển đường biển, đường hàng không và đường bộ.'],
+              ].map(([icon, title, body]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <h3>{t(title)}</h3>
+                  <p>{t(body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-export-packing-system-components-row">
+            <div className="materials-export-packing-system">
+              <h2>{t('Hệ thống đóng gói của ANSLIFE')}</h2>
+              <div className="materials-export-packing-system-layout">
+                <div className="materials-export-packing-system-steps">
+                  {[
+                    'Sản phẩm hoàn thiện',
+                    'Bọc PE / Túi bảo vệ',
+                    'Foam bảo vệ',
+                    'Bảo vệ cạnh',
+                    'Thùng carton',
+                    'Đai kiện',
+                    'Pallet',
+                    'Màng quấn Stretch Film',
+                    'Xếp container',
+                  ].map((item, index) => (
+                    <article key={item}>
+                      <span>{index + 1}</span>
+                      <p>{t(item)}</p>
+                    </article>
+                  ))}
+                </div>
+                <div className="materials-export-packing-system-visual" aria-hidden="true" />
+              </div>
+            </div>
+
+            <div className="materials-export-packing-components">
+              <h2>{t('Các thành phần trong hệ thống đóng gói')}</h2>
+              <div className="materials-export-packing-component-grid">
+                {[
+                  ['Thùng carton', 'Bao bì chính giúp bảo vệ sản phẩm và hỗ trợ vận chuyển.'],
+                  ['Foam bảo vệ', 'Hấp thụ va đập và chống rung.'],
+                  ['Bảo vệ cạnh', 'Giảm nguy cơ hư hỏng tại các góc và cạnh sản phẩm.'],
+                  ['Túi PE', 'Bảo vệ bề mặt khỏi bụi bẩn, hơi ẩm và trầy xước.'],
+                  ['Đai kiện', 'Giữ ổn định kiện hàng trong quá trình vận chuyển.'],
+                  ['Pallet', 'Hỗ trợ lưu kho, nâng hạ và xếp container.'],
+                ].map(([title, body]) => (
+                  <article key={title}>
+                    <div className="materials-export-packing-image-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-export-packing-process-qc-row">
+            <div className="materials-export-packing-process">
+              <h2>{t('Quy trình thiết kế đóng gói')}</h2>
+              <div className="materials-export-packing-process-flow">
+                {[
+                  ['1', 'Đánh giá sản phẩm'],
+                  ['2', 'Phân tích rủi ro vận chuyển'],
+                  ['3', 'Thiết kế phương án đóng gói'],
+                  ['4', 'Đóng gói thử nghiệm'],
+                  ['5', 'Đánh giá kết quả'],
+                  ['6', 'Phê duyệt mẫu'],
+                ].map(([number, title]) => (
+                  <article key={number}>
+                    <span>{number}</span>
+                    <div aria-hidden="true">▢</div>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-export-packing-qc">
+              <h2>{t('Kiểm soát chất lượng đóng gói')}</h2>
+              <div className="materials-export-packing-qc-grid">
+                {[
+                  ['Kiểm tra vật liệu đóng gói', 'Đánh giá chất lượng carton, foam, pallet và các vật liệu bảo vệ trước khi sử dụng.'],
+                  ['Kiểm tra kích thước', 'Đảm bảo quy cách đóng gói đúng theo bản vẽ và tiêu chuẩn của buyer.'],
+                  ['Kiểm tra ngoại quan', 'Xác nhận sản phẩm được bảo vệ đầy đủ trước khi đóng thùng.'],
+                  ['Kiểm tra ghi nhãn', 'Kiểm tra mã hàng, ký hiệu vận chuyển, nhãn cảnh báo và thông tin nhận diện.'],
+                  ['Kiểm tra pallet', 'Đảm bảo pallet ổn định, xử lý đúng tiêu chuẩn ISPM 15 nếu với pallet gỗ.'],
+                  ['Kiểm tra trước khi xếp container', 'Đánh giá toàn bộ kiện hàng trước khi xuất xưởng.'],
+                ].map(([title, body]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">✓</span>
+                    <div>
+                      <h3>{t(title)}</h3>
+                      <p>{t(body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-export-packing-method-application-row">
+            <div className="materials-export-packing-methods">
+              <h2>{t('Phương thức đóng gói')}</h2>
+              <div className="materials-export-packing-method-grid">
+                {[
+                  ['Fully Assembled', 'Sản phẩm được lắp ráp hoàn chỉnh trước khi đóng gói.'],
+                  ['Knock-down (KD)', 'Các bộ phận được tháo rời nhằm tối ưu không gian vận chuyển và giảm chi phí logistics.'],
+                  ['Nested Packing', 'Thiết kế lồng ghép nhiều sản phẩm để tối ưu thể tích đóng gói.'],
+                  ['Custom Packaging', 'Giải pháp đóng gói được thiết kế riêng theo yêu cầu của buyer.'],
+                ].map(([title, body]) => (
+                  <article key={title}>
+                    <div className="materials-export-packing-image-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-export-packing-applications">
+              <h2>{t('Ứng dụng')}</h2>
+              <div className="materials-export-packing-application-grid">
+                {[
+                  ['▱', 'Nội thất hoàn thiện', 'Ghế, bàn, tủ, giường và các sản phẩm hoàn chỉnh.'],
+                  ['▭', 'Nội thất bọc nệm', 'Bảo vệ bề mặt vải, da và kết cấu đệm.'],
+                  ['⚙', 'Linh kiện nội thất', 'Đóng gói theo bộ hoặc theo từng mã linh kiện.'],
+                  ['▧', 'OEM / ODM', 'Giải pháp đóng gói theo tiêu chuẩn thương hiệu của khách hàng.'],
+                  ['◎', 'Vietnam Supply Hub', 'Đóng gói lại, gom hàng và điều phối xuất khẩu theo từng lô hàng.'],
+                ].map(([icon, title, body]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-export-packing-supply-related-row">
+            <div className="materials-export-packing-supply-chain">
+              <h2>{t('Đóng gói trong hệ thống supply chain của ANSLIFE')}</h2>
+              <div className="materials-export-packing-supply-flow">
+                {[
+                  'Thiết kế sản phẩm',
+                  'Sản xuất',
+                  'QC',
+                  'Đóng gói',
+                  'Lưu kho',
+                  'Gom hàng',
+                  'Xếp container',
+                  'Xuất khẩu',
+                ].map((item) => (
+                  <article key={item}>
+                    <div className="materials-export-packing-supply-image-slot" aria-hidden="true" />
+                    <h3>{t(item)}</h3>
+                  </article>
+                ))}
+              </div>
+              <p>
+                {t(
+                  'Hệ thống vận hành đồng bộ - Kiểm soát chặt chẽ - Đảm bảo chất lượng toàn chuỗi',
+                )}
+              </p>
+            </div>
+
+            <div className="materials-export-packing-related">
+              <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+              <div className="materials-export-packing-related-grid">
+                {[
+                  ['Thùng carton', 'Bao bì chính của sản phẩm.'],
+                  ['Foam bảo vệ', 'Giải pháp hấp thụ va đập.'],
+                  ['Bảo vệ cạnh', 'Giảm hư hỏng tại các góc và cạnh.'],
+                  ['Pallet', 'Giải pháp lưu kho và vận chuyển.'],
+                  ['Chuẩn đóng gói', 'Tiêu chuẩn kiểm soát chất lượng trong quá trình đóng gói.'],
+                ].map(([title, body]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">▢</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-export-packing-cta">
+            <div className="materials-export-packing-cta-copy">
+              <h2>{t('Trao đổi về giải pháp đóng gói xuất khẩu cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ sản phẩm, tiêu chuẩn đóng gói, yêu cầu vận chuyển hoặc quy cách container loading để ANSLIFE đánh giá và đề xuất phương án đóng gói phù hợp.',
+                )}
+              </p>
+            </div>
+            <div className="materials-export-packing-cta-actions">
+              <a href="/vn/contact">
+                <span aria-hidden="true">✈</span>
+                {t('Gửi yêu cầu')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">⇧</span>
+                {t('Tải bản vẽ lên')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">☎</span>
+                {t('Liên hệ ANSLIFE')}
+              </a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsPalletPage && (
+        <section className="materials-pallet-content">
+          <section className="materials-pallet-role">
+            <h2>{t('Vai trò của pallet')}</h2>
+            <div className="materials-pallet-role-grid">
+              {[
+                ['▤', 'Hỗ trợ nâng hạ', 'Giúp xe nâng và thiết bị bốc xếp xử lý hàng hóa nhanh chóng và an toàn.'],
+                ['♢', 'Bảo vệ sản phẩm', 'Giảm tiếp xúc trực tiếp với mặt sàn và hạn chế tác động từ môi trường lưu kho.'],
+                ['⌂', 'Tối ưu lưu kho', 'Dễ dàng sắp xếp, quản lý và kiểm kê hàng hóa trong kho.'],
+                ['▥', 'Tối ưu container', 'Thiết kế pallet phù hợp giúp tận dụng không gian container và giảm chi phí logistics.'],
+                ['▧', 'Thuận tiện gom hàng', 'Hỗ trợ đóng ghép nhiều sản phẩm hoặc nhiều đơn hàng trên cùng một pallet.'],
+                ['◎', 'Phù hợp xuất khẩu', 'Đáp ứng yêu cầu vận chuyển đường biển, đường hàng không và đường bộ.'],
+              ].map(([icon, title, body]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <h3>{t(title)}</h3>
+                  <p>{t(body)}</p>
+                  <div className="materials-pallet-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-pallet-type-standard-row">
+            <div className="materials-pallet-types">
+              <h2>{t('Các loại pallet')}</h2>
+              <div className="materials-pallet-type-grid">
+                {[
+                  ['Pallet gỗ', 'Loại pallet được sử dụng phổ biến trong xuất khẩu nội thất nhờ khả năng chịu tải và chi phí hợp lý.'],
+                  ['Pallet nhựa', 'Phù hợp với các môi trường yêu cầu độ sạch cao hoặc tái sử dụng nhiều lần.'],
+                  ['Pallet theo yêu cầu', 'Thiết kế riêng theo kích thước sản phẩm, tải trọng và yêu cầu logistics của buyer.'],
+                ].map(([title, body]) => (
+                  <article key={title}>
+                    <div className="materials-pallet-type-image-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-pallet-standards">
+              <h2>{t('Tiêu chuẩn pallet')}</h2>
+              <div className="materials-pallet-standard-grid">
+                {[
+                  [
+                    '✤',
+                    'Pallet xử lý nhiệt ISPM 15',
+                    'Pallet gỗ được xử lý nhiệt theo tiêu chuẩn ISPM 15 và đóng dấu xác nhận, đáp ứng yêu cầu kiểm dịch thực vật của nhiều thị trường xuất khẩu.',
+                  ],
+                  [
+                    '▣',
+                    'Thiết kế theo tải trọng',
+                    'Lựa chọn kết cấu pallet phù hợp với trọng lượng và kích thước của từng lô hàng.',
+                  ],
+                  [
+                    '▤',
+                    'Tương thích thiết bị nâng',
+                    'Đảm bảo pallet phù hợp với xe nâng và hệ thống lưu kho tiêu chuẩn.',
+                  ],
+                ].map(([icon, title, body], index) => (
+                  <article key={title}>
+                    <span aria-hidden="true">{icon}</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                    {index === 2 && <div className="materials-pallet-standard-image-slot" aria-hidden="true" />}
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-pallet-applications">
+            <h2>{t('Ứng dụng trong đóng gói')}</h2>
+            <div className="materials-pallet-application-grid">
+              {[
+                ['▱', 'Ghế', 'Bảo vệ tay ghế, mặt ghế, lưng ghế và chân ghế.'],
+                ['▔', 'Bàn', 'Bảo vệ mặt bàn, cạnh bàn và các chi tiết hoàn thiện.'],
+                ['▥', 'Tủ & Kệ', 'Bảo vệ cánh tủ, đợt tủ và các bề mặt dễ trầy xước.'],
+                ['▭', 'Nội thất bọc nệm', 'Ngăn ma sát trên bề mặt vải, da hoặc PU trong quá trình vận chuyển.'],
+                ['▤', 'Linh kiện nội thất', 'Bảo vệ từng chi tiết gia công trước khi đóng gói theo bộ.'],
+                ['▧', 'OEM / ODM', 'Thiết kế phương án pallet theo tiêu chuẩn riêng của từng khách hàng.'],
+              ].map(([icon, title, body]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <h3>{t(title)}</h3>
+                  <p>{t(body)}</p>
+                  <div className="materials-pallet-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-pallet-process-control-row">
+            <div className="materials-pallet-process">
+              <h2>{t('Quy trình thiết kế pallet')}</h2>
+              <div className="materials-pallet-process-flow">
+                {[
+                  ['1', 'Đánh giá sản phẩm'],
+                  ['2', 'Xác định tải trọng'],
+                  ['3', 'Thiết kế pallet'],
+                  ['4', 'Kiểm tra xếp hàng'],
+                  ['5', 'Kiểm tra container'],
+                  ['6', 'Triển khai xuất khẩu'],
+                ].map(([number, title]) => (
+                  <article key={number}>
+                    <span>{number}</span>
+                    <div aria-hidden="true">▢</div>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-pallet-control">
+              <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+              <div className="materials-pallet-control-layout">
+                <div className="materials-pallet-control-grid">
+                  {[
+                    ['Kích thước pallet', 'Đảm bảo phù hợp với sản phẩm và kích thước container.'],
+                    ['Cố định hàng hóa', 'Đảm bảo hàng hóa được cố định chắc chắn trên pallet bằng dây đai hoặc màng quấn.'],
+                    ['Khả năng chịu tải', 'Lựa chọn kết cấu pallet phù hợp với trọng lượng của lô hàng.'],
+                    ['Kiểm tra trước xuất hàng', 'Đánh giá toàn bộ hệ thống pallet trước khi xếp container.'],
+                    ['Tiêu chuẩn ISPM 15', 'Kiểm tra xử lý nhiệt và dấu chứng nhận đối với pallet gỗ xuất khẩu.'],
+                    ['Tình trạng pallet', 'Kiểm tra bề mặt, kết cấu và độ ổn định của pallet trước khi sử dụng.'],
+                  ].map(([title, body]) => (
+                    <article key={title}>
+                      <span aria-hidden="true">✓</span>
+                      <div>
+                        <h3>{t(title)}</h3>
+                        <p>{t(body)}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-pallet-system-combo-row">
+            <div className="materials-pallet-system">
+              <div>
+                <h2>{t('Pallet trong hệ thống đóng gói của ANSLIFE')}</h2>
+                <p>
+                  {t(
+                    'ANSLIFE thiết kế và lựa chọn phương án pallet phù hợp với từng loại sản phẩm, quy cách đóng gói và điều kiện vận chuyển.',
+                  )}
+                </p>
+                <p>
+                  {t(
+                    'Pallet được kết hợp cùng thùng carton, foam bảo vệ và bảo vệ cạnh để hình thành hệ thống đóng gói nhằm tạo nên hệ thống logistics ổn định, giảm thiểu rủi ro trong quá trình lưu kho và xuất khẩu.',
+                  )}
+                </p>
+              </div>
+              <div className="materials-pallet-system-image-slot" aria-hidden="true" />
+            </div>
+
+            <div className="materials-pallet-combinations">
+              <h2>{t('Kết hợp với các vật liệu đóng gói khác')}</h2>
+              <div className="materials-pallet-combo-flow">
+                {['Thùng carton', 'Foam bảo vệ', 'Bảo vệ cạnh', 'Màng quấn PE', 'Đai kiện'].map((item) => (
+                  <article key={item}>
+                    <span aria-hidden="true">▢</span>
+                    <h3>{t(item)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-pallet-cta">
+            <div className="materials-pallet-cta-copy">
+              <h2>{t('Trao đổi về phương án pallet cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi quy cách sản phẩm, trọng lượng kiện hàng, phương án đóng gói hoặc yêu cầu container loading để ANSLIFE đề xuất kích thước, kết cấu và tiêu chuẩn pallet phù hợp.',
+                )}
+              </p>
+            </div>
+            <div className="materials-pallet-cta-actions">
+              <a href="/vn/contact">
+                <span aria-hidden="true">✈</span>
+                {t('Gửi yêu cầu')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">⇧</span>
+                {t('Tải bản vẽ lên')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">☎</span>
+                {t('Liên hệ ANSLIFE')}
+              </a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsEdgeProtectionPage && (
+        <section className="materials-edge-protection-content">
+          <section className="materials-edge-protection-reasons">
+            <h2>{t('Vì sao cần bảo vệ cạnh?')}</h2>
+            <div className="materials-edge-protection-reason-grid">
+              {[
+                ['▱', 'Hạn chế va đập', 'Giảm tác động trực tiếp lên các góc và cạnh trong quá trình vận chuyển.'],
+                ['✧', 'Bảo vệ bề mặt hoàn thiện', 'Giảm nguy cơ trầy xước, sứt mẻ hoặc bong lớp sơn hoàn thiện.'],
+                ['▣', 'Tăng độ ổn định khi đóng gói', 'Giữ sản phẩm cố định bên trong thùng carton và hạn chế dịch chuyển.'],
+                ['☑', 'Giảm tỷ lệ hư hỏng', 'Giúp giảm khiếu nại và chi phí phát sinh do hư hỏng trong quá trình giao hàng.'],
+                [
+                  '▰',
+                  'Phù hợp nhiều sản phẩm',
+                  'Ứng dụng cho nội thất hoàn thiện, linh kiện và sản phẩm Knock-down (KD).',
+                ],
+                [
+                  '▤',
+                  'Tối ưu logistics',
+                  'Bảo vệ hiệu quả mà không làm tăng đáng kể kích thước và trọng lượng kiện hàng.',
+                ],
+              ].map(([icon, title, body]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <h3>{t(title)}</h3>
+                  <p>{t(body)}</p>
+                  <div className="materials-edge-protection-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-edge-protection-types">
+            <h2>{t('Các loại bảo vệ cạnh')}</h2>
+            <div className="materials-edge-protection-type-grid">
+              {[
+                ['Corner Protector', 'Bảo vệ bốn góc của sản phẩm khỏi va đập và nén.'],
+                ['Edge Protector', 'Bảo vệ toàn bộ cạnh dài của mặt bàn, tủ hoặc panel.'],
+                ['Foam Edge Protection', 'Vật liệu foam định hình giúp hấp thụ lực va đập và bảo vệ bề mặt sơn.'],
+                ['Paper Corner Protection', 'Giải pháp từ giấy ép nhiều lớp, thân thiện với môi trường và phù hợp với nhiều dòng sản phẩm.'],
+              ].map(([title, body]) => (
+                <article key={title}>
+                  <div className="materials-edge-protection-type-image-slot" aria-hidden="true" />
+                  <h3>{t(title)}</h3>
+                  <p>{t(body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-edge-protection-applications">
+            <h2>{t('Ứng dụng trong đóng gói')}</h2>
+            <div className="materials-edge-protection-application-grid">
+              {[
+                ['▱', 'Ghế', 'Bảo vệ chân ghế, tay vịn và lưng ghế.'],
+                ['▔', 'Bàn', 'Bảo vệ các góc và cạnh mặt bàn.'],
+                ['▥', 'Tủ & Kệ', 'Bảo vệ cánh tủ, cạnh tủ và các chi tiết dễ va đập.'],
+                ['▭', 'Nội thất bọc nệm', 'Bảo vệ khung gỗ và các chi tiết cứng bên dưới lớp bọc.'],
+                ['▤', 'Linh kiện nội thất', 'Bảo vệ các chi tiết gia công trước khi đóng gói theo bộ.'],
+                ['▧', 'OEM / ODM', 'Thiết kế giải pháp bảo vệ theo yêu cầu riêng của từng sản phẩm.'],
+              ].map(([icon, title, body]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <h3>{t(title)}</h3>
+                  <p>{t(body)}</p>
+                  <div className="materials-edge-protection-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-edge-protection-process-control-row">
+            <div className="materials-edge-protection-process">
+              <h2>{t('Quy trình lựa chọn giải pháp bảo vệ')}</h2>
+              <div className="materials-edge-protection-process-flow">
+                {[
+                  ['1', 'Đánh giá sản phẩm'],
+                  ['2', 'Xác định vị trí va đập'],
+                  ['3', 'Lựa chọn vật liệu bảo vệ'],
+                  ['4', 'Kiểm tra đóng gói thử'],
+                  ['5', 'Đánh giá vận chuyển'],
+                  ['6', 'Triển khai sản xuất'],
+                ].map(([number, title]) => (
+                  <article key={number}>
+                    <span>{number}</span>
+                    <div aria-hidden="true">▢</div>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-edge-protection-control">
+              <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+              <div className="materials-edge-protection-control-grid">
+                {[
+                  ['Vị trí bảo vệ', 'Đảm bảo tất cả các góc và cạnh quan trọng đều được bảo vệ đầy đủ.'],
+                  ['Kích thước', 'Lựa chọn đúng kích thước theo thiết kế sản phẩm.'],
+                  ['Độ bám và cố định', 'Đảm bảo vật liệu bảo vệ không bị dịch chuyển trong quá trình vận chuyển.'],
+                  ['Khả năng hấp thụ va đập', 'Đánh giá hiệu quả bảo vệ theo từng phương thức vận chuyển.'],
+                  ['Kiểm tra trước xuất hàng', 'Xác nhận hệ thống bảo vệ được lắp đặt đúng quy trình trước khi đóng thùng.'],
+                ].map(([title, body]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">▧</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-edge-protection-supply-combo-row">
+            <div className="materials-edge-protection-supply">
+              <div className="materials-edge-protection-supply-image-slot" aria-hidden="true" />
+              <div className="materials-edge-protection-supply-copy">
+                <h2>{t('Bảo vệ cạnh trong hệ thống đóng gói của ANSLIFE')}</h2>
+                <p>
+                  {t(
+                    'ANSLIFE xây dựng giải pháp bảo vệ cạnh dựa trên đặc điểm của từng sản phẩm, kết hợp với thùng carton, foam bảo vệ và pallet để tạo thành hệ thống đóng gói hoàn chỉnh.',
+                  )}
+                </p>
+                <p>
+                  {t(
+                    'Mỗi phương án đều được đánh giá trong quá trình phát triển sản phẩm nhằm giảm thiểu rủi ro hư hỏng trong vận chuyển quốc tế và đảm bảo chất lượng khi giao đến khách hàng.',
+                  )}
+                </p>
+                <div className="materials-edge-protection-supply-flow">
+                  {[
+                    'Thiết kế theo sản phẩm',
+                    'Kiểm tra đóng gói thử',
+                    'Giảm rủi ro hư hỏng',
+                    'Tối ưu chi phí logistics',
+                    'Đáp ứng tiêu chuẩn xuất khẩu',
+                  ].map((item) => (
+                    <article key={item}>
+                      <span aria-hidden="true">▢</span>
+                      <p>{t(item)}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="materials-edge-protection-combinations">
+              <h2>{t('Kết hợp với các vật liệu đóng gói khác')}</h2>
+              <div className="materials-edge-protection-combo-map">
+                <div className="materials-edge-protection-combo-center">
+                  <strong>{t('Bảo vệ cạnh')}</strong>
+                  <span>{t('Edge & Corner Protection')}</span>
+                </div>
+                {['Thùng carton', 'Foam bảo vệ', 'Túi PE', 'Pallet', 'Đai kiện'].map((item) => (
+                  <article key={item}>
+                    <span aria-hidden="true">▢</span>
+                    <h3>{t(item)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-edge-protection-cta">
+            <div className="materials-edge-protection-cta-copy">
+              <h2>{t('Trao đổi về giải pháp bảo vệ cạnh cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ sản phẩm, quy cách đóng gói hoặc yêu cầu vận chuyển để ANSLIFE đề xuất phương án bảo vệ góc và cạnh phù hợp.',
+                )}
+              </p>
+            </div>
+            <div className="materials-edge-protection-cta-actions">
+              <a href="/vn/contact">
+                <span aria-hidden="true">✈</span>
+                {t('Gửi yêu cầu')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">⇧</span>
+                {t('Tải bản vẽ lên')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">☎</span>
+                {t('Liên hệ ANSLIFE')}
+              </a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsFoamProtectionPage && (
+        <section className="materials-foam-protection-content">
+          <section className="materials-foam-protection-role">
+            <h2>{t('Vai trò của foam bảo vệ')}</h2>
+            <div className="materials-foam-protection-role-grid">
+              {[
+                ['▱', 'Hạn chế va đập', 'Giảm tác động từ va chạm trong quá trình vận chuyển và bốc xếp.'],
+                ['≋', 'Chống rung', 'Hạn chế rung động liên tục gây ảnh hưởng đến kết cấu và bề mặt sản phẩm.'],
+                ['✧', 'Bảo vệ bề mặt hoàn thiện', 'Giảm nguy cơ trầy xước, bong sơn hoặc hư hỏng lớp hoàn thiện.'],
+                ['▣', 'Cố định sản phẩm', 'Giữ sản phẩm ổn định bên trong thùng carton, hạn chế dịch chuyển.'],
+                [
+                  '▰',
+                  'Phù hợp nhiều sản phẩm',
+                  'Ứng dụng cho nội thất bàn ghế, linh kiện, mặt bàn, khung ghế và sản phẩm bọc nệm.',
+                ],
+                [
+                  '◎',
+                  'Tối ưu chi phí logistics',
+                  'Lựa chọn đúng loại foam giúp cân bằng giữa khả năng bảo vệ và chi phí đóng gói.',
+                ],
+              ].map(([icon, title, body]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <h3>{t(title)}</h3>
+                  <p>{t(body)}</p>
+                  <div className="materials-foam-protection-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-foam-protection-types">
+            <h2>{t('Các loại foam bảo vệ')}</h2>
+            <div className="materials-foam-protection-type-grid">
+              {[
+                ['PE Foam', 'Mềm, nhẹ và phù hợp để bảo vệ bề mặt sản phẩm khỏi trầy xước.'],
+                ['EPE Foam', 'Đàn hồi tốt, hấp thụ va đập hiệu quả và được sử dụng phổ biến trong nội thất xuất khẩu.'],
+                ['EVA Foam', 'Độ bền cao, chịu nén tốt, phù hợp với các chi tiết cần bảo vệ đặc biệt.'],
+                [
+                  'Foam định hình',
+                  'Gia công theo hình dạng sản phẩm nhằm cố định và bảo vệ tối đa trong quá trình vận chuyển.',
+                ],
+              ].map(([title, body]) => (
+                <article key={title}>
+                  <div className="materials-foam-protection-type-image-slot" aria-hidden="true" />
+                  <div>
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-foam-protection-applications">
+            <h2>{t('Ứng dụng trong đóng gói')}</h2>
+            <div className="materials-foam-protection-application-grid">
+              {[
+                ['▱', 'Ghế', 'Bảo vệ tay ghế, mặt ghế, lưng ghế và chân ghế.'],
+                ['▔', 'Bàn', 'Bảo vệ mặt bàn, cạnh bàn và các chi tiết hoàn thiện.'],
+                ['▥', 'Tủ & Kệ', 'Bảo vệ cánh tủ, đợt tủ và các bề mặt dễ trầy xước.'],
+                ['▭', 'Nội thất bọc nệm', 'Ngăn ma sát trên bề mặt vải, da hoặc PU trong quá trình vận chuyển.'],
+                ['▤', 'Linh kiện nội thất', 'Bảo vệ từng chi tiết gia công trước khi đóng gói theo bộ.'],
+                ['▧', 'OEM / ODM', 'Thiết kế foam theo kích thước và yêu cầu riêng của từng dự án.'],
+              ].map(([icon, title, body]) => (
+                <article key={title}>
+                  <span aria-hidden="true">{icon}</span>
+                  <h3>{t(title)}</h3>
+                  <p>{t(body)}</p>
+                  <div className="materials-foam-protection-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-foam-protection-detail-row">
+            <div className="materials-foam-protection-process">
+              <h2>{t('Quy trình lựa chọn foam bảo vệ')}</h2>
+              <div className="materials-foam-protection-process-flow">
+                {[
+                  ['1', 'Đánh giá sản phẩm'],
+                  ['2', 'Xác định vị trí cần bảo vệ'],
+                  ['3', 'Lựa chọn loại foam'],
+                  ['4', 'Thiết kế phương án đóng gói'],
+                  ['5', 'Kiểm tra thử nghiệm'],
+                  ['6', 'Triển khai sản xuất'],
+                ].map(([number, title]) => (
+                  <article key={number}>
+                    <span>{number}</span>
+                    <div aria-hidden="true">▢</div>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-foam-protection-control">
+              <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+              <div className="materials-foam-protection-control-grid">
+                {[
+                  ['Độ dày foam', 'Lựa chọn theo trọng lượng và mức độ nhạy cảm của sản phẩm.'],
+                  ['Độ ổn định', 'Đảm bảo foam không bị xê dịch trong quá trình vận chuyển.'],
+                  ['Mật độ foam', 'Đảm bảo khả năng hấp thụ va đập phù hợp với từng ứng dụng.'],
+                  ['Kiểm tra trước xuất hàng', 'Đánh giá toàn bộ hệ thống bảo vệ trước khi đóng thùng và xếp container.'],
+                  ['Vị trí bố trí', 'Đặt đúng tại các điểm chịu lực hoặc dễ hư hỏng.'],
+                ].map(([title, body]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">▧</span>
+                    <div>
+                      <h3>{t(title)}</h3>
+                      <p>{t(body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-foam-protection-supply">
+              <h2>{t('Foam bảo vệ trong hệ thống đóng gói của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE lựa chọn và thiết kế giải pháp foam bảo vệ theo đặc điểm của từng sản phẩm, kết hợp với thùng carton, bảo vệ cạnh và pallet để hình thành hệ thống đóng gói hoàn chỉnh.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Mỗi phương án đều được kiểm tra trong giai đoạn phát triển sản phẩm nhằm giảm thiểu rủi ro hư hỏng trong quá trình vận chuyển quốc tế và đảm bảo chất lượng khi giao đến khách hàng.',
+                )}
+              </p>
+              <div className="materials-foam-protection-supply-image-slot" aria-hidden="true" />
+            </div>
+          </section>
+
+          <section className="materials-foam-protection-bottom-row">
+            <div className="materials-foam-protection-combinations">
+              <h2>{t('Kết hợp với các vật liệu đóng gói khác')}</h2>
+              <div className="materials-foam-protection-combo-map">
+                <div className="materials-foam-protection-combo-center">
+                  <strong>{t('Foam bảo vệ')}</strong>
+                </div>
+                {['Thùng carton', 'Bảo vệ cạnh', 'Pallet', 'Túi PE', 'Đai kiện'].map((item) => (
+                  <article key={item}>
+                    <span aria-hidden="true">▢</span>
+                    <h3>{t(item)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-foam-protection-related">
+              <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+              <div className="materials-foam-protection-related-grid">
+                {[
+                  ['Thùng carton', 'Giải pháp bao bì chính cho sản phẩm xuất khẩu.'],
+                  ['Bảo vệ cạnh', 'Bảo vệ góc và cạnh dễ va đập.'],
+                  ['Pallet', 'Giải pháp lưu kho, nâng hạ và vận chuyển.'],
+                  ['Chuẩn đóng gói', 'Quy trình kiểm soát đóng gói trước khi xuất khẩu.'],
+                ].map(([title, body]) => (
+                  <article key={title}>
+                    <div className="materials-foam-protection-related-image-slot" aria-hidden="true" />
+                    <div>
+                      <h3>{t(title)}</h3>
+                      <p>{t(body)}</p>
+                    </div>
+                    <span aria-hidden="true">›</span>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-foam-protection-cta">
+            <div className="materials-foam-protection-cta-copy">
+              <h2>{t('Trao đổi về giải pháp foam bảo vệ cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ sản phẩm, quy cách đóng gói hoặc yêu cầu vận chuyển để ANSLIFE đề xuất phương án foam bảo vệ phù hợp.',
+                )}
+              </p>
+            </div>
+            <div className="materials-foam-protection-cta-actions">
+              <a href="/vn/contact">
+                <span aria-hidden="true">✈</span>
+                {t('Gửi yêu cầu')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">⇧</span>
+                {t('Tải bản vẽ lên')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">☎</span>
+                {t('Liên hệ ANSLIFE')}
+              </a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsCartonPage && (
+        <section className="materials-carton-content">
+          <section className="materials-carton-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-carton-overview-panel">
+              {[
+                {
+                  icon: '□',
+                  title: 'Tên thương mại',
+                  body: 'Corrugated Carton',
+                },
+                {
+                  icon: '▤',
+                  title: 'Nhóm vật liệu',
+                  body: 'Vật liệu đóng gói',
+                },
+                {
+                  icon: '▱',
+                  title: 'Chức năng',
+                  body: 'Bảo vệ sản phẩm\nĐóng gói\nLưu kho\nVận chuyển',
+                },
+                {
+                  icon: '♻',
+                  title: 'Đặc điểm',
+                  body: 'Nhẹ\nChịu lực\nDễ in ấn\nCó thể tái chế',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    {item.body.includes('\n') ? (
+                      <ul>
+                        {item.body.split('\n').map((line) => (
+                          <li key={line}>{t(line)}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p>{t(item.body)}</p>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-carton-role">
+            <h2>{t('Vai trò của thùng carton')}</h2>
+            <div className="materials-carton-role-grid">
+              {[
+                {
+                  icon: '▱',
+                  title: 'Bảo vệ sản phẩm',
+                  body: 'Giảm tác động va đập trong quá trình vận chuyển.',
+                },
+                {
+                  icon: '▥',
+                  title: 'Tối ưu logistics',
+                  body: 'Thiết kế phù hợp giúp tối ưu không gian container và chi phí vận chuyển.',
+                },
+                {
+                  icon: '◇',
+                  title: 'Dễ nhận diện',
+                  body: 'Có thể in logo, mã hàng, hướng dẫn và thông tin vận chuyển.',
+                },
+                {
+                  icon: '◎',
+                  title: 'Phù hợp xuất khẩu',
+                  body: 'Đáp ứng yêu cầu đóng gói cho vận chuyển đường biển, đường bộ và đường hàng không.',
+                },
+                {
+                  icon: '♻',
+                  title: 'Thân thiện môi trường',
+                  body: 'Có khả năng tái chế và phù hợp với xu hướng phát triển bền vững.',
+                },
+                {
+                  icon: '▣',
+                  title: 'Linh hoạt theo sản phẩm',
+                  body: 'Thiết kế kích thước và kết cấu riêng cho từng dòng nội thất.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                  <div className="materials-carton-role-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-carton-type-application-row">
+            <div className="materials-carton-types">
+              <h2>{t('Các loại thùng carton')}</h2>
+              <div className="materials-carton-type-grid">
+                {[
+                  {
+                    title: 'Carton 3 lớp',
+                    body: 'Phù hợp với các sản phẩm có trọng lượng nhẹ và kích thước nhỏ.',
+                  },
+                  {
+                    title: 'Carton 5 lớp',
+                    body: 'Được sử dụng phổ biến cho nội thất xuất khẩu nhờ khả năng chịu lực và bảo vệ tốt.',
+                  },
+                  {
+                    title: 'Carton 7 lớp',
+                    body: 'Áp dụng cho sản phẩm có trọng lượng lớn hoặc yêu cầu bảo vệ cao trong quá trình vận chuyển.',
+                  },
+                  {
+                    title: 'Carton thiết kế riêng',
+                    body: 'Thiết kế theo kích thước, kết cấu và tiêu chuẩn đóng gói của từng buyer.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-carton-type-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-carton-applications">
+              <h2>{t('Ứng dụng trong đóng gói')}</h2>
+              <div className="materials-carton-application-grid">
+                {[
+                  ['Ghế', 'Đóng gói từng sản phẩm hoặc theo bộ.'],
+                  ['Bàn', 'Kết hợp với foam, bảo vệ cạnh và phụ kiện cố định.'],
+                  ['Tủ & Kệ', 'Đóng gói dạng Knock-down (KD) hoặc nguyên khối.'],
+                  ['Nội thất bọc nệm', 'Kết hợp túi PE và vật liệu bảo vệ bề mặt.'],
+                  ['Linh kiện nội thất', 'Đóng gói theo bộ hoặc theo mã linh kiện.'],
+                  ['OEM / ODM', 'Thiết kế bao bì riêng theo yêu cầu thương hiệu của khách hàng.'],
+                ].map(([title, body]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">▧</span>
+                    <div>
+                      <h3>{t(title)}</h3>
+                      <p>{t(body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-carton-design-control-row">
+            <div className="materials-carton-design">
+              <h2>{t('Thiết kế thùng carton')}</h2>
+              <div className="materials-carton-design-flow">
+                {[
+                  ['1', 'Kích thước sản phẩm'],
+                  ['2', 'Thiết kế thùng'],
+                  ['3', 'Lựa chọn vật liệu'],
+                  ['4', 'Kiểm tra khả năng chịu lực'],
+                  ['5', 'Đóng gói thử nghiệm'],
+                  ['6', 'Sản xuất hàng loạt'],
+                ].map(([number, title]) => (
+                  <article key={number}>
+                    <span>{number}</span>
+                    <div aria-hidden="true">▣</div>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-carton-control">
+              <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+              <div className="materials-carton-control-grid">
+                {[
+                  ['Kích thước', 'Đảm bảo phù hợp với sản phẩm và tối ưu không gian đóng gói.'],
+                  ['Độ bền thùng', 'Lựa chọn kết cấu carton phù hợp với trọng lượng và phương thức vận chuyển.'],
+                  ['Chất lượng in', 'Kiểm tra logo, ký hiệu vận chuyển, mã sản phẩm và nhãn cảnh báo.'],
+                  ['Độ kín của thùng', 'Đảm bảo thùng được dán và cố định đúng quy trình.'],
+                  ['Kiểm tra trước xuất hàng', 'Đánh giá ngoại quan và chất lượng đóng gói trước khi xếp container.'],
+                ].map(([title, body]) => (
+                  <article key={title}>
+                    <span aria-hidden="true">☑</span>
+                    <h3>{t(title)}</h3>
+                    <p>{t(body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-carton-supply">
+            <div className="materials-carton-supply-image-slot" aria-hidden="true" />
+            <div className="materials-carton-supply-copy">
+              <h2>{t('Thùng carton trong hệ thống đóng gói của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE thiết kế và lựa chọn giải pháp thùng carton phù hợp với từng loại sản phẩm, điều kiện vận chuyển và yêu cầu của buyer.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Mỗi phương án đóng gói đều được kiểm tra trong quá trình phát triển sản phẩm nhằm đảm bảo khả năng bảo vệ, tối ưu chi phí logistics và tính nhất quán trong sản xuất hàng loạt.',
+                )}
+              </p>
+            </div>
+            <div className="materials-carton-supply-flow">
+              {['Thiết kế phù hợp sản phẩm', 'Kiểm tra & thử nghiệm thực tế', 'Đảm bảo tiêu chuẩn xuất khẩu', 'Tối ưu chi phí logistics'].map((item) => (
+                <article key={item}>
+                  <span aria-hidden="true">▢</span>
+                  <p>{t(item)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-carton-bottom-row">
+            <div className="materials-carton-combinations">
+              <h2>{t('Kết hợp với các vật liệu bảo vệ khác')}</h2>
+              <div className="materials-carton-combo-grid">
+                {['Foam bảo vệ', 'Bảo vệ cạnh', 'Túi PE', 'Pallet', 'Đai kiện'].map((item) => (
+                  <article key={item}>
+                    <div className="materials-carton-combo-image-slot" aria-hidden="true" />
+                    <h3>{t(item)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-carton-related">
+              <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+              <div className="materials-carton-related-grid">
+                {['Foam bảo vệ', 'Bảo vệ cạnh', 'Pallet', 'Chuẩn đóng gói'].map((title) => (
+                  <article key={title}>
+                    <div className="materials-carton-related-image-slot" aria-hidden="true" />
+                    <div>
+                      <h3>{t(title)}</h3>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-carton-cta">
+            <div className="materials-carton-cta-copy">
+              <h2>{t('Trao đổi về giải pháp thùng carton cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ sản phẩm, quy cách đóng gói, carton mark hoặc tiêu chuẩn vận chuyển để ANSLIFE đề xuất phương án thùng carton phù hợp.',
+                )}
+              </p>
+            </div>
+            <div className="materials-carton-cta-actions">
+              <a href="/vn/contact">
+                <span aria-hidden="true">✈</span>
+                {t('Gửi yêu cầu')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">⇧</span>
+                {t('Tải bản vẽ lên')}
+              </a>
+              <a href="/vn/contact">
+                <span aria-hidden="true">☎</span>
+                {t('Liên hệ ANSLIFE')}
+              </a>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsLeatherPuPage && (
+        <section className="materials-leather-pu-content">
+          <section className="materials-leather-pu-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-leather-pu-overview-panel">
+              {[
+                {
+                  icon: '▱',
+                  title: 'Tên thương mại',
+                  body: 'Leather & PU Upholstery',
+                },
+                {
+                  icon: '▤',
+                  title: 'Nhóm vật liệu',
+                  body: 'Vật liệu bọc nệm',
+                },
+                {
+                  icon: '☷',
+                  title: 'Đặc điểm',
+                  body: 'Sang trọng\nDễ vệ sinh\nĐộ bền cao\nĐa dạng màu sắc',
+                },
+                {
+                  icon: '▥',
+                  title: 'Khả năng ứng dụng',
+                  body: 'Sofa\nGhế ăn\nGhế lounge\nGhế văn phòng\nHeadboard',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>
+                      {item.body.split('\n').map((line, index) => (
+                        <span key={`${item.title}-${line}`}>
+                          {index > 0 && <br />}
+                          {t(line)}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                </article>
+              ))}
+              <div className="materials-leather-pu-overview-image-slot" aria-hidden="true" />
+            </div>
+          </section>
+
+          <section className="materials-leather-pu-features">
+            <h2>{t('Vì sao Da / PU được sử dụng phổ biến?')}</h2>
+            <div className="materials-leather-pu-feature-grid">
+              {[
+                {
+                  icon: '◇',
+                  title: 'Ngoại quan sang trọng',
+                  body: 'Tạo cảm giác cao cấp và chuyên nghiệp cho sản phẩm nội thất.',
+                },
+                {
+                  icon: '✧',
+                  title: 'Dễ vệ sinh',
+                  body: 'Bề mặt dễ lau chùi, phù hợp với các không gian có tần suất sử dụng cao.',
+                },
+                {
+                  icon: '▿',
+                  title: 'Độ bền sử dụng',
+                  body: 'Đáp ứng tốt yêu cầu của nội thất gia đình và thương mại khi lựa chọn đúng chủng loại.',
+                },
+                {
+                  icon: '◌',
+                  title: 'Đa dạng màu sắc',
+                  body: 'Nhiều lựa chọn màu và bề mặt phù hợp với từng bộ sưu tập sản phẩm.',
+                },
+                {
+                  icon: '⌁',
+                  title: 'Cảm giác sử dụng',
+                  body: 'Mang lại trải nghiệm sử dụng khác nhau tùy theo từng loại da hoặc PU.',
+                },
+                {
+                  icon: '◎',
+                  title: 'Phù hợp nhiều thị trường',
+                  body: 'Được sử dụng rộng rãi trong khách sạn, văn phòng, nhà hàng và nội thất xuất khẩu.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                  <div className="materials-leather-pu-feature-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-leather-pu-types">
+            <h2>{t('Các nhóm vật liệu')}</h2>
+            <div className="materials-leather-pu-type-grid">
+              {[
+                {
+                  title: 'Da thật (Genuine Leather)',
+                  body: 'Mang lại vẻ đẹp tự nhiên với bề mặt và vân da đặc trưng, thường được lựa chọn cho các dòng nội thất cao cấp.',
+                  items: ['Sofa cao cấp', 'Lounge Chair', 'Executive Chair'],
+                },
+                {
+                  title: 'Da tổng hợp (PU Leather)',
+                  body: 'Giải pháp phổ biến nhờ tính thẩm mỹ, đa dạng màu sắc, dễ bảo trì và hiệu quả chi phí.',
+                  items: ['Ghế ăn', 'Ghế văn phòng', 'Sofa', 'Nội thất khách sạn'],
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-leather-pu-type-image-slot" aria-hidden="true" />
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                    <h4>{t('Ứng dụng')}</h4>
+                    <ul>
+                      {item.items.map((entry) => (
+                        <li key={entry}>{t(entry)}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-leather-pu-applications">
+            <h2>{t('Ứng dụng trong nội thất')}</h2>
+            <div className="materials-leather-pu-application-grid">
+              {[
+                {
+                  title: 'Sofa',
+                  items: ['Đệm ngồi', 'Đệm tựa', 'Tay vịn'],
+                },
+                {
+                  title: 'Ghế ăn',
+                  items: ['Dining Chair', 'Armchair'],
+                },
+                {
+                  title: 'Ghế lounge',
+                  items: ['Accent Chair', 'Relax Chair'],
+                },
+                {
+                  title: 'Ghế văn phòng',
+                  items: ['Executive Chair', 'Meeting Chair'],
+                },
+                {
+                  title: 'Đầu giường',
+                  items: ['Upholstered Headboard'],
+                },
+                {
+                  title: 'Nội thất dự án',
+                  items: ['Hotel', 'Resort', 'Restaurant', 'Office'],
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-leather-pu-application-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <ul>
+                    {item.items.map((entry) => (
+                      <li key={entry}>{t(entry)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-leather-pu-choose-control-row">
+            <div className="materials-leather-pu-criteria">
+              <h2>{t('Các tiêu chí lựa chọn')}</h2>
+              <div className="materials-leather-pu-criteria-grid">
+                {[
+                  {
+                    icon: '◌',
+                    title: 'Màu sắc',
+                    body: 'Đồng bộ với bộ sưu tập và mẫu duyệt.',
+                  },
+                  {
+                    icon: '▧',
+                    title: 'Kết cấu bề mặt',
+                    body: 'Lựa chọn theo phong cách thiết kế và trải nghiệm sử dụng.',
+                  },
+                  {
+                    icon: '▿',
+                    title: 'Khả năng chống mài mòn',
+                    body: 'Đáp ứng yêu cầu của từng môi trường sử dụng.',
+                  },
+                  {
+                    icon: '✧',
+                    title: 'Dễ vệ sinh',
+                    body: 'Phù hợp với khách sạn, nhà hàng, văn phòng và không gian công cộng.',
+                  },
+                  {
+                    icon: '☼',
+                    title: 'Độ bền màu',
+                    body: 'Duy trì tính ổn định trong quá trình sử dụng.',
+                  },
+                  {
+                    icon: '☑',
+                    title: 'Tiêu chuẩn kỹ thuật',
+                    body: 'Lựa chọn theo yêu cầu riêng của buyer hoặc từng thị trường.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span aria-hidden="true">{item.icon}</span>
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-leather-pu-control">
+              <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+              <div className="materials-leather-pu-control-grid">
+                {[
+                  {
+                    icon: '♢',
+                    title: 'Màu sắc',
+                    body: 'Đảm bảo đồng theo mẫu đã được phê duyệt.',
+                  },
+                  {
+                    icon: '⌕',
+                    title: 'Bề mặt',
+                    body: 'Kiểm tra vân, độ đồng đều và tình trạng ngoại quan.',
+                  },
+                  {
+                    icon: '□',
+                    title: 'Đường may',
+                    body: 'Đảm bảo độ chính xác và tính thẩm mỹ của sản phẩm.',
+                  },
+                  {
+                    icon: '☑',
+                    title: 'Kết hợp với foam',
+                    body: 'Đảm bảo độ căng, hình dáng của sản phẩm sau khi bọc.',
+                  },
+                  {
+                    icon: '⌁',
+                    title: 'Kiểm tra hoàn thiện',
+                    body: 'Đánh giá tổng thể trước khi đóng gói và xuất hàng.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span aria-hidden="true">{item.icon}</span>
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-leather-pu-supply-combo-row">
+            <div className="materials-leather-pu-supply">
+              <div className="materials-leather-pu-supply-copy">
+                <h2>{t('Da / PU trong hệ thống cung ứng của ANSLIFE')}</h2>
+                <p>
+                  {t(
+                    'ANSLIFE hỗ trợ lựa chọn vật liệu da hoặc PU phù hợp với yêu cầu thiết kế, ngân sách và tiêu chuẩn kỹ thuật của từng dự án.',
+                  )}
+                </p>
+                <p>
+                  {t(
+                    'Các mẫu vật liệu được quản lý đồng bộ với foam, khung sản phẩm và quy trình bọc nệm nhằm đảm bảo sự nhất quán giữa mẫu duyệt và sản xuất hàng loạt.',
+                  )}
+                </p>
+              </div>
+              <div className="materials-leather-pu-supply-image-slot" aria-hidden="true" />
+            </div>
+
+            <div className="materials-leather-pu-combinations">
+              <h2>{t('Kết hợp với các vật liệu khác')}</h2>
+              <div className="materials-leather-pu-combo-map">
+                <div className="materials-leather-pu-combo-center">
+                  <div className="materials-leather-pu-combo-image-slot" aria-hidden="true" />
+                  <strong>{t('Da / PU')}</strong>
+                  <span>{t('Leather & PU Upholstery')}</span>
+                </div>
+                {['Foam', 'Kim loại', 'Mây', 'Vải', 'Khung gỗ'].map((item) => (
+                  <article key={item}>
+                    <div className="materials-leather-pu-combo-thumb-slot" aria-hidden="true" />
+                    <h3>{t(item)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-leather-pu-related">
+            <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+            <div className="materials-leather-pu-related-grid">
+              {[
+                {
+                  title: 'Foam',
+                  body: 'Giải pháp đệm và nâng đỡ cho sản phẩm bọc nệm.',
+                },
+                {
+                  title: 'Vải',
+                  body: 'Các dòng vải bọc cho nhiều phong cách thiết kế.',
+                },
+                {
+                  title: 'Nội thất bọc nệm',
+                  body: 'Khám phá sofa, ghế và giường bọc nệm.',
+                },
+                {
+                  title: 'Khung ghế',
+                  body: 'Hệ khung kết hợp với foam và vật liệu bọc.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-leather-pu-related-image-slot" aria-hidden="true" />
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                  <span aria-hidden="true">›</span>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-leather-pu-cta">
+            <div className="materials-leather-pu-cta-copy">
+              <h2>{t('Trao đổi về giải pháp da / PU cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi mẫu vật liệu, bảng màu hoặc yêu cầu kỹ thuật để ANSLIFE tư vấn lựa chọn loại da hoặc PU phù hợp với sản phẩm, tiêu chuẩn sử dụng và thị trường xuất khẩu.',
+                )}
+              </p>
+              <div className="materials-leather-pu-cta-actions">
+                <a href="/vn/contact">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">⇧</span>
+                  {t('Tải mẫu vật liệu lên')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+            <div className="materials-leather-pu-cta-image-slot" aria-hidden="true" />
+          </section>
+        </section>
+      )}
+      {isMaterialsFabricPage && (
+        <section className="materials-fabric-content">
+          <section className="materials-fabric-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-fabric-overview-panel">
+              {[
+                {
+                  icon: '▥',
+                  title: 'Tên thương mại',
+                  body: 'Upholstery Fabric',
+                },
+                {
+                  icon: '◍',
+                  title: 'Nhóm vật liệu',
+                  body: 'Vật liệu bọc nệm',
+                },
+                {
+                  icon: '▧',
+                  title: 'Đặc điểm',
+                  body: 'Đa dạng màu sắc\nĐa dạng kết cấu\nThoải mái\nLinh hoạt trong thiết kế',
+                },
+                {
+                  icon: '▥',
+                  title: 'Ứng dụng',
+                  body: 'Ghế\nSofa\nGiường\nHeadboard\nBench',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>
+                      {item.body.split('\n').map((line, index) => (
+                        <span key={`${item.title}-${line}`}>
+                          {index > 0 && <br />}
+                          {t(line)}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                </article>
+              ))}
+              <div className="materials-fabric-overview-image-slot" aria-hidden="true" />
+            </div>
+          </section>
+
+          <section className="materials-fabric-features">
+            <h2>{t('Vì sao Upholstery Fabric được sử dụng phổ biến?')}</h2>
+            <div className="materials-fabric-feature-grid">
+              {[
+                {
+                  icon: '◌',
+                  title: 'Đa dạng màu sắc',
+                  body: 'Đáp ứng nhiều phong cách thiết kế và bộ sưu tập sản phẩm.',
+                },
+                {
+                  icon: '▧',
+                  title: 'Nhiều kết cấu bề mặt',
+                  body: 'Từ mịn, dệt thô đến các kiểu vải có họa tiết đặc trưng.',
+                },
+                {
+                  icon: '⌁',
+                  title: 'Cảm giác sử dụng',
+                  body: 'Mang lại sự thoải mái và dễ chịu khi tiếp xúc trực tiếp.',
+                },
+                {
+                  icon: '✣',
+                  title: 'Dễ phối hợp vật liệu',
+                  body: 'Kết hợp tốt với gỗ, kim loại, mây và da.',
+                },
+                {
+                  icon: '▤',
+                  title: 'Phù hợp nhiều không gian',
+                  body: 'Từ nội thất gia đình đến khách sạn, nhà hàng và văn phòng.',
+                },
+                {
+                  icon: '□',
+                  title: 'Linh hoạt theo yêu cầu buyer',
+                  body: 'Có thể lựa chọn màu sắc, chất liệu và thông số kỹ thuật theo từng dự án.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                  <div className="materials-fabric-feature-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-fabric-groups">
+            <h2>{t('Các nhóm vải phổ biến')}</h2>
+            <div className="materials-fabric-group-grid">
+              {[
+                {
+                  title: 'Polyester',
+                  body: 'Độ bền tốt, dễ bảo trì và phù hợp với nhiều dòng sản phẩm.',
+                },
+                {
+                  title: 'Linen Blend',
+                  body: 'Mang lại vẻ tự nhiên và cảm giác mềm mại.',
+                },
+                {
+                  title: 'Cotton Blend',
+                  body: 'Thoải mái khi sử dụng và phù hợp với nội thất gia đình.',
+                },
+                {
+                  title: 'Woven Fabric',
+                  body: 'Đa dạng về họa tiết và kết cấu bề mặt.',
+                },
+                {
+                  title: 'Performance Fabric',
+                  body: 'Tăng khả năng chống bám bẩn, chống mài mòn và phù hợp với môi trường sử dụng cường độ cao.',
+                },
+                {
+                  title: 'Recycled Fabric',
+                  body: 'Giải pháp vật liệu hướng tới phát triển bền vững.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-fabric-group-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-fabric-app-criteria-row">
+            <div className="materials-fabric-applications">
+              <h2>{t('Ứng dụng trong nội thất')}</h2>
+              <div className="materials-fabric-application-grid">
+                {[
+                  {
+                    title: 'Sofa',
+                    items: ['Đệm ngồi', 'Đệm tựa', 'Tay vịn'],
+                  },
+                  {
+                    title: 'Ghế bọc nệm',
+                    items: ['Dining Chair', 'Lounge Chair', 'Office Chair'],
+                  },
+                  {
+                    title: 'Giường',
+                    items: ['Headboard', 'Bed Frame'],
+                  },
+                  {
+                    title: 'Bench',
+                    items: ['Bench', 'Ottoman'],
+                  },
+                  {
+                    title: 'Nội thất khách sạn',
+                    items: ['Hotel Furniture', 'Resort Furniture', 'Restaurant Furniture'],
+                  },
+                  {
+                    title: 'Nội thất văn phòng',
+                    items: ['Reception Seating', 'Meeting Room', 'Workspace Furniture'],
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-fabric-application-image-slot" aria-hidden="true" />
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <ul>
+                        {item.items.map((entry) => (
+                          <li key={entry}>{t(entry)}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-fabric-criteria">
+              <h2>{t('Các tiêu chí lựa chọn vải')}</h2>
+              <div className="materials-fabric-criteria-grid">
+                {[
+                  {
+                    icon: '◌',
+                    title: 'Màu sắc',
+                    body: 'Đồng bộ với thiết kế và bộ sưu tập sản phẩm.',
+                  },
+                  {
+                    icon: '▧',
+                    title: 'Kết cấu',
+                    body: 'Lựa chọn theo phong cách thiết kế và cảm giác sử dụng.',
+                  },
+                  {
+                    icon: '▿',
+                    title: 'Độ bền mài mòn',
+                    body: 'Phù hợp với tần suất sử dụng của từng không gian.',
+                  },
+                  {
+                    icon: 'UV',
+                    title: 'Độ bền màu',
+                    body: 'Đảm bảo tính ổn định trong quá trình sử dụng.',
+                  },
+                  {
+                    icon: '♢',
+                    title: 'Khả năng vệ sinh',
+                    body: 'Lựa chọn theo yêu cầu bảo trì và bảo dưỡng.',
+                  },
+                  {
+                    icon: '☑',
+                    title: 'Tiêu chuẩn kỹ thuật',
+                    body: 'Đáp ứng các yêu cầu riêng của buyer hoặc từng thị trường.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span aria-hidden="true">{item.icon}</span>
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-fabric-control">
+            <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+            <div className="materials-fabric-control-grid">
+              {[
+                {
+                  icon: '◌',
+                  title: 'Màu sắc',
+                  body: 'Đảm bảo đúng theo mẫu duyệt.',
+                },
+                {
+                  icon: '⚗',
+                  title: 'Lô nhuộm',
+                  body: 'Kiểm soát sự đồng đều giữa các lô sản xuất.',
+                },
+                {
+                  icon: '▥',
+                  title: 'Hướng vân vải',
+                  body: 'Đảm bảo tính nhất quán khi cắt và may.',
+                },
+                {
+                  icon: '▣',
+                  title: 'Chất lượng đường may',
+                  body: 'Kiểm tra độ chính xác và tính thẩm mỹ của sản phẩm hoàn thiện.',
+                },
+                {
+                  icon: '⌕',
+                  title: 'Kiểm tra ngoại quan',
+                  body: 'Đánh giá bề mặt trước khi đóng gói và xuất hàng.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-fabric-supply-combo-row">
+            <div className="materials-fabric-supply">
+              <div className="materials-fabric-supply-copy">
+                <h2>{t('Vải trong hệ thống cung ứng của ANSLIFE')}</h2>
+                <p>
+                  {t(
+                    'ANSLIFE hỗ trợ lựa chọn chất liệu, màu sắc và thông số kỹ thuật của vải bọc theo yêu cầu của từng buyer và từng dự án.',
+                  )}
+                </p>
+                <p>
+                  {t(
+                    'Các mẫu vải được quản lý đồng bộ với mẫu duyệt, vật liệu bọc, foam và quy trình sản xuất nhằm đảm bảo tính nhất quán giữa mẫu phát triển và sản xuất hàng loạt.',
+                  )}
+                </p>
+              </div>
+              <div className="materials-fabric-supply-image-slot" aria-hidden="true" />
+            </div>
+
+            <div className="materials-fabric-combinations">
+              <h2>{t('Kết hợp với các vật liệu khác')}</h2>
+              <div className="materials-fabric-combo-map">
+                <div className="materials-fabric-combo-center">
+                  <div className="materials-fabric-combo-image-slot" aria-hidden="true" />
+                  <strong>{t('Vải')}</strong>
+                  <span>{t('Upholstery Fabric')}</span>
+                </div>
+                {['Foam', 'Da / PU', 'Mây', 'Kim loại', 'Khung gỗ'].map((item) => (
+                  <article key={item}>
+                    <div className="materials-fabric-combo-thumb-slot" aria-hidden="true" />
+                    <h3>{t(item)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-fabric-related">
+            <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+            <div className="materials-fabric-related-grid">
+              {[
+                {
+                  title: 'Foam',
+                  body: 'Giải pháp đệm và nâng đỡ cho sản phẩm bọc nệm.',
+                },
+                {
+                  title: 'Da / PU',
+                  body: 'Các lựa chọn bề mặt bọc cao cấp.',
+                },
+                {
+                  title: 'Nội thất bọc nệm',
+                  body: 'Khám phá các dòng sofa, ghế và giường bọc nệm.',
+                },
+                {
+                  title: 'Sơn & hoàn thiện bề mặt',
+                  body: 'Giải pháp hoàn thiện cho phần khung gỗ kết hợp với vải bọc.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-fabric-related-image-slot" aria-hidden="true" />
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                  <span aria-hidden="true">›</span>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-fabric-cta">
+            <div className="materials-fabric-cta-image-slot" aria-hidden="true" />
+            <div className="materials-fabric-cta-copy">
+              <h2>{t('Trao đổi về giải pháp vải bọc cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bảng màu, mẫu vải hoặc yêu cầu kỹ thuật để ANSLIFE tư vấn lựa chọn chất liệu, màu sắc và thông số phù hợp với từng sản phẩm và thị trường xuất khẩu.',
+                )}
+              </p>
+              <div className="materials-fabric-cta-actions">
+                <a href="/vn/contact">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">⇧</span>
+                  {t('Tải bản vẽ lên')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsFoamPage && (
+        <section className="materials-foam-content">
+          <section className="materials-foam-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-foam-overview-panel">
+              {[
+                {
+                  icon: '▣',
+                  title: 'Tên thương mại',
+                  body: 'PU Foam',
+                },
+                {
+                  icon: '◍',
+                  title: 'Nhóm vật liệu',
+                  body: 'Vật liệu bọc nệm',
+                },
+                {
+                  icon: '▤',
+                  title: 'Chức năng',
+                  body: 'Đệm\nNâng đỡ\nTạo sự êm ái\nGiảm áp lực',
+                },
+                {
+                  icon: '□',
+                  title: 'Đặc điểm',
+                  body: 'Đàn hồi\nNhẹ\nDễ tạo hình\nNhiều cấp độ cứng',
+                },
+                {
+                  icon: '▥',
+                  title: 'Ứng dụng',
+                  body: 'Ghế\nSofa\nGiường\nHeadboard\nBench',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>
+                      {item.body.split('\n').map((line, index) => (
+                        <span key={`${item.title}-${line}`}>
+                          {index > 0 && <br />}
+                          {t(line)}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-foam-features">
+            <h2>{t('Vì sao Foam được sử dụng rộng rãi?')}</h2>
+            <div className="materials-foam-feature-grid">
+              {[
+                {
+                  icon: '◍',
+                  title: 'Êm ái và thoải mái',
+                  body: 'Mang lại cảm giác ngồi hoặc nằm phù hợp với từng dòng sản phẩm.',
+                },
+                {
+                  icon: '≋',
+                  title: 'Khả năng đàn hồi',
+                  body: 'Giúp sản phẩm phục hồi hình dạng sau quá trình sử dụng.',
+                },
+                {
+                  icon: '✣',
+                  title: 'Nâng đỡ cơ thể',
+                  body: 'Phân bố áp lực và tăng sự thoải mái cho người sử dụng.',
+                },
+                {
+                  icon: '⌁',
+                  title: 'Dễ tạo hình',
+                  body: 'Có thể cắt, CNC hoặc tạo hình theo nhiều thiết kế khác nhau.',
+                },
+                {
+                  icon: '▤',
+                  title: 'Đa dạng chủng loại',
+                  body: 'Có nhiều mật độ và độ cứng đáp ứng các yêu cầu khác nhau.',
+                },
+                {
+                  icon: '✧',
+                  title: 'Kết hợp linh hoạt',
+                  body: 'Có thể kết hợp với lò xo, bông polyester và nhiều vật liệu bọc khác.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                  <div className="materials-foam-feature-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-foam-types">
+            <h2>{t('Các loại Foam phổ biến')}</h2>
+            <div className="materials-foam-type-grid">
+              {[
+                {
+                  title: 'Standard Foam',
+                  body: 'Phù hợp với hầu hết các dòng ghế và sofa thông dụng.',
+                },
+                {
+                  title: 'High Density Foam',
+                  body: 'Độ bền cao, phù hợp với các sản phẩm sử dụng thường xuyên.',
+                },
+                {
+                  title: 'High Resilience Foam (HR Foam)',
+                  body: 'Đàn hồi tốt, mang lại cảm giác ngồi thoải mái và tuổi thọ cao.',
+                },
+                {
+                  title: 'Memory Foam',
+                  body: 'Phân bố áp lực tốt, thường sử dụng cho các dòng sản phẩm cao cấp.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-foam-type-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-foam-applications">
+            <h2>{t('Ứng dụng trong nội thất')}</h2>
+            <div className="materials-foam-application-grid">
+              {[
+                {
+                  title: 'Sofa',
+                  items: ['Đệm ngồi', 'Đệm tựa', 'Tay vịn'],
+                },
+                {
+                  title: 'Ghế bọc nệm',
+                  items: ['Dining Chair', 'Lounge Chair', 'Office Chair'],
+                },
+                {
+                  title: 'Giường',
+                  items: ['Headboard', 'Đệm đầu giường'],
+                },
+                {
+                  title: 'Bench',
+                  items: ['Ghế băng', 'Ghế cuối giường'],
+                },
+                {
+                  title: 'Nội thất khách sạn',
+                  items: ['Hotel Furniture', 'Resort Furniture', 'Hospitality Seating'],
+                },
+                {
+                  title: 'Nội thất theo dự án',
+                  items: ['OEM / ODM', 'Custom Furniture'],
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-foam-application-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <ul>
+                    {item.items.map((entry) => (
+                      <li key={entry}>{t(entry)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-foam-parameters">
+            <h2>{t('Các thông số cần lựa chọn')}</h2>
+            <div className="materials-foam-parameter-grid">
+              {[
+                {
+                  icon: 'KG/m³',
+                  title: 'Density (Mật độ)',
+                  body: 'Ảnh hưởng đến độ bền và tuổi thọ của foam.',
+                },
+                {
+                  icon: '◜',
+                  title: 'Hardness (Độ cứng)',
+                  body: 'Quyết định cảm giác ngồi hoặc nằm.',
+                },
+                {
+                  icon: '≋',
+                  title: 'Resilience (Độ đàn hồi)',
+                  body: 'Khả năng phục hồi sau khi chịu tải.',
+                },
+                {
+                  icon: 'L',
+                  title: 'Thickness (Độ dày)',
+                  body: 'Lựa chọn theo thiết kế và mục đích sử dụng.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-foam-control">
+            <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+            <div className="materials-foam-control-grid">
+              {[
+                {
+                  icon: '▧',
+                  title: 'Mật độ foam',
+                  body: 'Đảm bảo đúng thông số kỹ thuật theo yêu cầu của dự án.',
+                },
+                {
+                  icon: '↓',
+                  title: 'Độ cứng',
+                  body: 'Kiểm tra cảm giác sử dụng và khả năng nâng đỡ.',
+                },
+                {
+                  icon: '□',
+                  title: 'Kích thước',
+                  body: 'Đảm bảo độ chính xác trước khi bọc nệm.',
+                },
+                {
+                  icon: '↻',
+                  title: 'Khả năng phục hồi',
+                  body: 'Đánh giá khả năng đàn hồi sau quá trình nén.',
+                },
+                {
+                  icon: '⌁',
+                  title: 'Chất lượng gia công',
+                  body: 'Kiểm tra bề mặt cắt và độ chính xác của chi tiết foam.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-foam-supply">
+            <div className="materials-foam-supply-image-slot" aria-hidden="true" />
+            <div className="materials-foam-supply-copy">
+              <h2>{t('Foam trong hệ thống cung ứng của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ lựa chọn chủng loại foam phù hợp với thiết kế sản phẩm, tiêu chuẩn kỹ thuật và yêu cầu sử dụng của từng dự án.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Foam được kết hợp với hệ thống khung, vật liệu bọc và quy trình kiểm soát chất lượng nhằm đảm bảo sự đồng nhất giữa mẫu duyệt và sản xuất hàng loạt.',
+                )}
+              </p>
+            </div>
+            <div className="materials-foam-supply-flow">
+              {['Tư vấn vật liệu', 'Phát triển sản phẩm', 'Kiểm soát chất lượng', 'Sản xuất ổn định', 'Đáp ứng tiêu chuẩn xuất khẩu'].map((item) => (
+                <article key={item}>
+                  <div className="materials-foam-supply-icon-slot" aria-hidden="true" />
+                  <p>{t(item)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-foam-combinations">
+            <h2>{t('Kết hợp với các vật liệu khác')}</h2>
+            <div className="materials-foam-combo-chain">
+              {['Vải', 'Da / PU', 'Foam', 'Khung gỗ', 'Lò xo', 'Bông polyester'].map((item) => (
+                <article key={item} className={item === 'Foam' ? 'is-main' : undefined}>
+                  <div className="materials-foam-combo-image-slot" aria-hidden="true" />
+                  <h3>{t(item)}</h3>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-foam-bottom-row">
+            <div className="materials-foam-related">
+              <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+              <div className="materials-foam-related-grid">
+                {[
+                  {
+                    title: 'Nội thất bọc nệm',
+                    body: 'Khám phá các sản phẩm sử dụng foam.',
+                  },
+                  {
+                    title: 'Vải',
+                    body: 'Các loại vải bọc phù hợp với từng dòng sản phẩm.',
+                  },
+                  {
+                    title: 'Da / PU',
+                    body: 'Giải pháp bọc cho sofa, ghế và nội thất thương mại.',
+                  },
+                  {
+                    title: 'Khung ghế',
+                    body: 'Hệ khung kết hợp cùng foam và vật liệu bọc.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-foam-related-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-foam-cta">
+              <div className="materials-foam-cta-copy">
+                <h2>{t('Trao đổi về giải pháp foam cho dự án của bạn')}</h2>
+                <p>
+                  {t(
+                    'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu về độ cứng, mật độ và cảm giác sử dụng để ANSLIFE tư vấn lựa chọn loại foam phù hợp với từng dòng nội thất và thị trường xuất khẩu.',
+                  )}
+                </p>
+                <div className="materials-foam-cta-actions">
+                  <a href="/vn/contact">
+                    <span aria-hidden="true">✈</span>
+                    {t('Gửi yêu cầu')}
+                  </a>
+                  <a href="/vn/contact">
+                    <span aria-hidden="true">⇧</span>
+                    {t('Tải bản vẽ lên')}
+                  </a>
+                  <a href="/vn/contact">
+                    <span aria-hidden="true">☎</span>
+                    {t('Liên hệ ANSLIFE')}
+                  </a>
+                </div>
+              </div>
+              <div className="materials-foam-cta-image-slot" aria-hidden="true" />
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsCaneWebbingPage && (
+        <section className="materials-cane-webbing-content">
+          <section className="materials-cane-webbing-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-cane-webbing-overview-panel">
+              {[
+                {
+                  icon: '◌',
+                  title: 'Tên thương mại',
+                  body: 'Natural Cane Webbing',
+                },
+                {
+                  icon: '♧',
+                  title: 'Nhóm vật liệu',
+                  body: 'Vật liệu tự nhiên',
+                },
+                {
+                  icon: '☷',
+                  title: 'Đặc điểm',
+                  body: 'Thông thoáng\nNhẹ\nGiá trị thủ công\nTrang trí cao',
+                },
+                {
+                  icon: '▧',
+                  title: 'Cấu tạo',
+                  body: 'Sợi mây tự nhiên được đan thành tấm theo nhiều kiểu mặt đan khác nhau.',
+                },
+                {
+                  icon: '▥',
+                  title: 'Khả năng ứng dụng',
+                  body: 'Ghế\nTủ\nVách trang trí\nĐầu giường\nPanel nội thất',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>
+                      {item.body.split('\n').map((line, index) => (
+                        <span key={`${item.title}-${line}`}>
+                          {index > 0 && <br />}
+                          {t(line)}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-cane-webbing-features">
+            <h2>{t('Vì sao Cane Webbing được ưa chuộng?')}</h2>
+            <div className="materials-cane-webbing-feature-grid">
+              {[
+                {
+                  icon: '◍',
+                  title: 'Thẩm mỹ tự nhiên',
+                  body: 'Mang đến vẻ đẹp tinh tế và gần gũi với thiên nhiên.',
+                },
+                {
+                  icon: '≋',
+                  title: 'Thông thoáng',
+                  body: 'Cấu trúc mặt đan giúp tăng khả năng lưu thông không khí cho bề mặt sử dụng.',
+                },
+                {
+                  icon: '◌',
+                  title: 'Trọng lượng nhẹ',
+                  body: 'Giảm trọng lượng tổng thể của sản phẩm mà vẫn đảm bảo tính thẩm mỹ.',
+                },
+                {
+                  icon: '✧',
+                  title: 'Giá trị thủ công',
+                  body: 'Mỗi tấm đan thể hiện kỹ thuật và tay nghề của người thợ.',
+                },
+                {
+                  icon: '↔',
+                  title: 'Dễ kết hợp vật liệu',
+                  body: 'Phù hợp với gỗ tự nhiên, kim loại, kính và vật liệu bọc nệm.',
+                },
+                {
+                  icon: '▢',
+                  title: 'Phong cách thiết kế đa dạng',
+                  body: 'Được sử dụng rộng rãi trong nhiều xu hướng nội thất hiện đại.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                  <div className="materials-cane-webbing-feature-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-cane-webbing-weaves">
+            <h2>{t('Các kiểu đan phổ biến')}</h2>
+            <div className="materials-cane-webbing-weave-grid">
+              {[
+                {
+                  title: 'Open Cane',
+                  body: 'Kiểu đan lục giác truyền thống, tạo cảm giác nhẹ nhàng và thông thoáng.',
+                },
+                {
+                  title: 'Close Weave',
+                  body: 'Mật độ đan cao hơn, tạo độ kín và tạo điểm nhấn cho sản phẩm.',
+                },
+                {
+                  title: 'Custom Weave',
+                  body: 'Các kiểu đan được phát triển theo yêu cầu thiết kế riêng của từng dự án.',
+                },
+                {
+                  title: 'Decorative Pattern',
+                  body: 'Hoa văn đan trang trí phục vụ các dòng nội thất cao cấp.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-cane-webbing-weave-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-cane-webbing-applications">
+            <h2>{t('Ứng dụng trong nội thất')}</h2>
+            <div className="materials-cane-webbing-application-grid">
+              {[
+                {
+                  title: 'Ghế',
+                  items: ['Lưng ghế', 'Mặt ghế', 'Ghế ăn', 'Ghế lounge'],
+                },
+                {
+                  title: 'Tủ',
+                  items: ['Cánh tủ', 'Cửa tủ', 'Panel trang trí'],
+                },
+                {
+                  title: 'Đầu giường',
+                  items: ['Headboard', 'Decorative Insert'],
+                },
+                {
+                  title: 'Vách trang trí',
+                  items: ['Decorative Screen', 'Room Divider', 'Wall Panel'],
+                },
+                {
+                  title: 'Nội thất khách sạn',
+                  items: ['Hotel Furniture', 'Resort Furniture', 'Restaurant Furniture'],
+                },
+                {
+                  title: 'Nội thất tùy chỉnh',
+                  items: ['Custom Furniture', 'OEM / ODM Projects'],
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-cane-webbing-application-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <ul>
+                    {item.items.map((entry) => (
+                      <li key={entry}>{t(entry)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-cane-webbing-combo-finish-row">
+            <div className="materials-cane-webbing-combinations">
+              <h2>{t('Kết hợp với các vật liệu khác')}</h2>
+              <div className="materials-cane-webbing-combo-map">
+                <div className="materials-cane-webbing-combo-center">
+                  <div className="materials-cane-webbing-combo-image-slot" aria-hidden="true" />
+                  <strong>{t('Cane Webbing')}</strong>
+                </div>
+                {['Gỗ tự nhiên', 'Kim loại', 'Kính', 'Vải bọc', 'Da'].map((item) => (
+                  <article key={item}>
+                    <div className="materials-cane-webbing-combo-thumb-slot" aria-hidden="true" />
+                    <h3>{t(item)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-cane-webbing-finishing">
+              <h2>{t('Các phương án hoàn thiện')}</h2>
+              <div className="materials-cane-webbing-finish-grid">
+                {[
+                  {
+                    title: 'Natural Finish',
+                    body: 'Giữ nguyên màu sắc tự nhiên của mặt đan.',
+                  },
+                  {
+                    title: 'Stain Finish',
+                    body: 'Điều chỉnh màu sắc để đồng bộ với khung gỗ.',
+                  },
+                  {
+                    title: 'Protective Coating',
+                    body: 'Bảo vệ bề mặt và tăng độ bền trong điều kiện sử dụng trong nhà.',
+                  },
+                  {
+                    title: 'Custom Color',
+                    body: 'Hoàn thiện theo màu hoặc yêu cầu của buyer.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-cane-webbing-finish-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-cane-webbing-control">
+            <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+            <div className="materials-cane-webbing-control-grid">
+              {[
+                {
+                  icon: '◍',
+                  title: 'Chất lượng sợi mây',
+                  body: 'Đảm bảo độ đồng đều, độ già và tình trạng của sợi mây trước khi sản xuất.',
+                },
+                {
+                  icon: '▧',
+                  title: 'Mật độ đan',
+                  body: 'Kiểm soát độ căng, khoảng cách và sự đồng nhất của mặt đan.',
+                },
+                {
+                  icon: '↔',
+                  title: 'Liên kết với khung',
+                  body: 'Đảm bảo mặt đan được căng yêu cầu chuẩn và ổn định trong quá trình sử dụng.',
+                },
+                {
+                  icon: '⌁',
+                  title: 'Hoàn thiện bề mặt',
+                  body: 'Kiểm tra màu sắc, độ đồng đều và chất lượng lớp hoàn thiện.',
+                },
+                {
+                  icon: '□',
+                  title: 'Đóng gói',
+                  body: 'Bảo vệ mặt đan khỏi va đập và biến dạng trong quá trình vận chuyển.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-cane-webbing-supply">
+            <div className="materials-cane-webbing-supply-image-slot" aria-hidden="true" />
+            <div className="materials-cane-webbing-supply-copy">
+              <h2>{t('Cane Webbing trong hệ thống cung ứng của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ lựa chọn kiểu đan, phát triển sản phẩm, kiểm soát chất lượng và triển khai sản xuất các sản phẩm sử dụng mặt đan mây theo yêu cầu của từng dự án.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Mặt đan mây có thể được ứng dụng trong các bộ sưu tập nội thất hoàn thiện, OEM / ODM và các dự án khách sạn, resort hoặc không gian thương mại.',
+                )}
+              </p>
+            </div>
+            <div className="materials-cane-webbing-supply-flow">
+              {['Lựa chọn kiểu đan phù hợp', 'Kiểm soát chất lượng', 'Sản xuất chuyên nghiệp', 'Đáp ứng tiêu chuẩn xuất khẩu'].map((item) => (
+                <article key={item}>
+                  <div className="materials-cane-webbing-supply-icon-slot" aria-hidden="true" />
+                  <p>{t(item)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-cane-webbing-styles">
+            <h2>{t('Phong cách thiết kế phù hợp')}</h2>
+            <div className="materials-cane-webbing-style-grid">
+              {[
+                {
+                  title: 'Scandinavian',
+                  body: 'Tối giản, sáng màu và sử dụng vật liệu tự nhiên.',
+                },
+                {
+                  title: 'Japandi',
+                  body: 'Cân bằng giữa công năng, thủ công và vẻ đẹp tự nhiên.',
+                },
+                {
+                  title: 'Tropical',
+                  body: 'Không gian nghỉ dưỡng với vật liệu thiên nhiên.',
+                },
+                {
+                  title: 'Contemporary',
+                  body: 'Kết hợp vật liệu truyền thống với thiết kế hiện đại.',
+                },
+                {
+                  title: 'Boutique Hospitality',
+                  body: 'Khách sạn, resort và nhà hàng có dấu ấn thiết kế riêng.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-cane-webbing-style-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-cane-webbing-related">
+            <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+            <div className="materials-cane-webbing-related-grid">
+              {[
+                {
+                  title: 'Mây',
+                  body: 'Tìm hiểu về nguyên liệu mây tự nhiên.',
+                },
+                {
+                  title: 'Tre',
+                  body: 'Khám phá các ứng dụng của tre trong nội thất.',
+                },
+                {
+                  title: 'Nội thất mây tre',
+                  body: 'Các bộ sưu tập sử dụng mây và mặt đan mây.',
+                },
+                {
+                  title: 'Ghế',
+                  body: 'Các dòng ghế sử dụng mặt đan mây tự nhiên.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-cane-webbing-related-image-slot" aria-hidden="true" />
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                  <span aria-hidden="true">›</span>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-cane-webbing-cta">
+            <div className="materials-cane-webbing-cta-image-slot" aria-hidden="true" />
+            <div className="materials-cane-webbing-cta-copy">
+              <h2>{t('Trao đổi về mặt đan mây cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu kỹ thuật để ANSLIFE đánh giá khả năng ứng dụng mặt đan mây và đề xuất phương án sản xuất phù hợp.',
+                )}
+              </p>
+              <div className="materials-cane-webbing-cta-actions">
+                <a href="/vn/contact">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">⇧</span>
+                  {t('Tải bản vẽ lên')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsBambooPage && (
+        <section className="materials-bamboo-content">
+          <section className="materials-bamboo-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-bamboo-overview-panel">
+              {[
+                {
+                  icon: '♜',
+                  title: 'Tên thương mại',
+                  body: 'Bamboo',
+                },
+                {
+                  icon: '◍',
+                  title: 'Nhóm vật liệu',
+                  body: 'Vật liệu tự nhiên',
+                },
+                {
+                  icon: '☷',
+                  title: 'Đặc điểm',
+                  body: 'Nhẹ\nĐộ bền tốt\nPhát triển nhanh\nThân thiện môi trường',
+                },
+                {
+                  icon: '⚙',
+                  title: 'Khả năng gia công',
+                  body: 'Ép tấm\nUốn\nTiện\nCNC\nGhép thanh\nGia công thủ công',
+                },
+                {
+                  icon: '▥',
+                  title: 'Phong cách phù hợp',
+                  body: 'Scandinavian\nJapandi\nModern\nEco Living\nHospitality',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>
+                      {item.body.split('\n').map((line, index) => (
+                        <span key={`${item.title}-${line}`}>
+                          {index > 0 && <br />}
+                          {t(line)}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-bamboo-features">
+            <h2>{t('Vì sao Bamboo được sử dụng nhiều?')}</h2>
+            <div className="materials-bamboo-feature-grid">
+              {[
+                {
+                  icon: '◍',
+                  title: 'Nguồn nguyên liệu tái tạo',
+                  body: 'Tre có chu kỳ sinh trưởng ngắn và là một trong những vật liệu tự nhiên được đánh giá cao về khả năng tái tạo.',
+                },
+                {
+                  icon: '▿',
+                  title: 'Độ bền tốt',
+                  body: 'Khi được xử lý phù hợp, tre đáp ứng tốt nhiều yêu cầu sử dụng trong nội thất.',
+                },
+                {
+                  icon: '◌',
+                  title: 'Trọng lượng nhẹ',
+                  body: 'Giúp giảm trọng lượng sản phẩm và thuận lợi trong vận chuyển.',
+                },
+                {
+                  icon: '⌁',
+                  title: 'Gia công linh hoạt',
+                  body: 'Có thể ép tấm, ghép thanh, tạo hình hoặc kết hợp với nhiều vật liệu khác.',
+                },
+                {
+                  icon: '◉',
+                  title: 'Giá trị thiết kế',
+                  body: 'Mang đến vẻ đẹp tự nhiên, hiện đại và phù hợp với nhiều phong cách nội thất.',
+                },
+                {
+                  icon: '◎',
+                  title: 'Hướng đến phát triển bền vững',
+                  body: 'Là lựa chọn phù hợp cho các dự án ưu tiên vật liệu có nguồn gốc tự nhiên và sử dụng tài nguyên hiệu quả.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                  <div className="materials-bamboo-feature-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-bamboo-applications">
+            <h2>{t('Ứng dụng trong nội thất')}</h2>
+            <div className="materials-bamboo-application-grid">
+              {[
+                {
+                  icon: '▥',
+                  title: 'Ghế',
+                  items: ['Dining Chair', 'Lounge Chair', 'Bar Chair'],
+                },
+                {
+                  icon: '◈',
+                  title: 'Bàn',
+                  items: ['Dining Table', 'Coffee Table', 'Side Table'],
+                },
+                {
+                  icon: '▤',
+                  title: 'Kệ & Tủ',
+                  items: ['Bookshelf', 'Storage Cabinet', 'Display Unit'],
+                },
+                {
+                  icon: '▧',
+                  title: 'Panel trang trí',
+                  items: ['Wall Panel', 'Decorative Screen', 'Ceiling Panel'],
+                },
+                {
+                  icon: '♣',
+                  title: 'Nội thất khách sạn & Resort',
+                  items: ['Hospitality Furniture', 'Resort Furniture', 'Restaurant Furniture'],
+                },
+                {
+                  icon: '▥',
+                  title: 'Nội thất theo dự án',
+                  items: ['Custom Furniture', 'Commercial Interior', 'Public Space'],
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-bamboo-application-image-slot" aria-hidden="true" />
+                  <h3>
+                    <span aria-hidden="true">{item.icon}</span>
+                    {t(item.title)}
+                  </h3>
+                  <ul>
+                    {item.items.map((entry) => (
+                      <li key={entry}>{t(entry)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-bamboo-form-finish-row">
+            <div className="materials-bamboo-forms">
+              <h2>{t('Các hình thức ứng dụng của tre')}</h2>
+              <div className="materials-bamboo-form-grid">
+                {[
+                  {
+                    title: 'Tre nguyên cây',
+                    body: 'Ứng dụng cho các thiết kế mang tính thủ công và kiến trúc đặc trưng.',
+                  },
+                  {
+                    title: 'Tre ép khối',
+                    body: 'Gia công thành các chi tiết chịu lực và sản phẩm nội thất hiện đại.',
+                  },
+                  {
+                    title: 'Tre ghép thanh',
+                    body: 'Sử dụng cho mặt bàn, panel và các chi tiết trang trí.',
+                  },
+                  {
+                    title: 'Tre kết hợp vật liệu khác',
+                    body: 'Kết hợp với gỗ, kim loại, kính hoặc vật liệu bọc để tạo nên nhiều giải pháp thiết kế.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-bamboo-form-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-bamboo-finishing">
+              <h2>{t('Hoàn thiện bề mặt')}</h2>
+              <div className="materials-bamboo-finish-grid">
+                {[
+                  {
+                    title: 'Natural Finish',
+                    body: 'Giữ nguyên màu sắc và vẻ đẹp tự nhiên của tre.',
+                  },
+                  {
+                    title: 'Stain Finish',
+                    body: 'Điều chỉnh màu sắc theo yêu cầu thiết kế.',
+                  },
+                  {
+                    title: 'Oil Finish',
+                    body: 'Tăng vẻ tự nhiên và bảo vệ bề mặt.',
+                  },
+                  {
+                    title: 'Matte Finish',
+                    body: 'Mang lại cảm giác hiện đại và tinh tế.',
+                  },
+                  {
+                    title: 'Custom Finish',
+                    body: 'Hoàn thiện theo bảng màu hoặc mẫu duyệt của buyer.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-bamboo-finish-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-bamboo-control">
+            <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+            <div className="materials-bamboo-control-grid">
+              {[
+                {
+                  icon: '♧',
+                  title: 'Chất lượng nguyên liệu',
+                  body: 'Kiểm tra độ đồng đều, độ già và tình trạng của tre trước khi sản xuất.',
+                },
+                {
+                  icon: '♢',
+                  title: 'Độ ẩm',
+                  body: 'Kiểm soát nhằm đảm bảo tính ổn định của vật liệu.',
+                },
+                {
+                  icon: '↔',
+                  title: 'Chất lượng ghép thanh hoặc ép tấm',
+                  body: 'Đảm bảo độ liên kết và độ ổn định của kết cấu.',
+                },
+                {
+                  icon: '⌁',
+                  title: 'Hoàn thiện bề mặt',
+                  body: 'Kiểm tra màu sắc, độ đồng đều và chất lượng lớp hoàn thiện.',
+                },
+                {
+                  icon: '□',
+                  title: 'Đóng gói',
+                  body: 'Bảo vệ sản phẩm trong quá trình lưu kho và vận chuyển quốc tế.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                  <div className="materials-bamboo-control-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-bamboo-supply">
+            <div className="materials-bamboo-supply-copy">
+              <h2>{t('Tre trong hệ thống cung ứng của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ lựa chọn vật liệu tre phù hợp, phát triển sản phẩm, tổ chức sản xuất và kiểm soát chất lượng cho các dự án nội thất xuất khẩu.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Tre có thể được ứng dụng trong các chương trình OEM / ODM, nội thất hoàn thiện, dự án khách sạn, resort và các sản phẩm theo định hướng thiết kế bền vững.',
+                )}
+              </p>
+            </div>
+            <div className="materials-bamboo-supply-flow">
+              {['Lựa chọn vật liệu phù hợp', 'Phát triển sản phẩm', 'Sản xuất chuyên nghiệp', 'Kiểm soát chất lượng', 'Hỗ trợ xuất khẩu và logistics'].map((item) => (
+                <article key={item}>
+                  <div className="materials-bamboo-supply-icon-slot" aria-hidden="true" />
+                  <p>{t(item)}</p>
+                </article>
+              ))}
+            </div>
+            <div className="materials-bamboo-supply-image-slot" aria-hidden="true" />
+          </section>
+
+          <section className="materials-bamboo-styles">
+            <h2>{t('Tre phù hợp với những phong cách nào?')}</h2>
+            <div className="materials-bamboo-style-grid">
+              {[
+                {
+                  title: 'Eco Living',
+                  body: 'Ưu tiên vật liệu tự nhiên và phát triển bền vững.',
+                },
+                {
+                  title: 'Japandi',
+                  body: 'Đề cao sự tối giản, cân bằng và chất liệu tự nhiên.',
+                },
+                {
+                  title: 'Scandinavian',
+                  body: 'Kết hợp màu sắc sáng và thiết kế hiện đại.',
+                },
+                {
+                  title: 'Tropical',
+                  body: 'Không gian nghỉ dưỡng và resort.',
+                },
+                {
+                  title: 'Contemporary',
+                  body: 'Kết hợp tre với gỗ, kim loại và vật liệu bọc nệm.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-bamboo-style-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-bamboo-related">
+            <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+            <div className="materials-bamboo-related-grid">
+              {[
+                {
+                  title: 'Nội thất mây tre',
+                  body: 'Khám phá các bộ sưu tập sử dụng tre.',
+                },
+                {
+                  title: 'Mây',
+                  body: 'Tìm hiểu về vật liệu mây và các ứng dụng trong nội thất.',
+                },
+                {
+                  title: 'Mặt đan mây',
+                  body: 'Khám phá các giải pháp đan tự nhiên cho ghế và tủ.',
+                },
+                {
+                  title: 'Sơn & hoàn thiện bề mặt',
+                  body: 'Các phương án hoàn thiện phù hợp với tre.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-bamboo-related-image-slot" aria-hidden="true" />
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                  <span aria-hidden="true">›</span>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-bamboo-cta">
+            <div className="materials-bamboo-cta-image-slot" aria-hidden="true" />
+            <div className="materials-bamboo-cta-copy">
+              <h2>{t('Trao đổi về vật liệu tre cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu kỹ thuật để ANSLIFE đánh giá khả năng ứng dụng tre và đề xuất phương án sản xuất phù hợp.',
+                )}
+              </p>
+              <div className="materials-bamboo-cta-actions">
+                <a href="/vn/contact">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">⇧</span>
+                  {t('Tải bản vẽ lên')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsRattanPage && (
+        <section className="materials-rattan-content">
+          <section className="materials-rattan-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-rattan-overview-panel">
+              {[
+                {
+                  icon: '◌',
+                  title: 'Tên thương mại',
+                  body: 'Rattan',
+                },
+                {
+                  icon: '♧',
+                  title: 'Nhóm vật liệu',
+                  body: 'Vật liệu tự nhiên',
+                },
+                {
+                  icon: '◍',
+                  title: 'Đặc điểm',
+                  body: 'Nhẹ - Dẻo - Linh hoạt - Thân thiện môi trường',
+                },
+                {
+                  icon: '▧',
+                  title: 'Khả năng gia công',
+                  body: 'Uốn - Đan - Gia công thủ công\nKết hợp với khung gỗ hoặc kim loại',
+                },
+                {
+                  icon: '▥',
+                  title: 'Phong cách phù hợp',
+                  body: 'Natural - Tropical - Scandinavian - Resort - Contemporary',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>
+                      {item.body.split('\n').map((line, index) => (
+                        <span key={`${item.title}-${line}`}>
+                          {index > 0 && <br />}
+                          {t(line)}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-rattan-features">
+            <h2>{t('Vì sao mây được ưa chuộng?')}</h2>
+            <div className="materials-rattan-feature-grid">
+              {[
+                {
+                  icon: '◍',
+                  title: 'Trọng lượng nhẹ',
+                  body: 'Giúp sản phẩm dễ di chuyển và thuận tiện trong sử dụng.',
+                },
+                {
+                  icon: '≈',
+                  title: 'Dẻo và linh hoạt',
+                  body: 'Có thể tạo nên nhiều hình dáng và chi tiết thiết kế khác nhau.',
+                },
+                {
+                  icon: '✋',
+                  title: 'Giá trị thủ công',
+                  body: 'Mỗi sản phẩm thể hiện kỹ thuật đan và tay nghề của người thợ.',
+                },
+                {
+                  icon: '♢',
+                  title: 'Thẩm mỹ tự nhiên',
+                  body: 'Mang đến cảm giác gần gũi, ấm áp và hài hòa với không gian.',
+                },
+                {
+                  icon: '↔',
+                  title: 'Kết hợp đa vật liệu',
+                  body: 'Dễ kết hợp với gỗ, kim loại, kính hoặc vật liệu bọc nệm.',
+                },
+                {
+                  icon: '◎',
+                  title: 'Hướng đến phát triển bền vững',
+                  body: 'Là vật liệu có nguồn gốc tự nhiên và thân thiện với môi trường.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                  <div className="materials-rattan-feature-image-slot" aria-hidden="true" />
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-rattan-applications">
+            <h2>{t('Ứng dụng trong nội thất')}</h2>
+            <div className="materials-rattan-application-grid">
+              {[
+                {
+                  title: 'Ghế',
+                  items: ['Dining Chair', 'Lounge Chair', 'Accent Chair', 'Bar Chair'],
+                },
+                {
+                  title: 'Sofa & Ghế băng',
+                  items: ['Sofa', 'Bench', 'Daybed'],
+                },
+                {
+                  title: 'Bàn',
+                  items: ['Coffee Table', 'Side Table', 'Dining Table'],
+                },
+                {
+                  title: 'Đèn trang trí',
+                  items: ['Pendant Lamp', 'Floor Lamp'],
+                },
+                {
+                  title: 'Tủ & Kệ',
+                  items: ['Cabinet', 'Display Shelf', 'Storage Unit'],
+                },
+                {
+                  title: 'Nội thất ngoài trời có mái che',
+                  items: ['Resort Furniture', 'Terrace Furniture', 'Covered Outdoor Area'],
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-rattan-application-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <ul>
+                    {item.items.map((entry) => (
+                      <li key={entry}>{t(entry)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-rattan-tech-finish-row">
+            <div className="materials-rattan-techniques">
+              <h2>{t('Các kỹ thuật gia công mây')}</h2>
+              <div className="materials-rattan-technique-grid">
+                {[
+                  {
+                    title: 'Uốn mây',
+                    body: 'Tạo hình khung và các chi tiết cong theo thiết kế.',
+                  },
+                  {
+                    title: 'Đan thủ công',
+                    body: 'Ứng dụng nhiều kiểu đan với giá trị thẩm mỹ và công năng khác nhau.',
+                  },
+                  {
+                    title: 'Kết hợp khung gỗ',
+                    body: 'Tăng độ ổn định và khả năng chịu lực của sản phẩm.',
+                  },
+                  {
+                    title: 'Kết hợp kim loại',
+                    body: 'Tạo phong cách hiện đại và mở rộng khả năng thiết kế.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-rattan-technique-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-rattan-finishing">
+              <h2>{t('Hoàn thiện bề mặt')}</h2>
+              <div className="materials-rattan-finish-grid">
+                {[
+                  {
+                    title: 'Natural Finish',
+                    body: 'Giữ nguyên màu sắc và vẻ đẹp tự nhiên của mây.',
+                  },
+                  {
+                    title: 'Stain Finish',
+                    body: 'Điều chỉnh màu sắc phù hợp với bộ sưu tập sản phẩm.',
+                  },
+                  {
+                    title: 'Clear Coating',
+                    body: 'Bảo vệ bề mặt và tăng độ bền trong điều kiện sử dụng trong nhà.',
+                  },
+                  {
+                    title: 'Custom Color Finish',
+                    body: 'Hoàn thiện màu theo bảng màu hoặc mẫu duyệt của buyer.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-rattan-finish-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-rattan-control">
+            <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+            <div className="materials-rattan-control-grid">
+              {[
+                {
+                  icon: '◍',
+                  title: 'Chất lượng nguyên liệu',
+                  body: 'Tạo hình ổn định đều, độ già và tình trạng của sợi mây trước khi sản xuất.',
+                },
+                {
+                  icon: '▧',
+                  title: 'Kỹ thuật đan',
+                  body: 'Đảm bảo mật độ đan, độ căng và tính đồng nhất của từng sản phẩm.',
+                },
+                {
+                  icon: '↔',
+                  title: 'Liên kết với khung',
+                  body: 'Kiểm soát độ chắc chắn giữa mây và kết cấu gỗ hoặc kim loại.',
+                },
+                {
+                  icon: '⌁',
+                  title: 'Hoàn thiện bề mặt',
+                  body: 'Kiểm tra màu sắc, độ đồng đều và chất lượng lớp hoàn thiện.',
+                },
+                {
+                  icon: '□',
+                  title: 'Đóng gói',
+                  body: 'Bảo vệ các chi tiết đan khỏi va đập và biến dạng trong quá trình vận chuyển.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-rattan-supply">
+            <div className="materials-rattan-supply-copy">
+              <h2>{t('Mây trong hệ thống cung ứng của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ lựa chọn nguyên liệu mây, phát triển sản phẩm, tổ chức sản xuất và kiểm soát chất lượng cho các dự án sử dụng vật liệu tự nhiên.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Mây có thể được ứng dụng cho các bộ sưu tập nội thất hoàn thiện, OEM / ODM và các dự án khách sạn, resort, nhà hàng hoặc không gian thương mại với yêu cầu thiết kế riêng.',
+                )}
+              </p>
+            </div>
+            <div className="materials-rattan-supply-flow">
+              {['Lựa chọn nguyên liệu chất lượng', 'Phát triển sản phẩm và mẫu thử', 'Sản xuất thủ công và công nghiệp', 'Kiểm soát chất lượng chặt chẽ'].map((item) => (
+                <article key={item}>
+                  <div className="materials-rattan-supply-icon-slot" aria-hidden="true" />
+                  <p>{t(item)}</p>
+                </article>
+              ))}
+            </div>
+            <div className="materials-rattan-supply-image-slot" aria-hidden="true" />
+          </section>
+
+          <section className="materials-rattan-styles">
+            <h2>{t('Mây phù hợp với những phong cách nào?')}</h2>
+            <div className="materials-rattan-style-grid">
+              {[
+                {
+                  title: 'Tropical',
+                  body: 'Không gian nghỉ dưỡng và resort.',
+                },
+                {
+                  title: 'Scandinavian',
+                  body: 'Kết hợp vật liệu tự nhiên với thiết kế tối giản.',
+                },
+                {
+                  title: 'Japandi',
+                  body: 'Đề cao sự cân bằng giữa thủ công và công năng.',
+                },
+                {
+                  title: 'Contemporary',
+                  body: 'Kết hợp mây với gỗ, kim loại và vật liệu bọc nệm.',
+                },
+                {
+                  title: 'Coastal Living',
+                  body: 'Không gian ven biển và phong cách nghỉ dưỡng.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-rattan-style-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-rattan-related">
+            <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+            <div className="materials-rattan-related-grid">
+              {[
+                {
+                  title: 'Nội thất mây tre',
+                  body: 'Khám phá các bộ sưu tập sử dụng mây tự nhiên.',
+                },
+                {
+                  title: 'Ghế',
+                  body: 'Các dòng ghế kết hợp khung gỗ và mây đan.',
+                },
+                {
+                  title: 'Tre',
+                  body: 'Tìm hiểu về vật liệu tre và các ứng dụng trong nội thất.',
+                },
+                {
+                  title: 'Mặt đan mây',
+                  body: 'Khám phá các kiểu đan và giải pháp mặt đan cho sản phẩm nội thất.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-rattan-related-image-slot" aria-hidden="true" />
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                  <span aria-hidden="true">›</span>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-rattan-cta">
+            <div className="materials-rattan-cta-image-slot" aria-hidden="true" />
+            <div className="materials-rattan-cta-copy">
+              <h2>{t('Trao đổi về vật liệu mây cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu kỹ thuật để ANSLIFE đánh giá khả năng ứng dụng mây và đề xuất phương án sản xuất phù hợp.',
+                )}
+              </p>
+              <div className="materials-rattan-cta-actions">
+                <a href="/vn/contact">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">⇧</span>
+                  {t('Tải bản vẽ lên')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsLaminatedBoardPage && (
+        <section className="materials-laminated-board-content">
+          <section className="materials-laminated-board-types">
+            <h2>{t('Các loại vật liệu phủ bề mặt')}</h2>
+            <div className="materials-laminated-board-type-grid">
+              {[
+                {
+                  icon: '♧',
+                  title: 'Veneer',
+                  body: 'Lớp gỗ tự nhiên mỏng được dán lên bề mặt vật liệu nền nhằm giữ vẻ đẹp và cảm giác của gỗ tự nhiên.',
+                  items: ['Nội thất cao cấp', 'Bàn', 'Tủ', 'Giường', 'Hospitality Furniture'],
+                },
+                {
+                  icon: '▱',
+                  title: 'Melamine',
+                  body: 'Lớp giấy trang trí được ép trực tiếp lên bề mặt tấm gỗ, mang lại nhiều lựa chọn về màu sắc và vân gỗ với hiệu quả chi phí cao.',
+                  items: ['Cabinet Furniture', 'Office Furniture', 'Residential Furniture'],
+                },
+                {
+                  icon: '▱',
+                  title: 'Laminate (HPL/CPL)',
+                  body: 'Vật liệu phủ có khả năng chống trầy xước và chịu mài mòn tốt, phù hợp với các bề mặt sử dụng thường xuyên.',
+                  items: ['Bàn', 'Văn phòng', 'Khách sạn', 'Nhà hàng'],
+                },
+                {
+                  icon: '◇',
+                  title: 'Acrylic',
+                  body: 'Bề mặt bóng gương hiện đại với khả năng tạo hiệu ứng thẩm mỹ cao.',
+                  items: ['Tủ bếp', 'Tủ áo', 'Nội thất hiện đại'],
+                },
+                {
+                  icon: '◍',
+                  title: 'PET Film',
+                  body: 'Giải pháp bề mặt hiện đại với khả năng chống bám vân tay và dễ vệ sinh.',
+                  items: ['Cabinet', 'Kitchen Furniture', 'Modern Interior'],
+                },
+                {
+                  icon: '☼',
+                  title: 'UV Finish',
+                  body: 'Bề mặt được xử lý bằng sơn UV nhằm tăng độ cứng, khả năng chống trầy xước và độ bền của lớp hoàn thiện.',
+                  items: ['Panel', 'Cabinet', 'Decorative Furniture'],
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-laminated-board-type-image-slot" aria-hidden="true" />
+                  <div className="materials-laminated-board-type-body">
+                    <h3>
+                      <span aria-hidden="true">{item.icon}</span>
+                      {t(item.title)}
+                    </h3>
+                    <p>{t(item.body)}</p>
+                    <h4>{t('Ứng dụng')}</h4>
+                    <ul>
+                      {item.items.map((entry) => (
+                        <li key={entry}>{t(entry)}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-laminated-board-select-control-row">
+            <div className="materials-laminated-board-selection">
+              <h2>{t('Lựa chọn bề mặt theo nhu cầu')}</h2>
+              <div className="materials-laminated-board-selection-table" role="table" aria-label={t('Lựa chọn bề mặt theo nhu cầu')}>
+                {[
+                  ['Yêu cầu', 'Giải pháp phù hợp'],
+                  ['Vẻ đẹp gỗ tự nhiên', 'Veneer'],
+                  ['Tối ưu chi phí', 'Melamine'],
+                  ['Chống trầy xước', 'Laminate'],
+                  ['Bóng gương hiện đại', 'Acrylic'],
+                  ['Chống bám vân tay', 'PET'],
+                  ['Độ bền bề mặt cao', 'UV Finish'],
+                ].map((row, rowIndex) => (
+                  <div className="materials-laminated-board-selection-row" role="row" key={row.join('-')}>
+                    {row.map((cell, cellIndex) => (
+                      <div role={rowIndex === 0 ? 'columnheader' : 'cell'} key={cell}>
+                        {rowIndex > 0 && cellIndex === 0 && <span aria-hidden="true">▧</span>}
+                        {t(cell)}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-laminated-board-control">
+              <h2>{t('Các yếu tố cần kiểm soát')}</h2>
+              <div className="materials-laminated-board-control-grid">
+                {[
+                  {
+                    icon: '◌',
+                    title: 'Màu sắc',
+                    body: 'Đảm bảo tính đồng nhất giữa mẫu duyệt và sản xuất hàng loạt.',
+                  },
+                  {
+                    icon: '⌕',
+                    title: 'Chất lượng bề mặt',
+                    body: 'Kiểm tra độ phẳng, độ bóng, khả năng chống trầy xước và ngoại quan.',
+                  },
+                  {
+                    icon: '▱',
+                    title: 'Liên kết với vật liệu nền',
+                    body: 'Đảm bảo lớp phủ bám chắc trên MDF, Plywood hoặc Particle Board.',
+                  },
+                  {
+                    icon: '□',
+                    title: 'Cạnh hoàn thiện',
+                    body: 'Kiểm tra chất lượng dán cạnh và tính đồng nhất của sản phẩm.',
+                  },
+                  {
+                    icon: '☑',
+                    title: 'Mẫu duyệt',
+                    body: 'Đối chiếu màu sắc và bề mặt theo mẫu đã được buyer phê duyệt.',
+                  },
+                  {
+                    icon: '♢',
+                    title: 'Độ ẩm vật liệu',
+                    body: 'Kiểm soát để duy trì sự ổn định trong quá trình sản xuất và sử dụng.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span aria-hidden="true">{item.icon}</span>
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-laminated-board-supply">
+            <div className="materials-laminated-board-supply-image-slot" aria-hidden="true" />
+            <div className="materials-laminated-board-supply-copy">
+              <h2>{t('Vật liệu phủ bề mặt trong hệ thống cung ứng của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ lựa chọn vật liệu phủ bề mặt phù hợp với thiết kế, điều kiện sử dụng và ngân sách của từng dự án.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Các giải pháp hoàn thiện được triển khai đồng bộ với vật liệu nền, quy trình sản xuất, kiểm soát chất lượng và tiêu chuẩn riêng của buyer nhằm đảm bảo tính nhất quán cho từng đơn hàng xuất khẩu.',
+                )}
+              </p>
+              <div className="materials-laminated-board-supply-flow">
+                {['Tư vấn vật liệu', 'Kiểm tra & đánh giá', 'Triển khai sản xuất', 'Kiểm soát chất lượng', 'Đáp ứng tiêu chuẩn'].map((item) => (
+                  <article key={item}>
+                    <div className="materials-laminated-board-supply-icon-slot" aria-hidden="true" />
+                    <p>{t(item)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-laminated-board-related">
+            <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+            <div className="materials-laminated-board-related-grid">
+              {[
+                {
+                  title: 'Plywood',
+                  body: 'Các giải pháp phủ bề mặt trên Plywood.',
+                },
+                {
+                  title: 'MDF',
+                  body: 'Hoàn thiện bề mặt cho sản phẩm sơn và phủ.',
+                },
+                {
+                  title: 'Particle Board',
+                  body: 'Ứng dụng Melamine và Laminate.',
+                },
+                {
+                  title: 'Sơn & Hoàn thiện bề mặt',
+                  body: 'Các hệ sơn và màu sắc cho nội thất xuất khẩu.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-laminated-board-related-image-slot" aria-hidden="true" />
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                  <span aria-hidden="true">›</span>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-laminated-board-cta">
+            <div className="materials-laminated-board-cta-image-slot" aria-hidden="true" />
+            <div className="materials-laminated-board-cta-copy">
+              <h2>{t('Trao đổi về vật liệu phủ bề mặt cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu kỹ thuật để ANSLIFE đánh giá phương án phủ bề mặt phù hợp với vật liệu nền, ngân sách và tiêu chuẩn thị trường.',
+                )}
+              </p>
+              <div className="materials-laminated-board-cta-actions">
+                <a href="/vn/contact">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">⇧</span>
+                  {t('Tải bản vẽ lên')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsParticleBoardPage && (
+        <section className="materials-particle-board-content">
+          <section className="materials-particle-board-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-particle-board-overview-panel">
+              {[
+                {
+                  icon: '▤',
+                  title: 'Tên thương mại',
+                  body: 'Particle Board',
+                },
+                {
+                  icon: '♜',
+                  title: 'Nhóm vật liệu',
+                  body: 'Gỗ kỹ thuật',
+                },
+                {
+                  icon: '▰',
+                  title: 'Cấu tạo',
+                  body: 'Dăm gỗ ép với keo chuyên dụng',
+                },
+                {
+                  icon: '◎',
+                  title: 'Đặc điểm',
+                  body: 'Hiệu quả chi phí\nBề mặt ổn định\nGia công tốt\nPhù hợp nội thất dạng tấm',
+                },
+                {
+                  icon: '⚒',
+                  title: 'Khả năng gia công',
+                  body: 'Cắt • Khoan • CNC\nDán cạnh • Lắp ráp\nPhủ bề mặt',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>
+                      {item.body.split('\n').map((line, index) => (
+                        <span key={`${item.title}-${line}`}>
+                          {index > 0 && <br />}
+                          {t(line)}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-particle-board-features">
+            <h2>{t('Vì sao Particle Board được sử dụng phổ biến?')}</h2>
+            <div className="materials-particle-board-feature-grid">
+              {[
+                {
+                  icon: '◈',
+                  title: 'Hiệu quả chi phí',
+                  body: 'Là lựa chọn phù hợp cho các chương trình sản xuất quy mô lớn với yêu cầu tối ưu ngân sách.',
+                },
+                {
+                  icon: '▰',
+                  title: 'Kích thước ổn định',
+                  body: 'Phù hợp với các sản phẩm dạng tấm có yêu cầu lắp ráp chính xác.',
+                },
+                {
+                  icon: '✎',
+                  title: 'Gia công nhanh',
+                  body: 'Dễ cắt, khoan, CNC và lắp ráp trên các dây chuyền sản xuất hiện đại.',
+                },
+                {
+                  icon: '▰',
+                  title: 'Phù hợp phủ bề mặt',
+                  body: 'Có thể phủ Melamine, Laminate hoặc Veneer theo yêu cầu thiết kế.',
+                },
+                {
+                  icon: '⚙',
+                  title: 'Tối ưu cho Flat-Pack',
+                  body: 'Thích hợp với các sản phẩm đóng gói KD và Ready-to-Assemble.',
+                },
+                {
+                  icon: '▥',
+                  title: 'Sản xuất hàng loạt',
+                  body: 'Đáp ứng tốt các đơn hàng lớn với chất lượng ổn định và thời gian sản xuất hiệu quả.',
+                },
+              ].map((item, index) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <b>{index + 1}</b>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-particle-board-applications">
+            <h2>{t('Các ứng dụng phổ biến')}</h2>
+            <div className="materials-particle-board-application-grid">
+              {[
+                {
+                  title: 'Tủ',
+                  items: ['Tủ quần áo', 'Tủ bếp', 'Tủ TV', 'Tủ lưu trữ'],
+                },
+                {
+                  title: 'Kệ',
+                  items: ['Bookshelf', 'Storage Shelf', 'Display Shelf'],
+                },
+                {
+                  title: 'Bàn',
+                  items: ['Bàn làm việc', 'Bàn học', 'Bàn văn phòng'],
+                },
+                {
+                  title: 'Nội thất văn phòng',
+                  items: ['Tủ hồ sơ', 'Module văn phòng', 'Workstation'],
+                },
+                {
+                  title: 'Nội thất bán lẻ',
+                  items: ['Flat-Pack Furniture', 'Ready-to-Assemble Furniture'],
+                },
+                {
+                  title: 'Nội thất dự án',
+                  items: ['Căn hộ', 'Văn phòng', 'Ký túc xá', 'Không gian thương mại'],
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-particle-board-application-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <ul>
+                    {item.items.map((entry) => (
+                      <li key={entry}>{t(entry)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-particle-board-finish-control-row">
+            <div className="materials-particle-board-finishing">
+              <h2>{t('Các phương án hoàn thiện')}</h2>
+              <div className="materials-particle-board-finish-grid">
+                {[
+                  {
+                    title: 'Melamine',
+                    body: 'Giải pháp phổ biến nhất với nhiều lựa chọn màu sắc và vân gỗ.',
+                  },
+                  {
+                    title: 'Laminate',
+                    body: 'Tăng khả năng chống trầy xước và độ bền cho bề mặt sử dụng thường xuyên.',
+                  },
+                  {
+                    title: 'Veneer',
+                    body: 'Mang lại vẻ ngoài của gỗ tự nhiên cho các sản phẩm yêu cầu tính thẩm mỹ cao.',
+                  },
+                  {
+                    title: 'Sơn hoàn thiện',
+                    body: 'Áp dụng cho một số thiết kế và yêu cầu đặc biệt của dự án.',
+                  },
+                  {
+                    title: 'UV / Acrylic (theo yêu cầu)',
+                    body: 'Áp dụng cho các thiết kế hiện đại với yêu cầu bề mặt cao.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-particle-board-finish-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-particle-board-control">
+              <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+              <div className="materials-particle-board-control-list">
+                {[
+                  {
+                    title: 'Chất lượng lõi ván',
+                    body: 'Kiểm tra mật độ, độ đồng đều và khả năng chịu lực của tấm ván.',
+                  },
+                  {
+                    title: 'Kích thước & độ dày',
+                    body: 'Đảm bảo đúng quy cách và dung sai theo yêu cầu kỹ thuật.',
+                  },
+                  {
+                    title: 'Bề mặt',
+                    body: 'Kiểm tra độ phẳng và tình trạng bề mặt trước khi phủ hoàn thiện.',
+                  },
+                  {
+                    title: 'Dán cạnh',
+                    body: 'Đảm bảo cạnh được xử lý chính xác nhằm tăng độ bền và tính thẩm mỹ.',
+                  },
+                  {
+                    title: 'Độ ẩm vật liệu',
+                    body: 'Kiểm soát để duy trì sự ổn định trong quá trình sản xuất và sử dụng.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span aria-hidden="true">▣</span>
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-particle-board-supply">
+            <div className="materials-particle-board-supply-copy">
+              <h2>{t('Particle Board trong hệ thống cung ứng của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ lựa chọn chủng loại Particle Board phù hợp với yêu cầu kỹ thuật, mục tiêu chi phí và phương án hoàn thiện của từng dự án.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Particle Board được ứng dụng cho các chương trình OEM / ODM, nội thất dạng tấm, nội thất lắp ráp và các dự án sản xuất quy mô lớn phục vụ thị trường xuất khẩu.',
+                )}
+              </p>
+            </div>
+            <div className="materials-particle-board-supply-flow">
+              {[
+                'Lựa chọn chủng loại phù hợp',
+                'Kiểm soát chất lượng trước sản xuất',
+                'Gia công & phủ bề mặt theo yêu cầu',
+                'Đóng gói KD chuyên nghiệp',
+                'Chuỗi cung ứng ổn định',
+              ].map((item) => (
+                <article key={item}>
+                  <div className="materials-particle-board-supply-icon-slot" aria-hidden="true" />
+                  <p>{t(item)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-particle-board-followup-row">
+            <div className="materials-particle-board-fit">
+              <h2>{t('Particle Board phù hợp với những ứng dụng nào?')}</h2>
+              <div className="materials-particle-board-fit-grid">
+                {[
+                  {
+                    title: 'Ready-to-Assemble Furniture',
+                    body: 'Các sản phẩm đóng gói KD và tự lắp ráp.',
+                  },
+                  {
+                    title: 'Residential Furniture',
+                    body: 'Nội thất gia đình hiện đại.',
+                  },
+                  {
+                    title: 'Office Furniture',
+                    body: 'Bàn làm việc, tủ hồ sơ và hệ lưu trữ.',
+                  },
+                  {
+                    title: 'Retail Furniture',
+                    body: 'Các bộ sưu tập nội thất bán lẻ và thương mại điện tử.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span aria-hidden="true">▧</span>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-particle-board-quick-compare">
+              <h2>{t('So sánh nhanh')}</h2>
+              <div
+                className="materials-particle-board-quick-table"
+                role="table"
+                aria-label={t('So sánh nhanh vật liệu gỗ kỹ thuật')}
+              >
+                {[
+                  ['Vật liệu', 'Điểm mạnh'],
+                  ['Plywood', 'Kết cấu ổn định, chịu lực cao'],
+                  ['MDF', 'Bề mặt mịn, lý tưởng cho sơn và phủ bề mặt'],
+                  ['Particle Board', 'Hiệu quả chi phí, tối ưu cho nội thất dạng tấm và Flat-Pack'],
+                  ['Surface Panels', 'Đa dạng lựa chọn hoàn thiện và màu sắc'],
+                ].map((row, rowIndex) => (
+                  <div className="materials-particle-board-quick-row" role="row" key={row.join('-')}>
+                    {row.map((cell) => (
+                      <div
+                        className={rowIndex === 0 || row[0] === 'Particle Board' ? 'is-highlight' : undefined}
+                        role={rowIndex === 0 ? 'columnheader' : 'cell'}
+                        key={cell}
+                      >
+                        {t(cell)}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-particle-board-related">
+              <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+              <div className="materials-particle-board-related-list">
+                {[
+                  {
+                    title: 'Tủ & Lưu trữ',
+                    body: 'Khám phá các hệ tủ sử dụng Particle Board.',
+                  },
+                  {
+                    title: 'Kệ',
+                    body: 'Các dòng kệ và nội thất dạng tấm.',
+                  },
+                  {
+                    title: 'Hoàn thiện bề mặt',
+                    body: 'Các giải pháp Melamine, Laminate và Veneer.',
+                  },
+                  {
+                    title: 'Kiểm tra vật liệu',
+                    body: 'Quy trình kiểm tra Particle Board trước khi đưa vào sản xuất.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-particle-board-related-image-slot" aria-hidden="true" />
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-particle-board-cta">
+            <div className="materials-particle-board-cta-image-slot" aria-hidden="true" />
+            <div className="materials-particle-board-cta-copy">
+              <h2>{t('Trao đổi về vật liệu Particle Board cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu kỹ thuật để ANSLIFE đánh giá khả năng ứng dụng Particle Board và đề xuất phương án phù hợp.',
+                )}
+              </p>
+              <div className="materials-particle-board-cta-actions">
+                <a href="/vn/contact">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">⇧</span>
+                  {t('Tải bản vẽ lên')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsMdfPage && (
+        <section className="materials-mdf-content">
+          <section className="materials-mdf-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-mdf-overview-panel">
+              {[
+                {
+                  icon: '▤',
+                  title: 'Tên thương mại',
+                  body: 'Medium Density Fiberboard (MDF)',
+                },
+                {
+                  icon: '♜',
+                  title: 'Nhóm vật liệu',
+                  body: 'Gỗ kỹ thuật',
+                },
+                {
+                  icon: '▱',
+                  title: 'Cấu tạo',
+                  body: 'Sợi gỗ ép mật độ trung bình',
+                },
+                {
+                  icon: '◎',
+                  title: 'Đặc điểm',
+                  body: 'Bề mặt mịn, đồng nhất, dễ gia công, ổn định kích thước',
+                },
+                {
+                  icon: '⚒',
+                  title: 'Khả năng gia công',
+                  body: 'Cắt, khoan, CNC, phay, dán cạnh và sơn hoàn thiện',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-mdf-features">
+            <h2>{t('Vì sao MDF được sử dụng phổ biến?')}</h2>
+            <div className="materials-mdf-feature-grid">
+              {[
+                {
+                  icon: '✎',
+                  title: 'Bề mặt mịn',
+                  body: 'Lý tưởng cho các sản phẩm sơn màu và hoàn thiện cao cấp.',
+                },
+                {
+                  icon: '▱',
+                  title: 'Cấu trúc đồng nhất',
+                  body: 'Giúp quá trình gia công và hoàn thiện đạt độ ổn định cao.',
+                },
+                {
+                  icon: '♙',
+                  title: 'Gia công chính xác',
+                  body: 'Phù hợp với CNC, tạo rãnh, phay và các chi tiết định hình.',
+                },
+                {
+                  icon: '▥',
+                  title: 'Hiệu quả sản xuất',
+                  body: 'Đáp ứng tốt các chương trình sản xuất hàng loạt với chất lượng đồng đều.',
+                },
+                {
+                  icon: '▱',
+                  title: 'Dễ kết hợp vật liệu phủ',
+                  body: 'Có thể phủ veneer, melamine, laminate hoặc sơn theo yêu cầu thiết kế.',
+                },
+                {
+                  icon: '▥',
+                  title: 'Ứng dụng đa dạng',
+                  body: 'Được sử dụng trong nội thất gia đình, văn phòng, khách sạn và dự án thương mại.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-mdf-main-grid">
+            <div className="materials-mdf-types">
+              <h2>{t('Các loại MDF phổ biến')}</h2>
+              <div className="materials-mdf-type-list">
+                {[
+                  {
+                    title: 'MDF tiêu chuẩn',
+                    body: 'Phù hợp với hầu hết các sản phẩm nội thất trong điều kiện sử dụng thông thường.',
+                  },
+                  {
+                    title: 'MDF chống ẩm (MR MDF)',
+                    body: 'Được sử dụng cho các khu vực có độ ẩm cao hơn như bếp hoặc phòng tắm theo yêu cầu thiết kế.',
+                  },
+                  {
+                    title: 'MDF chống cháy (FR MDF)',
+                    body: 'Phù hợp với các dự án yêu cầu tiêu chuẩn chống cháy theo quy định hoặc thiết kế công trình.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-mdf-type-image-slot" aria-hidden="true" />
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-mdf-structure">
+              <h2>{t('Cấu tạo của MDF')}</h2>
+              <div className="materials-mdf-structure-grid">
+                <div className="materials-mdf-structure-image-slot" aria-hidden="true" />
+                <ul>
+                  {[
+                    'Sợi gỗ được nghiền mịn và trộn keo chuyên dụng.',
+                    'Hỗn hợp được ép dưới áp suất và nhiệt độ cao.',
+                    'Tạo tấm MDF có cấu trúc đồng nhất.',
+                    'Đảm bảo độ ổn định, chịu lực tốt và bề mặt mịn.',
+                  ].map((item) => (
+                    <li key={item}>{t(item)}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="materials-mdf-machining">
+              <h2>{t('Khả năng gia công')}</h2>
+              <div className="materials-mdf-machining-grid">
+                {['Cắt', 'Khoan', 'CNC', 'Phay', 'Dán cạnh', 'Sơn hoàn thiện'].map((item) => (
+                  <article key={item}>
+                    <span aria-hidden="true">⚒</span>
+                    <h3>{t(item)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-mdf-application-control-row">
+            <div className="materials-mdf-applications">
+              <h2>{t('Ứng dụng trong nội thất')}</h2>
+              <div className="materials-mdf-application-grid">
+                {[
+                  {
+                    title: 'Tủ',
+                    items: ['Tủ quần áo', 'Tủ bếp', 'Tủ TV', 'Tủ lưu trữ'],
+                  },
+                  {
+                    title: 'Kệ',
+                    items: ['Bookshelf', 'Display Shelf', 'Wall Shelf'],
+                  },
+                  {
+                    title: 'Panel trang trí',
+                    items: ['Vách ốp', 'Panel nội thất', 'Trang trí tường'],
+                  },
+                  {
+                    title: 'Bàn',
+                    items: ['Bàn làm việc', 'Bàn học', 'Bàn trang điểm'],
+                  },
+                  {
+                    title: 'Cửa & cánh tủ',
+                    items: ['Cánh tủ sơn', 'Cánh tủ phủ veneer', 'Cánh tủ phủ laminate'],
+                  },
+                  {
+                    title: 'Nội thất dự án',
+                    items: ['Khách sạn', 'Văn phòng', 'Căn hộ', 'Showroom'],
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-mdf-application-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <ul>
+                      {item.items.map((entry) => (
+                        <li key={entry}>{t(entry)}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-mdf-control">
+              <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+              <div className="materials-mdf-control-list">
+                {[
+                  {
+                    title: 'Chất lượng bề mặt',
+                    body: 'Đảm bảo bề mặt đồng đều trước khi phủ hoặc sơn.',
+                  },
+                  {
+                    title: 'Kích thước & độ dày',
+                    body: 'Kiểm tra theo bản vẽ và dung sai kỹ thuật.',
+                  },
+                  {
+                    title: 'Độ ẩm vật liệu',
+                    body: 'Kiểm soát nhằm duy trì sự ổn định trong quá trình sản xuất và sử dụng.',
+                  },
+                  {
+                    title: 'Chất lượng cạnh',
+                    body: 'Đảm bảo cạnh cắt sạch, phù hợp cho dán cạnh hoặc sơn.',
+                  },
+                  {
+                    title: 'Khả năng hoàn thiện',
+                    body: 'Đánh giá khả năng bám sơn hoặc vật liệu phủ trước khi sản xuất hàng loạt.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span aria-hidden="true">▣</span>
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-mdf-supply-fit-row">
+            <div className="materials-mdf-supply">
+              <h2>{t('MDF trong hệ thống cung ứng của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ lựa chọn chủng loại MDF phù hợp với yêu cầu kỹ thuật, điều kiện sử dụng và phương án hoàn thiện của từng dự án.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'MDF có thể được ứng dụng cho sản phẩm hoàn thiện, hệ tủ, panel trang trí, chương trình OEM / ODM và các dự án khách sạn, văn phòng hoặc căn hộ.',
+                )}
+              </p>
+              <div className="materials-mdf-supply-flow">
+                {['Lựa chọn vật liệu phù hợp', 'Đánh giá kỹ thuật & khả năng sản xuất', 'Kiểm soát chất lượng trước sản xuất', 'Tổ chức chuỗi cung ứng'].map((item) => (
+                  <article key={item}>
+                    <div className="materials-mdf-supply-icon-slot" aria-hidden="true" />
+                    <p>{t(item)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-mdf-fit">
+              <h2>{t('MDF phù hợp với những ứng dụng nào?')}</h2>
+              <div className="materials-mdf-fit-grid">
+                {[
+                  {
+                    title: 'Painted Furniture',
+                    body: 'Nội thất sơn màu với yêu cầu bề mặt hoàn thiện cao.',
+                  },
+                  {
+                    title: 'Hospitality Furniture',
+                    body: 'Khách sạn, căn hộ dịch vụ và resort.',
+                  },
+                  {
+                    title: 'Cabinet Furniture',
+                    body: 'Các hệ tủ gia đình và thương mại.',
+                  },
+                  {
+                    title: 'Office Furniture',
+                    body: 'Bàn làm việc, tủ hồ sơ và hệ lưu trữ.',
+                  },
+                  {
+                    title: 'Decorative Panels',
+                    body: 'Panel và vách trang trí nội thất.',
+                  },
+                  {
+                    title: 'Custom Project Furniture',
+                    body: 'Các dự án nội thất theo yêu cầu riêng.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span aria-hidden="true">▤</span>
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-mdf-followup-row">
+            <div className="materials-mdf-quick-compare">
+              <h2>{t('So sánh nhanh')}</h2>
+              <div className="materials-mdf-quick-table" role="table" aria-label={t('So sánh nhanh vật liệu gỗ kỹ thuật')}>
+                {[
+                  ['Vật liệu', 'Điểm mạnh'],
+                  ['Plywood', 'Độ ổn định cao, chịu lực tốt'],
+                  ['MDF', 'Bề mặt mịn, lý tưởng cho sơn và phủ bề mặt'],
+                  ['Particle Board', 'Hiệu quả chi phí'],
+                  ['Surface Panels', 'Đa dạng lựa chọn bề mặt hoàn thiện'],
+                ].map((row, rowIndex) => (
+                  <div className="materials-mdf-quick-row" role="row" key={row.join('-')}>
+                    {row.map((cell) => (
+                      <div
+                        className={rowIndex === 0 || row[0] === 'MDF' ? 'is-highlight' : undefined}
+                        role={rowIndex === 0 ? 'columnheader' : 'cell'}
+                        key={cell}
+                      >
+                        {t(cell)}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-mdf-related">
+              <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+              <div className="materials-mdf-related-grid">
+                {[
+                  {
+                    title: 'Tủ & Lưu trữ',
+                    body: 'Khám phá các hệ tủ sử dụng MDF.',
+                  },
+                  {
+                    title: 'Kệ',
+                    body: 'Các dòng kệ và panel từ MDF.',
+                  },
+                  {
+                    title: 'Sơn & hoàn thiện bề mặt',
+                    body: 'Các phương án sơn, veneer, laminate và melamine.',
+                  },
+                  {
+                    title: 'Kiểm tra vật liệu',
+                    body: 'Quy trình kiểm tra MDF trước khi đưa vào sản xuất.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-mdf-related-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-mdf-cta">
+            <div className="materials-mdf-cta-image-slot" aria-hidden="true" />
+            <div className="materials-mdf-cta-copy">
+              <h2>{t('Trao đổi về vật liệu MDF cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu kỹ thuật để ANSLIFE đánh giá khả năng ứng dụng MDF và đề xuất phương án phù hợp.',
+                )}
+              </p>
+              <div className="materials-mdf-cta-actions">
+                <a href="/vn/contact">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">⇧</span>
+                  {t('Tải bản vẽ lên')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsPlywoodPage && (
+        <section className="materials-plywood-content">
+          <section className="materials-plywood-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-plywood-overview-panel">
+              {[
+                {
+                  icon: '▤',
+                  title: 'Tên thương mại',
+                  body: 'Plywood',
+                },
+                {
+                  icon: '♜',
+                  title: 'Nhóm vật liệu',
+                  body: 'Gỗ kỹ thuật',
+                },
+                {
+                  icon: '◩',
+                  title: 'Cấu tạo',
+                  body: 'Nhiều lớp veneer gỗ tự nhiên ép chéo.',
+                },
+                {
+                  icon: '▧',
+                  title: 'Đặc điểm',
+                  body: 'Ổn định, chịu lực tốt, ít cong vênh, gia công linh hoạt.',
+                },
+                {
+                  icon: '⚒',
+                  title: 'Khả năng gia công',
+                  body: 'Cắt, CNC, khoan, phay, dán veneer, sơn hoàn thiện.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-plywood-features">
+            <h2>{t('Vì sao Plywood được sử dụng phổ biến?')}</h2>
+            <div className="materials-plywood-feature-grid">
+              {[
+                {
+                  icon: '⚙',
+                  title: 'Độ ổn định cao',
+                  body: 'Cấu trúc nhiều lớp giúp giảm hiện tượng cong vênh và biến dạng trong quá trình sử dụng.',
+                },
+                {
+                  icon: '✣',
+                  title: 'Khả năng chịu lực tốt',
+                  body: 'Phù hợp cho nhiều kết cấu nội thất và các chi tiết chịu tải.',
+                },
+                {
+                  icon: '♙',
+                  title: 'Gia công linh hoạt',
+                  body: 'Dễ cắt, khoan, CNC và kết hợp với nhiều loại vật liệu khác.',
+                },
+                {
+                  icon: '▥',
+                  title: 'Hiệu quả sản xuất',
+                  body: 'Đáp ứng tốt các chương trình sản xuất hàng loạt với chất lượng ổn định.',
+                },
+                {
+                  icon: '◎',
+                  title: 'Tương thích nhiều bề mặt hoàn thiện',
+                  body: 'Có thể phủ veneer, laminate, melamine hoặc sơn theo yêu cầu thiết kế.',
+                },
+                {
+                  icon: '⚙',
+                  title: 'Ứng dụng đa dạng',
+                  body: 'Sử dụng trong nội thất gia đình, thương mại, khách sạn và dự án xuất khẩu.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-plywood-main-grid">
+            <div className="materials-plywood-structure">
+              <h2>{t('Cấu tạo của Plywood')}</h2>
+              <div className="materials-plywood-structure-image-slot" aria-hidden="true" />
+              <ul>
+                {[
+                  'Các lớp veneer được xếp vuông góc với nhau.',
+                  'Tăng độ ổn định và khả năng chịu lực.',
+                  'Giảm co ngót và cong vênh.',
+                ].map((item) => (
+                  <li key={item}>{t(item)}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="materials-plywood-applications">
+              <h2>{t('Ứng dụng trong nội thất')}</h2>
+              <div className="materials-plywood-application-grid">
+                {[
+                  {
+                    title: 'Bàn',
+                    items: ['Mặt bàn', 'Kết cấu bàn', 'Bàn làm việc'],
+                  },
+                  {
+                    title: 'Tủ',
+                    items: ['Thân tủ', 'Đợt tủ', 'Cánh tủ', 'Ngăn kéo'],
+                  },
+                  {
+                    title: 'Giường',
+                    items: ['Vạt giường', 'Khung giường', 'Đầu giường'],
+                  },
+                  {
+                    title: 'Kệ',
+                    items: ['Bookshelf', 'Display Shelf', 'Storage Shelf'],
+                  },
+                  {
+                    title: 'Cấu kiện nội thất',
+                    items: ['Vách ngăn', 'Panel', 'Chi tiết CNC', 'Kết cấu bên trong'],
+                  },
+                  {
+                    title: 'Nội thất dự án',
+                    items: ['Khách sạn', 'Resort', 'Văn phòng', 'Căn hộ dịch vụ'],
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-plywood-application-image-slot" aria-hidden="true" />
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <ul>
+                        {item.items.map((entry) => (
+                          <li key={entry}>{t(entry)}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-plywood-finishing">
+              <h2>{t('Các phương án hoàn thiện')}</h2>
+              <div className="materials-plywood-finish-list">
+                {[
+                  {
+                    title: 'Veneer',
+                    body: 'Mang lại bề mặt gỗ tự nhiên với nhiều lựa chọn về loài gỗ.',
+                  },
+                  {
+                    title: 'Melamine',
+                    body: 'Đa dạng màu sắc và hoa văn, phù hợp với sản xuất hàng loạt.',
+                  },
+                  {
+                    title: 'Laminate',
+                    body: 'Tăng khả năng chống trầy xước và đáp ứng yêu cầu sử dụng cường độ cao.',
+                  },
+                  {
+                    title: 'Sơn hoàn thiện',
+                    body: 'Hoàn thiện màu theo thiết kế và tiêu chuẩn của buyer.',
+                  },
+                  {
+                    title: 'HPL (nếu dự án yêu cầu)',
+                    body: 'Phù hợp cho các bề mặt cần độ bền và khả năng chống mài mòn cao.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-plywood-finish-image-slot" aria-hidden="true" />
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-plywood-detail-grid">
+            <div className="materials-plywood-control">
+              <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+              <div className="materials-plywood-control-list">
+                {[
+                  {
+                    title: 'Cấu trúc tấm',
+                    body: 'Kiểm tra số lớp, độ đồng đều và chất lượng liên kết giữa các lớp veneer.',
+                  },
+                  {
+                    title: 'Kích thước & độ dày',
+                    body: 'Đảm bảo đúng quy cách và dung sai theo yêu cầu kỹ thuật.',
+                  },
+                  {
+                    title: 'Chất lượng bề mặt',
+                    body: 'Kiểm tra bề mặt trước khi phủ veneer hoặc hoàn thiện.',
+                  },
+                  {
+                    title: 'Độ ẩm vật liệu',
+                    body: 'Kiểm soát nhằm đảm bảo sự ổn định trong quá trình sản xuất.',
+                  },
+                  {
+                    title: 'Khả năng gia công',
+                    body: 'Đảm bảo vật liệu phù hợp với các công đoạn CNC, khoan và lắp ráp.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span aria-hidden="true">▣</span>
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-plywood-supply">
+              <h2>{t('Plywood trong hệ thống cung ứng của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ lựa chọn chủng loại Plywood phù hợp với từng sản phẩm, yêu cầu kỹ thuật và thị trường xuất khẩu.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Plywood có thể được ứng dụng cho nội thất hoàn thiện, cấu kiện nội thất, chương trình OEM / ODM và các dự án khách sạn, resort, văn phòng hoặc không gian thương mại.',
+                )}
+              </p>
+              <div className="materials-plywood-supply-flow">
+                {['Phát triển sản phẩm', 'Lựa chọn vật liệu', 'Đánh giá khả năng sản xuất', 'Tổ chức chuỗi cung ứng'].map((item) => (
+                  <article key={item}>
+                    <div className="materials-plywood-supply-icon-slot" aria-hidden="true" />
+                    <p>{t(item)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-plywood-fit">
+              <h2>{t('Plywood phù hợp với những ứng dụng nào?')}</h2>
+              <div className="materials-plywood-fit-list">
+                {[
+                  {
+                    title: 'Cabinet Furniture',
+                    body: 'Các hệ tủ và lưu trữ.',
+                  },
+                  {
+                    title: 'Panel Furniture',
+                    body: 'Nội thất dạng tấm với kết cấu ổn định.',
+                  },
+                  {
+                    title: 'Hospitality Furniture',
+                    body: 'Khách sạn, resort và căn hộ dịch vụ.',
+                  },
+                  {
+                    title: 'Office Furniture',
+                    body: 'Bàn làm việc, tủ hồ sơ và hệ vách ngăn.',
+                  },
+                  {
+                    title: 'Custom Project Furniture',
+                    body: 'Các dự án nội thất theo yêu cầu riêng.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-plywood-fit-image-slot" aria-hidden="true" />
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-plywood-followup-row">
+            <div className="materials-plywood-quick-compare">
+              <h2>{t('So sánh nhanh')}</h2>
+              <div className="materials-plywood-quick-table" role="table" aria-label={t('So sánh nhanh vật liệu gỗ kỹ thuật')}>
+                {[
+                  ['Vật liệu', 'Điểm mạnh'],
+                  ['Plywood', 'Ổn định, chịu lực tốt, đa năng'],
+                  ['MDF', 'Bề mặt mịn, phù hợp sơn và phủ bề mặt'],
+                  ['Particle Board', 'Tối ưu chi phí cho nội thất dạng tấm'],
+                  ['Surface Panels', 'Đa dạng lựa chọn hoàn thiện và màu sắc'],
+                ].map((row, rowIndex) => (
+                  <div className="materials-plywood-quick-row" role="row" key={row.join('-')}>
+                    {row.map((cell) => (
+                      <div
+                        className={rowIndex === 0 || row[0] === 'Plywood' ? 'is-highlight' : undefined}
+                        role={rowIndex === 0 ? 'columnheader' : 'cell'}
+                        key={cell}
+                      >
+                        {t(cell)}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-plywood-related">
+              <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+              <div className="materials-plywood-related-grid">
+                {[
+                  {
+                    title: 'Nội thất hoàn thiện',
+                    body: 'Khám phá các sản phẩm sử dụng Plywood.',
+                  },
+                  {
+                    title: 'Cấu kiện nội thất',
+                    body: 'Các cấu kiện và chi tiết được sản xuất từ Plywood.',
+                  },
+                  {
+                    title: 'Sơn & hoàn thiện bề mặt',
+                    body: 'Các phương án phủ veneer, laminate, melamine và sơn.',
+                  },
+                  {
+                    title: 'Kiểm tra vật liệu',
+                    body: 'Quy trình kiểm tra Plywood trước khi đưa vào sản xuất.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-plywood-related-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-plywood-cta">
+            <div className="materials-plywood-cta-image-slot" aria-hidden="true" />
+            <div className="materials-plywood-cta-copy">
+              <h2>{t('Trao đổi về vật liệu Plywood cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu kỹ thuật để ANSLIFE đánh giá khả năng ứng dụng Plywood và đề xuất phương án phù hợp.',
+                )}
+              </p>
+              <div className="materials-plywood-cta-actions">
+                <a href="/vn/contact">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">⇧</span>
+                  {t('Tải bản vẽ lên')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsPinePage && (
+        <section className="materials-pine-content">
+          <section className="materials-pine-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-pine-overview-panel">
+              {[
+                {
+                  icon: '▤',
+                  title: 'Tên thương mại',
+                  body: 'Pine',
+                },
+                {
+                  icon: '♜',
+                  title: 'Nhóm vật liệu',
+                  body: 'Gỗ tự nhiên',
+                },
+                {
+                  icon: '◩',
+                  title: 'Màu sắc tự nhiên',
+                  body: 'Vàng nhạt đến kem sáng.',
+                },
+                {
+                  icon: '▧',
+                  title: 'Đặc điểm vân gỗ',
+                  body: 'Vân thẳng, mắt gỗ tự nhiên rõ nét.',
+                },
+                {
+                  icon: '♧',
+                  title: 'Trọng lượng',
+                  body: 'Nhẹ hơn nhiều loại gỗ cùng thông dụng.',
+                },
+                {
+                  icon: '⚒',
+                  title: 'Khả năng gia công',
+                  body: 'Dễ cắt, khoan, tiện, CNC và lắp ráp.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-pine-features">
+            <h2>{t('Vì sao Pine được sử dụng phổ biến?')}</h2>
+            <div className="materials-pine-feature-grid">
+              {[
+                {
+                  icon: '♢',
+                  title: 'Trọng lượng nhẹ',
+                  body: 'Thuận lợi cho vận chuyển, lưu kho và lắp ráp.',
+                },
+                {
+                  icon: '⚒',
+                  title: 'Dễ gia công',
+                  body: 'Phù hợp với sản xuất hàng loạt và nhiều phương pháp chế tạo.',
+                },
+                {
+                  icon: '◉',
+                  title: 'Hiệu quả chi phí',
+                  body: 'Giúp tối ưu chi phí vật liệu cho nhiều dòng sản phẩm.',
+                },
+                {
+                  icon: '☼',
+                  title: 'Màu sắc sáng',
+                  body: 'Tạo cảm giác tự nhiên, trẻ trung và dễ hoàn thiện.',
+                },
+                {
+                  icon: '▣',
+                  title: 'Phù hợp đóng gói KD',
+                  body: 'Thuận lợi cho các sản phẩm Knock-down và thương mại điện tử.',
+                },
+                {
+                  icon: '◎',
+                  title: 'Nguồn cung ổn định',
+                  body: 'Được sử dụng rộng rãi trên nhiều thị trường quốc tế.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-pine-characteristics">
+            <h2>{t('Đặc trưng của Pine')}</h2>
+            <div className="materials-pine-character-grid">
+              <div className="materials-pine-character-image-slot" aria-hidden="true" />
+              {[
+                {
+                  icon: '◎',
+                  title: 'Mắt gỗ tự nhiên',
+                  body: 'Một trong những dấu hiệu nhận biết đặc trưng của Pine là các mắt gỗ tự nhiên xuất hiện trên bề mặt vật liệu.',
+                },
+                {
+                  icon: '◌',
+                  title: 'Vân gỗ đơn giản',
+                  body: 'Mang lại cảm giác mộc mạc, gần gũi và tự nhiên.',
+                },
+                {
+                  icon: '♙',
+                  title: 'Phong cách riêng',
+                  body: 'Pine thường được lựa chọn cho các bộ sưu tập mang tính Scandinavian, Country hoặc Casual Living.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-pine-applications">
+            <h2>{t('Ứng dụng trong nội thất')}</h2>
+            <div className="materials-pine-application-grid">
+              {[
+                {
+                  title: 'Giường',
+                  items: ['Khung giường', 'Giường trẻ em', 'Giường tầng'],
+                },
+                {
+                  title: 'Tủ & lưu trữ',
+                  items: ['Tủ quần áo', 'Tủ đầu giường', 'Kệ lưu trữ'],
+                },
+                {
+                  title: 'Kệ',
+                  items: ['Bookshelf', 'Display Shelf', 'Storage Shelf'],
+                },
+                {
+                  title: 'Bàn',
+                  items: ['Bàn học', 'Bàn làm việc', 'Bàn phụ'],
+                },
+                {
+                  title: 'Nội thất trẻ em',
+                  items: ['Children Furniture', 'Kids Bedroom Furniture'],
+                },
+                {
+                  title: 'Nội thất DIY & Flat-Pack',
+                  items: ['Ready-to-Assemble Furniture', 'E-commerce Furniture'],
+                },
+                {
+                  title: 'Nội thất dự án',
+                  items: ['Khách sạn', 'Resort', 'Nhà hàng', 'Không gian thương mại'],
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-pine-application-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <ul>
+                    {item.items.map((entry) => (
+                      <li key={entry}>{t(entry)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-pine-production-row">
+            <div className="materials-pine-flatpack">
+              <h2>{t('Pine và sản phẩm Flat-Pack')}</h2>
+              <p>{t('Vì sao Pine phù hợp với Flat-Pack Furniture?')}</p>
+              <div className="materials-pine-flatpack-grid">
+                <div className="materials-pine-flatpack-flow">
+                  {[
+                    'Trọng lượng nhẹ',
+                    'Dễ gia công',
+                    'Dễ đóng gói KD',
+                    'Giảm chi phí logistics',
+                    'Thuận lợi bán hàng online',
+                  ].map((item) => (
+                    <article key={item}>
+                      <span aria-hidden="true">◈</span>
+                      <p>{t(item)}</p>
+                    </article>
+                  ))}
+                </div>
+                <div className="materials-pine-flatpack-popular">
+                  <h3>{t('Ứng dụng phổ biến')}</h3>
+                  <ul>
+                    {['Bookshelf', 'Storage Unit', 'Wardrobe', 'Bed Frame', 'Home Office Furniture'].map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="materials-pine-flatpack-image-slot" aria-hidden="true" />
+            </div>
+
+            <div className="materials-pine-finishing">
+              <h2>{t('Khả năng hoàn thiện bề mặt')}</h2>
+              <div className="materials-pine-finish-list">
+                {[
+                  {
+                    title: 'Natural Finish',
+                    body: 'Giữ nguyên màu sắc và mắt gỗ tự nhiên.',
+                  },
+                  {
+                    title: 'White Wash',
+                    body: 'Phong cách Scandinavian phổ biến.',
+                  },
+                  {
+                    title: 'Stain Finish',
+                    body: 'Điều chỉnh màu sắc theo yêu cầu thiết kế.',
+                  },
+                  {
+                    title: 'Matte Finish',
+                    body: 'Mang lại cảm giác hiện đại và tự nhiên.',
+                  },
+                  {
+                    title: 'Color Finish',
+                    body: 'Sơn màu theo yêu cầu của buyer.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-pine-finish-image-slot" aria-hidden="true" />
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-pine-control">
+              <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+              <div className="materials-pine-control-list">
+                {[
+                  {
+                    title: 'Độ ẩm vật liệu',
+                    body: 'Đảm bảo độ ổn định trong sản xuất và sử dụng.',
+                  },
+                  {
+                    title: 'Mắt gỗ',
+                    body: 'Kiểm soát vị trí và mức độ xuất hiện theo yêu cầu sản phẩm.',
+                  },
+                  {
+                    title: 'Đồng đều màu sắc',
+                    body: 'Duy trì tính nhất quán giữa các lô vật liệu.',
+                  },
+                  {
+                    title: 'Hoàn thiện bề mặt',
+                    body: 'Kiểm soát khả năng hấp thụ stain và chất lượng hoàn thiện.',
+                  },
+                  {
+                    title: 'Đóng gói',
+                    body: 'Bảo vệ sản phẩm trong quá trình vận chuyển quốc tế.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span aria-hidden="true">▣</span>
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-pine-supply">
+            <div className="materials-pine-supply-image-slot" aria-hidden="true" />
+            <div className="materials-pine-supply-copy">
+              <h2>{t('Pine trong hệ thống cung ứng của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ phát triển sản phẩm, lựa chọn vật liệu, đánh giá khả năng sản xuất và tổ chức chuỗi cung ứng cho các dự án sử dụng gỗ Pine tại Việt Nam.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Pine đặc biệt phù hợp với các chương trình OEM, ODM, nội thất trẻ em, nội thất đóng gói KD và các dòng sản phẩm bán lẻ quy mô lớn.',
+                )}
+              </p>
+            </div>
+            <div className="materials-pine-supply-flow">
+              {['Phát triển sản phẩm', 'Lựa chọn vật liệu', 'Đánh giá khả năng sản xuất', 'Tổ chức chuỗi cung ứng'].map((item) => (
+                <article key={item}>
+                  <div className="materials-pine-supply-icon-slot" aria-hidden="true" />
+                  <p>{t(item)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-pine-followup-row">
+            <div className="materials-pine-quick-compare">
+              <h2>{t('So sánh nhanh')}</h2>
+              <div className="materials-pine-quick-table" role="table" aria-label={t('So sánh nhanh các vật liệu gỗ')}>
+                {[
+                  ['Vật liệu', 'Điểm mạnh'],
+                  ['Rubberwood', 'Hiệu quả chi phí, sản xuất hàng loạt'],
+                  ['Ash', 'Scandinavian, vân đẹp'],
+                  ['Oak', 'Cao cấp, nhận diện quốc tế'],
+                  ['Beech', 'Ghế và cấu kiện uốn cong'],
+                  ['Acacia', 'Vân nổi bật, outdoor furniture'],
+                  ['Pine', 'Nhẹ, KD furniture và bán lẻ'],
+                ].map((row, rowIndex) => (
+                  <div className="materials-pine-quick-row" role="row" key={row.join('-')}>
+                    {row.map((cell) => (
+                      <div
+                        className={rowIndex === 0 || row[0] === 'Pine' ? 'is-highlight' : undefined}
+                        role={rowIndex === 0 ? 'columnheader' : 'cell'}
+                        key={cell}
+                      >
+                        {t(cell)}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-pine-style-fit">
+              <h2>{t('Pine phù hợp với những phong cách nào?')}</h2>
+              <div className="materials-pine-style-grid">
+                {[
+                  {
+                    title: 'Scandinavian',
+                    body: 'Màu trắng, đơn giản và tự nhiên.',
+                  },
+                  {
+                    title: 'Country',
+                    body: 'Tạo cảm giác ấm áp và gần gũi.',
+                  },
+                  {
+                    title: 'Casual Living',
+                    body: 'Nội thất gia đình hướng đến sự thoải mái.',
+                  },
+                  {
+                    title: 'Kids Furniture',
+                    body: 'Ứng dụng phổ biến trong không gian trẻ em.',
+                  },
+                  {
+                    title: 'E-commerce Furniture',
+                    body: 'Thiết kế tối ưu cho vận chuyển và lắp ráp.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-pine-style-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-pine-related-links">
+              <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+              <div className="materials-pine-related-list">
+                {[
+                  {
+                    icon: '▱',
+                    title: 'Giường',
+                    body: 'Khám phá các sản phẩm giường sử dụng Pine.',
+                  },
+                  {
+                    icon: '▤',
+                    title: 'Tủ & Lưu trữ',
+                    body: 'Các hệ tủ và lưu trữ từ Pine.',
+                  },
+                  {
+                    icon: '▥',
+                    title: 'Kệ',
+                    body: 'Các dòng bookshelf và storage shelf.',
+                  },
+                  {
+                    icon: '◩',
+                    title: 'Sơn & hoàn thiện bề mặt',
+                    body: 'Các phương án hoàn thiện phù hợp với Pine.',
+                  },
+                  {
+                    icon: '▣',
+                    title: 'Kiểm soát độ ẩm',
+                    body: 'Các hoạt động kiểm soát vật liệu trong sản xuất.',
+                  },
+                ].map((item) => (
+                  <a href="/vn/contact" key={item.title}>
+                    <span aria-hidden="true">{item.icon}</span>
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                    <b aria-hidden="true">›</b>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-pine-cta">
+            <div className="materials-pine-cta-image-slot" aria-hidden="true" />
+            <div className="materials-pine-cta-copy">
+              <h2>{t('Trao đổi về vật liệu Pine cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu kỹ thuật để ANSLIFE đánh giá khả năng ứng dụng gỗ Pine và đề xuất phương án phù hợp.',
+                )}
+              </p>
+              <div className="materials-pine-cta-actions">
+                <a href="/vn/contact">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">⇧</span>
+                  {t('Tải bản vẽ lên')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsAcaciaPage && (
+        <section className="materials-acacia-content">
+          <section className="materials-acacia-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-acacia-overview-panel">
+              {[
+                {
+                  icon: '▤',
+                  title: 'Tên thương mại',
+                  body: 'Acacia',
+                },
+                {
+                  icon: '♜',
+                  title: 'Nhóm vật liệu',
+                  body: 'Gỗ tự nhiên',
+                },
+                {
+                  icon: '◩',
+                  title: 'Màu sắc tự nhiên',
+                  body: 'Từ vàng nhạt, nâu vàng đến nâu đậm tùy từng khu vực gỗ.',
+                },
+                {
+                  icon: '▧',
+                  title: 'Đặc điểm vân gỗ',
+                  body: 'Vân gỗ rõ nét, tương phản cao và giàu tính tự nhiên.',
+                },
+                {
+                  icon: '⚒',
+                  title: 'Khả năng gia công',
+                  body: 'Gia công tốt, phù hợp với nhiều phương pháp sản xuất nội thất hoàn thiện và cấu kiện nội thất.',
+                },
+                {
+                  icon: '◈',
+                  title: 'Đặc điểm nổi bật',
+                  body: 'Vân đẹp\nMàu sắc phong phú\nĐộ bền tốt\nỨng dụng linh hoạt',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>
+                      {item.body.split('\n').map((line, index) => (
+                        <span key={`${item.title}-${line}`}>
+                          {index > 0 && <br />}
+                          {t(line)}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-acacia-features">
+            <h2>{t('Vì sao Acacia được ưa chuộng?')}</h2>
+            <div className="materials-acacia-feature-grid">
+              {[
+                {
+                  icon: '◎',
+                  title: 'Vân gỗ nổi bật',
+                  body: 'Tạo điểm nhấn thị giác mạnh mẽ và mang đậm tính tự nhiên.',
+                },
+                {
+                  icon: '◌',
+                  title: 'Màu sắc đa dạng',
+                  body: 'Mỗi sản phẩm có thể sở hữu những sắc độ tự nhiên riêng biệt.',
+                },
+                {
+                  icon: '✓',
+                  title: 'Độ bền tốt',
+                  body: 'Phù hợp với nhiều môi trường sử dụng khác nhau.',
+                },
+                {
+                  icon: '◇',
+                  title: 'Giá trị thẩm mỹ cao',
+                  body: 'Được sử dụng nhiều trong các bộ sưu tập nội thất mang phong cách tự nhiên và contemporary.',
+                },
+                {
+                  icon: '▣',
+                  title: 'Hiệu quả chi phí',
+                  body: 'Mang lại sự cân bằng giữa chất lượng, thẩm mỹ và chi phí sản xuất.',
+                },
+                {
+                  icon: '✣',
+                  title: 'Ứng dụng linh hoạt',
+                  body: 'Có thể sử dụng cho nội thất trong nhà, ngoài trời và các dự án hospitality.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-acacia-applications">
+            <h2>{t('Ứng dụng trong nội thất')}</h2>
+            <div className="materials-acacia-application-grid">
+              {[
+                {
+                  title: 'Bàn',
+                  items: ['Bàn ăn', 'Bàn cafe', 'Bàn phụ', 'Bàn ngoài trời'],
+                },
+                {
+                  title: 'Ghế',
+                  items: ['Ghế ăn', 'Ghế ngoài trời', 'Ghế nhà hàng', 'Ghế resort'],
+                },
+                {
+                  title: 'Giường',
+                  items: ['Khung giường', 'Đầu giường'],
+                },
+                {
+                  title: 'Tủ & lưu trữ',
+                  items: ['Tủ trang trí', 'Tủ phòng ngủ', 'Tủ lưu trữ'],
+                },
+                {
+                  title: 'Nội thất ngoài trời',
+                  items: ['Bàn ghế sân vườn', 'Ban công', 'Poolside Furniture', 'Resort Furniture'],
+                },
+                {
+                  title: 'Nội thất dự án',
+                  items: ['Khách sạn', 'Resort', 'Nhà hàng', 'Không gian thương mại'],
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-acacia-application-image-slot" aria-hidden="true" />
+                  <h3>{t(item.title)}</h3>
+                  <ul>
+                    {item.items.map((entry) => (
+                      <li key={entry}>{t(entry)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-acacia-detail-row">
+            <div className="materials-acacia-outdoor">
+              <h2>{t('Acacia và nội thất ngoài trời')}</h2>
+              <p>{t('Vì sao Acacia được sử dụng nhiều cho Outdoor Furniture?')}</p>
+              <div className="materials-acacia-outdoor-grid">
+                <div className="materials-acacia-outdoor-flow">
+                  {[
+                    'Độ bền tốt',
+                    'Kết cấu ổn định',
+                    'Vẻ đẹp tự nhiên',
+                    'Dễ hoàn thiện bảo vệ bề mặt',
+                    'Phù hợp môi trường sử dụng đa dạng',
+                  ].map((item, index) => (
+                    <article key={item}>
+                      <span aria-hidden="true">◈</span>
+                      <p>{t(item)}</p>
+                      {index < 4 && <b aria-hidden="true">↓</b>}
+                    </article>
+                  ))}
+                </div>
+                <div className="materials-acacia-outdoor-popular">
+                  <h3>{t('Ứng dụng phổ biến')}</h3>
+                  <ul>
+                    {[
+                      'Dining Set Outdoor',
+                      'Garden Furniture',
+                      'Balcony Furniture',
+                      'Resort Furniture',
+                      'Poolside Furniture',
+                    ].map((item) => (
+                      <li key={item}>{t(item)}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="materials-acacia-outdoor-image-slot" aria-hidden="true" />
+            </div>
+
+            <div className="materials-acacia-finishing">
+              <h2>{t('Khả năng hoàn thiện bề mặt')}</h2>
+              <div className="materials-acacia-finish-list">
+                {[
+                  {
+                    title: 'Natural Finish',
+                    body: 'Tôn lên vẻ đẹp tự nhiên và sự tương phản của vân gỗ.',
+                  },
+                  {
+                    title: 'Stain Finish',
+                    body: 'Phát triển màu sắc theo yêu cầu thiết kế.',
+                  },
+                  {
+                    title: 'Oil Finish',
+                    body: 'Một trong những phương án hoàn thiện phổ biến cho Acacia.',
+                  },
+                  {
+                    title: 'Matte Finish',
+                    body: 'Mang lại cảm giác hiện đại và gần gũi với vật liệu.',
+                  },
+                  {
+                    title: 'Outdoor Protective Finish',
+                    body: 'Hỗ trợ bảo vệ bề mặt cho các sản phẩm ngoài trời.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-acacia-finish-image-slot" aria-hidden="true" />
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-acacia-control">
+              <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+              <div className="materials-acacia-control-list">
+                {[
+                  {
+                    title: 'Độ ẩm vật liệu',
+                    body: 'Đảm bảo độ ổn định trong sản xuất và sử dụng.',
+                  },
+                  {
+                    title: 'Đồng đều màu sắc',
+                    body: 'Kiểm soát sự khác biệt tự nhiên giữa các chi tiết.',
+                  },
+                  {
+                    title: 'Sắp xếp vân gỗ',
+                    body: 'Đảm bảo tính thẩm mỹ cho sản phẩm hoàn thiện.',
+                  },
+                  {
+                    title: 'Hoàn thiện bề mặt',
+                    body: 'Kiểm soát màu sắc, độ bóng và chất lượng hoàn thiện.',
+                  },
+                  {
+                    title: 'Điều kiện sử dụng',
+                    body: 'Lựa chọn phương án hoàn thiện phù hợp với môi trường trong nhà hoặc ngoài trời.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span aria-hidden="true">▣</span>
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <section className="materials-acacia-supply">
+              <div className="materials-acacia-supply-copy">
+                <h2>{t('Acacia trong hệ thống cung ứng của ANSLIFE')}</h2>
+                <p>
+                  {t(
+                    'ANSLIFE hỗ trợ phát triển sản phẩm, lựa chọn vật liệu, đánh giá khả năng sản xuất và tổ chức chuỗi cung ứng cho các dự án sử dụng gỗ Acacia tại Việt Nam.',
+                  )}
+                </p>
+                <p>
+                  {t(
+                    'Acacia có thể được ứng dụng cho sản phẩm hoàn thiện, nội thất ngoài trời, chương trình OEM / ODM và các dự án khách sạn, resort hoặc thương mại.',
+                  )}
+                </p>
+              </div>
+              <div className="materials-acacia-supply-flow">
+                {['Phát triển sản phẩm', 'Lựa chọn vật liệu', 'Đánh giá khả năng sản xuất', 'Tổ chức chuỗi cung ứng'].map((item) => (
+                  <article key={item}>
+                    <div className="materials-acacia-supply-icon-slot" aria-hidden="true" />
+                    <p>{t(item)}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+          </section>
+
+          <section className="materials-acacia-style-compare-row">
+            <div className="materials-acacia-quick-compare">
+              <h2>{t('So sánh nhanh')}</h2>
+              <div className="materials-acacia-quick-table" role="table" aria-label={t('So sánh nhanh các vật liệu gỗ')}>
+                {[
+                  ['Vật liệu', 'Điểm mạnh'],
+                  ['Rubberwood', 'Hiệu quả chi phí, sản xuất hàng loạt'],
+                  ['Ash', 'Vân đẹp, Scandinavian'],
+                  ['Oak', 'Cao cấp, nhận diện quốc tế'],
+                  ['Beech', 'Ghế và cấu kiện uốn cong'],
+                  ['Acacia', 'Vân nổi bật, nội thất ngoài trời'],
+                  ['Pine', 'Nhẹ, linh hoạt và dễ gia công'],
+                ].map((row, rowIndex) => (
+                  <div className="materials-acacia-quick-row" role="row" key={row.join('-')}>
+                    {row.map((cell) => (
+                      <div
+                        className={rowIndex === 0 || row[0] === 'Acacia' ? 'is-highlight' : undefined}
+                        role={rowIndex === 0 ? 'columnheader' : 'cell'}
+                        key={cell}
+                      >
+                        {t(cell)}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-acacia-style-fit">
+              <h2>{t('Acacia phù hợp với những phong cách nào?')}</h2>
+              <div className="materials-acacia-style-grid">
+                {[
+                  {
+                    title: 'Natural Living',
+                    body: 'Tôn vinh vẻ đẹp tự nhiên của vật liệu.',
+                  },
+                  {
+                    title: 'Contemporary',
+                    body: 'Kết hợp giữa thiết kế hiện đại và vật liệu tự nhiên.',
+                  },
+                  {
+                    title: 'Rustic Modern',
+                    body: 'Vân gỗ nổi bật tạo nên cá tính riêng cho sản phẩm.',
+                  },
+                  {
+                    title: 'Tropical',
+                    body: 'Phù hợp với resort, khách sạn và không gian nghỉ dưỡng.',
+                  },
+                  {
+                    title: 'Outdoor Living',
+                    body: 'Các không gian sân vườn, ban công và hồ bơi.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-acacia-style-image-slot" aria-hidden="true" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-acacia-cta">
+            <div className="materials-acacia-cta-image-slot" aria-hidden="true" />
+            <div className="materials-acacia-cta-copy">
+              <h2>{t('Trao đổi về vật liệu Acacia cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu kỹ thuật để ANSLIFE đánh giá khả năng ứng dụng gỗ Acacia và đề xuất phương án phù hợp.',
+                )}
+              </p>
+              <div className="materials-acacia-cta-actions">
+                <a href="/vn/contact">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">⇧</span>
+                  {t('Tải bản vẽ lên')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+      )}
+      {isMaterialsBeechPage && (
+        <section className="materials-beech-content">
+          <section className="materials-beech-overview">
+            <h2>{t('Tổng quan vật liệu')}</h2>
+            <div className="materials-beech-overview-panel">
+              {[
+                {
+                  icon: '▤',
+                  title: 'Tên thương mại',
+                  body: 'Beech',
+                },
+                {
+                  icon: '♜',
+                  title: 'Nhóm vật liệu',
+                  body: 'Gỗ tự nhiên',
+                },
+                {
+                  icon: '⌘',
+                  title: 'Màu sắc tự nhiên',
+                  body: 'Kem nhạt đến hồng nhạt hoặc vàng nhạt.',
+                },
+                {
+                  icon: '▧',
+                  title: 'Đặc điểm vân gỗ',
+                  body: 'Mịn, đều và ít tương phản.',
+                },
+                {
+                  icon: '⚒',
+                  title: 'Khả năng gia công',
+                  body: 'Rất tốt cho tiện, CNC, khoan, phay và đặc biệt là uốn cong.',
+                },
+                {
+                  icon: '◈',
+                  title: 'Đặc điểm nổi bật',
+                  body: 'Độ đồng đều cao\nDễ gia công\nKhả năng uốn cong tốt\nPhù hợp sản xuất ghế',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <div>
+                    <h3>{t(item.title)}</h3>
+                    <p>
+                      {item.body.split('\n').map((line, index) => (
+                        <span key={`${item.title}-${line}`}>
+                          {index > 0 && <br />}
+                          {t(line)}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-beech-features">
+            <h2>{t('Vì sao Beech được sử dụng nhiều trong ngành ghế?')}</h2>
+            <div className="materials-beech-feature-grid">
+              {[
+                {
+                  icon: '◌',
+                  title: 'Khả năng uốn cong',
+                  body: 'Beech là một trong những loại gỗ phổ biến nhất cho công nghệ uốn cong bằng hơi nước.',
+                },
+                {
+                  icon: '◍',
+                  title: 'Kết cấu đồng đều',
+                  body: 'Giúp sản phẩm có độ ổn định cao và dễ kiểm soát chất lượng.',
+                },
+                {
+                  icon: '♙',
+                  title: 'Độ cứng phù hợp',
+                  body: 'Đáp ứng yêu cầu sử dụng cho các dòng ghế thương mại và dân dụng.',
+                },
+                {
+                  icon: '⚙',
+                  title: 'Gia công chính xác',
+                  body: 'Phù hợp với sản xuất hàng loạt và các chi tiết có độ chính xác cao.',
+                },
+                {
+                  icon: '✎',
+                  title: 'Dễ hoàn thiện màu sắc',
+                  body: 'Có thể phát triển nhiều màu stain khác nhau.',
+                },
+                {
+                  icon: '▥',
+                  title: 'Phổ biến tại Châu Âu và Nhật Bản',
+                  body: 'Là vật liệu quen thuộc trong các bộ sưu tập ghế và nội thất hospitality.',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-beech-applications">
+            <h2>{t('Ứng dụng trong nội thất')}</h2>
+            <div className="materials-beech-application-grid">
+              {[
+                {
+                  title: 'Ghế ăn',
+                  items: ['Dining Chair', 'Cafe Chair', 'Restaurant Chair'],
+                },
+                {
+                  title: 'Ghế uốn cong',
+                  items: ['Bentwood Chair', 'Curved Back Chair'],
+                },
+                {
+                  title: 'Ghế khách sạn',
+                  items: ['Hospitality Seating', 'Hotel Furniture'],
+                },
+                {
+                  title: 'Ghế bọc nệm',
+                  items: ['Upholstered Chair', 'Dining Armchair'],
+                },
+                {
+                  title: 'Cấu kiện nội thất',
+                  items: ['Tay ghế', 'Lưng ghế', 'Khung ghế', 'Chân ghế'],
+                },
+                {
+                  title: 'Nội thất dự án',
+                  items: ['Khách sạn', 'Nhà hàng', 'Resort', 'Không gian thương mại'],
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="materials-beech-application-image-slot" />
+                  <h3>{t(item.title)}</h3>
+                  <ul>
+                    {item.items.map((line) => (
+                      <li key={line}>{t(line)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-beech-production-row">
+            <div className="materials-beech-chair-production">
+              <h2>{t('Beech và sản xuất ghế')}</h2>
+              <p>{t('Vì sao Beech được sử dụng cho ghế?')}</p>
+              <div className="materials-beech-chair-grid">
+                <div className="materials-beech-chair-flow">
+                  {[
+                    'Kết cấu đồng đều',
+                    'Gia công chính xác',
+                    'Uốn cong tốt',
+                    'Ổn định khi sử dụng',
+                    'Phù hợp sản xuất hàng loạt',
+                  ].map((item, index) => (
+                    <article key={item}>
+                      <span aria-hidden="true">▧</span>
+                      <p>{t(item)}</p>
+                      {index < 4 && <b aria-hidden="true">↓</b>}
+                    </article>
+                  ))}
+                </div>
+                <div className="materials-beech-chair-popular">
+                  <h3>{t('Ứng dụng phổ biến')}</h3>
+                  {['Dining Chair', 'Bentwood Chair', 'Cafe Chair', 'Restaurant Seating', 'Hospitality Seating'].map((item) => (
+                    <article key={item}>
+                      <span aria-hidden="true">▥</span>
+                      <p>{t(item)}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="materials-beech-finishing">
+              <h2>{t('Khả năng hoàn thiện bề mặt')}</h2>
+              <div className="materials-beech-finish-list">
+                {[
+                  {
+                    title: 'Natural Finish',
+                    body: 'Giữ vẻ sáng và sạch của vật liệu.',
+                  },
+                  {
+                    title: 'Stain Finish',
+                    body: 'Phát triển màu theo yêu cầu thiết kế và buyer.',
+                  },
+                  {
+                    title: 'Lacquer Finish',
+                    body: 'Tăng độ bền và khả năng bảo vệ bề mặt.',
+                  },
+                  {
+                    title: 'Matte Finish',
+                    body: 'Mang lại cảm giác hiện đại và tự nhiên.',
+                  },
+                  {
+                    title: 'Custom Color Finish',
+                    body: 'Hoàn thiện theo bảng màu hoặc mẫu duyệt.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-beech-finish-image-slot" />
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-beech-control">
+              <h2>{t('Những yếu tố cần kiểm soát')}</h2>
+              <div className="materials-beech-control-list">
+                {[
+                  {
+                    title: 'Độ ẩm vật liệu',
+                    body: 'Đảm bảo tính ổn định trong sản xuất và sử dụng.',
+                  },
+                  {
+                    title: 'Chất lượng uốn cong',
+                    body: 'Kiểm soát hình dạng và độ ổn định của cấu kiện cong.',
+                  },
+                  {
+                    title: 'Kết cấu liên kết',
+                    body: 'Đảm bảo độ bền của các điểm kết nối.',
+                  },
+                  {
+                    title: 'Đồng đều màu sắc',
+                    body: 'Duy trì tính nhất quán giữa các lô hàng.',
+                  },
+                  {
+                    title: 'Hoàn thiện bề mặt',
+                    body: 'Kiểm soát màu sắc, độ bóng và chất lượng hoàn thiện.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span aria-hidden="true">▣</span>
+                    <div>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-beech-supply">
+            <div className="materials-beech-supply-image-slot" />
+            <div className="materials-beech-supply-copy">
+              <h2>{t('Beech trong hệ thống cung ứng của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'ANSLIFE hỗ trợ phát triển sản phẩm, lựa chọn vật liệu, đánh giá khả năng sản xuất và tổ chức chuỗi cung ứng cho các dự án sử dụng gỗ Beech tại Việt Nam.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Beech đặc biệt phù hợp với các chương trình sản xuất ghế, nội thất hospitality, OEM / ODM và các sản phẩm yêu cầu cấu kiện cong hoặc độ chính xác gia công cao.',
+                )}
+              </p>
+            </div>
+            <div className="materials-beech-supply-flow">
+              {['Phát triển sản phẩm', 'Lựa chọn vật liệu', 'Đánh giá khả năng sản xuất', 'Tổ chức chuỗi cung ứng'].map((item) => (
+                <article key={item}>
+                  <div className="materials-beech-supply-icon-slot" />
+                  <p>{t(item)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="materials-beech-style-compare-row">
+            <div className="materials-beech-style-fit">
+              <h2>{t('Beech phù hợp với những phong cách nào?')}</h2>
+              <div className="materials-beech-style-grid">
+                {[
+                  {
+                    title: 'Scandinavian',
+                    body: 'Đường nét đơn giản và màu sắc sáng.',
+                  },
+                  {
+                    title: 'Nordic',
+                    body: 'Tập trung vào vật liệu tự nhiên và công năng.',
+                  },
+                  {
+                    title: 'Modern',
+                    body: 'Phù hợp với các thiết kế hiện đại và tối giản.',
+                  },
+                  {
+                    title: 'Hospitality',
+                    body: 'Nhà hàng, khách sạn và không gian công cộng.',
+                  },
+                  {
+                    title: 'Cafe & Restaurant',
+                    body: 'Một trong những vật liệu phổ biến nhất cho ngành F&B.',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="materials-beech-style-image-slot" />
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="materials-beech-quick-compare">
+              <h2>{t('So sánh nhanh')}</h2>
+              <div className="materials-beech-quick-table" role="table" aria-label={t('So sánh nhanh các vật liệu gỗ')}>
+                {[
+                  ['Vật liệu', 'Điểm mạnh'],
+                  ['Rubberwood', 'Hiệu quả chi phí, sản xuất hàng loạt'],
+                  ['Ash', 'Vân đẹp, Scandinavian'],
+                  ['Oak', 'Cao cấp, nhận diện quốc tế'],
+                  ['Beech', 'Ghế và cấu kiện uốn cong'],
+                  ['Acacia', 'Vân gỗ nổi bật & cá tính'],
+                  ['Pine', 'Nhẹ, dễ gia công'],
+                ].map((row, rowIndex) => (
+                  <div className="materials-beech-quick-row" role="row" key={row.join('-')}>
+                    {row.map((cell) => (
+                      <div
+                        className={rowIndex === 0 || row[0] === 'Beech' ? 'is-highlight' : undefined}
+                        role={rowIndex === 0 ? 'columnheader' : 'cell'}
+                        key={cell}
+                      >
+                        {t(cell)}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="materials-beech-cta">
+            <div className="materials-beech-cta-image-slot" />
+            <div className="materials-beech-cta-copy">
+              <h2>{t('Trao đổi về vật liệu Beech cho dự án của bạn')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu sản phẩm hoặc yêu cầu kỹ thuật để ANSLIFE đánh giá khả năng ứng dụng gỗ Beech và đề xuất phương án phù hợp.',
+                )}
+              </p>
+              <div className="materials-beech-cta-actions">
+                <a href="/vn/contact">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">⇧</span>
+                  {t('Tải bản vẽ lên')}
+                </a>
+                <a href="/vn/contact">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
       )}
       {isMaterialsOakPage && (
         <section className="materials-oak-content">
