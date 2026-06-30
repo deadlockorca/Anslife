@@ -10139,26 +10139,33 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 {
                   title: 'Tên thương mại',
                   body: 'Rubberwood',
+                  image: '/assets/materials/solid-wood/rubber-wood/overview/commercial-name.png',
                 },
                 {
                   title: 'Nguồn gốc',
                   body: 'Cây cao su sau chu kỳ khai thác mủ.',
+                  image: '/assets/materials/solid-wood/rubber-wood/overview/source.png',
                 },
                 {
                   title: 'Màu sắc tự nhiên',
                   body: 'Từ trắng kem đến vàng nhạt.',
+                  image: '/assets/materials/solid-wood/rubber-wood/overview/natural-color.png',
                 },
                 {
                   title: 'Đặc điểm vân gỗ',
                   body: 'Vân tương đối đều, nhẹ và dễ hoàn thiện.',
+                  image: '/assets/materials/solid-wood/rubber-wood/overview/wood-grain.png',
                 },
                 {
                   title: 'Khả năng gia công',
                   body: 'Gia công tốt bằng các phương pháp cắt, tiện, CNC, khoan và lắp ráp.',
+                  image: '/assets/materials/solid-wood/rubber-wood/overview/machining.png',
                 },
               ].map((item) => (
                 <article key={item.title}>
-                  <div className="materials-rubber-wood-overview-image-slot" />
+                  <div className="materials-rubber-wood-overview-image-slot">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <div>
                     <h3>{t(item.title)}</h3>
                     <p>{t(item.body)}</p>
@@ -10175,30 +10182,38 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 {
                   title: 'Nguồn cung ổn định',
                   body: 'Nguồn cung dồi dào từ diện tích cao su lớn, đảm bảo tính ổn định và lịch sản xuất.',
+                  image: '/assets/materials/solid-wood/rubber-wood/features/stable-supply.webp',
                 },
                 {
                   title: 'Dễ gia công',
                   body: 'Gia công tốt, ít gây mẻ, phù hợp với nhiều phương pháp cắt, tiện, CNC, khoan và lắp ráp.',
+                  image: '/assets/materials/solid-wood/rubber-wood/features/easy-machining.webp',
                 },
                 {
                   title: 'Hoàn thiện linh hoạt',
                   body: 'Dễ chấp nhận nhiều hệ thống hoàn thiện: stain, sơn PU, sơn NC, sơn màu và các hiệu ứng khác.',
+                  image: '/assets/materials/solid-wood/rubber-wood/features/flexible-finishing.webp',
                 },
                 {
                   title: 'Màu sắc sáng',
                   body: 'Màu sáng tự nhiên giúp sản phẩm dễ phối màu, tạo cảm giác hiện đại và tinh tế.',
+                  image: '/assets/materials/solid-wood/rubber-wood/features/light-color.webp',
                 },
                 {
                   title: 'Thích hợp sản xuất hàng loạt',
                   body: 'Tính chất ổn định, đồng nhất, phù hợp cho sản xuất quy mô lớn và kiểm soát chất lượng.',
+                  image: '/assets/materials/solid-wood/rubber-wood/features/mass-production.webp',
                 },
                 {
                   title: 'Giá trị kinh tế tốt',
                   body: 'Chi phí hợp lý, tối ưu hiệu quả đầu tư cho các dự án xuất khẩu và OEM/ODM.',
+                  image: '/assets/materials/solid-wood/rubber-wood/features/economic-value.webp',
                 },
               ].map((item) => (
                 <article key={item.title}>
-                  <div className="materials-rubber-wood-card-image-slot" />
+                  <div className="materials-rubber-wood-card-image-slot">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <h3>{t(item.title)}</h3>
                   <p>{t(item.body)}</p>
                 </article>
@@ -10213,30 +10228,38 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 {
                   title: 'Ghế',
                   body: 'Ghế ăn, ghế cafe, ghế bar và ghế làm việc với thiết kế đa dạng.',
+                  image: '/assets/materials/solid-wood/rubber-wood/applications/chair.webp',
                 },
                 {
                   title: 'Bàn',
                   body: 'Bàn ăn, bàn cafe, bàn làm việc, bàn trà và các loại bàn khác.',
+                  image: '/assets/materials/solid-wood/rubber-wood/applications/table.webp',
                 },
                 {
                   title: 'Tủ & lưu trữ',
                   body: 'Tủ quần áo, tủ kệ, tủ bếp, kệ trang trí và giải pháp lưu trữ khác.',
+                  image: '/assets/materials/solid-wood/rubber-wood/applications/storage.webp',
                 },
                 {
                   title: 'Giường',
                   body: 'Giường đôi, giường trẻ em, giường tầng và các thiết kế theo yêu cầu.',
+                  image: '/assets/materials/solid-wood/rubber-wood/applications/bed.webp',
                 },
                 {
                   title: 'Cấu kiện nội thất',
                   body: 'Khung ghế, chân bàn, thanh giường, khung tủ và các cấu kiện lắp ráp khác.',
+                  image: '/assets/materials/solid-wood/rubber-wood/applications/components.webp',
                 },
                 {
                   title: 'Nội thất dự án',
                   body: 'Sản phẩm cho dự án khách sạn, resort, căn hộ, văn phòng và không gian công cộng.',
+                  image: '/assets/materials/solid-wood/rubber-wood/applications/project-furniture.webp',
                 },
               ].map((item) => (
                 <article key={item.title}>
-                  <div className="materials-rubber-wood-card-image-slot" />
+                  <div className="materials-rubber-wood-card-image-slot">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <h3>{t(item.title)}</h3>
                   <p>{t(item.body)}</p>
                 </article>
@@ -10251,26 +10274,33 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 {
                   title: 'Stain',
                   body: 'Tôn vân gỗ tự nhiên, màu sắc ấm áp và sang trọng.',
+                  image: '/assets/materials/solid-wood/rubber-wood/finishes/stain.webp',
                 },
                 {
                   title: 'Natural Finish',
                   body: 'Giữ màu gỗ tự nhiên, trong trẻo, tinh tế và hiện đại.',
+                  image: '/assets/materials/solid-wood/rubber-wood/finishes/natural-finish.webp',
                 },
                 {
                   title: 'Lacquer',
                   body: 'Bề mặt mịn, bền màu, dễ vệ sinh và bảo trì.',
+                  image: '/assets/materials/solid-wood/rubber-wood/finishes/lacquer.webp',
                 },
                 {
                   title: 'Matte Finish',
                   body: 'Hiệu ứng mờ cao cấp, chống bám vân tay, cảm giác tự nhiên.',
+                  image: '/assets/materials/solid-wood/rubber-wood/finishes/matte-finish.webp',
                 },
                 {
                   title: 'Color Finish',
                   body: 'Sơn màu đa dạng, đáp ứng yêu cầu thiết kế riêng.',
+                  image: '/assets/materials/solid-wood/rubber-wood/finishes/color-finish.webp',
                 },
               ].map((item) => (
                 <article key={item.title}>
-                  <div className="materials-rubber-wood-finish-image-slot" />
+                  <div className="materials-rubber-wood-finish-image-slot">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <div>
                     <h3>{t(item.title)}</h3>
                     <p>{t(item.body)}</p>
@@ -10320,7 +10350,14 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <section className="materials-rubber-wood-supply">
               <h2>{t('6. Gỗ cao su trong hệ thống cung ứng của ANSLIFE')}</h2>
               <div className="materials-rubber-wood-supply-intro">
-                <div className="materials-rubber-wood-supply-image-slot" />
+                <div className="materials-rubber-wood-supply-image-slot">
+                  <img
+                    src="/assets/materials/solid-wood/rubber-wood/supply/supply-chain-overview.webp"
+                    alt={t('Tổng quan chuỗi cung ứng gỗ cao su')}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <div>
                   <p>
                     {t(
@@ -10336,14 +10373,28 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </div>
               <div className="materials-rubber-wood-supply-steps">
                 {[
-                  'Tư vấn & phát triển SP',
-                  'Đánh giá tính khả thi',
-                  'Sản xuất & kiểm soát chất lượng',
-                  'Quản lý chuỗi cung ứng',
+                  {
+                    title: 'Tư vấn & phát triển SP',
+                    image: '/assets/materials/solid-wood/rubber-wood/supply/product-development.webp',
+                  },
+                  {
+                    title: 'Đánh giá tính khả thi',
+                    image: '/assets/materials/solid-wood/rubber-wood/supply/feasibility-assessment.webp',
+                  },
+                  {
+                    title: 'Sản xuất & kiểm soát chất lượng',
+                    image: '/assets/materials/solid-wood/rubber-wood/supply/production-quality-control.webp',
+                  },
+                  {
+                    title: 'Quản lý chuỗi cung ứng',
+                    image: '/assets/materials/solid-wood/rubber-wood/supply/supply-chain-management.webp',
+                  },
                 ].map((item) => (
-                  <article key={item}>
-                    <div className="materials-rubber-wood-supply-step-image-slot" />
-                    <p>{t(item)}</p>
+                  <article key={item.title}>
+                    <div className="materials-rubber-wood-supply-step-image-slot">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <p>{t(item.title)}</p>
                   </article>
                 ))}
               </div>
@@ -10357,22 +10408,28 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 {
                   title: 'Nội thất hoàn thiện',
                   body: 'Khám phá các dòng sản phẩm nội thất do ANSLIFE sản xuất.',
+                  image: '/assets/materials/solid-wood/rubber-wood/related/finished-furniture.webp',
                 },
                 {
                   title: 'Cấu kiện nội thất',
                   body: 'Tìm hiểu các cấu kiện và linh kiện nội thất.',
+                  image: '/assets/materials/solid-wood/rubber-wood/related/furniture-components.webp',
                 },
                 {
                   title: 'Sơn & hoàn thiện bề mặt',
                   body: 'Các hệ thống sơn và hoàn thiện phù hợp cho gỗ cao su.',
+                  image: '/assets/materials/solid-wood/rubber-wood/related/finishing-surface.webp',
                 },
                 {
                   title: 'Kiểm soát độ ẩm',
                   body: 'Giải pháp kiểm soát độ ẩm trong sản xuất và lưu kho.',
+                  image: '/assets/materials/solid-wood/rubber-wood/related/moisture-control.webp',
                 },
               ].map((item) => (
                 <article key={item.title}>
-                  <div className="materials-rubber-wood-related-image-slot" />
+                  <div className="materials-rubber-wood-related-image-slot">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <div>
                     <h3>{t(item.title)}</h3>
                     <p>{t(item.body)}</p>
@@ -10384,7 +10441,14 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
           </section>
 
           <section className="materials-rubber-wood-cta">
-            <div className="materials-rubber-wood-cta-image-slot" />
+            <div className="materials-rubber-wood-cta-image-slot">
+              <img
+                src="/assets/materials/solid-wood/rubber-wood/cta/project-furniture-consultation.webp"
+                alt={t('Tư vấn ứng dụng gỗ cao su cho sản phẩm nội thất')}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <div className="materials-rubber-wood-cta-copy">
               <h2>{t('8. Trao đổi về vật liệu gỗ cao su cho dự án của bạn')}</h2>
               <p>
@@ -10407,7 +10471,14 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 </a>
               </div>
             </div>
-            <div className="materials-rubber-wood-cta-image-slot" />
+            <div className="materials-rubber-wood-cta-image-slot">
+              <img
+                src="/assets/materials/solid-wood/rubber-wood/cta/technical-drawing-review.webp"
+                alt={t('Đánh giá bản vẽ kỹ thuật cho dự án gỗ cao su')}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </section>
         </section>
       )}

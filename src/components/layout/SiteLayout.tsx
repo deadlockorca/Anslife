@@ -365,6 +365,10 @@ export default function SiteLayout() {
       ),
     [location.pathname],
   );
+  const isScholarshipCommunityRoute = useMemo(
+    () => /\/about-anslife\/scholarship-community(?:\/|$)/.test(location.pathname),
+    [location.pathname],
+  );
   const isAboutWideRoute = useMemo(
     () =>
       /\/about-anslife\/(?:company-intro|company-info|vision-mission|core-values|production-philosophy|organization|team|anslife-ecosystem|development-history)(?:\/|$)/.test(
@@ -1404,6 +1408,8 @@ export default function SiteLayout() {
         !isAdminRoute && isCompanyIntroRoute ? 'is-company-intro-route' : ''
       } ${
         !isAdminRoute && isAboutWideRoute ? 'is-about-wide-route' : ''
+      } ${
+        !isAdminRoute && isScholarshipCommunityRoute ? 'is-scholarship-community-route' : ''
       } ${
         !isAdminRoute && isOperationsSupplyRoute ? 'is-operations-supply-route' : ''
       } ${
