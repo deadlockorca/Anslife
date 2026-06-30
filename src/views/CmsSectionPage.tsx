@@ -1,10 +1,11 @@
 import { useCallback, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import HtmlContent from '../components/common/HtmlContent';
 import LoadingBlock from '../components/common/LoadingBlock';
 import ErrorBlock from '../components/common/ErrorBlock';
 import PageSections from '../components/common/PageSections';
 import Seo from '../components/seo/Seo';
-import type { StaticPageConfig } from '../config/site';
+import { TOP_MENU, type StaticPageConfig } from '../config/site';
 import { useAsyncResource } from '../hooks/useAsyncResource';
 import useSiteI18n from '../hooks/useSiteI18n';
 import { getAIFallbackPageHtml } from '../content/aiGeneratedContent';
@@ -15,9 +16,20 @@ interface CmsSectionPageProps {
 }
 
 export default function CmsSectionPage({ config }: CmsSectionPageProps) {
-  const { language, t } = useSiteI18n();
+  const { language, t, toLocalizedPath } = useSiteI18n();
   const hiddenAboutSectionIds = useMemo(
     () => new Set(['vision-mission', 'core-values']),
+    [],
+  );
+  const materialGroupSectionIds = useMemo(
+    () =>
+      new Set([
+        'solid-wood',
+        'engineered-wood',
+        'natural-materials',
+        'upholstery-materials',
+        'packing-materials',
+      ]),
     [],
   );
   const loadPage = useCallback(() => getPageBySlug(config.slug), [config.slug]);
@@ -32,15 +44,22 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
     () =>
       config.slug === 'quality-control'
         ? []
+        : config.slug === 'materials'
+        ? config.sections.filter((section) => materialGroupSectionIds.has(section.id))
         : config.slug === 'about-anslife'
         ? config.sections.filter((section) => !hiddenAboutSectionIds.has(section.id))
         : config.sections,
-    [config.sections, config.slug, hiddenAboutSectionIds],
+    [config.sections, config.slug, hiddenAboutSectionIds, materialGroupSectionIds],
   );
   const shouldHideHeroKicker =
     config.slug === 'about-anslife' || config.slug === 'global-network';
   const shouldHideAboutHeroSummary = config.slug === 'about-anslife' || shouldRenderBlankPage;
   const shouldShowScholarshipCommunityBanner = config.slug === 'scholarship-community';
+  const shouldShowMaterialGroupsOnly = config.slug === 'materials';
+  const materialMenuGroups = useMemo(
+    () => TOP_MENU.find((item) => item.path === '/materials')?.children ?? [],
+    [],
+  );
   const displayHtml = useMemo(() => {
     if (!resolvedHtml) {
       return resolvedHtml;
@@ -322,14 +341,42 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
 
       {shouldShowLoading && <LoadingBlock />}
       {shouldShowError && <ErrorBlock message={error as string} />}
-      {displayHtml && (
+      {!shouldShowMaterialGroupsOnly && displayHtml && (
         <HtmlContent
           className="html-content html-panel"
           html={displayHtml}
         />
       )}
 
-      {!shouldShowScholarshipCommunityBanner && (
+      {shouldShowMaterialGroupsOnly && (
+        <section className="materials-group-list" aria-label={t('Các nhóm nội dung')}>
+          <div className="section-list-header">
+            <h2>{t('Các nhóm nội dung')}</h2>
+            <p>{t('Chọn nhóm vật liệu, sau đó vào từng mục con để xem chi tiết.')}</p>
+          </div>
+          <div className="materials-group-grid">
+            {materialMenuGroups.map((group) => (
+              <article className="materials-group-card" key={group.path}>
+                <header>
+                  <h3>{t(group.label)}</h3>
+                </header>
+                <div className="materials-child-grid">
+                  {(group.children ?? []).map((child) => (
+                    <section className="materials-child-card" key={child.path}>
+                      <h4>{t(child.label)}</h4>
+                      <Link to={toLocalizedPath(child.path)} className="inline-link">
+                        {t('Xem chi tiết')}
+                      </Link>
+                    </section>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {!shouldShowScholarshipCommunityBanner && !shouldShowMaterialGroupsOnly && (
         <PageSections sections={sectionListForNavigation} basePath={config.path} />
       )}
     </>

@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import HtmlContent from '../components/common/HtmlContent';
 import LoadingBlock from '../components/common/LoadingBlock';
 import ErrorBlock from '../components/common/ErrorBlock';
@@ -15,7 +15,7 @@ interface CmsSubSectionPageProps {
 }
 
 export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
-  const { language, t } = useSiteI18n();
+  const { language, t, toLocalizedPath } = useSiteI18n();
   const { sectionId = '', '*': nestedPath = '' } = useParams();
 
   const section = useMemo(
@@ -352,6 +352,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'vietnam-supply-hub' &&
     section.id === 'export-documentation-support' &&
     !detailSlug;
+  const isSupplyHubPartnerStandardRoomPage =
+    config.slug === 'vietnam-supply-hub' &&
+    section.id === 'partner-standard-room' &&
+    !detailSlug;
   const isSupplyHubApprovedProductSamplesPage =
     config.slug === 'vietnam-supply-hub' &&
     section.id === 'partner-standard-room' &&
@@ -462,6 +466,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isSupplyHubWeeklyShipmentArrangementPage ||
     isSupplyHubMaterialComponentStoragePage ||
     isSupplyHubExportDocumentationSupportPage ||
+    isSupplyHubPartnerStandardRoomPage ||
     isSupplyHubApprovedProductSamplesPage ||
     isSupplyHubComponentSamplesPage ||
     isSupplyHubTechnicalDrawingsPage ||
@@ -529,6 +534,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isSupplyHubWeeklyShipmentArrangementPage ||
     isSupplyHubMaterialComponentStoragePage ||
     isSupplyHubExportDocumentationSupportPage ||
+    isSupplyHubPartnerStandardRoomPage ||
     isSupplyHubApprovedProductSamplesPage ||
     isSupplyHubComponentSamplesPage ||
     isSupplyHubTechnicalDrawingsPage ||
@@ -736,6 +742,38 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                     : isFinishingMatteDetail
                       ? matteFinishSeoDescription
                     : t(section.description);
+  const supplyHubPartnerStandardRoomLinks = [
+    {
+      title: 'Mẫu sản phẩm đã duyệt',
+      description: 'Lưu mẫu duyệt làm chuẩn đối chiếu cho sản xuất, QC và các đơn hàng lặp lại.',
+      href: '/vietnam-supply-hub/partner-standard-room/approved-product-samples',
+    },
+    {
+      title: 'Mẫu cấu kiện',
+      description: 'Quản lý mẫu chi tiết, cấu kiện và bán thành phẩm theo từng dự án hoặc buyer.',
+      href: '/vietnam-supply-hub/partner-standard-room/component-samples',
+    },
+    {
+      title: 'Bản vẽ kỹ thuật',
+      description: 'Lưu trữ bản vẽ, thông số kỹ thuật, BOM và tài liệu tham chiếu cho sản xuất.',
+      href: '/vietnam-supply-hub/partner-standard-room/technical-drawings',
+    },
+    {
+      title: 'Tài liệu vật liệu',
+      description: 'Quản lý mẫu vật liệu, mã vật liệu và tài liệu tham chiếu trong chuỗi cung ứng.',
+      href: '/vietnam-supply-hub/partner-standard-room/material-references',
+    },
+    {
+      title: 'Tiêu chuẩn đóng gói',
+      description: 'Chuẩn hóa quy cách đóng gói, nhãn, pallet và tài liệu đóng gói xuất khẩu.',
+      href: '/vietnam-supply-hub/partner-standard-room/packing-standards',
+    },
+    {
+      title: 'Checklist QC',
+      description: 'Lưu checklist kiểm tra để kết nối tiêu chuẩn mẫu, sản xuất và trước khi xuất hàng.',
+      href: '/vietnam-supply-hub/partner-standard-room/qc-checklists',
+    },
+  ];
   const supplyHubStorageSupportCards = [
     {
       number: '1',
@@ -11815,6 +11853,32 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             </p>
           </figcaption>
         </figure>
+      )}
+      {isSupplyHubPartnerStandardRoomPage && (
+        <section className="supply-hub-partner-standard-room">
+          <div className="supply-hub-partner-standard-room-intro">
+            <span>{t('Vietnam Supply Hub')}</span>
+            <h1>{t('Phòng mẫu chuẩn đối tác')}</h1>
+            <p>
+              {t(
+                'ANSLIFE quản lý mẫu duyệt, cấu kiện, bản vẽ, tài liệu vật liệu, tiêu chuẩn đóng gói và checklist QC trong một không gian tham chiếu thống nhất cho từng đối tác.',
+              )}
+            </p>
+          </div>
+          <div className="supply-hub-partner-standard-room-grid">
+            {supplyHubPartnerStandardRoomLinks.map((item, index) => (
+              <article key={item.href} className="supply-hub-partner-standard-room-card">
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <h2>{t(item.title)}</h2>
+                <p>{t(item.description)}</p>
+                <Link to={toLocalizedPath(item.href)}>
+                  {t('Xem chi tiết')}
+                  <b aria-hidden="true">→</b>
+                </Link>
+              </article>
+            ))}
+          </div>
+        </section>
       )}
       {shouldShowQualityControlOverviewBanner && (
         <figure className="quality-control-overview-banner">

@@ -286,19 +286,6 @@ export const TOP_MENU: TopMenuItem[] = [
     label: 'Câu hỏi thường gặp',
     path: '/resources/faq',
   },
-  {
-    label: 'Liên hệ / Gửi yêu cầu',
-    path: '/contact',
-    children: [
-      { label: 'Yêu cầu chung', path: '/contact' },
-      { label: 'Yêu cầu báo giá', path: '/contact/request-quotation' },
-      { label: 'Tải bản vẽ / ảnh tham chiếu', path: '/contact/upload-drawing' },
-      { label: 'Yêu cầu OEM / ODM', path: '/contact/oem-odm-request' },
-      { label: 'Yêu cầu Supply Hub', path: '/contact/supply-hub-inquiry' },
-      { label: 'Yêu cầu thăm nhà máy', path: '/contact/factory-visit-request' },
-      { label: 'Thông tin liên hệ', path: '/contact/company-info' },
-    ],
-  },
 ];
 
 export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
@@ -504,66 +491,46 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
     slug: 'vietnam-supply-hub',
     summary: 'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.',
     sections: [
-      { id: 'overview', title: 'Tổng quan', description: 'Tổng quan Vietnam Supply Hub.' },
+      {
+        id: 'overview',
+        title: 'Tổng quan mô hình Supply Hub',
+        description:
+          'Tổng quan mô hình lưu kho, gom hàng, điều phối xuất khẩu và phòng mẫu chuẩn đối tác.',
+      },
       {
         id: 'storage-solution',
-        title: 'Giải pháp lưu kho tại Việt Nam',
-        description: 'Không gian lưu kho và tổ chức xuất hàng từ Việt Nam.',
-      },
-      {
-        id: 'inventory-buffer-vietnam',
-        title: 'Tồn kho đệm tại Việt Nam',
-        description: 'Inventory buffer phục vụ kế hoạch cung ứng.',
-      },
-      {
-        id: 'weekly-shipment-arrangement',
-        title: 'Điều phối xuất hàng hằng tuần',
-        description: 'Lịch xuất hàng định kỳ theo buyer và thị trường.',
+        title: 'Lưu kho & tồn kho đệm tại Việt Nam',
+        description:
+          'Giải pháp lưu kho thành phẩm, tồn kho đệm và hỗ trợ kế hoạch xuất hàng tại Việt Nam.',
       },
       {
         id: 'lcl-fcl-consolidation',
         title: 'Gom hàng LCL / FCL',
-        description: 'Gom hàng theo LCL hoặc FCL.',
+        description:
+          'Gom hàng lẻ, gom container và điều phối nhiều nguồn hàng để tối ưu xuất khẩu.',
       },
       {
-        id: 'japan-singapore-supply-support',
-        title: 'Hỗ trợ cung ứng Nhật Bản & Singapore',
-        description: 'Điều phối nguồn cung cho Nhật Bản và Singapore.',
+        id: 'weekly-shipment-arrangement',
+        title: 'Điều phối xuất hàng định kỳ',
+        description:
+          'Tổ chức lịch xuất hàng định kỳ theo kế hoạch buyer, thị trường và năng lực cung ứng.',
       },
       {
         id: 'material-component-storage',
-        title: 'Lưu kho vật liệu & linh kiện',
-        description: 'Lưu vật liệu và linh kiện theo chuẩn đối tác.',
+        title: 'Lưu kho vật liệu & cấu kiện',
+        description:
+          'Lưu kho vật liệu, cấu kiện và bán thành phẩm để hỗ trợ sản xuất và cung ứng dài hạn.',
       },
       {
         id: 'export-documentation-support',
         title: 'Hỗ trợ chứng từ xuất khẩu',
-        description: 'Chuẩn bị thông tin chứng từ và lô hàng.',
+        description: 'Hỗ trợ hồ sơ, thông tin lô hàng và chứng từ phục vụ xuất khẩu.',
       },
       {
         id: 'partner-standard-room',
         title: 'Phòng mẫu chuẩn đối tác',
-        description: '',
-      },
-      {
-        id: 'vietnam-supply-hub-japanese-buyers',
-        title: 'Supply Hub Việt Nam cho buyer Nhật Bản',
-        description: 'Điều phối lưu kho, mẫu chuẩn và xuất hàng từ Việt Nam cho buyer Nhật Bản.',
-      },
-      {
-        id: 'vietnam-storage-solution-importers',
-        title: 'Giải pháp lưu kho Việt Nam cho nhà nhập khẩu',
-        description: 'Lưu kho và tổ chức tồn kho phục vụ importer làm việc với nguồn cung Việt Nam.',
-      },
-      {
-        id: 'weekly-shipment-vietnam-japan',
-        title: 'Xuất hàng hằng tuần từ Việt Nam sang Nhật Bản',
-        description: 'Điều phối lịch xuất hàng định kỳ từ Việt Nam sang Nhật Bản.',
-      },
-      {
-        id: 'vietnam-export-consolidation-service',
-        title: 'Dịch vụ gom hàng xuất khẩu Việt Nam',
-        description: 'Gom lô hàng, vật liệu và linh kiện để chuẩn bị xuất khẩu từ Việt Nam.',
+        description:
+          'Quản lý mẫu duyệt, cấu kiện, bản vẽ, tài liệu vật liệu, tiêu chuẩn đóng gói và checklist QC.',
       },
     ],
   },

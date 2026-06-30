@@ -3013,6 +3013,73 @@ a.mobile-menu-utility-link {
   color: var(--muted);
 }
 
+.materials-group-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.materials-group-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.materials-group-card {
+  display: grid;
+  gap: 0.75rem;
+  border: 1px solid rgba(68, 96, 132, 0.16);
+  border-radius: 12px;
+  padding: 0.85rem;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(28, 42, 64, 0.06);
+}
+
+.materials-group-card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(68, 96, 132, 0.14);
+}
+
+.materials-group-card h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.14rem, 1.45vw, 1.42rem);
+  line-height: 1.16;
+  color: #2b2f35;
+}
+
+.materials-child-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.62rem;
+}
+
+.materials-child-card {
+  display: grid;
+  align-content: space-between;
+  gap: 0.62rem;
+  min-height: 6rem;
+  border: 1px solid rgba(68, 96, 132, 0.13);
+  border-radius: 10px;
+  padding: 0.72rem;
+  background: linear-gradient(180deg, #ffffff 0%, #faf7f1 100%);
+}
+
+.materials-child-card h4 {
+  margin: 0;
+  color: #27313d;
+  font-size: 0.96rem;
+  line-height: 1.25;
+}
+
+@media (max-width: 760px) {
+  .materials-child-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .html-content {
   line-height: 1.7;
 }
@@ -28442,6 +28509,147 @@ img.quality-control-final-inspection-cta-image {
   .supply-hub-component-samples-usage-card,
   .supply-hub-component-samples-benefit-card {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.supply-hub-partner-standard-room {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(0.9rem, 1.6vw, 1.45rem);
+  padding: clamp(1rem, 2vw, 1.65rem) clamp(0.8rem, 1.5vw, 1.35rem) clamp(1.2rem, 2.2vw, 1.9rem);
+  background: #f7f1e7 !important;
+  color: #20242a;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+}
+
+.supply-hub-partner-standard-room-intro {
+  align-self: start;
+  display: grid;
+  gap: clamp(0.7rem, 1vw, 0.95rem);
+  padding: clamp(1rem, 1.7vw, 1.45rem);
+  border: 1px solid rgba(44, 46, 48, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 252, 246, 0.56) !important;
+}
+
+.supply-hub-partner-standard-room-intro span {
+  color: #8f5f26;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.supply-hub-partner-standard-room-intro h1 {
+  margin: 0;
+  max-width: 15ch;
+  color: #20242a;
+  font-family: var(--font-heading);
+  font-size: clamp(2.1rem, 3.7vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.supply-hub-partner-standard-room-intro p {
+  margin: 0;
+  max-width: 50ch;
+  color: #45413b;
+  font-size: clamp(0.92rem, 1vw, 1.05rem);
+  line-height: 1.62;
+  letter-spacing: 0;
+}
+
+.supply-hub-partner-standard-room-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.72rem, 1vw, 0.95rem);
+}
+
+.supply-hub-partner-standard-room-card {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 0.62rem;
+  min-height: 218px;
+  padding: clamp(0.9rem, 1.35vw, 1.2rem);
+  border: 1px solid rgba(44, 46, 48, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 14px 28px rgba(55, 42, 31, 0.08);
+}
+
+.supply-hub-partner-standard-room-card > span {
+  color: #9a5a20;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.supply-hub-partner-standard-room-card h2 {
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(1.02rem, 1.18vw, 1.22rem);
+  font-weight: 850;
+  line-height: 1.24;
+  letter-spacing: 0;
+}
+
+.supply-hub-partner-standard-room-card p {
+  margin: 0;
+  color: #4b4741;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.supply-hub-partner-standard-room-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  width: max-content;
+  max-width: 100%;
+  min-height: 42px;
+  padding: 0.62rem 0.82rem;
+  border: 1px solid rgba(32, 36, 42, 0.2);
+  border-radius: 8px;
+  color: #20242a;
+  font-size: 0.86rem;
+  font-weight: 850;
+  line-height: 1.1;
+  text-decoration: none;
+  background: #f8f3ea !important;
+}
+
+.supply-hub-partner-standard-room-card a:hover {
+  border-color: rgba(143, 95, 38, 0.45);
+  color: #8f5f26;
+}
+
+@media (max-width: 900px) {
+  .supply-hub-partner-standard-room {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-partner-standard-room-intro h1 {
+    max-width: 18ch;
+  }
+}
+
+@media (max-width: 620px) {
+  .supply-hub-partner-standard-room {
+    padding: 0.85rem 0.68rem 1.1rem;
+  }
+
+  .supply-hub-partner-standard-room-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .supply-hub-partner-standard-room-card {
+    min-height: 0;
   }
 }
 

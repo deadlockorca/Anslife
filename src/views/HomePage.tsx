@@ -414,7 +414,7 @@ export default function HomePage() {
         id: 'contact',
         icon: '☎',
         title: t('Liên hệ'),
-        to: '/contact',
+        to: '/about-anslife/company-info',
       },
     ],
     [t],
