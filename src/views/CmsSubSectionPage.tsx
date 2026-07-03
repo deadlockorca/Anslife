@@ -2653,17 +2653,40 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Hệ thống sản xuất của ANSLIFE')}</h2>
               <div className="manufacturing-factory-overview-system-flow">
                 {[
-                  ['◎', 'Khách hàng'],
-                  ['▱', 'Phát triển sản phẩm'],
-                  ['▥', 'Lựa chọn nhà máy phù hợp'],
-                  ['⌂', 'Tổ chức sản xuất'],
-                  ['⚙', 'QC độc lập'],
-                  ['♢', 'Đóng gói'],
-                  ['▔', 'Xuất khẩu'],
-                ].map(([icon, title]) => (
-                  <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
-                    <h3>{t(title)}</h3>
+                  {
+                    title: 'Khách hàng',
+                    image: '/assets/manufacturing/factory-overview/system/customer.webp',
+                  },
+                  {
+                    title: 'Phát triển sản phẩm',
+                    image: '/assets/manufacturing/factory-overview/system/product-development.webp',
+                  },
+                  {
+                    title: 'Lựa chọn nhà máy phù hợp',
+                    image: '/assets/manufacturing/factory-overview/system/factory-matching.webp',
+                  },
+                  {
+                    title: 'Tổ chức sản xuất',
+                    image: '/assets/manufacturing/factory-overview/system/production-organization.webp',
+                  },
+                  {
+                    title: 'QC độc lập',
+                    image: '/assets/manufacturing/factory-overview/system/independent-qc.webp',
+                  },
+                  {
+                    title: 'Đóng gói',
+                    image: '/assets/manufacturing/factory-overview/system/packing.webp',
+                  },
+                  {
+                    title: 'Xuất khẩu',
+                    image: '/assets/manufacturing/factory-overview/system/export.webp',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span className="manufacturing-factory-overview-system-image" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <h3>{t(item.title)}</h3>
                   </article>
                 ))}
               </div>
@@ -2673,16 +2696,38 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Năng lực sản xuất')}</h2>
               <div className="manufacturing-factory-overview-capability-grid">
                 {[
-                  ['▱', 'Nội thất hoàn thiện', 'Sản xuất ghế, bàn, tủ, giường, kệ và các dòng nội thất hoàn thiện theo yêu cầu của khách hàng.'],
-                  ['▧', 'Linh kiện nội thất', 'Gia công khung ghế, mặt bàn, chân gỗ, chi tiết tủ, cấu kiện bọc nệm và linh kiện mây tre.'],
-                  ['⚙', 'Gia công vật liệu', 'Gia công gỗ tự nhiên, gỗ kỹ thuật, vật liệu bọc và các chi tiết hoàn thiện.'],
-                  ['✎', 'OEM / ODM', 'Phát triển và sản xuất sản phẩm theo bản vẽ, mẫu hoặc yêu cầu kỹ thuật của buyer.'],
-                  ['⌂', 'Dự án xuất khẩu', 'Kết nối sản xuất với lưu kho, gom hàng và điều phối xuất khẩu theo từng dự án.'],
-                ].map(([icon, title, body]) => (
-                  <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
-                    <h3>{t(title)}</h3>
-                    <p>{t(body)}</p>
+                  {
+                    title: 'Nội thất hoàn thiện',
+                    body: 'Sản xuất ghế, bàn, tủ, giường, kệ và các dòng nội thất hoàn thiện theo yêu cầu của khách hàng.',
+                    image: '/assets/manufacturing/factory-overview/capability/finished-furniture.webp',
+                  },
+                  {
+                    title: 'Linh kiện nội thất',
+                    body: 'Gia công khung ghế, mặt bàn, chân gỗ, chi tiết tủ, cấu kiện bọc nệm và linh kiện mây tre.',
+                    image: '/assets/manufacturing/factory-overview/capability/furniture-components.webp',
+                  },
+                  {
+                    title: 'Gia công vật liệu',
+                    body: 'Gia công gỗ tự nhiên, gỗ kỹ thuật, vật liệu bọc và các chi tiết hoàn thiện.',
+                    image: '/assets/manufacturing/factory-overview/capability/material-processing.webp',
+                  },
+                  {
+                    title: 'OEM / ODM',
+                    body: 'Phát triển và sản xuất sản phẩm theo bản vẽ, mẫu hoặc yêu cầu kỹ thuật của buyer.',
+                    image: '/assets/manufacturing/factory-overview/capability/oem-odm.webp',
+                  },
+                  {
+                    title: 'Dự án xuất khẩu',
+                    body: 'Kết nối sản xuất với lưu kho, gom hàng và điều phối xuất khẩu theo từng dự án.',
+                    image: '/assets/manufacturing/factory-overview/capability/export-project.webp',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span className="manufacturing-factory-overview-capability-image" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
                   </article>
                 ))}
               </div>
@@ -2693,19 +2738,46 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <h2>{t('Hệ thống sản xuất')}</h2>
             <div className="manufacturing-factory-overview-production-grid">
               {[
-                ['1', 'Chuẩn bị vật liệu', 'Kiểm tra nguyên liệu đầu vào, độ ẩm và tiêu chuẩn vật liệu trước khi đưa vào sản xuất.'],
-                ['2', 'Gia công', 'Gia công gỗ, kim loại, mây tre và các cấu kiện theo bản vẽ kỹ thuật.'],
-                ['3', 'Hoàn thiện', 'Chà nhám, sơn hoàn thiện, bọc nệm, lắp ráp và xử lý bề mặt.'],
-                ['4', 'Kiểm tra chất lượng', 'Kiểm soát chất lượng tại từng công đoạn và kiểm tra cuối trước khi đóng gói.'],
-                ['5', 'Đóng gói & Xuất khẩu', 'Đóng gói theo tiêu chuẩn buyer, lưu kho và điều phối xuất khẩu.'],
-              ].map(([number, title, body]) => (
-                <article key={title}>
-                  <div className="manufacturing-factory-overview-image-slot" aria-hidden="true" />
+                {
+                  number: '1',
+                  title: 'Chuẩn bị vật liệu',
+                  body: 'Kiểm tra nguyên liệu đầu vào, độ ẩm và tiêu chuẩn vật liệu trước khi đưa vào sản xuất.',
+                  image: '/assets/manufacturing/factory-overview/production-system/material-preparation.webp',
+                },
+                {
+                  number: '2',
+                  title: 'Gia công',
+                  body: 'Gia công gỗ, kim loại, mây tre và các cấu kiện theo bản vẽ kỹ thuật.',
+                  image: '/assets/manufacturing/factory-overview/production-system/processing.webp',
+                },
+                {
+                  number: '3',
+                  title: 'Hoàn thiện',
+                  body: 'Chà nhám, sơn hoàn thiện, bọc nệm, lắp ráp và xử lý bề mặt.',
+                  image: '/assets/manufacturing/factory-overview/production-system/finishing.webp',
+                },
+                {
+                  number: '4',
+                  title: 'Kiểm tra chất lượng',
+                  body: 'Kiểm soát chất lượng tại từng công đoạn và kiểm tra cuối trước khi đóng gói.',
+                  image: '/assets/manufacturing/factory-overview/production-system/quality-control.webp',
+                },
+                {
+                  number: '5',
+                  title: 'Đóng gói & Xuất khẩu',
+                  body: 'Đóng gói theo tiêu chuẩn buyer, lưu kho và điều phối xuất khẩu.',
+                  image: '/assets/manufacturing/factory-overview/production-system/packing-export.webp',
+                },
+              ].map((item) => (
+                <article key={item.title}>
+                  <div className="manufacturing-factory-overview-image-slot" aria-hidden="true">
+                    {item.image ? <img src={item.image} alt="" loading="lazy" decoding="async" /> : null}
+                  </div>
                   <div className="manufacturing-factory-overview-production-copy">
-                    <span>{number}</span>
+                    <span>{item.number}</span>
                     <div>
-                      <h3>{t(title)}</h3>
-                      <p>{t(body)}</p>
+                      <h3>{t(item.title)}</h3>
+                      <p>{t(item.body)}</p>
                     </div>
                   </div>
                 </article>
@@ -2718,18 +2790,44 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Các nhóm sản phẩm sản xuất')}</h2>
               <div className="manufacturing-factory-overview-product-grid">
                 {[
-                  'Nội thất hoàn thiện',
-                  'Nội thất bọc nệm',
-                  'Nội thất mây tre',
-                  'Nội thất ngoài trời',
-                  'Linh kiện nội thất',
-                  'OEM / ODM',
-                  'Hospitality Furniture',
-                  'Commercial Furniture',
-                ].map((title) => (
-                  <article key={title}>
-                    <div className="manufacturing-factory-overview-image-slot" aria-hidden="true" />
-                    <h3>{t(title)}</h3>
+                  {
+                    title: 'Nội thất hoàn thiện',
+                    image: '/assets/manufacturing/factory-overview/product-groups/finished-furniture.webp',
+                  },
+                  {
+                    title: 'Nội thất bọc nệm',
+                    image: '/assets/manufacturing/factory-overview/product-groups/upholstered-furniture.webp',
+                  },
+                  {
+                    title: 'Nội thất mây tre',
+                    image: '/assets/manufacturing/factory-overview/product-groups/rattan-bamboo-furniture.webp',
+                  },
+                  {
+                    title: 'Nội thất ngoài trời',
+                    image: '/assets/manufacturing/factory-overview/product-groups/outdoor-furniture.webp',
+                  },
+                  {
+                    title: 'Linh kiện nội thất',
+                    image: '/assets/manufacturing/factory-overview/product-groups/furniture-components.webp',
+                  },
+                  {
+                    title: 'OEM / ODM',
+                    image: '/assets/manufacturing/factory-overview/product-groups/oem-odm.webp',
+                  },
+                  {
+                    title: 'Hospitality Furniture',
+                    image: '/assets/manufacturing/factory-overview/product-groups/hospitality-furniture.webp',
+                  },
+                  {
+                    title: 'Commercial Furniture',
+                    image: '/assets/manufacturing/factory-overview/product-groups/commercial-furniture.webp',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <div className="manufacturing-factory-overview-image-slot" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <h3>{t(item.title)}</h3>
                   </article>
                 ))}
               </div>
@@ -2739,15 +2837,33 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Hệ thống kiểm soát')}</h2>
               <div className="manufacturing-factory-overview-control-grid">
                 {[
-                  ['☑', 'Kiểm soát vật liệu', 'Kiểm tra nguyên liệu theo tiêu chuẩn kỹ thuật trước khi sản xuất.'],
-                  ['⚙', 'Kiểm soát sản xuất', 'Theo dõi từng công đoạn nhằm đảm bảo đúng quy trình và bản vẽ.'],
-                  ['♢', 'Kiểm soát chất lượng', 'QC độc lập trong suốt quá trình sản xuất và trước khi xuất hàng.'],
-                  ['▣', 'Kiểm soát tiến độ', 'Theo dõi kế hoạch sản xuất và tiến độ giao hàng của từng dự án.'],
-                ].map(([icon, title, body]) => (
-                  <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
-                    <h3>{t(title)}</h3>
-                    <p>{t(body)}</p>
+                  {
+                    title: 'Kiểm soát vật liệu',
+                    body: 'Kiểm tra nguyên liệu theo tiêu chuẩn kỹ thuật trước khi sản xuất.',
+                    image: '/assets/manufacturing/factory-overview/control-system/material-control.webp',
+                  },
+                  {
+                    title: 'Kiểm soát sản xuất',
+                    body: 'Theo dõi từng công đoạn nhằm đảm bảo đúng quy trình và bản vẽ.',
+                    image: '/assets/manufacturing/factory-overview/control-system/production-control.webp',
+                  },
+                  {
+                    title: 'Kiểm soát chất lượng',
+                    body: 'QC độc lập trong suốt quá trình sản xuất và trước khi xuất hàng.',
+                    image: '/assets/manufacturing/factory-overview/control-system/quality-control.webp',
+                  },
+                  {
+                    title: 'Kiểm soát tiến độ',
+                    body: 'Theo dõi kế hoạch sản xuất và tiến độ giao hàng của từng dự án.',
+                    image: '/assets/manufacturing/factory-overview/control-system/schedule-control.webp',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span className="manufacturing-factory-overview-control-image" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
                   </article>
                 ))}
               </div>
@@ -2757,15 +2873,32 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Năng lực vận hành của ANSLIFE')}</h2>
               <div className="manufacturing-factory-overview-operation-flow">
                 {[
-                  ['◎', 'Quản lý dự án'],
-                  ['⌂', 'Quản lý sản xuất'],
-                  ['♢', 'Quản lý chất lượng'],
-                  ['▧', 'Quản lý đóng gói'],
-                  ['▤', 'Quản lý logistics'],
-                ].map(([icon, title]) => (
-                  <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
-                    <h3>{t(title)}</h3>
+                  {
+                    title: 'Quản lý dự án',
+                    image: '/assets/manufacturing/factory-overview/operations/project-management.webp',
+                  },
+                  {
+                    title: 'Quản lý sản xuất',
+                    image: '/assets/manufacturing/factory-overview/operations/production-management.webp',
+                  },
+                  {
+                    title: 'Quản lý chất lượng',
+                    image: '/assets/manufacturing/factory-overview/operations/quality-management.webp',
+                  },
+                  {
+                    title: 'Quản lý đóng gói',
+                    image: '/assets/manufacturing/factory-overview/operations/packing-management.webp',
+                  },
+                  {
+                    title: 'Quản lý logistics',
+                    image: '/assets/manufacturing/factory-overview/operations/logistics-management.webp',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span className="manufacturing-factory-overview-operation-image" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <h3>{t(item.title)}</h3>
                   </article>
                 ))}
               </div>
@@ -2777,18 +2910,44 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Đóng gói trong hệ thống supply chain của ANSLIFE')}</h2>
               <div className="manufacturing-factory-overview-supply-flow">
                 {[
-                  ['✎', 'Thiết kế sản phẩm'],
-                  ['⌂', 'Sản xuất'],
-                  ['♢', 'QC'],
-                  ['▧', 'Đóng gói'],
-                  ['⌘', 'Lưu kho'],
-                  ['▥', 'Gom hàng'],
-                  ['▤', 'Xếp container'],
-                  ['▔', 'Xuất khẩu'],
-                ].map(([icon, title]) => (
-                  <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
-                    <h3>{t(title)}</h3>
+                  {
+                    title: 'Thiết kế sản phẩm',
+                    image: '/assets/manufacturing/factory-overview/supply-chain/product-design.webp',
+                  },
+                  {
+                    title: 'Sản xuất',
+                    image: '/assets/manufacturing/factory-overview/supply-chain/production.webp',
+                  },
+                  {
+                    title: 'QC',
+                    image: '/assets/manufacturing/factory-overview/supply-chain/qc.webp',
+                  },
+                  {
+                    title: 'Đóng gói',
+                    image: '/assets/manufacturing/factory-overview/supply-chain/packing.webp',
+                  },
+                  {
+                    title: 'Lưu kho',
+                    image: '/assets/manufacturing/factory-overview/supply-chain/storage.webp',
+                  },
+                  {
+                    title: 'Gom hàng',
+                    image: '/assets/manufacturing/factory-overview/supply-chain/consolidation.webp',
+                  },
+                  {
+                    title: 'Xếp container',
+                    image: '/assets/manufacturing/factory-overview/supply-chain/container-loading.webp',
+                  },
+                  {
+                    title: 'Xuất khẩu',
+                    image: '/assets/manufacturing/factory-overview/supply-chain/export.webp',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span className="manufacturing-factory-overview-supply-image" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <h3>{t(item.title)}</h3>
                   </article>
                 ))}
               </div>
@@ -9856,33 +10015,35 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <div className="materials-ash-overview-panel">
               {[
                 {
-                  icon: '▤',
                   title: 'Tên thương mại',
                   body: 'Ash',
+                  image: '/assets/materials/solid-wood/ash/overview/commercial-name.webp',
                 },
                 {
-                  icon: '⌁',
                   title: 'Nhóm vật liệu',
                   body: 'Gỗ tự nhiên',
+                  image: '/assets/materials/solid-wood/ash/overview/material-group.webp',
                 },
                 {
-                  icon: '◒',
                   title: 'Màu sắc tự nhiên',
                   body: 'Từ trắng kem đến vàng nhạt hoặc nâu nhạt.',
+                  image: '/assets/materials/solid-wood/ash/overview/natural-color.webp',
                 },
                 {
-                  icon: '▧',
                   title: 'Đặc điểm vân gỗ',
                   body: 'Vân gỗ rõ ràng, thẳng hoặc dạng sóng nhẹ, tạo cảm giác tự nhiên và hiện đại.',
+                  image: '/assets/materials/solid-wood/ash/overview/wood-grain.webp',
                 },
                 {
-                  icon: '✕',
                   title: 'Khả năng gia công',
                   body: 'Gia công tốt, phù hợp với cắt, tiện, CNC, uốn cong và nhiều phương pháp sản xuất nội thất.',
+                  image: '/assets/materials/solid-wood/ash/overview/machining.webp',
                 },
               ].map((item) => (
                 <article key={item.title}>
-                  <span aria-hidden="true">{item.icon}</span>
+                  <div className="materials-ash-overview-image-slot">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <div>
                     <h3>{t(item.title)}</h3>
                     <p>{t(item.body)}</p>
@@ -9897,39 +10058,43 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <div className="materials-ash-feature-panel">
               {[
                 {
-                  icon: '▥',
                   title: 'Vân gỗ đẹp và rõ nét',
                   body: 'Mang lại giá trị thẩm mỹ cao và dễ nhận diện trong các dòng nội thất hiện đại.',
+                  image: '/assets/materials/solid-wood/ash/features/wood-grain.webp',
                 },
                 {
-                  icon: '☼',
                   title: 'Màu sắc sáng',
                   body: 'Dễ kết hợp với nhiều phong cách thiết kế và phương án hoàn thiện.',
+                  image: '/assets/materials/solid-wood/ash/features/light-color.webp',
                 },
                 {
-                  icon: '◌',
                   title: 'Khả năng hoàn thiện linh hoạt',
                   body: 'Phù hợp với stain, lacquer, oil finish và nhiều hệ hoàn thiện khác.',
+                  image: '/assets/materials/solid-wood/ash/features/flexible-finishing.webp',
                 },
                 {
-                  icon: '✕',
                   title: 'Gia công tốt',
                   body: 'Thích hợp cho các chi tiết phức tạp, cấu kiện cong và sản phẩm yêu cầu độ chính xác cao.',
+                  image: '/assets/materials/solid-wood/ash/features/machining.webp',
                 },
                 {
-                  icon: '⌁',
                   title: 'Tính ứng dụng cao',
                   body: 'Được sử dụng rộng rãi trong nội thất gia đình, khách sạn và dự án thương mại.',
+                  image: '/assets/materials/solid-wood/ash/features/applications.webp',
                 },
                 {
-                  icon: '↗',
                   title: 'Phù hợp với nhiều thị trường',
                   body: 'Là loại gỗ quen thuộc trong các chương trình nội thất xuất khẩu sang Mỹ, Châu Âu và Nhật Bản.',
+                  image: '/assets/materials/solid-wood/ash/features/export-markets.webp',
                 },
               ].map((item) => (
                 <article key={item.title}>
-                  <span aria-hidden="true">{item.icon}</span>
-                  <h3>{t(item.title)}</h3>
+                  <div className="materials-ash-feature-heading">
+                    <div className="materials-ash-feature-image-slot">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <h3>{t(item.title)}</h3>
+                  </div>
                   <p>{t(item.body)}</p>
                 </article>
               ))}
@@ -9943,30 +10108,38 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 {
                   title: 'Ghế',
                   body: 'Ghế ăn, ghế lounge, ghế bọc nệm và các dòng ghế thiết kế.',
+                  image: '/assets/materials/solid-wood/ash/applications/chair.webp',
                 },
                 {
                   title: 'Bàn',
                   body: 'Bàn ăn, bàn làm việc, bàn cà phê và bàn phụ.',
+                  image: '/assets/materials/solid-wood/ash/applications/table.webp',
                 },
                 {
                   title: 'Tủ & lưu trữ',
                   body: 'Tủ đầu giường, tủ trang trí và các hệ lưu trữ cao cấp.',
+                  image: '/assets/materials/solid-wood/ash/applications/storage.webp',
                 },
                 {
                   title: 'Giường',
                   body: 'Khung giường và các bộ phận kết cấu.',
+                  image: '/assets/materials/solid-wood/ash/applications/bed.webp',
                 },
                 {
                   title: 'Cấu kiện nội thất',
                   body: 'Tay ghế, chân bàn, khung ghế và các chi tiết gia công theo bản vẽ.',
+                  image: '/assets/materials/solid-wood/ash/applications/components.webp',
                 },
                 {
                   title: 'Nội thất dự án',
                   body: 'Khách sạn, resort, nhà hàng, văn phòng và các không gian thương mại.',
+                  image: '/assets/materials/solid-wood/ash/applications/project-furniture.webp',
                 },
               ].map((item, index) => (
                 <article key={item.title}>
-                  <div className={`materials-ash-application-image-slot tone-${index + 1}`} />
+                  <div className={`materials-ash-application-image-slot tone-${index + 1}`}>
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <h3>{t(item.title)}</h3>
                   <p>{t(item.body)}</p>
                 </article>
@@ -9983,30 +10156,37 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                     tone: 'natural',
                     title: 'Natural Finish',
                     body: 'Giữ lại màu sắc tự nhiên và vẻ đẹp nguyên bản của vật liệu.',
+                    image: '/assets/materials/solid-wood/ash/finishes/natural-finish.webp',
                   },
                   {
                     tone: 'stain',
                     title: 'Stain Finish',
                     body: 'Tạo chiều sâu cho vân gỗ và phát triển màu sắc theo yêu cầu thiết kế.',
+                    image: '/assets/materials/solid-wood/ash/finishes/stain.webp',
                   },
                   {
                     tone: 'oil',
                     title: 'Oil Finish',
                     body: 'Mang lại cảm giác tự nhiên và gần gũi với vật liệu.',
+                    image: '/assets/materials/solid-wood/ash/finishes/oil-finish.webp',
                   },
                   {
                     tone: 'matte',
                     title: 'Matte Finish',
                     body: 'Tạo bề mặt hiện đại và tinh tế.',
+                    image: '/assets/materials/solid-wood/ash/finishes/matte-finish.webp',
                   },
                   {
                     tone: 'color',
                     title: 'Color Finish',
                     body: 'Hoàn thiện màu theo bảng màu hoặc mẫu duyệt của buyer.',
+                    image: '/assets/materials/solid-wood/ash/finishes/color-finish.webp',
                   },
                 ].map((item) => (
                   <article key={item.title}>
-                    <span className={`materials-ash-finish-swatch ${item.tone}`} aria-hidden="true" />
+                    <span className={`materials-ash-finish-swatch ${item.tone}`} aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </span>
                     <div>
                       <h3>{t(item.title)}</h3>
                       <p>{t(item.body)}</p>
@@ -10064,7 +10244,14 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                   'Tùy theo yêu cầu của buyer, Ash có thể được sử dụng cho sản phẩm hoàn thiện, cấu kiện nội thất, chương trình OEM / ODM hoặc các dự án nội thất thương mại và xuất khẩu.',
                 )}
               </p>
-              <div className="materials-ash-supply-image-slot" />
+              <div className="materials-ash-supply-image-slot">
+                <img
+                  src="/assets/materials/solid-wood/ash/supply/supply-chain-overview.webp"
+                  alt={t('Ash trong hệ thống cung ứng của ANSLIFE')}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </section>
           </div>
 
@@ -10076,22 +10263,28 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                   {
                     title: 'Scandinavian',
                     body: 'Tận dụng màu sáng và vân gỗ tự nhiên.',
+                    image: '/assets/materials/solid-wood/ash/styles/scandinavian.webp',
                   },
                   {
                     title: 'Modern',
                     body: 'Kết hợp với các đường nét đơn giản và hoàn thiện mờ.',
+                    image: '/assets/materials/solid-wood/ash/styles/modern.webp',
                   },
                   {
                     title: 'Contemporary',
                     body: 'Linh hoạt với nhiều phương án màu sắc và vật liệu kết hợp.',
+                    image: '/assets/materials/solid-wood/ash/styles/contemporary.webp',
                   },
                   {
                     title: 'Hospitality',
                     body: 'Phù hợp với các dự án khách sạn, resort và không gian thương mại.',
+                    image: '/assets/materials/solid-wood/ash/styles/hospitality.webp',
                   },
                 ].map((item) => (
                   <article key={item.title}>
-                    <div className="materials-ash-style-image-slot" />
+                    <div className="materials-ash-style-image-slot">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </div>
                     <h3>{t(item.title)}</h3>
                     <p>{t(item.body)}</p>
                   </article>
@@ -10104,45 +10297,48 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <div className="materials-ash-related-list">
                 {[
                   {
-                    icon: '▣',
                     title: 'Nội thất hoàn thiện',
                     body: 'Khám phá các sản phẩm sử dụng gỗ Ash.',
-                    href: '/vn/products-solutions/finished-furniture',
+                    href: '/products-solutions/finished-furniture',
                   },
                   {
-                    icon: '☷',
                     title: 'Cấu kiện nội thất',
                     body: 'Các cấu kiện và bộ phận được sản xuất từ Ash.',
-                    href: '/vn/products-solutions/furniture-components',
+                    href: '/products-solutions/furniture-components',
                   },
                   {
-                    icon: '▱',
                     title: 'Sơn & hoàn thiện bề mặt',
                     body: 'Các phương án hoàn thiện phù hợp với Ash.',
-                    href: '/vn/products-solutions/finishing',
+                    href: '/products-solutions/finishing',
                   },
                   {
-                    icon: '▦',
                     title: 'Kiểm soát độ ẩm',
                     body: 'Các hoạt động kiểm soát vật liệu trong sản xuất.',
-                    href: '/vn/resources/manufacturing-notes',
+                    href: '/resources/manufacturing-notes',
                   },
                 ].map((item) => (
-                  <a href={item.href} key={item.title}>
-                    <span aria-hidden="true">{item.icon}</span>
+                  <Link to={toLocalizedPath(item.href)} key={item.title}>
+                    <span aria-hidden="true">✓</span>
                     <div>
                       <h3>{t(item.title)}</h3>
                       <p>{t(item.body)}</p>
                     </div>
                     <b aria-hidden="true">›</b>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </section>
           </div>
 
           <section className="materials-ash-cta">
-            <div className="materials-ash-cta-image-slot" />
+            <div className="materials-ash-cta-image-slot">
+              <img
+                src="/assets/materials/solid-wood/ash/cta/project-consultation.webp"
+                alt={t('Trao đổi về vật liệu Ash cho dự án của bạn')}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <div className="materials-ash-cta-copy">
               <h2>{t('Trao đổi về vật liệu Ash cho dự án của bạn')}</h2>
               <p>

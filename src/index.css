@@ -13147,21 +13147,27 @@ a.mobile-menu-utility-link {
   padding: clamp(0.9rem, 1.18vw, 1.28rem);
 }
 
+.materials-ash-overview-image-slot {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.45rem;
+  background:
+    linear-gradient(135deg, rgba(233, 225, 214, 0.92), rgba(250, 246, 239, 0.96)),
+    #eee5d8;
+  box-shadow: inset 0 0 0 1px rgba(70, 49, 34, 0.1);
+}
+
+.materials-ash-overview-image-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .materials-ash-overview-panel article + article,
 .materials-ash-feature-panel article + article {
   border-left: 1px solid rgba(52, 48, 42, 0.16);
-}
-
-.materials-ash-overview-panel article > span,
-.materials-ash-feature-panel article > span {
-  display: inline-grid;
-  place-items: center;
-  width: clamp(2.35rem, 2.9vw, 3.25rem);
-  aspect-ratio: 1;
-  color: #7a5d3d;
-  font-family: var(--font-heading);
-  font-size: clamp(1.55rem, 2vw, 2.2rem);
-  line-height: 1;
 }
 
 .materials-ash-overview-panel h3,
@@ -13202,12 +13208,33 @@ a.mobile-menu-utility-link {
 .materials-ash-feature-panel article {
   display: grid;
   align-content: start;
-  min-height: clamp(13.2rem, 14.4vw, 16.6rem);
+  min-height: clamp(9.4rem, 10.5vw, 12.2rem);
   padding: clamp(1rem, 1.25vw, 1.35rem);
 }
 
-.materials-ash-feature-panel article > span {
-  margin-bottom: clamp(0.75rem, 0.95vw, 1rem);
+.materials-ash-feature-heading {
+  display: grid;
+  grid-template-columns: clamp(2.55rem, 3vw, 3.4rem) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(0.62rem, 0.8vw, 0.95rem);
+}
+
+.materials-ash-feature-image-slot {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.45rem;
+  background:
+    linear-gradient(135deg, rgba(233, 225, 214, 0.92), rgba(250, 246, 239, 0.96)),
+    #eee5d8;
+  box-shadow: inset 0 0 0 1px rgba(70, 49, 34, 0.1);
+}
+
+.materials-ash-feature-image-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .materials-ash-application-grid {
@@ -13235,6 +13262,16 @@ a.mobile-menu-utility-link {
 
 .materials-ash-application-image-slot {
   height: clamp(11.2rem, 12.6vw, 15rem);
+}
+
+.materials-ash-application-image-slot img,
+.materials-ash-supply-image-slot img,
+.materials-ash-style-image-slot img,
+.materials-ash-cta-image-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .materials-ash-application-image-slot::before,
@@ -13293,6 +13330,13 @@ a.mobile-menu-utility-link {
   box-shadow: inset 0 0 0 1px rgba(70, 49, 34, 0.12);
 }
 
+.materials-ash-finish-swatch img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .materials-ash-control-list article {
   display: grid;
   grid-template-columns: clamp(1.85rem, 2vw, 2.2rem) minmax(0, 1fr);
@@ -13329,6 +13373,10 @@ a.mobile-menu-utility-link {
   min-height: clamp(9.6rem, 10.8vw, 13rem);
   margin-top: clamp(1rem, 1.3vw, 1.4rem);
   border-radius: 6px;
+}
+
+.materials-ash-supply-image-slot img {
+  min-height: inherit;
 }
 
 .materials-ash-followup-row {
@@ -13490,6 +13538,10 @@ a.mobile-menu-utility-link {
 .materials-ash-cta-image-slot {
   min-height: clamp(9rem, 10vw, 12rem);
   border-radius: 6px;
+}
+
+.materials-ash-cta-image-slot img {
+  min-height: inherit;
 }
 
 .materials-ash-cta-copy h2 {
@@ -14359,6 +14411,80 @@ a.mobile-menu-utility-link {
   background: rgba(255, 253, 248, 0.78);
 }
 
+.manufacturing-factory-overview-system-flow article > .manufacturing-factory-overview-system-image {
+  overflow: hidden;
+  width: clamp(2.65rem, 3.15vw, 3.65rem);
+  max-width: none;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  font-size: 0;
+  background: rgba(246, 241, 232, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(70, 49, 34, 0.1);
+}
+
+.manufacturing-factory-overview-system-flow article > .manufacturing-factory-overview-system-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manufacturing-factory-overview-capability-grid article > .manufacturing-factory-overview-capability-image {
+  overflow: hidden;
+  font-size: 0;
+  background: rgba(246, 241, 232, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(70, 49, 34, 0.1);
+}
+
+.manufacturing-factory-overview-capability-grid article > .manufacturing-factory-overview-capability-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manufacturing-factory-overview-control-grid article > .manufacturing-factory-overview-control-image {
+  overflow: hidden;
+  font-size: 0;
+  background: rgba(246, 241, 232, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(70, 49, 34, 0.1);
+}
+
+.manufacturing-factory-overview-control-grid article > .manufacturing-factory-overview-control-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manufacturing-factory-overview-operation-flow article > .manufacturing-factory-overview-operation-image {
+  overflow: hidden;
+  font-size: 0;
+  background: rgba(246, 241, 232, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(70, 49, 34, 0.1);
+}
+
+.manufacturing-factory-overview-operation-flow article > .manufacturing-factory-overview-operation-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manufacturing-factory-overview-supply-flow article > .manufacturing-factory-overview-supply-image {
+  overflow: hidden;
+  font-size: 0;
+  background: rgba(246, 241, 232, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(70, 49, 34, 0.1);
+}
+
+.manufacturing-factory-overview-supply-flow article > .manufacturing-factory-overview-supply-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .manufacturing-factory-overview-system-flow article:not(:last-child),
 .manufacturing-factory-overview-supply-flow article:not(:last-child) {
   position: relative;
@@ -14367,11 +14493,18 @@ a.mobile-menu-utility-link {
 .manufacturing-factory-overview-system-flow article:not(:last-child)::after,
 .manufacturing-factory-overview-supply-flow article:not(:last-child)::after {
   position: absolute;
-  top: clamp(1.85rem, 2.2vw, 2.45rem);
   right: -0.62rem;
   color: rgba(83, 71, 57, 0.52);
   content: '→';
   font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+}
+
+.manufacturing-factory-overview-system-flow article:not(:last-child)::after {
+  top: clamp(1.85rem, 2.2vw, 2.45rem);
+}
+
+.manufacturing-factory-overview-supply-flow article:not(:last-child)::after {
+  top: clamp(1.85rem, 2.2vw, 2.45rem);
 }
 
 .manufacturing-factory-overview-system-flow h3,
@@ -14407,10 +14540,18 @@ a.mobile-menu-utility-link {
 }
 
 .manufacturing-factory-overview-image-slot {
+  overflow: hidden;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(235, 222, 205, 0.68)),
     #f1e6d8;
   box-shadow: inset 0 0 0 1px rgba(91, 67, 46, 0.1);
+}
+
+.manufacturing-factory-overview-image-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .manufacturing-factory-overview-production-grid article,
@@ -14460,6 +14601,18 @@ a.mobile-menu-utility-link {
 
 .manufacturing-factory-overview-operation-flow {
   gap: 0;
+}
+
+.manufacturing-factory-overview-operation-flow article {
+  grid-template-columns: clamp(2.65rem, 3.15vw, 3.65rem) minmax(0, 1fr);
+  gap: clamp(0.68rem, 0.9vw, 1rem);
+  align-items: center;
+  justify-items: start;
+  text-align: left;
+}
+
+.manufacturing-factory-overview-operation-flow article > span {
+  margin-bottom: 0;
 }
 
 .manufacturing-factory-overview-operation-flow article + article {
@@ -64829,4 +64982,282 @@ img.supply-hub-weekly-cta-image-placeholder {
   background-image: none !important;
   border: 0 !important;
   box-shadow: none !important;
+}
+
+@media (max-width: 680px) {
+  .materials-ash-content {
+    width: min(calc(100vw - 3rem), 42rem);
+    max-width: calc(100vw - 3rem);
+    margin: 0.78rem auto 2.35rem;
+    overflow-x: clip;
+  }
+
+  .materials-ash-content > section + section,
+  .materials-ash-detail-row,
+  .materials-ash-followup-row,
+  .materials-ash-cta {
+    margin-top: 0.98rem;
+  }
+
+  .materials-ash-content h2 {
+    gap: 0.55rem;
+    margin-bottom: 0.55rem;
+    font-size: 0.82rem;
+    line-height: 1.1;
+  }
+
+  .materials-ash-content :is(h2, h3, p, a, span, b) {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  .materials-ash-overview-panel,
+  .materials-ash-feature-panel,
+  .materials-ash-application-grid,
+  .materials-ash-style-grid {
+    border-radius: 7px;
+  }
+
+  .materials-ash-overview-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .materials-ash-overview-panel article:nth-child(n) {
+    grid-template-columns: 2.45rem minmax(0, 1fr);
+    gap: 0.62rem;
+    min-height: auto;
+    padding: 0.68rem 0.72rem;
+    border-left: 0;
+  }
+
+  .materials-ash-overview-panel article + article {
+    border-top: 1px solid rgba(52, 48, 42, 0.14);
+  }
+
+  .materials-ash-feature-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .materials-ash-feature-panel article:nth-child(n) {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 0.68rem 0.72rem;
+    border-top: 0;
+    border-left: 0;
+  }
+
+  .materials-ash-feature-panel article + article {
+    border-top: 1px solid rgba(52, 48, 42, 0.14);
+  }
+
+  .materials-ash-feature-heading {
+    grid-template-columns: 2.05rem minmax(0, 1fr);
+    gap: 0.58rem;
+  }
+
+  .materials-ash-overview-panel h3,
+  .materials-ash-feature-panel h3,
+  .materials-ash-finishing-list h3,
+  .materials-ash-control-list h3 {
+    font-size: 0.82rem;
+    line-height: 1.12;
+  }
+
+  .materials-ash-overview-panel p,
+  .materials-ash-feature-panel p,
+  .materials-ash-finishing-list p,
+  .materials-ash-control-list p,
+  .materials-ash-supply p,
+  .materials-ash-related-list p,
+  .materials-ash-cta-copy p {
+    font-size: 0.64rem;
+    line-height: 1.32;
+  }
+
+  .materials-ash-feature-panel p {
+    margin-top: 0.48rem;
+  }
+
+  .materials-ash-application-grid {
+    grid-template-columns: 1fr;
+    gap: 0.58rem;
+  }
+
+  .materials-ash-application-grid article {
+    display: grid;
+    grid-template-columns: minmax(7.4rem, 0.42fr) minmax(0, 1fr);
+    align-items: start;
+    border-radius: 7px;
+  }
+
+  .materials-ash-application-image-slot {
+    grid-row: span 2;
+    height: 100%;
+    min-height: 7.2rem;
+  }
+
+  .materials-ash-application-grid h3 {
+    grid-column: 2;
+    margin: 0.66rem 0.68rem 0;
+    font-size: 0.92rem;
+    line-height: 1.12;
+  }
+
+  .materials-ash-application-grid p {
+    grid-column: 2;
+    margin: 0.36rem 0.68rem 0.7rem;
+    font-size: 0.62rem;
+    line-height: 1.3;
+  }
+
+  .materials-ash-detail-row {
+    grid-template-columns: 1fr;
+    gap: 0.78rem;
+  }
+
+  .materials-ash-detail-row > section,
+  .materials-ash-style-fit,
+  .materials-ash-related-links,
+  .materials-ash-cta {
+    padding: 0.72rem;
+    border-radius: 7px;
+  }
+
+  .materials-ash-detail-row h2,
+  .materials-ash-followup-row h2,
+  .materials-ash-related-links h2 {
+    margin-bottom: 0.58rem;
+  }
+
+  .materials-ash-finishing-list {
+    gap: 0.55rem;
+  }
+
+  .materials-ash-finishing-list article {
+    grid-template-columns: 4.9rem minmax(0, 1fr);
+    gap: 0.62rem;
+  }
+
+  .materials-ash-control-list {
+    gap: 0.58rem;
+  }
+
+  .materials-ash-control-list article {
+    grid-template-columns: 1.42rem minmax(0, 1fr);
+    gap: 0.54rem;
+  }
+
+  .materials-ash-control-list article > span {
+    width: 1.24rem;
+    border-width: 1px;
+    font-size: 0.66rem;
+  }
+
+  .materials-ash-supply p + p {
+    margin-top: 0.52rem;
+  }
+
+  .materials-ash-supply-image-slot {
+    min-height: 7.2rem;
+    margin-top: 0.72rem;
+  }
+
+  .materials-ash-followup-row {
+    grid-template-columns: 1fr;
+    gap: 0.78rem;
+  }
+
+  .materials-ash-style-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .materials-ash-style-grid article:nth-child(n) {
+    border-top: 0;
+    border-left: 0;
+  }
+
+  .materials-ash-style-grid article + article {
+    border-top: 1px solid rgba(52, 48, 42, 0.12);
+  }
+
+  .materials-ash-style-image-slot {
+    height: 7rem;
+    min-height: 0;
+  }
+
+  .materials-ash-style-grid h3,
+  .materials-ash-related-list h3 {
+    margin-top: 0.55rem;
+    font-size: 0.82rem;
+    line-height: 1.12;
+  }
+
+  .materials-ash-style-grid p {
+    margin-bottom: 0.68rem;
+    font-size: 0.62rem;
+    line-height: 1.28;
+  }
+
+  .materials-ash-related-list a {
+    grid-template-columns: 1.75rem minmax(0, 1fr) auto;
+    min-height: 3.2rem;
+    padding: 0.48rem 0.54rem;
+  }
+
+  .materials-ash-related-list a > span {
+    width: 1.46rem;
+    font-size: 0.96rem;
+  }
+
+  .materials-ash-related-list b {
+    font-size: 1.18rem;
+  }
+
+  .materials-ash-cta {
+    grid-template-columns: 1fr;
+    gap: 0.72rem;
+  }
+
+  .materials-ash-cta-image-slot {
+    min-height: 7.8rem;
+  }
+
+  .materials-ash-cta-copy h2 {
+    font-size: clamp(1.04rem, 5vw, 1.42rem);
+    line-height: 1.06;
+  }
+
+  .materials-ash-cta-actions {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-top: 0.72rem;
+  }
+
+  .materials-ash-cta-actions a {
+    min-height: 2.38rem;
+    padding: 0.58rem 0.68rem;
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .materials-ash-application-image-slot {
+    height: 8.8rem;
+  }
+
+  .materials-ash-application-grid article {
+    grid-template-columns: 1fr;
+  }
+
+  .materials-ash-application-image-slot {
+    grid-row: auto;
+  }
+
+  .materials-ash-application-grid h3,
+  .materials-ash-application-grid p {
+    grid-column: auto;
+  }
 }

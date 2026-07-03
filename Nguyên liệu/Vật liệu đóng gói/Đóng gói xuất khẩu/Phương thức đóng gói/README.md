@@ -1,3 +1,0 @@
-# Phuong thuc dong goi
-
-Thu muc de bo anh cho phan nay tren trang Dong goi xuat khau.
