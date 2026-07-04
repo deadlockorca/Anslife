@@ -14822,6 +14822,13 @@ a.mobile-menu-utility-link {
   letter-spacing: 0;
 }
 
+.manufacturing-machinery-equipment-overview-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.52fr);
+  gap: clamp(0.9rem, 1.25vw, 1.35rem);
+  align-items: stretch;
+}
+
 .manufacturing-machinery-equipment-system,
 .manufacturing-machinery-equipment-technology,
 .manufacturing-machinery-equipment-capability,
@@ -14835,6 +14842,100 @@ a.mobile-menu-utility-link {
     linear-gradient(180deg, rgba(255, 253, 248, 0.98), rgba(249, 245, 238, 0.94)),
     #f8f2e8;
   box-shadow: 0 10px 20px rgba(41, 35, 28, 0.045);
+}
+
+.manufacturing-machinery-equipment-flow-panel,
+.manufacturing-machinery-equipment-production-panel {
+  padding: clamp(0.95rem, 1.2vw, 1.3rem);
+  border: 1px solid rgba(83, 71, 57, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.98), rgba(249, 245, 238, 0.94)),
+    #f8f2e8;
+  box-shadow: 0 10px 20px rgba(41, 35, 28, 0.045);
+}
+
+.manufacturing-machinery-equipment-flow-list,
+.manufacturing-machinery-equipment-production-capability-grid {
+  display: grid;
+  gap: clamp(0.62rem, 0.82vw, 0.9rem);
+}
+
+.manufacturing-machinery-equipment-flow-list {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  align-items: start;
+}
+
+.manufacturing-machinery-equipment-flow-list article {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  min-width: 0;
+  text-align: center;
+}
+
+.manufacturing-machinery-equipment-flow-list article:not(:last-child)::after {
+  position: absolute;
+  top: clamp(1.88rem, 2.2vw, 2.45rem);
+  right: -0.5rem;
+  color: rgba(83, 71, 57, 0.5);
+  content: '→';
+  font-size: clamp(0.86rem, 1vw, 1.1rem);
+}
+
+.manufacturing-machinery-equipment-flow-list article > span,
+.manufacturing-machinery-equipment-production-capability-grid article > span {
+  display: grid;
+  place-items: center;
+  width: clamp(2.75rem, 3.25vw, 3.85rem);
+  aspect-ratio: 1;
+  margin-bottom: clamp(0.42rem, 0.58vw, 0.72rem);
+  border: 1px solid rgba(83, 71, 57, 0.22);
+  border-radius: 999px;
+  color: #17191d;
+  font-family: var(--font-heading);
+  font-size: clamp(1.28rem, 1.65vw, 2rem);
+  line-height: 1;
+  background: rgba(255, 253, 248, 0.82);
+}
+
+.manufacturing-machinery-equipment-flow-list article > .manufacturing-machinery-equipment-flow-image,
+.manufacturing-machinery-equipment-production-capability-grid
+  article
+  > .manufacturing-machinery-equipment-production-capability-image {
+  overflow: hidden;
+  font-size: 0;
+  background: rgba(246, 241, 232, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(70, 49, 34, 0.1);
+}
+
+.manufacturing-machinery-equipment-flow-list article > .manufacturing-machinery-equipment-flow-image img,
+.manufacturing-machinery-equipment-production-capability-grid
+  article
+  > .manufacturing-machinery-equipment-production-capability-image
+  img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manufacturing-machinery-equipment-production-capability-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.manufacturing-machinery-equipment-production-capability-grid article {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  min-width: 0;
+  min-height: clamp(13.5rem, 15.2vw, 17.5rem);
+  padding: clamp(0.72rem, 0.92vw, 1.02rem);
+  border: 1px solid rgba(83, 71, 57, 0.16);
+  border-radius: 8px;
+  text-align: center;
+  background: rgba(255, 253, 248, 0.54);
+  box-shadow: 0 8px 16px rgba(41, 35, 28, 0.038);
 }
 
 .manufacturing-machinery-equipment-system {
@@ -14857,10 +14958,19 @@ a.mobile-menu-utility-link {
 
 .manufacturing-machinery-equipment-image-slot {
   min-height: clamp(8.4rem, 9.6vw, 12rem);
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(231, 220, 205, 0.7)),
     #f1e6d8;
   box-shadow: inset 0 0 0 1px rgba(91, 67, 46, 0.1);
+}
+
+.manufacturing-machinery-equipment-image-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .manufacturing-machinery-equipment-system-copy {
@@ -14868,14 +14978,12 @@ a.mobile-menu-utility-link {
   padding: clamp(0.78rem, 0.98vw, 1.12rem);
 }
 
-.manufacturing-machinery-equipment-technology-grid article > span,
-.manufacturing-machinery-equipment-capability-grid article > span,
-.manufacturing-machinery-equipment-role-flow article > span,
-.manufacturing-machinery-equipment-investment-grid article > span {
+.manufacturing-machinery-equipment-role-flow article > span {
   display: grid;
   place-items: center;
   width: clamp(2.8rem, 3.35vw, 3.9rem);
   aspect-ratio: 1;
+  overflow: hidden;
   border: 1px solid rgba(83, 71, 57, 0.2);
   border-radius: 999px;
   color: #173f20;
@@ -14885,7 +14993,59 @@ a.mobile-menu-utility-link {
   background: rgba(255, 253, 248, 0.82);
 }
 
+.manufacturing-machinery-equipment-role-flow article > .manufacturing-machinery-equipment-role-image {
+  font-size: 0;
+  background: rgba(246, 241, 232, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(70, 49, 34, 0.1);
+}
+
+.manufacturing-machinery-equipment-role-flow article > .manufacturing-machinery-equipment-role-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manufacturing-machinery-equipment-technology-grid article > span,
+.manufacturing-machinery-equipment-capability-grid article > span,
+.manufacturing-machinery-equipment-investment-grid article > span {
+  display: grid;
+  place-items: center;
+  width: min(100%, clamp(4.8rem, 5.8vw, 6.8rem));
+  aspect-ratio: 4 / 3;
+  margin-bottom: clamp(0.46rem, 0.62vw, 0.72rem);
+  overflow: hidden;
+  border: 1px solid rgba(83, 71, 57, 0.2);
+  border-radius: 6px;
+  color: #173f20;
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 1.8vw, 2.25rem);
+  line-height: 1;
+  background: rgba(255, 253, 248, 0.82);
+}
+
+.manufacturing-machinery-equipment-technology-grid
+  article
+  > .manufacturing-machinery-equipment-technology-image {
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 3 / 2;
+  background: rgba(246, 241, 232, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(70, 49, 34, 0.1);
+}
+
+.manufacturing-machinery-equipment-technology-grid article > span img,
+.manufacturing-machinery-equipment-capability-grid article > span img,
+.manufacturing-machinery-equipment-investment-grid article > span img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .manufacturing-machinery-equipment-system-copy h3,
+.manufacturing-machinery-equipment-flow-list h3,
+.manufacturing-machinery-equipment-production-capability-grid h3,
 .manufacturing-machinery-equipment-technology-grid h3,
 .manufacturing-machinery-equipment-capability-grid h3,
 .manufacturing-machinery-equipment-role-flow h3,
@@ -14900,6 +15060,7 @@ a.mobile-menu-utility-link {
 }
 
 .manufacturing-machinery-equipment-system-copy p,
+.manufacturing-machinery-equipment-production-capability-grid p,
 .manufacturing-machinery-equipment-technology-grid p,
 .manufacturing-machinery-equipment-capability-grid p,
 .manufacturing-machinery-equipment-investment-grid p,
@@ -15046,6 +15207,19 @@ a.mobile-menu-utility-link {
 }
 
 @media (max-width: 1180px) {
+  .manufacturing-machinery-equipment-overview-row {
+    grid-template-columns: 1fr;
+  }
+
+  .manufacturing-machinery-equipment-flow-list,
+  .manufacturing-machinery-equipment-production-capability-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .manufacturing-machinery-equipment-flow-list article:nth-child(4)::after {
+    display: none;
+  }
+
   .manufacturing-machinery-equipment-system-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -15077,6 +15251,16 @@ a.mobile-menu-utility-link {
     font-size: 0.86rem;
   }
 
+  .manufacturing-machinery-equipment-overview-row {
+    grid-template-columns: 1fr;
+    gap: 1.08rem;
+  }
+
+  .manufacturing-machinery-equipment-flow-panel,
+  .manufacturing-machinery-equipment-production-panel {
+    padding: 0.82rem;
+  }
+
   .manufacturing-machinery-equipment-system,
   .manufacturing-machinery-equipment-technology,
   .manufacturing-machinery-equipment-capability,
@@ -15084,6 +15268,39 @@ a.mobile-menu-utility-link {
   .manufacturing-machinery-equipment-investment,
   .manufacturing-machinery-equipment-cta {
     padding: 0.82rem;
+  }
+
+  .manufacturing-machinery-equipment-flow-list,
+  .manufacturing-machinery-equipment-production-capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .manufacturing-machinery-equipment-flow-list article {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 0.68rem;
+    align-items: center;
+    justify-items: start;
+    min-height: 3.5rem;
+    text-align: left;
+  }
+
+  .manufacturing-machinery-equipment-flow-list article:not(:last-child)::after {
+    display: none;
+  }
+
+  .manufacturing-machinery-equipment-flow-list article > span {
+    margin-bottom: 0;
+  }
+
+  .manufacturing-machinery-equipment-production-capability-grid article {
+    align-items: start;
+    justify-items: start;
+    min-height: 0;
+    text-align: left;
+  }
+
+  .manufacturing-machinery-equipment-production-capability-grid article > span {
+    margin-bottom: 0.56rem;
   }
 
   .manufacturing-machinery-equipment-system-grid,
@@ -15198,6 +15415,7 @@ a.mobile-menu-utility-link {
 .manufacturing-finishing-capability-image-slot,
 .manufacturing-finishing-capability-surface-slot,
 .manufacturing-finishing-capability-wide-slot {
+  overflow: hidden;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(231, 220, 205, 0.7)),
     #f1e6d8;
@@ -15205,22 +15423,36 @@ a.mobile-menu-utility-link {
 }
 
 .manufacturing-finishing-capability-image-slot {
+  aspect-ratio: 3 / 2;
   min-height: clamp(7.6rem, 8.4vw, 10.4rem);
 }
 
 .manufacturing-finishing-capability-surface-slot {
-  min-height: clamp(4.2rem, 4.8vw, 6rem);
+  width: 100%;
+  aspect-ratio: 8 / 3;
+  min-height: 0;
+  margin: 0;
 }
 
 .manufacturing-finishing-capability-wide-slot {
+  aspect-ratio: 3 / 2;
   min-height: clamp(9rem, 10vw, 12rem);
   border-radius: 7px;
+}
+
+.manufacturing-finishing-capability-image-slot img,
+.manufacturing-finishing-capability-surface-slot img,
+.manufacturing-finishing-capability-wide-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .manufacturing-finishing-capability-capacity-copy {
   position: relative;
   min-height: clamp(8.7rem, 9.8vw, 11.8rem);
-  padding: clamp(1.1rem, 1.25vw, 1.42rem) clamp(0.78rem, 0.98vw, 1.12rem)
+  padding: clamp(0.82rem, 1vw, 1.12rem) clamp(0.78rem, 0.98vw, 1.12rem)
     clamp(0.78rem, 0.98vw, 1.12rem);
   text-align: center;
 }
@@ -15353,6 +15585,7 @@ a.mobile-menu-utility-link {
   width: clamp(2.65rem, 3.15vw, 3.65rem);
   aspect-ratio: 1;
   margin-bottom: clamp(0.42rem, 0.58vw, 0.72rem);
+  overflow: hidden;
   border: 1px solid rgba(83, 71, 57, 0.18);
   border-radius: 999px;
   color: #173f20;
@@ -15360,6 +15593,23 @@ a.mobile-menu-utility-link {
   font-size: clamp(1.35rem, 1.75vw, 2.15rem);
   line-height: 1;
   background: rgba(255, 253, 248, 0.78);
+}
+
+.manufacturing-finishing-capability-process-flow article > .manufacturing-finishing-capability-flow-image,
+.manufacturing-finishing-capability-control-grid article > .manufacturing-finishing-capability-flow-image,
+.manufacturing-finishing-capability-value-flow article > .manufacturing-finishing-capability-flow-image {
+  font-size: 0;
+  background: rgba(246, 241, 232, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(70, 49, 34, 0.1);
+}
+
+.manufacturing-finishing-capability-process-flow article > .manufacturing-finishing-capability-flow-image img,
+.manufacturing-finishing-capability-control-grid article > .manufacturing-finishing-capability-flow-image img,
+.manufacturing-finishing-capability-value-flow article > .manufacturing-finishing-capability-flow-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .manufacturing-finishing-capability-process-flow small {
@@ -15531,7 +15781,8 @@ a.mobile-menu-utility-link {
   }
 
   .manufacturing-finishing-capability-surface-slot {
-    min-height: 4.8rem;
+    width: 100%;
+    min-height: 0;
   }
 
   .manufacturing-finishing-capability-capacity-copy {
@@ -16006,8 +16257,7 @@ a.mobile-menu-utility-link {
 
 .manufacturing-packing-area-stage-head {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: clamp(0.56rem, 0.72vw, 0.84rem);
+  justify-items: center;
   align-items: start;
 }
 
@@ -16083,12 +16333,28 @@ a.mobile-menu-utility-link {
 .manufacturing-packing-area-image-slot,
 .manufacturing-packing-area-material-slot,
 .manufacturing-packing-area-capability-slot,
-.manufacturing-packing-area-role-slot {
+.manufacturing-packing-area-role-slot,
+.manufacturing-packing-area-process-image-slot,
+.manufacturing-packing-area-role-image-slot {
   width: 100%;
+  overflow: hidden;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(231, 220, 205, 0.7)),
     #f1e6d8;
   box-shadow: inset 0 0 0 1px rgba(91, 67, 46, 0.1);
+}
+
+.manufacturing-packing-area-image-slot img,
+.manufacturing-packing-area-material-slot img,
+.manufacturing-packing-area-capability-slot img,
+.manufacturing-packing-area-role-slot img,
+.manufacturing-packing-area-process-image-slot img,
+.manufacturing-packing-area-role-image-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .manufacturing-packing-area-image-slot {
@@ -16167,6 +16433,13 @@ a.mobile-menu-utility-link {
   background: rgba(255, 253, 248, 0.78);
 }
 
+.manufacturing-packing-area-process-image-slot {
+  width: clamp(3.4rem, 4.4vw, 5.6rem);
+  aspect-ratio: 1.18;
+  margin-bottom: clamp(0.42rem, 0.58vw, 0.72rem);
+  border-radius: 6px;
+}
+
 .manufacturing-packing-area-process-flow small {
   display: grid;
   place-items: center;
@@ -16199,7 +16472,7 @@ a.mobile-menu-utility-link {
 
 .manufacturing-packing-area-capability-grid article {
   display: grid;
-  grid-template-columns: clamp(2.5rem, 3vw, 3.5rem) minmax(0, 1fr) minmax(7.5rem, 0.42fr);
+  grid-template-columns: minmax(0, 1fr) minmax(7.5rem, 0.42fr);
   gap: clamp(0.72rem, 0.92vw, 1rem);
   align-items: center;
   min-height: clamp(9rem, 9.8vw, 11rem);
@@ -16253,6 +16526,13 @@ a.mobile-menu-utility-link {
 .manufacturing-packing-area-role-grid article {
   min-height: clamp(8.2rem, 9vw, 10.4rem);
   box-shadow: none;
+}
+
+.manufacturing-packing-area-role-image-slot {
+  width: min(100%, clamp(4.8rem, 5.6vw, 6.8rem));
+  aspect-ratio: 1.18;
+  margin-bottom: clamp(0.42rem, 0.58vw, 0.72rem);
+  border-radius: 6px;
 }
 
 .manufacturing-packing-area-cta {
@@ -16482,9 +16762,7 @@ a.mobile-menu-utility-link {
 
 .manufacturing-assembly-line-stage-head {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: clamp(0.56rem, 0.72vw, 0.84rem);
-  align-items: start;
+  justify-items: center;
 }
 
 .manufacturing-assembly-line-stage-head span {
@@ -16556,11 +16834,28 @@ a.mobile-menu-utility-link {
 
 .manufacturing-assembly-line-image-slot,
 .manufacturing-assembly-line-product-slot,
-.manufacturing-assembly-line-wide-slot {
+.manufacturing-assembly-line-wide-slot,
+.manufacturing-assembly-line-control-image-slot,
+.manufacturing-assembly-line-application-image-slot,
+.manufacturing-assembly-line-related-image-slot {
+  overflow: hidden;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(231, 220, 205, 0.7)),
     #f1e6d8;
   box-shadow: inset 0 0 0 1px rgba(91, 67, 46, 0.1);
+}
+
+.manufacturing-assembly-line-image-slot img,
+.manufacturing-assembly-line-product-slot img,
+.manufacturing-assembly-line-wide-slot img,
+.manufacturing-assembly-line-control-image-slot img,
+.manufacturing-assembly-line-application-image-slot img,
+.manufacturing-assembly-line-related-image-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .manufacturing-assembly-line-image-slot {
@@ -16656,6 +16951,13 @@ a.mobile-menu-utility-link {
   background: rgba(255, 253, 248, 0.78);
 }
 
+.manufacturing-assembly-line-control-image-slot {
+  width: clamp(3.4rem, 4.4vw, 5.6rem);
+  aspect-ratio: 1.18;
+  margin-bottom: clamp(0.42rem, 0.58vw, 0.72rem);
+  border-radius: 6px;
+}
+
 .manufacturing-assembly-line-application-grid {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
@@ -16672,6 +16974,13 @@ a.mobile-menu-utility-link {
 
 .manufacturing-assembly-line-application-grid article:first-child {
   border-left: 0;
+}
+
+.manufacturing-assembly-line-application-image-slot {
+  width: min(100%, clamp(5.2rem, 6vw, 7.4rem));
+  aspect-ratio: 1.25;
+  margin-bottom: clamp(0.42rem, 0.58vw, 0.72rem);
+  border-radius: 6px;
 }
 
 .manufacturing-assembly-line-role {
@@ -16714,6 +17023,13 @@ a.mobile-menu-utility-link {
   aspect-ratio: 1;
   margin-bottom: clamp(0.42rem, 0.58vw, 0.72rem);
   font-size: clamp(1.35rem, 1.75vw, 2.15rem);
+}
+
+.manufacturing-assembly-line-related-image-slot {
+  width: min(100%, clamp(5.8rem, 6.4vw, 8rem));
+  aspect-ratio: 1.28;
+  margin-bottom: clamp(0.42rem, 0.58vw, 0.72rem);
+  border-radius: 6px;
 }
 
 .manufacturing-assembly-line-related-grid a {
@@ -16871,6 +17187,12 @@ a.mobile-menu-utility-link {
     min-height: 8.4rem;
   }
 
+  .manufacturing-assembly-line-control-image-slot,
+  .manufacturing-assembly-line-application-image-slot,
+  .manufacturing-assembly-line-related-image-slot {
+    width: min(100%, 8.6rem);
+  }
+
   .manufacturing-assembly-line-control-flow article:not(:last-child)::after {
     display: none;
   }
@@ -16898,6 +17220,563 @@ a.mobile-menu-utility-link {
 
   .manufacturing-assembly-line-cta h2 {
     font-size: clamp(1.12rem, 5.2vw, 1.72rem);
+  }
+}
+
+@media (max-width: 680px) {
+  .manufacturing-factory-overview-content,
+  .manufacturing-machinery-equipment-content,
+  .manufacturing-finishing-capability-content,
+  .manufacturing-assembly-line-content,
+  .manufacturing-packing-area-content,
+  .manufacturing-container-loading-content {
+    width: min(100% - 1rem, 44rem);
+    margin-top: 0.9rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .manufacturing-factory-overview-content > section + section,
+  .manufacturing-machinery-equipment-content > section + section,
+  .manufacturing-finishing-capability-content > section + section,
+  .manufacturing-assembly-line-content > section + section,
+  .manufacturing-packing-area-content > section + section,
+  .manufacturing-container-loading-content > section + section {
+    margin-top: 0.95rem;
+  }
+
+  .manufacturing-factory-overview-content h2,
+  .manufacturing-machinery-equipment-content h2,
+  .manufacturing-finishing-capability-content h2,
+  .manufacturing-assembly-line-content h2,
+  .manufacturing-packing-area-content h2,
+  .manufacturing-container-loading-content h2 {
+    margin-bottom: 0.54rem;
+    font-size: 0.78rem;
+    line-height: 1.15;
+  }
+
+  .manufacturing-factory-overview-system,
+  .manufacturing-factory-overview-capability,
+  .manufacturing-factory-overview-production,
+  .manufacturing-factory-overview-products,
+  .manufacturing-factory-overview-control,
+  .manufacturing-factory-overview-operations,
+  .manufacturing-factory-overview-supply-chain,
+  .manufacturing-factory-overview-related,
+  .manufacturing-factory-overview-cta,
+  .manufacturing-machinery-equipment-flow-panel,
+  .manufacturing-machinery-equipment-production-panel,
+  .manufacturing-machinery-equipment-system,
+  .manufacturing-machinery-equipment-technology,
+  .manufacturing-machinery-equipment-capability,
+  .manufacturing-machinery-equipment-role,
+  .manufacturing-machinery-equipment-investment,
+  .manufacturing-machinery-equipment-cta,
+  .manufacturing-finishing-capability-capacity,
+  .manufacturing-finishing-capability-surface,
+  .manufacturing-finishing-capability-process,
+  .manufacturing-finishing-capability-control,
+  .manufacturing-finishing-capability-applications,
+  .manufacturing-finishing-capability-quality,
+  .manufacturing-finishing-capability-value,
+  .manufacturing-finishing-capability-cta,
+  .manufacturing-assembly-line-stages,
+  .manufacturing-assembly-line-products,
+  .manufacturing-assembly-line-control,
+  .manufacturing-assembly-line-applications,
+  .manufacturing-assembly-line-role,
+  .manufacturing-assembly-line-related,
+  .manufacturing-assembly-line-cta,
+  .manufacturing-packing-area-stages,
+  .manufacturing-packing-area-materials,
+  .manufacturing-packing-area-process,
+  .manufacturing-packing-area-controls,
+  .manufacturing-packing-area-capability,
+  .manufacturing-packing-area-role,
+  .manufacturing-packing-area-cta,
+  .manufacturing-container-loading-goals,
+  .manufacturing-container-loading-process,
+  .manufacturing-container-loading-controls,
+  .manufacturing-container-loading-types,
+  .manufacturing-container-loading-capability,
+  .manufacturing-container-loading-supply,
+  .manufacturing-container-loading-cta {
+    padding: 0.62rem;
+    border-radius: 7px;
+  }
+
+  .manufacturing-factory-overview-top-row,
+  .manufacturing-factory-overview-middle-row,
+  .manufacturing-factory-overview-bottom-row,
+  .manufacturing-machinery-equipment-overview-row,
+  .manufacturing-machinery-equipment-middle-row,
+  .manufacturing-machinery-equipment-bottom-row,
+  .manufacturing-finishing-capability-middle-row,
+  .manufacturing-finishing-capability-bottom-row,
+  .manufacturing-packing-area-system-row,
+  .manufacturing-packing-area-role,
+  .manufacturing-container-loading-middle-row,
+  .manufacturing-container-loading-bottom-row,
+  .manufacturing-assembly-line-middle-row,
+  .manufacturing-assembly-line-bottom-row,
+  .manufacturing-assembly-line-role {
+    gap: 0.82rem;
+  }
+
+  .manufacturing-factory-overview-system-flow,
+  .manufacturing-factory-overview-capability-grid,
+  .manufacturing-factory-overview-production-grid,
+  .manufacturing-factory-overview-product-grid,
+  .manufacturing-factory-overview-control-grid,
+  .manufacturing-factory-overview-operation-flow,
+  .manufacturing-factory-overview-supply-flow,
+  .manufacturing-factory-overview-related-grid,
+  .manufacturing-machinery-equipment-flow-list,
+  .manufacturing-machinery-equipment-production-capability-grid,
+  .manufacturing-machinery-equipment-system-grid,
+  .manufacturing-machinery-equipment-technology-grid,
+  .manufacturing-machinery-equipment-capability-grid,
+  .manufacturing-machinery-equipment-role-flow,
+  .manufacturing-machinery-equipment-investment-grid,
+  .manufacturing-finishing-capability-capacity-grid,
+  .manufacturing-finishing-capability-surface-grid,
+  .manufacturing-finishing-capability-process-flow,
+  .manufacturing-finishing-capability-control-grid,
+  .manufacturing-finishing-capability-application-grid,
+  .manufacturing-finishing-capability-value-flow,
+  .manufacturing-assembly-line-stage-grid,
+  .manufacturing-assembly-line-product-grid,
+  .manufacturing-assembly-line-control-flow,
+  .manufacturing-assembly-line-application-grid,
+  .manufacturing-assembly-line-related-grid,
+  .manufacturing-packing-area-stage-grid,
+  .manufacturing-packing-area-material-grid,
+  .manufacturing-packing-area-process-flow,
+  .manufacturing-packing-area-control-grid,
+  .manufacturing-packing-area-capability-grid,
+  .manufacturing-packing-area-role-grid,
+  .manufacturing-container-loading-goal-grid,
+  .manufacturing-container-loading-process-flow,
+  .manufacturing-container-loading-control-grid,
+  .manufacturing-container-loading-type-grid,
+  .manufacturing-container-loading-capability-grid,
+  .manufacturing-container-loading-supply-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .manufacturing-factory-overview-system-flow article,
+  .manufacturing-factory-overview-capability-grid article,
+  .manufacturing-factory-overview-production-grid article,
+  .manufacturing-factory-overview-product-grid article,
+  .manufacturing-factory-overview-control-grid article,
+  .manufacturing-factory-overview-operation-flow article,
+  .manufacturing-factory-overview-supply-flow article,
+  .manufacturing-factory-overview-related-grid article,
+  .manufacturing-machinery-equipment-flow-list article,
+  .manufacturing-machinery-equipment-production-capability-grid article,
+  .manufacturing-machinery-equipment-system-grid article,
+  .manufacturing-machinery-equipment-technology-grid article,
+  .manufacturing-machinery-equipment-capability-grid article,
+  .manufacturing-machinery-equipment-role-flow article,
+  .manufacturing-machinery-equipment-investment-grid article,
+  .manufacturing-finishing-capability-capacity-grid article,
+  .manufacturing-finishing-capability-surface-grid article,
+  .manufacturing-finishing-capability-process-flow article,
+  .manufacturing-finishing-capability-control-grid article,
+  .manufacturing-finishing-capability-application-grid article,
+  .manufacturing-finishing-capability-value-flow article,
+  .manufacturing-assembly-line-stage-grid article,
+  .manufacturing-assembly-line-product-grid article,
+  .manufacturing-assembly-line-control-flow article,
+  .manufacturing-assembly-line-application-grid article,
+  .manufacturing-assembly-line-related-grid article,
+  .manufacturing-packing-area-stage-grid article,
+  .manufacturing-packing-area-material-grid article,
+  .manufacturing-packing-area-process-flow article,
+  .manufacturing-packing-area-control-grid article,
+  .manufacturing-packing-area-capability-grid article,
+  .manufacturing-packing-area-role-grid article,
+  .manufacturing-container-loading-goal-grid article,
+  .manufacturing-container-loading-process-flow article,
+  .manufacturing-container-loading-control-grid article,
+  .manufacturing-container-loading-type-grid article,
+  .manufacturing-container-loading-capability-grid article,
+  .manufacturing-container-loading-supply-flow article {
+    min-height: auto;
+    padding: 0.54rem;
+    border: 1px solid rgba(83, 71, 57, 0.16);
+    border-radius: 7px;
+    text-align: left;
+    background: rgba(255, 253, 248, 0.46);
+    box-shadow: 0 6px 12px rgba(41, 35, 28, 0.03);
+  }
+
+  .manufacturing-machinery-equipment-flow-list article,
+  .manufacturing-machinery-equipment-role-flow article,
+  .manufacturing-finishing-capability-process-flow article,
+  .manufacturing-finishing-capability-value-flow article,
+  .manufacturing-assembly-line-control-flow article,
+  .manufacturing-packing-area-process-flow article,
+  .manufacturing-container-loading-process-flow article,
+  .manufacturing-container-loading-supply-flow article {
+    display: grid;
+    grid-template-columns: 2.75rem minmax(0, 1fr);
+    gap: 0.46rem;
+    align-items: center;
+    justify-items: start;
+  }
+
+  .manufacturing-factory-overview-system-flow article:not(:last-child)::after,
+  .manufacturing-factory-overview-supply-flow article:not(:last-child)::after,
+  .manufacturing-machinery-equipment-flow-list article:not(:last-child)::after,
+  .manufacturing-machinery-equipment-role-flow article:not(:last-child)::after,
+  .manufacturing-finishing-capability-process-flow article:not(:last-child)::after,
+  .manufacturing-finishing-capability-value-flow article:not(:last-child)::after,
+  .manufacturing-assembly-line-control-flow article:not(:last-child)::after,
+  .manufacturing-packing-area-process-flow article:not(:last-child)::after,
+  .manufacturing-container-loading-process-flow article:not(:last-child)::after,
+  .manufacturing-container-loading-supply-flow article:not(:last-child)::after {
+    display: none;
+  }
+
+  .manufacturing-factory-overview-system-flow h3,
+  .manufacturing-factory-overview-capability-grid h3,
+  .manufacturing-factory-overview-production-grid h3,
+  .manufacturing-factory-overview-product-grid h3,
+  .manufacturing-factory-overview-control-grid h3,
+  .manufacturing-factory-overview-operation-flow h3,
+  .manufacturing-factory-overview-supply-flow h3,
+  .manufacturing-factory-overview-related-grid h3,
+  .manufacturing-machinery-equipment-system-copy h3,
+  .manufacturing-machinery-equipment-flow-list h3,
+  .manufacturing-machinery-equipment-production-capability-grid h3,
+  .manufacturing-machinery-equipment-technology-grid h3,
+  .manufacturing-machinery-equipment-capability-grid h3,
+  .manufacturing-machinery-equipment-role-flow h3,
+  .manufacturing-machinery-equipment-investment-grid h3,
+  .manufacturing-finishing-capability-capacity-copy h3,
+  .manufacturing-finishing-capability-surface-grid h3,
+  .manufacturing-finishing-capability-process-flow h3,
+  .manufacturing-finishing-capability-control-grid h3,
+  .manufacturing-finishing-capability-application-grid h3,
+  .manufacturing-finishing-capability-value-flow h3,
+  .manufacturing-assembly-line-stage-grid h3,
+  .manufacturing-assembly-line-product-grid h3,
+  .manufacturing-assembly-line-control-flow h3,
+  .manufacturing-assembly-line-application-grid h3,
+  .manufacturing-assembly-line-related-grid h3,
+  .manufacturing-packing-area-stage-grid h3,
+  .manufacturing-packing-area-material-grid h3,
+  .manufacturing-packing-area-process-flow h3,
+  .manufacturing-packing-area-control-grid h3,
+  .manufacturing-packing-area-capability-grid h3,
+  .manufacturing-packing-area-role-grid h3,
+  .manufacturing-container-loading-goal-grid h3,
+  .manufacturing-container-loading-process-flow h3,
+  .manufacturing-container-loading-control-grid h3,
+  .manufacturing-container-loading-type-grid h3,
+  .manufacturing-container-loading-capability-grid h3,
+  .manufacturing-container-loading-supply-flow h3 {
+    min-height: auto;
+    margin: 0;
+    font-size: 0.66rem;
+    line-height: 1.14;
+    text-align: left;
+  }
+
+  .manufacturing-factory-overview-capability-grid p,
+  .manufacturing-factory-overview-production-grid p,
+  .manufacturing-factory-overview-control-grid p,
+  .manufacturing-factory-overview-supply-chain > p,
+  .manufacturing-factory-overview-related-grid p,
+  .manufacturing-factory-overview-cta-copy p,
+  .manufacturing-machinery-equipment-system-copy p,
+  .manufacturing-machinery-equipment-production-capability-grid p,
+  .manufacturing-machinery-equipment-technology-grid p,
+  .manufacturing-machinery-equipment-capability-grid p,
+  .manufacturing-machinery-equipment-investment-grid p,
+  .manufacturing-machinery-equipment-cta-copy p,
+  .manufacturing-finishing-capability-capacity-copy p,
+  .manufacturing-finishing-capability-surface-grid p,
+  .manufacturing-finishing-capability-control-grid p,
+  .manufacturing-finishing-capability-quality p,
+  .manufacturing-finishing-capability-cta-copy p,
+  .manufacturing-assembly-line-stage-grid p,
+  .manufacturing-assembly-line-product-grid p,
+  .manufacturing-assembly-line-role p,
+  .manufacturing-assembly-line-related-grid p,
+  .manufacturing-packing-area-stage-grid p,
+  .manufacturing-packing-area-material-grid p,
+  .manufacturing-packing-area-control-grid p,
+  .manufacturing-packing-area-capability-grid p,
+  .manufacturing-packing-area-role-copy p,
+  .manufacturing-container-loading-goal-grid p,
+  .manufacturing-container-loading-control-grid p,
+  .manufacturing-container-loading-type-grid p,
+  .manufacturing-container-loading-capability-grid p,
+  .manufacturing-container-loading-cta-copy p {
+    max-width: none;
+    margin-top: 0.26rem;
+    font-size: 0.56rem;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .manufacturing-factory-overview-system-flow article > span,
+  .manufacturing-factory-overview-capability-grid article > span,
+  .manufacturing-factory-overview-control-grid article > span,
+  .manufacturing-factory-overview-operation-flow article > span,
+  .manufacturing-factory-overview-supply-flow article > span,
+  .manufacturing-machinery-equipment-flow-list article > span,
+  .manufacturing-machinery-equipment-production-capability-grid article > span,
+  .manufacturing-machinery-equipment-role-flow article > span,
+  .manufacturing-machinery-equipment-technology-grid article > span,
+  .manufacturing-machinery-equipment-capability-grid article > span,
+  .manufacturing-machinery-equipment-investment-grid article > span,
+  .manufacturing-finishing-capability-process-flow article > span,
+  .manufacturing-finishing-capability-control-grid article > span,
+  .manufacturing-finishing-capability-value-flow article > span,
+  .manufacturing-finishing-capability-application-grid article > span,
+  .manufacturing-assembly-line-stage-head span,
+  .manufacturing-assembly-line-control-image-slot,
+  .manufacturing-packing-area-stage-head span,
+  .manufacturing-packing-area-process-image-slot,
+  .manufacturing-packing-area-process-flow article > span,
+  .manufacturing-packing-area-control-grid article > span,
+  .manufacturing-packing-area-capability-grid article > span,
+  .manufacturing-packing-area-role-grid article > span,
+  .manufacturing-container-loading-goal-grid article > span,
+  .manufacturing-container-loading-process-flow article > span,
+  .manufacturing-container-loading-control-grid article > span,
+  .manufacturing-container-loading-capability-grid article > span,
+  .manufacturing-container-loading-supply-flow article > span {
+    width: 2.35rem;
+    margin: 0 0 0.34rem;
+    font-size: 0.9rem;
+  }
+
+  .manufacturing-machinery-equipment-flow-list article > span,
+  .manufacturing-machinery-equipment-role-flow article > span,
+  .manufacturing-finishing-capability-process-flow article > span,
+  .manufacturing-finishing-capability-value-flow article > span,
+  .manufacturing-packing-area-process-flow article > span,
+  .manufacturing-packing-area-process-image-slot,
+  .manufacturing-container-loading-process-flow article > span,
+  .manufacturing-container-loading-supply-flow article > span,
+  .manufacturing-assembly-line-control-image-slot {
+    margin: 0;
+  }
+
+  .manufacturing-packing-area-role-image-slot {
+    width: min(100%, 4.2rem);
+    margin-bottom: 0.34rem;
+  }
+
+  .manufacturing-factory-overview-image-slot,
+  .manufacturing-machinery-equipment-image-slot,
+  .manufacturing-finishing-capability-image-slot,
+  .manufacturing-finishing-capability-wide-slot,
+  .manufacturing-assembly-line-image-slot,
+  .manufacturing-assembly-line-product-slot,
+  .manufacturing-assembly-line-wide-slot,
+  .manufacturing-packing-area-image-slot,
+  .manufacturing-packing-area-material-slot,
+  .manufacturing-packing-area-capability-slot,
+  .manufacturing-packing-area-role-slot,
+  .manufacturing-container-loading-image-slot {
+    min-height: 4.8rem;
+    max-height: none;
+    margin-top: 0.42rem;
+    border-radius: 6px;
+  }
+
+  .manufacturing-finishing-capability-surface-slot {
+    aspect-ratio: 2.5;
+    min-height: 3.25rem;
+  }
+
+  .manufacturing-machinery-equipment-system-copy,
+  .manufacturing-finishing-capability-capacity-copy,
+  .manufacturing-finishing-capability-surface-grid article > div:last-child {
+    min-height: auto;
+    padding: 0.54rem;
+  }
+
+  .manufacturing-finishing-capability-capacity-copy > span {
+    position: static;
+    width: 1.85rem;
+    margin: 0 0 0.34rem;
+    font-size: 0.74rem;
+  }
+
+  .manufacturing-packing-area-capability-grid article {
+    grid-template-columns: 1fr;
+    gap: 0.42rem;
+    align-items: start;
+    justify-items: start;
+  }
+
+  .manufacturing-packing-area-role-copy,
+  .manufacturing-assembly-line-role > div:first-child {
+    align-self: start;
+  }
+
+  .manufacturing-factory-overview-cta,
+  .manufacturing-machinery-equipment-cta,
+  .manufacturing-finishing-capability-cta,
+  .manufacturing-assembly-line-cta,
+  .manufacturing-packing-area-cta,
+  .manufacturing-container-loading-cta,
+  .manufacturing-factory-overview-cta-actions,
+  .manufacturing-machinery-equipment-cta-actions,
+  .manufacturing-finishing-capability-cta-actions,
+  .manufacturing-assembly-line-cta-actions,
+  .manufacturing-packing-area-cta-actions,
+  .manufacturing-container-loading-cta-actions {
+    grid-template-columns: 1fr;
+    gap: 0.46rem;
+  }
+
+  .manufacturing-factory-overview-cta h2,
+  .manufacturing-machinery-equipment-cta h2,
+  .manufacturing-finishing-capability-cta h2,
+  .manufacturing-assembly-line-cta h2,
+  .manufacturing-packing-area-cta h2,
+  .manufacturing-container-loading-cta h2 {
+    max-width: 24ch;
+    font-size: clamp(0.94rem, 3.85vw, 1.14rem);
+    line-height: 1.06;
+  }
+
+  .manufacturing-factory-overview-cta-actions a,
+  .manufacturing-machinery-equipment-cta-actions a,
+  .manufacturing-finishing-capability-cta-actions a,
+  .manufacturing-assembly-line-cta-actions a,
+  .manufacturing-packing-area-cta-actions a,
+  .manufacturing-container-loading-cta-actions a {
+    min-height: 2.55rem;
+    justify-content: center;
+    padding: 0.48rem 0.68rem;
+    border-radius: 6px;
+    font-size: 0.68rem;
+    line-height: 1.12;
+  }
+
+  .manufacturing-packing-area-process .manufacturing-packing-area-process-flow {
+    gap: 0.42rem;
+    padding-top: 0;
+  }
+
+  .manufacturing-packing-area-process .manufacturing-packing-area-process-flow article {
+    grid-template-columns: 2.6rem minmax(0, 1fr) 1.55rem;
+    gap: 0.46rem;
+    align-items: center;
+    min-height: 3.35rem;
+    padding: 0.46rem 0.52rem;
+  }
+
+  .manufacturing-packing-area-process .manufacturing-packing-area-process-image-slot {
+    width: 2.5rem;
+    margin: 0;
+    aspect-ratio: 1;
+  }
+
+  .manufacturing-packing-area-process .manufacturing-packing-area-process-flow h3 {
+    align-self: center;
+    font-size: 0.62rem;
+    line-height: 1.12;
+  }
+
+  .manufacturing-packing-area-process .manufacturing-packing-area-process-flow small {
+    width: 1.45rem;
+    margin: 0;
+    justify-self: end;
+    font-size: 0.62rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .manufacturing-factory-overview-content,
+  .manufacturing-machinery-equipment-content,
+  .manufacturing-finishing-capability-content,
+  .manufacturing-assembly-line-content,
+  .manufacturing-packing-area-content,
+  .manufacturing-container-loading-content {
+    width: min(100% - 0.82rem, 44rem);
+    margin-top: 0.75rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .manufacturing-factory-overview-system-flow,
+  .manufacturing-factory-overview-capability-grid,
+  .manufacturing-factory-overview-production-grid,
+  .manufacturing-factory-overview-product-grid,
+  .manufacturing-factory-overview-control-grid,
+  .manufacturing-factory-overview-operation-flow,
+  .manufacturing-factory-overview-supply-flow,
+  .manufacturing-factory-overview-related-grid,
+  .manufacturing-machinery-equipment-flow-list,
+  .manufacturing-machinery-equipment-production-capability-grid,
+  .manufacturing-machinery-equipment-system-grid,
+  .manufacturing-machinery-equipment-technology-grid,
+  .manufacturing-machinery-equipment-capability-grid,
+  .manufacturing-machinery-equipment-role-flow,
+  .manufacturing-machinery-equipment-investment-grid,
+  .manufacturing-finishing-capability-capacity-grid,
+  .manufacturing-finishing-capability-surface-grid,
+  .manufacturing-finishing-capability-process-flow,
+  .manufacturing-finishing-capability-control-grid,
+  .manufacturing-finishing-capability-application-grid,
+  .manufacturing-finishing-capability-value-flow,
+  .manufacturing-assembly-line-stage-grid,
+  .manufacturing-assembly-line-product-grid,
+  .manufacturing-assembly-line-control-flow,
+  .manufacturing-assembly-line-application-grid,
+  .manufacturing-assembly-line-related-grid,
+  .manufacturing-packing-area-stage-grid,
+  .manufacturing-packing-area-material-grid,
+  .manufacturing-packing-area-process-flow,
+  .manufacturing-packing-area-control-grid,
+  .manufacturing-packing-area-capability-grid,
+  .manufacturing-packing-area-role-grid,
+  .manufacturing-container-loading-goal-grid,
+  .manufacturing-container-loading-process-flow,
+  .manufacturing-container-loading-control-grid,
+  .manufacturing-container-loading-type-grid,
+  .manufacturing-container-loading-capability-grid,
+  .manufacturing-container-loading-supply-flow {
+    gap: 0.42rem;
+  }
+
+  .manufacturing-machinery-equipment-flow-list article,
+  .manufacturing-machinery-equipment-role-flow article,
+  .manufacturing-finishing-capability-process-flow article,
+  .manufacturing-finishing-capability-value-flow article,
+  .manufacturing-assembly-line-control-flow article,
+  .manufacturing-packing-area-process-flow article,
+  .manufacturing-container-loading-process-flow article,
+  .manufacturing-container-loading-supply-flow article {
+    grid-template-columns: 2.55rem minmax(0, 1fr);
+  }
+
+  .manufacturing-factory-overview-image-slot,
+  .manufacturing-machinery-equipment-image-slot,
+  .manufacturing-finishing-capability-image-slot,
+  .manufacturing-finishing-capability-wide-slot,
+  .manufacturing-assembly-line-image-slot,
+  .manufacturing-assembly-line-product-slot,
+  .manufacturing-assembly-line-wide-slot,
+  .manufacturing-packing-area-image-slot,
+  .manufacturing-packing-area-material-slot,
+  .manufacturing-packing-area-capability-slot,
+  .manufacturing-packing-area-role-slot,
+  .manufacturing-container-loading-image-slot {
+    min-height: 4.25rem;
+  }
+
+  .manufacturing-packing-area-process .manufacturing-packing-area-process-flow {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -22457,6 +23336,24 @@ img.quality-control-final-inspection-cta-image {
   color: rgba(64, 58, 50, 0.76);
   font-size: clamp(1.4rem, 2.2vw, 2.35rem);
   line-height: 1;
+}
+
+.quality-control-in-process-inspection-location-number {
+  display: grid;
+  width: clamp(2.05rem, 2.25vw, 2.45rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(38, 35, 31, 0.44);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.42), transparent 32%),
+    #56514b;
+  color: #fff9ee;
+  font-family: var(--font-heading);
+  font-size: clamp(0.92rem, 1.08vw, 1.16rem);
+  font-weight: 400;
+  line-height: 1;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.22);
 }
 
 .quality-control-in-process-inspection-flow-image {
@@ -31188,7 +32085,7 @@ img.supply-hub-weekly-cta-image-placeholder {
   grid-template-columns: minmax(0, 1fr) minmax(118px, 0.38fr);
   gap: clamp(0.72rem, 1vw, 1rem);
   align-items: center;
-  border-color: rgba(232, 103, 29, 0.62);
+  border-color: #111;
   background: rgba(255, 246, 235, 0.36) !important;
 }
 
@@ -31226,7 +32123,7 @@ img.supply-hub-weekly-cta-image-placeholder {
   justify-self: end;
   width: clamp(120px, 8.6vw, 170px);
   aspect-ratio: 1.7 / 1;
-  border: 1px dashed rgba(232, 103, 29, 0.34);
+  border: 1px dashed rgba(17, 17, 17, 0.34);
   border-radius: 12px;
   background: transparent !important;
 }
@@ -31246,9 +32143,9 @@ img.supply-hub-weekly-cta-image-placeholder {
   gap: 0.58rem;
   min-height: clamp(42px, 3vw, 52px);
   padding: 0.55rem 0.9rem;
-  border: 1px solid rgba(232, 103, 29, 0.7);
+  border: 1px solid #111;
   border-radius: 8px;
-  color: #d85f16;
+  color: #111;
   font-family: var(--font-ui);
   font-size: clamp(0.86rem, 1vw, 1.08rem);
   font-weight: 800;
@@ -31256,6 +32153,12 @@ img.supply-hub-weekly-cta-image-placeholder {
   text-decoration: none;
   letter-spacing: 0;
   background: rgba(255, 252, 246, 0.28) !important;
+}
+
+.supply-hub-weekly-cta-actions a.supply-hub-weekly-cta-primary {
+  border-color: #111;
+  color: #fff;
+  background: #111 !important;
 }
 
 .supply-hub-weekly-cta-actions span {
@@ -36902,15 +37805,14 @@ img.supply-hub-weekly-cta-image-placeholder {
 
   .resources-export-knowledge-cta {
     grid-template-columns: 1fr;
-    gap: 0.72rem;
-    margin-top: 1.25rem;
-    padding: 0.72rem;
+    gap: 0.52rem;
+    margin-top: 0.95rem;
+    padding: 0.58rem;
+    border-radius: 7px;
   }
 
   .resources-export-knowledge-cta-image-slot {
-    width: min(100%, 17rem);
-    margin: 0 auto;
-    aspect-ratio: 1.9;
+    display: none;
   }
 
   .resources-export-knowledge-cta-copy {
@@ -36918,35 +37820,39 @@ img.supply-hub-weekly-cta-image-placeholder {
   }
 
   .resources-export-knowledge-cta-copy h2 {
-    max-width: 22ch;
+    max-width: 24ch;
     margin: 0 auto;
-    font-size: clamp(1rem, 4.5vw, 1.34rem);
+    font-size: clamp(0.94rem, 3.85vw, 1.14rem);
+    line-height: 1.06;
   }
 
   .resources-export-knowledge-cta-copy p {
-    margin-top: 0.42rem;
-    font-size: 0.66rem;
-    line-height: 1.28;
+    max-width: 42ch;
+    margin: 0.32rem auto 0;
+    font-size: 0.62rem;
+    line-height: 1.24;
   }
 
   .resources-export-knowledge-cta-actions {
     grid-template-columns: 1fr;
-    gap: 0.58rem;
+    gap: 0.42rem;
   }
 
   .resources-export-knowledge-cta-actions a {
-    min-height: 3.2rem;
+    min-height: 2.55rem;
     grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.62rem;
+    gap: 0.5rem;
     justify-content: center;
     justify-items: start;
-    padding: 0.62rem 0.82rem;
-    font-size: 0.78rem;
+    padding: 0.48rem 0.68rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    line-height: 1.12;
     text-align: left;
   }
 
   .resources-export-knowledge-cta-icon {
-    width: 1.35rem;
+    width: 1.05rem;
   }
 
   .resources-manufacturing-notes-content {
@@ -39478,6 +40384,2840 @@ img.supply-hub-weekly-cta-image-placeholder {
   }
 }
 
+@media (max-width: 680px) {
+  .resources-company-updates-content,
+  .resources-case-studies-content,
+  .resources-manufacturing-notes-content {
+    width: min(100% - 1rem, 44rem);
+    margin-top: 0.9rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .resources-company-updates-featured,
+  .resources-company-updates-timeline,
+  .resources-company-updates-follow,
+  .resources-case-studies-structure,
+  .resources-case-studies-featured,
+  .resources-case-studies-value,
+  .resources-manufacturing-notes-featured,
+  .resources-manufacturing-notes-info-row {
+    margin-top: 1.05rem;
+  }
+
+  .resources-company-updates-featured h2,
+  .resources-company-updates-timeline h2,
+  .resources-company-updates-follow h2,
+  .resources-case-studies-groups h2,
+  .resources-case-studies-structure h2,
+  .resources-case-studies-featured h2,
+  .resources-case-studies-value h2,
+  .resources-manufacturing-notes-categories h2,
+  .resources-manufacturing-notes-featured h2,
+  .resources-manufacturing-notes-audience h2,
+  .resources-manufacturing-notes-importance h2,
+  .resources-manufacturing-notes-library h2,
+  .resources-manufacturing-notes-supply-quality h2,
+  .resources-manufacturing-notes-standard-room h2 {
+    gap: 0.56rem;
+    margin-bottom: 0.62rem;
+    font-size: 0.76rem;
+    line-height: 1.14;
+  }
+
+  .resources-manufacturing-notes-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.56rem;
+  }
+
+  .resources-case-studies-group-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.56rem;
+  }
+
+  .resources-case-studies-group-grid article,
+  .resources-manufacturing-notes-category-grid article {
+    min-height: auto;
+    padding-bottom: 0.82rem;
+  }
+
+  .resources-case-studies-group-image-slot {
+    width: 100%;
+    aspect-ratio: 1.45;
+    margin: 0;
+  }
+
+  .resources-manufacturing-notes-category-image-slot {
+    width: 100%;
+    aspect-ratio: 1.45;
+    margin: 0;
+  }
+
+  .resources-case-studies-group-grid h3,
+  .resources-manufacturing-notes-category-grid h3 {
+    min-height: auto;
+    padding: 0.68rem 0.7rem 0;
+    font-size: clamp(0.92rem, 4vw, 1.12rem);
+  }
+
+  .resources-case-studies-group-grid h3 {
+    min-height: 3em;
+    padding: 0.62rem 0.6rem 0;
+    font-size: clamp(0.74rem, 3.05vw, 0.92rem);
+  }
+
+  .resources-manufacturing-notes-category-grid h3 {
+    min-height: 3em;
+    padding: 0.62rem 0.6rem 0;
+    font-size: clamp(0.74rem, 3.05vw, 0.92rem);
+  }
+
+  .resources-case-studies-group-grid h3 span,
+  .resources-manufacturing-notes-category-grid h3 span {
+    font-size: clamp(0.88rem, 3.7vw, 1.04rem);
+  }
+
+  .resources-case-studies-group-grid h3 span {
+    font-size: clamp(0.78rem, 3.1vw, 0.94rem);
+  }
+
+  .resources-manufacturing-notes-category-grid h3 span {
+    font-size: clamp(0.78rem, 3.1vw, 0.94rem);
+  }
+
+  .resources-case-studies-group-grid p,
+  .resources-manufacturing-notes-category-grid p {
+    margin: 0.52rem 0.7rem 0;
+    font-size: 0.64rem;
+    line-height: 1.28;
+  }
+
+  .resources-case-studies-group-grid p {
+    margin: 0.46rem 0.6rem 0;
+    font-size: 0.6rem;
+    line-height: 1.22;
+  }
+
+  .resources-manufacturing-notes-category-grid p {
+    margin: 0.46rem 0.6rem 0;
+    font-size: 0.6rem;
+    line-height: 1.22;
+  }
+
+  .resources-case-studies-group-grid ul,
+  .resources-manufacturing-notes-category-grid ul {
+    gap: 0.34rem;
+    margin: 0.58rem 0.7rem 0;
+  }
+
+  .resources-case-studies-group-grid ul {
+    margin: 0.5rem 0.6rem 0;
+  }
+
+  .resources-manufacturing-notes-category-grid ul {
+    margin: 0.5rem 0.6rem 0;
+  }
+
+  .resources-case-studies-group-grid li,
+  .resources-manufacturing-notes-category-grid li {
+    font-size: 0.62rem;
+    line-height: 1.22;
+  }
+
+  .resources-case-studies-group-grid li {
+    font-size: 0.58rem;
+    line-height: 1.18;
+  }
+
+  .resources-manufacturing-notes-category-grid li {
+    font-size: 0.58rem;
+    line-height: 1.18;
+  }
+
+  .resources-case-studies-featured-grid,
+  .resources-manufacturing-notes-featured-grid {
+    gap: 0.56rem;
+  }
+
+  .resources-case-studies-featured-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resources-case-studies-featured-grid article,
+  .resources-manufacturing-notes-featured-grid article {
+    min-height: auto;
+  }
+
+  .resources-case-studies-featured-image-slot,
+  .resources-manufacturing-notes-featured-image-slot,
+  .resources-company-updates-featured-image-slot,
+  .resources-company-updates-follow-image-slot {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1.55;
+  }
+
+  .resources-case-studies-featured-copy,
+  .resources-manufacturing-notes-featured-copy,
+  .resources-company-updates-featured-copy,
+  .resources-company-updates-follow-copy {
+    min-height: auto;
+    padding: 0.66rem 0.66rem 0.74rem;
+  }
+
+  .resources-case-studies-featured-copy h3,
+  .resources-manufacturing-notes-featured-copy h3,
+  .resources-company-updates-featured-copy h3,
+  .resources-company-updates-follow-copy h3 {
+    min-height: auto;
+    font-size: clamp(0.78rem, 3.25vw, 0.96rem);
+    line-height: 1.14;
+  }
+
+  .resources-case-studies-featured-copy p,
+  .resources-manufacturing-notes-featured-copy p,
+  .resources-company-updates-featured-copy p,
+  .resources-company-updates-follow-copy p {
+    margin-top: 0.38rem;
+    font-size: 0.62rem;
+    line-height: 1.24;
+  }
+
+  .resources-company-updates-featured-copy time {
+    margin-top: 0.56rem;
+    font-size: 0.6rem;
+  }
+
+  .resources-company-updates-category-grid {
+    gap: 0.5rem;
+  }
+
+  .resources-company-updates-category-grid article {
+    grid-template-columns: 2.35rem minmax(0, 1fr);
+    gap: 0.58rem;
+    padding: 0.68rem;
+  }
+
+  .resources-company-updates-category-grid h2 {
+    font-size: 0.74rem;
+    line-height: 1.16;
+  }
+
+  .resources-company-updates-category-grid h2 span {
+    font-size: 0.78rem;
+  }
+
+  .resources-company-updates-timeline-track {
+    gap: 0.72rem;
+  }
+
+  .resources-company-updates-timeline-year {
+    padding-left: 0.9rem;
+  }
+
+  .resources-company-updates-timeline-year h3 {
+    min-width: 4rem;
+    margin-bottom: 0.52rem;
+    padding: 0.32rem 0.58rem;
+    font-size: 1rem;
+  }
+
+  .resources-company-updates-timeline-year ul {
+    gap: 0.48rem;
+  }
+
+  .resources-company-updates-timeline-year li {
+    grid-template-columns: 1.45rem minmax(0, 1fr);
+    gap: 0.48rem;
+    font-size: 0.62rem;
+    line-height: 1.22;
+  }
+
+  .resources-company-updates-timeline-icon {
+    width: 1.34rem;
+  }
+
+  .resources-manufacturing-notes-audience-grid {
+    grid-template-columns: 1fr;
+    gap: 0.56rem;
+    padding: 0.72rem;
+  }
+
+  .resources-manufacturing-notes-audience-grid article {
+    grid-template-columns: 1.82rem minmax(0, 1fr);
+    gap: 0.48rem;
+  }
+
+  .resources-manufacturing-notes-audience-grid h3 {
+    font-size: 0.68rem;
+  }
+
+  .resources-manufacturing-notes-audience-grid p {
+    font-size: 0.6rem;
+    line-height: 1.22;
+  }
+
+  .resources-manufacturing-notes-importance-flow,
+  .resources-manufacturing-notes-supply-flow {
+    gap: 0.9rem;
+    padding: 0.68rem 0.62rem 0.82rem;
+  }
+
+  .resources-manufacturing-notes-importance-step-wrap,
+  .resources-manufacturing-notes-supply-step-wrap {
+    flex-basis: min(31vw, 7.3rem);
+  }
+
+  .resources-manufacturing-notes-importance-icon,
+  .resources-manufacturing-notes-supply-icon {
+    width: min(54%, 3.15rem);
+  }
+
+  .resources-manufacturing-notes-importance-flow h3,
+  .resources-manufacturing-notes-supply-flow h3 {
+    font-size: 0.58rem;
+    line-height: 1.14;
+  }
+
+  .resources-manufacturing-notes-knowledge-row {
+    gap: 0.62rem;
+    margin-top: 0.62rem;
+  }
+
+  .resources-manufacturing-notes-library,
+  .resources-manufacturing-notes-supply-quality,
+  .resources-manufacturing-notes-standard-room {
+    min-height: auto;
+  }
+
+  .resources-manufacturing-notes-library > p,
+  .resources-manufacturing-notes-supply-quality > p,
+  .resources-manufacturing-notes-standard-room > p {
+    margin: 0.42rem 0.66rem 0;
+    font-size: 0.6rem;
+    line-height: 1.22;
+  }
+
+  .resources-manufacturing-notes-library-layout,
+  .resources-manufacturing-notes-standard-room-layout {
+    grid-template-columns: 1fr;
+    gap: 0.56rem;
+    padding: 0.62rem 0.66rem 0.72rem;
+  }
+
+  .resources-manufacturing-notes-library-image-slot,
+  .resources-manufacturing-notes-standard-room-image-slot {
+    display: none;
+  }
+
+  .resources-manufacturing-notes-library-layout ul,
+  .resources-manufacturing-notes-standard-room-layout ul {
+    gap: 0.34rem;
+  }
+
+  .resources-manufacturing-notes-library-layout li,
+  .resources-manufacturing-notes-standard-room-layout li {
+    font-size: 0.6rem;
+    line-height: 1.18;
+  }
+
+  .resources-company-updates-cta,
+  .resources-case-studies-cta,
+  .resources-manufacturing-notes-cta {
+    grid-template-columns: 1fr;
+    gap: 0.52rem;
+    margin-top: 0.95rem;
+    padding: 0.58rem;
+    border-radius: 7px;
+  }
+
+  .resources-company-updates-cta-image-slot,
+  .resources-case-studies-cta-image-slot,
+  .resources-manufacturing-notes-cta-image-slot {
+    display: none;
+  }
+
+  .resources-company-updates-cta-copy,
+  .resources-case-studies-cta-copy,
+  .resources-manufacturing-notes-cta-copy {
+    text-align: center;
+  }
+
+  .resources-company-updates-cta-copy h2,
+  .resources-case-studies-cta-copy h2,
+  .resources-manufacturing-notes-cta-copy h2 {
+    max-width: 24ch;
+    margin: 0 auto;
+    font-size: clamp(0.94rem, 3.85vw, 1.14rem);
+    line-height: 1.06;
+  }
+
+  .resources-company-updates-cta-copy p,
+  .resources-case-studies-cta-copy p,
+  .resources-manufacturing-notes-cta-copy p {
+    max-width: 42ch;
+    margin: 0.32rem auto 0;
+    font-size: 0.62rem;
+    line-height: 1.24;
+  }
+
+  .resources-company-updates-cta-actions,
+  .resources-case-studies-cta-actions,
+  .resources-manufacturing-notes-cta-actions {
+    grid-template-columns: 1fr;
+    gap: 0.42rem;
+    max-width: none;
+    margin-top: 0;
+  }
+
+  .resources-company-updates-cta-actions a,
+  .resources-case-studies-cta-actions a,
+  .resources-manufacturing-notes-cta-actions a {
+    min-height: 2.55rem;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.5rem;
+    justify-content: center;
+    justify-items: start;
+    padding: 0.48rem 0.68rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    line-height: 1.12;
+    text-align: left;
+  }
+
+  .resources-manufacturing-notes-cta-icon {
+    width: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resources-company-updates-featured-grid,
+  .resources-company-updates-follow-grid,
+  .resources-case-studies-value-grid,
+  .resources-manufacturing-notes-featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-company-updates-featured-image-slot,
+  .resources-company-updates-follow-image-slot,
+  .resources-case-studies-featured-image-slot,
+  .resources-manufacturing-notes-featured-image-slot {
+    aspect-ratio: 2.05;
+  }
+
+  .resources-case-studies-value-grid article {
+    grid-template-columns: 2.35rem minmax(0, 1fr);
+    gap: 0.56rem;
+    padding: 0.68rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .supply-hub-overview-banner,
+  .supply-hub-weekly-shipment-arrangement-banner {
+    position: relative;
+    width: min(100%, calc(100vw - 2.6rem));
+    max-width: 100%;
+    justify-self: start;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 0;
+    background: #f4efe6;
+  }
+
+  .supply-hub-overview-banner > img,
+  .supply-hub-weekly-shipment-arrangement-banner > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2006 / 784;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .supply-hub-overview-banner-copy,
+  .supply-hub-weekly-shipment-arrangement-banner-copy {
+    position: absolute;
+    left: 0.9rem;
+    right: auto;
+    top: 0.72rem;
+    z-index: 2;
+    width: min(55vw, 17rem);
+    max-width: none;
+    min-width: 0;
+    padding: 0;
+    transform: none;
+    overflow-wrap: normal;
+  }
+
+  .supply-hub-overview-banner-copy strong,
+  .supply-hub-weekly-shipment-arrangement-banner-copy h1 {
+    max-width: 12ch;
+    margin: 0;
+    font-size: clamp(1.15rem, 5.4vw, 1.9rem);
+    line-height: 0.98;
+    overflow-wrap: normal;
+  }
+
+  .supply-hub-overview-banner-copy p,
+  .supply-hub-weekly-shipment-arrangement-banner-copy span,
+  .supply-hub-weekly-shipment-arrangement-banner-copy ul {
+    max-width: 42ch;
+    margin-top: 0.24rem;
+    font-size: clamp(0.32rem, 1.36vw, 0.48rem);
+    line-height: 1.1;
+  }
+
+  .supply-hub-weekly-shipment-arrangement-banner-copy ul {
+    gap: 0.12rem;
+    padding-left: 0.68rem;
+  }
+
+  .supply-hub-overview-content,
+  .supply-hub-storage-content,
+  .supply-hub-lcl-fcl-content,
+  .supply-hub-weekly-shipment-content,
+  .supply-hub-material-storage-content,
+  .supply-hub-export-doc-content,
+  .supply-hub-approved-samples-content,
+  .supply-hub-component-samples-content,
+  .supply-hub-technical-drawings-content,
+  .supply-hub-material-references-content,
+  .supply-hub-packing-standards-content,
+  .supply-hub-qc-checklist-content,
+  .supply-hub-partner-standard-room {
+    width: min(100% - 1rem, 44rem);
+    margin: 0.9rem auto 2.2rem;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .supply-hub-overview-content,
+  .supply-hub-weekly-shipment-content,
+  .supply-hub-partner-standard-room {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.72rem;
+  }
+
+  .supply-hub-overview-main-grid,
+  .supply-hub-weekly-detail-grid,
+  .supply-hub-weekly-closing-grid,
+  .supply-hub-storage-support-grid,
+  .supply-hub-storage-model-grid,
+  .supply-hub-material-storage-item-grid,
+  .supply-hub-material-storage-goal-grid,
+  .supply-hub-material-storage-traceability,
+  .supply-hub-material-storage-audience-grid,
+  .supply-hub-material-storage-operation-steps,
+  .supply-hub-export-doc-role,
+  .supply-hub-export-doc-commercial-grid,
+  .supply-hub-export-doc-multi-factory-body,
+  .supply-hub-export-doc-qc-grid,
+  .supply-hub-approved-samples-journey-grid,
+  .supply-hub-approved-samples-project-grid,
+  .supply-hub-component-samples-type-grid,
+  .supply-hub-component-samples-record-grid,
+  .supply-hub-component-samples-usage-grid,
+  .supply-hub-component-samples-key-grid,
+  .supply-hub-component-samples-management-grid,
+  .supply-hub-component-samples-flow,
+  .supply-hub-component-samples-benefit-grid,
+  .supply-hub-component-samples-process-list,
+  .supply-hub-technical-drawings-role-grid,
+  .supply-hub-technical-drawings-standard-grid,
+  .supply-hub-technical-drawings-process-grid,
+  .supply-hub-material-references-group-grid,
+  .supply-hub-material-references-value-grid,
+  .supply-hub-packing-standards-reference-grid,
+  .supply-hub-packing-standards-value-grid,
+  .supply-hub-qc-checklist-reference-grid,
+  .supply-hub-qc-checklist-value-grid {
+    grid-template-columns: 1fr;
+    gap: 0.56rem;
+  }
+
+  .supply-hub-overview-left,
+  .supply-hub-overview-right,
+  .supply-hub-weekly-middle-stack,
+  .supply-hub-lcl-fcl-grid,
+  .supply-hub-lcl-fcl-operation-grid {
+    gap: 0.72rem;
+  }
+
+  .supply-hub-overview-block,
+  .supply-hub-storage-panel,
+  .supply-hub-lcl-fcl-card,
+  .supply-hub-lcl-fcl-operation-card,
+  .supply-hub-weekly-goals,
+  .supply-hub-weekly-models,
+  .supply-hub-weekly-support,
+  .supply-hub-weekly-buffer,
+  .supply-hub-weekly-pre-export,
+  .supply-hub-weekly-audiences,
+  .supply-hub-weekly-process,
+  .supply-hub-weekly-buyer-inputs,
+  .supply-hub-material-storage-panel,
+  .supply-hub-export-doc-panel,
+  .supply-hub-approved-samples-panel,
+  .supply-hub-component-samples-panel,
+  .supply-hub-technical-drawings-panel,
+  .supply-hub-material-references-panel,
+  .supply-hub-packing-standards-panel,
+  .supply-hub-qc-checklist-panel,
+  .supply-hub-partner-standard-room-intro,
+  .supply-hub-partner-standard-room-card {
+    gap: 0.52rem;
+    padding: 0.66rem;
+    border-radius: 8px;
+  }
+
+  .supply-hub-overview-block h2,
+  .supply-hub-storage-panel h2,
+  .supply-hub-lcl-fcl-card h2,
+  .supply-hub-lcl-fcl-operation-card h2,
+  .supply-hub-weekly-goals h2,
+  .supply-hub-weekly-models h2,
+  .supply-hub-weekly-support h2,
+  .supply-hub-weekly-buffer h2,
+  .supply-hub-weekly-pre-export h2,
+  .supply-hub-weekly-audiences h2,
+  .supply-hub-weekly-process h2,
+  .supply-hub-weekly-buyer-inputs h2,
+  .supply-hub-material-storage-panel h2,
+  .supply-hub-export-doc-panel h2,
+  .supply-hub-approved-samples-panel h2,
+  .supply-hub-component-samples-panel h2,
+  .supply-hub-technical-drawings-panel h2,
+  .supply-hub-material-references-panel h2,
+  .supply-hub-packing-standards-panel h2,
+  .supply-hub-qc-checklist-panel h2 {
+    margin-bottom: 0.58rem;
+    padding-bottom: 0.42rem;
+    font-size: 0.78rem;
+    line-height: 1.14;
+  }
+
+  .supply-hub-partner-standard-room-intro h1 {
+    max-width: 16ch;
+    font-size: clamp(1.3rem, 6vw, 2rem);
+    line-height: 1;
+  }
+
+  .supply-hub-partner-standard-room-intro p,
+  .supply-hub-partner-standard-room-card p {
+    font-size: 0.64rem;
+    line-height: 1.28;
+  }
+
+  .supply-hub-partner-standard-room-grid,
+  .supply-hub-storage-process-list,
+  .supply-hub-weekly-goal-grid,
+  .supply-hub-weekly-model-grid,
+  .supply-hub-weekly-support-grid,
+  .supply-hub-weekly-buffer-grid,
+  .supply-hub-weekly-check-grid,
+  .supply-hub-weekly-audience-grid,
+  .supply-hub-weekly-process-steps,
+  .supply-hub-export-doc-process-steps,
+  .supply-hub-packing-standards-managed-grid,
+  .supply-hub-packing-standards-document-grid,
+  .supply-hub-qc-checklist-group-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    min-width: 0;
+  }
+
+  .supply-hub-overview-definition,
+  .supply-hub-overview-benefits,
+  .supply-hub-overview-role-grid,
+  .supply-hub-overview-audience-grid,
+  .supply-hub-lcl-fcl-feature-grid,
+  .supply-hub-lcl-fcl-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .supply-hub-overview-definition,
+  .supply-hub-overview-benefits {
+    border: 0;
+    overflow: visible;
+  }
+
+  .supply-hub-overview-definition article,
+  .supply-hub-overview-benefits article,
+  .supply-hub-overview-role-grid article,
+  .supply-hub-overview-audience-grid article,
+  .supply-hub-storage-support-card,
+  .supply-hub-storage-model-card,
+  .supply-hub-storage-operation-card,
+  .supply-hub-storage-buyer-benefit-card,
+  .supply-hub-material-storage-item-card,
+  .supply-hub-material-storage-goal-card,
+  .supply-hub-material-storage-audience-card,
+  .supply-hub-weekly-goal-item,
+  .supply-hub-weekly-model-card,
+  .supply-hub-weekly-support-card,
+  .supply-hub-weekly-buffer-item,
+  .supply-hub-weekly-check-item,
+  .supply-hub-weekly-audience-card,
+  .supply-hub-weekly-process-step,
+  .supply-hub-packing-standards-managed-grid article,
+  .supply-hub-packing-standards-document-grid article,
+  .supply-hub-qc-checklist-group-grid article {
+    min-height: auto;
+    padding: 0.62rem;
+    border: 1px solid rgba(33, 36, 40, 0.16);
+    border-radius: 7px;
+  }
+
+  .supply-hub-weekly-goal-item,
+  .supply-hub-weekly-model-card,
+  .supply-hub-weekly-audience-card,
+  .supply-hub-storage-support-card,
+  .supply-hub-storage-operation-card,
+  .supply-hub-storage-buyer-benefit-card,
+  .supply-hub-material-storage-item-card,
+  .supply-hub-material-storage-goal-card,
+  .supply-hub-material-storage-audience-card {
+    grid-template-columns: 2.35rem minmax(0, 1fr);
+    gap: 0.56rem;
+  }
+
+  .supply-hub-weekly-support-card,
+  .supply-hub-weekly-buffer-item,
+  .supply-hub-weekly-process-step {
+    align-content: start;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .supply-hub-weekly-check-item {
+    grid-template-columns: 1.8rem minmax(0, 1fr);
+  }
+
+  .supply-hub-weekly-support-card:last-child,
+  .supply-hub-weekly-buffer-item:last-child,
+  .supply-hub-overview-definition article + article,
+  .supply-hub-overview-benefits article + article {
+    border-left: 1px solid rgba(33, 36, 40, 0.16);
+    border-right: 1px solid rgba(33, 36, 40, 0.16);
+    border-top: 1px solid rgba(33, 36, 40, 0.16);
+  }
+
+  .supply-hub-overview-definition h3,
+  .supply-hub-overview-role-grid h3,
+  .supply-hub-overview-audience-grid h3,
+  .supply-hub-storage-support-copy h3,
+  .supply-hub-weekly-model-copy h3,
+  .supply-hub-weekly-support-card h3,
+  .supply-hub-weekly-audience-card h3,
+  .supply-hub-partner-standard-room-card h2 {
+    font-size: 0.72rem;
+    line-height: 1.16;
+  }
+
+  .supply-hub-overview-definition p,
+  .supply-hub-overview-role-grid p,
+  .supply-hub-overview-audience-grid p,
+  .supply-hub-overview-benefits p,
+  .supply-hub-storage-support-copy p,
+  .supply-hub-storage-support-copy li,
+  .supply-hub-weekly-goal-item p,
+  .supply-hub-weekly-model-copy p,
+  .supply-hub-weekly-model-copy li,
+  .supply-hub-weekly-support-card li,
+  .supply-hub-weekly-buffer > p,
+  .supply-hub-weekly-buffer-item span,
+  .supply-hub-weekly-check-item span,
+  .supply-hub-weekly-audience-card p,
+  .supply-hub-weekly-process-step span,
+  .supply-hub-weekly-buyer-inputs li {
+    font-size: 0.6rem;
+    line-height: 1.22;
+  }
+
+  .supply-hub-overview-image-slot,
+  .supply-hub-overview-card-image,
+  .supply-hub-overview-benefit-image,
+  .supply-hub-weekly-image-placeholder,
+  .supply-hub-weekly-model-image-placeholder,
+  .supply-hub-weekly-support-image-placeholder,
+  .supply-hub-weekly-small-image-placeholder,
+  .supply-hub-weekly-check-image-placeholder,
+  .supply-hub-weekly-audience-image-placeholder,
+  .supply-hub-weekly-process-image-placeholder {
+    width: 2.15rem;
+    margin: 0;
+  }
+
+  .supply-hub-overview-cta,
+  .supply-hub-storage-cta,
+  .supply-hub-lcl-fcl-cta,
+  .supply-hub-weekly-cta,
+  .supply-hub-material-storage-cta,
+  .supply-hub-export-doc-cta,
+  .supply-hub-approved-samples-cta,
+  .supply-hub-component-samples-cta,
+  .supply-hub-technical-drawings-cta,
+  .supply-hub-packing-standards-cta,
+  .supply-hub-qc-checklist-cta {
+    grid-template-columns: 1fr;
+    gap: 0.52rem;
+    margin-top: 0.95rem;
+    padding: 0.58rem;
+    border-radius: 7px;
+  }
+
+  .supply-hub-overview-cta-image,
+  .supply-hub-lcl-fcl-cta-image,
+  .supply-hub-lcl-fcl-cta-image-placeholder,
+  .supply-hub-weekly-cta-image-placeholder,
+  .supply-hub-material-storage-cta-image-placeholder,
+  .supply-hub-export-doc-cta-image-placeholder,
+  .supply-hub-component-samples-cta-media,
+  .supply-hub-packing-standards-cta-art {
+    display: none;
+  }
+
+  .supply-hub-weekly-cta .supply-hub-weekly-cta-image-placeholder {
+    display: none;
+  }
+
+  .supply-hub-overview-cta-copy,
+  .supply-hub-storage-cta-copy,
+  .supply-hub-lcl-fcl-cta-copy,
+  .supply-hub-weekly-cta-copy,
+  .supply-hub-material-storage-cta-copy,
+  .supply-hub-export-doc-cta-copy,
+  .supply-hub-approved-samples-cta-copy,
+  .supply-hub-component-samples-cta-copy,
+  .supply-hub-technical-drawings-cta-copy,
+  .supply-hub-packing-standards-cta-copy,
+  .supply-hub-qc-checklist-cta-copy {
+    text-align: center;
+  }
+
+  .supply-hub-overview-cta-copy h2,
+  .supply-hub-storage-cta-copy h2,
+  .supply-hub-lcl-fcl-cta-copy h2,
+  .supply-hub-weekly-cta-copy h2,
+  .supply-hub-material-storage-cta-copy h2,
+  .supply-hub-export-doc-cta-copy h2,
+  .supply-hub-approved-samples-cta-copy h2,
+  .supply-hub-component-samples-cta-copy h2,
+  .supply-hub-technical-drawings-cta h2,
+  .supply-hub-packing-standards-cta-copy h2,
+  .supply-hub-qc-checklist-cta-copy h2 {
+    max-width: 24ch;
+    margin: 0 auto;
+    font-size: clamp(0.94rem, 3.85vw, 1.14rem);
+    line-height: 1.06;
+  }
+
+  .supply-hub-overview-cta-copy p,
+  .supply-hub-storage-cta-copy p,
+  .supply-hub-lcl-fcl-cta-copy p,
+  .supply-hub-weekly-cta-copy p,
+  .supply-hub-material-storage-cta-copy p,
+  .supply-hub-export-doc-cta-copy p,
+  .supply-hub-approved-samples-cta-copy p,
+  .supply-hub-component-samples-cta-copy p,
+  .supply-hub-component-samples-cta-note,
+  .supply-hub-packing-standards-cta-copy p,
+  .supply-hub-qc-checklist-cta-copy p {
+    max-width: 42ch;
+    margin: 0.32rem auto 0;
+    font-size: 0.62rem;
+    line-height: 1.24;
+  }
+
+  .supply-hub-overview-cta-actions,
+  .supply-hub-storage-cta-actions,
+  .supply-hub-lcl-fcl-cta-actions,
+  .supply-hub-weekly-cta-actions,
+  .supply-hub-material-storage-cta-actions,
+  .supply-hub-export-doc-cta-actions,
+  .supply-hub-approved-samples-cta-actions,
+  .supply-hub-component-samples-cta-actions,
+  .supply-hub-technical-drawings-cta-actions,
+  .supply-hub-packing-standards-cta-actions,
+  .supply-hub-qc-checklist-cta-actions {
+    grid-template-columns: 1fr;
+    gap: 0.42rem;
+    max-width: none;
+    margin-top: 0;
+  }
+
+  .supply-hub-overview-cta-actions a,
+  .supply-hub-storage-cta-actions a,
+  .supply-hub-lcl-fcl-cta-actions a,
+  .supply-hub-weekly-cta-actions a,
+  .supply-hub-material-storage-cta-actions a,
+  .supply-hub-export-doc-cta-actions a,
+  .supply-hub-approved-samples-cta-actions a,
+  .supply-hub-component-samples-cta-actions a,
+  .supply-hub-technical-drawings-cta-actions a,
+  .supply-hub-packing-standards-cta-actions a,
+  .supply-hub-qc-checklist-cta-actions a,
+  .supply-hub-partner-standard-room-card a {
+    min-height: 2.55rem;
+    justify-content: center;
+    padding: 0.48rem 0.68rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    line-height: 1.12;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .supply-hub-overview-content,
+  .supply-hub-storage-content,
+  .supply-hub-lcl-fcl-content,
+  .supply-hub-weekly-shipment-content,
+  .supply-hub-material-storage-content,
+  .supply-hub-export-doc-content,
+  .supply-hub-approved-samples-content,
+  .supply-hub-component-samples-content,
+  .supply-hub-technical-drawings-content,
+  .supply-hub-material-references-content,
+  .supply-hub-packing-standards-content,
+  .supply-hub-qc-checklist-content,
+  .supply-hub-partner-standard-room {
+    width: min(100% - 0.82rem, 44rem);
+    margin-top: 0.75rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .supply-hub-overview-definition,
+  .supply-hub-overview-benefits,
+  .supply-hub-overview-role-grid,
+  .supply-hub-overview-audience-grid,
+  .supply-hub-storage-process-list,
+  .supply-hub-weekly-goal-grid,
+  .supply-hub-weekly-model-grid,
+  .supply-hub-weekly-support-grid,
+  .supply-hub-weekly-buffer-grid,
+  .supply-hub-weekly-check-grid,
+  .supply-hub-weekly-audience-grid,
+  .supply-hub-weekly-process-steps,
+  .supply-hub-export-doc-process-steps,
+  .supply-hub-packing-standards-managed-grid,
+  .supply-hub-packing-standards-document-grid,
+  .supply-hub-packing-standards-reference-grid,
+  .supply-hub-packing-standards-value-grid,
+  .supply-hub-qc-checklist-group-grid,
+  .supply-hub-qc-checklist-reference-grid,
+  .supply-hub-qc-checklist-value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .supply-hub-weekly-goal-item,
+  .supply-hub-weekly-model-card,
+  .supply-hub-weekly-audience-card,
+  .supply-hub-storage-support-card,
+  .supply-hub-storage-operation-card,
+  .supply-hub-storage-buyer-benefit-card,
+  .supply-hub-material-storage-item-card,
+  .supply-hub-material-storage-goal-card,
+  .supply-hub-material-storage-audience-card {
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .supply-hub-export-documentation-support-banner > img {
+    aspect-ratio: 2007 / 784;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .supply-hub-export-documentation-support-banner-copy {
+    left: 0.9rem;
+    top: 0.72rem;
+    width: min(52vw, 15rem);
+  }
+
+  .supply-hub-export-documentation-support-banner-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(1.04rem, 5vw, 1.65rem);
+    line-height: 0.98;
+  }
+
+  .supply-hub-export-documentation-support-banner-copy > span,
+  .supply-hub-export-documentation-support-banner-copy p {
+    margin-top: 0.22rem;
+    font-size: clamp(0.32rem, 1.32vw, 0.46rem);
+    line-height: 1.1;
+  }
+
+  .supply-hub-export-doc-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.72rem;
+  }
+
+  .supply-hub-export-doc-panel {
+    padding: 0.62rem;
+  }
+
+  .supply-hub-export-doc-panel h2 {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.38rem;
+    border-bottom: 1px solid rgba(33, 36, 40, 0.14);
+    font-size: 0.78rem;
+    line-height: 1.14;
+  }
+
+  .supply-hub-export-doc-role,
+  .supply-hub-export-doc-multi-factory-body,
+  .supply-hub-export-doc-checks-body,
+  .supply-hub-export-doc-buyer-body,
+  .supply-hub-export-doc-repeat-body,
+  .supply-hub-export-doc-buyer-inputs-body {
+    grid-template-columns: 2.15rem minmax(0, 1fr);
+    gap: 0.52rem;
+    align-items: start;
+  }
+
+  .supply-hub-export-doc-commercial-grid,
+  .supply-hub-export-doc-qc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .supply-hub-export-doc-commercial-card,
+  .supply-hub-export-doc-qc-card {
+    display: grid;
+    grid-template-columns: 2.15rem minmax(0, 1fr);
+    gap: 0.5rem;
+    padding: 0.58rem;
+    border: 1px solid rgba(33, 36, 40, 0.16) !important;
+    border-radius: 7px;
+    text-align: left;
+  }
+
+  .supply-hub-export-doc-role-image-placeholder,
+  .supply-hub-export-doc-commercial-image-placeholder,
+  .supply-hub-export-doc-multi-factory-image-placeholder,
+  .supply-hub-export-doc-checks-image-placeholder,
+  .supply-hub-export-doc-qc-image-placeholder,
+  .supply-hub-export-doc-buyer-image-placeholder,
+  .supply-hub-export-doc-repeat-image-placeholder,
+  .supply-hub-export-doc-audience-image-placeholder,
+  .supply-hub-export-doc-buyer-inputs-image-placeholder {
+    width: 2.15rem;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    aspect-ratio: 1;
+  }
+
+  .supply-hub-export-doc-commercial-image-placeholder,
+  .supply-hub-export-doc-qc-image-placeholder {
+    grid-row: span 2;
+  }
+
+  .supply-hub-export-doc-role-copy p,
+  .supply-hub-export-doc-commercial-copy p,
+  .supply-hub-export-doc-commercial-copy ul,
+  .supply-hub-export-doc-multi-factory ul,
+  .supply-hub-export-doc-checks-body li,
+  .supply-hub-export-doc-qc-card li,
+  .supply-hub-export-doc-buyer-body li,
+  .supply-hub-export-doc-repeat-body li,
+  .supply-hub-export-doc-audience-row p,
+  .supply-hub-export-doc-buyer-inputs-body li {
+    font-size: 0.58rem;
+    line-height: 1.22;
+  }
+
+  .supply-hub-export-doc-commercial-copy h3,
+  .supply-hub-export-doc-qc-card h3,
+  .supply-hub-export-doc-audience-row h3 {
+    font-size: 0.72rem;
+    line-height: 1.16;
+  }
+
+  .supply-hub-export-doc-checks-body ul,
+  .supply-hub-export-doc-buyer-body ul,
+  .supply-hub-export-doc-repeat-body ul,
+  .supply-hub-export-doc-buyer-inputs-body ul {
+    display: grid;
+    grid-column: 2;
+    gap: 0.18rem;
+    padding-left: 0.85rem;
+    list-style: disc;
+  }
+
+  .supply-hub-export-doc-checks-body li,
+  .supply-hub-export-doc-buyer-body li,
+  .supply-hub-export-doc-repeat-body li,
+  .supply-hub-export-doc-buyer-inputs-body li,
+  .supply-hub-export-doc-checks-body li:nth-child(n + 3),
+  .supply-hub-export-doc-buyer-body li:nth-child(n + 3),
+  .supply-hub-export-doc-repeat-body li:nth-child(n + 3),
+  .supply-hub-export-doc-buyer-inputs-body li:nth-child(n + 3) {
+    grid-column: auto;
+    padding-left: 0;
+  }
+
+  .supply-hub-export-doc-checks-body li::before,
+  .supply-hub-export-doc-buyer-body li::before,
+  .supply-hub-export-doc-repeat-body li::before,
+  .supply-hub-export-doc-buyer-inputs-body li::before {
+    content: none;
+  }
+
+  .supply-hub-export-doc-audience-list {
+    gap: 0.5rem;
+  }
+
+  .supply-hub-export-doc-audience-row {
+    grid-template-columns: 2.15rem minmax(0, 1fr);
+    gap: 0.5rem;
+    padding: 0.58rem;
+    border: 1px solid rgba(33, 36, 40, 0.16);
+    border-radius: 7px;
+  }
+
+  .supply-hub-export-doc-process-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.42rem;
+  }
+
+  .supply-hub-export-doc-process-step {
+    grid-template-columns: 1.45rem minmax(0, 1fr);
+    gap: 0.38rem;
+    align-items: center;
+    justify-items: start;
+    min-height: 2.55rem;
+    padding: 0.42rem 0.46rem;
+    border: 1px solid rgba(33, 36, 40, 0.16);
+    border-radius: 7px;
+    text-align: left;
+  }
+
+  .supply-hub-export-doc-process-number {
+    width: 1.45rem;
+    margin: 0;
+    font-size: 0.62rem;
+  }
+
+  img.supply-hub-export-doc-process-image-placeholder,
+  .supply-hub-export-doc-process-image-placeholder {
+    display: none !important;
+  }
+
+  .supply-hub-export-doc-process-step p {
+    grid-column: 2;
+    margin: 0;
+    font-size: 0.58rem;
+    line-height: 1.12;
+  }
+
+  .supply-hub-export-doc-cta {
+    grid-template-columns: 1fr;
+    gap: 0.52rem;
+    margin-top: 0.95rem;
+    padding: 0.58rem;
+    border-radius: 7px;
+  }
+
+  .supply-hub-export-doc-cta-image-placeholder {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .supply-hub-export-doc-commercial-grid,
+  .supply-hub-export-doc-qc-grid,
+  .supply-hub-export-doc-process-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .supply-hub-export-documentation-support-banner-copy {
+    width: min(50vw, 12.5rem);
+  }
+
+  .supply-hub-export-documentation-support-banner-copy p + p {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .supply-hub-partner-component-samples-banner > img {
+    aspect-ratio: 2006 / 784;
+    object-fit: cover;
+    object-position: 70% center;
+  }
+
+  .supply-hub-partner-component-samples-banner-copy {
+    left: 0.9rem;
+    right: auto;
+    top: 0.72rem;
+    width: min(54vw, 15rem);
+  }
+
+  .supply-hub-partner-component-samples-banner-copy h1 {
+    max-width: 11ch;
+    font-size: clamp(1.08rem, 5.3vw, 1.7rem);
+    line-height: 0.98;
+  }
+
+  .supply-hub-partner-component-samples-banner-copy > span,
+  .supply-hub-partner-component-samples-banner-copy p {
+    margin-top: 0.22rem;
+    font-size: clamp(0.32rem, 1.34vw, 0.46rem);
+    line-height: 1.1;
+  }
+
+  .supply-hub-component-samples-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.72rem;
+  }
+
+  .supply-hub-component-samples-panel {
+    padding: 0.62rem;
+  }
+
+  .supply-hub-component-samples-panel h2 {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.38rem;
+    border-bottom: 1px solid rgba(33, 36, 40, 0.14);
+    font-size: 0.78rem;
+    line-height: 1.14;
+  }
+
+  .supply-hub-component-samples-panel h3 {
+    font-size: 0.7rem;
+    line-height: 1.16;
+  }
+
+  .supply-hub-component-samples-panel p,
+  .supply-hub-component-samples-panel ul,
+  .supply-hub-component-samples-flow p,
+  .supply-hub-component-samples-process-list span,
+  .supply-hub-component-samples-cta-note p {
+    font-size: 0.58rem;
+    line-height: 1.22;
+  }
+
+  .supply-hub-component-samples-role-list {
+    gap: 0.42rem;
+  }
+
+  .supply-hub-component-samples-role-list li {
+    grid-template-columns: 1.45rem minmax(0, 1fr);
+    gap: 0.4rem;
+    font-size: 0.62rem;
+    line-height: 1.16;
+  }
+
+  .supply-hub-component-samples-small-slot {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .supply-hub-component-samples-type-grid,
+  .supply-hub-component-samples-record-grid,
+  .supply-hub-component-samples-usage-grid,
+  .supply-hub-component-samples-key-grid,
+  .supply-hub-component-samples-management-grid,
+  .supply-hub-component-samples-flow,
+  .supply-hub-component-samples-benefit-grid,
+  .supply-hub-component-samples-process-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .supply-hub-component-samples-type-card,
+  .supply-hub-component-samples-record-card,
+  .supply-hub-component-samples-usage-card,
+  .supply-hub-component-samples-key-card,
+  .supply-hub-component-samples-management-card,
+  .supply-hub-component-samples-flow article,
+  .supply-hub-component-samples-benefit-card,
+  .supply-hub-component-samples-process-list li {
+    min-height: auto;
+    padding: 0.56rem;
+    border: 1px solid rgba(33, 36, 40, 0.16);
+    border-radius: 7px;
+  }
+
+  .supply-hub-component-samples-usage-card,
+  .supply-hub-component-samples-key-card,
+  .supply-hub-component-samples-management-card,
+  .supply-hub-component-samples-benefit-card {
+    grid-template-columns: 2.1rem minmax(0, 1fr);
+    gap: 0.48rem;
+    align-items: start;
+  }
+
+  .supply-hub-component-samples-type-card .supply-hub-component-samples-image-slot,
+  .supply-hub-component-samples-record-card .supply-hub-component-samples-image-slot {
+    width: 100%;
+    min-height: 3rem;
+    margin-bottom: 0.42rem;
+    aspect-ratio: 4 / 2.15;
+  }
+
+  .supply-hub-component-samples-usage-card .supply-hub-component-samples-image-slot,
+  .supply-hub-component-samples-key-card .supply-hub-component-samples-image-slot,
+  .supply-hub-component-samples-management-card .supply-hub-component-samples-image-slot,
+  .supply-hub-component-samples-benefit-card .supply-hub-component-samples-image-slot,
+  .supply-hub-component-samples-flow .supply-hub-component-samples-image-slot {
+    grid-row: span 2;
+    width: 2.1rem;
+    min-width: 0;
+    margin: 0;
+    aspect-ratio: 1;
+  }
+
+  .supply-hub-component-samples-key-card ul,
+  .supply-hub-component-samples-management-card ul,
+  .supply-hub-component-samples-record-card ul,
+  .supply-hub-component-samples-type-card ul {
+    margin-top: 0.34rem;
+    padding-left: 0.82rem;
+    font-size: 0.56rem;
+    line-height: 1.2;
+  }
+
+  .supply-hub-component-samples-flow article {
+    grid-template-columns: 2.1rem minmax(0, 1fr);
+    justify-items: start;
+    align-content: start;
+    text-align: left;
+  }
+
+  .supply-hub-component-samples-flow article:not(:last-child)::after,
+  .supply-hub-component-samples-process-list li::after {
+    content: none !important;
+  }
+
+  .supply-hub-component-samples-process-list li {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+    text-align: left;
+  }
+
+  .supply-hub-component-samples-process-list .supply-hub-component-samples-image-slot {
+    display: none;
+  }
+
+  .supply-hub-component-samples-cta {
+    grid-template-columns: 1fr;
+    gap: 0.52rem;
+    margin-top: 0.95rem;
+    padding: 0.58rem;
+    border-radius: 7px;
+  }
+
+  .supply-hub-component-samples-cta-media {
+    display: none !important;
+  }
+
+  .supply-hub-component-samples-cta-copy {
+    text-align: center;
+  }
+
+  .supply-hub-component-samples-cta-copy h2 {
+    max-width: 24ch;
+    margin: 0 auto;
+    font-size: clamp(0.94rem, 3.85vw, 1.14rem);
+    line-height: 1.06;
+  }
+
+  .supply-hub-component-samples-cta-note {
+    text-align: center;
+  }
+
+  .supply-hub-component-samples-cta-actions {
+    grid-template-columns: 1fr;
+    gap: 0.42rem;
+    margin-top: 0;
+  }
+
+  .supply-hub-component-samples-cta-actions a {
+    min-height: 2.55rem;
+    justify-content: center;
+    padding: 0.48rem 0.68rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    line-height: 1.12;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .supply-hub-component-samples-type-grid,
+  .supply-hub-component-samples-record-grid,
+  .supply-hub-component-samples-usage-grid,
+  .supply-hub-component-samples-key-grid,
+  .supply-hub-component-samples-management-grid,
+  .supply-hub-component-samples-flow,
+  .supply-hub-component-samples-benefit-grid,
+  .supply-hub-component-samples-process-list {
+    grid-template-columns: 1fr;
+  }
+
+  .supply-hub-partner-component-samples-banner-copy {
+    width: min(50vw, 12.2rem);
+  }
+
+  .supply-hub-partner-component-samples-banner-copy p + p {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .supply-hub-partner-technical-drawings-banner > img {
+    aspect-ratio: 2006 / 784;
+    object-fit: cover;
+    object-position: 70% center;
+  }
+
+  .supply-hub-partner-technical-drawings-banner-copy {
+    left: 0.9rem;
+    right: auto;
+    top: 0.72rem;
+    width: min(54vw, 15rem);
+  }
+
+  .supply-hub-partner-technical-drawings-banner-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(1.08rem, 5.3vw, 1.7rem);
+    line-height: 0.98;
+  }
+
+  .supply-hub-partner-technical-drawings-banner-copy > span,
+  .supply-hub-partner-technical-drawings-banner-copy p {
+    margin-top: 0.22rem;
+    font-size: clamp(0.32rem, 1.34vw, 0.46rem);
+    line-height: 1.1;
+  }
+
+  .supply-hub-technical-drawings-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.72rem;
+  }
+
+  .supply-hub-technical-drawings-panel {
+    padding: 0.62rem;
+    border-radius: 8px;
+  }
+
+  .supply-hub-technical-drawings-panel h2 {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.38rem;
+    border-bottom: 1px solid rgba(33, 36, 40, 0.14);
+    font-size: 0.78rem;
+    line-height: 1.14;
+  }
+
+  .supply-hub-technical-drawings-panel h3 {
+    font-size: 0.7rem;
+    line-height: 1.16;
+  }
+
+  .supply-hub-technical-drawings-panel p,
+  .supply-hub-technical-drawings-panel li,
+  .supply-hub-technical-drawings-reference-flow strong,
+  .supply-hub-technical-drawings-document-grid strong,
+  .supply-hub-technical-drawings-process-flow p {
+    font-size: 0.58rem;
+    line-height: 1.22;
+  }
+
+  .supply-hub-technical-drawings-role-layout {
+    display: grid;
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    gap: 0.52rem;
+    align-items: start;
+  }
+
+  .supply-hub-technical-drawings-role-layout .supply-hub-technical-drawings-image-slot {
+    float: none;
+    grid-row: span 2;
+    width: 2.2rem;
+    margin: 0;
+  }
+
+  .supply-hub-technical-drawings-role-layout p + p {
+    margin-top: 0.28rem;
+  }
+
+  .supply-hub-technical-drawings-type-grid,
+  .supply-hub-technical-drawings-reference-flow,
+  .supply-hub-technical-drawings-document-grid,
+  .supply-hub-technical-drawings-value-grid,
+  .supply-hub-technical-drawings-process-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .supply-hub-technical-drawings-type-card,
+  .supply-hub-technical-drawings-reference-flow article,
+  .supply-hub-technical-drawings-document-grid article,
+  .supply-hub-technical-drawings-value-grid article,
+  .supply-hub-technical-drawings-process-flow article {
+    min-height: auto;
+    padding: 0.56rem;
+    border: 1px solid rgba(33, 36, 40, 0.16);
+    border-radius: 7px;
+  }
+
+  .supply-hub-technical-drawings-type-card,
+  .supply-hub-technical-drawings-reference-flow article,
+  .supply-hub-technical-drawings-value-grid article,
+  .supply-hub-technical-drawings-process-flow article {
+    display: grid;
+    grid-template-columns: 2.1rem minmax(0, 1fr);
+    gap: 0.46rem;
+    align-items: start;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .supply-hub-technical-drawings-type-card {
+    grid-template-areas:
+      "image title"
+      "image body";
+  }
+
+  .supply-hub-technical-drawings-value-grid article,
+  .supply-hub-technical-drawings-process-flow article {
+    grid-template-areas:
+      "image title"
+      "image body";
+  }
+
+  .supply-hub-technical-drawings-type-card h3 {
+    grid-area: title;
+  }
+
+  .supply-hub-technical-drawings-value-grid article h3,
+  .supply-hub-technical-drawings-process-flow article h3 {
+    grid-area: title;
+  }
+
+  .supply-hub-technical-drawings-type-card p {
+    grid-area: body;
+    max-width: 32ch;
+  }
+
+  .supply-hub-technical-drawings-value-grid article p,
+  .supply-hub-technical-drawings-process-flow article p {
+    grid-area: body;
+    max-width: 34ch;
+  }
+
+  .supply-hub-technical-drawings-type-card .supply-hub-technical-drawings-image-slot,
+  .supply-hub-technical-drawings-reference-flow .supply-hub-technical-drawings-image-slot,
+  .supply-hub-technical-drawings-value-grid .supply-hub-technical-drawings-image-slot,
+  .supply-hub-technical-drawings-process-flow .supply-hub-technical-drawings-image-slot,
+  .supply-hub-technical-drawings-document-grid .supply-hub-technical-drawings-image-slot {
+    grid-row: span 2;
+    width: 2.1rem;
+    min-width: 0;
+    margin: 0;
+    aspect-ratio: 1;
+  }
+
+  .supply-hub-technical-drawings-type-card .supply-hub-technical-drawings-image-slot {
+    grid-area: image;
+  }
+
+  .supply-hub-technical-drawings-value-grid .supply-hub-technical-drawings-image-slot,
+  .supply-hub-technical-drawings-process-flow .supply-hub-technical-drawings-image-slot {
+    grid-area: image;
+  }
+
+  .supply-hub-technical-drawings-document-grid article {
+    grid-template-columns: 2.1rem minmax(0, 1fr);
+    gap: 0.46rem;
+  }
+
+  .supply-hub-technical-drawings-version-layout,
+  .supply-hub-technical-drawings-value-layout {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .supply-hub-technical-drawings-version-board {
+    display: none;
+  }
+
+  .supply-hub-technical-drawings-version ul,
+  .supply-hub-technical-drawings-production ul {
+    display: grid;
+    gap: 0.34rem;
+  }
+
+  .supply-hub-technical-drawings-version li,
+  .supply-hub-technical-drawings-production li {
+    padding-left: 1.22rem;
+  }
+
+  .supply-hub-technical-drawings-standard-room > p {
+    margin-bottom: 0.5rem;
+    font-size: 0.6rem;
+    line-height: 1.24;
+  }
+
+  .supply-hub-technical-drawings-reference-flow article:not(:last-child)::after,
+  .supply-hub-technical-drawings-process-flow article:not(:last-child)::after {
+    content: none !important;
+  }
+
+  .supply-hub-technical-drawings-reference-caption {
+    margin-top: 0.5rem;
+    padding-top: 0.38rem;
+    font-size: 0.6rem;
+    line-height: 1.16;
+  }
+
+  .supply-hub-technical-drawings-value-grid h3,
+  .supply-hub-technical-drawings-process-flow h3 {
+    min-height: 0;
+  }
+
+  .supply-hub-technical-drawings-value-visual {
+    display: none;
+  }
+
+  .supply-hub-technical-drawings-cta {
+    grid-template-columns: 1fr;
+    gap: 0.52rem;
+    margin-top: 0.95rem;
+    padding: 0.58rem;
+    border-radius: 7px;
+    text-align: center;
+  }
+
+  .supply-hub-technical-drawings-cta h2 {
+    max-width: 24ch;
+    margin: 0 auto;
+    font-size: clamp(0.94rem, 3.85vw, 1.14rem);
+    line-height: 1.06;
+  }
+
+  .supply-hub-technical-drawings-cta p {
+    max-width: 42ch;
+    margin: 0.32rem auto 0;
+    font-size: 0.62rem;
+    line-height: 1.24;
+  }
+
+  .supply-hub-technical-drawings-cta-actions {
+    grid-template-columns: 1fr;
+    gap: 0.42rem;
+    margin-top: 0;
+  }
+
+  .supply-hub-technical-drawings-cta-actions a {
+    min-height: 2.55rem;
+    justify-content: center;
+    padding: 0.48rem 0.68rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    line-height: 1.12;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .supply-hub-technical-drawings-type-grid,
+  .supply-hub-technical-drawings-reference-flow,
+  .supply-hub-technical-drawings-document-grid,
+  .supply-hub-technical-drawings-value-grid,
+  .supply-hub-technical-drawings-process-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .supply-hub-partner-technical-drawings-banner-copy {
+    width: min(50vw, 12.2rem);
+  }
+
+  .supply-hub-partner-technical-drawings-banner-copy p + p {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .supply-hub-material-storage-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.72rem;
+  }
+
+  .supply-hub-material-storage-item-grid,
+  .supply-hub-material-storage-goal-grid,
+  .supply-hub-material-storage-audience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .supply-hub-material-storage-item-card,
+  .supply-hub-material-storage-goal-card,
+  .supply-hub-material-storage-audience-card {
+    display: grid;
+    grid-template-columns: 2.15rem minmax(0, 1fr);
+    align-items: start;
+    gap: 0.5rem;
+    padding: 0.58rem;
+    text-align: left;
+  }
+
+  .supply-hub-material-storage-image-placeholder,
+  .supply-hub-material-storage-goal-image-placeholder,
+  .supply-hub-material-storage-audience-image-placeholder {
+    grid-row: span 2;
+    width: 2.15rem;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .supply-hub-material-storage-item-copy h3,
+  .supply-hub-material-storage-goal-card h3,
+  .supply-hub-material-storage-audience-card h3 {
+    font-size: 0.72rem;
+    line-height: 1.16;
+  }
+
+  .supply-hub-material-storage-item-copy ul,
+  .supply-hub-material-storage-goal-card p,
+  .supply-hub-material-storage-audience-card p {
+    font-size: 0.58rem;
+    line-height: 1.22;
+  }
+
+  .supply-hub-material-storage-project-row {
+    grid-template-columns: 2rem minmax(4.4rem, 0.46fr) minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+
+  .supply-hub-material-storage-icon-row {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+
+  .supply-hub-material-storage-small-image-placeholder {
+    width: 2rem;
+    min-width: 0;
+  }
+
+  .supply-hub-material-storage-traceability {
+    grid-template-columns: 1fr;
+  }
+
+  .supply-hub-material-storage-traceability-image-placeholder {
+    width: min(100%, 12rem);
+    min-height: 6.4rem;
+  }
+
+  .supply-hub-material-storage-operation-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .supply-hub-material-storage-operation-step {
+    grid-template-columns: 1.7rem minmax(0, 1fr);
+    gap: 0.45rem;
+    align-items: center;
+    justify-items: start;
+    padding: 0.56rem;
+    text-align: left;
+  }
+
+  .supply-hub-material-storage-operation-number {
+    width: 1.7rem;
+    margin: 0;
+  }
+
+  .supply-hub-material-storage-operation-step p {
+    min-height: 0;
+    margin: 0;
+    font-size: 0.62rem;
+  }
+
+  .supply-hub-material-storage-operation-image-placeholder {
+    display: none;
+  }
+
+  .supply-hub-material-storage-cta {
+    grid-template-columns: 1fr;
+    gap: 0.52rem;
+    margin-top: 0.95rem;
+    padding: 0.58rem;
+    border-radius: 7px;
+  }
+
+  .supply-hub-material-storage-cta-image-placeholder {
+    display: none !important;
+  }
+
+  .supply-hub-material-storage-cta-copy {
+    text-align: center;
+  }
+
+  .supply-hub-material-storage-cta-copy h2 {
+    max-width: 24ch;
+    margin: 0 auto;
+    font-size: clamp(0.94rem, 3.85vw, 1.14rem);
+    line-height: 1.06;
+  }
+
+  .supply-hub-material-storage-cta-copy p {
+    max-width: 42ch;
+    margin: 0.32rem auto 0;
+    font-size: 0.62rem;
+    line-height: 1.24;
+  }
+
+  .supply-hub-material-storage-cta-actions {
+    grid-template-columns: 1fr;
+    gap: 0.42rem;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .supply-hub-material-storage-item-grid,
+  .supply-hub-material-storage-goal-grid,
+  .supply-hub-material-storage-audience-grid,
+  .supply-hub-material-storage-operation-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .supply-hub-material-storage-project-row {
+    grid-template-columns: 1.85rem minmax(0, 1fr);
+  }
+
+  .supply-hub-material-storage-project-row ul {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 680px) {
+  .quality-control-overview-content,
+  .quality-control-qc-process-content,
+  .quality-control-material-inspection-content,
+  .quality-control-in-process-inspection-content,
+  .quality-control-final-inspection-content,
+  .quality-control-approved-sample-control-content,
+  .quality-control-moisture-control-content,
+  .quality-control-packing-standard-content,
+  .quality-control-inspection-report-content {
+    width: min(100% - 1rem, 44rem);
+    margin-top: 0.9rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .quality-control-overview-panel + .quality-control-overview-panel,
+  .quality-control-qc-process-panel + .quality-control-qc-process-panel,
+  .quality-control-material-inspection-panel + .quality-control-material-inspection-panel,
+  .quality-control-in-process-inspection-panel + .quality-control-in-process-inspection-panel,
+  .quality-control-final-inspection-panel + .quality-control-final-inspection-panel,
+  .quality-control-approved-sample-control-panel + .quality-control-approved-sample-control-panel,
+  .quality-control-moisture-control-panel + .quality-control-moisture-control-panel,
+  .quality-control-packing-standard-panel + .quality-control-packing-standard-panel,
+  .quality-control-inspection-report-panel + .quality-control-inspection-report-panel {
+    margin-top: 1.05rem;
+  }
+
+  .quality-control-overview-panel h2,
+  .quality-control-qc-process-panel h2,
+  .quality-control-material-inspection-panel h2,
+  .quality-control-in-process-inspection-panel h2,
+  .quality-control-final-inspection-panel h2,
+  .quality-control-approved-sample-control-panel h2,
+  .quality-control-moisture-control-panel h2,
+  .quality-control-packing-standard-panel h2,
+  .quality-control-inspection-report-panel h2 {
+    justify-content: center;
+    gap: 0.56rem;
+    margin-bottom: 0;
+    padding: 0.68rem 0.66rem 0;
+    font-size: 0.78rem;
+    line-height: 1.14;
+    text-align: center;
+  }
+
+  .quality-control-overview-panel h2::before,
+  .quality-control-overview-panel h2::after,
+  .quality-control-qc-process-panel h2::before,
+  .quality-control-qc-process-panel h2::after,
+  .quality-control-material-inspection-panel h2::before,
+  .quality-control-material-inspection-panel h2::after,
+  .quality-control-in-process-inspection-panel h2::before,
+  .quality-control-in-process-inspection-panel h2::after,
+  .quality-control-final-inspection-panel h2::before,
+  .quality-control-final-inspection-panel h2::after,
+  .quality-control-approved-sample-control-panel h2::before,
+  .quality-control-approved-sample-control-panel h2::after,
+  .quality-control-moisture-control-panel h2::before,
+  .quality-control-moisture-control-panel h2::after,
+  .quality-control-packing-standard-panel h2::before,
+  .quality-control-packing-standard-panel h2::after,
+  .quality-control-inspection-report-panel h2::before,
+  .quality-control-inspection-report-panel h2::after {
+    content: none;
+  }
+
+  .quality-control-final-inspection-panel h2 {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .quality-control-final-inspection-panel h2 > span {
+    flex: 0 0 auto;
+  }
+
+  .quality-control-moisture-control-panel h2 {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .quality-control-moisture-control-panel h2 > span {
+    flex: 0 0 auto;
+  }
+
+  .quality-control-packing-standard-panel h2 {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .quality-control-packing-standard-panel h2 > span {
+    flex: 0 0 auto;
+  }
+
+  .quality-control-overview-flow-grid,
+  .quality-control-overview-pillar-grid,
+  .quality-control-overview-goal-grid,
+  .quality-control-qc-process-flow-grid,
+  .quality-control-qc-process-principle-grid,
+  .quality-control-material-inspection-material-grid,
+  .quality-control-material-inspection-main-grid,
+  .quality-control-material-inspection-system-grid,
+  .quality-control-in-process-inspection-stage-grid,
+  .quality-control-in-process-inspection-controlled-grid,
+  .quality-control-in-process-inspection-method-grid,
+  .quality-control-in-process-inspection-benefit-flow,
+  .quality-control-in-process-inspection-system-flow,
+  .quality-control-final-inspection-goal-grid,
+  .quality-control-final-inspection-check-grid,
+  .quality-control-final-inspection-record-grid,
+  .quality-control-final-inspection-role-flow,
+  .quality-control-approved-sample-control-type-grid,
+  .quality-control-approved-sample-control-process-grid,
+  .quality-control-approved-sample-control-storage-grid,
+  .quality-control-approved-sample-control-risk-flow,
+  .quality-control-approved-sample-control-role-flow,
+  .quality-control-moisture-control-importance-flow,
+  .quality-control-moisture-control-effect-grid,
+  .quality-control-moisture-control-material-grid,
+  .quality-control-moisture-control-method-grid,
+  .quality-control-moisture-control-point-flow,
+  .quality-control-moisture-control-risk-grid,
+  .quality-control-packing-standard-goal-grid,
+  .quality-control-packing-standard-control-grid,
+  .quality-control-packing-standard-material-grid,
+  .quality-control-packing-standard-type-grid,
+  .quality-control-inspection-report-content-grid,
+  .quality-control-inspection-report-type-grid,
+  .quality-control-inspection-report-support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.56rem;
+    padding: 0.66rem;
+  }
+
+  .quality-control-overview-buyer-layout,
+  .quality-control-final-inspection-pair,
+  .quality-control-final-inspection-approved-layout,
+  .quality-control-material-inspection-followup,
+  .quality-control-approved-sample-control-standard-room {
+    grid-template-columns: 1fr;
+    gap: 0.62rem;
+  }
+
+  .quality-control-overview-flow-grid article,
+  .quality-control-overview-pillar-grid article,
+  .quality-control-overview-goal-grid article,
+  .quality-control-qc-process-flow-grid article,
+  .quality-control-qc-process-principle-grid article,
+  .quality-control-material-inspection-material-grid article,
+  .quality-control-material-inspection-main-grid article,
+  .quality-control-material-inspection-system-grid article,
+  .quality-control-in-process-inspection-stage-grid article,
+  .quality-control-in-process-inspection-controlled-grid article,
+  .quality-control-in-process-inspection-method-grid article,
+  .quality-control-in-process-inspection-benefit-flow div,
+  .quality-control-in-process-inspection-system-flow div,
+  .quality-control-final-inspection-goal-grid article,
+  .quality-control-final-inspection-check-grid article,
+  .quality-control-final-inspection-record-grid article,
+  .quality-control-final-inspection-role-flow article,
+  .quality-control-approved-sample-control-type-grid article,
+  .quality-control-approved-sample-control-process-grid article,
+  .quality-control-approved-sample-control-storage-grid article,
+  .quality-control-approved-sample-control-risk-flow article,
+  .quality-control-approved-sample-control-role-flow article,
+  .quality-control-moisture-control-importance-flow article,
+  .quality-control-moisture-control-effect-grid article,
+  .quality-control-moisture-control-material-grid article,
+  .quality-control-moisture-control-method-grid article,
+  .quality-control-moisture-control-point-flow article,
+  .quality-control-moisture-control-risk-grid article,
+  .quality-control-packing-standard-goal-grid article,
+  .quality-control-packing-standard-control-grid article,
+  .quality-control-packing-standard-material-grid article,
+  .quality-control-packing-standard-type-grid article,
+  .quality-control-inspection-report-content-grid article,
+  .quality-control-inspection-report-type-grid article,
+  .quality-control-inspection-report-support-grid article {
+    min-height: auto;
+    padding: 0.62rem;
+    border: 1px solid rgba(52, 48, 42, 0.16);
+    border-radius: 7px;
+  }
+
+  .quality-control-qc-process-flow-grid article,
+  .quality-control-material-inspection-main-grid article,
+  .quality-control-final-inspection-check-grid article,
+  .quality-control-approved-sample-control-process-grid article,
+  .quality-control-approved-sample-control-risk-flow article,
+  .quality-control-approved-sample-control-role-flow article,
+  .quality-control-moisture-control-point-flow article,
+  .quality-control-final-inspection-role-flow article {
+    border-left: 1px solid rgba(52, 48, 42, 0.16);
+    border-top: 1px solid rgba(52, 48, 42, 0.16);
+  }
+
+  .quality-control-overview-flow-grid article::before,
+  .quality-control-overview-flow-grid article::after,
+  .quality-control-qc-process-flow-grid article::before,
+  .quality-control-qc-process-flow-grid article::after,
+  .quality-control-material-inspection-main-grid article::before,
+  .quality-control-material-inspection-main-grid article::after,
+  .quality-control-approved-sample-control-process-grid article::before,
+  .quality-control-approved-sample-control-process-grid article::after,
+  .quality-control-approved-sample-control-risk-flow article::before,
+  .quality-control-approved-sample-control-risk-flow article::after,
+  .quality-control-approved-sample-control-role-flow article::before,
+  .quality-control-approved-sample-control-role-flow article::after,
+  .quality-control-moisture-control-point-flow article::before,
+  .quality-control-moisture-control-point-flow article::after,
+  .quality-control-moisture-control-system-flow article::before,
+  .quality-control-moisture-control-system-flow article::after,
+  .quality-control-final-inspection-role-flow article::before,
+  .quality-control-final-inspection-role-flow article::after {
+    content: none !important;
+  }
+
+  .quality-control-overview-flow-grid h3,
+  .quality-control-overview-pillar-grid h3,
+  .quality-control-overview-goal-grid h3,
+  .quality-control-qc-process-flow-grid h3,
+  .quality-control-qc-process-principle-grid h3,
+  .quality-control-material-inspection-material-grid h3,
+  .quality-control-material-inspection-main-grid strong,
+  .quality-control-material-inspection-system-grid h3,
+  .quality-control-in-process-inspection-stage-grid h3,
+  .quality-control-in-process-inspection-controlled-grid h3,
+  .quality-control-in-process-inspection-method-grid h3,
+  .quality-control-final-inspection-goal-grid h3,
+  .quality-control-final-inspection-check-grid h3,
+  .quality-control-final-inspection-record-grid h3,
+  .quality-control-approved-sample-control-type-grid h3,
+  .quality-control-approved-sample-control-process-grid h3,
+  .quality-control-approved-sample-control-storage-grid h3,
+  .quality-control-moisture-control-effect-grid h3,
+  .quality-control-moisture-control-material-grid h3,
+  .quality-control-moisture-control-method-grid h3,
+  .quality-control-moisture-control-risk-grid h3,
+  .quality-control-packing-standard-goal-grid h3,
+  .quality-control-packing-standard-control-grid h3,
+  .quality-control-packing-standard-material-copy h3,
+  .quality-control-packing-standard-type-grid h3,
+  .quality-control-inspection-report-content-grid h3,
+  .quality-control-inspection-report-type-grid h3,
+  .quality-control-inspection-report-support-copy h3 {
+    min-height: auto;
+    margin-bottom: 0.36rem;
+    font-size: 0.72rem;
+    line-height: 1.16;
+    text-align: left;
+  }
+
+  .quality-control-overview-flow-grid p,
+  .quality-control-overview-pillar-grid p,
+  .quality-control-overview-goal-grid p,
+  .quality-control-qc-process-flow-grid p,
+  .quality-control-qc-process-flow-grid li,
+  .quality-control-qc-process-principle-grid p,
+  .quality-control-material-inspection-material-grid p,
+  .quality-control-material-inspection-main-grid p,
+  .quality-control-material-inspection-main-grid li,
+  .quality-control-material-inspection-system-grid p,
+  .quality-control-in-process-inspection-stage-grid p,
+  .quality-control-in-process-inspection-controlled-grid p,
+  .quality-control-in-process-inspection-method-grid p,
+  .quality-control-final-inspection-goal-grid p,
+  .quality-control-final-inspection-check-grid p,
+  .quality-control-final-inspection-check-grid li,
+  .quality-control-approved-sample-control-type-grid p,
+  .quality-control-approved-sample-control-process-grid p,
+  .quality-control-approved-sample-control-storage-grid p,
+  .quality-control-moisture-control-effect-grid p,
+  .quality-control-moisture-control-material-grid p,
+  .quality-control-moisture-control-method-grid p,
+  .quality-control-packing-standard-goal-grid p,
+  .quality-control-packing-standard-control-copy p,
+  .quality-control-packing-standard-control-copy li,
+  .quality-control-packing-standard-material-copy p,
+  .quality-control-packing-standard-type-grid p,
+  .quality-control-inspection-report-content-grid li,
+  .quality-control-inspection-report-type-grid p,
+  .quality-control-inspection-report-support-copy p {
+    max-width: none;
+    font-size: 0.6rem;
+    line-height: 1.22;
+  }
+
+  .quality-control-overview-flow-image,
+  .quality-control-overview-pillar-image,
+  .quality-control-overview-goal-image,
+  .quality-control-qc-process-image,
+  .quality-control-qc-process-principle-image,
+  .quality-control-material-inspection-material-image,
+  .quality-control-material-inspection-image,
+  .quality-control-material-inspection-system-icon,
+  .quality-control-in-process-inspection-stage-image,
+  .quality-control-in-process-inspection-small-image,
+  .quality-control-final-inspection-goal-image,
+  .quality-control-final-inspection-check-image,
+  .quality-control-final-inspection-small-image,
+  .quality-control-final-inspection-record-image,
+  .quality-control-final-inspection-role-image,
+  .quality-control-approved-sample-control-card-image,
+  .quality-control-approved-sample-control-process-image,
+  .quality-control-approved-sample-control-storage-image,
+  .quality-control-approved-sample-control-risk-image,
+  .quality-control-approved-sample-control-role-image,
+  .quality-control-moisture-control-effect-image,
+  .quality-control-moisture-control-material-image,
+  .quality-control-moisture-control-method-image,
+  .quality-control-moisture-control-risk-image,
+  .quality-control-packing-standard-goal-image-slot,
+  .quality-control-packing-standard-control-image-slot,
+  .quality-control-packing-standard-material-image-slot,
+  .quality-control-packing-standard-type-image-slot,
+  .quality-control-inspection-report-content-image-slot,
+  .quality-control-inspection-report-type-image-slot,
+  .quality-control-inspection-report-support-image-slot {
+    width: min(100%, 5.2rem);
+    min-height: 0;
+    margin: 0 auto 0.42rem;
+    aspect-ratio: 1.35;
+    object-fit: contain;
+  }
+
+  .quality-control-material-inspection-material-grid article,
+  .quality-control-in-process-inspection-stage-grid article,
+  .quality-control-in-process-inspection-controlled-grid article,
+  .quality-control-in-process-inspection-method-grid article,
+  .quality-control-final-inspection-goal-grid article,
+  .quality-control-final-inspection-check-grid article,
+  .quality-control-final-inspection-method-grid article,
+  .quality-control-packing-standard-material-grid article,
+  .quality-control-inspection-report-support-grid article {
+    grid-template-columns: 3.2rem minmax(0, 1fr);
+    gap: 0.54rem;
+    align-items: start;
+    text-align: left;
+  }
+
+  .quality-control-material-inspection-material-image,
+  .quality-control-in-process-inspection-stage-image,
+  .quality-control-in-process-inspection-small-image,
+  .quality-control-final-inspection-goal-image,
+  .quality-control-final-inspection-check-image,
+  .quality-control-final-inspection-small-image,
+  .quality-control-packing-standard-material-image-slot,
+  .quality-control-inspection-report-support-image-slot {
+    grid-row: 1 / span 3;
+    width: 3.2rem;
+    height: auto;
+    margin: 0;
+    border-right: 0;
+  }
+
+  .quality-control-final-inspection-checks .quality-control-final-inspection-check-grid {
+    gap: 0.42rem;
+    padding: 0.52rem;
+  }
+
+  .quality-control-final-inspection-checks .quality-control-final-inspection-check-grid article {
+    grid-template-columns: 1fr;
+    gap: 0.28rem;
+    align-content: start;
+    padding: 0.56rem 0.58rem;
+  }
+
+  .quality-control-final-inspection-checks .quality-control-final-inspection-check-copy {
+    gap: 0;
+  }
+
+  .quality-control-final-inspection-checks .quality-control-final-inspection-check-grid h3 {
+    gap: 0.3rem;
+    margin: 0;
+    font-size: clamp(0.66rem, 2.75vw, 0.82rem);
+    line-height: 1.08;
+  }
+
+  .quality-control-final-inspection-checks .quality-control-final-inspection-check-grid p {
+    margin-top: 0.26rem;
+    font-size: 0.58rem;
+    line-height: 1.18;
+  }
+
+  .quality-control-final-inspection-checks .quality-control-final-inspection-check-grid ul {
+    gap: 0.1rem;
+    margin-top: 0.3rem;
+    padding-left: 0.82rem;
+  }
+
+  .quality-control-final-inspection-checks .quality-control-final-inspection-check-grid li {
+    font-size: 0.56rem;
+    line-height: 1.16;
+  }
+
+  .quality-control-final-inspection-checks .quality-control-final-inspection-check-image {
+    display: none;
+  }
+
+  .quality-control-final-inspection-results .quality-control-final-inspection-result-flow {
+    gap: 0.46rem;
+    padding: 0.52rem;
+  }
+
+  .quality-control-final-inspection-results .quality-control-final-inspection-result-flow article {
+    grid-template-columns: 1.85rem minmax(0, 1fr);
+    gap: 0.46rem;
+    align-items: start;
+    justify-items: stretch;
+    padding: 0.52rem;
+    border: 1px solid rgba(52, 48, 42, 0.16);
+    border-radius: 7px;
+    background: rgba(255, 252, 246, 0.34);
+  }
+
+  .quality-control-final-inspection-results .quality-control-final-inspection-result-label {
+    justify-self: start;
+    width: 1.7rem;
+    font-size: 0.72rem;
+  }
+
+  .quality-control-final-inspection-results .quality-control-final-inspection-result-flow ol {
+    width: 100%;
+    justify-self: stretch;
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.46rem;
+  }
+
+  .quality-control-final-inspection-results .quality-control-final-inspection-result-flow li {
+    grid-template-columns: 2.85rem minmax(0, 1fr);
+    gap: 0.48rem;
+    min-height: 4.2rem;
+    padding: 0.5rem 0.54rem;
+    border-radius: 7px;
+  }
+
+  .quality-control-final-inspection-results .quality-control-final-inspection-result-flow li::before,
+  .quality-control-final-inspection-results .quality-control-final-inspection-result-flow li::after {
+    content: none;
+  }
+
+  .quality-control-final-inspection-results .quality-control-final-inspection-result-image {
+    display: block;
+    width: 2.65rem;
+    margin: 0;
+    aspect-ratio: 1;
+  }
+
+  .quality-control-final-inspection-results .quality-control-final-inspection-result-flow li > span:last-child {
+    align-self: center;
+    font-size: 0.64rem;
+    line-height: 1.16;
+  }
+
+  .quality-control-moisture-control-system .quality-control-moisture-control-system-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.46rem;
+    padding: 0.52rem;
+  }
+
+  .quality-control-moisture-control-system .quality-control-moisture-control-system-flow article {
+    grid-template-columns: 2.55rem minmax(0, 1fr);
+    gap: 0.48rem;
+    align-items: center;
+    justify-items: start;
+    min-height: 4rem;
+    padding: 0.5rem 0.54rem;
+    border: 1px solid rgba(52, 48, 42, 0.16);
+    border-radius: 7px;
+    text-align: left;
+    background: rgba(255, 252, 246, 0.34);
+  }
+
+  .quality-control-moisture-control-system .quality-control-moisture-control-system-flow article::before,
+  .quality-control-moisture-control-system .quality-control-moisture-control-system-flow article::after {
+    content: none !important;
+  }
+
+  .quality-control-moisture-control-system .quality-control-moisture-control-system-image {
+    width: 2.45rem;
+    margin: 0;
+    aspect-ratio: 1;
+  }
+
+  .quality-control-moisture-control-system .quality-control-moisture-control-system-flow h3 {
+    margin: 0;
+    font-size: 0.62rem;
+    line-height: 1.14;
+    text-align: left;
+  }
+
+  .quality-control-packing-standard-content {
+    width: min(100% - 1rem, 44rem);
+    margin-top: 0.9rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .quality-control-packing-standard-panel + .quality-control-packing-standard-panel,
+  .quality-control-packing-standard-bottom-row,
+  .quality-control-packing-standard-final-row,
+  .quality-control-packing-standard-cta {
+    margin-top: 1.05rem;
+  }
+
+  .quality-control-packing-standard-panel h2 {
+    border-bottom: 0;
+    padding: 0.68rem 0.66rem 0;
+  }
+
+  .quality-control-packing-standard-goal-grid,
+  .quality-control-packing-standard-control-grid,
+  .quality-control-packing-standard-material-grid,
+  .quality-control-packing-standard-type-grid {
+    gap: 0.5rem;
+    padding: 0.56rem;
+  }
+
+  .quality-control-packing-standard-goal-grid article,
+  .quality-control-packing-standard-control-grid article,
+  .quality-control-packing-standard-material-grid article,
+  .quality-control-packing-standard-type-grid article {
+    min-height: auto;
+    padding: 0.58rem;
+    border: 1px solid rgba(52, 48, 42, 0.16);
+    border-radius: 7px;
+  }
+
+  .quality-control-packing-standard-goal-image-slot,
+  .quality-control-packing-standard-control-image-slot,
+  .quality-control-packing-standard-material-image-slot,
+  .quality-control-packing-standard-type-image-slot {
+    width: 3.1rem;
+    margin: 0 0 0.38rem;
+    aspect-ratio: 1;
+  }
+
+  .quality-control-packing-standard-goal-grid h3,
+  .quality-control-packing-standard-control-grid h3,
+  .quality-control-packing-standard-material-copy h3,
+  .quality-control-packing-standard-type-grid h3 {
+    justify-content: flex-start;
+    min-height: auto;
+    margin: 0 0 0.32rem;
+    font-size: 0.68rem;
+    line-height: 1.12;
+    text-align: left;
+  }
+
+  .quality-control-packing-standard-goal-grid p,
+  .quality-control-packing-standard-control-copy p,
+  .quality-control-packing-standard-control-copy li,
+  .quality-control-packing-standard-material-copy p,
+  .quality-control-packing-standard-type-grid p {
+    max-width: none;
+    margin-top: 0.24rem;
+    font-size: 0.58rem;
+    line-height: 1.18;
+    text-align: left;
+  }
+
+  .quality-control-packing-standard-control-copy ul {
+    width: auto;
+    gap: 0.1rem;
+    margin: 0.28rem 0 0;
+  }
+
+  .quality-control-packing-standard-control-layout,
+  .quality-control-packing-standard-type-layout {
+    grid-template-columns: 3.1rem minmax(0, 1fr);
+    gap: 0.48rem;
+    align-items: start;
+  }
+
+  .quality-control-packing-standard-material-grid article {
+    grid-template-columns: 3.1rem minmax(0, 1fr);
+    gap: 0.48rem;
+  }
+
+  .quality-control-packing-standard-process-flow,
+  .quality-control-packing-standard-role-flow,
+  .quality-control-packing-standard-risk-flow {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.46rem;
+    overflow: visible;
+    padding: 0.56rem;
+  }
+
+  .quality-control-packing-standard-process-step-wrap,
+  .quality-control-packing-standard-role-step-wrap,
+  .quality-control-packing-standard-risk-step-wrap {
+    min-width: 0;
+    flex: initial;
+  }
+
+  .quality-control-packing-standard-process-step-wrap article,
+  .quality-control-packing-standard-role-step-wrap article,
+  .quality-control-packing-standard-risk-step-wrap article {
+    grid-template-columns: 2.9rem minmax(0, 1fr);
+    grid-template-rows: auto;
+    gap: 0.46rem;
+    align-items: center;
+    min-height: 4.1rem;
+    padding: 0.5rem 0.54rem;
+    text-align: left;
+  }
+
+  .quality-control-packing-standard-process-step-wrap h3,
+  .quality-control-packing-standard-role-step-wrap h3,
+  .quality-control-packing-standard-risk-step-wrap h3 {
+    align-self: center;
+    min-height: auto;
+    margin: 0;
+    justify-content: flex-start;
+    font-size: 0.62rem;
+    line-height: 1.14;
+    text-align: left;
+  }
+
+  .quality-control-packing-standard-process-image-slot,
+  .quality-control-packing-standard-role-image-slot,
+  .quality-control-packing-standard-risk-image-slot {
+    grid-row: 1;
+    width: 2.75rem;
+    margin: 0;
+    aspect-ratio: 1;
+  }
+
+  .quality-control-packing-standard-process-arrow,
+  .quality-control-packing-standard-role-arrow,
+  .quality-control-packing-standard-risk-arrow {
+    display: none;
+  }
+
+  .quality-control-packing-standard-bottom-row,
+  .quality-control-packing-standard-final-row {
+    grid-template-columns: 1fr;
+    gap: 1.05rem;
+  }
+
+  .quality-control-packing-standard-buyer-layout,
+  .quality-control-packing-standard-supply-hub-copy {
+    padding: 0.62rem;
+  }
+
+  .quality-control-packing-standard-buyer-layout p,
+  .quality-control-packing-standard-supply-hub-copy p {
+    font-size: 0.62rem;
+    line-height: 1.24;
+  }
+
+  .quality-control-packing-standard-buyer-layout ul {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+    margin: 0.42rem 0;
+  }
+
+  .quality-control-packing-standard-buyer-layout li {
+    font-size: 0.6rem;
+    line-height: 1.2;
+  }
+
+  .quality-control-inspection-report-panel h2 {
+    border-bottom: 0;
+    text-align: left;
+  }
+
+  .quality-control-inspection-report-stage-flow,
+  .quality-control-inspection-report-structure-flow,
+  .quality-control-inspection-report-system-flow {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.46rem;
+    overflow: visible;
+    padding: 0.56rem;
+    scroll-snap-type: none;
+  }
+
+  .quality-control-inspection-report-stage-step-wrap,
+  .quality-control-inspection-report-structure-step-wrap,
+  .quality-control-inspection-report-system-step-wrap {
+    min-width: 0;
+    flex: initial;
+    scroll-snap-align: none;
+  }
+
+  .quality-control-inspection-report-stage-step-wrap article,
+  .quality-control-inspection-report-structure-step-wrap article,
+  .quality-control-inspection-report-system-step-wrap article {
+    display: grid;
+    grid-template-columns: 2.9rem minmax(0, 1fr);
+    grid-template-rows: auto;
+    gap: 0.46rem;
+    align-items: center;
+    min-height: 4.1rem;
+    padding: 0.5rem 0.54rem;
+    border: 1px solid rgba(52, 48, 42, 0.16);
+    border-radius: 7px;
+    background: rgba(255, 252, 246, 0.34);
+    text-align: left;
+  }
+
+  .quality-control-inspection-report-stage-image-slot,
+  .quality-control-inspection-report-structure-image-slot,
+  .quality-control-inspection-report-system-image-slot {
+    grid-row: 1;
+    width: 2.75rem;
+    margin: 0;
+    aspect-ratio: 1;
+  }
+
+  .quality-control-inspection-report-stage-step-wrap h3,
+  .quality-control-inspection-report-structure-step-wrap h3,
+  .quality-control-inspection-report-system-step-wrap h3 {
+    align-self: center;
+    max-width: none;
+    min-height: auto;
+    margin: 0;
+    justify-content: flex-start;
+    font-size: 0.62rem;
+    line-height: 1.14;
+    text-align: left;
+  }
+
+  .quality-control-inspection-report-stage-arrow,
+  .quality-control-inspection-report-structure-arrow,
+  .quality-control-inspection-report-system-arrow {
+    display: none;
+  }
+
+  .quality-control-inspection-report-content-grid,
+  .quality-control-inspection-report-type-grid,
+  .quality-control-inspection-report-support-grid {
+    gap: 0.5rem;
+    padding: 0.56rem;
+  }
+
+  .quality-control-inspection-report-content-grid article,
+  .quality-control-inspection-report-type-grid article,
+  .quality-control-inspection-report-support-grid article {
+    min-height: auto;
+    padding: 0.58rem;
+    border: 1px solid rgba(52, 48, 42, 0.16);
+    border-radius: 7px;
+  }
+
+  .quality-control-inspection-report-content-grid article + article,
+  .quality-control-inspection-report-content-grid article:nth-child(2n),
+  .quality-control-inspection-report-content-grid article:nth-child(n + 3),
+  .quality-control-inspection-report-type-grid article + article,
+  .quality-control-inspection-report-type-grid article:nth-child(2n),
+  .quality-control-inspection-report-type-grid article:nth-child(n + 3),
+  .quality-control-inspection-report-support-grid article + article,
+  .quality-control-inspection-report-support-grid article:nth-child(2n),
+  .quality-control-inspection-report-support-grid article:nth-child(n + 3) {
+    border: 1px solid rgba(52, 48, 42, 0.16);
+  }
+
+  .quality-control-inspection-report-content-image-slot,
+  .quality-control-inspection-report-type-image-slot,
+  .quality-control-inspection-report-support-image-slot {
+    width: 3.1rem;
+    margin: 0 0 0.38rem;
+    aspect-ratio: 1;
+  }
+
+  .quality-control-inspection-report-content-grid h3,
+  .quality-control-inspection-report-type-grid h3,
+  .quality-control-inspection-report-support-copy h3 {
+    justify-content: flex-start;
+    min-height: auto;
+    margin: 0 0 0.32rem;
+    font-size: 0.68rem;
+    line-height: 1.12;
+    text-align: left;
+  }
+
+  .quality-control-inspection-report-content-grid ul {
+    gap: 0.12rem;
+  }
+
+  .quality-control-inspection-report-content-grid li,
+  .quality-control-inspection-report-type-grid p,
+  .quality-control-inspection-report-support-copy p {
+    max-width: none;
+    margin-top: 0.24rem;
+    font-size: 0.58rem;
+    line-height: 1.18;
+    text-align: left;
+  }
+
+  .quality-control-inspection-report-support-grid article {
+    grid-template-columns: 3.1rem minmax(0, 1fr);
+    gap: 0.48rem;
+  }
+
+  .quality-control-inspection-report-support-image-slot {
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+
+  .quality-control-inspection-report-standard-room {
+    grid-template-columns: 1fr;
+    gap: 0.52rem;
+    padding: 0.58rem;
+  }
+
+  .quality-control-inspection-report-standard-room-copy h2 {
+    font-size: 0.78rem;
+    line-height: 1.14;
+    text-align: left;
+  }
+
+  .quality-control-inspection-report-standard-room-copy p {
+    margin-top: 0.32rem;
+    font-size: 0.62rem;
+    line-height: 1.24;
+  }
+
+  .quality-control-inspection-report-standard-room-image-slot {
+    display: none;
+  }
+
+  .quality-control-overview-cta,
+  .quality-control-qc-process-cta,
+  .quality-control-material-inspection-cta,
+  .quality-control-in-process-inspection-cta,
+  .quality-control-final-inspection-cta,
+  .quality-control-approved-sample-control-cta,
+  .quality-control-moisture-control-cta,
+  .quality-control-packing-standard-cta,
+  .quality-control-inspection-report-cta {
+    grid-template-columns: 1fr;
+    gap: 0.52rem;
+    margin-top: 0.95rem;
+    padding: 0.58rem;
+    border-radius: 7px;
+  }
+
+  .quality-control-overview-cta-image,
+  .quality-control-qc-process-cta-image,
+  .quality-control-material-inspection-cta-image,
+  .quality-control-in-process-inspection-cta-image,
+  .quality-control-final-inspection-cta-image,
+  .quality-control-approved-sample-control-cta-image,
+  .quality-control-moisture-control-cta-image,
+  .quality-control-packing-standard-cta-image-slot,
+  .quality-control-inspection-report-cta-image-slot {
+    display: none;
+  }
+
+  .quality-control-overview-cta-copy,
+  .quality-control-qc-process-cta-copy,
+  .quality-control-material-inspection-cta-copy,
+  .quality-control-in-process-inspection-cta-copy,
+  .quality-control-final-inspection-cta-copy,
+  .quality-control-approved-sample-control-cta-copy,
+  .quality-control-moisture-control-cta-copy,
+  .quality-control-packing-standard-cta-copy,
+  .quality-control-inspection-report-cta-copy {
+    text-align: center;
+  }
+
+  .quality-control-overview-cta-copy h2,
+  .quality-control-qc-process-cta-copy h2,
+  .quality-control-material-inspection-cta-copy h2,
+  .quality-control-in-process-inspection-cta-copy h2,
+  .quality-control-final-inspection-cta-copy h2,
+  .quality-control-approved-sample-control-cta-copy h2,
+  .quality-control-moisture-control-cta-copy h2,
+  .quality-control-packing-standard-cta-copy h2,
+  .quality-control-inspection-report-cta-copy h2 {
+    max-width: 24ch;
+    margin: 0 auto;
+    font-size: clamp(0.94rem, 3.85vw, 1.14rem);
+    line-height: 1.06;
+    text-align: center;
+  }
+
+  .quality-control-overview-cta-copy p,
+  .quality-control-qc-process-cta-copy p,
+  .quality-control-material-inspection-cta-copy p,
+  .quality-control-in-process-inspection-cta-copy p,
+  .quality-control-final-inspection-cta-copy p,
+  .quality-control-approved-sample-control-cta-copy p,
+  .quality-control-moisture-control-cta-copy p,
+  .quality-control-packing-standard-cta-copy p,
+  .quality-control-inspection-report-cta-copy p {
+    max-width: 42ch;
+    margin: 0.32rem auto 0;
+    font-size: 0.62rem;
+    line-height: 1.24;
+  }
+
+  .quality-control-overview-cta-actions,
+  .quality-control-qc-process-cta-actions,
+  .quality-control-material-inspection-cta-actions,
+  .quality-control-in-process-inspection-cta-actions,
+  .quality-control-final-inspection-cta-actions,
+  .quality-control-approved-sample-control-cta-actions,
+  .quality-control-moisture-control-cta-actions,
+  .quality-control-packing-standard-cta-actions,
+  .quality-control-inspection-report-cta-actions {
+    grid-template-columns: 1fr;
+    gap: 0.42rem;
+    max-width: none;
+    min-width: 0;
+    margin-top: 0;
+  }
+
+  .quality-control-overview-cta-actions a,
+  .quality-control-qc-process-cta-actions a,
+  .quality-control-material-inspection-cta-actions a,
+  .quality-control-in-process-inspection-cta-actions a,
+  .quality-control-final-inspection-cta-actions a,
+  .quality-control-approved-sample-control-cta-actions a,
+  .quality-control-moisture-control-cta-actions a,
+  .quality-control-packing-standard-cta-actions a,
+  .quality-control-inspection-report-cta-actions a {
+    min-height: 2.55rem;
+    justify-content: center;
+    padding: 0.48rem 0.68rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    line-height: 1.12;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .quality-control-overview-content,
+  .quality-control-qc-process-content,
+  .quality-control-material-inspection-content,
+  .quality-control-in-process-inspection-content,
+  .quality-control-final-inspection-content,
+  .quality-control-approved-sample-control-content,
+  .quality-control-moisture-control-content,
+  .quality-control-packing-standard-content,
+  .quality-control-inspection-report-content {
+    width: min(100% - 0.82rem, 44rem);
+    margin-top: 0.75rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .quality-control-overview-flow-grid,
+  .quality-control-overview-pillar-grid,
+  .quality-control-overview-goal-grid,
+  .quality-control-qc-process-flow-grid,
+  .quality-control-qc-process-principle-grid,
+  .quality-control-material-inspection-material-grid,
+  .quality-control-material-inspection-main-grid,
+  .quality-control-material-inspection-system-grid,
+  .quality-control-in-process-inspection-stage-grid,
+  .quality-control-in-process-inspection-controlled-grid,
+  .quality-control-in-process-inspection-method-grid,
+  .quality-control-in-process-inspection-benefit-flow,
+  .quality-control-in-process-inspection-system-flow,
+  .quality-control-final-inspection-goal-grid,
+  .quality-control-final-inspection-check-grid,
+  .quality-control-final-inspection-record-grid,
+  .quality-control-final-inspection-role-flow,
+  .quality-control-approved-sample-control-type-grid,
+  .quality-control-approved-sample-control-process-grid,
+  .quality-control-approved-sample-control-storage-grid,
+  .quality-control-approved-sample-control-risk-flow,
+  .quality-control-approved-sample-control-role-flow,
+  .quality-control-moisture-control-importance-flow,
+  .quality-control-moisture-control-effect-grid,
+  .quality-control-moisture-control-material-grid,
+  .quality-control-moisture-control-method-grid,
+  .quality-control-moisture-control-point-flow,
+  .quality-control-moisture-control-risk-grid,
+  .quality-control-packing-standard-goal-grid,
+  .quality-control-packing-standard-control-grid,
+  .quality-control-packing-standard-material-grid,
+  .quality-control-packing-standard-type-grid,
+  .quality-control-inspection-report-content-grid,
+  .quality-control-inspection-report-type-grid,
+  .quality-control-inspection-report-support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-control-material-inspection-material-grid article,
+  .quality-control-in-process-inspection-stage-grid article,
+  .quality-control-in-process-inspection-controlled-grid article,
+  .quality-control-in-process-inspection-method-grid article,
+  .quality-control-final-inspection-goal-grid article,
+  .quality-control-final-inspection-check-grid article,
+  .quality-control-final-inspection-method-grid article,
+  .quality-control-packing-standard-material-grid article,
+  .quality-control-inspection-report-support-grid article {
+    grid-template-columns: 3rem minmax(0, 1fr);
+  }
+
+  .quality-control-packing-standard-process-flow,
+  .quality-control-packing-standard-role-flow,
+  .quality-control-packing-standard-risk-flow,
+  .quality-control-inspection-report-stage-flow,
+  .quality-control-inspection-report-structure-flow,
+  .quality-control-inspection-report-system-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-control-packing-standard-control-layout,
+  .quality-control-packing-standard-type-layout,
+  .quality-control-packing-standard-material-grid article,
+  .quality-control-packing-standard-process-step-wrap article,
+  .quality-control-packing-standard-role-step-wrap article,
+  .quality-control-packing-standard-risk-step-wrap article,
+  .quality-control-inspection-report-stage-step-wrap article,
+  .quality-control-inspection-report-structure-step-wrap article,
+  .quality-control-inspection-report-system-step-wrap article {
+    grid-template-columns: 2.8rem minmax(0, 1fr);
+  }
+}
+
 .ai-intro {
   margin: 0;
   color: #415268;
@@ -40642,30 +44382,35 @@ img.supply-hub-weekly-cta-image-placeholder {
   }
 
   .scholarship-community-banner > img {
-    aspect-ratio: 4 / 3;
-    object-position: 25% center;
+    aspect-ratio: 2006 / 784;
+    object-fit: cover;
+    object-position: center;
   }
 
   .scholarship-community-banner-copy {
-    left: 0.86rem;
-    top: 50%;
-    width: min(56vw, 13.8rem);
-    transform: translateY(-50%);
+    left: 0.9rem;
+    right: auto;
+    top: 0.72rem;
+    width: min(42vw, 13.6rem);
+    transform: none;
+    max-width: none;
     min-width: 0;
     padding: 0;
+    overflow-wrap: normal;
   }
 
   .scholarship-community-banner-copy h1 {
     max-width: 12ch;
-    font-size: clamp(1.28rem, 5vw, 1.72rem);
+    font-size: clamp(1.15rem, 5.4vw, 1.9rem);
     line-height: 0.98;
+    overflow-wrap: normal;
   }
 
   .scholarship-community-banner-copy p {
-    max-width: 32ch;
-    margin-top: clamp(0.22rem, 0.8vw, 0.32rem);
-    font-size: clamp(0.48rem, 1.55vw, 0.6rem);
-    line-height: 1.18;
+    max-width: 34ch;
+    margin-top: clamp(0.22rem, 0.64vw, 0.32rem);
+    font-size: clamp(0.4rem, 1.22vw, 0.52rem);
+    line-height: 1.12;
   }
 }
 
@@ -41017,20 +44762,107 @@ img.supply-hub-weekly-cta-image-placeholder {
 
 @media (max-width: 760px) {
   .site-shell.is-scholarship-community-route .content-shell {
-    width: min(360px, calc(100% - 2rem));
-    margin-left: 1rem;
+    width: min(100% - 1rem, 44rem);
+    margin-top: 0.75rem;
+    margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1.8rem;
+  }
+
+  .scholarship-community-banner {
+    width: min(100%, calc(100vw - 2.6rem));
+  }
+
+  .scholarship-community-banner > img {
+    aspect-ratio: 2006 / 784;
+    object-position: center;
+  }
+
+  .scholarship-community-banner-copy {
+    left: 0.9rem;
+    top: 0.72rem;
+    width: min(42vw, 13.6rem);
+    transform: none;
+  }
+
+  .scholarship-community-banner-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(1.15rem, 5.4vw, 1.9rem);
+  }
+
+  .scholarship-community-banner-copy p {
+    max-width: 34ch;
+    margin-top: clamp(0.22rem, 0.64vw, 0.32rem);
+    font-size: clamp(0.4rem, 1.22vw, 0.52rem);
+    line-height: 1.12;
+  }
+
+  .scholarship-community-content {
+    gap: 0.82rem;
+    margin-top: 0.82rem;
+  }
+
+  .scholarship-community-block {
+    gap: 0.48rem;
+  }
+
+  .scholarship-community-block > h2,
+  .scholarship-community-panel > h2,
+  .scholarship-community-content > h2 {
+    font-size: 0.78rem;
+    line-height: 1.16;
   }
 
   .scholarship-community-direction-grid,
-  .scholarship-community-program-grid,
+  .scholarship-community-program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.52rem;
+  }
+
   .scholarship-community-related-grid {
     grid-template-columns: 1fr;
+    gap: 0.52rem;
   }
 
   .scholarship-community-card,
   .scholarship-community-card-tall {
     min-height: 0;
+    gap: 0.28rem;
+    padding: 0.56rem;
+  }
+
+  .scholarship-community-card-mark {
+    width: 1.9rem;
+    font-size: 0.66rem;
+  }
+
+  .scholarship-community-card h3,
+  .scholarship-community-related-card h3,
+  .scholarship-community-commitment-grid h3 {
+    font-size: 0.68rem;
+    line-height: 1.12;
+  }
+
+  .scholarship-community-card p,
+  .scholarship-community-related-card p,
+  .scholarship-community-commitment-grid p,
+  .scholarship-community-cta p {
+    font-size: 0.58rem;
+    line-height: 1.2;
+  }
+
+  .scholarship-community-image-slot {
+    min-height: 3.4rem;
+    border-radius: 6px;
+  }
+
+  .scholarship-community-card .scholarship-community-image-slot {
+    margin-top: 0.24rem;
+  }
+
+  .scholarship-community-image-slot-wide {
+    min-height: 3.8rem;
+    margin: -0.56rem -0.56rem 0;
   }
 
   .scholarship-community-philosophy,
@@ -41038,23 +44870,155 @@ img.supply-hub-weekly-cta-image-placeholder {
     grid-template-columns: 1fr;
   }
 
+  .scholarship-community-systems,
+  .scholarship-community-statement,
+  .scholarship-community-cta {
+    gap: 0.72rem;
+  }
+
+  .scholarship-community-panel,
+  .scholarship-community-cta {
+    gap: 0.52rem;
+    padding: 0.62rem;
+  }
+
+  .scholarship-community-philosophy {
+    gap: 0.52rem;
+  }
+
+  .scholarship-community-philosophy ul,
+  .scholarship-community-journey {
+    gap: 0.34rem;
+  }
+
+  .scholarship-community-philosophy li,
+  .scholarship-community-journey li {
+    gap: 0.38rem;
+    font-size: 0.62rem;
+    line-height: 1.16;
+  }
+
+  .scholarship-community-philosophy li span,
+  .scholarship-community-journey li span,
+  .scholarship-community-commitment-grid span {
+    width: 1.55rem;
+    font-size: 0.56rem;
+  }
+
+  .scholarship-community-image-slot-fill {
+    display: none;
+  }
+
   .scholarship-community-commitment-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.46rem;
     overflow-x: visible;
   }
 
   .scholarship-community-commitment-grid section {
     min-height: 0;
-    border-left: 0;
-    border-top: 1px solid rgba(45, 48, 52, 0.14);
+    gap: 0.3rem;
+    padding: 0.52rem;
+    border: 1px solid rgba(45, 48, 52, 0.14);
+    border-radius: 6px;
+    text-align: left;
+    justify-items: start;
   }
 
   .scholarship-community-commitment-grid section:first-child {
-    border-top: 0;
+    border-top: 1px solid rgba(45, 48, 52, 0.14);
+  }
+
+  .scholarship-community-image-slot-panorama {
+    display: none;
+  }
+
+  .scholarship-community-statement blockquote {
+    min-height: 0;
+    padding: 0.72rem 0.78rem;
+  }
+
+  .scholarship-community-statement blockquote::before {
+    top: -0.18rem;
+    font-size: 2.8rem;
+  }
+
+  .scholarship-community-statement p {
+    font-size: 0.66rem;
+    line-height: 1.32;
   }
 
   .scholarship-community-related-card {
-    grid-template-columns: minmax(5.5rem, 0.44fr) minmax(0, 1fr) auto;
+    grid-template-columns: 3.6rem minmax(0, 1fr) auto;
+    gap: 0.52rem;
+    min-height: 0;
+    padding: 0.54rem;
+  }
+
+  .scholarship-community-related-card .scholarship-community-image-slot {
+    min-height: 3.1rem;
+  }
+
+  .scholarship-community-related-card > span {
+    align-self: center;
+    font-size: 1rem;
+  }
+
+  .scholarship-community-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .scholarship-community-cta-image {
+    display: none;
+  }
+
+  .scholarship-community-cta h2 {
+    max-width: 23ch;
+    font-size: clamp(0.96rem, 4vw, 1.16rem);
+    line-height: 1.06;
+  }
+
+  .scholarship-community-cta p {
+    max-width: 44ch;
+    margin-top: 0.32rem;
+  }
+
+  .scholarship-community-cta-actions {
+    gap: 0.42rem;
+  }
+
+  .scholarship-community-cta-actions a {
+    min-height: 2.45rem;
+    padding: 0.48rem 0.68rem;
+    font-size: 0.68rem;
+    line-height: 1.12;
+  }
+}
+
+@media (max-width: 430px) {
+  .scholarship-community-banner-copy {
+    width: min(46vw, 12.2rem);
+  }
+
+  .scholarship-community-banner-copy p {
+    font-size: clamp(0.38rem, 1.32vw, 0.5rem);
+  }
+
+  .scholarship-community-card h3,
+  .scholarship-community-related-card h3,
+  .scholarship-community-commitment-grid h3 {
+    font-size: 0.64rem;
+  }
+
+  .scholarship-community-card p,
+  .scholarship-community-related-card p,
+  .scholarship-community-commitment-grid p,
+  .scholarship-community-cta p {
+    font-size: 0.55rem;
+  }
+
+  .scholarship-community-related-card {
+    grid-template-columns: 3.1rem minmax(0, 1fr) auto;
   }
 }
 

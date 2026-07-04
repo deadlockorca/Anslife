@@ -1896,49 +1896,50 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               {[
                 [
                   '1',
-                  '◎',
                   'Kiểm tra ngoại quan',
                   'Kiểm tra tình trạng sản phẩm sau lắp ráp và trước khi đóng gói.',
+                  '/assets/manufacturing/packing-area/stages/stage-01.webp',
                 ],
                 [
                   '2',
-                  '✧',
                   'Vệ sinh sản phẩm',
                   'Làm sạch bụi, dấu bẩn và kiểm tra bề mặt hoàn thiện.',
+                  '/assets/manufacturing/packing-area/stages/stage-02.webp',
                 ],
                 [
                   '3',
-                  '✓',
                   'Bảo vệ sản phẩm',
                   'Sử dụng túi PE, foam bảo vệ, bảo vệ cạnh và các vật liệu phù hợp để giảm rủi ro hư hỏng.',
+                  '/assets/manufacturing/packing-area/stages/stage-03.webp',
                 ],
                 [
                   '4',
-                  '□',
                   'Đóng thùng',
                   'Đóng gói theo đúng quy cách, kích thước và hướng dẫn của từng dự án.',
+                  '/assets/manufacturing/packing-area/stages/stage-04.webp',
                 ],
                 [
                   '5',
-                  '☑',
                   'Ghi nhãn',
                   'Dán nhãn sản phẩm, mã hàng, ký hiệu vận chuyển và các thông tin theo yêu cầu của buyer.',
+                  '/assets/manufacturing/packing-area/stages/stage-05.webp',
                 ],
                 [
                   '6',
-                  '▱',
                   'Chuyển sang khu vực xuất hàng',
                   'Kiện hàng được chuyển đến khu vực pallet hoặc chờ xếp container.',
+                  '/assets/manufacturing/packing-area/stages/stage-06.webp',
                 ],
-              ].map(([number, icon, title, description]) => (
+              ].map(([number, title, description, image]) => (
                 <article key={number}>
                   <div className="manufacturing-packing-area-stage-head">
                     <span>{number}</span>
-                    <b aria-hidden="true">{icon}</b>
                   </div>
                   <h3>{t(title)}</h3>
                   <p>{t(description)}</p>
-                  <div className="manufacturing-packing-area-image-slot" aria-hidden="true" />
+                  <div className="manufacturing-packing-area-image-slot" aria-hidden="true">
+                    <img src={image} alt="" loading="lazy" decoding="async" />
+                  </div>
                 </article>
               ))}
             </div>
@@ -1952,30 +1953,38 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                   [
                     'Túi PE',
                     'Bảo vệ bề mặt khỏi bụi và hơi ẩm.',
+                    '/assets/manufacturing/packing-area/materials/material-01.webp',
                   ],
                   [
                     'Foam bảo vệ',
                     'Giảm va đập và chống rung.',
+                    '/assets/manufacturing/packing-area/materials/material-02.webp',
                   ],
                   [
                     'Bảo vệ cạnh',
                     'Bảo vệ các góc và cạnh dễ hư hỏng.',
+                    '/assets/manufacturing/packing-area/materials/material-03.webp',
                   ],
                   [
                     'Thùng carton',
                     'Bao bì chính của sản phẩm.',
+                    '/assets/manufacturing/packing-area/materials/material-04.webp',
                   ],
                   [
                     'Đai kiện',
                     'Giữ kiện hàng ổn định trong quá trình vận chuyển.',
+                    '/assets/manufacturing/packing-area/materials/material-05.webp',
                   ],
                   [
                     'Pallet',
                     'Chuẩn bị cho lưu kho và xếp container.',
+                    '/assets/manufacturing/packing-area/materials/material-06.webp',
                   ],
-                ].map(([title, description]) => (
+                ].map(([title, description, image]) => (
                   <article key={title}>
-                    <div className="manufacturing-packing-area-material-slot" aria-hidden="true" />
+                    <div className="manufacturing-packing-area-material-slot" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </div>
                     <h3>{t(title)}</h3>
                     <p>{t(description)}</p>
                   </article>
@@ -1987,17 +1996,19 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Quy trình đóng gói')}</h2>
               <div className="manufacturing-packing-area-process-flow">
                 {[
-                  ['▱', 'Sản phẩm hoàn thiện'],
-                  ['◎', 'Kiểm tra ngoại quan'],
-                  ['✧', 'Làm sạch sản phẩm'],
-                  ['✓', 'Lắp vật liệu bảo vệ'],
-                  ['□', 'Đóng thùng carton'],
-                  ['☑', 'Dán nhãn'],
-                  ['▤', 'Đặt lên pallet'],
-                  ['▱', 'Chờ xuất hàng'],
-                ].map(([icon, title], index) => (
+                  ['/assets/manufacturing/packing-area/process/process-01.webp', 'Sản phẩm hoàn thiện'],
+                  ['/assets/manufacturing/packing-area/process/process-02.webp', 'Kiểm tra ngoại quan'],
+                  ['/assets/manufacturing/packing-area/process/process-03.webp', 'Làm sạch sản phẩm'],
+                  ['/assets/manufacturing/packing-area/process/process-04.webp', 'Lắp vật liệu bảo vệ'],
+                  ['/assets/manufacturing/packing-area/process/process-05.webp', 'Đóng thùng carton'],
+                  ['/assets/manufacturing/packing-area/process/process-06.webp', 'Dán nhãn'],
+                  ['/assets/manufacturing/packing-area/process/process-07.webp', 'Đặt lên pallet'],
+                  ['/assets/manufacturing/packing-area/process/process-08.webp', 'Chờ xuất hàng'],
+                ].map(([image, title], index) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <div className="manufacturing-packing-area-process-image-slot" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </div>
                     <h3>{t(title)}</h3>
                     <small>{index + 1}</small>
                   </article>
@@ -2010,15 +2021,15 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <h2>{t('Những yếu tố được kiểm soát')}</h2>
             <div className="manufacturing-packing-area-control-grid">
               {[
-                ['▱', 'Quy cách đóng gói', 'Đảm bảo đúng theo tiêu chuẩn của từng buyer hoặc từng thị trường.'],
-                ['□', 'Vật liệu đóng gói', 'Kiểm tra chất lượng và tình trạng của tất cả vật liệu trước khi sử dụng.'],
-                ['☑', 'Nhãn sản phẩm', 'Kiểm tra mã hàng, số lượng, ký hiệu và thông tin vận chuyển.'],
-                ['✓', 'Độ an toàn', 'Đảm bảo sản phẩm được cố định chắc chắn trong thùng.'],
-                ['▤', 'Pallet hóa', 'Kiểm tra cách sắp xếp kiện hàng trên pallet trước khi lưu kho.'],
-                ['☑', 'Kiểm tra cuối', 'Xác nhận kiện hàng đạt yêu cầu trước khi chuyển sang khu vực xuất hàng.'],
-              ].map(([icon, title, description]) => (
+                ['Quy cách đóng gói', 'Đảm bảo đúng theo tiêu chuẩn của từng buyer hoặc từng thị trường.'],
+                ['Vật liệu đóng gói', 'Kiểm tra chất lượng và tình trạng của tất cả vật liệu trước khi sử dụng.'],
+                ['Nhãn sản phẩm', 'Kiểm tra mã hàng, số lượng, ký hiệu và thông tin vận chuyển.'],
+                ['Độ an toàn', 'Đảm bảo sản phẩm được cố định chắc chắn trong thùng.'],
+                ['Pallet hóa', 'Kiểm tra cách sắp xếp kiện hàng trên pallet trước khi lưu kho.'],
+                ['Kiểm tra cuối', 'Xác nhận kiện hàng đạt yêu cầu trước khi chuyển sang khu vực xuất hàng.'],
+              ].map(([title, description], index) => (
                 <article key={title}>
-                  <span aria-hidden="true">{icon}</span>
+                  <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
                   <h3>{t(title)}</h3>
                   <p>{t(description)}</p>
                 </article>
@@ -2031,40 +2042,43 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <div className="manufacturing-packing-area-capability-grid">
               {[
                 [
-                  '☑',
                   'Đóng gói theo tiêu chuẩn Buyer',
                   'Thực hiện theo quy cách, hướng dẫn và tiêu chuẩn riêng của từng khách hàng.',
+                  '/assets/manufacturing/packing-area/capability/capability-01.webp',
                 ],
                 [
-                  '◇',
                   'Đóng gói OEM / ODM',
                   'Hỗ trợ in logo, mã sản phẩm, hướng dẫn lắp ráp và nhận diện thương hiệu.',
+                  '/assets/manufacturing/packing-area/capability/capability-02.webp',
                 ],
                 [
-                  '□',
                   'Đóng gói Knock-down (KD)',
                   'Tối ưu thể tích vận chuyển và giảm chi phí logistics.',
+                  '/assets/manufacturing/packing-area/capability/capability-03.webp',
                 ],
                 [
-                  '◎',
                   'Đóng gói cho dự án xuất khẩu',
                   'Triển khai đồng bộ cho các đơn hàng thương mại, khách sạn, văn phòng và chuỗi bán lẻ.',
+                  '/assets/manufacturing/packing-area/capability/capability-04.webp',
                 ],
-              ].map(([icon, title, description]) => (
+              ].map(([title, description, image]) => (
                 <article key={title}>
-                  <span aria-hidden="true">{icon}</span>
                   <div>
                     <h3>{t(title)}</h3>
                     <p>{t(description)}</p>
                   </div>
-                  <div className="manufacturing-packing-area-capability-slot" aria-hidden="true" />
+                  <div className="manufacturing-packing-area-capability-slot" aria-hidden="true">
+                    <img src={image} alt="" loading="lazy" decoding="async" />
+                  </div>
                 </article>
               ))}
             </div>
           </section>
 
           <section className="manufacturing-packing-area-role">
-            <div className="manufacturing-packing-area-role-slot" aria-hidden="true" />
+            <div className="manufacturing-packing-area-role-slot" aria-hidden="true">
+              <img src="/assets/manufacturing/packing-area/role/role-01.webp" alt="" loading="lazy" decoding="async" />
+            </div>
             <div className="manufacturing-packing-area-role-copy">
               <h2>{t('Vai trò của khu vực đóng gói')}</h2>
               <p>
@@ -2075,13 +2089,15 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             </div>
             <div className="manufacturing-packing-area-role-grid">
               {[
-                ['✓', 'Bảo vệ tối ưu sản phẩm'],
-                ['◎', 'Giảm thiểu rủi ro hư hỏng'],
-                ['▥', 'Quy trình chuẩn hóa và kiểm soát'],
-                ['◎', 'Sẵn sàng cho xuất khẩu'],
-              ].map(([icon, title]) => (
+                ['/assets/manufacturing/packing-area/role/role-02.webp', 'Bảo vệ tối ưu sản phẩm'],
+                ['/assets/manufacturing/packing-area/role/role-03.webp', 'Giảm thiểu rủi ro hư hỏng'],
+                ['/assets/manufacturing/packing-area/role/role-04.webp', 'Quy trình chuẩn hóa và kiểm soát'],
+                ['/assets/manufacturing/packing-area/role/role-05.webp', 'Sẵn sàng cho xuất khẩu'],
+              ].map(([image, title]) => (
                 <article key={title}>
-                  <span aria-hidden="true">{icon}</span>
+                  <div className="manufacturing-packing-area-role-image-slot" aria-hidden="true">
+                    <img src={image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <h3>{t(title)}</h3>
                 </article>
               ))}
@@ -2113,49 +2129,50 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               {[
                 [
                   '01',
-                  '□',
                   'Chuẩn bị linh kiện',
                   'Kiểm tra và phân loại các linh kiện trước khi đưa vào dây chuyền lắp ráp.',
+                  '/assets/manufacturing/assembly-line/stages/stage-01.webp',
                 ],
                 [
                   '02',
-                  '▥',
                   'Lắp ráp kết cấu',
                   'Lắp ráp khung, mặt bàn, chân, cánh tủ và các bộ phận chính theo bản vẽ kỹ thuật.',
+                  '/assets/manufacturing/assembly-line/stages/stage-02.webp',
                 ],
                 [
                   '03',
-                  '⌁',
                   'Lắp phụ kiện',
                   'Lắp đặt bản lề, ray trượt, tay nắm, vít liên kết và các phụ kiện chức năng.',
+                  '/assets/manufacturing/assembly-line/stages/stage-03.webp',
                 ],
                 [
                   '04',
-                  '◎',
                   'Cân chỉnh sản phẩm',
                   'Điều chỉnh kích thước, khe hở, độ cân bằng và khả năng vận hành của sản phẩm.',
+                  '/assets/manufacturing/assembly-line/stages/stage-04.webp',
                 ],
                 [
                   '05',
-                  '☑',
                   'Kiểm tra vận hành',
                   'Đánh giá khả năng đóng mở, liên kết và độ ổn định trước khi chuyển sang QC.',
+                  '/assets/manufacturing/assembly-line/stages/stage-05.webp',
                 ],
                 [
                   '06',
-                  '✧',
                   'Hoàn thiện trước QC',
                   'Làm sạch sản phẩm và kiểm tra ngoại quan trước khi kiểm tra chất lượng cuối cùng.',
+                  '/assets/manufacturing/assembly-line/stages/stage-06.webp',
                 ],
-              ].map(([number, icon, title, description]) => (
+              ].map(([number, title, description, image]) => (
                 <article key={number}>
                   <div className="manufacturing-assembly-line-stage-head">
                     <span>{number}</span>
-                    <b aria-hidden="true">{icon}</b>
                   </div>
                   <h3>{t(title)}</h3>
                   <p>{t(description)}</p>
-                  <div className="manufacturing-assembly-line-image-slot" aria-hidden="true" />
+                  <div className="manufacturing-assembly-line-image-slot" aria-hidden="true">
+                    <img src={image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <i aria-hidden="true">›</i>
                 </article>
               ))}
@@ -2166,18 +2183,19 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <h2>{t('Dây chuyền lắp ráp theo nhóm sản phẩm')}</h2>
             <div className="manufacturing-assembly-line-product-grid">
               {[
-                ['♧', 'Ghế', 'Lắp khung, mặt ngồi, tựa lưng, tay vịn và chân ghế.'],
-                ['▱', 'Bàn', 'Lắp mặt bàn, chân bàn và hệ liên kết.'],
-                ['▥', 'Tủ & Kệ', 'Lắp thân tủ, cánh, ray trượt, bản lề và phụ kiện.'],
-                ['▭', 'Nội thất bọc nệm', 'Lắp khung, foam, vật liệu bọc và phụ kiện hoàn thiện.'],
-                ['◌', 'Nội thất mây tre', 'Lắp khung, chi tiết đan và các bộ phận hoàn thiện.'],
-                ['◇', 'OEM / ODM', 'Triển khai quy trình lắp ráp theo yêu cầu riêng của từng dự án.'],
-              ].map(([icon, title, description]) => (
+                ['Ghế', 'Lắp khung, mặt ngồi, tựa lưng, tay vịn và chân ghế.', '/assets/manufacturing/assembly-line/products/product-01.webp'],
+                ['Bàn', 'Lắp mặt bàn, chân bàn và hệ liên kết.', '/assets/manufacturing/assembly-line/products/product-02.webp'],
+                ['Tủ & Kệ', 'Lắp thân tủ, cánh, ray trượt, bản lề và phụ kiện.', '/assets/manufacturing/assembly-line/products/product-03.webp'],
+                ['Nội thất bọc nệm', 'Lắp khung, foam, vật liệu bọc và phụ kiện hoàn thiện.', '/assets/manufacturing/assembly-line/products/product-04.webp'],
+                ['Nội thất mây tre', 'Lắp khung, chi tiết đan và các bộ phận hoàn thiện.', '/assets/manufacturing/assembly-line/products/product-05.webp'],
+                ['OEM / ODM', 'Triển khai quy trình lắp ráp theo yêu cầu riêng của từng dự án.', '/assets/manufacturing/assembly-line/products/product-06.webp'],
+              ].map(([title, description, image]) => (
                 <article key={title}>
-                  <span aria-hidden="true">{icon}</span>
                   <h3>{t(title)}</h3>
                   <p>{t(description)}</p>
-                  <div className="manufacturing-assembly-line-product-slot" aria-hidden="true" />
+                  <div className="manufacturing-assembly-line-product-slot" aria-hidden="true">
+                    <img src={image} alt="" loading="lazy" decoding="async" />
+                  </div>
                 </article>
               ))}
             </div>
@@ -2188,17 +2206,19 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Kiểm soát trong quá trình lắp ráp')}</h2>
               <div className="manufacturing-assembly-line-control-flow">
                 {[
-                  ['◎', 'Linh kiện'],
-                  ['☑', 'Kiểm tra đầu vào'],
-                  ['▥', 'Lắp ráp kết cấu'],
-                  ['⌁', 'Lắp phụ kiện'],
-                  ['⊕', 'Cân chỉnh'],
-                  ['☑', 'Kiểm tra vận hành'],
-                  ['◉', 'Kiểm tra ngoại quan'],
-                  ['✓', 'Chuyển sang QC cuối'],
-                ].map(([icon, title]) => (
+                  ['/assets/manufacturing/assembly-line/control/control-01.webp', 'Linh kiện'],
+                  ['/assets/manufacturing/assembly-line/control/control-02.webp', 'Kiểm tra đầu vào'],
+                  ['/assets/manufacturing/assembly-line/control/control-03.webp', 'Lắp ráp kết cấu'],
+                  ['/assets/manufacturing/assembly-line/control/control-04.webp', 'Lắp phụ kiện'],
+                  ['/assets/manufacturing/assembly-line/control/control-05.webp', 'Cân chỉnh'],
+                  ['/assets/manufacturing/assembly-line/control/control-06.webp', 'Kiểm tra vận hành'],
+                  ['/assets/manufacturing/assembly-line/control/control-07.webp', 'Kiểm tra ngoại quan'],
+                  ['/assets/manufacturing/assembly-line/control/control-08.webp', 'Chuyển sang QC cuối'],
+                ].map(([image, title]) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <div className="manufacturing-assembly-line-control-image-slot" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </div>
                     <h3>{t(title)}</h3>
                   </article>
                 ))}
@@ -2209,15 +2229,17 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Ứng dụng')}</h2>
               <div className="manufacturing-assembly-line-application-grid">
                 {[
-                  ['▭', 'Nội thất hoàn thiện'],
-                  ['□', 'Nội thất Knock-down (KD)'],
-                  ['▱', 'Nội thất bọc nệm'],
-                  ['◌', 'Nội thất mây tre'],
-                  ['◇', 'OEM / ODM'],
-                  ['▦', 'Dự án khách sạn và thương mại'],
-                ].map(([icon, title]) => (
+                  ['/assets/manufacturing/assembly-line/applications/application-01.webp', 'Nội thất hoàn thiện'],
+                  ['/assets/manufacturing/assembly-line/applications/application-02.webp', 'Nội thất Knock-down (KD)'],
+                  ['/assets/manufacturing/assembly-line/applications/application-03.webp', 'Nội thất bọc nệm'],
+                  ['/assets/manufacturing/assembly-line/applications/application-04.webp', 'Nội thất mây tre'],
+                  ['/assets/manufacturing/assembly-line/applications/application-05.webp', 'OEM / ODM'],
+                  ['/assets/manufacturing/assembly-line/applications/application-06.webp', 'Dự án khách sạn và thương mại'],
+                ].map(([image, title]) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <div className="manufacturing-assembly-line-application-image-slot" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </div>
                     <h3>{t(title)}</h3>
                   </article>
                 ))}
@@ -2240,7 +2262,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                   )}
                 </p>
               </div>
-              <div className="manufacturing-assembly-line-wide-slot" aria-hidden="true" />
+              <div className="manufacturing-assembly-line-wide-slot" aria-hidden="true">
+                <img src="/assets/manufacturing/assembly-line/role/role-01.webp" alt="" loading="lazy" decoding="async" />
+              </div>
             </div>
 
             <div className="manufacturing-assembly-line-related">
@@ -2248,32 +2272,34 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <div className="manufacturing-assembly-line-related-grid">
                 {[
                   [
-                    '⌂',
+                    '/assets/manufacturing/assembly-line/related/related-01.webp',
                     'Tổng quan nhà máy',
                     'Giới thiệu hệ thống tổ chức sản xuất của ANSLIFE.',
                     '/manufacturing/factory-overview',
                   ],
                   [
-                    '⚙',
+                    '/assets/manufacturing/assembly-line/related/related-02.webp',
                     'Máy móc & Thiết bị',
                     'Các công nghệ và thiết bị phục vụ sản xuất.',
                     '/manufacturing/machinery-equipment',
                   ],
                   [
-                    '◒',
+                    '/assets/manufacturing/assembly-line/related/related-03.webp',
                     'Năng lực hoàn thiện',
                     'Quy trình xử lý bề mặt và hoàn thiện sản phẩm.',
                     '/manufacturing/finishing-capability',
                   ],
                   [
-                    '✓',
+                    '/assets/manufacturing/assembly-line/related/related-04.webp',
                     'Kiểm tra cuối',
                     'Quy trình kiểm tra trước khi đóng gói và xuất khẩu.',
                     '/quality-control/final-inspection',
                   ],
-                ].map(([icon, title, description, href]) => (
+                ].map(([image, title, description, href]) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <div className="manufacturing-assembly-line-related-image-slot" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </div>
                     <h3>{t(title)}</h3>
                     <p>{t(description)}</p>
                     <a href={href} aria-label={t(title)}>
@@ -2308,41 +2334,43 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <h2>{t('Năng lực hoàn thiện của ANSLIFE')}</h2>
             <div className="manufacturing-finishing-capability-capacity-grid">
               {[
-                [
-                  '♧',
-                  'Hoàn thiện gỗ tự nhiên',
-                  'Giữ nguyên vẻ đẹp của vân gỗ hoặc xử lý màu sắc theo yêu cầu của từng bộ sưu tập.',
-                ],
-                [
-                  '▤',
-                  'Hoàn thiện gỗ kỹ thuật',
-                  'Áp dụng các giải pháp sơn và vật liệu phủ bề mặt nhằm tạo tính đồng nhất và độ bền cho sản phẩm.',
-                ],
-                [
-                  '▱',
-                  'Hoàn thiện nội thất bọc nệm',
-                  'Kiểm soát độ căng của vật liệu bọc, đường may và hình dáng tổng thể của sản phẩm.',
-                ],
-                [
-                  '▦',
-                  'Hoàn thiện mây tre',
-                  'Xử lý bề mặt và hoàn thiện màu sắc nhằm bảo vệ vật liệu tự nhiên và tăng giá trị thẩm mỹ.',
-                ],
-                [
-                  '▰',
-                  'Hoàn thiện kim loại',
-                  'Kết hợp các giải pháp sơn hoặc xử lý bề mặt phù hợp với yêu cầu thiết kế và môi trường sử dụng.',
-                ],
-                [
-                  '◉',
-                  'Hoàn thiện theo yêu cầu',
-                  'Phát triển màu sắc, bề mặt và hiệu ứng hoàn thiện theo mẫu hoặc tiêu chuẩn riêng của buyer.',
-                ],
-              ].map(([icon, title, description]) => (
+                {
+                  image: '/assets/manufacturing/finishing-capability/capacity/natural-wood.webp',
+                  title: 'Hoàn thiện gỗ tự nhiên',
+                  description: 'Giữ nguyên vẻ đẹp của vân gỗ hoặc xử lý màu sắc theo yêu cầu của từng bộ sưu tập.',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/capacity/engineered-wood.webp',
+                  title: 'Hoàn thiện gỗ kỹ thuật',
+                  description:
+                    'Áp dụng các giải pháp sơn và vật liệu phủ bề mặt nhằm tạo tính đồng nhất và độ bền cho sản phẩm.',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/capacity/upholstery.webp',
+                  title: 'Hoàn thiện nội thất bọc nệm',
+                  description: 'Kiểm soát độ căng của vật liệu bọc, đường may và hình dáng tổng thể của sản phẩm.',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/capacity/rattan-bamboo.webp',
+                  title: 'Hoàn thiện mây tre',
+                  description: 'Xử lý bề mặt và hoàn thiện màu sắc nhằm bảo vệ vật liệu tự nhiên và tăng giá trị thẩm mỹ.',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/capacity/metal.webp',
+                  title: 'Hoàn thiện kim loại',
+                  description: 'Kết hợp các giải pháp sơn hoặc xử lý bề mặt phù hợp với yêu cầu thiết kế và môi trường sử dụng.',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/capacity/custom.webp',
+                  title: 'Hoàn thiện theo yêu cầu',
+                  description: 'Phát triển màu sắc, bề mặt và hiệu ứng hoàn thiện theo mẫu hoặc tiêu chuẩn riêng của buyer.',
+                },
+              ].map(({ image, title, description }) => (
                 <article key={title}>
-                  <div className="manufacturing-finishing-capability-image-slot" aria-hidden="true" />
+                  <div className="manufacturing-finishing-capability-image-slot" aria-hidden="true">
+                    <img src={image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <div className="manufacturing-finishing-capability-capacity-copy">
-                    <span aria-hidden="true">{icon}</span>
                     <h3>{t(title)}</h3>
                     <p>{t(description)}</p>
                   </div>
@@ -2355,15 +2383,41 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <h2>{t('Các hệ hoàn thiện bề mặt')}</h2>
             <div className="manufacturing-finishing-capability-surface-grid">
               {[
-                ['Natural Finish', 'Giữ nguyên màu sắc và vẻ đẹp tự nhiên của vật liệu.'],
-                ['Stain Finish', 'Điều chỉnh màu sắc nhưng vẫn giữ được vân gỗ tự nhiên.'],
-                ['Lacquer Finish', 'Tạo lớp phủ bảo vệ với độ bền và tính thẩm mỹ cao.'],
-                ['Oil Finish', 'Làm nổi bật kết cấu tự nhiên và tạo cảm giác chân thực khi sử dụng.'],
-                ['Matte Finish', 'Bề mặt mờ hiện đại, hạn chế phản xạ ánh sáng.'],
-                ['Custom Color Finish', 'Hoàn thiện theo bảng màu, mẫu chuẩn hoặc yêu cầu riêng của buyer.'],
-              ].map(([title, description]) => (
+                {
+                  image: '/assets/manufacturing/finishing-capability/surface/natural-finish.webp',
+                  title: 'Natural Finish',
+                  description: 'Giữ nguyên màu sắc và vẻ đẹp tự nhiên của vật liệu.',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/surface/stain-finish.webp',
+                  title: 'Stain Finish',
+                  description: 'Điều chỉnh màu sắc nhưng vẫn giữ được vân gỗ tự nhiên.',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/surface/lacquer-finish.webp',
+                  title: 'Lacquer Finish',
+                  description: 'Tạo lớp phủ bảo vệ với độ bền và tính thẩm mỹ cao.',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/surface/oil-finish.webp',
+                  title: 'Oil Finish',
+                  description: 'Làm nổi bật kết cấu tự nhiên và tạo cảm giác chân thực khi sử dụng.',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/surface/matte-finish.webp',
+                  title: 'Matte Finish',
+                  description: 'Bề mặt mờ hiện đại, hạn chế phản xạ ánh sáng.',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/surface/custom-color-finish.webp',
+                  title: 'Custom Color Finish',
+                  description: 'Hoàn thiện theo bảng màu, mẫu chuẩn hoặc yêu cầu riêng của buyer.',
+                },
+              ].map(({ image, title, description }) => (
                 <article key={title}>
-                  <div className="manufacturing-finishing-capability-surface-slot" aria-hidden="true" />
+                  <div className="manufacturing-finishing-capability-surface-slot" aria-hidden="true">
+                    <img src={image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <div>
                     <h3>{t(title)}</h3>
                     <p>{t(description)}</p>
@@ -2378,16 +2432,30 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Quy trình hoàn thiện')}</h2>
               <div className="manufacturing-finishing-capability-process-flow">
                 {[
-                  ['◒', 'Chà nhám'],
-                  ['◉', 'Làm sạch bề mặt'],
-                  ['▣', 'Xử lý nền'],
-                  ['◐', 'Sơn hoặc hoàn thiện'],
-                  ['▥', 'Sấy khô'],
-                  ['◎', 'Kiểm tra màu sắc'],
-                  ['⌕', 'Kiểm tra ngoại quan'],
-                ].map(([icon, title], index) => (
+                  { image: '/assets/manufacturing/finishing-capability/process/sanding.webp', title: 'Chà nhám' },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/process/surface-cleaning.webp',
+                    title: 'Làm sạch bề mặt',
+                  },
+                  { image: '/assets/manufacturing/finishing-capability/process/base-treatment.webp', title: 'Xử lý nền' },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/process/finish-application.webp',
+                    title: 'Sơn hoặc hoàn thiện',
+                  },
+                  { image: '/assets/manufacturing/finishing-capability/process/drying.webp', title: 'Sấy khô' },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/process/color-check.webp',
+                    title: 'Kiểm tra màu sắc',
+                  },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/process/visual-check.webp',
+                    title: 'Kiểm tra ngoại quan',
+                  },
+                ].map(({ image, title }, index) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <span className="manufacturing-finishing-capability-flow-image" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </span>
                     <small>{index + 1}</small>
                     <h3>{t(title)}</h3>
                   </article>
@@ -2399,15 +2467,41 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Những yếu tố được kiểm soát')}</h2>
               <div className="manufacturing-finishing-capability-control-grid">
                 {[
-                  ['◌', 'Màu sắc', 'Đảm bảo đồng với mẫu duyệt và đồng đều giữa các lô sản xuất.'],
-                  ['▦', 'Độ đồng đều', 'Kiểm soát sự nhất quán trên toàn bộ bề mặt sản phẩm.'],
-                  ['✧', 'Chất lượng bề mặt', 'Kiểm tra độ mịn, độ phủ và ngoại quan sau hoàn thiện.'],
-                  ['✓', 'Liên kết lớp phủ', 'Đảm bảo lớp hoàn thiện bám chắc vào bề mặt vật liệu.'],
-                  ['◉', 'Kiểm tra ánh sáng', 'Đánh giá màu sắc và ngoại quan dưới điều kiện ánh sáng tiêu chuẩn.'],
-                  ['☑', 'Kiểm tra cuối', 'Đánh giá tổng thể trước khi chuyển sang công đoạn đóng gói.'],
-                ].map(([icon, title, description]) => (
+                  {
+                    image: '/assets/manufacturing/finishing-capability/control/color.webp',
+                    title: 'Màu sắc',
+                    description: 'Đảm bảo đồng với mẫu duyệt và đồng đều giữa các lô sản xuất.',
+                  },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/control/consistency.webp',
+                    title: 'Độ đồng đều',
+                    description: 'Kiểm soát sự nhất quán trên toàn bộ bề mặt sản phẩm.',
+                  },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/control/surface-quality.webp',
+                    title: 'Chất lượng bề mặt',
+                    description: 'Kiểm tra độ mịn, độ phủ và ngoại quan sau hoàn thiện.',
+                  },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/control/coating-adhesion.webp',
+                    title: 'Liên kết lớp phủ',
+                    description: 'Đảm bảo lớp hoàn thiện bám chắc vào bề mặt vật liệu.',
+                  },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/control/lighting-check.webp',
+                    title: 'Kiểm tra ánh sáng',
+                    description: 'Đánh giá màu sắc và ngoại quan dưới điều kiện ánh sáng tiêu chuẩn.',
+                  },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/control/final-check.webp',
+                    title: 'Kiểm tra cuối',
+                    description: 'Đánh giá tổng thể trước khi chuyển sang công đoạn đóng gói.',
+                  },
+                ].map(({ image, title, description }) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <span className="manufacturing-finishing-capability-flow-image" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </span>
                     <h3>{t(title)}</h3>
                     <p>{t(description)}</p>
                   </article>
@@ -2420,17 +2514,36 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <h2>{t('Ứng dụng')}</h2>
             <div className="manufacturing-finishing-capability-application-grid">
               {[
-                ['⌂', 'Nội thất gia đình'],
-                ['▱', 'Nội thất khách sạn'],
-                ['▔', 'Nội thất nhà hàng'],
-                ['▱', 'Nội thất văn phòng'],
-                ['▰', 'OEM / ODM'],
-                ['◎', 'Dự án xuất khẩu'],
-              ].map(([icon, title]) => (
+                {
+                  image: '/assets/manufacturing/finishing-capability/applications/home-furniture.webp',
+                  title: 'Nội thất gia đình',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/applications/hotel-furniture.webp',
+                  title: 'Nội thất khách sạn',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/applications/restaurant-furniture.webp',
+                  title: 'Nội thất nhà hàng',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/applications/office-furniture.webp',
+                  title: 'Nội thất văn phòng',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/applications/oem-odm.webp',
+                  title: 'OEM / ODM',
+                },
+                {
+                  image: '/assets/manufacturing/finishing-capability/applications/export-project.webp',
+                  title: 'Dự án xuất khẩu',
+                },
+              ].map(({ image, title }) => (
                 <article key={title}>
-                  <span aria-hidden="true">{icon}</span>
                   <h3>{t(title)}</h3>
-                  <div className="manufacturing-finishing-capability-image-slot" aria-hidden="true" />
+                  <div className="manufacturing-finishing-capability-image-slot" aria-hidden="true">
+                    <img src={image} alt="" loading="lazy" decoding="async" />
+                  </div>
                 </article>
               ))}
             </div>
@@ -2452,7 +2565,14 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                     )}
                   </p>
                 </div>
-                <div className="manufacturing-finishing-capability-wide-slot" aria-hidden="true" />
+                <div className="manufacturing-finishing-capability-wide-slot" aria-hidden="true">
+                  <img
+                    src="/assets/manufacturing/finishing-capability/quality/quality-system.webp"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
               </div>
             </div>
 
@@ -2460,14 +2580,31 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Vai trò của hoàn thiện trong chuỗi giá trị')}</h2>
               <div className="manufacturing-finishing-capability-value-flow">
                 {[
-                  ['◇', 'Tăng giá trị thẩm mỹ'],
-                  ['◎', 'Nâng cao trải nghiệm người dùng'],
-                  ['✓', 'Bảo vệ bề mặt sản phẩm'],
-                  ['⌛', 'Tăng tuổi thọ sản phẩm'],
-                  ['☆', 'Tạo lợi thế cạnh tranh'],
-                ].map(([icon, title]) => (
+                  {
+                    image: '/assets/manufacturing/finishing-capability/value/aesthetic-value.webp',
+                    title: 'Tăng giá trị thẩm mỹ',
+                  },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/value/user-experience.webp',
+                    title: 'Nâng cao trải nghiệm người dùng',
+                  },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/value/surface-protection.webp',
+                    title: 'Bảo vệ bề mặt sản phẩm',
+                  },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/value/durability.webp',
+                    title: 'Tăng tuổi thọ sản phẩm',
+                  },
+                  {
+                    image: '/assets/manufacturing/finishing-capability/value/competitive-advantage.webp',
+                    title: 'Tạo lợi thế cạnh tranh',
+                  },
+                ].map(({ image, title }) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <span className="manufacturing-finishing-capability-flow-image" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </span>
                     <h3>{t(title)}</h3>
                   </article>
                 ))}
@@ -2494,53 +2631,146 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
       )}
       {isManufacturingMachineryEquipmentPage && (
         <section className="manufacturing-machinery-equipment-content">
+          <section className="manufacturing-machinery-equipment-overview-row">
+            <div className="manufacturing-machinery-equipment-flow-panel">
+              <h2>{t('Hệ thống thiết bị sản xuất')}</h2>
+              <div className="manufacturing-machinery-equipment-flow-list">
+                {[
+                  {
+                    title: 'Khách hàng',
+                    image: '/assets/manufacturing/factory-overview/system/customer.webp',
+                  },
+                  {
+                    title: 'Phát triển sản phẩm',
+                    image: '/assets/manufacturing/factory-overview/system/product-development.webp',
+                  },
+                  {
+                    title: 'Lựa chọn nhà máy phù hợp',
+                    image: '/assets/manufacturing/factory-overview/system/factory-matching.webp',
+                  },
+                  {
+                    title: 'Tổ chức sản xuất',
+                    image: '/assets/manufacturing/factory-overview/system/production-organization.webp',
+                  },
+                  {
+                    title: 'QC độc lập',
+                    image: '/assets/manufacturing/factory-overview/system/independent-qc.webp',
+                  },
+                  {
+                    title: 'Đóng gói',
+                    image: '/assets/manufacturing/factory-overview/system/packing.webp',
+                  },
+                  {
+                    title: 'Xuất khẩu',
+                    image: '/assets/manufacturing/factory-overview/system/export.webp',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span className="manufacturing-machinery-equipment-flow-image" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <h3>{t(item.title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-machinery-equipment-production-panel">
+              <h2>{t('Năng lực sản xuất')}</h2>
+              <div className="manufacturing-machinery-equipment-production-capability-grid">
+                {[
+                  {
+                    title: 'Nội thất hoàn thiện',
+                    body: 'Sản xuất ghế, bàn, tủ, giường, kệ và các dòng nội thất hoàn thiện theo yêu cầu của khách hàng.',
+                    image: '/assets/manufacturing/factory-overview/capability/finished-furniture.webp',
+                  },
+                  {
+                    title: 'Linh kiện nội thất',
+                    body: 'Gia công khung ghế, mặt bàn, chân ghế, chi tiết tủ, các khối bọc nệm và linh kiện mây tre.',
+                    image: '/assets/manufacturing/factory-overview/capability/furniture-components.webp',
+                  },
+                  {
+                    title: 'Gia công vật liệu',
+                    body: 'Gia công gỗ tự nhiên, gỗ kỹ thuật, ván MDF và các chi tiết hoàn thiện.',
+                    image: '/assets/manufacturing/factory-overview/capability/material-processing.webp',
+                  },
+                  {
+                    title: 'OEM / ODM',
+                    body: 'Phát triển và sản xuất sản phẩm theo bản vẽ, mẫu hoặc yêu cầu kỹ thuật của buyer.',
+                    image: '/assets/manufacturing/factory-overview/capability/oem-odm.webp',
+                  },
+                  {
+                    title: 'Dự án xuất khẩu',
+                    body: 'Kết nối sản xuất với lưu kho, gom hàng và đáp ứng đơn xuất theo từng dự án.',
+                    image: '/assets/manufacturing/factory-overview/capability/export-project.webp',
+                  },
+                ].map((item) => (
+                  <article key={item.title}>
+                    <span className="manufacturing-machinery-equipment-production-capability-image" aria-hidden="true">
+                      <img src={item.image} alt="" loading="lazy" decoding="async" />
+                    </span>
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.body)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
           <section className="manufacturing-machinery-equipment-system">
             <h2>{t('Hệ thống thiết bị sản xuất')}</h2>
             <div className="manufacturing-machinery-equipment-system-grid">
               {[
-                [
-                  '⚙',
-                  '1. Gia công gỗ',
-                  'Máy cắt, máy cưa, máy bào, máy soi và các thiết bị gia công gỗ phục vụ sản xuất linh kiện và nội thất hoàn thiện.',
-                ],
-                [
-                  'CNC',
-                  '2. Gia công CNC',
-                  'Máy CNC phục vụ cắt, khoan, phay và gia công các chi tiết có độ chính xác cao theo bản vẽ kỹ thuật.',
-                ],
-                [
-                  '◌',
-                  '3. Chà nhám',
-                  'Hệ thống chà nhám giúp tạo bề mặt đồng đều trước khi hoàn thiện sơn hoặc lắp ráp.',
-                ],
-                [
-                  '▣',
-                  '4. Sơn hoàn thiện',
-                  'Thiết bị phun sơn, buồng sơn và hệ thống sấy phục vụ nhiều phương pháp hoàn thiện bề mặt theo yêu cầu của từng dự án.',
-                ],
-                [
-                  '▱',
-                  '5. Bọc nệm',
-                  'Thiết bị cắt foam, may và bọc nệm phục vụ các sản phẩm sofa, ghế và nội thất bọc nệm.',
-                ],
-                [
-                  '⚒',
-                  '6. Lắp ráp',
-                  'Khu vực và thiết bị hỗ trợ lắp ráp, kiểm tra kích thước và hoàn thiện sản phẩm trước khi kiểm tra chất lượng.',
-                ],
-                [
-                  '◇',
-                  '7. Đóng gói',
-                  'Thiết bị đóng gói, quấn màng, đai kiện và chuẩn bị pallet phục vụ xuất khẩu.',
-                ],
-                [
-                  '✓',
-                  '8. Thiết bị kiểm tra',
-                  'Thiết bị đo lường và kiểm tra hỗ trợ kiểm soát chất lượng trong quá trình sản xuất và trước khi xuất hàng.',
-                ],
-              ].map(([, title, description]) => (
+                {
+                  image: '/assets/manufacturing/machinery-equipment/system/wood-processing.webp',
+                  title: '1. Gia công gỗ',
+                  description:
+                    'Máy cắt, máy cưa, máy bào, máy soi và các thiết bị gia công gỗ phục vụ sản xuất linh kiện và nội thất hoàn thiện.',
+                },
+                {
+                  image: '/assets/manufacturing/machinery-equipment/system/cnc-processing.webp',
+                  title: '2. Gia công CNC',
+                  description:
+                    'Máy CNC phục vụ cắt, khoan, phay và gia công các chi tiết có độ chính xác cao theo bản vẽ kỹ thuật.',
+                },
+                {
+                  image: '/assets/manufacturing/machinery-equipment/system/sanding.webp',
+                  title: '3. Chà nhám',
+                  description: 'Hệ thống chà nhám giúp tạo bề mặt đồng đều trước khi hoàn thiện sơn hoặc lắp ráp.',
+                },
+                {
+                  image: '/assets/manufacturing/machinery-equipment/system/finishing.webp',
+                  title: '4. Sơn hoàn thiện',
+                  description:
+                    'Thiết bị phun sơn, buồng sơn và hệ thống sấy phục vụ nhiều phương pháp hoàn thiện bề mặt theo yêu cầu của từng dự án.',
+                },
+                {
+                  image: '/assets/manufacturing/machinery-equipment/system/upholstery.webp',
+                  title: '5. Bọc nệm',
+                  description: 'Thiết bị cắt foam, may và bọc nệm phục vụ các sản phẩm sofa, ghế và nội thất bọc nệm.',
+                },
+                {
+                  image: '/assets/manufacturing/machinery-equipment/system/assembly.webp',
+                  title: '6. Lắp ráp',
+                  description:
+                    'Khu vực và thiết bị hỗ trợ lắp ráp, kiểm tra kích thước và hoàn thiện sản phẩm trước khi kiểm tra chất lượng.',
+                },
+                {
+                  image: '/assets/manufacturing/machinery-equipment/system/packing.webp',
+                  title: '7. Đóng gói',
+                  description: 'Thiết bị đóng gói, quấn màng, đai kiện và chuẩn bị pallet phục vụ xuất khẩu.',
+                },
+                {
+                  image: '/assets/manufacturing/machinery-equipment/system/inspection.webp',
+                  title: '8. Thiết bị kiểm tra',
+                  description:
+                    'Thiết bị đo lường và kiểm tra hỗ trợ kiểm soát chất lượng trong quá trình sản xuất và trước khi xuất hàng.',
+                },
+              ].map(({ image, title, description }) => (
                 <article key={title}>
-                  <div className="manufacturing-machinery-equipment-image-slot" aria-hidden="true" />
+                  <div className="manufacturing-machinery-equipment-image-slot" aria-hidden="true">
+                    <img src={image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <div className="manufacturing-machinery-equipment-system-copy">
                     <h3>{t(title)}</h3>
                     <p>{t(description)}</p>
@@ -2555,15 +2785,41 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Công nghệ gia công')}</h2>
               <div className="manufacturing-machinery-equipment-technology-grid">
                 {[
-                  ['▥', 'Gia công CNC', 'Gia công chính xác theo bản vẽ kỹ thuật.'],
-                  ['⌐', 'Khoan & Phay', 'Đảm bảo độ chính xác của các mối liên kết và chi tiết sản phẩm.'],
-                  ['◒', 'Chà nhám', 'Tạo bề mặt đồng đều trước khi hoàn thiện.'],
-                  ['▣', 'Phun sơn', 'Đáp ứng nhiều hệ sơn và yêu cầu hoàn thiện khác nhau.'],
-                  ['▱', 'Bọc nệm', 'Gia công các sản phẩm bọc với độ chính xác và tính thẩm mỹ cao.'],
-                  ['◇', 'Đóng gói', 'Chuẩn bị sản phẩm theo tiêu chuẩn xuất khẩu quốc tế.'],
-                ].map(([icon, title, description]) => (
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/technology/cnc-processing.webp',
+                    title: 'Gia công CNC',
+                    description: 'Gia công chính xác theo bản vẽ kỹ thuật.',
+                  },
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/technology/drilling-milling.webp',
+                    title: 'Khoan & Phay',
+                    description: 'Đảm bảo độ chính xác của các mối liên kết và chi tiết sản phẩm.',
+                  },
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/technology/sanding.webp',
+                    title: 'Chà nhám',
+                    description: 'Tạo bề mặt đồng đều trước khi hoàn thiện.',
+                  },
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/technology/spray-finishing.webp',
+                    title: 'Phun sơn',
+                    description: 'Đáp ứng nhiều hệ sơn và yêu cầu hoàn thiện khác nhau.',
+                  },
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/technology/upholstery.webp',
+                    title: 'Bọc nệm',
+                    description: 'Gia công các sản phẩm bọc với độ chính xác và tính thẩm mỹ cao.',
+                  },
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/technology/export-packing.webp',
+                    title: 'Đóng gói',
+                    description: 'Chuẩn bị sản phẩm theo tiêu chuẩn xuất khẩu quốc tế.',
+                  },
+                ].map(({ image, title, description }) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <span className="manufacturing-machinery-equipment-technology-image" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </span>
                     <h3>{t(title)}</h3>
                     <p>{t(description)}</p>
                   </article>
@@ -2575,13 +2831,32 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Năng lực hỗ trợ sản xuất')}</h2>
               <div className="manufacturing-machinery-equipment-capability-grid">
                 {[
-                  ['▤', 'Gia công đa vật liệu', 'Gỗ tự nhiên, gỗ kỹ thuật, mây tre, kim loại và vật liệu bọc.'],
-                  ['▱', 'Sản xuất OEM / ODM', 'Triển khai sản xuất theo bản vẽ và tiêu chuẩn riêng của buyer.'],
-                  ['◎', 'Dự án xuất khẩu', 'Đáp ứng các đơn hàng thương mại và dự án nội thất quy mô lớn.'],
-                  ['✓', 'Kiểm soát chất lượng', 'Thiết bị sản xuất kết hợp với quy trình QC nhằm đảm bảo chất lượng ổn định.'],
-                ].map(([icon, title, description]) => (
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/capability/multi-material.webp',
+                    title: 'Gia công đa vật liệu',
+                    description: 'Gỗ tự nhiên, gỗ kỹ thuật, mây tre, kim loại và vật liệu bọc.',
+                  },
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/capability/oem-odm.webp',
+                    title: 'Sản xuất OEM / ODM',
+                    description: 'Triển khai sản xuất theo bản vẽ và tiêu chuẩn riêng của buyer.',
+                  },
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/capability/export-project.webp',
+                    title: 'Dự án xuất khẩu',
+                    description: 'Đáp ứng các đơn hàng thương mại và dự án nội thất quy mô lớn.',
+                  },
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/capability/quality-control.webp',
+                    title: 'Kiểm soát chất lượng',
+                    description:
+                      'Thiết bị sản xuất kết hợp với quy trình QC nhằm đảm bảo chất lượng ổn định.',
+                  },
+                ].map(({ image, title, description }) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <span aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </span>
                     <h3>{t(title)}</h3>
                     <p>{t(description)}</p>
                   </article>
@@ -2595,16 +2870,18 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Vai trò của thiết bị trong quy trình sản xuất')}</h2>
               <div className="manufacturing-machinery-equipment-role-flow">
                 {[
-                  ['▨', 'Nguyên liệu'],
-                  ['⚙', 'Gia công'],
-                  ['◒', 'Chà nhám'],
-                  ['▣', 'Hoàn thiện'],
-                  ['⌂', 'Lắp ráp'],
-                  ['✓', 'QC'],
-                  ['◇', 'Đóng gói'],
-                ].map(([icon, title]) => (
+                  { image: '/assets/manufacturing/machinery-equipment/role/materials.webp', title: 'Nguyên liệu' },
+                  { image: '/assets/manufacturing/machinery-equipment/role/processing.webp', title: 'Gia công' },
+                  { image: '/assets/manufacturing/machinery-equipment/role/sanding.webp', title: 'Chà nhám' },
+                  { image: '/assets/manufacturing/machinery-equipment/role/finishing.webp', title: 'Hoàn thiện' },
+                  { image: '/assets/manufacturing/machinery-equipment/role/assembly.webp', title: 'Lắp ráp' },
+                  { image: '/assets/manufacturing/machinery-equipment/role/qc.webp', title: 'QC' },
+                  { image: '/assets/manufacturing/machinery-equipment/role/packing.webp', title: 'Đóng gói' },
+                ].map(({ image, title }) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <span className="manufacturing-machinery-equipment-role-image" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </span>
                     <h3>{t(title)}</h3>
                   </article>
                 ))}
@@ -2615,12 +2892,26 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Định hướng đầu tư')}</h2>
               <div className="manufacturing-machinery-equipment-investment-grid">
                 {[
-                  ['◎', 'Nâng cao độ chính xác', 'Đầu tư thiết bị phù hợp nhằm đảm bảo độ ổn định của sản phẩm.'],
-                  ['▥', 'Tăng hiệu quả sản xuất', 'Cải thiện năng suất và tối ưu quy trình sản xuất.'],
-                  ['♧', 'Phát triển bền vững', 'Ưu tiên công nghệ giúp sử dụng vật liệu hiệu quả và giảm lãng phí trong sản xuất.'],
-                ].map(([icon, title, description]) => (
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/investment/precision.webp',
+                    title: 'Nâng cao độ chính xác',
+                    description: 'Đầu tư thiết bị phù hợp nhằm đảm bảo độ ổn định của sản phẩm.',
+                  },
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/investment/efficiency.webp',
+                    title: 'Tăng hiệu quả sản xuất',
+                    description: 'Cải thiện năng suất và tối ưu quy trình sản xuất.',
+                  },
+                  {
+                    image: '/assets/manufacturing/machinery-equipment/investment/sustainable.webp',
+                    title: 'Phát triển bền vững',
+                    description: 'Ưu tiên công nghệ giúp sử dụng vật liệu hiệu quả và giảm lãng phí trong sản xuất.',
+                  },
+                ].map(({ image, title, description }) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <span aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </span>
                     <h3>{t(title)}</h3>
                     <p>{t(description)}</p>
                   </article>
@@ -12910,8 +13201,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 ['Chà nhám', '/assets/quality-control/in-process-inspection/flow-sanding.webp'],
                 ['Hoàn thiện bề mặt', '/assets/quality-control/in-process-inspection/flow-surface-finish.webp'],
                 ['Thành phẩm', '/assets/quality-control/in-process-inspection/flow-finished-product.webp'],
-              ].map(([step, image]) => (
+              ].map(([step, image], index) => (
                 <div key={step}>
+                  <span className="quality-control-in-process-inspection-location-number">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
                   <img
                     className="quality-control-in-process-inspection-flow-image"
                     src={image}
@@ -12944,7 +13238,6 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                   title: 'Kiểm tra cấu kiện',
                   image: '/assets/quality-control/in-process-inspection/stage-component-check.webp',
                   text: 'Kiểm tra các bộ phận trước khi chuyển sang công đoạn lắp ráp hoặc hoàn thiện.',
-                  examples: ['Khung ghế', 'Chân bàn', 'Tay ghế', 'Lưng ghế', 'Bộ phận tủ', 'Cấu kiện bọc nệm'],
                   checks: ['Kích thước', 'Độ vuông góc', 'Độ cân bằng', 'Độ chắc chắn của liên kết'],
                 },
                 {
@@ -12979,16 +13272,6 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                     decoding="async"
                   />
                   <p>{t(stage.text)}</p>
-                  {stage.examples ? (
-                    <div className="quality-control-in-process-inspection-stage-examples">
-                      <strong>{t('Ví dụ:')}</strong>
-                      <ul>
-                        {stage.examples.map((example) => (
-                          <li key={example}>{t(example)}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
                   <ul className="quality-control-in-process-inspection-checks">
                     {stage.checks.map((check) => (
                       <li key={check}>{t(check)}</li>
