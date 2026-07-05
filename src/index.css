@@ -43216,6 +43216,16 @@ img.supply-hub-weekly-cta-image-placeholder {
   .quality-control-inspection-report-system-step-wrap article {
     grid-template-columns: 2.8rem minmax(0, 1fr);
   }
+
+  .quality-control-moisture-control-importance-flow,
+  .quality-control-moisture-control-effect-grid,
+  .quality-control-moisture-control-material-grid,
+  .quality-control-moisture-control-method-grid,
+  .quality-control-moisture-control-point-flow,
+  .quality-control-moisture-control-risk-grid,
+  .quality-control-moisture-control-system .quality-control-moisture-control-system-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .ai-intro {
