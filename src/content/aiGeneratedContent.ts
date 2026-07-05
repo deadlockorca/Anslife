@@ -10417,7 +10417,6 @@ const ABOUT_PHILOSOPHY_SECTION_VN = `
     <header class="ai-philosophy-hero">
       <p class="ai-op-kicker">TRIẾT LÝ KINH DOANH</p>
       <h2>Triết lý</h2>
-      <p class="ai-op-subtitle">Chúng tôi xây dựng niềm tin bằng hệ thống, dữ liệu và trách nhiệm.</p>
     </header>
 
     <article class="ai-op-core ai-philosophy-intro">
@@ -10536,7 +10535,6 @@ const ABOUT_PHILOSOPHY_SECTION_EN = `
     <header class="ai-philosophy-hero">
       <p class="ai-op-kicker">BUSINESS PHILOSOPHY</p>
       <h2>Philosophy</h2>
-      <p class="ai-op-subtitle">We build trust through systems, data, and responsibility.</p>
     </header>
 
     <article class="ai-op-core ai-philosophy-intro">
@@ -20065,157 +20063,108 @@ function getLacquerBannerImagePath(language: LanguageCode): string {
   return `/assets/products/finishing/lacquer/lacquer-banner-text${suffix}.webp`;
 }
 
+function getProductsTranslatedSectionHtml(
+  language: LanguageCode,
+  vnSectionHtml: string,
+  enSectionHtml?: string,
+): string {
+  const sectionHtml =
+    language === 'vn'
+      ? vnSectionHtml
+      : language === 'en' && enSectionHtml
+        ? enSectionHtml
+        : translateAiHtml(language, vnSectionHtml);
+
+  return `<div class="ai-content">${sectionHtml}</div>`;
+}
+
 function getOperationsSupplyDetailHtml(
   detailSlug: string,
   language: LanguageCode,
 ): string | null {
   if (detailSlug === 'oem-odm-product-development') {
-    if (language === 'vn') {
-      return `<div class="ai-content">${PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN}</div>`.replace(
-        /href="\/vn\/contact\//g,
-        `href="/${language}/contact/`,
-      );
-    }
-
-    const localizedSectionHtml =
-      PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_LOCALIZED[
-        language as OemOdmDetailLanguage
-      ] ?? PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN;
-
-    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+    return getProductsTranslatedSectionHtml(
+      language,
+      PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_VN,
+      PRODUCTS_OEM_ODM_PRODUCT_DEVELOPMENT_SECTION_EN,
+    ).replace(
       /href="\/vn\/contact\//g,
       `href="/${language}/contact/`,
     );
   }
 
   if (detailSlug === 'project-supply-chain-feasibility-assessment') {
-    if (language === 'vn') {
-      return `<div class="ai-content">${PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_VN}</div>`.replace(
-        /href="\/vn\/contact\//g,
-        `href="/${language}/contact/`,
-      );
-    }
-
-    const localizedSectionHtml =
-      PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_LOCALIZED[
-        language as FeasibilityDetailLanguage
-      ] ?? PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_EN;
-
-    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+    return getProductsTranslatedSectionHtml(
+      language,
+      PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_VN,
+      PRODUCTS_PROJECT_SUPPLY_CHAIN_FEASIBILITY_ASSESSMENT_SECTION_EN,
+    ).replace(
       /href="\/vn\/contact\//g,
       `href="/${language}/contact/`,
     );
   }
 
   if (detailSlug === 'factory-capability-assessment') {
-    if (language === 'vn') {
-      return `<div class="ai-content">${PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_VN}</div>`.replace(
-        /href="\/vn\/contact\//g,
-        `href="/${language}/contact/`,
-      );
-    }
-
-    const localizedSectionHtml =
-      PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_LOCALIZED[
-        language as FactoryAssessmentDetailLanguage
-      ] ?? PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN;
-
-    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+    return getProductsTranslatedSectionHtml(
+      language,
+      PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_VN,
+      PRODUCTS_FACTORY_CAPABILITY_ASSESSMENT_SECTION_EN,
+    ).replace(
       /href="\/vn\/contact\//g,
       `href="/${language}/contact/`,
     );
   }
 
   if (detailSlug === 'export-project-operation-management') {
-    if (language === 'vn') {
-      return `<div class="ai-content">${PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_VN}</div>`.replace(
-        /href="\/vn\/contact\//g,
-        `href="/${language}/contact/`,
-      );
-    }
-
-    const localizedSectionHtml =
-      PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_LOCALIZED[
-        language as ExportProjectOperationDetailLanguage
-      ] ?? PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN;
-
-    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+    return getProductsTranslatedSectionHtml(
+      language,
+      PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_VN,
+      PRODUCTS_EXPORT_PROJECT_OPERATION_MANAGEMENT_SECTION_EN,
+    ).replace(
       /href="\/vn\/contact\//g,
       `href="/${language}/contact/`,
     );
   }
 
   if (detailSlug === 'independent-project-qc-service') {
-    if (language === 'vn') {
-      return `<div class="ai-content">${PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_VN}</div>`.replace(
-        /href="\/vn\/contact\//g,
-        `href="/${language}/contact/`,
-      );
-    }
-
-    const localizedSectionHtml =
-      PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_LOCALIZED[
-        language as IndependentProjectQcDetailLanguage
-      ] ?? PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN;
-
-    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+    return getProductsTranslatedSectionHtml(
+      language,
+      PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_VN,
+      PRODUCTS_INDEPENDENT_PROJECT_QC_SERVICE_SECTION_EN,
+    ).replace(
       /href="\/vn\/contact\//g,
       `href="/${language}/contact/`,
     );
   }
 
   if (detailSlug === 'project-logistics-import-export-coordination') {
-    if (language === 'vn') {
-      return `<div class="ai-content">${PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_VN}</div>`.replace(
-        /href="\/vn\/contact\//g,
-        `href="/${language}/contact/`,
-      );
-    }
-
-    const localizedSectionHtml =
-      PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_LOCALIZED[
-        language as ProjectLogisticsImportExportDetailLanguage
-      ] ?? PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN;
-
-    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+    return getProductsTranslatedSectionHtml(
+      language,
+      PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_VN,
+      PRODUCTS_PROJECT_LOGISTICS_IMPORT_EXPORT_COORDINATION_SECTION_EN,
+    ).replace(
       /href="\/vn\/contact\//g,
       `href="/${language}/contact/`,
     );
   }
 
   if (detailSlug === 'vietnam-storage-solution') {
-    if (language === 'vn') {
-      return `<div class="ai-content">${PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_VN}</div>`.replace(
-        /href="\/vn\/contact\//g,
-        `href="/${language}/contact/`,
-      );
-    }
-
-    const localizedSectionHtml =
-      PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_LOCALIZED[
-        language as VietnamStorageSolutionDetailLanguage
-      ] ?? PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN;
-
-    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+    return getProductsTranslatedSectionHtml(
+      language,
+      PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_VN,
+      PRODUCTS_VIETNAM_STORAGE_SOLUTION_SECTION_EN,
+    ).replace(
       /href="\/vn\/contact\//g,
       `href="/${language}/contact/`,
     );
   }
 
   if (detailSlug === 'trade-financing') {
-    if (language === 'vn') {
-      return `<div class="ai-content">${PRODUCTS_TRADE_FINANCING_SECTION_VN}</div>`.replace(
-        /href="\/vn\/contact\//g,
-        `href="/${language}/contact/`,
-      );
-    }
-
-    const localizedSectionHtml =
-      PRODUCTS_TRADE_FINANCING_SECTION_LOCALIZED[
-        language as TradeFinancingDetailLanguage
-      ] ?? PRODUCTS_TRADE_FINANCING_SECTION_EN;
-
-    return `<div class="ai-content">${localizedSectionHtml}</div>`.replace(
+    return getProductsTranslatedSectionHtml(
+      language,
+      PRODUCTS_TRADE_FINANCING_SECTION_VN,
+      PRODUCTS_TRADE_FINANCING_SECTION_EN,
+    ).replace(
       /href="\/vn\/contact\//g,
       `href="/${language}/contact/`,
     );
@@ -20242,7 +20191,7 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions\/finishing/g,
         `href="/${language}/products-solutions/finishing`,
-      )
+    )
       .replace(/href="\/vn"/g, `href="/${language}"`);
   }
 
@@ -20284,7 +20233,7 @@ export function getAIFallbackSectionHtml(
       .replace(
         '/assets/products/finishing/lacquer/lacquer-banner-text.webp',
         getLacquerBannerImagePath(language),
-      )
+    )
       .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
       .replace(/href="\/vn"/g, `href="/${language}"`);
   }
@@ -20337,7 +20286,7 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions/g,
         `href="/${language}/products-solutions`,
-      )
+    )
       .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
       .replace(/href="\/vn"/g, `href="/${language}"`);
   }
@@ -20354,7 +20303,7 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions/g,
         `href="/${language}/products-solutions`,
-      )
+    )
       .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
       .replace(/href="\/vn"/g, `href="/${language}"`);
   }
@@ -20372,7 +20321,7 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions/g,
         `href="/${language}/products-solutions`,
-      )
+    )
       .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
       .replace(/href="\/vn"/g, `href="/${language}"`);
   }
@@ -20390,7 +20339,7 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions/g,
         `href="/${language}/products-solutions`,
-      )
+    )
       .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
       .replace(/href="\/vn"/g, `href="/${language}"`);
   }
@@ -20407,7 +20356,7 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions/g,
         `href="/${language}/products-solutions`,
-      )
+    )
       .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
       .replace(/href="\/vn"/g, `href="/${language}"`);
   }
@@ -20425,7 +20374,7 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions/g,
         `href="/${language}/products-solutions`,
-      )
+    )
       .replace(/href="\/vn\/contact/g, `href="/${language}/contact`)
       .replace(/href="\/vn"/g, `href="/${language}"`);
   }
@@ -20438,11 +20387,11 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions\/furniture-components/g,
         `href="/${language}/products-solutions/furniture-components`,
-      )
+    )
       .replace(
         /href="\/vn\/contact\/request-quotation"/g,
         `href="/${language}/contact/request-quotation"`,
-      )
+    )
       .replace(
         /href="\/vn\/contact\/upload-drawing"/g,
         `href="/${language}/contact/upload-drawing"`,
@@ -20451,153 +20400,145 @@ export function getAIFallbackSectionHtml(
 
   if (pageSlug === 'products-solutions' && sectionId === 'finished-furniture') {
     if (subSectionSlug === 'chairs') {
-      const sectionHtml =
-        language === 'vn'
-          ? PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_VN
-          : PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_EN;
-
-      return `<div class="ai-content">${sectionHtml}</div>`
+      return getProductsTranslatedSectionHtml(
+        language,
+        PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_VN,
+        PRODUCTS_FINISHED_FURNITURE_CHAIRS_SECTION_EN,
+      )
         .replace(
           /href="\/vn\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(
           /href="\/en\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
         .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
     }
 
     if (subSectionSlug === 'tables') {
-      const sectionHtml =
-        language === 'vn'
-          ? PRODUCTS_FINISHED_FURNITURE_TABLES_SECTION_VN
-          : PRODUCTS_FINISHED_FURNITURE_TABLES_SECTION_EN;
-
-      return `<div class="ai-content">${sectionHtml}</div>`
+      return getProductsTranslatedSectionHtml(
+        language,
+        PRODUCTS_FINISHED_FURNITURE_TABLES_SECTION_VN,
+        PRODUCTS_FINISHED_FURNITURE_TABLES_SECTION_EN,
+      )
         .replace(
           /href="\/vn\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(
           /href="\/en\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
         .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
     }
 
     if (subSectionSlug === 'storage-cabinets' || subSectionSlug === 'cabinets-storage') {
-      const sectionHtml =
-        language === 'vn'
-          ? PRODUCTS_FINISHED_FURNITURE_STORAGE_CABINETS_SECTION_VN
-          : PRODUCTS_FINISHED_FURNITURE_STORAGE_CABINETS_SECTION_EN;
-
-      return `<div class="ai-content">${sectionHtml}</div>`
+      return getProductsTranslatedSectionHtml(
+        language,
+        PRODUCTS_FINISHED_FURNITURE_STORAGE_CABINETS_SECTION_VN,
+        PRODUCTS_FINISHED_FURNITURE_STORAGE_CABINETS_SECTION_EN,
+      )
         .replace(
           /href="\/vn\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(
           /href="\/en\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
         .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
     }
 
     if (subSectionSlug === 'shelves') {
-      const sectionHtml =
-        language === 'vn'
-          ? PRODUCTS_FINISHED_FURNITURE_SHELVES_SECTION_VN
-          : PRODUCTS_FINISHED_FURNITURE_SHELVES_SECTION_EN;
-
-      return `<div class="ai-content">${sectionHtml}</div>`
+      return getProductsTranslatedSectionHtml(
+        language,
+        PRODUCTS_FINISHED_FURNITURE_SHELVES_SECTION_VN,
+        PRODUCTS_FINISHED_FURNITURE_SHELVES_SECTION_EN,
+      )
         .replace(
           /href="\/vn\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(
           /href="\/en\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
         .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
     }
 
     if (subSectionSlug === 'beds') {
-      const sectionHtml =
-        language === 'vn'
-          ? PRODUCTS_FINISHED_FURNITURE_BEDS_SECTION_VN
-          : PRODUCTS_FINISHED_FURNITURE_BEDS_SECTION_EN;
-
-      return `<div class="ai-content">${sectionHtml}</div>`
+      return getProductsTranslatedSectionHtml(
+        language,
+        PRODUCTS_FINISHED_FURNITURE_BEDS_SECTION_VN,
+        PRODUCTS_FINISHED_FURNITURE_BEDS_SECTION_EN,
+      )
         .replace(
           /href="\/vn\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(
           /href="\/en\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
         .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
     }
 
     if (subSectionSlug === 'rattan-bamboo-furniture') {
-      const sectionHtml =
-        language === 'vn'
-          ? PRODUCTS_FINISHED_FURNITURE_RATTAN_BAMBOO_SECTION_VN
-          : PRODUCTS_FINISHED_FURNITURE_RATTAN_BAMBOO_SECTION_EN;
-
-      return `<div class="ai-content">${sectionHtml}</div>`
+      return getProductsTranslatedSectionHtml(
+        language,
+        PRODUCTS_FINISHED_FURNITURE_RATTAN_BAMBOO_SECTION_VN,
+        PRODUCTS_FINISHED_FURNITURE_RATTAN_BAMBOO_SECTION_EN,
+      )
         .replace(
           /href="\/vn\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(
           /href="\/en\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
         .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
     }
 
     if (subSectionSlug === 'upholstered-furniture' || subSectionSlug === 'upholstery') {
-      const sectionHtml =
-        language === 'vn'
-          ? PRODUCTS_FINISHED_FURNITURE_UPHOLSTERED_SECTION_VN
-          : PRODUCTS_FINISHED_FURNITURE_UPHOLSTERED_SECTION_EN;
-
-      return `<div class="ai-content">${sectionHtml}</div>`
+      return getProductsTranslatedSectionHtml(
+        language,
+        PRODUCTS_FINISHED_FURNITURE_UPHOLSTERED_SECTION_VN,
+        PRODUCTS_FINISHED_FURNITURE_UPHOLSTERED_SECTION_EN,
+      )
         .replace(
           /href="\/vn\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(
           /href="\/en\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
         .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
     }
 
     if (subSectionSlug === 'outdoor-furniture') {
-      const sectionHtml =
-        language === 'vn'
-          ? PRODUCTS_FINISHED_FURNITURE_OUTDOOR_SECTION_VN
-          : PRODUCTS_FINISHED_FURNITURE_OUTDOOR_SECTION_EN;
-
-      return `<div class="ai-content">${sectionHtml}</div>`
+      return getProductsTranslatedSectionHtml(
+        language,
+        PRODUCTS_FINISHED_FURNITURE_OUTDOOR_SECTION_VN,
+        PRODUCTS_FINISHED_FURNITURE_OUTDOOR_SECTION_EN,
+      )
         .replace(
           /href="\/vn\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(
           /href="\/en\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
         .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
     }
@@ -20606,38 +20547,36 @@ export function getAIFallbackSectionHtml(
       subSectionSlug === 'custom-project-furniture' ||
       subSectionSlug === 'hotel-resort-office-custom-furniture'
     ) {
-      const sectionHtml =
-        language === 'vn'
-          ? PRODUCTS_FINISHED_FURNITURE_CUSTOM_PROJECT_SECTION_VN
-          : PRODUCTS_FINISHED_FURNITURE_CUSTOM_PROJECT_SECTION_EN;
-
-      return `<div class="ai-content">${sectionHtml}</div>`
+      return getProductsTranslatedSectionHtml(
+        language,
+        PRODUCTS_FINISHED_FURNITURE_CUSTOM_PROJECT_SECTION_VN,
+        PRODUCTS_FINISHED_FURNITURE_CUSTOM_PROJECT_SECTION_EN,
+      )
         .replace(
           /href="\/vn\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(
           /href="\/en\/products-solutions\/finished-furniture/g,
           `href="/${language}/products-solutions/finished-furniture`,
-        )
+      )
         .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
         .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
     }
 
-    const sectionHtml =
-      language === 'vn'
-        ? PRODUCTS_FINISHED_FURNITURE_SECTION_VN
-        : PRODUCTS_FINISHED_FURNITURE_SECTION_EN;
-
-    return `<div class="ai-content">${sectionHtml}</div>`
+    return getProductsTranslatedSectionHtml(
+      language,
+      PRODUCTS_FINISHED_FURNITURE_SECTION_VN,
+      PRODUCTS_FINISHED_FURNITURE_SECTION_EN,
+    )
       .replace(
         /href="\/vn\/products-solutions\/finished-furniture/g,
         `href="/${language}/products-solutions/finished-furniture`,
-      )
+    )
       .replace(
         /href="\/en\/products-solutions\/finished-furniture/g,
         `href="/${language}/products-solutions/finished-furniture`,
-      )
+    )
       .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`)
       .replace(/href="\/en\/contact\//g, `href="/${language}/contact/`);
   }
@@ -20655,35 +20594,35 @@ export function getAIFallbackSectionHtml(
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/oem-odm-product-development"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/oem-odm-product-development"`,
-      )
+    )
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/project-supply-chain-feasibility-assessment"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/project-supply-chain-feasibility-assessment"`,
-      )
+    )
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/factory-capability-assessment"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/factory-capability-assessment"`,
-      )
+    )
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/export-project-operation-management"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/export-project-operation-management"`,
-      )
+    )
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/independent-project-qc-service"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/independent-project-qc-service"`,
-      )
+    )
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/project-logistics-import-export-coordination"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/project-logistics-import-export-coordination"`,
-      )
+    )
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/vietnam-storage-solution"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/vietnam-storage-solution"`,
-      )
+    )
       .replace(
         /href="\/vn\/products-solutions\/operations-supply-solutions\/trade-financing"/g,
         `href="/${language}/products-solutions/operations-supply-solutions/trade-financing"`,
-      )
+    )
       .replace(/href="\/vn\/contact\//g, `href="/${language}/contact/`);
   }
 

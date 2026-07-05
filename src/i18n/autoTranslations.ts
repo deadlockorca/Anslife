@@ -1,12 +1,19 @@
 import type { LanguageCode } from './language';
+import { ABOUT_ANSLIFE_TEMPLATE_TRANSLATIONS } from './aboutAnslifeTemplateTranslations';
 import { CABINET_STORAGE_PARTS_TEMPLATE_TRANSLATIONS } from './cabinetStoragePartsTemplateTranslations';
 import { CUSTOM_DRAWING_COMPONENTS_TEMPLATE_TRANSLATIONS } from './customDrawingComponentsTemplateTranslations';
 import { FINISHING_OVERVIEW_TEMPLATE_TRANSLATIONS } from './finishingOverviewTemplateTranslations';
 import { FURNITURE_COMPONENTS_TEMPLATE_TRANSLATIONS } from './furnitureComponentsTemplateTranslations';
 import { LACQUER_TEMPLATE_TRANSLATIONS } from './lacquerTemplateTranslations';
+import { MANUFACTURING_TEMPLATE_TRANSLATIONS } from './manufacturingTemplateTranslations';
+import { MATERIALS_TEMPLATE_TRANSLATIONS } from './materialsTemplateTranslations';
 import { NATURAL_FINISH_TEMPLATE_TRANSLATIONS } from './naturalFinishTemplateTranslations';
 import { OIL_FINISH_TEMPLATE_TRANSLATIONS } from './oilFinishTemplateTranslations';
+import { PRODUCTS_SOLUTIONS_TEMPLATE_TRANSLATIONS } from './productsSolutionsTemplateTranslations';
+import { QUALITY_CONTROL_TEMPLATE_TRANSLATIONS } from './qualityControlTemplateTranslations';
+import { RESOURCES_TEMPLATE_TRANSLATIONS } from './resourcesTemplateTranslations';
 import { STAIN_TEMPLATE_TRANSLATIONS } from './stainTemplateTranslations';
+import { SUPPLY_HUB_TEMPLATE_TRANSLATIONS } from './supplyHubTemplateTranslations';
 import { TABLE_TOPS_LEGS_TEMPLATE_TRANSLATIONS } from './tableTopsLegsTemplateTranslations';
 import { UPHOLSTERY_PARTS_TEMPLATE_TRANSLATIONS } from './upholsteryPartsTemplateTranslations';
 
@@ -6154,5 +6161,75 @@ for (const language of Object.keys(FINISHING_OVERVIEW_TEMPLATE_TRANSLATIONS) as 
   AUTO_TRANSLATIONS[language] = {
     ...(AUTO_TRANSLATIONS[language] ?? {}),
     ...(FINISHING_OVERVIEW_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
+
+for (const language of Object.keys(MANUFACTURING_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(MANUFACTURING_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
+
+for (const language of Object.keys(SUPPLY_HUB_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(SUPPLY_HUB_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
+
+for (const language of Object.keys(QUALITY_CONTROL_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(QUALITY_CONTROL_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
+
+for (const language of Object.keys(MATERIALS_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(MATERIALS_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
+
+for (const language of Object.keys(PRODUCTS_SOLUTIONS_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(PRODUCTS_SOLUTIONS_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
+
+for (const language of Object.keys(ABOUT_ANSLIFE_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(ABOUT_ANSLIFE_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
+
+for (const language of Object.keys(RESOURCES_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(RESOURCES_TEMPLATE_TRANSLATIONS[language] ?? {}),
   };
 }
