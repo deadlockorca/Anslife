@@ -90,39 +90,47 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
       mark: '01',
       title: 'Phát triển con người',
       body: 'Đầu tư vào đào tạo, môi trường làm việc và cơ hội phát triển cho đội ngũ nhân sự.',
+      image: '/assets/about/scholarship-community/directions/direction-01.webp',
     },
     {
       mark: '02',
       title: 'Đồng hành cùng cộng đồng',
       body: 'Tham gia các hoạt động xã hội và chia sẻ giá trị với địa phương nơi ANSLIFE hoạt động.',
+      image: '/assets/about/scholarship-community/directions/direction-02.webp',
     },
     {
       mark: '03',
       title: 'Phát triển ngành sản xuất',
       body: 'Hỗ trợ nâng cao năng lực cho các nhà máy đối tác và thúc đẩy tiêu chuẩn sản xuất ổn định.',
+      image: '/assets/about/scholarship-community/directions/direction-03.webp',
     },
     {
       mark: '04',
       title: 'Hướng tới phát triển bền vững',
       body: 'Khuyến khích sử dụng vật liệu phù hợp, tối ưu nguồn lực và giảm lãng phí trong sản xuất.',
+      image: '/assets/about/scholarship-community/directions/direction-04.webp',
     },
   ];
   const scholarshipPrograms = [
     {
       title: 'Quỹ học bổng',
       body: 'Đồng hành cùng học sinh, sinh viên có hoàn cảnh khó khăn và khuyến khích tinh thần học tập.',
+      image: '/assets/about/scholarship-community/programs/program-01.webp',
     },
     {
       title: 'Hoạt động cộng đồng',
       body: 'Tham gia các chương trình hỗ trợ cộng đồng và các hoạt động thiện nguyện tại địa phương.',
+      image: '/assets/about/scholarship-community/programs/program-02.webp',
     },
     {
       title: 'Phát triển nguồn nhân lực',
       body: 'Đào tạo kỹ năng nghề, phát triển đội ngũ quản lý và nâng cao năng lực sản xuất.',
+      image: '/assets/about/scholarship-community/programs/program-03.webp',
     },
     {
       title: 'Đồng hành cùng đối tác',
       body: 'Chia sẻ kinh nghiệm, quy trình và tiêu chuẩn nhằm nâng cao năng lực của chuỗi cung ứng.',
+      image: '/assets/about/scholarship-community/programs/program-04.webp',
     },
   ];
   const scholarshipPhilosophy = [
@@ -166,21 +174,25 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
       title: 'Triết lý ANSLIFE',
       body: 'Tìm hiểu giá trị cốt lõi và định hướng phát triển của ANSLIFE.',
       href: '/about-anslife/philosophy',
+      image: '/assets/about/scholarship-community/related/related-01.webp',
     },
     {
       title: 'Tổng quan công ty',
       body: 'Khám phá mô hình hoạt động và năng lực của ANSLIFE.',
       href: '/about-anslife/company-intro',
+      image: '/assets/about/scholarship-community/related/related-02.webp',
     },
     {
       title: 'Chất lượng & Tiêu chuẩn',
       body: 'Cam kết về chất lượng trong toàn bộ chuỗi sản xuất.',
       href: '/quality-control',
+      image: '/assets/about/scholarship-community/related/related-03.webp',
     },
     {
       title: 'Vietnam Supply Hub',
       body: 'Giải pháp hỗ trợ chuỗi cung ứng và phát triển đối tác.',
       href: '/vietnam-supply-hub',
+      image: '/assets/about/scholarship-community/related/related-04.webp',
     },
   ];
 
@@ -232,7 +244,9 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
                   <span className="scholarship-community-card-mark">{item.mark}</span>
                   <h3>{t(item.title)}</h3>
                   <p>{t(item.body)}</p>
-                  <div className="scholarship-community-image-slot" aria-hidden="true" />
+                  <div className="scholarship-community-image-slot" aria-hidden="true">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
                 </article>
               ))}
             </div>
@@ -243,7 +257,9 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
             <div className="scholarship-community-program-grid">
               {scholarshipPrograms.map((item) => (
                 <article className="scholarship-community-card" key={item.title}>
-                  <div className="scholarship-community-image-slot scholarship-community-image-slot-wide" aria-hidden="true" />
+                  <div className="scholarship-community-image-slot scholarship-community-image-slot-wide" aria-hidden="true">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <h3>{t(item.title)}</h3>
                   <p>{t(item.body)}</p>
                 </article>
@@ -263,7 +279,14 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
                     </li>
                   ))}
                 </ul>
-                <div className="scholarship-community-image-slot scholarship-community-image-slot-fill" aria-hidden="true" />
+                <div className="scholarship-community-image-slot scholarship-community-image-slot-fill" aria-hidden="true">
+                  <img
+                    src="/assets/about/scholarship-community/philosophy/philosophy-01.webp"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
               </div>
             </article>
 
@@ -294,7 +317,14 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
           </section>
 
           <section className="scholarship-community-statement" aria-label={t('Cam kết phát triển bền vững')}>
-            <div className="scholarship-community-image-slot scholarship-community-image-slot-panorama" aria-hidden="true" />
+            <div className="scholarship-community-image-slot scholarship-community-image-slot-panorama" aria-hidden="true">
+              <img
+                src="/assets/about/scholarship-community/statement/statement-01.webp"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <blockquote>
               <p>
                 {t(
@@ -309,7 +339,9 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
             <div className="scholarship-community-related-grid">
               {scholarshipRelatedLinks.map((item) => (
                 <a className="scholarship-community-related-card" href={item.href} key={item.title}>
-                  <div className="scholarship-community-image-slot" aria-hidden="true" />
+                  <div className="scholarship-community-image-slot" aria-hidden="true">
+                    <img src={item.image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <div>
                     <h3>{t(item.title)}</h3>
                     <p>{t(item.body)}</p>
@@ -321,7 +353,14 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
           </section>
 
           <section className="scholarship-community-cta">
-            <div className="scholarship-community-image-slot scholarship-community-cta-image" aria-hidden="true" />
+            <div className="scholarship-community-image-slot scholarship-community-cta-image" aria-hidden="true">
+              <img
+                src="/assets/about/scholarship-community/cta/cta-01.webp"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <div>
               <h2>{t('Đồng hành cùng ANSLIFE vì sự phát triển bền vững')}</h2>
               <p>
