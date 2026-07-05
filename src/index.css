@@ -41308,7 +41308,7 @@ img.supply-hub-weekly-cta-image-placeholder {
   .supply-hub-qc-checklist-group-grid,
   .supply-hub-qc-checklist-reference-grid,
   .supply-hub-qc-checklist-value-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .supply-hub-weekly-goal-item,
@@ -41759,7 +41759,7 @@ img.supply-hub-weekly-cta-image-placeholder {
   .supply-hub-component-samples-flow,
   .supply-hub-component-samples-benefit-grid,
   .supply-hub-component-samples-process-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .supply-hub-partner-component-samples-banner-copy {
@@ -42034,7 +42034,7 @@ img.supply-hub-weekly-cta-image-placeholder {
   .supply-hub-technical-drawings-document-grid,
   .supply-hub-technical-drawings-value-grid,
   .supply-hub-technical-drawings-process-flow {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .supply-hub-partner-technical-drawings-banner-copy {
@@ -42189,7 +42189,7 @@ img.supply-hub-weekly-cta-image-placeholder {
   .supply-hub-material-storage-goal-grid,
   .supply-hub-material-storage-audience-grid,
   .supply-hub-material-storage-operation-steps {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .supply-hub-material-storage-project-row {
@@ -43181,7 +43181,7 @@ img.supply-hub-weekly-cta-image-placeholder {
   .quality-control-inspection-report-content-grid,
   .quality-control-inspection-report-type-grid,
   .quality-control-inspection-report-support-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .quality-control-material-inspection-material-grid article,
@@ -43202,7 +43202,7 @@ img.supply-hub-weekly-cta-image-placeholder {
   .quality-control-inspection-report-stage-flow,
   .quality-control-inspection-report-structure-flow,
   .quality-control-inspection-report-system-flow {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .quality-control-packing-standard-control-layout,
@@ -43224,6 +43224,104 @@ img.supply-hub-weekly-cta-image-placeholder {
   .quality-control-moisture-control-point-flow,
   .quality-control-moisture-control-risk-grid,
   .quality-control-moisture-control-system .quality-control-moisture-control-system-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .resources-company-updates-featured-grid,
+  .resources-company-updates-follow-grid,
+  .resources-case-studies-value-grid,
+  .resources-manufacturing-notes-featured-grid,
+  .supply-hub-overview-definition,
+  .supply-hub-overview-benefits,
+  .supply-hub-overview-role-grid,
+  .supply-hub-overview-audience-grid,
+  .supply-hub-storage-support-grid,
+  .supply-hub-storage-model-grid,
+  .supply-hub-storage-process-list,
+  .supply-hub-weekly-goal-grid,
+  .supply-hub-weekly-model-grid,
+  .supply-hub-weekly-support-grid,
+  .supply-hub-weekly-buffer-grid,
+  .supply-hub-weekly-check-grid,
+  .supply-hub-weekly-audience-grid,
+  .supply-hub-weekly-process-steps,
+  .supply-hub-material-storage-item-grid,
+  .supply-hub-material-storage-goal-grid,
+  .supply-hub-material-storage-audience-grid,
+  .supply-hub-material-storage-operation-steps,
+  .supply-hub-export-doc-commercial-grid,
+  .supply-hub-export-doc-qc-grid,
+  .supply-hub-export-doc-process-steps,
+  .supply-hub-approved-samples-stored-grid,
+  .supply-hub-approved-samples-flow,
+  .supply-hub-approved-samples-benefit-grid,
+  .supply-hub-approved-samples-process-list,
+  .supply-hub-component-samples-type-grid,
+  .supply-hub-component-samples-record-grid,
+  .supply-hub-component-samples-usage-grid,
+  .supply-hub-component-samples-key-grid,
+  .supply-hub-component-samples-management-grid,
+  .supply-hub-component-samples-flow,
+  .supply-hub-component-samples-benefit-grid,
+  .supply-hub-component-samples-process-list,
+  .supply-hub-technical-drawings-type-grid,
+  .supply-hub-technical-drawings-reference-flow,
+  .supply-hub-technical-drawings-document-grid,
+  .supply-hub-technical-drawings-value-grid,
+  .supply-hub-technical-drawings-process-flow,
+  .supply-hub-material-references-group-grid,
+  .supply-hub-material-references-value-grid,
+  .supply-hub-packing-standards-managed-grid,
+  .supply-hub-packing-standards-document-grid,
+  .supply-hub-packing-standards-reference-grid,
+  .supply-hub-packing-standards-value-grid,
+  .supply-hub-qc-checklist-group-grid,
+  .supply-hub-qc-checklist-reference-grid,
+  .supply-hub-qc-checklist-value-grid,
+  .quality-control-overview-flow-grid,
+  .quality-control-overview-pillar-grid,
+  .quality-control-overview-goal-grid,
+  .quality-control-qc-process-flow-grid,
+  .quality-control-qc-process-principle-grid,
+  .quality-control-material-inspection-material-grid,
+  .quality-control-material-inspection-main-grid,
+  .quality-control-material-inspection-system-grid,
+  .quality-control-in-process-inspection-stage-grid,
+  .quality-control-in-process-inspection-controlled-grid,
+  .quality-control-in-process-inspection-method-grid,
+  .quality-control-in-process-inspection-benefit-flow,
+  .quality-control-in-process-inspection-system-flow,
+  .quality-control-final-inspection-goal-grid,
+  .quality-control-final-inspection-check-grid,
+  .quality-control-final-inspection-record-grid,
+  .quality-control-final-inspection-role-flow,
+  .quality-control-approved-sample-control-type-grid,
+  .quality-control-approved-sample-control-process-grid,
+  .quality-control-approved-sample-control-storage-grid,
+  .quality-control-approved-sample-control-risk-flow,
+  .quality-control-approved-sample-control-role-flow,
+  .quality-control-moisture-control-importance-flow,
+  .quality-control-moisture-control-effect-grid,
+  .quality-control-moisture-control-material-grid,
+  .quality-control-moisture-control-method-grid,
+  .quality-control-moisture-control-point-flow,
+  .quality-control-moisture-control-risk-grid,
+  .quality-control-moisture-control-system .quality-control-moisture-control-system-flow,
+  .quality-control-packing-standard-goal-grid,
+  .quality-control-packing-standard-control-grid,
+  .quality-control-packing-standard-material-grid,
+  .quality-control-packing-standard-type-grid,
+  .quality-control-packing-standard-process-flow,
+  .quality-control-packing-standard-role-flow,
+  .quality-control-packing-standard-risk-flow,
+  .quality-control-inspection-report-stage-flow,
+  .quality-control-inspection-report-structure-flow,
+  .quality-control-inspection-report-system-flow,
+  .quality-control-inspection-report-content-grid,
+  .quality-control-inspection-report-type-grid,
+  .quality-control-inspection-report-support-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
