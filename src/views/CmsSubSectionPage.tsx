@@ -1751,15 +1751,17 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <h2>{t('Mục tiêu của quy trình xếp container')}</h2>
             <div className="manufacturing-container-loading-goal-grid">
               {[
-                ['✓', 'Bảo vệ hàng hóa', 'Hạn chế va đập, dịch chuyển và hư hỏng trong quá trình vận chuyển.'],
-                ['□', 'Tối ưu không gian', 'Sắp xếp kiện hàng hợp lý để tận dụng tối đa dung tích container.'],
-                ['⚖', 'Phân bổ tải trọng', 'Đảm bảo trọng lượng được phân bổ đồng đều nhằm tăng độ ổn định khi vận chuyển.'],
-                ['▱', 'Thuận tiện dỡ hàng', 'Sắp xếp theo thứ tự giao nhận và yêu cầu của khách hàng.'],
-                ['☑', 'Đáp ứng tiêu chuẩn Buyer', 'Tuân thủ quy cách xếp hàng và hướng dẫn logistics của từng dự án.'],
-                ['▥', 'Giảm chi phí vận chuyển', 'Tối ưu hệ số lấp đầy container và hạn chế phát sinh chi phí logistics.'],
-              ].map(([icon, title, description]) => (
+                ['/assets/manufacturing/container-loading/goals/goal-01.webp', 'Bảo vệ hàng hóa', 'Hạn chế va đập, dịch chuyển và hư hỏng trong quá trình vận chuyển.'],
+                ['/assets/manufacturing/container-loading/goals/goal-02.webp', 'Tối ưu không gian', 'Sắp xếp kiện hàng hợp lý để tận dụng tối đa dung tích container.'],
+                ['/assets/manufacturing/container-loading/goals/goal-03.webp', 'Phân bổ tải trọng', 'Đảm bảo trọng lượng được phân bổ đồng đều nhằm tăng độ ổn định khi vận chuyển.'],
+                ['/assets/manufacturing/container-loading/goals/goal-04.webp', 'Thuận tiện dỡ hàng', 'Sắp xếp theo thứ tự giao nhận và yêu cầu của khách hàng.'],
+                ['/assets/manufacturing/container-loading/goals/goal-05.webp', 'Đáp ứng tiêu chuẩn Buyer', 'Tuân thủ quy cách xếp hàng và hướng dẫn logistics của từng dự án.'],
+                ['/assets/manufacturing/container-loading/goals/goal-06.webp', 'Giảm chi phí vận chuyển', 'Tối ưu hệ số lấp đầy container và hạn chế phát sinh chi phí logistics.'],
+              ].map(([image, title, description]) => (
                 <article key={title}>
-                  <span aria-hidden="true">{icon}</span>
+                  <div className="manufacturing-container-loading-card-image-slot" aria-hidden="true">
+                    <img src={image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <h3>{t(title)}</h3>
                   <p>{t(description)}</p>
                 </article>
@@ -1772,17 +1774,19 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Quy trình xếp container')}</h2>
               <div className="manufacturing-container-loading-process-flow">
                 {[
-                  ['☑', 'Kiểm tra kiện hàng'],
-                  ['▤', 'Kiểm tra pallet'],
-                  ['⌗', 'Lập sơ đồ xếp container'],
-                  ['▥', 'Đưa hàng vào container'],
-                  ['▱', 'Cố định kiện hàng'],
-                  ['✓', 'Kiểm tra an toàn'],
-                  ['◇', 'Niêm phong container'],
-                  ['▱', 'Xuất hàng'],
-                ].map(([icon, title], index) => (
+                  ['/assets/manufacturing/container-loading/process/process-01.webp', 'Kiểm tra kiện hàng'],
+                  ['/assets/manufacturing/container-loading/process/process-02.webp', 'Kiểm tra pallet'],
+                  ['/assets/manufacturing/container-loading/process/process-03.webp', 'Lập sơ đồ xếp container'],
+                  ['/assets/manufacturing/container-loading/process/process-04.webp', 'Đưa hàng vào container'],
+                  ['/assets/manufacturing/container-loading/process/process-05.webp', 'Cố định kiện hàng'],
+                  ['/assets/manufacturing/container-loading/process/process-06.webp', 'Kiểm tra an toàn'],
+                  ['/assets/manufacturing/container-loading/process/process-07.webp', 'Niêm phong container'],
+                  ['/assets/manufacturing/container-loading/process/process-08.webp', 'Xuất hàng'],
+                ].map(([image, title], index) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <div className="manufacturing-container-loading-process-image-slot" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </div>
                     <h3>{t(title)}</h3>
                     <small>{index + 1}</small>
                   </article>
@@ -1794,15 +1798,17 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Những yếu tố được kiểm soát')}</h2>
               <div className="manufacturing-container-loading-control-grid">
                 {[
-                  ['☑', 'Kiểm tra kiện hàng', 'Xác nhận số lượng, mã hàng và tình trạng đóng gói trước khi xếp.'],
-                  ['▤', 'Kiểm tra pallet', 'Đảm bảo pallet ổn định, đúng tải trọng và phù hợp với phương án xếp hàng.'],
-                  ['⚖', 'Phân bổ tải trọng', 'Bố trí trọng lượng hợp lý nhằm đảm bảo cân bằng container trong quá trình vận chuyển.'],
-                  ['✓', 'Cố định hàng hóa', 'Sử dụng dây đai, thanh chèn và vật liệu bảo vệ để hạn chế dịch chuyển.'],
-                  ['□', 'Kiểm tra khoảng trống', 'Hạn chế khoảng trống lớn giúp giảm rung lắc và va chạm giữa các kiện hàng.'],
-                  ['☑', 'Kiểm tra trước niêm phong', 'Đánh giá toàn bộ container trước khi đóng cửa và bàn giao cho đơn vị vận chuyển.'],
-                ].map(([icon, title, description]) => (
+                  ['/assets/manufacturing/container-loading/controls/control-01.webp', 'Kiểm tra kiện hàng', 'Xác nhận số lượng, mã hàng và tình trạng đóng gói trước khi xếp.'],
+                  ['/assets/manufacturing/container-loading/controls/control-02.webp', 'Kiểm tra pallet', 'Đảm bảo pallet ổn định, đúng tải trọng và phù hợp với phương án xếp hàng.'],
+                  ['/assets/manufacturing/container-loading/controls/control-03.webp', 'Phân bổ tải trọng', 'Bố trí trọng lượng hợp lý nhằm đảm bảo cân bằng container trong quá trình vận chuyển.'],
+                  ['/assets/manufacturing/container-loading/controls/control-04.webp', 'Cố định hàng hóa', 'Sử dụng dây đai, thanh chèn và vật liệu bảo vệ để hạn chế dịch chuyển.'],
+                  ['/assets/manufacturing/container-loading/controls/control-05.webp', 'Kiểm tra khoảng trống', 'Hạn chế khoảng trống lớn giúp giảm rung lắc và va chạm giữa các kiện hàng.'],
+                  ['/assets/manufacturing/container-loading/controls/control-06.webp', 'Kiểm tra trước niêm phong', 'Đánh giá toàn bộ container trước khi đóng cửa và bàn giao cho đơn vị vận chuyển.'],
+                ].map(([image, title, description]) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <div className="manufacturing-container-loading-card-image-slot" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </div>
                     <h3>{t(title)}</h3>
                     <p>{t(description)}</p>
                   </article>
@@ -1815,15 +1821,17 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <h2>{t('Các loại hình xếp hàng')}</h2>
             <div className="manufacturing-container-loading-type-grid">
               {[
-                ['Nội thất nguyên chiếc', 'Xếp theo kích thước và khả năng chịu tải của từng sản phẩm.'],
-                ['Knock-down (KD)', 'Tối ưu thể tích bằng cách xếp theo từng kiện và bộ sản phẩm.'],
-                ['Linh kiện nội thất', 'Gom pallet theo mã hàng hoặc từng dự án.'],
-                ['Hàng hỗn hợp (Mixed Container)', 'Kết hợp nhiều nhóm sản phẩm trong cùng container theo kế hoạch giao hàng.'],
-                ['LCL', 'Chuẩn bị kiện hàng phù hợp với vận chuyển ghép container.'],
-                ['FCL', 'Triển khai phương án xếp tối ưu cho container nguyên.'],
-              ].map(([title, description]) => (
+                ['/assets/manufacturing/container-loading/types/type-01.webp', 'Nội thất nguyên chiếc', 'Xếp theo kích thước và khả năng chịu tải của từng sản phẩm.'],
+                ['/assets/manufacturing/container-loading/types/type-02.webp', 'Knock-down (KD)', 'Tối ưu thể tích bằng cách xếp theo từng kiện và bộ sản phẩm.'],
+                ['/assets/manufacturing/container-loading/types/type-03.webp', 'Linh kiện nội thất', 'Gom pallet theo mã hàng hoặc từng dự án.'],
+                ['/assets/manufacturing/container-loading/types/type-04.webp', 'Hàng hỗn hợp (Mixed Container)', 'Kết hợp nhiều nhóm sản phẩm trong cùng container theo kế hoạch giao hàng.'],
+                ['/assets/manufacturing/container-loading/types/type-05.webp', 'LCL', 'Chuẩn bị kiện hàng phù hợp với vận chuyển ghép container.'],
+                ['/assets/manufacturing/container-loading/types/type-06.webp', 'FCL', 'Triển khai phương án xếp tối ưu cho container nguyên.'],
+              ].map(([image, title, description]) => (
                 <article key={title}>
-                  <div className="manufacturing-container-loading-image-slot" aria-hidden="true" />
+                  <div className="manufacturing-container-loading-image-slot" aria-hidden="true">
+                    <img src={image} alt="" loading="lazy" decoding="async" />
+                  </div>
                   <h3>{t(title)}</h3>
                   <p>{t(description)}</p>
                 </article>
@@ -1836,13 +1844,15 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Năng lực xếp container của ANSLIFE')}</h2>
               <div className="manufacturing-container-loading-capability-grid">
                 {[
-                  ['□', 'Lập sơ đồ xếp hàng', 'Xây dựng phương án xếp container theo kích thước và tải trọng thực tế.'],
-                  ['✓', 'Kiểm soát an toàn', 'Đảm bảo hàng hóa được cố định chắc chắn trong suốt quá trình vận chuyển.'],
-                  ['◎', 'Phối hợp Logistics', 'Kết nối với đơn vị vận chuyển và lịch xuất hàng để đảm bảo tiến độ.'],
-                  ['⌂', 'Hỗ trợ Supply Hub', 'Thực hiện gom hàng từ nhiều nhà máy và tổ chức xếp container tại Vietnam Supply Hub.'],
-                ].map(([icon, title, description]) => (
+                  ['/assets/manufacturing/container-loading/capability/capability-01.webp', 'Lập sơ đồ xếp hàng', 'Xây dựng phương án xếp container theo kích thước và tải trọng thực tế.'],
+                  ['/assets/manufacturing/container-loading/capability/capability-02.webp', 'Kiểm soát an toàn', 'Đảm bảo hàng hóa được cố định chắc chắn trong suốt quá trình vận chuyển.'],
+                  ['/assets/manufacturing/container-loading/capability/capability-03.webp', 'Phối hợp Logistics', 'Kết nối với đơn vị vận chuyển và lịch xuất hàng để đảm bảo tiến độ.'],
+                  ['/assets/manufacturing/container-loading/capability/capability-04.webp', 'Hỗ trợ Supply Hub', 'Thực hiện gom hàng từ nhiều nhà máy và tổ chức xếp container tại Vietnam Supply Hub.'],
+                ].map(([image, title, description]) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <div className="manufacturing-container-loading-card-image-slot" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </div>
                     <h3>{t(title)}</h3>
                     <p>{t(description)}</p>
                   </article>
@@ -1854,16 +1864,18 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               <h2>{t('Xếp container trong chuỗi cung ứng của ANSLIFE')}</h2>
               <div className="manufacturing-container-loading-supply-flow">
                 {[
-                  ['⌂', 'Sản xuất'],
-                  ['✓', 'QC cuối'],
-                  ['□', 'Đóng gói'],
-                  ['▤', 'Pallet hóa'],
-                  ['▥', 'Xếp container'],
-                  ['◎', 'Xuất khẩu'],
-                  ['○', 'Giao hàng'],
-                ].map(([icon, title]) => (
+                  ['/assets/manufacturing/container-loading/supply-chain/supply-01.webp', 'Sản xuất'],
+                  ['/assets/manufacturing/container-loading/supply-chain/supply-02.webp', 'QC cuối'],
+                  ['/assets/manufacturing/container-loading/supply-chain/supply-03.webp', 'Đóng gói'],
+                  ['/assets/manufacturing/container-loading/supply-chain/supply-04.webp', 'Pallet hóa'],
+                  ['/assets/manufacturing/container-loading/supply-chain/supply-05.webp', 'Xếp container'],
+                  ['/assets/manufacturing/container-loading/supply-chain/supply-06.webp', 'Xuất khẩu'],
+                  ['/assets/manufacturing/container-loading/supply-chain/supply-07.webp', 'Giao hàng'],
+                ].map(([image, title]) => (
                   <article key={title}>
-                    <span aria-hidden="true">{icon}</span>
+                    <div className="manufacturing-container-loading-supply-image-slot" aria-hidden="true">
+                      <img src={image} alt="" loading="lazy" decoding="async" />
+                    </div>
                     <h3>{t(title)}</h3>
                   </article>
                 ))}
