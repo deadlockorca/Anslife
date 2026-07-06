@@ -2398,13 +2398,6 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
 const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
   <section id="component-custom-parts" class="ai-section ai-components-page ai-component-detail-page ai-component-custom-drawing-page">
     <header class="ai-component-custom-drawing-banner" aria-label="Cấu kiện tùy chỉnh theo bản vẽ">
-      <img
-        class="ai-component-custom-drawing-banner-image"
-        src="/assets/products/furniture-components/custom-drawing-components-banner.webp"
-        alt="Sơ đồ cấu kiện tùy chỉnh theo bản vẽ, chi tiết khoan định vị, rãnh lắp ráp, mộng gỗ, cạnh bo, insert ren và mã chi tiết"
-        loading="eager"
-        decoding="async"
-      >
       <div class="ai-component-custom-drawing-copy">
         <h2>Cấu kiện tùy chỉnh<br>theo bản vẽ</h2>
         <p class="ai-component-custom-drawing-subtitle">Custom Furniture Components by Drawing</p>
@@ -2728,7 +2721,6 @@ const PRODUCTS_FURNITURE_COMPONENTS_CUSTOM_DRAWING_SECTION_VN = `
 const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
   <section id="component-upholstery-parts" class="ai-section ai-components-page ai-component-detail-page ai-component-upholstery-detail-page">
     <header class="ai-component-table-detail-banner ai-component-upholstery-detail-banner">
-      <img class="ai-component-table-detail-banner-image ai-component-upholstery-detail-banner-image" src="/assets/products/furniture-components/upholstery-detail/upholstery-parts-banner.webp?v=faf5f2" alt="Sơ đồ cấu tạo bộ phận bọc nệm sofa" loading="eager" decoding="async">
       <div class="ai-component-upholstery-detail-copy">
         <h2>Bộ phận<br>bọc nệm</h2>
         <p class="ai-component-upholstery-detail-subtitle">Cấu kiện bọc nệm</p>
@@ -3018,7 +3010,6 @@ const PRODUCTS_FURNITURE_COMPONENTS_UPHOLSTERY_PARTS_SECTION_VN = `
 const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
   <section id="chair-frames-components" class="ai-section ai-components-page ai-component-detail-page">
     <header class="ai-component-detail-banner">
-      <img class="ai-component-detail-banner-image" src="/assets/products/furniture-components/chair-detail-banner.webp" alt="" loading="eager" decoding="async" aria-hidden="true">
       <div class="ai-component-detail-banner-copy">
         <h2>Khung ghế &amp; bộ phận ghế</h2>
         <p class="ai-component-detail-banner-subtitle">Chair Frames & Chair Components</p>
@@ -3754,7 +3745,6 @@ const PRODUCTS_FURNITURE_COMPONENTS_CHAIR_FRAMES_SECTION_VN = `
 const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
   <section id="table-tops-legs" class="ai-section ai-components-page ai-component-detail-page ai-component-table-detail-page">
     <header class="ai-component-table-detail-banner" aria-label="Mặt bàn và chân bàn">
-      <img class="ai-component-table-detail-banner-image" src="/assets/products/furniture-components/table-tops-legs-banner.webp" alt="Sơ đồ cấu kiện mặt bàn, chân bàn và các chi tiết liên kết phổ biến" loading="eager" decoding="async">
       <div class="ai-component-table-detail-banner-copy">
         <h2>Mặt bàn &amp; chân bàn</h2>
         <p>Sản xuất mặt bàn và chân bàn theo bản vẽ, mẫu duyệt và tiêu chuẩn kỹ thuật của buyer.</p>
@@ -4171,7 +4161,6 @@ const PRODUCTS_FURNITURE_COMPONENTS_TABLE_TOPS_LEGS_SECTION_VN = `
 const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
   <section id="cabinet-storage-parts" class="ai-section ai-components-page ai-component-detail-page ai-component-table-detail-page ai-component-cabinet-detail-page">
     <header class="ai-component-table-detail-banner ai-component-cabinet-detail-banner" aria-label="Bộ phận tủ và lưu trữ">
-      <img class="ai-component-table-detail-banner-image ai-component-cabinet-detail-banner-image" src="/assets/products/furniture-components/cabinet-storage-parts-banner.webp" alt="Sơ đồ cấu kiện tủ, ngăn kéo, ray trượt, bản lề và các chi tiết liên kết tiêu biểu" loading="eager" decoding="async">
       <div class="ai-component-table-detail-banner-copy ai-component-cabinet-detail-banner-copy">
         <h2>Bộ phận tủ &amp; lưu trữ</h2>
         <p>Sản xuất cánh tủ, ngăn kéo, hông tủ, đáy tủ và chi tiết lắp ráp theo bản vẽ, mẫu duyệt và tiêu chuẩn kỹ thuật của buyer.</p>
@@ -4650,13 +4639,6 @@ const PRODUCTS_FURNITURE_COMPONENTS_CABINET_STORAGE_PARTS_SECTION_VN = `
 const PRODUCTS_FURNITURE_COMPONENTS_BED_PARTS_SECTION_VN = `
   <section id="bed-parts" class="ai-section ai-components-page ai-component-detail-page ai-component-table-detail-page ai-component-bed-detail-page">
     <header class="ai-component-table-detail-banner ai-component-bed-detail-banner" aria-label="Bộ phận giường">
-      <img
-        class="ai-component-table-detail-banner-image ai-component-bed-detail-banner-image"
-        src="/assets/products/furniture-components/bed-detail/bed-parts-banner.webp"
-        alt="Sơ đồ cấu kiện giường, đầu giường, ray bên, nan giường, chân giường và các chi tiết liên kết tiêu biểu"
-        loading="eager"
-        decoding="async"
-      >
       <div class="ai-component-table-detail-banner-copy ai-component-bed-detail-banner-copy">
         <h2>Bộ phận giường</h2>
         <p class="ai-component-bed-detail-banner-eyebrow">Bed Components</p>
