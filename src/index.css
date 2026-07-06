@@ -71123,3 +71123,99 @@ img.supply-hub-weekly-cta-image-placeholder {
     height: 0.58rem !important;
   }
 }
+
+@media (max-width: 680px) {
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #chair-frames-components
+    .ai-component-detail-groups-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #chair-frames-components
+    .ai-components-cta-icon {
+    display: none !important;
+  }
+}
+
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  #table-tops-legs
+  .ai-component-table-product-grid,
+.site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+  #table-tops-legs
+  .ai-component-table-packaging-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 680px) {
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #cabinet-storage-parts
+    .ai-component-cabinet-product-grid,
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #cabinet-storage-parts
+    .ai-component-cabinet-packaging-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #cabinet-storage-parts
+    .ai-component-cabinet-material-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #bed-parts
+    .ai-component-bed-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #bed-parts
+    .ai-component-bed-material-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #bed-parts
+    .ai-component-bed-process
+    .ai-component-detail-process-flow {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #bed-parts
+    .ai-component-bed-process
+    .ai-component-detail-process-step {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #bed-parts
+    .ai-component-bed-process
+    .ai-component-detail-process-arrow {
+    display: none !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #component-upholstery-parts
+    .ai-component-upholstery-groups-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #component-custom-parts
+    .ai-component-custom-groups-grid,
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #component-custom-parts
+    .ai-component-custom-packaging-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
