@@ -71219,3 +71219,31 @@ img.supply-hub-weekly-cta-image-placeholder {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
+
+@media (max-width: 768px) {
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #philosophy
+    .ai-philosophy-hero {
+    aspect-ratio: 2171 / 724;
+    min-height: 0 !important;
+    background: url('/assets/about/philosophy-banner.png') center center / contain no-repeat !important;
+    background-color: #f4eee7 !important;
+    padding: clamp(0.5rem, 2vw, 0.85rem) !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #philosophy
+    .ai-philosophy-hero
+    h2 {
+    font-size: clamp(1.1rem, 6vw, 2rem);
+    line-height: 0.98;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #philosophy
+    .ai-philosophy-hero
+    .ai-op-kicker {
+    font-size: clamp(0.42rem, 2.2vw, 0.7rem);
+    line-height: 1.1;
+  }
+}
