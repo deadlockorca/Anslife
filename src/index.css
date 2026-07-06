@@ -20115,7 +20115,7 @@ a.mobile-menu-utility-link {
   color: #24272b;
   font-family: var(--font-heading);
   font-size: clamp(1.16rem, 1.72vw, 1.95rem);
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1.08;
   letter-spacing: 0;
 }
@@ -20469,7 +20469,7 @@ a.mobile-menu-utility-link {
   color: #25282c;
   font-family: var(--font-heading);
   font-size: clamp(1.18rem, 1.72vw, 1.95rem);
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1.08;
   letter-spacing: 0;
 }
@@ -20519,7 +20519,7 @@ a.mobile-menu-utility-link {
   color: #25282c;
   font-family: var(--font-heading);
   font-size: clamp(1.26rem, 1.9vw, 2.08rem);
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1.08;
   letter-spacing: 0;
 }
@@ -20680,7 +20680,7 @@ a.mobile-menu-utility-link {
   color: #24272b;
   font-family: var(--font-heading);
   font-size: clamp(1.16rem, 1.72vw, 1.95rem);
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1.08;
   letter-spacing: 0;
 }
@@ -21227,7 +21227,7 @@ a.mobile-menu-utility-link {
   color: #25282c;
   font-family: var(--font-heading);
   font-size: clamp(1.28rem, 2vw, 2.16rem);
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1.08;
   letter-spacing: 0;
 }
@@ -69424,5 +69424,369 @@ img.supply-hub-weekly-cta-image-placeholder {
   .materials-ash-application-grid h3,
   .materials-ash-application-grid p {
     grid-column: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .quality-control-overview-panel h2,
+  .quality-control-overview-buyer-qc h2,
+  .quality-control-overview-cta-copy h2 {
+    display: block;
+    justify-content: flex-start;
+    margin-bottom: 0.58rem;
+    padding: 0;
+    text-align: left;
+  }
+
+  .quality-control-overview-flow {
+    padding: 0.62rem;
+  }
+
+  .quality-control-overview-flow-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .quality-control-overview-flow-grid article,
+  .quality-control-overview-flow-grid article:nth-child(3n + 1) {
+    grid-template-columns: 3.7rem minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr;
+    gap: 0.42rem 0.52rem;
+    align-items: start;
+    padding: 0.58rem;
+    border: 1px solid rgba(52, 48, 42, 0.16);
+    border-radius: 7px;
+  }
+
+  .quality-control-overview-flow-step {
+    grid-column: 1;
+    grid-row: 1;
+    justify-items: start;
+    min-height: 0;
+  }
+
+  .quality-control-overview-flow-step span {
+    width: 1.92rem;
+    height: 1.92rem;
+    font-size: 0.86rem;
+  }
+
+  .quality-control-overview-flow-image {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+    width: min(100%, 3.55rem);
+    margin: 0;
+    aspect-ratio: 1.08;
+  }
+
+  .quality-control-overview-flow-grid h3 {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    min-height: 0;
+    margin: 0;
+    font-size: 0.72rem;
+    line-height: 1.12;
+    text-align: left;
+    letter-spacing: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .quality-control-overview-flow-grid p {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    max-width: none;
+    margin: 0;
+    font-size: 0.58rem;
+    line-height: 1.2;
+    text-align: left;
+    letter-spacing: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+
+  .quality-control-overview-pillars {
+    padding: 0.62rem;
+  }
+
+  .quality-control-overview-pillar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .quality-control-overview-pillar-grid article,
+  .quality-control-overview-pillar-grid article:nth-child(even) {
+    grid-template-columns: 3.7rem minmax(0, 1fr);
+    gap: 0.42rem 0.52rem;
+    align-items: start;
+    padding: 0.58rem;
+    border: 1px solid rgba(52, 48, 42, 0.16);
+    border-radius: 7px;
+  }
+
+  .quality-control-overview-pillar-image {
+    width: min(100%, 3.55rem);
+    margin: 0;
+    aspect-ratio: 1.08;
+  }
+
+  .quality-control-overview-pillar-grid h3 {
+    min-height: 0;
+    margin: 0 0 0.26rem;
+    font-size: 0.72rem;
+    line-height: 1.12;
+    text-align: left;
+    letter-spacing: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .quality-control-overview-pillar-grid p {
+    max-width: none;
+    margin: 0;
+    font-size: 0.58rem;
+    line-height: 1.2;
+    text-align: left;
+    letter-spacing: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+
+  .quality-control-overview-goals {
+    padding: 0.62rem;
+  }
+
+  .quality-control-overview-goal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .quality-control-overview-goal-grid article,
+  .quality-control-overview-goal-grid article:nth-child(even) {
+    grid-template-columns: 3.7rem minmax(0, 1fr);
+    gap: 0.42rem 0.52rem;
+    align-items: start;
+    padding: 0.58rem;
+    border: 1px solid rgba(52, 48, 42, 0.16);
+    border-radius: 7px;
+  }
+
+  .quality-control-overview-goal-image {
+    width: min(100%, 3.55rem);
+    margin: 0;
+    aspect-ratio: 1.08;
+  }
+
+  .quality-control-overview-goal-grid h3 {
+    min-height: 0;
+    margin: 0 0 0.26rem;
+    font-size: 0.72rem;
+    line-height: 1.12;
+    text-align: left;
+    letter-spacing: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .quality-control-overview-goal-grid p {
+    max-width: none;
+    margin: 0;
+    font-size: 0.58rem;
+    line-height: 1.2;
+    text-align: left;
+    letter-spacing: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+
+  .quality-control-overview-buyer-card .quality-control-overview-buyer-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(5.6rem, 34%);
+    gap: 0.7rem;
+    align-items: center;
+  }
+
+  .quality-control-overview-buyer-card .quality-control-overview-check-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.34rem;
+  }
+
+  .quality-control-overview-buyer-card .quality-control-overview-check-list li {
+    padding-left: 1.22rem;
+    font-size: 0.66rem;
+    line-height: 1.18;
+  }
+
+  .quality-control-overview-buyer-card .quality-control-overview-check-list li::before {
+    width: 0.86rem;
+    height: 0.86rem;
+    font-size: 0.62rem;
+  }
+
+  .quality-control-overview-buyer-card .quality-control-overview-buyer-image {
+    width: min(100%, 7.4rem);
+    max-width: none;
+    margin: 0;
+    justify-self: end;
+  }
+}
+
+@media (max-width: 680px) {
+  .quality-control-qc-process-panel h2,
+  .quality-control-qc-process-cta-copy h2 {
+    display: block;
+    justify-content: flex-start;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .quality-control-qc-process-flow-grid h3,
+  .quality-control-qc-process-principle-grid h3 {
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .quality-control-qc-process-flow-grid article,
+  .quality-control-qc-process-flow-grid article:nth-child(4n + 1),
+  .quality-control-qc-process-flow-grid article:nth-child(odd) {
+    display: block;
+    grid-template-columns: none;
+  }
+
+  .quality-control-qc-process-step {
+    justify-content: flex-start;
+    margin-bottom: 0.38rem;
+  }
+
+  .quality-control-qc-process-image {
+    display: block;
+    width: min(100%, 8.8rem);
+    margin: 0 0 0.52rem;
+  }
+
+  .quality-control-qc-process-flow-grid h3 {
+    min-height: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .quality-control-qc-process-flow-grid p,
+  .quality-control-qc-process-flow-grid ul {
+    margin-top: 0.26rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .quality-control-approved-sample-control-definition {
+    padding-bottom: 0.62rem;
+  }
+
+  .quality-control-approved-sample-control-definition h2 {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.62rem 0.62rem 0;
+    font-size: clamp(0.98rem, 4.5vw, 1.25rem);
+    line-height: 1.08;
+    text-align: left;
+  }
+
+  .quality-control-approved-sample-control-definition h2 > span {
+    width: 1.72rem;
+    font-size: 0.82rem;
+  }
+
+  .quality-control-approved-sample-control-equation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.36rem;
+    padding: 0.58rem 0.62rem 0;
+  }
+
+  .quality-control-approved-sample-control-equation-sign {
+    display: none;
+  }
+
+  .quality-control-approved-sample-control-equation-item,
+  .quality-control-approved-sample-control-equation-result {
+    grid-template-columns: 2.35rem minmax(0, 1fr);
+    gap: 0.34rem;
+    align-items: center;
+    min-height: 0;
+    padding: 0.34rem 0.38rem;
+    border-radius: 6px;
+  }
+
+  .quality-control-approved-sample-control-equation-result {
+    grid-column: auto;
+    grid-template-columns: 2.35rem minmax(0, 1fr);
+  }
+
+  .quality-control-approved-sample-control-equation .quality-control-approved-sample-control-image {
+    width: 2.35rem;
+    margin: 0;
+    aspect-ratio: 1;
+  }
+
+  .quality-control-approved-sample-control-equation p {
+    font-size: 0.62rem;
+    line-height: 1.12;
+    text-align: left;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+}
+
+@media (max-width: 680px) {
+  .quality-control-inspection-report-types .quality-control-inspection-report-type-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.42rem;
+    padding: 0.52rem;
+  }
+
+  .quality-control-inspection-report-types .quality-control-inspection-report-type-grid article {
+    display: grid;
+    grid-template-columns: 2.75rem minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    gap: 0.26rem 0.46rem;
+    align-items: center;
+    min-height: 0;
+    padding: 0.5rem;
+    text-align: left;
+  }
+
+  .quality-control-inspection-report-types .quality-control-inspection-report-type-image-slot {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 2.65rem;
+    margin: 0;
+    aspect-ratio: 1;
+  }
+
+  .quality-control-inspection-report-types .quality-control-inspection-report-type-grid h3 {
+    grid-column: 2;
+    margin: 0;
+    font-size: 0.64rem;
+    line-height: 1.1;
+    text-align: left;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .quality-control-inspection-report-types .quality-control-inspection-report-type-grid p {
+    grid-column: 2;
+    max-width: none;
+    margin: 0;
+    font-size: 0.54rem;
+    line-height: 1.16;
+    text-align: left;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 }
