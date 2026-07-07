@@ -71355,3 +71355,2328 @@ img.supply-hub-weekly-cta-image-placeholder {
     font-size: clamp(0.58rem, 2.45vw, 0.7rem);
   }
 }
+
+.manufacturing-material-preparation-banner {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4efe6;
+}
+
+.manufacturing-cutting-banner {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4efe6;
+}
+
+.manufacturing-woodworking-banner {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4efe6;
+}
+
+.manufacturing-material-preparation-banner > img,
+.manufacturing-cutting-banner > img,
+.manufacturing-woodworking-banner > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2005 / 784;
+  object-fit: cover;
+  object-position: center;
+}
+
+.manufacturing-material-preparation-banner-copy,
+.manufacturing-cutting-banner-copy,
+.manufacturing-woodworking-banner-copy {
+  position: absolute;
+  left: clamp(1.25rem, 4vw, 4rem);
+  top: 43%;
+  z-index: 2;
+  width: min(43%, 690px);
+  transform: translateY(-50%);
+  color: #20242a;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.82);
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-banner-copy h1,
+.manufacturing-cutting-banner-copy h1,
+.manufacturing-woodworking-banner-copy h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-heading);
+  font-size: clamp(2.15rem, 4vw, 4.85rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  overflow-wrap: normal;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-banner-copy p,
+.manufacturing-cutting-banner-copy p,
+.manufacturing-woodworking-banner-copy p {
+  display: block;
+  max-width: 58ch;
+  margin: clamp(0.42rem, 0.62vw, 0.58rem) 0 0;
+  color: #252b32;
+  font-family: var(--font-ui);
+  font-size: clamp(0.58rem, 0.7vw, 0.82rem);
+  font-weight: 700;
+  line-height: 1.24;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+@media (max-width: 680px) {
+  .manufacturing-material-preparation-banner,
+  .manufacturing-cutting-banner,
+  .manufacturing-woodworking-banner {
+    width: min(100%, calc(100vw - 2.6rem));
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .manufacturing-material-preparation-banner > img,
+  .manufacturing-cutting-banner > img,
+  .manufacturing-woodworking-banner > img {
+    aspect-ratio: 2005 / 784;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .manufacturing-material-preparation-banner-copy,
+  .manufacturing-cutting-banner-copy,
+  .manufacturing-woodworking-banner-copy {
+    left: 0.9rem;
+    right: auto;
+    top: 0.72rem;
+    width: min(55vw, 17rem);
+    transform: none;
+    max-width: none;
+    min-width: 0;
+    padding: 0;
+    overflow-wrap: normal;
+  }
+
+  .manufacturing-material-preparation-banner-copy h1,
+  .manufacturing-cutting-banner-copy h1,
+  .manufacturing-woodworking-banner-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(1.15rem, 5.4vw, 1.9rem);
+    line-height: 0.98;
+    overflow-wrap: normal;
+  }
+
+  .manufacturing-material-preparation-banner-copy p,
+  .manufacturing-cutting-banner-copy p,
+  .manufacturing-woodworking-banner-copy p {
+    max-width: 100%;
+    margin-top: 0.28rem;
+    font-size: clamp(0.42rem, 1.9vw, 0.62rem);
+    font-weight: 700;
+    line-height: 1.12;
+  }
+}
+
+.manufacturing-material-preparation-content {
+  display: grid;
+  gap: clamp(1.15rem, 2vw, 1.8rem);
+  color: #20242a;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-content {
+  display: grid;
+  gap: clamp(1.15rem, 2vw, 1.8rem);
+  color: #20242a;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-content h2,
+.manufacturing-cutting-content h2 {
+  margin: 0 0 clamp(0.7rem, 1.1vw, 1rem);
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(1.05rem, 1.45vw, 1.45rem);
+  font-weight: 900;
+  line-height: 1.16;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-top-row,
+.manufacturing-cutting-top-row {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.92fr) minmax(0, 2.02fr);
+  gap: clamp(1.1rem, 2vw, 2rem);
+  align-items: start;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-process,
+.manufacturing-material-preparation-checks,
+.manufacturing-material-preparation-materials,
+.manufacturing-cutting-process,
+.manufacturing-cutting-categories,
+.manufacturing-cutting-controls {
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-process-list,
+.manufacturing-cutting-process-list {
+  display: grid;
+  gap: 0.82rem;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-process-list article,
+.manufacturing-cutting-process-list article {
+  position: relative;
+  display: grid;
+  grid-template-columns: 54px 42px minmax(0, 1fr);
+  align-items: center;
+  min-height: 64px;
+  padding: 0.72rem 1rem;
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62) !important;
+  box-shadow: 0 10px 24px rgba(44, 38, 30, 0.04);
+}
+
+.manufacturing-material-preparation-process-list article:not(:last-child)::after,
+.manufacturing-cutting-process-list article:not(:last-child)::after {
+  content: '↓';
+  position: absolute;
+  left: 50%;
+  bottom: -0.78rem;
+  z-index: 1;
+  color: rgba(36, 37, 35, 0.72);
+  font-size: 1rem;
+  font-weight: 900;
+  transform: translateX(-50%);
+}
+
+.manufacturing-material-preparation-small-slot,
+.manufacturing-cutting-small-slot {
+  width: 42px;
+  height: 42px;
+  border: 1px dashed rgba(36, 37, 35, 0.24);
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(239, 232, 220, 0.42)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-material-preparation-process-list span,
+.manufacturing-cutting-process-list span {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(36, 37, 35, 0.22);
+  border-radius: 999px;
+  color: #20242a;
+  font-size: 0.95rem;
+  font-weight: 900;
+  background: rgba(255, 255, 255, 0.72) !important;
+}
+
+.manufacturing-material-preparation-process-list h3,
+.manufacturing-material-preparation-check-grid h3,
+.manufacturing-material-preparation-material-grid h3,
+.manufacturing-cutting-process-list h3,
+.manufacturing-cutting-category-grid h3,
+.manufacturing-cutting-control-grid h3 {
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-weight: 900;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-process-list h3,
+.manufacturing-cutting-process-list h3 {
+  font-size: clamp(0.88rem, 1vw, 1.06rem);
+  line-height: 1.22;
+}
+
+.manufacturing-material-preparation-check-grid,
+.manufacturing-cutting-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.8rem, 1.2vw, 1.1rem);
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-check-grid article,
+.manufacturing-cutting-category-grid article {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  min-height: 250px;
+  padding: clamp(0.85rem, 1.3vw, 1.2rem);
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.58) !important;
+  box-shadow: 0 10px 24px rgba(44, 38, 30, 0.035);
+}
+
+.manufacturing-material-preparation-large-slot,
+.manufacturing-cutting-large-slot {
+  width: min(100%, 112px);
+  height: 94px;
+  margin-bottom: clamp(0.7rem, 1vw, 1rem);
+  border: 1px dashed rgba(36, 37, 35, 0.22);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(239, 232, 220, 0.44)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-material-preparation-check-grid h3,
+.manufacturing-cutting-category-grid h3 {
+  font-size: clamp(1rem, 1.25vw, 1.32rem);
+  line-height: 1.22;
+}
+
+.manufacturing-material-preparation-check-grid p,
+.manufacturing-material-preparation-material-grid p,
+.manufacturing-cutting-category-grid p,
+.manufacturing-cutting-control-grid p {
+  margin: 0.54rem 0 0;
+  color: #30343a;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-check-grid p,
+.manufacturing-cutting-category-grid p {
+  max-width: 25ch;
+  font-size: clamp(0.78rem, 0.88vw, 0.98rem);
+  line-height: 1.52;
+}
+
+.manufacturing-cutting-controls {
+  padding: clamp(0.9rem, 1.2vw, 1.2rem);
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.58) !important;
+  box-shadow: 0 10px 24px rgba(44, 38, 30, 0.035);
+}
+
+.manufacturing-cutting-control-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  background: transparent !important;
+}
+
+.manufacturing-cutting-control-grid article {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  min-height: 180px;
+  padding: 0.8rem clamp(0.65rem, 0.9vw, 0.95rem);
+  border-right: 1px solid rgba(36, 37, 35, 0.16);
+  text-align: center;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-control-grid article:last-child {
+  border-right: 0;
+}
+
+.manufacturing-cutting-control-slot {
+  width: 74px;
+  height: 62px;
+  margin-bottom: 0.58rem;
+  border: 1px dashed rgba(36, 37, 35, 0.22);
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(239, 232, 220, 0.44)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-cutting-control-grid h3 {
+  font-size: clamp(0.86rem, 0.95vw, 1.02rem);
+  line-height: 1.2;
+}
+
+.manufacturing-cutting-control-grid p {
+  font-size: clamp(0.68rem, 0.76vw, 0.86rem);
+  line-height: 1.42;
+}
+
+.manufacturing-cutting-middle-row,
+.manufacturing-cutting-bottom-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(0.95rem, 1.4vw, 1.35rem);
+  background: transparent !important;
+}
+
+.manufacturing-cutting-equipment,
+.manufacturing-cutting-role,
+.manufacturing-cutting-nesting,
+.manufacturing-cutting-commitment,
+.manufacturing-cutting-related {
+  padding: clamp(0.9rem, 1.2vw, 1.2rem);
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.58) !important;
+  box-shadow: 0 10px 24px rgba(44, 38, 30, 0.035);
+}
+
+.manufacturing-cutting-equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.62rem;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-equipment-grid article {
+  display: grid;
+  align-content: start;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-equipment-slot {
+  width: 100%;
+  aspect-ratio: 1.28 / 1;
+  margin-bottom: 0.48rem;
+  border: 1px dashed rgba(36, 37, 35, 0.22);
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(239, 232, 220, 0.44)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-cutting-equipment-grid h3,
+.manufacturing-cutting-related-card h3 {
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-weight: 900;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-equipment-grid h3 {
+  font-size: clamp(0.72rem, 0.82vw, 0.9rem);
+  line-height: 1.22;
+}
+
+.manufacturing-cutting-equipment-grid p,
+.manufacturing-cutting-commitment-list p,
+.manufacturing-cutting-related-card p {
+  margin: 0.32rem 0 0;
+  color: #30343a;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-equipment-grid p {
+  font-size: clamp(0.62rem, 0.7vw, 0.76rem);
+  line-height: 1.38;
+}
+
+.manufacturing-cutting-role-nesting {
+  display: grid;
+  gap: clamp(0.82rem, 1.15vw, 1.08rem);
+  background: transparent !important;
+}
+
+.manufacturing-cutting-role-flow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.4rem;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-role-item {
+  display: contents;
+}
+
+.manufacturing-cutting-role-item figure {
+  display: grid;
+  justify-items: center;
+  gap: 0.45rem;
+  min-width: 74px;
+  margin: 0;
+  text-align: center;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-role-item > span {
+  margin-top: 26px;
+  color: rgba(36, 37, 35, 0.68);
+  font-weight: 900;
+}
+
+.manufacturing-cutting-role-slot {
+  width: 54px;
+  height: 54px;
+  border: 1px dashed rgba(36, 37, 35, 0.22);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(239, 232, 220, 0.42)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-cutting-role-item figcaption {
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.64rem, 0.72vw, 0.8rem);
+  font-weight: 900;
+  line-height: 1.2;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-nesting {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(220px, 0.95fr);
+  gap: clamp(0.8rem, 1.15vw, 1.1rem);
+  align-items: center;
+}
+
+.manufacturing-cutting-nesting-slot {
+  width: 100%;
+  aspect-ratio: 1.92 / 1;
+  border: 1px dashed rgba(36, 37, 35, 0.22);
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(239, 232, 220, 0.44)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-cutting-nesting ul {
+  display: grid;
+  gap: 0.62rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-nesting li {
+  position: relative;
+  padding-left: 2.1rem;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.78rem, 0.86vw, 0.96rem);
+  font-weight: 900;
+  line-height: 1.28;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-nesting li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 999px;
+  color: #6b5d4a;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.manufacturing-cutting-bottom-row {
+  grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.22fr);
+}
+
+.manufacturing-cutting-commitment-list {
+  display: grid;
+  gap: 1rem;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-commitment-list article {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 0.78rem;
+  align-items: start;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-commitment-slot {
+  width: 42px;
+  height: 42px;
+  border: 1px dashed rgba(36, 37, 35, 0.22);
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(239, 232, 220, 0.42)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-cutting-commitment-list p {
+  margin-top: 0;
+  font-size: clamp(0.78rem, 0.86vw, 0.94rem);
+  line-height: 1.55;
+}
+
+.manufacturing-cutting-related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.72rem;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-related-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  min-height: 204px;
+  padding: 0.58rem 0.58rem 2.1rem;
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.manufacturing-cutting-related-slot {
+  width: 100%;
+  aspect-ratio: 1.58 / 1;
+  margin-bottom: 0.55rem;
+  border: 1px dashed rgba(36, 37, 35, 0.22);
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(239, 232, 220, 0.44)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-cutting-related-card h3 {
+  font-size: clamp(0.74rem, 0.82vw, 0.9rem);
+  line-height: 1.22;
+}
+
+.manufacturing-cutting-related-card p {
+  font-size: clamp(0.62rem, 0.7vw, 0.76rem);
+  line-height: 1.36;
+}
+
+.manufacturing-cutting-related-card > span {
+  position: absolute;
+  right: 0.58rem;
+  bottom: 0.58rem;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(36, 37, 35, 0.14);
+  border-radius: 999px;
+  color: #20242a;
+  font-size: 1.1rem;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.manufacturing-cutting-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
+  gap: clamp(0.9rem, 1.4vw, 1.35rem);
+  align-items: center;
+  padding: clamp(1rem, 1.8vw, 1.55rem);
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62) !important;
+  box-shadow: 0 10px 24px rgba(44, 38, 30, 0.04);
+}
+
+.manufacturing-cutting-cta h2 {
+  margin: 0;
+}
+
+.manufacturing-cutting-cta p {
+  max-width: 72ch;
+  margin: 0.62rem 0 0;
+  color: #30343a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.82rem, 0.92vw, 1rem);
+  font-weight: 700;
+  line-height: 1.55;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-cta-actions {
+  display: grid;
+  gap: 0.62rem;
+  background: transparent !important;
+}
+
+.manufacturing-cutting-cta-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 46px;
+  padding: 0.72rem 0.95rem;
+  border: 1px solid rgba(36, 37, 35, 0.24);
+  border-radius: 7px;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.82rem, 0.9vw, 0.98rem);
+  font-weight: 900;
+  line-height: 1.18;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.72) !important;
+}
+
+.manufacturing-cutting-cta-actions a:hover,
+.manufacturing-cutting-cta-actions a:focus-visible {
+  border-color: rgba(36, 37, 35, 0.48);
+  background: rgba(244, 239, 230, 0.9) !important;
+}
+
+.manufacturing-cutting-cta-actions span {
+  flex: 0 0 auto;
+  margin-left: 0.85rem;
+}
+
+.manufacturing-woodworking-content {
+  display: grid;
+  gap: clamp(1rem, 1.65vw, 1.45rem);
+  color: #20242a;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-content h2 {
+  margin: 0 0 clamp(0.65rem, 0.95vw, 0.9rem);
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(1rem, 1.3vw, 1.34rem);
+  font-weight: 900;
+  line-height: 1.16;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-top-row,
+.manufacturing-woodworking-middle-row,
+.manufacturing-woodworking-lower-row,
+.manufacturing-woodworking-bottom-row {
+  display: grid;
+  gap: clamp(0.9rem, 1.25vw, 1.2rem);
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-top-row {
+  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 2.25fr);
+}
+
+.manufacturing-woodworking-middle-row,
+.manufacturing-woodworking-lower-row,
+.manufacturing-woodworking-bottom-row {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+}
+
+.manufacturing-woodworking-process,
+.manufacturing-woodworking-stages,
+.manufacturing-woodworking-joints,
+.manufacturing-woodworking-controls,
+.manufacturing-woodworking-equipment,
+.manufacturing-woodworking-role,
+.manufacturing-woodworking-diagram,
+.manufacturing-woodworking-commitment,
+.manufacturing-woodworking-related {
+  padding: clamp(0.78rem, 1.08vw, 1.05rem);
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.58) !important;
+  box-shadow: 0 10px 24px rgba(44, 38, 30, 0.035);
+}
+
+.manufacturing-woodworking-process-list {
+  display: grid;
+  gap: 0.64rem;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-process-list article {
+  position: relative;
+  display: grid;
+  grid-template-columns: 42px 34px minmax(0, 1fr);
+  align-items: center;
+  min-height: 50px;
+  padding: 0.48rem 0.66rem;
+  border-bottom: 1px solid rgba(36, 37, 35, 0.12);
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-process-list article:not(:last-child)::after {
+  content: '↓';
+  position: absolute;
+  left: 50%;
+  bottom: -0.6rem;
+  color: rgba(36, 37, 35, 0.7);
+  font-size: 0.9rem;
+  font-weight: 900;
+  transform: translateX(-50%);
+}
+
+.manufacturing-woodworking-small-slot,
+.manufacturing-woodworking-stage-icon-slot,
+.manufacturing-woodworking-control-slot,
+.manufacturing-woodworking-role-slot,
+.manufacturing-woodworking-diagram-slot,
+.manufacturing-woodworking-commitment-icon-slot {
+  border: 1px dashed rgba(36, 37, 35, 0.22);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(239, 232, 220, 0.42)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-woodworking-small-slot {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.manufacturing-woodworking-process-list span {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.76rem;
+  font-weight: 900;
+  background: #725839 !important;
+}
+
+.manufacturing-woodworking-process-list h3,
+.manufacturing-woodworking-stage-grid h3,
+.manufacturing-woodworking-joint-grid h3,
+.manufacturing-woodworking-control-grid h3,
+.manufacturing-woodworking-equipment-grid h3,
+.manufacturing-woodworking-related-card h3 {
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-weight: 900;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-process-list h3 {
+  font-size: clamp(0.78rem, 0.9vw, 0.98rem);
+  line-height: 1.2;
+}
+
+.manufacturing-woodworking-stage-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.62rem;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-stage-grid article,
+.manufacturing-woodworking-joint-grid article,
+.manufacturing-woodworking-control-grid article,
+.manufacturing-woodworking-equipment-grid article {
+  display: grid;
+  align-content: start;
+  text-align: center;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-stage-grid article {
+  min-height: 310px;
+  padding: 0.52rem;
+  border: 1px solid rgba(36, 37, 35, 0.14);
+  border-radius: 8px;
+}
+
+.manufacturing-woodworking-stage-icon-slot {
+  justify-self: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.46rem;
+  border-radius: 8px;
+}
+
+.manufacturing-woodworking-stage-image-slot,
+.manufacturing-woodworking-joint-slot,
+.manufacturing-woodworking-equipment-slot,
+.manufacturing-woodworking-related-slot,
+.manufacturing-woodworking-commitment-visual-slot {
+  border: 1px dashed rgba(36, 37, 35, 0.22);
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(239, 232, 220, 0.44)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-woodworking-stage-image-slot {
+  align-self: end;
+  width: 100%;
+  aspect-ratio: 1 / 1.18;
+  margin-top: 0.58rem;
+}
+
+.manufacturing-woodworking-stage-grid h3,
+.manufacturing-woodworking-joint-grid h3,
+.manufacturing-woodworking-control-grid h3 {
+  font-size: clamp(0.78rem, 0.88vw, 0.96rem);
+  line-height: 1.2;
+}
+
+.manufacturing-woodworking-stage-grid p,
+.manufacturing-woodworking-joint-grid p,
+.manufacturing-woodworking-control-grid p,
+.manufacturing-woodworking-equipment-grid p,
+.manufacturing-woodworking-commitment-list p,
+.manufacturing-woodworking-related-card p {
+  margin: 0.34rem 0 0;
+  color: #30343a;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-stage-grid p,
+.manufacturing-woodworking-joint-grid p,
+.manufacturing-woodworking-control-grid p {
+  font-size: clamp(0.64rem, 0.72vw, 0.8rem);
+  line-height: 1.38;
+}
+
+.manufacturing-woodworking-joint-grid,
+.manufacturing-woodworking-control-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.58rem;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-joint-grid article,
+.manufacturing-woodworking-control-grid article {
+  min-height: 230px;
+  padding: 0.5rem;
+  border: 1px solid rgba(36, 37, 35, 0.14);
+  border-radius: 7px;
+}
+
+.manufacturing-woodworking-joint-slot {
+  align-self: end;
+  width: 100%;
+  aspect-ratio: 1.12 / 1;
+  margin-top: 0.5rem;
+}
+
+.manufacturing-woodworking-control-slot {
+  justify-self: center;
+  width: 58px;
+  height: 52px;
+  margin-bottom: 0.48rem;
+  border-radius: 7px;
+}
+
+.manufacturing-woodworking-equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.65rem;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-equipment-slot {
+  width: 100%;
+  aspect-ratio: 1.22 / 1;
+  margin-bottom: 0.52rem;
+}
+
+.manufacturing-woodworking-equipment-grid h3 {
+  font-size: clamp(0.72rem, 0.82vw, 0.92rem);
+  line-height: 1.22;
+}
+
+.manufacturing-woodworking-equipment-grid p {
+  font-size: clamp(0.62rem, 0.7vw, 0.76rem);
+  line-height: 1.36;
+}
+
+.manufacturing-woodworking-role-process {
+  display: grid;
+  gap: 0.82rem;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-role-flow,
+.manufacturing-woodworking-diagram-flow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.42rem;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-role-item,
+.manufacturing-woodworking-diagram-item {
+  display: contents;
+}
+
+.manufacturing-woodworking-role-item figure,
+.manufacturing-woodworking-diagram-item figure {
+  display: grid;
+  justify-items: center;
+  gap: 0.38rem;
+  min-width: 68px;
+  margin: 0;
+  text-align: center;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-role-item > span,
+.manufacturing-woodworking-diagram-item > span {
+  margin-top: 24px;
+  color: rgba(36, 37, 35, 0.68);
+  font-weight: 900;
+}
+
+.manufacturing-woodworking-role-slot {
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+}
+
+.manufacturing-woodworking-role-item figure.is-active .manufacturing-woodworking-role-slot {
+  background: #725839 !important;
+  border-color: #725839;
+}
+
+.manufacturing-woodworking-role-item figcaption,
+.manufacturing-woodworking-diagram-item figcaption {
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.58rem, 0.68vw, 0.76rem);
+  font-weight: 900;
+  line-height: 1.18;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-diagram {
+  padding-top: 0.78rem;
+}
+
+.manufacturing-woodworking-diagram-flow {
+  padding-top: 0.72rem;
+  border-top: 1px solid rgba(36, 37, 35, 0.14);
+}
+
+.manufacturing-woodworking-diagram-slot {
+  width: 48px;
+  height: 40px;
+  border-radius: 7px;
+}
+
+.manufacturing-woodworking-commitment-layout {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.45fr) minmax(0, 1fr);
+  gap: 0.95rem;
+  align-items: center;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-commitment-visual-slot {
+  width: 100%;
+  aspect-ratio: 1.45 / 1;
+}
+
+.manufacturing-woodworking-commitment-list {
+  display: grid;
+  gap: 0.72rem;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-commitment-list article {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: start;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-commitment-icon-slot {
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+}
+
+.manufacturing-woodworking-commitment-list p {
+  margin-top: 0;
+  font-size: clamp(0.72rem, 0.82vw, 0.92rem);
+  line-height: 1.48;
+}
+
+.manufacturing-woodworking-related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.72rem;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-related-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  min-height: 196px;
+  padding: 0.58rem 0.58rem 2.1rem;
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.manufacturing-woodworking-related-slot {
+  width: 100%;
+  aspect-ratio: 1.58 / 1;
+  margin-bottom: 0.55rem;
+}
+
+.manufacturing-woodworking-related-card h3 {
+  font-size: clamp(0.74rem, 0.82vw, 0.9rem);
+  line-height: 1.22;
+}
+
+.manufacturing-woodworking-related-card p {
+  font-size: clamp(0.62rem, 0.7vw, 0.76rem);
+  line-height: 1.36;
+}
+
+.manufacturing-woodworking-related-card > span {
+  position: absolute;
+  right: 0.58rem;
+  bottom: 0.58rem;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(36, 37, 35, 0.14);
+  border-radius: 999px;
+  color: #20242a;
+  font-size: 1.1rem;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.manufacturing-woodworking-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
+  gap: clamp(0.9rem, 1.4vw, 1.35rem);
+  align-items: center;
+  padding: clamp(1rem, 1.8vw, 1.55rem);
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62) !important;
+  box-shadow: 0 10px 24px rgba(44, 38, 30, 0.04);
+}
+
+.manufacturing-woodworking-cta h2 {
+  margin: 0;
+}
+
+.manufacturing-woodworking-cta p {
+  max-width: 72ch;
+  margin: 0.62rem 0 0;
+  color: #30343a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.82rem, 0.92vw, 1rem);
+  font-weight: 700;
+  line-height: 1.55;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-cta-actions {
+  display: grid;
+  gap: 0.62rem;
+  background: transparent !important;
+}
+
+.manufacturing-woodworking-cta-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 46px;
+  padding: 0.72rem 0.95rem;
+  border: 1px solid rgba(36, 37, 35, 0.24);
+  border-radius: 7px;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.82rem, 0.9vw, 0.98rem);
+  font-weight: 900;
+  line-height: 1.18;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.72) !important;
+}
+
+.manufacturing-woodworking-cta-actions a:hover,
+.manufacturing-woodworking-cta-actions a:focus-visible {
+  border-color: rgba(36, 37, 35, 0.48);
+  background: rgba(244, 239, 230, 0.9) !important;
+}
+
+.manufacturing-woodworking-cta-actions span {
+  flex: 0 0 auto;
+  margin-left: 0.85rem;
+}
+
+.manufacturing-material-preparation-material-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.72rem, 1vw, 1rem);
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-material-grid article {
+  display: grid;
+  align-content: start;
+  min-height: 250px;
+  padding: 0.58rem;
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.58) !important;
+  box-shadow: 0 10px 24px rgba(44, 38, 30, 0.035);
+}
+
+.manufacturing-material-preparation-material-slot {
+  width: 100%;
+  aspect-ratio: 1.44 / 1;
+  margin: 0 0 0.62rem;
+  border: 1px dashed rgba(36, 37, 35, 0.22);
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(239, 232, 220, 0.44)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-material-preparation-material-grid h3 {
+  font-size: clamp(0.88rem, 1vw, 1.06rem);
+  line-height: 1.2;
+}
+
+.manufacturing-material-preparation-material-grid p {
+  font-size: clamp(0.72rem, 0.78vw, 0.88rem);
+  line-height: 1.48;
+}
+
+.manufacturing-material-preparation-bottom-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.95rem, 1.4vw, 1.35rem);
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-control-panel,
+.manufacturing-material-preparation-role-panel,
+.manufacturing-material-preparation-commitment-panel {
+  min-height: 420px;
+  padding: clamp(1rem, 1.35vw, 1.3rem);
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.58) !important;
+  box-shadow: 0 10px 24px rgba(44, 38, 30, 0.035);
+}
+
+.manufacturing-material-preparation-control-list {
+  display: grid;
+  gap: 0.92rem;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-control-list article {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 0.78rem;
+  align-items: start;
+  padding-bottom: 0.92rem;
+  border-bottom: 1px solid rgba(36, 37, 35, 0.12);
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-control-list article:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.manufacturing-material-preparation-list-slot {
+  width: 42px;
+  height: 42px;
+  border: 1px dashed rgba(36, 37, 35, 0.24);
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(239, 232, 220, 0.42)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-material-preparation-control-list h3,
+.manufacturing-material-preparation-role-flow h3,
+.manufacturing-material-preparation-related-card h3 {
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-weight: 900;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-control-list h3 {
+  font-size: clamp(0.9rem, 1vw, 1.08rem);
+  line-height: 1.2;
+}
+
+.manufacturing-material-preparation-control-list p,
+.manufacturing-material-preparation-commitment-panel p,
+.manufacturing-material-preparation-related-card p {
+  margin: 0.32rem 0 0;
+  color: #30343a;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-control-list p {
+  font-size: clamp(0.76rem, 0.82vw, 0.9rem);
+  line-height: 1.45;
+}
+
+.manufacturing-material-preparation-role-flow {
+  display: grid;
+  gap: 0.62rem;
+  justify-items: center;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-role-flow article {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: center;
+  gap: 0.72rem;
+  width: min(100%, 275px);
+  min-height: 48px;
+  padding: 0.48rem 0.82rem;
+  border: 1px solid rgba(36, 37, 35, 0.16);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.66) !important;
+}
+
+.manufacturing-material-preparation-role-flow article:not(:last-child)::after {
+  content: '↓';
+  position: absolute;
+  left: 50%;
+  bottom: -0.58rem;
+  color: rgba(36, 37, 35, 0.72);
+  font-size: 0.88rem;
+  font-weight: 900;
+  transform: translateX(-50%);
+}
+
+.manufacturing-material-preparation-flow-slot {
+  width: 32px;
+  height: 32px;
+  border: 1px dashed rgba(36, 37, 35, 0.24);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(239, 232, 220, 0.42)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-material-preparation-role-flow h3 {
+  font-size: clamp(0.78rem, 0.9vw, 0.98rem);
+  line-height: 1.18;
+  text-align: center;
+}
+
+.manufacturing-material-preparation-commitment-panel {
+  display: grid;
+  align-content: start;
+}
+
+.manufacturing-material-preparation-commitment-panel p {
+  margin-top: 0;
+  font-size: clamp(0.82rem, 0.95vw, 1.02rem);
+  line-height: 1.62;
+}
+
+.manufacturing-material-preparation-commitment-panel p + p {
+  margin-top: clamp(0.85rem, 1.1vw, 1.1rem);
+}
+
+.manufacturing-material-preparation-commitment-slot {
+  width: 100%;
+  aspect-ratio: 1.92 / 1;
+  align-self: end;
+  margin-top: clamp(1rem, 1.6vw, 1.6rem);
+  border: 1px dashed rgba(36, 37, 35, 0.22);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(239, 232, 220, 0.44)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-material-preparation-related {
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.72rem, 1vw, 1rem);
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-related-card {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) 34px;
+  gap: 0.78rem;
+  align-items: center;
+  min-height: 112px;
+  padding: 0.62rem;
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.58) !important;
+  box-shadow: 0 10px 24px rgba(44, 38, 30, 0.035);
+}
+
+.manufacturing-material-preparation-related-slot {
+  width: 100%;
+  aspect-ratio: 1.16 / 1;
+  border: 1px dashed rgba(36, 37, 35, 0.22);
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(239, 232, 220, 0.44)),
+    repeating-linear-gradient(110deg, rgba(33, 33, 33, 0.04) 0 1px, transparent 1px 10px) !important;
+}
+
+.manufacturing-material-preparation-related-card h3 {
+  font-size: clamp(0.82rem, 0.9vw, 0.98rem);
+  line-height: 1.2;
+}
+
+.manufacturing-material-preparation-related-card p {
+  font-size: clamp(0.68rem, 0.75vw, 0.82rem);
+  line-height: 1.42;
+}
+
+.manufacturing-material-preparation-related-card > span {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(36, 37, 35, 0.14);
+  border-radius: 999px;
+  color: #20242a;
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.manufacturing-material-preparation-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
+  gap: clamp(0.9rem, 1.4vw, 1.35rem);
+  align-items: center;
+  padding: clamp(1rem, 1.8vw, 1.55rem);
+  border: 1px solid rgba(36, 37, 35, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62) !important;
+  box-shadow: 0 10px 24px rgba(44, 38, 30, 0.04);
+}
+
+.manufacturing-material-preparation-cta h2 {
+  margin: 0;
+}
+
+.manufacturing-material-preparation-cta p {
+  max-width: 72ch;
+  margin: 0.62rem 0 0;
+  color: #30343a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.82rem, 0.92vw, 1rem);
+  font-weight: 700;
+  line-height: 1.55;
+  letter-spacing: 0;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-cta-actions {
+  display: grid;
+  gap: 0.62rem;
+  background: transparent !important;
+}
+
+.manufacturing-material-preparation-cta-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 46px;
+  padding: 0.72rem 0.95rem;
+  border: 1px solid rgba(36, 37, 35, 0.24);
+  border-radius: 7px;
+  color: #20242a;
+  font-family: var(--font-ui);
+  font-size: clamp(0.82rem, 0.9vw, 0.98rem);
+  font-weight: 900;
+  line-height: 1.18;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.72) !important;
+}
+
+.manufacturing-material-preparation-cta-actions a:hover,
+.manufacturing-material-preparation-cta-actions a:focus-visible {
+  border-color: rgba(36, 37, 35, 0.48);
+  background: rgba(244, 239, 230, 0.9) !important;
+}
+
+.manufacturing-material-preparation-cta-actions span {
+  flex: 0 0 auto;
+  margin-left: 0.85rem;
+}
+
+@media (max-width: 1100px) {
+  .manufacturing-material-preparation-top-row,
+  .manufacturing-cutting-top-row {
+    grid-template-columns: 1fr;
+  }
+
+  .manufacturing-material-preparation-check-grid,
+  .manufacturing-cutting-category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .manufacturing-cutting-control-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .manufacturing-cutting-control-grid article:nth-child(3n) {
+    border-right: 0;
+  }
+
+  .manufacturing-cutting-control-grid article:nth-child(n + 4) {
+    border-top: 1px solid rgba(36, 37, 35, 0.16);
+  }
+
+  .manufacturing-cutting-middle-row,
+  .manufacturing-cutting-bottom-row,
+  .manufacturing-cutting-nesting {
+    grid-template-columns: 1fr;
+  }
+
+  .manufacturing-cutting-equipment-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .manufacturing-cutting-role-flow {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .manufacturing-cutting-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .manufacturing-cutting-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .manufacturing-woodworking-top-row,
+  .manufacturing-woodworking-middle-row,
+  .manufacturing-woodworking-lower-row,
+  .manufacturing-woodworking-bottom-row,
+  .manufacturing-woodworking-commitment-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .manufacturing-woodworking-stage-grid,
+  .manufacturing-woodworking-joint-grid,
+  .manufacturing-woodworking-control-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .manufacturing-woodworking-equipment-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .manufacturing-woodworking-role-flow,
+  .manufacturing-woodworking-diagram-flow {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .manufacturing-woodworking-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .manufacturing-woodworking-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .manufacturing-material-preparation-material-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .manufacturing-material-preparation-bottom-row {
+    grid-template-columns: 1fr;
+  }
+
+  .manufacturing-material-preparation-control-panel,
+  .manufacturing-material-preparation-role-panel,
+  .manufacturing-material-preparation-commitment-panel {
+    min-height: 0;
+  }
+
+  .manufacturing-material-preparation-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .manufacturing-material-preparation-cta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .manufacturing-material-preparation-content,
+  .manufacturing-cutting-content {
+    gap: 0.95rem;
+  }
+
+  .manufacturing-material-preparation-content h2,
+  .manufacturing-cutting-content h2 {
+    margin-bottom: 0.62rem;
+    font-size: clamp(0.92rem, 4.2vw, 1.15rem);
+  }
+
+  .manufacturing-material-preparation-top-row,
+  .manufacturing-cutting-top-row {
+    gap: 0.95rem;
+  }
+
+  .manufacturing-material-preparation-process-list,
+  .manufacturing-cutting-process-list {
+    gap: 0.62rem;
+  }
+
+  .manufacturing-material-preparation-process-list article,
+  .manufacturing-cutting-process-list article {
+    grid-template-columns: 42px 32px minmax(0, 1fr);
+    min-height: 52px;
+    padding: 0.5rem 0.58rem;
+  }
+
+  .manufacturing-material-preparation-small-slot,
+  .manufacturing-cutting-small-slot {
+    width: 34px;
+    height: 34px;
+  }
+
+  .manufacturing-material-preparation-process-list span,
+  .manufacturing-cutting-process-list span {
+    width: 28px;
+    height: 28px;
+    font-size: 0.78rem;
+  }
+
+  .manufacturing-material-preparation-process-list h3,
+  .manufacturing-cutting-process-list h3 {
+    font-size: clamp(0.72rem, 3.2vw, 0.9rem);
+  }
+
+  .manufacturing-material-preparation-check-grid,
+  .manufacturing-material-preparation-material-grid,
+  .manufacturing-cutting-category-grid,
+  .manufacturing-cutting-control-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.62rem;
+  }
+
+  .manufacturing-material-preparation-check-grid article,
+  .manufacturing-material-preparation-material-grid article,
+  .manufacturing-cutting-category-grid article,
+  .manufacturing-cutting-control-grid article {
+    min-height: 0;
+    padding: 0.56rem;
+  }
+
+  .manufacturing-material-preparation-large-slot,
+  .manufacturing-cutting-large-slot {
+    width: 68px;
+    height: 58px;
+    margin-bottom: 0.45rem;
+  }
+
+  .manufacturing-material-preparation-check-grid h3,
+  .manufacturing-material-preparation-material-grid h3,
+  .manufacturing-cutting-category-grid h3,
+  .manufacturing-cutting-control-grid h3 {
+    font-size: clamp(0.72rem, 3.1vw, 0.9rem);
+  }
+
+  .manufacturing-material-preparation-check-grid p,
+  .manufacturing-material-preparation-material-grid p,
+  .manufacturing-cutting-category-grid p,
+  .manufacturing-cutting-control-grid p {
+    margin-top: 0.32rem;
+    font-size: clamp(0.58rem, 2.55vw, 0.72rem);
+    line-height: 1.32;
+  }
+
+  .manufacturing-cutting-controls {
+    padding: 0.56rem;
+  }
+
+  .manufacturing-cutting-control-grid article,
+  .manufacturing-cutting-control-grid article:nth-child(3n),
+  .manufacturing-cutting-control-grid article:last-child {
+    border-right: 0;
+    border-top: 0;
+  }
+
+  .manufacturing-cutting-control-slot {
+    width: 58px;
+    height: 50px;
+    margin-bottom: 0.42rem;
+  }
+
+  .manufacturing-cutting-middle-row,
+  .manufacturing-cutting-bottom-row {
+    gap: 0.7rem;
+  }
+
+  .manufacturing-cutting-equipment,
+  .manufacturing-cutting-role,
+  .manufacturing-cutting-nesting,
+  .manufacturing-cutting-commitment,
+  .manufacturing-cutting-related {
+    padding: 0.56rem;
+  }
+
+  .manufacturing-cutting-equipment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.58rem;
+  }
+
+  .manufacturing-cutting-equipment-grid h3,
+  .manufacturing-cutting-related-card h3 {
+    font-size: clamp(0.68rem, 2.9vw, 0.84rem);
+  }
+
+  .manufacturing-cutting-equipment-grid p,
+  .manufacturing-cutting-related-card p {
+    font-size: clamp(0.54rem, 2.35vw, 0.66rem);
+    line-height: 1.3;
+  }
+
+  .manufacturing-cutting-role-flow {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .manufacturing-cutting-role-item {
+    display: block;
+  }
+
+  .manufacturing-cutting-role-item > span {
+    display: none;
+  }
+
+  .manufacturing-cutting-role-item figure {
+    min-width: 0;
+    gap: 0.32rem;
+  }
+
+  .manufacturing-cutting-role-slot {
+    width: 42px;
+    height: 42px;
+  }
+
+  .manufacturing-cutting-role-item figcaption {
+    font-size: clamp(0.56rem, 2.45vw, 0.68rem);
+  }
+
+  .manufacturing-cutting-nesting {
+    gap: 0.64rem;
+  }
+
+  .manufacturing-cutting-nesting li {
+    padding-left: 1.7rem;
+    font-size: clamp(0.62rem, 2.65vw, 0.76rem);
+  }
+
+  .manufacturing-cutting-nesting li::before {
+    width: 1.08rem;
+    height: 1.08rem;
+  }
+
+  .manufacturing-cutting-commitment-list {
+    gap: 0.68rem;
+  }
+
+  .manufacturing-cutting-commitment-list article {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 0.55rem;
+  }
+
+  .manufacturing-cutting-commitment-slot {
+    width: 32px;
+    height: 32px;
+  }
+
+  .manufacturing-cutting-commitment-list p {
+    font-size: clamp(0.58rem, 2.55vw, 0.72rem);
+    line-height: 1.34;
+  }
+
+  .manufacturing-cutting-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.58rem;
+  }
+
+  .manufacturing-cutting-related-card {
+    min-height: 0;
+    padding: 0.48rem 0.48rem 1.8rem;
+  }
+
+  .manufacturing-cutting-related-card > span {
+    right: 0.48rem;
+    bottom: 0.48rem;
+    width: 22px;
+    height: 22px;
+  }
+
+  .manufacturing-cutting-cta {
+    gap: 0.65rem;
+    padding: 0.7rem;
+  }
+
+  .manufacturing-cutting-cta p {
+    margin-top: 0.38rem;
+    font-size: clamp(0.58rem, 2.55vw, 0.72rem);
+    line-height: 1.34;
+  }
+
+  .manufacturing-cutting-cta-actions {
+    gap: 0.48rem;
+  }
+
+  .manufacturing-cutting-cta-actions a {
+    min-height: 38px;
+    padding: 0.5rem 0.62rem;
+    font-size: clamp(0.64rem, 2.8vw, 0.78rem);
+  }
+
+  .manufacturing-woodworking-content {
+    gap: 0.82rem;
+  }
+
+  .manufacturing-woodworking-content h2 {
+    margin-bottom: 0.52rem;
+    font-size: clamp(0.92rem, 4.2vw, 1.15rem);
+  }
+
+  .manufacturing-woodworking-top-row,
+  .manufacturing-woodworking-middle-row,
+  .manufacturing-woodworking-lower-row,
+  .manufacturing-woodworking-bottom-row,
+  .manufacturing-woodworking-role-process {
+    gap: 0.7rem;
+  }
+
+  .manufacturing-woodworking-process,
+  .manufacturing-woodworking-stages,
+  .manufacturing-woodworking-joints,
+  .manufacturing-woodworking-controls,
+  .manufacturing-woodworking-equipment,
+  .manufacturing-woodworking-role,
+  .manufacturing-woodworking-diagram,
+  .manufacturing-woodworking-commitment,
+  .manufacturing-woodworking-related {
+    padding: 0.56rem;
+  }
+
+  .manufacturing-woodworking-process-list {
+    gap: 0.54rem;
+  }
+
+  .manufacturing-woodworking-process-list article {
+    grid-template-columns: 34px 28px minmax(0, 1fr);
+    min-height: 44px;
+    padding: 0.42rem 0.46rem;
+  }
+
+  .manufacturing-woodworking-small-slot {
+    width: 28px;
+    height: 28px;
+  }
+
+  .manufacturing-woodworking-process-list span {
+    width: 23px;
+    height: 23px;
+    font-size: 0.68rem;
+  }
+
+  .manufacturing-woodworking-process-list h3 {
+    font-size: clamp(0.68rem, 3vw, 0.84rem);
+  }
+
+  .manufacturing-woodworking-stage-grid,
+  .manufacturing-woodworking-joint-grid,
+  .manufacturing-woodworking-control-grid,
+  .manufacturing-woodworking-equipment-grid,
+  .manufacturing-woodworking-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.56rem;
+  }
+
+  .manufacturing-woodworking-stage-grid article,
+  .manufacturing-woodworking-joint-grid article,
+  .manufacturing-woodworking-control-grid article,
+  .manufacturing-woodworking-related-card {
+    min-height: 0;
+    padding: 0.48rem;
+  }
+
+  .manufacturing-woodworking-stage-icon-slot {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 0.34rem;
+  }
+
+  .manufacturing-woodworking-stage-image-slot {
+    aspect-ratio: 1.28 / 1;
+    margin-top: 0.42rem;
+  }
+
+  .manufacturing-woodworking-control-slot {
+    width: 46px;
+    height: 40px;
+    margin-bottom: 0.34rem;
+  }
+
+  .manufacturing-woodworking-stage-grid h3,
+  .manufacturing-woodworking-joint-grid h3,
+  .manufacturing-woodworking-control-grid h3,
+  .manufacturing-woodworking-equipment-grid h3,
+  .manufacturing-woodworking-related-card h3 {
+    font-size: clamp(0.66rem, 2.9vw, 0.84rem);
+  }
+
+  .manufacturing-woodworking-stage-grid p,
+  .manufacturing-woodworking-joint-grid p,
+  .manufacturing-woodworking-control-grid p,
+  .manufacturing-woodworking-equipment-grid p,
+  .manufacturing-woodworking-related-card p {
+    margin-top: 0.28rem;
+    font-size: clamp(0.54rem, 2.35vw, 0.66rem);
+    line-height: 1.3;
+  }
+
+  .manufacturing-woodworking-role-flow,
+  .manufacturing-woodworking-diagram-flow {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.54rem;
+  }
+
+  .manufacturing-woodworking-role-item,
+  .manufacturing-woodworking-diagram-item {
+    display: block;
+  }
+
+  .manufacturing-woodworking-role-item > span,
+  .manufacturing-woodworking-diagram-item > span {
+    display: none;
+  }
+
+  .manufacturing-woodworking-role-item figure,
+  .manufacturing-woodworking-diagram-item figure {
+    min-width: 0;
+    gap: 0.28rem;
+  }
+
+  .manufacturing-woodworking-role-slot {
+    width: 42px;
+    height: 42px;
+  }
+
+  .manufacturing-woodworking-diagram-slot {
+    width: 42px;
+    height: 34px;
+  }
+
+  .manufacturing-woodworking-role-item figcaption,
+  .manufacturing-woodworking-diagram-item figcaption {
+    font-size: clamp(0.54rem, 2.35vw, 0.66rem);
+  }
+
+  .manufacturing-woodworking-commitment-layout {
+    gap: 0.62rem;
+  }
+
+  .manufacturing-woodworking-commitment-list article {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+
+  .manufacturing-woodworking-commitment-icon-slot {
+    width: 30px;
+    height: 30px;
+  }
+
+  .manufacturing-woodworking-commitment-list p {
+    font-size: clamp(0.58rem, 2.55vw, 0.72rem);
+    line-height: 1.34;
+  }
+
+  .manufacturing-woodworking-related-card {
+    padding-bottom: 1.75rem;
+  }
+
+  .manufacturing-woodworking-related-card > span {
+    right: 0.48rem;
+    bottom: 0.48rem;
+    width: 22px;
+    height: 22px;
+  }
+
+  .manufacturing-woodworking-cta {
+    gap: 0.65rem;
+    padding: 0.7rem;
+  }
+
+  .manufacturing-woodworking-cta p {
+    margin-top: 0.38rem;
+    font-size: clamp(0.58rem, 2.55vw, 0.72rem);
+    line-height: 1.34;
+  }
+
+  .manufacturing-woodworking-cta-actions {
+    gap: 0.48rem;
+  }
+
+  .manufacturing-woodworking-cta-actions a {
+    min-height: 38px;
+    padding: 0.5rem 0.62rem;
+    font-size: clamp(0.64rem, 2.8vw, 0.78rem);
+  }
+
+  .manufacturing-material-preparation-material-slot {
+    margin-bottom: 0.44rem;
+  }
+
+  .manufacturing-material-preparation-bottom-row {
+    gap: 0.7rem;
+  }
+
+  .manufacturing-material-preparation-control-panel,
+  .manufacturing-material-preparation-role-panel,
+  .manufacturing-material-preparation-commitment-panel {
+    padding: 0.7rem;
+  }
+
+  .manufacturing-material-preparation-control-list {
+    gap: 0.62rem;
+  }
+
+  .manufacturing-material-preparation-control-list article {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 0.55rem;
+    padding-bottom: 0.62rem;
+  }
+
+  .manufacturing-material-preparation-list-slot {
+    width: 32px;
+    height: 32px;
+  }
+
+  .manufacturing-material-preparation-control-list h3 {
+    font-size: clamp(0.72rem, 3.2vw, 0.9rem);
+  }
+
+  .manufacturing-material-preparation-control-list p,
+  .manufacturing-material-preparation-commitment-panel p {
+    font-size: clamp(0.58rem, 2.55vw, 0.72rem);
+    line-height: 1.34;
+  }
+
+  .manufacturing-material-preparation-role-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.52rem;
+  }
+
+  .manufacturing-material-preparation-role-flow article {
+    width: 100%;
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 0.42rem;
+    min-height: 44px;
+    padding: 0.42rem 0.48rem;
+  }
+
+  .manufacturing-material-preparation-role-flow article::after {
+    display: none;
+  }
+
+  .manufacturing-material-preparation-flow-slot {
+    width: 26px;
+    height: 26px;
+  }
+
+  .manufacturing-material-preparation-role-flow h3 {
+    font-size: clamp(0.62rem, 2.75vw, 0.78rem);
+    text-align: left;
+  }
+
+  .manufacturing-material-preparation-commitment-slot {
+    margin-top: 0.7rem;
+  }
+
+  .manufacturing-material-preparation-related-grid {
+    grid-template-columns: 1fr;
+    gap: 0.58rem;
+  }
+
+  .manufacturing-material-preparation-related-card {
+    grid-template-columns: 70px minmax(0, 1fr) 28px;
+    min-height: 82px;
+    gap: 0.58rem;
+    padding: 0.48rem;
+  }
+
+  .manufacturing-material-preparation-related-card h3 {
+    font-size: clamp(0.72rem, 3.1vw, 0.88rem);
+  }
+
+  .manufacturing-material-preparation-related-card p {
+    font-size: clamp(0.56rem, 2.45vw, 0.68rem);
+    line-height: 1.32;
+  }
+
+  .manufacturing-material-preparation-related-card > span {
+    width: 24px;
+    height: 24px;
+    font-size: 1.15rem;
+  }
+
+  .manufacturing-material-preparation-cta {
+    gap: 0.65rem;
+    padding: 0.7rem;
+  }
+
+  .manufacturing-material-preparation-cta p {
+    margin-top: 0.38rem;
+    font-size: clamp(0.58rem, 2.55vw, 0.72rem);
+    line-height: 1.34;
+  }
+
+  .manufacturing-material-preparation-cta-actions {
+    gap: 0.48rem;
+  }
+
+  .manufacturing-material-preparation-cta-actions a {
+    min-height: 38px;
+    padding: 0.5rem 0.62rem;
+    font-size: clamp(0.64rem, 2.8vw, 0.78rem);
+  }
+}
+
+@media (max-width: 820px) {
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #chairs
+    .ai-chair-hero {
+    aspect-ratio: 1774 / 887;
+    min-height: 0 !important;
+    align-content: start;
+    gap: clamp(0.24rem, 1.4vw, 0.45rem);
+    padding: clamp(0.58rem, 2.4vw, 0.95rem) !important;
+    background: url('/assets/products/finished-furniture/chairs-banner.png') center center / contain no-repeat !important;
+    background-color: #fffaf4 !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #chairs
+    .ai-chair-hero
+    h2 {
+    max-width: 48%;
+    font-size: clamp(1.15rem, 6vw, 2.15rem);
+    line-height: 0.95;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #chairs
+    .ai-chair-hero
+    .ai-chair-lead,
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #chairs
+    .ai-chair-hero
+    p:not(.ai-chair-eyebrow) {
+    max-width: 48%;
+    font-size: clamp(0.46rem, 2.05vw, 0.72rem);
+    line-height: 1.22;
+  }
+}
+
+@media (max-width: 820px) {
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    :is(
+      #tables,
+      #storage-cabinets,
+      #shelves,
+      #beds,
+      #rattan-bamboo-furniture,
+      #upholstered-furniture,
+      #outdoor-furniture,
+      #custom-project-furniture
+    )
+    .ai-chair-hero {
+    aspect-ratio: 1774 / 887;
+    min-height: 0 !important;
+    align-content: start;
+    gap: clamp(0.22rem, 1.35vw, 0.42rem);
+    padding: clamp(0.52rem, 2.25vw, 0.9rem) !important;
+    background-color: #fffaf4 !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #tables
+    .ai-table-hero {
+    background: url('/assets/products/finished-furniture/tables-banner.png') center center / contain
+      no-repeat !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #storage-cabinets
+    .ai-storage-hero {
+    aspect-ratio: 1672 / 941;
+    background: url('/assets/products/finished-furniture/storage-cabinets-banner.png') center center /
+      contain no-repeat !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #shelves
+    .ai-shelves-hero {
+    background: url('/assets/products/finished-furniture/shelves-banner.png') center center / contain
+      no-repeat !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #beds
+    .ai-beds-hero {
+    background: url('/assets/products/finished-furniture/beds-banner.png') center center / contain
+      no-repeat !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #rattan-bamboo-furniture
+    .ai-rattan-hero {
+    background: url('/assets/products/finished-furniture/rattan-bamboo-banner.png') center center /
+      contain no-repeat !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #upholstered-furniture
+    .ai-upholstered-hero {
+    background: url('/assets/products/finished-furniture/upholstered-banner.png') center center /
+      contain no-repeat !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #outdoor-furniture
+    .ai-outdoor-hero {
+    background: url('/assets/products/finished-furniture/outdoor-banner.png') center center / contain
+      no-repeat !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #custom-project-furniture
+    .ai-custom-project-hero {
+    background: url('/assets/products/finished-furniture/custom-project-banner.png') center center /
+      contain no-repeat !important;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    :is(
+      #tables,
+      #storage-cabinets,
+      #shelves,
+      #beds,
+      #rattan-bamboo-furniture,
+      #upholstered-furniture,
+      #outdoor-furniture
+    )
+    .ai-chair-hero
+    h2 {
+    max-width: 48%;
+    font-size: clamp(1.05rem, 5.45vw, 2.05rem);
+    line-height: 0.96;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #custom-project-furniture
+    .ai-custom-project-hero
+    h2 {
+    max-width: 48%;
+    font-size: clamp(0.82rem, 3.6vw, 1.45rem);
+    line-height: 0.98;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    :is(
+      #tables,
+      #storage-cabinets,
+      #shelves,
+      #beds,
+      #rattan-bamboo-furniture,
+      #upholstered-furniture,
+      #outdoor-furniture,
+      #custom-project-furniture
+    )
+    .ai-chair-hero
+    .ai-chair-lead,
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    :is(
+      #tables,
+      #storage-cabinets,
+      #shelves,
+      #beds,
+      #rattan-bamboo-furniture,
+      #upholstered-furniture,
+      #outdoor-furniture,
+      #custom-project-furniture
+    )
+    .ai-chair-hero
+    p:not(.ai-chair-eyebrow) {
+    max-width: 48%;
+    font-size: clamp(0.42rem, 1.92vw, 0.68rem);
+    line-height: 1.18;
+  }
+}

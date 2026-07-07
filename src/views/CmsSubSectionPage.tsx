@@ -420,6 +420,18 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'manufacturing' && section.id === 'packing-area' && !detailSlug;
   const isManufacturingContainerLoadingPage =
     config.slug === 'manufacturing' && section.id === 'container-loading' && !detailSlug;
+  const isManufacturingMaterialPreparationPage =
+    config.slug === 'manufacturing' &&
+    section.id === 'production-process' &&
+    detailSlug === 'material-preparation';
+  const isManufacturingCuttingPage =
+    config.slug === 'manufacturing' &&
+    section.id === 'production-process' &&
+    detailSlug === 'cutting';
+  const isManufacturingWoodworkingPage =
+    config.slug === 'manufacturing' &&
+    section.id === 'production-process' &&
+    detailSlug === 'woodworking';
   const shouldRenderBlankSubSectionPage =
     shouldRenderBlankScholarshipPage ||
     shouldRenderBlankQualityInProcessPage ||
@@ -438,6 +450,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isManufacturingAssemblyLinePage ||
     isManufacturingPackingAreaPage ||
     isManufacturingContainerLoadingPage ||
+    isManufacturingMaterialPreparationPage ||
+    isManufacturingCuttingPage ||
+    isManufacturingWoodworkingPage ||
     isMaterialsRubberWoodPage ||
     isMaterialsAshPage ||
     isMaterialsOakPage ||
@@ -506,6 +521,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     isManufacturingAssemblyLinePage ||
     isManufacturingPackingAreaPage ||
     isManufacturingContainerLoadingPage ||
+    isManufacturingMaterialPreparationPage ||
+    isManufacturingCuttingPage ||
+    isManufacturingWoodworkingPage ||
     isMaterialsRubberWoodPage ||
     isMaterialsAshPage ||
     isMaterialsOakPage ||
@@ -614,6 +632,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldShowManufacturingAssemblyLineBanner = isManufacturingAssemblyLinePage;
   const shouldShowManufacturingPackingAreaBanner = isManufacturingPackingAreaPage;
   const shouldShowManufacturingContainerLoadingBanner = isManufacturingContainerLoadingPage;
+  const shouldShowManufacturingMaterialPreparationBanner = isManufacturingMaterialPreparationPage;
+  const shouldShowManufacturingCuttingBanner = isManufacturingCuttingPage;
+  const shouldShowManufacturingWoodworkingBanner = isManufacturingWoodworkingPage;
   const shouldShowMaterialsRubberWoodBanner = isMaterialsRubberWoodPage;
   const shouldShowMaterialsAshBanner = isMaterialsAshPage;
   const shouldShowMaterialsOakBanner = isMaterialsOakPage;
@@ -1744,6 +1765,785 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             </p>
           </figcaption>
         </figure>
+      )}
+      {shouldShowManufacturingMaterialPreparationBanner && (
+        <figure className="manufacturing-material-preparation-banner">
+          <img
+            src="/assets/manufacturing/production-process/material-preparation-banner.webp"
+            alt={t('Banner chuẩn bị vật liệu')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="manufacturing-material-preparation-banner-copy">
+            <h1>{t('Chuẩn bị vật liệu')}</h1>
+            <p>
+              {t(
+                'Kiểm tra, phân loại và chuẩn bị nguyên vật liệu trước khi đưa vào sản xuất nhàm đảm bảo chất lượng, tinh ổn định và hiệu quả của toàn bộ quy trình.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Chuẩn bị vặt liệu là bước đầu tiên trong quy trình sản xuất, quyết định chất lượng của các công đoạn tiếp theo. Mọi nguyên vật liệu đều được kiểm tra, phân loại và xử lý theo yêu cầu kỹ thuật trước khi đưa vào gia công.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE áp dụng quy trình kiếm soát vật liệu nhâm đảm bảo sự đóng nhất giữa màu dà phê duyệt và san xuất hàng loạt, đồng thời đấp ứng các tiêu chuản cua từng thị trưởng xuất kháu.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowManufacturingCuttingBanner && (
+        <figure className="manufacturing-cutting-banner">
+          <img
+            src="/assets/manufacturing/production-process/cutting-banner.webp"
+            alt={t('Banner công đoạn cắt')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="manufacturing-cutting-banner-copy">
+            <h1>{t('Cắt')}</h1>
+            <p>
+              {t(
+                'Gia công vật liệu theo kích thước và quy cách kỹ thuật, tạo nền tăng cho các công đoạn sản xuất tiếp theo.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Sau khi vật liệu được chuẩn bị và kiểm tra, công doạn cất được thực hiện theo bản về kỹ thuật và danh mục vật liệu (BOM). Mục tiêu là tạo ra các chi tiết có kích thước chính xác, tối ưu tỷ lệ sử dụng vật liệu và đâm bảo sự đóng nhất giữa các lò sản xuất.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE kiếm soát quy trình cất nhấm đáp ứng yêu cầu về độ chính xác. hiệu quả sản xuất và khả nãng truy xuất trong toàn bộ dự án.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {shouldShowManufacturingWoodworkingBanner && (
+        <figure className="manufacturing-woodworking-banner">
+          <img
+            src="/assets/manufacturing/production-process/woodworking-banner.webp"
+            alt={t('Banner gia công gỗ')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="manufacturing-woodworking-banner-copy">
+            <h1>{t('Gia công gỗ')}</h1>
+            <p>
+              {t(
+                'Gia công các chi tiết gỗ với độ chính xác cao, tạo nền tăng cho quả trình lắp ráp và hoàn thiện sản phẩm nội thất.',
+              )}
+            </p>
+            <p>
+              {t(
+                'Sau công đoạn cất, các chỉ tiết gỗ được gia công theo bản vẽ kỹ thuật đé tạo hình, liên kết và chuẩn bị cho quá trình lấp ráp. Độ chính xác của công đoạn này ảnh hưởng trực tiếp đến kết cầu, độ bên và tính thấm mỹ của sản phẩm.',
+              )}
+            </p>
+            <p>
+              {t(
+                'ANSLIFE kiếm soát quy trình gia công nhãm đảm bảo mọi chi tiết đáp ứng đúng kích thước, dung sai và yêu cầu kỹ thuật trước khi chuyển sang các công đoạn tiếp theo.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isManufacturingWoodworkingPage && (
+        <section className="manufacturing-woodworking-content">
+          <section className="manufacturing-woodworking-top-row">
+            <div className="manufacturing-woodworking-process">
+              <h2>{t('Quy trình gia công gỗ')}</h2>
+              <div className="manufacturing-woodworking-process-list">
+                {[
+                  ['1', 'Nhận bán thành phẩm'],
+                  ['2', 'Đối chiếu bản vẽ kỹ thuật'],
+                  ['3', 'Gia công tạo hình'],
+                  ['4', 'Gia công mộng và liên kết'],
+                  ['5', 'Khoan và phay'],
+                  ['6', 'Kiểm tra kích thước'],
+                  ['7', 'Phân loại chi tiết'],
+                  ['8', 'Chuyển sang chà nhám'],
+                ].map(([number, title]) => (
+                  <article key={number}>
+                    <div className="manufacturing-woodworking-small-slot" aria-hidden="true" />
+                    <span>{number}</span>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-woodworking-stages">
+              <h2>{t('Các công đoạn gia công')}</h2>
+              <div className="manufacturing-woodworking-stage-grid">
+                {[
+                  ['Tạo hình chi tiết', 'Gia công biên dạng và hình dạng theo thiết kế của từng sản phẩm.'],
+                  ['Gia công mộng', 'Gia công các loại mộng và liên kết gỗ nhằm đảm bảo độ chính xác và khả năng lắp ráp.'],
+                  ['Khoan', 'Khoan lỗ cho phụ kiện, liên kết và các chi tiết chức năng.'],
+                  ['Phay', 'Gia công rãnh, bo cạnh và các chi tiết kỹ thuật theo bản vẽ.'],
+                  ['Gia công CNC', 'Gia công các chi tiết phức tạp với độ chính xác và tính lặp lại cao.'],
+                  ['Kiểm tra bán thành phẩm', 'Đánh giá kích thước, dung sai và chất lượng trước khi chuyển sang công đoạn tiếp theo.'],
+                ].map(([title, description]) => (
+                  <article key={title}>
+                    <div className="manufacturing-woodworking-stage-icon-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                    <div className="manufacturing-woodworking-stage-image-slot" aria-hidden="true" />
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-woodworking-middle-row">
+            <div className="manufacturing-woodworking-joints">
+              <h2>{t('Các dạng liên kết gỗ')}</h2>
+              <div className="manufacturing-woodworking-joint-grid">
+                {[
+                  ['Mortise & Tenon', 'Liên kết mộng âm dương truyền thống, đảm bảo độ bền và ổn định.'],
+                  ['Dowel Joint', 'Liên kết bằng chốt gỗ, phù hợp với nhiều dòng nội thất hiện đại.'],
+                  ['Finger Joint', 'Liên kết ghép thanh nhằm tối ưu vật liệu và tăng độ ổn định.'],
+                  ['Groove & Tongue', 'Liên kết rãnh và hèm cho các chi tiết panel và mặt gỗ.'],
+                  ['Mechanical Fastening', 'Gia công vị trí lắp vít cho các chi tiết panel và mặt gỗ.'],
+                  ['Custom Joint', 'Gia công theo yêu cầu thiết kế và tiêu chuẩn riêng của từng dự án.'],
+                ].map(([title, description]) => (
+                  <article key={title}>
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                    <div className="manufacturing-woodworking-joint-slot" aria-hidden="true" />
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-woodworking-controls">
+              <h2>{t('Những yếu tố được kiểm soát')}</h2>
+              <div className="manufacturing-woodworking-control-grid">
+                {[
+                  ['Kích thước', 'Đảm bảo mọi chi tiết đúng kích thước và dung sai theo bản vẽ kỹ thuật.'],
+                  ['Độ chính xác', 'Kiểm soát khả năng lắp ghép của các chi tiết trong quá trình sản xuất.'],
+                  ['Chất lượng bề mặt', 'Hạn chế sứt mẻ, nứt hoặc hư hỏng trong quá trình gia công.'],
+                  ['Liên kết', 'Đảm bảo các vị trí mộng, khoan và phay đạt yêu cầu kỹ thuật.'],
+                  ['Truy xuất bán thành phẩm', 'Quản lý chi tiết theo từng lô sản xuất và mã sản phẩm.'],
+                  ['Kiểm tra trước chà nhám', 'Xác nhận chất lượng bán thành phẩm trước khi chuyển sang xử lý bề mặt.'],
+                ].map(([title, description]) => (
+                  <article key={title}>
+                    <div className="manufacturing-woodworking-control-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-woodworking-lower-row">
+            <div className="manufacturing-woodworking-equipment">
+              <h2>{t('Thiết bị gia công')}</h2>
+              <div className="manufacturing-woodworking-equipment-grid">
+                {[
+                  ['Máy CNC', 'Gia công các chi tiết phức tạp theo bản vẽ kỹ thuật.'],
+                  ['Máy khoan nhiều đầu', 'Gia công đồng thời nhiều vị trí khoan với độ chính xác cao.'],
+                  ['Máy phay', 'Tạo rãnh, bo cạnh và các biên dạng kỹ thuật.'],
+                  ['Máy tạo mộng', 'Gia công các liên kết gỗ phục vụ lắp ráp.'],
+                  ['Thiết bị đo kiểm', 'Kiểm tra kích thước và dung sai của từng chi tiết.'],
+                ].map(([title, description]) => (
+                  <article key={title}>
+                    <div className="manufacturing-woodworking-equipment-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-woodworking-role-process">
+              <section className="manufacturing-woodworking-role">
+                <h2>{t('Vai trò trong quy trình sản xuất')}</h2>
+                <div className="manufacturing-woodworking-role-flow">
+                  {['Chuẩn bị vật liệu', 'Cắt', 'Gia công gỗ', 'Chà nhám', 'Hoàn thiện', 'Lắp ráp'].map(
+                    (title, index, items) => (
+                      <div className="manufacturing-woodworking-role-item" key={title}>
+                        <figure className={title === 'Gia công gỗ' ? 'is-active' : undefined}>
+                          <div className="manufacturing-woodworking-role-slot" aria-hidden="true" />
+                          <figcaption>{t(title)}</figcaption>
+                        </figure>
+                        {index < items.length - 1 ? <span aria-hidden="true">→</span> : null}
+                      </div>
+                    ),
+                  )}
+                </div>
+              </section>
+
+              <section className="manufacturing-woodworking-diagram">
+                <h2>{t('Sơ đồ minh họa quy trình gia công')}</h2>
+                <div className="manufacturing-woodworking-diagram-flow">
+                  {[
+                    'Chi tiết sau cắt',
+                    'Tạo hình',
+                    'Khoan & Phay',
+                    'Gia công mộng',
+                    'Kiểm tra kích thước',
+                    'Chuyển sang chà nhám',
+                  ].map((title, index, items) => (
+                    <div className="manufacturing-woodworking-diagram-item" key={title}>
+                      <figure>
+                        <div className="manufacturing-woodworking-diagram-slot" aria-hidden="true" />
+                        <figcaption>{t(title)}</figcaption>
+                      </figure>
+                      {index < items.length - 1 ? <span aria-hidden="true">→</span> : null}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section className="manufacturing-woodworking-bottom-row">
+            <div className="manufacturing-woodworking-commitment">
+              <h2>{t('Cam kết của ANSLIFE')}</h2>
+              <div className="manufacturing-woodworking-commitment-layout">
+                <div className="manufacturing-woodworking-commitment-visual-slot" aria-hidden="true" />
+                <div className="manufacturing-woodworking-commitment-list">
+                  {[
+                    'ANSLIFE kiểm soát toàn bộ quá trình gia công gỗ theo bản vẽ kỹ thuật và quy trình sản xuất thống nhất nhằm đảm bảo độ chính xác của từng chi tiết, khả năng lắp ráp và chất lượng ổn định giữa các lô sản xuất.',
+                    'Các bán thành phẩm chỉ được chuyển sang công đoạn tiếp theo sau khi đáp ứng đầy đủ yêu cầu về kích thước, liên kết và ngoại quan.',
+                  ].map((item) => (
+                    <article key={item}>
+                      <div className="manufacturing-woodworking-commitment-icon-slot" aria-hidden="true" />
+                      <p>{t(item)}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="manufacturing-woodworking-related">
+              <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+              <div className="manufacturing-woodworking-related-grid">
+                {[
+                  [
+                    'Chuẩn bị vật liệu',
+                    'Quy trình kiểm tra và chuẩn bị nguyên liệu trước sản xuất.',
+                    '/manufacturing/production-process/material-preparation',
+                  ],
+                  [
+                    'Cắt',
+                    'Gia công vật liệu theo kích thước và quy cách kỹ thuật.',
+                    '/manufacturing/production-process/cutting',
+                  ],
+                  [
+                    'Chà nhám',
+                    'Xử lý bề mặt trước khi hoàn thiện.',
+                    '/manufacturing/production-process/sanding',
+                  ],
+                  [
+                    'Máy móc & Thiết bị',
+                    'Hệ thống thiết bị phục vụ gia công và sản xuất.',
+                    '/manufacturing/machinery-equipment',
+                  ],
+                ].map(([title, description, href]) => (
+                  <Link className="manufacturing-woodworking-related-card" key={title} to={toLocalizedPath(href)}>
+                    <div className="manufacturing-woodworking-related-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                    <span aria-hidden="true">›</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-woodworking-cta">
+            <div className="manufacturing-woodworking-cta-copy">
+              <h2>{t('Cần gia công chi tiết gỗ theo bản vẽ kỹ thuật?')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, mẫu chi tiết, yêu cầu liên kết hoặc tiêu chuẩn dung sai để ANSLIFE đánh giá phương án gia công gỗ, kiểm soát độ chính xác và chuẩn bị bán thành phẩm cho các công đoạn tiếp theo.',
+                )}
+              </p>
+            </div>
+            <div className="manufacturing-woodworking-cta-actions">
+              <Link to={toLocalizedPath('/about-anslife/company-info')}>
+                {t('Trao đổi yêu cầu')} <span aria-hidden="true">→</span>
+              </Link>
+              <Link to={toLocalizedPath('/manufacturing/production-process/sanding')}>
+                {t('Xem chà nhám')} <span aria-hidden="true">→</span>
+              </Link>
+              <Link to={toLocalizedPath('/manufacturing/machinery-equipment')}>
+                {t('Xem máy móc thiết bị')} <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </section>
+        </section>
+      )}
+      {isManufacturingCuttingPage && (
+        <section className="manufacturing-cutting-content">
+          <section className="manufacturing-cutting-top-row">
+            <div className="manufacturing-cutting-process">
+              <h2>{t('Quy trình cắt')}</h2>
+              <div className="manufacturing-cutting-process-list">
+                {[
+                  ['1', 'Nhận lệnh sản xuất'],
+                  ['2', 'Đối chiếu bản vẽ'],
+                  ['3', 'Lựa chọn vật liệu'],
+                  ['4', 'Thiết lập máy cắt'],
+                  ['5', 'Gia công theo quy cách'],
+                  ['6', 'Kiểm tra kích thước'],
+                  ['7', 'Phân loại chi tiết'],
+                  ['8', 'Chuyển sang gia công tiếp theo'],
+                ].map(([number, title]) => (
+                  <article key={number}>
+                    <div className="manufacturing-cutting-small-slot" aria-hidden="true" />
+                    <span>{number}</span>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-cutting-categories">
+              <h2>{t('Các hạng mục gia công')}</h2>
+              <div className="manufacturing-cutting-category-grid">
+                {[
+                  [
+                    'Cắt gỗ tự nhiên',
+                    'Gia công gỗ theo kích thước và chiều vân phù hợp với thiết kế sản phẩm.',
+                  ],
+                  [
+                    'Cắt gỗ kỹ thuật',
+                    'Cắt plywood, MDF, ván dăm và các loại panel theo bản vẽ kỹ thuật.',
+                  ],
+                  ['Cắt Foam', 'Gia công foam theo hình dạng và kích thước phục vụ sản phẩm bọc nệm.'],
+                  [
+                    'Cắt vật liệu bọc',
+                    'Cắt vải, da và PU theo rập nhằm đảm bảo độ chính xác khi may và bọc.',
+                  ],
+                  [
+                    'Cắt vật liệu tự nhiên',
+                    'Chuẩn bị các chi tiết mây, tre và vật liệu tự nhiên theo yêu cầu sản xuất.',
+                  ],
+                  [
+                    'Chuẩn bị bán thành phẩm',
+                    'Phân loại và đánh dấu các chi tiết trước khi chuyển sang công đoạn gia công tiếp theo.',
+                  ],
+                ].map(([title, description]) => (
+                  <article key={title}>
+                    <div className="manufacturing-cutting-large-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-cutting-controls">
+            <h2>{t('Những yếu tố được kiểm soát')}</h2>
+            <div className="manufacturing-cutting-control-grid">
+              {[
+                [
+                  'Kích thước',
+                  'Đảm bảo chi tiết được cắt đúng kích thước theo bản vẽ kỹ thuật.',
+                ],
+                [
+                  'Góc cắt',
+                  'Kiểm soát góc cắt và sai số nhằm đảm bảo khả năng lắp ráp.',
+                ],
+                [
+                  'Chất lượng bề mặt',
+                  'Hạn chế sứt mẻ, nứt hoặc hư hỏng tại mép cắt.',
+                ],
+                [
+                  'Hướng vân gỗ',
+                  'Đảm bảo hướng vân phù hợp với yêu cầu thiết kế và thẩm mỹ.',
+                ],
+                [
+                  'Tối ưu vật liệu',
+                  'Sắp xếp phương án cắt hợp lý nhằm giảm hao hụt nguyên liệu.',
+                ],
+                [
+                  'Truy xuất bán thành phẩm',
+                  'Đánh dấu và quản lý từng chi tiết để phục vụ các công đoạn tiếp theo.',
+                ],
+              ].map(([title, description]) => (
+                <article key={title}>
+                  <div className="manufacturing-cutting-control-slot" aria-hidden="true" />
+                  <h3>{t(title)}</h3>
+                  <p>{t(description)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-cutting-middle-row">
+            <div className="manufacturing-cutting-equipment">
+              <h2>{t('Thiết bị sử dụng')}</h2>
+              <div className="manufacturing-cutting-equipment-grid">
+                {[
+                  ['Máy cưa bàn', 'Gia công các chi tiết gỗ theo kích thước tiêu chuẩn.'],
+                  ['Máy cắt Panel', 'Cắt các loại tấm gỗ kỹ thuật với độ chính xác cao.'],
+                  ['Máy CNC', 'Gia công các chi tiết có hình dạng phức tạp theo bản vẽ kỹ thuật.'],
+                  ['Máy cắt Foam', 'Cắt foam theo kích thước và hình dạng yêu cầu.'],
+                  ['Máy cắt vải', 'Kiểm tra kích thước và sai số sau khi cắt.'],
+                  ['Thiết bị đo kiểm', 'Kiểm tra kích thước và sai số sau khi cắt.'],
+                ].map(([title, description]) => (
+                  <article key={title}>
+                    <div className="manufacturing-cutting-equipment-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-cutting-role-nesting">
+              <section className="manufacturing-cutting-role">
+                <h2>{t('Vai trò trong quy trình sản xuất')}</h2>
+                <div className="manufacturing-cutting-role-flow">
+                  {[
+                    'Chuẩn bị vật liệu',
+                    'Cắt',
+                    'Gia công',
+                    'Chà nhám',
+                    'Hoàn thiện',
+                    'Lắp ráp',
+                  ].map((title, index, items) => (
+                    <div className="manufacturing-cutting-role-item" key={title}>
+                      <figure>
+                        <div className="manufacturing-cutting-role-slot" aria-hidden="true" />
+                        <figcaption>{t(title)}</figcaption>
+                      </figure>
+                      {index < items.length - 1 ? <span aria-hidden="true">→</span> : null}
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section className="manufacturing-cutting-nesting">
+                <div>
+                  <h2>{t('Mẫu bố trí cắt tối ưu (Nesting Layout)')}</h2>
+                  <div className="manufacturing-cutting-nesting-slot" aria-hidden="true" />
+                </div>
+                <ul>
+                  {[
+                    'Tối ưu diện tích tấm vật liệu',
+                    'Giảm hao hụt nguyên liệu',
+                    'Giảm chi phí sản xuất',
+                    'Tăng hiệu quả sử dụng vật liệu',
+                  ].map((item) => (
+                    <li key={item}>{t(item)}</li>
+                  ))}
+                </ul>
+              </section>
+            </div>
+          </section>
+
+          <section className="manufacturing-cutting-bottom-row">
+            <div className="manufacturing-cutting-commitment">
+              <h2>{t('Cam kết của ANSLIFE')}</h2>
+              <div className="manufacturing-cutting-commitment-list">
+                {[
+                  'ANSLIFE kiểm soát công đoạn cắt theo bản vẽ kỹ thuật và quy trình sản xuất thống nhất nhằm đảm bảo độ chính xác của từng chi tiết, tối ưu sử dụng vật liệu và duy trì tính đồng nhất giữa mẫu duyệt và sản xuất hàng loạt.',
+                  'Việc kiểm tra kích thước được thực hiện trước khi các chi tiết được chuyển sang công đoạn gia công tiếp theo, góp phần giảm sai lỗi và nâng cao hiệu quả sản xuất.',
+                ].map((item) => (
+                  <article key={item}>
+                    <div className="manufacturing-cutting-commitment-slot" aria-hidden="true" />
+                    <p>{t(item)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-cutting-related">
+              <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+              <div className="manufacturing-cutting-related-grid">
+                {[
+                  [
+                    'Chuẩn bị vật liệu',
+                    'Kiểm tra và chuẩn bị nguyên liệu trước khi đưa vào sản xuất.',
+                    '/manufacturing/production-process/material-preparation',
+                  ],
+                  [
+                    'Gia công gỗ',
+                    'Các công đoạn tạo hình, khoan, phay và hoàn thiện chi tiết sau khi cắt.',
+                    '/manufacturing/production-process/woodworking',
+                  ],
+                  [
+                    'Máy móc & Thiết bị',
+                    'Hệ thống máy cắt, CNC và thiết bị đo kiểm phục vụ sản xuất.',
+                    '/manufacturing/machinery-equipment',
+                  ],
+                  [
+                    'Kiểm tra trong sản xuất',
+                    'Quy trình kiểm soát chất lượng trong từng công đoạn gia công.',
+                    '/quality-control/in-process-inspection',
+                  ],
+                ].map(([title, description, href]) => (
+                  <Link className="manufacturing-cutting-related-card" key={title} to={toLocalizedPath(href)}>
+                    <div className="manufacturing-cutting-related-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                    <span aria-hidden="true">›</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-cutting-cta">
+            <div className="manufacturing-cutting-cta-copy">
+              <h2>{t('Cần gia công cắt vật liệu theo bản vẽ kỹ thuật?')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi bản vẽ, BOM, quy cách vật liệu hoặc yêu cầu dung sai để ANSLIFE kiểm tra phương án cắt, tối ưu vật liệu và chuẩn bị bán thành phẩm cho các công đoạn sản xuất tiếp theo.',
+                )}
+              </p>
+            </div>
+            <div className="manufacturing-cutting-cta-actions">
+              <Link to={toLocalizedPath('/about-anslife/company-info')}>
+                {t('Trao đổi yêu cầu')} <span aria-hidden="true">→</span>
+              </Link>
+              <Link to={toLocalizedPath('/manufacturing/machinery-equipment')}>
+                {t('Xem máy móc thiết bị')} <span aria-hidden="true">→</span>
+              </Link>
+              <Link to={toLocalizedPath('/quality-control/in-process-inspection')}>
+                {t('Kiểm tra trong sản xuất')} <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </section>
+        </section>
+      )}
+      {isManufacturingMaterialPreparationPage && (
+        <section className="manufacturing-material-preparation-content">
+          <section className="manufacturing-material-preparation-top-row">
+            <div className="manufacturing-material-preparation-process">
+              <h2>{t('Quy trình chuẩn bị vật liệu')}</h2>
+              <div className="manufacturing-material-preparation-process-list">
+                {[
+                  ['1', 'Tiếp nhận vật liệu'],
+                  ['2', 'Kiểm tra hồ sơ & quy cách'],
+                  ['3', 'Kiểm tra chất lượng'],
+                  ['4', 'Kiểm soát độ ẩm (đối với gỗ)'],
+                  ['5', 'Phân loại vật liệu'],
+                  ['6', 'Lưu kho theo quy định'],
+                  ['7', 'Cấp phát cho sản xuất'],
+                ].map(([number, title]) => (
+                  <article key={number}>
+                    <div className="manufacturing-material-preparation-small-slot" aria-hidden="true" />
+                    <span>{number}</span>
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-material-preparation-checks">
+              <h2>{t('Các hạng mục kiểm tra')}</h2>
+              <div className="manufacturing-material-preparation-check-grid">
+                {[
+                  [
+                    'Kiểm tra quy cách',
+                    'Đối chiếu kích thước, chủng loại và thông số kỹ thuật với yêu cầu của đơn hàng.',
+                  ],
+                  [
+                    'Kiểm tra ngoại quan',
+                    'Đánh giá bề mặt vật liệu, màu sắc, khuyết tật và các dấu hiệu ảnh hưởng đến chất lượng sản phẩm.',
+                  ],
+                  [
+                    'Kiểm soát độ ẩm',
+                    'Đo và kiểm soát độ ẩm của gỗ theo tiêu chuẩn kỹ thuật trước khi gia công.',
+                  ],
+                  [
+                    'Phân loại vật liệu',
+                    'Sắp xếp theo chủng loại, quy cách và mục đích sử dụng nhằm tối ưu quá trình sản xuất.',
+                  ],
+                  [
+                    'Truy xuất nguồn gốc',
+                    'Quản lý lô vật liệu để đảm bảo khả năng truy xuất trong suốt quá trình sản xuất.',
+                  ],
+                  [
+                    'Lưu kho',
+                    'Bảo quản vật liệu trong điều kiện phù hợp nhằm duy trì chất lượng trước khi đưa vào sản xuất.',
+                  ],
+                ].map(([title, description]) => (
+                  <article key={title}>
+                    <div className="manufacturing-material-preparation-large-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="manufacturing-material-preparation-materials">
+            <h2>{t('Vật liệu được chuẩn bị')}</h2>
+            <div className="manufacturing-material-preparation-material-grid">
+              {[
+                [
+                  'Gỗ tự nhiên',
+                  'Cao su, Ash, Oak, Beech, Acacia, Pine và các loại gỗ khác theo yêu cầu dự án.',
+                ],
+                ['Gỗ kỹ thuật', 'Plywood, MDF, ván dăm và các loại tấm công nghiệp.'],
+                [
+                  'Mây & Tre',
+                  'Nguyên liệu tự nhiên phục vụ các sản phẩm mây tre và chi tiết trang trí.',
+                ],
+                ['Foam & Vật liệu bọc', 'Foam, vải, da, PU và các vật liệu đệm.'],
+                ['Phụ kiện', 'Bản lề, ray trượt, tay nắm, vít và các linh kiện lắp ráp.'],
+                [
+                  'Vật liệu hoàn thiện',
+                  'Sơn, stain, lacquer, dầu hoàn thiện và các vật liệu phủ bề mặt.',
+                ],
+              ].map(([title, description]) => (
+                <article key={title}>
+                  <div className="manufacturing-material-preparation-material-slot" aria-hidden="true" />
+                  <h3>{t(title)}</h3>
+                  <p>{t(description)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-material-preparation-bottom-row">
+            <div className="manufacturing-material-preparation-control-panel">
+              <h2>{t('Những yếu tố được kiểm soát')}</h2>
+              <div className="manufacturing-material-preparation-control-list">
+                {[
+                  [
+                    'Đúng chủng loại',
+                    'Đảm bảo vật liệu đúng theo yêu cầu của bản vẽ và BOM.',
+                  ],
+                  [
+                    'Chất lượng ổn định',
+                    'Kiểm tra sự đồng nhất giữa các lô vật liệu trước khi đưa vào sản xuất.',
+                  ],
+                  [
+                    'Điều kiện bảo quản',
+                    'Kiểm soát môi trường lưu kho phù hợp với từng nhóm vật liệu.',
+                  ],
+                  [
+                    'Truy xuất vật liệu',
+                    'Ghi nhận thông tin lô hàng và quá trình sử dụng để phục vụ truy xuất khi cần thiết.',
+                  ],
+                  [
+                    'Sẵn sàng sản xuất',
+                    'Đảm bảo vật liệu được chuẩn bị đầy đủ trước khi cấp phát cho từng công đoạn.',
+                  ],
+                ].map(([title, description]) => (
+                  <article key={title}>
+                    <div className="manufacturing-material-preparation-list-slot" aria-hidden="true" />
+                    <div>
+                      <h3>{t(title)}</h3>
+                      <p>{t(description)}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-material-preparation-role-panel">
+              <h2>{t('Vai trò trong hệ thống sản xuất')}</h2>
+              <div className="manufacturing-material-preparation-role-flow">
+                {[
+                  'Nhận vật liệu',
+                  'Kiểm tra chất lượng',
+                  'Kiểm soát độ ẩm',
+                  'Phân loại',
+                  'Lưu kho',
+                  'Cấp phát',
+                  'Gia công',
+                ].map((title) => (
+                  <article key={title}>
+                    <div className="manufacturing-material-preparation-flow-slot" aria-hidden="true" />
+                    <h3>{t(title)}</h3>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="manufacturing-material-preparation-commitment-panel">
+              <h2>{t('Cam kết của ANSLIFE')}</h2>
+              <p>
+                {t(
+                  'Việc chuẩn bị vật liệu được thực hiện theo quy trình thống nhất nhằm đảm bảo mọi nguyên liệu đưa vào sản xuất đều đáp ứng yêu cầu kỹ thuật và tiêu chuẩn chất lượng của từng dự án.',
+                )}
+              </p>
+              <p>
+                {t(
+                  'Đây là nền tảng giúp ANSLIFE duy trì sự ổn định giữa mẫu phát triển và sản xuất hàng loạt, đồng thời giảm thiểu rủi ro trong các công đoạn tiếp theo.',
+                )}
+              </p>
+              <div className="manufacturing-material-preparation-commitment-slot" aria-hidden="true" />
+            </div>
+          </section>
+
+          <section className="manufacturing-material-preparation-related">
+            <h2>{t('Liên kết với các nội dung liên quan')}</h2>
+            <div className="manufacturing-material-preparation-related-grid">
+              {[
+                [
+                  'Nguyên liệu',
+                  'Tìm hiểu các nhóm vật liệu được sử dụng trong sản xuất nội thất.',
+                  '/materials',
+                ],
+                [
+                  'Kiểm tra vật liệu',
+                  'Quy trình kiểm tra chất lượng nguyên liệu đầu vào.',
+                  '/quality-control/material-inspection',
+                ],
+                [
+                  'Gia công gỗ',
+                  'Công đoạn đầu tiên sau khi vật liệu được chuẩn bị.',
+                  '/manufacturing/production-process/woodworking',
+                ],
+                [
+                  'Kiểm soát độ ẩm',
+                  'Quản lý độ ẩm của gỗ nhằm đảm bảo sự ổn định của sản phẩm.',
+                  '/quality-control/moisture-control',
+                ],
+              ].map(([title, description, href]) => (
+                <Link
+                  className="manufacturing-material-preparation-related-card"
+                  key={title}
+                  to={toLocalizedPath(href)}
+                >
+                  <div className="manufacturing-material-preparation-related-slot" aria-hidden="true" />
+                  <div>
+                    <h3>{t(title)}</h3>
+                    <p>{t(description)}</p>
+                  </div>
+                  <span aria-hidden="true">›</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          <section className="manufacturing-material-preparation-cta">
+            <div className="manufacturing-material-preparation-cta-copy">
+              <h2>{t('Cần chuẩn bị vật liệu cho đơn hàng sản xuất?')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi BOM, bản vẽ kỹ thuật, tiêu chuẩn vật liệu hoặc yêu cầu dự án để ANSLIFE kiểm tra, phân loại và đề xuất phương án chuẩn bị vật liệu phù hợp trước khi đưa vào sản xuất.',
+                )}
+              </p>
+            </div>
+            <div className="manufacturing-material-preparation-cta-actions">
+              <Link to={toLocalizedPath('/about-anslife/company-info')}>
+                {t('Trao đổi yêu cầu')} <span aria-hidden="true">→</span>
+              </Link>
+              <Link to={toLocalizedPath('/materials')}>
+                {t('Xem nhóm nguyên liệu')} <span aria-hidden="true">→</span>
+              </Link>
+              <Link to={toLocalizedPath('/quality-control/material-inspection')}>
+                {t('Kiểm tra vật liệu')} <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </section>
+        </section>
       )}
       {isManufacturingContainerLoadingPage && (
         <section className="manufacturing-container-loading-content">

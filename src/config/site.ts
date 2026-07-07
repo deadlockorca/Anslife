@@ -168,26 +168,6 @@ export const TOP_MENU: TopMenuItem[] = [
     path: '/manufacturing',
     children: [
       { label: 'Tổng quan nhà máy', path: '/manufacturing/factory-overview' },
-      {
-        label: 'Quy trình sản xuất',
-        path: '/manufacturing/production-process',
-        children: [
-          {
-            label: 'Chuẩn bị vật liệu',
-            path: '/manufacturing/production-process/material-preparation',
-          },
-          { label: 'Cắt', path: '/manufacturing/production-process/cutting' },
-          { label: 'Gia công gỗ', path: '/manufacturing/production-process/woodworking' },
-          { label: 'Chà nhám', path: '/manufacturing/production-process/sanding' },
-          {
-            label: 'Hoàn thiện / sơn',
-            path: '/manufacturing/production-process/finishing-painting',
-          },
-          { label: 'Lắp ráp', path: '/manufacturing/production-process/assembly' },
-          { label: 'Kiểm tra', path: '/manufacturing/production-process/inspection' },
-          { label: 'Đóng gói sản phẩm', path: '/manufacturing/production-process/packing' },
-        ],
-      },
       { label: 'Máy móc & thiết bị', path: '/manufacturing/machinery-equipment' },
       { label: 'Năng lực hoàn thiện', path: '/manufacturing/finishing-capability' },
       { label: 'Dây chuyền lắp ráp', path: '/manufacturing/assembly-line' },
