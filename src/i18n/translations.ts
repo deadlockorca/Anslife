@@ -1936,6 +1936,23 @@ const TRANSLATIONS: Partial<Record<
       'State the desired timeline for receiving the quote or starting execution.',
     'Cho biết điều kiện giao hàng dự kiến để tư vấn phù hợp.':
       'Share the expected delivery terms so we can advise accordingly.',
+    'Sản xuất và xuất khẩu nội thất gỗ.': 'Wood furniture manufacturing and export.',
+    'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
+      'Warehousing, shipment coordination, and partner standard room in Vietnam.',
+    'Tổng quan mô hình lưu kho, gom hàng, điều phối xuất khẩu và phòng mẫu chuẩn đối tác.':
+      'Overview of warehousing, consolidation, export coordination, and partner standard room.',
+    'Giải pháp lưu kho thành phẩm, tồn kho đệm và hỗ trợ kế hoạch xuất hàng tại Việt Nam.':
+      'Finished goods warehousing, buffer inventory, and shipment planning support in Vietnam.',
+    'Gom hàng lẻ, gom container và điều phối nhiều nguồn hàng để tối ưu xuất khẩu.':
+      'Consolidating LCL, FCL, and multiple supply sources to optimize export.',
+    'Tổ chức lịch xuất hàng định kỳ theo kế hoạch buyer, thị trường và năng lực cung ứng.':
+      'Organizing recurring shipment schedules based on buyer plans, markets, and supply capability.',
+    'Lưu kho vật liệu, cấu kiện và bán thành phẩm để hỗ trợ sản xuất và cung ứng dài hạn.':
+      'Storing materials, components, and semi-finished goods to support production and long-term supply.',
+    'Hỗ trợ hồ sơ, thông tin lô hàng và chứng từ phục vụ xuất khẩu.':
+      'Supporting shipment records, cargo information, and documents for export.',
+    'Quản lý mẫu duyệt, cấu kiện, bản vẽ, tài liệu vật liệu, tiêu chuẩn đóng gói và checklist QC.':
+      'Managing approved samples, components, drawings, material documents, packing standards, and QC checklists.',
   },
   jp: {
     'Trang chủ': 'ホーム',
@@ -2611,6 +2628,29 @@ const TRANSLATIONS: Partial<Record<
       '見積受領および着手を希望される時期をお知らせください。',
     'Cho biết điều kiện giao hàng dự kiến để tư vấn phù hợp.':
       '想定される納品条件をお知らせいただければ適切にご提案いたします。',
+    'Sản xuất và xuất khẩu nội thất gỗ.': '木製家具の製造と輸出。',
+    'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
+      'ベトナムでの倉庫保管、出荷調整、パートナー標準ルーム。',
+    'Tổng quan mô hình Supply Hub': 'Supply Hubモデル概要',
+    'Tổng quan mô hình lưu kho, gom hàng, điều phối xuất khẩu và phòng mẫu chuẩn đối tác.':
+      '倉庫保管、混載、輸出調整、パートナー標準ルームのモデル概要。',
+    'Lưu kho & tồn kho đệm tại Việt Nam': 'ベトナムでの倉庫保管・バッファ在庫',
+    'Giải pháp lưu kho thành phẩm, tồn kho đệm và hỗ trợ kế hoạch xuất hàng tại Việt Nam.':
+      'ベトナムでの完成品保管、バッファ在庫、出荷計画サポート。',
+    'Gom hàng LCL / FCL': 'LCL / FCL混載',
+    'Gom hàng lẻ, gom container và điều phối nhiều nguồn hàng để tối ưu xuất khẩu.':
+      'LCL、FCL、複数供給元の貨物を統合し、輸出を最適化します。',
+    'Điều phối xuất hàng định kỳ': '定期出荷調整',
+    'Tổ chức lịch xuất hàng định kỳ theo kế hoạch buyer, thị trường và năng lực cung ứng.':
+      'バイヤー計画、市場、供給能力に応じて定期出荷スケジュールを組みます。',
+    'Lưu kho vật liệu & cấu kiện': '材料・部材保管',
+    'Lưu kho vật liệu, cấu kiện và bán thành phẩm để hỗ trợ sản xuất và cung ứng dài hạn.':
+      '材料、部材、半製品を保管し、生産と長期供給を支援します。',
+    'Hỗ trợ chứng từ xuất khẩu': '輸出書類サポート',
+    'Hỗ trợ hồ sơ, thông tin lô hàng và chứng từ phục vụ xuất khẩu.':
+      '輸出に必要な出荷記録、貨物情報、書類をサポートします。',
+    'Quản lý mẫu duyệt, cấu kiện, bản vẽ, tài liệu vật liệu, tiêu chuẩn đóng gói và checklist QC.':
+      '承認サンプル、部材、図面、材料資料、梱包基準、QCチェックリストを管理します。',
   },
   kr: {
     'Trang chủ': '홈',
@@ -3279,6 +3319,29 @@ const TRANSLATIONS: Partial<Record<
       '견적 수령 및 진행을 희망하는 일정을 알려 주세요.',
     'Cho biết điều kiện giao hàng dự kiến để tư vấn phù hợp.':
       '예상 배송 조건을 알려 주시면 그에 맞추어 안내해 드립니다.',
+    'Sản xuất và xuất khẩu nội thất gỗ.': '목재 가구 제조 및 수출.',
+    'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
+      '베트남 내 창고 보관, 출하 조율 및 파트너 표준룸.',
+    'Tổng quan mô hình Supply Hub': 'Supply Hub 모델 개요',
+    'Tổng quan mô hình lưu kho, gom hàng, điều phối xuất khẩu và phòng mẫu chuẩn đối tác.':
+      '창고 보관, 화물 통합, 수출 조율 및 파트너 표준룸 모델 개요.',
+    'Lưu kho & tồn kho đệm tại Việt Nam': '베트남 창고 보관 및 버퍼 재고',
+    'Giải pháp lưu kho thành phẩm, tồn kho đệm và hỗ trợ kế hoạch xuất hàng tại Việt Nam.':
+      '베트남 내 완제품 보관, 버퍼 재고 및 출하 계획 지원.',
+    'Gom hàng LCL / FCL': 'LCL / FCL 혼재',
+    'Gom hàng lẻ, gom container và điều phối nhiều nguồn hàng để tối ưu xuất khẩu.':
+      'LCL, FCL 및 여러 공급원의 화물을 통합해 수출을 최적화합니다.',
+    'Điều phối xuất hàng định kỳ': '정기 출하 조율',
+    'Tổ chức lịch xuất hàng định kỳ theo kế hoạch buyer, thị trường và năng lực cung ứng.':
+      '바이어 계획, 시장 및 공급 역량에 맞춰 정기 출하 일정을 구성합니다.',
+    'Lưu kho vật liệu & cấu kiện': '자재 및 구성품 보관',
+    'Lưu kho vật liệu, cấu kiện và bán thành phẩm để hỗ trợ sản xuất và cung ứng dài hạn.':
+      '자재, 구성품 및 반제품을 보관해 생산과 장기 공급을 지원합니다.',
+    'Hỗ trợ chứng từ xuất khẩu': '수출 서류 지원',
+    'Hỗ trợ hồ sơ, thông tin lô hàng và chứng từ phục vụ xuất khẩu.':
+      '수출을 위한 출하 기록, 화물 정보 및 관련 서류를 지원합니다.',
+    'Quản lý mẫu duyệt, cấu kiện, bản vẽ, tài liệu vật liệu, tiêu chuẩn đóng gói và checklist QC.':
+      '승인 샘플, 구성품, 도면, 자재 문서, 포장 기준 및 QC 체크리스트를 관리합니다.',
   },
   sv: {
     'Foam / Mút / Xốp': 'Foam / Svamp',
@@ -3365,6 +3428,31 @@ const TRANSLATIONS: Partial<Record<
       'Skicka din förfrågan idag så svarar ANSLIFE-teamet så snart som möjligt.',
     'Gửi yêu cầu': 'Skicka förfrågan',
     'Tải tài liệu / bản vẽ lên': 'Ladda upp dokument / ritningar',
+    'Sản xuất và xuất khẩu nội thất gỗ.': 'Tillverkning och export av trämöbler.',
+    'Trung tâm cung ứng Việt Nam': 'Vietnams Supply Hub',
+    'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
+      'Lagerhållning, leveranssamordning och partnerns standardrum i Vietnam.',
+    'Tổng quan mô hình Supply Hub': 'Översikt över Supply Hub-modell',
+    'Tổng quan mô hình lưu kho, gom hàng, điều phối xuất khẩu và phòng mẫu chuẩn đối tác.':
+      'Översikt över lagerhållning, konsolidering, exportsamordning och partnerns standardrum.',
+    'Lưu kho & tồn kho đệm tại Việt Nam': 'Lagring & buffertlager i Vietnam',
+    'Giải pháp lưu kho thành phẩm, tồn kho đệm và hỗ trợ kế hoạch xuất hàng tại Việt Nam.':
+      'Lagring av färdiga varor, buffertlager och stöd för leveransplanering i Vietnam.',
+    'Gom hàng LCL / FCL': 'LCL / FCL-konsolidering',
+    'Gom hàng lẻ, gom container và điều phối nhiều nguồn hàng để tối ưu xuất khẩu.':
+      'Konsolidering av LCL, FCL och flera leveranskällor för att optimera exporten.',
+    'Điều phối xuất hàng định kỳ': 'Schemalagd leveranssamordning',
+    'Tổ chức lịch xuất hàng định kỳ theo kế hoạch buyer, thị trường và năng lực cung ứng.':
+      'Organisering av återkommande leveranser enligt köparplaner, marknader och leveranskapacitet.',
+    'Lưu kho vật liệu & cấu kiện': 'Lagring av material och komponenter',
+    'Lưu kho vật liệu, cấu kiện và bán thành phẩm để hỗ trợ sản xuất và cung ứng dài hạn.':
+      'Lagring av material, komponenter och halvfabrikat för produktion och långsiktig leverans.',
+    'Hỗ trợ chứng từ xuất khẩu': 'Stöd för exportdokument',
+    'Hỗ trợ hồ sơ, thông tin lô hàng và chứng từ phục vụ xuất khẩu.':
+      'Stöd för sändningsunderlag, lastinformation och dokument för export.',
+    'Phòng mẫu chuẩn đối tác': 'Partnerns standardprovrum',
+    'Quản lý mẫu duyệt, cấu kiện, bản vẽ, tài liệu vật liệu, tiêu chuẩn đóng gói và checklist QC.':
+      'Hantering av godkända prover, komponenter, ritningar, materialdokument, packstandarder och QC-checklistor.',
   },
   fr: {
     'Foam / Mút / Xốp': 'Mousse / Éponge',
@@ -3453,6 +3541,31 @@ const TRANSLATIONS: Partial<Record<
       'Envoyez votre demande aujourd’hui, l’équipe ANSLIFE vous répondra dès que possible.',
     'Gửi yêu cầu': 'Envoyer une demande',
     'Tải tài liệu / bản vẽ lên': 'Téléverser documents / plans',
+    'Sản xuất và xuất khẩu nội thất gỗ.': 'Fabrication et exportation de meubles en bois.',
+    'Trung tâm cung ứng Việt Nam': 'Hub d’approvisionnement au Vietnam',
+    'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
+      'Stockage, coordination des expéditions et salle standard partenaire au Vietnam.',
+    'Tổng quan mô hình Supply Hub': 'Présentation du modèle Supply Hub',
+    'Tổng quan mô hình lưu kho, gom hàng, điều phối xuất khẩu và phòng mẫu chuẩn đối tác.':
+      'Présentation du stockage, du groupage, de la coordination export et de la salle standard partenaire.',
+    'Lưu kho & tồn kho đệm tại Việt Nam': 'Stockage & stock tampon au Vietnam',
+    'Giải pháp lưu kho thành phẩm, tồn kho đệm và hỗ trợ kế hoạch xuất hàng tại Việt Nam.':
+      'Stockage de produits finis, stock tampon et support au planning d’expédition au Vietnam.',
+    'Gom hàng LCL / FCL': 'Consolidation LCL / FCL',
+    'Gom hàng lẻ, gom container và điều phối nhiều nguồn hàng để tối ưu xuất khẩu.':
+      'Consolidation LCL, FCL et coordination de plusieurs sources pour optimiser l’export.',
+    'Điều phối xuất hàng định kỳ': 'Coordination d’expéditions régulières',
+    'Tổ chức lịch xuất hàng định kỳ theo kế hoạch buyer, thị trường và năng lực cung ứng.':
+      'Organisation d’expéditions récurrentes selon les plans acheteur, les marchés et la capacité d’approvisionnement.',
+    'Lưu kho vật liệu & cấu kiện': 'Stockage matériaux & composants',
+    'Lưu kho vật liệu, cấu kiện và bán thành phẩm để hỗ trợ sản xuất và cung ứng dài hạn.':
+      'Stockage des matériaux, composants et semi-finis pour soutenir la production et l’approvisionnement long terme.',
+    'Hỗ trợ chứng từ xuất khẩu': 'Support documentaire export',
+    'Hỗ trợ hồ sơ, thông tin lô hàng và chứng từ phục vụ xuất khẩu.':
+      'Support des dossiers, informations de lot et documents nécessaires à l’export.',
+    'Phòng mẫu chuẩn đối tác': 'Salle d’échantillons standard partenaire',
+    'Quản lý mẫu duyệt, cấu kiện, bản vẽ, tài liệu vật liệu, tiêu chuẩn đóng gói và checklist QC.':
+      'Gestion des échantillons approuvés, composants, plans, documents matériaux, standards d’emballage et checklists QC.',
   },
   ru: {
     'Foam / Mút / Xốp': 'Пена / Губка',
@@ -3542,6 +3655,31 @@ const TRANSLATIONS: Partial<Record<
     'Tải tài liệu / bản vẽ lên': 'Загрузить документы / чертежи',
     'Tải bản vẽ lên': 'Загрузить чертеж',
     'Liên hệ ANSLIFE': 'Связаться с ANSLIFE',
+    'Sản xuất và xuất khẩu nội thất gỗ.': 'Производство и экспорт деревянной мебели.',
+    'Trung tâm cung ứng Việt Nam': 'Центр поставок во Вьетнаме',
+    'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
+      'Хранение, координация отгрузок и стандартная комната партнера во Вьетнаме.',
+    'Tổng quan mô hình Supply Hub': 'Обзор модели Supply Hub',
+    'Tổng quan mô hình lưu kho, gom hàng, điều phối xuất khẩu và phòng mẫu chuẩn đối tác.':
+      'Обзор модели хранения, консолидации, экспортной координации и стандартной комнаты партнера.',
+    'Lưu kho & tồn kho đệm tại Việt Nam': 'Складирование и буферный запас во Вьетнаме',
+    'Giải pháp lưu kho thành phẩm, tồn kho đệm và hỗ trợ kế hoạch xuất hàng tại Việt Nam.':
+      'Хранение готовой продукции, буферный запас и поддержка планирования отгрузок во Вьетнаме.',
+    'Gom hàng LCL / FCL': 'Консолидация LCL / FCL',
+    'Gom hàng lẻ, gom container và điều phối nhiều nguồn hàng để tối ưu xuất khẩu.':
+      'Консолидация LCL, FCL и нескольких источников поставки для оптимизации экспорта.',
+    'Điều phối xuất hàng định kỳ': 'Координация регулярных отгрузок',
+    'Tổ chức lịch xuất hàng định kỳ theo kế hoạch buyer, thị trường và năng lực cung ứng.':
+      'Организация регулярных графиков отгрузки по планам покупателя, рынкам и возможностям поставки.',
+    'Lưu kho vật liệu & cấu kiện': 'Хранение материалов и компонентов',
+    'Lưu kho vật liệu, cấu kiện và bán thành phẩm để hỗ trợ sản xuất và cung ứng dài hạn.':
+      'Хранение материалов, компонентов и полуфабрикатов для производства и долгосрочных поставок.',
+    'Hỗ trợ chứng từ xuất khẩu': 'Поддержка экспортных документов',
+    'Hỗ trợ hồ sơ, thông tin lô hàng và chứng từ phục vụ xuất khẩu.':
+      'Поддержка записей, информации о партии и документов для экспорта.',
+    'Phòng mẫu chuẩn đối tác': 'Комната стандартных образцов партнера',
+    'Quản lý mẫu duyệt, cấu kiện, bản vẽ, tài liệu vật liệu, tiêu chuẩn đóng gói và checklist QC.':
+      'Управление утвержденными образцами, компонентами, чертежами, материалами, стандартами упаковки и QC-чеклистами.',
   },
   es: {
     'Foam / Mút / Xốp': 'Espuma / Esponja',
@@ -3630,6 +3768,31 @@ const TRANSLATIONS: Partial<Record<
       'Envía tu solicitud hoy y el equipo de ANSLIFE responderá lo antes posible.',
     'Gửi yêu cầu': 'Enviar solicitud',
     'Tải tài liệu / bản vẽ lên': 'Subir documentos / planos',
+    'Sản xuất và xuất khẩu nội thất gỗ.': 'Fabricación y exportación de muebles de madera.',
+    'Trung tâm cung ứng Việt Nam': 'Centro de Suministro en Vietnam',
+    'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
+      'Almacenamiento, coordinación de envíos y sala estándar del socio en Vietnam.',
+    'Tổng quan mô hình Supply Hub': 'Resumen del modelo Supply Hub',
+    'Tổng quan mô hình lưu kho, gom hàng, điều phối xuất khẩu và phòng mẫu chuẩn đối tác.':
+      'Resumen de almacenamiento, consolidación, coordinación de exportación y sala estándar del socio.',
+    'Lưu kho & tồn kho đệm tại Việt Nam': 'Almacenaje y stock de respaldo en Vietnam',
+    'Giải pháp lưu kho thành phẩm, tồn kho đệm và hỗ trợ kế hoạch xuất hàng tại Việt Nam.':
+      'Almacenamiento de productos terminados, stock de respaldo y apoyo al plan de envíos en Vietnam.',
+    'Gom hàng LCL / FCL': 'Consolidación LCL / FCL',
+    'Gom hàng lẻ, gom container và điều phối nhiều nguồn hàng để tối ưu xuất khẩu.':
+      'Consolidación LCL, FCL y coordinación de varias fuentes para optimizar la exportación.',
+    'Điều phối xuất hàng định kỳ': 'Coordinación de envíos periódicos',
+    'Tổ chức lịch xuất hàng định kỳ theo kế hoạch buyer, thị trường và năng lực cung ứng.':
+      'Organización de envíos recurrentes según planes del comprador, mercados y capacidad de suministro.',
+    'Lưu kho vật liệu & cấu kiện': 'Almacenamiento de materiales y componentes',
+    'Lưu kho vật liệu, cấu kiện và bán thành phẩm để hỗ trợ sản xuất và cung ứng dài hạn.':
+      'Almacenamiento de materiales, componentes y semielaborados para apoyar producción y suministro a largo plazo.',
+    'Hỗ trợ chứng từ xuất khẩu': 'Soporte de documentación de exportación',
+    'Hỗ trợ hồ sơ, thông tin lô hàng và chứng từ phục vụ xuất khẩu.':
+      'Soporte de registros, información de lote y documentos para exportación.',
+    'Phòng mẫu chuẩn đối tác': 'Sala de muestras estándar del socio',
+    'Quản lý mẫu duyệt, cấu kiện, bản vẽ, tài liệu vật liệu, tiêu chuẩn đóng gói và checklist QC.':
+      'Gestión de muestras aprobadas, componentes, planos, documentos de materiales, estándares de embalaje y checklists QC.',
   },
   zh: {
     'Foam / Mút / Xốp': '泡棉 / 海绵',
@@ -3717,6 +3880,31 @@ const TRANSLATIONS: Partial<Record<
       '今天发送需求，ANSLIFE 团队会尽快回复。',
     'Gửi yêu cầu': '发送需求',
     'Tải tài liệu / bản vẽ lên': '上传资料 / 图纸',
+    'Sản xuất và xuất khẩu nội thất gỗ.': '木制家具制造与出口。',
+    'Trung tâm cung ứng Việt Nam': '越南供应中心',
+    'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
+      '越南仓储、出货协调与合作伙伴标准样品室。',
+    'Tổng quan mô hình Supply Hub': 'Supply Hub模式概览',
+    'Tổng quan mô hình lưu kho, gom hàng, điều phối xuất khẩu và phòng mẫu chuẩn đối tác.':
+      '仓储、集货、出口协调与合作伙伴标准样品室模式概览。',
+    'Lưu kho & tồn kho đệm tại Việt Nam': '越南仓储与缓冲库存',
+    'Giải pháp lưu kho thành phẩm, tồn kho đệm và hỗ trợ kế hoạch xuất hàng tại Việt Nam.':
+      '越南成品仓储、缓冲库存及出货计划支持。',
+    'Gom hàng LCL / FCL': 'LCL / FCL拼箱与整柜集货',
+    'Gom hàng lẻ, gom container và điều phối nhiều nguồn hàng để tối ưu xuất khẩu.':
+      '整合LCL、FCL及多来源货物，以优化出口。',
+    'Điều phối xuất hàng định kỳ': '定期出货协调',
+    'Tổ chức lịch xuất hàng định kỳ theo kế hoạch buyer, thị trường và năng lực cung ứng.':
+      '根据买家计划、市场和供应能力安排定期出货。',
+    'Lưu kho vật liệu & cấu kiện': '材料与构件仓储',
+    'Lưu kho vật liệu, cấu kiện và bán thành phẩm để hỗ trợ sản xuất và cung ứng dài hạn.':
+      '储存材料、构件和半成品，以支持生产和长期供应。',
+    'Hỗ trợ chứng từ xuất khẩu': '出口单证支持',
+    'Hỗ trợ hồ sơ, thông tin lô hàng và chứng từ phục vụ xuất khẩu.':
+      '支持出口所需的出货记录、货物信息和相关单证。',
+    'Phòng mẫu chuẩn đối tác': '合作伙伴标准样品室',
+    'Quản lý mẫu duyệt, cấu kiện, bản vẽ, tài liệu vật liệu, tiêu chuẩn đóng gói và checklist QC.':
+      '管理确认样品、构件、图纸、材料文件、包装标准和QC检查表。',
   },
 };
 

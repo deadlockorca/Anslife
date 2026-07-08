@@ -416,7 +416,11 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
       )}
 
       {!shouldShowScholarshipCommunityBanner && !shouldShowMaterialGroupsOnly && (
-        <PageSections sections={sectionListForNavigation} basePath={config.path} />
+        <PageSections
+          sections={sectionListForNavigation}
+          basePath={config.path}
+          hideIntroText={config.slug === 'vietnam-supply-hub'}
+        />
       )}
     </>
   );
