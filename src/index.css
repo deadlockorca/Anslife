@@ -60135,34 +60135,41 @@ img.supply-hub-weekly-cta-image-placeholder {
 
 @media (max-width: 760px) {
   .ai-finishing-natural-banner {
-    display: grid;
-    aspect-ratio: auto;
-    overflow: visible;
+    display: block;
+    aspect-ratio: 2006 / 784;
+    overflow: hidden;
+    background:
+      url('/assets/products/finishing/natural-finish/natural-finish-banner.webp')
+      center center / contain no-repeat #f7f3ec !important;
   }
 
   .ai-finishing-natural-banner-image {
-    position: relative;
-    inset: auto;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    aspect-ratio: 2006 / 784;
-    height: auto !important;
+    height: 100% !important;
+    object-fit: contain;
+    object-position: center center;
   }
 
   .ai-finishing-natural-copy {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: 100%;
-    padding: clamp(1.1rem, 5vw, 1.75rem);
+    position: absolute;
+    top: clamp(0.38rem, 2.1vw, 0.82rem);
+    left: clamp(0.44rem, 2.5vw, 0.92rem);
+    width: min(48%, 14rem);
+    padding: 0;
   }
 
   .ai-finishing-natural-copy h2 {
-    font-size: clamp(1.95rem, 8vw, 2.85rem);
+    font-size: clamp(1rem, 5.15vw, 1.72rem);
+    line-height: 0.98;
   }
 
   .ai-finishing-natural-lead,
   .ai-finishing-natural-text {
-    font-size: clamp(0.82rem, 3.5vw, 0.98rem);
+    margin-top: clamp(0.18rem, 0.9vw, 0.32rem);
+    font-size: clamp(0.36rem, 1.82vw, 0.58rem);
+    line-height: 1.13;
   }
 
   .ai-finishing-natural-flow-grid {
@@ -73773,5 +73780,1115 @@ img.supply-hub-weekly-cta-image-placeholder {
     .ai-finished-highlights p {
     font-size: 0.64rem;
     line-height: 1.28;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #natural-finish
+    .ai-finishing-natural-copy
+    h2 {
+    max-width: 12ch;
+    font-size: clamp(1.15rem, 5.4vw, 1.9rem);
+    line-height: 0.98;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #natural-finish
+    .ai-finishing-natural-lead,
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #natural-finish
+    .ai-finishing-natural-text {
+    max-width: 42ch;
+    margin-top: 0.24rem;
+    font-size: clamp(0.32rem, 1.36vw, 0.48rem);
+    line-height: 1.1;
+  }
+}
+
+.html-content .ai-content .ai-finishing-natural-banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100% !important;
+  margin: 0;
+  overflow: hidden;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #f4efe6 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  isolation: isolate;
+}
+
+.html-content .ai-content .ai-finishing-natural-banner::after {
+  content: none !important;
+}
+
+.html-content .ai-content .ai-finishing-natural-banner > .ai-finishing-natural-banner-image {
+  position: static !important;
+  inset: auto !important;
+  z-index: auto !important;
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-width: none !important;
+  aspect-ratio: 2006 / 784;
+  object-fit: cover;
+  object-position: center;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+.html-content .ai-content .ai-finishing-natural-copy {
+  position: absolute;
+  left: clamp(1.25rem, 4vw, 4rem);
+  top: 43%;
+  z-index: 2;
+  width: min(43%, 690px);
+  max-width: none;
+  transform: translateY(-50%);
+  padding: 0 !important;
+  color: #20242a;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.82);
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content .ai-finishing-natural-copy :is(h2, p, span, strong, em, small) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content .ai-finishing-natural-copy::before,
+.html-content .ai-content .ai-finishing-natural-copy::after,
+.html-content .ai-content .ai-finishing-natural-copy :is(h2, p, span, strong, em, small)::before,
+.html-content .ai-content .ai-finishing-natural-copy :is(h2, p, span, strong, em, small)::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content .ai-finishing-natural-copy,
+.html-content .ai-content .ai-finishing-natural-copy * {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+  outline: 0 !important;
+}
+
+.html-content .ai-content .ai-finishing-natural-copy h2 {
+  max-width: 12ch;
+  margin: 0;
+  color: #20242a !important;
+  font-family: var(--font-heading);
+  font-size: clamp(2.15rem, 4vw, 4.85rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  overflow-wrap: normal;
+}
+
+.html-content .ai-content .ai-finishing-natural-copy p {
+  max-width: 42ch;
+  margin: clamp(0.52rem, 0.78vw, 0.76rem) 0 0;
+  color: #30363e !important;
+  font-family: var(--font-ui);
+  font-size: clamp(0.7rem, 0.78vw, 0.9rem);
+  font-weight: 700;
+  line-height: 1.38;
+  letter-spacing: 0;
+}
+
+@media (max-width: 680px) {
+  .html-content .ai-content .ai-finishing-natural-banner {
+    width: min(100%, calc(100vw - 2.6rem));
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .html-content .ai-content .ai-finishing-natural-banner > .ai-finishing-natural-banner-image {
+    aspect-ratio: 2006 / 784;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .html-content .ai-content .ai-finishing-natural-copy {
+    left: 0.9rem;
+    right: auto;
+    top: 0.72rem;
+    width: min(55vw, 17rem);
+    transform: none;
+    max-width: none;
+    min-width: 0;
+    padding: 0 !important;
+    overflow-wrap: normal;
+  }
+
+  .html-content .ai-content .ai-finishing-natural-copy h2 {
+    max-width: 12ch;
+    font-size: clamp(1.15rem, 5.4vw, 1.9rem);
+    line-height: 0.98;
+    overflow-wrap: normal;
+  }
+
+  .html-content .ai-content .ai-finishing-natural-copy p {
+    max-width: 42ch;
+    margin-top: 0.24rem;
+    font-size: clamp(0.32rem, 1.36vw, 0.48rem);
+    line-height: 1.1;
+  }
+}
+
+#natural-finish .ai-finishing-natural-banner > .ai-finishing-natural-copy,
+#natural-finish .ai-finishing-natural-banner > .ai-finishing-natural-copy *,
+#natural-finish .ai-finishing-natural-banner > .ai-finishing-natural-copy :is(h2, p, span, strong, em, small) {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+#natural-finish .ai-finishing-natural-banner > .ai-finishing-natural-copy::before,
+#natural-finish .ai-finishing-natural-banner > .ai-finishing-natural-copy::after,
+#natural-finish .ai-finishing-natural-banner > .ai-finishing-natural-copy *::before,
+#natural-finish .ai-finishing-natural-banner > .ai-finishing-natural-copy *::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content .ai-finishing-stain-banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100% !important;
+  margin: 0;
+  overflow: hidden;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #f4efe6 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  isolation: isolate;
+}
+
+.html-content .ai-content .ai-finishing-stain-banner::after {
+  content: none !important;
+}
+
+.html-content .ai-content .ai-finishing-stain-banner > .ai-finishing-stain-banner-image {
+  position: static !important;
+  inset: auto !important;
+  z-index: auto !important;
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-width: none !important;
+  aspect-ratio: 2007 / 783;
+  object-fit: cover;
+  object-position: center;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+.html-content .ai-content .ai-finishing-stain-copy {
+  position: absolute;
+  left: clamp(1.25rem, 4vw, 4rem);
+  top: 43%;
+  z-index: 2;
+  width: min(43%, 690px);
+  max-width: none;
+  transform: translateY(-50%);
+  padding: 0 !important;
+  color: #20242a;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.82);
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content .ai-finishing-stain-copy :is(h2, h3, p, span, strong, em, small, div),
+.html-content .ai-content .ai-finishing-stain-info,
+.html-content .ai-content .ai-finishing-stain-info * {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content .ai-finishing-stain-copy::before,
+.html-content .ai-content .ai-finishing-stain-copy::after,
+.html-content .ai-content .ai-finishing-stain-copy :is(h2, h3, p, span, strong, em, small, div)::before,
+.html-content .ai-content .ai-finishing-stain-copy :is(h2, h3, p, span, strong, em, small, div)::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content .ai-finishing-stain-copy,
+.html-content .ai-content .ai-finishing-stain-copy * {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+  outline: 0 !important;
+}
+
+.html-content .ai-content .ai-finishing-stain-copy h2 {
+  max-width: 12ch;
+  margin: 0;
+  color: #20242a !important;
+  font-family: var(--font-heading);
+  font-size: clamp(2.15rem, 4vw, 4.85rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  overflow-wrap: normal;
+}
+
+.html-content .ai-content .ai-finishing-stain-copy p {
+  max-width: 42ch;
+  margin: clamp(0.52rem, 0.78vw, 0.76rem) 0 0;
+  color: #30363e !important;
+  font-family: var(--font-ui);
+  font-size: clamp(0.7rem, 0.78vw, 0.9rem);
+  font-weight: 700;
+  line-height: 1.38;
+  letter-spacing: 0;
+}
+
+.html-content .ai-content .ai-finishing-stain-rule {
+  width: clamp(34px, 3.6vw, 58px);
+  height: 3px;
+  margin: clamp(0.48rem, 0.7vw, 0.78rem) 0 clamp(0.78rem, 1vw, 1.1rem);
+  background: #8b552c !important;
+}
+
+.html-content .ai-content .ai-finishing-stain-info {
+  display: grid;
+  grid-template-columns: clamp(1.55rem, 2.2vw, 2rem) minmax(0, 1fr);
+  gap: 0.48rem;
+  align-items: start;
+  margin-top: clamp(0.56rem, 0.78vw, 0.82rem);
+  padding: 0 !important;
+}
+
+.html-content .ai-content .ai-finishing-stain-info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(1.45rem, 2vw, 1.85rem);
+  height: clamp(1.45rem, 2vw, 1.85rem);
+  border: 1px solid rgba(32, 36, 42, 0.42) !important;
+  border-radius: 999px !important;
+  font-size: clamp(0.72rem, 0.72vw, 0.82rem);
+  font-weight: 800;
+}
+
+.html-content .ai-content .ai-finishing-stain-info h3 {
+  margin: 0;
+  color: #20242a !important;
+  font-size: clamp(0.68rem, 0.72vw, 0.82rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.html-content .ai-content .ai-finishing-stain-info p {
+  margin-top: 0.22rem;
+  font-size: clamp(0.58rem, 0.66vw, 0.76rem);
+  line-height: 1.24;
+}
+
+@media (max-width: 680px) {
+  .html-content .ai-content .ai-finishing-stain-banner {
+    width: min(100%, calc(100vw - 2.6rem));
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .html-content .ai-content .ai-finishing-stain-banner > .ai-finishing-stain-banner-image {
+    aspect-ratio: 2007 / 783;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .html-content .ai-content .ai-finishing-stain-copy {
+    left: 0.9rem;
+    right: auto;
+    top: 0.72rem;
+    width: min(55vw, 17rem);
+    transform: none;
+    max-width: none;
+    min-width: 0;
+    padding: 0 !important;
+    overflow-wrap: normal;
+  }
+
+  .html-content .ai-content .ai-finishing-stain-copy h2 {
+    max-width: 12ch;
+    font-size: clamp(1.15rem, 5.4vw, 1.9rem);
+    line-height: 0.98;
+    overflow-wrap: normal;
+  }
+
+  .html-content .ai-content .ai-finishing-stain-copy p {
+    max-width: 42ch;
+    margin-top: 0.24rem;
+    font-size: clamp(0.32rem, 1.36vw, 0.48rem);
+    line-height: 1.1;
+  }
+
+  .html-content .ai-content .ai-finishing-stain-rule {
+    width: 1.55rem;
+    height: 2px;
+    margin: 0.2rem 0 0.24rem;
+  }
+
+  .html-content .ai-content .ai-finishing-stain-info {
+    grid-template-columns: 1rem minmax(0, 1fr);
+    gap: 0.22rem;
+    margin-top: 0.24rem;
+  }
+
+  .html-content .ai-content .ai-finishing-stain-info-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+    font-size: 0.42rem;
+  }
+
+  .html-content .ai-content .ai-finishing-stain-info h3 {
+    font-size: 0.42rem;
+    line-height: 1.05;
+  }
+
+  .html-content .ai-content .ai-finishing-stain-info p {
+    margin-top: 0.1rem;
+    font-size: 0.32rem;
+    line-height: 1.08;
+  }
+}
+
+#stain .ai-finishing-stain-banner > .ai-finishing-stain-copy,
+#stain .ai-finishing-stain-banner > .ai-finishing-stain-copy *,
+#stain .ai-finishing-stain-banner > .ai-finishing-stain-copy :is(h2, h3, p, span, strong, em, small, div) {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+#stain .ai-finishing-stain-banner > .ai-finishing-stain-copy::before,
+#stain .ai-finishing-stain-banner > .ai-finishing-stain-copy::after,
+#stain .ai-finishing-stain-banner > .ai-finishing-stain-copy *::before,
+#stain .ai-finishing-stain-banner > .ai-finishing-stain-copy *::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content #oil-finish.ai-finishing-oil-banner-page {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100% !important;
+  min-height: 0 !important;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #f4efe6 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  isolation: isolate;
+}
+
+.html-content .ai-content #oil-finish.ai-finishing-oil-banner-page::before,
+.html-content .ai-content #oil-finish.ai-finishing-oil-banner-page::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-image {
+  position: static !important;
+  inset: auto !important;
+  z-index: auto !important;
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-width: none !important;
+  aspect-ratio: 2006 / 784;
+  object-fit: cover;
+  object-position: center;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy {
+  position: absolute;
+  left: clamp(1.25rem, 4vw, 4rem);
+  top: 43%;
+  z-index: 2;
+  display: block;
+  width: min(43%, 690px);
+  max-width: none;
+  transform: translateY(-50%);
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #20242a !important;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.82);
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy,
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy *,
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy :is(h1, h2, h3, p, span, strong, em, small) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy::before,
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy::after,
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy *::before,
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy *::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy,
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy * {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #20242a !important;
+  font-family: var(--font-heading);
+  font-size: clamp(2.15rem, 4vw, 4.85rem) !important;
+  font-weight: 400;
+  line-height: 0.98 !important;
+  letter-spacing: 0 !important;
+  overflow-wrap: normal;
+}
+
+.html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy p {
+  max-width: 42ch;
+  margin: clamp(0.52rem, 0.78vw, 0.76rem) 0 0;
+  color: #30363e !important;
+  font-family: var(--font-ui);
+  font-size: clamp(0.7rem, 0.78vw, 0.9rem) !important;
+  font-weight: 700;
+  line-height: 1.38 !important;
+  letter-spacing: 0 !important;
+}
+
+@media (max-width: 680px) {
+  .html-content .ai-content #oil-finish.ai-finishing-oil-banner-page {
+    width: min(100%, calc(100vw - 2.6rem));
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .html-content .ai-content #oil-finish > .ai-finishing-oil-banner-image {
+    aspect-ratio: 2006 / 784;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy {
+    left: 0.9rem;
+    right: auto;
+    top: 0.72rem;
+    width: min(55vw, 17rem);
+    transform: none;
+    max-width: none;
+    min-width: 0;
+    padding: 0 !important;
+    overflow-wrap: normal;
+  }
+
+  .html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(1.15rem, 5.4vw, 1.9rem) !important;
+    line-height: 0.98 !important;
+    overflow-wrap: normal;
+  }
+
+  .html-content .ai-content #oil-finish > .ai-finishing-oil-banner-copy p {
+    max-width: 42ch;
+    margin-top: 0.24rem;
+    font-size: clamp(0.32rem, 1.36vw, 0.48rem) !important;
+    line-height: 1.1 !important;
+  }
+}
+
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100% !important;
+  min-height: 0 !important;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #f4efe6 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  contain: none !important;
+  isolation: isolate;
+}
+
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero::before,
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero > .ai-finishing-painted-hero-image {
+  position: static !important;
+  inset: auto !important;
+  z-index: auto !important;
+  display: block;
+  width: 100%;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: none !important;
+  aspect-ratio: 2006 / 784;
+  object-fit: cover;
+  object-position: center;
+  transform: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero > .ai-finishing-painted-copy {
+  position: absolute;
+  left: clamp(1.25rem, 4vw, 4rem);
+  top: 43%;
+  z-index: 2;
+  display: block;
+  width: min(43%, 690px);
+  max-width: none;
+  transform: translateY(-50%);
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #20242a !important;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.82);
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero > .ai-finishing-painted-copy,
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero > .ai-finishing-painted-copy *,
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero > .ai-finishing-painted-copy :is(h1, h2, h3, p, span, strong, em, small) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero > .ai-finishing-painted-copy::before,
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero > .ai-finishing-painted-copy::after,
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero > .ai-finishing-painted-copy *::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero > .ai-finishing-painted-copy,
+.html-content .ai-content #painted-finish .ai-finishing-painted-hero > .ai-finishing-painted-copy * {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+.html-content .ai-content #painted-finish .ai-finishing-painted-copy .ai-finishing-painted-eyebrow {
+  max-width: 42ch;
+  margin: 0 0 clamp(0.36rem, 0.52vw, 0.52rem);
+  color: #20242a !important;
+  font-family: var(--font-ui);
+  font-size: clamp(0.66rem, 0.74vw, 0.86rem);
+  font-weight: 900;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+
+.html-content .ai-content #painted-finish .ai-finishing-painted-copy h2 {
+  max-width: 13ch;
+  margin: 0;
+  color: #20242a !important;
+  font-family: var(--font-heading);
+  font-size: clamp(2.15rem, 4vw, 4.85rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+  overflow-wrap: normal;
+}
+
+.html-content .ai-content #painted-finish .ai-finishing-painted-copy h2::after {
+  content: '';
+  display: block;
+  width: clamp(34px, 3.6vw, 58px);
+  height: 3px;
+  margin: clamp(0.48rem, 0.7vw, 0.78rem) 0 clamp(0.78rem, 1vw, 1.1rem);
+  background: #8b552c !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content #painted-finish .ai-finishing-painted-copy p {
+  max-width: 42ch;
+  margin: clamp(0.52rem, 0.78vw, 0.76rem) 0 0;
+  color: #30363e !important;
+  font-family: var(--font-ui);
+  font-size: clamp(0.7rem, 0.78vw, 0.9rem) !important;
+  font-weight: 700;
+  line-height: 1.38 !important;
+  letter-spacing: 0 !important;
+}
+
+@media (max-width: 680px) {
+  .html-content .ai-content #painted-finish .ai-finishing-painted-hero {
+    width: min(100%, calc(100vw - 2.6rem));
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .html-content .ai-content #painted-finish .ai-finishing-painted-hero > .ai-finishing-painted-hero-image {
+    aspect-ratio: 2006 / 784;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .html-content .ai-content #painted-finish .ai-finishing-painted-hero > .ai-finishing-painted-copy {
+    left: 0.9rem;
+    right: auto;
+    top: 0.72rem;
+    width: min(55vw, 17rem);
+    transform: none;
+    max-width: none;
+    min-width: 0;
+    padding: 0 !important;
+    overflow-wrap: normal;
+  }
+
+  .html-content .ai-content #painted-finish .ai-finishing-painted-copy .ai-finishing-painted-eyebrow {
+    margin-bottom: 0.16rem;
+    font-size: clamp(0.3rem, 1.22vw, 0.44rem);
+    line-height: 1.05;
+  }
+
+  .html-content .ai-content #painted-finish .ai-finishing-painted-copy h2 {
+    max-width: 13ch;
+    font-size: clamp(1.15rem, 5.4vw, 1.9rem);
+    line-height: 0.98;
+    overflow-wrap: normal;
+  }
+
+  .html-content .ai-content #painted-finish .ai-finishing-painted-copy h2::after {
+    width: 1.55rem;
+    height: 2px;
+    margin: 0.2rem 0 0.24rem;
+  }
+
+  .html-content .ai-content #painted-finish .ai-finishing-painted-copy p {
+    max-width: 42ch;
+    margin-top: 0.24rem;
+    font-size: clamp(0.32rem, 1.36vw, 0.48rem) !important;
+    line-height: 1.1 !important;
+  }
+}
+
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100% !important;
+  min-height: 0 !important;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #f4efe6 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  isolation: isolate;
+}
+
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner::before,
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-image {
+  position: static !important;
+  inset: auto !important;
+  z-index: auto !important;
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-width: none !important;
+  aspect-ratio: 2006 / 784;
+  object-fit: cover;
+  object-position: center;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-copy {
+  position: absolute;
+  left: clamp(1.25rem, 4vw, 4rem);
+  top: 43%;
+  z-index: 2;
+  display: block;
+  width: min(43%, 690px);
+  max-width: none;
+  transform: translateY(-50%);
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #20242a !important;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.82);
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-copy,
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-copy *,
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-copy :is(h1, h2, h3, p, span, strong, em, small) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-copy::before,
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-copy::after,
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-copy *::before,
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-copy *::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-copy,
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-copy * {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner-copy h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #20242a !important;
+  font-family: var(--font-heading);
+  font-size: clamp(2.15rem, 4vw, 4.85rem) !important;
+  font-weight: 400;
+  line-height: 0.98 !important;
+  letter-spacing: 0 !important;
+  overflow-wrap: normal;
+}
+
+.html-content .ai-content #matte-finish .ai-finishing-matte-banner-copy p {
+  max-width: 42ch;
+  margin: clamp(0.52rem, 0.78vw, 0.76rem) 0 0;
+  color: #30363e !important;
+  font-family: var(--font-ui);
+  font-size: clamp(0.7rem, 0.78vw, 0.9rem) !important;
+  font-weight: 700;
+  line-height: 1.38 !important;
+  letter-spacing: 0 !important;
+}
+
+@media (max-width: 680px) {
+  .html-content .ai-content #matte-finish .ai-finishing-matte-banner {
+    width: min(100%, calc(100vw - 2.6rem));
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-image {
+    aspect-ratio: 2006 / 784;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .html-content .ai-content #matte-finish .ai-finishing-matte-banner > .ai-finishing-matte-banner-copy {
+    left: 0.9rem;
+    right: auto;
+    top: 0.72rem;
+    width: min(55vw, 17rem);
+    transform: none;
+    max-width: none;
+    min-width: 0;
+    padding: 0 !important;
+    overflow-wrap: normal;
+  }
+
+  .html-content .ai-content #matte-finish .ai-finishing-matte-banner-copy h1 {
+    max-width: 12ch;
+    font-size: clamp(1.15rem, 5.4vw, 1.9rem) !important;
+    line-height: 0.98 !important;
+    overflow-wrap: normal;
+  }
+
+  .html-content .ai-content #matte-finish .ai-finishing-matte-banner-copy p {
+    max-width: 42ch;
+    margin-top: 0.24rem;
+    font-size: clamp(0.32rem, 1.36vw, 0.48rem) !important;
+    line-height: 1.1 !important;
+  }
+}
+
+@media (max-width: 680px) {
+  #matte-finish .ai-finishing-matte-group-grid,
+  #matte-finish .ai-finishing-matte-effect-grid,
+  #matte-finish .ai-finishing-matte-process-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #matte-finish .ai-finishing-matte-process-step {
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 680px) {
+  #oil-finish .ai-finishing-oil-key-visual {
+    display: none !important;
+  }
+
+  #oil-finish .ai-finishing-oil-key-control {
+    grid-template-columns: 1fr !important;
+  }
+
+  #oil-finish .ai-finishing-oil-use-grid,
+  #oil-finish .ai-finishing-oil-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #oil-finish .ai-finishing-oil-process-grid article {
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #oil-finish .ai-finishing-oil-use-grid,
+  #oil-finish .ai-finishing-oil-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .html-content .ai-content:has(#oil-finish) .ai-finishing-oil-key-visual,
+  .html-content .ai-content:has(#oil-finish) .ai-finishing-oil-key-visual *,
+  .html-content .ai-content:has(#oil-finish) .ai-finishing-oil-key-visual::before,
+  .html-content .ai-content:has(#oil-finish) .ai-finishing-oil-key-visual::after {
+    display: none !important;
+  }
+
+  .html-content .ai-content:has(#oil-finish) .ai-finishing-oil-key-control {
+    grid-template-columns: 1fr !important;
+  }
+
+  .html-content .ai-content:has(#oil-finish) .ai-finishing-oil-use-grid,
+  .html-content .ai-content:has(#oil-finish) .ai-finishing-oil-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .html-content .ai-content:has(#oil-finish) .ai-finishing-oil-use-grid,
+  .html-content .ai-content:has(#oil-finish) .ai-finishing-oil-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  #painted-finish .ai-finishing-painted-group-grid,
+  #painted-finish .ai-finishing-painted-effect-grid,
+  #painted-finish .ai-finishing-painted-process-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #painted-finish .ai-finishing-painted-process-step {
+    min-height: 0 !important;
+  }
+
+  #painted-finish .ai-finishing-painted-control-visual,
+  #painted-finish .ai-finishing-painted-control-visual *,
+  #painted-finish .ai-finishing-painted-control-visual::before,
+  #painted-finish .ai-finishing-painted-control-visual::after {
+    display: none !important;
+  }
+
+  #painted-finish .ai-finishing-painted-control-body {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #painted-finish .ai-finishing-painted-group-grid,
+  #painted-finish .ai-finishing-painted-effect-grid,
+  #painted-finish .ai-finishing-painted-process-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .html-content .ai-content:has(#matte-finish) .ai-finishing-matte-control-visual,
+  .html-content .ai-content:has(#matte-finish) .ai-finishing-matte-control-visual *,
+  .html-content .ai-content:has(#matte-finish) .ai-finishing-matte-control-visual::before,
+  .html-content .ai-content:has(#matte-finish) .ai-finishing-matte-control-visual::after {
+    display: none !important;
+  }
+
+  .html-content .ai-content:has(#matte-finish) .ai-finishing-matte-control-body {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #finishing-overview
+    .ai-finishing-overview-copy {
+    left: 0.9rem;
+    top: 0.72rem;
+    width: min(55vw, 17rem);
+    max-width: none;
+    padding: 0 !important;
+    gap: 0;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #finishing-overview
+    .ai-finishing-overview-copy
+    h2 {
+    max-width: 13ch;
+    font-size: clamp(1.15rem, 5.4vw, 1.9rem);
+    font-weight: 400;
+    line-height: 0.98;
+    overflow-wrap: normal;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #finishing-overview
+    .ai-finishing-overview-copy
+    h2::after {
+    width: 1.55rem;
+    height: 2px;
+    margin: 0.2rem 0 0.24rem;
+  }
+
+  .site-shell:not(.is-admin-route):not(.has-global-video):not(.is-home-route)
+    #finishing-overview
+    .ai-finishing-overview-copy
+    p:last-child {
+    max-width: 42ch;
+    margin-top: 0.24rem;
+    font-size: clamp(0.32rem, 1.36vw, 0.48rem);
+    font-weight: 700;
+    line-height: 1.1;
   }
 }

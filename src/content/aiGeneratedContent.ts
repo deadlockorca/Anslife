@@ -950,8 +950,8 @@ const PRODUCTS_FINISHING_NATURAL_FINISH_SECTION_VN = `
       >
       <div class="ai-finishing-natural-copy">
         <h2>Hoàn thiện tự nhiên</h2>
-        <p class="ai-finishing-natural-lead">ANSLIFE phát triển các giải pháp hoàn thiện tự nhiên cho sản phẩm nội thất, veneer, plywood và các vật liệu liên quan với triết lý tôn vinh vẻ đẹp thật của gỗ và kiểm soát chặt chẽ chất lượng bề mặt.</p>
-        <p class="ai-finishing-natural-text">Mọi tiêu chuẩn màu sắc, vân gỗ và cảm giác bề mặt đều được thiết lập theo mẫu duyệt của buyer và duy trì ổn định trong sản xuất hàng loạt.</p>
+        <p class="ai-finishing-natural-lead">ANSLIFE phát triển các giài pháp hoàn thiện tự nhiên cho sản phẩm nội thất, veneer, plywood và các vật liệu liên quan với triết lý tôn vinh về đẹp thật của gỏ và kiểm soát chặt chê chất lượng bề mặt.</p>
+        <p class="ai-finishing-natural-text">Mọi tiêu chuẩn màu sắc, vân gỗ và cảm giác bề mặt đêu được thiết lập theo mẫu duyệt của buyer và duy trì ổn dịnh trong sản xuất hàng loạt.</p>
       </div>
     </header>
 
