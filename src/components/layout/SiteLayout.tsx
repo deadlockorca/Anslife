@@ -1486,11 +1486,6 @@ export default function SiteLayout() {
                   ))}
                 </nav>
 
-                <a className="topbar-hotline" href={`tel:${HEADER_HOTLINE_TEL}`}>
-                  <span aria-hidden="true">☎</span>
-                  <span>{HEADER_HOTLINE_NUMBER}</span>
-                </a>
-
                 {renderLanguageSwitcher('language-switcher-utility')}
               </div>
             </div>

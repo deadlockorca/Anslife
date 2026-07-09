@@ -9595,11 +9595,11 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
           </div>
           <div class="ai-company-info-row">
             <dt>Website</dt>
-            <dd><a href="https://anslife.net" target="_blank" rel="noopener noreferrer">anslife.net</a></dd>
+            <dd><a href="https://anslife.com" target="_blank" rel="noopener noreferrer">anslife.com</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Email</dt>
-            <dd><a href="mailto:global@anslife.net">global@anslife.net</a></dd>
+            <dd><a href="mailto:global@anslife.com">global@anslife.com</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Ngôn ngữ hỗ trợ</dt>
@@ -9631,7 +9631,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.vn">contact@anslife.vn</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>Số điện thoại</dt>
@@ -9904,11 +9904,11 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
           </div>
           <div class="ai-company-info-row">
             <dt>Website</dt>
-            <dd><a href="https://anslife.net" target="_blank" rel="noopener noreferrer">anslife.net</a></dd>
+            <dd><a href="https://anslife.com" target="_blank" rel="noopener noreferrer">anslife.com</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Email</dt>
-            <dd><a href="mailto:global@anslife.net">global@anslife.net</a></dd>
+            <dd><a href="mailto:global@anslife.com">global@anslife.com</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Supported Languages</dt>
@@ -9940,7 +9940,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.vn">contact@anslife.vn</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>Phone</dt>
@@ -10057,11 +10057,11 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
           </div>
           <div class="ai-company-info-row">
             <dt>ウェブサイト</dt>
-            <dd><a href="https://anslife.net" target="_blank" rel="noopener noreferrer">anslife.net</a></dd>
+            <dd><a href="https://anslife.com" target="_blank" rel="noopener noreferrer">anslife.com</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Email</dt>
-            <dd><a href="mailto:global@anslife.net">global@anslife.net</a></dd>
+            <dd><a href="mailto:global@anslife.com">global@anslife.com</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>対応言語</dt>
@@ -10093,7 +10093,7 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.vn">contact@anslife.vn</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>電話番号</dt>
@@ -10210,11 +10210,11 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
           </div>
           <div class="ai-company-info-row">
             <dt>웹사이트</dt>
-            <dd><a href="https://anslife.net" target="_blank" rel="noopener noreferrer">anslife.net</a></dd>
+            <dd><a href="https://anslife.com" target="_blank" rel="noopener noreferrer">anslife.com</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Email</dt>
-            <dd><a href="mailto:global@anslife.net">global@anslife.net</a></dd>
+            <dd><a href="mailto:global@anslife.com">global@anslife.com</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>지원 언어</dt>
@@ -10246,7 +10246,7 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.vn">contact@anslife.vn</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>전화번호</dt>

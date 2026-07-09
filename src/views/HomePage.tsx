@@ -389,8 +389,8 @@ export default function HomePage() {
       {
         id: 'factory',
         icon: '🏭',
-        title: t('Nhà máy'),
-        to: '/manufacturing/factory-overview',
+        title: t('Vận hành'),
+        to: '/products-solutions/operations-supply-solutions',
       },
       {
         id: 'products',
