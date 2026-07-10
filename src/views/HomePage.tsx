@@ -394,9 +394,9 @@ export default function HomePage() {
       },
       {
         id: 'products',
-        icon: '🪑',
-        title: t('Sản phẩm'),
-        to: '/products',
+        icon: '❓',
+        title: t('Hỏi đáp'),
+        to: '/resources/faq',
       },
       {
         id: 'materials',

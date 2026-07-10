@@ -15104,7 +15104,7 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                     <h3>{buyer.name}</h3>
                     <ul>
                       {buyer.items.map((item) => (
-                        <li key={item}>{item}</li>
+                        <li key={item}>{t(item)}</li>
                       ))}
                     </ul>
                   </div>
