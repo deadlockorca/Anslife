@@ -1944,7 +1944,8 @@ const TRANSLATIONS: Partial<Record<
       'State the desired timeline for receiving the quote or starting execution.',
     'Cho biết điều kiện giao hàng dự kiến để tư vấn phù hợp.':
       'Share the expected delivery terms so we can advise accordingly.',
-    'Sản xuất và xuất khẩu nội thất gỗ.': 'Wood furniture manufacturing and export.',
+    'Hệ thống sản xuất, cung ứng và xuất khẩu nội thất tại Việt Nam.':
+      'Furniture manufacturing, supply and export system in Vietnam.',
     'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
       'Warehousing, shipment coordination, and partner standard room in Vietnam.',
     'Tổng quan mô hình lưu kho, gom hàng, điều phối xuất khẩu và phòng mẫu chuẩn đối tác.':
@@ -2636,7 +2637,8 @@ const TRANSLATIONS: Partial<Record<
       '見積受領および着手を希望される時期をお知らせください。',
     'Cho biết điều kiện giao hàng dự kiến để tư vấn phù hợp.':
       '想定される納品条件をお知らせいただければ適切にご提案いたします。',
-    'Sản xuất và xuất khẩu nội thất gỗ.': '木製家具の製造と輸出。',
+    'Hệ thống sản xuất, cung ứng và xuất khẩu nội thất tại Việt Nam.':
+      'ベトナムにおける家具の製造・供給・輸出システム。',
     'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
       'ベトナムでの倉庫保管、出荷調整、パートナー標準ルーム。',
     'Tổng quan mô hình Supply Hub': 'Supply Hubモデル概要',
@@ -3327,7 +3329,8 @@ const TRANSLATIONS: Partial<Record<
       '견적 수령 및 진행을 희망하는 일정을 알려 주세요.',
     'Cho biết điều kiện giao hàng dự kiến để tư vấn phù hợp.':
       '예상 배송 조건을 알려 주시면 그에 맞추어 안내해 드립니다.',
-    'Sản xuất và xuất khẩu nội thất gỗ.': '목재 가구 제조 및 수출.',
+    'Hệ thống sản xuất, cung ứng và xuất khẩu nội thất tại Việt Nam.':
+      '베트남의 가구 생산, 공급 및 수출 시스템.',
     'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
       '베트남 내 창고 보관, 출하 조율 및 파트너 표준룸.',
     'Tổng quan mô hình Supply Hub': 'Supply Hub 모델 개요',
@@ -3436,7 +3439,8 @@ const TRANSLATIONS: Partial<Record<
       'Skicka din förfrågan idag så svarar ANSLIFE-teamet så snart som möjligt.',
     'Gửi yêu cầu': 'Skicka förfrågan',
     'Tải tài liệu / bản vẽ lên': 'Ladda upp dokument / ritningar',
-    'Sản xuất và xuất khẩu nội thất gỗ.': 'Tillverkning och export av trämöbler.',
+    'Hệ thống sản xuất, cung ứng và xuất khẩu nội thất tại Việt Nam.':
+      'System för möbeltillverkning, försörjning och export i Vietnam.',
     'Trung tâm cung ứng Việt Nam': 'Vietnams Supply Hub',
     'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
       'Lagerhållning, leveranssamordning och partnerns standardrum i Vietnam.',
@@ -3549,7 +3553,8 @@ const TRANSLATIONS: Partial<Record<
       'Envoyez votre demande aujourd’hui, l’équipe ANSLIFE vous répondra dès que possible.',
     'Gửi yêu cầu': 'Envoyer une demande',
     'Tải tài liệu / bản vẽ lên': 'Téléverser documents / plans',
-    'Sản xuất và xuất khẩu nội thất gỗ.': 'Fabrication et exportation de meubles en bois.',
+    'Hệ thống sản xuất, cung ứng và xuất khẩu nội thất tại Việt Nam.':
+      'Système de production, d’approvisionnement et d’exportation de mobilier au Vietnam.',
     'Trung tâm cung ứng Việt Nam': 'Hub d’approvisionnement au Vietnam',
     'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
       'Stockage, coordination des expéditions et salle standard partenaire au Vietnam.',
@@ -3663,7 +3668,8 @@ const TRANSLATIONS: Partial<Record<
     'Tải tài liệu / bản vẽ lên': 'Загрузить документы / чертежи',
     'Tải bản vẽ lên': 'Загрузить чертеж',
     'Liên hệ ANSLIFE': 'Связаться с ANSLIFE',
-    'Sản xuất và xuất khẩu nội thất gỗ.': 'Производство и экспорт деревянной мебели.',
+    'Hệ thống sản xuất, cung ứng và xuất khẩu nội thất tại Việt Nam.':
+      'Система производства, поставок и экспорта мебели во Вьетнаме.',
     'Trung tâm cung ứng Việt Nam': 'Центр поставок во Вьетнаме',
     'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
       'Хранение, координация отгрузок и стандартная комната партнера во Вьетнаме.',
@@ -3776,7 +3782,8 @@ const TRANSLATIONS: Partial<Record<
       'Envía tu solicitud hoy y el equipo de ANSLIFE responderá lo antes posible.',
     'Gửi yêu cầu': 'Enviar solicitud',
     'Tải tài liệu / bản vẽ lên': 'Subir documentos / planos',
-    'Sản xuất và xuất khẩu nội thất gỗ.': 'Fabricación y exportación de muebles de madera.',
+    'Hệ thống sản xuất, cung ứng và xuất khẩu nội thất tại Việt Nam.':
+      'Sistema de producción, suministro y exportación de mobiliario en Vietnam.',
     'Trung tâm cung ứng Việt Nam': 'Centro de Suministro en Vietnam',
     'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
       'Almacenamiento, coordinación de envíos y sala estándar del socio en Vietnam.',
@@ -3888,7 +3895,8 @@ const TRANSLATIONS: Partial<Record<
       '今天发送需求，ANSLIFE 团队会尽快回复。',
     'Gửi yêu cầu': '发送需求',
     'Tải tài liệu / bản vẽ lên': '上传资料 / 图纸',
-    'Sản xuất và xuất khẩu nội thất gỗ.': '木制家具制造与出口。',
+    'Hệ thống sản xuất, cung ứng và xuất khẩu nội thất tại Việt Nam.':
+      '越南家具生产、供应与出口体系。',
     'Trung tâm cung ứng Việt Nam': '越南供应中心',
     'Lưu kho, điều phối xuất hàng và phòng mẫu chuẩn đối tác tại Việt Nam.':
       '越南仓储、出货协调与合作伙伴标准样品室。',

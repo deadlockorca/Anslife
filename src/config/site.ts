@@ -735,7 +735,7 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
       {
         id: 'buyer-specific-standards',
         title: 'Tiêu chuẩn riêng của buyer',
-        description: 'Yêu cầu riêng theo buyer và thị trường.',
+        description: '',
       },
       {
         id: 'buyer-standard-room',

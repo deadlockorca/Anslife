@@ -1949,7 +1949,7 @@ export default function SiteLayout() {
                 />
               </Link>
               <p className="site-footer-company-copy">
-                {t('Sản xuất và xuất khẩu nội thất gỗ.')}
+                {t('Hệ thống sản xuất, cung ứng và xuất khẩu nội thất tại Việt Nam.')}
               </p>
               <SocialLinks className="site-footer-social-icons" />
             </section>

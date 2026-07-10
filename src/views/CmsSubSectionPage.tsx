@@ -400,6 +400,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
     config.slug === 'quality-control' && section.id === 'packing-standard' && !detailSlug;
   const isQualityControlInspectionReportPage =
     config.slug === 'quality-control' && section.id === 'inspection-report' && !detailSlug;
+  const isQualityControlBuyerSpecificStandardsPage =
+    config.slug === 'quality-control' && section.id === 'buyer-specific-standards' && !detailSlug;
   const isResourcesManufacturingNotesPage =
     config.slug === 'resources' && section.id === 'manufacturing-notes' && !detailSlug;
   const isResourcesExportKnowledgePage =
@@ -622,6 +624,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
   const shouldShowQualityControlMoistureControlBanner = isQualityControlMoistureControlPage;
   const shouldShowQualityControlPackingStandardBanner = isQualityControlPackingStandardPage;
   const shouldShowQualityControlInspectionReportBanner = isQualityControlInspectionReportPage;
+  const shouldShowQualityControlBuyerSpecificStandardsBanner =
+    isQualityControlBuyerSpecificStandardsPage;
   const shouldShowResourcesManufacturingNotesBanner = isResourcesManufacturingNotesPage;
   const shouldShowResourcesExportKnowledgeBanner = isResourcesExportKnowledgePage;
   const shouldShowResourcesCaseStudiesBanner = isResourcesCaseStudiesPage;
@@ -14792,6 +14796,340 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             </p>
           </figcaption>
         </figure>
+      )}
+      {shouldShowQualityControlBuyerSpecificStandardsBanner && (
+        <figure className="quality-control-buyer-specific-standards-banner">
+          <img
+            src="/assets/quality-control/buyer-specific-standards/banner.webp"
+            alt={t('Banner tiêu chuẩn riêng của buyer')}
+            loading="eager"
+            decoding="async"
+          />
+          <figcaption className="quality-control-buyer-specific-standards-banner-copy">
+            <h1>{t('Tiêu chuẩn riêng của Buyer')}</h1>
+            <span>
+              {t(
+                'Quản lý và triển khai các tiêu chuẩn riêng theo yêu cầu của từng khách hàng và từng thị trường.',
+              )}
+            </span>
+            <p>
+              {t(
+                'ANSLIFE hỗ trợ tiếp nhận, quản lý và triển khai các tiêu chuẩn này xuyên suốt quá trình sản xuất nhằm đâm bảo tính nhất quán giữa mẫu duyệt, sản xuất hàng loạt và các đơn hàng lập lại.',
+              )}
+            </p>
+          </figcaption>
+        </figure>
+      )}
+      {isQualityControlBuyerSpecificStandardsPage && (
+        <section
+          className="quality-control-buyer-specific-standards-content"
+          aria-labelledby="quality-control-buyer-specific-standards-managed-title"
+        >
+          <section className="quality-control-buyer-specific-standards-panel">
+            <h2 id="quality-control-buyer-specific-standards-managed-title">
+              {`1. ${t('Những tiêu chuẩn nào có thể được quản lý?')}`}
+            </h2>
+            <div className="quality-control-buyer-specific-standards-grid">
+              {[
+                {
+                  number: '01',
+                  title: 'Tiêu chuẩn sản phẩm',
+                  body: 'Yêu cầu về kích thước, kết cấu, dung sai và chức năng sử dụng của sản phẩm.',
+                  examples: 'Ví dụ: Kích thước, Dung sai, Khả năng chịu tải, Tiêu chuẩn lắp ráp.',
+                },
+                {
+                  number: '02',
+                  title: 'Tiêu chuẩn vật liệu',
+                  body: 'Yêu cầu về chủng loại, nguồn gốc và đặc tính vật liệu sử dụng.',
+                  examples: 'Ví dụ: Loại gỗ, Veneer, Foam, Vải, Da, Vật liệu tự nhiên.',
+                },
+                {
+                  number: '03',
+                  title: 'Tiêu chuẩn hoàn thiện',
+                  body: 'Yêu cầu về màu sắc, stain, độ bóng, độ mờ và chất lượng bề mặt.',
+                  examples: 'Ví dụ: Mẫu màu, Bảng stain, Gloss level, Matte finish, Oil finish.',
+                },
+                {
+                  number: '04',
+                  title: 'Tiêu chuẩn chất lượng',
+                  body: 'Các tiêu chí đánh giá sản phẩm trong quá trình kiểm tra và nghiệm thu.',
+                  examples: 'Ví dụ: Checklist QC, Tiêu chí chấp nhận lỗi, Phương pháp kiểm tra.',
+                },
+                {
+                  number: '05',
+                  title: 'Tiêu chuẩn báo cáo',
+                  body: 'Yêu cầu về nội dung và hình thức báo cáo kiểm tra.',
+                  examples: 'Ví dụ: Mẫu báo cáo QC, Hình ảnh bắt buộc, Hồ sơ lưu trữ.',
+                },
+              ].map((item) => (
+                <article key={item.number}>
+                  <h3>
+                    <span>{`${item.number}.`}</span>
+                    {t(item.title)}
+                  </h3>
+                  <div
+                    className="quality-control-buyer-specific-standards-image-slot"
+                    aria-hidden="true"
+                  />
+                  <p>{t(item.body)}</p>
+                  <p>{t(item.examples)}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-buyer-specific-standards-panel quality-control-buyer-specific-standards-process">
+            <h2>{`2. ${t('Quy trình quản lý tiêu chuẩn Buyer')}`}</h2>
+            <div className="quality-control-buyer-specific-standards-process-flow">
+              {[
+                {
+                  number: '01',
+                  title: 'Tiếp nhận tiêu chuẩn',
+                  body: 'Thu thập các tài liệu, tiêu chuẩn và yêu cầu liên quan từ buyer.',
+                  bullets: [],
+                },
+                {
+                  number: '02',
+                  title: 'Rà soát & xác nhận',
+                  body: 'Đánh giá tính khả thi và làm rõ các yêu cầu trước khi triển khai.',
+                  bullets: [],
+                },
+                {
+                  number: '03',
+                  title: 'Lưu trữ hồ sơ',
+                  body: 'Thiết lập hồ sơ tiêu chuẩn riêng cho từng buyer và từng dự án.',
+                  bullets: [],
+                },
+                {
+                  number: '04',
+                  title: 'Triển khai sản xuất',
+                  body: 'Chuyển đổi tiêu chuẩn thành các yêu cầu cụ thể cho vật liệu, sản xuất, QC và đóng gói.',
+                  bullets: [],
+                },
+                {
+                  number: '05',
+                  title: 'Kiểm tra & đối chiếu',
+                  body: 'Mọi hoạt động kiểm tra đều được đối chiếu với tiêu chuẩn đã được xác nhận.',
+                  bullets: [],
+                },
+                {
+                  number: '06',
+                  title: 'Lưu cho đơn hàng lặp lại',
+                  body: 'Tiêu chuẩn được lưu giữ nhằm đảm bảo tính nhất quán giữa các đợt sản xuất.',
+                  bullets: [],
+                },
+              ].map((item, index) => (
+                <div className="quality-control-buyer-specific-standards-process-step-wrap" key={item.number}>
+                  <article>
+                    <h3>
+                      <span>{item.number}</span>
+                    </h3>
+                    <h4>{t(item.title)}</h4>
+                    <div
+                      className="quality-control-buyer-specific-standards-process-image-slot"
+                      aria-hidden="true"
+                    />
+                    <p>{t(item.body)}</p>
+                    {item.bullets.length > 0 && (
+                      <ul>
+                        {item.bullets.map((bullet) => (
+                          <li key={bullet}>{bullet}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </article>
+                  {index < 5 && (
+                    <span
+                      className="quality-control-buyer-specific-standards-process-arrow"
+                      aria-hidden="true"
+                    >
+                      →
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-buyer-specific-standards-panel quality-control-buyer-specific-standards-system">
+            <h2>{`3. ${t('Hệ thống quản lý tiêu chuẩn Buyer')}`}</h2>
+            <div className="quality-control-buyer-specific-standards-system-grid">
+              {[
+                {
+                  number: '01',
+                  title: 'Hồ sơ kỹ thuật',
+                  bullets: ['Bản vẽ', 'Thông số kỹ thuật', 'BOM'],
+                },
+                {
+                  number: '02',
+                  title: 'Mẫu duyệt',
+                  bullets: ['Mẫu sản phẩm', 'Mẫu cấu kiện', 'Mẫu vật liệu'],
+                },
+                {
+                  number: '03',
+                  title: 'Bảng màu & hoàn thiện',
+                  bullets: ['Stain', 'Color Sample', 'Finish Sample'],
+                },
+                {
+                  number: '04',
+                  title: 'Checklist QC',
+                  bullets: ['Tiêu chuẩn kiểm tra', 'Tiêu chí chấp nhận'],
+                },
+                {
+                  number: '05',
+                  title: 'Tiêu chuẩn đóng gói',
+                  bullets: ['Carton', 'Label', 'Pallet', 'Container'],
+                },
+              ].map((item) => (
+                <article key={item.number}>
+                  <h3>
+                    <span>{`${item.number}.`}</span>
+                    {t(item.title)}
+                  </h3>
+                  <div
+                    className="quality-control-buyer-specific-standards-system-image-slot"
+                    aria-hidden="true"
+                  />
+                  <ul>
+                    {item.bullets.map((bullet) => (
+                      <li key={bullet}>{t(bullet)}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-buyer-specific-standards-panel quality-control-buyer-specific-standards-importance">
+            <h2>{`4. ${t('Tại sao điều này quan trọng?')}`}</h2>
+            <div className="quality-control-buyer-specific-standards-importance-flow">
+              {[
+                'Tiêu chuẩn Buyer',
+                'Sản xuất đúng yêu cầu',
+                'Kiểm tra đúng tiêu chuẩn',
+                'Đóng gói đúng quy cách',
+                'Giao hàng đúng cam kết',
+                'Giảm khiếu nại',
+              ].map((item, index, items) => (
+                <div
+                  className="quality-control-buyer-specific-standards-importance-step-wrap"
+                  key={item}
+                >
+                  <article>
+                    <div
+                      className="quality-control-buyer-specific-standards-importance-image-slot"
+                      aria-hidden="true"
+                    />
+                    <h3>{t(item)}</h3>
+                  </article>
+                  {index < items.length - 1 && (
+                    <span
+                      className="quality-control-buyer-specific-standards-importance-arrow"
+                      aria-hidden="true"
+                    >
+                      →
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-buyer-specific-standards-panel quality-control-buyer-specific-standards-standard-room">
+            <div className="quality-control-buyer-specific-standards-standard-room-copy">
+              <h2>{`5. ${t('Liên kết với Phòng mẫu chuẩn đối tác')}`}</h2>
+              <p>
+                {t(
+                  'ANSLIFE có thể lưu trữ và quản lý tiêu chuẩn riêng của từng buyer trong hệ thống Phòng mẫu chuẩn đối tác, bao gồm:',
+                )}
+              </p>
+              <ul>
+                {[
+                  'Mẫu sản phẩm đã duyệt',
+                  'Mẫu vật liệu',
+                  'Bảng màu',
+                  'Bản vẽ kỹ thuật',
+                  'Checklist QC',
+                  'Tiêu chuẩn đóng gói',
+                  'Hồ sơ báo cáo chất lượng',
+                ].map((item) => (
+                  <li key={item}>{t(item)}</li>
+                ))}
+              </ul>
+              <p>
+                {t(
+                  'Điều này giúp duy trì tính nhất quán giữa nhiều nhà máy, nhiều dự án và nhiều năm hợp tác.',
+                )}
+              </p>
+            </div>
+            <div
+              className="quality-control-buyer-specific-standards-standard-room-image-slot"
+              aria-hidden="true"
+            />
+          </section>
+          <section className="quality-control-buyer-specific-standards-panel quality-control-buyer-specific-standards-buyer-examples">
+            <h2>{`6. ${t('Buyer tiêu biểu thường có những gì?')}`}</h2>
+            <div className="quality-control-buyer-specific-standards-buyer-grid">
+              {[
+                {
+                  name: 'Buyer A',
+                  items: [
+                    'QC Checklist',
+                    'Packaging Guideline',
+                    'Color Standard',
+                    'Product Specification',
+                  ],
+                },
+                {
+                  name: 'Buyer B',
+                  items: [
+                    'Approved Sample',
+                    'Material Standard',
+                    'Inspection Method',
+                    'Reporting Format',
+                  ],
+                },
+                {
+                  name: 'Buyer C',
+                  items: [
+                    'Product Manual',
+                    'Finish Standard',
+                    'Label Requirement',
+                    'Shipping Requirement',
+                  ],
+                },
+              ].map((buyer) => (
+                <article key={buyer.name}>
+                  <div
+                    className="quality-control-buyer-specific-standards-buyer-image-slot"
+                    aria-hidden="true"
+                  />
+                  <div className="quality-control-buyer-specific-standards-buyer-copy">
+                    <h3>{buyer.name}</h3>
+                    <ul>
+                      {buyer.items.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="quality-control-buyer-specific-standards-panel quality-control-buyer-specific-standards-cta">
+            <div className="quality-control-buyer-specific-standards-cta-copy">
+              <h2>{t('Trao đổi về tiêu chuẩn riêng của Buyer')}</h2>
+              <p>
+                {t(
+                  'Buyer có thể gửi tiêu chuẩn sản phẩm, checklist QC, bảng màu, mẫu duyệt hoặc yêu cầu đóng gói để ANSLIFE tiếp nhận, rà soát và đề xuất phương án quản lý phù hợp.',
+                )}
+              </p>
+            </div>
+            <div className="quality-control-buyer-specific-standards-cta-actions">
+              <a className="is-primary" href="/vn/contact/upload-drawing">
+                {t('Gửi tiêu chuẩn')}
+              </a>
+              <a href="/vn/contact/upload-drawing">{t('Tải tài liệu')}</a>
+              <a href="/vn/contact">{t('Liên hệ ANSLIFE')}</a>
+            </div>
+          </section>
+        </section>
       )}
       {isQualityControlInspectionReportPage && (
         <section
