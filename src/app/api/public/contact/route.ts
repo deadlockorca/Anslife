@@ -86,8 +86,7 @@ export async function POST(request: Request) {
   if (leadError) {
     return NextResponse.json({
       status: 'mail_sent',
-      message:
-        'Yêu cầu đã được gửi qua email. Hệ thống lưu dữ liệu đang tạm thời không khả dụng.',
+      message: 'Yêu cầu đã được gửi qua email.',
     }, { headers });
   }
 
