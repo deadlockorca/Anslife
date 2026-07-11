@@ -725,6 +725,380 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
   },
 };
 
+const REQUEST_QUOTATION_PAGE_TRANSLATIONS: Partial<
+  Record<Exclude<LanguageCode, typeof VIETNAMESE>, Partial<Record<string, string>>>
+> = {
+  en: {
+    'Liên hệ với chúng tôi': 'Contact us',
+    'Chúng tôi luôn sẫn sàng lắng nghe và hỗ trợ bạn.':
+      'We are always ready to listen and support you.',
+    'Vui lòng điền thông tin vào biểu mẫu bên dưới.':
+      'Please fill in the form below.',
+    'Thông tin liên hệ': 'Contact information',
+    'Họ và tên': 'Full name',
+    'Nhập họ và tên': 'Enter your full name',
+    'Nhập email của bạn': 'Enter your email',
+    'Số điện thoại': 'Phone number',
+    'Nhập số điện thoại': 'Enter your phone number',
+    'Công ty / Tổ chức': 'Company / Organization',
+    'Nhập tên công ty hoặc tổ chức': 'Enter company or organization name',
+    'Quốc gia / Vùng lãnh thổ': 'Country / Region',
+    'Chọn quốc gia / vùng lãnh thổ': 'Select country / region',
+    Nhật: 'Japan',
+    EU: 'EU',
+    Mỹ: 'United States',
+    'Hàn Quốc': 'South Korea',
+    'Trung Quốc': 'China',
+    Úc: 'Australia',
+    Canada: 'Canada',
+    'Việt Nam': 'Vietnam',
+    'Nội dung liên hệ': 'Message',
+    'Vui lòng mô tả chi tiết yêu cầu của bạn':
+      'Please describe your request in detail',
+    'Tôi đồng ý để ANSLIFE xử lý thông tin theo':
+      'I agree for ANSLIFE to process my information according to',
+    'Chính sách bảo mật': 'Privacy Policy',
+    'Cần hỗ trợ nhanh?': 'Need quick support?',
+    'Liên hệ trực tiếp với chúng tôi qua:': 'Contact us directly via:',
+    'Thứ 2 - Thứ 6: 08:00 - 17:30': 'Monday - Friday: 08:00 - 17:30',
+    'Cam kết hỗ trợ': 'Support commitments',
+    'Bảo mật thông tin': 'Information security',
+    'Cam kết bảo mật tuyệt đối thông tin của khách hàng.':
+      'We are committed to protecting customer information.',
+    'Phản hồi nhanh chóng': 'Fast response',
+    'Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.':
+      'We will respond within 24 working hours.',
+    'Hỗ trợ tận tâm': 'Dedicated support',
+    'Đội ngũ chuyên nghiệp sẵn sàng hỗ trợ bạn.':
+      'Our professional team is ready to support you.',
+    'Toàn cầu': 'Global',
+    'Kết nối và phục vụ khách hàng trên toàn thế giới.':
+      'Connecting and serving customers worldwide.',
+  },
+  jp: {
+    'Liên hệ với chúng tôi': 'お問い合わせ',
+    'Chúng tôi luôn sẫn sàng lắng nghe và hỗ trợ bạn.':
+      '私たちはいつでもご相談を伺い、サポートいたします。',
+    'Vui lòng điền thông tin vào biểu mẫu bên dưới.':
+      '以下のフォームに情報をご記入ください。',
+    'Thông tin liên hệ': '連絡先情報',
+    'Họ và tên': '氏名',
+    'Nhập họ và tên': '氏名を入力',
+    'Nhập email của bạn': 'メールアドレスを入力',
+    'Số điện thoại': '電話番号',
+    'Nhập số điện thoại': '電話番号を入力',
+    'Công ty / Tổ chức': '会社 / 組織',
+    'Nhập tên công ty hoặc tổ chức': '会社名または組織名を入力',
+    'Quốc gia / Vùng lãnh thổ': '国 / 地域',
+    'Chọn quốc gia / vùng lãnh thổ': '国 / 地域を選択',
+    Nhật: '日本',
+    EU: 'EU',
+    Mỹ: '米国',
+    'Hàn Quốc': '韓国',
+    'Trung Quốc': '中国',
+    Úc: 'オーストラリア',
+    Canada: 'カナダ',
+    'Việt Nam': 'ベトナム',
+    'Nội dung liên hệ': 'お問い合わせ内容',
+    'Vui lòng mô tả chi tiết yêu cầu của bạn': 'ご要望の詳細をご記入ください',
+    'Tôi đồng ý để ANSLIFE xử lý thông tin theo':
+      'ANSLIFEが以下に従って情報を処理することに同意します',
+    'Chính sách bảo mật': 'プライバシーポリシー',
+    'Cần hỗ trợ nhanh?': 'お急ぎのサポートが必要ですか？',
+    'Liên hệ trực tiếp với chúng tôi qua:': '以下から直接お問い合わせください:',
+    'Thứ 2 - Thứ 6: 08:00 - 17:30': '月曜日 - 金曜日: 08:00 - 17:30',
+    'Cam kết hỗ trợ': 'サポートへの取り組み',
+    'Bảo mật thông tin': '情報セキュリティ',
+    'Cam kết bảo mật tuyệt đối thông tin của khách hàng.':
+      'お客様情報の保護に責任を持って取り組みます。',
+    'Phản hồi nhanh chóng': '迅速な返信',
+    'Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.':
+      '24営業時間以内に返信いたします。',
+    'Hỗ trợ tận tâm': '丁寧なサポート',
+    'Đội ngũ chuyên nghiệp sẵn sàng hỗ trợ bạn.':
+      '専門チームがいつでもサポートいたします。',
+    'Toàn cầu': 'グローバル',
+    'Kết nối và phục vụ khách hàng trên toàn thế giới.':
+      '世界中のお客様とつながり、サービスを提供します。',
+  },
+  kr: {
+    'Liên hệ với chúng tôi': '문의하기',
+    'Chúng tôi luôn sẫn sàng lắng nghe và hỗ trợ bạn.':
+      '언제든지 귀하의 의견을 듣고 지원할 준비가 되어 있습니다.',
+    'Vui lòng điền thông tin vào biểu mẫu bên dưới.':
+      '아래 양식에 정보를 입력해 주세요.',
+    'Thông tin liên hệ': '연락처 정보',
+    'Họ và tên': '성명',
+    'Nhập họ và tên': '성명을 입력하세요',
+    'Nhập email của bạn': '이메일을 입력하세요',
+    'Số điện thoại': '전화번호',
+    'Nhập số điện thoại': '전화번호를 입력하세요',
+    'Công ty / Tổ chức': '회사 / 조직',
+    'Nhập tên công ty hoặc tổ chức': '회사 또는 조직명을 입력하세요',
+    'Quốc gia / Vùng lãnh thổ': '국가 / 지역',
+    'Chọn quốc gia / vùng lãnh thổ': '국가 / 지역 선택',
+    Nhật: '일본',
+    EU: 'EU',
+    Mỹ: '미국',
+    'Hàn Quốc': '한국',
+    'Trung Quốc': '중국',
+    Úc: '호주',
+    Canada: '캐나다',
+    'Việt Nam': '베트남',
+    'Nội dung liên hệ': '문의 내용',
+    'Vui lòng mô tả chi tiết yêu cầu của bạn': '요청 내용을 자세히 입력해 주세요',
+    'Tôi đồng ý để ANSLIFE xử lý thông tin theo':
+      'ANSLIFE가 다음에 따라 내 정보를 처리하는 데 동의합니다',
+    'Chính sách bảo mật': '개인정보 처리방침',
+    'Cần hỗ trợ nhanh?': '빠른 지원이 필요하신가요?',
+    'Liên hệ trực tiếp với chúng tôi qua:': '다음으로 직접 문의하세요:',
+    'Thứ 2 - Thứ 6: 08:00 - 17:30': '월요일 - 금요일: 08:00 - 17:30',
+    'Cam kết hỗ trợ': '지원 약속',
+    'Bảo mật thông tin': '정보 보안',
+    'Cam kết bảo mật tuyệt đối thông tin của khách hàng.':
+      '고객 정보 보호를 철저히 약속합니다.',
+    'Phản hồi nhanh chóng': '빠른 응답',
+    'Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.':
+      '영업시간 기준 24시간 이내에 답변드리겠습니다.',
+    'Hỗ trợ tận tâm': '성실한 지원',
+    'Đội ngũ chuyên nghiệp sẵn sàng hỗ trợ bạn.':
+      '전문 팀이 언제든지 지원할 준비가 되어 있습니다.',
+    'Toàn cầu': '글로벌',
+    'Kết nối và phục vụ khách hàng trên toàn thế giới.':
+      '전 세계 고객과 연결하고 서비스를 제공합니다.',
+  },
+  sv: {
+    'Liên hệ với chúng tôi': 'Kontakta oss',
+    'Chúng tôi luôn sẫn sàng lắng nghe và hỗ trợ bạn.':
+      'Vi är alltid redo att lyssna och hjälpa dig.',
+    'Vui lòng điền thông tin vào biểu mẫu bên dưới.':
+      'Fyll i uppgifterna i formuläret nedan.',
+    'Thông tin liên hệ': 'Kontaktinformation',
+    'Họ và tên': 'Fullständigt namn',
+    'Nhập họ và tên': 'Ange fullständigt namn',
+    'Nhập email của bạn': 'Ange din e-postadress',
+    'Số điện thoại': 'Telefonnummer',
+    'Nhập số điện thoại': 'Ange telefonnummer',
+    'Công ty / Tổ chức': 'Företag / Organisation',
+    'Nhập tên công ty hoặc tổ chức': 'Ange företagets eller organisationens namn',
+    'Quốc gia / Vùng lãnh thổ': 'Land / Region',
+    'Chọn quốc gia / vùng lãnh thổ': 'Välj land / region',
+    Nhật: 'Japan',
+    EU: 'EU',
+    Mỹ: 'USA',
+    'Hàn Quốc': 'Sydkorea',
+    'Trung Quốc': 'Kina',
+    Úc: 'Australien',
+    Canada: 'Kanada',
+    'Việt Nam': 'Vietnam',
+    'Nội dung liên hệ': 'Meddelande',
+    'Vui lòng mô tả chi tiết yêu cầu của bạn': 'Beskriv din förfrågan i detalj',
+    'Tôi đồng ý để ANSLIFE xử lý thông tin theo':
+      'Jag samtycker till att ANSLIFE behandlar mina uppgifter enligt',
+    'Chính sách bảo mật': 'Integritetspolicy',
+    'Cần hỗ trợ nhanh?': 'Behöver du snabb hjälp?',
+    'Liên hệ trực tiếp với chúng tôi qua:': 'Kontakta oss direkt via:',
+    'Thứ 2 - Thứ 6: 08:00 - 17:30': 'Måndag - fredag: 08:00 - 17:30',
+    'Cam kết hỗ trợ': 'Supportåtaganden',
+    'Bảo mật thông tin': 'Informationssäkerhet',
+    'Cam kết bảo mật tuyệt đối thông tin của khách hàng.':
+      'Vi åtar oss att skydda kundernas information.',
+    'Phản hồi nhanh chóng': 'Snabb återkoppling',
+    'Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.':
+      'Vi svarar inom 24 arbetstimmar.',
+    'Hỗ trợ tận tâm': 'Engagerad support',
+    'Đội ngũ chuyên nghiệp sẵn sàng hỗ trợ bạn.':
+      'Vårt professionella team är redo att hjälpa dig.',
+    'Toàn cầu': 'Globalt',
+    'Kết nối và phục vụ khách hàng trên toàn thế giới.':
+      'Vi ansluter och betjänar kunder över hela världen.',
+  },
+  fr: {
+    'Liên hệ với chúng tôi': 'Contactez-nous',
+    'Chúng tôi luôn sẫn sàng lắng nghe và hỗ trợ bạn.':
+      'Nous sommes toujours prêts à vous écouter et à vous accompagner.',
+    'Vui lòng điền thông tin vào biểu mẫu bên dưới.':
+      'Veuillez remplir le formulaire ci-dessous.',
+    'Thông tin liên hệ': 'Informations de contact',
+    'Họ và tên': 'Nom complet',
+    'Nhập họ và tên': 'Saisissez votre nom complet',
+    'Nhập email của bạn': 'Saisissez votre email',
+    'Số điện thoại': 'Numéro de téléphone',
+    'Nhập số điện thoại': 'Saisissez votre numéro de téléphone',
+    'Công ty / Tổ chức': 'Entreprise / Organisation',
+    'Nhập tên công ty hoặc tổ chức': 'Saisissez le nom de l’entreprise ou de l’organisation',
+    'Quốc gia / Vùng lãnh thổ': 'Pays / Région',
+    'Chọn quốc gia / vùng lãnh thổ': 'Sélectionner un pays / une région',
+    Nhật: 'Japon',
+    EU: 'UE',
+    Mỹ: 'États-Unis',
+    'Hàn Quốc': 'Corée du Sud',
+    'Trung Quốc': 'Chine',
+    Úc: 'Australie',
+    Canada: 'Canada',
+    'Việt Nam': 'Vietnam',
+    'Nội dung liên hệ': 'Message',
+    'Vui lòng mô tả chi tiết yêu cầu của bạn': 'Veuillez décrire votre demande en détail',
+    'Tôi đồng ý để ANSLIFE xử lý thông tin theo':
+      'J’accepte qu’ANSLIFE traite mes informations conformément à la',
+    'Chính sách bảo mật': 'Politique de confidentialité',
+    'Cần hỗ trợ nhanh?': 'Besoin d’une aide rapide ?',
+    'Liên hệ trực tiếp với chúng tôi qua:': 'Contactez-nous directement via :',
+    'Thứ 2 - Thứ 6: 08:00 - 17:30': 'Lundi - vendredi : 08:00 - 17:30',
+    'Cam kết hỗ trợ': 'Engagements de support',
+    'Bảo mật thông tin': 'Sécurité des informations',
+    'Cam kết bảo mật tuyệt đối thông tin của khách hàng.':
+      'Nous nous engageons à protéger les informations des clients.',
+    'Phản hồi nhanh chóng': 'Réponse rapide',
+    'Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.':
+      'Nous répondrons sous 24 heures ouvrées.',
+    'Hỗ trợ tận tâm': 'Support attentif',
+    'Đội ngũ chuyên nghiệp sẵn sàng hỗ trợ bạn.':
+      'Notre équipe professionnelle est prête à vous accompagner.',
+    'Toàn cầu': 'Global',
+    'Kết nối và phục vụ khách hàng trên toàn thế giới.':
+      'Connecter et servir les clients dans le monde entier.',
+  },
+  ru: {
+    'Liên hệ với chúng tôi': 'Свяжитесь с нами',
+    'Chúng tôi luôn sẫn sàng lắng nghe và hỗ trợ bạn.':
+      'Мы всегда готовы выслушать вас и помочь.',
+    'Vui lòng điền thông tin vào biểu mẫu bên dưới.':
+      'Пожалуйста, заполните форму ниже.',
+    'Thông tin liên hệ': 'Контактная информация',
+    'Họ và tên': 'Полное имя',
+    'Nhập họ và tên': 'Введите полное имя',
+    'Nhập email của bạn': 'Введите ваш email',
+    'Số điện thoại': 'Номер телефона',
+    'Nhập số điện thoại': 'Введите номер телефона',
+    'Công ty / Tổ chức': 'Компания / Организация',
+    'Nhập tên công ty hoặc tổ chức': 'Введите название компании или организации',
+    'Quốc gia / Vùng lãnh thổ': 'Страна / Регион',
+    'Chọn quốc gia / vùng lãnh thổ': 'Выберите страну / регион',
+    Nhật: 'Япония',
+    EU: 'ЕС',
+    Mỹ: 'США',
+    'Hàn Quốc': 'Южная Корея',
+    'Trung Quốc': 'Китай',
+    Úc: 'Австралия',
+    Canada: 'Канада',
+    'Việt Nam': 'Вьетнам',
+    'Nội dung liên hệ': 'Сообщение',
+    'Vui lòng mô tả chi tiết yêu cầu của bạn': 'Пожалуйста, подробно опишите ваш запрос',
+    'Tôi đồng ý để ANSLIFE xử lý thông tin theo':
+      'Я соглашаюсь на обработку моих данных ANSLIFE в соответствии с',
+    'Chính sách bảo mật': 'Политикой конфиденциальности',
+    'Cần hỗ trợ nhanh?': 'Нужна быстрая поддержка?',
+    'Liên hệ trực tiếp với chúng tôi qua:': 'Свяжитесь с нами напрямую:',
+    'Thứ 2 - Thứ 6: 08:00 - 17:30': 'Понедельник - пятница: 08:00 - 17:30',
+    'Cam kết hỗ trợ': 'Обязательства поддержки',
+    'Bảo mật thông tin': 'Защита информации',
+    'Cam kết bảo mật tuyệt đối thông tin của khách hàng.':
+      'Мы обязуемся защищать информацию клиентов.',
+    'Phản hồi nhanh chóng': 'Быстрый ответ',
+    'Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.':
+      'Мы ответим в течение 24 рабочих часов.',
+    'Hỗ trợ tận tâm': 'Внимательная поддержка',
+    'Đội ngũ chuyên nghiệp sẵn sàng hỗ trợ bạn.':
+      'Наша профессиональная команда готова помочь вам.',
+    'Toàn cầu': 'Глобально',
+    'Kết nối và phục vụ khách hàng trên toàn thế giới.':
+      'Мы связываем и обслуживаем клиентов по всему миру.',
+  },
+  es: {
+    'Liên hệ với chúng tôi': 'Contáctanos',
+    'Chúng tôi luôn sẫn sàng lắng nghe và hỗ trợ bạn.':
+      'Siempre estamos listos para escucharte y apoyarte.',
+    'Vui lòng điền thông tin vào biểu mẫu bên dưới.':
+      'Por favor completa el formulario a continuación.',
+    'Thông tin liên hệ': 'Información de contacto',
+    'Họ và tên': 'Nombre completo',
+    'Nhập họ và tên': 'Introduce tu nombre completo',
+    'Nhập email của bạn': 'Introduce tu email',
+    'Số điện thoại': 'Número de teléfono',
+    'Nhập số điện thoại': 'Introduce tu número de teléfono',
+    'Công ty / Tổ chức': 'Empresa / Organización',
+    'Nhập tên công ty hoặc tổ chức': 'Introduce el nombre de la empresa u organización',
+    'Quốc gia / Vùng lãnh thổ': 'País / Región',
+    'Chọn quốc gia / vùng lãnh thổ': 'Seleccionar país / región',
+    Nhật: 'Japón',
+    EU: 'UE',
+    Mỹ: 'Estados Unidos',
+    'Hàn Quốc': 'Corea del Sur',
+    'Trung Quốc': 'China',
+    Úc: 'Australia',
+    Canada: 'Canadá',
+    'Việt Nam': 'Vietnam',
+    'Nội dung liên hệ': 'Mensaje',
+    'Vui lòng mô tả chi tiết yêu cầu của bạn': 'Describe tu solicitud en detalle',
+    'Tôi đồng ý để ANSLIFE xử lý thông tin theo':
+      'Acepto que ANSLIFE procese mi información de acuerdo con la',
+    'Chính sách bảo mật': 'Política de privacidad',
+    'Cần hỗ trợ nhanh?': '¿Necesitas ayuda rápida?',
+    'Liên hệ trực tiếp với chúng tôi qua:': 'Contáctanos directamente por:',
+    'Thứ 2 - Thứ 6: 08:00 - 17:30': 'Lunes - viernes: 08:00 - 17:30',
+    'Cam kết hỗ trợ': 'Compromisos de soporte',
+    'Bảo mật thông tin': 'Seguridad de la información',
+    'Cam kết bảo mật tuyệt đối thông tin của khách hàng.':
+      'Nos comprometemos a proteger la información de los clientes.',
+    'Phản hồi nhanh chóng': 'Respuesta rápida',
+    'Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.':
+      'Responderemos dentro de 24 horas hábiles.',
+    'Hỗ trợ tận tâm': 'Soporte dedicado',
+    'Đội ngũ chuyên nghiệp sẵn sàng hỗ trợ bạn.':
+      'Nuestro equipo profesional está listo para apoyarte.',
+    'Toàn cầu': 'Global',
+    'Kết nối và phục vụ khách hàng trên toàn thế giới.':
+      'Conectamos y servimos a clientes en todo el mundo.',
+  },
+  zh: {
+    'Liên hệ với chúng tôi': '联系我们',
+    'Chúng tôi luôn sẫn sàng lắng nghe và hỗ trợ bạn.':
+      '我们随时准备倾听并为您提供支持。',
+    'Vui lòng điền thông tin vào biểu mẫu bên dưới.':
+      '请填写下方表单。',
+    'Thông tin liên hệ': '联系信息',
+    'Họ và tên': '姓名',
+    'Nhập họ và tên': '请输入姓名',
+    'Nhập email của bạn': '请输入您的邮箱',
+    'Số điện thoại': '电话号码',
+    'Nhập số điện thoại': '请输入电话号码',
+    'Công ty / Tổ chức': '公司 / 组织',
+    'Nhập tên công ty hoặc tổ chức': '请输入公司或组织名称',
+    'Quốc gia / Vùng lãnh thổ': '国家 / 地区',
+    'Chọn quốc gia / vùng lãnh thổ': '选择国家 / 地区',
+    Nhật: '日本',
+    EU: '欧盟',
+    Mỹ: '美国',
+    'Hàn Quốc': '韩国',
+    'Trung Quốc': '中国',
+    Úc: '澳大利亚',
+    Canada: '加拿大',
+    'Việt Nam': '越南',
+    'Nội dung liên hệ': '联系内容',
+    'Vui lòng mô tả chi tiết yêu cầu của bạn': '请详细描述您的需求',
+    'Tôi đồng ý để ANSLIFE xử lý thông tin theo':
+      '我同意ANSLIFE根据以下政策处理我的信息',
+    'Chính sách bảo mật': '隐私政策',
+    'Cần hỗ trợ nhanh?': '需要快速支持？',
+    'Liên hệ trực tiếp với chúng tôi qua:': '请通过以下方式直接联系我们：',
+    'Thứ 2 - Thứ 6: 08:00 - 17:30': '周一 - 周五：08:00 - 17:30',
+    'Cam kết hỗ trợ': '支持承诺',
+    'Bảo mật thông tin': '信息安全',
+    'Cam kết bảo mật tuyệt đối thông tin của khách hàng.':
+      '我们承诺保护客户信息安全。',
+    'Phản hồi nhanh chóng': '快速响应',
+    'Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.':
+      '我们将在24个工作小时内回复。',
+    'Hỗ trợ tận tâm': '用心支持',
+    'Đội ngũ chuyên nghiệp sẵn sàng hỗ trợ bạn.':
+      '专业团队随时准备为您提供支持。',
+    'Toàn cầu': '全球',
+    'Kết nối và phục vụ khách hàng trên toàn thế giới.':
+      '连接并服务全球客户。',
+  },
+};
+
 const TRANSLATIONS: Partial<Record<
   Exclude<LanguageCode, typeof VIETNAMESE>,
   Partial<Record<string, string>>
@@ -4463,6 +4837,7 @@ export function translateText(language: LanguageCode, text: string): string {
 
   return (
     PRIMARY_NAV_TRANSLATIONS[language]?.[text] ??
+    REQUEST_QUOTATION_PAGE_TRANSLATIONS[language]?.[text] ??
     CONTACT_REQUEST_TRANSLATIONS[language]?.[text] ??
     NAV_MENU_TRANSLATIONS[language]?.[text] ??
     TRANSLATIONS[language]?.[text] ??

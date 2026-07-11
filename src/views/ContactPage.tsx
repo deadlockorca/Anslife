@@ -334,8 +334,11 @@ export default function ContactPage() {
   )
     ? (sectionParam as ContactSection)
     : 'all';
+  const isBlankRequestQuotationPage = activeSection === 'request-quotation';
   const showCompanyInfo = activeSection === 'all' || activeSection === 'company-info';
-  const showQuoteForm = activeSection === 'all' || isQuoteContactSection(activeSection);
+  const showQuoteForm =
+    activeSection === 'all' ||
+    (isQuoteContactSection(activeSection) && !isBlankRequestQuotationPage);
   const showMeetingForm = activeSection === 'all' || isMeetingContactSection(activeSection);
   const showMapSection = activeSection === 'map';
   const quoteFormCopy = useMemo(() => getQuoteFormCopy(activeSection), [activeSection]);
@@ -544,6 +547,214 @@ export default function ContactPage() {
         title={t('Liên hệ')}
         description={t('Thông tin công ty ANSLIFE, form báo giá và đặt lịch làm việc.')}
       />
+
+      {isBlankRequestQuotationPage && (
+        <section className="contact-request-quotation-page" id="request-quotation">
+          <figure className="contact-request-quotation-banner">
+            <img
+              src="/assets/contact/request-quotation/request-quotation-banner.webp"
+              alt=""
+              aria-hidden="true"
+              loading="eager"
+              decoding="async"
+            />
+            <figcaption className="contact-request-quotation-banner-copy">
+              <h1>{t('Liên hệ với chúng tôi')}</h1>
+              <p>{t('Chúng tôi luôn sẫn sàng lắng nghe và hỗ trợ bạn.')}</p>
+              <p>{t('Vui lòng điền thông tin vào biểu mẫu bên dưới.')}</p>
+            </figcaption>
+          </figure>
+
+          <section className="contact-request-quotation-form-section">
+            <form
+              className="contact-request-quotation-form"
+              onSubmit={(event) => submitByFormId(quoteFormId, event, setQuoteState)}
+            >
+              <div className="contact-request-quotation-form-column">
+                <h2>
+                  <span aria-hidden="true">✈</span>
+                  {t('Thông tin liên hệ')}
+                </h2>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Họ và tên')} <em aria-hidden="true">*</em>
+                  </span>
+                  <input name="your-name" placeholder={t('Nhập họ và tên')} required />
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Email')} <em aria-hidden="true">*</em>
+                  </span>
+                  <input
+                    type="email"
+                    name="your-email"
+                    placeholder={t('Nhập email của bạn')}
+                    required
+                  />
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Số điện thoại')} <em aria-hidden="true">*</em>
+                  </span>
+                  <input name="your-phone" placeholder={t('Nhập số điện thoại')} required />
+                </label>
+
+                <label>
+                  {t('Công ty / Tổ chức')}
+                  <input name="your-company" placeholder={t('Nhập tên công ty hoặc tổ chức')} />
+                </label>
+
+                <label>
+                  {t('Quốc gia / Vùng lãnh thổ')}
+                  <select name="country-region" defaultValue="">
+                    <option value="" disabled>
+                      {t('Chọn quốc gia / vùng lãnh thổ')}
+                    </option>
+                    {[
+                      'Nhật',
+                      'EU',
+                      'Mỹ',
+                      'Hàn Quốc',
+                      'Trung Quốc',
+                      'Úc',
+                      'Canada',
+                      'Việt Nam',
+                    ].map((countryRegion) => (
+                      <option key={countryRegion} value={countryRegion}>
+                        {t(countryRegion)}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Nội dung liên hệ')} <em aria-hidden="true">*</em>
+                  </span>
+                  <textarea
+                    name="your-message"
+                    rows={7}
+                    placeholder={t('Vui lòng mô tả chi tiết yêu cầu của bạn')}
+                    required
+                  />
+                </label>
+
+                <label className="contact-request-quotation-policy">
+                  <input name="privacy-consent" type="checkbox" required />
+                  <span>
+                    {t('Tôi đồng ý để ANSLIFE xử lý thông tin theo')}{' '}
+                    <a href="/privacy-policy">{t('Chính sách bảo mật')}.</a>
+                  </span>
+                </label>
+
+                <input type="hidden" name="inquiry-type" value="work_request" />
+
+                <button
+                  type="submit"
+                  className="contact-request-quotation-submit"
+                  disabled={quoteState.status === 'loading'}
+                >
+                  <span aria-hidden="true">✈</span>
+                  {quoteState.status === 'loading' ? t('Đang gửi...') : t('Gửi yêu cầu')}
+                </button>
+
+                {quoteState.status !== 'idle' && (
+                  <p
+                    className={
+                      quoteState.status === 'success'
+                        ? 'contact-request-quotation-success'
+                        : 'contact-request-quotation-error'
+                    }
+                  >
+                    {quoteState.message}
+                  </p>
+                )}
+              </div>
+
+              <aside className="contact-request-quotation-type-column">
+                <h2>
+                  <span aria-hidden="true">▤</span>
+                  {t('Loại yêu cầu')}
+                </h2>
+
+                <fieldset className="contact-request-quotation-type-list">
+                  <legend>{t('Loại yêu cầu')}</legend>
+                  {workRequestTypeOptions.map((option, index) => (
+                    <label key={option.value} className="contact-request-quotation-type-item">
+                      <input
+                        type="radio"
+                        name="request-category"
+                        value={option.value}
+                        defaultChecked={index === 0}
+                        required
+                      />
+                      <span>{t(option.label)}</span>
+                    </label>
+                  ))}
+                </fieldset>
+
+                <div className="contact-request-quotation-support">
+                  <h3>
+                    <span aria-hidden="true">🎧</span>
+                    {t('Cần hỗ trợ nhanh?')}
+                  </h3>
+                  <p>{t('Liên hệ trực tiếp với chúng tôi qua:')}</p>
+                  <ul>
+                    <li>
+                      <span aria-hidden="true">☎</span>
+                      <a href="tel:+84123456789">(+84) 123 456 789</a>
+                    </li>
+                    <li>
+                      <span aria-hidden="true">✉</span>
+                      <a href="mailto:contact@anslife.com">contact@anslife.com</a>
+                    </li>
+                    <li>
+                      <span aria-hidden="true">◷</span>
+                      {t('Thứ 2 - Thứ 6: 08:00 - 17:30')}
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+            </form>
+          </section>
+
+          <section className="contact-request-quotation-benefits" aria-label={t('Cam kết hỗ trợ')}>
+            {[
+              {
+                icon: '♢',
+                title: 'Bảo mật thông tin',
+                text: 'Cam kết bảo mật tuyệt đối thông tin của khách hàng.',
+              },
+              {
+                icon: '◷',
+                title: 'Phản hồi nhanh chóng',
+                text: 'Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.',
+              },
+              {
+                icon: '♢',
+                title: 'Hỗ trợ tận tâm',
+                text: 'Đội ngũ chuyên nghiệp sẵn sàng hỗ trợ bạn.',
+              },
+              {
+                icon: '◎',
+                title: 'Toàn cầu',
+                text: 'Kết nối và phục vụ khách hàng trên toàn thế giới.',
+              },
+            ].map((item) => (
+              <article key={item.title} className="contact-request-quotation-benefit">
+                <span aria-hidden="true">{item.icon}</span>
+                <div>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.text)}</p>
+                </div>
+              </article>
+            ))}
+          </section>
+        </section>
+      )}
 
       {showCompanyInfo && loading && <LoadingBlock />}
       {showCompanyInfo && shouldShowError && <ErrorBlock message={error as string} />}

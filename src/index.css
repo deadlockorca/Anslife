@@ -72183,6 +72183,433 @@ img.supply-hub-weekly-cta-image-placeholder {
   background: #f4efe6;
 }
 
+.contact-request-quotation-page {
+  width: 100%;
+}
+
+.contact-request-quotation-banner {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: #f4efe6;
+}
+
+.contact-request-quotation-banner::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  content: '';
+  background: linear-gradient(
+    90deg,
+    rgba(246, 240, 231, 0.92) 0%,
+    rgba(246, 240, 231, 0.72) 30%,
+    rgba(246, 240, 231, 0.18) 58%,
+    rgba(246, 240, 231, 0) 100%
+  );
+}
+
+.contact-request-quotation-banner > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2005 / 784;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contact-request-quotation-banner-copy {
+  position: absolute;
+  left: clamp(1.25rem, 4vw, 4.25rem);
+  top: 50%;
+  z-index: 2;
+  width: min(40%, 560px);
+  transform: translateY(-50%);
+  color: #20242a;
+  font-family: var(--font-ui);
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.78);
+}
+
+.contact-request-quotation-banner-copy h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #20242a;
+  font-family: var(--font-heading);
+  font-size: clamp(2.15rem, 4.35vw, 5rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.contact-request-quotation-banner-copy p {
+  max-width: 44ch;
+  margin: clamp(0.42rem, 0.8vw, 0.72rem) 0 0;
+  color: #252b32;
+  font-family: var(--font-ui);
+  font-size: clamp(0.72rem, 1vw, 1rem);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: 0;
+}
+
+.contact-request-quotation-form-section {
+  padding: clamp(1.2rem, 2.8vw, 2.75rem);
+  background: #f8f4ed;
+}
+
+.contact-request-quotation-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: clamp(1.4rem, 3vw, 3rem);
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 2.6vw, 2.4rem);
+  border: 1px solid rgba(32, 36, 42, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 45px rgba(40, 34, 25, 0.08);
+}
+
+.contact-request-quotation-form-column,
+.contact-request-quotation-type-column {
+  min-width: 0;
+}
+
+.contact-request-quotation-form-column {
+  padding-right: clamp(0rem, 2vw, 2rem);
+  border-right: 1px solid rgba(32, 36, 42, 0.1);
+}
+
+.contact-request-quotation-form h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0 0 1.65rem;
+  color: #15191f;
+  font-family: var(--font-ui);
+  font-size: clamp(1.25rem, 1.55vw, 1.6rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.contact-request-quotation-form h2 > span {
+  color: #ff6a1a;
+  font-size: 1.25em;
+  line-height: 1;
+}
+
+.contact-request-quotation-form label {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0 0 1.2rem;
+  color: #1e252d;
+  font-family: var(--font-ui);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+.contact-request-quotation-form label em {
+  color: #ff5b1a;
+  font-style: normal;
+}
+
+.contact-request-quotation-label-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  width: fit-content;
+}
+
+.contact-request-quotation-form input:not([type='radio']):not([type='checkbox']),
+.contact-request-quotation-form select,
+.contact-request-quotation-form textarea {
+  width: 100%;
+  border: 1px solid rgba(32, 36, 42, 0.13);
+  border-radius: 7px;
+  background: #fff;
+  color: #20242a;
+  font: inherit;
+  font-weight: 500;
+  letter-spacing: 0;
+  outline: none;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.contact-request-quotation-form input:not([type='radio']):not([type='checkbox']),
+.contact-request-quotation-form select {
+  min-height: 3.25rem;
+  padding: 0.7rem 0.95rem;
+}
+
+.contact-request-quotation-form textarea {
+  min-height: 12.4rem;
+  resize: vertical;
+  padding: 0.9rem 0.95rem;
+}
+
+.contact-request-quotation-form input::placeholder,
+.contact-request-quotation-form textarea::placeholder {
+  color: rgba(32, 36, 42, 0.42);
+}
+
+.contact-request-quotation-form input:not([type='radio']):not([type='checkbox']):focus,
+.contact-request-quotation-form select:focus,
+.contact-request-quotation-form textarea:focus {
+  border-color: rgba(255, 106, 26, 0.72);
+  box-shadow: 0 0 0 3px rgba(255, 106, 26, 0.11);
+}
+
+.contact-request-quotation-policy {
+  display: flex !important;
+  grid-template-columns: none;
+  align-items: flex-start;
+  gap: 0.5rem !important;
+  margin-top: 0.2rem !important;
+  color: rgba(32, 36, 42, 0.7) !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+}
+
+.contact-request-quotation-policy input {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.12rem;
+  accent-color: #ff6a1a;
+}
+
+.contact-request-quotation-policy a {
+  color: #ff6a1a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-request-quotation-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 3.55rem;
+  margin-top: 0.3rem;
+  border: 0;
+  border-radius: 7px;
+  background: #ff5f16;
+  color: #fff;
+  font-family: var(--font-ui);
+  font-size: 1.08rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  cursor: pointer;
+  box-shadow: 0 12px 26px rgba(255, 95, 22, 0.24);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.contact-request-quotation-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(255, 95, 22, 0.28);
+}
+
+.contact-request-quotation-submit:disabled {
+  cursor: wait;
+  opacity: 0.75;
+  transform: none;
+}
+
+.contact-request-quotation-success,
+.contact-request-quotation-error {
+  margin: 0.9rem 0 0;
+  font-family: var(--font-ui);
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.contact-request-quotation-success {
+  color: #236b3a;
+}
+
+.contact-request-quotation-error {
+  color: #b33219;
+}
+
+.contact-request-quotation-type-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.contact-request-quotation-type-list legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.contact-request-quotation-type-item {
+  display: flex !important;
+  grid-template-columns: none;
+  align-items: center;
+  gap: 0.78rem !important;
+  min-height: 3.65rem;
+  margin: 0 !important;
+  padding: 0.78rem 1rem;
+  border: 1px solid rgba(32, 36, 42, 0.08);
+  border-radius: 7px;
+  background: #fff;
+  color: #20242a !important;
+  font-size: 0.98rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  transition:
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.contact-request-quotation-type-item:has(input:checked) {
+  border-color: #ff6a1a;
+  background: #fff8f2;
+  box-shadow: 0 0 0 1px rgba(255, 106, 26, 0.12);
+}
+
+.contact-request-quotation-type-item input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  accent-color: #ff6a1a;
+  flex: 0 0 auto;
+}
+
+.contact-request-quotation-support {
+  margin-top: 1.45rem;
+  padding: 1.45rem 1.35rem;
+  border-radius: 8px;
+  background: #fff5e9;
+  color: #20242a;
+  font-family: var(--font-ui);
+}
+
+.contact-request-quotation-support h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.78rem;
+  margin: 0 0 0.45rem;
+  color: #15191f;
+  font-size: 1.08rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.contact-request-quotation-support h3 span {
+  color: #ff6a1a;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.contact-request-quotation-support p {
+  margin: 0 0 1rem 2.35rem;
+  color: rgba(32, 36, 42, 0.72);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.contact-request-quotation-support ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0 0 0 2.35rem;
+  list-style: none;
+}
+
+.contact-request-quotation-support li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #20242a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.contact-request-quotation-support li > span {
+  color: #ff6a1a;
+  width: 1.1rem;
+  flex: 0 0 1.1rem;
+  text-align: center;
+}
+
+.contact-request-quotation-support a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-request-quotation-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  width: min(1180px, calc(100% - clamp(1.5rem, 5.6vw, 5.5rem)));
+  margin: 0 auto clamp(1.2rem, 2.6vw, 2.5rem);
+  padding: clamp(1.05rem, 2vw, 1.55rem) 0;
+  border: 1px solid rgba(32, 36, 42, 0.06);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 14px 38px rgba(40, 34, 25, 0.05);
+}
+
+.contact-request-quotation-benefit {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+  min-width: 0;
+  padding: 0 clamp(1rem, 2vw, 1.6rem);
+  font-family: var(--font-ui);
+}
+
+.contact-request-quotation-benefit + .contact-request-quotation-benefit {
+  border-left: 1px solid rgba(32, 36, 42, 0.08);
+}
+
+.contact-request-quotation-benefit > span {
+  display: grid;
+  place-items: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  color: #ff6a1a;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.contact-request-quotation-benefit h3 {
+  margin: 0 0 0.35rem;
+  color: #171b21;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.contact-request-quotation-benefit p {
+  margin: 0;
+  color: rgba(32, 36, 42, 0.68);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
 .manufacturing-material-preparation-banner > img,
 .manufacturing-cutting-banner > img,
 .manufacturing-woodworking-banner > img {
@@ -72240,6 +72667,166 @@ img.supply-hub-weekly-cta-image-placeholder {
 }
 
 @media (max-width: 680px) {
+  .contact-request-quotation-banner {
+    width: min(100%, calc(100vw - 2.6rem));
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .contact-request-quotation-banner::after {
+    background: linear-gradient(
+      90deg,
+      rgba(246, 240, 231, 0.94) 0%,
+      rgba(246, 240, 231, 0.76) 38%,
+      rgba(246, 240, 231, 0.16) 72%,
+      rgba(246, 240, 231, 0) 100%
+    );
+  }
+
+  .contact-request-quotation-banner > img {
+    aspect-ratio: 2005 / 784;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .contact-request-quotation-banner-copy {
+    left: 0.9rem;
+    top: 0.78rem;
+    width: min(56vw, 17rem);
+    transform: none;
+  }
+
+  .contact-request-quotation-banner-copy h1 {
+    max-width: 11ch;
+    font-size: clamp(1.15rem, 5.2vw, 1.85rem);
+    line-height: 0.98;
+  }
+
+  .contact-request-quotation-banner-copy p {
+    max-width: 100%;
+    margin-top: 0.28rem;
+    font-size: clamp(0.42rem, 1.9vw, 0.62rem);
+    line-height: 1.12;
+  }
+
+  .contact-request-quotation-form-section {
+    padding: 0.9rem 0.75rem 1.25rem;
+  }
+
+  .contact-request-quotation-form {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .contact-request-quotation-form-column {
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .contact-request-quotation-form h2 {
+    gap: 0.55rem;
+    margin-bottom: 1rem;
+    font-size: 1.08rem;
+  }
+
+  .contact-request-quotation-form label {
+    gap: 0.42rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  .contact-request-quotation-form input:not([type='radio']):not([type='checkbox']),
+  .contact-request-quotation-form select {
+    min-height: 2.75rem;
+    padding: 0.58rem 0.75rem;
+    font-size: 0.86rem;
+  }
+
+  .contact-request-quotation-form textarea {
+    min-height: 8.5rem;
+    padding: 0.7rem 0.75rem;
+    font-size: 0.86rem;
+  }
+
+  .contact-request-quotation-policy {
+    font-size: 0.78rem !important;
+  }
+
+  .contact-request-quotation-submit {
+    min-height: 3rem;
+    font-size: 0.94rem;
+  }
+
+  .contact-request-quotation-type-list {
+    gap: 0.55rem;
+  }
+
+  .contact-request-quotation-type-item {
+    min-height: 3rem;
+    padding: 0.62rem 0.75rem;
+    font-size: 0.84rem !important;
+  }
+
+  .contact-request-quotation-type-item input {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .contact-request-quotation-support {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .contact-request-quotation-support h3 {
+    font-size: 0.98rem;
+  }
+
+  .contact-request-quotation-support p,
+  .contact-request-quotation-support ul {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .contact-request-quotation-support p,
+  .contact-request-quotation-support li {
+    font-size: 0.82rem;
+  }
+
+  .contact-request-quotation-benefits {
+    grid-template-columns: 1fr;
+    width: calc(100% - 1.5rem);
+    margin-bottom: 1.25rem;
+    padding: 0.25rem 0;
+  }
+
+  .contact-request-quotation-benefit {
+    gap: 0.65rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .contact-request-quotation-benefit + .contact-request-quotation-benefit {
+    border-top: 1px solid rgba(32, 36, 42, 0.08);
+    border-left: 0;
+  }
+
+  .contact-request-quotation-benefit > span {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1.45rem;
+  }
+
+  .contact-request-quotation-benefit h3 {
+    margin-bottom: 0.22rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-request-quotation-benefit p {
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
   .manufacturing-material-preparation-banner,
   .manufacturing-cutting-banner,
   .manufacturing-woodworking-banner {
