@@ -704,10 +704,6 @@ export default function ContactPage() {
                   <p>{t('Liên hệ trực tiếp với chúng tôi qua:')}</p>
                   <ul>
                     <li>
-                      <span aria-hidden="true">☎</span>
-                      <a href="tel:+84123456789">(+84) 123 456 789</a>
-                    </li>
-                    <li>
                       <span aria-hidden="true">✉</span>
                       <a href="mailto:contact@anslife.com">contact@anslife.com</a>
                     </li>
