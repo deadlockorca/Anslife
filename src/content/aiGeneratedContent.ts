@@ -9634,10 +9634,6 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
               <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
-              <dt>Số điện thoại</dt>
-              <dd><a href="tel:+84901827555">+84 901 827 555</a></dd>
-            </div>
-            <div>
               <dt>Địa chỉ văn phòng Hà Nội</dt>
               <dd>Tầng 5, Tòa nhà Zen Tower, Số 12 đường Khuất Duy Tiến, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội, Việt Nam</dd>
             </div>
@@ -9943,10 +9939,6 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
               <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
-              <dt>Phone</dt>
-              <dd><a href="tel:+84901827555">+84 901 827 555</a></dd>
-            </div>
-            <div>
               <dt>Hanoi Office Address</dt>
               <dd>5th Floor, Zen Tower, No. 12 Khuat Duy Tien Street, Thanh Xuan Trung Ward, Thanh Xuan District, Ha Noi, Viet Nam</dd>
             </div>
@@ -10096,10 +10088,6 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
               <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
-              <dt>電話番号</dt>
-              <dd><a href="tel:+84901827555">+84 901 827 555</a></dd>
-            </div>
-            <div>
               <dt>ハノイ オフィス住所</dt>
               <dd>5th Floor, Zen Tower, No. 12 Khuat Duy Tien Street, Thanh Xuan Trung Ward, Thanh Xuan District, Ha Noi, Viet Nam</dd>
             </div>
@@ -10247,10 +10235,6 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
             <div>
               <dt>Email</dt>
               <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>전화번호</dt>
-              <dd><a href="tel:+84901827555">+84 901 827 555</a></dd>
             </div>
             <div>
               <dt>하노이 사무소 주소</dt>
