@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { createContactLead } from '../../../../lib/repositories/contentRepository';
 import { getCorsHeaders } from '../../../../lib/http/cors';
+import { sendContactNotificationEmail } from '../../../../lib/email/contactNotification';
 
 export const dynamic = 'force-dynamic';
 
@@ -55,23 +56,45 @@ export async function POST(request: Request) {
     );
   }
 
+  let leadSaved = false;
+  let leadError: unknown = null;
   try {
     await createContactLead(resolveFormType(formId), payload);
-    return NextResponse.json({
-      status: 'mail_sent',
-      message: 'Yêu cầu đã được gửi thành công.',
-    }, { headers });
+    leadSaved = true;
   } catch (error) {
+    leadError = error;
     console.error('[API][contact] Failed to create lead:', error);
+  }
+
+  try {
+    await sendContactNotificationEmail(payload);
+  } catch (error) {
+    console.error('[API][contact] Failed to send notification email:', error);
+    const message = leadSaved
+      ? 'Yêu cầu đã được lưu nhưng chưa gửi được email thông báo. Vui lòng kiểm tra cấu hình SMTP.'
+      : 'Không thể gửi email hoặc lưu yêu cầu. Vui lòng kiểm tra cấu hình SMTP và database.';
+
     return NextResponse.json(
       {
         status: 'mail_failed',
-        message:
-          'Không thể lưu yêu cầu vào hệ thống dữ liệu. Vui lòng kiểm tra cấu hình database.',
+        message,
       },
       { status: 500, headers },
     );
   }
+
+  if (leadError) {
+    return NextResponse.json({
+      status: 'mail_sent',
+      message:
+        'Yêu cầu đã được gửi qua email. Hệ thống lưu dữ liệu đang tạm thời không khả dụng.',
+    }, { headers });
+  }
+
+  return NextResponse.json({
+    status: 'mail_sent',
+    message: 'Yêu cầu đã được gửi thành công.',
+  }, { headers });
 }
 
 export async function OPTIONS(request: Request) {
