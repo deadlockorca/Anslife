@@ -15885,6 +15885,13 @@ function getExtraAboutSectionHtml(
     return buildLocalizedCompanyIntroStandardSection(language, content);
   }
 
+  if (
+    sectionId === 'company-info' &&
+    (language === 'en' || language === 'jp' || language === 'kr')
+  ) {
+    return null;
+  }
+
   const content = EXTRA_ABOUT_LOCALIZED_CONTENT[language];
   switch (sectionId as ExtraAboutSectionId) {
     case 'company-intro':
