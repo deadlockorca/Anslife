@@ -235,6 +235,13 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu tài trợ thương mại': 'Trade finance request',
     'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
       'Support trade finance options linked to orders, production, QC and shipment.',
+    'Yêu cầu tài trợ học bổng': 'Scholarship sponsorship request',
+    'Hỗ trợ, đồng hành hoặc tài trợ cho các chương trình học bổng của ANSLIFE.':
+      'Support, partner with or sponsor ANSLIFE scholarship programs.',
+    'Yêu cầu đề nghị tham gia các chương trình cộng đồng, phụng sự xã hội':
+      'Request to join community and social service programs',
+    'Đề nghị phối hợp, tham gia hoặc đồng hành cùng các chương trình cộng đồng và phụng sự xã hội.':
+      'Propose cooperation, participation or partnership in community and social service programs.',
     'Yêu cầu logistics / chứng từ': 'Logistics / Documentation request',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       'Export coordination, packing, container loading and shipment documentation.',
@@ -266,6 +273,8 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       'You can select multiple products. If a product is not suggested, enter it manually and click Add.',
     'Đang gửi dữ liệu...': 'Submitting data...',
     'Đang gửi...': 'Submitting...',
+    'Vui lòng chọn ít nhất một loại yêu cầu.':
+      'Please select at least one request type.',
     'Không gửi được form. Vui lòng thử lại.': 'Unable to submit the form. Please try again.',
   },
   jp: {
@@ -299,6 +308,13 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu tài trợ thương mại': '貿易金融依頼',
     'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
       '注文、生産、QC、出荷に紐づく貿易金融案を支援します。',
+    'Yêu cầu tài trợ học bổng': '奨学金スポンサー依頼',
+    'Hỗ trợ, đồng hành hoặc tài trợ cho các chương trình học bổng của ANSLIFE.':
+      'ANSLIFEの奨学金プログラムへの支援、協力、スポンサー提供。',
+    'Yêu cầu đề nghị tham gia các chương trình cộng đồng, phụng sự xã hội':
+      'コミュニティ・社会貢献プログラム参加依頼',
+    'Đề nghị phối hợp, tham gia hoặc đồng hành cùng các chương trình cộng đồng và phụng sự xã hội.':
+      'コミュニティおよび社会貢献プログラムへの協力、参加、伴走の提案。',
     'Yêu cầu logistics / chứng từ': '物流 / 書類依頼',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       '輸出調整、梱包、コンテナ積載、出荷書類。',
@@ -330,6 +346,8 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       '複数の製品を選択できます。候補にない場合は手入力して「追加」を押してください。',
     'Đang gửi dữ liệu...': 'データ送信中...',
     'Đang gửi...': '送信中...',
+    'Vui lòng chọn ít nhất một loại yêu cầu.':
+      '少なくとも1つの依頼タイプを選択してください。',
     'Không gửi được form. Vui lòng thử lại.':
       'フォームを送信できませんでした。もう一度お試しください。',
   },
@@ -364,6 +382,13 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu tài trợ thương mại': '무역 금융 요청',
     'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
       '주문, 생산, QC 및 출하와 연계된 무역 금융 방안을 지원합니다.',
+    'Yêu cầu tài trợ học bổng': '장학금 후원 요청',
+    'Hỗ trợ, đồng hành hoặc tài trợ cho các chương trình học bổng của ANSLIFE.':
+      'ANSLIFE 장학금 프로그램에 대한 지원, 협력 또는 후원.',
+    'Yêu cầu đề nghị tham gia các chương trình cộng đồng, phụng sự xã hội':
+      '커뮤니티 및 사회공헌 프로그램 참여 요청',
+    'Đề nghị phối hợp, tham gia hoặc đồng hành cùng các chương trình cộng đồng và phụng sự xã hội.':
+      '커뮤니티 및 사회공헌 프로그램에 대한 협력, 참여 또는 동행 제안.',
     'Yêu cầu logistics / chứng từ': '물류 / 서류 요청',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       '수출 조율, 포장, 컨테이너 적재 및 선적 서류.',
@@ -395,6 +420,8 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       '여러 제품을 선택할 수 있습니다. 추천에 없으면 직접 입력 후 추가를 누르세요.',
     'Đang gửi dữ liệu...': '데이터 전송 중...',
     'Đang gửi...': '전송 중...',
+    'Vui lòng chọn ít nhất một loại yêu cầu.':
+      '요청 유형을 하나 이상 선택해 주세요.',
     'Không gửi được form. Vui lòng thử lại.':
       '폼을 전송할 수 없습니다. 다시 시도해 주세요.',
   },
@@ -429,6 +456,13 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu tài trợ thương mại': 'Handelsfinansieringsförfrågan',
     'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
       'Stöd för handelsfinansiering kopplad till order, produktion, QC och leverans.',
+    'Yêu cầu tài trợ học bổng': 'Förfrågan om stipendiesponsring',
+    'Hỗ trợ, đồng hành hoặc tài trợ cho các chương trình học bổng của ANSLIFE.':
+      'Stöd, samarbete eller sponsring för ANSLIFE:s stipendieprogram.',
+    'Yêu cầu đề nghị tham gia các chương trình cộng đồng, phụng sự xã hội':
+      'Förfrågan om att delta i samhälls- och sociala insatsprogram',
+    'Đề nghị phối hợp, tham gia hoặc đồng hành cùng các chương trình cộng đồng và phụng sự xã hội.':
+      'Förslag om samarbete, deltagande eller partnerskap i samhälls- och sociala insatsprogram.',
     'Yêu cầu logistics / chứng từ': 'Logistik / dokumentförfrågan',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       'Exportkoordinering, packning, containerlastning och fraktdokument.',
@@ -460,6 +494,8 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       'Du kan välja flera produkter. Om den inte finns i förslagen, ange manuellt och klicka på Lägg till.',
     'Đang gửi dữ liệu...': 'Skickar data...',
     'Đang gửi...': 'Skickar...',
+    'Vui lòng chọn ít nhất một loại yêu cầu.':
+      'Välj minst en förfrågningstyp.',
     'Không gửi được form. Vui lòng thử lại.':
       'Formuläret kunde inte skickas. Försök igen.',
   },
@@ -494,6 +530,13 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu tài trợ thương mại': 'Demande de financement commercial',
     'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
       'Accompagnement pour une solution de financement commercial liée aux commandes, à la production, au QC et aux expéditions.',
+    'Yêu cầu tài trợ học bổng': 'Demande de sponsoring de bourse',
+    'Hỗ trợ, đồng hành hoặc tài trợ cho các chương trình học bổng của ANSLIFE.':
+      'Soutien, accompagnement ou sponsoring des programmes de bourses d’ANSLIFE.',
+    'Yêu cầu đề nghị tham gia các chương trình cộng đồng, phụng sự xã hội':
+      'Demande de participation aux programmes communautaires et d’engagement social',
+    'Đề nghị phối hợp, tham gia hoặc đồng hành cùng các chương trình cộng đồng và phụng sự xã hội.':
+      'Proposition de coopération, participation ou partenariat dans les programmes communautaires et d’engagement social.',
     'Yêu cầu logistics / chứng từ': 'Demande logistique / documents',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       'Coordination export, emballage, chargement container et documents d’expédition.',
@@ -525,6 +568,8 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       'Vous pouvez sélectionner plusieurs produits. Si le produit n’apparaît pas, saisissez-le manuellement puis cliquez sur Ajouter.',
     'Đang gửi dữ liệu...': 'Envoi des données...',
     'Đang gửi...': 'Envoi...',
+    'Vui lòng chọn ít nhất một loại yêu cầu.':
+      'Veuillez sélectionner au moins un type de demande.',
     'Không gửi được form. Vui lòng thử lại.':
       'Impossible d’envoyer le formulaire. Veuillez réessayer.',
   },
@@ -559,6 +604,13 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu tài trợ thương mại': 'Запрос торгового финансирования',
     'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
       'Поддержка вариантов торгового финансирования, связанных с заказом, производством, QC и отгрузкой.',
+    'Yêu cầu tài trợ học bổng': 'Запрос на спонсирование стипендий',
+    'Hỗ trợ, đồng hành hoặc tài trợ cho các chương trình học bổng của ANSLIFE.':
+      'Поддержка, партнерство или спонсирование стипендиальных программ ANSLIFE.',
+    'Yêu cầu đề nghị tham gia các chương trình cộng đồng, phụng sự xã hội':
+      'Запрос на участие в общественных и социальных программах',
+    'Đề nghị phối hợp, tham gia hoặc đồng hành cùng các chương trình cộng đồng và phụng sự xã hội.':
+      'Предложение о сотрудничестве, участии или партнерстве в общественных и социальных программах.',
     'Yêu cầu logistics / chứng từ': 'Запрос по логистике / документам',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       'Координация экспорта, упаковка, загрузка контейнера и отгрузочные документы.',
@@ -590,6 +642,8 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       'Можно выбрать несколько продуктов. Если нужного нет в подсказках, введите вручную и нажмите Добавить.',
     'Đang gửi dữ liệu...': 'Отправка данных...',
     'Đang gửi...': 'Отправка...',
+    'Vui lòng chọn ít nhất một loại yêu cầu.':
+      'Выберите хотя бы один тип запроса.',
     'Không gửi được form. Vui lòng thử lại.':
       'Не удалось отправить форму. Попробуйте еще раз.',
   },
@@ -624,6 +678,13 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu tài trợ thương mại': 'Solicitud de financiación comercial',
     'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
       'Apoyo con opciones de financiación comercial vinculadas al pedido, la producción, el QC y el despacho.',
+    'Yêu cầu tài trợ học bổng': 'Solicitud de patrocinio de becas',
+    'Hỗ trợ, đồng hành hoặc tài trợ cho các chương trình học bổng của ANSLIFE.':
+      'Apoyo, colaboración o patrocinio para los programas de becas de ANSLIFE.',
+    'Yêu cầu đề nghị tham gia các chương trình cộng đồng, phụng sự xã hội':
+      'Solicitud para participar en programas comunitarios y de servicio social',
+    'Đề nghị phối hợp, tham gia hoặc đồng hành cùng các chương trình cộng đồng và phụng sự xã hội.':
+      'Propuesta de cooperación, participación o colaboración en programas comunitarios y de servicio social.',
     'Yêu cầu logistics / chứng từ': 'Solicitud de logística / documentación',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       'Coordinación de exportación, embalaje, carga de contenedor y documentos de envío.',
@@ -655,6 +716,8 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       'Puedes seleccionar varios productos. Si no aparece en las sugerencias, introdúcelo manualmente y pulsa Añadir.',
     'Đang gửi dữ liệu...': 'Enviando datos...',
     'Đang gửi...': 'Enviando...',
+    'Vui lòng chọn ít nhất một loại yêu cầu.':
+      'Selecciona al menos un tipo de solicitud.',
     'Không gửi được form. Vui lòng thử lại.':
       'No se pudo enviar el formulario. Inténtalo de nuevo.',
   },
@@ -689,6 +752,13 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu tài trợ thương mại': '贸易融资需求',
     'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
       '支持与订单、生产、QC和出货关联的贸易融资方案。',
+    'Yêu cầu tài trợ học bổng': '奖学金赞助需求',
+    'Hỗ trợ, đồng hành hoặc tài trợ cho các chương trình học bổng của ANSLIFE.':
+      '支持、合作或赞助ANSLIFE奖学金项目。',
+    'Yêu cầu đề nghị tham gia các chương trình cộng đồng, phụng sự xã hội':
+      '参与社区与社会公益项目需求',
+    'Đề nghị phối hợp, tham gia hoặc đồng hành cùng các chương trình cộng đồng và phụng sự xã hội.':
+      '提议合作、参与或共同支持社区与社会公益项目。',
     'Yêu cầu logistics / chứng từ': '物流 / 单证需求',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       '出口协调、包装、装柜和交货文件。',
@@ -720,6 +790,8 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       '可以选择多个产品。如果建议中没有，请手动输入后点击添加。',
     'Đang gửi dữ liệu...': '正在提交数据...',
     'Đang gửi...': '提交中...',
+    'Vui lòng chọn ít nhất một loại yêu cầu.':
+      '请至少选择一种需求类型。',
     'Không gửi được form. Vui lòng thử lại.':
       '表单提交失败，请重试。',
   },

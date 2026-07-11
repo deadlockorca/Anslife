@@ -25,6 +25,9 @@ const REQUEST_CATEGORY_LABELS: Record<string, string> = {
   qc_request: 'Yêu cầu QC / kiểm soát chất lượng',
   supply_hub_request: 'Yêu cầu Supply Hub',
   trade_finance_request: 'Yêu cầu tài trợ thương mại',
+  scholarship_sponsorship_request: 'Yêu cầu tài trợ học bổng',
+  community_program_request:
+    'Yêu cầu đề nghị tham gia các chương trình cộng đồng, phụng sự xã hội',
   logistics_documentation_request: 'Yêu cầu logistics / chứng từ',
 };
 
@@ -60,9 +63,18 @@ function escapeHtml(value: string): string {
     .replace(/'/g, '&#39;');
 }
 
+function normalizeRequestCategoryValue(value: string): string {
+  return value
+    .split(',')
+    .map((item) => item.trim())
+    .filter(Boolean)
+    .map((item) => REQUEST_CATEGORY_LABELS[item] ?? item)
+    .join(', ');
+}
+
 function normalizeFieldValue(key: string, value: string): string {
   if (key === 'request-category') {
-    return REQUEST_CATEGORY_LABELS[value] ?? value;
+    return normalizeRequestCategoryValue(value);
   }
 
   if (key === 'privacy-consent') {
@@ -109,7 +121,7 @@ function getContactSummary(payload: ContactPayload) {
   const company = payload['your-company']?.trim() || 'Chưa có công ty';
   const market = payload['country-region']?.trim() || 'Chưa chọn thị trường';
   const requestType =
-    REQUEST_CATEGORY_LABELS[payload['request-category'] ?? ''] ?? 'Yêu cầu liên hệ';
+    normalizeRequestCategoryValue(payload['request-category'] ?? '') || 'Yêu cầu liên hệ';
 
   return {
     senderName,

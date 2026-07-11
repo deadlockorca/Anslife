@@ -2070,14 +2070,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="manufacturing-woodworking-cta-actions">
+              <Link to={toLocalizedPath('/contact/request-quotation')}>
+                {t('Gửi yêu cầu')} <span aria-hidden="true">→</span>
+              </Link>
               <Link to={toLocalizedPath('/about-anslife/company-info')}>
-                {t('Trao đổi yêu cầu')} <span aria-hidden="true">→</span>
-              </Link>
-              <Link to={toLocalizedPath('/manufacturing/production-process/sanding')}>
-                {t('Xem chà nhám')} <span aria-hidden="true">→</span>
-              </Link>
-              <Link to={toLocalizedPath('/manufacturing/machinery-equipment')}>
-                {t('Xem máy móc thiết bị')} <span aria-hidden="true">→</span>
+                {t('Liên hệ ANSLIFE')} <span aria-hidden="true">→</span>
               </Link>
             </div>
           </section>
@@ -2307,14 +2304,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="manufacturing-cutting-cta-actions">
+              <Link to={toLocalizedPath('/contact/request-quotation')}>
+                {t('Gửi yêu cầu')} <span aria-hidden="true">→</span>
+              </Link>
               <Link to={toLocalizedPath('/about-anslife/company-info')}>
-                {t('Trao đổi yêu cầu')} <span aria-hidden="true">→</span>
-              </Link>
-              <Link to={toLocalizedPath('/manufacturing/machinery-equipment')}>
-                {t('Xem máy móc thiết bị')} <span aria-hidden="true">→</span>
-              </Link>
-              <Link to={toLocalizedPath('/quality-control/in-process-inspection')}>
-                {t('Kiểm tra trong sản xuất')} <span aria-hidden="true">→</span>
+                {t('Liên hệ ANSLIFE')} <span aria-hidden="true">→</span>
               </Link>
             </div>
           </section>
@@ -2536,14 +2530,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="manufacturing-material-preparation-cta-actions">
+              <Link to={toLocalizedPath('/contact/request-quotation')}>
+                {t('Gửi yêu cầu')} <span aria-hidden="true">→</span>
+              </Link>
               <Link to={toLocalizedPath('/about-anslife/company-info')}>
-                {t('Trao đổi yêu cầu')} <span aria-hidden="true">→</span>
-              </Link>
-              <Link to={toLocalizedPath('/materials')}>
-                {t('Xem nhóm nguyên liệu')} <span aria-hidden="true">→</span>
-              </Link>
-              <Link to={toLocalizedPath('/quality-control/material-inspection')}>
-                {t('Kiểm tra vật liệu')} <span aria-hidden="true">→</span>
+                {t('Liên hệ ANSLIFE')} <span aria-hidden="true">→</span>
               </Link>
             </div>
           </section>
@@ -2697,9 +2688,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="manufacturing-container-loading-cta-actions">
-              <a href="/contact">{t('Trao đổi dự án')} <span aria-hidden="true">→</span></a>
-              <a href="/manufacturing/packing-area">{t('Khu vực đóng gói')} <span aria-hidden="true">→</span></a>
-              <a href="/vietnam-supply-hub/lcl-fcl-consolidation">{t('LCL / FCL Consolidation')} <span aria-hidden="true">→</span></a>
+              <a href="/contact/request-quotation">{t('Gửi yêu cầu')} <span aria-hidden="true">→</span></a>
+              <a href="/about-anslife/company-info">{t('Liên hệ ANSLIFE')} <span aria-hidden="true">→</span></a>
             </div>
           </section>
         </section>
@@ -2930,9 +2920,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="manufacturing-packing-area-cta-actions">
-              <a href="/contact">{t('Trao đổi dự án')} <span aria-hidden="true">→</span></a>
-              <a href="/quality-control/packing-standard">{t('Tiêu chuẩn đóng gói')} <span aria-hidden="true">→</span></a>
-              <a href="/manufacturing/container-loading">{t('Xếp container')} <span aria-hidden="true">→</span></a>
+              <a href="/contact/request-quotation">{t('Gửi yêu cầu')} <span aria-hidden="true">→</span></a>
+              <a href="/about-anslife/company-info">{t('Liên hệ ANSLIFE')} <span aria-hidden="true">→</span></a>
             </div>
           </section>
         </section>
@@ -3137,9 +3126,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="manufacturing-assembly-line-cta-actions">
-              <a href="/contact">{t('Trao đổi dự án')} <span aria-hidden="true">→</span></a>
-              <a href="/manufacturing/factory-overview">{t('Xem tổng quan nhà máy')} <span aria-hidden="true">→</span></a>
-              <a href="/quality-control/final-inspection">{t('Kiểm tra cuối')} <span aria-hidden="true">→</span></a>
+              <a href="/contact/request-quotation">{t('Gửi yêu cầu')} <span aria-hidden="true">→</span></a>
+              <a href="/about-anslife/company-info">{t('Liên hệ ANSLIFE')} <span aria-hidden="true">→</span></a>
             </div>
           </section>
         </section>
@@ -3438,9 +3426,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="manufacturing-finishing-capability-cta-actions">
-              <a href="/contact">{t('Trao đổi dự án')} <span aria-hidden="true">→</span></a>
-              <a href="/manufacturing/machinery-equipment">{t('Máy móc & Thiết bị')} <span aria-hidden="true">→</span></a>
-              <a href="/quality-control/approved-sample-control">{t('Kiểm soát mẫu duyệt')} <span aria-hidden="true">→</span></a>
+              <a href="/contact/request-quotation">{t('Gửi yêu cầu')} <span aria-hidden="true">→</span></a>
+              <a href="/about-anslife/company-info">{t('Liên hệ ANSLIFE')} <span aria-hidden="true">→</span></a>
             </div>
           </section>
         </section>
@@ -3746,9 +3733,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="manufacturing-machinery-equipment-cta-actions">
-              <a href="/contact">{t('Trao đổi dự án')} <span aria-hidden="true">→</span></a>
-              <a href="/manufacturing/factory-overview">{t('Xem tổng quan nhà máy')} <span aria-hidden="true">→</span></a>
-              <a href="/quality-control/qc-process">{t('Quy trình QC')} <span aria-hidden="true">→</span></a>
+              <a href="/contact/request-quotation">{t('Gửi yêu cầu')} <span aria-hidden="true">→</span></a>
+              <a href="/about-anslife/company-info">{t('Liên hệ ANSLIFE')} <span aria-hidden="true">→</span></a>
             </div>
           </section>
         </section>
@@ -4090,15 +4076,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="manufacturing-factory-overview-cta-actions">
-              <a href="/vn/contact">
+              <a href="/contact/request-quotation">
                 <span aria-hidden="true">✈</span>
                 {t('Gửi yêu cầu')}
               </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">⇧</span>
-                {t('Tải bản vẽ lên')}
-              </a>
-              <a href="/vn/contact">
+              <a href="/about-anslife/company-info">
                 <span aria-hidden="true">☎</span>
                 {t('Liên hệ ANSLIFE')}
               </a>
@@ -12195,9 +12177,8 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="resources-company-updates-cta-actions">
-                <a href="/vn/resources/company-updates">{t('Xem tất cả cập nhật')} →</a>
-                <a href="/vn/contact">{t('Đăng ký nhận tin')} →</a>
-                <a href="/vn/contact">{t('Liên hệ ANSLIFE')} →</a>
+                <a href="/contact/request-quotation">{t('Gửi yêu cầu')} →</a>
+                <a href="/about-anslife/company-info">{t('Liên hệ ANSLIFE')} →</a>
               </div>
             </div>
           </section>
@@ -12455,11 +12436,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="resources-case-studies-cta-actions">
-                <a className="is-primary" href="/vn/resources/case-studies">
-                  {t('Xem Case Study mới nhất')} →
+                <a className="is-primary" href="/contact/request-quotation">
+                  {t('Gửi yêu cầu')} →
                 </a>
-                <a href="/vn/contact">{t('Gửi yêu cầu dự án')} →</a>
-                <a href="/vn/contact">{t('Liên hệ ANSLIFE')} →</a>
+                <a href="/about-anslife/company-info">{t('Liên hệ ANSLIFE')} →</a>
               </div>
             </div>
           </section>
@@ -12666,15 +12646,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="resources-export-knowledge-cta-actions">
-              <a className="is-primary" href="/vn/resources/export-knowledge">
+              <a className="is-primary" href="/contact/request-quotation">
                 <span className="resources-export-knowledge-cta-icon resources-export-knowledge-cta-icon--book" aria-hidden="true" />
-                {t('Xem bài viết mới nhất')}
+                {t('Gửi yêu cầu')}
               </a>
-              <a href="/vn/search">
-                <span className="resources-export-knowledge-cta-icon resources-export-knowledge-cta-icon--search" aria-hidden="true" />
-                {t('Tìm kiếm chủ đề')}
-              </a>
-              <a href="/vn/contact">
+              <a href="/about-anslife/company-info">
                 <span className="resources-export-knowledge-cta-icon resources-export-knowledge-cta-icon--headset" aria-hidden="true" />
                 {t('Liên hệ ANSLIFE')}
               </a>
@@ -13037,15 +13013,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="resources-manufacturing-notes-cta-actions">
-              <a className="is-primary" href="/vn/resources/manufacturing-notes">
+              <a className="is-primary" href="/contact/request-quotation">
                 <span className="resources-manufacturing-notes-cta-icon resources-manufacturing-notes-cta-icon--book" aria-hidden="true" />
-                {t('Xem ghi chú mới nhất')}
+                {t('Gửi yêu cầu')}
               </a>
-              <a href="/vn/search">
-                <span className="resources-manufacturing-notes-cta-icon resources-manufacturing-notes-cta-icon--search" aria-hidden="true" />
-                {t('Tìm kiếm chủ đề')}
-              </a>
-              <a href="/vn/contact">
+              <a href="/about-anslife/company-info">
                 <span className="resources-manufacturing-notes-cta-icon resources-manufacturing-notes-cta-icon--phone" aria-hidden="true" />
                 {t('Liên hệ ANSLIFE')}
               </a>
@@ -13436,15 +13408,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="quality-control-overview-cta-actions">
-              <a className="is-primary" href="/vn/contact/upload-drawing">
+              <a className="is-primary" href="/contact/request-quotation">
                 <span className="quality-control-overview-action-icon quality-control-overview-action-icon--upload" aria-hidden="true" />
-                {t('Gửi yêu cầu chất lượng')}
+                {t('Gửi yêu cầu')}
               </a>
-              <a href="/vn/contact/upload-drawing">
-                <span className="quality-control-overview-action-icon quality-control-overview-action-icon--document" aria-hidden="true" />
-                {t('Tải tài liệu kỹ thuật')}
-              </a>
-              <a href="/vn/contact">
+              <a href="/about-anslife/company-info">
                 <span className="quality-control-overview-action-icon quality-control-overview-action-icon--phone" aria-hidden="true" />
                 {t('Liên hệ ANSLIFE')}
               </a>
@@ -13653,15 +13621,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="quality-control-qc-process-cta-actions">
-              <a className="is-primary" href="/vn/contact/upload-drawing">
+              <a className="is-primary" href="/contact/request-quotation">
                 <span className="quality-control-qc-process-action-icon quality-control-qc-process-action-icon--upload" aria-hidden="true" />
-                {t('Gửi yêu cầu QC')}
+                {t('Gửi yêu cầu')}
               </a>
-              <a href="/vn/contact/upload-drawing">
-                <span className="quality-control-qc-process-action-icon quality-control-qc-process-action-icon--document" aria-hidden="true" />
-                {t('Tải tài liệu kỹ thuật')}
-              </a>
-              <a href="/vn/contact">
+              <a href="/about-anslife/company-info">
                 <span className="quality-control-qc-process-action-icon quality-control-qc-process-action-icon--phone" aria-hidden="true" />
                 {t('Liên hệ ANSLIFE')}
               </a>
@@ -13960,13 +13924,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="quality-control-material-inspection-cta-actions">
-              <a className="is-primary" href="/vn/contact/upload-drawing">
+              <a className="is-primary" href="/contact/request-quotation">
                 {t('Gửi yêu cầu')}
               </a>
-              <a href="/vn/contact/upload-drawing">
-                {t('Tải tài liệu kỹ thuật')}
-              </a>
-              <a href="/vn/contact">
+              <a href="/about-anslife/company-info">
                 {t('Liên hệ ANSLIFE')}
               </a>
             </div>
@@ -14251,11 +14212,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 </p>
               </div>
               <div className="quality-control-in-process-inspection-cta-actions">
-                <a className="is-primary" href="/vn/contact/upload-drawing">
-                  {t('Gửi yêu cầu QC')}
+                <a className="is-primary" href="/contact/request-quotation">
+                  {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact/upload-drawing">{t('Tải tài liệu kỹ thuật')}</a>
-                <a href="/vn/contact">{t('Liên hệ ANSLIFE')}</a>
+                <a href="/about-anslife/company-info">{t('Liên hệ ANSLIFE')}</a>
               </div>
             </section>
           </section>
@@ -14762,15 +14722,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="quality-control-packing-standard-cta-actions">
-                <a className="is-primary" href="/vn/contact/upload-drawing">
+                <a className="is-primary" href="/contact/request-quotation">
                   <span className="quality-control-packing-standard-cta-icon quality-control-packing-standard-cta-icon--upload" aria-hidden="true" />
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact/upload-drawing">
-                  <span className="quality-control-packing-standard-cta-icon quality-control-packing-standard-cta-icon--document" aria-hidden="true" />
-                  {t('Tải tiêu chuẩn đóng gói')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span className="quality-control-packing-standard-cta-icon quality-control-packing-standard-cta-icon--phone" aria-hidden="true" />
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -15122,11 +15078,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="quality-control-buyer-specific-standards-cta-actions">
-              <a className="is-primary" href="/vn/contact/upload-drawing">
-                {t('Gửi tiêu chuẩn')}
+              <a className="is-primary" href="/contact/request-quotation">
+                {t('Gửi yêu cầu')}
               </a>
-              <a href="/vn/contact/upload-drawing">{t('Tải tài liệu')}</a>
-              <a href="/vn/contact">{t('Liên hệ ANSLIFE')}</a>
+              <a href="/about-anslife/company-info">{t('Liên hệ ANSLIFE')}</a>
             </div>
           </section>
         </section>
@@ -15473,15 +15428,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="quality-control-inspection-report-cta-actions">
-                <a className="is-primary" href="/vn/contact/upload-drawing">
+                <a className="is-primary" href="/contact/request-quotation">
                   <span className="quality-control-inspection-report-cta-icon quality-control-inspection-report-cta-icon--upload" aria-hidden="true" />
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact/upload-drawing">
-                  <span className="quality-control-inspection-report-cta-icon quality-control-inspection-report-cta-icon--document" aria-hidden="true" />
-                  {t('Tải tài liệu kỹ thuật')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span className="quality-control-inspection-report-cta-icon quality-control-inspection-report-cta-icon--phone" aria-hidden="true" />
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -15832,11 +15783,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="quality-control-moisture-control-cta-actions">
-              <a className="is-primary" href="/vn/contact">
+              <a className="is-primary" href="/contact/request-quotation">
                 {t('Gửi yêu cầu')}
               </a>
-              <a href="/vn/contact">{t('Tải tài liệu kỹ thuật')}</a>
-              <a href="/vn/contact">{t('Liên hệ ANSLIFE')}</a>
+              <a href="/about-anslife/company-info">{t('Liên hệ ANSLIFE')}</a>
             </div>
           </section>
         </section>
@@ -16162,11 +16112,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="quality-control-approved-sample-control-cta-actions">
-              <a className="is-primary" href="/vn/contact">
-                {t('Gửi mẫu duyệt')}
+              <a className="is-primary" href="/contact/request-quotation">
+                {t('Gửi yêu cầu')}
               </a>
-              <a href="/vn/contact">{t('Tải tài liệu kỹ thuật')}</a>
-              <a href="/vn/contact">{t('Liên hệ ANSLIFE')}</a>
+              <a href="/about-anslife/company-info">{t('Liên hệ ANSLIFE')}</a>
             </div>
           </section>
         </section>
@@ -16484,13 +16433,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="quality-control-final-inspection-cta-actions">
-              <a className="is-primary" href="/vn/contact">
-                {t('Gửi yêu cầu QC')}
+              <a className="is-primary" href="/contact/request-quotation">
+                {t('Gửi yêu cầu')}
               </a>
-              <a href="/vn/contact">
-                {t('Tải checklist QC')}
-              </a>
-              <a href="/vn/contact">
+              <a href="/about-anslife/company-info">
                 {t('Liên hệ ANSLIFE')}
               </a>
             </div>
@@ -16940,11 +16886,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="supply-hub-qc-checklist-cta-actions">
-              <a href="/vn/contact/upload-drawing">
+              <a href="/contact/request-quotation">
                 <span className="supply-hub-qc-checklist-action-icon supply-hub-qc-checklist-action-icon--document" aria-hidden="true" />
-                {t('Gửi tiêu chuẩn kiểm tra')}
+                {t('Gửi yêu cầu')}
               </a>
-              <a href="/vn/contact">
+              <a href="/about-anslife/company-info">
                 <span className="supply-hub-qc-checklist-action-icon supply-hub-qc-checklist-action-icon--phone" aria-hidden="true" />
                 {t('Liên hệ ANSLIFE')}
               </a>
@@ -17228,15 +17174,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="supply-hub-packing-standards-cta-actions">
-                <a className="is-primary" href="/vn/contact/upload-drawing">
+                <a className="is-primary" href="/contact/request-quotation">
                   <span className="supply-hub-packing-standards-action-icon supply-hub-packing-standards-action-icon--upload" aria-hidden="true" />
-                  {t('Tải tiêu chuẩn đóng gói lên')}
+                  {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact/upload-drawing">
-                  <span className="supply-hub-packing-standards-action-icon supply-hub-packing-standards-action-icon--request" aria-hidden="true" />
-                  {t('Gửi yêu cầu kỹ thuật')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span className="supply-hub-packing-standards-action-icon supply-hub-packing-standards-action-icon--phone" aria-hidden="true" />
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -17823,15 +17765,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="supply-hub-technical-drawings-cta-actions">
-              <a href="/contact/upload-drawing">
-                <b aria-hidden="true">↥</b>
-                <span>{t('Tải bản vẽ lên')}</span>
-              </a>
-              <a href="/contact/supply-hub-inquiry">
+              <a href="/contact/request-quotation">
                 <b aria-hidden="true">✈</b>
-                <span>{t('Gửi yêu cầu kỹ thuật')}</span>
+                <span>{t('Gửi yêu cầu')}</span>
               </a>
-              <a href="/contact">
+              <a href="/about-anslife/company-info">
                 <b aria-hidden="true">☎</b>
                 <span>{t('Liên hệ ANSLIFE')}</span>
               </a>
@@ -18311,12 +18249,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="supply-hub-component-samples-cta-actions">
-              <a href="/contact/supply-hub-inquiry">
+              <a href="/contact/request-quotation">
                 <span>{t('Gửi yêu cầu')}</span>
                 <b aria-hidden="true">→</b>
               </a>
-              <a href="/contact">
-                <span>{t('Trao đổi với ANSLIFE')}</span>
+              <a href="/about-anslife/company-info">
+                <span>{t('Liên hệ ANSLIFE')}</span>
                 <b aria-hidden="true">☰</b>
               </a>
             </div>
@@ -18641,12 +18579,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="supply-hub-approved-samples-cta-actions">
-                <a href="/contact/supply-hub-inquiry">
+                <a href="/contact/request-quotation">
                   <span>{t('Gửi yêu cầu')}</span>
                   <b aria-hidden="true">→</b>
                 </a>
-                <a href="/contact">
-                  <span>{t('Trao đổi với ANSLIFE')}</span>
+                <a href="/about-anslife/company-info">
+                  <span>{t('Liên hệ ANSLIFE')}</span>
                   <b aria-hidden="true">☰</b>
                 </a>
               </div>
@@ -18840,11 +18778,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="supply-hub-material-storage-cta-actions">
-              <a className="supply-hub-material-storage-cta-primary" href="/contact/supply-hub-inquiry">
+              <a className="supply-hub-material-storage-cta-primary" href="/contact/request-quotation">
                 {t('Gửi yêu cầu')}
               </a>
-              <a className="supply-hub-material-storage-cta-secondary" href="/contact">
-                {t('Trao đổi với ANSLIFE')}
+              <a className="supply-hub-material-storage-cta-secondary" href="/about-anslife/company-info">
+                {t('Liên hệ ANSLIFE')}
               </a>
             </div>
             <img
@@ -19084,12 +19022,12 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="supply-hub-export-doc-cta-actions">
-                <a className="supply-hub-export-doc-cta-primary" href="/contact/supply-hub-inquiry">
+                <a className="supply-hub-export-doc-cta-primary" href="/contact/request-quotation">
                   {t('Gửi yêu cầu')}
                   <span aria-hidden="true">→</span>
                 </a>
-                <a className="supply-hub-export-doc-cta-secondary" href="/contact">
-                  {t('Trao đổi với ANSLIFE')}
+                <a className="supply-hub-export-doc-cta-secondary" href="/about-anslife/company-info">
+                  {t('Liên hệ ANSLIFE')}
                   <span aria-hidden="true">☏</span>
                 </a>
               </div>
@@ -19353,13 +19291,13 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 decoding="async"
               />
               <div className="supply-hub-weekly-cta-actions">
-                <a className="supply-hub-weekly-cta-primary" href="/contact/supply-hub-inquiry">
+                <a className="supply-hub-weekly-cta-primary" href="/contact/request-quotation">
                   <span aria-hidden="true">↗</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a className="supply-hub-weekly-cta-secondary" href="/contact">
+                <a className="supply-hub-weekly-cta-secondary" href="/about-anslife/company-info">
                   <span aria-hidden="true">☏</span>
-                  {t('Trao đổi với ANSLIFE')}
+                  {t('Liên hệ ANSLIFE')}
                 </a>
               </div>
             </section>
@@ -19490,10 +19428,10 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="supply-hub-lcl-fcl-cta-actions">
-              <a className="supply-hub-lcl-fcl-cta-primary" href="/contact/supply-hub-inquiry">
+              <a className="supply-hub-lcl-fcl-cta-primary" href="/contact/request-quotation">
                 {t('Gửi yêu cầu')}
               </a>
-              <a className="supply-hub-lcl-fcl-cta-secondary" href="/contact">
+              <a className="supply-hub-lcl-fcl-cta-secondary" href="/about-anslife/company-info">
                 {t('Liên hệ ANSLIFE')}
               </a>
             </div>
@@ -19617,13 +19555,13 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="supply-hub-storage-cta-actions">
-              <a href="/contact/supply-hub-inquiry">
-                <span>{t('Gửi yêu cầu Supply Hub')}</span>
+              <a href="/contact/request-quotation">
+                <span>{t('Gửi yêu cầu')}</span>
                 <b aria-hidden="true">→</b>
               </a>
-              <a href="/contact/upload-drawing">
-                <span>{t('Tải tài liệu lên')}</span>
-                <b aria-hidden="true">↥</b>
+              <a href="/about-anslife/company-info">
+                <span>{t('Liên hệ ANSLIFE')}</span>
+                <b aria-hidden="true">☏</b>
               </a>
             </div>
           </section>
@@ -19840,13 +19778,13 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="supply-hub-overview-cta-actions">
-              <a href="/contact/supply-hub-inquiry">
+              <a href="/contact/request-quotation">
                 <span>{t('Gửi yêu cầu')}</span>
                 <b aria-hidden="true">→</b>
               </a>
-              <a href="/contact/supply-hub-inquiry">
-                <span>{t('Tải tài liệu lên')}</span>
-                <b aria-hidden="true">⇧</b>
+              <a href="/about-anslife/company-info">
+                <span>{t('Liên hệ ANSLIFE')}</span>
+                <b aria-hidden="true">☏</b>
               </a>
             </div>
           </section>

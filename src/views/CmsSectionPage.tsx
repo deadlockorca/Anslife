@@ -370,9 +370,8 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
               </p>
             </div>
             <div className="scholarship-community-cta-actions">
-              <a href="/contact">{t('Liên hệ hợp tác')}</a>
-              <a href="/contact">{t('Gửi đề xuất')}</a>
-              <a href="/contact">{t('Kết nối với ANSLIFE')}</a>
+              <Link to={toLocalizedPath('/contact/request-quotation')}>{t('Gửi yêu cầu')}</Link>
+              <Link to={toLocalizedPath('/about-anslife/company-info')}>{t('Liên hệ ANSLIFE')}</Link>
             </div>
           </section>
         </section>

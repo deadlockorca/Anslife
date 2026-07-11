@@ -145,8 +145,8 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
         <p>Gửi bản vẽ, yêu cầu sản phẩm, vật liệu hoặc nhu cầu lưu kho để đội ngũ ANSLIFE xem xét và đề xuất giải pháp phù hợp.</p>
       </div>
       <div class="ai-company-request-actions">
-        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu <span>→</span></a>
-        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
+        <a class="ai-company-request-primary" href="/contact/request-quotation">Gửi yêu cầu <span>→</span></a>
+        <a class="ai-company-request-secondary" href="/about-anslife/company-info">Liên hệ ANSLIFE</a>
       </div>
     </div>
 
@@ -260,8 +260,8 @@ const PRODUCTS_OPERATIONS_SUPPLY_SECTION_VN = `
         <p>Gửi yêu cầu ngay hôm nay, đội ngũ ANSLIFE sẽ phản hồi trong thời gian sớm nhất.</p>
       </div>
       <div class="ai-company-request-actions">
-        <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
-        <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải tài liệu / bản vẽ lên</a>
+        <a class="ai-company-request-primary" href="/contact/request-quotation">Gửi yêu cầu</a>
+        <a class="ai-company-request-secondary" href="/about-anslife/company-info">Liên hệ ANSLIFE</a>
       </div>
     </div>
   </section>
@@ -655,13 +655,13 @@ const PRODUCTS_FINISHING_PAINTED_FINISH_SECTION_VN = `
         <h3>Gửi mẫu màu / mẫu bề mặt cho ANSLIFE</h3>
         <p>Buyer có thể gửi mẫu màu, mã màu, mẫu bề mặt, hình ảnh tham khảo hoặc tiêu chuẩn hoàn thiện để ANSLIFE đánh giá, phát triển phương án sơn màu và đề xuất giải pháp phù hợp cho sản xuất.</p>
         <div class="ai-finishing-painted-sample-actions">
-          <a class="ai-finishing-painted-sample-primary" href="/vn/contact/request-quotation">
+          <a class="ai-finishing-painted-sample-primary" href="/contact/request-quotation">
             <span aria-hidden="true">↗</span>
             Gửi yêu cầu
           </a>
-          <a class="ai-finishing-painted-sample-secondary" href="/vn/contact/upload-drawing">
-            <span aria-hidden="true">↑</span>
-            Tải mẫu lên
+          <a class="ai-finishing-painted-sample-secondary" href="/about-anslife/company-info">
+            <span aria-hidden="true">☎</span>
+            Liên hệ ANSLIFE
           </a>
         </div>
       </aside>
@@ -924,13 +924,13 @@ const PRODUCTS_FINISHING_MATTE_FINISH_SECTION_VN = `
         <h3>Gửi mẫu mờ / mẫu bề mặt cho ANSLIFE</h3>
         <p>Buyer có thể gửi mẫu bề mặt, mẫu màu, hình ảnh tham khảo hoặc tiêu chuẩn độ mờ để ANSLIFE đánh giá, phát triển phương án hoàn thiện mờ và đề xuất giải pháp phù hợp cho sản xuất.</p>
         <div class="ai-finishing-matte-sample-actions">
-          <a class="ai-finishing-matte-sample-primary" href="/vn/contact/request-quotation">
+          <a class="ai-finishing-matte-sample-primary" href="/contact/request-quotation">
             <span aria-hidden="true">↗</span>
             Gửi yêu cầu
           </a>
-          <a class="ai-finishing-matte-sample-secondary" href="/vn/contact/upload-drawing">
-            <span aria-hidden="true">↑</span>
-            Tải mẫu lên
+          <a class="ai-finishing-matte-sample-secondary" href="/about-anslife/company-info">
+            <span aria-hidden="true">☎</span>
+            Liên hệ ANSLIFE
           </a>
         </div>
       </aside>
@@ -1172,8 +1172,8 @@ const PRODUCTS_FINISHING_NATURAL_FINISH_SECTION_VN = `
           <h3>Gửi mẫu màu / mẫu gỗ cho ANSLIFE</h3>
           <p>Buyer có thể gửi mẫu màu, mẫu gỗ, hình ảnh tham khảo hoặc tiêu chuẩn hoàn thiện để ANSLIFE đánh giá và đề xuất phương án phù hợp.</p>
           <div class="ai-finishing-natural-request-actions">
-            <a class="ai-finishing-natural-request-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu</a>
-            <a class="ai-finishing-natural-request-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↑</span>Tải mẫu lên</a>
+            <a class="ai-finishing-natural-request-primary" href="/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu</a>
+            <a class="ai-finishing-natural-request-secondary" href="/about-anslife/company-info"><span aria-hidden="true">☎</span>Liên hệ ANSLIFE</a>
           </div>
         </div>
         <figure class="ai-finishing-natural-request-visual" aria-label="Minh họa gửi mẫu màu hoặc mẫu gỗ">
@@ -1438,8 +1438,8 @@ const PRODUCTS_FINISHING_STAIN_SECTION_VN = `
         <h3>GỬI MẪU MÀU / MẪU GỖ CHO ANSLIFE</h3>
         <p>Khách mua có thể gửi mẫu màu, mẫu gỗ, hình ảnh tham khảo hoặc tiêu chuẩn hoàn thiện để ANSLIFE đánh giá và đề xuất phương án phù hợp.</p>
         <div class="ai-finishing-stain-sample-actions">
-          <a class="ai-finishing-stain-sample-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu</a>
-          <a class="ai-finishing-stain-sample-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↑</span>Tải mẫu lên</a>
+          <a class="ai-finishing-stain-sample-primary" href="/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu</a>
+          <a class="ai-finishing-stain-sample-secondary" href="/about-anslife/company-info"><span aria-hidden="true">☎</span>Liên hệ ANSLIFE</a>
         </div>
       </article>
     </section>
@@ -1727,8 +1727,8 @@ const PRODUCTS_FINISHING_LACQUER_SECTION_VN = `
       <h3>GỬI MẪU BỀ MẶT / MẪU HOÀN THIỆN CHO ANSLIFE</h3>
       <p>Buyer có thể gửi mẫu bề mặt, mẫu màu, hình ảnh tham khảo hoặc tiêu chuẩn hoàn thiện để ANSLIFE đánh giá, phát triển hệ lacquer và đề xuất phương án phù hợp cho sản xuất.</p>
       <div class="ai-finishing-lacquer-sample-actions">
-        <a class="ai-finishing-lacquer-sample-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu</a>
-        <a class="ai-finishing-lacquer-sample-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↑</span>Tải mẫu lên</a>
+        <a class="ai-finishing-lacquer-sample-primary" href="/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu</a>
+        <a class="ai-finishing-lacquer-sample-secondary" href="/about-anslife/company-info"><span aria-hidden="true">☎</span>Liên hệ ANSLIFE</a>
       </div>
     </article>
   </section>
@@ -2008,8 +2008,8 @@ const PRODUCTS_FINISHING_OIL_FINISH_SECTION_VN = `
       <h3>GỬI MẪU MÀU / MẪU GỖ CHO ANSLIFE</h3>
       <p>Buyer có thể gửi mẫu màu, mẫu gỗ, mẫu bề mặt, hình ảnh tham khảo hoặc tiêu chuẩn hoàn thiện để ANSLIFE đánh giá, phát triển phương án hoàn thiện dầu và đề xuất giải pháp phù hợp cho sản xuất.</p>
       <div class="ai-finishing-oil-sample-actions">
-        <a class="ai-finishing-oil-sample-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu</a>
-        <a class="ai-finishing-oil-sample-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↑</span>Tải mẫu lên</a>
+        <a class="ai-finishing-oil-sample-primary" href="/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu</a>
+        <a class="ai-finishing-oil-sample-secondary" href="/about-anslife/company-info"><span aria-hidden="true">☎</span>Liên hệ ANSLIFE</a>
       </div>
     </article>
   </section>
@@ -2133,9 +2133,8 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_VN = `
         <h3>Gửi yêu cầu sản phẩm cho ANSLIFE</h3>
         <p>Buyer có thể gửi bản vẽ, mẫu thật, hình ảnh tham khảo hoặc yêu cầu tiêu chuẩn sản phẩm. ANSLIFE sẽ xem xét và đề xuất phương án sản xuất, vật liệu, kiểm soát chất lượng và xuất hàng phù hợp.</p>
         <div class="ai-company-request-actions">
-          <a class="ai-company-request-primary" href="/vn/contact/request-quotation">Gửi yêu cầu</a>
-          <a class="ai-company-request-secondary" href="/vn/contact/upload-drawing">Tải bản vẽ lên</a>
-          <a class="ai-company-request-secondary" href="/vn/contact/company-info">Liên hệ ANSLIFE</a>
+          <a class="ai-company-request-primary" href="/contact/request-quotation">Gửi yêu cầu</a>
+          <a class="ai-company-request-secondary" href="/about-anslife/company-info">Liên hệ ANSLIFE</a>
         </div>
       </div>
     </section>
@@ -2260,9 +2259,8 @@ const PRODUCTS_FINISHED_FURNITURE_SECTION_EN = `
         <h3>Send your product request to ANSLIFE</h3>
         <p>Buyers can send drawings, physical samples, reference images, or product standard requirements. ANSLIFE will review and propose suitable production, material, quality control, and export options.</p>
         <div class="ai-company-request-actions">
-          <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request</a>
-          <a class="ai-company-request-secondary" href="/en/contact/upload-drawing">Upload drawings</a>
-          <a class="ai-company-request-secondary" href="/en/contact/company-info">Contact ANSLIFE</a>
+          <a class="ai-company-request-primary" href="/contact/request-quotation">Send request</a>
+          <a class="ai-company-request-secondary" href="/about-anslife/company-info">Contact ANSLIFE</a>
         </div>
       </div>
     </section>
@@ -2388,8 +2386,8 @@ const PRODUCTS_FURNITURE_COMPONENTS_SECTION_VN = `
         <p>Đội ngũ kỹ thuật & kinh doanh của chúng tôi sẽ phản hồi nhanh chóng để tư vấn giải pháp và báo giá phù hợp.</p>
       </div>
       <div class="ai-components-actions">
-        <a class="ai-components-primary" href="/vn/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu ngay</a>
-        <a class="ai-components-secondary" href="/vn/contact/upload-drawing"><span aria-hidden="true">↓</span>Tải mẫu yêu cầu cấu kiện</a>
+        <a class="ai-components-primary" href="/contact/request-quotation"><span aria-hidden="true">➤</span>Gửi yêu cầu</a>
+        <a class="ai-components-secondary" href="/about-anslife/company-info"><span aria-hidden="true">☎</span>Liên hệ ANSLIFE</a>
       </div>
     </section>
   </section>
@@ -9846,8 +9844,8 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
         <p>Send drawings, product requirements, material needs or warehousing needs so the ANSLIFE team can review and propose a suitable solution.</p>
       </div>
       <div class="ai-company-request-actions">
-        <a class="ai-company-request-primary" href="/en/contact/request-quotation">Send request <span>→</span></a>
-        <a class="ai-company-request-secondary" href="/en/contact/upload-drawing">Upload drawings</a>
+        <a class="ai-company-request-primary" href="/contact/request-quotation">Send request <span>→</span></a>
+        <a class="ai-company-request-secondary" href="/about-anslife/company-info">Contact ANSLIFE</a>
       </div>
     </div>
 
@@ -15617,8 +15615,8 @@ function buildLocalizedCompanyIntroStandardSection(
         <p>${content.companyIntro.cta}</p>
       </div>
       <div class="ai-company-request-actions">
-        <a class="ai-company-request-primary" href="/${language}/contact/request-quotation">${translateText(language, 'Gửi yêu cầu')} <span>→</span></a>
-        <a class="ai-company-request-secondary" href="/${language}/contact/upload-drawing">${translateText(language, 'Tải tài liệu / bản vẽ lên')}</a>
+        <a class="ai-company-request-primary" href="/contact/request-quotation">${translateText(language, 'Gửi yêu cầu')} <span>→</span></a>
+        <a class="ai-company-request-secondary" href="/about-anslife/company-info">${translateText(language, 'Liên hệ ANSLIFE')}</a>
       </div>
     </div>
 

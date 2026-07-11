@@ -189,6 +189,17 @@ const workRequestTypeOptions = [
     description: 'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.',
   },
   {
+    value: 'scholarship_sponsorship_request',
+    label: 'Yêu cầu tài trợ học bổng',
+    description: 'Hỗ trợ, đồng hành hoặc tài trợ cho các chương trình học bổng của ANSLIFE.',
+  },
+  {
+    value: 'community_program_request',
+    label: 'Yêu cầu đề nghị tham gia các chương trình cộng đồng, phụng sự xã hội',
+    description:
+      'Đề nghị phối hợp, tham gia hoặc đồng hành cùng các chương trình cộng đồng và phụng sự xã hội.',
+  },
+  {
     value: 'logistics_documentation_request',
     label: 'Yêu cầu logistics / chứng từ',
     description: 'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.',
@@ -576,8 +587,30 @@ export default function ContactPage() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const hasMultiRequestCategory = Boolean(
+      form.querySelector('input[type="checkbox"][name="request-category"]'),
+    );
+    const selectedRequestCategories = formData
+      .getAll('request-category')
+      .map((value) => String(value))
+      .filter(Boolean);
+
+    if (hasMultiRequestCategory && selectedRequestCategories.length === 0) {
+      setState({ status: 'error', message: t('Vui lòng chọn ít nhất một loại yêu cầu.') });
+      return;
+    }
+
+    const groupedPayload = new Map<string, string[]>();
+    for (const [key, value] of formData.entries()) {
+      const currentValues = groupedPayload.get(key) ?? [];
+      currentValues.push(String(value));
+      groupedPayload.set(key, currentValues);
+    }
     const payload = Object.fromEntries(
-      Array.from(formData.entries()).map(([key, value]) => [key, String(value)]),
+      Array.from(groupedPayload.entries()).map(([key, values]) => [
+        key,
+        values.join(', '),
+      ]),
     );
 
     setState({ status: 'loading', message: t('Đang gửi dữ liệu...') });
@@ -737,11 +770,10 @@ export default function ContactPage() {
                   {workRequestTypeOptions.map((option, index) => (
                     <label key={option.value} className="contact-request-quotation-type-item">
                       <input
-                        type="radio"
+                        type="checkbox"
                         name="request-category"
                         value={option.value}
                         defaultChecked={index === 0}
-                        required
                       />
                       <span>{t(option.label)}</span>
                     </label>
