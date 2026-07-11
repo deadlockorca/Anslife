@@ -127,10 +127,25 @@ const workRequestTypeOptions = [
     description: 'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.',
   },
   {
+    value: 'trade_finance_request',
+    label: 'Yêu cầu tài trợ thương mại',
+    description: 'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.',
+  },
+  {
     value: 'logistics_documentation_request',
     label: 'Yêu cầu logistics / chứng từ',
     description: 'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.',
   },
+] as const;
+
+const marketOriginOptions = [
+  'Nhật Bản',
+  'EU',
+  'Mỹ',
+  'Hàn Quốc',
+  'Trung Quốc',
+  'Úc',
+  'Canada',
 ] as const;
 
 function isQuoteContactSection(
@@ -627,6 +642,21 @@ export default function ContactPage() {
                     ))}
                   </div>
                 </fieldset>
+              )}
+              {isWorkRequestForm && (
+                <label>
+                  {t('Bạn đến từ thị trường nào?')}
+                  <select name="market-origin" required defaultValue="">
+                    <option value="" disabled>
+                      {t('Chọn thị trường')}
+                    </option>
+                    {marketOriginOptions.map((market) => (
+                      <option key={market} value={market}>
+                        {t(market)}
+                      </option>
+                    ))}
+                  </select>
+                </label>
               )}
               {quoteFormCopy.referenceLabel && (
                 <label>

@@ -232,6 +232,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu Supply Hub': 'Supply Hub request',
     'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
       'Warehousing, LCL/FCL consolidation, standard sample management, documentation or recurring shipment.',
+    'Yêu cầu tài trợ thương mại': 'Trade finance request',
+    'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
+      'Support trade finance options linked to orders, production, QC and shipment.',
     'Yêu cầu logistics / chứng từ': 'Logistics / Documentation request',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       'Export coordination, packing, container loading and shipment documentation.',
@@ -239,6 +242,15 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Nội dung yêu cầu': 'Request details',
     'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
       'Describe your needs, product group, market, estimated quantity, reference documents or required response timeline.',
+    'Bạn đến từ thị trường nào?': 'Which market are you from?',
+    'Chọn thị trường': 'Select market',
+    'Nhật Bản': 'Japan',
+    EU: 'EU',
+    Mỹ: 'United States',
+    'Hàn Quốc': 'South Korea',
+    'Trung Quốc': 'China',
+    Úc: 'Australia',
+    Canada: 'Canada',
     'Gửi yêu cầu': 'Send request',
     'Họ tên': 'Full name',
     'Công ty': 'Company',
@@ -284,6 +296,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu Supply Hub': 'Supply Hub依頼',
     'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
       '保管、LCL/FCL混載、標準サンプル管理、書類対応、定期出荷。',
+    'Yêu cầu tài trợ thương mại': '貿易金融依頼',
+    'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
+      '注文、生産、QC、出荷に紐づく貿易金融案を支援します。',
     'Yêu cầu logistics / chứng từ': '物流 / 書類依頼',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       '輸出調整、梱包、コンテナ積載、出荷書類。',
@@ -291,6 +306,15 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Nội dung yêu cầu': '依頼内容',
     'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
       'ご要望、製品グループ、市場、想定数量、参考資料、希望回答時期をご記入ください。',
+    'Bạn đến từ thị trường nào?': 'どの市場からのお問い合わせですか？',
+    'Chọn thị trường': '市場を選択',
+    'Nhật Bản': '日本',
+    EU: 'EU',
+    Mỹ: '米国',
+    'Hàn Quốc': '韓国',
+    'Trung Quốc': '中国',
+    Úc: 'オーストラリア',
+    Canada: 'カナダ',
     'Gửi yêu cầu': '依頼を送信',
     'Họ tên': 'お名前',
     'Công ty': '会社名',
@@ -337,6 +361,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu Supply Hub': 'Supply Hub 요청',
     'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
       '보관, LCL/FCL 통합, 표준 샘플 관리, 서류 또는 정기 출하.',
+    'Yêu cầu tài trợ thương mại': '무역 금융 요청',
+    'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
+      '주문, 생산, QC 및 출하와 연계된 무역 금융 방안을 지원합니다.',
     'Yêu cầu logistics / chứng từ': '물류 / 서류 요청',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       '수출 조율, 포장, 컨테이너 적재 및 선적 서류.',
@@ -344,6 +371,15 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Nội dung yêu cầu': '요청 내용',
     'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
       '요구사항, 제품군, 시장, 예상 수량, 참고 자료 또는 희망 응답 일정을 입력해 주세요.',
+    'Bạn đến từ thị trường nào?': '어느 시장에서 오셨나요?',
+    'Chọn thị trường': '시장 선택',
+    'Nhật Bản': '일본',
+    EU: 'EU',
+    Mỹ: '미국',
+    'Hàn Quốc': '한국',
+    'Trung Quốc': '중국',
+    Úc: '호주',
+    Canada: '캐나다',
     'Gửi yêu cầu': '요청 보내기',
     'Họ tên': '이름',
     'Công ty': '회사',
@@ -390,6 +426,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu Supply Hub': 'Supply Hub-förfrågan',
     'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
       'Lagring, LCL/FCL-konsolidering, standardprov, dokument eller återkommande leveranser.',
+    'Yêu cầu tài trợ thương mại': 'Handelsfinansieringsförfrågan',
+    'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
+      'Stöd för handelsfinansiering kopplad till order, produktion, QC och leverans.',
     'Yêu cầu logistics / chứng từ': 'Logistik / dokumentförfrågan',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       'Exportkoordinering, packning, containerlastning och fraktdokument.',
@@ -397,6 +436,15 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Nội dung yêu cầu': 'Förfrågningsdetaljer',
     'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
       'Beskriv behov, produktgrupp, marknad, beräknad volym, referensmaterial eller önskad svarstid.',
+    'Bạn đến từ thị trường nào?': 'Vilken marknad kommer du från?',
+    'Chọn thị trường': 'Välj marknad',
+    'Nhật Bản': 'Japan',
+    EU: 'EU',
+    Mỹ: 'USA',
+    'Hàn Quốc': 'Sydkorea',
+    'Trung Quốc': 'Kina',
+    Úc: 'Australien',
+    Canada: 'Kanada',
     'Gửi yêu cầu': 'Skicka förfrågan',
     'Họ tên': 'Namn',
     'Công ty': 'Företag',
@@ -443,6 +491,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu Supply Hub': 'Demande Supply Hub',
     'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
       'Stockage, consolidation LCL/FCL, gestion des échantillons standards, documents ou expéditions récurrentes.',
+    'Yêu cầu tài trợ thương mại': 'Demande de financement commercial',
+    'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
+      'Accompagnement pour une solution de financement commercial liée aux commandes, à la production, au QC et aux expéditions.',
     'Yêu cầu logistics / chứng từ': 'Demande logistique / documents',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       'Coordination export, emballage, chargement container et documents d’expédition.',
@@ -450,6 +501,15 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Nội dung yêu cầu': 'Détails de la demande',
     'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
       'Décrivez le besoin, le groupe de produits, le marché, la quantité estimée, les documents de référence ou le délai de réponse souhaité.',
+    'Bạn đến từ thị trường nào?': 'De quel marché venez-vous ?',
+    'Chọn thị trường': 'Sélectionner un marché',
+    'Nhật Bản': 'Japon',
+    EU: 'UE',
+    Mỹ: 'États-Unis',
+    'Hàn Quốc': 'Corée du Sud',
+    'Trung Quốc': 'Chine',
+    Úc: 'Australie',
+    Canada: 'Canada',
     'Gửi yêu cầu': 'Envoyer la demande',
     'Họ tên': 'Nom complet',
     'Công ty': 'Entreprise',
@@ -496,6 +556,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu Supply Hub': 'Запрос Supply Hub',
     'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
       'Складирование, консолидация LCL/FCL, управление эталонными образцами, документы или регулярные отгрузки.',
+    'Yêu cầu tài trợ thương mại': 'Запрос торгового финансирования',
+    'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
+      'Поддержка вариантов торгового финансирования, связанных с заказом, производством, QC и отгрузкой.',
     'Yêu cầu logistics / chứng từ': 'Запрос по логистике / документам',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       'Координация экспорта, упаковка, загрузка контейнера и отгрузочные документы.',
@@ -503,6 +566,15 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Nội dung yêu cầu': 'Детали запроса',
     'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
       'Опишите задачу, группу продуктов, рынок, предполагаемое количество, справочные материалы или желаемый срок ответа.',
+    'Bạn đến từ thị trường nào?': 'С какого рынка вы обращаетесь?',
+    'Chọn thị trường': 'Выберите рынок',
+    'Nhật Bản': 'Япония',
+    EU: 'ЕС',
+    Mỹ: 'США',
+    'Hàn Quốc': 'Южная Корея',
+    'Trung Quốc': 'Китай',
+    Úc: 'Австралия',
+    Canada: 'Канада',
     'Gửi yêu cầu': 'Отправить запрос',
     'Họ tên': 'Полное имя',
     'Công ty': 'Компания',
@@ -549,6 +621,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu Supply Hub': 'Solicitud Supply Hub',
     'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
       'Almacenamiento, consolidación LCL/FCL, gestión de muestras estándar, documentación o envíos recurrentes.',
+    'Yêu cầu tài trợ thương mại': 'Solicitud de financiación comercial',
+    'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
+      'Apoyo con opciones de financiación comercial vinculadas al pedido, la producción, el QC y el despacho.',
     'Yêu cầu logistics / chứng từ': 'Solicitud de logística / documentación',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       'Coordinación de exportación, embalaje, carga de contenedor y documentos de envío.',
@@ -556,6 +631,15 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Nội dung yêu cầu': 'Detalles de la solicitud',
     'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
       'Describe la necesidad, grupo de productos, mercado, cantidad estimada, documentos de referencia o plazo deseado de respuesta.',
+    'Bạn đến từ thị trường nào?': '¿De qué mercado vienes?',
+    'Chọn thị trường': 'Seleccionar mercado',
+    'Nhật Bản': 'Japón',
+    EU: 'UE',
+    Mỹ: 'Estados Unidos',
+    'Hàn Quốc': 'Corea del Sur',
+    'Trung Quốc': 'China',
+    Úc: 'Australia',
+    Canada: 'Canadá',
     'Gửi yêu cầu': 'Enviar solicitud',
     'Họ tên': 'Nombre completo',
     'Công ty': 'Empresa',
@@ -602,6 +686,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Yêu cầu Supply Hub': 'Supply Hub需求',
     'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
       '仓储、LCL/FCL集货、标准样品管理、单证或定期出货。',
+    'Yêu cầu tài trợ thương mại': '贸易融资需求',
+    'Hỗ trợ phương án tài trợ thương mại gắn với đơn hàng, sản xuất, QC và xuất hàng.':
+      '支持与订单、生产、QC和出货关联的贸易融资方案。',
     'Yêu cầu logistics / chứng từ': '物流 / 单证需求',
     'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
       '出口协调、包装、装柜和交货文件。',
@@ -609,6 +696,15 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Nội dung yêu cầu': '需求内容',
     'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
       '请描述需求、产品组、市场、预计数量、参考资料或期望回复时间。',
+    'Bạn đến từ thị trường nào?': '您来自哪个市场？',
+    'Chọn thị trường': '选择市场',
+    'Nhật Bản': '日本',
+    EU: '欧盟',
+    Mỹ: '美国',
+    'Hàn Quốc': '韩国',
+    'Trung Quốc': '中国',
+    Úc: '澳大利亚',
+    Canada: '加拿大',
     'Gửi yêu cầu': '提交需求',
     'Họ tên': '姓名',
     'Công ty': '公司',
