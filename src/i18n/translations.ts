@@ -201,6 +201,434 @@ const PRIMARY_NAV_TRANSLATIONS: Partial<
   },
 };
 
+const CONTACT_REQUEST_TRANSLATIONS: Partial<
+  Record<Exclude<LanguageCode, typeof VIETNAMESE>, Partial<Record<string, string>>>
+> = {
+  en: {
+    'Liên hệ': 'Contact',
+    'Gửi yêu cầu làm việc': 'Send a Work Request',
+    'Chọn loại yêu cầu phù hợp với nhu cầu của bạn, sau đó gửi thông tin để đội ngũ ANSLIFE tiếp nhận và phản hồi theo đúng nhóm dịch vụ.':
+      'Select the request type that matches your needs, then send the details so the ANSLIFE team can route and respond through the right service group.',
+    'Loại yêu cầu': 'Request type',
+    'Các loại yêu cầu': 'Request types',
+    'Yêu cầu mua hàng / sản xuất': 'Purchasing / Production request',
+    'Sản xuất nội thất, cấu kiện hoặc nhóm hàng theo nhu cầu buyer.':
+      'Furniture, components or product groups manufactured according to buyer needs.',
+    'Yêu cầu R&D / phát triển mẫu': 'R&D / Sample development request',
+    'Phát triển sản phẩm, mẫu thử, vật liệu, cấu trúc hoặc phương án hoàn thiện.':
+      'Product, sample, material, structure or finishing development.',
+    'Yêu cầu OEM / ODM': 'OEM / ODM request',
+    'Triển khai sản phẩm theo bản vẽ, mẫu thật, brief kỹ thuật hoặc ý tưởng.':
+      'Develop products from drawings, physical samples, technical briefs or ideas.',
+    'Yêu cầu cấu kiện nội thất': 'Furniture component request',
+    'Khung ghế, mặt bàn, chân bàn, bộ phận tủ, giường hoặc cấu kiện tùy chỉnh.':
+      'Chair frames, table tops, table legs, cabinet parts, bed parts or custom components.',
+    'Yêu cầu hoàn thiện bề mặt': 'Surface finishing request',
+    'Stain, oil, lacquer, sơn màu, matte finish hoặc mẫu màu theo buyer.':
+      'Stain, oil, lacquer, painted finish, matte finish or buyer-specific color samples.',
+    'Yêu cầu QC / kiểm soát chất lượng': 'QC / Quality control request',
+    'Kiểm tra vật liệu, kiểm tra trong sản xuất, kiểm tra cuối hoặc báo cáo QC.':
+      'Material inspection, in-process inspection, final inspection or QC reporting.',
+    'Yêu cầu Supply Hub': 'Supply Hub request',
+    'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
+      'Warehousing, LCL/FCL consolidation, standard sample management, documentation or recurring shipment.',
+    'Yêu cầu logistics / chứng từ': 'Logistics / Documentation request',
+    'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
+      'Export coordination, packing, container loading and shipment documentation.',
+    'Sản phẩm / nhóm hàng / dịch vụ quan tâm': 'Product / product group / service of interest',
+    'Nội dung yêu cầu': 'Request details',
+    'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
+      'Describe your needs, product group, market, estimated quantity, reference documents or required response timeline.',
+    'Gửi yêu cầu': 'Send request',
+    'Họ tên': 'Full name',
+    'Công ty': 'Company',
+    'Nhập tên sản phẩm rồi bấm Thêm': 'Enter a product name and click Add',
+    'Thêm': 'Add',
+    'Xóa': 'Remove',
+    'Đang tải danh sách sản phẩm...': 'Loading product list...',
+    'Không tải được gợi ý sản phẩm từ hệ thống dữ liệu. Bạn vẫn có thể nhập thủ công.':
+      'Could not load product suggestions from the data system. You can still enter manually.',
+    'Chưa có sản phẩm trong hệ thống để gợi ý.':
+      'There are no products in the system to suggest yet.',
+    'Bạn có thể chọn nhiều sản phẩm. Nếu không thấy trong gợi ý, nhập thủ công rồi bấm Thêm.':
+      'You can select multiple products. If a product is not suggested, enter it manually and click Add.',
+    'Đang gửi dữ liệu...': 'Submitting data...',
+    'Đang gửi...': 'Submitting...',
+    'Không gửi được form. Vui lòng thử lại.': 'Unable to submit the form. Please try again.',
+  },
+  jp: {
+    'Liên hệ': 'お問い合わせ',
+    'Gửi yêu cầu làm việc': '業務依頼を送信',
+    'Chọn loại yêu cầu phù hợp với nhu cầu của bạn, sau đó gửi thông tin để đội ngũ ANSLIFE tiếp nhận và phản hồi theo đúng nhóm dịch vụ.':
+      'ご要望に合う依頼タイプを選択し、詳細情報を送信してください。ANSLIFEチームが適切なサービス担当へ振り分けて対応します。',
+    'Loại yêu cầu': '依頼タイプ',
+    'Các loại yêu cầu': '依頼タイプ一覧',
+    'Yêu cầu mua hàng / sản xuất': '購買 / 生産依頼',
+    'Sản xuất nội thất, cấu kiện hoặc nhóm hàng theo nhu cầu buyer.':
+      'バイヤーの要望に応じた家具、部材、商品グループの生産。',
+    'Yêu cầu R&D / phát triển mẫu': 'R&D / サンプル開発依頼',
+    'Phát triển sản phẩm, mẫu thử, vật liệu, cấu trúc hoặc phương án hoàn thiện.':
+      '製品、試作サンプル、材料、構造、仕上げ方法の開発。',
+    'Yêu cầu OEM / ODM': 'OEM / ODM依頼',
+    'Triển khai sản phẩm theo bản vẽ, mẫu thật, brief kỹ thuật hoặc ý tưởng.':
+      '図面、実物サンプル、技術ブリーフ、アイデアに基づく製品展開。',
+    'Yêu cầu cấu kiện nội thất': '家具部材依頼',
+    'Khung ghế, mặt bàn, chân bàn, bộ phận tủ, giường hoặc cấu kiện tùy chỉnh.':
+      '椅子フレーム、天板、テーブル脚、収納部材、ベッド部材、カスタム部材。',
+    'Yêu cầu hoàn thiện bề mặt': '表面仕上げ依頼',
+    'Stain, oil, lacquer, sơn màu, matte finish hoặc mẫu màu theo buyer.':
+      'ステイン、オイル、ラッカー、カラー塗装、マット仕上げ、バイヤー指定色サンプル。',
+    'Yêu cầu QC / kiểm soát chất lượng': 'QC / 品質管理依頼',
+    'Kiểm tra vật liệu, kiểm tra trong sản xuất, kiểm tra cuối hoặc báo cáo QC.':
+      '材料検査、工程内検査、最終検査、QCレポート。',
+    'Yêu cầu Supply Hub': 'Supply Hub依頼',
+    'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
+      '保管、LCL/FCL混載、標準サンプル管理、書類対応、定期出荷。',
+    'Yêu cầu logistics / chứng từ': '物流 / 書類依頼',
+    'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
+      '輸出調整、梱包、コンテナ積載、出荷書類。',
+    'Sản phẩm / nhóm hàng / dịch vụ quan tâm': '関心のある製品 / 商品群 / サービス',
+    'Nội dung yêu cầu': '依頼内容',
+    'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
+      'ご要望、製品グループ、市場、想定数量、参考資料、希望回答時期をご記入ください。',
+    'Gửi yêu cầu': '依頼を送信',
+    'Họ tên': 'お名前',
+    'Công ty': '会社名',
+    'Nhập tên sản phẩm rồi bấm Thêm': '製品名を入力して「追加」を押してください',
+    'Thêm': '追加',
+    'Xóa': '削除',
+    'Đang tải danh sách sản phẩm...': '製品一覧を読み込み中...',
+    'Không tải được gợi ý sản phẩm từ hệ thống dữ liệu. Bạn vẫn có thể nhập thủ công.':
+      'データシステムから製品候補を取得できません。手入力は可能です。',
+    'Chưa có sản phẩm trong hệ thống để gợi ý.':
+      '候補として表示できる製品がシステムにまだありません。',
+    'Bạn có thể chọn nhiều sản phẩm. Nếu không thấy trong gợi ý, nhập thủ công rồi bấm Thêm.':
+      '複数の製品を選択できます。候補にない場合は手入力して「追加」を押してください。',
+    'Đang gửi dữ liệu...': 'データ送信中...',
+    'Đang gửi...': '送信中...',
+    'Không gửi được form. Vui lòng thử lại.':
+      'フォームを送信できませんでした。もう一度お試しください。',
+  },
+  kr: {
+    'Liên hệ': '문의',
+    'Gửi yêu cầu làm việc': '업무 요청 보내기',
+    'Chọn loại yêu cầu phù hợp với nhu cầu của bạn, sau đó gửi thông tin để đội ngũ ANSLIFE tiếp nhận và phản hồi theo đúng nhóm dịch vụ.':
+      '요청 목적에 맞는 유형을 선택한 뒤 정보를 보내면 ANSLIFE 팀이 적합한 서비스 그룹으로 배정해 응답합니다.',
+    'Loại yêu cầu': '요청 유형',
+    'Các loại yêu cầu': '요청 유형',
+    'Yêu cầu mua hàng / sản xuất': '구매 / 생산 요청',
+    'Sản xuất nội thất, cấu kiện hoặc nhóm hàng theo nhu cầu buyer.':
+      '바이어 요구에 따른 가구, 부품 또는 제품군 생산.',
+    'Yêu cầu R&D / phát triển mẫu': 'R&D / 샘플 개발 요청',
+    'Phát triển sản phẩm, mẫu thử, vật liệu, cấu trúc hoặc phương án hoàn thiện.':
+      '제품, 샘플, 자재, 구조 또는 마감 방식 개발.',
+    'Yêu cầu OEM / ODM': 'OEM / ODM 요청',
+    'Triển khai sản phẩm theo bản vẽ, mẫu thật, brief kỹ thuật hoặc ý tưởng.':
+      '도면, 실물 샘플, 기술 브리프 또는 아이디어 기반 제품 개발.',
+    'Yêu cầu cấu kiện nội thất': '가구 부품 요청',
+    'Khung ghế, mặt bàn, chân bàn, bộ phận tủ, giường hoặc cấu kiện tùy chỉnh.':
+      '의자 프레임, 테이블 상판, 다리, 수납 부품, 침대 부품 또는 맞춤 부품.',
+    'Yêu cầu hoàn thiện bề mặt': '표면 마감 요청',
+    'Stain, oil, lacquer, sơn màu, matte finish hoặc mẫu màu theo buyer.':
+      '스테인, 오일, 래커, 컬러 도장, 무광 마감 또는 바이어 지정 컬러 샘플.',
+    'Yêu cầu QC / kiểm soát chất lượng': 'QC / 품질관리 요청',
+    'Kiểm tra vật liệu, kiểm tra trong sản xuất, kiểm tra cuối hoặc báo cáo QC.':
+      '자재 검사, 공정 검사, 최종 검사 또는 QC 보고.',
+    'Yêu cầu Supply Hub': 'Supply Hub 요청',
+    'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
+      '보관, LCL/FCL 통합, 표준 샘플 관리, 서류 또는 정기 출하.',
+    'Yêu cầu logistics / chứng từ': '물류 / 서류 요청',
+    'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
+      '수출 조율, 포장, 컨테이너 적재 및 선적 서류.',
+    'Sản phẩm / nhóm hàng / dịch vụ quan tâm': '관심 제품 / 제품군 / 서비스',
+    'Nội dung yêu cầu': '요청 내용',
+    'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
+      '요구사항, 제품군, 시장, 예상 수량, 참고 자료 또는 희망 응답 일정을 입력해 주세요.',
+    'Gửi yêu cầu': '요청 보내기',
+    'Họ tên': '이름',
+    'Công ty': '회사',
+    'Nhập tên sản phẩm rồi bấm Thêm': '제품명을 입력한 뒤 추가를 누르세요',
+    'Thêm': '추가',
+    'Xóa': '삭제',
+    'Đang tải danh sách sản phẩm...': '제품 목록을 불러오는 중...',
+    'Không tải được gợi ý sản phẩm từ hệ thống dữ liệu. Bạn vẫn có thể nhập thủ công.':
+      '데이터 시스템에서 제품 추천을 불러오지 못했습니다. 수동 입력은 가능합니다.',
+    'Chưa có sản phẩm trong hệ thống để gợi ý.':
+      '시스템에 추천할 제품이 아직 없습니다.',
+    'Bạn có thể chọn nhiều sản phẩm. Nếu không thấy trong gợi ý, nhập thủ công rồi bấm Thêm.':
+      '여러 제품을 선택할 수 있습니다. 추천에 없으면 직접 입력 후 추가를 누르세요.',
+    'Đang gửi dữ liệu...': '데이터 전송 중...',
+    'Đang gửi...': '전송 중...',
+    'Không gửi được form. Vui lòng thử lại.':
+      '폼을 전송할 수 없습니다. 다시 시도해 주세요.',
+  },
+  sv: {
+    'Liên hệ': 'Kontakt',
+    'Gửi yêu cầu làm việc': 'Skicka arbetsförfrågan',
+    'Chọn loại yêu cầu phù hợp với nhu cầu của bạn, sau đó gửi thông tin để đội ngũ ANSLIFE tiếp nhận và phản hồi theo đúng nhóm dịch vụ.':
+      'Välj den förfrågningstyp som passar ditt behov och skicka informationen så att ANSLIFE kan ta emot och svara via rätt tjänstegrupp.',
+    'Loại yêu cầu': 'Typ av förfrågan',
+    'Các loại yêu cầu': 'Förfrågningstyper',
+    'Yêu cầu mua hàng / sản xuất': 'Inköps- / produktionsförfrågan',
+    'Sản xuất nội thất, cấu kiện hoặc nhóm hàng theo nhu cầu buyer.':
+      'Produktion av möbler, komponenter eller produktgrupper enligt köparens behov.',
+    'Yêu cầu R&D / phát triển mẫu': 'R&D / provutveckling',
+    'Phát triển sản phẩm, mẫu thử, vật liệu, cấu trúc hoặc phương án hoàn thiện.':
+      'Utveckling av produkt, prov, material, konstruktion eller ytbehandling.',
+    'Yêu cầu OEM / ODM': 'OEM / ODM-förfrågan',
+    'Triển khai sản phẩm theo bản vẽ, mẫu thật, brief kỹ thuật hoặc ý tưởng.':
+      'Produktutveckling utifrån ritningar, fysiska prover, teknisk brief eller idéer.',
+    'Yêu cầu cấu kiện nội thất': 'Förfrågan om möbelkomponenter',
+    'Khung ghế, mặt bàn, chân bàn, bộ phận tủ, giường hoặc cấu kiện tùy chỉnh.':
+      'Stolsramar, bordsskivor, bordsben, skåpdelar, sängdelar eller specialkomponenter.',
+    'Yêu cầu hoàn thiện bề mặt': 'Förfrågan om ytbehandling',
+    'Stain, oil, lacquer, sơn màu, matte finish hoặc mẫu màu theo buyer.':
+      'Stain, olja, lack, färgmålning, matt finish eller köparspecifika färgprover.',
+    'Yêu cầu QC / kiểm soát chất lượng': 'QC / kvalitetskontroll',
+    'Kiểm tra vật liệu, kiểm tra trong sản xuất, kiểm tra cuối hoặc báo cáo QC.':
+      'Materialkontroll, produktionskontroll, slutkontroll eller QC-rapportering.',
+    'Yêu cầu Supply Hub': 'Supply Hub-förfrågan',
+    'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
+      'Lagring, LCL/FCL-konsolidering, standardprov, dokument eller återkommande leveranser.',
+    'Yêu cầu logistics / chứng từ': 'Logistik / dokumentförfrågan',
+    'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
+      'Exportkoordinering, packning, containerlastning och fraktdokument.',
+    'Sản phẩm / nhóm hàng / dịch vụ quan tâm': 'Produkt / produktgrupp / tjänst av intresse',
+    'Nội dung yêu cầu': 'Förfrågningsdetaljer',
+    'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
+      'Beskriv behov, produktgrupp, marknad, beräknad volym, referensmaterial eller önskad svarstid.',
+    'Gửi yêu cầu': 'Skicka förfrågan',
+    'Họ tên': 'Namn',
+    'Công ty': 'Företag',
+    'Nhập tên sản phẩm rồi bấm Thêm': 'Ange produktnamn och klicka på Lägg till',
+    'Thêm': 'Lägg till',
+    'Xóa': 'Ta bort',
+    'Đang tải danh sách sản phẩm...': 'Laddar produktlista...',
+    'Không tải được gợi ý sản phẩm từ hệ thống dữ liệu. Bạn vẫn có thể nhập thủ công.':
+      'Kunde inte ladda produktförslag från datasystemet. Du kan fortfarande ange manuellt.',
+    'Chưa có sản phẩm trong hệ thống để gợi ý.':
+      'Det finns ännu inga produkter i systemet att föreslå.',
+    'Bạn có thể chọn nhiều sản phẩm. Nếu không thấy trong gợi ý, nhập thủ công rồi bấm Thêm.':
+      'Du kan välja flera produkter. Om den inte finns i förslagen, ange manuellt och klicka på Lägg till.',
+    'Đang gửi dữ liệu...': 'Skickar data...',
+    'Đang gửi...': 'Skickar...',
+    'Không gửi được form. Vui lòng thử lại.':
+      'Formuläret kunde inte skickas. Försök igen.',
+  },
+  fr: {
+    'Liên hệ': 'Contact',
+    'Gửi yêu cầu làm việc': 'Envoyer une demande de travail',
+    'Chọn loại yêu cầu phù hợp với nhu cầu của bạn, sau đó gửi thông tin để đội ngũ ANSLIFE tiếp nhận và phản hồi theo đúng nhóm dịch vụ.':
+      "Choisissez le type de demande adapté à votre besoin, puis envoyez les informations afin que l'équipe ANSLIFE les oriente vers le bon service.",
+    'Loại yêu cầu': 'Type de demande',
+    'Các loại yêu cầu': 'Types de demandes',
+    'Yêu cầu mua hàng / sản xuất': 'Demande d’achat / production',
+    'Sản xuất nội thất, cấu kiện hoặc nhóm hàng theo nhu cầu buyer.':
+      "Production de meubles, composants ou groupes de produits selon les besoins de l'acheteur.",
+    'Yêu cầu R&D / phát triển mẫu': 'Demande R&D / développement d’échantillon',
+    'Phát triển sản phẩm, mẫu thử, vật liệu, cấu trúc hoặc phương án hoàn thiện.':
+      'Développement de produit, échantillon, matériau, structure ou solution de finition.',
+    'Yêu cầu OEM / ODM': 'Demande OEM / ODM',
+    'Triển khai sản phẩm theo bản vẽ, mẫu thật, brief kỹ thuật hoặc ý tưởng.':
+      'Développement de produits à partir de plans, échantillons physiques, briefs techniques ou idées.',
+    'Yêu cầu cấu kiện nội thất': 'Demande de composants de mobilier',
+    'Khung ghế, mặt bàn, chân bàn, bộ phận tủ, giường hoặc cấu kiện tùy chỉnh.':
+      'Structures de chaise, plateaux, pieds de table, pièces de rangement, éléments de lit ou composants sur mesure.',
+    'Yêu cầu hoàn thiện bề mặt': 'Demande de finition de surface',
+    'Stain, oil, lacquer, sơn màu, matte finish hoặc mẫu màu theo buyer.':
+      'Teinte, huile, laque, peinture couleur, finition mate ou échantillon couleur selon buyer.',
+    'Yêu cầu QC / kiểm soát chất lượng': 'Demande QC / contrôle qualité',
+    'Kiểm tra vật liệu, kiểm tra trong sản xuất, kiểm tra cuối hoặc báo cáo QC.':
+      'Inspection des matériaux, contrôle en production, inspection finale ou rapport QC.',
+    'Yêu cầu Supply Hub': 'Demande Supply Hub',
+    'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
+      'Stockage, consolidation LCL/FCL, gestion des échantillons standards, documents ou expéditions récurrentes.',
+    'Yêu cầu logistics / chứng từ': 'Demande logistique / documents',
+    'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
+      'Coordination export, emballage, chargement container et documents d’expédition.',
+    'Sản phẩm / nhóm hàng / dịch vụ quan tâm': 'Produit / groupe de produits / service concerné',
+    'Nội dung yêu cầu': 'Détails de la demande',
+    'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
+      'Décrivez le besoin, le groupe de produits, le marché, la quantité estimée, les documents de référence ou le délai de réponse souhaité.',
+    'Gửi yêu cầu': 'Envoyer la demande',
+    'Họ tên': 'Nom complet',
+    'Công ty': 'Entreprise',
+    'Nhập tên sản phẩm rồi bấm Thêm': 'Saisissez le nom du produit puis cliquez sur Ajouter',
+    'Thêm': 'Ajouter',
+    'Xóa': 'Supprimer',
+    'Đang tải danh sách sản phẩm...': 'Chargement de la liste des produits...',
+    'Không tải được gợi ý sản phẩm từ hệ thống dữ liệu. Bạn vẫn có thể nhập thủ công.':
+      'Impossible de charger les suggestions depuis le système de données. Vous pouvez toujours saisir manuellement.',
+    'Chưa có sản phẩm trong hệ thống để gợi ý.':
+      'Aucun produit disponible dans le système pour les suggestions.',
+    'Bạn có thể chọn nhiều sản phẩm. Nếu không thấy trong gợi ý, nhập thủ công rồi bấm Thêm.':
+      'Vous pouvez sélectionner plusieurs produits. Si le produit n’apparaît pas, saisissez-le manuellement puis cliquez sur Ajouter.',
+    'Đang gửi dữ liệu...': 'Envoi des données...',
+    'Đang gửi...': 'Envoi...',
+    'Không gửi được form. Vui lòng thử lại.':
+      'Impossible d’envoyer le formulaire. Veuillez réessayer.',
+  },
+  ru: {
+    'Liên hệ': 'Контакты',
+    'Gửi yêu cầu làm việc': 'Отправить рабочий запрос',
+    'Chọn loại yêu cầu phù hợp với nhu cầu của bạn, sau đó gửi thông tin để đội ngũ ANSLIFE tiếp nhận và phản hồi theo đúng nhóm dịch vụ.':
+      'Выберите тип запроса, соответствующий вашей задаче, затем отправьте данные, чтобы команда ANSLIFE направила их в нужную сервисную группу.',
+    'Loại yêu cầu': 'Тип запроса',
+    'Các loại yêu cầu': 'Типы запросов',
+    'Yêu cầu mua hàng / sản xuất': 'Запрос на закупку / производство',
+    'Sản xuất nội thất, cấu kiện hoặc nhóm hàng theo nhu cầu buyer.':
+      'Производство мебели, компонентов или товарных групп под требования buyer.',
+    'Yêu cầu R&D / phát triển mẫu': 'Запрос R&D / разработка образца',
+    'Phát triển sản phẩm, mẫu thử, vật liệu, cấu trúc hoặc phương án hoàn thiện.':
+      'Разработка продукта, образца, материала, конструкции или варианта отделки.',
+    'Yêu cầu OEM / ODM': 'Запрос OEM / ODM',
+    'Triển khai sản phẩm theo bản vẽ, mẫu thật, brief kỹ thuật hoặc ý tưởng.':
+      'Разработка продукта по чертежам, физическим образцам, техническому брифу или идее.',
+    'Yêu cầu cấu kiện nội thất': 'Запрос мебельных компонентов',
+    'Khung ghế, mặt bàn, chân bàn, bộ phận tủ, giường hoặc cấu kiện tùy chỉnh.':
+      'Каркасы стульев, столешницы, ножки столов, детали шкафов, кроватей или кастомные компоненты.',
+    'Yêu cầu hoàn thiện bề mặt': 'Запрос на финишную отделку',
+    'Stain, oil, lacquer, sơn màu, matte finish hoặc mẫu màu theo buyer.':
+      'Морилка, масло, лак, цветная окраска, матовая отделка или цветовые образцы buyer.',
+    'Yêu cầu QC / kiểm soát chất lượng': 'Запрос QC / контроля качества',
+    'Kiểm tra vật liệu, kiểm tra trong sản xuất, kiểm tra cuối hoặc báo cáo QC.':
+      'Проверка материалов, инспекция в производстве, финальная инспекция или отчет QC.',
+    'Yêu cầu Supply Hub': 'Запрос Supply Hub',
+    'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
+      'Складирование, консолидация LCL/FCL, управление эталонными образцами, документы или регулярные отгрузки.',
+    'Yêu cầu logistics / chứng từ': 'Запрос по логистике / документам',
+    'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
+      'Координация экспорта, упаковка, загрузка контейнера и отгрузочные документы.',
+    'Sản phẩm / nhóm hàng / dịch vụ quan tâm': 'Интересующий продукт / группа товаров / услуга',
+    'Nội dung yêu cầu': 'Детали запроса',
+    'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
+      'Опишите задачу, группу продуктов, рынок, предполагаемое количество, справочные материалы или желаемый срок ответа.',
+    'Gửi yêu cầu': 'Отправить запрос',
+    'Họ tên': 'Полное имя',
+    'Công ty': 'Компания',
+    'Nhập tên sản phẩm rồi bấm Thêm': 'Введите название продукта и нажмите Добавить',
+    'Thêm': 'Добавить',
+    'Xóa': 'Удалить',
+    'Đang tải danh sách sản phẩm...': 'Загрузка списка продуктов...',
+    'Không tải được gợi ý sản phẩm từ hệ thống dữ liệu. Bạn vẫn có thể nhập thủ công.':
+      'Не удалось загрузить подсказки из системы данных. Вы можете ввести данные вручную.',
+    'Chưa có sản phẩm trong hệ thống để gợi ý.':
+      'В системе пока нет продуктов для подсказок.',
+    'Bạn có thể chọn nhiều sản phẩm. Nếu không thấy trong gợi ý, nhập thủ công rồi bấm Thêm.':
+      'Можно выбрать несколько продуктов. Если нужного нет в подсказках, введите вручную и нажмите Добавить.',
+    'Đang gửi dữ liệu...': 'Отправка данных...',
+    'Đang gửi...': 'Отправка...',
+    'Không gửi được form. Vui lòng thử lại.':
+      'Не удалось отправить форму. Попробуйте еще раз.',
+  },
+  es: {
+    'Liên hệ': 'Contacto',
+    'Gửi yêu cầu làm việc': 'Enviar solicitud de trabajo',
+    'Chọn loại yêu cầu phù hợp với nhu cầu của bạn, sau đó gửi thông tin để đội ngũ ANSLIFE tiếp nhận và phản hồi theo đúng nhóm dịch vụ.':
+      'Elige el tipo de solicitud que corresponde a tu necesidad y envía la información para que el equipo de ANSLIFE la derive al grupo de servicio correcto.',
+    'Loại yêu cầu': 'Tipo de solicitud',
+    'Các loại yêu cầu': 'Tipos de solicitud',
+    'Yêu cầu mua hàng / sản xuất': 'Solicitud de compra / producción',
+    'Sản xuất nội thất, cấu kiện hoặc nhóm hàng theo nhu cầu buyer.':
+      'Producción de muebles, componentes o grupos de productos según las necesidades del buyer.',
+    'Yêu cầu R&D / phát triển mẫu': 'Solicitud de I+D / desarrollo de muestra',
+    'Phát triển sản phẩm, mẫu thử, vật liệu, cấu trúc hoặc phương án hoàn thiện.':
+      'Desarrollo de producto, muestra, material, estructura o solución de acabado.',
+    'Yêu cầu OEM / ODM': 'Solicitud OEM / ODM',
+    'Triển khai sản phẩm theo bản vẽ, mẫu thật, brief kỹ thuật hoặc ý tưởng.':
+      'Desarrollo de productos a partir de planos, muestras físicas, briefs técnicos o ideas.',
+    'Yêu cầu cấu kiện nội thất': 'Solicitud de componentes de mobiliario',
+    'Khung ghế, mặt bàn, chân bàn, bộ phận tủ, giường hoặc cấu kiện tùy chỉnh.':
+      'Estructuras de silla, sobres de mesa, patas, partes de gabinete, cama o componentes personalizados.',
+    'Yêu cầu hoàn thiện bề mặt': 'Solicitud de acabado superficial',
+    'Stain, oil, lacquer, sơn màu, matte finish hoặc mẫu màu theo buyer.':
+      'Tinte, aceite, laca, pintura de color, acabado mate o muestras de color según buyer.',
+    'Yêu cầu QC / kiểm soát chất lượng': 'Solicitud de QC / control de calidad',
+    'Kiểm tra vật liệu, kiểm tra trong sản xuất, kiểm tra cuối hoặc báo cáo QC.':
+      'Inspección de materiales, inspección en proceso, inspección final o informe QC.',
+    'Yêu cầu Supply Hub': 'Solicitud Supply Hub',
+    'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
+      'Almacenamiento, consolidación LCL/FCL, gestión de muestras estándar, documentación o envíos recurrentes.',
+    'Yêu cầu logistics / chứng từ': 'Solicitud de logística / documentación',
+    'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
+      'Coordinación de exportación, embalaje, carga de contenedor y documentos de envío.',
+    'Sản phẩm / nhóm hàng / dịch vụ quan tâm': 'Producto / grupo de productos / servicio de interés',
+    'Nội dung yêu cầu': 'Detalles de la solicitud',
+    'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
+      'Describe la necesidad, grupo de productos, mercado, cantidad estimada, documentos de referencia o plazo deseado de respuesta.',
+    'Gửi yêu cầu': 'Enviar solicitud',
+    'Họ tên': 'Nombre completo',
+    'Công ty': 'Empresa',
+    'Nhập tên sản phẩm rồi bấm Thêm': 'Introduce el nombre del producto y pulsa Añadir',
+    'Thêm': 'Añadir',
+    'Xóa': 'Eliminar',
+    'Đang tải danh sách sản phẩm...': 'Cargando lista de productos...',
+    'Không tải được gợi ý sản phẩm từ hệ thống dữ liệu. Bạn vẫn có thể nhập thủ công.':
+      'No se pudieron cargar sugerencias desde el sistema de datos. Aún puedes introducirlo manualmente.',
+    'Chưa có sản phẩm trong hệ thống để gợi ý.':
+      'Aún no hay productos en el sistema para sugerir.',
+    'Bạn có thể chọn nhiều sản phẩm. Nếu không thấy trong gợi ý, nhập thủ công rồi bấm Thêm.':
+      'Puedes seleccionar varios productos. Si no aparece en las sugerencias, introdúcelo manualmente y pulsa Añadir.',
+    'Đang gửi dữ liệu...': 'Enviando datos...',
+    'Đang gửi...': 'Enviando...',
+    'Không gửi được form. Vui lòng thử lại.':
+      'No se pudo enviar el formulario. Inténtalo de nuevo.',
+  },
+  zh: {
+    'Liên hệ': '联系',
+    'Gửi yêu cầu làm việc': '提交工作需求',
+    'Chọn loại yêu cầu phù hợp với nhu cầu của bạn, sau đó gửi thông tin để đội ngũ ANSLIFE tiếp nhận và phản hồi theo đúng nhóm dịch vụ.':
+      '请选择符合需求的类型并提交信息，ANSLIFE团队会转交给对应服务组处理和回复。',
+    'Loại yêu cầu': '需求类型',
+    'Các loại yêu cầu': '需求类型',
+    'Yêu cầu mua hàng / sản xuất': '采购 / 生产需求',
+    'Sản xuất nội thất, cấu kiện hoặc nhóm hàng theo nhu cầu buyer.':
+      '根据买家需求生产家具、构件或产品组。',
+    'Yêu cầu R&D / phát triển mẫu': '研发 / 样品开发需求',
+    'Phát triển sản phẩm, mẫu thử, vật liệu, cấu trúc hoặc phương án hoàn thiện.':
+      '产品、样品、材料、结构或表面处理方案开发。',
+    'Yêu cầu OEM / ODM': 'OEM / ODM需求',
+    'Triển khai sản phẩm theo bản vẽ, mẫu thật, brief kỹ thuật hoặc ý tưởng.':
+      '根据图纸、实物样品、技术简报或想法开发产品。',
+    'Yêu cầu cấu kiện nội thất': '家具构件需求',
+    'Khung ghế, mặt bàn, chân bàn, bộ phận tủ, giường hoặc cấu kiện tùy chỉnh.':
+      '椅架、桌面、桌脚、柜体部件、床部件或定制构件。',
+    'Yêu cầu hoàn thiện bề mặt': '表面处理需求',
+    'Stain, oil, lacquer, sơn màu, matte finish hoặc mẫu màu theo buyer.':
+      '染色、油蜡、漆面、彩色涂装、哑光效果或买家指定色样。',
+    'Yêu cầu QC / kiểm soát chất lượng': 'QC / 质量控制需求',
+    'Kiểm tra vật liệu, kiểm tra trong sản xuất, kiểm tra cuối hoặc báo cáo QC.':
+      '材料检验、生产过程检验、最终检验或QC报告。',
+    'Yêu cầu Supply Hub': 'Supply Hub需求',
+    'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.':
+      '仓储、LCL/FCL集货、标准样品管理、单证或定期出货。',
+    'Yêu cầu logistics / chứng từ': '物流 / 单证需求',
+    'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.':
+      '出口协调、包装、装柜和交货文件。',
+    'Sản phẩm / nhóm hàng / dịch vụ quan tâm': '关注的产品 / 产品组 / 服务',
+    'Nội dung yêu cầu': '需求内容',
+    'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.':
+      '请描述需求、产品组、市场、预计数量、参考资料或期望回复时间。',
+    'Gửi yêu cầu': '提交需求',
+    'Họ tên': '姓名',
+    'Công ty': '公司',
+    'Nhập tên sản phẩm rồi bấm Thêm': '输入产品名称后点击添加',
+    'Thêm': '添加',
+    'Xóa': '删除',
+    'Đang tải danh sách sản phẩm...': '正在加载产品列表...',
+    'Không tải được gợi ý sản phẩm từ hệ thống dữ liệu. Bạn vẫn có thể nhập thủ công.':
+      '无法从数据系统加载产品建议。你仍然可以手动输入。',
+    'Chưa có sản phẩm trong hệ thống để gợi ý.':
+      '系统中暂无可建议的产品。',
+    'Bạn có thể chọn nhiều sản phẩm. Nếu không thấy trong gợi ý, nhập thủ công rồi bấm Thêm.':
+      '可以选择多个产品。如果建议中没有，请手动输入后点击添加。',
+    'Đang gửi dữ liệu...': '正在提交数据...',
+    'Đang gửi...': '提交中...',
+    'Không gửi được form. Vui lòng thử lại.':
+      '表单提交失败，请重试。',
+  },
+};
+
 const TRANSLATIONS: Partial<Record<
   Exclude<LanguageCode, typeof VIETNAMESE>,
   Partial<Record<string, string>>
@@ -3939,6 +4367,7 @@ export function translateText(language: LanguageCode, text: string): string {
 
   return (
     PRIMARY_NAV_TRANSLATIONS[language]?.[text] ??
+    CONTACT_REQUEST_TRANSLATIONS[language]?.[text] ??
     NAV_MENU_TRANSLATIONS[language]?.[text] ??
     TRANSLATIONS[language]?.[text] ??
     AUTO_TRANSLATIONS[language]?.[text] ??

@@ -90,6 +90,49 @@ interface QuoteFormCopy {
   referencePlaceholder?: string;
 }
 
+const workRequestTypeOptions = [
+  {
+    value: 'purchase_request',
+    label: 'Yêu cầu mua hàng / sản xuất',
+    description: 'Sản xuất nội thất, cấu kiện hoặc nhóm hàng theo nhu cầu buyer.',
+  },
+  {
+    value: 'rnd_request',
+    label: 'Yêu cầu R&D / phát triển mẫu',
+    description: 'Phát triển sản phẩm, mẫu thử, vật liệu, cấu trúc hoặc phương án hoàn thiện.',
+  },
+  {
+    value: 'oem_odm_request',
+    label: 'Yêu cầu OEM / ODM',
+    description: 'Triển khai sản phẩm theo bản vẽ, mẫu thật, brief kỹ thuật hoặc ý tưởng.',
+  },
+  {
+    value: 'component_request',
+    label: 'Yêu cầu cấu kiện nội thất',
+    description: 'Khung ghế, mặt bàn, chân bàn, bộ phận tủ, giường hoặc cấu kiện tùy chỉnh.',
+  },
+  {
+    value: 'finishing_request',
+    label: 'Yêu cầu hoàn thiện bề mặt',
+    description: 'Stain, oil, lacquer, sơn màu, matte finish hoặc mẫu màu theo buyer.',
+  },
+  {
+    value: 'qc_request',
+    label: 'Yêu cầu QC / kiểm soát chất lượng',
+    description: 'Kiểm tra vật liệu, kiểm tra trong sản xuất, kiểm tra cuối hoặc báo cáo QC.',
+  },
+  {
+    value: 'supply_hub_request',
+    label: 'Yêu cầu Supply Hub',
+    description: 'Lưu kho, gom hàng LCL/FCL, quản lý mẫu chuẩn, chứng từ hoặc xuất hàng định kỳ.',
+  },
+  {
+    value: 'logistics_documentation_request',
+    label: 'Yêu cầu logistics / chứng từ',
+    description: 'Điều phối xuất khẩu, packing, container loading và hồ sơ giao hàng.',
+  },
+] as const;
+
 function isQuoteContactSection(
   section: ContactSection | 'all',
 ): section is QuoteContactSection {
@@ -156,8 +199,19 @@ function getQuoteFormCopy(section: ContactSection | 'all'): QuoteFormCopy {
         buttonLabel: 'Gửi yêu cầu Supply Hub',
         inquiryType: 'supply_hub_inquiry',
       };
-    case 'quote-request':
     case 'request-quotation':
+      return {
+        title: 'Gửi yêu cầu làm việc',
+        intro:
+          'Chọn loại yêu cầu phù hợp với nhu cầu của bạn, sau đó gửi thông tin để đội ngũ ANSLIFE tiếp nhận và phản hồi theo đúng nhóm dịch vụ.',
+        productLabel: 'Sản phẩm / nhóm hàng / dịch vụ quan tâm',
+        messageLabel: 'Nội dung yêu cầu',
+        messagePlaceholder:
+          'Mô tả nhu cầu, nhóm sản phẩm, thị trường, số lượng dự kiến, tài liệu tham chiếu hoặc thời gian cần phản hồi.',
+        buttonLabel: 'Gửi yêu cầu',
+        inquiryType: 'work_request',
+      };
+    case 'quote-request':
     default:
       return {
         title: 'Gửi yêu cầu báo giá',
@@ -270,6 +324,7 @@ export default function ContactPage() {
   const showMeetingForm = activeSection === 'all' || isMeetingContactSection(activeSection);
   const showMapSection = activeSection === 'map';
   const quoteFormCopy = useMemo(() => getQuoteFormCopy(activeSection), [activeSection]);
+  const isWorkRequestForm = activeSection === 'request-quotation';
 
   const [quoteState, setQuoteState] = useState<SubmissionState>(idleState);
   const [meetingState, setMeetingState] = useState<SubmissionState>(idleState);
@@ -553,6 +608,26 @@ export default function ContactPage() {
                 <input name="your-company" required />
               </label>
               <input type="hidden" name="inquiry-type" value={quoteFormCopy.inquiryType} />
+              {isWorkRequestForm && (
+                <fieldset className="work-request-type-field">
+                  <legend>{t('Loại yêu cầu')}</legend>
+                  <select name="request-category" required defaultValue={workRequestTypeOptions[0].value}>
+                    {workRequestTypeOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {t(option.label)}
+                      </option>
+                    ))}
+                  </select>
+                  <div className="work-request-type-list" aria-label={t('Các loại yêu cầu')}>
+                    {workRequestTypeOptions.map((option) => (
+                      <article key={option.value} className="work-request-type-item">
+                        <strong>{t(option.label)}</strong>
+                        <span>{t(option.description)}</span>
+                      </article>
+                    ))}
+                  </div>
+                </fieldset>
+              )}
               {quoteFormCopy.referenceLabel && (
                 <label>
                   {t(quoteFormCopy.referenceLabel)}
