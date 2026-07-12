@@ -104,8 +104,8 @@ type FooterContactIcon = 'location' | 'phone' | 'mail' | 'website';
 
 const FOOTER_CONTACT_ITEMS = [
   {
-    label: 'info@anslife.com',
-    path: 'mailto:info@anslife.com',
+    label: 'contact@anslife.cok',
+    path: 'mailto:contact@anslife.cok',
     icon: 'mail' as FooterContactIcon,
   },
   {
