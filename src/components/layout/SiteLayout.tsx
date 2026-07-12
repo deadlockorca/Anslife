@@ -104,18 +104,13 @@ type FooterContactIcon = 'location' | 'phone' | 'mail' | 'website';
 
 const FOOTER_CONTACT_ITEMS = [
   {
-    label: HEADER_HOTLINE_NUMBER,
-    path: `tel:${HEADER_HOTLINE_TEL}`,
-    icon: 'phone' as FooterContactIcon,
-  },
-  {
-    label: 'info@anslife.net',
-    path: 'mailto:info@anslife.net',
+    label: 'info@anslife.com',
+    path: 'mailto:info@anslife.com',
     icon: 'mail' as FooterContactIcon,
   },
   {
-    label: 'www.anslife.net',
-    path: 'https://anslife.net',
+    label: 'www.anslife.com',
+    path: 'https://anslife.com',
     icon: 'website' as FooterContactIcon,
   },
 ] as const;

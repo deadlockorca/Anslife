@@ -4828,19 +4828,15 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="materials-cushion-materials-cta-actions">
-              <a href="/vn/contact">
-                <span aria-hidden="true">✈</span>
-                {t('Gửi yêu cầu')}
-              </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">⇧</span>
-                {t('Tải bản vẽ lên')}
-              </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">☎</span>
-                {t('Liên hệ ANSLIFE')}
-              </a>
-            </div>
+                <a href="/contact/request-quotation">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/about-anslife/company-info">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
           </section>
         </section>
       )}
@@ -5193,19 +5189,15 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="materials-export-packing-cta-actions">
-              <a href="/vn/contact">
-                <span aria-hidden="true">✈</span>
-                {t('Gửi yêu cầu')}
-              </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">⇧</span>
-                {t('Tải bản vẽ lên')}
-              </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">☎</span>
-                {t('Liên hệ ANSLIFE')}
-              </a>
-            </div>
+                <a href="/contact/request-quotation">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/about-anslife/company-info">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
           </section>
         </section>
       )}
@@ -5389,19 +5381,15 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="materials-pallet-cta-actions">
-              <a href="/vn/contact">
-                <span aria-hidden="true">✈</span>
-                {t('Gửi yêu cầu')}
-              </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">⇧</span>
-                {t('Tải bản vẽ lên')}
-              </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">☎</span>
-                {t('Liên hệ ANSLIFE')}
-              </a>
-            </div>
+                <a href="/contact/request-quotation">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/about-anslife/company-info">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
           </section>
         </section>
       )}
@@ -5575,19 +5563,15 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="materials-edge-protection-cta-actions">
-              <a href="/vn/contact">
-                <span aria-hidden="true">✈</span>
-                {t('Gửi yêu cầu')}
-              </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">⇧</span>
-                {t('Tải bản vẽ lên')}
-              </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">☎</span>
-                {t('Liên hệ ANSLIFE')}
-              </a>
-            </div>
+                <a href="/contact/request-quotation">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/about-anslife/company-info">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
           </section>
         </section>
       )}
@@ -5772,19 +5756,15 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="materials-foam-protection-cta-actions">
-              <a href="/vn/contact">
-                <span aria-hidden="true">✈</span>
-                {t('Gửi yêu cầu')}
-              </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">⇧</span>
-                {t('Tải bản vẽ lên')}
-              </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">☎</span>
-                {t('Liên hệ ANSLIFE')}
-              </a>
-            </div>
+                <a href="/contact/request-quotation">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/about-anslife/company-info">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
           </section>
         </section>
       )}
@@ -6037,19 +6017,15 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
               </p>
             </div>
             <div className="materials-carton-cta-actions">
-              <a href="/vn/contact">
-                <span aria-hidden="true">✈</span>
-                {t('Gửi yêu cầu')}
-              </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">⇧</span>
-                {t('Tải bản vẽ lên')}
-              </a>
-              <a href="/vn/contact">
-                <span aria-hidden="true">☎</span>
-                {t('Liên hệ ANSLIFE')}
-              </a>
-            </div>
+                <a href="/contact/request-quotation">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/about-anslife/company-info">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
           </section>
         </section>
       )}
@@ -6385,15 +6361,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-leather-pu-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải mẫu vật liệu lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -6744,15 +6716,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-fabric-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -7082,19 +7050,15 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                   )}
                 </p>
                 <div className="materials-foam-cta-actions">
-                  <a href="/vn/contact">
-                    <span aria-hidden="true">✈</span>
-                    {t('Gửi yêu cầu')}
-                  </a>
-                  <a href="/vn/contact">
-                    <span aria-hidden="true">⇧</span>
-                    {t('Tải bản vẽ lên')}
-                  </a>
-                  <a href="/vn/contact">
-                    <span aria-hidden="true">☎</span>
-                    {t('Liên hệ ANSLIFE')}
-                  </a>
-                </div>
+                <a href="/contact/request-quotation">
+                  <span aria-hidden="true">✈</span>
+                  {t('Gửi yêu cầu')}
+                </a>
+                <a href="/about-anslife/company-info">
+                  <span aria-hidden="true">☎</span>
+                  {t('Liên hệ ANSLIFE')}
+                </a>
+              </div>
               </div>
               <div className="materials-foam-cta-image-slot" aria-hidden="true" />
             </div>
@@ -7459,15 +7423,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-cane-webbing-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -7832,15 +7792,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-bamboo-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -8191,15 +8147,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-rattan-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -8411,15 +8363,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-laminated-board-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -8770,15 +8718,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-particle-board-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -9144,15 +9088,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-mdf-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -9507,15 +9447,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-plywood-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -9938,15 +9874,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-pine-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -10304,15 +10236,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-acacia-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -10665,15 +10593,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-beech-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -11080,15 +11004,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-oak-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -11436,15 +11356,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-ash-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
@@ -11780,15 +11696,11 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
               <div className="materials-rubber-wood-cta-actions">
-                <a href="/vn/contact">
+                <a href="/contact/request-quotation">
                   <span aria-hidden="true">✈</span>
                   {t('Gửi yêu cầu')}
                 </a>
-                <a href="/vn/contact">
-                  <span aria-hidden="true">⇧</span>
-                  {t('Tải bản vẽ lên')}
-                </a>
-                <a href="/vn/contact">
+                <a href="/about-anslife/company-info">
                   <span aria-hidden="true">☎</span>
                   {t('Liên hệ ANSLIFE')}
                 </a>
