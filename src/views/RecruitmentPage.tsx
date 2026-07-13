@@ -64,6 +64,56 @@ const statusLabels: Record<RecruitmentStatus, string> = {
 
 const recruitmentFormId = Number(process.env.NEXT_PUBLIC_CF7_QUOTE_FORM_ID ?? 1);
 
+const recruitmentJoinReasons = [
+  {
+    icon: '◎',
+    title: 'Môi trường chuyên nghiệp, minh bạch',
+  },
+  {
+    icon: '⌂',
+    title: 'Cơ hội phát triển nghề nghiệp rõ ràng và lâu dài',
+  },
+  {
+    icon: '↗',
+    title: 'Tham gia vào các dự án nội thất xuất khẩu quốc tế quy mô lớn',
+  },
+  {
+    icon: '◇',
+    title: 'Chế độ phúc lợi cạnh tranh và lộ trình thăng tiến rõ ràng',
+  },
+] as const;
+
+const recruitmentProcessSteps = [
+  {
+    icon: '✈',
+    title: 'Ứng tuyển',
+  },
+  {
+    icon: '☷',
+    title: 'Sàng lọc hồ sơ',
+  },
+  {
+    icon: '☰',
+    title: 'Phỏng vấn',
+  },
+  {
+    icon: '☆',
+    title: 'Đánh giá năng lực',
+  },
+  {
+    icon: '▤',
+    title: 'Đề xuất',
+  },
+  {
+    icon: '◷',
+    title: 'Thử việc',
+  },
+  {
+    icon: '◇',
+    title: 'Gia nhập ANSLIFE',
+  },
+] as const;
+
 function createGroupCards(groupTitle: string, groupBody: string): RecruitmentGroup['cards'] {
   return [
     {
@@ -991,6 +1041,62 @@ export default function RecruitmentPage() {
                 </section>
               )}
             </div>
+          </div>
+        </section>
+
+        <section className="recruitment-join-process" aria-label={t('Vì sao nên gia nhập ANSLIFE')}>
+          <article className="recruitment-join-card">
+            <h2>{t('Vì sao nên gia nhập ANSLIFE?')}</h2>
+            <div className="recruitment-join-grid">
+              {recruitmentJoinReasons.map((item) => (
+                <div className="recruitment-join-reason" key={item.title}>
+                  <span aria-hidden="true">{item.icon}</span>
+                  <p>{t(item.title)}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+
+          <article className="recruitment-process-card">
+            <h2>{t('Quy trình tuyển dụng')}</h2>
+            <div className="recruitment-process-flow">
+              {recruitmentProcessSteps.map((step, index) => (
+                <div className="recruitment-process-item" key={step.title}>
+                  <div className="recruitment-process-node">
+                    <span aria-hidden="true">{step.icon}</span>
+                  </div>
+                  <p>{t(step.title)}</p>
+                  {index < recruitmentProcessSteps.length - 1 && (
+                    <i className="recruitment-process-arrow" aria-hidden="true">
+                      →
+                    </i>
+                  )}
+                </div>
+              ))}
+            </div>
+          </article>
+        </section>
+
+        <section className="recruitment-cta" aria-labelledby="recruitment-cta-title">
+          <div>
+            <h2 id="recruitment-cta-title">{t('Sẵn sàng đồng hành cùng ANSLIFE?')}</h2>
+            <p>
+              {t(
+                'Gửi hồ sơ của bạn để ANSLIFE có thể kết nối khi có vị trí phù hợp với năng lực và định hướng phát triển của bạn.',
+              )}
+            </p>
+          </div>
+          <div className="recruitment-cta-actions">
+            <button
+              type="button"
+              onClick={() => {
+                setApplicationState({ status: 'idle', message: '' });
+                setIsApplicationPopupOpen(true);
+              }}
+            >
+              {t('Ứng tuyển / gửi hồ sơ')}
+            </button>
+            <Link to={toLocalizedPath('/about-anslife/company-info')}>{t('Liên hệ ANSLIFE')}</Link>
           </div>
         </section>
 
