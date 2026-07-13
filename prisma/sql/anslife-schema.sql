@@ -360,6 +360,59 @@ CREATE TABLE `audit_logs` (
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+-- CreateTable
+CREATE TABLE `recruitment_jobs` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `group_code` VARCHAR(64) NOT NULL,
+    `group_title` VARCHAR(191) NOT NULL,
+    `group_body` VARCHAR(512) NULL,
+    `market_name` VARCHAR(191) NOT NULL,
+    `market_status` VARCHAR(32) NOT NULL DEFAULT 'receiving',
+    `title` VARCHAR(191) NOT NULL,
+    `summary` VARCHAR(512) NOT NULL,
+    `description` LONGTEXT NULL,
+    `requirements_json` LONGTEXT NULL,
+    `benefits_json` LONGTEXT NULL,
+    `location` VARCHAR(191) NULL,
+    `work_type` VARCHAR(191) NULL,
+    `status` VARCHAR(32) NOT NULL DEFAULT 'receiving',
+    `sort_order` INTEGER NOT NULL DEFAULT 0,
+    `is_public` BOOLEAN NOT NULL DEFAULT true,
+    `created_at` DATETIME(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+    `updated_at` DATETIME(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0) ON UPDATE CURRENT_TIMESTAMP(0),
+
+    INDEX `idx_recruitment_jobs_public_status`(`is_public`, `status`),
+    INDEX `idx_recruitment_jobs_group_market`(`group_code`, `market_name`),
+    INDEX `idx_recruitment_jobs_sort`(`sort_order`, `id`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `recruitment_applications` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `job_id` BIGINT UNSIGNED NULL,
+    `job_title` VARCHAR(191) NULL,
+    `career_group` VARCHAR(191) NULL,
+    `career_market` VARCHAR(191) NULL,
+    `career_status` VARCHAR(64) NULL,
+    `name` VARCHAR(191) NULL,
+    `email` VARCHAR(191) NULL,
+    `phone` VARCHAR(64) NULL,
+    `country_region` VARCHAR(191) NULL,
+    `cv_link` VARCHAR(1024) NULL,
+    `latest_experience` VARCHAR(512) NULL,
+    `message` LONGTEXT NULL,
+    `payload_json` LONGTEXT NULL,
+    `status` VARCHAR(32) NOT NULL DEFAULT 'new',
+    `created_at` DATETIME(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+    `updated_at` DATETIME(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0) ON UPDATE CURRENT_TIMESTAMP(0),
+
+    INDEX `idx_recruitment_applications_job`(`job_id`),
+    INDEX `idx_recruitment_applications_status`(`status`),
+    INDEX `idx_recruitment_applications_created_at`(`created_at`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 -- AddForeignKey
 ALTER TABLE `content_item_taxonomies` ADD CONSTRAINT `fk_content_item_taxonomies_item` FOREIGN KEY (`item_id`) REFERENCES `content_items`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
@@ -459,3 +512,5 @@ ALTER TABLE `data_share_links` ADD CONSTRAINT `fk_data_share_links_created_by` F
 -- AddForeignKey
 ALTER TABLE `audit_logs` ADD CONSTRAINT `fk_audit_logs_actor` FOREIGN KEY (`actor_user_id`) REFERENCES `app_users`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
+-- AddForeignKey
+ALTER TABLE `recruitment_applications` ADD CONSTRAINT `fk_recruitment_applications_job` FOREIGN KEY (`job_id`) REFERENCES `recruitment_jobs`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;

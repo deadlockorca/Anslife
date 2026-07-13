@@ -71,6 +71,61 @@ model ContactLead {
   @@map("contact_leads")
 }
 
+model RecruitmentJob {
+  id                BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  group_code        String   @db.VarChar(64)
+  group_title       String   @db.VarChar(191)
+  group_body        String?  @db.VarChar(512)
+  market_name       String   @db.VarChar(191)
+  market_status     String   @default("receiving") @db.VarChar(32)
+  title             String   @db.VarChar(191)
+  summary           String   @db.VarChar(512)
+  description       String?  @db.LongText
+  requirements_json String?  @db.LongText
+  benefits_json     String?  @db.LongText
+  location          String?  @db.VarChar(191)
+  work_type         String?  @db.VarChar(191)
+  status            String   @default("receiving") @db.VarChar(32)
+  sort_order        Int      @default(0)
+  is_public         Boolean  @default(true) @db.TinyInt
+  created_at        DateTime @default(now()) @db.DateTime(0)
+  updated_at        DateTime @updatedAt @db.DateTime(0)
+
+  recruitment_applications RecruitmentApplication[]
+
+  @@index([is_public, status], map: "idx_recruitment_jobs_public_status")
+  @@index([group_code, market_name], map: "idx_recruitment_jobs_group_market")
+  @@index([sort_order, id], map: "idx_recruitment_jobs_sort")
+  @@map("recruitment_jobs")
+}
+
+model RecruitmentApplication {
+  id                BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  job_id            BigInt?  @db.UnsignedBigInt
+  job_title         String?  @db.VarChar(191)
+  career_group      String?  @db.VarChar(191)
+  career_market     String?  @db.VarChar(191)
+  career_status     String?  @db.VarChar(64)
+  name              String?  @db.VarChar(191)
+  email             String?  @db.VarChar(191)
+  phone             String?  @db.VarChar(64)
+  country_region    String?  @db.VarChar(191)
+  cv_link           String?  @db.VarChar(1024)
+  latest_experience String?  @db.VarChar(512)
+  message           String?  @db.LongText
+  payload_json      String?  @db.LongText
+  status            String   @default("new") @db.VarChar(32)
+  created_at        DateTime @default(now()) @db.DateTime(0)
+  updated_at        DateTime @updatedAt @db.DateTime(0)
+
+  job RecruitmentJob? @relation(fields: [job_id], references: [id], onDelete: SetNull, map: "fk_recruitment_applications_job")
+
+  @@index([job_id], map: "idx_recruitment_applications_job")
+  @@index([status], map: "idx_recruitment_applications_status")
+  @@index([created_at], map: "idx_recruitment_applications_created_at")
+  @@map("recruitment_applications")
+}
+
 model AppUser {
   id            BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
   email         String    @unique(map: "uniq_app_users_email") @db.VarChar(191)

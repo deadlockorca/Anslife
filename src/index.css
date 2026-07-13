@@ -2671,6 +2671,32 @@ a.mobile-menu-utility-link {
   font-weight: 800;
 }
 
+.recruitment-job-detail-list {
+  margin-top: 0.85rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(88, 73, 58, 0.12);
+  border-radius: 8px;
+  background: rgba(250, 247, 241, 0.7);
+}
+
+.recruitment-job-detail-list h4 {
+  margin: 0 0 0.45rem;
+  color: #252525;
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.recruitment-job-detail-list ul {
+  margin: 0;
+  padding-left: 1.05rem;
+  color: #36322e;
+  font-size: 0.86rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
 .recruitment-job-detail-actions {
   display: grid;
   gap: 0.55rem;

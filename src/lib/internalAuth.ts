@@ -73,6 +73,48 @@ export interface InternalFactory {
   updatedAt: string;
 }
 
+export type InternalRecruitmentStatus = 'open' | 'receiving' | 'paused' | 'closed';
+
+export interface InternalRecruitmentJob {
+  id: number;
+  groupCode: string;
+  groupTitle: string;
+  groupBody: string | null;
+  marketName: string;
+  marketStatus: InternalRecruitmentStatus;
+  title: string;
+  summary: string;
+  description: string | null;
+  requirements: string[];
+  benefits: string[];
+  location: string | null;
+  workType: string | null;
+  status: InternalRecruitmentStatus;
+  sortOrder: number;
+  isPublic: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface InternalRecruitmentApplication {
+  id: number;
+  jobId: number | null;
+  jobTitle: string | null;
+  careerGroup: string | null;
+  careerMarket: string | null;
+  careerStatus: string | null;
+  name: string | null;
+  email: string | null;
+  phone: string | null;
+  countryRegion: string | null;
+  cvLink: string | null;
+  latestExperience: string | null;
+  message: string | null;
+  status: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface InternalOrderAssignment {
   userId: number;
   assignmentRole: string;
@@ -386,6 +428,10 @@ function isInternalOrderStatus(value: string): value is InternalOrderStatus {
   return INTERNAL_ORDER_STATUS_OPTIONS.some((option) => option.code === value);
 }
 
+function isInternalRecruitmentStatus(value: string): value is InternalRecruitmentStatus {
+  return ['open', 'receiving', 'paused', 'closed'].includes(value);
+}
+
 async function parseApiError(response: Response): Promise<string> {
   const contentType = response.headers.get('content-type') ?? '';
   if (contentType.includes('application/json')) {
@@ -544,6 +590,104 @@ function normalizeInternalFactory(value: unknown): InternalFactory | null {
     code,
     name,
     location: normalizeOptionalString(raw.location),
+    createdAt: normalizeString(raw.createdAt),
+    updatedAt: normalizeString(raw.updatedAt),
+  };
+}
+
+function normalizeStringArray(value: unknown): string[] {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value.map((item) => normalizeString(item)).filter(Boolean);
+}
+
+function normalizeInternalRecruitmentJob(value: unknown): InternalRecruitmentJob | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return null;
+  }
+
+  const raw = value as Record<string, unknown>;
+  const id = Number(raw.id);
+  const groupCode = normalizeString(raw.groupCode);
+  const groupTitle = normalizeString(raw.groupTitle);
+  const marketName = normalizeString(raw.marketName);
+  const marketStatus = normalizeString(raw.marketStatus).toLowerCase();
+  const title = normalizeString(raw.title);
+  const summary = normalizeString(raw.summary);
+  const status = normalizeString(raw.status).toLowerCase();
+  const sortOrder = Number(raw.sortOrder ?? 0);
+
+  if (
+    !Number.isInteger(id) ||
+    id <= 0 ||
+    !groupCode ||
+    !groupTitle ||
+    !marketName ||
+    !isInternalRecruitmentStatus(marketStatus) ||
+    !title ||
+    !summary ||
+    !isInternalRecruitmentStatus(status) ||
+    !Number.isFinite(sortOrder)
+  ) {
+    return null;
+  }
+
+  return {
+    id,
+    groupCode,
+    groupTitle,
+    groupBody: normalizeOptionalString(raw.groupBody),
+    marketName,
+    marketStatus,
+    title,
+    summary,
+    description: normalizeOptionalString(raw.description),
+    requirements: normalizeStringArray(raw.requirements),
+    benefits: normalizeStringArray(raw.benefits),
+    location: normalizeOptionalString(raw.location),
+    workType: normalizeOptionalString(raw.workType),
+    status,
+    sortOrder,
+    isPublic: Boolean(raw.isPublic),
+    createdAt: normalizeString(raw.createdAt),
+    updatedAt: normalizeString(raw.updatedAt),
+  };
+}
+
+function normalizeInternalRecruitmentApplication(value: unknown): InternalRecruitmentApplication | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return null;
+  }
+
+  const raw = value as Record<string, unknown>;
+  const id = Number(raw.id);
+  const jobId = raw.jobId == null ? null : Number(raw.jobId);
+
+  if (
+    !Number.isInteger(id) ||
+    id <= 0 ||
+    (jobId !== null && (!Number.isInteger(jobId) || jobId <= 0))
+  ) {
+    return null;
+  }
+
+  return {
+    id,
+    jobId,
+    jobTitle: normalizeOptionalString(raw.jobTitle),
+    careerGroup: normalizeOptionalString(raw.careerGroup),
+    careerMarket: normalizeOptionalString(raw.careerMarket),
+    careerStatus: normalizeOptionalString(raw.careerStatus),
+    name: normalizeOptionalString(raw.name),
+    email: normalizeOptionalString(raw.email),
+    phone: normalizeOptionalString(raw.phone),
+    countryRegion: normalizeOptionalString(raw.countryRegion),
+    cvLink: normalizeOptionalString(raw.cvLink),
+    latestExperience: normalizeOptionalString(raw.latestExperience),
+    message: normalizeOptionalString(raw.message),
+    status: normalizeString(raw.status) || 'new',
     createdAt: normalizeString(raw.createdAt),
     updatedAt: normalizeString(raw.updatedAt),
   };
@@ -1615,6 +1759,106 @@ export async function updateInternalFactory(
   }
 
   return factory;
+}
+
+interface ListRecruitmentJobsResponse {
+  ok: boolean;
+  jobs: unknown[];
+}
+
+interface ListRecruitmentApplicationsResponse {
+  ok: boolean;
+  applications: unknown[];
+}
+
+export interface SaveRecruitmentJobPayload {
+  groupCode?: string;
+  groupTitle?: string;
+  groupBody?: string | null;
+  marketName?: string;
+  marketStatus?: InternalRecruitmentStatus;
+  title?: string;
+  summary?: string;
+  description?: string | null;
+  requirements?: string[];
+  benefits?: string[];
+  location?: string | null;
+  workType?: string | null;
+  status?: InternalRecruitmentStatus;
+  sortOrder?: number;
+  isPublic?: boolean;
+}
+
+interface SaveRecruitmentJobResponse {
+  ok: boolean;
+  job: unknown;
+}
+
+export async function listInternalRecruitmentJobs(perPage = 200): Promise<InternalRecruitmentJob[]> {
+  const payload = await requestInternal<ListRecruitmentJobsResponse>(
+    `/recruitment/jobs?per_page=${encodeURIComponent(String(perPage))}`,
+  );
+  if (!payload.ok || !Array.isArray(payload.jobs)) {
+    return [];
+  }
+
+  return payload.jobs
+    .map((item) => normalizeInternalRecruitmentJob(item))
+    .filter((item): item is InternalRecruitmentJob => Boolean(item));
+}
+
+export async function createInternalRecruitmentJob(
+  payload: SaveRecruitmentJobPayload,
+): Promise<InternalRecruitmentJob> {
+  const data = await requestInternal<SaveRecruitmentJobResponse>('/recruitment/jobs', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const job = normalizeInternalRecruitmentJob(data.job);
+  if (!data.ok || !job) {
+    throw new Error('Không thể tạo vị trí tuyển dụng.');
+  }
+
+  return job;
+}
+
+export async function updateInternalRecruitmentJob(
+  jobId: number,
+  payload: SaveRecruitmentJobPayload,
+): Promise<InternalRecruitmentJob> {
+  const data = await requestInternal<SaveRecruitmentJobResponse>(`/recruitment/jobs/${jobId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const job = normalizeInternalRecruitmentJob(data.job);
+  if (!data.ok || !job) {
+    throw new Error('Không thể cập nhật vị trí tuyển dụng.');
+  }
+
+  return job;
+}
+
+export async function listInternalRecruitmentApplications(
+  perPage = 100,
+): Promise<InternalRecruitmentApplication[]> {
+  const payload = await requestInternal<ListRecruitmentApplicationsResponse>(
+    `/recruitment/applications?per_page=${encodeURIComponent(String(perPage))}`,
+  );
+  if (!payload.ok || !Array.isArray(payload.applications)) {
+    return [];
+  }
+
+  return payload.applications
+    .map((item) => normalizeInternalRecruitmentApplication(item))
+    .filter((item): item is InternalRecruitmentApplication => Boolean(item));
 }
 
 interface ListOrdersResponse {

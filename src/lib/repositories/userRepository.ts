@@ -135,7 +135,10 @@ export async function getUserAuthContextById(
 export async function touchUserLastLogin(userId: number): Promise<void> {
   const pool = await ensureReady();
   await pool.execute(
-    `UPDATE app_users SET last_login_at = CURRENT_TIMESTAMP WHERE id = ?`,
+    `UPDATE app_users
+     SET last_login_at = CURRENT_TIMESTAMP,
+         updated_at = CURRENT_TIMESTAMP
+     WHERE id = ?`,
     [userId],
   );
 }
@@ -173,8 +176,8 @@ export async function createUser(input: CreateUserInput): Promise<UserProfile> {
     await connection.beginTransaction();
 
     const [insertResult] = await connection.execute<ResultSetHeader>(
-      `INSERT INTO app_users (email, password_hash, full_name, is_active)
-       VALUES (?, ?, ?, ?)`,
+      `INSERT INTO app_users (email, password_hash, full_name, is_active, updated_at)
+       VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP)`,
       [
         normalizedEmail,
         input.passwordHash,
@@ -237,6 +240,7 @@ export async function updateUser(
     }
 
     if (updateFields.length > 0) {
+      updateFields.push('updated_at = CURRENT_TIMESTAMP');
       updateValues.push(userId);
       await connection.execute(
         `UPDATE app_users

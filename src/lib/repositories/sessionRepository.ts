@@ -42,8 +42,8 @@ async function ensureReady() {
 export async function createUserSession(input: CreateUserSessionInput): Promise<void> {
   const pool = await ensureReady();
   await pool.execute(
-    `INSERT INTO app_user_sessions (user_id, token_hash, expires_at)
-     VALUES (?, ?, ?)`,
+    `INSERT INTO app_user_sessions (user_id, token_hash, expires_at, updated_at)
+     VALUES (?, ?, ?, CURRENT_TIMESTAMP)`,
     [input.userId, input.tokenHash, input.expiresAt],
   );
 }

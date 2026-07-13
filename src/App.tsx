@@ -40,6 +40,7 @@ const AdminAuditLogsPage = lazy(() => import('./views/AdminAuditLogsPage'));
 const AdminAttendancePage = lazy(() => import('./views/AdminAttendancePage'));
 const AdminLogisticsPage = lazy(() => import('./views/AdminLogisticsPage'));
 const AdminWorkLogsPage = lazy(() => import('./views/AdminWorkLogsPage'));
+const AdminRecruitmentPage = lazy(() => import('./views/AdminRecruitmentPage'));
 const NotFoundPage = lazy(() => import('./views/NotFoundPage'));
 
 function trimLeadingSlash(path: string): string {
@@ -220,6 +221,7 @@ export default function App() {
             <Route path="admin/attendance" element={<AdminAttendancePage />} />
             <Route path="admin/logistics" element={<AdminLogisticsPage />} />
             <Route path="admin/work-logs" element={<AdminWorkLogsPage />} />
+            <Route path="admin/recruitment" element={<AdminRecruitmentPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         ))}

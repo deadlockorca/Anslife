@@ -18,6 +18,7 @@ const ADMIN_MODULES = [
   { path: '/admin/sales-data', label: 'Dữ liệu sale' },
   { path: '/admin/buyer-portal', label: 'Cổng khách hàng' },
   { path: '/admin/attendance', label: 'Chấm công' },
+  { path: '/admin/recruitment', label: 'Tuyển dụng' },
   { path: '/admin/audit-logs', label: 'Nhật ký kiểm toán' },
 ] as const;
 

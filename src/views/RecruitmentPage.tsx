@@ -7,9 +7,15 @@ import { submitContactForm } from '../lib/wp';
 type RecruitmentStatus = 'open' | 'receiving' | 'paused' | 'closed';
 
 interface RecruitmentJob {
+  id?: number;
   title: string;
   status: RecruitmentStatus;
   summary: string;
+  description?: string | null;
+  requirements?: string[];
+  benefits?: string[];
+  location?: string | null;
+  workType?: string | null;
 }
 
 interface RecruitmentMarket {
@@ -30,6 +36,25 @@ interface RecruitmentGroup {
   markets: RecruitmentMarket[];
 }
 
+interface RecruitmentJobApiRecord {
+  id: number;
+  groupCode: string;
+  groupTitle: string;
+  groupBody: string | null;
+  marketName: string;
+  marketStatus: RecruitmentStatus;
+  title: string;
+  summary: string;
+  description: string | null;
+  requirements: string[];
+  benefits: string[];
+  location: string | null;
+  workType: string | null;
+  status: RecruitmentStatus;
+  sortOrder: number;
+  isPublic: boolean;
+}
+
 const statusLabels: Record<RecruitmentStatus, string> = {
   open: 'Đang tuyển',
   receiving: 'Đang tiếp nhận hồ sơ',
@@ -38,6 +63,78 @@ const statusLabels: Record<RecruitmentStatus, string> = {
 };
 
 const recruitmentFormId = Number(process.env.NEXT_PUBLIC_CF7_QUOTE_FORM_ID ?? 1);
+
+function createGroupCards(groupTitle: string, groupBody: string): RecruitmentGroup['cards'] {
+  return [
+    {
+      title: 'Mục tiêu',
+      body: groupBody || `Phát triển năng lực cho nhóm ${groupTitle}.`,
+    },
+    {
+      title: 'Đội ngũ',
+      body: 'Đội ngũ chuyên nghiệp, phối hợp đa bộ phận và định hướng kết quả.',
+    },
+    {
+      title: 'Phạm vi',
+      body: 'Triển khai theo cụm thị trường, dự án và nhu cầu vận hành thực tế.',
+    },
+    {
+      title: 'Sứ mệnh',
+      body: 'Kết nối ANSLIFE với nhân sự phù hợp để phát triển bền vững.',
+    },
+  ];
+}
+
+function buildCareerGroupsFromJobs(jobs: RecruitmentJobApiRecord[]): RecruitmentGroup[] {
+  const groups = new Map<string, RecruitmentGroup>();
+
+  for (const job of jobs) {
+    const groupCode = job.groupCode || job.groupTitle;
+    const groupBody = job.groupBody ?? '';
+    let group = groups.get(groupCode);
+    if (!group) {
+      group = {
+        code: groupCode.slice(0, 4).toUpperCase(),
+        title: job.groupTitle,
+        body: groupBody || job.summary,
+        positions: '0 vị trí',
+        cards: createGroupCards(job.groupTitle, groupBody || job.summary),
+        markets: [],
+      };
+      groups.set(groupCode, group);
+    }
+
+    let market = group.markets.find((item) => item.market === job.marketName);
+    if (!market) {
+      market = {
+        market: job.marketName,
+        status: job.marketStatus,
+        jobs: [],
+      };
+      group.markets.push(market);
+    }
+
+    market.jobs.push({
+      id: job.id,
+      title: job.title,
+      status: job.status,
+      summary: job.summary,
+      description: job.description,
+      requirements: job.requirements,
+      benefits: job.benefits,
+      location: job.location,
+      workType: job.workType,
+    });
+  }
+
+  return Array.from(groups.values()).map((group) => {
+    const count = group.markets.reduce((total, market) => total + market.jobs.length, 0);
+    return {
+      ...group,
+      positions: `${count} vị trí`,
+    };
+  });
+}
 
 const defaultMarkets: RecruitmentMarket[] = [
   {
@@ -598,11 +695,12 @@ export default function RecruitmentPage() {
   const [expandedMarketIndex, setExpandedMarketIndex] = useState(0);
   const [selectedJobKey, setSelectedJobKey] = useState('0-0');
   const [isApplicationPopupOpen, setIsApplicationPopupOpen] = useState(false);
+  const [careerGroupData, setCareerGroupData] = useState<RecruitmentGroup[]>(careerGroups);
   const [applicationState, setApplicationState] = useState<{
     status: 'idle' | 'loading' | 'success' | 'error';
     message: string;
   }>({ status: 'idle', message: '' });
-  const selectedGroup = careerGroups[selectedGroupIndex];
+  const selectedGroup = careerGroupData[selectedGroupIndex] ?? careerGroupData[0] ?? careerGroups[0];
   const [selectedMarketIndexValue] = selectedJobKey.split('-').map(Number);
   const selectedMarket =
     selectedGroup.markets[selectedMarketIndexValue] ?? selectedGroup.markets[0];
@@ -610,6 +708,41 @@ export default function RecruitmentPage() {
     const [marketIndexValue, jobIndexValue] = selectedJobKey.split('-').map(Number);
     return selectedGroup.markets[marketIndexValue]?.jobs[jobIndexValue] ?? selectedGroup.markets[0]?.jobs[0];
   }, [selectedGroup, selectedJobKey]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadRecruitmentJobs() {
+      try {
+        const response = await fetch('/api/public/recruitment/jobs');
+        const data = (await response.json()) as {
+          ok?: boolean;
+          jobs?: RecruitmentJobApiRecord[];
+        };
+        if (!isMounted || !data.ok || !Array.isArray(data.jobs) || data.jobs.length === 0) {
+          return;
+        }
+
+        const groupsFromDb = buildCareerGroupsFromJobs(data.jobs);
+        if (groupsFromDb.length === 0) {
+          return;
+        }
+
+        setCareerGroupData(groupsFromDb);
+        setSelectedGroupIndex(0);
+        setExpandedMarketIndex(0);
+        setSelectedJobKey('0-0');
+      } catch {
+        // Keep static recruitment content when the database is not configured or unavailable.
+      }
+    }
+
+    void loadRecruitmentJobs();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   function handleGroupSelect(index: number) {
     setSelectedGroupIndex(index);
@@ -697,7 +830,7 @@ export default function RecruitmentPage() {
           <h2 id="recruitment-opportunity-title">{t('Bản đồ cơ hội nghề nghiệp')}</h2>
           <div className="recruitment-opportunity-layout">
             <div className="recruitment-career-list" aria-label={t('Nhóm cơ hội nghề nghiệp')}>
-              {careerGroups.map((group, index) => (
+              {careerGroupData.map((group, index) => (
                 <button
                   type="button"
                   className={`recruitment-career-card ${
@@ -799,6 +932,7 @@ export default function RecruitmentPage() {
                     </span>
                     <h3 id="recruitment-job-detail-title">{t(selectedJob.title)}</h3>
                     <p>{t(selectedJob.summary)}</p>
+                    {selectedJob.description && <p>{t(selectedJob.description)}</p>}
                     <dl>
                       <div>
                         <dt>{t('Nhóm nghề')}</dt>
@@ -808,7 +942,39 @@ export default function RecruitmentPage() {
                         <dt>{t('Khu vực / bộ phận')}</dt>
                         <dd>{t(selectedMarket.market)}</dd>
                       </div>
+                      {selectedJob.location && (
+                        <div>
+                          <dt>{t('Địa điểm')}</dt>
+                          <dd>{t(selectedJob.location)}</dd>
+                        </div>
+                      )}
+                      {selectedJob.workType && (
+                        <div>
+                          <dt>{t('Hình thức')}</dt>
+                          <dd>{t(selectedJob.workType)}</dd>
+                        </div>
+                      )}
                     </dl>
+                    {selectedJob.requirements && selectedJob.requirements.length > 0 && (
+                      <div className="recruitment-job-detail-list">
+                        <h4>{t('Yêu cầu')}</h4>
+                        <ul>
+                          {selectedJob.requirements.map((item) => (
+                            <li key={item}>{t(item)}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {selectedJob.benefits && selectedJob.benefits.length > 0 && (
+                      <div className="recruitment-job-detail-list">
+                        <h4>{t('Quyền lợi')}</h4>
+                        <ul>
+                          {selectedJob.benefits.map((item) => (
+                            <li key={item}>{t(item)}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                   <div className="recruitment-job-detail-actions">
                     <button
@@ -862,6 +1028,7 @@ export default function RecruitmentPage() {
 
               <input type="hidden" name="request-category" value="recruitment_application" />
               <input type="hidden" name="inquiry-type" value="Ứng tuyển tuyển dụng" />
+              <input type="hidden" name="recruitment-job-id" value={selectedJob.id ?? ''} />
               <input type="hidden" name="career-group" value={selectedGroup.title} />
               <input type="hidden" name="career-market" value={selectedMarket.market} />
               <input type="hidden" name="career-position" value={selectedJob.title} />

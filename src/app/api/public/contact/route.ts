@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { createContactLead } from '../../../../lib/repositories/contentRepository';
 import { getCorsHeaders } from '../../../../lib/http/cors';
 import { sendContactNotificationEmail } from '../../../../lib/email/contactNotification';
+import { createRecruitmentApplication } from '../../../../lib/repositories/recruitmentRepository';
 
 export const dynamic = 'force-dynamic';
 
@@ -64,6 +65,14 @@ export async function POST(request: Request) {
   } catch (error) {
     leadError = error;
     console.error('[API][contact] Failed to create lead:', error);
+  }
+
+  if (payload['request-category'] === 'recruitment_application') {
+    try {
+      await createRecruitmentApplication(payload);
+    } catch (error) {
+      console.error('[API][contact] Failed to create recruitment application:', error);
+    }
   }
 
   try {
