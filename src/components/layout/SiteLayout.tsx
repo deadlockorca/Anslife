@@ -104,8 +104,8 @@ type FooterContactIcon = 'location' | 'phone' | 'mail' | 'website';
 
 const FOOTER_CONTACT_ITEMS = [
   {
-    label: 'contact@anslife.cok',
-    path: 'mailto:contact@anslife.cok',
+    label: 'contact@anslife.com',
+    path: 'mailto:contact@anslife.com',
     icon: 'mail' as FooterContactIcon,
   },
   {
@@ -426,7 +426,10 @@ export default function SiteLayout() {
       desktopTopMenuItems.map((item) => ({
         label: item.label,
         path: item.path,
-        children: item.children,
+        children:
+          item.path === '/about-anslife'
+            ? [...(item.children ?? []), { label: 'Tuyển dụng', path: '/recruitment' }]
+            : item.children,
       })),
     [desktopTopMenuItems],
   );
