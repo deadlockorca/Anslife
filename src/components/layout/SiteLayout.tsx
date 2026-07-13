@@ -98,7 +98,7 @@ const HEADER_UTILITY_LINKS = [
   { label: 'Tin tức', path: '/news' },
   { label: 'Dự án', path: '/projects' },
   { label: 'Mạng lưới', path: '/global-network' },
-  { label: 'Tuyển dụng', path: '/about-anslife/scholarship-community' },
+  { label: 'Tuyển dụng', path: '/recruitment' },
 ] as const;
 type FooterContactIcon = 'location' | 'phone' | 'mail' | 'website';
 

@@ -14,6 +14,12 @@ const FIELD_LABELS: Record<string, string> = {
   'privacy-consent': 'Đồng ý chính sách',
   'product-interest': 'Sản phẩm / dịch vụ quan tâm',
   'reference-link': 'Link tham chiếu',
+  'career-group': 'Nhóm nghề',
+  'career-market': 'Khu vực / bộ phận',
+  'career-position': 'Vị trí ứng tuyển',
+  'career-status': 'Trạng thái vị trí',
+  'cv-link': 'Link CV / Portfolio',
+  'latest-experience': 'Kinh nghiệm gần nhất',
 };
 
 const REQUEST_CATEGORY_LABELS: Record<string, string> = {
@@ -29,6 +35,7 @@ const REQUEST_CATEGORY_LABELS: Record<string, string> = {
   community_program_request:
     'Yêu cầu đề nghị tham gia các chương trình cộng đồng, phụng sự xã hội',
   logistics_documentation_request: 'Yêu cầu logistics / chứng từ',
+  recruitment_application: 'Ứng tuyển tuyển dụng',
 };
 
 const FIELD_ORDER = [
@@ -38,6 +45,12 @@ const FIELD_ORDER = [
   'your-company',
   'country-region',
   'request-category',
+  'career-position',
+  'career-group',
+  'career-market',
+  'career-status',
+  'cv-link',
+  'latest-experience',
   'product-interest',
   'reference-link',
   'your-message',
