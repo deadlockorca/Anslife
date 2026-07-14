@@ -1,6 +1,6 @@
 import type { FormEvent } from 'react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { getAIFallbackPageHtml } from '../content/aiGeneratedContent';
 import ErrorBlock from '../components/common/ErrorBlock';
 import HtmlContent from '../components/common/HtmlContent';
@@ -17,6 +17,8 @@ const contactSections = [
   'company-info',
   'quote-request',
   'request-quotation',
+  'factory-partner',
+  'community-service',
   'general-inquiry',
   'upload-drawing',
   'oem-odm-request',
@@ -126,6 +128,7 @@ function getCalendarWeekdayLabels(language: string): string[] {
 }
 
 type ContactSection = (typeof contactSections)[number];
+type ContactRequestAudienceIcon = 'export-partner' | 'factory' | 'recruitment' | 'community';
 
 type QuoteContactSection =
   | 'quote-request'
@@ -206,6 +209,80 @@ const workRequestTypeOptions = [
   },
 ] as const;
 
+const factoryPartnerRequestOptions = [
+  {
+    value: 'factory_trade_finance',
+    label: 'Đăng kí tài trợ thương mại',
+  },
+  {
+    value: 'factory_rnd_product',
+    label: 'R&D sản phẩm',
+  },
+  {
+    value: 'factory_project_management',
+    label: 'Hợp tác quản lý dự án',
+  },
+  {
+    value: 'factory_logistics',
+    label: 'Logistics / chứng từ xuất khẩu',
+  },
+  {
+    value: 'factory_oem_odm',
+    label: 'Gia công OEM / ODM',
+  },
+  {
+    value: 'factory_qc_standard',
+    label: 'QC / tiêu chuẩn chất lượng',
+  },
+  {
+    value: 'factory_surface_finishing',
+    label: 'Hoàn thiện bề mặt',
+  },
+  {
+    value: 'factory_supply_hub',
+    label: 'Tham gia hệ thống Supply Hub',
+  },
+] as const;
+
+const communityServiceRequestOptions = [
+  {
+    value: 'community_scholarship',
+    label: 'Học bổng',
+  },
+  {
+    value: 'community_disaster_relief',
+    label: 'Cứu trợ thiên tai',
+  },
+  {
+    value: 'community_education_support',
+    label: 'Hỗ trợ giáo dục',
+  },
+  {
+    value: 'community_livelihood_support',
+    label: 'Hỗ trợ sinh kế',
+  },
+  {
+    value: 'community_local_program',
+    label: 'Chương trình cộng đồng địa phương',
+  },
+  {
+    value: 'community_environment',
+    label: 'Hoạt động môi trường',
+  },
+  {
+    value: 'community_health_wellbeing',
+    label: 'Y tế / chăm sóc sức khỏe',
+  },
+  {
+    value: 'community_sponsorship_partnership',
+    label: 'Tài trợ / đồng hành chương trình',
+  },
+  {
+    value: 'community_other',
+    label: 'Đề xuất phụng sự xã hội khác',
+  },
+] as const;
+
 const marketOriginOptions = [
   'Nhật Bản',
   'EU',
@@ -215,6 +292,53 @@ const marketOriginOptions = [
   'Úc',
   'Canada',
 ] as const;
+
+function ContactRequestAudienceIcon({ icon }: { icon: ContactRequestAudienceIcon }) {
+  if (icon === 'factory') {
+    return (
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M10 52V24l12 7V20l13 8v24" />
+        <path d="M35 30h19v22" />
+        <path d="M16 42h5M27 42h5M42 42h5" />
+        <path d="M45 30V13h7v17" />
+      </svg>
+    );
+  }
+
+  if (icon === 'recruitment') {
+    return (
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="21" r="8" />
+        <circle cx="17" cy="27" r="6" />
+        <circle cx="47" cy="27" r="6" />
+        <path d="M19 52c1.5-10 6.5-15 13-15s11.5 5 13 15" />
+        <path d="M7 52c1-8 4.8-12 10-12 2.6 0 4.8 1 6.4 3" />
+        <path d="M40.6 43c1.6-2 3.8-3 6.4-3 5.2 0 9 4 10 12" />
+      </svg>
+    );
+  }
+
+  if (icon === 'community') {
+    return (
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 25c-5-8-16-5-16 4 0 8 16 17 16 17s16-9 16-17c0-9-11-12-16-4Z" />
+        <path d="M10 46h12l8 6h14l10-9" />
+        <path d="M10 38h10l10 8" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="19" r="10" />
+      <path d="M22 19h20M32 9c4 4 6 8 6 10s-2 6-6 10M32 9c-4 4-6 8-6 10s2 6 6 10" />
+      <path d="M9 40l10-8 10 9" />
+      <path d="M55 40l-10-8-10 9" />
+      <path d="M19 32l10 13h6l10-13" />
+      <path d="M20 48h24" />
+    </svg>
+  );
+}
 
 function isQuoteContactSection(
   section: ContactSection | 'all',
@@ -403,6 +527,8 @@ export default function ContactPage() {
     ? (sectionParam as ContactSection)
     : 'all';
   const isBlankRequestQuotationPage = activeSection === 'request-quotation';
+  const isFactoryPartnerPage = activeSection === 'factory-partner';
+  const isCommunityServicePage = activeSection === 'community-service';
   const showCompanyInfo = activeSection === 'all' || activeSection === 'company-info';
   const showQuoteForm =
     activeSection === 'all' ||
@@ -417,6 +543,8 @@ export default function ContactPage() {
   );
 
   const [quoteState, setQuoteState] = useState<SubmissionState>(idleState);
+  const [factoryPartnerState, setFactoryPartnerState] = useState<SubmissionState>(idleState);
+  const [communityServiceState, setCommunityServiceState] = useState<SubmissionState>(idleState);
   const [meetingState, setMeetingState] = useState<SubmissionState>(idleState);
   const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
   const [productInput, setProductInput] = useState('');
@@ -659,7 +787,63 @@ export default function ContactPage() {
             </figcaption>
           </figure>
 
-          <section className="contact-request-quotation-form-section">
+          <section className="contact-request-quotation-audience" aria-label={t('Nhóm yêu cầu')}>
+            {[
+              {
+                icon: 'export-partner' as ContactRequestAudienceIcon,
+                title: 'Đối tác xuất khẩu',
+                href: '#contact-request-quotation-form',
+              },
+              {
+                icon: 'factory' as ContactRequestAudienceIcon,
+                title: 'Nhà máy gia công',
+                path: `/${language}/contact/factory-partner`,
+              },
+              {
+                icon: 'recruitment' as ContactRequestAudienceIcon,
+                title: 'Ứng Tuyển Nhân Sự',
+                path: `/${language}/recruitment`,
+              },
+              {
+                icon: 'community' as ContactRequestAudienceIcon,
+                title: 'Phụng Sự xã Hội',
+                path: `/${language}/contact/community-service`,
+              },
+            ].map((item) => {
+              const content = (
+                <>
+                  <span className="contact-request-quotation-audience-icon">
+                    <ContactRequestAudienceIcon icon={item.icon} />
+                  </span>
+                  <span className="contact-request-quotation-audience-title">{t(item.title)}</span>
+                  <span className="contact-request-quotation-audience-line" aria-hidden="true" />
+                  <span className="contact-request-quotation-audience-arrow" aria-hidden="true">
+                    ›
+                  </span>
+                </>
+              );
+
+              return item.path ? (
+                <Link
+                  key={item.title}
+                  to={item.path}
+                  className="contact-request-quotation-audience-card"
+                >
+                  {content}
+                </Link>
+              ) : (
+                <a
+                  key={item.title}
+                  href={item.href}
+                  className="contact-request-quotation-audience-card"
+                >
+                  {content}
+                </a>
+              );
+            })}
+          </section>
+
+          <section className="contact-request-quotation-form-section" id="contact-request-quotation-form">
             <form
               className="contact-request-quotation-form"
               onSubmit={(event) => submitByFormId(quoteFormId, event, setQuoteState)}
@@ -832,6 +1016,481 @@ export default function ContactPage() {
                 </div>
               </article>
             ))}
+          </section>
+        </section>
+      )}
+
+      {isFactoryPartnerPage && (
+        <section className="contact-request-quotation-page" id="factory-partner">
+          <figure className="contact-request-quotation-banner">
+            <img
+              src="/assets/contact/request-quotation/request-quotation-banner.webp"
+              alt=""
+              aria-hidden="true"
+              loading="eager"
+              decoding="async"
+            />
+            <figcaption className="contact-request-quotation-banner-copy">
+              <h1>{t('Nhà máy gia công')}</h1>
+              <p>{t('Đăng ký hợp tác cùng hệ thống sản xuất và cung ứng của ANSLIFE.')}</p>
+              <p>
+                {t(
+                  'Vui lòng gửi thông tin liên hệ và giới thiệu ngắn gọn về nhà máy để đội ngũ ANSLIFE đánh giá hướng hợp tác phù hợp.',
+                )}
+              </p>
+            </figcaption>
+          </figure>
+
+          <section className="contact-request-quotation-audience" aria-label={t('Nhóm yêu cầu')}>
+            {[
+              {
+                icon: 'export-partner' as ContactRequestAudienceIcon,
+                title: 'Đối tác xuất khẩu',
+                path: `/${language}/contact/request-quotation#contact-request-quotation-form`,
+              },
+              {
+                icon: 'factory' as ContactRequestAudienceIcon,
+                title: 'Nhà máy gia công',
+                href: '#factory-partner-form',
+              },
+              {
+                icon: 'recruitment' as ContactRequestAudienceIcon,
+                title: 'Ứng Tuyển Nhân Sự',
+                path: `/${language}/recruitment`,
+              },
+              {
+                icon: 'community' as ContactRequestAudienceIcon,
+                title: 'Phụng Sự xã Hội',
+                path: `/${language}/contact/community-service`,
+              },
+            ].map((item) => {
+              const content = (
+                <>
+                  <span className="contact-request-quotation-audience-icon">
+                    <ContactRequestAudienceIcon icon={item.icon} />
+                  </span>
+                  <span className="contact-request-quotation-audience-title">{t(item.title)}</span>
+                  <span className="contact-request-quotation-audience-line" aria-hidden="true" />
+                  <span className="contact-request-quotation-audience-arrow" aria-hidden="true">
+                    ›
+                  </span>
+                </>
+              );
+
+              return item.path ? (
+                <Link
+                  key={item.title}
+                  to={item.path}
+                  className="contact-request-quotation-audience-card"
+                >
+                  {content}
+                </Link>
+              ) : (
+                <a
+                  key={item.title}
+                  href={item.href}
+                  className="contact-request-quotation-audience-card"
+                >
+                  {content}
+                </a>
+              );
+            })}
+          </section>
+
+          <section className="contact-request-quotation-form-section" id="factory-partner-form">
+            <form
+              className="contact-request-quotation-form"
+              onSubmit={(event) =>
+                submitByFormId(quoteFormId, event, setFactoryPartnerState)
+              }
+            >
+              <div className="contact-request-quotation-form-column">
+                <h2>
+                  <span aria-hidden="true">▤</span>
+                  {t('Thông tin nhà máy')}
+                </h2>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Tên người liên lạc')} <em aria-hidden="true">*</em>
+                  </span>
+                  <input name="your-name" placeholder={t('Nhập tên người liên lạc')} required />
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Quốc gia')} <em aria-hidden="true">*</em>
+                  </span>
+                  <select name="country-region" defaultValue="" required>
+                    <option value="" disabled>
+                      {t('Chọn quốc gia')}
+                    </option>
+                    {countryRegionOptions.map((countryRegion) => (
+                      <option key={countryRegion.value} value={countryRegion.value}>
+                        {countryRegion.label}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Tỉnh / Thành phố')} <em aria-hidden="true">*</em>
+                  </span>
+                  <input name="province-city" placeholder={t('Nhập tỉnh / thành phố')} required />
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Số điện thoại')} <em aria-hidden="true">*</em>
+                  </span>
+                  <input name="your-phone" placeholder={t('Nhập số điện thoại')} required />
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Email')} <em aria-hidden="true">*</em>
+                  </span>
+                  <input
+                    type="email"
+                    name="your-email"
+                    placeholder={t('Nhập email của bạn')}
+                    required
+                  />
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Giới thiệu ngắn gọn về nhà máy')} <em aria-hidden="true">*</em>
+                  </span>
+                  <textarea
+                    name="factory-introduction"
+                    rows={7}
+                    placeholder={t(
+                      'Vui lòng giới thiệu quy mô, nhóm sản phẩm, năng lực sản xuất, chứng chỉ, thị trường đã phục vụ hoặc nhu cầu hợp tác.',
+                    )}
+                    required
+                  />
+                </label>
+
+                <label className="contact-request-quotation-policy">
+                  <input name="privacy-consent" type="checkbox" required />
+                  <span>
+                    {t('Tôi đồng ý để ANSLIFE xử lý thông tin theo')}{' '}
+                    <a href="/privacy-policy">{t('Chính sách bảo mật')}.</a>
+                  </span>
+                </label>
+
+                <input type="hidden" name="inquiry-type" value="factory_partner" />
+
+                <button
+                  type="submit"
+                  className="contact-request-quotation-submit"
+                  disabled={factoryPartnerState.status === 'loading'}
+                >
+                  <span aria-hidden="true">✈</span>
+                  {factoryPartnerState.status === 'loading'
+                    ? t('Đang gửi...')
+                    : t('Gửi yêu cầu')}
+                </button>
+
+                {factoryPartnerState.status !== 'idle' && (
+                  <p
+                    className={
+                      factoryPartnerState.status === 'success'
+                        ? 'contact-request-quotation-success'
+                        : 'contact-request-quotation-error'
+                    }
+                  >
+                    {factoryPartnerState.message}
+                  </p>
+                )}
+              </div>
+
+              <aside className="contact-request-quotation-type-column">
+                <h2>
+                  <span aria-hidden="true">▤</span>
+                  {t('Nhu cầu hợp tác')}
+                </h2>
+
+                <fieldset className="contact-request-quotation-type-list">
+                  <legend>{t('Nhu cầu hợp tác')}</legend>
+                  {factoryPartnerRequestOptions.map((option, index) => (
+                    <label key={option.value} className="contact-request-quotation-type-item">
+                      <input
+                        type="checkbox"
+                        name="request-category"
+                        value={option.value}
+                        defaultChecked={index === 0}
+                      />
+                      <span>{t(option.label)}</span>
+                    </label>
+                  ))}
+                </fieldset>
+
+                <div className="contact-request-quotation-support">
+                  <h3>
+                    <span aria-hidden="true">◎</span>
+                    {t('Thông tin nên chuẩn bị')}
+                  </h3>
+                  <p>{t('ANSLIFE sẽ phản hồi nhanh hơn nếu nhà máy cung cấp rõ:')}</p>
+                  <ul>
+                    <li>
+                      <span aria-hidden="true">✓</span>
+                      {t('Nhóm sản phẩm và công đoạn có thể gia công')}
+                    </li>
+                    <li>
+                      <span aria-hidden="true">✓</span>
+                      {t('Năng lực sản xuất, QC và đóng gói xuất khẩu')}
+                    </li>
+                    <li>
+                      <span aria-hidden="true">✓</span>
+                      {t('Thị trường hoặc buyer đã từng phục vụ')}
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+            </form>
+          </section>
+        </section>
+      )}
+
+      {isCommunityServicePage && (
+        <section className="contact-request-quotation-page" id="community-service">
+          <figure className="contact-request-quotation-banner">
+            <img
+              src="/assets/contact/request-quotation/request-quotation-banner.webp"
+              alt=""
+              aria-hidden="true"
+              loading="eager"
+              decoding="async"
+            />
+            <figcaption className="contact-request-quotation-banner-copy">
+              <h1>{t('Đăng ký phụng sự xã hội')}</h1>
+              <p>{t('Kết nối cùng ANSLIFE trong các chương trình hỗ trợ con người và cộng đồng.')}</p>
+              <p>
+                {t(
+                  'Vui lòng gửi thông tin chương trình hoặc đề xuất phối hợp để đội ngũ ANSLIFE xem xét hướng đồng hành phù hợp.',
+                )}
+              </p>
+            </figcaption>
+          </figure>
+
+          <section className="contact-request-quotation-audience" aria-label={t('Nhóm yêu cầu')}>
+            {[
+              {
+                icon: 'export-partner' as ContactRequestAudienceIcon,
+                title: 'Đối tác xuất khẩu',
+                path: `/${language}/contact/request-quotation#contact-request-quotation-form`,
+              },
+              {
+                icon: 'factory' as ContactRequestAudienceIcon,
+                title: 'Nhà máy gia công',
+                path: `/${language}/contact/factory-partner`,
+              },
+              {
+                icon: 'recruitment' as ContactRequestAudienceIcon,
+                title: 'Ứng Tuyển Nhân Sự',
+                path: `/${language}/recruitment`,
+              },
+              {
+                icon: 'community' as ContactRequestAudienceIcon,
+                title: 'Phụng Sự xã Hội',
+                href: '#community-service-form',
+              },
+            ].map((item) => {
+              const content = (
+                <>
+                  <span className="contact-request-quotation-audience-icon">
+                    <ContactRequestAudienceIcon icon={item.icon} />
+                  </span>
+                  <span className="contact-request-quotation-audience-title">{t(item.title)}</span>
+                  <span className="contact-request-quotation-audience-line" aria-hidden="true" />
+                  <span className="contact-request-quotation-audience-arrow" aria-hidden="true">
+                    ›
+                  </span>
+                </>
+              );
+
+              return item.path ? (
+                <Link
+                  key={item.title}
+                  to={item.path}
+                  className="contact-request-quotation-audience-card"
+                >
+                  {content}
+                </Link>
+              ) : (
+                <a
+                  key={item.title}
+                  href={item.href}
+                  className="contact-request-quotation-audience-card"
+                >
+                  {content}
+                </a>
+              );
+            })}
+          </section>
+
+          <section className="contact-request-quotation-form-section" id="community-service-form">
+            <form
+              className="contact-request-quotation-form"
+              onSubmit={(event) =>
+                submitByFormId(quoteFormId, event, setCommunityServiceState)
+              }
+            >
+              <div className="contact-request-quotation-form-column">
+                <h2>
+                  <span aria-hidden="true">♡</span>
+                  {t('Thông tin đăng ký')}
+                </h2>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Tên người liên lạc')} <em aria-hidden="true">*</em>
+                  </span>
+                  <input name="your-name" placeholder={t('Nhập tên người liên lạc')} required />
+                </label>
+
+                <label>
+                  {t('Tổ chức / Cá nhân')}
+                  <input name="your-company" placeholder={t('Nhập tên tổ chức hoặc cá nhân')} />
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Quốc gia')} <em aria-hidden="true">*</em>
+                  </span>
+                  <select name="country-region" defaultValue="" required>
+                    <option value="" disabled>
+                      {t('Chọn quốc gia')}
+                    </option>
+                    {countryRegionOptions.map((countryRegion) => (
+                      <option key={countryRegion.value} value={countryRegion.value}>
+                        {countryRegion.label}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Tỉnh / Thành phố')} <em aria-hidden="true">*</em>
+                  </span>
+                  <input name="province-city" placeholder={t('Nhập tỉnh / thành phố')} required />
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Số điện thoại')} <em aria-hidden="true">*</em>
+                  </span>
+                  <input name="your-phone" placeholder={t('Nhập số điện thoại')} required />
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Email')} <em aria-hidden="true">*</em>
+                  </span>
+                  <input
+                    type="email"
+                    name="your-email"
+                    placeholder={t('Nhập email của bạn')}
+                    required
+                  />
+                </label>
+
+                <label>
+                  <span className="contact-request-quotation-label-text">
+                    {t('Giới thiệu ngắn gọn về chương trình')} <em aria-hidden="true">*</em>
+                  </span>
+                  <textarea
+                    name="community-introduction"
+                    rows={7}
+                    placeholder={t(
+                      'Vui lòng mô tả mục tiêu, địa điểm, đối tượng hỗ trợ, thời gian dự kiến, hình thức phối hợp hoặc nguồn lực cần đồng hành.',
+                    )}
+                    required
+                  />
+                </label>
+
+                <label className="contact-request-quotation-policy">
+                  <input name="privacy-consent" type="checkbox" required />
+                  <span>
+                    {t('Tôi đồng ý để ANSLIFE xử lý thông tin theo')}{' '}
+                    <a href="/privacy-policy">{t('Chính sách bảo mật')}.</a>
+                  </span>
+                </label>
+
+                <input type="hidden" name="inquiry-type" value="community_service" />
+
+                <button
+                  type="submit"
+                  className="contact-request-quotation-submit"
+                  disabled={communityServiceState.status === 'loading'}
+                >
+                  <span aria-hidden="true">✈</span>
+                  {communityServiceState.status === 'loading'
+                    ? t('Đang gửi...')
+                    : t('Gửi yêu cầu')}
+                </button>
+
+                {communityServiceState.status !== 'idle' && (
+                  <p
+                    className={
+                      communityServiceState.status === 'success'
+                        ? 'contact-request-quotation-success'
+                        : 'contact-request-quotation-error'
+                    }
+                  >
+                    {communityServiceState.message}
+                  </p>
+                )}
+              </div>
+
+              <aside className="contact-request-quotation-type-column">
+                <h2>
+                  <span aria-hidden="true">▤</span>
+                  {t('Nội dung phụng sự')}
+                </h2>
+
+                <fieldset className="contact-request-quotation-type-list">
+                  <legend>{t('Nội dung phụng sự')}</legend>
+                  {communityServiceRequestOptions.map((option, index) => (
+                    <label key={option.value} className="contact-request-quotation-type-item">
+                      <input
+                        type="checkbox"
+                        name="request-category"
+                        value={option.value}
+                        defaultChecked={index === 0}
+                      />
+                      <span>{t(option.label)}</span>
+                    </label>
+                  ))}
+                </fieldset>
+
+                <div className="contact-request-quotation-support">
+                  <h3>
+                    <span aria-hidden="true">◎</span>
+                    {t('Thông tin nên chuẩn bị')}
+                  </h3>
+                  <p>{t('ANSLIFE sẽ phản hồi nhanh hơn nếu đề xuất có đủ:')}</p>
+                  <ul>
+                    <li>
+                      <span aria-hidden="true">✓</span>
+                      {t('Mục tiêu và nhóm đối tượng cần hỗ trợ')}
+                    </li>
+                    <li>
+                      <span aria-hidden="true">✓</span>
+                      {t('Khu vực, thời gian và quy mô chương trình')}
+                    </li>
+                    <li>
+                      <span aria-hidden="true">✓</span>
+                      {t('Hình thức ANSLIFE có thể đồng hành')}
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+            </form>
           </section>
         </section>
       )}
