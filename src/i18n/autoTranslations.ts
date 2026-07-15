@@ -11,6 +11,7 @@ import { NATURAL_FINISH_TEMPLATE_TRANSLATIONS } from './naturalFinishTemplateTra
 import { OIL_FINISH_TEMPLATE_TRANSLATIONS } from './oilFinishTemplateTranslations';
 import { PRODUCTS_SOLUTIONS_TEMPLATE_TRANSLATIONS } from './productsSolutionsTemplateTranslations';
 import { QUALITY_CONTROL_TEMPLATE_TRANSLATIONS } from './qualityControlTemplateTranslations';
+import { RECRUITMENT_TEMPLATE_TRANSLATIONS } from './recruitmentTemplateTranslations';
 import { RESOURCES_TEMPLATE_TRANSLATIONS } from './resourcesTemplateTranslations';
 import { STAIN_TEMPLATE_TRANSLATIONS } from './stainTemplateTranslations';
 import { SUPPLY_HUB_TEMPLATE_TRANSLATIONS } from './supplyHubTemplateTranslations';
@@ -6231,5 +6232,15 @@ for (const language of Object.keys(RESOURCES_TEMPLATE_TRANSLATIONS) as Exclude<
   AUTO_TRANSLATIONS[language] = {
     ...(AUTO_TRANSLATIONS[language] ?? {}),
     ...(RESOURCES_TEMPLATE_TRANSLATIONS[language] ?? {}),
+  };
+}
+
+for (const language of Object.keys(RECRUITMENT_TEMPLATE_TRANSLATIONS) as Exclude<
+  LanguageCode,
+  'vn'
+>[]) {
+  AUTO_TRANSLATIONS[language] = {
+    ...(AUTO_TRANSLATIONS[language] ?? {}),
+    ...(RECRUITMENT_TEMPLATE_TRANSLATIONS[language] ?? {}),
   };
 }

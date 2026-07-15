@@ -74,9 +74,6 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
           <p>Tài trợ thương mại có kiểm soát cho buyer và nhà máy.</p>
         </article>
       </div>
-      <div class="ai-company-overview-action">
-        <a href="/vn/about-anslife/company-info">Xem chi tiết năng lực của chúng tôi <span>→</span></a>
-      </div>
     </div>
 
     <div class="ai-company-overview-section">
@@ -9774,9 +9771,6 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
           <p>Controlled trade finance support for buyers and factories.</p>
         </article>
       </div>
-      <div class="ai-company-overview-action">
-        <a href="/en/about-anslife/company-info">View our capabilities in detail <span>→</span></a>
-      </div>
     </div>
 
     <div class="ai-company-overview-section">
@@ -15544,9 +15538,6 @@ function buildLocalizedCompanyIntroStandardSection(
         </article>`,
           )
           .join('')}
-      </div>
-      <div class="ai-company-overview-action">
-        <a href="/${language}/about-anslife/company-info">${translateText(language, 'Xem chi tiết năng lực của chúng tôi')} <span>→</span></a>
       </div>
     </div>
 
