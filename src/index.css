@@ -47627,7 +47627,7 @@ img.supply-hub-weekly-cta-image-placeholder {
 
 .ai-company-market-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.55rem;
   margin-top: 0.75rem;
 }
@@ -47725,6 +47725,18 @@ img.supply-hub-weekly-cta-image-placeholder {
   color: #f1c84b;
   font-size: 0.45rem;
   letter-spacing: 0.08rem;
+}
+
+.ai-market-flag-kr {
+  background: #f8f5ef;
+}
+
+.ai-market-flag-kr::before {
+  content: '';
+  position: absolute;
+  inset: 8px 15px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #c92645 0 50%, #24477f 50% 100%);
 }
 
 .ai-company-request-panel {

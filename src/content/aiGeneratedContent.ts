@@ -134,6 +134,7 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
           <span><i class="ai-market-flag ai-market-flag-jp" aria-hidden="true"></i><strong>Nhật Bản</strong></span>
           <span><i class="ai-market-flag ai-market-flag-us" aria-hidden="true"></i><strong>Hoa Kỳ</strong></span>
           <span><i class="ai-market-flag ai-market-flag-eu" aria-hidden="true"></i><strong>EU</strong></span>
+          <span><i class="ai-market-flag ai-market-flag-kr" aria-hidden="true"></i><strong>Hàn Quốc</strong></span>
         </div>
         <p class="ai-company-market-note"><i class="ai-footer-icon ai-icon-globe" aria-hidden="true"></i><span>và các thị trường quốc tế</span></p>
       </article>
@@ -9833,6 +9834,7 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
           <span><i class="ai-market-flag ai-market-flag-jp" aria-hidden="true"></i><strong>Japan</strong></span>
           <span><i class="ai-market-flag ai-market-flag-us" aria-hidden="true"></i><strong>United States</strong></span>
           <span><i class="ai-market-flag ai-market-flag-eu" aria-hidden="true"></i><strong>EU</strong></span>
+          <span><i class="ai-market-flag ai-market-flag-kr" aria-hidden="true"></i><strong>South Korea</strong></span>
         </div>
         <p class="ai-company-market-note"><i class="ai-footer-icon ai-icon-globe" aria-hidden="true"></i><span>and other international markets</span></p>
       </article>
@@ -15604,6 +15606,7 @@ function buildLocalizedCompanyIntroStandardSection(
           <span><i class="ai-market-flag ai-market-flag-jp" aria-hidden="true"></i><strong>${translateText(language, 'Nhật Bản')}</strong></span>
           <span><i class="ai-market-flag ai-market-flag-us" aria-hidden="true"></i><strong>${translateText(language, 'Hoa Kỳ')}</strong></span>
           <span><i class="ai-market-flag ai-market-flag-eu" aria-hidden="true"></i><strong>EU</strong></span>
+          <span><i class="ai-market-flag ai-market-flag-kr" aria-hidden="true"></i><strong>${translateText(language, 'Hàn Quốc')}</strong></span>
         </div>
         <p class="ai-company-market-note"><i class="ai-footer-icon ai-icon-globe" aria-hidden="true"></i><span>${translateText(language, 'và các thị trường quốc tế')}</span></p>
       </article>
