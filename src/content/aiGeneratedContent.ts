@@ -59,18 +59,23 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
           <p>Hệ thống QC độc lập đảm bảo chất lượng đúng tiêu chuẩn quốc tế.</p>
         </article>
         <article class="ai-company-capability-card">
+          <span class="ai-company-overview-icon ai-icon-clipboard-check" aria-hidden="true"></span>
+          <h3>4. Kiểm định</h3>
+          <p>Kiểm định chất lượng theo tiêu chuẩn buyer, hồ sơ kỹ thuật và yêu cầu từng thị trường.</p>
+        </article>
+        <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-warehouse" aria-hidden="true"></span>
-          <h3>4. Lưu kho tại Việt Nam</h3>
+          <h3>5. Lưu kho tại Việt Nam</h3>
           <p>Kho bãi an toàn, quản lý tồn kho và chuẩn bị xuất hàng định kỳ.</p>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-operations" aria-hidden="true"></span>
-          <h3>5. Vận hành & quản lý dự án</h3>
+          <h3>6. Vận hành & quản lý dự án</h3>
           <p>Điều phối đơn hàng, kế hoạch sản xuất, tiến độ và giao hàng minh bạch.</p>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-hand-coin" aria-hidden="true"></span>
-          <h3>6. Tài trợ thương mại</h3>
+          <h3>7. Tài trợ thương mại</h3>
           <p>Tài trợ thương mại có kiểm soát cho buyer và nhà máy.</p>
         </article>
       </div>
@@ -82,10 +87,11 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
         <article><span class="ai-process-step">1</span><i class="ai-process-icon ai-icon-file-plus" aria-hidden="true"></i><strong>Buyer gửi yêu cầu</strong></article>
         <article><span class="ai-process-step">2</span><i class="ai-process-icon ai-icon-search" aria-hidden="true"></i><strong>ANSLIFE kiểm tra bản vẽ / mẫu / tiêu chuẩn</strong></article>
         <article><span class="ai-process-step">3</span><i class="ai-process-icon ai-icon-clipboard-check" aria-hidden="true"></i><strong>Chuẩn bị vật liệu & phát triển mẫu</strong></article>
-        <article><span class="ai-process-step">4</span><i class="ai-process-icon ai-icon-factory" aria-hidden="true"></i><strong>Tổ chức sản xuất, vận hành dự án & tài trợ thương mại</strong></article>
-        <article><span class="ai-process-step">5</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>QC độc lập & kiểm soát chất lượng</strong></article>
-        <article><span class="ai-process-step">6</span><i class="ai-process-icon ai-icon-warehouse" aria-hidden="true"></i><strong>Lưu kho tại Việt Nam</strong></article>
-        <article><span class="ai-process-step">7</span><i class="ai-process-icon ai-icon-truck" aria-hidden="true"></i><strong>Xuất hàng định kỳ</strong></article>
+        <article><span class="ai-process-step">4</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>Kiểm định chất lượng</strong></article>
+        <article><span class="ai-process-step">5</span><i class="ai-process-icon ai-icon-factory" aria-hidden="true"></i><strong>Tổ chức sản xuất, vận hành dự án & tài trợ thương mại</strong></article>
+        <article><span class="ai-process-step">6</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>QC độc lập & kiểm soát chất lượng</strong></article>
+        <article><span class="ai-process-step">7</span><i class="ai-process-icon ai-icon-warehouse" aria-hidden="true"></i><strong>Lưu kho tại Việt Nam</strong></article>
+        <article><span class="ai-process-step">8</span><i class="ai-process-icon ai-icon-truck" aria-hidden="true"></i><strong>Xuất hàng định kỳ</strong></article>
       </div>
     </div>
 
@@ -132,6 +138,8 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
           <span><i class="ai-market-flag ai-market-flag-us" aria-hidden="true"></i><strong>Hoa Kỳ</strong></span>
           <span><i class="ai-market-flag ai-market-flag-eu" aria-hidden="true"></i><strong>EU</strong></span>
           <span><i class="ai-market-flag ai-market-flag-kr" aria-hidden="true"></i><strong>Hàn Quốc</strong></span>
+          <span><i class="ai-market-flag ai-market-flag-au" aria-hidden="true"></i><strong>Úc</strong></span>
+          <span><i class="ai-market-flag ai-market-flag-ca" aria-hidden="true"></i><strong>Canada</strong></span>
         </div>
         <p class="ai-company-market-note"><i class="ai-footer-icon ai-icon-globe" aria-hidden="true"></i><span>và các thị trường quốc tế</span></p>
       </article>
@@ -9756,18 +9764,23 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
           <p>Independent QC system to ensure quality against international standards.</p>
         </article>
         <article class="ai-company-capability-card">
+          <span class="ai-company-overview-icon ai-icon-clipboard-check" aria-hidden="true"></span>
+          <h3>4. Inspection</h3>
+          <p>Quality inspection against buyer standards, technical files and market requirements.</p>
+        </article>
+        <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-warehouse" aria-hidden="true"></span>
-          <h3>4. Warehousing in Vietnam</h3>
+          <h3>5. Warehousing in Vietnam</h3>
           <p>Safe warehousing, inventory management and recurring shipment preparation.</p>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-operations" aria-hidden="true"></span>
-          <h3>5. Project operations</h3>
+          <h3>6. Project operations</h3>
           <p>Transparent order coordination, production planning, schedule and delivery control.</p>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-hand-coin" aria-hidden="true"></span>
-          <h3>6. Trade finance</h3>
+          <h3>7. Trade finance</h3>
           <p>Controlled trade finance support for buyers and factories.</p>
         </article>
       </div>
@@ -9779,10 +9792,11 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
         <article><span class="ai-process-step">1</span><i class="ai-process-icon ai-icon-file-plus" aria-hidden="true"></i><strong>Buyer sends request</strong></article>
         <article><span class="ai-process-step">2</span><i class="ai-process-icon ai-icon-search" aria-hidden="true"></i><strong>ANSLIFE reviews drawings / samples / standards</strong></article>
         <article><span class="ai-process-step">3</span><i class="ai-process-icon ai-icon-clipboard-check" aria-hidden="true"></i><strong>Prepare materials & develop samples</strong></article>
-        <article><span class="ai-process-step">4</span><i class="ai-process-icon ai-icon-factory" aria-hidden="true"></i><strong>Organize production, project operations & trade finance</strong></article>
-        <article><span class="ai-process-step">5</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>Independent QC & quality control</strong></article>
-        <article><span class="ai-process-step">6</span><i class="ai-process-icon ai-icon-warehouse" aria-hidden="true"></i><strong>Warehousing in Vietnam</strong></article>
-        <article><span class="ai-process-step">7</span><i class="ai-process-icon ai-icon-truck" aria-hidden="true"></i><strong>Recurring export shipment</strong></article>
+        <article><span class="ai-process-step">4</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>Quality inspection</strong></article>
+        <article><span class="ai-process-step">5</span><i class="ai-process-icon ai-icon-factory" aria-hidden="true"></i><strong>Organize production, project operations & trade finance</strong></article>
+        <article><span class="ai-process-step">6</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>Independent QC & quality control</strong></article>
+        <article><span class="ai-process-step">7</span><i class="ai-process-icon ai-icon-warehouse" aria-hidden="true"></i><strong>Warehousing in Vietnam</strong></article>
+        <article><span class="ai-process-step">8</span><i class="ai-process-icon ai-icon-truck" aria-hidden="true"></i><strong>Recurring export shipment</strong></article>
       </div>
     </div>
 
@@ -9829,6 +9843,8 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
           <span><i class="ai-market-flag ai-market-flag-us" aria-hidden="true"></i><strong>United States</strong></span>
           <span><i class="ai-market-flag ai-market-flag-eu" aria-hidden="true"></i><strong>EU</strong></span>
           <span><i class="ai-market-flag ai-market-flag-kr" aria-hidden="true"></i><strong>South Korea</strong></span>
+          <span><i class="ai-market-flag ai-market-flag-au" aria-hidden="true"></i><strong>Australia</strong></span>
+          <span><i class="ai-market-flag ai-market-flag-ca" aria-hidden="true"></i><strong>Canada</strong></span>
         </div>
         <p class="ai-company-market-note"><i class="ai-footer-icon ai-icon-globe" aria-hidden="true"></i><span>and other international markets</span></p>
       </article>
@@ -15103,6 +15119,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
         { title: 'Materials and colors', text: 'Wood, boards, veneer, foam, fabric, hardware and packing materials are controlled according to buyer requirements.' },
         { title: 'Order checklist', text: 'Each order is checked for dimensions, structure, finish, moisture, labels, packing and pre-shipment condition.' },
         { title: 'Independent QC', text: 'Inspection is separated from production to improve objectivity and traceability.' },
+        { title: 'Inspection', text: 'Quality inspection is managed against buyer standards, technical files and market requirements.' },
         { title: 'Transparent reporting', text: 'Issues are recorded, reported and followed with corrective actions.' },
       ],
     },
@@ -15153,6 +15170,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
         { title: '材料と色の管理', text: '木材、板材、突板、フォーム、生地、金物、梱包材をバイヤー基準に沿って確認します。' },
         { title: '注文別チェックリスト', text: '各注文ごとに寸法、構造、仕上げ、含水率、ラベル、梱包、出荷前状態を確認します。' },
         { title: '独立したQC', text: '品質確認を製造工程から切り離し、客観性とトレーサビリティを高めます。' },
+        { title: '検査', text: 'バイヤー基準、技術資料、市場要件に基づいて品質検査を管理します。' },
         { title: '透明な報告', text: '生産、検品、出荷で発生した問題は記録し、共有し、必要な是正対応につなげます。' },
       ],
     },
@@ -15203,6 +15221,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
         { title: '소재와 색상 관리', text: '목재, 보드, 무늬목, 폼, 원단, 부자재, 포장재는 바이어 기준에 맞춰 관리됩니다.' },
         { title: '주문별 체크리스트', text: '각 주문은 치수, 구조, 마감, 함수율, 라벨, 포장, 출하 전 상태를 별도로 확인합니다.' },
         { title: '독립 QC', text: '품질 확인을 생산 조직과 분리해 객관성과 추적 가능성을 높입니다.' },
+        { title: '검사', text: '바이어 기준, 기술 문서, 시장 요구사항에 따라 품질 검사를 관리합니다.' },
         { title: '투명한 보고', text: '생산, 검사, 출하 과정의 이슈는 기록, 공유하고 필요한 개선 조치로 연결합니다.' },
       ],
     },
@@ -15253,6 +15272,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
         { title: 'Material och färg', text: 'Trä, skivor, faner, foam, textil, beslag och packmaterial kontrolleras enligt köparens krav.' },
         { title: 'Orderchecklista', text: 'Varje order har en egen checklista för mått, struktur, finish, fukt, etikett, packning och leveransskick.' },
         { title: 'Oberoende QC', text: 'Kontrollen utförs separat från produktionen för att minska subjektiva bedömningar.' },
+        { title: 'Inspektion', text: 'Kvalitetsinspektion styrs mot köparens standarder, tekniska filer och marknadskrav.' },
         { title: 'Transparent rapportering', text: 'Avvikelser registreras, rapporteras och följs upp med korrigerande åtgärder.' },
       ],
     },
@@ -15303,6 +15323,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
         { title: 'Matériaux et couleurs', text: 'Bois, panneaux, placage, mousse, tissu, accessoires et emballages sont contrôlés selon les exigences du buyer.' },
         { title: 'Checklist par commande', text: 'Chaque commande couvre dimensions, structure, finition, humidité, étiquettes, emballage et état avant expédition.' },
         { title: 'QC indépendant', text: 'Le contrôle est séparé de la production pour garantir une évaluation objective.' },
+        { title: 'Inspection', text: 'L’inspection qualité est gérée selon les standards buyer, les dossiers techniques et les exigences marché.' },
         { title: 'Reporting transparent', text: 'Les écarts sont enregistrés, partagés et suivis avec des actions correctives.' },
       ],
     },
@@ -15353,6 +15374,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
         { title: 'Материалы и цвет', text: 'Дерево, панели, шпон, пена, ткань, фурнитура и упаковка контролируются по требованиям покупателя.' },
         { title: 'Чек-лист заказа', text: 'Для каждого заказа проверяются размеры, конструкция, отделка, влажность, маркировка, упаковка и состояние перед отгрузкой.' },
         { title: 'Независимый QC', text: 'Контроль отделен от производства для более объективной оценки.' },
+        { title: 'Инспекция', text: 'Инспекция качества проводится по стандартам покупателя, техническим файлам и требованиям рынка.' },
         { title: 'Прозрачная отчетность', text: 'Отклонения фиксируются, передаются и закрываются корректирующими действиями.' },
       ],
     },
@@ -15403,6 +15425,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
         { title: 'Materiales y color', text: 'Madera, tableros, chapa, espuma, tela, herrajes y empaque se controlan según requisitos del comprador.' },
         { title: 'Checklist por pedido', text: 'Cada pedido revisa dimensiones, estructura, acabado, humedad, etiquetas, empaque y condición antes del envío.' },
         { title: 'QC independiente', text: 'La inspección está separada de producción para mantener objetividad.' },
+        { title: 'Inspección', text: 'La inspección de calidad se gestiona según estándares del comprador, archivos técnicos y requisitos del mercado.' },
         { title: 'Reporte transparente', text: 'Las desviaciones se registran, reportan y cierran con acciones correctivas.' },
       ],
     },
@@ -15453,6 +15476,7 @@ const EXTRA_ABOUT_LOCALIZED_CONTENT: Record<ExtraAboutLanguage, ExtraAboutLocali
         { title: '材料与颜色', text: '木材、板材、贴皮、海绵、面料、五金和包装材料按买家要求控制。' },
         { title: '订单检查清单', text: '每个订单检查尺寸、结构、完成度、含水率、标签、包装和出货前状态。' },
         { title: '独立 QC', text: '质量检查与生产分离，以提高客观性和可追溯性。' },
+        { title: '检验', text: '质量检验按照买家标准、技术文件和市场要求进行管理。' },
         { title: '透明报告', text: '生产、检验或出货中的问题会被记录、报告并跟进纠正措施。' },
       ],
     },
@@ -15480,6 +15504,7 @@ function buildLocalizedCompanyIntroStandardSection(
     'ai-icon-factory',
     'ai-icon-layers',
     'ai-icon-shield-check',
+    'ai-icon-clipboard-check',
     'ai-icon-warehouse',
     'ai-icon-operations',
     'ai-icon-hand-coin',
@@ -15488,6 +15513,7 @@ function buildLocalizedCompanyIntroStandardSection(
     { icon: 'ai-icon-file-plus', text: translateText(language, 'Buyer gửi yêu cầu') },
     { icon: 'ai-icon-search', text: translateText(language, 'ANSLIFE kiểm tra bản vẽ / mẫu / tiêu chuẩn') },
     { icon: 'ai-icon-clipboard-check', text: translateText(language, 'Phát triển mẫu') },
+    { icon: 'ai-icon-shield-check', text: translateText(language, 'Kiểm định chất lượng') },
     {
       icon: 'ai-icon-factory',
       text: translateText(
@@ -15598,6 +15624,8 @@ function buildLocalizedCompanyIntroStandardSection(
           <span><i class="ai-market-flag ai-market-flag-us" aria-hidden="true"></i><strong>${translateText(language, 'Hoa Kỳ')}</strong></span>
           <span><i class="ai-market-flag ai-market-flag-eu" aria-hidden="true"></i><strong>EU</strong></span>
           <span><i class="ai-market-flag ai-market-flag-kr" aria-hidden="true"></i><strong>${translateText(language, 'Hàn Quốc')}</strong></span>
+          <span><i class="ai-market-flag ai-market-flag-au" aria-hidden="true"></i><strong>${translateText(language, 'Úc')}</strong></span>
+          <span><i class="ai-market-flag ai-market-flag-ca" aria-hidden="true"></i><strong>${translateText(language, 'Canada')}</strong></span>
         </div>
         <p class="ai-company-market-note"><i class="ai-footer-icon ai-icon-globe" aria-hidden="true"></i><span>${translateText(language, 'và các thị trường quốc tế')}</span></p>
       </article>

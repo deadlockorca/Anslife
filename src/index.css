@@ -47412,7 +47412,7 @@ img.supply-hub-weekly-cta-image-placeholder {
 }
 
 .ai-company-capability-grid {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
 .ai-company-overview-action {
@@ -47439,7 +47439,7 @@ img.supply-hub-weekly-cta-image-placeholder {
 
 .ai-company-process {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: 0.7rem;
   align-items: start;
 }
@@ -47627,7 +47627,7 @@ img.supply-hub-weekly-cta-image-placeholder {
 
 .ai-company-market-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.55rem;
   margin-top: 0.75rem;
 }
@@ -47737,6 +47737,44 @@ img.supply-hub-weekly-cta-image-placeholder {
   inset: 8px 15px;
   border-radius: 999px;
   background: linear-gradient(180deg, #c92645 0 50%, #24477f 50% 100%);
+}
+
+.ai-market-flag-au {
+  background: #16336f;
+}
+
+.ai-market-flag-au::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 14px;
+  background:
+    linear-gradient(45deg, transparent 42%, #c92645 42% 58%, transparent 58%),
+    linear-gradient(-45deg, transparent 42%, #c92645 42% 58%, transparent 58%),
+    #f8f5ef;
+}
+
+.ai-market-flag-au::after {
+  content: '✦';
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  color: #f8f5ef;
+  font-size: 0.56rem;
+}
+
+.ai-market-flag-ca {
+  background: linear-gradient(90deg, #d52b1e 0 25%, #f8f5ef 25% 75%, #d52b1e 75% 100%);
+}
+
+.ai-market-flag-ca::after {
+  content: '';
+  position: absolute;
+  inset: 8px 17px;
+  background: #d52b1e;
+  clip-path: polygon(50% 0, 62% 32%, 100% 30%, 70% 52%, 82% 100%, 50% 74%, 18% 100%, 30% 52%, 0 30%, 38% 32%);
 }
 
 .ai-company-request-panel {
