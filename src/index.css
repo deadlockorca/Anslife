@@ -47264,6 +47264,18 @@ img.supply-hub-weekly-cta-image-placeholder {
   padding: 1.25rem 0.85rem;
 }
 
+.ai-company-capability-card {
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.ai-company-capability-card p {
+  align-self: start;
+}
+
+.ai-company-capability-more {
+  align-self: end;
+}
+
 .ai-company-overview-card {
   align-content: center;
   gap: 0.5rem;
@@ -47406,6 +47418,23 @@ img.supply-hub-weekly-cta-image-placeholder {
   line-height: 1.65;
 }
 
+.ai-company-capability-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  border: 1px solid #111;
+  border-radius: 6px;
+  background: transparent;
+  padding: 0 0.82rem;
+  color: #111 !important;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: default;
+}
+
 .ai-company-overview-section {
   display: grid;
   gap: 0.85rem;
@@ -47439,7 +47468,7 @@ img.supply-hub-weekly-cta-image-placeholder {
 
 .ai-company-process {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-columns: repeat(9, minmax(0, 1fr));
   gap: 0.7rem;
   align-items: start;
 }

@@ -47,36 +47,43 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
           <span class="ai-company-overview-icon ai-icon-factory" aria-hidden="true"></span>
           <h3>1. Sản xuất</h3>
           <p>Mạng lưới nhà máy do ANSLIFE điều phối đáp ứng nhiều yêu cầu và tiêu chuẩn.</p>
+          <button class="ai-company-capability-more" type="button">Xem thêm</button>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-layers" aria-hidden="true"></span>
           <h3>2. Chuỗi cung ứng vật liệu</h3>
           <p>Nguồn vật liệu liên tục, đa dạng, ổn định và có kiểm soát.</p>
+          <button class="ai-company-capability-more" type="button">Xem thêm</button>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-shield-check" aria-hidden="true"></span>
           <h3>3. QC độc lập</h3>
           <p>Hệ thống QC độc lập đảm bảo chất lượng đúng tiêu chuẩn quốc tế.</p>
+          <button class="ai-company-capability-more" type="button">Xem thêm</button>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-clipboard-check" aria-hidden="true"></span>
           <h3>4. Kiểm định</h3>
           <p>Kiểm định chất lượng theo tiêu chuẩn buyer, hồ sơ kỹ thuật và yêu cầu từng thị trường.</p>
+          <button class="ai-company-capability-more" type="button">Xem thêm</button>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-warehouse" aria-hidden="true"></span>
           <h3>5. Lưu kho tại Việt Nam</h3>
           <p>Kho bãi an toàn, quản lý tồn kho và chuẩn bị xuất hàng định kỳ.</p>
+          <button class="ai-company-capability-more" type="button">Xem thêm</button>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-operations" aria-hidden="true"></span>
           <h3>6. Vận hành & quản lý dự án</h3>
           <p>Điều phối đơn hàng, kế hoạch sản xuất, tiến độ và giao hàng minh bạch.</p>
+          <button class="ai-company-capability-more" type="button">Xem thêm</button>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-hand-coin" aria-hidden="true"></span>
           <h3>7. Tài trợ thương mại</h3>
           <p>Tài trợ thương mại có kiểm soát cho buyer và nhà máy.</p>
+          <button class="ai-company-capability-more" type="button">Xem thêm</button>
         </article>
       </div>
     </div>
@@ -86,12 +93,13 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
       <div class="ai-company-process">
         <article><span class="ai-process-step">1</span><i class="ai-process-icon ai-icon-file-plus" aria-hidden="true"></i><strong>Buyer gửi yêu cầu</strong></article>
         <article><span class="ai-process-step">2</span><i class="ai-process-icon ai-icon-search" aria-hidden="true"></i><strong>ANSLIFE kiểm tra bản vẽ / mẫu / tiêu chuẩn</strong></article>
-        <article><span class="ai-process-step">3</span><i class="ai-process-icon ai-icon-clipboard-check" aria-hidden="true"></i><strong>Chuẩn bị vật liệu & phát triển mẫu</strong></article>
-        <article><span class="ai-process-step">4</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>Kiểm định chất lượng</strong></article>
-        <article><span class="ai-process-step">5</span><i class="ai-process-icon ai-icon-factory" aria-hidden="true"></i><strong>Tổ chức sản xuất, vận hành dự án & tài trợ thương mại</strong></article>
-        <article><span class="ai-process-step">6</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>QC độc lập & kiểm soát chất lượng</strong></article>
-        <article><span class="ai-process-step">7</span><i class="ai-process-icon ai-icon-warehouse" aria-hidden="true"></i><strong>Lưu kho tại Việt Nam</strong></article>
-        <article><span class="ai-process-step">8</span><i class="ai-process-icon ai-icon-truck" aria-hidden="true"></i><strong>Xuất hàng định kỳ</strong></article>
+        <article><span class="ai-process-step">3</span><i class="ai-process-icon ai-icon-clipboard-check" aria-hidden="true"></i><strong>Thống nhất tiêu chuẩn & chi phí làm việc</strong></article>
+        <article><span class="ai-process-step">4</span><i class="ai-process-icon ai-icon-clipboard-check" aria-hidden="true"></i><strong>Chuẩn bị vật liệu & phát triển mẫu</strong></article>
+        <article><span class="ai-process-step">5</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>Kiểm định chất lượng</strong></article>
+        <article><span class="ai-process-step">6</span><i class="ai-process-icon ai-icon-factory" aria-hidden="true"></i><strong>Tổ chức sản xuất, vận hành dự án & tài trợ thương mại</strong></article>
+        <article><span class="ai-process-step">7</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>QC độc lập & kiểm soát chất lượng</strong></article>
+        <article><span class="ai-process-step">8</span><i class="ai-process-icon ai-icon-warehouse" aria-hidden="true"></i><strong>Lưu kho tại Việt Nam</strong></article>
+        <article><span class="ai-process-step">9</span><i class="ai-process-icon ai-icon-truck" aria-hidden="true"></i><strong>Xuất hàng định kỳ</strong></article>
       </div>
     </div>
 
@@ -9752,36 +9760,43 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
           <span class="ai-company-overview-icon ai-icon-factory" aria-hidden="true"></span>
           <h3>1. Production</h3>
           <p>ANSLIFE-coordinated factory network built for different requirements and standards.</p>
+          <button class="ai-company-capability-more" type="button">View more</button>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-layers" aria-hidden="true"></span>
           <h3>2. Material supply chain</h3>
           <p>Continuous, diverse, stable and controlled material sources.</p>
+          <button class="ai-company-capability-more" type="button">View more</button>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-shield-check" aria-hidden="true"></span>
           <h3>3. Independent QC</h3>
           <p>Independent QC system to ensure quality against international standards.</p>
+          <button class="ai-company-capability-more" type="button">View more</button>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-clipboard-check" aria-hidden="true"></span>
           <h3>4. Inspection</h3>
           <p>Quality inspection against buyer standards, technical files and market requirements.</p>
+          <button class="ai-company-capability-more" type="button">View more</button>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-warehouse" aria-hidden="true"></span>
           <h3>5. Warehousing in Vietnam</h3>
           <p>Safe warehousing, inventory management and recurring shipment preparation.</p>
+          <button class="ai-company-capability-more" type="button">View more</button>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-operations" aria-hidden="true"></span>
           <h3>6. Project operations</h3>
           <p>Transparent order coordination, production planning, schedule and delivery control.</p>
+          <button class="ai-company-capability-more" type="button">View more</button>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-hand-coin" aria-hidden="true"></span>
           <h3>7. Trade finance</h3>
           <p>Controlled trade finance support for buyers and factories.</p>
+          <button class="ai-company-capability-more" type="button">View more</button>
         </article>
       </div>
     </div>
@@ -9791,12 +9806,13 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
       <div class="ai-company-process">
         <article><span class="ai-process-step">1</span><i class="ai-process-icon ai-icon-file-plus" aria-hidden="true"></i><strong>Buyer sends request</strong></article>
         <article><span class="ai-process-step">2</span><i class="ai-process-icon ai-icon-search" aria-hidden="true"></i><strong>ANSLIFE reviews drawings / samples / standards</strong></article>
-        <article><span class="ai-process-step">3</span><i class="ai-process-icon ai-icon-clipboard-check" aria-hidden="true"></i><strong>Prepare materials & develop samples</strong></article>
-        <article><span class="ai-process-step">4</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>Quality inspection</strong></article>
-        <article><span class="ai-process-step">5</span><i class="ai-process-icon ai-icon-factory" aria-hidden="true"></i><strong>Organize production, project operations & trade finance</strong></article>
-        <article><span class="ai-process-step">6</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>Independent QC & quality control</strong></article>
-        <article><span class="ai-process-step">7</span><i class="ai-process-icon ai-icon-warehouse" aria-hidden="true"></i><strong>Warehousing in Vietnam</strong></article>
-        <article><span class="ai-process-step">8</span><i class="ai-process-icon ai-icon-truck" aria-hidden="true"></i><strong>Recurring export shipment</strong></article>
+        <article><span class="ai-process-step">3</span><i class="ai-process-icon ai-icon-clipboard-check" aria-hidden="true"></i><strong>Align standards & working costs</strong></article>
+        <article><span class="ai-process-step">4</span><i class="ai-process-icon ai-icon-clipboard-check" aria-hidden="true"></i><strong>Prepare materials & develop samples</strong></article>
+        <article><span class="ai-process-step">5</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>Quality inspection</strong></article>
+        <article><span class="ai-process-step">6</span><i class="ai-process-icon ai-icon-factory" aria-hidden="true"></i><strong>Organize production, project operations & trade finance</strong></article>
+        <article><span class="ai-process-step">7</span><i class="ai-process-icon ai-icon-shield-check" aria-hidden="true"></i><strong>Independent QC & quality control</strong></article>
+        <article><span class="ai-process-step">8</span><i class="ai-process-icon ai-icon-warehouse" aria-hidden="true"></i><strong>Warehousing in Vietnam</strong></article>
+        <article><span class="ai-process-step">9</span><i class="ai-process-icon ai-icon-truck" aria-hidden="true"></i><strong>Recurring export shipment</strong></article>
       </div>
     </div>
 
@@ -15512,6 +15528,7 @@ function buildLocalizedCompanyIntroStandardSection(
   const processSteps = [
     { icon: 'ai-icon-file-plus', text: translateText(language, 'Buyer gửi yêu cầu') },
     { icon: 'ai-icon-search', text: translateText(language, 'ANSLIFE kiểm tra bản vẽ / mẫu / tiêu chuẩn') },
+    { icon: 'ai-icon-clipboard-check', text: translateText(language, 'Thống nhất tiêu chuẩn & chi phí làm việc') },
     { icon: 'ai-icon-clipboard-check', text: translateText(language, 'Phát triển mẫu') },
     { icon: 'ai-icon-shield-check', text: translateText(language, 'Kiểm định chất lượng') },
     {
@@ -15561,6 +15578,7 @@ function buildLocalizedCompanyIntroStandardSection(
           <span class="ai-company-overview-icon ${capabilityIconClasses[index] ?? 'ai-icon-box'}" aria-hidden="true"></span>
           <h3>${index + 1}. ${item.title}</h3>
           <p>${item.text}</p>
+          <button class="ai-company-capability-more" type="button">${translateText(language, 'Xem thêm')}</button>
         </article>`,
           )
           .join('')}
