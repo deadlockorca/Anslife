@@ -52,9 +52,7 @@ const RECRUITMENT_MANAGE_ROLES: AppRole[] = ['super_admin', 'system_admin', 'dat
 
 const statusOptions: Array<{ value: InternalRecruitmentStatus; label: string }> = [
   { value: 'open', label: 'Đang tuyển' },
-  { value: 'receiving', label: 'Đang tiếp nhận hồ sơ' },
-  { value: 'paused', label: 'Tạm dừng tuyển dụng' },
-  { value: 'closed', label: 'Đã đóng tuyển dụng' },
+  { value: 'paused', label: 'Tạm dừng tuyển' },
 ];
 
 const defaultForm: RecruitmentJobFormState = {

@@ -1,7 +1,7 @@
 import type { ResultSetHeader, RowDataPacket } from 'mysql2';
 import { ensureDatabaseSchema, getDbPool, isDatabaseConfigured } from '../db/mysql';
 
-export type RecruitmentStatus = 'open' | 'receiving' | 'paused' | 'closed';
+export type RecruitmentStatus = 'open' | 'paused';
 
 interface RecruitmentJobRow extends RowDataPacket {
   id: number;
@@ -113,9 +113,7 @@ export interface ListRecruitmentJobsInput {
 
 const RECRUITMENT_STATUS_VALUES = new Set<RecruitmentStatus>([
   'open',
-  'receiving',
   'paused',
-  'closed',
 ]);
 
 let recruitmentSchemaReady = false;
@@ -126,6 +124,12 @@ function isRecruitmentStatus(value: string): value is RecruitmentStatus {
 
 function normalizeStatus(value: string | null | undefined, fallback: RecruitmentStatus): RecruitmentStatus {
   const normalized = String(value ?? '').trim().toLowerCase();
+  if (normalized === 'receiving') {
+    return 'open';
+  }
+  if (normalized === 'closed') {
+    return 'paused';
+  }
   return isRecruitmentStatus(normalized) ? normalized : fallback;
 }
 
@@ -207,7 +211,7 @@ function mapRecruitmentJob(row: RecruitmentJobRow): RecruitmentJobRecord {
     groupTitle: row.group_title,
     groupBody: row.group_body,
     marketName: row.market_name,
-    marketStatus: normalizeStatus(row.market_status, 'receiving'),
+    marketStatus: normalizeStatus(row.market_status, 'open'),
     title: row.title,
     summary: row.summary,
     description: row.description,
@@ -215,7 +219,7 @@ function mapRecruitmentJob(row: RecruitmentJobRow): RecruitmentJobRecord {
     benefits: parseStringArray(row.benefits_json),
     location: row.location,
     workType: row.work_type,
-    status: normalizeStatus(row.status, 'receiving'),
+    status: normalizeStatus(row.status, 'open'),
     sortOrder: row.sort_order,
     isPublic: Boolean(row.is_public),
     createdAt: new Date(row.created_at).toISOString(),
@@ -268,7 +272,7 @@ async function ensureReady() {
         group_title VARCHAR(191) NOT NULL,
         group_body VARCHAR(512) NULL,
         market_name VARCHAR(191) NOT NULL,
-        market_status VARCHAR(32) NOT NULL DEFAULT 'receiving',
+        market_status VARCHAR(32) NOT NULL DEFAULT 'open',
         title VARCHAR(191) NOT NULL,
         summary VARCHAR(512) NOT NULL,
         description LONGTEXT NULL,
@@ -276,7 +280,7 @@ async function ensureReady() {
         benefits_json LONGTEXT NULL,
         location VARCHAR(191) NULL,
         work_type VARCHAR(191) NULL,
-        status VARCHAR(32) NOT NULL DEFAULT 'receiving',
+        status VARCHAR(32) NOT NULL DEFAULT 'open',
         sort_order INT NOT NULL DEFAULT 0,
         is_public TINYINT(1) NOT NULL DEFAULT 1,
         created_at DATETIME(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
@@ -381,7 +385,7 @@ export async function createRecruitmentJob(
       normalizeRequired(input.groupTitle, 'groupTitle', 191),
       normalizeOptional(input.groupBody ?? null, 512),
       normalizeRequired(input.marketName, 'marketName', 191),
-      normalizeStatus(input.marketStatus, 'receiving'),
+      normalizeStatus(input.marketStatus, 'open'),
       normalizeRequired(input.title, 'title', 191),
       normalizeRequired(input.summary, 'summary', 512),
       normalizeOptional(input.description ?? null),
@@ -389,7 +393,7 @@ export async function createRecruitmentJob(
       serializeStringArray(input.benefits),
       normalizeOptional(input.location ?? null, 191),
       normalizeOptional(input.workType ?? null, 191),
-      normalizeStatus(input.status, 'receiving'),
+      normalizeStatus(input.status, 'open'),
       Number.isFinite(Number(input.sortOrder)) ? Number(input.sortOrder) : 0,
       input.isPublic === false ? 0 : 1,
     ],
@@ -429,7 +433,7 @@ export async function updateRecruitmentJob(
   }
   if (input.marketStatus !== undefined) {
     fields.push('market_status = ?');
-    values.push(normalizeStatus(input.marketStatus, 'receiving'));
+    values.push(normalizeStatus(input.marketStatus, 'open'));
   }
   if (typeof input.title === 'string') {
     fields.push('title = ?');
@@ -461,7 +465,7 @@ export async function updateRecruitmentJob(
   }
   if (input.status !== undefined) {
     fields.push('status = ?');
-    values.push(normalizeStatus(input.status, 'receiving'));
+    values.push(normalizeStatus(input.status, 'open'));
   }
   if (input.sortOrder !== undefined) {
     fields.push('sort_order = ?');

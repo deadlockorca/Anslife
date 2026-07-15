@@ -73,7 +73,7 @@ export interface InternalFactory {
   updatedAt: string;
 }
 
-export type InternalRecruitmentStatus = 'open' | 'receiving' | 'paused' | 'closed';
+export type InternalRecruitmentStatus = 'open' | 'paused';
 
 export interface InternalRecruitmentJob {
   id: number;
@@ -429,7 +429,17 @@ function isInternalOrderStatus(value: string): value is InternalOrderStatus {
 }
 
 function isInternalRecruitmentStatus(value: string): value is InternalRecruitmentStatus {
-  return ['open', 'receiving', 'paused', 'closed'].includes(value);
+  return ['open', 'paused'].includes(value);
+}
+
+function normalizeInternalRecruitmentStatus(value: string): InternalRecruitmentStatus | null {
+  if (value === 'receiving') {
+    return 'open';
+  }
+  if (value === 'closed') {
+    return 'paused';
+  }
+  return isInternalRecruitmentStatus(value) ? value : null;
 }
 
 async function parseApiError(response: Response): Promise<string> {
@@ -613,10 +623,14 @@ function normalizeInternalRecruitmentJob(value: unknown): InternalRecruitmentJob
   const groupCode = normalizeString(raw.groupCode);
   const groupTitle = normalizeString(raw.groupTitle);
   const marketName = normalizeString(raw.marketName);
-  const marketStatus = normalizeString(raw.marketStatus).toLowerCase();
+  const marketStatus = normalizeInternalRecruitmentStatus(
+    normalizeString(raw.marketStatus).toLowerCase(),
+  );
   const title = normalizeString(raw.title);
   const summary = normalizeString(raw.summary);
-  const status = normalizeString(raw.status).toLowerCase();
+  const status = normalizeInternalRecruitmentStatus(
+    normalizeString(raw.status).toLowerCase(),
+  );
   const sortOrder = Number(raw.sortOrder ?? 0);
 
   if (
@@ -625,10 +639,10 @@ function normalizeInternalRecruitmentJob(value: unknown): InternalRecruitmentJob
     !groupCode ||
     !groupTitle ||
     !marketName ||
-    !isInternalRecruitmentStatus(marketStatus) ||
+    !marketStatus ||
     !title ||
     !summary ||
-    !isInternalRecruitmentStatus(status) ||
+    !status ||
     !Number.isFinite(sortOrder)
   ) {
     return null;

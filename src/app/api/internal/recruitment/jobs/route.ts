@@ -29,7 +29,7 @@ interface SaveRecruitmentJobBody {
 }
 
 const RECRUITMENT_MANAGE_ROLES = new Set(['super_admin', 'system_admin', 'data_controller']);
-const RECRUITMENT_STATUS_VALUES = new Set(['open', 'receiving', 'paused', 'closed']);
+const RECRUITMENT_STATUS_VALUES = new Set(['open', 'paused']);
 
 function canManageRecruitment(actor: Awaited<ReturnType<typeof getAuthActor>>): boolean {
   return Boolean(actor?.roles.some((role) => RECRUITMENT_MANAGE_ROLES.has(role)));
@@ -65,7 +65,7 @@ function parseJobInput(body: SaveRecruitmentJobBody): CreateRecruitmentJobInput 
     groupTitle: String(body.groupTitle ?? '').trim(),
     groupBody: body.groupBody == null ? null : String(body.groupBody).trim(),
     marketName: String(body.marketName ?? '').trim(),
-    marketStatus: normalizeStatus(body.marketStatus, 'receiving'),
+    marketStatus: normalizeStatus(body.marketStatus, 'open'),
     title: String(body.title ?? '').trim(),
     summary: String(body.summary ?? '').trim(),
     description: body.description == null ? null : String(body.description).trim(),
@@ -73,7 +73,7 @@ function parseJobInput(body: SaveRecruitmentJobBody): CreateRecruitmentJobInput 
     benefits: normalizeStringArray(body.benefits),
     location: body.location == null ? null : String(body.location).trim(),
     workType: body.workType == null ? null : String(body.workType).trim(),
-    status: normalizeStatus(body.status, 'receiving'),
+    status: normalizeStatus(body.status, 'open'),
     sortOrder: Number.isFinite(Number(body.sortOrder)) ? Number(body.sortOrder) : 0,
     isPublic: body.isPublic !== false,
   };

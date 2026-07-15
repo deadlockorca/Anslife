@@ -4,7 +4,7 @@ import Seo from '../components/seo/Seo';
 import useSiteI18n from '../hooks/useSiteI18n';
 import { submitContactForm } from '../lib/wp';
 
-type RecruitmentStatus = 'open' | 'receiving' | 'paused' | 'closed';
+type RecruitmentStatus = 'open' | 'paused';
 
 interface RecruitmentJob {
   id?: number;
@@ -29,9 +29,11 @@ interface RecruitmentGroup {
   title: string;
   body: string;
   positions: string;
+  image: string;
   cards: Array<{
     title: string;
     body: string;
+    image: string;
   }>;
   markets: RecruitmentMarket[];
 }
@@ -57,10 +59,75 @@ interface RecruitmentJobApiRecord {
 
 const statusLabels: Record<RecruitmentStatus, string> = {
   open: 'Đang tuyển',
-  receiving: 'Đang tiếp nhận hồ sơ',
-  paused: 'Tạm dừng tuyển dụng',
-  closed: 'Đã đóng tuyển dụng',
+  paused: 'Tạm dừng tuyển',
 };
+
+type RecruitmentMarketIconKey =
+  | 'japan'
+  | 'korea'
+  | 'north-america'
+  | 'europe'
+  | 'uk-ireland'
+  | 'oceania'
+  | 'southeast-asia'
+  | 'greater-china'
+  | 'middle-east'
+  | 'south-asia'
+  | 'africa'
+  | 'latin-america'
+  | 'default';
+
+const recruitmentMarketIconAssets: Record<RecruitmentMarketIconKey, string> = {
+  japan: '/assets/recruitment/markets/japan.png',
+  korea: '/assets/recruitment/markets/south-korea.png',
+  'north-america': '/assets/recruitment/markets/united-states-of-america.png',
+  europe: '/assets/recruitment/markets/european-union.png',
+  'uk-ireland': '/assets/recruitment/markets/united-kingdom.png',
+  oceania: '/assets/recruitment/markets/flag.png',
+  'southeast-asia': '/assets/recruitment/markets/world.png',
+  'greater-china': '/assets/recruitment/markets/sensoji-temple_4193496.png',
+  'middle-east': '/assets/recruitment/markets/world (1).png',
+  'south-asia': '/assets/recruitment/markets/india.png',
+  africa: '/assets/recruitment/markets/south-africa.png',
+  'latin-america': '/assets/recruitment/markets/world.png',
+  default: '/assets/recruitment/markets/world.png',
+};
+
+const recruitmentCareerImages = Array.from(
+  { length: 11 },
+  (_, index) => `/assets/recruitment/opportunity-map/career-${String(index + 1).padStart(2, '0')}.webp`,
+);
+
+const recruitmentOpportunityCardImages = [
+  '/assets/recruitment/international-business/card-01.webp',
+  '/assets/recruitment/international-business/card-02.webp',
+  '/assets/recruitment/international-business/card-03.webp',
+  '/assets/recruitment/international-business/card-04.webp',
+] as const;
+
+const recruitmentProcessImages = Array.from(
+  { length: 7 },
+  (_, index) => `/assets/recruitment/process/process-${String(index + 1).padStart(2, '0')}.webp`,
+);
+
+function getRecruitmentMarketIconKey(market: string): RecruitmentMarketIconKey {
+  const normalized = market.toLowerCase();
+
+  if (normalized.includes('nhật') || normalized.includes('japan')) return 'japan';
+  if (normalized.includes('hàn') || normalized.includes('korea')) return 'korea';
+  if (normalized.includes('bắc mỹ') || normalized.includes('hoa kỳ') || normalized.includes('canada')) return 'north-america';
+  if (normalized.includes('châu âu') || normalized.includes('europe')) return 'europe';
+  if (normalized.includes('vương quốc anh') || normalized.includes('ireland') || normalized.includes('uk')) return 'uk-ireland';
+  if (normalized.includes('australia') || normalized.includes('new zealand') || normalized.includes('úc')) return 'oceania';
+  if (normalized.includes('đông nam á') || normalized.includes('southeast')) return 'southeast-asia';
+  if (normalized.includes('hồng kông') || normalized.includes('đài loan') || normalized.includes('trung quốc')) return 'greater-china';
+  if (normalized.includes('trung đông') || normalized.includes('middle east')) return 'middle-east';
+  if (normalized.includes('ấn độ') || normalized.includes('nam á') || normalized.includes('india')) return 'south-asia';
+  if (normalized.includes('châu phi') || normalized.includes('africa')) return 'africa';
+  if (normalized.includes('mỹ latinh') || normalized.includes('latin')) return 'latin-america';
+
+  return 'default';
+}
 
 const recruitmentFormId = Number(process.env.NEXT_PUBLIC_CF7_QUOTE_FORM_ID ?? 1);
 
@@ -119,18 +186,22 @@ function createGroupCards(groupTitle: string, groupBody: string): RecruitmentGro
     {
       title: 'Mục tiêu',
       body: groupBody || `Phát triển năng lực cho nhóm ${groupTitle}.`,
+      image: recruitmentOpportunityCardImages[0],
     },
     {
       title: 'Đội ngũ',
       body: 'Đội ngũ chuyên nghiệp, phối hợp đa bộ phận và định hướng kết quả.',
+      image: recruitmentOpportunityCardImages[1],
     },
     {
       title: 'Phạm vi',
       body: 'Triển khai theo cụm thị trường, dự án và nhu cầu vận hành thực tế.',
+      image: recruitmentOpportunityCardImages[2],
     },
     {
       title: 'Sứ mệnh',
       body: 'Kết nối ANSLIFE với nhân sự phù hợp để phát triển bền vững.',
+      image: recruitmentOpportunityCardImages[3],
     },
   ];
 }
@@ -148,6 +219,7 @@ function buildCareerGroupsFromJobs(jobs: RecruitmentJobApiRecord[]): Recruitment
         title: job.groupTitle,
         body: groupBody || job.summary,
         positions: '0 vị trí',
+        image: recruitmentCareerImages[groups.size % recruitmentCareerImages.length],
         cards: createGroupCards(job.groupTitle, groupBody || job.summary),
         markets: [],
       };
@@ -285,22 +357,22 @@ const defaultMarkets: RecruitmentMarket[] = [
   },
   {
     market: 'Đông Nam Á',
-    status: 'receiving',
+    status: 'open',
     jobs: [
       {
         title: 'Nhân viên phát triển thị trường Đông Nam Á',
-        status: 'receiving',
+        status: 'open',
         summary: 'Tiếp nhận hồ sơ ứng viên có kinh nghiệm thị trường ASEAN và khách hàng B2B.',
       },
     ],
   },
   {
     market: 'Hồng Kông, Đài Loan & Trung Quốc',
-    status: 'receiving',
+    status: 'open',
     jobs: [
       {
         title: 'Nhân viên phát triển khách hàng Hoa ngữ',
-        status: 'receiving',
+        status: 'open',
         summary: 'Tiếp nhận hồ sơ ứng viên có khả năng giao tiếp tiếng Trung và hiểu chuỗi cung ứng nội thất.',
       },
     ],
@@ -351,6 +423,8 @@ const defaultMarkets: RecruitmentMarket[] = [
   },
 ];
 
+let recruitmentGroupImageIndex = 0;
+
 function buildRecruitmentGroup(input: {
   code: string;
   title: string;
@@ -362,16 +436,20 @@ function buildRecruitmentGroup(input: {
   mission: string;
   markets?: RecruitmentMarket[];
 }): RecruitmentGroup {
+  const imageIndex = recruitmentGroupImageIndex % recruitmentCareerImages.length;
+  recruitmentGroupImageIndex += 1;
+
   return {
     code: input.code,
     title: input.title,
     body: input.body,
     positions: input.positions,
+    image: recruitmentCareerImages[imageIndex],
     cards: [
-      { title: 'Mục tiêu', body: input.goal },
-      { title: 'Đội ngũ', body: input.team },
-      { title: 'Phạm vi', body: input.scope },
-      { title: 'Sứ mệnh', body: input.mission },
+      { title: 'Mục tiêu', body: input.goal, image: recruitmentOpportunityCardImages[0] },
+      { title: 'Đội ngũ', body: input.team, image: recruitmentOpportunityCardImages[1] },
+      { title: 'Phạm vi', body: input.scope, image: recruitmentOpportunityCardImages[2] },
+      { title: 'Sứ mệnh', body: input.mission, image: recruitmentOpportunityCardImages[3] },
     ],
     markets: input.markets ?? defaultMarkets,
   };
@@ -409,18 +487,18 @@ const careerGroups = [
           },
           {
             title: 'Điều phối dự án phát triển sản phẩm',
-            status: 'receiving',
+            status: 'open',
             summary: 'Quản lý tiến độ mẫu, thông tin buyer và các đầu việc giữa thiết kế, kỹ thuật, sản xuất.',
           },
         ],
       },
       {
         market: 'Nhóm kỹ thuật sản phẩm',
-        status: 'receiving',
+        status: 'open',
         jobs: [
           {
             title: 'Nhân viên kỹ thuật bản vẽ nội thất',
-            status: 'receiving',
+            status: 'open',
             summary: 'Rà soát bản vẽ, thông số, kết cấu và yêu cầu kỹ thuật trước khi chuyển sản xuất.',
           },
         ],
@@ -448,7 +526,7 @@ const careerGroups = [
           },
           {
             title: 'Điều phối đơn hàng sản xuất',
-            status: 'receiving',
+            status: 'open',
             summary: 'Kết nối thông tin giữa buyer, nhà máy, QC, đóng gói và xuất hàng.',
           },
         ],
@@ -487,7 +565,7 @@ const careerGroups = [
           },
           {
             title: 'Nhân viên kiểm tra cuối',
-            status: 'receiving',
+            status: 'open',
             summary: 'Kiểm tra thành phẩm trước đóng gói, đối chiếu tiêu chuẩn và lập báo cáo kiểm tra.',
           },
         ],
@@ -517,11 +595,11 @@ const careerGroups = [
     markets: [
       {
         market: 'Mua hàng & nhà cung cấp',
-        status: 'receiving',
+        status: 'open',
         jobs: [
           {
             title: 'Nhân viên mua hàng vật liệu nội thất',
-            status: 'receiving',
+            status: 'open',
             summary: 'Tìm kiếm nhà cung cấp, theo dõi báo giá, mẫu vật liệu và tiến độ cung ứng.',
           },
         ],
@@ -560,7 +638,7 @@ const careerGroups = [
           },
           {
             title: 'Nhân viên pha màu',
-            status: 'receiving',
+            status: 'open',
             summary: 'Pha màu theo mẫu duyệt, ghi nhận công thức và hỗ trợ duy trì độ ổn định màu.',
           },
         ],
@@ -590,11 +668,11 @@ const careerGroups = [
       },
       {
         market: 'Chứng từ & logistics',
-        status: 'receiving',
+        status: 'open',
         jobs: [
           {
             title: 'Nhân viên chứng từ xuất khẩu',
-            status: 'receiving',
+            status: 'open',
             summary: 'Chuẩn hóa hồ sơ xuất khẩu, phối hợp logistics và theo dõi chứng từ giao hàng.',
           },
         ],
@@ -613,11 +691,11 @@ const careerGroups = [
     markets: [
       {
         market: 'Phát triển hệ thống',
-        status: 'receiving',
+        status: 'open',
         jobs: [
           {
             title: 'Nhân viên phát triển hệ thống nội bộ',
-            status: 'receiving',
+            status: 'open',
             summary: 'Phát triển tính năng, xử lý dữ liệu và hỗ trợ số hóa quy trình vận hành.',
           },
         ],
@@ -658,11 +736,11 @@ const careerGroups = [
       },
       {
         market: 'Thiết kế & hình ảnh',
-        status: 'receiving',
+        status: 'open',
         jobs: [
           {
             title: 'Nhân viên thiết kế truyền thông',
-            status: 'receiving',
+            status: 'open',
             summary: 'Thiết kế tài liệu thương hiệu, visual sản phẩm và nội dung phục vụ buyer quốc tế.',
           },
         ],
@@ -681,11 +759,11 @@ const careerGroups = [
     markets: [
       {
         market: 'Tài chính & kế toán',
-        status: 'receiving',
+        status: 'open',
         jobs: [
           {
             title: 'Nhân viên kế toán tổng hợp',
-            status: 'receiving',
+            status: 'open',
             summary: 'Theo dõi nghiệp vụ kế toán, chứng từ, báo cáo và phối hợp dữ liệu vận hành.',
           },
         ],
@@ -726,11 +804,11 @@ const careerGroups = [
       },
       {
         market: 'Hành chính & hỗ trợ điều hành',
-        status: 'receiving',
+        status: 'open',
         jobs: [
           {
             title: 'Nhân viên hành chính văn phòng',
-            status: 'receiving',
+            status: 'open',
             summary: 'Quản lý công việc hành chính, hồ sơ văn phòng và hỗ trợ điều phối hoạt động nội bộ.',
           },
         ],
@@ -891,7 +969,7 @@ export default function RecruitmentPage() {
                   aria-pressed={selectedGroupIndex === index}
                 >
                   <span className="recruitment-career-icon" aria-hidden="true">
-                    {group.code}
+                    <img src={group.image} alt="" loading="lazy" />
                   </span>
                   <span className="recruitment-career-number">{String(index + 1).padStart(2, '0')}</span>
                   <span className="recruitment-career-copy">
@@ -918,7 +996,9 @@ export default function RecruitmentPage() {
               <div className="recruitment-opportunity-cards">
                 {selectedGroup.cards.map((card) => (
                   <article key={card.title}>
-                    <span aria-hidden="true" />
+                    <span aria-hidden="true">
+                      <img src={card.image} alt="" loading="lazy" />
+                    </span>
                     <h4>{t(card.title)}</h4>
                     <p>{t(card.body)}</p>
                   </article>
@@ -929,15 +1009,14 @@ export default function RecruitmentPage() {
                 <h3>{t('Các cụm thị trường & vị trí tuyển dụng')}</h3>
                 <div className="recruitment-status-legend" aria-label={t('Trạng thái tuyển dụng')}>
                   <span><i className="is-open" />{t('Đang tuyển')}</span>
-                  <span><i className="is-receiving" />{t('Đang tiếp nhận hồ sơ')}</span>
-                  <span><i className="is-paused" />{t('Tạm dừng tuyển dụng')}</span>
-                  <span><i className="is-closed" />{t('Đã đóng tuyển dụng')}</span>
+                  <span><i className="is-paused" />{t('Tạm dừng tuyển')}</span>
                 </div>
               </div>
 
               <div className="recruitment-market-list">
                 {selectedGroup.markets.map((row, index) => {
                   const isExpanded = expandedMarketIndex === index;
+                  const marketIconKey = getRecruitmentMarketIconKey(row.market);
                   return (
                   <article className={`recruitment-market-row ${isExpanded ? 'is-expanded' : ''}`} key={row.market}>
                     <button
@@ -946,7 +1025,9 @@ export default function RecruitmentPage() {
                       onClick={() => handleMarketToggle(index)}
                       aria-expanded={isExpanded}
                     >
-                      <span className={`recruitment-market-dot is-${row.status}`} aria-hidden="true" />
+                      <span className={`recruitment-market-icon is-${marketIconKey}`} aria-hidden="true">
+                        <img src={recruitmentMarketIconAssets[marketIconKey]} alt="" loading="lazy" />
+                      </span>
                       <h4>{t(row.market)}</h4>
                       <span className="recruitment-market-count">{t(`${row.jobs.length} vị trí`)}</span>
                       <span className={`recruitment-market-status is-${row.status}`}>{t(statusLabels[row.status])}</span>
@@ -1050,7 +1131,6 @@ export default function RecruitmentPage() {
             <div className="recruitment-join-grid">
               {recruitmentJoinReasons.map((item) => (
                 <div className="recruitment-join-reason" key={item.title}>
-                  <span aria-hidden="true">{item.icon}</span>
                   <p>{t(item.title)}</p>
                 </div>
               ))}
@@ -1063,7 +1143,7 @@ export default function RecruitmentPage() {
               {recruitmentProcessSteps.map((step, index) => (
                 <div className="recruitment-process-item" key={step.title}>
                   <div className="recruitment-process-node">
-                    <span aria-hidden="true">{step.icon}</span>
+                    <img src={recruitmentProcessImages[index]} alt="" loading="lazy" />
                   </div>
                   <p>{t(step.title)}</p>
                   {index < recruitmentProcessSteps.length - 1 && (
@@ -1138,7 +1218,11 @@ export default function RecruitmentPage() {
               <input type="hidden" name="career-group" value={selectedGroup.title} />
               <input type="hidden" name="career-market" value={selectedMarket.market} />
               <input type="hidden" name="career-position" value={selectedJob.title} />
-              <input type="hidden" name="career-status" value={statusLabels[selectedJob.status]} />
+              <input
+                type="hidden"
+                name="career-status"
+                value={statusLabels[selectedJob.status]}
+              />
 
               <div className="recruitment-application-grid">
                 <label>

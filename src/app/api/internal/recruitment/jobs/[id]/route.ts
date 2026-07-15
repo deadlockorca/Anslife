@@ -29,7 +29,7 @@ interface SaveRecruitmentJobBody {
 }
 
 const RECRUITMENT_MANAGE_ROLES = new Set(['super_admin', 'system_admin', 'data_controller']);
-const RECRUITMENT_STATUS_VALUES = new Set(['open', 'receiving', 'paused', 'closed']);
+const RECRUITMENT_STATUS_VALUES = new Set(['open', 'paused']);
 
 function canManageRecruitment(actor: Awaited<ReturnType<typeof getAuthActor>>): boolean {
   return Boolean(actor?.roles.some((role) => RECRUITMENT_MANAGE_ROLES.has(role)));

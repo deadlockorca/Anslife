@@ -77,7 +77,7 @@ model RecruitmentJob {
   group_title       String   @db.VarChar(191)
   group_body        String?  @db.VarChar(512)
   market_name       String   @db.VarChar(191)
-  market_status     String   @default("receiving") @db.VarChar(32)
+  market_status     String   @default("open") @db.VarChar(32)
   title             String   @db.VarChar(191)
   summary           String   @db.VarChar(512)
   description       String?  @db.LongText
@@ -85,7 +85,7 @@ model RecruitmentJob {
   benefits_json     String?  @db.LongText
   location          String?  @db.VarChar(191)
   work_type         String?  @db.VarChar(191)
-  status            String   @default("receiving") @db.VarChar(32)
+  status            String   @default("open") @db.VarChar(32)
   sort_order        Int      @default(0)
   is_public         Boolean  @default(true) @db.TinyInt
   created_at        DateTime @default(now()) @db.DateTime(0)
