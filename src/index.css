@@ -73953,11 +73953,18 @@ img.supply-hub-weekly-cta-image-placeholder {
 .contact-request-quotation-benefit > span {
   display: grid;
   place-items: center;
-  width: 2.15rem;
-  height: 2.15rem;
-  color: #ff6a1a;
-  font-size: 1.75rem;
+  width: 2.35rem;
+  height: 2.35rem;
   line-height: 1;
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+.contact-request-quotation-benefit > span img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .contact-request-quotation-benefit h3 {
@@ -74220,9 +74227,8 @@ img.supply-hub-weekly-cta-image-placeholder {
   }
 
   .contact-request-quotation-benefit > span {
-    width: 1.75rem;
-    height: 1.75rem;
-    font-size: 1.45rem;
+    width: 2rem;
+    height: 2rem;
   }
 
   .contact-request-quotation-benefit h3 {

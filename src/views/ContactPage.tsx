@@ -791,7 +791,7 @@ export default function ContactPage() {
             {[
               {
                 icon: 'export-partner' as ContactRequestAudienceIcon,
-                title: 'Đối tác xuất khẩu',
+                title: 'Đối tác',
                 href: '#contact-request-quotation-form',
               },
               {
@@ -988,28 +988,30 @@ export default function ContactPage() {
           <section className="contact-request-quotation-benefits" aria-label={t('Cam kết hỗ trợ')}>
             {[
               {
-                icon: '♢',
+                iconSrc: '/assets/contact/request-quotation/icons/information-security.webp',
                 title: 'Bảo mật thông tin',
                 text: 'Cam kết bảo mật tuyệt đối thông tin của khách hàng.',
               },
               {
-                icon: '◷',
+                iconSrc: '/assets/contact/request-quotation/icons/fast-response.webp',
                 title: 'Phản hồi nhanh chóng',
                 text: 'Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.',
               },
               {
-                icon: '♢',
+                iconSrc: '/assets/contact/request-quotation/icons/dedicated-support.webp',
                 title: 'Hỗ trợ tận tâm',
                 text: 'Đội ngũ chuyên nghiệp sẵn sàng hỗ trợ bạn.',
               },
               {
-                icon: '◎',
+                iconSrc: '/assets/contact/request-quotation/icons/global.webp',
                 title: 'Toàn cầu',
                 text: 'Kết nối và phục vụ khách hàng trên toàn thế giới.',
               },
             ].map((item) => (
               <article key={item.title} className="contact-request-quotation-benefit">
-                <span aria-hidden="true">{item.icon}</span>
+                <span aria-hidden="true">
+                  <img src={item.iconSrc} alt="" loading="lazy" decoding="async" />
+                </span>
                 <div>
                   <h3>{t(item.title)}</h3>
                   <p>{t(item.text)}</p>
@@ -1045,7 +1047,7 @@ export default function ContactPage() {
             {[
               {
                 icon: 'export-partner' as ContactRequestAudienceIcon,
-                title: 'Đối tác xuất khẩu',
+                title: 'Đối tác',
                 path: `/${language}/contact/request-quotation#contact-request-quotation-form`,
               },
               {
@@ -1280,7 +1282,7 @@ export default function ContactPage() {
             {[
               {
                 icon: 'export-partner' as ContactRequestAudienceIcon,
-                title: 'Đối tác xuất khẩu',
+                title: 'Đối tác',
                 path: `/${language}/contact/request-quotation#contact-request-quotation-form`,
               },
               {
