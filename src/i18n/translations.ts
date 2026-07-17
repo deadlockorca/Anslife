@@ -2727,6 +2727,7 @@ const TRANSLATIONS: Partial<Record<
     'Ngôn ngữ hỗ trợ': 'Supported Languages',
     'Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn':
       'English, Japanese, Vietnamese, Korean',
+    'Đa dạng ngôn ngữ': 'Multiple languages',
     'Buyer có thể liên hệ ANSLIFE để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
       'Buyers can contact ANSLIFE to send product requirements, drawings, samples, materials or warehousing and export shipment plans from Vietnam.',
     'Văn phòng & liên hệ': 'Offices & Contact',
@@ -3474,6 +3475,7 @@ const TRANSLATIONS: Partial<Record<
     'Ngôn ngữ hỗ trợ': '対応言語',
     'Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn':
       '英語、日本語、ベトナム語、韓国語',
+    'Đa dạng ngôn ngữ': '多言語対応',
     'Buyer có thể liên hệ ANSLIFE để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
       'バイヤーはANSLIFEに連絡し、製品要件、図面、サンプル、素材、またはベトナムからの保管・出荷計画を送ることができます。',
     'Văn phòng & liên hệ': 'オフィス・連絡先',
@@ -4170,6 +4172,7 @@ const TRANSLATIONS: Partial<Record<
     'Ngôn ngữ hỗ trợ': '지원 언어',
     'Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn':
       '영어, 일본어, 베트남어, 한국어',
+    'Đa dạng ngôn ngữ': '다양한 언어',
     'Buyer có thể liên hệ ANSLIFE để gửi yêu cầu sản phẩm, bản vẽ, mẫu, vật liệu hoặc kế hoạch lưu kho – xuất hàng từ Việt Nam.':
       '바이어는 ANSLIFE에 연락해 제품 요구사항, 도면, 샘플, 소재 또는 베트남발 보관 및 출하 계획을 보낼 수 있습니다.',
     'Văn phòng & liên hệ': '사무소 및 연락처',

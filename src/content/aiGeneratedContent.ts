@@ -135,7 +135,7 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
           <div><dt>Địa điểm hỗ trợ gặp mặt quốc tế</dt><dd>Tokyo, Singapore, Hong Kong,...</dd></div>
           <div><dt>Email</dt><dd>Global@anslife.com</dd></div>
           <div><dt>Website</dt><dd>anslife.com</dd></div>
-          <div><dt>Ngôn ngữ hỗ trợ</dt><dd>Tiếng Việt, tiếng Nhật, tiếng Anh</dd></div>
+          <div><dt>Ngôn ngữ hỗ trợ</dt><dd>Đa dạng ngôn ngữ</dd></div>
         </dl>
       </article>
 
@@ -9848,7 +9848,7 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
           <div><dt>International meeting support locations</dt><dd>Tokyo, Singapore, Hong Kong,...</dd></div>
           <div><dt>Email</dt><dd>Global@anslife.com</dd></div>
           <div><dt>Website</dt><dd>anslife.com</dd></div>
-          <div><dt>Supported languages</dt><dd>Vietnamese, Japanese, English</dd></div>
+          <div><dt>Supported languages</dt><dd>Multiple languages</dd></div>
         </dl>
       </article>
 
