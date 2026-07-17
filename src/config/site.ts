@@ -291,11 +291,6 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
         description: 'Natural finish, stain, lacquer, oil, painted và matte finish.',
       },
       {
-        id: 'materials-supply',
-        title: 'Cung ứng vật liệu',
-        description: 'Ván, gỗ tự nhiên, veneer, foam, vật liệu bọc và vật liệu đóng gói.',
-      },
-      {
         id: 'operations-supply-solutions',
         title: 'Giải pháp vận hành & cung ứng',
         description:

@@ -25,7 +25,7 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
           <span class="ai-company-overview-icon ai-icon-pin" aria-hidden="true"></span>
           <h3>Địa điểm</h3>
           <p>Việt Nam</p>
-          <p>Văn phòng đại diện: Tokyo, Singapore, Hong Kong</p>
+          <p>Địa điểm hỗ trợ gặp mặt quốc tế: Tokyo, Singapore, Hong Kong,...</p>
         </article>
         <article class="ai-company-overview-card">
           <span class="ai-company-overview-icon ai-icon-globe" aria-hidden="true"></span>
@@ -47,43 +47,43 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
           <span class="ai-company-overview-icon ai-icon-factory" aria-hidden="true"></span>
           <h3>1. Sản xuất</h3>
           <p>Mạng lưới nhà máy do ANSLIFE điều phối đáp ứng nhiều yêu cầu và tiêu chuẩn.</p>
-          <button class="ai-company-capability-more" type="button">Xem thêm</button>
+          <a class="ai-company-capability-more" href="/manufacturing/factory-overview">Xem thêm</a>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-layers" aria-hidden="true"></span>
           <h3>2. Chuỗi cung ứng vật liệu</h3>
           <p>Nguồn vật liệu liên tục, đa dạng, ổn định và có kiểm soát.</p>
-          <button class="ai-company-capability-more" type="button">Xem thêm</button>
+          <a class="ai-company-capability-more" href="/materials">Xem thêm</a>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-shield-check" aria-hidden="true"></span>
           <h3>3. QC độc lập</h3>
           <p>Hệ thống QC độc lập đảm bảo chất lượng đúng tiêu chuẩn quốc tế.</p>
-          <button class="ai-company-capability-more" type="button">Xem thêm</button>
+          <a class="ai-company-capability-more" href="/products-solutions/operations-supply-solutions/independent-project-qc-service">Xem thêm</a>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-clipboard-check" aria-hidden="true"></span>
           <h3>4. Kiểm định</h3>
           <p>Kiểm định chất lượng theo tiêu chuẩn buyer, hồ sơ kỹ thuật và yêu cầu từng thị trường.</p>
-          <button class="ai-company-capability-more" type="button">Xem thêm</button>
+          <a class="ai-company-capability-more" href="/quality-control/buyer-specific-standards">Xem thêm</a>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-warehouse" aria-hidden="true"></span>
           <h3>5. Lưu kho tại Việt Nam</h3>
           <p>Kho bãi an toàn, quản lý tồn kho và chuẩn bị xuất hàng định kỳ.</p>
-          <button class="ai-company-capability-more" type="button">Xem thêm</button>
+          <a class="ai-company-capability-more" href="/vietnam-supply-hub/storage-solution">Xem thêm</a>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-operations" aria-hidden="true"></span>
           <h3>6. Vận hành & quản lý dự án</h3>
           <p>Điều phối đơn hàng, kế hoạch sản xuất, tiến độ và giao hàng minh bạch.</p>
-          <button class="ai-company-capability-more" type="button">Xem thêm</button>
+          <a class="ai-company-capability-more" href="/products-solutions/operations-supply-solutions/export-project-operation-management">Xem thêm</a>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-hand-coin" aria-hidden="true"></span>
           <h3>7. Tài trợ thương mại</h3>
           <p>Tài trợ thương mại có kiểm soát cho buyer và nhà máy.</p>
-          <button class="ai-company-capability-more" type="button">Xem thêm</button>
+          <a class="ai-company-capability-more" href="/products-solutions/operations-supply-solutions/trade-financing">Xem thêm</a>
         </article>
       </div>
     </div>
@@ -132,7 +132,7 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
           <div><dt>Tên công ty</dt><dd>ANSLIFE</dd></div>
           <div><dt>Lĩnh vực hoạt động</dt><dd>Sản xuất & chuỗi cung ứng</dd></div>
           <div><dt>Trụ sở</dt><dd>Việt Nam</dd></div>
-          <div><dt>Văn phòng đại diện</dt><dd>Tokyo, Singapore, Hong Kong</dd></div>
+          <div><dt>Địa điểm hỗ trợ gặp mặt quốc tế</dt><dd>Tokyo, Singapore, Hong Kong,...</dd></div>
           <div><dt>Email</dt><dd>Global@anslife.com</dd></div>
           <div><dt>Website</dt><dd>anslife.com</dd></div>
           <div><dt>Ngôn ngữ hỗ trợ</dt><dd>Tiếng Việt, tiếng Nhật, tiếng Anh</dd></div>
@@ -9602,7 +9602,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
             <dd>Hà Nội, TP. Hồ Chí Minh</dd>
           </div>
           <div class="ai-company-info-row">
-            <dt>Văn phòng quốc tế</dt>
+            <dt>Địa điểm hỗ trợ gặp mặt quốc tế</dt>
             <dd>Tokyo, Singapore, Hong Kong</dd>
           </div>
           <div class="ai-company-info-row">
@@ -9629,7 +9629,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
       <header class="ai-company-office-header">
         <h2>Văn phòng & liên hệ</h2>
         <p>
-          ANSLIFE có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.
+          ANSLIFE có văn phòng đại diện tại Việt Nam và các địa điểm hỗ trợ gặp mặt quốc tế tại Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.
         </p>
       </header>
 
@@ -9664,7 +9664,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
           <h3>JAPAN</h3>
           <dl>
             <div>
-              <dt>Văn phòng đại diện</dt>
+              <dt>Địa điểm hỗ trợ gặp mặt quốc tế</dt>
               <dd>Tokyo, Japan</dd>
             </div>
             <div>
@@ -9682,7 +9682,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
           <h3>SINGAPORE</h3>
           <dl>
             <div>
-              <dt>Văn phòng đại diện</dt>
+              <dt>Địa điểm hỗ trợ gặp mặt quốc tế</dt>
               <dd>Singapore</dd>
             </div>
             <div>
@@ -9700,7 +9700,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
           <h3>HONG KONG</h3>
           <dl>
             <div>
-              <dt>Văn phòng đại diện</dt>
+              <dt>Địa điểm hỗ trợ gặp mặt quốc tế</dt>
               <dd>Hong Kong</dd>
             </div>
             <div>
@@ -9738,7 +9738,7 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
           <span class="ai-company-overview-icon ai-icon-pin" aria-hidden="true"></span>
           <h3>Location</h3>
           <p>Vietnam</p>
-          <p>Representative offices: Tokyo, Singapore, Hong Kong</p>
+          <p>International meeting support locations: Tokyo, Singapore, Hong Kong,...</p>
         </article>
         <article class="ai-company-overview-card">
           <span class="ai-company-overview-icon ai-icon-globe" aria-hidden="true"></span>
@@ -9760,43 +9760,43 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
           <span class="ai-company-overview-icon ai-icon-factory" aria-hidden="true"></span>
           <h3>1. Production</h3>
           <p>ANSLIFE-coordinated factory network built for different requirements and standards.</p>
-          <button class="ai-company-capability-more" type="button">View more</button>
+          <a class="ai-company-capability-more" href="/en/manufacturing/factory-overview">View more</a>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-layers" aria-hidden="true"></span>
           <h3>2. Material supply chain</h3>
           <p>Continuous, diverse, stable and controlled material sources.</p>
-          <button class="ai-company-capability-more" type="button">View more</button>
+          <a class="ai-company-capability-more" href="/en/materials">View more</a>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-shield-check" aria-hidden="true"></span>
           <h3>3. Independent QC</h3>
           <p>Independent QC system to ensure quality against international standards.</p>
-          <button class="ai-company-capability-more" type="button">View more</button>
+          <a class="ai-company-capability-more" href="/en/products-solutions/operations-supply-solutions/independent-project-qc-service">View more</a>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-clipboard-check" aria-hidden="true"></span>
           <h3>4. Inspection</h3>
           <p>Quality inspection against buyer standards, technical files and market requirements.</p>
-          <button class="ai-company-capability-more" type="button">View more</button>
+          <a class="ai-company-capability-more" href="/en/quality-control/buyer-specific-standards">View more</a>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-warehouse" aria-hidden="true"></span>
           <h3>5. Warehousing in Vietnam</h3>
           <p>Safe warehousing, inventory management and recurring shipment preparation.</p>
-          <button class="ai-company-capability-more" type="button">View more</button>
+          <a class="ai-company-capability-more" href="/en/vietnam-supply-hub/storage-solution">View more</a>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-operations" aria-hidden="true"></span>
           <h3>6. Project operations</h3>
           <p>Transparent order coordination, production planning, schedule and delivery control.</p>
-          <button class="ai-company-capability-more" type="button">View more</button>
+          <a class="ai-company-capability-more" href="/en/products-solutions/operations-supply-solutions/export-project-operation-management">View more</a>
         </article>
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ai-icon-hand-coin" aria-hidden="true"></span>
           <h3>7. Trade finance</h3>
           <p>Controlled trade finance support for buyers and factories.</p>
-          <button class="ai-company-capability-more" type="button">View more</button>
+          <a class="ai-company-capability-more" href="/en/products-solutions/operations-supply-solutions/trade-financing">View more</a>
         </article>
       </div>
     </div>
@@ -9845,7 +9845,7 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
           <div><dt>Company name</dt><dd>ANSLIFE</dd></div>
           <div><dt>Business scope</dt><dd>Production & supply chain</dd></div>
           <div><dt>Headquarters</dt><dd>Vietnam</dd></div>
-          <div><dt>Representative offices</dt><dd>Tokyo, Singapore, Hong Kong</dd></div>
+          <div><dt>International meeting support locations</dt><dd>Tokyo, Singapore, Hong Kong,...</dd></div>
           <div><dt>Email</dt><dd>Global@anslife.com</dd></div>
           <div><dt>Website</dt><dd>anslife.com</dd></div>
           <div><dt>Supported languages</dt><dd>Vietnamese, Japanese, English</dd></div>
@@ -9921,7 +9921,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
             <dd>Ha Noi, Ho Chi Minh City</dd>
           </div>
           <div class="ai-company-info-row">
-            <dt>International Offices</dt>
+            <dt>International meeting support locations</dt>
             <dd>Tokyo, Singapore, Hong Kong</dd>
           </div>
           <div class="ai-company-info-row">
@@ -9948,7 +9948,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
       <header class="ai-company-office-header">
         <h2>Offices & Contact</h2>
         <p>
-          ANSLIFE operates representative offices in Vietnam, Japan, Singapore and Hong Kong to support international buyers with requirement exchange, project management, standards control and supply chain organization from Vietnam.
+          ANSLIFE operates representative offices in Vietnam and international meeting support locations in Japan, Singapore and Hong Kong to support international buyers with requirement exchange, project management, standards control and supply chain organization from Vietnam.
         </p>
       </header>
 
@@ -9983,7 +9983,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
           <h3>JAPAN</h3>
           <dl>
             <div>
-              <dt>Representative Office</dt>
+              <dt>International meeting support location</dt>
               <dd>Tokyo, Japan</dd>
             </div>
             <div>
@@ -10001,7 +10001,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
           <h3>SINGAPORE</h3>
           <dl>
             <div>
-              <dt>Representative Office</dt>
+              <dt>International meeting support location</dt>
               <dd>Singapore</dd>
             </div>
             <div>
@@ -10019,7 +10019,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
           <h3>HONG KONG</h3>
           <dl>
             <div>
-              <dt>Representative Office</dt>
+              <dt>International meeting support location</dt>
               <dd>Hong Kong</dd>
             </div>
             <div>
@@ -10097,7 +10097,7 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
       <header class="ai-company-office-header">
         <h2>拠点・お問い合わせ</h2>
         <p>
-          ANSLIFEは、ベトナム、日本、シンガポール、香港に代表拠点を置き、海外バイヤーの要件確認、プロジェクト管理、基準管理、ベトナムからのサプライチェーン構築を支援します。
+          ANSLIFEは、ベトナムに代表拠点を置き、日本、シンガポール、香港では国際面談サポート拠点として、海外バイヤーの要件確認、プロジェクト管理、基準管理、ベトナムからのサプライチェーン構築を支援します。
         </p>
       </header>
 
@@ -10132,7 +10132,7 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
           <h3>日本</h3>
           <dl>
             <div>
-              <dt>代表オフィス</dt>
+              <dt>国際面談サポート拠点</dt>
               <dd>東京、日本</dd>
             </div>
             <div>
@@ -10150,7 +10150,7 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
           <h3>シンガポール</h3>
           <dl>
             <div>
-              <dt>代表オフィス</dt>
+              <dt>国際面談サポート拠点</dt>
               <dd>シンガポール</dd>
             </div>
             <div>
@@ -10168,7 +10168,7 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
           <h3>香港</h3>
           <dl>
             <div>
-              <dt>代表オフィス</dt>
+              <dt>国際面談サポート拠点</dt>
               <dd>香港</dd>
             </div>
             <div>
@@ -10246,7 +10246,7 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
       <header class="ai-company-office-header">
         <h2>사무소 및 연락처</h2>
         <p>
-          ANSLIFE는 베트남, 일본, 싱가포르, 홍콩에 대표 거점을 운영하며 해외 바이어의 요구사항 협의, 프로젝트 관리, 기준 관리 및 베트남 기반 공급망 구축을 지원합니다.
+          ANSLIFE는 베트남에 대표 거점을 운영하고 일본, 싱가포르, 홍콩에서는 국제 미팅 지원 장소를 통해 해외 바이어의 요구사항 협의, 프로젝트 관리, 기준 관리 및 베트남 기반 공급망 구축을 지원합니다.
         </p>
       </header>
 
@@ -10281,7 +10281,7 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
           <h3>일본</h3>
           <dl>
             <div>
-              <dt>대표 사무소</dt>
+              <dt>국제 미팅 지원 장소</dt>
               <dd>도쿄, 일본</dd>
             </div>
             <div>
@@ -10299,7 +10299,7 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
           <h3>싱가포르</h3>
           <dl>
             <div>
-              <dt>대표 사무소</dt>
+              <dt>국제 미팅 지원 장소</dt>
               <dd>싱가포르</dd>
             </div>
             <div>
@@ -10317,7 +10317,7 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
           <h3>홍콩</h3>
           <dl>
             <div>
-              <dt>대표 사무소</dt>
+              <dt>국제 미팅 지원 장소</dt>
               <dd>홍콩</dd>
             </div>
             <div>
@@ -15525,6 +15525,15 @@ function buildLocalizedCompanyIntroStandardSection(
     'ai-icon-operations',
     'ai-icon-hand-coin',
   ];
+  const capabilityLinks = [
+    '/manufacturing/factory-overview',
+    '/materials',
+    '/products-solutions/operations-supply-solutions/independent-project-qc-service',
+    '/quality-control/buyer-specific-standards',
+    '/vietnam-supply-hub/storage-solution',
+    '/products-solutions/operations-supply-solutions/export-project-operation-management',
+    '/products-solutions/operations-supply-solutions/trade-financing',
+  ];
   const processSteps = [
     { icon: 'ai-icon-file-plus', text: translateText(language, 'Buyer gửi yêu cầu') },
     { icon: 'ai-icon-search', text: translateText(language, 'ANSLIFE kiểm tra bản vẽ / mẫu / tiêu chuẩn') },
@@ -15573,13 +15582,22 @@ function buildLocalizedCompanyIntroStandardSection(
       <div class="ai-company-capability-grid">
         ${content.workingStandards.items
           .map(
-            (item, index) => `
+            (item, index) => {
+              const capabilityLink = capabilityLinks[index];
+              const capabilityHref = capabilityLink ? `/${language}${capabilityLink}` : '';
+
+              return `
         <article class="ai-company-capability-card">
           <span class="ai-company-overview-icon ${capabilityIconClasses[index] ?? 'ai-icon-box'}" aria-hidden="true"></span>
           <h3>${index + 1}. ${item.title}</h3>
           <p>${item.text}</p>
-          <button class="ai-company-capability-more" type="button">${translateText(language, 'Xem thêm')}</button>
-        </article>`,
+          ${
+            capabilityHref
+              ? `<a class="ai-company-capability-more" href="${capabilityHref}">${translateText(language, 'Xem thêm')}</a>`
+              : `<button class="ai-company-capability-more" type="button">${translateText(language, 'Xem thêm')}</button>`
+          }
+        </article>`;
+            },
           )
           .join('')}
       </div>

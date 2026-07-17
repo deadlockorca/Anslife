@@ -2723,6 +2723,7 @@ const TRANSLATIONS: Partial<Record<
     'Văn phòng trong nước': 'Vietnam Offices',
     'Hà Nội, TP. Hồ Chí Minh': 'Hanoi, Ho Chi Minh City',
     'Văn phòng quốc tế': 'International Offices',
+    'Địa điểm hỗ trợ gặp mặt quốc tế': 'International meeting support locations',
     'Ngôn ngữ hỗ trợ': 'Supported Languages',
     'Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn':
       'English, Japanese, Vietnamese, Korean',
@@ -2731,6 +2732,8 @@ const TRANSLATIONS: Partial<Record<
     'Văn phòng & liên hệ': 'Offices & Contact',
     'ANSLIFE có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
       'ANSLIFE operates representative offices in Vietnam, Japan, Singapore and Hong Kong to support international buyers with requirement exchange, project management, standards control and supply chain organization from Vietnam.',
+    'ANSLIFE có văn phòng đại diện tại Việt Nam và các địa điểm hỗ trợ gặp mặt quốc tế tại Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
+      'ANSLIFE operates representative offices in Vietnam and international meeting support locations in Japan, Singapore and Hong Kong to support international buyers with requirement exchange, project management, standards control and supply chain organization from Vietnam.',
     'Văn phòng đại diện': 'Representative Offices',
     'Địa chỉ': 'Address',
     'Địa chỉ đang cập nhật': 'Address updating',
@@ -3467,6 +3470,7 @@ const TRANSLATIONS: Partial<Record<
     'Văn phòng trong nước': 'ベトナム国内オフィス',
     'Hà Nội, TP. Hồ Chí Minh': 'ハノイ、ホーチミン市',
     'Văn phòng quốc tế': '海外オフィス',
+    'Địa điểm hỗ trợ gặp mặt quốc tế': '国際面談サポート拠点',
     'Ngôn ngữ hỗ trợ': '対応言語',
     'Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn':
       '英語、日本語、ベトナム語、韓国語',
@@ -3475,6 +3479,8 @@ const TRANSLATIONS: Partial<Record<
     'Văn phòng & liên hệ': 'オフィス・連絡先',
     'ANSLIFE có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
       'ANSLIFEは、ベトナム、日本、シンガポール、香港に代表オフィスを展開し、海外バイヤーの要件確認、プロジェクト管理、基準管理、ベトナムからのサプライチェーン構築を支援します。',
+    'ANSLIFE có văn phòng đại diện tại Việt Nam và các địa điểm hỗ trợ gặp mặt quốc tế tại Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
+      'ANSLIFEは、ベトナムに代表オフィスを置き、日本、シンガポール、香港では国際面談サポート拠点として、海外バイヤーの要件確認、プロジェクト管理、基準管理、ベトナムからのサプライチェーン構築を支援します。',
     'Văn phòng đại diện': '代表オフィス',
     'Địa chỉ': '住所',
     'Địa chỉ đang cập nhật': '住所更新中',
@@ -4160,6 +4166,7 @@ const TRANSLATIONS: Partial<Record<
     'Văn phòng trong nước': '베트남 국내 사무소',
     'Hà Nội, TP. Hồ Chí Minh': '하노이, 호치민시',
     'Văn phòng quốc tế': '해외 사무소',
+    'Địa điểm hỗ trợ gặp mặt quốc tế': '국제 미팅 지원 장소',
     'Ngôn ngữ hỗ trợ': '지원 언어',
     'Tiếng Anh, Tiếng Nhật, Tiếng Việt, Tiếng Hàn':
       '영어, 일본어, 베트남어, 한국어',
@@ -4168,6 +4175,8 @@ const TRANSLATIONS: Partial<Record<
     'Văn phòng & liên hệ': '사무소 및 연락처',
     'ANSLIFE có hệ thống văn phòng đại diện tại Việt Nam, Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
       'ANSLIFE는 베트남, 일본, 싱가포르, 홍콩에 대표 사무소를 운영하며 해외 바이어의 요구사항 협의, 프로젝트 관리, 기준 관리, 베트남발 공급망 구축을 지원합니다.',
+    'ANSLIFE có văn phòng đại diện tại Việt Nam và các địa điểm hỗ trợ gặp mặt quốc tế tại Nhật Bản, Singapore và Hong Kong nhằm hỗ trợ buyer quốc tế trong quá trình trao đổi yêu cầu, quản lý dự án, kiểm soát tiêu chuẩn và tổ chức chuỗi cung ứng từ Việt Nam.':
+      'ANSLIFE는 베트남에 대표 사무소를 운영하고 일본, 싱가포르, 홍콩에서는 국제 미팅 지원 장소를 통해 해외 바이어의 요구사항 협의, 프로젝트 관리, 기준 관리 및 베트남 기반 공급망 구축을 지원합니다.',
     'Văn phòng đại diện': '대표 사무소',
     'Địa chỉ': '주소',
     'Địa chỉ đang cập nhật': '주소 업데이트 중',
