@@ -41522,6 +41522,18 @@ img.supply-hub-weekly-cta-image-placeholder {
   background: rgba(244, 239, 230, 0.56);
 }
 
+.quality-control-buyer-specific-standards-image-slot img,
+.quality-control-buyer-specific-standards-process-image-slot img,
+.quality-control-buyer-specific-standards-system-image-slot img,
+.quality-control-buyer-specific-standards-importance-image-slot img,
+.quality-control-buyer-specific-standards-standard-room-image-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
 .quality-control-buyer-specific-standards-grid p {
   margin: 0;
   color: #2f343a;
@@ -41729,7 +41741,7 @@ img.supply-hub-weekly-cta-image-placeholder {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
   gap: 1rem;
-  align-items: stretch;
+  align-items: start;
 }
 
 .quality-control-buyer-specific-standards-standard-room-copy h2,
@@ -41766,10 +41778,11 @@ img.supply-hub-weekly-cta-image-placeholder {
 }
 
 .quality-control-buyer-specific-standards-standard-room-image-slot {
-  min-height: 12rem;
+  height: clamp(12.5rem, 15vw, 15.25rem);
   border: 1px dashed rgba(60, 55, 48, 0.22);
   border-radius: 7px;
   background: rgba(244, 239, 230, 0.56);
+  overflow: hidden;
 }
 
 .quality-control-buyer-specific-standards-buyer-grid {
@@ -42024,7 +42037,7 @@ img.supply-hub-weekly-cta-image-placeholder {
   }
 
   .quality-control-buyer-specific-standards-standard-room-image-slot {
-    min-height: 8rem;
+    height: 8rem;
   }
 
   .quality-control-buyer-specific-standards-buyer-grid {

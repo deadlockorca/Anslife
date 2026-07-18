@@ -14702,30 +14702,35 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 {
                   number: '01',
                   title: 'Tiêu chuẩn sản phẩm',
+                  image: '/assets/quality-control/buyer-specific-standards/managed-standards/product-standard.webp',
                   body: 'Yêu cầu về kích thước, kết cấu, dung sai và chức năng sử dụng của sản phẩm.',
                   examples: 'Ví dụ: Kích thước, Dung sai, Khả năng chịu tải, Tiêu chuẩn lắp ráp.',
                 },
                 {
                   number: '02',
                   title: 'Tiêu chuẩn vật liệu',
+                  image: '/assets/quality-control/buyer-specific-standards/managed-standards/material-standard.webp',
                   body: 'Yêu cầu về chủng loại, nguồn gốc và đặc tính vật liệu sử dụng.',
                   examples: 'Ví dụ: Loại gỗ, Veneer, Foam, Vải, Da, Vật liệu tự nhiên.',
                 },
                 {
                   number: '03',
                   title: 'Tiêu chuẩn hoàn thiện',
+                  image: '/assets/quality-control/buyer-specific-standards/managed-standards/finish-standard.webp',
                   body: 'Yêu cầu về màu sắc, stain, độ bóng, độ mờ và chất lượng bề mặt.',
                   examples: 'Ví dụ: Mẫu màu, Bảng stain, Gloss level, Matte finish, Oil finish.',
                 },
                 {
                   number: '04',
                   title: 'Tiêu chuẩn chất lượng',
+                  image: '/assets/quality-control/buyer-specific-standards/managed-standards/quality-standard.webp',
                   body: 'Các tiêu chí đánh giá sản phẩm trong quá trình kiểm tra và nghiệm thu.',
                   examples: 'Ví dụ: Checklist QC, Tiêu chí chấp nhận lỗi, Phương pháp kiểm tra.',
                 },
                 {
                   number: '05',
                   title: 'Tiêu chuẩn báo cáo',
+                  image: '/assets/quality-control/buyer-specific-standards/managed-standards/report-standard.webp',
                   body: 'Yêu cầu về nội dung và hình thức báo cáo kiểm tra.',
                   examples: 'Ví dụ: Mẫu báo cáo QC, Hình ảnh bắt buộc, Hồ sơ lưu trữ.',
                 },
@@ -14735,10 +14740,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                     <span>{`${item.number}.`}</span>
                     {t(item.title)}
                   </h3>
-                  <div
-                    className="quality-control-buyer-specific-standards-image-slot"
-                    aria-hidden="true"
-                  />
+                  <div className="quality-control-buyer-specific-standards-image-slot">
+                    <img src={item.image} alt={t(item.title)} loading="lazy" decoding="async" />
+                  </div>
                   <p>{t(item.body)}</p>
                   <p>{t(item.examples)}</p>
                 </article>
@@ -14752,36 +14756,42 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 {
                   number: '01',
                   title: 'Tiếp nhận tiêu chuẩn',
+                  image: '/assets/quality-control/buyer-specific-standards/process/receive-standard.webp',
                   body: 'Thu thập các tài liệu, tiêu chuẩn và yêu cầu liên quan từ buyer.',
                   bullets: [],
                 },
                 {
                   number: '02',
                   title: 'Rà soát & xác nhận',
+                  image: '/assets/quality-control/buyer-specific-standards/process/review-confirm.webp',
                   body: 'Đánh giá tính khả thi và làm rõ các yêu cầu trước khi triển khai.',
                   bullets: [],
                 },
                 {
                   number: '03',
                   title: 'Lưu trữ hồ sơ',
+                  image: '/assets/quality-control/buyer-specific-standards/process/store-records.webp',
                   body: 'Thiết lập hồ sơ tiêu chuẩn riêng cho từng buyer và từng dự án.',
                   bullets: [],
                 },
                 {
                   number: '04',
                   title: 'Triển khai sản xuất',
+                  image: '/assets/quality-control/buyer-specific-standards/process/production-deployment.webp',
                   body: 'Chuyển đổi tiêu chuẩn thành các yêu cầu cụ thể cho vật liệu, sản xuất, QC và đóng gói.',
                   bullets: [],
                 },
                 {
                   number: '05',
                   title: 'Kiểm tra & đối chiếu',
+                  image: '/assets/quality-control/buyer-specific-standards/process/check-compare.webp',
                   body: 'Mọi hoạt động kiểm tra đều được đối chiếu với tiêu chuẩn đã được xác nhận.',
                   bullets: [],
                 },
                 {
                   number: '06',
                   title: 'Lưu cho đơn hàng lặp lại',
+                  image: '/assets/quality-control/buyer-specific-standards/process/repeat-order-records.webp',
                   body: 'Tiêu chuẩn được lưu giữ nhằm đảm bảo tính nhất quán giữa các đợt sản xuất.',
                   bullets: [],
                 },
@@ -14792,10 +14802,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                       <span>{item.number}</span>
                     </h3>
                     <h4>{t(item.title)}</h4>
-                    <div
-                      className="quality-control-buyer-specific-standards-process-image-slot"
-                      aria-hidden="true"
-                    />
+                    <div className="quality-control-buyer-specific-standards-process-image-slot">
+                      <img src={item.image} alt={t(item.title)} loading="lazy" decoding="async" />
+                    </div>
                     <p>{t(item.body)}</p>
                     {item.bullets.length > 0 && (
                       <ul>
@@ -14824,26 +14833,31 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 {
                   number: '01',
                   title: 'Hồ sơ kỹ thuật',
+                  image: '/assets/quality-control/buyer-specific-standards/system/technical-record.webp',
                   bullets: ['Bản vẽ', 'Thông số kỹ thuật', 'BOM'],
                 },
                 {
                   number: '02',
                   title: 'Mẫu duyệt',
+                  image: '/assets/quality-control/buyer-specific-standards/system/approved-sample.webp',
                   bullets: ['Mẫu sản phẩm', 'Mẫu cấu kiện', 'Mẫu vật liệu'],
                 },
                 {
                   number: '03',
                   title: 'Bảng màu & hoàn thiện',
+                  image: '/assets/quality-control/buyer-specific-standards/system/color-finish-board.webp',
                   bullets: ['Stain', 'Color Sample', 'Finish Sample'],
                 },
                 {
                   number: '04',
                   title: 'Checklist QC',
+                  image: '/assets/quality-control/buyer-specific-standards/system/qc-checklist.webp',
                   bullets: ['Tiêu chuẩn kiểm tra', 'Tiêu chí chấp nhận'],
                 },
                 {
                   number: '05',
                   title: 'Tiêu chuẩn đóng gói',
+                  image: '/assets/quality-control/buyer-specific-standards/system/packing-standard.webp',
                   bullets: ['Carton', 'Label', 'Pallet', 'Container'],
                 },
               ].map((item) => (
@@ -14852,10 +14866,9 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                     <span>{`${item.number}.`}</span>
                     {t(item.title)}
                   </h3>
-                  <div
-                    className="quality-control-buyer-specific-standards-system-image-slot"
-                    aria-hidden="true"
-                  />
+                  <div className="quality-control-buyer-specific-standards-system-image-slot">
+                    <img src={item.image} alt={t(item.title)} loading="lazy" decoding="async" />
+                  </div>
                   <ul>
                     {item.bullets.map((bullet) => (
                       <li key={bullet}>{t(bullet)}</li>
@@ -14869,23 +14882,40 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
             <h2>{`4. ${t('Tại sao điều này quan trọng?')}`}</h2>
             <div className="quality-control-buyer-specific-standards-importance-flow">
               {[
-                'Tiêu chuẩn Buyer',
-                'Sản xuất đúng yêu cầu',
-                'Kiểm tra đúng tiêu chuẩn',
-                'Đóng gói đúng quy cách',
-                'Giao hàng đúng cam kết',
-                'Giảm khiếu nại',
+                {
+                  title: 'Tiêu chuẩn Buyer',
+                  image: '/assets/quality-control/buyer-specific-standards/importance/buyer-standard.webp',
+                },
+                {
+                  title: 'Sản xuất đúng yêu cầu',
+                  image: '/assets/quality-control/buyer-specific-standards/importance/correct-production.webp',
+                },
+                {
+                  title: 'Kiểm tra đúng tiêu chuẩn',
+                  image: '/assets/quality-control/buyer-specific-standards/importance/correct-inspection.webp',
+                },
+                {
+                  title: 'Đóng gói đúng quy cách',
+                  image: '/assets/quality-control/buyer-specific-standards/importance/correct-packing.webp',
+                },
+                {
+                  title: 'Giao hàng đúng cam kết',
+                  image: '/assets/quality-control/buyer-specific-standards/importance/on-time-delivery.webp',
+                },
+                {
+                  title: 'Giảm khiếu nại',
+                  image: '/assets/quality-control/buyer-specific-standards/importance/reduce-claims.webp',
+                },
               ].map((item, index, items) => (
                 <div
                   className="quality-control-buyer-specific-standards-importance-step-wrap"
-                  key={item}
+                  key={item.title}
                 >
                   <article>
-                    <div
-                      className="quality-control-buyer-specific-standards-importance-image-slot"
-                      aria-hidden="true"
-                    />
-                    <h3>{t(item)}</h3>
+                    <div className="quality-control-buyer-specific-standards-importance-image-slot">
+                      <img src={item.image} alt={t(item.title)} loading="lazy" decoding="async" />
+                    </div>
+                    <h3>{t(item.title)}</h3>
                   </article>
                   {index < items.length - 1 && (
                     <span
@@ -14926,10 +14956,14 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 )}
               </p>
             </div>
-            <div
-              className="quality-control-buyer-specific-standards-standard-room-image-slot"
-              aria-hidden="true"
-            />
+            <div className="quality-control-buyer-specific-standards-standard-room-image-slot">
+              <img
+                src="/assets/quality-control/buyer-specific-standards/standard-room/partner-standard-room.webp"
+                alt={t('Liên kết với Phòng mẫu chuẩn đối tác')}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </section>
           <section className="quality-control-buyer-specific-standards-panel quality-control-buyer-specific-standards-buyer-examples">
             <h2>{`6. ${t('Buyer tiêu biểu thường có những gì?')}`}</h2>
@@ -14964,10 +14998,6 @@ export default function CmsSubSectionPage({ config }: CmsSubSectionPageProps) {
                 },
               ].map((buyer) => (
                 <article key={buyer.name}>
-                  <div
-                    className="quality-control-buyer-specific-standards-buyer-image-slot"
-                    aria-hidden="true"
-                  />
                   <div className="quality-control-buyer-specific-standards-buyer-copy">
                     <h3>{buyer.name}</h3>
                     <ul>
