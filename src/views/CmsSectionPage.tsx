@@ -28,6 +28,7 @@ export default function CmsSectionPage({ config }: CmsSectionPageProps) {
         'engineered-wood',
         'natural-materials',
         'upholstery-materials',
+        'metal-materials',
         'packing-materials',
       ]),
     [],

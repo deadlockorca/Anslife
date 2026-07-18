@@ -151,6 +151,17 @@ export const TOP_MENU: TopMenuItem[] = [
         ],
       },
       {
+        label: 'Vật liệu kim loại',
+        path: '/materials/metal-materials',
+        children: [
+          { label: 'Sắt / thép', path: '/materials/metal-materials/steel' },
+          { label: 'Inox', path: '/materials/metal-materials/stainless-steel' },
+          { label: 'Nhôm', path: '/materials/metal-materials/aluminum' },
+          { label: 'Đồng / hợp kim', path: '/materials/metal-materials/copper-alloy' },
+          { label: 'Phụ kiện kim loại', path: '/materials/metal-materials/metal-hardware' },
+        ],
+      },
+      {
         label: 'Vật liệu đóng gói',
         path: '/materials/packing-materials',
         children: [
@@ -364,6 +375,11 @@ export const STATIC_PAGE_MAP: Record<string, StaticPageConfig> = {
         id: 'upholstery-materials',
         title: 'Vật liệu bọc nệm',
         description: 'Foam, fabric, leather / PU và vật liệu đệm.',
+      },
+      {
+        id: 'metal-materials',
+        title: 'Vật liệu kim loại',
+        description: 'Sắt, thép, inox, nhôm, hợp kim và phụ kiện kim loại cho nội thất.',
       },
       {
         id: 'packing-materials',
