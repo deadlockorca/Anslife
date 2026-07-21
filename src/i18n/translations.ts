@@ -276,6 +276,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
     'Vui lòng chọn ít nhất một loại yêu cầu.':
       'Please select at least one request type.',
     'Không gửi được form. Vui lòng thử lại.': 'Unable to submit the form. Please try again.',
+    'Tải file đính kèm': 'Upload attachment',
+    'File tối đa 8MB.': 'Maximum file size: 8MB.',
+    'File đính kèm tối đa 8MB.': 'The attachment file must be 8MB or smaller.',
   },
   jp: {
     'Liên hệ': 'お問い合わせ',
@@ -350,6 +353,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       '少なくとも1つの依頼タイプを選択してください。',
     'Không gửi được form. Vui lòng thử lại.':
       'フォームを送信できませんでした。もう一度お試しください。',
+    'Tải file đính kèm': '添付ファイルをアップロード',
+    'File tối đa 8MB.': 'ファイルサイズは最大8MBです。',
+    'File đính kèm tối đa 8MB.': '添付ファイルは8MB以下にしてください。',
   },
   kr: {
     'Liên hệ': '문의',
@@ -424,6 +430,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       '요청 유형을 하나 이상 선택해 주세요.',
     'Không gửi được form. Vui lòng thử lại.':
       '폼을 전송할 수 없습니다. 다시 시도해 주세요.',
+    'Tải file đính kèm': '첨부 파일 업로드',
+    'File tối đa 8MB.': '파일 최대 크기: 8MB.',
+    'File đính kèm tối đa 8MB.': '첨부 파일은 8MB 이하여야 합니다.',
   },
   sv: {
     'Liên hệ': 'Kontakt',
@@ -498,6 +507,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       'Välj minst en förfrågningstyp.',
     'Không gửi được form. Vui lòng thử lại.':
       'Formuläret kunde inte skickas. Försök igen.',
+    'Tải file đính kèm': 'Ladda upp bilaga',
+    'File tối đa 8MB.': 'Maximal filstorlek: 8MB.',
+    'File đính kèm tối đa 8MB.': 'Bilagan får vara högst 8MB.',
   },
   fr: {
     'Liên hệ': 'Contact',
@@ -572,6 +584,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       'Veuillez sélectionner au moins un type de demande.',
     'Không gửi được form. Vui lòng thử lại.':
       'Impossible d’envoyer le formulaire. Veuillez réessayer.',
+    'Tải file đính kèm': 'Téléverser une pièce jointe',
+    'File tối đa 8MB.': 'Taille maximale du fichier : 8MB.',
+    'File đính kèm tối đa 8MB.': 'La pièce jointe doit faire 8MB maximum.',
   },
   ru: {
     'Liên hệ': 'Контакты',
@@ -646,6 +661,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       'Выберите хотя бы один тип запроса.',
     'Không gửi được form. Vui lòng thử lại.':
       'Не удалось отправить форму. Попробуйте еще раз.',
+    'Tải file đính kèm': 'Загрузить вложение',
+    'File tối đa 8MB.': 'Максимальный размер файла: 8MB.',
+    'File đính kèm tối đa 8MB.': 'Размер вложения не должен превышать 8MB.',
   },
   es: {
     'Liên hệ': 'Contacto',
@@ -720,6 +738,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       'Selecciona al menos un tipo de solicitud.',
     'Không gửi được form. Vui lòng thử lại.':
       'No se pudo enviar el formulario. Inténtalo de nuevo.',
+    'Tải file đính kèm': 'Subir archivo adjunto',
+    'File tối đa 8MB.': 'Tamaño máximo del archivo: 8MB.',
+    'File đính kèm tối đa 8MB.': 'El archivo adjunto debe tener 8MB como máximo.',
   },
   zh: {
     'Liên hệ': '联系',
@@ -794,6 +815,9 @@ const CONTACT_REQUEST_TRANSLATIONS: Partial<
       '请至少选择一种需求类型。',
     'Không gửi được form. Vui lòng thử lại.':
       '表单提交失败，请重试。',
+    'Tải file đính kèm': '上传附件',
+    'File tối đa 8MB.': '文件最大8MB。',
+    'File đính kèm tối đa 8MB.': '附件文件最大为8MB。',
   },
 };
 

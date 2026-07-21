@@ -13,6 +13,7 @@ import { getPageBySlug, getProducts, submitContactForm } from '../lib/wp';
 
 const quoteFormId = Number(process.env.NEXT_PUBLIC_CF7_QUOTE_FORM_ID ?? 1);
 const meetingFormId = Number(process.env.NEXT_PUBLIC_CF7_MEETING_FORM_ID ?? 2);
+const CONTACT_ATTACHMENT_MAX_SIZE = 8 * 1024 * 1024;
 const contactSections = [
   'company-info',
   'quote-request',
@@ -715,6 +716,15 @@ export default function ContactPage() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const attachmentValue = formData.get('attachment-file');
+    const attachmentFile =
+      attachmentValue instanceof File && attachmentValue.size > 0 ? attachmentValue : undefined;
+
+    if (attachmentFile && attachmentFile.size > CONTACT_ATTACHMENT_MAX_SIZE) {
+      setState({ status: 'error', message: t('File đính kèm tối đa 8MB.') });
+      return;
+    }
+
     const hasMultiRequestCategory = Boolean(
       form.querySelector('input[type="checkbox"][name="request-category"]'),
     );
@@ -730,6 +740,10 @@ export default function ContactPage() {
 
     const groupedPayload = new Map<string, string[]>();
     for (const [key, value] of formData.entries()) {
+      if (value instanceof File) {
+        continue;
+      }
+
       const currentValues = groupedPayload.get(key) ?? [];
       currentValues.push(String(value));
       groupedPayload.set(key, currentValues);
@@ -740,11 +754,15 @@ export default function ContactPage() {
         values.join(', '),
       ]),
     );
+    if (attachmentFile) {
+      payload['attachment-file-name'] = attachmentFile.name;
+      payload['attachment-file-size'] = `${(attachmentFile.size / 1024 / 1024).toFixed(2)} MB`;
+    }
 
     setState({ status: 'loading', message: t('Đang gửi dữ liệu...') });
 
     try {
-      const response = await submitContactForm(formId, payload);
+      const response = await submitContactForm(formId, payload, attachmentFile);
       if (response.status === 'mail_sent') {
         setState({ status: 'success', message: response.message });
         form.reset();
@@ -909,6 +927,16 @@ export default function ContactPage() {
                     placeholder={t('Vui lòng mô tả chi tiết yêu cầu của bạn')}
                     required
                   />
+                </label>
+
+                <label className="contact-request-quotation-file-field">
+                  <span className="contact-request-quotation-label-text">
+                    {t('Tải file đính kèm')}
+                  </span>
+                  <input name="attachment-file" type="file" />
+                  <span className="contact-request-quotation-file-note">
+                    {t('File tối đa 8MB.')}
+                  </span>
                 </label>
 
                 <label className="contact-request-quotation-policy">
@@ -1175,6 +1203,16 @@ export default function ContactPage() {
                   />
                 </label>
 
+                <label className="contact-request-quotation-file-field">
+                  <span className="contact-request-quotation-label-text">
+                    {t('Tải file đính kèm')}
+                  </span>
+                  <input name="attachment-file" type="file" />
+                  <span className="contact-request-quotation-file-note">
+                    {t('File tối đa 8MB.')}
+                  </span>
+                </label>
+
                 <label className="contact-request-quotation-policy">
                   <input name="privacy-consent" type="checkbox" required />
                   <span>
@@ -1413,6 +1451,16 @@ export default function ContactPage() {
                     )}
                     required
                   />
+                </label>
+
+                <label className="contact-request-quotation-file-field">
+                  <span className="contact-request-quotation-label-text">
+                    {t('Tải file đính kèm')}
+                  </span>
+                  <input name="attachment-file" type="file" />
+                  <span className="contact-request-quotation-file-note">
+                    {t('File tối đa 8MB.')}
+                  </span>
                 </label>
 
                 <label className="contact-request-quotation-policy">

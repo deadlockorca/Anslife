@@ -1,6 +1,11 @@
 import nodemailer from 'nodemailer';
 
 type ContactPayload = Record<string, string>;
+export interface ContactEmailAttachment {
+  filename: string;
+  contentType?: string;
+  content: Buffer;
+}
 
 const FIELD_LABELS: Record<string, string> = {
   'your-name': 'Họ và tên',
@@ -23,6 +28,8 @@ const FIELD_LABELS: Record<string, string> = {
   'career-status': 'Trạng thái vị trí',
   'cv-link': 'Link CV / Portfolio',
   'latest-experience': 'Kinh nghiệm gần nhất',
+  'attachment-file-name': 'File đính kèm',
+  'attachment-file-size': 'Dung lượng file',
 };
 
 const REQUEST_CATEGORY_LABELS: Record<string, string> = {
@@ -72,6 +79,8 @@ const FIELD_ORDER = [
   'career-status',
   'cv-link',
   'latest-experience',
+  'attachment-file-name',
+  'attachment-file-size',
   'product-interest',
   'reference-link',
   'your-message',
@@ -230,7 +239,10 @@ function buildHtml(payload: ContactPayload): string {
     </div>`;
 }
 
-export async function sendContactNotificationEmail(payload: ContactPayload): Promise<void> {
+export async function sendContactNotificationEmail(
+  payload: ContactPayload,
+  attachments: ContactEmailAttachment[] = [],
+): Promise<void> {
   const smtpHost = getRequiredEnv('SMTP_HOST');
   const smtpPort = Number(process.env.SMTP_PORT ?? 465);
   const smtpUser = getRequiredEnv('SMTP_USER');
@@ -258,5 +270,10 @@ export async function sendContactNotificationEmail(payload: ContactPayload): Pro
     subject: `[ANSLIFE] ${summary.senderName} <${summary.senderEmail}> - ${summary.requestType}`,
     text: buildPlainText(payload),
     html: buildHtml(payload),
+    attachments: attachments.map((attachment) => ({
+      filename: attachment.filename,
+      contentType: attachment.contentType,
+      content: attachment.content,
+    })),
   });
 }

@@ -164,7 +164,20 @@ export async function getProjectTypes(): Promise<WpCategory[]> {
 export async function submitContactForm(
   formId: number,
   payload: Record<string, string>,
+  attachmentFile?: File,
 ): Promise<Cf7Response> {
+  if (attachmentFile) {
+    const formData = new FormData();
+    formData.append('formId', String(formId));
+    formData.append('payload', JSON.stringify(payload));
+    formData.append('attachment', attachmentFile);
+
+    return fetchJson<Cf7Response>(`/contact`, {
+      method: 'POST',
+      body: formData,
+    });
+  }
+
   return fetchJson<Cf7Response>(`/contact`, {
     method: 'POST',
     headers: {
