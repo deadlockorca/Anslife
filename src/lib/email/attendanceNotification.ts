@@ -69,7 +69,7 @@ function getActionLabel(action: AttendanceNotificationAction): string {
     return 'Check-in';
   }
   if (action === 'check_out') {
-    return 'Check-out';
+    return 'Check-out - Upload ảnh công việc';
   }
   return 'Upload ảnh công việc';
 }
