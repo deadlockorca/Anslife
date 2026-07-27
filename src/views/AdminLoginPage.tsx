@@ -48,7 +48,7 @@ export default function AdminLoginPage() {
   const { t, toLocalizedPath } = useSiteI18n();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const [email, setEmail] = useState('admin@anslife.net');
+  const [email, setEmail] = useState('admin@anslife.com');
   const [password, setPassword] = useState('');
   const [checkingSession, setCheckingSession] = useState(true);
   const [state, setState] = useState<LoginState>(idleState);
