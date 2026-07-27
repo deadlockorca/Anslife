@@ -49,6 +49,12 @@ export interface AuthUser {
   scopes: ActorScope[];
 }
 
+export function isQcAttendanceOnlyUser(
+  user: Pick<AuthUser, 'roles'> | null | undefined,
+): boolean {
+  return Boolean(user && user.roles.length === 1 && user.roles[0] === 'qc');
+}
+
 export interface UserProfile extends AuthUser {
   isActive: boolean;
   createdAt: string;
@@ -113,6 +119,70 @@ export interface InternalRecruitmentApplication {
   status: string;
   createdAt: string;
   updatedAt: string;
+}
+
+export interface InternalDrivePortalItem {
+  id: string;
+  name: string;
+  mimeType: string;
+  kind: 'folder' | 'file';
+  size: string | null;
+  modifiedTime: string | null;
+  webViewLink: string | null;
+  canPreview: boolean;
+  canDownload: boolean;
+}
+
+export interface InternalDrivePortalFolder {
+  id: string;
+  name: string;
+  mimeType: string;
+  webViewLink: string | null;
+}
+
+export interface InternalDrivePortalListing {
+  folder: InternalDrivePortalFolder;
+  items: InternalDrivePortalItem[];
+}
+
+export interface InternalDriveProject {
+  id: number;
+  name: string;
+  driveFolderId: string;
+  description: string | null;
+  isActive: boolean;
+  canView: boolean;
+  canDownload: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface InternalDriveProjectMember {
+  id: number;
+  projectId: number;
+  userId: number;
+  userEmail: string;
+  userFullName: string;
+  canView: boolean;
+  canDownload: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface InternalDriveProjectAdmin extends InternalDriveProject {
+  members: InternalDriveProjectMember[];
+}
+
+export interface InternalDriveTablePreview {
+  fileId: string;
+  filename: string;
+  mimeType: string;
+  sheetName: string;
+  sheetNames: string[];
+  rows: string[][];
+  truncated: boolean;
+  maxRows: number;
+  maxColumns: number;
 }
 
 export interface InternalOrderAssignment {
@@ -292,6 +362,22 @@ export interface InternalAuditLog {
   createdAt: string;
 }
 
+export interface InternalAttendanceWorkPhoto {
+  id: number;
+  userId: number;
+  userEmail: string;
+  userFullName: string;
+  attendanceDate: string;
+  driveFileId: string;
+  driveParentId: string;
+  driveWebViewLink: string | null;
+  fileName: string;
+  originalFileName: string | null;
+  mimeType: string;
+  fileSize: number | null;
+  uploadedAt: string;
+}
+
 export interface InternalAttendanceLog {
   id: number;
   userId: number;
@@ -312,6 +398,7 @@ export interface InternalAttendanceLog {
   checkOutPhotoUrl: string | null;
   note: string | null;
   workMinutes: number | null;
+  workPhotos: InternalAttendanceWorkPhoto[];
   createdAt: string;
   updatedAt: string;
 }
@@ -557,6 +644,173 @@ function normalizeString(rawValue: unknown): string {
 function normalizeOptionalString(rawValue: unknown): string | null {
   const value = normalizeString(rawValue);
   return value.length > 0 ? value : null;
+}
+
+function normalizeInternalDrivePortalFolder(value: unknown): InternalDrivePortalFolder | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return null;
+  }
+
+  const raw = value as Record<string, unknown>;
+  const id = normalizeString(raw.id);
+  const name = normalizeString(raw.name);
+  const mimeType = normalizeString(raw.mimeType);
+  if (!id || !name || !mimeType) {
+    return null;
+  }
+
+  return {
+    id,
+    name,
+    mimeType,
+    webViewLink: normalizeOptionalString(raw.webViewLink),
+  };
+}
+
+function normalizeInternalDrivePortalItem(value: unknown): InternalDrivePortalItem | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return null;
+  }
+
+  const raw = value as Record<string, unknown>;
+  const id = normalizeString(raw.id);
+  const name = normalizeString(raw.name);
+  const mimeType = normalizeString(raw.mimeType);
+  const kind = normalizeString(raw.kind);
+  if (!id || !name || !mimeType || (kind !== 'folder' && kind !== 'file')) {
+    return null;
+  }
+
+  return {
+    id,
+    name,
+    mimeType,
+    kind,
+    size: normalizeOptionalString(raw.size),
+    modifiedTime: normalizeOptionalString(raw.modifiedTime),
+    webViewLink: normalizeOptionalString(raw.webViewLink),
+    canPreview: Boolean(raw.canPreview),
+    canDownload: Boolean(raw.canDownload),
+  };
+}
+
+function normalizeInternalDriveProject(value: unknown): InternalDriveProject | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return null;
+  }
+
+  const raw = value as Record<string, unknown>;
+  const id = Number(raw.id);
+  const name = normalizeString(raw.name);
+  const driveFolderId = normalizeString(raw.driveFolderId);
+  if (!Number.isInteger(id) || id <= 0 || !name || !driveFolderId) {
+    return null;
+  }
+
+  return {
+    id,
+    name,
+    driveFolderId,
+    description: normalizeOptionalString(raw.description),
+    isActive: Boolean(raw.isActive),
+    canView: Boolean(raw.canView),
+    canDownload: Boolean(raw.canDownload),
+    createdAt: normalizeString(raw.createdAt),
+    updatedAt: normalizeString(raw.updatedAt),
+  };
+}
+
+function normalizeInternalDriveProjectMember(value: unknown): InternalDriveProjectMember | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return null;
+  }
+
+  const raw = value as Record<string, unknown>;
+  const id = Number(raw.id);
+  const projectId = Number(raw.projectId);
+  const userId = Number(raw.userId);
+  const userEmail = normalizeString(raw.userEmail);
+  const userFullName = normalizeString(raw.userFullName);
+  if (
+    !Number.isInteger(id) ||
+    id <= 0 ||
+    !Number.isInteger(projectId) ||
+    projectId <= 0 ||
+    !Number.isInteger(userId) ||
+    userId <= 0 ||
+    !userEmail ||
+    !userFullName
+  ) {
+    return null;
+  }
+
+  return {
+    id,
+    projectId,
+    userId,
+    userEmail,
+    userFullName,
+    canView: Boolean(raw.canView),
+    canDownload: Boolean(raw.canDownload),
+    createdAt: normalizeString(raw.createdAt),
+    updatedAt: normalizeString(raw.updatedAt),
+  };
+}
+
+function normalizeInternalDriveProjectAdmin(value: unknown): InternalDriveProjectAdmin | null {
+  const project = normalizeInternalDriveProject(value);
+  if (!project || !value || typeof value !== 'object' || Array.isArray(value)) {
+    return null;
+  }
+
+  const raw = value as Record<string, unknown>;
+  const members = Array.isArray(raw.members)
+    ? raw.members
+        .map((member) => normalizeInternalDriveProjectMember(member))
+        .filter((member): member is InternalDriveProjectMember => Boolean(member))
+    : [];
+
+  return {
+    ...project,
+    members,
+  };
+}
+
+function normalizeStringMatrix(value: unknown): string[][] {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value
+    .filter((row): row is unknown[] => Array.isArray(row))
+    .map((row) => row.map((cell) => normalizeString(cell)));
+}
+
+function normalizeInternalDriveTablePreview(value: unknown): InternalDriveTablePreview | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return null;
+  }
+
+  const raw = value as Record<string, unknown>;
+  const fileId = normalizeString(raw.fileId);
+  const filename = normalizeString(raw.filename);
+  const mimeType = normalizeString(raw.mimeType);
+  const sheetName = normalizeString(raw.sheetName);
+  if (!fileId || !filename || !mimeType || !sheetName) {
+    return null;
+  }
+
+  return {
+    fileId,
+    filename,
+    mimeType,
+    sheetName,
+    sheetNames: normalizeStringArray(raw.sheetNames),
+    rows: normalizeStringMatrix(raw.rows),
+    truncated: Boolean(raw.truncated),
+    maxRows: Number(raw.maxRows) || 0,
+    maxColumns: Number(raw.maxColumns) || 0,
+  };
 }
 
 function normalizeInternalCustomer(value: unknown): InternalCustomer | null {
@@ -1237,8 +1491,63 @@ function normalizeInternalAttendanceLog(value: unknown): InternalAttendanceLog |
       workMinutes != null && Number.isFinite(workMinutes) && workMinutes >= 0
         ? Math.floor(workMinutes)
         : null,
+    workPhotos: Array.isArray(raw.workPhotos)
+      ? raw.workPhotos
+          .map((item) => normalizeInternalAttendanceWorkPhoto(item))
+          .filter((item): item is InternalAttendanceWorkPhoto => Boolean(item))
+      : [],
     createdAt: normalizeString(raw.createdAt),
     updatedAt: normalizeString(raw.updatedAt),
+  };
+}
+
+function normalizeInternalAttendanceWorkPhoto(value: unknown): InternalAttendanceWorkPhoto | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return null;
+  }
+
+  const raw = value as Record<string, unknown>;
+  const id = Number(raw.id);
+  const userId = Number(raw.userId);
+  const userEmail = normalizeString(raw.userEmail).toLowerCase();
+  const userFullName = normalizeString(raw.userFullName);
+  const attendanceDate = normalizeString(raw.attendanceDate);
+  const driveFileId = normalizeString(raw.driveFileId);
+  const driveParentId = normalizeString(raw.driveParentId);
+  const fileName = normalizeString(raw.fileName);
+  const mimeType = normalizeString(raw.mimeType);
+  const fileSize = raw.fileSize == null ? null : Number(raw.fileSize);
+
+  if (
+    !Number.isInteger(id) ||
+    id <= 0 ||
+    !Number.isInteger(userId) ||
+    userId <= 0 ||
+    !userEmail ||
+    !userFullName ||
+    !attendanceDate ||
+    !driveFileId ||
+    !driveParentId ||
+    !fileName ||
+    !mimeType
+  ) {
+    return null;
+  }
+
+  return {
+    id,
+    userId,
+    userEmail,
+    userFullName,
+    attendanceDate,
+    driveFileId,
+    driveParentId,
+    driveWebViewLink: normalizeOptionalString(raw.driveWebViewLink),
+    fileName,
+    originalFileName: normalizeOptionalString(raw.originalFileName),
+    mimeType,
+    fileSize: fileSize != null && Number.isFinite(fileSize) ? Math.max(0, Math.floor(fileSize)) : null,
+    uploadedAt: normalizeString(raw.uploadedAt),
   };
 }
 
@@ -2289,12 +2598,18 @@ interface ListAttendanceResponse {
   logs: unknown[];
   todayDate?: string;
   todayLog?: unknown | null;
+  todayWorkPhotos?: unknown[];
   canManage?: boolean;
 }
 
 interface SaveAttendanceResponse {
   ok: boolean;
   log: unknown;
+}
+
+interface UploadAttendanceWorkPhotosResponse {
+  ok: boolean;
+  photos: unknown[];
 }
 
 interface GetDashboardSummaryResponse {
@@ -2372,6 +2687,7 @@ export interface InternalAttendanceListResult {
   logs: InternalAttendanceLog[];
   todayDate: string;
   todayLog: InternalAttendanceLog | null;
+  todayWorkPhotos: InternalAttendanceWorkPhoto[];
   canManage: boolean;
 }
 
@@ -2463,6 +2779,255 @@ export async function listInternalOrderDataItems(
   return payload.items
     .map((item) => normalizeInternalOrderDataItem(item))
     .filter((item): item is InternalOrderDataItem => Boolean(item));
+}
+
+interface DrivePortalListingResponse {
+  ok: boolean;
+  project?: unknown;
+  folder: unknown;
+  items: unknown[];
+}
+
+interface DriveProjectsResponse {
+  ok: boolean;
+  projects: unknown[];
+}
+
+interface DriveProjectResponse {
+  ok: boolean;
+  project: unknown;
+}
+
+interface DriveProjectMemberResponse {
+  ok: boolean;
+  member: unknown;
+}
+
+interface SaveDriveProjectPayload {
+  name?: string;
+  driveFolderId?: string;
+  driveFolderUrl?: string;
+  description?: string | null;
+  isActive?: boolean;
+}
+
+interface SaveDriveProjectMemberPayload {
+  userId: number;
+  canView?: boolean;
+  canDownload?: boolean;
+}
+
+export async function listInternalDriveProjects(): Promise<InternalDriveProject[]> {
+  const payload = await requestInternal<DriveProjectsResponse>('/drive/projects');
+  if (!payload.ok || !Array.isArray(payload.projects)) {
+    return [];
+  }
+
+  return payload.projects
+    .map((project) => normalizeInternalDriveProject(project))
+    .filter((project): project is InternalDriveProject => Boolean(project));
+}
+
+export async function listInternalDriveProjectsForAdmin(): Promise<InternalDriveProjectAdmin[]> {
+  const payload = await requestInternal<DriveProjectsResponse>('/drive-projects');
+  if (!payload.ok || !Array.isArray(payload.projects)) {
+    return [];
+  }
+
+  return payload.projects
+    .map((project) => normalizeInternalDriveProjectAdmin(project))
+    .filter((project): project is InternalDriveProjectAdmin => Boolean(project));
+}
+
+export async function createInternalDriveProject(
+  payload: SaveDriveProjectPayload,
+): Promise<InternalDriveProject> {
+  const data = await requestInternal<DriveProjectResponse>('/drive-projects', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const project = normalizeInternalDriveProject(data.project);
+  if (!data.ok || !project) {
+    throw new Error('Không thể lưu dự án Drive.');
+  }
+
+  return project;
+}
+
+export async function updateInternalDriveProject(
+  projectId: number,
+  payload: SaveDriveProjectPayload,
+): Promise<InternalDriveProject> {
+  const data = await requestInternal<DriveProjectResponse>(`/drive-projects/${projectId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const project = normalizeInternalDriveProject(data.project);
+  if (!data.ok || !project) {
+    throw new Error('Không thể cập nhật dự án Drive.');
+  }
+
+  return project;
+}
+
+export async function deleteInternalDriveProject(projectId: number): Promise<void> {
+  const data = await requestInternal<{ ok: boolean }>(`/drive-projects/${projectId}`, {
+    method: 'DELETE',
+  });
+
+  if (!data.ok) {
+    throw new Error('Không thể xóa dự án Drive.');
+  }
+}
+
+export async function grantInternalDriveProjectMember(
+  projectId: number,
+  payload: SaveDriveProjectMemberPayload,
+): Promise<InternalDriveProjectMember> {
+  const data = await requestInternal<DriveProjectMemberResponse>(
+    `/drive-projects/${projectId}/members`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    },
+  );
+
+  const member = normalizeInternalDriveProjectMember(data.member);
+  if (!data.ok || !member) {
+    throw new Error('Không thể cấp quyền dự án Drive.');
+  }
+
+  return member;
+}
+
+export async function revokeInternalDriveProjectMember(
+  projectId: number,
+  userId: number,
+): Promise<void> {
+  const data = await requestInternal<{ ok: boolean }>(
+    `/drive-projects/${projectId}/members/${userId}`,
+    {
+      method: 'DELETE',
+    },
+  );
+
+  if (!data.ok) {
+    throw new Error('Không thể thu hồi quyền dự án Drive.');
+  }
+}
+
+export async function getInternalDrivePortalFolder(
+  projectId: number,
+  folderId?: string | null,
+): Promise<InternalDrivePortalListing> {
+  const searchParams = new URLSearchParams();
+  searchParams.set('project_id', String(projectId));
+  if (folderId?.trim()) {
+    searchParams.set('folder_id', folderId.trim());
+  }
+
+  const query = searchParams.toString();
+  const payload = await requestInternal<DrivePortalListingResponse>(
+    `/drive/folder${query ? `?${query}` : ''}`,
+  );
+  const folder = normalizeInternalDrivePortalFolder(payload.folder);
+  const items = Array.isArray(payload.items)
+    ? payload.items
+        .map((item) => normalizeInternalDrivePortalItem(item))
+        .filter((item): item is InternalDrivePortalItem => Boolean(item))
+    : [];
+
+  if (!payload.ok || !folder) {
+    throw new Error('Không thể tải dữ liệu Drive.');
+  }
+
+  return { folder, items };
+}
+
+export async function getInternalReportDriveFolder(
+  folderId?: string | null,
+): Promise<InternalDrivePortalListing> {
+  const searchParams = new URLSearchParams();
+  if (folderId?.trim()) {
+    searchParams.set('folder_id', folderId.trim());
+  }
+
+  const query = searchParams.toString();
+  const payload = await requestInternal<DrivePortalListingResponse>(
+    `/report-drive/folder${query ? `?${query}` : ''}`,
+  );
+  const folder = normalizeInternalDrivePortalFolder(payload.folder);
+  const items = Array.isArray(payload.items)
+    ? payload.items
+        .map((item) => normalizeInternalDrivePortalItem(item))
+        .filter((item): item is InternalDrivePortalItem => Boolean(item))
+    : [];
+
+  if (!payload.ok || !folder) {
+    throw new Error('Không thể tải dữ liệu báo cáo.');
+  }
+
+  return { folder, items };
+}
+
+interface DriveTablePreviewResponse {
+  ok: boolean;
+  preview: unknown;
+}
+
+export async function getInternalDriveTablePreview(
+  projectId: number,
+  fileId: string,
+  sheetName?: string | null,
+): Promise<InternalDriveTablePreview> {
+  const searchParams = new URLSearchParams();
+  searchParams.set('project_id', String(projectId));
+  if (sheetName?.trim()) {
+    searchParams.set('sheet', sheetName.trim());
+  }
+
+  const query = searchParams.toString();
+  const payload = await requestInternal<DriveTablePreviewResponse>(
+    `/drive/files/${encodeURIComponent(fileId)}/table-preview${query ? `?${query}` : ''}`,
+  );
+  const preview = normalizeInternalDriveTablePreview(payload.preview);
+  if (!payload.ok || !preview) {
+    throw new Error('Không thể xem trước bảng tính.');
+  }
+
+  return preview;
+}
+
+export async function getInternalReportDriveTablePreview(
+  fileId: string,
+  sheetName?: string | null,
+): Promise<InternalDriveTablePreview> {
+  const searchParams = new URLSearchParams();
+  if (sheetName?.trim()) {
+    searchParams.set('sheet', sheetName.trim());
+  }
+
+  const query = searchParams.toString();
+  const payload = await requestInternal<DriveTablePreviewResponse>(
+    `/report-drive/files/${encodeURIComponent(fileId)}/table-preview${query ? `?${query}` : ''}`,
+  );
+  const preview = normalizeInternalDriveTablePreview(payload.preview);
+  if (!payload.ok || !preview) {
+    throw new Error('Không thể xem trước bảng tính báo cáo.');
+  }
+
+  return preview;
 }
 
 export async function createInternalOrderDataItem(
@@ -2866,11 +3431,17 @@ export async function listInternalAttendanceLogs(
         .filter((item): item is InternalAttendanceLog => Boolean(item))
     : [];
   const todayLog = normalizeInternalAttendanceLog(payload.todayLog ?? null);
+  const todayWorkPhotos = Array.isArray(payload.todayWorkPhotos)
+    ? payload.todayWorkPhotos
+        .map((item) => normalizeInternalAttendanceWorkPhoto(item))
+        .filter((item): item is InternalAttendanceWorkPhoto => Boolean(item))
+    : [];
 
   return {
     logs,
     todayDate: normalizeString(payload.todayDate),
     todayLog,
+    todayWorkPhotos,
     canManage: Boolean(payload.canManage),
   };
 }
@@ -2920,6 +3491,32 @@ export async function checkOutInternalAttendance(
   return log;
 }
 
+export async function uploadInternalAttendanceWorkPhotos(
+  files: File[] | FileList,
+): Promise<InternalAttendanceWorkPhoto[]> {
+  const fileList = Array.from(files);
+  const formData = new FormData();
+  for (const file of fileList) {
+    formData.append('photos', file);
+  }
+
+  const data = await requestInternal<UploadAttendanceWorkPhotosResponse>(
+    '/attendance/work-photos',
+    {
+      method: 'POST',
+      body: formData,
+    },
+  );
+
+  if (!data.ok || !Array.isArray(data.photos)) {
+    throw new Error('Không thể tải ảnh công việc lên.');
+  }
+
+  return data.photos
+    .map((item) => normalizeInternalAttendanceWorkPhoto(item))
+    .filter((item): item is InternalAttendanceWorkPhoto => Boolean(item));
+}
+
 interface ListAuditLogsParams {
   perPage?: number;
   action?: string;
@@ -2967,6 +3564,34 @@ export function getInternalOrderDataDownloadUrl(itemId: number): string {
 
 export function getInternalOrderDataExportUrl(itemId: number): string {
   return `${INTERNAL_API_BASE}/order-data-items/${itemId}/export`;
+}
+
+export function getInternalDriveFileContentUrl(
+  projectId: number,
+  fileId: string,
+  download = false,
+): string {
+  const searchParams = new URLSearchParams();
+  searchParams.set('project_id', String(projectId));
+  if (download) {
+    searchParams.set('download', '1');
+  }
+  const query = searchParams.toString();
+  return `${INTERNAL_API_BASE}/drive/files/${encodeURIComponent(fileId)}/content?${query}`;
+}
+
+export function getInternalReportDriveFileContentUrl(
+  fileId: string,
+  download = false,
+): string {
+  const searchParams = new URLSearchParams();
+  if (download) {
+    searchParams.set('download', '1');
+  }
+  const query = searchParams.toString();
+  return `${INTERNAL_API_BASE}/report-drive/files/${encodeURIComponent(fileId)}/content${
+    query ? `?${query}` : ''
+  }`;
 }
 
 export function isAdminManager(user: AuthUser | null): boolean {

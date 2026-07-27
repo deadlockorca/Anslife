@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAuthActor, getRequestIp } from '../../../../../lib/auth/actor';
 import { can } from '../../../../../lib/auth/authorization';
+import { sendAttendanceNotificationEmail } from '../../../../../lib/email/attendanceNotification';
 import { writeAuditLog } from '../../../../../lib/repositories/auditRepository';
 import { checkInAttendance } from '../../../../../lib/repositories/attendanceRepository';
 import { saveAttendancePhoto } from '../../../../../lib/storage/attendancePhoto';
@@ -182,18 +183,36 @@ export async function POST(request: NextRequest) {
       note: body.note ?? null,
     });
 
-    await writeAuditLog({
-      actorUserId: actor.userId,
-      action: 'check_in',
-      resource: 'attendance',
-      resourceId: String(log.id),
-      after: {
-        attendanceDate: log.attendanceDate,
-        checkInAt: log.checkInAt,
-      },
-      ipAddress: getRequestIp(request),
-      userAgent: request.headers.get('user-agent'),
-    });
+    try {
+      await sendAttendanceNotificationEmail({
+        actor,
+        action: 'check_in',
+        attendanceDate: todayDate,
+        log,
+        ipAddress: getRequestIp(request),
+        userAgent: request.headers.get('user-agent'),
+        origin: request.nextUrl.origin,
+      });
+    } catch (emailError) {
+      console.error('[API][internal][attendance/check-in][EMAIL] Failed:', emailError);
+    }
+
+    try {
+      await writeAuditLog({
+        actorUserId: actor.userId,
+        action: 'check_in',
+        resource: 'attendance',
+        resourceId: String(log.id),
+        after: {
+          attendanceDate: log.attendanceDate,
+          checkInAt: log.checkInAt,
+        },
+        ipAddress: getRequestIp(request),
+        userAgent: request.headers.get('user-agent'),
+      });
+    } catch (auditError) {
+      console.error('[API][internal][attendance/check-in][AUDIT] Failed:', auditError);
+    }
 
     return NextResponse.json({ ok: true, log }, { status: 201 });
   } catch (error) {

@@ -21,26 +21,15 @@ const NewsDetailPage = lazy(() => import('./views/NewsDetailPage'));
 const ContactPage = lazy(() => import('./views/ContactPage'));
 const RecruitmentPage = lazy(() => import('./views/RecruitmentPage'));
 const SearchPage = lazy(() => import('./views/SearchPage'));
+const DrivePortalPage = lazy(() => import('./views/DrivePortalPage'));
 const AdminLoginPage = lazy(() => import('./views/AdminLoginPage'));
 const AdminDashboardPage = lazy(() => import('./views/AdminDashboardPage'));
-const AdminProductsPage = lazy(() => import('./views/AdminProductsPage'));
 const AdminUsersPage = lazy(() => import('./views/AdminUsersPage'));
-const AdminCustomersPage = lazy(() => import('./views/AdminCustomersPage'));
-const AdminFactoriesPage = lazy(() => import('./views/AdminFactoriesPage'));
-const AdminOrdersPage = lazy(() => import('./views/AdminOrdersPage'));
-const AdminDataUploadPage = lazy(() => import('./views/AdminDataUploadPage'));
-const AdminDataReviewPage = lazy(() => import('./views/AdminDataReviewPage'));
-const AdminQcPortalPage = lazy(() => import('./views/AdminQcPortalPage'));
-const AdminCapaPortalPage = lazy(() => import('./views/AdminCapaPortalPage'));
-const AdminFactorySurveysPage = lazy(() => import('./views/AdminFactorySurveysPage'));
-const AdminSupplierPortalPage = lazy(() => import('./views/AdminSupplierPortalPage'));
-const AdminSalesDataPage = lazy(() => import('./views/AdminSalesDataPage'));
-const AdminBuyerPortalPage = lazy(() => import('./views/AdminBuyerPortalPage'));
 const AdminAuditLogsPage = lazy(() => import('./views/AdminAuditLogsPage'));
 const AdminAttendancePage = lazy(() => import('./views/AdminAttendancePage'));
-const AdminLogisticsPage = lazy(() => import('./views/AdminLogisticsPage'));
-const AdminWorkLogsPage = lazy(() => import('./views/AdminWorkLogsPage'));
 const AdminRecruitmentPage = lazy(() => import('./views/AdminRecruitmentPage'));
+const AdminDriveProjectsPage = lazy(() => import('./views/AdminDriveProjectsPage'));
+const AdminReportDrivePage = lazy(() => import('./views/AdminReportDrivePage'));
 const NotFoundPage = lazy(() => import('./views/NotFoundPage'));
 
 function trimLeadingSlash(path: string): string {
@@ -197,31 +186,17 @@ export default function App() {
             <Route path="news/:slug" element={<NewsDetailPage />} />
             <Route path="search" element={<SearchPage />} />
             <Route path="recruitment" element={<RecruitmentPage />} />
+            <Route path="portal/drive" element={<DrivePortalPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="contact/:section" element={<ContactPage />} />
             <Route path="admin/login" element={<AdminLoginPage />} />
             <Route path="admin/dashboard" element={<AdminDashboardPage />} />
-            <Route path="admin/products" element={<AdminProductsPage />} />
             <Route path="admin/users" element={<AdminUsersPage />} />
-            <Route path="admin/customers" element={<AdminCustomersPage />} />
-            <Route path="admin/factories" element={<AdminFactoriesPage />} />
-            <Route path="admin/orders" element={<AdminOrdersPage />} />
-            <Route path="admin/data-upload" element={<AdminDataUploadPage />} />
-            <Route path="admin/data-review" element={<AdminDataReviewPage />} />
-            <Route path="admin/qc-portal" element={<AdminQcPortalPage />} />
-            <Route path="admin/capa-portal" element={<AdminCapaPortalPage />} />
-            <Route
-              path="admin/factory-surveys"
-              element={<AdminFactorySurveysPage />}
-            />
-            <Route path="admin/supplier-portal" element={<AdminSupplierPortalPage />} />
-            <Route path="admin/sales-data" element={<AdminSalesDataPage />} />
-            <Route path="admin/buyer-portal" element={<AdminBuyerPortalPage />} />
             <Route path="admin/audit-logs" element={<AdminAuditLogsPage />} />
             <Route path="admin/attendance" element={<AdminAttendancePage />} />
-            <Route path="admin/logistics" element={<AdminLogisticsPage />} />
-            <Route path="admin/work-logs" element={<AdminWorkLogsPage />} />
+            <Route path="admin/report-data" element={<AdminReportDrivePage />} />
             <Route path="admin/recruitment" element={<AdminRecruitmentPage />} />
+            <Route path="admin/drive-projects" element={<AdminDriveProjectsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         ))}

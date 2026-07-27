@@ -1,8 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAuthActor, getRequestIp } from '../../../../../lib/auth/actor';
 import { can } from '../../../../../lib/auth/authorization';
+import { sendAttendanceNotificationEmail } from '../../../../../lib/email/attendanceNotification';
 import { writeAuditLog } from '../../../../../lib/repositories/auditRepository';
 import { checkOutAttendance } from '../../../../../lib/repositories/attendanceRepository';
+import { listAttendanceWorkPhotos } from '../../../../../lib/repositories/attendanceWorkPhotoRepository';
 import { saveAttendancePhoto } from '../../../../../lib/storage/attendancePhoto';
 
 export const dynamic = 'force-dynamic';
@@ -140,6 +142,22 @@ export async function POST(request: NextRequest) {
     }
 
     const todayDate = getTodayDateInVietnam();
+    const workPhotos = await listAttendanceWorkPhotos({
+      userId: actor.userId,
+      fromDate: todayDate,
+      toDate: todayDate,
+      limit: 1,
+    });
+    if (workPhotos.length === 0) {
+      return NextResponse.json(
+        {
+          ok: false,
+          code: 'work_photos_required',
+          message: 'Bạn cần tải ảnh công việc trong ngày lên Drive trước khi check-out.',
+        },
+        { status: 400 },
+      );
+    }
 
     let photoUrl: string;
     try {
@@ -182,18 +200,36 @@ export async function POST(request: NextRequest) {
       note: body.note ?? null,
     });
 
-    await writeAuditLog({
-      actorUserId: actor.userId,
-      action: 'check_out',
-      resource: 'attendance',
-      resourceId: String(log.id),
-      after: {
-        attendanceDate: log.attendanceDate,
-        checkOutAt: log.checkOutAt,
-      },
-      ipAddress: getRequestIp(request),
-      userAgent: request.headers.get('user-agent'),
-    });
+    try {
+      await sendAttendanceNotificationEmail({
+        actor,
+        action: 'check_out',
+        attendanceDate: todayDate,
+        log,
+        ipAddress: getRequestIp(request),
+        userAgent: request.headers.get('user-agent'),
+        origin: request.nextUrl.origin,
+      });
+    } catch (emailError) {
+      console.error('[API][internal][attendance/check-out][EMAIL] Failed:', emailError);
+    }
+
+    try {
+      await writeAuditLog({
+        actorUserId: actor.userId,
+        action: 'check_out',
+        resource: 'attendance',
+        resourceId: String(log.id),
+        after: {
+          attendanceDate: log.attendanceDate,
+          checkOutAt: log.checkOutAt,
+        },
+        ipAddress: getRequestIp(request),
+        userAgent: request.headers.get('user-agent'),
+      });
+    } catch (auditError) {
+      console.error('[API][internal][attendance/check-out][AUDIT] Failed:', auditError);
+    }
 
     return NextResponse.json({ ok: true, log });
   } catch (error) {

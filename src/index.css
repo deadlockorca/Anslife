@@ -11,6 +11,432 @@
   font-display: swap;
 }
 
+.drive-portal-page {
+  background: #f4f1ea;
+  color: #25282a;
+  min-height: 100vh;
+  padding: 32px 24px 56px;
+}
+
+.drive-portal-shell {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.drive-portal-header {
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(47, 43, 38, 0.16);
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+}
+
+.drive-portal-eyebrow {
+  color: #775f48;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+}
+
+.drive-portal-header h1 {
+  font-family: 'Spectral', serif;
+  font-size: 2.25rem;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.drive-portal-header p {
+  color: #55504a;
+  font-size: 1rem;
+  margin: 8px 0 0;
+  max-width: 620px;
+}
+
+.drive-portal-user {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  min-width: 260px;
+}
+
+.drive-portal-user span {
+  color: #3f3b36;
+  font-weight: 700;
+}
+
+.drive-portal-user button,
+.drive-portal-toolbar button,
+.drive-portal-download-link {
+  background: #fffaf2;
+  border: 1px solid rgba(62, 55, 47, 0.22);
+  color: #25282a;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+.drive-portal-user button:hover,
+.drive-portal-toolbar button:hover,
+.drive-portal-download-link:hover {
+  border-color: #25282a;
+}
+
+.drive-portal-toolbar {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.drive-portal-breadcrumbs {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.drive-portal-breadcrumbs button {
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+
+.drive-portal-breadcrumbs button:disabled {
+  background: #4f3a2a;
+  border-color: #4f3a2a;
+  color: #fff;
+  cursor: default;
+}
+
+.drive-portal-layout {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+}
+
+.drive-portal-file-panel,
+.drive-portal-preview-panel {
+  background: #fffdf8;
+  border: 1px solid rgba(62, 55, 47, 0.18);
+  min-height: 640px;
+}
+
+.drive-portal-panel-heading,
+.drive-portal-preview-heading {
+  align-items: center;
+  border-bottom: 1px solid rgba(62, 55, 47, 0.14);
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 16px 18px;
+}
+
+.drive-portal-panel-heading h2,
+.drive-portal-preview-heading h2 {
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.drive-portal-panel-heading span {
+  color: #6b645c;
+  font-weight: 700;
+}
+
+.drive-portal-file-list {
+  display: grid;
+}
+
+.drive-portal-file-row {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(62, 55, 47, 0.1);
+  color: inherit;
+  cursor: pointer;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 52px minmax(0, 1fr) 90px 120px;
+  padding: 14px 18px;
+  text-align: left;
+}
+
+.drive-portal-file-row:hover,
+.drive-portal-file-row.is-selected {
+  background: #f5eee3;
+}
+
+.drive-portal-file-badge {
+  align-items: center;
+  border: 1px solid rgba(62, 55, 47, 0.22);
+  color: #4f3a2a;
+  display: inline-flex;
+  font-size: 0.74rem;
+  font-weight: 800;
+  height: 34px;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  min-width: 42px;
+  padding: 0 8px;
+}
+
+.drive-portal-file-badge.is-folder {
+  background: #ead8bf;
+}
+
+.drive-portal-file-badge.is-file {
+  background: #f9f4eb;
+}
+
+.drive-portal-file-main {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.drive-portal-file-main strong {
+  overflow-wrap: anywhere;
+}
+
+.drive-portal-file-main small,
+.drive-portal-file-row > span:nth-last-child(-n + 2) {
+  color: #6b645c;
+  font-size: 0.9rem;
+}
+
+.drive-portal-empty,
+.drive-portal-preview-empty {
+  color: #5f5750;
+  margin: 0;
+  padding: 24px;
+}
+
+.drive-portal-projects {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 16px;
+}
+
+.drive-portal-projects button {
+  background: #fffdf8;
+  border: 1px solid rgba(62, 55, 47, 0.18);
+  color: #25282a;
+  cursor: pointer;
+  display: grid;
+  gap: 4px;
+  min-height: 72px;
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.drive-portal-projects button:hover,
+.drive-portal-projects button.is-active {
+  background: #4f3a2a;
+  border-color: #4f3a2a;
+  color: #fff;
+}
+
+.drive-portal-projects strong {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.drive-portal-projects small {
+  color: inherit;
+  line-height: 1.35;
+  opacity: 0.8;
+}
+
+.drive-portal-preview-heading > div {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  min-width: 0;
+}
+
+.drive-portal-preview-heading h2 {
+  overflow-wrap: anywhere;
+}
+
+.drive-portal-preview-frame {
+  background: #f4f1ea;
+  height: 580px;
+  margin: 18px;
+  overflow: hidden;
+}
+
+.drive-portal-preview-frame iframe,
+.drive-portal-preview-frame img {
+  border: 0;
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.drive-portal-table-preview {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.drive-portal-table-toolbar {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.drive-portal-table-toolbar > div {
+  display: grid;
+  gap: 3px;
+}
+
+.drive-portal-table-toolbar strong {
+  font-size: 0.98rem;
+}
+
+.drive-portal-table-toolbar small {
+  color: #6b645c;
+}
+
+.drive-portal-table-toolbar select {
+  background: #fffaf2;
+  border: 1px solid rgba(62, 55, 47, 0.24);
+  color: #25282a;
+  font: inherit;
+  min-width: 180px;
+  padding: 9px 12px;
+}
+
+.drive-portal-table-scroll {
+  border: 1px solid rgba(62, 55, 47, 0.16);
+  max-height: 540px;
+  overflow: auto;
+}
+
+.drive-portal-table-scroll table {
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  min-width: 100%;
+}
+
+.drive-portal-table-scroll th,
+.drive-portal-table-scroll td {
+  border-bottom: 1px solid rgba(62, 55, 47, 0.12);
+  border-right: 1px solid rgba(62, 55, 47, 0.1);
+  max-width: 360px;
+  min-width: 120px;
+  overflow-wrap: anywhere;
+  padding: 9px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.drive-portal-table-scroll th {
+  background: #ead8bf;
+  font-weight: 800;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.drive-portal-table-scroll tr:nth-child(even) td {
+  background: #fffaf2;
+}
+
+.drive-portal-preview-empty {
+  align-items: center;
+  display: grid;
+  justify-items: center;
+  min-height: 360px;
+  text-align: center;
+}
+
+.drive-portal-preview-empty a {
+  color: #25282a;
+  font-weight: 800;
+}
+
+@media (max-width: 960px) {
+  .drive-portal-page {
+    padding: 20px 12px 40px;
+  }
+
+  .drive-portal-header,
+  .drive-portal-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .drive-portal-user {
+    justify-content: space-between;
+    min-width: 0;
+  }
+
+  .drive-portal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .drive-portal-file-panel,
+  .drive-portal-preview-panel {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .drive-portal-header h1 {
+    font-size: 1.55rem;
+  }
+
+  .drive-portal-header p {
+    font-size: 0.92rem;
+  }
+
+  .drive-portal-file-row {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+
+  .drive-portal-file-row > span:nth-last-child(-n + 2) {
+    display: none;
+  }
+
+  .drive-portal-preview-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .drive-portal-preview-frame {
+    height: 420px;
+    margin: 12px;
+  }
+
+  .drive-portal-table-preview {
+    padding: 12px;
+  }
+
+  .drive-portal-table-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .drive-portal-table-toolbar select {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .drive-portal-projects {
+    grid-template-columns: 1fr;
+  }
+}
+
 @font-face {
   font-family: 'Lyon Text Web';
   src:
@@ -945,6 +1371,14 @@ ul {
   background: rgba(68, 96, 132, 0.08);
 }
 
+.header-auth-actions {
+  grid-area: login;
+  align-items: center;
+  display: inline-flex;
+  gap: 0.55rem;
+  justify-content: flex-end;
+}
+
 .header-login-button {
   grid-area: login;
   text-decoration: none;
@@ -965,10 +1399,26 @@ ul {
   transition: all 0.2s ease;
 }
 
+.header-auth-actions .header-login-button {
+  grid-area: auto;
+}
+
+.header-login-button-secondary {
+  background: #fffaf2;
+  border-color: rgba(47, 71, 101, 0.32);
+  box-shadow: none;
+  color: #2f4765;
+}
+
 .header-login-button:hover {
   transform: translateY(-1px);
   background: linear-gradient(160deg, #355174 0%, #273f5d 100%);
   box-shadow: 0 10px 20px rgba(36, 54, 78, 0.3);
+}
+
+.header-login-button-secondary:hover {
+  background: #f0e6d8;
+  box-shadow: 0 8px 16px rgba(46, 37, 28, 0.12);
 }
 
 .submenu {
@@ -1765,6 +2215,12 @@ ul {
   border-radius: 12px;
   border: 1px solid #ded4c8;
   background: #e7ded3;
+}
+
+.mobile-menu-login-row-secondary {
+  background: #fffaf2;
+  border-color: #c9d3df;
+  color: #2f4765;
 }
 
 .mobile-menu-utility {
@@ -53660,6 +54116,25 @@ img.supply-hub-weekly-cta-image-placeholder {
   gap: 0.45rem;
 }
 
+.attendance-report-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.attendance-report-grid .attendance-clock-card,
+.attendance-report-grid .attendance-work-photo-card {
+  margin-top: 0;
+}
+
+.attendance-report-grid .attendance-clock-card,
+.attendance-report-grid .attendance-work-photo-head,
+.attendance-report-grid .attendance-work-photo-list {
+  grid-template-columns: 1fr;
+}
+
 .attendance-clock-card {
   margin-top: 1rem;
   display: grid;
@@ -53797,6 +54272,114 @@ img.supply-hub-weekly-cta-image-placeholder {
   object-fit: cover;
 }
 
+.attendance-work-photo-card {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.attendance-work-photo-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
+  gap: 0.8rem;
+  align-items: start;
+}
+
+.attendance-work-photo-head h2 {
+  margin: 0 0 0.35rem;
+}
+
+.attendance-work-photo-actions {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.attendance-work-photo-actions input {
+  border-radius: 10px;
+  border: 1px dashed rgba(68, 96, 132, 0.34);
+  background: #fbfaf7;
+  padding: 0.58rem;
+}
+
+.attendance-work-photo-selected {
+  border: 1px solid rgba(68, 96, 132, 0.14);
+  border-radius: 12px;
+  background: #fbfaf7;
+  padding: 0.7rem;
+}
+
+.attendance-work-photo-selected strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #2b425e;
+}
+
+.attendance-work-photo-selected ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #4f6177;
+  font-size: 0.88rem;
+}
+
+.attendance-work-photo-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.attendance-work-photo-item {
+  display: grid;
+  gap: 0.24rem;
+  border: 1px solid rgba(68, 96, 132, 0.16);
+  border-radius: 12px;
+  background: #fff;
+  color: #293f58;
+  padding: 0.68rem;
+  text-decoration: none;
+}
+
+.attendance-work-photo-item:hover {
+  border-color: rgba(68, 96, 132, 0.34);
+  background: #f8fbff;
+}
+
+.attendance-work-photo-item span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.attendance-work-photo-item small {
+  color: #68798d;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 900px) {
+  .attendance-report-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.attendance-work-photo-table-list {
+  display: grid;
+  gap: 0.18rem;
+  min-width: 140px;
+}
+
+.attendance-work-photo-table-list a {
+  overflow: hidden;
+  color: #2f557c;
+  font-size: 0.82rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.attendance-work-photo-table-list span {
+  color: #68798d;
+  font-size: 0.82rem;
+}
+
 .admin-assignment-list {
   display: grid;
   gap: 0.45rem;
@@ -53810,7 +54393,7 @@ img.supply-hub-weekly-cta-image-placeholder {
 }
 
 .admin-orders-table {
-  min-width: 1120px;
+  min-width: 1240px;
 }
 
 .admin-sales-detail {
@@ -53898,7 +54481,7 @@ img.supply-hub-weekly-cta-image-placeholder {
 
 .admin-scope-builder-row {
   display: grid;
-  grid-template-columns: minmax(140px, 0.85fr) minmax(0, 1fr) auto;
+  grid-template-columns: minmax(180px, 1fr) auto;
   gap: 0.46rem;
   align-items: center;
 }
@@ -54271,6 +54854,71 @@ img.supply-hub-weekly-cta-image-placeholder {
   gap: 0.45rem;
 }
 
+.admin-drive-project-layout {
+  align-items: start;
+}
+
+.admin-drive-project-list-card {
+  min-width: 0;
+}
+
+.admin-drive-project-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.admin-drive-project-card {
+  border: 1px solid rgba(62, 55, 47, 0.16);
+  background: #fffdf8;
+  padding: 1rem;
+}
+
+.admin-drive-project-head {
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(62, 55, 47, 0.12);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+}
+
+.admin-drive-project-head h3 {
+  font-size: 1.08rem;
+  margin: 0 0 0.25rem;
+}
+
+.admin-drive-project-head p {
+  color: #5f6874;
+  margin: 0 0 0.3rem;
+}
+
+.admin-drive-project-head small {
+  color: #6b7280;
+  display: block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  overflow-wrap: anywhere;
+}
+
+.admin-drive-grant-row {
+  align-items: center;
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: minmax(220px, 1fr) auto auto auto;
+  margin-bottom: 1rem;
+}
+
+.admin-drive-grant-row select {
+  min-height: 44px;
+}
+
+.admin-drive-permission-check {
+  align-items: center;
+  margin: 0;
+  min-height: 44px;
+  white-space: nowrap;
+}
+
 .admin-row-action.is-danger {
   border-color: rgba(156, 43, 43, 0.35);
   color: #812a2a;
@@ -54350,6 +54998,7 @@ img.supply-hub-weekly-cta-image-placeholder {
 }
 
 .admin-edit-form input,
+.admin-edit-form select,
 .admin-edit-form textarea {
   border-radius: 10px;
   border: 1px solid rgba(68, 96, 132, 0.24);
@@ -54839,6 +55488,7 @@ img.supply-hub-weekly-cta-image-placeholder {
 
   .topbar-utility,
   .main-nav,
+  .header-auth-actions,
   .header-login-button {
     display: none;
   }
@@ -54898,6 +55548,16 @@ img.supply-hub-weekly-cta-image-placeholder {
   .section-grid,
   .ai-contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .admin-drive-project-head,
+  .admin-drive-grant-row {
+    align-items: stretch;
+    grid-template-columns: 1fr;
+  }
+
+  .admin-drive-project-head {
+    display: grid;
   }
 
   .ai-highlight-grid,
@@ -55913,6 +56573,11 @@ img.supply-hub-weekly-cta-image-placeholder {
 
   .attendance-clock-card {
     gap: 0.72rem;
+  }
+
+  .attendance-work-photo-head,
+  .attendance-work-photo-list {
+    grid-template-columns: 1fr;
   }
 
   .attendance-camera-actions {

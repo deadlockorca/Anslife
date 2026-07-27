@@ -6,6 +6,10 @@ import {
   getAttendanceLogByUserAndDate,
   listAttendanceLogs,
 } from '../../../../lib/repositories/attendanceRepository';
+import {
+  listAttendanceWorkPhotos,
+  type AttendanceWorkPhotoRecord,
+} from '../../../../lib/repositories/attendanceWorkPhotoRepository';
 
 export const dynamic = 'force-dynamic';
 
@@ -46,6 +50,45 @@ function getTodayDateInVietnam(): string {
   }).format(now);
 }
 
+function getPhotoLookupKey(userId: number, attendanceDate: string): string {
+  return `${userId}:${attendanceDate}`;
+}
+
+function attachWorkPhotos<T extends { userId: number; attendanceDate: string }>(
+  logs: T[],
+  photos: AttendanceWorkPhotoRecord[],
+): Array<T & { workPhotos: AttendanceWorkPhotoRecord[] }> {
+  const photoMap = new Map<string, AttendanceWorkPhotoRecord[]>();
+  for (const photo of photos) {
+    const key = getPhotoLookupKey(photo.userId, photo.attendanceDate);
+    const current = photoMap.get(key) ?? [];
+    current.push(photo);
+    photoMap.set(key, current);
+  }
+
+  return logs.map((log) => ({
+    ...log,
+    workPhotos: photoMap.get(getPhotoLookupKey(log.userId, log.attendanceDate)) ?? [],
+  }));
+}
+
+function getLogDateRange(logs: Array<{ attendanceDate: string }>): {
+  fromDate?: string;
+  toDate?: string;
+} {
+  const dates = logs
+    .map((log) => log.attendanceDate)
+    .filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value))
+    .sort();
+  if (dates.length === 0) {
+    return {};
+  }
+  return {
+    fromDate: dates[0],
+    toDate: dates[dates.length - 1],
+  };
+}
+
 export async function GET(request: NextRequest) {
   try {
     const actor = await getAuthActor(request);
@@ -64,7 +107,7 @@ export async function GET(request: NextRequest) {
     });
     if (!viewDecision.allowed) {
       return NextResponse.json(
-        { ok: false, code: 'forbidden', message: 'Bạn không có quyền xem chấm công.' },
+        { ok: false, code: 'forbidden', message: 'Bạn không có quyền xem báo cáo công việc.' },
         { status: 403 },
       );
     }
@@ -91,6 +134,27 @@ export async function GET(request: NextRequest) {
 
     const todayDate = getTodayDateInVietnam();
     const todayLog = await getAttendanceLogByUserAndDate(actor.userId, todayDate);
+    const logDateRange = getLogDateRange(logs);
+    const scopedUserId = manageDecision.allowed ? userIdFilter : actor.userId;
+    const photos = await listAttendanceWorkPhotos({
+      limit: Math.min(1000, perPage * 12),
+      userId: scopedUserId,
+      fromDate: fromDate ?? logDateRange.fromDate,
+      toDate: toDate ?? logDateRange.toDate,
+    });
+    const todayWorkPhotos = await listAttendanceWorkPhotos({
+      limit: 100,
+      userId: actor.userId,
+      fromDate: todayDate,
+      toDate: todayDate,
+    });
+    const logsWithPhotos = attachWorkPhotos(logs, photos);
+    const todayLogWithPhotos = todayLog
+      ? {
+          ...todayLog,
+          workPhotos: todayWorkPhotos,
+        }
+      : null;
 
     await writeAuditLog({
       actorUserId: actor.userId,
@@ -113,15 +177,16 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       ok: true,
-      logs,
+      logs: logsWithPhotos,
       todayDate,
-      todayLog,
+      todayLog: todayLogWithPhotos,
+      todayWorkPhotos,
       canManage: manageDecision.allowed,
     });
   } catch (error) {
     console.error('[API][internal][attendance][GET] Failed:', error);
     return NextResponse.json(
-      { ok: false, code: 'internal_error', message: 'Không thể tải dữ liệu chấm công.' },
+      { ok: false, code: 'internal_error', message: 'Không thể tải dữ liệu báo cáo công việc.' },
       { status: 500 },
     );
   }

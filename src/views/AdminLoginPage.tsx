@@ -6,7 +6,11 @@ import LoadingBlock from '../components/common/LoadingBlock';
 import Seo from '../components/seo/Seo';
 import useSiteI18n from '../hooks/useSiteI18n';
 import { isLanguageCode } from '../i18n/language';
-import { getCurrentUser, loginInternal } from '../lib/internalAuth';
+import {
+  getCurrentUser,
+  isQcAttendanceOnlyUser,
+  loginInternal,
+} from '../lib/internalAuth';
 
 type LoginState =
   | { status: 'idle'; message: '' }
@@ -15,6 +19,7 @@ type LoginState =
 
 const idleState: LoginState = { status: 'idle', message: '' };
 const DEFAULT_ADMIN_NEXT_PATH = '/admin/dashboard';
+const QC_ATTENDANCE_NEXT_PATH = '/admin/attendance';
 
 function resolveAdminNextPath(rawValue: string): string {
   const trimmed = rawValue.trim();
@@ -64,7 +69,10 @@ export default function AdminLoginPage() {
         }
 
         if (currentUser) {
-          navigate(toLocalizedPath(nextPath), { replace: true });
+          const targetPath = isQcAttendanceOnlyUser(currentUser)
+            ? QC_ATTENDANCE_NEXT_PATH
+            : nextPath;
+          navigate(toLocalizedPath(targetPath), { replace: true });
           return;
         }
       } catch (error) {
@@ -95,12 +103,15 @@ export default function AdminLoginPage() {
     setState({ status: 'loading', message: t('Đang đăng nhập...') });
 
     try {
-      await loginInternal({
+      const user = await loginInternal({
         email: email.trim().toLowerCase(),
         password,
       });
 
-      navigate(toLocalizedPath(nextPath), { replace: true });
+      const targetPath = isQcAttendanceOnlyUser(user)
+        ? QC_ATTENDANCE_NEXT_PATH
+        : nextPath;
+      navigate(toLocalizedPath(targetPath), { replace: true });
     } catch (error) {
       const message =
         error instanceof Error ? error.message : t('Đăng nhập thất bại.');

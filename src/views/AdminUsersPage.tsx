@@ -7,35 +7,32 @@ import LoadingBlock from '../components/common/LoadingBlock';
 import Seo from '../components/seo/Seo';
 import useSiteI18n from '../hooks/useSiteI18n';
 import {
-  APP_ROLE_OPTIONS,
-  type AppRole,
-  type ActorScope,
-  formatScopes,
-  getCurrentUser,
-  type AuthUser,
-  listInternalCustomers,
-  listInternalFactories,
-  listInternalOrders,
-  listInternalUsers,
-  logoutInternal,
-  SCOPE_TYPE_OPTIONS,
-  type ScopeType,
   createInternalUser,
   deleteInternalUser,
+  getCurrentUser,
+  listInternalUsers,
+  logoutInternal,
   updateInternalUser,
+  type ActorScope,
+  type AppRole,
+  type AuthUser,
   type UserProfile,
 } from '../lib/internalAuth';
 
-interface CreateFormState {
+type FormState =
+  | { status: 'idle'; message: '' }
+  | { status: 'loading'; message: string }
+  | { status: 'success'; message: string }
+  | { status: 'error'; message: string };
+
+interface QcAccountFormState {
   email: string;
   fullName: string;
   password: string;
   isActive: boolean;
-  roles: AppRole[];
-  scopes: ActorScope[];
 }
 
-interface EditFormState {
+interface AccountEditState {
   userId: number;
   fullName: string;
   password: string;
@@ -44,132 +41,72 @@ interface EditFormState {
   scopes: ActorScope[];
 }
 
-interface ScopeDraftState {
-  type: ScopeType;
-  value: string;
-}
-
-type FormState =
-  | { status: 'idle'; message: '' }
-  | { status: 'loading'; message: string }
-  | { status: 'success'; message: string }
-  | { status: 'error'; message: string };
-
 const idleFormState: FormState = { status: 'idle', message: '' };
 
-const defaultCreateFormState: CreateFormState = {
+const emptyCreateForm: QcAccountFormState = {
   email: '',
   fullName: '',
   password: '',
   isActive: true,
-  roles: ['sale_trading'],
-  scopes: [{ type: 'global', value: '*' }],
 };
 
-const defaultScopeDraftState: ScopeDraftState = {
-  type: 'global',
-  value: '*',
+const qcReportScope: ActorScope = {
+  type: 'explicit',
+  value: 'attendance:self',
 };
 
-const defaultScopeReferences: Record<ScopeType, string[]> = {
-  global: ['*'],
-  customer: [],
-  factory: [],
-  order: [],
-  market: ['VN', 'JP', 'KR', 'US', 'EU'],
-  project: [],
-  supplier: [],
-  material: ['wood', 'plywood', 'mdf', 'hardware', 'paint', 'fabric', 'foam'],
-  buyer_company: [],
-  explicit: [],
-};
+const accessPresets = [
+  {
+    key: 'super_admin_global',
+    label: 'Quản trị tối cao',
+    roles: ['super_admin'],
+    scopes: [{ type: 'global', value: '*' }],
+  },
+  {
+    key: 'system_admin_global',
+    label: 'Quản trị hệ thống',
+    roles: ['system_admin'],
+    scopes: [{ type: 'global', value: '*' }],
+  },
+  {
+    key: 'qc_report',
+    label: 'QC báo cáo',
+    roles: ['qc'],
+    scopes: [qcReportScope],
+  },
+] satisfies Array<{
+  key: string;
+  label: string;
+  roles: AppRole[];
+  scopes: ActorScope[];
+}>;
 
-const scopeTypeLabelMap: Record<ScopeType, string> = {
-  global: 'Toàn hệ thống',
-  customer: 'Khách hàng',
-  factory: 'Nhà máy',
-  order: 'Đơn hàng',
-  market: 'Thị trường',
-  project: 'Dự án',
-  supplier: 'Nhà cung cấp',
-  material: 'Vật liệu',
-  buyer_company: 'Công ty buyer',
-  explicit: 'Phạm vi đặc biệt',
-};
-
-function toggleRoleInList(currentRoles: AppRole[], role: AppRole): AppRole[] {
-  if (currentRoles.includes(role)) {
-    return currentRoles.filter((item) => item !== role);
+function getAccessPresetKey(roles: AppRole[], scopes: ActorScope[]): string {
+  if (roles.length === 1 && roles[0] === 'qc') {
+    return 'qc_report';
+  }
+  if (roles.includes('system_admin')) {
+    return 'system_admin_global';
+  }
+  if (roles.includes('super_admin')) {
+    return 'super_admin_global';
   }
 
-  return [...currentRoles, role];
+  return 'custom';
 }
 
-function parseRoleLabel(role: AppRole): string {
-  return APP_ROLE_OPTIONS.find((item) => item.code === role)?.label ?? role;
+function isPrivilegedRoles(roles: AppRole[]): boolean {
+  return roles.includes('super_admin') || roles.includes('system_admin');
 }
 
-function isPrivilegedRole(role: AppRole): boolean {
-  return role === 'super_admin' || role === 'system_admin';
+function isAdminManager(actor: AuthUser | null): boolean {
+  return Boolean(
+    actor?.roles.includes('super_admin') || actor?.roles.includes('system_admin'),
+  );
 }
 
-function hasPrivilegedRole(roles: AppRole[]): boolean {
-  return roles.some((role) => isPrivilegedRole(role));
-}
-
-function dedupeScopeList(scopes: ActorScope[]): ActorScope[] {
-  const unique = new Map<string, ActorScope>();
-  for (const scope of scopes) {
-    const type = scope.type;
-    const value = scope.value.trim();
-    if (!value) {
-      continue;
-    }
-
-    unique.set(`${type}:${value}`, { type, value });
-  }
-
-  return Array.from(unique.values());
-}
-
-function getScopeTypeLabel(type: ScopeType): string {
-  return scopeTypeLabelMap[type] ?? type;
-}
-
-function getScopeDraftDefaultValue(type: ScopeType): string {
-  return type === 'global' ? '*' : '';
-}
-
-function appendScopeToList(currentScopes: ActorScope[], draft: ScopeDraftState): ActorScope[] {
-  const value = draft.type === 'global' ? '*' : draft.value.trim();
-  if (!value) {
-    return currentScopes;
-  }
-
-  return dedupeScopeList([...currentScopes, { type: draft.type, value }]);
-}
-
-function collectScopeValues(scopes: ActorScope[], type: ScopeType): string[] {
-  const values = scopes
-    .filter((scope) => scope.type === type)
-    .map((scope) => scope.value.trim())
-    .filter(Boolean);
-
-  return Array.from(new Set(values));
-}
-
-function mergeScopeValues(...valueGroups: readonly string[][]): string[] {
-  const unique = new Set<string>();
-  for (const values of valueGroups) {
-    for (const value of values) {
-      const normalized = value.trim();
-      if (normalized) {
-        unique.add(normalized);
-      }
-    }
-  }
-
-  return Array.from(unique.values());
+function isQcReportUser(user: Pick<UserProfile, 'roles'>): boolean {
+  return user.roles.length === 1 && user.roles[0] === 'qc';
 }
 
 function formatDate(dateString: string): string {
@@ -197,126 +134,14 @@ export default function AdminUsersPage() {
   const [users, setUsers] = useState<UserProfile[]>([]);
   const [usersLoading, setUsersLoading] = useState(false);
   const [usersError, setUsersError] = useState('');
-  const [createForm, setCreateForm] = useState<CreateFormState>(defaultCreateFormState);
+  const [createForm, setCreateForm] = useState<QcAccountFormState>(emptyCreateForm);
   const [createState, setCreateState] = useState<FormState>(idleFormState);
-  const [createScopeDraft, setCreateScopeDraft] = useState<ScopeDraftState>(
-    defaultScopeDraftState,
-  );
-  const [editForm, setEditForm] = useState<EditFormState | null>(null);
+  const [editForm, setEditForm] = useState<AccountEditState | null>(null);
   const [editState, setEditState] = useState<FormState>(idleFormState);
-  const [editScopeDraft, setEditScopeDraft] = useState<ScopeDraftState>(defaultScopeDraftState);
   const [deleteState, setDeleteState] = useState<FormState>(idleFormState);
-  const [deletingUserId, setDeletingUserId] = useState<number | null>(null);
-  const [scopeReferenceLoading, setScopeReferenceLoading] = useState(false);
-  const [scopeReferenceMap, setScopeReferenceMap] = useState<Record<ScopeType, string[]>>(
-    defaultScopeReferences,
-  );
 
-  const isAdminManager = useMemo(() => {
-    if (!actor) {
-      return false;
-    }
-
-    return (
-      actor.roles.includes('super_admin') || actor.roles.includes('system_admin')
-    );
-  }, [actor]);
-  const actorIsSuperAdmin = useMemo(
-    () => Boolean(actor?.roles.includes('super_admin')),
-    [actor],
-  );
-  const editableRoleOptions = useMemo(
-    () =>
-      actorIsSuperAdmin
-        ? APP_ROLE_OPTIONS
-        : APP_ROLE_OPTIONS.filter((role) => !isPrivilegedRole(role.code)),
-    [actorIsSuperAdmin],
-  );
-  const editingUser = useMemo(
-    () => (editForm ? users.find((user) => user.id === editForm.userId) ?? null : null),
-    [editForm, users],
-  );
-  const canEditUser = useCallback(
-    (user: UserProfile) => {
-      if (!isAdminManager) {
-        return false;
-      }
-
-      if (actorIsSuperAdmin) {
-        return true;
-      }
-
-      return !hasPrivilegedRole(user.roles);
-    },
-    [actorIsSuperAdmin, isAdminManager],
-  );
-
-  const canDeleteUser = useCallback(
-    (user: UserProfile) => {
-      if (!canEditUser(user)) {
-        return false;
-      }
-
-      if (!actor) {
-        return false;
-      }
-
-      return user.id !== actor.id;
-    },
-    [actor, canEditUser],
-  );
-  const createScopeValueOptions = useMemo(
-    () =>
-      mergeScopeValues(
-        scopeReferenceMap[createScopeDraft.type],
-        collectScopeValues(createForm.scopes, createScopeDraft.type),
-        createScopeDraft.type === 'global' ? ['*'] : [],
-      ),
-    [createForm.scopes, createScopeDraft.type, scopeReferenceMap],
-  );
-  const editScopeValueOptions = useMemo(
-    () =>
-      mergeScopeValues(
-        scopeReferenceMap[editScopeDraft.type],
-        collectScopeValues(editForm?.scopes ?? [], editScopeDraft.type),
-        editScopeDraft.type === 'global' ? ['*'] : [],
-      ),
-    [editForm?.scopes, editScopeDraft.type, scopeReferenceMap],
-  );
-
-  const loadScopeReferences = useCallback(async () => {
-    setScopeReferenceLoading(true);
-    try {
-      const [customersResult, factoriesResult, ordersResult] = await Promise.allSettled([
-        listInternalCustomers(200),
-        listInternalFactories(200),
-        listInternalOrders({ perPage: 200 }),
-      ]);
-
-      const customerCodes =
-        customersResult.status === 'fulfilled'
-          ? customersResult.value.map((item) => item.code.trim()).filter(Boolean)
-          : [];
-      const factoryCodes =
-        factoriesResult.status === 'fulfilled'
-          ? factoriesResult.value.map((item) => item.code.trim()).filter(Boolean)
-          : [];
-      const orderCodes =
-        ordersResult.status === 'fulfilled'
-          ? ordersResult.value.map((item) => item.orderNo.trim()).filter(Boolean)
-          : [];
-
-      setScopeReferenceMap((previous) => ({
-        ...previous,
-        customer: mergeScopeValues(previous.customer, customerCodes),
-        buyer_company: mergeScopeValues(previous.buyer_company, customerCodes),
-        factory: mergeScopeValues(previous.factory, factoryCodes),
-        order: mergeScopeValues(previous.order, orderCodes),
-      }));
-    } finally {
-      setScopeReferenceLoading(false);
-    }
-  }, []);
+  const qcUsers = useMemo(() => users.filter(isQcReportUser), [users]);
+  const adminUsers = useMemo(() => users.filter((user) => !isQcReportUser(user)), [users]);
 
   const loadUsers = useCallback(async () => {
     setUsersLoading(true);
@@ -325,93 +150,21 @@ export default function AdminUsersPage() {
       const items = await listInternalUsers();
       setUsers(items);
     } catch (error) {
-      const message =
-        error instanceof Error
-          ? error.message
-          : t('Không thể tải danh sách tài khoản.');
-      setUsersError(message);
+      setUsersError(
+        error instanceof Error ? error.message : t('Không thể tải danh sách tài khoản.'),
+      );
     } finally {
       setUsersLoading(false);
     }
   }, [t]);
 
   useEffect(() => {
-    if (!isAdminManager) {
-      return;
-    }
-
-    void loadScopeReferences();
-  }, [isAdminManager, loadScopeReferences]);
-
-  useEffect(() => {
-    const scopedValues = {
-      global: collectScopeValues(
-        users.flatMap((user) => user.scopes),
-        'global',
-      ),
-      customer: collectScopeValues(
-        users.flatMap((user) => user.scopes),
-        'customer',
-      ),
-      factory: collectScopeValues(
-        users.flatMap((user) => user.scopes),
-        'factory',
-      ),
-      order: collectScopeValues(
-        users.flatMap((user) => user.scopes),
-        'order',
-      ),
-      market: collectScopeValues(
-        users.flatMap((user) => user.scopes),
-        'market',
-      ),
-      project: collectScopeValues(
-        users.flatMap((user) => user.scopes),
-        'project',
-      ),
-      supplier: collectScopeValues(
-        users.flatMap((user) => user.scopes),
-        'supplier',
-      ),
-      material: collectScopeValues(
-        users.flatMap((user) => user.scopes),
-        'material',
-      ),
-      buyer_company: collectScopeValues(
-        users.flatMap((user) => user.scopes),
-        'buyer_company',
-      ),
-      explicit: collectScopeValues(
-        users.flatMap((user) => user.scopes),
-        'explicit',
-      ),
-    } satisfies Record<ScopeType, string[]>;
-
-    setScopeReferenceMap((previous) => ({
-      global: mergeScopeValues(previous.global, scopedValues.global, ['*']),
-      customer: mergeScopeValues(previous.customer, scopedValues.customer),
-      factory: mergeScopeValues(previous.factory, scopedValues.factory),
-      order: mergeScopeValues(previous.order, scopedValues.order),
-      market: mergeScopeValues(previous.market, scopedValues.market, ['VN', 'JP', 'KR', 'US', 'EU']),
-      project: mergeScopeValues(previous.project, scopedValues.project),
-      supplier: mergeScopeValues(previous.supplier, scopedValues.supplier),
-      material: mergeScopeValues(
-        previous.material,
-        scopedValues.material,
-        ['wood', 'plywood', 'mdf', 'hardware', 'paint', 'fabric', 'foam'],
-      ),
-      buyer_company: mergeScopeValues(previous.buyer_company, scopedValues.buyer_company),
-      explicit: mergeScopeValues(previous.explicit, scopedValues.explicit),
-    }));
-  }, [users]);
-
-  useEffect(() => {
-    let isMounted = true;
+    let mounted = true;
 
     async function bootstrapPage() {
       try {
         const currentUser = await getCurrentUser();
-        if (!isMounted) {
+        if (!mounted) {
           return;
         }
 
@@ -421,19 +174,17 @@ export default function AdminUsersPage() {
         }
 
         setActor(currentUser);
-        await loadUsers();
-      } catch (error) {
-        if (!isMounted) {
-          return;
+        if (isAdminManager(currentUser)) {
+          await loadUsers();
         }
-
-        const message =
-          error instanceof Error
-            ? error.message
-            : t('Không thể kiểm tra quyền truy cập.');
-        setUsersError(message);
+      } catch (error) {
+        if (mounted) {
+          setUsersError(
+            error instanceof Error ? error.message : t('Không thể kiểm tra quyền truy cập.'),
+          );
+        }
       } finally {
-        if (isMounted) {
+        if (mounted) {
           setAuthChecking(false);
         }
       }
@@ -441,104 +192,21 @@ export default function AdminUsersPage() {
 
     void bootstrapPage();
     return () => {
-      isMounted = false;
+      mounted = false;
     };
   }, [loadUsers, loginPath, navigate, t]);
 
   async function handleLogout() {
     try {
       await logoutInternal();
-    } catch {
-      // no-op
     } finally {
       navigate(loginPath, { replace: true });
     }
   }
 
-  function handleAddCreateScope() {
-    const nextScopes = appendScopeToList(createForm.scopes, createScopeDraft);
-    if (nextScopes.length === createForm.scopes.length) {
-      setCreateState({
-        status: 'error',
-        message: t('Vui lòng nhập giá trị scope hợp lệ trước khi thêm.'),
-      });
-      return;
-    }
-
-    setCreateState(idleFormState);
-    setCreateForm((previous) => ({ ...previous, scopes: nextScopes }));
-    setCreateScopeDraft((previous) => ({
-      ...previous,
-      value: getScopeDraftDefaultValue(previous.type),
-    }));
-  }
-
-  function handleRemoveCreateScope(type: ScopeType, value: string) {
-    setCreateState(idleFormState);
-    setCreateForm((previous) => ({
-      ...previous,
-      scopes: previous.scopes.filter(
-        (scope) => !(scope.type === type && scope.value === value),
-      ),
-    }));
-  }
-
-  function handleAddEditScope() {
-    if (!editForm) {
-      return;
-    }
-
-    const nextScopes = appendScopeToList(editForm.scopes, editScopeDraft);
-    if (nextScopes.length === editForm.scopes.length) {
-      setEditState({
-        status: 'error',
-        message: t('Vui lòng nhập giá trị scope hợp lệ trước khi thêm.'),
-      });
-      return;
-    }
-
-    setEditState(idleFormState);
-    setEditForm((previous) =>
-      previous
-        ? {
-            ...previous,
-            scopes: nextScopes,
-          }
-        : previous,
-    );
-    setEditScopeDraft((previous) => ({
-      ...previous,
-      value: getScopeDraftDefaultValue(previous.type),
-    }));
-  }
-
-  function handleRemoveEditScope(type: ScopeType, value: string) {
-    setEditState(idleFormState);
-    setEditForm((previous) =>
-      previous
-        ? {
-            ...previous,
-            scopes: previous.scopes.filter(
-              (scope) => !(scope.type === type && scope.value === value),
-            ),
-          }
-        : previous,
-    );
-  }
-
   async function handleCreateUser(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setCreateState({ status: 'loading', message: t('Đang tạo tài khoản...') });
-
-    if (createForm.roles.length === 0) {
-      setCreateState({
-        status: 'error',
-        message: t('Vui lòng chọn ít nhất một vai trò.'),
-      });
-      return;
-    }
-
-    const scopes = dedupeScopeList(createForm.scopes);
+    setCreateState({ status: 'loading', message: t('Đang tạo tài khoản QC...') });
 
     try {
       const createdUser = await createInternalUser({
@@ -546,39 +214,34 @@ export default function AdminUsersPage() {
         fullName: createForm.fullName.trim(),
         password: createForm.password,
         isActive: createForm.isActive,
-        roles: createForm.roles,
-        scopes,
+        roles: ['qc'],
+        scopes: [qcReportScope],
       });
 
       setUsers((previous) => [createdUser, ...previous]);
-      setCreateForm(defaultCreateFormState);
-      setCreateScopeDraft(defaultScopeDraftState);
+      setCreateForm(emptyCreateForm);
       setCreateState({
         status: 'success',
-        message: t('Tạo tài khoản thành công.'),
+        message: t('Tạo tài khoản QC thành công.'),
       });
     } catch (error) {
-      const message =
-        error instanceof Error ? error.message : t('Không thể tạo tài khoản.');
-      setCreateState({ status: 'error', message });
+      setCreateState({
+        status: 'error',
+        message: error instanceof Error ? error.message : t('Không thể tạo tài khoản.'),
+      });
     }
   }
 
   function openEditForm(user: UserProfile) {
-    if (!canEditUser(user)) {
-      return;
-    }
-
     setEditState(idleFormState);
     setEditForm({
       userId: user.id,
       fullName: user.fullName,
       password: '',
       isActive: user.isActive,
-      roles: user.roles,
-      scopes: dedupeScopeList(user.scopes),
+      roles: [...user.roles],
+      scopes: isQcReportUser(user) ? [qcReportScope] : [...user.scopes],
     });
-    setEditScopeDraft(defaultScopeDraftState);
   }
 
   async function handleEditUser(event: FormEvent<HTMLFormElement>) {
@@ -587,25 +250,23 @@ export default function AdminUsersPage() {
       return;
     }
 
-    setEditState({ status: 'loading', message: t('Đang cập nhật tài khoản...') });
-
-    if (editForm.roles.length === 0) {
+    const isEditingQcUser = editForm.roles.length === 1 && editForm.roles[0] === 'qc';
+    if (editForm.userId === actor?.id && (!editForm.isActive || !isPrivilegedRoles(editForm.roles))) {
       setEditState({
         status: 'error',
-        message: t('Vui lòng chọn ít nhất một vai trò.'),
+        message: t('Bạn không thể tự khóa hoặc tự bỏ quyền quản trị của tài khoản đang đăng nhập.'),
       });
       return;
     }
 
-    const scopes = dedupeScopeList(editForm.scopes);
-
+    setEditState({ status: 'loading', message: t('Đang cập nhật tài khoản...') });
     try {
       const updatedUser = await updateInternalUser(editForm.userId, {
         fullName: editForm.fullName.trim(),
         ...(editForm.password.trim() ? { password: editForm.password.trim() } : {}),
         isActive: editForm.isActive,
         roles: editForm.roles,
-        scopes,
+        scopes: isEditingQcUser ? [qcReportScope] : editForm.scopes,
       });
 
       setUsers((previous) =>
@@ -617,43 +278,31 @@ export default function AdminUsersPage() {
         message: t('Cập nhật tài khoản thành công.'),
       });
     } catch (error) {
-      const message =
-        error instanceof Error ? error.message : t('Không thể cập nhật tài khoản.');
-      setEditState({ status: 'error', message });
+      setEditState({
+        status: 'error',
+        message: error instanceof Error ? error.message : t('Không thể cập nhật tài khoản.'),
+      });
     }
   }
 
   async function handleDeleteUser(user: UserProfile) {
-    if (!canDeleteUser(user)) {
+    if (!isQcReportUser(user) || user.id === actor?.id) {
       return;
     }
 
-    const confirmed = window.confirm(
-      `${t('Bạn chắc chắn muốn xóa tài khoản này?')}\n${user.email}`,
-    );
-    if (!confirmed) {
-      return;
-    }
-
-    setDeleteState({ status: 'loading', message: t('Đang xóa tài khoản...') });
-    setDeletingUserId(user.id);
-
+    setDeleteState({ status: 'loading', message: t('Đang xóa tài khoản QC...') });
     try {
       await deleteInternalUser(user.id);
       setUsers((previous) => previous.filter((item) => item.id !== user.id));
-      if (editForm?.userId === user.id) {
-        setEditForm(null);
-      }
       setDeleteState({
         status: 'success',
-        message: t('Xóa tài khoản thành công.'),
+        message: t('Đã xóa tài khoản QC.'),
       });
     } catch (error) {
-      const message =
-        error instanceof Error ? error.message : t('Không thể xóa tài khoản.');
-      setDeleteState({ status: 'error', message });
-    } finally {
-      setDeletingUserId(null);
+      setDeleteState({
+        status: 'error',
+        message: error instanceof Error ? error.message : t('Không thể xóa tài khoản.'),
+      });
     }
   }
 
@@ -661,10 +310,27 @@ export default function AdminUsersPage() {
     return (
       <>
         <Seo
-          title={t('Quản trị tài khoản người dùng')}
-          description={t('Quản trị người dùng nội bộ ANSLIFE.')}
+          title={t('Tài khoản QC')}
+          description={t('Tạo và quản lý tài khoản QC báo cáo công việc.')}
         />
         <LoadingBlock />
+      </>
+    );
+  }
+
+  if (!isAdminManager(actor)) {
+    return (
+      <>
+        <Seo
+          title={t('Tài khoản QC')}
+          description={t('Tạo và quản lý tài khoản QC báo cáo công việc.')}
+        />
+        <section className="page-hero">
+          <p className="kicker">{t('QUẢN TRỊ')}</p>
+          <h1>{t('Tài khoản QC')}</h1>
+          <p>{t('Bạn không có quyền quản lý tài khoản.')}</p>
+        </section>
+        <ErrorBlock message={t('Chỉ tài khoản quản trị mới được tạo tài khoản QC.')} />
       </>
     );
   }
@@ -672,14 +338,18 @@ export default function AdminUsersPage() {
   return (
     <>
       <Seo
-        title={t('Quản trị tài khoản người dùng')}
-        description={t('Quản trị người dùng nội bộ ANSLIFE.')}
+        title={t('Tài khoản QC')}
+        description={t('Tạo và quản lý tài khoản QC báo cáo công việc.')}
       />
 
       <section className="page-hero">
         <p className="kicker">{t('QUẢN TRỊ')}</p>
-        <h1>{t('Quản trị tài khoản người dùng')}</h1>
-        <p>{t('Danh sách, tạo mới và chỉnh sửa tài khoản trong hệ thống nội bộ.')}</p>
+        <h1>{t('Tài khoản QC')}</h1>
+        <p>
+          {t(
+            'Tạo tài khoản QC chỉ dùng cho báo cáo công việc, check-in/check-out và upload ảnh.',
+          )}
+        </p>
       </section>
 
       <section className="admin-toolbar">
@@ -688,536 +358,345 @@ export default function AdminUsersPage() {
           <p>{actor?.email ?? ''}</p>
         </div>
         <div className="admin-toolbar-actions">
-          <button
-            type="button"
-            className="button-ghost"
-            onClick={() => void loadUsers()}
-            disabled={usersLoading}
-          >
-            {usersLoading ? t('Đang tải...') : t('Làm mới danh sách')}
+          <button type="button" className="button-ghost" onClick={() => void loadUsers()}>
+            {t('Làm mới')}
           </button>
-          <button type="button" className="button-ghost" onClick={handleLogout}>
+          <Link to={toLocalizedPath('/admin/dashboard')} className="button-ghost">
+            {t('Tổng quan')}
+          </Link>
+          <button type="button" className="button-ghost" onClick={() => void handleLogout()}>
             {t('Đăng xuất')}
           </button>
-          <Link to={toLocalizedPath('/')} className="button-ghost">
-            {t('Về trang chủ')}
-          </Link>
         </div>
       </section>
 
-      <AdminModuleTabs />
-
-      {!isAdminManager && (
-        <ErrorBlock message={t('Tài khoản hiện tại không có quyền quản trị người dùng.')} />
-      )}
+      <AdminModuleTabs actor={actor} />
 
       {usersError && <ErrorBlock message={usersError} />}
+      {createState.status === 'error' && <ErrorBlock message={createState.message} />}
+      {editState.status === 'error' && <ErrorBlock message={editState.message} />}
+      {deleteState.status === 'error' && <ErrorBlock message={deleteState.message} />}
       {createState.status === 'success' && (
         <div className="state-block success-text">{createState.message}</div>
       )}
       {editState.status === 'success' && (
         <div className="state-block success-text">{editState.message}</div>
       )}
-      {deleteState.status === 'error' && <ErrorBlock message={deleteState.message} />}
       {deleteState.status === 'success' && (
         <div className="state-block success-text">{deleteState.message}</div>
       )}
 
-      <section className="admin-layout-grid">
-        {isAdminManager ? (
-          <article className="form-card">
-            <h2>{t('Tạo tài khoản mới')}</h2>
-            <form onSubmit={handleCreateUser}>
-              <label>
-                {t('Email')}
-                <input
-                  type="email"
-                  value={createForm.email}
-                  onChange={(event) =>
-                    setCreateForm((previous) => ({
-                      ...previous,
-                      email: event.target.value,
-                    }))
-                  }
-                  required
-                  disabled={createState.status === 'loading'}
-                />
-              </label>
-
-              <label>
-                {t('Họ tên')}
-                <input
-                  value={createForm.fullName}
-                  onChange={(event) =>
-                    setCreateForm((previous) => ({
-                      ...previous,
-                      fullName: event.target.value,
-                    }))
-                  }
-                  required
-                  disabled={createState.status === 'loading'}
-                />
-              </label>
-
-              <label>
-                {t('Mật khẩu')}
-                <input
-                  type="password"
-                  value={createForm.password}
-                  onChange={(event) =>
-                    setCreateForm((previous) => ({
-                      ...previous,
-                      password: event.target.value,
-                    }))
-                  }
-                  required
-                  minLength={8}
-                  disabled={createState.status === 'loading'}
-                />
-              </label>
-
-              <fieldset className="admin-role-fieldset">
-                <legend>{t('Vai trò')}</legend>
-                <div className="admin-role-grid">
-                  {editableRoleOptions.map((role) => (
-                    <label key={role.code} className="admin-role-option">
-                      <input
-                        type="checkbox"
-                        checked={createForm.roles.includes(role.code)}
-                        onChange={() =>
-                          setCreateForm((previous) => ({
-                            ...previous,
-                            roles: toggleRoleInList(previous.roles, role.code),
-                          }))
-                        }
-                        disabled={createState.status === 'loading'}
-                      />
-                      <span>{t(role.label)}</span>
-                    </label>
-                  ))}
-                </div>
-              </fieldset>
-
-              <fieldset className="admin-role-fieldset admin-scope-fieldset">
-                <legend>{t('Phạm vi quyền (scope)')}</legend>
-                <div className="admin-scope-builder-row">
-                  <select
-                    value={createScopeDraft.type}
-                    onChange={(event) => {
-                      const type = event.target.value as ScopeType;
-                      setCreateScopeDraft({
-                        type,
-                        value: getScopeDraftDefaultValue(type),
-                      });
-                      setCreateState(idleFormState);
-                    }}
-                    disabled={createState.status === 'loading'}
-                  >
-                    {SCOPE_TYPE_OPTIONS.map((type) => (
-                      <option key={type} value={type}>
-                        {t(getScopeTypeLabel(type))}
-                      </option>
-                    ))}
-                  </select>
-                  <input
-                    value={createScopeDraft.value}
-                    onChange={(event) =>
-                      setCreateScopeDraft((previous) => ({
-                        ...previous,
-                        value: event.target.value,
-                      }))
-                    }
-                    placeholder={
-                      createScopeDraft.type === 'global'
-                        ? '*'
-                        : t('Nhập hoặc chọn giá trị scope')
-                    }
-                    list="create-scope-suggestions"
-                    disabled={
-                      createState.status === 'loading' || createScopeDraft.type === 'global'
-                    }
-                  />
-                  <datalist id="create-scope-suggestions">
-                    {createScopeValueOptions.map((value) => (
-                      <option key={value} value={value} />
-                    ))}
-                  </datalist>
-                  <button
-                    type="button"
-                    className="button-ghost"
-                    onClick={handleAddCreateScope}
-                    disabled={createState.status === 'loading'}
-                  >
-                    {t('Thêm')}
-                  </button>
-                </div>
-                <div className="admin-scope-chip-list">
-                  {createForm.scopes.length > 0 ? (
-                    createForm.scopes.map((scope) => {
-                      const scopeKey = `${scope.type}:${scope.value}`;
-                      return (
-                        <span key={scopeKey} className="admin-scope-chip">
-                          <strong>{t(getScopeTypeLabel(scope.type))}</strong>
-                          <span>{scope.value}</span>
-                          <button
-                            type="button"
-                            onClick={() => handleRemoveCreateScope(scope.type, scope.value)}
-                            disabled={createState.status === 'loading'}
-                            aria-label={t('Xóa scope')}
-                          >
-                            ×
-                          </button>
-                        </span>
-                      );
-                    })
-                  ) : (
-                    <span className="admin-empty">{t('Chưa thêm scope nào.')}</span>
-                  )}
-                </div>
-                <p className="admin-scope-hint">
-                  {scopeReferenceLoading
-                    ? t('Đang tải danh sách gợi ý scope...')
-                    : t('Chọn loại scope, chọn giá trị và bấm Thêm.')}
-                </p>
-              </fieldset>
-
-              <label className="admin-checkbox">
-                <input
-                  type="checkbox"
-                  checked={createForm.isActive}
-                  onChange={(event) =>
-                    setCreateForm((previous) => ({
-                      ...previous,
-                      isActive: event.target.checked,
-                    }))
-                  }
-                  disabled={createState.status === 'loading'}
-                />
-                <span>{t('Kích hoạt tài khoản')}</span>
-              </label>
-
-              <button
-                type="submit"
-                className="button-solid"
-                disabled={createState.status === 'loading'}
-              >
-                {createState.status === 'loading' ? t('Đang xử lý...') : t('Tạo tài khoản')}
-              </button>
-
-              {createState.status === 'error' && <ErrorBlock message={createState.message} />}
-            </form>
-          </article>
-        ) : (
-          <article className="form-card">
-            <h2>{t('Tạo tài khoản mới')}</h2>
-            <p className="admin-empty">
-              {t('Tài khoản hiện tại chỉ có quyền xem thông tin quản trị.')}
-            </p>
-          </article>
-        )}
-
-        <article className="form-card admin-users-card">
-          <h2>{t('Danh sách tài khoản')}</h2>
-          {usersLoading && <LoadingBlock />}
-          {!usersLoading && users.length === 0 && (
-            <p className="admin-empty">{t('Chưa có tài khoản nào trong hệ thống.')}</p>
-          )}
-
-          {!usersLoading && users.length > 0 && (
-            <div className="admin-table-wrap">
-              <table className="admin-users-table">
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>{t('Họ tên')}</th>
-                    <th>{t('Email')}</th>
-                    <th>{t('Vai trò')}</th>
-                    <th>{t('Phạm vi quyền')}</th>
-                    <th>{t('Trạng thái')}</th>
-                    <th>{t('Cập nhật')}</th>
-                    {isAdminManager && <th>{t('Thao tác')}</th>}
-                  </tr>
-                </thead>
-                <tbody>
-                  {users.map((user) => (
-                    <tr key={user.id}>
-                      <td>{user.id}</td>
-                      <td>{user.fullName}</td>
-                      <td>{user.email}</td>
-                      <td>
-                        <div className="admin-role-badge-list">
-                          {user.roles.map((role) => (
-                            <span key={role} className="admin-role-badge">
-                              {t(parseRoleLabel(role))}
-                            </span>
-                          ))}
-                        </div>
-                      </td>
-                      <td className="admin-scope-cell">
-                        {user.scopes.length > 0 ? formatScopes(user.scopes) : '-'}
-                      </td>
-                      <td>
-                        <span
-                          className={`admin-status-pill ${user.isActive ? 'is-active' : 'is-inactive'}`}
-                        >
-                          {user.isActive ? t('Hoạt động') : t('Đang khóa')}
-                        </span>
-                      </td>
-                      <td>{formatDate(user.updatedAt)}</td>
-                      {isAdminManager && (
-                        <td>
-                          <div className="admin-row-actions">
-                            <button
-                              type="button"
-                              className="button-ghost admin-row-action"
-                              onClick={() => openEditForm(user)}
-                              disabled={!canEditUser(user) || deletingUserId === user.id}
-                            >
-                              {t('Sửa')}
-                            </button>
-                            <button
-                              type="button"
-                              className="button-ghost admin-row-action is-danger"
-                              onClick={() => void handleDeleteUser(user)}
-                              disabled={!canDeleteUser(user) || deletingUserId === user.id}
-                            >
-                              {deletingUserId === user.id ? t('Đang xóa...') : t('Xóa')}
-                            </button>
-                          </div>
-                        </td>
-                      )}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </article>
+      <section className="form-card">
+        <h2>{t('Tạo tài khoản QC báo cáo')}</h2>
+        <form className="admin-order-form" onSubmit={handleCreateUser}>
+          <label>
+            {t('Email')}
+            <input
+              type="email"
+              value={createForm.email}
+              onChange={(event) =>
+                setCreateForm((previous) => ({
+                  ...previous,
+                  email: event.target.value,
+                }))
+              }
+              required
+              disabled={createState.status === 'loading'}
+            />
+          </label>
+          <label>
+            {t('Họ tên')}
+            <input
+              value={createForm.fullName}
+              onChange={(event) =>
+                setCreateForm((previous) => ({
+                  ...previous,
+                  fullName: event.target.value,
+                }))
+              }
+              required
+              disabled={createState.status === 'loading'}
+            />
+          </label>
+          <label>
+            {t('Mật khẩu')}
+            <input
+              type="password"
+              value={createForm.password}
+              onChange={(event) =>
+                setCreateForm((previous) => ({
+                  ...previous,
+                  password: event.target.value,
+                }))
+              }
+              required
+              minLength={8}
+              disabled={createState.status === 'loading'}
+            />
+          </label>
+          <label className="admin-checkbox">
+            <input
+              type="checkbox"
+              checked={createForm.isActive}
+              onChange={(event) =>
+                setCreateForm((previous) => ({
+                  ...previous,
+                  isActive: event.target.checked,
+                }))
+              }
+              disabled={createState.status === 'loading'}
+            />
+            {t('Kích hoạt tài khoản')}
+          </label>
+          <div className="admin-scope-chip-list">
+            <span className="admin-role-badge">QC</span>
+            <span className="admin-scope-chip">
+              <strong>{t('QC báo cáo')}</strong>
+              <span>{qcReportScope.value}</span>
+            </span>
+          </div>
+          <div className="admin-order-form-actions">
+            <button
+              type="submit"
+              className="button-solid"
+              disabled={createState.status === 'loading'}
+            >
+              {t('Tạo tài khoản QC')}
+            </button>
+          </div>
+        </form>
       </section>
 
-      {editForm && isAdminManager && (
-        <section className="admin-edit-overlay" role="dialog" aria-modal="true">
+      <section className="form-card admin-users-card">
+        <h2>{t('Danh sách tài khoản QC báo cáo')}</h2>
+        {usersLoading && <LoadingBlock />}
+        {!usersLoading && qcUsers.length === 0 && (
+          <p className="admin-empty">{t('Chưa có tài khoản QC báo cáo nào.')}</p>
+        )}
+        {!usersLoading && qcUsers.length > 0 && (
+          <div className="admin-table-wrap">
+            <table className="admin-users-table">
+              <thead>
+                <tr>
+                  <th>{t('Họ tên')}</th>
+                  <th>{t('Email')}</th>
+                  <th>{t('Vai trò')}</th>
+                  <th>{t('Scope')}</th>
+                  <th>{t('Trạng thái')}</th>
+                  <th>{t('Cập nhật')}</th>
+                  <th>{t('Thao tác')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {qcUsers.map((user) => (
+                  <tr key={user.id}>
+                    <td>{user.fullName}</td>
+                    <td>{user.email}</td>
+                    <td>
+                      <span className="admin-role-badge">QC</span>
+                    </td>
+                    <td>
+                      <span className="admin-scope-cell">{qcReportScope.value}</span>
+                    </td>
+                    <td>
+                      <span
+                        className={`admin-status-pill ${
+                          user.isActive ? 'is-order-approved_internal' : 'is-order-archived'
+                        }`}
+                      >
+                        {user.isActive ? t('Đang hoạt động') : t('Đã khóa')}
+                      </span>
+                    </td>
+                    <td>{formatDate(user.updatedAt)}</td>
+                    <td>
+                      <div className="admin-edit-actions">
+                        <button
+                          type="button"
+                          className="button-ghost"
+                          onClick={() => openEditForm(user)}
+                        >
+                          {t('Sửa')}
+                        </button>
+                        <button
+                          type="button"
+                          className="button-ghost danger"
+                          onClick={() => void handleDeleteUser(user)}
+                          disabled={deleteState.status === 'loading'}
+                        >
+                          {t('Xóa')}
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+
+      {adminUsers.length > 0 && (
+        <section className="form-card admin-users-card">
+          <h2>{t('Tài khoản quản trị hiện có')}</h2>
+          <p className="admin-empty">
+            {t('Có thể sửa họ tên, mật khẩu, trạng thái và quyền tài khoản.')}
+          </p>
+          <div className="admin-table-wrap">
+            <table className="admin-users-table">
+              <thead>
+                <tr>
+                  <th>{t('Họ tên')}</th>
+                  <th>{t('Email')}</th>
+                  <th>{t('Vai trò')}</th>
+                  <th>{t('Trạng thái')}</th>
+                  <th>{t('Thao tác')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {adminUsers.map((user) => (
+                  <tr key={user.id}>
+                    <td>{user.fullName}</td>
+                    <td>{user.email}</td>
+                    <td>
+                      <div className="admin-role-badge-list">
+                        {user.roles.map((role) => (
+                          <span key={role} className="admin-role-badge">
+                            {role}
+                          </span>
+                        ))}
+                      </div>
+                    </td>
+                    <td>{user.isActive ? t('Đang hoạt động') : t('Đã khóa')}</td>
+                    <td>
+                      <button
+                        type="button"
+                        className="button-ghost"
+                        onClick={() => openEditForm(user)}
+                      >
+                        {t('Sửa')}
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      {editForm && (
+        <div className="admin-edit-overlay" role="dialog" aria-modal="true">
           <button
             type="button"
             className="admin-edit-backdrop"
-            onClick={() => setEditForm(null)}
             aria-label={t('Đóng')}
+            onClick={() => setEditForm(null)}
           />
-          <article className="admin-edit-panel">
+          <form className="admin-edit-panel admin-edit-form" onSubmit={handleEditUser}>
             <div className="admin-edit-head">
-              <h2>
-                {t('Chỉnh sửa tài khoản')} #{editForm.userId}
-              </h2>
+              <h2>{t('Chỉnh sửa tài khoản')}</h2>
               <button type="button" className="admin-edit-close" onClick={() => setEditForm(null)}>
                 ×
               </button>
             </div>
-
-            <form onSubmit={handleEditUser} className="admin-edit-form">
-              <label>
-                {t('Họ tên')}
-                <input
-                  value={editForm.fullName}
-                  onChange={(event) =>
-                    setEditForm((previous) =>
-                      previous
-                        ? {
-                            ...previous,
-                            fullName: event.target.value,
-                          }
-                        : previous,
-                    )
+            <label>
+              {t('Họ tên')}
+              <input
+                value={editForm.fullName}
+                onChange={(event) =>
+                  setEditForm((previous) =>
+                    previous ? { ...previous, fullName: event.target.value } : previous,
+                  )
+                }
+                required
+                disabled={editState.status === 'loading'}
+              />
+            </label>
+            <label>
+              {t('Mật khẩu mới (để trống nếu không đổi)')}
+              <input
+                type="password"
+                value={editForm.password}
+                onChange={(event) =>
+                  setEditForm((previous) =>
+                    previous ? { ...previous, password: event.target.value } : previous,
+                  )
+                }
+                minLength={8}
+                disabled={editState.status === 'loading'}
+              />
+            </label>
+            <label>
+              {t('Quyền tài khoản')}
+              <select
+                value={getAccessPresetKey(editForm.roles, editForm.scopes)}
+                onChange={(event) => {
+                  const preset = accessPresets.find((item) => item.key === event.target.value);
+                  if (!preset) {
+                    return;
                   }
-                  required
-                  disabled={editState.status === 'loading'}
-                />
-              </label>
-
-              <label>
-                {t('Mật khẩu mới (để trống nếu không đổi)')}
-                <input
-                  type="password"
-                  value={editForm.password}
-                  onChange={(event) =>
-                    setEditForm((previous) =>
-                      previous
-                        ? {
-                            ...previous,
-                            password: event.target.value,
-                          }
-                        : previous,
-                    )
-                  }
-                  minLength={8}
-                  disabled={editState.status === 'loading'}
-                />
-              </label>
-
-              <fieldset className="admin-role-fieldset">
-                <legend>{t('Vai trò')}</legend>
-                <div className="admin-role-grid">
-                  {editableRoleOptions.map((role) => (
-                    <label key={role.code} className="admin-role-option">
-                      <input
-                        type="checkbox"
-                        checked={editForm.roles.includes(role.code)}
-                        onChange={() =>
-                          setEditForm((previous) =>
-                            previous
-                              ? {
-                                  ...previous,
-                                  roles: toggleRoleInList(previous.roles, role.code),
-                                }
-                              : previous,
-                          )
+                  setEditForm((previous) =>
+                    previous
+                      ? {
+                          ...previous,
+                          roles: [...preset.roles],
+                          scopes: preset.scopes.map((scope) => ({ ...scope })),
                         }
-                        disabled={editState.status === 'loading'}
-                      />
-                      <span>{t(role.label)}</span>
-                    </label>
-                  ))}
-                </div>
-              </fieldset>
-
-              <fieldset className="admin-role-fieldset admin-scope-fieldset">
-                <legend>{t('Phạm vi quyền (scope)')}</legend>
-                <div className="admin-scope-builder-row">
-                  <select
-                    value={editScopeDraft.type}
-                    onChange={(event) => {
-                      const type = event.target.value as ScopeType;
-                      setEditScopeDraft({
-                        type,
-                        value: getScopeDraftDefaultValue(type),
-                      });
-                      setEditState(idleFormState);
-                    }}
-                    disabled={editState.status === 'loading'}
-                  >
-                    {SCOPE_TYPE_OPTIONS.map((type) => (
-                      <option key={type} value={type}>
-                        {t(getScopeTypeLabel(type))}
-                      </option>
-                    ))}
-                  </select>
-                  <input
-                    value={editScopeDraft.value}
-                    onChange={(event) =>
-                      setEditScopeDraft((previous) => ({
-                        ...previous,
-                        value: event.target.value,
-                      }))
-                    }
-                    placeholder={
-                      editScopeDraft.type === 'global'
-                        ? '*'
-                        : t('Nhập hoặc chọn giá trị scope')
-                    }
-                    list="edit-scope-suggestions"
-                    disabled={editState.status === 'loading' || editScopeDraft.type === 'global'}
-                  />
-                  <datalist id="edit-scope-suggestions">
-                    {editScopeValueOptions.map((value) => (
-                      <option key={value} value={value} />
-                    ))}
-                  </datalist>
-                  <button
-                    type="button"
-                    className="button-ghost"
-                    onClick={handleAddEditScope}
-                    disabled={editState.status === 'loading'}
-                  >
-                    {t('Thêm')}
-                  </button>
-                </div>
-                <div className="admin-scope-chip-list">
-                  {editForm.scopes.length > 0 ? (
-                    editForm.scopes.map((scope) => {
-                      const scopeKey = `${scope.type}:${scope.value}`;
-                      return (
-                        <span key={scopeKey} className="admin-scope-chip">
-                          <strong>{t(getScopeTypeLabel(scope.type))}</strong>
-                          <span>{scope.value}</span>
-                          <button
-                            type="button"
-                            onClick={() => handleRemoveEditScope(scope.type, scope.value)}
-                            disabled={editState.status === 'loading'}
-                            aria-label={t('Xóa scope')}
-                          >
-                            ×
-                          </button>
-                        </span>
-                      );
-                    })
-                  ) : (
-                    <span className="admin-empty">{t('Chưa thêm scope nào.')}</span>
-                  )}
-                </div>
-                <p className="admin-scope-hint">
-                  {scopeReferenceLoading
-                    ? t('Đang tải danh sách gợi ý scope...')
-                    : t('Chọn loại scope, chọn giá trị và bấm Thêm.')}
-                </p>
-              </fieldset>
-
-              <label className="admin-checkbox">
-                <input
-                  type="checkbox"
-                  checked={editForm.isActive}
-                  onChange={(event) =>
-                    setEditForm((previous) =>
-                      previous
-                        ? {
-                            ...previous,
-                            isActive: event.target.checked,
-                          }
-                        : previous,
-                    )
-                  }
-                  disabled={editState.status === 'loading'}
-                />
-                <span>{t('Kích hoạt tài khoản')}</span>
-              </label>
-
-              <div className="admin-edit-actions">
-                <button
-                  type="button"
-                  className="button-ghost admin-row-action is-danger"
-                  onClick={() => {
-                    if (editingUser) {
-                      void handleDeleteUser(editingUser);
-                    }
-                  }}
-                  disabled={
-                    editState.status === 'loading' ||
-                    deletingUserId === editForm.userId ||
-                    !editingUser ||
-                    !canDeleteUser(editingUser)
-                  }
-                >
-                  {deletingUserId === editForm.userId ? t('Đang xóa...') : t('Xóa tài khoản')}
-                </button>
-                <button
-                  type="button"
-                  className="button-ghost"
-                  onClick={() => setEditForm(null)}
-                  disabled={editState.status === 'loading'}
-                >
-                  {t('Hủy')}
-                </button>
-                <button
-                  type="submit"
-                  className="button-solid"
-                  disabled={editState.status === 'loading'}
-                >
-                  {editState.status === 'loading' ? t('Đang xử lý...') : t('Lưu thay đổi')}
-                </button>
-              </div>
-
-              {editState.status === 'error' && <ErrorBlock message={editState.message} />}
-            </form>
-          </article>
-        </section>
+                      : previous,
+                  );
+                }}
+                disabled={editState.status === 'loading'}
+              >
+                {getAccessPresetKey(editForm.roles, editForm.scopes) === 'custom' && (
+                  <option value="custom">{t('Quyền tùy chỉnh hiện có')}</option>
+                )}
+                {accessPresets.map((preset) => (
+                  <option key={preset.key} value={preset.key}>
+                    {t(preset.label)}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="admin-checkbox">
+              <input
+                type="checkbox"
+                checked={editForm.isActive}
+                onChange={(event) =>
+                  setEditForm((previous) =>
+                    previous ? { ...previous, isActive: event.target.checked } : previous,
+                  )
+                }
+                disabled={editState.status === 'loading'}
+              />
+              {t('Kích hoạt tài khoản')}
+            </label>
+            <div className="admin-scope-chip-list">
+              {editForm.roles.map((role) => (
+                <span key={role} className="admin-role-badge">
+                  {role === 'qc' ? 'QC' : role}
+                </span>
+              ))}
+              {editForm.scopes.map((scope) => (
+                <span key={`${scope.type}:${scope.value}`} className="admin-scope-chip">
+                  <strong>{scope.type === 'explicit' ? t('QC báo cáo') : scope.type}</strong>
+                  <span>{scope.value}</span>
+                </span>
+              ))}
+            </div>
+            <div className="admin-edit-actions">
+              <button type="button" className="button-ghost" onClick={() => setEditForm(null)}>
+                {t('Hủy')}
+              </button>
+              <button
+                type="submit"
+                className="button-solid"
+                disabled={editState.status === 'loading'}
+              >
+                {t('Lưu thay đổi')}
+              </button>
+            </div>
+          </form>
+        </div>
       )}
     </>
   );

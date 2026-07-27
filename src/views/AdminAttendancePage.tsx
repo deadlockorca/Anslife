@@ -1,4 +1,4 @@
-import type { FormEvent } from 'react';
+import type { ChangeEvent, FormEvent } from 'react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AdminModuleTabs from '../components/admin/AdminModuleTabs';
@@ -12,9 +12,11 @@ import {
   getCurrentUser,
   listInternalAttendanceLogs,
   logoutInternal,
+  uploadInternalAttendanceWorkPhotos,
   type AppRole,
   type AuthUser,
   type InternalAttendanceLog,
+  type InternalAttendanceWorkPhoto,
 } from '../lib/internalAuth';
 
 interface AttendanceFilters {
@@ -73,6 +75,16 @@ function formatWorkingTime(minutes: number | null): string {
   const hours = Math.floor(minutes / 60);
   const remainingMinutes = minutes % 60;
   return `${hours}h ${remainingMinutes}m`;
+}
+
+function formatFileSize(bytes: number | null): string {
+  if (bytes == null || bytes < 0) {
+    return '-';
+  }
+  if (bytes < 1024 * 1024) {
+    return `${Math.max(1, Math.round(bytes / 1024))} KB`;
+  }
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 
 function formatDateLabel(value: string): string {
@@ -222,8 +234,10 @@ export default function AdminAttendancePage() {
   const [logs, setLogs] = useState<InternalAttendanceLog[]>([]);
   const [todayDate, setTodayDate] = useState('');
   const [todayLog, setTodayLog] = useState<InternalAttendanceLog | null>(null);
+  const [todayWorkPhotos, setTodayWorkPhotos] = useState<InternalAttendanceWorkPhoto[]>([]);
   const [canManageFromApi, setCanManageFromApi] = useState(false);
   const [clockNote, setClockNote] = useState('');
+  const [workPhotoFiles, setWorkPhotoFiles] = useState<File[]>([]);
   const [gpsPermission, setGpsPermission] = useState<
     'unknown' | 'prompt' | 'granted' | 'denied' | 'unsupported'
   >('unknown');
@@ -245,6 +259,7 @@ export default function AdminAttendancePage() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
+  const workPhotoInputRef = useRef<HTMLInputElement | null>(null);
 
   const actorCanManage = useMemo(
     () => canManageFromApi || canManageAttendance(actor),
@@ -257,7 +272,7 @@ export default function AdminAttendancePage() {
         return t('GPS chỉ hoạt động trên HTTPS hoặc localhost. Vui lòng mở đúng domain bảo mật.');
       }
       if (reason === 'permission_denied') {
-        return t('Bạn đã từ chối quyền vị trí. Hãy bật GPS và cho phép truy cập vị trí để chấm công.');
+        return t('Bạn đã từ chối quyền vị trí. Hãy bật GPS và cho phép truy cập vị trí để báo cáo công việc.');
       }
       if (reason === 'timeout') {
         return t('Không lấy được vị trí kịp thời gian. Hãy kiểm tra GPS rồi thử lại.');
@@ -305,7 +320,7 @@ export default function AdminAttendancePage() {
   const getCameraErrorMessage = useCallback(
     (reason: CameraErrorReason) => {
       if (reason === 'permission_denied') {
-        return t('Bạn đã từ chối quyền camera. Hãy cho phép camera để chấm công.');
+        return t('Bạn đã từ chối quyền camera. Hãy cho phép camera để báo cáo công việc.');
       }
       if (reason === 'busy') {
         return t('Camera đang được ứng dụng khác sử dụng. Vui lòng đóng ứng dụng đó và thử lại.');
@@ -455,12 +470,13 @@ export default function AdminAttendancePage() {
         setLogs(result.logs);
         setTodayDate(result.todayDate);
         setTodayLog(result.todayLog);
+        setTodayWorkPhotos(result.todayWorkPhotos);
         setCanManageFromApi(result.canManage);
       } catch (loadError) {
         const message =
           loadError instanceof Error
             ? loadError.message
-            : t('Không thể tải dữ liệu chấm công.');
+            : t('Không thể tải dữ liệu báo cáo công việc.');
         setError(message);
       } finally {
         setLoading(false);
@@ -571,6 +587,54 @@ export default function AdminAttendancePage() {
     await loadAttendance(defaultFilters, actorCanManage);
   }
 
+  function handleWorkPhotoFileChange(event: ChangeEvent<HTMLInputElement>) {
+    const selectedFiles = Array.from(event.target.files ?? []);
+    setWorkPhotoFiles(selectedFiles);
+  }
+
+  async function handleUploadWorkPhotos() {
+    if (workPhotoFiles.length === 0) {
+      setActionState({
+        status: 'error',
+        message: t('Vui lòng chọn ít nhất một ảnh công việc.'),
+      });
+      return;
+    }
+
+    setActionState({
+      status: 'loading',
+      message: t('Đang tải ảnh công việc lên Drive...'),
+    });
+    try {
+      const uploadedPhotos = await uploadInternalAttendanceWorkPhotos(workPhotoFiles);
+      setTodayWorkPhotos((previous) => [...uploadedPhotos, ...previous]);
+      setTodayLog((previous) =>
+        previous
+          ? {
+              ...previous,
+              workPhotos: [...uploadedPhotos, ...previous.workPhotos],
+            }
+          : previous,
+      );
+      setWorkPhotoFiles([]);
+      if (workPhotoInputRef.current) {
+        workPhotoInputRef.current.value = '';
+      }
+      setActionState({
+        status: 'success',
+        message: t('Tải ảnh công việc lên Drive thành công. Ảnh sẽ được tổng hợp trong email check-out.'),
+      });
+      await loadAttendance(filters, actorCanManage);
+    } catch (uploadError) {
+      const message =
+        uploadError instanceof Error ? uploadError.message : t('Không thể tải ảnh công việc.');
+      setActionState({
+        status: 'error',
+        message,
+      });
+    }
+  }
+
   async function handleCheckIn() {
     setActionState({
       status: 'loading',
@@ -616,6 +680,35 @@ export default function AdminAttendancePage() {
       message: t('Đang check-out...'),
     });
     try {
+      if (todayWorkPhotos.length === 0 && workPhotoFiles.length === 0) {
+        throw new Error(t('Bạn cần chọn và tải ảnh công việc lên Drive trước khi check-out.'));
+      }
+
+      if (workPhotoFiles.length > 0) {
+        setActionState({
+          status: 'loading',
+          message: t('Đang tải ảnh công việc lên Drive trước khi check-out...'),
+        });
+        const uploadedPhotos = await uploadInternalAttendanceWorkPhotos(workPhotoFiles);
+        setTodayWorkPhotos((previous) => [...uploadedPhotos, ...previous]);
+        setTodayLog((previous) =>
+          previous
+            ? {
+                ...previous,
+                workPhotos: [...uploadedPhotos, ...previous.workPhotos],
+              }
+            : previous,
+        );
+        setWorkPhotoFiles([]);
+        if (workPhotoInputRef.current) {
+          workPhotoInputRef.current.value = '';
+        }
+      }
+
+      setActionState({
+        status: 'loading',
+        message: t('Đang check-out...'),
+      });
       const gps = await captureGpsSnapshot();
       if (!gps.ok) {
         throw new Error(gps.message);
@@ -653,8 +746,8 @@ export default function AdminAttendancePage() {
     return (
       <>
         <Seo
-          title={t('Chấm công nhân viên')}
-          description={t('Theo dõi check-in/check-out theo ngày của nhân viên.')}
+          title={t('Báo cáo công việc')}
+          description={t('Theo dõi check-in/check-out và ảnh công việc theo ngày của nhân viên.')}
         />
         <LoadingBlock />
       </>
@@ -664,14 +757,14 @@ export default function AdminAttendancePage() {
   return (
     <>
       <Seo
-        title={t('Chấm công nhân viên')}
-        description={t('Theo dõi check-in/check-out theo ngày của nhân viên.')}
+        title={t('Báo cáo công việc')}
+        description={t('Theo dõi check-in/check-out và ảnh công việc theo ngày của nhân viên.')}
       />
 
       <section className="page-hero">
         <p className="kicker">{t('QUẢN TRỊ')}</p>
-        <h1>{t('Chấm công nhân viên')}</h1>
-        <p>{t('Check-in/check-out trên web, theo dõi lịch sử đi làm theo ngày.')}</p>
+        <h1>{t('Báo cáo công việc')}</h1>
+        <p>{t('Check-in/check-out trên web, theo dõi lịch sử và ảnh công việc theo ngày.')}</p>
       </section>
 
       <section className="admin-toolbar">
@@ -697,7 +790,7 @@ export default function AdminAttendancePage() {
         </div>
       </section>
 
-      <AdminModuleTabs />
+      <AdminModuleTabs actor={actor} />
 
       {error && <ErrorBlock message={error} />}
       {actionState.status === 'error' && <ErrorBlock message={actionState.message} />}
@@ -705,144 +798,209 @@ export default function AdminAttendancePage() {
         <div className="state-block success-text">{actionState.message}</div>
       )}
 
-      <section className="form-card attendance-clock-card">
-        <div>
-          <h2>{t('Chấm công hôm nay')}</h2>
-          <p className="admin-empty">
-            {t('Bắt buộc bật GPS và cho phép quyền vị trí khi check-in/check-out.')}
-          </p>
-          <p className="admin-empty">
-            {t('Ngày')}: <strong>{formatDateLabel(todayDate)}</strong>
-          </p>
-          <p className="admin-empty">
-            {t('Trạng thái')}{' '}
-            <span className={`admin-status-pill ${todayStatus.className}`}>
-              {t(todayStatus.label)}
-            </span>
-          </p>
-          <p className="admin-empty">
-            {t('Check-in')}: {formatDateTime(todayLog?.checkInAt ?? null)} | {t('Check-out')}:{' '}
-            {formatDateTime(todayLog?.checkOutAt ?? null)}
-          </p>
-        </div>
-
-        <div className="attendance-clock-actions">
-          <label>
-            {t('Ghi chú (tuỳ chọn)')}
-            <input
-              value={clockNote}
-              onChange={(event) => setClockNote(event.target.value)}
-              placeholder={t('Ví dụ: Đi công tác, vào ca chiều...')}
-              disabled={actionState.status === 'loading'}
-            />
-          </label>
-
-          <div className="attendance-gps-card">
-            <p className="attendance-gps-title">{t('Vị trí GPS (bắt buộc)')}</p>
-            <p className="attendance-gps-meta">
-              {t('Trạng thái quyền')}: <strong>{getGpsPermissionLabel(gpsPermission)}</strong>
+      <div className="attendance-report-grid">
+        <section className="form-card attendance-clock-card">
+          <div>
+            <h2>{t('Báo cáo công việc hôm nay')}</h2>
+            <p className="admin-empty">
+              {t('Bắt buộc bật GPS và cho phép quyền vị trí khi check-in/check-out.')}
             </p>
-            {gpsSnapshot ? (
-              <p className="attendance-gps-meta">
-                {t('Tọa độ gần nhất')}: {gpsSnapshot.latitude.toFixed(6)}, {gpsSnapshot.longitude.toFixed(6)} ·{' '}
-                {formatDateTime(gpsSnapshot.capturedAt)}
-              </p>
-            ) : (
-              <p className="attendance-gps-hint">{t('Chưa có tọa độ GPS. Bấm "Kiểm tra GPS" để yêu cầu quyền vị trí.')}</p>
-            )}
-            {gpsMessage ? <p className="attendance-gps-message">{gpsMessage}</p> : null}
-            <button
-              type="button"
-              className="button-ghost"
-              onClick={() => void captureGpsSnapshot()}
-              disabled={actionState.status === 'loading'}
-            >
-              {t('Kiểm tra GPS')}
-            </button>
+            <p className="admin-empty">
+              {t('Ngày')}: <strong>{formatDateLabel(todayDate)}</strong>
+            </p>
+            <p className="admin-empty">
+              {t('Trạng thái')}{' '}
+              <span className={`admin-status-pill ${todayStatus.className}`}>
+                {t(todayStatus.label)}
+              </span>
+            </p>
+            <p className="admin-empty">
+              {t('Check-in')}: {formatDateTime(todayLog?.checkInAt ?? null)} | {t('Check-out')}:{' '}
+              {formatDateTime(todayLog?.checkOutAt ?? null)}
+            </p>
           </div>
 
-          <div className="attendance-camera-card">
-            <p className="attendance-camera-title">{t('Ảnh check (bắt buộc)')}</p>
-            {cameraError && <p className="attendance-camera-error">{cameraError}</p>}
-            {photoDataUrl ? (
-              <div className="attendance-photo-preview">
-                <img src={photoDataUrl} alt={t('Ảnh chấm công')} />
-              </div>
-            ) : (
-              <p className="attendance-camera-hint">{t('Chưa có ảnh. Hãy mở camera và chụp ảnh.')}</p>
-            )}
+          <div className="attendance-clock-actions">
+            <label>
+              {t('Ghi chú (tuỳ chọn)')}
+              <input
+                value={clockNote}
+                onChange={(event) => setClockNote(event.target.value)}
+                placeholder={t('Ví dụ: Đi công tác, vào ca chiều...')}
+                disabled={actionState.status === 'loading'}
+              />
+            </label>
 
-            {cameraOpen && (
-              <div className="attendance-camera-live">
-                <video ref={videoRef} autoPlay muted playsInline />
-              </div>
-            )}
-
-            <div className="attendance-camera-actions">
-              {!cameraOpen ? (
-                <button
-                  type="button"
-                  className="button-ghost"
-                  onClick={() => void handleOpenCamera()}
-                  disabled={actionState.status === 'loading'}
-                >
-                  {photoDataUrl ? t('Mở lại camera') : t('Mở camera')}
-                </button>
+            <div className="attendance-gps-card">
+              <p className="attendance-gps-title">{t('Vị trí GPS (bắt buộc)')}</p>
+              <p className="attendance-gps-meta">
+                {t('Trạng thái quyền')}: <strong>{getGpsPermissionLabel(gpsPermission)}</strong>
+              </p>
+              {gpsSnapshot ? (
+                <p className="attendance-gps-meta">
+                  {t('Tọa độ gần nhất')}: {gpsSnapshot.latitude.toFixed(6)}, {gpsSnapshot.longitude.toFixed(6)} ·{' '}
+                  {formatDateTime(gpsSnapshot.capturedAt)}
+                </p>
               ) : (
-                <>
-                  <button
-                    type="button"
-                    className="button-solid"
-                    onClick={handleCapturePhoto}
-                    disabled={actionState.status === 'loading'}
-                  >
-                    {t('Chụp ảnh')}
-                  </button>
+                <p className="attendance-gps-hint">{t('Chưa có tọa độ GPS. Bấm "Kiểm tra GPS" để yêu cầu quyền vị trí.')}</p>
+              )}
+              {gpsMessage ? <p className="attendance-gps-message">{gpsMessage}</p> : null}
+              <button
+                type="button"
+                className="button-ghost"
+                onClick={() => void captureGpsSnapshot()}
+                disabled={actionState.status === 'loading'}
+              >
+                {t('Kiểm tra GPS')}
+              </button>
+            </div>
+
+            <div className="attendance-camera-card">
+              <p className="attendance-camera-title">{t('Ảnh check (bắt buộc)')}</p>
+              {cameraError && <p className="attendance-camera-error">{cameraError}</p>}
+              {photoDataUrl ? (
+                <div className="attendance-photo-preview">
+                  <img src={photoDataUrl} alt={t('Ảnh báo cáo công việc')} />
+                </div>
+              ) : (
+                <p className="attendance-camera-hint">{t('Chưa có ảnh. Hãy mở camera và chụp ảnh.')}</p>
+              )}
+
+              {cameraOpen && (
+                <div className="attendance-camera-live">
+                  <video ref={videoRef} autoPlay muted playsInline />
+                </div>
+              )}
+
+              <div className="attendance-camera-actions">
+                {!cameraOpen ? (
                   <button
                     type="button"
                     className="button-ghost"
-                    onClick={stopCamera}
+                    onClick={() => void handleOpenCamera()}
                     disabled={actionState.status === 'loading'}
                   >
-                    {t('Đóng camera')}
+                    {photoDataUrl ? t('Mở lại camera') : t('Mở camera')}
                   </button>
-                </>
-              )}
-              {photoDataUrl && !cameraOpen && (
-                <button
-                  type="button"
-                  className="button-ghost"
-                  onClick={() => setPhotoDataUrl('')}
-                  disabled={actionState.status === 'loading'}
-                >
-                  {t('Xóa ảnh')}
-                </button>
-              )}
+                ) : (
+                  <>
+                    <button
+                      type="button"
+                      className="button-solid"
+                      onClick={handleCapturePhoto}
+                      disabled={actionState.status === 'loading'}
+                    >
+                      {t('Chụp ảnh')}
+                    </button>
+                    <button
+                      type="button"
+                      className="button-ghost"
+                      onClick={stopCamera}
+                      disabled={actionState.status === 'loading'}
+                    >
+                      {t('Đóng camera')}
+                    </button>
+                  </>
+                )}
+                {photoDataUrl && !cameraOpen && (
+                  <button
+                    type="button"
+                    className="button-ghost"
+                    onClick={() => setPhotoDataUrl('')}
+                    disabled={actionState.status === 'loading'}
+                  >
+                    {t('Xóa ảnh')}
+                  </button>
+                )}
+              </div>
+
+              <canvas ref={canvasRef} className="attendance-camera-canvas" />
             </div>
 
-            <canvas ref={canvasRef} className="attendance-camera-canvas" />
+            <div className="admin-order-form-actions">
+              <button
+                type="button"
+                className="button-solid"
+                onClick={() => void handleCheckIn()}
+                disabled={Boolean(todayLog?.checkInAt) || actionState.status === 'loading'}
+              >
+                {t('Check-in')}
+              </button>
+              <button
+                type="button"
+                className="button-ghost"
+                onClick={() => void handleCheckOut()}
+                disabled={!todayLog?.checkInAt || Boolean(todayLog?.checkOutAt) || actionState.status === 'loading'}
+              >
+                {t('Check-out')}
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section className="form-card attendance-work-photo-card">
+          <div className="attendance-work-photo-head">
+            <div>
+              <h2>{t('Ảnh công việc hôm nay')}</h2>
+              <p className="admin-empty">
+                {t('Tải ảnh công việc trong ngày lên thư mục Google Drive của ANSLIFE. Bắt buộc có ảnh công việc trước khi check-out. Mỗi ảnh tối đa 8MB.')}
+              </p>
+            </div>
+            <div className="attendance-work-photo-actions">
+              <input
+                ref={workPhotoInputRef}
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+                multiple
+                onChange={handleWorkPhotoFileChange}
+                disabled={actionState.status === 'loading'}
+              />
+              <button
+                type="button"
+                className="button-solid"
+                onClick={() => void handleUploadWorkPhotos()}
+                disabled={workPhotoFiles.length === 0 || actionState.status === 'loading'}
+              >
+                {t('Tải ảnh lên Drive')}
+              </button>
+            </div>
           </div>
 
-          <div className="admin-order-form-actions">
-            <button
-              type="button"
-              className="button-solid"
-              onClick={() => void handleCheckIn()}
-              disabled={Boolean(todayLog?.checkInAt) || actionState.status === 'loading'}
-            >
-              {t('Check-in')}
-            </button>
-            <button
-              type="button"
-              className="button-ghost"
-              onClick={() => void handleCheckOut()}
-              disabled={!todayLog?.checkInAt || Boolean(todayLog?.checkOutAt) || actionState.status === 'loading'}
-            >
-              {t('Check-out')}
-            </button>
-          </div>
-        </div>
-      </section>
+          {workPhotoFiles.length > 0 && (
+            <div className="attendance-work-photo-selected">
+              <strong>{t('Ảnh đã chọn')}</strong>
+              <ul>
+                {workPhotoFiles.map((file) => (
+                  <li key={`${file.name}-${file.size}-${file.lastModified}`}>
+                    {file.name} · {formatFileSize(file.size)}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {todayWorkPhotos.length === 0 ? (
+            <p className="admin-empty">{t('Chưa có ảnh công việc nào được tải lên hôm nay.')}</p>
+          ) : (
+            <div className="attendance-work-photo-list">
+              {todayWorkPhotos.map((photo) => (
+                <a
+                  key={photo.id}
+                  href={photo.driveWebViewLink ?? '#'}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="attendance-work-photo-item"
+                >
+                  <span>{photo.originalFileName ?? photo.fileName}</span>
+                  <small>
+                    {formatFileSize(photo.fileSize)} · {formatDateTime(photo.uploadedAt)}
+                  </small>
+                </a>
+              ))}
+            </div>
+          )}
+        </section>
+      </div>
 
       <section className="filter-bar admin-order-filter">
         <form onSubmit={handleApplyFilters} className="admin-filter-form admin-filter-form-compact">
@@ -907,10 +1065,10 @@ export default function AdminAttendancePage() {
       </section>
 
       <section className="form-card admin-users-card">
-        <h2>{t('Lịch sử chấm công')}</h2>
+        <h2>{t('Lịch sử báo cáo công việc')}</h2>
         {loading && <LoadingBlock />}
         {!loading && logs.length === 0 && (
-          <p className="admin-empty">{t('Chưa có dữ liệu chấm công phù hợp.')}</p>
+          <p className="admin-empty">{t('Chưa có dữ liệu báo cáo công việc phù hợp.')}</p>
         )}
         {!loading && logs.length > 0 && (
           <div className="admin-table-wrap">
@@ -925,6 +1083,7 @@ export default function AdminAttendancePage() {
                   <th>{t('Giờ công')}</th>
                   <th>{t('Ảnh vào')}</th>
                   <th>{t('Ảnh ra')}</th>
+                  <th>{t('Ảnh công việc')}</th>
                   <th>{t('IP vào')}</th>
                   <th>{t('IP ra')}</th>
                   <th>{t('Ghi chú')}</th>
@@ -975,6 +1134,27 @@ export default function AdminAttendancePage() {
                             className="attendance-log-photo-thumb"
                           />
                         </a>
+                      ) : (
+                        '-'
+                      )}
+                    </td>
+                    <td>
+                      {log.workPhotos.length > 0 ? (
+                        <div className="attendance-work-photo-table-list">
+                          {log.workPhotos.slice(0, 3).map((photo) => (
+                            <a
+                              key={photo.id}
+                              href={photo.driveWebViewLink ?? '#'}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {photo.originalFileName ?? photo.fileName}
+                            </a>
+                          ))}
+                          {log.workPhotos.length > 3 && (
+                            <span>+{log.workPhotos.length - 3}</span>
+                          )}
+                        </div>
                       ) : (
                         '-'
                       )}

@@ -132,11 +132,14 @@ model AppUser {
   password_hash String    @db.VarChar(255)
   full_name     String    @db.VarChar(191)
   is_active     Boolean   @default(true) @db.TinyInt
+  roles_json    String?   @db.Text
+  scopes_json   String?   @db.Text
   last_login_at DateTime? @db.DateTime(0)
   created_at    DateTime  @default(now()) @db.DateTime(0)
   updated_at    DateTime  @updatedAt @db.DateTime(0)
 
   attendance_logs                     AttendanceLog[]
+  attendance_work_photos              AttendanceWorkPhoto[]
   trade_orders_sale_owner             TradeOrder[]           @relation("TradeOrdersSaleOwner")
   order_logistics_updated_by          OrderLogistics[]       @relation("OrderLogisticsUpdatedBy")
   order_work_logs_created_by          OrderWorkLog[]         @relation("OrderWorkLogsCreatedBy")
@@ -156,8 +159,41 @@ model AppUser {
   data_share_links_created_by         DataShareLink[]        @relation("DataShareLinksCreatedBy")
   audit_logs_actor                    AuditLog[]             @relation("AuditLogsActor")
   app_user_sessions                   AppUserSession[]
+  drive_project_members               DriveProjectMember[]
 
   @@map("app_users")
+}
+
+model DriveProject {
+  id              BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  name            String   @db.VarChar(191)
+  drive_folder_id String   @unique(map: "uniq_drive_projects_folder") @db.VarChar(191)
+  description     String?  @db.VarChar(512)
+  is_active       Boolean  @default(true) @db.TinyInt
+  created_at      DateTime @default(now()) @db.DateTime(0)
+  updated_at      DateTime @updatedAt @db.DateTime(0)
+
+  members DriveProjectMember[]
+
+  @@index([is_active], map: "idx_drive_projects_active")
+  @@map("drive_projects")
+}
+
+model DriveProjectMember {
+  id           BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  project_id   BigInt   @db.UnsignedBigInt
+  user_id      BigInt   @db.UnsignedBigInt
+  can_view     Boolean  @default(true) @db.TinyInt
+  can_download Boolean  @default(true) @db.TinyInt
+  created_at   DateTime @default(now()) @db.DateTime(0)
+  updated_at   DateTime @updatedAt @db.DateTime(0)
+
+  project DriveProject @relation(fields: [project_id], references: [id], onDelete: Cascade, map: "fk_drive_project_members_project")
+  user    AppUser      @relation(fields: [user_id], references: [id], onDelete: Cascade, map: "fk_drive_project_members_user")
+
+  @@unique([project_id, user_id], map: "uniq_drive_project_member")
+  @@index([user_id], map: "idx_drive_project_members_user")
+  @@map("drive_project_members")
 }
 
 model AppUserSession {
@@ -200,6 +236,27 @@ model AttendanceLog {
   @@index([attendance_date], map: "idx_attendance_logs_date")
   @@index([user_id], map: "idx_attendance_logs_user")
   @@map("attendance_logs")
+}
+
+model AttendanceWorkPhoto {
+  id                  BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id             BigInt   @db.UnsignedBigInt
+  attendance_date     DateTime @db.Date
+  drive_file_id       String   @db.VarChar(191)
+  drive_parent_id     String   @db.VarChar(191)
+  drive_web_view_link String?  @db.VarChar(1024)
+  file_name           String   @db.VarChar(255)
+  original_file_name  String?  @db.VarChar(255)
+  mime_type           String   @db.VarChar(191)
+  file_size           BigInt?  @db.UnsignedBigInt
+  uploaded_at         DateTime @default(now()) @db.DateTime(0)
+
+  user AppUser @relation(fields: [user_id], references: [id], onDelete: Cascade, map: "fk_attendance_work_photos_user")
+
+  @@index([attendance_date], map: "idx_attendance_work_photos_date")
+  @@index([user_id, attendance_date], map: "idx_attendance_work_photos_user_date")
+  @@index([drive_file_id], map: "idx_attendance_work_photos_drive_file")
+  @@map("attendance_work_photos")
 }
 
 model Customer {

@@ -247,6 +247,22 @@ export async function PATCH(
       );
     }
 
+    if (
+      actor.userId === targetUserId &&
+      parsedRoles.provided &&
+      parsedRoles.value &&
+      !hasPrivilegedRole(parsedRoles.value)
+    ) {
+      return NextResponse.json(
+        {
+          ok: false,
+          code: 'forbidden_self_role_downgrade',
+          message: 'Bạn không thể tự bỏ quyền quản trị của tài khoản đang đăng nhập.',
+        },
+        { status: 400 },
+      );
+    }
+
     const updated = await updateUser(targetUserId, {
       ...(fullName !== undefined ? { fullName } : {}),
       ...(password !== undefined ? { passwordHash: await hashPassword(password) } : {}),

@@ -602,7 +602,7 @@ export default function SiteLayout() {
     );
   }, [language, resolveRouteLanguage]);
 
-  const authMenuPath = headerAuthUser ? '/admin/users' : '/admin/login';
+  const authMenuPath = headerAuthUser ? '/admin/dashboard' : '/admin/login';
   const headerLoginLabel = headerAuthUser ? t('Quản trị') : t('Đăng nhập');
   const isExternalPath = useCallback(
     (path: string) => /^(https?:\/\/|mailto:|tel:)/i.test(path),
@@ -1631,13 +1631,24 @@ export default function SiteLayout() {
                 </nav>
               )}
 
-              <Link
-                to={toLocalizedPath(authMenuPath)}
-                className="header-login-button"
-                onClick={closeNavigationMenus}
-              >
-                {headerLoginLabel}
-              </Link>
+              <div className="header-auth-actions">
+                {headerAuthUser ? (
+                  <Link
+                    to={toLocalizedPath('/portal/drive')}
+                    className="header-login-button header-login-button-secondary"
+                    onClick={closeNavigationMenus}
+                  >
+                    {t('Dữ liệu dự án')}
+                  </Link>
+                ) : null}
+                <Link
+                  to={toLocalizedPath(authMenuPath)}
+                  className="header-login-button"
+                  onClick={closeNavigationMenus}
+                >
+                  {headerLoginLabel}
+                </Link>
+              </div>
 
             </>
           )}
@@ -1793,6 +1804,15 @@ export default function SiteLayout() {
                     </div>
                   )}
 
+                  {headerAuthUser ? (
+                    <Link
+                      to={toLocalizedPath('/portal/drive')}
+                      className="mobile-menu-login-row mobile-menu-login-row-secondary"
+                      onClick={closeNavigationMenus}
+                    >
+                      {t('Dữ liệu dự án')}
+                    </Link>
+                  ) : null}
                   <Link
                     to={toLocalizedPath(authMenuPath)}
                     className="mobile-menu-login-row"

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 const SESSION_COOKIE_NAME = 'anslife_session';
-const SUPPORTED_LANGUAGES = new Set(['vn', 'en', 'jp', 'kr']);
+const SUPPORTED_LANGUAGES = new Set(['vn', 'en', 'jp', 'kr', 'sv', 'fr', 'ru', 'es', 'zh']);
 
 function getPathSegments(pathname: string): string[] {
   return pathname.split('/').filter(Boolean);
@@ -19,6 +19,20 @@ function isAdminPath(pathname: string): boolean {
   }
 
   return first === 'admin';
+}
+
+function isProtectedPortalPath(pathname: string): boolean {
+  const segments = getPathSegments(pathname);
+  if (segments.length === 0) {
+    return false;
+  }
+
+  const [first, second] = segments;
+  if (SUPPORTED_LANGUAGES.has(first)) {
+    return second === 'portal';
+  }
+
+  return first === 'portal';
 }
 
 function isAdminLoginPath(pathname: string): boolean {
@@ -46,7 +60,8 @@ function resolveLanguage(pathname: string): string {
 export function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
-  if (!isAdminPath(pathname) || isAdminLoginPath(pathname)) {
+  const isProtectedPath = isAdminPath(pathname) || isProtectedPortalPath(pathname);
+  if (!isProtectedPath || isAdminLoginPath(pathname)) {
     return NextResponse.next();
   }
 
@@ -64,5 +79,10 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*', '/:lang(vn|en|jp|kr)/admin/:path*'],
+  matcher: [
+    '/admin/:path*',
+    '/portal/:path*',
+    '/:lang(vn|en|jp|kr|sv|fr|ru|es|zh)/admin/:path*',
+    '/:lang(vn|en|jp|kr|sv|fr|ru|es|zh)/portal/:path*',
+  ],
 };

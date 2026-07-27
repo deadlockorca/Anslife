@@ -147,12 +147,38 @@ function hasAuthenticatedRole(roles: AppRole[]): boolean {
   return roles.length > 0;
 }
 
+function hasAnyRole(roles: AppRole[], expectedRoles: AppRole[]): boolean {
+  return expectedRoles.some((role) => roles.includes(role));
+}
+
+function isQcAttendanceOnlyRoleSet(roles: AppRole[]): boolean {
+  return roles.length === 1 && roles[0] === 'qc';
+}
+
 export function can(input: AuthorizationInput): AuthorizationResult {
   if (!hasAuthenticatedRole(input.roles)) {
     return { allowed: false, reason: 'Bạn chưa đăng nhập.' };
   }
 
-  // RBAC is intentionally disabled in single-admin mode.
+  if (isQcAttendanceOnlyRoleSet(input.roles)) {
+    if (
+      input.resource === 'attendance' &&
+      ['view', 'create', 'update'].includes(input.action)
+    ) {
+      return { allowed: true, reason: 'QC được phép báo cáo công việc cá nhân.' };
+    }
+
+    return {
+      allowed: false,
+      reason: 'Tài khoản QC chỉ được phép check-in, check-out và gửi báo cáo công việc.',
+    };
+  }
+
+  if (hasAnyRole(input.roles, ['super_admin', 'system_admin', 'data_controller'])) {
+    return { allowed: true, reason: 'Vai trò quản trị được phép truy cập.' };
+  }
+
+  // Other non-QC role behavior is kept open while detailed RBAC is rolled out.
   return { allowed: true, reason: 'Chế độ admin đơn: cho phép truy cập.' };
 }
 
@@ -177,6 +203,13 @@ export function canTransitionDataState(
 
   if (input.from === input.to) {
     return { allowed: true, reason: 'Không có thay đổi trạng thái.' };
+  }
+
+  if (isQcAttendanceOnlyRoleSet(input.roles)) {
+    return {
+      allowed: false,
+      reason: 'Tài khoản QC chỉ được phép check-in, check-out và gửi báo cáo công việc.',
+    };
   }
 
   return { allowed: true, reason: 'Chế độ admin đơn: cho phép chuyển trạng thái.' };

@@ -65,6 +65,8 @@ CREATE TABLE `app_users` (
     `password_hash` VARCHAR(255) NOT NULL,
     `full_name` VARCHAR(191) NOT NULL,
     `is_active` BOOLEAN NOT NULL DEFAULT true,
+    `roles_json` TEXT NULL,
+    `scopes_json` TEXT NULL,
     `last_login_at` DATETIME(0) NULL,
     `created_at` DATETIME(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
     `updated_at` DATETIME(0) NOT NULL,
@@ -84,6 +86,36 @@ CREATE TABLE `app_user_sessions` (
 
     UNIQUE INDEX `uniq_app_user_sessions_token_hash`(`token_hash`),
     INDEX `idx_app_user_sessions_user_expired`(`user_id`, `expires_at`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `drive_projects` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(191) NOT NULL,
+    `drive_folder_id` VARCHAR(191) NOT NULL,
+    `description` VARCHAR(512) NULL,
+    `is_active` BOOLEAN NOT NULL DEFAULT true,
+    `created_at` DATETIME(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+    `updated_at` DATETIME(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0) ON UPDATE CURRENT_TIMESTAMP(0),
+
+    UNIQUE INDEX `uniq_drive_projects_folder`(`drive_folder_id`),
+    INDEX `idx_drive_projects_active`(`is_active`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `drive_project_members` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `project_id` BIGINT UNSIGNED NOT NULL,
+    `user_id` BIGINT UNSIGNED NOT NULL,
+    `can_view` BOOLEAN NOT NULL DEFAULT true,
+    `can_download` BOOLEAN NOT NULL DEFAULT true,
+    `created_at` DATETIME(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+    `updated_at` DATETIME(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0) ON UPDATE CURRENT_TIMESTAMP(0),
+
+    INDEX `idx_drive_project_members_user`(`user_id`),
+    UNIQUE INDEX `uniq_drive_project_member`(`project_id`, `user_id`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
@@ -111,6 +143,26 @@ CREATE TABLE `attendance_logs` (
     INDEX `idx_attendance_logs_date`(`attendance_date`),
     INDEX `idx_attendance_logs_user`(`user_id`),
     UNIQUE INDEX `uniq_attendance_logs_user_date`(`user_id`, `attendance_date`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `attendance_work_photos` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `user_id` BIGINT UNSIGNED NOT NULL,
+    `attendance_date` DATE NOT NULL,
+    `drive_file_id` VARCHAR(191) NOT NULL,
+    `drive_parent_id` VARCHAR(191) NOT NULL,
+    `drive_web_view_link` VARCHAR(1024) NULL,
+    `file_name` VARCHAR(255) NOT NULL,
+    `original_file_name` VARCHAR(255) NULL,
+    `mime_type` VARCHAR(191) NOT NULL,
+    `file_size` BIGINT UNSIGNED NULL,
+    `uploaded_at` DATETIME(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+
+    INDEX `idx_attendance_work_photos_date`(`attendance_date`),
+    INDEX `idx_attendance_work_photos_user_date`(`user_id`, `attendance_date`),
+    INDEX `idx_attendance_work_photos_drive_file`(`drive_file_id`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
@@ -423,7 +475,16 @@ ALTER TABLE `content_item_taxonomies` ADD CONSTRAINT `fk_content_item_taxonomies
 ALTER TABLE `app_user_sessions` ADD CONSTRAINT `fk_app_user_sessions_user` FOREIGN KEY (`user_id`) REFERENCES `app_users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
+ALTER TABLE `drive_project_members` ADD CONSTRAINT `fk_drive_project_members_project` FOREIGN KEY (`project_id`) REFERENCES `drive_projects`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE `drive_project_members` ADD CONSTRAINT `fk_drive_project_members_user` FOREIGN KEY (`user_id`) REFERENCES `app_users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
 ALTER TABLE `attendance_logs` ADD CONSTRAINT `fk_attendance_logs_user` FOREIGN KEY (`user_id`) REFERENCES `app_users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE `attendance_work_photos` ADD CONSTRAINT `fk_attendance_work_photos_user` FOREIGN KEY (`user_id`) REFERENCES `app_users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE `trade_orders` ADD CONSTRAINT `fk_trade_orders_customer` FOREIGN KEY (`customer_id`) REFERENCES `customers`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;

@@ -1,77 +1,48 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AdminModuleTabs from '../components/admin/AdminModuleTabs';
-import ErrorBlock from '../components/common/ErrorBlock';
 import LoadingBlock from '../components/common/LoadingBlock';
 import Seo from '../components/seo/Seo';
 import useSiteI18n from '../hooks/useSiteI18n';
 import {
   getCurrentUser,
-  getInternalDashboardSummary,
-  INTERNAL_ORDER_STATUS_OPTIONS,
+  isQcAttendanceOnlyUser,
   logoutInternal,
   type AuthUser,
-  type InternalDashboardSummary,
 } from '../lib/internalAuth';
 
-const emptySummary: InternalDashboardSummary = {
-  runningOrders: 0,
-  productionProgress: [],
-  latestQcReports: [],
-  deliverySchedule: [],
-  notifications: [],
-};
-
-function formatDate(value: string): string {
-  const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) {
-    return value;
-  }
-  return new Intl.DateTimeFormat('vi-VN', {
-    dateStyle: 'short',
-    timeStyle: 'short',
-  }).format(parsed);
-}
-
-function getStatusClass(status: string): string {
-  return `admin-status-pill is-order-${status.replace(/[^a-z0-9_-]/gi, '-')}`;
-}
-
-function getOrderStatusLabel(status: string): string {
-  return (
-    INTERNAL_ORDER_STATUS_OPTIONS.find((item) => item.code === status)?.label ?? status
-  );
-}
-
-function getNotificationLevelLabel(level: string): string {
-  switch (level) {
-    case 'info':
-      return 'Thông tin';
-    case 'warning':
-      return 'Cảnh báo';
-    case 'error':
-      return 'Lỗi';
-    case 'success':
-      return 'Thành công';
-    default:
-      return level;
-  }
-}
-
-function getSeverityLabel(severity: string): string {
-  switch (severity.toLowerCase()) {
-    case 'critical':
-      return 'Nghiêm trọng';
-    case 'major':
-      return 'Mức cao';
-    case 'minor':
-      return 'Mức trung bình';
-    case 'low':
-      return 'Mức thấp';
-    default:
-      return severity;
-  }
-}
+const ADMIN_OVERVIEW_MODULES = [
+  {
+    path: '/admin/drive-projects',
+    title: 'Quản lý Drive',
+    body: 'Tạo dự án Drive, gắn thư mục Google Drive và cấp quyền xem dữ liệu dự án.',
+  },
+  {
+    path: '/portal/drive',
+    title: 'Dữ liệu dự án',
+    body: 'Xem dữ liệu dự án được cấp quyền theo tài khoản đăng nhập.',
+  },
+  {
+    path: '/admin/attendance',
+    title: 'Báo cáo công việc',
+    body: 'Check-in, check-out, upload ảnh công việc và xem lịch sử báo cáo.',
+  },
+  {
+    path: '/admin/report-data',
+    title: 'Dữ liệu báo cáo',
+    body: 'Xem trực tiếp thư mục Google Drive chứa ảnh và tài liệu báo cáo công việc.',
+  },
+  {
+    path: '/admin/recruitment',
+    title: 'Tuyển dụng',
+    body: 'Quản lý vị trí tuyển dụng và hồ sơ ứng tuyển.',
+  },
+  {
+    path: '/admin/audit-logs',
+    title: 'Nhật ký kiểm toán',
+    body: 'Theo dõi các hành động quan trọng trong hệ thống.',
+  },
+] as const;
 
 export default function AdminDashboardPage() {
   const { t, toLocalizedPath } = useSiteI18n();
@@ -83,24 +54,6 @@ export default function AdminDashboardPage() {
 
   const [authChecking, setAuthChecking] = useState(true);
   const [actor, setActor] = useState<AuthUser | null>(null);
-  const [summary, setSummary] = useState<InternalDashboardSummary>(emptySummary);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-
-  const loadSummary = useCallback(async () => {
-    setLoading(true);
-    setError('');
-    try {
-      const payload = await getInternalDashboardSummary();
-      setSummary(payload);
-    } catch (loadError) {
-      const message =
-        loadError instanceof Error ? loadError.message : t('Không thể tải trang tổng quan.');
-      setError(message);
-    } finally {
-      setLoading(false);
-    }
-  }, [t]);
 
   useEffect(() => {
     let mounted = true;
@@ -114,8 +67,11 @@ export default function AdminDashboardPage() {
           navigate(loginPath, { replace: true });
           return;
         }
+        if (isQcAttendanceOnlyUser(currentUser)) {
+          navigate(toLocalizedPath('/admin/attendance'), { replace: true });
+          return;
+        }
         setActor(currentUser);
-        await loadSummary();
       } finally {
         if (mounted) {
           setAuthChecking(false);
@@ -126,7 +82,7 @@ export default function AdminDashboardPage() {
     return () => {
       mounted = false;
     };
-  }, [loadSummary, loginPath, navigate]);
+  }, [loginPath, navigate, toLocalizedPath]);
 
   async function handleLogout() {
     try {
@@ -139,7 +95,7 @@ export default function AdminDashboardPage() {
   if (authChecking) {
     return (
       <>
-        <Seo title={t('Cổng tổng quan')} description={t('Bảng điều khiển vận hành ANSLIFE.')} />
+        <Seo title={t('Tổng quan')} description={t('Bảng điều khiển vận hành ANSLIFE.')} />
         <LoadingBlock />
       </>
     );
@@ -147,12 +103,12 @@ export default function AdminDashboardPage() {
 
   return (
     <>
-      <Seo title={t('Cổng tổng quan')} description={t('Bảng điều khiển vận hành ANSLIFE.')} />
+      <Seo title={t('Tổng quan')} description={t('Bảng điều khiển vận hành ANSLIFE.')} />
 
       <section className="page-hero">
         <p className="kicker">{t('PORTAL LÀM VIỆC')}</p>
-        <h1>{t('Tổng quan điều hành')}</h1>
-        <p>{t('Theo dõi đơn hàng đang chạy, QC mới nhất, lịch giao hàng và thông báo hệ thống.')}</p>
+        <h1>{t('Tổng quan')}</h1>
+        <p>{t('Truy cập nhanh các module đang vận hành trong hệ thống ANSLIFE.')}</p>
       </section>
 
       <section className="admin-toolbar">
@@ -161,7 +117,7 @@ export default function AdminDashboardPage() {
           <p>{actor?.email ?? ''}</p>
         </div>
         <div className="admin-toolbar-actions">
-          <button type="button" className="button-ghost" onClick={() => void loadSummary()}>
+          <button type="button" className="button-ghost" onClick={() => window.location.reload()}>
             {t('Làm mới')}
           </button>
           <button type="button" className="button-ghost" onClick={() => void handleLogout()}>
@@ -170,124 +126,19 @@ export default function AdminDashboardPage() {
         </div>
       </section>
 
-      <AdminModuleTabs />
+      <AdminModuleTabs actor={actor} />
 
-      {error && <ErrorBlock message={error} />}
-
-      {loading ? (
-        <LoadingBlock />
-      ) : (
-        <>
-          <section className="admin-dashboard-grid">
-            <article className="form-card">
-              <h2>{t('Đơn hàng đang chạy')}</h2>
-              <p className="admin-dashboard-metric">{summary.runningOrders}</p>
-            </article>
-
-            <article className="form-card">
-              <h2>{t('Tiến độ sản xuất')}</h2>
-              {summary.productionProgress.length === 0 ? (
-                <p className="admin-empty">{t('Chưa có dữ liệu.')}</p>
-              ) : (
-                <ul className="admin-dashboard-list">
-                  {summary.productionProgress.map((item) => (
-                    <li key={item.status}>
-                      <span className={getStatusClass(item.status)}>{t(getOrderStatusLabel(item.status))}</span>
-                      <strong>{item.count}</strong>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </article>
-
-            <article className="form-card">
-              <h2>{t('Thông báo hệ thống')}</h2>
-              {summary.notifications.length === 0 ? (
-                <p className="admin-empty">{t('Không có thông báo.')}</p>
-              ) : (
-                <ul className="admin-dashboard-list admin-dashboard-notifications">
-                  {summary.notifications.map((item, index) => (
-                    <li key={`${item.level}-${index}`}>
-                      <span className={`admin-status-pill is-${item.level}`}>
-                        {t(getNotificationLevelLabel(item.level))}
-                      </span>
-                      <p>{item.message}</p>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </article>
-          </section>
-
-          <section className="admin-layout-grid">
-            <article className="admin-table-wrap">
-              <h2>{t('Báo cáo QC mới nhất')}</h2>
-              {summary.latestQcReports.length === 0 ? (
-                <p className="admin-empty">{t('Chưa có dữ liệu QC.')}</p>
-              ) : (
-                <table>
-                  <thead>
-                    <tr>
-                      <th>{t('Đơn hàng')}</th>
-                      <th>{t('Tiêu đề')}</th>
-                      <th>{t('Mức độ')}</th>
-                      <th>{t('Trạng thái')}</th>
-                      <th>{t('Thời gian')}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {summary.latestQcReports.map((item) => (
-                      <tr key={item.id}>
-                        <td>{item.orderNo}</td>
-                        <td>{item.title}</td>
-                        <td>{t(getSeverityLabel(item.severity))}</td>
-                        <td>
-                          <span className={getStatusClass(item.state)}>{t(getOrderStatusLabel(item.state))}</span>
-                        </td>
-                        <td>{item.observedAt ? formatDate(item.observedAt) : '-'}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              )}
-            </article>
-
-            <article className="admin-table-wrap">
-              <h2>{t('Lịch giao hàng')}</h2>
-              {summary.deliverySchedule.length === 0 ? (
-                <p className="admin-empty">{t('Chưa có lịch giao hàng.')}</p>
-              ) : (
-                <table>
-                  <thead>
-                    <tr>
-                      <th>{t('Đơn hàng')}</th>
-                      <th>{t('Khách hàng')}</th>
-                      <th>{t('Nhà máy')}</th>
-                      <th>{t('Trạng thái')}</th>
-                      <th>{t('Hạn xử lý')}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {summary.deliverySchedule.map((item) => (
-                      <tr key={`${item.orderId}-${item.orderNo}`}>
-                        <td>
-                          <Link to={toLocalizedPath(`/admin/orders`)}>{item.orderNo}</Link>
-                        </td>
-                        <td>{item.customerName}</td>
-                        <td>{item.factoryName ?? '-'}</td>
-                        <td>
-                          <span className={getStatusClass(item.status)}>{t(getOrderStatusLabel(item.status))}</span>
-                        </td>
-                        <td>{formatDate(item.dueDate)}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              )}
-            </article>
-          </section>
-        </>
-      )}
+      <section className="admin-dashboard-grid">
+        {ADMIN_OVERVIEW_MODULES.map((module) => (
+          <article key={module.path} className="form-card">
+            <h2>{t(module.title)}</h2>
+            <p className="admin-empty">{t(module.body)}</p>
+            <Link to={toLocalizedPath(module.path)} className="button-ghost">
+              {t('Mở module')}
+            </Link>
+          </article>
+        ))}
+      </section>
     </>
   );
 }

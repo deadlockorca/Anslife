@@ -341,7 +341,8 @@ export async function checkInAttendance(
            check_in_lat = ?,
            check_in_lng = ?,
            check_in_photo_url = ?,
-           note = COALESCE(?, note)
+           note = COALESCE(?, note),
+           updated_at = CURRENT_TIMESTAMP
        WHERE id = ?`,
       [ipAddress, userAgent, latitude, longitude, photoUrl, note, existing.id],
     );
@@ -356,9 +357,10 @@ export async function checkInAttendance(
   const [result] = await pool.execute<ResultSetHeader>(
     `INSERT INTO attendance_logs (
        user_id, attendance_date, check_in_at,
-       check_in_ip, check_in_user_agent, check_in_lat, check_in_lng, check_in_photo_url, note
+       check_in_ip, check_in_user_agent, check_in_lat, check_in_lng, check_in_photo_url, note,
+       created_at, updated_at
      )
-     VALUES (?, ?, CURRENT_TIMESTAMP, ?, ?, ?, ?, ?, ?)`,
+     VALUES (?, ?, CURRENT_TIMESTAMP, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)`,
     [input.userId, normalizedDate, ipAddress, userAgent, latitude, longitude, photoUrl, note],
   );
 
@@ -398,7 +400,8 @@ export async function checkOutAttendance(
          check_out_lat = ?,
          check_out_lng = ?,
          check_out_photo_url = ?,
-         note = COALESCE(?, note)
+         note = COALESCE(?, note),
+         updated_at = CURRENT_TIMESTAMP
      WHERE id = ?`,
     [ipAddress, userAgent, latitude, longitude, photoUrl, note, existing.id],
   );
