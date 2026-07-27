@@ -119,7 +119,7 @@ function buildAbsoluteUrl(origin: string | undefined, pathOrUrl: string | null):
     return value;
   }
 
-  const normalizedOrigin = origin?.replace(/\/$/, '');
+  const normalizedOrigin = getPublicOrigin(origin);
   if (!normalizedOrigin) {
     return value;
   }
@@ -127,8 +127,14 @@ function buildAbsoluteUrl(origin: string | undefined, pathOrUrl: string | null):
   return `${normalizedOrigin}/${value.replace(/^\/+/, '')}`;
 }
 
+function getPublicOrigin(origin: string | undefined): string {
+  const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  const publicSiteUrl = configuredSiteUrl || origin || '';
+  return publicSiteUrl.replace(/\/$/, '');
+}
+
 function buildPortalUrl(origin: string | undefined, folderId?: string | null): string {
-  const normalizedOrigin = origin?.replace(/\/$/, '');
+  const normalizedOrigin = getPublicOrigin(origin);
   const baseUrl = normalizedOrigin
     ? `${normalizedOrigin}/vn/admin/report-data`
     : '/vn/admin/report-data';
