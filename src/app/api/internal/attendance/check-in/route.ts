@@ -4,14 +4,12 @@ import { can } from '../../../../../lib/auth/authorization';
 import { sendAttendanceNotificationEmail } from '../../../../../lib/email/attendanceNotification';
 import { writeAuditLog } from '../../../../../lib/repositories/auditRepository';
 import { checkInAttendance } from '../../../../../lib/repositories/attendanceRepository';
-import { saveAttendancePhoto } from '../../../../../lib/storage/attendancePhoto';
 
 export const dynamic = 'force-dynamic';
 
 interface AttendanceCheckInBody {
   latitude?: number | null;
   longitude?: number | null;
-  photoDataUrl?: string | null;
   note?: string | null;
 }
 
@@ -56,14 +54,6 @@ function validateLocation(body: AttendanceCheckInBody): LocationValidationResult
     latitude,
     longitude,
   };
-}
-
-function normalizePhotoDataUrl(body: AttendanceCheckInBody): string | null {
-  if (typeof body.photoDataUrl !== 'string') {
-    return null;
-  }
-  const normalized = body.photoDataUrl.trim();
-  return normalized ? normalized : null;
 }
 
 function getTodayDateInVietnam(): string {
@@ -128,50 +118,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const photoDataUrl = normalizePhotoDataUrl(body);
-    if (!photoDataUrl) {
-      return NextResponse.json(
-        {
-          ok: false,
-          code: 'photo_required',
-          message: 'Bạn cần chụp ảnh để check-in.',
-        },
-        { status: 400 },
-      );
-    }
-
     const todayDate = getTodayDateInVietnam();
-
-    let photoUrl: string;
-    try {
-      photoUrl = await saveAttendancePhoto({
-        userId: actor.userId,
-        attendanceDate: todayDate,
-        mode: 'check-in',
-        photoDataUrl,
-      });
-    } catch (photoError) {
-      console.error('[API][internal][attendance/check-in][PHOTO] Failed:', photoError);
-      if (photoError instanceof Error && photoError.message === 'INVALID_ATTENDANCE_PHOTO') {
-        return NextResponse.json(
-          {
-            ok: false,
-            code: 'invalid_photo',
-            message: 'Ảnh check-in không hợp lệ hoặc quá lớn.',
-          },
-          { status: 400 },
-        );
-      }
-      return NextResponse.json(
-        {
-          ok: false,
-          code: 'photo_storage_failed',
-          message: 'Không thể lưu ảnh check-in lúc này. Vui lòng thử lại.',
-        },
-        { status: 500 },
-      );
-    }
-
     const log = await checkInAttendance({
       userId: actor.userId,
       attendanceDate: todayDate,
@@ -179,7 +126,7 @@ export async function POST(request: NextRequest) {
       userAgent: request.headers.get('user-agent'),
       latitude: locationValidation.latitude ?? null,
       longitude: locationValidation.longitude ?? null,
-      photoUrl,
+      photoUrl: null,
       note: body.note ?? null,
     });
 

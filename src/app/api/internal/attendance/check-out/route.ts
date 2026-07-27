@@ -5,14 +5,12 @@ import { sendAttendanceNotificationEmail } from '../../../../../lib/email/attend
 import { writeAuditLog } from '../../../../../lib/repositories/auditRepository';
 import { checkOutAttendance } from '../../../../../lib/repositories/attendanceRepository';
 import { listAttendanceWorkPhotos } from '../../../../../lib/repositories/attendanceWorkPhotoRepository';
-import { saveAttendancePhoto } from '../../../../../lib/storage/attendancePhoto';
 
 export const dynamic = 'force-dynamic';
 
 interface AttendanceCheckOutBody {
   latitude?: number | null;
   longitude?: number | null;
-  photoDataUrl?: string | null;
   note?: string | null;
 }
 
@@ -57,14 +55,6 @@ function validateLocation(body: AttendanceCheckOutBody): LocationValidationResul
     latitude,
     longitude,
   };
-}
-
-function normalizePhotoDataUrl(body: AttendanceCheckOutBody): string | null {
-  if (typeof body.photoDataUrl !== 'string') {
-    return null;
-  }
-  const normalized = body.photoDataUrl.trim();
-  return normalized ? normalized : null;
 }
 
 function getTodayDateInVietnam(): string {
@@ -129,18 +119,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const photoDataUrl = normalizePhotoDataUrl(body);
-    if (!photoDataUrl) {
-      return NextResponse.json(
-        {
-          ok: false,
-          code: 'photo_required',
-          message: 'Bạn cần chụp ảnh để check-out.',
-        },
-        { status: 400 },
-      );
-    }
-
     const todayDate = getTodayDateInVietnam();
     const workPhotos = await listAttendanceWorkPhotos({
       userId: actor.userId,
@@ -159,36 +137,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    let photoUrl: string;
-    try {
-      photoUrl = await saveAttendancePhoto({
-        userId: actor.userId,
-        attendanceDate: todayDate,
-        mode: 'check-out',
-        photoDataUrl,
-      });
-    } catch (photoError) {
-      console.error('[API][internal][attendance/check-out][PHOTO] Failed:', photoError);
-      if (photoError instanceof Error && photoError.message === 'INVALID_ATTENDANCE_PHOTO') {
-        return NextResponse.json(
-          {
-            ok: false,
-            code: 'invalid_photo',
-            message: 'Ảnh check-out không hợp lệ hoặc quá lớn.',
-          },
-          { status: 400 },
-        );
-      }
-      return NextResponse.json(
-        {
-          ok: false,
-          code: 'photo_storage_failed',
-          message: 'Không thể lưu ảnh check-out lúc này. Vui lòng thử lại.',
-        },
-        { status: 500 },
-      );
-    }
-
     const log = await checkOutAttendance({
       userId: actor.userId,
       attendanceDate: todayDate,
@@ -196,7 +144,7 @@ export async function POST(request: NextRequest) {
       userAgent: request.headers.get('user-agent'),
       latitude: locationValidation.latitude ?? null,
       longitude: locationValidation.longitude ?? null,
-      photoUrl,
+      photoUrl: null,
       note: body.note ?? null,
     });
 

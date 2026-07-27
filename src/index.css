@@ -54192,86 +54192,6 @@ img.supply-hub-weekly-cta-image-placeholder {
   color: #185e39;
 }
 
-.attendance-camera-card {
-  border: 1px solid rgba(68, 96, 132, 0.2);
-  border-radius: 12px;
-  background: #f8fbff;
-  padding: 0.68rem;
-  display: grid;
-  gap: 0.52rem;
-}
-
-.attendance-camera-title {
-  margin: 0;
-  color: #1f3957;
-  font-weight: 700;
-}
-
-.attendance-camera-hint {
-  margin: 0;
-  color: #476485;
-  font-size: 0.88rem;
-}
-
-.attendance-camera-error {
-  margin: 0;
-  color: #a22929;
-  font-size: 0.86rem;
-}
-
-.attendance-camera-live {
-  border-radius: 12px;
-  overflow: hidden;
-  background: #0f1924;
-  aspect-ratio: 4 / 3;
-}
-
-.attendance-camera-live video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.attendance-photo-preview {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(68, 96, 132, 0.2);
-  background: #fff;
-  aspect-ratio: 4 / 3;
-}
-
-.attendance-photo-preview img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.attendance-camera-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.42rem;
-}
-
-.attendance-camera-canvas {
-  display: none;
-}
-
-.attendance-log-photo-link {
-  display: inline-flex;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid rgba(68, 96, 132, 0.2);
-}
-
-.attendance-log-photo-thumb {
-  display: block;
-  width: 56px;
-  height: 56px;
-  object-fit: cover;
-}
-
 .attendance-work-photo-card {
   margin-top: 1rem;
   display: grid;
@@ -56578,16 +56498,6 @@ img.supply-hub-weekly-cta-image-placeholder {
   .attendance-work-photo-head,
   .attendance-work-photo-list {
     grid-template-columns: 1fr;
-  }
-
-  .attendance-camera-actions {
-    flex-direction: column;
-  }
-
-  .attendance-camera-actions .button-ghost,
-  .attendance-camera-actions .button-solid {
-    width: 100%;
-    justify-content: center;
   }
 
   .admin-filter-actions,

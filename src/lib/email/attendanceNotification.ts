@@ -64,6 +64,16 @@ function formatDateTime(value: string | null | undefined): string {
   }).format(parsed);
 }
 
+function formatWorkingTime(minutes: number | null | undefined): string {
+  if (minutes == null || minutes < 0) {
+    return 'Chưa có';
+  }
+
+  const hours = Math.floor(minutes / 60);
+  const remainingMinutes = minutes % 60;
+  return `${hours}h ${remainingMinutes}m`;
+}
+
 function getActionLabel(action: AttendanceNotificationAction): string {
   if (action === 'check_in') {
     return 'Check-in';
@@ -99,32 +109,6 @@ function getActionLocation(log: AttendanceLogRecord | undefined, action: Attenda
   }
 
   return { latitude, longitude };
-}
-
-function getPhotoUrl(log: AttendanceLogRecord | undefined, action: AttendanceNotificationAction) {
-  if (!log) {
-    return null;
-  }
-
-  return action === 'check_out' ? log.checkOutPhotoUrl : log.checkInPhotoUrl;
-}
-
-function buildAbsoluteUrl(origin: string | undefined, pathOrUrl: string | null): string | null {
-  const value = pathOrUrl?.trim();
-  if (!value) {
-    return null;
-  }
-
-  if (/^https?:\/\//i.test(value)) {
-    return value;
-  }
-
-  const normalizedOrigin = getPublicOrigin(origin);
-  if (!normalizedOrigin) {
-    return value;
-  }
-
-  return `${normalizedOrigin}/${value.replace(/^\/+/, '')}`;
 }
 
 function getPublicOrigin(origin: string | undefined): string {
@@ -182,16 +166,15 @@ function buildPlainText(input: AttendanceNotificationInput): string {
       `Giờ check-out: ${formatDateTime(input.log.checkOutAt)}`,
       `Vị trí GPS: ${getLocationText(input.log, input.action)}`,
     );
+    if (input.action === 'check_out') {
+      lines.push(`Thời gian làm việc trong ngày: ${formatWorkingTime(input.log.workMinutes)}`);
+    }
+
     const mapsUrl = buildGoogleMapsUrl(input.log, input.action);
     if (mapsUrl) {
       lines.push(`Google Map: ${mapsUrl}`);
     }
 
-    const photoUrl = getPhotoUrl(input.log, input.action);
-    const absolutePhotoUrl = buildAbsoluteUrl(input.origin, photoUrl);
-    if (absolutePhotoUrl) {
-      lines.push(`Ảnh ${actionLabel}: ${absolutePhotoUrl}`);
-    }
   }
 
   if (input.photos?.length) {
@@ -209,18 +192,19 @@ function buildPlainText(input: AttendanceNotificationInput): string {
     '',
     `IP: ${input.ipAddress ?? 'Chưa có'}`,
     `Thiết bị: ${input.userAgent ?? 'Chưa có'}`,
-    `Xem trong hệ thống: ${buildPortalUrl(input.origin, input.folderId)}`,
   );
+  if (input.action !== 'check_in') {
+    lines.push(`Xem trong hệ thống: ${buildPortalUrl(input.origin, input.folderId)}`);
+  }
 
   return lines.join('\n');
 }
 
 function buildHtml(input: AttendanceNotificationInput): string {
   const actionLabel = getActionLabel(input.action);
-  const photoUrl = buildAbsoluteUrl(input.origin, getPhotoUrl(input.log, input.action));
   const detailUrl = buildPortalUrl(input.origin, input.folderId);
   const mapsUrl = buildGoogleMapsUrl(input.log, input.action);
-  const summaryRows = [
+  const summaryRows: Array<[string, string]> = [
     ['Nhân sự', input.actor.fullName],
     ['Email', input.actor.email],
     ['Ngày báo cáo', formatDate(input.attendanceDate)],
@@ -231,6 +215,10 @@ function buildHtml(input: AttendanceNotificationInput): string {
     ['IP', input.ipAddress ?? 'Chưa có'],
     ['Thiết bị', input.userAgent ?? 'Chưa có'],
   ];
+  if (input.action === 'check_out') {
+    summaryRows.splice(6, 0, ['Thời gian làm việc trong ngày', formatWorkingTime(input.log?.workMinutes)]);
+  }
+
   const summaryHtml = summaryRows
     .map(
       ([label, value]) => `
@@ -250,14 +238,6 @@ function buildHtml(input: AttendanceNotificationInput): string {
       <div style="max-width:760px;margin:0 0 18px;padding:14px 16px;border:1px solid #eadfd2;background:#fff8f0;border-radius:10px;">
         <div style="font-weight:700;margin:0 0 10px;color:#20242a;">Tóm tắt</div>
         ${summaryHtml}
-        <div style="margin:0 0 6px;">
-          <span style="color:#6d737c;font-weight:700;">Ảnh check:</span>
-          <span>${
-            photoUrl
-              ? `<a href="${escapeHtml(photoUrl)}">Mở ảnh ${escapeHtml(actionLabel)}</a>`
-              : 'Chưa có'
-          }</span>
-        </div>
         <div style="margin-top:16px;">
           ${
             mapsUrl
@@ -266,9 +246,13 @@ function buildHtml(input: AttendanceNotificationInput): string {
                 </a>`
               : ''
           }
-          <a href="${escapeHtml(detailUrl)}" style="display:inline-block;padding:10px 16px;border-radius:8px;background:#2f4d73;color:#ffffff;text-decoration:none;font-weight:700;">
-            Xem chi tiết trên hệ thống
-          </a>
+          ${
+            input.action !== 'check_in'
+              ? `<a href="${escapeHtml(detailUrl)}" style="display:inline-block;padding:10px 16px;border-radius:8px;background:#2f4d73;color:#ffffff;text-decoration:none;font-weight:700;">
+                  Xem chi tiết trên hệ thống
+                </a>`
+              : ''
+          }
         </div>
       </div>
     </div>`;

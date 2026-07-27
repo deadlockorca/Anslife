@@ -140,12 +140,6 @@ type LocationSnapshotResult =
       reason: LocationErrorReason;
     };
 
-type CameraErrorReason =
-  | 'unsupported'
-  | 'permission_denied'
-  | 'busy'
-  | 'unavailable';
-
 function normalizeLocationErrorReason(
   error: GeolocationPositionError,
 ): LocationErrorReason {
@@ -207,19 +201,6 @@ async function getLocationSnapshot(): Promise<LocationSnapshotResult> {
   });
 }
 
-function resolveImageUrl(url: string | null): string | null {
-  if (!url) {
-    return null;
-  }
-  if (url.startsWith('http://') || url.startsWith('https://')) {
-    return url;
-  }
-  if (url.startsWith('/')) {
-    return url;
-  }
-  return `/${url}`;
-}
-
 export default function AdminAttendancePage() {
   const { t, toLocalizedPath } = useSiteI18n();
   const navigate = useNavigate();
@@ -247,18 +228,12 @@ export default function AdminAttendancePage() {
     capturedAt: string;
   } | null>(null);
   const [gpsMessage, setGpsMessage] = useState('');
-  const [photoDataUrl, setPhotoDataUrl] = useState('');
-  const [cameraOpen, setCameraOpen] = useState(false);
-  const [cameraError, setCameraError] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [actionState, setActionState] = useState<ActionState>({
     status: 'idle',
     message: '',
   });
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const streamRef = useRef<MediaStream | null>(null);
   const workPhotoInputRef = useRef<HTMLInputElement | null>(null);
 
   const actorCanManage = useMemo(
@@ -317,111 +292,6 @@ export default function AdminAttendancePage() {
       setGpsPermission('unsupported');
     }
   }, []);
-  const getCameraErrorMessage = useCallback(
-    (reason: CameraErrorReason) => {
-      if (reason === 'permission_denied') {
-        return t('Bạn đã từ chối quyền camera. Hãy cho phép camera để báo cáo công việc.');
-      }
-      if (reason === 'busy') {
-        return t('Camera đang được ứng dụng khác sử dụng. Vui lòng đóng ứng dụng đó và thử lại.');
-      }
-      if (reason === 'unsupported') {
-        return t('Thiết bị/trình duyệt không hỗ trợ camera.');
-      }
-      return t('Không thể mở camera. Vui lòng thử lại.');
-    },
-    [t],
-  );
-
-  const stopCamera = useCallback(() => {
-    const stream = streamRef.current;
-    if (stream) {
-      for (const track of stream.getTracks()) {
-        track.stop();
-      }
-      streamRef.current = null;
-    }
-    if (videoRef.current) {
-      videoRef.current.srcObject = null;
-    }
-    setCameraOpen(false);
-  }, []);
-
-  const handleOpenCamera = useCallback(async () => {
-    setCameraError('');
-
-    if (typeof navigator === 'undefined' || !navigator.mediaDevices?.getUserMedia) {
-      setCameraError(getCameraErrorMessage('unsupported'));
-      return;
-    }
-
-    stopCamera();
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({
-        video: {
-          facingMode: 'user',
-          width: { ideal: 1280 },
-          height: { ideal: 720 },
-        },
-        audio: false,
-      });
-      streamRef.current = stream;
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
-      }
-      setCameraOpen(true);
-    } catch (cameraOpenError) {
-      const errorName =
-        cameraOpenError && typeof cameraOpenError === 'object' && 'name' in cameraOpenError
-          ? String((cameraOpenError as { name?: unknown }).name ?? '')
-          : '';
-
-      if (errorName === 'NotAllowedError' || errorName === 'PermissionDeniedError') {
-        setCameraError(getCameraErrorMessage('permission_denied'));
-        return;
-      }
-      if (errorName === 'NotReadableError' || errorName === 'TrackStartError') {
-        setCameraError(getCameraErrorMessage('busy'));
-        return;
-      }
-      setCameraError(getCameraErrorMessage('unavailable'));
-    }
-  }, [getCameraErrorMessage, stopCamera]);
-
-  const handleCapturePhoto = useCallback(() => {
-    const video = videoRef.current;
-    const canvas = canvasRef.current;
-    if (!video || !canvas || video.videoWidth <= 0 || video.videoHeight <= 0) {
-      setCameraError(t('Chưa lấy được khung hình camera. Vui lòng thử lại.'));
-      return;
-    }
-
-    const maxWidth = 960;
-    const scale = Math.min(1, maxWidth / video.videoWidth);
-    const width = Math.max(1, Math.round(video.videoWidth * scale));
-    const height = Math.max(1, Math.round(video.videoHeight * scale));
-
-    canvas.width = width;
-    canvas.height = height;
-
-    const context = canvas.getContext('2d');
-    if (!context) {
-      setCameraError(t('Không thể xử lý ảnh camera. Vui lòng thử lại.'));
-      return;
-    }
-
-    context.drawImage(video, 0, 0, width, height);
-    const captured = canvas.toDataURL('image/jpeg', 0.84);
-    if (!captured || !captured.startsWith('data:image/')) {
-      setCameraError(t('Ảnh chụp không hợp lệ. Vui lòng chụp lại.'));
-      return;
-    }
-
-    setPhotoDataUrl(captured);
-    setCameraError('');
-    stopCamera();
-  }, [stopCamera, t]);
-
   const captureGpsSnapshot = useCallback(async () => {
     setGpsMessage(t('Đang lấy vị trí GPS...'));
     const location = await getLocationSnapshot();
@@ -525,47 +395,9 @@ export default function AdminAttendancePage() {
     };
   }, [loadAttendance, loginPath, navigate, t]);
 
-  useEffect(() => () => stopCamera(), [stopCamera]);
-
   useEffect(() => {
     void refreshGpsPermission();
   }, [refreshGpsPermission]);
-
-  useEffect(() => {
-    if (!cameraOpen) {
-      return;
-    }
-
-    const videoElement = videoRef.current;
-    const stream = streamRef.current;
-    if (!videoElement || !stream) {
-      return;
-    }
-
-    if (videoElement.srcObject !== stream) {
-      videoElement.srcObject = stream;
-    }
-
-    const startPlayback = () => {
-      void videoElement.play().catch(() => {
-        // no-op: người dùng có thể cần tương tác thêm trên một số trình duyệt.
-      });
-    };
-
-    if (videoElement.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
-      startPlayback();
-      return;
-    }
-
-    const onLoadedMetadata = () => {
-      startPlayback();
-    };
-
-    videoElement.addEventListener('loadedmetadata', onLoadedMetadata, { once: true });
-    return () => {
-      videoElement.removeEventListener('loadedmetadata', onLoadedMetadata);
-    };
-  }, [cameraOpen]);
 
   async function handleLogout() {
     try {
@@ -646,19 +478,13 @@ export default function AdminAttendancePage() {
         throw new Error(gps.message);
       }
 
-      if (!photoDataUrl) {
-        throw new Error(t('Bạn cần chụp ảnh camera trước khi check-in.'));
-      }
-
       const log = await checkInInternalAttendance({
         note: clockNote.trim() || undefined,
         latitude: gps.latitude,
         longitude: gps.longitude,
-        photoDataUrl,
       });
       setTodayLog(log);
       setClockNote('');
-      setPhotoDataUrl('');
       setActionState({
         status: 'success',
         message: t('Check-in thành công.'),
@@ -714,19 +540,13 @@ export default function AdminAttendancePage() {
         throw new Error(gps.message);
       }
 
-      if (!photoDataUrl) {
-        throw new Error(t('Bạn cần chụp ảnh camera trước khi check-out.'));
-      }
-
       const log = await checkOutInternalAttendance({
         note: clockNote.trim() || undefined,
         latitude: gps.latitude,
         longitude: gps.longitude,
-        photoDataUrl,
       });
       setTodayLog(log);
       setClockNote('');
-      setPhotoDataUrl('');
       setActionState({
         status: 'success',
         message: t('Check-out thành công.'),
@@ -853,68 +673,6 @@ export default function AdminAttendancePage() {
               >
                 {t('Kiểm tra GPS')}
               </button>
-            </div>
-
-            <div className="attendance-camera-card">
-              <p className="attendance-camera-title">{t('Ảnh check (bắt buộc)')}</p>
-              {cameraError && <p className="attendance-camera-error">{cameraError}</p>}
-              {photoDataUrl ? (
-                <div className="attendance-photo-preview">
-                  <img src={photoDataUrl} alt={t('Ảnh báo cáo công việc')} />
-                </div>
-              ) : (
-                <p className="attendance-camera-hint">{t('Chưa có ảnh. Hãy mở camera và chụp ảnh.')}</p>
-              )}
-
-              {cameraOpen && (
-                <div className="attendance-camera-live">
-                  <video ref={videoRef} autoPlay muted playsInline />
-                </div>
-              )}
-
-              <div className="attendance-camera-actions">
-                {!cameraOpen ? (
-                  <button
-                    type="button"
-                    className="button-ghost"
-                    onClick={() => void handleOpenCamera()}
-                    disabled={actionState.status === 'loading'}
-                  >
-                    {photoDataUrl ? t('Mở lại camera') : t('Mở camera')}
-                  </button>
-                ) : (
-                  <>
-                    <button
-                      type="button"
-                      className="button-solid"
-                      onClick={handleCapturePhoto}
-                      disabled={actionState.status === 'loading'}
-                    >
-                      {t('Chụp ảnh')}
-                    </button>
-                    <button
-                      type="button"
-                      className="button-ghost"
-                      onClick={stopCamera}
-                      disabled={actionState.status === 'loading'}
-                    >
-                      {t('Đóng camera')}
-                    </button>
-                  </>
-                )}
-                {photoDataUrl && !cameraOpen && (
-                  <button
-                    type="button"
-                    className="button-ghost"
-                    onClick={() => setPhotoDataUrl('')}
-                    disabled={actionState.status === 'loading'}
-                  >
-                    {t('Xóa ảnh')}
-                  </button>
-                )}
-              </div>
-
-              <canvas ref={canvasRef} className="attendance-camera-canvas" />
             </div>
 
             <div className="admin-order-form-actions">
@@ -1081,8 +839,6 @@ export default function AdminAttendancePage() {
                   <th>{t('Check-in')}</th>
                   <th>{t('Check-out')}</th>
                   <th>{t('Giờ công')}</th>
-                  <th>{t('Ảnh vào')}</th>
-                  <th>{t('Ảnh ra')}</th>
                   <th>{t('Ảnh công việc')}</th>
                   <th>{t('IP vào')}</th>
                   <th>{t('IP ra')}</th>
@@ -1102,42 +858,6 @@ export default function AdminAttendancePage() {
                     <td>{formatDateTime(log.checkInAt)}</td>
                     <td>{formatDateTime(log.checkOutAt)}</td>
                     <td>{formatWorkingTime(log.workMinutes)}</td>
-                    <td>
-                      {resolveImageUrl(log.checkInPhotoUrl) ? (
-                        <a
-                          href={resolveImageUrl(log.checkInPhotoUrl) ?? '#'}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="attendance-log-photo-link"
-                        >
-                          <img
-                            src={resolveImageUrl(log.checkInPhotoUrl) ?? ''}
-                            alt={t('Ảnh check-in')}
-                            className="attendance-log-photo-thumb"
-                          />
-                        </a>
-                      ) : (
-                        '-'
-                      )}
-                    </td>
-                    <td>
-                      {resolveImageUrl(log.checkOutPhotoUrl) ? (
-                        <a
-                          href={resolveImageUrl(log.checkOutPhotoUrl) ?? '#'}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="attendance-log-photo-link"
-                        >
-                          <img
-                            src={resolveImageUrl(log.checkOutPhotoUrl) ?? ''}
-                            alt={t('Ảnh check-out')}
-                            className="attendance-log-photo-thumb"
-                          />
-                        </a>
-                      ) : (
-                        '-'
-                      )}
-                    </td>
                     <td>
                       {log.workPhotos.length > 0 ? (
                         <div className="attendance-work-photo-table-list">
