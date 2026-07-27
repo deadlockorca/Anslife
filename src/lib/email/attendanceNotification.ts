@@ -130,7 +130,15 @@ function buildAbsoluteUrl(origin: string | undefined, pathOrUrl: string | null):
 function getPublicOrigin(origin: string | undefined): string {
   const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
   const publicSiteUrl = configuredSiteUrl || origin || '';
-  return publicSiteUrl.replace(/\/$/, '');
+  if (!publicSiteUrl) {
+    return '';
+  }
+
+  try {
+    return new URL(publicSiteUrl).origin;
+  } catch {
+    return publicSiteUrl.replace(/\/$/, '').replace(/\/[a-z]{2}(?:-[A-Z]{2})?$/, '');
+  }
 }
 
 function buildPortalUrl(origin: string | undefined, folderId?: string | null): string {
