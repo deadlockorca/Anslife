@@ -133,7 +133,7 @@ const ABOUT_COMPANY_INTRO_SECTION_VN = `
           <div><dt>Lĩnh vực hoạt động</dt><dd>Sản xuất & chuỗi cung ứng</dd></div>
           <div><dt>Trụ sở</dt><dd>Việt Nam</dd></div>
           <div><dt>Địa điểm hỗ trợ gặp mặt quốc tế</dt><dd>Tokyo, Singapore, Hong Kong,...</dd></div>
-          <div><dt>Email</dt><dd>Global@anslife.com</dd></div>
+          <div><dt>Email</dt><dd>contact@anslife.com</dd></div>
           <div><dt>Website</dt><dd>anslife.com</dd></div>
           <div><dt>Ngôn ngữ hỗ trợ</dt><dd>Đa dạng ngôn ngữ</dd></div>
         </dl>
@@ -9611,7 +9611,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
           </div>
           <div class="ai-company-info-row">
             <dt>Email</dt>
-            <dd><a href="mailto:global@anslife.com">global@anslife.com</a></dd>
+            <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Ngôn ngữ hỗ trợ</dt>
@@ -9669,7 +9669,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.jp">contact@anslife.jp</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>Địa chỉ</dt>
@@ -9687,7 +9687,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.sg">contact@anslife.sg</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>Địa chỉ</dt>
@@ -9705,7 +9705,7 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.hk">contact@anslife.hk</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>Địa chỉ</dt>
@@ -9846,7 +9846,7 @@ const ABOUT_COMPANY_INTRO_SECTION_EN = `
           <div><dt>Business scope</dt><dd>Production & supply chain</dd></div>
           <div><dt>Headquarters</dt><dd>Vietnam</dd></div>
           <div><dt>International meeting support locations</dt><dd>Tokyo, Singapore, Hong Kong,...</dd></div>
-          <div><dt>Email</dt><dd>Global@anslife.com</dd></div>
+          <div><dt>Email</dt><dd>contact@anslife.com</dd></div>
           <div><dt>Website</dt><dd>anslife.com</dd></div>
           <div><dt>Supported languages</dt><dd>Multiple languages</dd></div>
         </dl>
@@ -9930,7 +9930,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
           </div>
           <div class="ai-company-info-row">
             <dt>Email</dt>
-            <dd><a href="mailto:global@anslife.com">global@anslife.com</a></dd>
+            <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>Supported Languages</dt>
@@ -9988,7 +9988,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.jp">contact@anslife.jp</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>Address</dt>
@@ -10006,7 +10006,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.sg">contact@anslife.sg</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>Address</dt>
@@ -10024,7 +10024,7 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.hk">contact@anslife.hk</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>Address</dt>
@@ -10079,7 +10079,7 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
           </div>
           <div class="ai-company-info-row">
             <dt>Email</dt>
-            <dd><a href="mailto:global@anslife.com">global@anslife.com</a></dd>
+            <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>対応言語</dt>
@@ -10137,7 +10137,7 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.jp">contact@anslife.jp</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>住所</dt>
@@ -10155,7 +10155,7 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.sg">contact@anslife.sg</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>住所</dt>
@@ -10173,7 +10173,7 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.hk">contact@anslife.hk</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>住所</dt>
@@ -10228,7 +10228,7 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
           </div>
           <div class="ai-company-info-row">
             <dt>Email</dt>
-            <dd><a href="mailto:global@anslife.com">global@anslife.com</a></dd>
+            <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
           </div>
           <div class="ai-company-info-row">
             <dt>지원 언어</dt>
@@ -10286,7 +10286,7 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.jp">contact@anslife.jp</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>주소</dt>
@@ -10304,7 +10304,7 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.sg">contact@anslife.sg</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>주소</dt>
@@ -10322,7 +10322,7 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
             </div>
             <div>
               <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.hk">contact@anslife.hk</a></dd>
+              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
             </div>
             <div>
               <dt>주소</dt>
@@ -18645,7 +18645,7 @@ const RESOURCES_FAQ_SECTION_VN = `
     </div>
 
     <footer class="anslife-faq-footer">
-      <p>ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555</p>
+      <p>ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555</p>
     </footer>
   </section>
 `.trim();
@@ -18737,7 +18737,7 @@ const RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
     title: 'Frequently Asked Questions for Buyers',
     intro:
       'This page answers common questions from international buyers about working with ANSLIFE on production, supply chain, quality control, warehousing, trade finance, payment and international delivery.',
-    footer: 'ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+    footer: 'ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555',
     topics: [
       {
         id: 'faq-about',
@@ -19024,7 +19024,7 @@ const RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
     title: 'バイヤー向けよくある質問',
     intro:
       'このページでは、海外バイヤーがANSLIFEと生産、サプライチェーン、品質管理、保管、貿易金融、決済、国際配送について協業する際によく確認する内容をまとめています。',
-    footer: 'ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+    footer: 'ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555',
     topics: [
       {
         id: 'faq-about',
@@ -19311,7 +19311,7 @@ const RESOURCES_FAQ_LOCALIZED_CONTENT: Partial<
     title: '바이어를 위한 자주 묻는 질문',
     intro:
       '이 페이지는 해외 바이어가 ANSLIFE와 생산, 공급망, 품질관리, 보관, 무역금융, 결제, 국제 배송을 진행할 때 자주 확인하는 질문을 정리한 자료입니다.',
-    footer: 'ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+    footer: 'ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555',
     topics: [
       {
         id: 'faq-about',
@@ -19641,7 +19641,7 @@ function buildCompactResourcesFaqContent(
   return {
     title: input.title,
     intro: input.intro,
-    footer: 'ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+    footer: 'ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555',
     topics: [
       {
         id: 'faq-about',
@@ -19744,7 +19744,7 @@ function buildMinimalResourcesFaqContent(input: {
   return {
     title: input.title,
     intro: input.intro,
-    footer: 'ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555',
+    footer: 'ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555',
     topics: input.topics.map(([nav, title, question, answer, extraQuestion], index) => ({
       id: ids[index],
       nav,

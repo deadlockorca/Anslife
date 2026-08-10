@@ -4,7 +4,7 @@ export const RESOURCES_TEMPLATE_TRANSLATIONS: Partial<
   Record<Exclude<LanguageCode, 'vn'>, Record<string, string>>
 > = {
   "en": {
-    "ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555": "ANSLIFE | ANSLIFE.com | global@ANSLIFE.com | Tel: +84 901 827 555",
+    "ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555": "ANSLIFE | ANSLIFE.com | contact@anslife.com | Tel: +84 901 827 555",
     "ANSLIFE có chấp nhận chuyển khoản quốc tế không?": "Does ANSLIFE accept international wire transfers?",
     "ANSLIFE có chấp nhận thư tín dụng không?": "Does ANSLIFE accept letters of credit?",
     "ANSLIFE có chuỗi cung ứng vật liệu như thế nào?": "What kind of material supply chain does ANSLIFE have?",
@@ -452,7 +452,7 @@ export const RESOURCES_TEMPLATE_TRANSLATIONS: Partial<
     "Xem tất cả cập nhật": "See all updates"
   },
   "jp": {
-    "ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555": "アンライフ |アンズライフ.com | global@ANSLIFE.com |電話: +84 901 827 555",
+    "ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555": "アンライフ |アンズライフ.com | contact@anslife.com |電話: +84 901 827 555",
     "ANSLIFE có chấp nhận chuyển khoản quốc tế không?": "ANSLIFE は国際電信送金を受け入れますか?",
     "ANSLIFE có chấp nhận thư tín dụng không?": "ANSLIFE は信用状を受け入れますか?",
     "ANSLIFE có chuỗi cung ứng vật liệu như thế nào?": "ANSLIFE はどのような材料サプライチェーンを持っていますか?",
@@ -900,7 +900,7 @@ export const RESOURCES_TEMPLATE_TRANSLATIONS: Partial<
     "Xem tất cả cập nhật": "すべてのアップデートを見る"
   },
   "kr": {
-    "ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555": "앤라이프 | ANSLIFE.com | global@ANSLIFE.com | 전화: +84 901 827 555",
+    "ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555": "앤라이프 | ANSLIFE.com | contact@anslife.com | 전화: +84 901 827 555",
     "ANSLIFE có chấp nhận chuyển khoản quốc tế không?": "ANSLIFE에서는 국제 송금을 허용합니까?",
     "ANSLIFE có chấp nhận thư tín dụng không?": "ANSLIFE에서는 신용장을 받나요?",
     "ANSLIFE có chuỗi cung ứng vật liệu như thế nào?": "ANSLIFE는 어떤 자재 공급망을 갖고 있나요?",
@@ -1348,7 +1348,7 @@ export const RESOURCES_TEMPLATE_TRANSLATIONS: Partial<
     "Xem tất cả cập nhật": "모든 업데이트 보기"
   },
   "sv": {
-    "ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555": "ANSLIFE | ANSLIFE.com | global@ANSLIFE.com | Tel: +84 901 827 555",
+    "ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555": "ANSLIFE | ANSLIFE.com | contact@anslife.com | Tel: +84 901 827 555",
     "ANSLIFE có chấp nhận chuyển khoản quốc tế không?": "Accepterar ANSLIFE internationella banköverföringar?",
     "ANSLIFE có chấp nhận thư tín dụng không?": "Accepterar ANSLIFE remburs?",
     "ANSLIFE có chuỗi cung ứng vật liệu như thế nào?": "Vilken typ av materialförsörjningskedja har ANSLIFE?",
@@ -1796,7 +1796,7 @@ export const RESOURCES_TEMPLATE_TRANSLATIONS: Partial<
     "Xem tất cả cập nhật": "Se alla uppdateringar"
   },
   "fr": {
-    "ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555": "ANSVIE | ANSLIFE.com | global@ANSLIFE.com | Tél: +84 901 827 555",
+    "ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555": "ANSVIE | ANSLIFE.com | contact@anslife.com | Tél: +84 901 827 555",
     "ANSLIFE có chấp nhận chuyển khoản quốc tế không?": "ANSLIFE accepte-t-il les virements électroniques internationaux?",
     "ANSLIFE có chấp nhận thư tín dụng không?": "ANSLIFE accepte-t-elle les lettres de crédit?",
     "ANSLIFE có chuỗi cung ứng vật liệu như thế nào?": "De quel type de chaîne d'approvisionnement en matériaux dispose ANSLIFE?",
@@ -2244,7 +2244,7 @@ export const RESOURCES_TEMPLATE_TRANSLATIONS: Partial<
     "Xem tất cả cập nhật": "Voir toutes les mises à jour"
   },
   "ru": {
-    "ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555": "АНСЛАЙФ | ANSLIFE.com | global@ANSLIFE.com | Тел: +84 901 827 555",
+    "ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555": "АНСЛАЙФ | ANSLIFE.com | contact@anslife.com | Тел: +84 901 827 555",
     "ANSLIFE có chấp nhận chuyển khoản quốc tế không?": "Принимает ли ANSLIFE международные банковские переводы?",
     "ANSLIFE có chấp nhận thư tín dụng không?": "Принимает ли ANSLIFE аккредитивы?",
     "ANSLIFE có chuỗi cung ứng vật liệu như thế nào?": "Какую цепочку поставок материалов имеет ANSLIFE?",
@@ -2692,7 +2692,7 @@ export const RESOURCES_TEMPLATE_TRANSLATIONS: Partial<
     "Xem tất cả cập nhật": "Посмотреть все обновления"
   },
   "es": {
-    "ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555": "ANSVIDA | ANSLIFE.com | global@ANSLIFE.com | Teléfono: +84 901 827 555",
+    "ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555": "ANSVIDA | ANSLIFE.com | contact@anslife.com | Teléfono: +84 901 827 555",
     "ANSLIFE có chấp nhận chuyển khoản quốc tế không?": "¿ANSLIFE acepta transferencias bancarias internacionales?",
     "ANSLIFE có chấp nhận thư tín dụng không?": "¿ANSLIFE acepta cartas de crédito?",
     "ANSLIFE có chuỗi cung ứng vật liệu như thế nào?": "¿Qué tipo de cadena de suministro de materiales tiene ANSLIFE?",
@@ -3140,7 +3140,7 @@ export const RESOURCES_TEMPLATE_TRANSLATIONS: Partial<
     "Xem tất cả cập nhật": "Ver todas las actualizaciones"
   },
   "zh": {
-    "ANSLIFE | anslife.com | global@anslife.com | Tel: +84 901 827 555": "ANSLIFE | ANSLIFE.com | global@ANSLIFE.com | Tel: +84 901 827 555",
+    "ANSLIFE | anslife.com | contact@anslife.com | Tel: +84 901 827 555": "ANSLIFE | ANSLIFE.com | contact@anslife.com | Tel: +84 901 827 555",
     "ANSLIFE có chấp nhận chuyển khoản quốc tế không?": "ANSLIFE 接受国际电汇吗？",
     "ANSLIFE có chấp nhận thư tín dụng không?": "ANSLIFE 接受信用证吗？",
     "ANSLIFE có chuỗi cung ứng vật liệu như thế nào?": "ANSLIFE拥有什么样的材料供应链？",
