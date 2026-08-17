@@ -9642,10 +9642,6 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
               <dd>Hà Nội, TP. Hồ Chí Minh</dd>
             </div>
             <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
               <dt>Địa chỉ văn phòng Hà Nội</dt>
               <dd>Tầng 5, Tòa nhà Zen Tower, Số 12 đường Khuất Duy Tiến, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội, Việt Nam</dd>
             </div>
@@ -9667,14 +9663,6 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
               <dt>Địa điểm hỗ trợ gặp mặt quốc tế</dt>
               <dd>Tokyo, Japan</dd>
             </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>Địa chỉ</dt>
-              <dd>Địa chỉ đang cập nhật</dd>
-            </div>
           </dl>
         </article>
 
@@ -9685,14 +9673,6 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
               <dt>Địa điểm hỗ trợ gặp mặt quốc tế</dt>
               <dd>Singapore</dd>
             </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>Địa chỉ</dt>
-              <dd>Địa chỉ đang cập nhật</dd>
-            </div>
           </dl>
         </article>
 
@@ -9702,14 +9682,6 @@ const ABOUT_COMPANY_INFO_SECTION_VN = `
             <div>
               <dt>Địa điểm hỗ trợ gặp mặt quốc tế</dt>
               <dd>Hong Kong</dd>
-            </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>Địa chỉ</dt>
-              <dd>Địa chỉ đang cập nhật</dd>
             </div>
           </dl>
         </article>
@@ -9961,10 +9933,6 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
               <dd>Ha Noi, Ho Chi Minh City</dd>
             </div>
             <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
               <dt>Hanoi Office Address</dt>
               <dd>5th Floor, Zen Tower, No. 12 Khuat Duy Tien Street, Thanh Xuan Trung Ward, Thanh Xuan District, Ha Noi, Viet Nam</dd>
             </div>
@@ -9986,14 +9954,6 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
               <dt>International meeting support location</dt>
               <dd>Tokyo, Japan</dd>
             </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>Address</dt>
-              <dd>Address updating</dd>
-            </div>
           </dl>
         </article>
 
@@ -10004,14 +9964,6 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
               <dt>International meeting support location</dt>
               <dd>Singapore</dd>
             </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>Address</dt>
-              <dd>Address updating</dd>
-            </div>
           </dl>
         </article>
 
@@ -10021,14 +9973,6 @@ const ABOUT_COMPANY_INFO_SECTION_EN = `
             <div>
               <dt>International meeting support location</dt>
               <dd>Hong Kong</dd>
-            </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>Address</dt>
-              <dd>Address updating</dd>
             </div>
           </dl>
         </article>
@@ -10110,10 +10054,6 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
               <dd>Ha Noi、Ho Chi Minh City</dd>
             </div>
             <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
               <dt>ハノイ オフィス住所</dt>
               <dd>5th Floor, Zen Tower, No. 12 Khuat Duy Tien Street, Thanh Xuan Trung Ward, Thanh Xuan District, Ha Noi, Viet Nam</dd>
             </div>
@@ -10135,14 +10075,6 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
               <dt>国際面談サポート拠点</dt>
               <dd>東京、日本</dd>
             </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>住所</dt>
-              <dd>更新中</dd>
-            </div>
           </dl>
         </article>
 
@@ -10153,14 +10085,6 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
               <dt>国際面談サポート拠点</dt>
               <dd>シンガポール</dd>
             </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>住所</dt>
-              <dd>更新中</dd>
-            </div>
           </dl>
         </article>
 
@@ -10170,14 +10094,6 @@ const ABOUT_COMPANY_INFO_SECTION_JP = `
             <div>
               <dt>国際面談サポート拠点</dt>
               <dd>香港</dd>
-            </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>住所</dt>
-              <dd>更新中</dd>
             </div>
           </dl>
         </article>
@@ -10259,10 +10175,6 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
               <dd>Ha Noi, Ho Chi Minh City</dd>
             </div>
             <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
               <dt>하노이 사무소 주소</dt>
               <dd>5th Floor, Zen Tower, No. 12 Khuat Duy Tien Street, Thanh Xuan Trung Ward, Thanh Xuan District, Ha Noi, Viet Nam</dd>
             </div>
@@ -10284,14 +10196,6 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
               <dt>국제 미팅 지원 장소</dt>
               <dd>도쿄, 일본</dd>
             </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>주소</dt>
-              <dd>업데이트 중</dd>
-            </div>
           </dl>
         </article>
 
@@ -10302,14 +10206,6 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
               <dt>국제 미팅 지원 장소</dt>
               <dd>싱가포르</dd>
             </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>주소</dt>
-              <dd>업데이트 중</dd>
-            </div>
           </dl>
         </article>
 
@@ -10319,14 +10215,6 @@ const ABOUT_COMPANY_INFO_SECTION_KR = `
             <div>
               <dt>국제 미팅 지원 장소</dt>
               <dd>홍콩</dd>
-            </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:contact@anslife.com">contact@anslife.com</a></dd>
-            </div>
-            <div>
-              <dt>주소</dt>
-              <dd>업데이트 중</dd>
             </div>
           </dl>
         </article>
